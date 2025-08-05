@@ -23,27 +23,25 @@ class AudioManager: ObservableObject {
     
     init() {
         // Load saved settings or use defaults
-        self.speechRate = UserDefaults.standard.float(forKey: "speechRate")
-        if self.speechRate == 0 {
-            self.speechRate = 0.5 // Default rate
-        }
+        let savedRate = UserDefaults.standard.float(forKey: "speechRate")
+        self.speechRate = savedRate == 0 ? 0.5 : savedRate
         
-        self.speechVolume = UserDefaults.standard.float(forKey: "speechVolume")
-        if self.speechVolume == 0 {
-            self.speechVolume = 1.0 // Default volume
-        }
+        let savedVolume = UserDefaults.standard.float(forKey: "speechVolume")
+        self.speechVolume = savedVolume == 0 ? 1.0 : savedVolume
         
         // Set up audio session
         setupAudioSession()
     }
     
     private func setupAudioSession() {
+        #if os(iOS)
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
         } catch {
             print("Failed to set up audio session: \(error)")
         }
+        #endif
     }
     
     /// Speak the given text with current settings

@@ -31,7 +31,8 @@ struct ContentView: View {
                     }
                 }
                 .padding()
-                .background(Color(.systemBackground))
+                .background(Color(NSColor.windowBackgroundColor))
+                .padding(.bottom, 8)
                 
                 // Main content
                 List {
@@ -99,7 +100,7 @@ struct ContentView: View {
                         }
                     }
                 }
-                .listStyle(InsetGroupedListStyle())
+                .listStyle(SidebarListStyle())
             }
         }
         .sheet(isPresented: $showingSettings) {

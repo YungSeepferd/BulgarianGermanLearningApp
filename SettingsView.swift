@@ -19,6 +19,9 @@ struct SettingsView: View {
                         
                         Slider(value: $audioManager.speechRate, in: 0.1...1.0, step: 0.1)
                             .accentColor(.blue)
+                        Text("Adjust how fast the words are spoken.")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
                     }
                     
                     VStack(alignment: .leading, spacing: 8) {
@@ -31,6 +34,9 @@ struct SettingsView: View {
                         
                         Slider(value: $audioManager.speechVolume, in: 0.0...1.0, step: 0.1)
                             .accentColor(.blue)
+                        Text("Adjust the pronunciation volume.")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
                     }
                 }
                 
@@ -63,10 +69,13 @@ struct SettingsView: View {
                 }
             }
             .navigationTitle("Settings")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(trailing: Button("Done") {
-                presentationMode.wrappedValue.dismiss()
-            })
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button("Done") {
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                }
+            }
         }
         .onDisappear {
             audioManager.stop()

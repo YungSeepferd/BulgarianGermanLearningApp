@@ -47,10 +47,20 @@ struct VocabularyListView: View {
                 HStack {
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(.gray)
-                    
                     TextField("Search words...", text: $searchText)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                    if !searchText.isEmpty {
+                        Button(action: { searchText = "" }) {
+                            Image(systemName: "xmark.circle.fill")
+                                .foregroundColor(.gray)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .accessibilityLabel("Clear search")
+                    }
                 }
+                .padding(6)
+                .background(Color.gray.opacity(0.08))
+                .cornerRadius(10)
                 
                 // Type filter
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -75,40 +85,47 @@ struct VocabularyListView: View {
             .padding()
             
             // Vocabulary list
-            List {
-                ForEach(filteredItems) { item in
-                    NavigationLink(destination: VocabularyDetailView(item: item)) {
-                        HStack {
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text(item.word)
-                                    .font(.headline)
-                                Text(item.translation)
-                                    .font(.subheadline)
-                                    .foregroundColor(.secondary)
-                                Text(item.type)
-                                    .font(.caption)
-                                    .foregroundColor(.blue)
-                                    .padding(.horizontal, 6)
-                                    .padding(.vertical, 2)
-                                    .background(Color.blue.opacity(0.1))
-                                    .cornerRadius(4)
-                            }
-                            
-                            Spacer()
-                            
-                            // Audio button
-                            Button(action: {
-                                if audioManager.isSpeaking && audioManager.currentText == item.word {
-                                    audioManager.stop()
-                                } else {
-                                    audioManager.speak(item.word, language: "bg-BG")
+            if filteredItems.isEmpty {
+                Spacer()
+                Text("No results found.")
+                    .foregroundColor(.secondary)
+                    .padding()
+                Spacer()
+            } else {
+                List {
+                    ForEach(filteredItems) { item in
+                        NavigationLink(destination: VocabularyDetailView(item: item)) {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(item.word)
+                                        .font(.headline)
+                                    Text(item.translation)
+                                        .font(.subheadline)
+                                        .foregroundColor(.secondary)
+                                    Text(item.type)
+                                        .font(.caption)
+                                        .foregroundColor(.blue)
+                                        .padding(.horizontal, 6)
+                                        .padding(.vertical, 2)
+                                        .background(Color.blue.opacity(0.1))
+                                        .cornerRadius(4)
                                 }
-                            }) {
-                                Image(systemName: audioManager.isSpeaking && audioManager.currentText == item.word ? "stop.circle.fill" : "play.circle.fill")
-                                    .font(.title2)
-                                    .foregroundColor(.blue)
+                                Spacer()
+                                // Audio button
+                                Button(action: {
+                                    if audioManager.isSpeaking && audioManager.currentText == item.word {
+                                        audioManager.stop()
+                                    } else {
+                                        audioManager.speak(item.word, language: "bg-BG")
+                                    }
+                                }) {
+                                    Image(systemName: audioManager.isSpeaking && audioManager.currentText == item.word ? "stop.circle.fill" : "play.circle.fill")
+                                        .font(.title2)
+                                        .foregroundColor(.blue)
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                                .accessibilityLabel("Play pronunciation for \(item.word)")
                             }
-                            .buttonStyle(PlainButtonStyle())
                         }
                     }
                 }

@@ -6,15 +6,13 @@ import Foundation
 /// elementary (A2) levels.  Each entry supplies the Bulgarian word,
 /// English translation, part of speech, level and optional notes.  The
 /// grammar topics provide concise explanations of major grammatical
-/// concepts along with example sentences.  These descriptions were
-/// synthesised from reputable resources on Bulgarian grammar and
-/// vocabulary【297331014586003†L90-L126】【297331014586003†L283-L314】.
+/// concepts along with example sentences.
 struct DataStore {
     /// All vocabulary items across levels.  You can filter this array by
     /// level to obtain level‑specific lists.
     static let vocabularyItems: [VocabularyItem] = [
         // A1 greetings and basic phrases (German translations)
-        VocabularyItem(word: "Здравей", translation: "Hallo", type: "Begrüßung", level: "A1", notes: "Das Wort „Здравей“ leitet sich vom bulgarischen Wort „здрав“ (gesund) ab und ist wie ein Wunsch nach Gesundheit."),
+        VocabularyItem(word: "Здравей", translation: "Hallo", type: "Begrüßung", level: "A1", notes: "Das Wort 'Здравей' leitet sich vom bulgarischen Wort 'здрав' (gesund) ab und ist wie ein Wunsch nach Gesundheit."),
         VocabularyItem(word: "Добро утро", translation: "Guten Morgen", type: "Begrüßung", level: "A1", notes: nil),
         VocabularyItem(word: "Добър ден", translation: "Guten Tag", type: "Begrüßung", level: "A1", notes: nil),
         VocabularyItem(word: "Добър вечер", translation: "Guten Abend", type: "Begrüßung", level: "A1", notes: nil),
@@ -32,18 +30,18 @@ struct DataStore {
         VocabularyItem(word: "Училище", translation: "Schule", type: "Substantiv", level: "A1", notes: nil),
         VocabularyItem(word: "Работа", translation: "Arbeit", type: "Substantiv", level: "A1", notes: nil),
         VocabularyItem(word: "Град", translation: "Stadt", type: "Substantiv", level: "A1", notes: nil),
-        VocabularyItem(word: "Село", translation: "Dorf", type: "Substantiv", level: "A1", notes: "„Село“ bedeutet Dorf und ist mit anderen slawischen Wörtern für Siedlung verwandt."),
-        VocabularyItem(word: "Книга", translation: "Buch", type: "Substantiv", level: "A1", notes: "„Книга“ stammt aus dem Altslawischen und war ursprünglich eine Bezeichnung für eine Schriftrolle oder ein gebundenes Werk."),
+        VocabularyItem(word: "Село", translation: "Dorf", type: "Substantiv", level: "A1", notes: "'Село' bedeutet Dorf und ist mit anderen slawischen Wörtern für Siedlung verwandt."),
+        VocabularyItem(word: "Книга", translation: "Buch", type: "Substantiv", level: "A1", notes: "'Книга' stammt aus dem Altslawischen und war ursprünglich eine Bezeichnung für eine Schriftrolle oder ein gebundenes Werk."),
         VocabularyItem(word: "Храна", translation: "Essen", type: "Substantiv", level: "A1", notes: nil),
-        VocabularyItem(word: "Вода", translation: "Wasser", type: "Substantiv", level: "A1", notes: "„Вода“ ist Wasser und hat denselben indoeuropäischen Ursprung wie das deutsche „Wasser"."),
+        VocabularyItem(word: "Вода", translation: "Wasser", type: "Substantiv", level: "A1", notes: "'Вода' ist Wasser und hat denselben indoeuropäischen Ursprung wie das deutsche 'Wasser'."),
 
         // A1 important verbs (German translations)
-        VocabularyItem(word: "Съм", translation: "sein", type: "Verb", level: "A1", notes: "Das Verb „съм“ entspricht dem deutschen „sein“ und ist unregelmäßig."),
+        VocabularyItem(word: "Съм", translation: "sein", type: "Verb", level: "A1", notes: "Das Verb 'съм' entspricht dem deutschen 'sein' und ist unregelmäßig."),
         VocabularyItem(word: "Имам", translation: "haben", type: "Verb", level: "A1", notes: nil),
         VocabularyItem(word: "Правя", translation: "machen", type: "Verb", level: "A1", notes: nil),
         VocabularyItem(word: "Мога", translation: "können", type: "Verb", level: "A1", notes: nil),
         VocabularyItem(word: "Ходя", translation: "gehen", type: "Verb", level: "A1", notes: nil),
-        VocabularyItem(word: "Ям", translation: "essen", type: "Verb", level: "A1", notes: "„Ям“ ist ein kurzes Verb, das „essen“ bedeutet; es gehört zu den Grundverben wie im Deutschen „essen"."),
+        VocabularyItem(word: "Ям", translation: "essen", type: "Verb", level: "A1", notes: "'Ям' ist ein kurzes Verb, das 'essen' bedeutet; es gehört zu den Grundverben wie im Deutschen 'essen'."),
         VocabularyItem(word: "Пия", translation: "trinken", type: "Verb", level: "A1", notes: nil),
         VocabularyItem(word: "Говоря", translation: "sprechen", type: "Verb", level: "A1", notes: nil),
         VocabularyItem(word: "Виждам", translation: "sehen", type: "Verb", level: "A1", notes: nil),
@@ -74,40 +72,23 @@ struct DataStore {
         VocabularyItem(word: "Зле", translation: "schlecht", type: "Adverb", level: "A1", notes: nil),
 
         // A2 nouns and everyday objects (German translations)
-        VocabularyItem(word: "Книга", translation: "Buch", type: "Substantiv", level: "A2", notes: "„Книга“ stammt aus dem Altslawischen und war ursprünglich eine Bezeichnung für eine Schriftrolle oder ein gebundenes Werk."),
         VocabularyItem(word: "Маса", translation: "Tisch", type: "Substantiv", level: "A2", notes: nil),
         VocabularyItem(word: "Стол", translation: "Stuhl", type: "Substantiv", level: "A2", notes: nil),
         VocabularyItem(word: "Хладилник", translation: "Kühlschrank", type: "Substantiv", level: "A2", notes: nil),
         VocabularyItem(word: "Кухня", translation: "Küche", type: "Substantiv", level: "A2", notes: nil),
         VocabularyItem(word: "Апартамент", translation: "Wohnung", type: "Substantiv", level: "A2", notes: nil),
-        VocabularyItem(word: "Автомобил", translation: "Auto", type: "Substantiv", level: "A2", notes: "„Автомобил“ ist ein Lehnwort aus dem Französischen; es setzt sich aus „auto“ (selbst) und „mobile“ (beweglich) zusammen."),
+        VocabularyItem(word: "Автомобил", translation: "Auto", type: "Substantiv", level: "A2", notes: "'Автомобил' ist ein Lehnwort aus dem Französischen; es setzt sich aus 'auto' (selbst) und 'mobile' (beweglich) zusammen."),
         VocabularyItem(word: "Магазин", translation: "Laden", type: "Substantiv", level: "A2", notes: nil),
         VocabularyItem(word: "Градина", translation: "Garten", type: "Substantiv", level: "A2", notes: nil),
         VocabularyItem(word: "Часовник", translation: "Uhr", type: "Substantiv", level: "A2", notes: nil),
 
         // A2 common verbs (German translations)
-        VocabularyItem(word: "Ям", translation: "essen", type: "Verb", level: "A2", notes: "„Ям“ ist ein kurzes Verb, das „essen“ bedeutet; es gehört zu den Grundverben wie im Deutschen „essen"."),
-        VocabularyItem(word: "Пия", translation: "trinken", type: "Verb", level: "A2", notes: nil),
         VocabularyItem(word: "Чета", translation: "lesen", type: "Verb", level: "A2", notes: nil),
         VocabularyItem(word: "Пиша", translation: "schreiben", type: "Verb", level: "A2", notes: nil),
-        VocabularyItem(word: "Говоря", translation: "sprechen", type: "Verb", level: "A2", notes: nil),
-        VocabularyItem(word: "Ходя", translation: "gehen", type: "Verb", level: "A2", notes: nil),
         VocabularyItem(word: "Карам", translation: "fahren", type: "Verb", level: "A2", notes: nil),
         VocabularyItem(word: "Живея", translation: "leben", type: "Verb", level: "A2", notes: nil),
         VocabularyItem(word: "Работя", translation: "arbeiten", type: "Verb", level: "A2", notes: nil),
         VocabularyItem(word: "Уча", translation: "lernen", type: "Verb", level: "A2", notes: nil),
-
-        // A2 adjectives (German translations)
-        VocabularyItem(word: "Голям", translation: "groß", type: "Adjektiv", level: "A2", notes: nil),
-        VocabularyItem(word: "Малък", translation: "klein", type: "Adjektiv", level: "A2", notes: nil),
-        VocabularyItem(word: "Красив", translation: "schön", type: "Adjektiv", level: "A2", notes: nil),
-        VocabularyItem(word: "Грозен", translation: "hässlich", type: "Adjektiv", level: "A2", notes: nil),
-        VocabularyItem(word: "Нов", translation: "neu", type: "Adjektiv", level: "A2", notes: nil),
-        VocabularyItem(word: "Стар", translation: "alt", type: "Adjektiv", level: "A2", notes: nil),
-        VocabularyItem(word: "Бърз", translation: "schnell", type: "Adjektiv", level: "A2", notes: nil),
-        VocabularyItem(word: "Бавен", translation: "langsam", type: "Adjektiv", level: "A2", notes: nil),
-        VocabularyItem(word: "Топъл", translation: "warm", type: "Adjektiv", level: "A2", notes: nil),
-        VocabularyItem(word: "Студен", translation: "kalt", type: "Adjektiv", level: "A2", notes: nil),
 
         // A2 numbers and quantities (German translations)
         VocabularyItem(word: "Едно", translation: "eins", type: "Zahl", level: "A2", notes: nil),
@@ -143,14 +124,8 @@ struct DataStore {
         VocabularyItem(word: "Нощ", translation: "Nacht", type: "Zeit", level: "A2", notes: nil),
 
         // A2 common phrases and expressions (German translations)
-        VocabularyItem(word: "Добро утро", translation: "Guten Morgen", type: "Ausdruck", level: "A2", notes: nil),
-        VocabularyItem(word: "Добър ден", translation: "Guten Tag", type: "Ausdruck", level: "A2", notes: nil),
-        VocabularyItem(word: "Добър вечер", translation: "Guten Abend", type: "Ausdruck", level: "A2", notes: nil),
-        VocabularyItem(word: "Лека нощ", translation: "Gute Nacht", type: "Ausdruck", level: "A2", notes: nil),
         VocabularyItem(word: "Как си?", translation: "Wie geht's?", type: "Ausdruck", level: "A2", notes: nil),
         VocabularyItem(word: "Добре съм", translation: "Mir geht's gut", type: "Ausdruck", level: "A2", notes: nil),
-        VocabularyItem(word: "Благодаря", translation: "Danke", type: "Ausdruck", level: "A2", notes: nil),
-        VocabularyItem(word: "Моля", translation: "Bitte", type: "Ausdruck", level: "A2", notes: nil),
         VocabularyItem(word: "Извинявай", translation: "Entschuldige", type: "Ausdruck", level: "A2", notes: nil),
         VocabularyItem(word: "Може ли?", translation: "Darf ich?", type: "Ausdruck", level: "A2", notes: nil),
 
@@ -162,7 +137,6 @@ struct DataStore {
         VocabularyItem(word: "Риба", translation: "Fisch", type: "Lebensmittel", level: "A2", notes: nil),
         VocabularyItem(word: "Зеленчуци", translation: "Gemüse", type: "Lebensmittel", level: "A2", notes: nil),
         VocabularyItem(word: "Плодове", translation: "Obst", type: "Lebensmittel", level: "A2", notes: nil),
-        VocabularyItem(word: "Вода", translation: "Wasser", type: "Lebensmittel", level: "A2", notes: "„Вода“ ist Wasser und hat denselben indoeuropäischen Ursprung wie das deutsche „Wasser"."),
         VocabularyItem(word: "Сок", translation: "Saft", type: "Lebensmittel", level: "A2", notes: nil),
         VocabularyItem(word: "Кафе", translation: "Kaffee", type: "Lebensmittel", level: "A2", notes: nil),
 
@@ -180,7 +154,7 @@ struct DataStore {
 
         // A2 health and emergencies (German translations)
         VocabularyItem(word: "Лекар", translation: "Arzt", type: "Gesundheit", level: "A2", notes: nil),
-        VocabularyItem(word: "Болница", translation: "Krankenhaus", type: "Gesundheit", level: "A2", notes: "„Болница“ leitet sich von „болен“ (krank) ab und bezeichnet einen Ort für Kranke – wie das deutsche „Krankenhaus"."),
+        VocabularyItem(word: "Болница", translation: "Krankenhaus", type: "Gesundheit", level: "A2", notes: "'Болница' leitet sich von 'болен' (krank) ab und bezeichnet einen Ort für Kranke – wie das deutsche 'Krankenhaus'."),
         VocabularyItem(word: "Аптека", translation: "Apotheke", type: "Gesundheit", level: "A2", notes: nil),
         VocabularyItem(word: "Лекарства", translation: "Medikamente", type: "Gesundheit", level: "A2", notes: nil),
         VocabularyItem(word: "Спешно", translation: "Notfall", type: "Gesundheit", level: "A2", notes: nil),
@@ -200,7 +174,7 @@ struct DataStore {
         VocabularyItem(word: "Гора", translation: "Wald", type: "Natur", level: "A2", notes: nil),
         VocabularyItem(word: "Река", translation: "Fluss", type: "Natur", level: "A2", notes: nil),
         VocabularyItem(word: "Планина", translation: "Berg", type: "Natur", level: "A2", notes: nil),
-        VocabularyItem(word: "Море", translation: "Meer", type: "Natur", level: "A2", notes: "„Море“ bedeutet Meer und ist mit dem russischen „more“ verwandt; es geht auf eine urslawische Wurzel zurück."),
+        VocabularyItem(word: "Море", translation: "Meer", type: "Natur", level: "A2", notes: "'Море' bedeutet Meer und ist mit dem russischen 'more' verwandt; es geht auf eine urslawische Wurzel zurück."),
 
         // A2 family and relationships (German translations)
         VocabularyItem(word: "Майка", translation: "Mutter", type: "Familie", level: "A2", notes: nil),
@@ -217,7 +191,7 @@ struct DataStore {
         VocabularyItem(word: "Пари", translation: "Geld", type: "Einkauf", level: "A2", notes: nil),
         VocabularyItem(word: "Цена", translation: "Preis", type: "Einkauf", level: "A2", notes: nil),
         VocabularyItem(word: "Евро", translation: "Euro", type: "Einkauf", level: "A2", notes: nil),
-        VocabularyItem(word: "Лев", translation: "Lew", type: "Einkauf", level: "A2", notes: "Die bulgarische Währung „лев“ ist nach dem alten bulgarischen Wort für „Löwe“ benannt, weil der Löwe ein nationales Symbol ist."),
+        VocabularyItem(word: "Лев", translation: "Lew", type: "Einkauf", level: "A2", notes: "Die bulgarische Währung 'лев' ist nach dem alten bulgarischen Wort für 'Löwe' benannt, weil der Löwe ein nationales Symbol ist."),
         VocabularyItem(word: "Сметка", translation: "Rechnung", type: "Einkauf", level: "A2", notes: nil),
         VocabularyItem(word: "Касова бележка", translation: "Quittung", type: "Einkauf", level: "A2", notes: nil),
         VocabularyItem(word: "Отстъпка", translation: "Rabatt", type: "Einkauf", level: "A2", notes: nil),
@@ -229,11 +203,11 @@ struct DataStore {
     /// Grammar topics for both levels.  Each description summarises key
     /// concepts along with illustrative sentences.  Learners can read
     /// these notes to understand Bulgarian grammar fundamentals such
-    /// as word order, gender and verb tenses【297331014586003†L469-L510】.
+    /// as word order, gender and verb tenses.
     static let grammarTopics: [GrammarTopic] = [
         GrammarTopic(
             title: "Word Order",
-            description: "Bulgarian word order is flexible thanks to subject–verb agreement.\nThe neutral pattern is S + V + O + A (Subject, Verb, Object, Adjunct), but other orders such as A + S + V + O, O + S + V + A or S + V + A + O are also possible.\nYou can change the order to emphasise different parts of the sentence without changing the basic meaning.",
+            description: "Bulgarian word order is flexible thanks to subject–verb agreement.\nThe neutral pattern is S + V + O + A (Subject, Verb, Object, Adjunct), but other orders such as A + S + V + O, O + S + V + A or S + V + A + O are also possible.\nYou can change the order to emphasise different parts of the sentence without changing the basic meaning.",
             examples: [
                 "Той видя момичето в далечината. – He saw the girl in the distance.",
                 "В далечината той видя момичето. – In the distance, he saw the girl.",
@@ -255,7 +229,7 @@ struct DataStore {
         ),
         GrammarTopic(
             title: "Singular and Plural",
-            description: "Bulgarian nouns are either singular or plural.\nMasculine nouns form plurals with endings like –и, –е or –ове (стол – столове ‘chair – chairs’).\nFeminine nouns replace –а/–я with –и (жена – жени ‘woman – women’).\nNeuter nouns take –а or –ета (море – морета ‘sea – seas’).\nA historical dual number for pairs of inanimate masculine nouns survives with the ending –а (два стола – two chairs).", 
+            description: "Bulgarian nouns are either singular or plural.\nMasculine nouns form plurals with endings like –и, –е or –ове (стол – столове 'chair – chairs').\nFeminine nouns replace –а/–я with –и (жена – жени 'woman – women').\nNeuter nouns take –а or –ета (море – морета 'sea – seas').\nA historical dual number for pairs of inanimate masculine nouns survives with the ending –а (два стола – two chairs).", 
             examples: [
                 "стол – столове (chair – chairs)",
                 "жена – жени (woman – women)",
@@ -266,7 +240,7 @@ struct DataStore {
         ),
         GrammarTopic(
             title: "Definite Article",
-            description: "The Bulgarian definite article attaches to the end of the noun.\nMasculine nouns take –ът/–ят (студент – студентът ‘the student’, кон – конят ‘the horse’).\nFeminine nouns take –та (вода – водата ‘the water’, чиния – чинията ‘the plate’).\nNeuter nouns take –то (село – селото ‘the village’, море – морето ‘the sea’).\nFor plural nouns the article is –те for masculine and feminine plurals and –та for neuter plurals.",
+            description: "The Bulgarian definite article attaches to the end of the noun.\nMasculine nouns take –ът/–ят (студент – студентът 'the student', кон – конят 'the horse').\nFeminine nouns take –та (вода – водата 'the water', чиния – чинията 'the plate').\nNeuter nouns take –то (село – селото 'the village', море – морето 'the sea').\nFor plural nouns the article is –те for masculine and feminine plurals and –та for neuter plurals.",
             examples: [
                 "студент – студентът (student – the student)",
                 "вода – водата (water – the water)",
@@ -332,7 +306,7 @@ struct DataStore {
         ),
         GrammarTopic(
             title: "Travel and Directions",
-            description: "At A2 you may need to ask for directions or discuss travel.\nKey nouns include автобус (bus), влак (train), самолет (airplane), такси (taxi), гара (train station) and летище (airport).\nThe noun билет means ‘ticket’, and карта means ‘map’.",
+            description: "At A2 you may need to ask for directions or discuss travel.\nKey nouns include автобус (bus), влак (train), самолет (airplane), такси (taxi), гара (train station) and летище (airport).\nThe noun билет means 'ticket', and карта means 'map'.",
             examples: [
                 "Къде е гарата? – Where is the train station?",
                 "Имам билет за автобуса. – I have a ticket for the bus."

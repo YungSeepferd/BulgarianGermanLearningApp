@@ -30,13 +30,14 @@ struct VocabularyDetailView: View {
                             .font(.title)
                             .foregroundColor(.blue)
                     }
+                    .accessibilityLabel("Play pronunciation for \(item.word)")
                 }
-                
+                Divider()
                 // German translation
                 Text(item.translation)
                     .font(.title2)
                     .foregroundColor(.primary)
-                
+                Divider()
                 // Part of speech
                 Text("Part of speech: \(item.type)")
                     .font(.subheadline)
@@ -45,7 +46,7 @@ struct VocabularyDetailView: View {
                     .padding(.vertical, 6)
                     .background(Color.gray.opacity(0.1))
                     .cornerRadius(8)
-                
+                Divider()
                 // Notes section
                 if let notes = item.notes, !notes.isEmpty {
                     VStack(alignment: .leading, spacing: 8) {
@@ -67,6 +68,8 @@ struct VocabularyDetailView: View {
             .padding()
         }
         .navigationTitle(item.word)
+        .navigationBarBackButtonHidden(false)
+        .navigationBarTitleDisplayMode(.inline)
         .onDisappear {
             audioManager.stop()
         }
