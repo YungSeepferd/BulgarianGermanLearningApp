@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulgarian-German Learning App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="app-title">
+                    <h1>Bulgarian</h1>
+                    <h2>Learning App</h2>
+                </div>
+                <button class="settings-btn" onclick="showSettings()">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home View -->
+            <div id="home-view" class="view active">
+                <div class="level-section">
+                    <h3>Level A1 - Beginner</h3>
+                    <div class="level-cards">
+                        <div class="level-card" onclick="showVocabulary('A1')">
+                            <i class="fas fa-font"></i>
+                            <div class="card-content">
+                                <h4>A1 Vocabulary</h4>
+                                <p>Basic words and phrases</p>
+                            </div>
+                        </div>
+                        <div class="level-card" onclick="showGrammar('A1')">
+                            <i class="fas fa-book"></i>
+                            <div class="card-content">
+                                <h4>A1 Grammar</h4>
+                                <p>Fundamental grammar rules</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="level-section">
+                    <h3>Level A2 - Elementary</h3>
+                    <div class="level-cards">
+                        <div class="level-card" onclick="showVocabulary('A2')">
+                            <i class="fas fa-font"></i>
+                            <div class="card-content">
+                                <h4>A2 Vocabulary</h4>
+                                <p>Extended vocabulary</p>
+                            </div>
+                        </div>
+                        <div class="level-card" onclick="showGrammar('A2')">
+                            <i class="fas fa-book"></i>
+                            <div class="card-content">
+                                <h4>A2 Grammar</h4>
+                                <p>Advanced grammar concepts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vocabulary View -->
+            <div id="vocabulary-view" class="view">
+                <div class="view-header">
+                    <button class="back-btn" onclick="goHome()">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <h3 id="vocabulary-title">Vocabulary</h3>
+                </div>
+
+                <div class="search-filter">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Search words..." oninput="filterVocabulary()">
+                        <button class="clear-btn" onclick="clearSearch()" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="filter-tabs" id="filter-tabs">
+                        <!-- Filter tabs will be populated dynamically -->
+                    </div>
+                </div>
+
+                <div class="vocabulary-list" id="vocabulary-list">
+                    <!-- Vocabulary items will be populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Vocabulary Detail View -->
+            <div id="vocabulary-detail-view" class="view">
+                <div class="view-header">
+                    <button class="back-btn" onclick="goBack()">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <h3 id="detail-title">Word Detail</h3>
+                </div>
+
+                <div class="detail-content" id="detail-content">
+                    <!-- Detail content will be populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Grammar View -->
+            <div id="grammar-view" class="view">
+                <div class="view-header">
+                    <button class="back-btn" onclick="goHome()">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <h3 id="grammar-title">Grammar</h3>
+                </div>
+
+                <div class="grammar-list" id="grammar-list">
+                    <!-- Grammar topics will be populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Grammar Detail View -->
+            <div id="grammar-detail-view" class="view">
+                <div class="view-header">
+                    <button class="back-btn" onclick="goBack()">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <h3 id="grammar-detail-title">Grammar Topic</h3>
+                </div>
+
+                <div class="grammar-detail-content" id="grammar-detail-content">
+                    <!-- Grammar detail content will be populated dynamically -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Settings Modal -->
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Settings</h3>
+                    <button class="close-btn" onclick="hideSettings()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="settings-section">
+                        <h4>Audio Settings</h4>
+                        <div class="setting-item">
+                            <label>Speech Rate: <span id="rate-value">50%</span></label>
+                            <input type="range" id="speech-rate" min="0.1" max="1.0" step="0.1" value="0.5" oninput="updateSpeechRate()">
+                            <p class="setting-description">Adjust how fast the words are spoken.</p>
+                        </div>
+                        <div class="setting-item">
+                            <label>Volume: <span id="volume-value">100%</span></label>
+                            <input type="range" id="speech-volume" min="0.0" max="1.0" step="0.1" value="1.0" oninput="updateSpeechVolume()">
+                            <p class="setting-description">Adjust the pronunciation volume.</p>
+                        </div>
+                    </div>
+                    <div class="settings-section">
+                        <h4>Test Audio</h4>
+                        <div class="test-audio">
+                            <span>Test pronunciation</span>
+                            <button class="play-btn" onclick="testAudio()">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="settings-section">
+                        <h4>About</h4>
+                        <div class="about-info">
+                            <h5>Bulgarian-German Learning App</h5>
+                            <p>Version 1.0</p>
+                            <p>Learn Bulgarian vocabulary with German translations and audio pronunciation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
