@@ -16,14 +16,14 @@ struct SettingsView: View {
                             Text("\(Int(audioManager.speechRate * 100))%")
                                 .foregroundColor(.secondary)
                         }
-                        
+
                         Slider(value: $audioManager.speechRate, in: 0.1...1.0, step: 0.1)
                             .accentColor(.blue)
                         Text("Adjust how fast the words are spoken.")
                             .font(.caption)
                             .foregroundColor(.secondary)
                     }
-                    
+
                     VStack(alignment: .leading, spacing: 8) {
                         HStack {
                             Text("Volume")
@@ -31,21 +31,27 @@ struct SettingsView: View {
                             Text("\(Int(audioManager.speechVolume * 100))%")
                                 .foregroundColor(.secondary)
                         }
-                        
+
                         Slider(value: $audioManager.speechVolume, in: 0.0...1.0, step: 0.1)
                             .accentColor(.blue)
                         Text("Adjust the pronunciation volume.")
                             .font(.caption)
                             .foregroundColor(.secondary)
                     }
+
+                    Picker("Voice", selection: $audioManager.speechLanguage) {
+                        Text("English (US)").tag("en-US")
+                        Text("Bulgarian").tag("bg-BG")
+                        Text("German").tag("de-DE")
+                    }
                 }
-                
+
                 Section(header: Text("Test Audio")) {
                     HStack {
                         Text("Test pronunciation")
                         Spacer()
                         Button(action: {
-                            audioManager.speak("Здравей", language: "bg-BG")
+                            audioManager.speak("Здравей")
                         }) {
                             Image(systemName: audioManager.isSpeaking ? "stop.circle.fill" : "play.circle.fill")
                                 .font(.title2)

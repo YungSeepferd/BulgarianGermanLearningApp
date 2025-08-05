@@ -11,31 +11,6 @@ struct VocabularyItem: Identifiable {
     let type: String
     let level: String
     let notes: String?
-    
-    /// Audio settings for pronunciation
-    var audioSettings: AudioSettings {
-        AudioSettings(
-            text: word,
-            language: "bg-BG", // Bulgarian language code
-            rate: UserDefaults.standard.float(forKey: "speechRate"),
-            volume: UserDefaults.standard.float(forKey: "speechVolume")
-        )
-    }
-}
-
-/// Audio settings for text-to-speech pronunciation
-struct AudioSettings {
-    let text: String
-    let language: String
-    let rate: Float
-    let volume: Float
-    
-    init(text: String, language: String, rate: Float = 0.5, volume: Float = 1.0) {
-        self.text = text
-        self.language = language
-        self.rate = rate
-        self.volume = volume
-    }
 }
 
 /// A grammar topic summarises a single concept such as gender or word order.

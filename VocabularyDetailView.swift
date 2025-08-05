@@ -23,7 +23,7 @@ struct VocabularyDetailView: View {
                         if audioManager.isSpeaking && audioManager.currentText == item.word {
                             audioManager.stop()
                         } else {
-                            audioManager.speak(item.word, language: "bg-BG")
+                            audioManager.speak(item.word)
                         }
                     }) {
                         Image(systemName: audioManager.isSpeaking && audioManager.currentText == item.word ? "stop.circle.fill" : "play.circle.fill")

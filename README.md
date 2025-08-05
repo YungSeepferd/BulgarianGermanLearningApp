@@ -9,6 +9,7 @@ A SwiftUI-based iOS application for learning Bulgarian vocabulary and grammar wi
 - **German Translations**: All vocabulary items include German translations
 - **Offline Learning**: Complete offline functionality with local data storage
 - **User-Friendly Interface**: Clean, intuitive SwiftUI interface
+- **Text-to-Speech**: Pronounce Bulgarian words with an English voice; select other voices in Settings
 
 ## Project Structure
 
@@ -38,6 +39,8 @@ A SwiftUI-based iOS application for learning Bulgarian vocabulary and grammar wi
 ## Development
 
 This app is built using SwiftUI and requires Xcode for development. The app is completely offline and stores all language data locally in static arrays.
+
+For deployments on GitHub Pages or other static hosting, browser‑based text-to-speech can be achieved using the [Web Speech API's `SpeechSynthesis`](https://developer.mozilla.org/docs/Web/API/SpeechSynthesis) or open-source libraries like [TextToSpeechKt](https://github.com/aallam/text-to-speech-kt).
 
 ## License
 
