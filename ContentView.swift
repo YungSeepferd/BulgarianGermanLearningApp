@@ -5,23 +5,26 @@ import SwiftUI
 /// option navigates to the appropriate list view.
 struct ContentView: View {
     @State private var showingSettings = false
+    @AppStorage("learningDirection") private var learningDirection: LearningDirection = .bulgarianToGerman
     
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
                 // Header with app title and settings
-                HStack {
+                HStack(spacing: 12) {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Bulgarian")
+                        Text(learningDirection == .bulgarianToGerman ? "Bulgarisch" : "Немски")
                             .font(.largeTitle)
                             .fontWeight(.bold)
-                        Text("Learning App")
+                        Text(learningDirection == .bulgarianToGerman ? "Lern-App" : "Учебно приложение")
                             .font(.title2)
                             .foregroundColor(.secondary)
                     }
-                    
+
                     Spacer()
-                    
+
+                    DirectionToggle()
+
                     Button(action: {
                         showingSettings = true
                     }) {
@@ -36,16 +39,16 @@ struct ContentView: View {
                 
                 // Main content
                 List {
-                    Section(header: Text("Level A1 - Beginner")) {
+                    Section(header: Text(learningDirection == .bulgarianToGerman ? "Niveau A1 - Anfänger" : "Ниво A1 - начинаещи")) {
                         NavigationLink(destination: VocabularyListView(level: "A1")) {
                             HStack {
                                 Image(systemName: "textformat.abc")
                                     .foregroundColor(.blue)
                                     .frame(width: 30)
                                 VStack(alignment: .leading, spacing: 2) {
-                                    Text("A1 Vocabulary")
+                                    Text(learningDirection == .bulgarianToGerman ? "A1 Vokabeln" : "A1 Лексика")
                                         .font(.headline)
-                                    Text("Basic words and phrases")
+                                    Text(learningDirection == .bulgarianToGerman ? "Grundlegende Wörter und Sätze" : "Основни думи и изрази")
                                         .font(.caption)
                                         .foregroundColor(.secondary)
                                 }
@@ -58,9 +61,9 @@ struct ContentView: View {
                                     .foregroundColor(.green)
                                     .frame(width: 30)
                                 VStack(alignment: .leading, spacing: 2) {
-                                    Text("A1 Grammar")
+                                    Text(learningDirection == .bulgarianToGerman ? "A1 Grammatik" : "A1 Граматика")
                                         .font(.headline)
-                                    Text("Fundamental grammar rules")
+                                    Text(learningDirection == .bulgarianToGerman ? "Grundregeln" : "Основни граматични правила")
                                         .font(.caption)
                                         .foregroundColor(.secondary)
                                 }
@@ -68,16 +71,16 @@ struct ContentView: View {
                         }
                     }
                     
-                    Section(header: Text("Level A2 - Elementary")) {
+                    Section(header: Text(learningDirection == .bulgarianToGerman ? "Niveau A2 - Grundstufe" : "Ниво A2 - средно")) {
                         NavigationLink(destination: VocabularyListView(level: "A2")) {
                             HStack {
                                 Image(systemName: "textformat.abc")
                                     .foregroundColor(.blue)
                                     .frame(width: 30)
                                 VStack(alignment: .leading, spacing: 2) {
-                                    Text("A2 Vocabulary")
+                                    Text(learningDirection == .bulgarianToGerman ? "A2 Vokabeln" : "A2 Лексика")
                                         .font(.headline)
-                                    Text("Extended vocabulary")
+                                    Text(learningDirection == .bulgarianToGerman ? "Erweiterter Wortschatz" : "Разширен речник")
                                         .font(.caption)
                                         .foregroundColor(.secondary)
                                 }
@@ -90,9 +93,9 @@ struct ContentView: View {
                                     .foregroundColor(.green)
                                     .frame(width: 30)
                                 VStack(alignment: .leading, spacing: 2) {
-                                    Text("A2 Grammar")
+                                    Text(learningDirection == .bulgarianToGerman ? "A2 Grammatik" : "A2 Граматика")
                                         .font(.headline)
-                                    Text("Advanced grammar concepts")
+                                    Text(learningDirection == .bulgarianToGerman ? "Fortgeschrittene Grammatik" : "По-напреднала граматика")
                                         .font(.caption)
                                         .foregroundColor(.secondary)
                                 }

@@ -5,20 +5,22 @@ import SwiftUI
 /// scroll view ensures content is readable on smaller screens.
 struct GrammarDetailView: View {
     let topic: GrammarTopic
+    @AppStorage("learningDirection") private var learningDirection: LearningDirection = .bulgarianToGerman
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                Text(topic.title)
+                Text(topic.title(for: learningDirection))
                     .font(.title)
                     .bold()
-                Text(topic.description)
+                Text(topic.description(for: learningDirection))
                     .font(.body)
-                if !topic.examples.isEmpty {
-                    Text("Examples:")
+                let examples = topic.examples(for: learningDirection)
+                if !examples.isEmpty {
+                    Text(learningDirection == .bulgarianToGerman ? "Beispiele:" : "Примери:")
                         .font(.headline)
                         .padding(.top)
-                    ForEach(topic.examples, id: \.self) { example in
+                    ForEach(examples, id: \.self) { example in
                         Text("• \(example)")
                     }
                 }
@@ -26,14 +28,28 @@ struct GrammarDetailView: View {
             }
             .padding()
         }
-        .navigationTitle(topic.title)
+        .navigationTitle(topic.title(for: learningDirection))
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                DirectionToggle()
+            }
+        }
     }
 }
 
 struct GrammarDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            GrammarDetailView(topic: GrammarTopic(title: "Gender of Nouns", description: "Example description", examples: ["мъж – man"], level: "A1"))
+        let sample = GrammarTopic(
+            titleBG: "Род на съществителните",
+            titleDE: "Genus der Substantive",
+            descriptionBG: "Примерно описание",
+            descriptionDE: "Beispielbeschreibung",
+            examplesBG: ["мъж – мъжки род"],
+            examplesDE: ["мъж – Mann (Maskulinum)"],
+            level: "A1"
+        )
+        return NavigationView {
+            GrammarDetailView(topic: sample)
         }
     }
 }
