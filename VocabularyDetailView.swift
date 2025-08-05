@@ -6,28 +6,70 @@ import SwiftUI
 /// when there is little information.
 struct VocabularyDetailView: View {
     let item: VocabularyItem
-
+    @StateObject private var audioManager = AudioManager()
+    
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
-                Text(item.word)
-                    .font(.largeTitle)
-                    .bold()
+            VStack(alignment: .leading, spacing: 20) {
+                // Bulgarian word with audio button
+                HStack {
+                    Text(item.word)
+                        .font(.largeTitle)
+                        .bold()
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        if audioManager.isSpeaking && audioManager.currentText == item.word {
+                            audioManager.stop()
+                        } else {
+                            audioManager.speak(item.word, language: "bg-BG")
+                        }
+                    }) {
+                        Image(systemName: audioManager.isSpeaking && audioManager.currentText == item.word ? "stop.circle.fill" : "play.circle.fill")
+                            .font(.title)
+                            .foregroundColor(.blue)
+                    }
+                }
+                
+                // German translation
                 Text(item.translation)
                     .font(.title2)
                     .foregroundColor(.primary)
+                
+                // Part of speech
                 Text("Part of speech: \(item.type)")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 6)
+                    .background(Color.gray.opacity(0.1))
+                    .cornerRadius(8)
+                
+                // Notes section
                 if let notes = item.notes, !notes.isEmpty {
-                    Text(notes)
-                        .font(.body)
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Notes:")
+                            .font(.headline)
+                            .foregroundColor(.primary)
+                        
+                        Text(notes)
+                            .font(.body)
+                            .foregroundColor(.secondary)
+                            .padding()
+                            .background(Color.blue.opacity(0.05))
+                            .cornerRadius(12)
+                    }
                 }
+                
                 Spacer()
             }
             .padding()
         }
         .navigationTitle(item.word)
+        .onDisappear {
+            audioManager.stop()
+        }
     }
 }
 
