@@ -1,12 +1,12 @@
 # Bulgarian-German Learning App
 
-A SwiftUI-based iOS application for learning Bulgarian vocabulary and grammar with German translations.
+A SwiftUI-based iOS application for learning Bulgarian and German vocabulary and grammar.
 
 ## Features
 
-- **Vocabulary Learning**: Browse Bulgarian words organized by CEFR levels (A1 and A2)
-- **Grammar Topics**: Learn Bulgarian grammar concepts with detailed explanations
-- **German Translations**: All vocabulary items include German translations
+- **Vocabulary Learning**: Browse words organised by CEFR levels (A1 and A2)
+- **Grammar Topics**: Learn grammar concepts with detailed explanations
+- **Bilingual Mode**: Toggle between Bulgarian→German and German→Bulgarian learning directions on every screen
 - **Offline Learning**: Complete offline functionality with local data storage
 - **User-Friendly Interface**: Clean, intuitive SwiftUI interface
 

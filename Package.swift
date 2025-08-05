@@ -19,18 +19,21 @@ let package = Package(
         .executableTarget(
             name: "BulgarianVocabularyApp",
             path: ".",
+            exclude: ["README.md"],
             sources: [
                 "BulgarianVocabularyApp.swift",
-                "ContentView.swift", 
+                "ContentView.swift",
                 "DataStore.swift",
                 "Models.swift",
+                "GrammarData.swift",
                 "VocabularyListView.swift",
                 "VocabularyDetailView.swift",
                 "GrammarListView.swift",
                 "GrammarDetailView.swift",
+                "DirectionToggle.swift",
                 "AudioManager.swift",
                 "SettingsView.swift"
             ]
         )
     ]
-) 
+)

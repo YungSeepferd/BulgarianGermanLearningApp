@@ -1,45 +1,47 @@
 import SwiftUI
 
-/// Shows detailed information about a single vocabulary item.  Besides the
-/// Bulgarian word and its translation, this view displays the part of
-/// speech and any additional notes.  A spacer pushes content to the top
-/// when there is little information.
+/// Shows detailed information about a single vocabulary item.  Depending on
+/// the current learning direction, the view presents the headword with its
+/// translation, the part of speech and any additional notes.  A spacer pushes
+/// content to the top when there is little information.
 struct VocabularyDetailView: View {
     let item: VocabularyItem
     @StateObject private var audioManager = AudioManager()
+    @AppStorage("learningDirection") private var learningDirection: LearningDirection = .bulgarianToGerman
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                // Bulgarian word with audio button
+                // Word with audio button
                 HStack {
-                    Text(item.word)
+                    let baseWord = item.displayedWord(for: learningDirection)
+                    Text(baseWord)
                         .font(.largeTitle)
                         .bold()
-                    
+
                     Spacer()
-                    
+
                     Button(action: {
-                        if audioManager.isSpeaking && audioManager.currentText == item.word {
+                        if audioManager.isSpeaking && audioManager.currentText == baseWord {
                             audioManager.stop()
                         } else {
-                            audioManager.speak(item.word, language: "bg-BG")
+                            audioManager.speak(baseWord, language: item.audioLanguage(for: learningDirection))
                         }
                     }) {
-                        Image(systemName: audioManager.isSpeaking && audioManager.currentText == item.word ? "stop.circle.fill" : "play.circle.fill")
+                        Image(systemName: audioManager.isSpeaking && audioManager.currentText == baseWord ? "stop.circle.fill" : "play.circle.fill")
                             .font(.title)
                             .foregroundColor(.blue)
                     }
-                    .accessibilityLabel("Play pronunciation for \(item.word)")
+                    .accessibilityLabel(learningDirection.playPronunciationLabel(for: baseWord))
                 }
                 Divider()
-                // German translation
-                Text(item.translation)
+                // Translation
+                Text(item.displayedTranslation(for: learningDirection))
                     .font(.title2)
                     .foregroundColor(.primary)
                 Divider()
                 // Part of speech
-                Text("Part of speech: \(item.type)")
+                Text((learningDirection == .bulgarianToGerman ? "Wortart: " : "Част на речта: ") + item.displayedType(for: learningDirection))
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                     .padding(.horizontal, 12)
@@ -48,12 +50,12 @@ struct VocabularyDetailView: View {
                     .cornerRadius(8)
                 Divider()
                 // Notes section
-                if let notes = item.notes, !notes.isEmpty {
+                if let notes = item.displayedNotes(for: learningDirection), !notes.isEmpty {
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("Notes:")
+                        Text(learningDirection == .bulgarianToGerman ? "Notizen:" : "Бележки:")
                             .font(.headline)
                             .foregroundColor(.primary)
-                        
+
                         Text(notes)
                             .font(.body)
                             .foregroundColor(.secondary)
@@ -67,9 +69,14 @@ struct VocabularyDetailView: View {
             }
             .padding()
         }
-        .navigationTitle(item.word)
+        .navigationTitle(item.displayedWord(for: learningDirection))
         .navigationBarBackButtonHidden(false)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                DirectionToggle()
+            }
+        }
         .onDisappear {
             audioManager.stop()
         }

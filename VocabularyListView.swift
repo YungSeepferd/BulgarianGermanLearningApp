@@ -1,18 +1,20 @@
 import SwiftUI
 
-/// Displays a list of vocabulary items for a given level.  Each row shows
-/// the Bulgarian word and its English translation.  Tapping on a row
-/// navigates to a detail view with more information.
+/// Displays a list of vocabulary items for a given level.  Each row adapts to
+/// the current learning direction, presenting the headword with its
+/// translation.  Tapping on a row navigates to a detail view with more
+/// information.
 struct VocabularyListView: View {
     let level: String
     @StateObject private var audioManager = AudioManager()
     @State private var searchText = ""
-    @State private var selectedType = "All"
+    @State private var selectedType = ""
+    @AppStorage("learningDirection") private var learningDirection: LearningDirection = .bulgarianToGerman
     
     // Filter the shared vocabulary items by level on initialisation
     private var items: [VocabularyItem] {
         DataStore.vocabularyItems.filter { $0.level == level }
-            .sorted { $0.word < $1.word }
+            .sorted { $0.displayedWord(for: learningDirection) < $1.displayedWord(for: learningDirection) }
     }
     
     // Filtered items based on search and type
@@ -21,13 +23,13 @@ struct VocabularyListView: View {
         
         if !searchText.isEmpty {
             filtered = filtered.filter { 
-                $0.word.localizedCaseInsensitiveContains(searchText) ||
-                $0.translation.localizedCaseInsensitiveContains(searchText)
+                $0.displayedWord(for: learningDirection).localizedCaseInsensitiveContains(searchText) ||
+                $0.displayedTranslation(for: learningDirection).localizedCaseInsensitiveContains(searchText)
             }
         }
         
-        if selectedType != "All" {
-            filtered = filtered.filter { $0.type == selectedType }
+        if selectedType != allFilterLabel {
+            filtered = filtered.filter { $0.displayedType(for: learningDirection) == selectedType }
         }
         
         return filtered
@@ -35,9 +37,11 @@ struct VocabularyListView: View {
     
     // Available types for filtering
     private var availableTypes: [String] {
-        let types = Set(items.map { $0.type })
-        return ["All"] + Array(types).sorted()
+        let types = Set(items.map { $0.displayedType(for: learningDirection) })
+        return [allFilterLabel] + Array(types).sorted()
     }
+
+    private var allFilterLabel: String { learningDirection.allFilterLabel }
 
     var body: some View {
         VStack {
@@ -47,7 +51,7 @@ struct VocabularyListView: View {
                 HStack {
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(.gray)
-                    TextField("Search words...", text: $searchText)
+                    TextField(learningDirection == .bulgarianToGerman ? "Wörter suchen..." : "Търсене...", text: $searchText)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     if !searchText.isEmpty {
                         Button(action: { searchText = "" }) {
@@ -55,7 +59,7 @@ struct VocabularyListView: View {
                                 .foregroundColor(.gray)
                         }
                         .buttonStyle(PlainButtonStyle())
-                        .accessibilityLabel("Clear search")
+                        .accessibilityLabel(learningDirection.clearSearchLabel)
                     }
                 }
                 .padding(6)
@@ -87,7 +91,7 @@ struct VocabularyListView: View {
             // Vocabulary list
             if filteredItems.isEmpty {
                 Spacer()
-                Text("No results found.")
+                Text(learningDirection.noResultsText)
                     .foregroundColor(.secondary)
                     .padding()
                 Spacer()
@@ -97,12 +101,12 @@ struct VocabularyListView: View {
                         NavigationLink(destination: VocabularyDetailView(item: item)) {
                             HStack {
                                 VStack(alignment: .leading, spacing: 4) {
-                                    Text(item.word)
+                                    Text(item.displayedWord(for: learningDirection))
                                         .font(.headline)
-                                    Text(item.translation)
+                                    Text(item.displayedTranslation(for: learningDirection))
                                         .font(.subheadline)
                                         .foregroundColor(.secondary)
-                                    Text(item.type)
+                                    Text(item.displayedType(for: learningDirection))
                                         .font(.caption)
                                         .foregroundColor(.blue)
                                         .padding(.horizontal, 6)
@@ -111,27 +115,36 @@ struct VocabularyListView: View {
                                         .cornerRadius(4)
                                 }
                                 Spacer()
-                                // Audio button
+                                let baseWord = item.displayedWord(for: learningDirection)
                                 Button(action: {
-                                    if audioManager.isSpeaking && audioManager.currentText == item.word {
+                                    if audioManager.isSpeaking && audioManager.currentText == baseWord {
                                         audioManager.stop()
                                     } else {
-                                        audioManager.speak(item.word, language: "bg-BG")
+                                        audioManager.speak(baseWord, language: item.audioLanguage(for: learningDirection))
                                     }
                                 }) {
-                                    Image(systemName: audioManager.isSpeaking && audioManager.currentText == item.word ? "stop.circle.fill" : "play.circle.fill")
+                                    Image(systemName: audioManager.isSpeaking && audioManager.currentText == baseWord ? "stop.circle.fill" : "play.circle.fill")
                                         .font(.title2)
                                         .foregroundColor(.blue)
                                 }
                                 .buttonStyle(PlainButtonStyle())
-                                .accessibilityLabel("Play pronunciation for \(item.word)")
+                                .accessibilityLabel(learningDirection.playPronunciationLabel(for: baseWord))
                             }
                         }
                     }
                 }
             }
         }
-        .navigationTitle("\(level) Vocabulary")
+        .navigationTitle("\(level) \(learningDirection == .bulgarianToGerman ? "Vokabeln" : "Лексика")")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                DirectionToggle()
+            }
+        }
+        .onAppear { selectedType = allFilterLabel }
+        .onChange(of: learningDirection) { _ in
+            selectedType = allFilterLabel
+        }
         .onDisappear {
             audioManager.stop()
         }

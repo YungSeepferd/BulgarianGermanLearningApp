@@ -5,20 +5,26 @@ import SwiftUI
 /// `GrammarDetailView` which contains the full explanation and examples.
 struct GrammarListView: View {
     let level: String
+    @AppStorage("learningDirection") private var learningDirection: LearningDirection = .bulgarianToGerman
     private var topics: [GrammarTopic] {
         DataStore.grammarTopics.filter { $0.level == level }
-            .sorted { $0.title < $1.title }
+            .sorted { $0.title(for: learningDirection) < $1.title(for: learningDirection) }
     }
 
     var body: some View {
         List {
             ForEach(topics) { topic in
                 NavigationLink(destination: GrammarDetailView(topic: topic)) {
-                    Text(topic.title)
+                    Text(topic.title(for: learningDirection))
                 }
             }
         }
-        .navigationTitle("\(level) Grammar")
+        .navigationTitle("\(level) \(learningDirection == .bulgarianToGerman ? "Grammatik" : "Граматика")")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                DirectionToggle()
+            }
+        }
     }
 }
 
