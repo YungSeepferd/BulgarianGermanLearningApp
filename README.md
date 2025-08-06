@@ -1,6 +1,6 @@
 # Bulgarian-German Learning App (Rust Rewrite)
 
-This repository is being refactored into a Rust-powered vocabulary and grammar trainer.
+This repository contains a Rust-powered vocabulary and grammar trainer.
 The project targets both the web (via WebAssembly) and native desktops while sharing a
 common library for data models and learning logic.
 
@@ -12,9 +12,14 @@ common library for data models and learning logic.
 ├── lib/                  # Shared library crate
 ├── web/                  # Yew-based web frontend (WASM)
 ├── desktop/              # Desktop application (egui/eframe placeholder)
-├── data/                 # Vocabulary and grammar data
 └── README.md
 ```
+
+## Audio
+
+Audio playback is implemented in Rust and exposed to the browser via WebAssembly. The
+`web/src/audio.rs` module uses the Web Speech API for text‑to‑speech, allowing users to
+select language, rate, and volume without relying on legacy JavaScript code.
 
 ## Prerequisites
 
@@ -42,5 +47,3 @@ Run checks across the workspace:
 cargo test
 ```
 
----
-This is a work in progress as the codebase migrates from JavaScript to Rust.
