@@ -1,9 +1,52 @@
 import Foundation
 
-/// A single vocabulary entry consisting of the Bulgarian word, its English
-/// translation, the part of speech (noun, verb, adjective, etc.) and the
-/// associated CEFR level (A1 or A2).  A unique identifier is generated
-/// automatically so that the objects can be used in SwiftUI lists.
+/// The direction in which a learner studies vocabulary.
+///
+/// * `.bulgarianToGerman` – German speakers learn Bulgarian words with
+///   German explanations.
+/// * `.germanToBulgarian` – Bulgarian speakers learn German words with
+///   Bulgarian explanations.
+enum LearningDirection: String, CaseIterable, Identifiable {
+    case bulgarianToGerman = "bgToDe"
+    case germanToBulgarian = "deToBg"
+
+    var id: String { rawValue }
+
+    /// Short text used on the toggle button (e.g. "BG→DE").
+    var toggleLabel: String {
+        self == .bulgarianToGerman ? "BG→DE" : "DE→BG"
+    }
+
+    /// Accessibility label describing the action of the toggle.
+    var toggleAccessibilityLabel: String {
+        self == .bulgarianToGerman ? "Switch to German to Bulgarian" : "Превключи към български към немски"
+    }
+
+    /// Label for the "all" filter in lists.
+    var allFilterLabel: String {
+        self == .bulgarianToGerman ? "Alle" : "Всички"
+    }
+
+    /// Message shown when search results are empty.
+    var noResultsText: String {
+        self == .bulgarianToGerman ? "Keine Ergebnisse." : "Няма резултати."
+    }
+
+    /// Text for clearing the search field.
+    var clearSearchLabel: String {
+        self == .bulgarianToGerman ? "Suche löschen" : "Изчисти търсенето"
+    }
+
+    /// Accessibility text for playing pronunciation of a given word.
+    func playPronunciationLabel(for word: String) -> String {
+        self == .bulgarianToGerman ? "Aussprache für \(word) abspielen" : "Пусни произношението на \(word)"
+    }
+}
+
+/// A single vocabulary entry consisting of the Bulgarian word, its German
+/// translation, the part of speech and the associated CEFR level. A unique
+/// identifier is generated automatically so that the objects can be used in
+/// SwiftUI lists.
 struct VocabularyItem: Identifiable {
     let id = UUID()
     let word: String
@@ -11,16 +54,74 @@ struct VocabularyItem: Identifiable {
     let type: String
     let level: String
     let notes: String?
-    
-    /// Audio settings for pronunciation
-    var audioSettings: AudioSettings {
-        AudioSettings(
-            text: word,
-            language: "bg-BG", // Bulgarian language code
-            rate: UserDefaults.standard.float(forKey: "speechRate"),
-            volume: UserDefaults.standard.float(forKey: "speechVolume")
-        )
+
+    /// Return the word shown to the user depending on the learning
+    /// direction. German learners see the Bulgarian word, Bulgarian
+    /// learners see the German word.
+    func displayedWord(for direction: LearningDirection) -> String {
+        direction == .bulgarianToGerman ? word : translation
     }
+
+    /// Return the translation shown to the user depending on the learning
+    /// direction.
+    func displayedTranslation(for direction: LearningDirection) -> String {
+        direction == .bulgarianToGerman ? translation : word
+    }
+
+    /// Localise the part of speech for the selected learning direction.
+    func displayedType(for direction: LearningDirection) -> String {
+        if direction == .bulgarianToGerman {
+            return type
+        }
+        return VocabularyItem.typeMap[type] ?? type
+    }
+
+    /// Return note text in both languages so learners can compare the
+    /// explanation in their target language with their native language.
+    ///
+    /// - Returns: A tuple containing the primary note (according to the
+    ///   current learning direction) and the secondary note in the other
+    ///   language if available.
+    func notesPair(for direction: LearningDirection) -> (primary: String?, secondary: String?) {
+        if direction == .bulgarianToGerman {
+            return (notes, VocabularyItem.bgNotesMap[word])
+        } else {
+            return (VocabularyItem.bgNotesMap[word], notes)
+        }
+    }
+
+    /// Return the appropriate language code for pronunciation depending on
+    /// the current direction.
+    func audioLanguage(for direction: LearningDirection) -> String {
+        direction == .bulgarianToGerman ? "bg-BG" : "de-DE"
+    }
+
+    /// Mapping between German and Bulgarian part‑of‑speech labels.
+    private static let typeMap: [String: String] = [
+        "Begrüßung": "Поздрав",
+        "Ausdruck": "Израз",
+        "Substantiv": "Съществително",
+        "Verb": "Глагол",
+        "Adjektiv": "Прилагателно",
+        "Adverb": "Наречие",
+        "Zahl": "Число",
+        "Quantor": "Квантор",
+        "Tag": "Ден",
+        "Natur": "Природа",
+        "Familie": "Семейство",
+        "Einkauf": "Пазаруване"
+    ]
+
+    /// Bulgarian translations for the explanatory notes keyed by the
+    /// Bulgarian word.
+    private static let bgNotesMap: [String: String] = [
+        "Здравей": "Думата \"Здравей\" произлиза от \"здрав\" и е пожелание за здраве.",
+        "Село": "\"Село\" означава малко населено място и е сродно с други славянски думи за селище.",
+        "Книга": "\"Книга\" идва от старославянски и първоначално е означавала свитък или подвързано произведение.",
+        "Вода": "\"Вода\" има същия индоевропейски корен като немската дума \"Wasser\".",
+        "Море": "\"Море\" означава море и е сродно на руското \"море\"; думата произхожда от праславянски корен.",
+        "Лев": "Българската валута \"лев\" е наречена на старото българско слово за \"лъв\" – национален символ."
+    ]
 }
 
 /// Audio settings for text-to-speech pronunciation
@@ -39,13 +140,39 @@ struct AudioSettings {
 }
 
 /// A grammar topic summarises a single concept such as gender or word order.
-/// Each topic has a title, a detailed description, a list of example
-/// sentences, and an associated level indicating when a learner is
-/// expected to encounter the topic.
+/// Text is provided in both Bulgarian and German so it can be shown to the
+/// learner depending on the selected learning direction.
 struct GrammarTopic: Identifiable {
     let id = UUID()
-    let title: String
-    let description: String
-    let examples: [String]
+    let titleBG: String
+    let titleDE: String
+    let descriptionBG: String
+    let descriptionDE: String
+    let examplesBG: [String]
+    let examplesDE: [String]
     let level: String
+
+    func title(for direction: LearningDirection) -> String {
+        direction == .bulgarianToGerman ? titleDE : titleBG
+    }
+
+    func description(for direction: LearningDirection) -> String {
+        direction == .bulgarianToGerman ? descriptionDE : descriptionBG
+    }
+
+    /// Provide description text in both languages to allow cross‑language
+    /// comparison in the detail view.
+    func descriptionPair(for direction: LearningDirection) -> (primary: String, secondary: String) {
+        direction == .bulgarianToGerman ? (descriptionDE, descriptionBG) : (descriptionBG, descriptionDE)
+    }
+
+    func examples(for direction: LearningDirection) -> [String] {
+        direction == .bulgarianToGerman ? examplesDE : examplesBG
+    }
+
+    /// Return example sentences in both languages so learners can see the
+    /// equivalent phrasing.
+    func examplesPair(for direction: LearningDirection) -> (primary: [String], secondary: [String]) {
+        direction == .bulgarianToGerman ? (examplesDE, examplesBG) : (examplesBG, examplesDE)
+    }
 }

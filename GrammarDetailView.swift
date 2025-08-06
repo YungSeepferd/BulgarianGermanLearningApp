@@ -5,20 +5,37 @@ import SwiftUI
 /// scroll view ensures content is readable on smaller screens.
 struct GrammarDetailView: View {
     let topic: GrammarTopic
+    @AppStorage("learningDirection") private var learningDirection: LearningDirection = .bulgarianToGerman
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                Text(topic.title)
+                Text(topic.title(for: learningDirection))
                     .font(.title)
                     .bold()
-                Text(topic.description)
+                let descriptions = topic.descriptionPair(for: learningDirection)
+                Text(descriptions.primary)
                     .font(.body)
-                if !topic.examples.isEmpty {
-                    Text("Examples:")
+                if !descriptions.secondary.isEmpty {
+                    Text((learningDirection == .bulgarianToGerman ? "На български: " : "Auf Deutsch: ") + descriptions.secondary)
+                        .font(.body)
+                        .foregroundColor(.secondary)
+                }
+
+                let examples = topic.examplesPair(for: learningDirection)
+                if !examples.primary.isEmpty {
+                    Text(learningDirection == .bulgarianToGerman ? "Beispiele:" : "Примери:")
                         .font(.headline)
                         .padding(.top)
-                    ForEach(topic.examples, id: \.self) { example in
+                    ForEach(examples.primary, id: \.self) { example in
+                        Text("• \(example)")
+                    }
+                }
+                if !examples.secondary.isEmpty {
+                    Text(learningDirection == .bulgarianToGerman ? "Примери на български:" : "Beispiele auf Deutsch:")
+                        .font(.headline)
+                        .padding(.top)
+                    ForEach(examples.secondary, id: \.self) { example in
                         Text("• \(example)")
                     }
                 }
@@ -26,14 +43,28 @@ struct GrammarDetailView: View {
             }
             .padding()
         }
-        .navigationTitle(topic.title)
+        .navigationTitle(topic.title(for: learningDirection))
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                DirectionToggle()
+            }
+        }
     }
 }
 
 struct GrammarDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            GrammarDetailView(topic: GrammarTopic(title: "Gender of Nouns", description: "Example description", examples: ["мъж – man"], level: "A1"))
+        let sample = GrammarTopic(
+            titleBG: "Род на съществителните",
+            titleDE: "Genus der Substantive",
+            descriptionBG: "Примерно описание",
+            descriptionDE: "Beispielbeschreibung",
+            examplesBG: ["мъж – мъжки род"],
+            examplesDE: ["мъж – Mann (Maskulinum)"],
+            level: "A1"
+        )
+        return NavigationView {
+            GrammarDetailView(topic: sample)
         }
     }
 }
