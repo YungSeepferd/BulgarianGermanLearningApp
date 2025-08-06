@@ -10,6 +10,14 @@
   },
   "jest": {
     "testEnvironment": "jsdom",
-    "setupFilesAfterEnv": ["@testing-library/jest-dom"]
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.4",
+    "eslint": "^8.57.1",
+    "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5"
   }
 }

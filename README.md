@@ -17,6 +17,7 @@ A modern web application for learning Bulgarian vocabulary and grammar with Germ
 - **📱 Responsive Design**: Works perfectly on desktop, tablet, and mobile
 - **⚙️ Customizable Settings**: Adjust speech rate and volume
 - **🌍 CEFR Levels**: Organized by A1 (Beginner) and A2 (Elementary) levels
+- **🔄 Bilingual Mode**: Toggle between Bulgarian→German and German→Bulgarian on any screen
 
 ## 🚀 Getting Started
 
