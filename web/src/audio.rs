@@ -13,7 +13,7 @@ pub struct Audio {
 #[cfg(target_arch = "wasm32")]
 impl Audio {
     pub fn new() -> Self {
-        let win = window().expect("no window");
+        let win = window().expect("Failed to access browser window - required for speech synthesis");
         let synth = win
             .speech_synthesis()
             .expect("speech synthesis not available");
