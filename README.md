@@ -1,4 +1,5 @@
 # Bulgarian-German Learning App
+# Bulgarian-German Learning App
 
 A modern web application for learning Bulgarian vocabulary and grammar with German translations and audio pronunciation.
 
