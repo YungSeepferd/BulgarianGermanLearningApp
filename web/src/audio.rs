@@ -1,6 +1,7 @@
 #[cfg(target_arch = "wasm32")]
 use web_sys::{window, SpeechSynthesis, SpeechSynthesisUtterance};
 
+/// Thin wrapper around the Web Speech API used from WASM.
 #[cfg(target_arch = "wasm32")]
 pub struct Audio {
     synth: SpeechSynthesis,
@@ -21,7 +22,7 @@ impl Audio {
             .as_ref()
             .and_then(|s| s.get_item("speechRate").ok().flatten())
             .and_then(|v| v.parse().ok())
-            .unwrap_or(1.0);
+            .unwrap_or(0.5);
         let volume = storage
             .as_ref()
             .and_then(|s| s.get_item("speechVolume").ok().flatten())
@@ -49,14 +50,22 @@ impl Audio {
         }
     }
 
-    pub fn update_settings(&mut self, rate: f32, volume: f32) {
+    pub fn set_rate(&mut self, rate: f32) {
         self.rate = rate;
-        self.volume = volume;
         if let Some(storage) = window()
             .and_then(|w| w.local_storage().ok())
             .flatten()
         {
             let _ = storage.set_item("speechRate", &rate.to_string());
+        }
+    }
+
+    pub fn set_volume(&mut self, volume: f32) {
+        self.volume = volume;
+        if let Some(storage) = window()
+            .and_then(|w| w.local_storage().ok())
+            .flatten()
+        {
             let _ = storage.set_item("speechVolume", &volume.to_string());
         }
     }
@@ -81,15 +90,18 @@ impl Audio {
 }
 
 #[cfg(not(target_arch = "wasm32"))]
+#[allow(dead_code)]
 pub struct Audio;
 
 #[cfg(not(target_arch = "wasm32"))]
+#[allow(dead_code)]
 impl Audio {
     pub fn new() -> Self {
         Self
     }
     pub fn set_language(&mut self, _language: &str) {}
-    pub fn update_settings(&mut self, _rate: f32, _volume: f32) {}
+    pub fn set_rate(&mut self, _rate: f32) {}
+    pub fn set_volume(&mut self, _volume: f32) {}
     pub fn play(&mut self, _text: &str) {}
     pub fn stop(&self) {}
 }
