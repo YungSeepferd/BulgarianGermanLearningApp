@@ -1,0 +1,59 @@
+name: Lint and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install ESLint
+        run: |
+          npm init -y
+          npm install eslint --save-dev
+          npm install eslint-config-standard --save-dev
+          npx eslint --init
+
+      - name: Run ESLint
+        run: npx eslint '**/*.js'
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Jest
+        run: |
+          npm init -y
+          npm install --save-dev jest
+          npm install --save-dev @testing-library/jest-dom
+
+      - name: Run Tests
+        run: npm test
+
+  validate-html:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Validate HTML
+        uses: Cyb3r-Jak3/html5validator-action@master
+        with:
+          root: .
+          format: text
+          log_level: INFO

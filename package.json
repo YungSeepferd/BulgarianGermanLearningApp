@@ -1,0 +1,15 @@
+{
+  "name": "bulgarian-vocabulary-app",
+  "version": "1.0.0",
+  "description": "A web application for learning Bulgarian vocabulary and grammar with German translations",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint '**/*.js'",
+    "start": "python -m http.server 8000"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["@testing-library/jest-dom"]
+  }
+}
