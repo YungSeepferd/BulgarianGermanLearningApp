@@ -74,7 +74,7 @@ impl Audio {
         if self.synth.speaking() {
             let _ = self.synth.cancel();
         }
-        let utter = SpeechSynthesisUtterance::new().expect("create utterance");
+        let utter = SpeechSynthesisUtterance::new().expect("Failed to create speech synthesis utterance");
         utter.set_text(text);
         utter.set_lang(&self.language);
         utter.set_rate(self.rate);
