@@ -31,7 +31,7 @@ impl Audio {
         let language = storage
             .as_ref()
             .and_then(|s| s.get_item("selectedLanguage").ok().flatten())
-            .unwrap_or_else(|| "en-US".to_string());
+            .unwrap_or_else(|| DEFAULT_LANGUAGE.to_string());
         Self {
             synth,
             rate,
