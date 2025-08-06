@@ -1,3 +1,4 @@
+/* global module */
 // Web Speech API implementation for the Bulgarian Learning App
 const speechSynthesis = window.speechSynthesis;
 let currentUtterance = null;
@@ -61,4 +62,8 @@ function stopSpeaking() {
 function updateAudioSettings(rate, volume) {
     localStorage.setItem('speechRate', rate);
     localStorage.setItem('speechVolume', volume);
+}
+
+if (typeof module !== 'undefined') {
+    module.exports = { setLanguage, speak, stopSpeaking, updateAudioSettings, LANGUAGES };
 }

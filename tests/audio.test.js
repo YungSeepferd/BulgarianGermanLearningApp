@@ -1,13 +1,12 @@
+/* eslint-env jest, node */
+
 describe('Audio functionality', () => {
+    let audio;
+
     beforeEach(() => {
-        // Mock localStorage
-        const localStorageMock = {
-            getItem: jest.fn(),
-            setItem: jest.fn(),
-            clear: jest.fn()
-        };
-        global.localStorage = localStorageMock;
-        
+        // Clear localStorage
+        window.localStorage.clear();
+
         // Mock Web Speech API
         global.speechSynthesis = {
             speaking: false,
@@ -15,16 +14,20 @@ describe('Audio functionality', () => {
             speak: jest.fn()
         };
         global.SpeechSynthesisUtterance = jest.fn();
+
+        // Require module after mocks are set
+        jest.resetModules();
+        audio = require('../audio.js');
     });
 
     test('setLanguage updates localStorage', () => {
-        setLanguage('bg-BG');
-        expect(localStorage.setItem).toHaveBeenCalledWith('selectedLanguage', 'bg-BG');
+        audio.setLanguage('bg-BG');
+        expect(window.localStorage.getItem('selectedLanguage')).toBe('bg-BG');
     });
 
     test('speak function uses correct language', () => {
-        localStorage.getItem.mockReturnValue('bg-BG');
-        speak('test');
+        window.localStorage.setItem('selectedLanguage', 'bg-BG');
+        audio.speak('test');
         expect(SpeechSynthesisUtterance).toHaveBeenCalled();
         expect(speechSynthesis.speak).toHaveBeenCalled();
     });

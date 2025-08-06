@@ -14,12 +14,15 @@
         <header class="header">
             <div class="header-content">
                 <div class="app-title">
-                    <h1>Bulgarian</h1>
-                    <h2>Learning App</h2>
+                    <h1 id="app-title-1">Bulgarian</h1>
+                    <h2 id="app-title-2">Learning App</h2>
                 </div>
-                <button class="settings-btn" onclick="showSettings()">
-                    <i class="fas fa-cog"></i>
-                </button>
+                <div class="header-actions">
+                    <button class="direction-toggle" onclick="toggleDirection()" aria-label="Switch direction"></button>
+                    <button class="settings-btn" onclick="showSettings()">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
             </div>
         </header>
 
@@ -75,6 +78,7 @@
                         <i class="fas fa-arrow-left"></i>
                     </button>
                     <h3 id="vocabulary-title">Vocabulary</h3>
+                    <button class="direction-toggle" onclick="toggleDirection()" aria-label="Switch direction"></button>
                 </div>
 
                 <div class="search-filter">
@@ -102,6 +106,7 @@
                         <i class="fas fa-arrow-left"></i>
                     </button>
                     <h3 id="detail-title">Word Detail</h3>
+                    <button class="direction-toggle" onclick="toggleDirection()" aria-label="Switch direction"></button>
                 </div>
 
                 <div class="detail-content" id="detail-content">
@@ -116,6 +121,7 @@
                         <i class="fas fa-arrow-left"></i>
                     </button>
                     <h3 id="grammar-title">Grammar</h3>
+                    <button class="direction-toggle" onclick="toggleDirection()" aria-label="Switch direction"></button>
                 </div>
 
                 <div class="grammar-list" id="grammar-list">
@@ -130,6 +136,7 @@
                         <i class="fas fa-arrow-left"></i>
                     </button>
                     <h3 id="grammar-detail-title">Grammar Topic</h3>
+                    <button class="direction-toggle" onclick="toggleDirection()" aria-label="Switch direction"></button>
                 </div>
 
                 <div class="grammar-detail-content" id="grammar-detail-content">
@@ -142,40 +149,40 @@
         <div id="settings-modal" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3>Settings</h3>
+                    <h3 id="settings-title">Settings</h3>
                     <button class="close-btn" onclick="hideSettings()">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="settings-section">
-                        <h4>Audio Settings</h4>
+                        <h4 id="audio-settings-title">Audio Settings</h4>
                         <div class="setting-item">
-                            <label>Speech Rate: <span id="rate-value">50%</span></label>
+                            <label id="speech-rate-label">Speech Rate: <span id="rate-value">50%</span></label>
                             <input type="range" id="speech-rate" min="0.1" max="1.0" step="0.1" value="0.5" oninput="updateSpeechRate()">
-                            <p class="setting-description">Adjust how fast the words are spoken.</p>
+                            <p id="speech-rate-desc" class="setting-description">Adjust how fast the words are spoken.</p>
                         </div>
                         <div class="setting-item">
-                            <label>Volume: <span id="volume-value">100%</span></label>
+                            <label id="speech-volume-label">Volume: <span id="volume-value">100%</span></label>
                             <input type="range" id="speech-volume" min="0.0" max="1.0" step="0.1" value="1.0" oninput="updateSpeechVolume()">
-                            <p class="setting-description">Adjust the pronunciation volume.</p>
+                            <p id="speech-volume-desc" class="setting-description">Adjust the pronunciation volume.</p>
                         </div>
                     </div>
                     <div class="settings-section">
-                        <h4>Test Audio</h4>
+                        <h4 id="test-audio-title">Test Audio</h4>
                         <div class="test-audio">
-                            <span>Test pronunciation</span>
+                            <span id="test-audio-label">Test pronunciation</span>
                             <button class="play-btn" onclick="testAudio()">
                                 <i class="fas fa-play"></i>
                             </button>
                         </div>
                     </div>
                     <div class="settings-section">
-                        <h4>About</h4>
+                        <h4 id="about-title">About</h4>
                         <div class="about-info">
-                            <h5>Bulgarian-German Learning App</h5>
-                            <p>Version 1.0</p>
-                            <p>Learn Bulgarian vocabulary with German translations and audio pronunciation.</p>
+                            <h5 id="about-app-name">Bulgarian-German Learning App</h5>
+                            <p id="about-version">Version 1.0</p>
+                            <p id="about-description">Learn Bulgarian vocabulary with German translations and audio pronunciation.</p>
                         </div>
                     </div>
                 </div>
