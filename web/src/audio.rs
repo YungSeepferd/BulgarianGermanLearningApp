@@ -16,7 +16,7 @@ impl Audio {
         let win = window().expect("Failed to access browser window - required for speech synthesis");
         let synth = win
             .speech_synthesis()
-            .expect("speech synthesis not available");
+            .expect("Speech synthesis API is not supported in this browser");
         let storage = win.local_storage().ok().flatten();
         let rate = storage
             .as_ref()
