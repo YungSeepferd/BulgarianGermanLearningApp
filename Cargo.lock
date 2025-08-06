@@ -482,6 +482,8 @@ name = "bglg_app_web"
 version = "0.1.0"
 dependencies = [
  "bglg_app_lib",
+ "wasm-bindgen",
+ "web-sys",
  "yew",
 ]
 
