@@ -1,0 +1,8 @@
+[package]
+name = "bglg_app_web"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+yew = { version = "0.21", features = ["csr"] }
+bglg_app_lib = { path = "../lib" }
