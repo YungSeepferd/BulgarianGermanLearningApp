@@ -482,6 +482,7 @@ name = "bglg_app_web"
 version = "0.1.0"
 dependencies = [
  "bglg_app_lib",
+ "web-sys",
  "yew",
 ]
 
