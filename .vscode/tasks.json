@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Build and Run SwiftUI App",
+			"command": "swift run",
+			"group": "build",
+			"problemMatcher": [
+				"$swift"
+			],
+			"isBackground": false
+		}
+	]
+}
