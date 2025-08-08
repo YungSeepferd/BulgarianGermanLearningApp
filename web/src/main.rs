@@ -1,5 +1,5 @@
-use bglg_app_web::{GrammarView, VocabularyView};
 use bglg_app_web::audio::{set_language, speak, stop_speaking, update_audio_settings};
+use bglg_app_web::{GrammarView, VocabularyView};
 use web_sys::{HtmlInputElement, HtmlSelectElement};
 use yew::prelude::*;
 
@@ -108,5 +108,6 @@ fn app() -> Html {
 }
 
 fn main() {
+    wasm_logger::init(wasm_logger::Config::default());
     yew::Renderer::<App>::new().render();
 }
