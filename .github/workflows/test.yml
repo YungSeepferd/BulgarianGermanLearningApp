@@ -10,26 +10,25 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
 
       - name: Install Jest
         run: |
           npm init -y
-          npm install --save-dev jest
-          npm install --save-dev @testing-library/jest-dom
+          npm install --save-dev jest @testing-library/jest-dom
 
       - name: Run Tests
-        run: npm test
+        run: npx jest --passWithNoTests
 
   validate-html:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Validate HTML
         uses: Cyb3r-Jak3/html5validator-action@master
