@@ -217,7 +217,9 @@ pub fn stop_speaking() {
         match win.speech_synthesis() {
             Ok(synth) => {
                 if synth.speaking() {
-                    synth.cancel();
+                    if let Err(e) = synth.cancel() {
+                        warn!("Failed to cancel speech synthesis: {:?}", e);
+                    }
                 }
             }
             Err(e) => warn!("Speech synthesis unavailable: {:?}", e),
