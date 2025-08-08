@@ -1,8 +1,0 @@
-[package]
-name = "bglg_app_desktop"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-bglg_app_lib = { path = "../lib" }
-eframe = "0.28"
