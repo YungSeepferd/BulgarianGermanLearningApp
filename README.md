@@ -1,8 +1,8 @@
 # Bulgarian-German Learning App (Rust Rewrite)
 
 This repository contains a Rust-powered vocabulary and grammar trainer.
-The project targets both the web (via WebAssembly) and native desktops while sharing a
-common library for data models and learning logic.
+The project targets the web via WebAssembly while sharing a common library for data
+models and learning logic.
 
 ## Project Layout
 
@@ -11,7 +11,6 @@ common library for data models and learning logic.
 ├── Cargo.toml            # Workspace definition
 ├── lib/                  # Shared library crate
 ├── web/                  # Yew-based web frontend (WASM)
-├── desktop/              # Desktop application (egui/eframe placeholder)
 └── README.md
 ```
 
@@ -31,14 +30,11 @@ select language, rate, and volume without relying on legacy JavaScript code.
 
 ### Web (WASM)
 ```bash
-cd web
-trunk serve # or `trunk build --release`
+wasm-pack build --target web web
 ```
 
-### Desktop
-```bash
-cargo run -p bglg_app_desktop
-```
+The repository includes a GitHub Actions workflow that builds the WebAssembly package
+and deploys it to GitHub Pages on every push to `main`.
 
 ## Testing
 

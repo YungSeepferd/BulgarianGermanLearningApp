@@ -1,4 +1,7 @@
 use bglg_app_web::{AudioControls, GrammarView, LevelSelector, VocabularyView};
+use console_error_panic_hook;
+use log::info;
+use wasm_logger;
 use yew::prelude::*;
 
 #[function_component(App)]
@@ -38,5 +41,8 @@ fn app() -> Html {
 }
 
 fn main() {
+    console_error_panic_hook::set_once();
+    wasm_logger::init(wasm_logger::Config::default());
+    info!("Web app starting");
     yew::Renderer::<App>::new().render();
 }
