@@ -203,7 +203,9 @@ pub fn speak(text: &str) {
         onend.forget();
 
         let utter_clone = utter.clone();
-        s.speak(&utter);
+        if let Err(e) = s.speak(&utter) {
+            warn!("Failed to speak utterance: {:?}", e);
+        }
         CURRENT_UTTERANCE.with(|u| *u.borrow_mut() = Some(utter_clone));
     } else {
         CURRENT_UTTERANCE.with(|u| *u.borrow_mut() = Some(utter));
