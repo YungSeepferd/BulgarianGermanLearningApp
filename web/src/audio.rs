@@ -67,7 +67,9 @@ pub fn speak(text: &str) {
     };
     if let Some(s) = synth.as_ref() {
         if s.speaking() {
-            s.cancel();
+            if let Err(e) = s.cancel() {
+                warn!("Failed to cancel speech synthesis: {:?}", e);
+            }
         }
     }
 
