@@ -1,0 +1,59 @@
+# Hugo build artifacts
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Hugo development
+hugo_stats.json
+
+# Node modules and package files
+node_modules/
+package-lock.json
+yarn.lock
+npm-debug.log*
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build and deployment artifacts
+dist/
+build/
+*.tgz
+*.tar.gz
+
+# Legacy Rust/WASM artifacts (should not exist but just in case)
+target/
+Cargo.lock
+Cargo.toml
+*.wasm
+*.js.map
+*.d.ts
+*_bg.wasm
+*_bg.wasm.d.ts
+web/pkg/
+web/dist/

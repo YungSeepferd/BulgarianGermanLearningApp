@@ -1,0 +1,209 @@
+{{ define "title" }}Practice Session - {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+
+<div class="practice-container">
+    <div class="practice-header">
+        <div class="session-stats">
+            <span class="stat">
+                <span class="stat-label">Progress:</span>
+                <span class="stat-value" id="progress">0/0</span>
+            </span>
+            <span class="stat">
+                <span class="stat-label">Accuracy:</span>
+                <span class="stat-value" id="accuracy">0%</span>
+            </span>
+            <span class="stat">
+                <span class="stat-label">Time:</span>
+                <span class="stat-value" id="session-time">00:00</span>
+            </span>
+        </div>
+        
+        <div class="session-controls">
+            <button id="end-session" class="btn-secondary">End Session</button>
+            <button id="settings-toggle" class="btn-secondary" title="Session Settings">⚙️</button>
+        </div>
+    </div>
+    
+    <!-- Session Settings Panel -->
+    <div class="settings-panel hidden" id="settings-panel">
+        <div class="setting-group">
+            <label for="session-length">Session Length:</label>
+            <select id="session-length">
+                <option value="10">10 items</option>
+                <option value="20" selected>20 items</option>
+                <option value="30">30 items</option>
+                <option value="50">50 items</option>
+            </select>
+        </div>
+        
+        <div class="setting-group">
+            <label for="difficulty-filter">Difficulty:</label>
+            <select id="difficulty-filter">
+                <option value="">All Levels</option>
+                <option value="A1">A1 - Beginner</option>
+                <option value="A2">A2 - Elementary</option>
+                <option value="B1">B1 - Intermediate</option>
+                <option value="B2">B2 - Upper Intermediate</option>
+            </select>
+        </div>
+        
+        <div class="setting-group">
+            <label>
+                <input type="checkbox" id="audio-enabled" checked>
+                Enable Audio
+            </label>
+        </div>
+    </div>
+    
+    <!-- Loading State -->
+    <div class="loading-state" id="loading-state">
+        <div class="spinner"></div>
+        <p>Preparing your practice session...</p>
+    </div>
+    
+    <!-- No Items Available -->
+    <div class="no-items-state hidden" id="no-items-state">
+        <div class="no-items-content">
+            <h2>🎉 Great job!</h2>
+            <p>You've completed all available items for today.</p>
+            <p>Come back tomorrow for more practice, or review vocabulary and grammar.</p>
+            
+            <div class="no-items-actions">
+                <a href="/vocabulary/" class="btn-primary">Browse Vocabulary</a>
+                <a href="/grammar/" class="btn-secondary">Study Grammar</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Practice Session -->
+    <div class="practice-session hidden" id="practice-session">
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <div class="card-content">
+                            <div class="word" id="current-word"></div>
+                            <div class="word-meta">
+                                <span class="level-badge" id="word-level"></span>
+                                <span class="category-tag" id="word-category"></span>
+                            </div>
+                        </div>
+                        
+                        {{ if .Site.Params.enableAudio }}
+                        <button class="audio-btn" id="play-audio" title="Play pronunciation">
+                            <span class="audio-icon">🔊</span>
+                        </button>
+                        {{ end }}
+                    </div>
+                    
+                    <div class="flashcard-back">
+                        <div class="card-content">
+                            <div class="translation" id="current-translation"></div>
+                            <div class="notes" id="current-notes"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flashcard-controls">
+                <button id="show-answer" class="btn-primary">Show Answer</button>
+                
+                <div class="response-buttons hidden" id="response-buttons">
+                    <button id="incorrect-btn" class="btn-incorrect">
+                        <span class="icon">✗</span>
+                        <span class="text">Incorrect</span>
+                        <span class="shortcut">1</span>
+                    </button>
+                    <button id="correct-btn" class="btn-correct">
+                        <span class="icon">✓</span>
+                        <span class="text">Correct</span>
+                        <span class="shortcut">2</span>
+                    </button>
+                </div>
+                
+                <div class="hint-section">
+                    <button id="show-hint" class="btn-hint">💡 Hint</button>
+                    <div class="hint-content hidden" id="hint-content"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+    </div>
+    
+    <!-- Session Complete -->
+    <div class="session-complete hidden" id="session-complete">
+        <div class="completion-stats">
+            <h2>🎉 Session Complete!</h2>
+            
+            <div class="final-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="final-correct">0</span>
+                    <span class="stat-label">Correct</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="final-total">0</span>
+                    <span class="stat-label">Total</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="final-accuracy">0%</span>
+                    <span class="stat-label">Accuracy</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="final-time">0:00</span>
+                    <span class="stat-label">Time</span>
+                </div>
+            </div>
+            
+            <div class="performance-feedback" id="performance-feedback">
+                <!-- Dynamic feedback based on performance -->
+            </div>
+            
+            <div class="session-actions">
+                <button id="new-session" class="btn-primary">New Session</button>
+                <a href="/vocabulary/" class="btn-secondary">Browse Vocabulary</a>
+                <button id="review-mistakes" class="btn-secondary">Review Mistakes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+// Initialize practice session
+document.addEventListener('DOMContentLoaded', function() {
+    const practiceSession = new PracticeSession({
+        vocabulary: {{ .Site.Data.vocabulary | jsonify }},
+        enableAudio: {{ .Site.Params.enableAudio | default false }},
+        sessionLength: {{ .Site.Params.defaultSessionLength | default 20 }}
+    });
+    
+    practiceSession.init();
+    
+    // Keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+        if (e.key === '1') {
+            const incorrectBtn = document.getElementById('incorrect-btn');
+            if (incorrectBtn && !incorrectBtn.classList.contains('hidden')) {
+                incorrectBtn.click();
+            }
+        } else if (e.key === '2') {
+            const correctBtn = document.getElementById('correct-btn');
+            if (correctBtn && !correctBtn.classList.contains('hidden')) {
+                correctBtn.click();
+            }
+        } else if (e.key === ' ' || e.key === 'Enter') {
+            e.preventDefault();
+            const showAnswerBtn = document.getElementById('show-answer');
+            if (showAnswerBtn && !showAnswerBtn.classList.contains('hidden')) {
+                showAnswerBtn.click();
+            }
+        }
+    });
+});
+</script>
+{{ end }}

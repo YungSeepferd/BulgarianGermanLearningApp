@@ -1,0 +1,89 @@
+// Code block styles
+.code-block {
+  position: relative;
+  margin: $spacing-6 0;
+  border-radius: $radius-md;
+  background-color: var(--code-bg);
+  box-shadow: $shadow-sm;
+  overflow: hidden;
+
+  .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-2 $spacing-4;
+    background-color: var(--code-header-bg);
+    border-bottom: 1px solid var(--border-primary);
+    font-family: $font-family-mono;
+    font-size: $font-size-sm;
+    color: var(--text-secondary);
+  }
+
+  .language {
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .copy-button {
+    display: flex;
+    align-items: center;
+    padding: $spacing-1 $spacing-2;
+    background: none;
+    border: 1px solid var(--border-primary);
+    border-radius: $radius-sm;
+    color: var(--text-secondary);
+    font-size: $font-size-xs;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: var(--bg-secondary);
+      color: var(--text-primary);
+    }
+
+    .copy-icon {
+      margin-right: $spacing-1;
+    }
+  }
+
+  .highlight {
+    padding: $spacing-4;
+    overflow-x: auto;
+
+    pre {
+      margin: 0;
+      padding: 0;
+      background: none;
+      font-family: $font-family-mono;
+      font-size: $font-size-sm;
+      line-height: 1.5;
+      tab-size: 2;
+    }
+
+    code {
+      font-family: inherit;
+    }
+  }
+}
+
+// Inline code styles
+:not(pre) > code {
+  padding: 0.2em 0.4em;
+  background-color: var(--code-bg);
+  border-radius: $radius-sm;
+  font-family: $font-mono;
+  font-size: 0.9em;
+  color: var(--code-text);
+}
+
+// Responsive adjustments
+@media (max-width: var(--breakpoint-md)) {
+  .code-block {
+    margin: $spacing-4 0;
+    
+    .highlight {
+      padding: $spacing-3;
+    }
+  }
+}

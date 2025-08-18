@@ -1,0 +1,347 @@
+# Hugo-Based Bulgarian-German Learning App Architecture
+
+# Hugo Static Site Generator Architecture for Language Learning
+# This extends the existing pseudocode to work with Hugo's static site generation
+# and Go's template system for GitHub Pages deployment
+
+## Project Structure
+```
+hugo-bulgarian-app/
+├── archetypes/          # Content templates
+│   ├── vocabulary.md    # Vocabulary item template
+│   └── grammar.md       # Grammar rule template
+├── assets/              # Source files for Hugo Pipes
+│   ├── js/             # JavaScript source files
+│   ├── scss/           # SCSS stylesheets
+│   └── data/           # JSON data processing
+├── content/            # Markdown content files
+│   ├── vocabulary/     # Vocabulary items as markdown
+│   ├── grammar/        # Grammar rules as markdown
+│   └── practice/       # Practice session content
+├── data/               # Data files (JSON, YAML, TOML)
+│   ├── vocabulary.json # Vocabulary data
+│   ├── grammar.json    # Grammar data
+│   └── config.json     # App configuration
+├── layouts/            # HTML templates
+│   ├── _default/       # Default templates
+│   ├── vocabulary/     # Vocabulary-specific templates
+│   ├── grammar/        # Grammar-specific templates
+│   ├── practice/       # Practice session templates
+│   └── partials/       # Reusable template components
+├── static/             # Static assets (images, fonts)
+├── themes/             # Hugo themes (if using external themes)
+├── hugo.toml          # Hugo configuration
+└── package.json       # Node.js dependencies for asset processing
+```
+
+## Core Hugo Integration Concepts
+
+INTERFACE HugoContentType
+    METHODS:
+        render_to_markdown() -> String
+        get_front_matter() -> Map[String, Any]
+        get_hugo_params() -> Map[String, Any]
+
+INTERFACE HugoDataProcessor
+    METHODS:
+        process_json_data() -> List[HugoContentType]
+        generate_static_pages() -> Void
+        build_search_index() -> Map[String, Any]
+
+## Extended Data Models for Hugo
+
+CLASS HugoVocabularyItem EXTENDS VocabularyItem IMPLEMENTS HugoContentType
+    FIELDS:
+        slug: String              # URL-friendly identifier
+        hugo_weight: Integer      # Hugo page weight for ordering
+        hugo_tags: List[String]   # Hugo taxonomy tags
+        hugo_categories: List[String] # Hugo taxonomy categories
+        audio_file: String?       # Path to audio file
+        image_file: String?       # Path to associated image
+        
+    METHODS:
+        render_to_markdown() -> String
+            front_matter = get_front_matter()
+            content = format_markdown_content()
+            RETURN front_matter + "\n---\n" + content
+            
+        get_front_matter() -> Map[String, Any]
+            RETURN {
+                "title": this.word,
+                "translation": this.translation,
+                "category": this.category,
+                "level": this.level,
+                "weight": this.hugo_weight,
+                "tags": this.hugo_tags,
+                "audio": this.audio_file,
+                "image": this.image_file,
+                "type": "vocabulary"
+            }
+            
+        get_hugo_params() -> Map[String, Any]
+            RETURN {
+                "difficulty": calculate_difficulty(),
+                "frequency": get_usage_frequency(),
+                "related_grammar": find_related_grammar()
+            }
+
+CLASS HugoGrammarItem EXTENDS GrammarItem IMPLEMENTS HugoContentType
+    FIELDS:
+        slug: String
+        hugo_weight: Integer
+        prerequisites: List[String]  # Other grammar topics needed first
+        exercises: List[GrammarExercise]
+        
+    METHODS:
+        render_to_markdown() -> String
+            front_matter = get_front_matter()
+            content = format_grammar_content()
+            RETURN front_matter + "\n---\n" + content
+            
+        get_front_matter() -> Map[String, Any]
+            RETURN {
+                "title": this.title,
+                "description": this.description,
+                "level": this.level,
+                "weight": this.hugo_weight,
+                "prerequisites": this.prerequisites,
+                "type": "grammar"
+            }
+
+CLASS GrammarExercise
+    FIELDS:
+        question: String
+        options: List[String]
+        correct_answer: Integer
+        explanation: String
+
+## Hugo Data Processing Service
+
+CLASS HugoDataProcessor IMPLEMENTS HugoDataProcessor
+    FIELDS:
+        vocabulary_data: List[HugoVocabularyItem]
+        grammar_data: List[HugoGrammarItem]
+        output_dir: String
+        
+    METHODS:
+        process_json_data() -> List[HugoContentType]
+            """
+            Convert JSON data files into Hugo-compatible content files
+            """
+            all_content = []
+            
+            # Process vocabulary data
+            FOR EACH vocab_item IN load_vocabulary_json()
+                hugo_item = HugoVocabularyItem.from_json(vocab_item)
+                hugo_item.slug = generate_slug(hugo_item.word)
+                hugo_item.hugo_weight = calculate_weight(hugo_item)
+                hugo_item.hugo_tags = extract_tags(hugo_item)
+                all_content.append(hugo_item)
+            END FOR
+            
+            # Process grammar data
+            FOR EACH grammar_item IN load_grammar_json()
+                hugo_item = HugoGrammarItem.from_json(grammar_item)
+                hugo_item.slug = generate_slug(hugo_item.title)
+                hugo_item.exercises = generate_exercises(hugo_item)
+                all_content.append(hugo_item)
+            END FOR
+            
+            RETURN all_content
+            
+        generate_static_pages() -> Void
+            """
+            Generate markdown files for Hugo to process
+            """
+            content_items = process_json_data()
+            
+            FOR EACH item IN content_items
+                file_path = determine_content_path(item)
+                markdown_content = item.render_to_markdown()
+                write_file(file_path, markdown_content)
+            END FOR
+            
+        build_search_index() -> Map[String, Any]
+            """
+            Create a search index for client-side search functionality
+            """
+            search_index = {
+                "vocabulary": [],
+                "grammar": []
+            }
+            
+            FOR EACH vocab_item IN vocabulary_data
+                search_entry = {
+                    "id": vocab_item.slug,
+                    "title": vocab_item.word,
+                    "content": vocab_item.word + " " + vocab_item.translation,
+                    "category": vocab_item.category,
+                    "level": vocab_item.level,
+                    "url": "/vocabulary/" + vocab_item.slug + "/"
+                }
+                search_index["vocabulary"].append(search_entry)
+            END FOR
+            
+            FOR EACH grammar_item IN grammar_data
+                search_entry = {
+                    "id": grammar_item.slug,
+                    "title": grammar_item.title,
+                    "content": grammar_item.description,
+                    "level": grammar_item.level,
+                    "url": "/grammar/" + grammar_item.slug + "/"
+                }
+                search_index["grammar"].append(search_entry)
+            END FOR
+            
+            RETURN search_index
+
+## Hugo Template Integration
+
+CLASS HugoTemplateRenderer
+    METHODS:
+        render_vocabulary_list(items: List[HugoVocabularyItem]) -> String
+            """
+            Render vocabulary list template with Hugo template syntax
+            """
+            RETURN """
+            {{ range .Site.Data.vocabulary }}
+            <div class="vocab-card" data-level="{{ .level }}" data-category="{{ .category }}">
+                <div class="word">{{ .word }}</div>
+                <div class="translation">{{ .translation }}</div>
+                {{ if .audio }}
+                <button class="play-audio" data-audio="{{ .audio }}">🔊</button>
+                {{ end }}
+            </div>
+            {{ end }}
+            """
+            
+        render_practice_session() -> String
+            """
+            Render practice session template with JavaScript integration
+            """
+            RETURN """
+            <div id="practice-container">
+                <div id="flashcard">
+                    <div class="card-front"></div>
+                    <div class="card-back"></div>
+                </div>
+                <div class="controls">
+                    <button id="show-answer">Show Answer</button>
+                    <button id="correct" class="hidden">Correct ✓</button>
+                    <button id="incorrect" class="hidden">Incorrect ✗</button>
+                </div>
+            </div>
+            
+            <script>
+                // Initialize practice session with Hugo data
+                const vocabularyData = {{ .Site.Data.vocabulary | jsonify }};
+                const practiceSession = new PracticeSession(vocabularyData);
+                practiceSession.start();
+            </script>
+            """
+
+## Client-Side JavaScript Integration
+
+CLASS HugoPracticeSession
+    FIELDS:
+        vocabulary_data: List[Map[String, Any]]
+        current_item: Map[String, Any]
+        review_states: Map[String, ReviewState]
+        session_stats: SessionStats
+        
+    METHODS:
+        initialize_from_hugo_data(hugo_data: Map[String, Any]) -> Void
+            """
+            Initialize practice session with data from Hugo templates
+            """
+            this.vocabulary_data = hugo_data["vocabulary"]
+            this.review_states = load_from_local_storage("review_states")
+            this.session_stats = SessionStats()
+            
+        start_practice_session() -> Void
+            """
+            Start a new practice session with due items
+            """
+            due_items = filter_due_items(this.vocabulary_data)
+            IF due_items.length == 0 THEN
+                show_no_items_message()
+                RETURN
+            END IF
+            
+            this.current_item = select_next_item(due_items)
+            render_flashcard(this.current_item)
+            
+        handle_user_response(correct: Boolean) -> Void
+            """
+            Process user response and update review state
+            """
+            item_id = this.current_item["slug"]
+            current_state = this.review_states.get(item_id, ReviewState())
+            
+            (next_review, updated_state) = calculate_next_review(correct, current_state)
+            this.review_states[item_id] = updated_state
+            
+            save_to_local_storage("review_states", this.review_states)
+            update_session_stats(correct)
+            
+            # Move to next item or end session
+            IF has_more_items() THEN
+                this.current_item = select_next_item()
+                render_flashcard(this.current_item)
+            ELSE
+                show_session_complete()
+            END IF
+
+CLASS SessionStats
+    FIELDS:
+        correct_answers: Integer
+        total_answers: Integer
+        session_start_time: DateTime
+        
+    METHODS:
+        get_accuracy() -> Float
+            IF this.total_answers == 0 THEN
+                RETURN 0.0
+            END IF
+            RETURN this.correct_answers / this.total_answers
+            
+        get_session_duration() -> Integer
+            RETURN CURRENT_TIME - this.session_start_time
+
+## Hugo Build Process Integration
+
+CLASS HugoBuildProcess
+    METHODS:
+        pre_build_hook() -> Void
+            """
+            Run before Hugo builds the site
+            """
+            processor = HugoDataProcessor()
+            processor.generate_static_pages()
+            
+            search_index = processor.build_search_index()
+            write_json_file("static/search-index.json", search_index)
+            
+        post_build_hook() -> Void
+            """
+            Run after Hugo builds the site
+            """
+            optimize_assets()
+            generate_service_worker()
+            validate_build_output()
+            
+        optimize_assets() -> Void
+            """
+            Optimize CSS, JS, and images for production
+            """
+            minify_css_files()
+            minify_js_files()
+            compress_images()
+            
+        generate_service_worker() -> Void
+            """
+            Generate service worker for offline functionality
+            """
+            asset_list = get_all_static_assets()
+            service_worker_content = create_service_worker_template(asset_list)
+            write_file("static/sw.js", service_worker_content)

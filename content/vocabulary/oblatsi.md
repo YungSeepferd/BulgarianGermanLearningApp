@@ -1,0 +1,20 @@
+---
+title: "Облаци"
+translation: "Wolken"
+category: "Natur"
+level: "A2"
+type: "vocabulary"
+weight: 20
+tags: ["A2", "Natur"]
+audio: "/audio/oblatsi.mp3"
+date: 2025-08-17
+---
+
+# Облаци
+
+**Translation:** Wolken
+
+**Category:** Natur
+
+**Level:** A2
+

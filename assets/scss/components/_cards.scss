@@ -1,0 +1,349 @@
+// Card component styles
+.vocab-card,
+.grammar-item,
+.feature-card,
+.activity-card,
+.quick-start-card {
+  @include card-base;
+  @include card-hover;
+  padding: $spacing-6;
+  position: relative;
+}
+
+// Vocabulary cards
+.vocab-card {
+  @include flex-column;
+  gap: $spacing-3;
+
+  .progress-indicator {
+    position: absolute;
+    top: $spacing-3;
+    right: $spacing-3;
+    width: 12px;
+    height: 12px;
+    border-radius: $radius-full;
+
+    &.new {
+      background-color: var(--progress-new);
+    }
+
+    &.learning {
+      background-color: var(--progress-learning);
+    }
+
+    &.familiar {
+      background-color: var(--progress-familiar);
+    }
+
+    &.mastered {
+      background-color: var(--progress-mastered);
+    }
+  }
+
+  .vocab-header {
+    @include flex-between;
+    align-items: flex-start;
+    gap: $spacing-3;
+
+    .vocab-word {
+      font-size: $font-size-lg;
+      font-weight: $font-weight-semibold;
+      color: var(--text-primary);
+      flex: 1;
+    }
+
+    .vocab-select {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+  }
+
+  .vocab-translation {
+    font-size: $font-size-base;
+    color: var(--text-secondary);
+    margin-bottom: $spacing-2;
+  }
+
+  .vocab-meta {
+    @include flex-center;
+    gap: $spacing-2;
+    margin: $spacing-2 0;
+  }
+
+  .vocab-notes {
+    font-size: $font-size-sm;
+    color: var(--text-muted);
+    font-style: italic;
+    padding: $spacing-2 $spacing-3;
+    background-color: var(--bg-secondary);
+    border-radius: $radius-base;
+    border-left: 3px solid var(--color-info);
+  }
+
+  .vocab-actions {
+    @include flex-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: $spacing-3;
+
+    .review-info {
+      font-size: $font-size-xs;
+      color: var(--text-muted);
+    }
+  }
+}
+
+// Grammar cards
+.grammar-item {
+  .grammar-header {
+    @include flex-between;
+    align-items: flex-start;
+    margin-bottom: $spacing-4;
+
+    h2 {
+      margin: 0;
+      font-size: $font-size-xl;
+      color: var(--text-primary);
+    }
+  }
+
+  .grammar-description {
+    color: var(--text-secondary);
+    margin-bottom: $spacing-4;
+    line-height: $line-height-relaxed;
+  }
+
+  .grammar-examples {
+    margin: $spacing-4 0;
+
+    h3 {
+      font-size: $font-size-base;
+      font-weight: $font-weight-medium;
+      color: var(--text-primary);
+      margin-bottom: $spacing-3;
+    }
+
+    .examples-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .example-item {
+        padding: $spacing-2 $spacing-3;
+        background-color: var(--bg-secondary);
+        border-radius: $radius-base;
+        margin-bottom: $spacing-2;
+        font-size: $font-size-sm;
+        color: var(--text-secondary);
+        border-left: 3px solid var(--color-primary);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .hidden-examples {
+        margin-top: $spacing-2;
+
+        &.hidden {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .grammar-actions {
+    @include flex-between;
+    align-items: center;
+    margin-top: $spacing-4;
+    padding-top: $spacing-4;
+    border-top: 1px solid var(--border-primary);
+  }
+}
+
+// Feature cards (home page)
+.feature-card {
+  text-align: center;
+  padding: $spacing-8 $spacing-6;
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: $spacing-4;
+  }
+
+  h3 {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-3;
+    color: var(--text-primary);
+  }
+
+  p {
+    color: var(--text-secondary);
+    line-height: $line-height-relaxed;
+    margin: 0;
+  }
+}
+
+// Activity cards (home page)
+.activity-card {
+  @include flex-center;
+  gap: $spacing-4;
+  padding: $spacing-6;
+
+  .activity-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  .activity-content {
+    flex: 1;
+
+    h3 {
+      font-size: $font-size-base;
+      font-weight: $font-weight-medium;
+      color: var(--text-primary);
+      margin-bottom: $spacing-2;
+    }
+
+    .activity-count {
+      font-size: $font-size-lg;
+      font-weight: $font-weight-semibold;
+      color: var(--color-primary);
+      margin-bottom: $spacing-2;
+    }
+
+    .activity-action {
+      font-size: $font-size-sm;
+      color: var(--text-secondary);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+
+// Quick start cards (home page)
+.quick-start-card {
+  text-align: center;
+  padding: $spacing-6;
+
+  h3 {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-3;
+    color: var(--text-primary);
+  }
+
+  p {
+    color: var(--text-secondary);
+    margin-bottom: $spacing-4;
+  }
+
+  .level-badges {
+    @include flex-center;
+    gap: $spacing-2;
+    flex-wrap: wrap;
+  }
+
+  .practice-preview {
+    @include flex-center;
+    margin: $spacing-4 0;
+
+    .mini-flashcard {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-primary);
+      border-radius: $radius-base;
+      padding: $spacing-3;
+      text-align: center;
+
+      .mini-word {
+        font-weight: $font-weight-semibold;
+        color: var(--text-primary);
+        margin-bottom: $spacing-1;
+      }
+
+      .mini-translation {
+        font-size: $font-size-sm;
+        color: var(--text-secondary);
+      }
+    }
+  }
+
+  .progress-preview {
+    @include flex-column;
+    align-items: center;
+    gap: $spacing-2;
+
+    .mini-progress-bar {
+      width: 100px;
+      height: 8px;
+      background-color: var(--color-gray-200);
+      border-radius: $radius-full;
+      overflow: hidden;
+
+      .mini-progress-fill {
+        height: 100%;
+        background-color: var(--color-success);
+        transition: width $transition-base;
+      }
+    }
+
+    .mini-progress-text {
+      font-size: $font-size-sm;
+      color: var(--text-secondary);
+    }
+  }
+}
+
+// Content item (list pages)
+.content-item {
+  @include card-base;
+  padding: $spacing-6;
+  margin-bottom: $spacing-4;
+  transition: all $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-md;
+  }
+
+  .item-header {
+    @include flex-between;
+    align-items: flex-start;
+    margin-bottom: $spacing-3;
+
+    h2 {
+      margin: 0;
+      font-size: $font-size-xl;
+
+      a {
+        color: var(--text-primary);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+
+  .item-summary {
+    color: var(--text-secondary);
+    margin-bottom: $spacing-3;
+    line-height: $line-height-relaxed;
+  }
+
+  .item-meta {
+    @include flex-center;
+    gap: $spacing-3;
+    font-size: $font-size-sm;
+    color: var(--text-muted);
+
+    .category {
+      padding: $spacing-1 $spacing-2;
+      background-color: var(--bg-secondary);
+      border-radius: $radius-sm;
+    }
+  }
+}

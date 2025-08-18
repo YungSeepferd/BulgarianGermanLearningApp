@@ -1,0 +1,90 @@
+{{ define "title" }}Grammar - {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+
+<div class="grammar-container">
+    <div class="page-header">
+        <h1>Grammar</h1>
+        <p>Master Bulgarian and German grammar rules with examples and exercises</p>
+    </div>
+    
+    <div class="grammar-filters">
+        <select id="grammar-level-filter">
+            <option value="">All Levels</option>
+            <option value="A1">A1 - Beginner</option>
+            <option value="A2">A2 - Elementary</option>
+            <option value="B1">B1 - Intermediate</option>
+            <option value="B2">B2 - Upper Intermediate</option>
+        </select>
+        
+        <input type="text" id="grammar-search" placeholder="Search grammar topics..." class="search-input">
+    </div>
+    
+    <div class="grammar-stats">
+        <span class="stat">Total Topics: <span id="grammar-total">{{ len .Site.Data.grammar }}</span></span>
+        <span class="stat">Showing: <span id="grammar-showing">{{ len .Site.Data.grammar }}</span></span>
+    </div>
+    
+    <div class="grammar-list" id="grammar-list">
+        {{ range .Site.Data.grammar }}
+        <article class="grammar-item" 
+                 data-level="{{ .level }}" 
+                 data-title="{{ .title | lower }}"
+                 data-description="{{ .description | lower }}">
+            <header class="grammar-header">
+                <h2>{{ .title }}</h2>
+                <span class="level-badge level-{{ .level | lower }}">{{ .level }}</span>
+            </header>
+            
+            <div class="grammar-description">
+                {{ .description | markdownify }}
+            </div>
+            
+            {{ if .examples }}
+            <div class="grammar-examples">
+                <h3>Examples:</h3>
+                <ul class="examples-list">
+                    {{ range .examples }}
+                    <li class="example-item">{{ . }}</li>
+                    {{ end }}
+                </ul>
+                
+                {{ if gt (len .examples) 3 }}
+                <button class="show-more-examples" data-target="examples-{{ .title | urlize }}">
+                    Show More Examples
+                </button>
+                {{ end }}
+            </div>
+            {{ end }}
+            
+            <div class="grammar-actions">
+                <button class="start-exercise-btn" data-grammar-title="{{ .title }}">
+                    Practice This Rule
+                </button>
+                <button class="bookmark-btn" data-grammar-title="{{ .title }}" title="Bookmark this rule">
+                    ⭐
+                </button>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+    
+    <div class="no-results hidden" id="grammar-no-results">
+        <p>No grammar topics found matching your criteria.</p>
+        <button id="clear-grammar-filters" class="btn-secondary">Clear Filters</button>
+    </div>
+</div>
+
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+// Initialize grammar filtering and search
+document.addEventListener('DOMContentLoaded', function() {
+    const grammarApp = new GrammarApp({
+        data: {{ .Site.Data.grammar | jsonify }},
+        container: '#grammar-list'
+    });
+    grammarApp.init();
+});
+</script>
+{{ end }}

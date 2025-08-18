@@ -1,0 +1,97 @@
+{{ define "title" }}Vocabulary - {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+
+<div class="vocabulary-container">
+    <div class="page-header">
+        <h1>Vocabulary</h1>
+        <p>Learn Bulgarian and German vocabulary with spaced repetition</p>
+    </div>
+    
+    <div class="filters">
+        <select id="level-filter">
+            <option value="">All Levels</option>
+            <option value="A1">A1 - Beginner</option>
+            <option value="A2">A2 - Elementary</option>
+            <option value="B1">B1 - Intermediate</option>
+            <option value="B2">B2 - Upper Intermediate</option>
+        </select>
+        
+        <select id="category-filter">
+            <option value="">All Categories</option>
+            {{ $categories := slice }}
+            {{ range .Site.Data.vocabulary }}
+                {{ $categories = $categories | append .category }}
+            {{ end }}
+            {{ range ($categories | uniq | sort) }}
+            <option value="{{ . }}">{{ . }}</option>
+            {{ end }}
+        </select>
+        
+        <input type="text" id="search-input" placeholder="Search vocabulary..." class="search-input">
+        
+        <button id="practice-selected" class="btn-primary">Practice Selected</button>
+    </div>
+    
+    <div class="vocabulary-stats">
+        <span class="stat">Total: <span id="total-count">{{ len .Site.Data.vocabulary }}</span></span>
+        <span class="stat">Showing: <span id="showing-count">{{ len .Site.Data.vocabulary }}</span></span>
+    </div>
+    
+    <div class="vocabulary-grid" id="vocabulary-grid">
+        {{ range .Site.Data.vocabulary }}
+        <div class="vocab-card" 
+             data-level="{{ .level }}" 
+             data-category="{{ .category }}"
+             data-word="{{ .word | lower }}"
+             data-translation="{{ .translation | lower }}"
+             data-slug="{{ .word | urlize }}">
+            
+            <div class="vocab-header">
+                <div class="vocab-word">{{ .word }}</div>
+                <input type="checkbox" class="vocab-select" data-word="{{ .word }}">
+            </div>
+            
+            <div class="vocab-translation">{{ .translation }}</div>
+            
+            {{ if .audio }}
+            <button class="audio-btn" data-audio="{{ .audio }}" title="Play pronunciation">
+                <span class="audio-icon">🔊</span>
+            </button>
+            {{ end }}
+            
+            <div class="vocab-meta">
+                <span class="level-badge level-{{ .level | lower }}">{{ .level }}</span>
+                <span class="category-tag">{{ .category }}</span>
+            </div>
+            
+            {{ if .notes }}
+            <div class="vocab-notes">{{ .notes }}</div>
+            {{ end }}
+            
+            <div class="vocab-actions">
+                <button class="practice-single-btn" data-word="{{ .word }}">Practice</button>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    
+    <div class="no-results hidden" id="no-results">
+        <p>No vocabulary items found matching your criteria.</p>
+        <button id="clear-filters" class="btn-secondary">Clear Filters</button>
+    </div>
+</div>
+
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+// Initialize vocabulary filtering and search
+document.addEventListener('DOMContentLoaded', function() {
+    const vocabularyApp = new VocabularyApp({
+        data: {{ .Site.Data.vocabulary | jsonify }},
+        container: '#vocabulary-grid'
+    });
+    vocabularyApp.init();
+});
+</script>
+{{ end }}

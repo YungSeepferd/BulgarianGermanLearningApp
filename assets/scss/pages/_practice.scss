@@ -1,0 +1,339 @@
+// Practice page styles
+.practice-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+
+  @include md {
+    padding: 0 $spacing-6;
+  }
+
+  @include lg {
+    padding: 0 $spacing-8;
+  }
+}
+
+// Practice header
+.practice-header {
+  @include flex-between;
+  align-items: flex-start;
+  margin-bottom: $spacing-8;
+  padding: $spacing-6;
+  background-color: var(--bg-secondary);
+  border-radius: $radius-xl;
+  flex-wrap: wrap;
+  gap: $spacing-4;
+
+  @include md {
+    flex-wrap: nowrap;
+  }
+}
+
+.session-controls {
+  @include flex-center;
+  gap: $spacing-3;
+}
+
+// Practice session
+.practice-session {
+  @include flex-column;
+  gap: $spacing-8;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+// Session complete
+.session-complete {
+  @include flex-column;
+  align-items: center;
+  gap: $spacing-8;
+  padding: $spacing-12;
+  background-color: var(--bg-secondary);
+  border-radius: $radius-2xl;
+  text-align: center;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.session-actions {
+  @include flex-center;
+  gap: $spacing-4;
+  margin-top: $spacing-6;
+  flex-wrap: wrap;
+
+  @include md {
+    flex-wrap: nowrap;
+  }
+}
+
+// Content pages (single)
+.single-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+
+  @include md {
+    padding: 0 $spacing-6;
+  }
+
+  @include lg {
+    padding: 0 $spacing-8;
+  }
+}
+
+.content-header {
+  text-align: center;
+  margin-bottom: $spacing-8;
+  padding-bottom: $spacing-6;
+  border-bottom: 1px solid var(--border-primary);
+
+  h1 {
+    font-size: $font-size-4xl;
+    color: var(--text-primary);
+    margin-bottom: $spacing-4;
+
+    @include md {
+      font-size: 3.5rem;
+    }
+  }
+
+  .content-meta {
+    @include flex-center;
+    gap: $spacing-4;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: $spacing-4;
+
+    time {
+      color: var(--text-muted);
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+.content-body {
+  font-size: $font-size-lg;
+  line-height: $line-height-relaxed;
+  color: var(--text-secondary);
+  margin-bottom: $spacing-8;
+
+  h2, h3, h4 {
+    color: var(--text-primary);
+    margin-top: $spacing-8;
+    margin-bottom: $spacing-4;
+  }
+
+  p {
+    margin-bottom: $spacing-6;
+  }
+
+  ul, ol {
+    margin-bottom: $spacing-6;
+    padding-left: $spacing-6;
+
+    li {
+      margin-bottom: $spacing-3;
+    }
+  }
+}
+
+// Examples and exercises sections
+.examples-section,
+.exercises-section {
+  margin: $spacing-8 0;
+  padding: $spacing-6;
+  background-color: var(--bg-secondary);
+  border-radius: $radius-xl;
+
+  h2 {
+    font-size: $font-size-2xl;
+    color: var(--text-primary);
+    margin-bottom: $spacing-6;
+  }
+}
+
+.examples-list {
+  @include flex-column;
+  gap: $spacing-4;
+
+  .example-item {
+    padding: $spacing-4;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: $radius-lg;
+    border-left: 4px solid var(--color-primary);
+  }
+}
+
+.exercises-list {
+  @include flex-column;
+  gap: $spacing-6;
+
+  .exercise-item {
+    padding: $spacing-6;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: $radius-lg;
+
+    .exercise-question {
+      font-size: $font-size-lg;
+      font-weight: $font-weight-medium;
+      color: var(--text-primary);
+      margin-bottom: $spacing-4;
+    }
+
+    .exercise-answer {
+      padding: $spacing-4;
+      background-color: var(--bg-secondary);
+      border-radius: $radius-base;
+      color: var(--text-secondary);
+      margin-bottom: $spacing-4;
+      border-left: 4px solid var(--color-success);
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+}
+
+// Content footer
+.content-footer {
+  margin-top: $spacing-12;
+  padding-top: $spacing-8;
+  border-top: 1px solid var(--border-primary);
+}
+
+.content-actions {
+  @include flex-center;
+  gap: $spacing-4;
+  margin-bottom: $spacing-8;
+  flex-wrap: wrap;
+
+  button {
+    @include flex-center;
+    gap: $spacing-2;
+  }
+}
+
+.content-navigation {
+  @include flex-between;
+  gap: $spacing-4;
+
+  .nav-link {
+    @include flex-column;
+    gap: $spacing-1;
+    padding: $spacing-4;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: $radius-lg;
+    text-decoration: none;
+    transition: all $transition-base;
+    flex: 1;
+    max-width: 300px;
+
+    &:hover {
+      background-color: var(--bg-tertiary);
+      border-color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    &.nav-prev {
+      text-align: left;
+    }
+
+    &.nav-next {
+      text-align: right;
+    }
+
+    .nav-direction {
+      font-size: $font-size-sm;
+      color: var(--text-muted);
+      font-weight: $font-weight-medium;
+    }
+
+    .nav-title {
+      color: var(--text-primary);
+      font-weight: $font-weight-medium;
+      @include text-clamp(2);
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: var(--breakpoint-md)) {
+  .practice-container,
+  .single-content {
+    padding: 0 $spacing-3;
+  }
+
+  .practice-header {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+
+    .session-stats {
+      justify-content: center;
+    }
+
+    .session-controls {
+      justify-content: center;
+    }
+  }
+
+  .session-stats {
+    flex-direction: column;
+    gap: $spacing-3;
+
+    .stat {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .response-buttons {
+    flex-direction: column;
+    gap: $spacing-3;
+
+    button {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+
+  .final-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .session-actions {
+    flex-direction: column;
+    
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+
+  .content-actions {
+    flex-direction: column;
+    
+    button {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+
+  .content-navigation {
+    flex-direction: column;
+    
+    .nav-link {
+      max-width: none;
+      text-align: center;
+    }
+  }
+}

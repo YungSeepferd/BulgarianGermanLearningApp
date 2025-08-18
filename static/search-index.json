@@ -1,0 +1,1498 @@
+{
+  "vocabulary": [
+    {
+      "id": "zdravey",
+      "title": "Здравей",
+      "content": "Здравей Hallo",
+      "category": "Begrüßung",
+      "level": "A1",
+      "url": "/vocabulary/zdravey/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "dobro-utro",
+      "title": "Добро утро",
+      "content": "Добро утро Guten Morgen",
+      "category": "Begrüßung",
+      "level": "A1",
+      "url": "/vocabulary/dobro-utro/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "dobar-den",
+      "title": "Добър ден",
+      "content": "Добър ден Guten Tag",
+      "category": "Begrüßung",
+      "level": "A1",
+      "url": "/vocabulary/dobar-den/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "dobar-vecher",
+      "title": "Добър вечер",
+      "content": "Добър вечер Guten Abend",
+      "category": "Begrüßung",
+      "level": "A1",
+      "url": "/vocabulary/dobar-vecher/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "leka-nosht",
+      "title": "Лека нощ",
+      "content": "Лека нощ Gute Nacht",
+      "category": "Begrüßung",
+      "level": "A1",
+      "url": "/vocabulary/leka-nosht/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "dovizhdane",
+      "title": "Довиждане",
+      "content": "Довиждане Auf Wiedersehen",
+      "category": "Begrüßung",
+      "level": "A1",
+      "url": "/vocabulary/dovizhdane/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "molya",
+      "title": "Моля",
+      "content": "Моля Bitte",
+      "category": "Ausdruck",
+      "level": "A1",
+      "url": "/vocabulary/molya/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "blagodarya",
+      "title": "Благодаря",
+      "content": "Благодаря Danke",
+      "category": "Ausdruck",
+      "level": "A1",
+      "url": "/vocabulary/blagodarya/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "izvinete",
+      "title": "Извинете",
+      "content": "Извинете Entschuldigung",
+      "category": "Ausdruck",
+      "level": "A1",
+      "url": "/vocabulary/izvinete/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "sazhalyavam",
+      "title": "Съжалявам",
+      "content": "Съжалявам Es tut mir leid",
+      "category": "Ausdruck",
+      "level": "A1",
+      "url": "/vocabulary/sazhalyavam/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "chovek",
+      "title": "Човек",
+      "content": "Човек Mensch",
+      "category": "Substantiv",
+      "level": "A1",
+      "url": "/vocabulary/chovek/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "semeystvo",
+      "title": "Семейство",
+      "content": "Семейство Familie",
+      "category": "Substantiv",
+      "level": "A1",
+      "url": "/vocabulary/semeystvo/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "kashta",
+      "title": "Къща",
+      "content": "Къща Haus",
+      "category": "Substantiv",
+      "level": "A1",
+      "url": "/vocabulary/kashta/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "uchilishte",
+      "title": "Училище",
+      "content": "Училище Schule",
+      "category": "Substantiv",
+      "level": "A1",
+      "url": "/vocabulary/uchilishte/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "rabota",
+      "title": "Работа",
+      "content": "Работа Arbeit",
+      "category": "Substantiv",
+      "level": "A1",
+      "url": "/vocabulary/rabota/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "grad",
+      "title": "Град",
+      "content": "Град Stadt",
+      "category": "Substantiv",
+      "level": "A1",
+      "url": "/vocabulary/grad/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "selo",
+      "title": "Село",
+      "content": "Село Dorf",
+      "category": "Substantiv",
+      "level": "A1",
+      "url": "/vocabulary/selo/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "kniga",
+      "title": "Книга",
+      "content": "Книга Buch",
+      "category": "Substantiv",
+      "level": "A1",
+      "url": "/vocabulary/kniga/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "hrana",
+      "title": "Храна",
+      "content": "Храна Essen",
+      "category": "Substantiv",
+      "level": "A1",
+      "url": "/vocabulary/hrana/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "voda",
+      "title": "Вода",
+      "content": "Вода Wasser",
+      "category": "Substantiv",
+      "level": "A1",
+      "url": "/vocabulary/voda/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "sam",
+      "title": "Съм",
+      "content": "Съм sein",
+      "category": "Verb",
+      "level": "A1",
+      "url": "/vocabulary/sam/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "imam",
+      "title": "Имам",
+      "content": "Имам haben",
+      "category": "Verb",
+      "level": "A1",
+      "url": "/vocabulary/imam/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "pravya",
+      "title": "Правя",
+      "content": "Правя machen",
+      "category": "Verb",
+      "level": "A1",
+      "url": "/vocabulary/pravya/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "moga",
+      "title": "Мога",
+      "content": "Мога können",
+      "category": "Verb",
+      "level": "A1",
+      "url": "/vocabulary/moga/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "hodya",
+      "title": "Ходя",
+      "content": "Ходя gehen",
+      "category": "Verb",
+      "level": "A1",
+      "url": "/vocabulary/hodya/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "yam",
+      "title": "Ям",
+      "content": "Ям essen",
+      "category": "Verb",
+      "level": "A1",
+      "url": "/vocabulary/yam/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "piya",
+      "title": "Пия",
+      "content": "Пия trinken",
+      "category": "Verb",
+      "level": "A1",
+      "url": "/vocabulary/piya/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "govorya",
+      "title": "Говоря",
+      "content": "Говоря sprechen",
+      "category": "Verb",
+      "level": "A1",
+      "url": "/vocabulary/govorya/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "vizhdam",
+      "title": "Виждам",
+      "content": "Виждам sehen",
+      "category": "Verb",
+      "level": "A1",
+      "url": "/vocabulary/vizhdam/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "chuvam",
+      "title": "Чувам",
+      "content": "Чувам hören",
+      "category": "Verb",
+      "level": "A1",
+      "url": "/vocabulary/chuvam/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "dobar",
+      "title": "Добър",
+      "content": "Добър gut",
+      "category": "Adjektiv",
+      "level": "A1",
+      "url": "/vocabulary/dobar/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "losh",
+      "title": "Лош",
+      "content": "Лош schlecht",
+      "category": "Adjektiv",
+      "level": "A1",
+      "url": "/vocabulary/losh/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "golyam",
+      "title": "Голям",
+      "content": "Голям groß",
+      "category": "Adjektiv",
+      "level": "A1",
+      "url": "/vocabulary/golyam/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "malak",
+      "title": "Малък",
+      "content": "Малък klein",
+      "category": "Adjektiv",
+      "level": "A1",
+      "url": "/vocabulary/malak/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "nov",
+      "title": "Нов",
+      "content": "Нов neu",
+      "category": "Adjektiv",
+      "level": "A1",
+      "url": "/vocabulary/nov/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "star",
+      "title": "Стар",
+      "content": "Стар alt",
+      "category": "Adjektiv",
+      "level": "A1",
+      "url": "/vocabulary/star/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "krasiv",
+      "title": "Красив",
+      "content": "Красив schön",
+      "category": "Adjektiv",
+      "level": "A1",
+      "url": "/vocabulary/krasiv/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "grozen",
+      "title": "Грозен",
+      "content": "Грозен hässlich",
+      "category": "Adjektiv",
+      "level": "A1",
+      "url": "/vocabulary/grozen/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "topal",
+      "title": "Топъл",
+      "content": "Топъл warm",
+      "category": "Adjektiv",
+      "level": "A1",
+      "url": "/vocabulary/topal/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "studen",
+      "title": "Студен",
+      "content": "Студен kalt",
+      "category": "Adjektiv",
+      "level": "A1",
+      "url": "/vocabulary/studen/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "tuk",
+      "title": "Тук",
+      "content": "Тук hier",
+      "category": "Adverb",
+      "level": "A1",
+      "url": "/vocabulary/tuk/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "tam",
+      "title": "Там",
+      "content": "Там dort",
+      "category": "Adverb",
+      "level": "A1",
+      "url": "/vocabulary/tam/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "sega",
+      "title": "Сега",
+      "content": "Сега jetzt",
+      "category": "Adverb",
+      "level": "A1",
+      "url": "/vocabulary/sega/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "togava",
+      "title": "Тогава",
+      "content": "Тогава dann",
+      "category": "Adverb",
+      "level": "A1",
+      "url": "/vocabulary/togava/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "barzo",
+      "title": "Бързо",
+      "content": "Бързо schnell",
+      "category": "Adverb",
+      "level": "A1",
+      "url": "/vocabulary/barzo/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "bavno",
+      "title": "Бавно",
+      "content": "Бавно langsam",
+      "category": "Adverb",
+      "level": "A1",
+      "url": "/vocabulary/bavno/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "chesto",
+      "title": "Често",
+      "content": "Често oft",
+      "category": "Adverb",
+      "level": "A1",
+      "url": "/vocabulary/chesto/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "redko",
+      "title": "Редко",
+      "content": "Редко selten",
+      "category": "Adverb",
+      "level": "A1",
+      "url": "/vocabulary/redko/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "dobre",
+      "title": "Добре",
+      "content": "Добре gut",
+      "category": "Adverb",
+      "level": "A1",
+      "url": "/vocabulary/dobre/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "zle",
+      "title": "Зле",
+      "content": "Зле schlecht",
+      "category": "Adverb",
+      "level": "A1",
+      "url": "/vocabulary/zle/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "masa",
+      "title": "Маса",
+      "content": "Маса Tisch",
+      "category": "Substantiv",
+      "level": "A2",
+      "url": "/vocabulary/masa/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "stol",
+      "title": "Стол",
+      "content": "Стол Stuhl",
+      "category": "Substantiv",
+      "level": "A2",
+      "url": "/vocabulary/stol/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "hladilnik",
+      "title": "Хладилник",
+      "content": "Хладилник Kühlschrank",
+      "category": "Substantiv",
+      "level": "A2",
+      "url": "/vocabulary/hladilnik/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "kuhnya",
+      "title": "Кухня",
+      "content": "Кухня Küche",
+      "category": "Substantiv",
+      "level": "A2",
+      "url": "/vocabulary/kuhnya/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "apartament",
+      "title": "Апартамент",
+      "content": "Апартамент Wohnung",
+      "category": "Substantiv",
+      "level": "A2",
+      "url": "/vocabulary/apartament/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "avtomobil",
+      "title": "Автомобил",
+      "content": "Автомобил Auto",
+      "category": "Substantiv",
+      "level": "A2",
+      "url": "/vocabulary/avtomobil/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "magazin",
+      "title": "Магазин",
+      "content": "Магазин Laden",
+      "category": "Substantiv",
+      "level": "A2",
+      "url": "/vocabulary/magazin/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "gradina",
+      "title": "Градина",
+      "content": "Градина Garten",
+      "category": "Substantiv",
+      "level": "A2",
+      "url": "/vocabulary/gradina/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "chasovnik",
+      "title": "Часовник",
+      "content": "Часовник Uhr",
+      "category": "Substantiv",
+      "level": "A2",
+      "url": "/vocabulary/chasovnik/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "cheta",
+      "title": "Чета",
+      "content": "Чета lesen",
+      "category": "Verb",
+      "level": "A2",
+      "url": "/vocabulary/cheta/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "pisha",
+      "title": "Пиша",
+      "content": "Пиша schreiben",
+      "category": "Verb",
+      "level": "A2",
+      "url": "/vocabulary/pisha/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "karam",
+      "title": "Карам",
+      "content": "Карам fahren",
+      "category": "Verb",
+      "level": "A2",
+      "url": "/vocabulary/karam/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "zhiveya",
+      "title": "Живея",
+      "content": "Живея leben",
+      "category": "Verb",
+      "level": "A2",
+      "url": "/vocabulary/zhiveya/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "rabotya",
+      "title": "Работя",
+      "content": "Работя arbeiten",
+      "category": "Verb",
+      "level": "A2",
+      "url": "/vocabulary/rabotya/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "ucha",
+      "title": "Уча",
+      "content": "Уча lernen",
+      "category": "Verb",
+      "level": "A2",
+      "url": "/vocabulary/ucha/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "edno",
+      "title": "Едно",
+      "content": "Едно eins",
+      "category": "Zahl",
+      "level": "A2",
+      "url": "/vocabulary/edno/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "dve",
+      "title": "Две",
+      "content": "Две zwei",
+      "category": "Zahl",
+      "level": "A2",
+      "url": "/vocabulary/dve/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "tri",
+      "title": "Три",
+      "content": "Три drei",
+      "category": "Zahl",
+      "level": "A2",
+      "url": "/vocabulary/tri/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "chetiri",
+      "title": "Четири",
+      "content": "Четири vier",
+      "category": "Zahl",
+      "level": "A2",
+      "url": "/vocabulary/chetiri/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "pet",
+      "title": "Пет",
+      "content": "Пет fünf",
+      "category": "Zahl",
+      "level": "A2",
+      "url": "/vocabulary/pet/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "shest",
+      "title": "Шест",
+      "content": "Шест sechs",
+      "category": "Zahl",
+      "level": "A2",
+      "url": "/vocabulary/shest/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "sedem",
+      "title": "Седем",
+      "content": "Седем sieben",
+      "category": "Zahl",
+      "level": "A2",
+      "url": "/vocabulary/sedem/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "osem",
+      "title": "Осем",
+      "content": "Осем acht",
+      "category": "Zahl",
+      "level": "A2",
+      "url": "/vocabulary/osem/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "devet",
+      "title": "Девет",
+      "content": "Девет neun",
+      "category": "Zahl",
+      "level": "A2",
+      "url": "/vocabulary/devet/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "deset",
+      "title": "Десет",
+      "content": "Десет zehn",
+      "category": "Zahl",
+      "level": "A2",
+      "url": "/vocabulary/deset/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "mnogo",
+      "title": "Много",
+      "content": "Много viele",
+      "category": "Quantor",
+      "level": "A2",
+      "url": "/vocabulary/mnogo/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "malko",
+      "title": "Малко",
+      "content": "Малко wenig",
+      "category": "Quantor",
+      "level": "A2",
+      "url": "/vocabulary/malko/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "vsichki",
+      "title": "Всички",
+      "content": "Всички alle",
+      "category": "Quantor",
+      "level": "A2",
+      "url": "/vocabulary/vsichki/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "nyakolko",
+      "title": "Няколко",
+      "content": "Няколко einige",
+      "category": "Quantor",
+      "level": "A2",
+      "url": "/vocabulary/nyakolko/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "nikoy",
+      "title": "Никой",
+      "content": "Никой keiner",
+      "category": "Quantor",
+      "level": "A2",
+      "url": "/vocabulary/nikoy/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "ponedelnik",
+      "title": "Понеделник",
+      "content": "Понеделник Montag",
+      "category": "Tag",
+      "level": "A2",
+      "url": "/vocabulary/ponedelnik/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "vtornik",
+      "title": "Вторник",
+      "content": "Вторник Dienstag",
+      "category": "Tag",
+      "level": "A2",
+      "url": "/vocabulary/vtornik/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "sryada",
+      "title": "Сряда",
+      "content": "Сряда Mittwoch",
+      "category": "Tag",
+      "level": "A2",
+      "url": "/vocabulary/sryada/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "chetvartak",
+      "title": "Четвъртък",
+      "content": "Четвъртък Donnerstag",
+      "category": "Tag",
+      "level": "A2",
+      "url": "/vocabulary/chetvartak/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "petak",
+      "title": "Петък",
+      "content": "Петък Freitag",
+      "category": "Tag",
+      "level": "A2",
+      "url": "/vocabulary/petak/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "sabota",
+      "title": "Събота",
+      "content": "Събота Samstag",
+      "category": "Tag",
+      "level": "A2",
+      "url": "/vocabulary/sabota/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "nedelya",
+      "title": "Неделя",
+      "content": "Неделя Sonntag",
+      "category": "Tag",
+      "level": "A2",
+      "url": "/vocabulary/nedelya/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "chas",
+      "title": "Час",
+      "content": "Час Stunde",
+      "category": "Zeit",
+      "level": "A2",
+      "url": "/vocabulary/chas/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "minuta",
+      "title": "Минута",
+      "content": "Минута Minute",
+      "category": "Zeit",
+      "level": "A2",
+      "url": "/vocabulary/minuta/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "sutrin",
+      "title": "Сутрин",
+      "content": "Сутрин Morgen",
+      "category": "Zeit",
+      "level": "A2",
+      "url": "/vocabulary/sutrin/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "obed",
+      "title": "Обед",
+      "content": "Обед Mittag",
+      "category": "Zeit",
+      "level": "A2",
+      "url": "/vocabulary/obed/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "sledobed",
+      "title": "Следобед",
+      "content": "Следобед Nachmittag",
+      "category": "Zeit",
+      "level": "A2",
+      "url": "/vocabulary/sledobed/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "vecher",
+      "title": "Вечер",
+      "content": "Вечер Abend",
+      "category": "Zeit",
+      "level": "A2",
+      "url": "/vocabulary/vecher/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "nosht",
+      "title": "Нощ",
+      "content": "Нощ Nacht",
+      "category": "Zeit",
+      "level": "A2",
+      "url": "/vocabulary/nosht/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "kak-si",
+      "title": "Как си?",
+      "content": "Как си? Wie geht's?",
+      "category": "Ausdruck",
+      "level": "A2",
+      "url": "/vocabulary/kak-si/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "dobre-sam",
+      "title": "Добре съм",
+      "content": "Добре съм Mir geht's gut",
+      "category": "Ausdruck",
+      "level": "A2",
+      "url": "/vocabulary/dobre-sam/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "izvinyavay",
+      "title": "Извинявай",
+      "content": "Извинявай Entschuldige",
+      "category": "Ausdruck",
+      "level": "A2",
+      "url": "/vocabulary/izvinyavay/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "mozhe-li",
+      "title": "Може ли?",
+      "content": "Може ли? Darf ich?",
+      "category": "Ausdruck",
+      "level": "A2",
+      "url": "/vocabulary/mozhe-li/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "hlyab",
+      "title": "Хляб",
+      "content": "Хляб Brot",
+      "category": "Lebensmittel",
+      "level": "A2",
+      "url": "/vocabulary/hlyab/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "mlyako",
+      "title": "Мляко",
+      "content": "Мляко Milch",
+      "category": "Lebensmittel",
+      "level": "A2",
+      "url": "/vocabulary/mlyako/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "sirene",
+      "title": "Сирене",
+      "content": "Сирене Käse",
+      "category": "Lebensmittel",
+      "level": "A2",
+      "url": "/vocabulary/sirene/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "meso",
+      "title": "Месо",
+      "content": "Месо Fleisch",
+      "category": "Lebensmittel",
+      "level": "A2",
+      "url": "/vocabulary/meso/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "riba",
+      "title": "Риба",
+      "content": "Риба Fisch",
+      "category": "Lebensmittel",
+      "level": "A2",
+      "url": "/vocabulary/riba/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "zelenchutsi",
+      "title": "Зеленчуци",
+      "content": "Зеленчуци Gemüse",
+      "category": "Lebensmittel",
+      "level": "A2",
+      "url": "/vocabulary/zelenchutsi/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "plodove",
+      "title": "Плодове",
+      "content": "Плодове Obst",
+      "category": "Lebensmittel",
+      "level": "A2",
+      "url": "/vocabulary/plodove/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "sok",
+      "title": "Сок",
+      "content": "Сок Saft",
+      "category": "Lebensmittel",
+      "level": "A2",
+      "url": "/vocabulary/sok/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "kafe",
+      "title": "Кафе",
+      "content": "Кафе Kaffee",
+      "category": "Lebensmittel",
+      "level": "A2",
+      "url": "/vocabulary/kafe/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "avtobus",
+      "title": "Автобус",
+      "content": "Автобус Bus",
+      "category": "Transport",
+      "level": "A2",
+      "url": "/vocabulary/avtobus/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "vlak",
+      "title": "Влак",
+      "content": "Влак Zug",
+      "category": "Transport",
+      "level": "A2",
+      "url": "/vocabulary/vlak/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "samolet",
+      "title": "Самолет",
+      "content": "Самолет Flugzeug",
+      "category": "Transport",
+      "level": "A2",
+      "url": "/vocabulary/samolet/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "taksi",
+      "title": "Такси",
+      "content": "Такси Taxi",
+      "category": "Transport",
+      "level": "A2",
+      "url": "/vocabulary/taksi/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "gara",
+      "title": "Гара",
+      "content": "Гара Bahnhof",
+      "category": "Transport",
+      "level": "A2",
+      "url": "/vocabulary/gara/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "letishte",
+      "title": "Летище",
+      "content": "Летище Flughafen",
+      "category": "Transport",
+      "level": "A2",
+      "url": "/vocabulary/letishte/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "hotel",
+      "title": "Хотел",
+      "content": "Хотел Hotel",
+      "category": "Transport",
+      "level": "A2",
+      "url": "/vocabulary/hotel/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "bilet",
+      "title": "Билет",
+      "content": "Билет Ticket",
+      "category": "Transport",
+      "level": "A2",
+      "url": "/vocabulary/bilet/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "pat",
+      "title": "Път",
+      "content": "Път Straße",
+      "category": "Transport",
+      "level": "A2",
+      "url": "/vocabulary/pat/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "karta",
+      "title": "Карта",
+      "content": "Карта Karte",
+      "category": "Transport",
+      "level": "A2",
+      "url": "/vocabulary/karta/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "lekar",
+      "title": "Лекар",
+      "content": "Лекар Arzt",
+      "category": "Gesundheit",
+      "level": "A2",
+      "url": "/vocabulary/lekar/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "bolnitsa",
+      "title": "Болница",
+      "content": "Болница Krankenhaus",
+      "category": "Gesundheit",
+      "level": "A2",
+      "url": "/vocabulary/bolnitsa/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "apteka",
+      "title": "Аптека",
+      "content": "Аптека Apotheke",
+      "category": "Gesundheit",
+      "level": "A2",
+      "url": "/vocabulary/apteka/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "lekarstva",
+      "title": "Лекарства",
+      "content": "Лекарства Medikamente",
+      "category": "Gesundheit",
+      "level": "A2",
+      "url": "/vocabulary/lekarstva/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "speshno",
+      "title": "Спешно",
+      "content": "Спешно Notfall",
+      "category": "Gesundheit",
+      "level": "A2",
+      "url": "/vocabulary/speshno/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "bolka",
+      "title": "Болка",
+      "content": "Болка Schmerz",
+      "category": "Gesundheit",
+      "level": "A2",
+      "url": "/vocabulary/bolka/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "zdrave",
+      "title": "Здраве",
+      "content": "Здраве Gesundheit",
+      "category": "Gesundheit",
+      "level": "A2",
+      "url": "/vocabulary/zdrave/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "treska",
+      "title": "Треска",
+      "content": "Треска Fieber",
+      "category": "Gesundheit",
+      "level": "A2",
+      "url": "/vocabulary/treska/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "nastinka",
+      "title": "Настинка",
+      "content": "Настинка Erkältung",
+      "category": "Gesundheit",
+      "level": "A2",
+      "url": "/vocabulary/nastinka/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "pomosht",
+      "title": "Помощ",
+      "content": "Помощ Hilfe",
+      "category": "Gesundheit",
+      "level": "A2",
+      "url": "/vocabulary/pomosht/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "slantse",
+      "title": "Слънце",
+      "content": "Слънце Sonne",
+      "category": "Natur",
+      "level": "A2",
+      "url": "/vocabulary/slantse/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "dazhd",
+      "title": "Дъжд",
+      "content": "Дъжд Regen",
+      "category": "Natur",
+      "level": "A2",
+      "url": "/vocabulary/dazhd/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "snyag",
+      "title": "Сняг",
+      "content": "Сняг Schnee",
+      "category": "Natur",
+      "level": "A2",
+      "url": "/vocabulary/snyag/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "vyatar",
+      "title": "Вятър",
+      "content": "Вятър Wind",
+      "category": "Natur",
+      "level": "A2",
+      "url": "/vocabulary/vyatar/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "temperatura",
+      "title": "Температура",
+      "content": "Температура Temperatur",
+      "category": "Natur",
+      "level": "A2",
+      "url": "/vocabulary/temperatura/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "oblatsi",
+      "title": "Облаци",
+      "content": "Облаци Wolken",
+      "category": "Natur",
+      "level": "A2",
+      "url": "/vocabulary/oblatsi/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "gora",
+      "title": "Гора",
+      "content": "Гора Wald",
+      "category": "Natur",
+      "level": "A2",
+      "url": "/vocabulary/gora/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "reka",
+      "title": "Река",
+      "content": "Река Fluss",
+      "category": "Natur",
+      "level": "A2",
+      "url": "/vocabulary/reka/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "planina",
+      "title": "Планина",
+      "content": "Планина Berg",
+      "category": "Natur",
+      "level": "A2",
+      "url": "/vocabulary/planina/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "more",
+      "title": "Море",
+      "content": "Море Meer",
+      "category": "Natur",
+      "level": "A2",
+      "url": "/vocabulary/more/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "mayka",
+      "title": "Майка",
+      "content": "Майка Mutter",
+      "category": "Familie",
+      "level": "A2",
+      "url": "/vocabulary/mayka/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "bashta",
+      "title": "Баща",
+      "content": "Баща Vater",
+      "category": "Familie",
+      "level": "A2",
+      "url": "/vocabulary/bashta/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "brat",
+      "title": "Брат",
+      "content": "Брат Bruder",
+      "category": "Familie",
+      "level": "A2",
+      "url": "/vocabulary/brat/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "sestra",
+      "title": "Сестра",
+      "content": "Сестра Schwester",
+      "category": "Familie",
+      "level": "A2",
+      "url": "/vocabulary/sestra/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "saprug",
+      "title": "Съпруг",
+      "content": "Съпруг Ehemann",
+      "category": "Familie",
+      "level": "A2",
+      "url": "/vocabulary/saprug/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "sapruga",
+      "title": "Съпруга",
+      "content": "Съпруга Ehefrau",
+      "category": "Familie",
+      "level": "A2",
+      "url": "/vocabulary/sapruga/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "dete",
+      "title": "Дете",
+      "content": "Дете Kind",
+      "category": "Familie",
+      "level": "A2",
+      "url": "/vocabulary/dete/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "priyatel",
+      "title": "Приятел",
+      "content": "Приятел Freund",
+      "category": "Familie",
+      "level": "A2",
+      "url": "/vocabulary/priyatel/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "priyatelka",
+      "title": "Приятелка",
+      "content": "Приятелка Freundin",
+      "category": "Familie",
+      "level": "A2",
+      "url": "/vocabulary/priyatelka/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "pari",
+      "title": "Пари",
+      "content": "Пари Geld",
+      "category": "Einkauf",
+      "level": "A2",
+      "url": "/vocabulary/pari/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "tsena",
+      "title": "Цена",
+      "content": "Цена Preis",
+      "category": "Einkauf",
+      "level": "A2",
+      "url": "/vocabulary/tsena/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "evro",
+      "title": "Евро",
+      "content": "Евро Euro",
+      "category": "Einkauf",
+      "level": "A2",
+      "url": "/vocabulary/evro/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "lev",
+      "title": "Лев",
+      "content": "Лев Lew",
+      "category": "Einkauf",
+      "level": "A2",
+      "url": "/vocabulary/lev/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "smetka",
+      "title": "Сметка",
+      "content": "Сметка Rechnung",
+      "category": "Einkauf",
+      "level": "A2",
+      "url": "/vocabulary/smetka/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "kasova-belezhka",
+      "title": "Касова бележка",
+      "content": "Касова бележка Quittung",
+      "category": "Einkauf",
+      "level": "A2",
+      "url": "/vocabulary/kasova-belezhka/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "otstapka",
+      "title": "Отстъпка",
+      "content": "Отстъпка Rabatt",
+      "category": "Einkauf",
+      "level": "A2",
+      "url": "/vocabulary/otstapka/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "kupuvam",
+      "title": "Купувам",
+      "content": "Купувам kaufen",
+      "category": "Verb",
+      "level": "A2",
+      "url": "/vocabulary/kupuvam/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "prodavam",
+      "title": "Продавам",
+      "content": "Продавам verkaufen",
+      "category": "Verb",
+      "level": "A2",
+      "url": "/vocabulary/prodavam/",
+      "type": "vocabulary"
+    },
+    {
+      "id": "pazaruvam",
+      "title": "Пазарувам",
+      "content": "Пазарувам einkaufen",
+      "category": "Verb",
+      "level": "A2",
+      "url": "/vocabulary/pazaruvam/",
+      "type": "vocabulary"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "word-order",
+      "title": "Word Order",
+      "content": "Bulgarian word order is flexible thanks to subject–verb agreement.\nThe neutral pattern is S + V + O + A (Subject, Verb, Object, Adjunct), but other orders such as A + S + V + O, O + S + V + A or S + V + A + O are also possible.\nYou can change the order to emphasise different parts of the sentence without changing the basic meaning.",
+      "level": "A1",
+      "url": "/grammar/word-order/",
+      "type": "grammar"
+    },
+    {
+      "id": "gender-of-nouns",
+      "title": "Gender of Nouns",
+      "content": "Bulgarian nouns have three grammatical genders: masculine, feminine and neuter.\nMasculine nouns usually end in a consonant (мъж – man, син – son).\nFeminine nouns often end in –а/–я (жена – woman, ябълка – apple).\nNeuter nouns typically end in –е/–о (море – sea, месо – meat).\nThere are exceptions: some masculine nouns end in –а/–я (баща – father), some feminine nouns end in a consonant (любов – love), and some neuter nouns end in –и or –ю (такси – taxi).",
+      "level": "A1",
+      "url": "/grammar/gender-of-nouns/",
+      "type": "grammar"
+    },
+    {
+      "id": "singular-and-plural",
+      "title": "Singular and Plural",
+      "content": "Bulgarian nouns are either singular or plural.\nMasculine nouns form plurals with endings like –и, –е or –ове (стол – столове 'chair – chairs').\nFeminine nouns replace –а/–я with –и (жена – жени 'woman – women').\nNeuter nouns take –а or –ета (море – морета 'sea – seas').\nA historical dual number for pairs of inanimate masculine nouns survives with the ending –а (два стола – two chairs).",
+      "level": "A1",
+      "url": "/grammar/singular-and-plural/",
+      "type": "grammar"
+    },
+    {
+      "id": "definite-article",
+      "title": "Definite Article",
+      "content": "The Bulgarian definite article attaches to the end of the noun.\nMasculine nouns take –ът/–ят (студент – студентът 'the student', кон – конят 'the horse').\nFeminine nouns take –та (вода – водата 'the water', чиния – чинията 'the plate').\nNeuter nouns take –то (село – селото 'the village', море – морето 'the sea').\nFor plural nouns the article is –те for masculine and feminine plurals and –та for neuter plurals.",
+      "level": "A1",
+      "url": "/grammar/definite-article/",
+      "type": "grammar"
+    },
+    {
+      "id": "pronouns-and-cases",
+      "title": "Pronouns and Cases",
+      "content": "Bulgarian cases exist mainly in personal pronouns.\nThere are three cases: nominative (аз, ти, той, тя, то, ние, вие, те), accusative (ме, те, го, я, го, ни, ви, ги) and dative (ми, ти, му, й, му, ни, ви, им).\nUse the nominative for subjects, the accusative for direct objects and the dative for indirect objects.",
+      "level": "A1",
+      "url": "/grammar/pronouns-and-cases/",
+      "type": "grammar"
+    },
+    {
+      "id": "present-and-future-tenses",
+      "title": "Present and Future Tenses",
+      "content": "Bulgarian verbs conjugate for person and number.\nThe present tense expresses ongoing actions (Аз уча български – I study Bulgarian).\nFuture tense uses the particle ще and the present tense of the verb (Аз ще уча български – I will study Bulgarian).",
+      "level": "A1",
+      "url": "/grammar/present-and-future-tenses/",
+      "type": "grammar"
+    },
+    {
+      "id": "past-tenses",
+      "title": "Past Tenses",
+      "content": "For A2 learners it's useful to distinguish between the past aorist and the past imperfect.\nThe past aorist describes completed actions (Аз учих български – I studied Bulgarian), while the past imperfect describes continuous or habitual past actions (Аз учех български – I was studying Bulgarian).",
+      "level": "A2",
+      "url": "/grammar/past-tenses/",
+      "type": "grammar"
+    },
+    {
+      "id": "quantifiers-and-numbers",
+      "title": "Quantifiers and Numbers",
+      "content": "At level A2 you'll encounter quantifiers and numbers more frequently.\nThe words много (many/much), малко (few/little), всички (all), няколко (several) and никой (none) help quantify nouns.\nBulgarian numbers one through ten are: едно, две, три, четири, пет, шест, седем, осем, девет, десет.",
+      "level": "A2",
+      "url": "/grammar/quantifiers-and-numbers/",
+      "type": "grammar"
+    },
+    {
+      "id": "time-expressions",
+      "title": "Time Expressions",
+      "content": "Talking about time requires vocabulary for days and parts of the day.\nThe days of the week are понеделник, вторник, сряда, четвъртък, петък, събота and неделя.\nParts of the day include сутрин (morning), обед (noon), следобед (afternoon), вечер (evening) and нощ (night).",
+      "level": "A2",
+      "url": "/grammar/time-expressions/",
+      "type": "grammar"
+    },
+    {
+      "id": "food-and-shopping-vocabulary",
+      "title": "Food and Shopping Vocabulary",
+      "content": "Food and shopping conversations are frequent at A2.\nLearn common nouns for food (хляб – bread, мляко – milk, сирене – cheese) and verbs for shopping (купувам – to buy, продавам – to sell, пазарувам – to shop).\nUnderstanding basic currency words like лев (the Bulgarian currency) and евро (euro) is also helpful.",
+      "level": "A2",
+      "url": "/grammar/food-and-shopping-vocabulary/",
+      "type": "grammar"
+    },
+    {
+      "id": "travel-and-directions",
+      "title": "Travel and Directions",
+      "content": "At A2 you may need to ask for directions or discuss travel.\nKey nouns include автобус (bus), влак (train), самолет (airplane), такси (taxi), гара (train station) and летище (airport).\nThe noun билет means 'ticket', and карта means 'map'.",
+      "level": "A2",
+      "url": "/grammar/travel-and-directions/",
+      "type": "grammar"
+    }
+  ]
+}

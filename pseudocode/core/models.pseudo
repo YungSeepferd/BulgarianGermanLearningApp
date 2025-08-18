@@ -1,0 +1,58 @@
+# Go Data Models for Hugo Bulgarian-German Learning App
+
+# VocabularyItem represents a single vocabulary word/phrase
+# Maps to JSON data structure and Hugo front matter
+STRUCT VocabularyItem {
+    Word        string   `json:"word"`
+    Translation string   `json:"translation"`
+    Category    string   `json:"category"`
+    Level       string   `json:"level"`
+    Notes       string   `json:"notes,omitempty"`
+    Audio       string   `json:"audio,omitempty"`
+    Slug        string   `json:"slug,omitempty"`
+    Weight      int      `json:"weight,omitempty"`
+    Tags        []string `json:"tags,omitempty"`
+}
+
+# GrammarItem represents a grammar rule or concept
+# Maps to JSON data structure and Hugo front matter
+STRUCT GrammarItem {
+    Title       string     `json:"title"`
+    Description string     `json:"description"`
+    Examples    []string   `json:"examples"`
+    Level       string     `json:"level"`
+    Slug        string     `json:"slug,omitempty"`
+    Weight      int        `json:"weight,omitempty"`
+    Exercises   []Exercise `json:"exercises,omitempty"`
+}
+
+# ReviewState tracks spaced repetition data
+# Stored in browser localStorage as JSON
+STRUCT ReviewState {
+    ItemID      string    `json:"item_id"`
+    Interval    int       `json:"interval"`
+    EaseFactor  float64   `json:"ease_factor"`
+    Repetitions int       `json:"repetitions"`
+    NextReview  time.Time `json:"next_review"`
+    LastReview  time.Time `json:"last_review"`
+}
+
+# Exercise represents a practice exercise
+STRUCT Exercise {
+    Type          string   `json:"type"`
+    Question      string   `json:"question"`
+    Options       []string `json:"options,omitempty"`
+    CorrectAnswer string   `json:"correct_answer"`
+    Explanation   string   `json:"explanation,omitempty"`
+}
+
+# SearchEntry for Hugo search index
+STRUCT SearchEntry {
+    ID       string `json:"id"`
+    Title    string `json:"title"`
+    Content  string `json:"content"`
+    Category string `json:"category,omitempty"`
+    Level    string `json:"level"`
+    URL      string `json:"url"`
+    Type     string `json:"type"`
+}
