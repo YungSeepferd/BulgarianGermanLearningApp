@@ -1,0 +1,244 @@
+{{ define "title" }}Practice Session - {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+
+<div class="practice-container">
+    <div class="practice-header">
+        <div class="session-stats">
+            <span class="stat">
+                <span class="stat-label">Fortschritt / Прогрес:</span>
+                <span class="stat-value" id="progress">0/0</span>
+            </span>
+            <span class="stat">
+                <span class="stat-label">Genauigkeit / Точност:</span>
+                <span class="stat-value" id="accuracy">0%</span>
+            </span>
+            <span class="stat">
+                <span class="stat-label">Zeit / Време:</span>
+                <span class="stat-value" id="session-time">00:00</span>
+            </span>
+        </div>
+        
+        <div class="session-controls">
+            <button id="end-session" class="btn-secondary">Sitzung beenden / Край на сесията</button>
+            <button id="settings-toggle" class="btn-secondary" title="Sitzungseinstellungen / Настройки на сесията">⚙️</button>
+        </div>
+    </div>
+    
+    <!-- Session Settings Panel -->
+    <div class="settings-panel hidden" id="settings-panel">
+        <div class="setting-group">
+            <label for="session-length">Sitzungslänge / Дължина на сесията:</label>
+            <select id="session-length">
+                <option value="10">10 Elemente / елемента</option>
+                <option value="20" selected>20 Elemente / елемента</option>
+                <option value="30">30 Elemente / елемента</option>
+                <option value="50">50 Elemente / елемента</option>
+            </select>
+        </div>
+        
+        <div class="setting-group">
+            <label for="difficulty-filter">Schwierigkeit / Трудност:</label>
+            <select id="difficulty-filter">
+                <option value="">Alle Niveaus / Всички нива</option>
+                <option value="A1">A1 - Anfänger / Начинаещи</option>
+                <option value="A2">A2 - Grundstufe / Основно</option>
+                <option value="B1">B1 - Mittelstufe / Средно</option>
+                <option value="B2">B2 - Obere Mittelstufe / Горно средно</option>
+            </select>
+        </div>
+        
+        <div class="setting-group">
+            <label>
+                <input type="checkbox" id="audio-enabled" checked>
+                Audio aktivieren / Включване на аудио
+            </label>
+        </div>
+    </div>
+    
+    <!-- Loading State -->
+    <div class="loading-state" id="loading-state">
+        <div class="spinner"></div>
+        <p>Ihre Übungssitzung wird vorbereitet... / Подготвяме вашата сесия за упражнения...</p>
+    </div>
+    
+    <!-- No Items Available -->
+    <div class="no-items-state hidden" id="no-items-state">
+        <div class="no-items-content">
+            <h2>🎉 Großartige Arbeit! / Отлична работа!</h2>
+            <p>Sie haben alle verfügbaren Elemente für heute abgeschlossen. / Завършихте всички налични елементи за днес.</p>
+            <p>Kommen Sie morgen für mehr Übung zurück oder wiederholen Sie Wortschatz und Grammatik. / Върнете се утре за повече упражнения или прегледайте речника и граматиката.</p>
+            
+            <div class="no-items-actions">
+                <a href="/vocabulary/" class="btn-primary">Wortschatz durchsuchen / Преглед на речника</a>
+                <a href="/grammar/" class="btn-secondary">Grammatik studieren / Изучаване на граматика</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Practice Session -->
+    <div class="practice-session hidden" id="practice-session">
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <div class="card-content">
+                            <div class="word" id="current-word"></div>
+                            <div class="word-meta">
+                                <span class="level-badge" id="word-level"></span>
+                                <span class="category-tag" id="word-category"></span>
+                            </div>
+                        </div>
+                        
+                        {{ if .Site.Params.enableAudio }}
+                        <button class="audio-btn" id="play-audio" title="Play pronunciation">
+                            <span class="audio-icon">🔊</span>
+                        </button>
+                        {{ end }}
+                    </div>
+                    
+                    <div class="flashcard-back">
+                        <div class="card-content">
+                            <div class="translation" id="current-translation"></div>
+                            <div class="notes" id="current-notes"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flashcard-controls">
+                <button id="show-answer" class="btn-primary">Antwort zeigen / Покажи отговора</button>
+                
+                <div class="response-buttons hidden" id="response-buttons">
+                    <button id="incorrect-btn" class="btn-incorrect">
+                        <span class="icon">✗</span>
+                        <span class="text">Falsch / Грешно</span>
+                        <span class="shortcut">1</span>
+                    </button>
+                    <button id="correct-btn" class="btn-correct">
+                        <span class="icon">✓</span>
+                        <span class="text">Richtig / Правилно</span>
+                        <span class="shortcut">2</span>
+                    </button>
+                </div>
+                
+                <div class="hint-section">
+                    <button id="show-hint" class="btn-hint">💡 Hinweis / Подсказка</button>
+                    <div class="hint-content hidden" id="hint-content"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+    </div>
+    
+    <!-- Session Complete -->
+    <div class="session-complete hidden" id="session-complete">
+        <div class="completion-stats">
+            <h2>🎉 Sitzung abgeschlossen! / Сесията завърши!</h2>
+            
+            <div class="final-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="final-correct">0</span>
+                    <span class="stat-label">Richtig / Правилни</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="final-total">0</span>
+                    <span class="stat-label">Gesamt / Общо</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="final-accuracy">0%</span>
+                    <span class="stat-label">Genauigkeit / Точност</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="final-time">0:00</span>
+                    <span class="stat-label">Zeit / Време</span>
+                </div>
+            </div>
+            
+            <div class="performance-feedback" id="performance-feedback">
+                <!-- Dynamic feedback based on performance -->
+            </div>
+            
+            <div class="session-actions">
+                <button id="new-session" class="btn-primary">Neue Sitzung / Нова сесия</button>
+                <a href="/vocabulary/" class="btn-secondary">Wortschatz durchsuchen / Преглед на речника</a>
+                <button id="review-mistakes" class="btn-secondary">Fehler überprüfen / Преглед на грешките</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ end }}
+
+{{ define "scripts" }}
+<!-- Vocabulary data for JavaScript -->
+<script id="practice-vocabulary-data" type="application/json">
+{{ .Site.Data.vocabulary | jsonify }}
+</script>
+
+<!-- Practice configuration -->
+<script id="practice-config" type="application/json">
+{
+    "enableAudio": {{ if .Site.Params.enableAudio }}true{{ else }}false{{ end }},
+    "sessionLength": {{ .Site.Params.defaultSessionLength | default 20 }}
+}
+</script>
+
+<script>
+// Initialize enhanced practice session with bidirectional learning
+document.addEventListener('DOMContentLoaded', function() {
+    // Load vocabulary data from script tag
+    const vocabularyData = JSON.parse(document.getElementById('practice-vocabulary-data').textContent);
+    
+    // Load practice configuration
+    const config = JSON.parse(document.getElementById('practice-config').textContent);
+    
+    // Initialize vocabulary adapter
+    const adapter = new VocabularyAdapter(vocabularyData);
+    
+    // Initialize enhanced spaced repetition
+    const spacedRepetition = new EnhancedSpacedRepetition();
+    
+    // Get current learning direction
+    const currentDirection = localStorage.getItem('bgde:learning_direction') || 'bg_to_de';
+    
+    // Get selected items from localStorage (if coming from vocabulary page)
+    const selectedItems = JSON.parse(localStorage.getItem('bgde:practice_selection') || '[]');
+    
+    // Initialize enhanced practice session
+    const practiceSession = new EnhancedPracticeSession({
+        adapter: adapter,
+        spacedRepetition: spacedRepetition,
+        selectedItems: selectedItems,
+        learningDirection: currentDirection,
+        enableAudio: config.enableAudio,
+        sessionLength: config.sessionLength
+    });
+    
+    practiceSession.init();
+    
+    // Keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+        if (e.key === '1') {
+            const incorrectBtn = document.getElementById('incorrect-btn');
+            if (incorrectBtn && !incorrectBtn.classList.contains('hidden')) {
+                incorrectBtn.click();
+            }
+        } else if (e.key === '2') {
+            const correctBtn = document.getElementById('correct-btn');
+            if (correctBtn && !correctBtn.classList.contains('hidden')) {
+                correctBtn.click();
+            }
+        } else if (e.key === ' ' || e.key === 'Enter') {
+            e.preventDefault();
+            const showAnswerBtn = document.getElementById('show-answer');
+            if (showAnswerBtn && !showAnswerBtn.classList.contains('hidden')) {
+                showAnswerBtn.click();
+            }
+        }
+    });
+});
+</script>
+{{ end }}

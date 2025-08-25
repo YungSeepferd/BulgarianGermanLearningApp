@@ -1,0 +1,39 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+
+<div class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{ if .Content }}
+    <div class="page-description">
+        {{ .Content }}
+    </div>
+    {{ end }}
+</div>
+
+<div class="content-list">
+    {{ range .Pages }}
+    <article class="content-item">
+        <header class="item-header">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            {{ if .Params.level }}
+            <span class="level-badge level-{{ .Params.level | lower }}">{{ .Params.level }}</span>
+            {{ end }}
+        </header>
+        
+        {{ if .Summary }}
+        <div class="item-summary">
+            {{ .Summary }}
+        </div>
+        {{ end }}
+        
+        <footer class="item-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            {{ if .Params.category }}
+            <span class="category">{{ .Params.category }}</span>
+            {{ end }}
+        </footer>
+    </article>
+    {{ end }}
+</div>
+
+{{ end }}

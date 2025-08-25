@@ -1,0 +1,88 @@
+<!-- Language Direction Toggle Component -->
+<div class="language-toggle" id="language-toggle">
+    <button id="direction-toggle" class="toggle-btn" data-direction="bg_to_de" aria-label="Toggle learning direction">
+        <span class="source-lang" id="source-lang">BG</span>
+        <span class="arrow">→</span>
+        <span class="target-lang" id="target-lang">DE</span>
+    </button>
+    <div class="toggle-options">
+        <span class="direction-label">Learning Direction</span>
+        <div class="direction-description" id="direction-description">
+            Bulgarian → German
+        </div>
+    </div>
+</div>
+
+<script>
+(function() {
+    'use strict';
+    
+    class LanguageToggle {
+        constructor() {
+            this.currentDirection = localStorage.getItem('bgde:learning_direction') || 'bg_to_de';
+            this.toggleBtn = document.getElementById('direction-toggle');
+            this.sourceLang = document.getElementById('source-lang');
+            this.targetLang = document.getElementById('target-lang');
+            this.description = document.getElementById('direction-description');
+            
+            this.init();
+        }
+        
+        init() {
+            if (!this.toggleBtn) return;
+            
+            this.updateUI();
+            this.toggleBtn.addEventListener('click', () => this.toggle());
+            
+            // Listen for direction changes from other components
+            window.addEventListener('learning-direction-changed', (event) => {
+                this.currentDirection = event.detail.direction;
+                this.updateUI();
+            });
+        }
+        
+        toggle() {
+            const newDirection = this.currentDirection === 'bg_to_de' ? 'de_to_bg' : 'bg_to_de';
+            this.setDirection(newDirection);
+        }
+        
+        setDirection(direction) {
+            this.currentDirection = direction;
+            localStorage.setItem('bgde:learning_direction', direction);
+            this.updateUI();
+            
+            // Dispatch custom event for other components
+            window.dispatchEvent(new CustomEvent('learning-direction-changed', {
+                detail: { direction: direction }
+            }));
+        }
+        
+        updateUI() {
+            if (this.currentDirection === 'bg_to_de') {
+                this.sourceLang.textContent = 'BG';
+                this.targetLang.textContent = 'DE';
+                this.description.textContent = 'Bulgarian → German';
+                this.toggleBtn.setAttribute('data-direction', 'bg_to_de');
+            } else {
+                this.sourceLang.textContent = 'DE';
+                this.targetLang.textContent = 'BG';
+                this.description.textContent = 'German → Bulgarian';
+                this.toggleBtn.setAttribute('data-direction', 'de_to_bg');
+            }
+        }
+        
+        getCurrentDirection() {
+            return this.currentDirection;
+        }
+    }
+    
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.languageToggle = new LanguageToggle();
+        });
+    } else {
+        window.languageToggle = new LanguageToggle();
+    }
+})();
+</script>

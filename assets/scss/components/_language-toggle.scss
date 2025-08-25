@@ -1,0 +1,285 @@
+// Language Toggle Component Styles
+// Bidirectional learning interface for German↔Bulgarian
+
+.language-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.language-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  
+  &:hover {
+    border-color: var(--color-primary);
+    background: var(--color-bg-primary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.toggle-text {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+// Floating controls for when no header exists
+.floating-controls {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  background: var(--color-bg-primary);
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
+}
+
+// Language direction specific styles
+.lang-de-bg {
+  // German-to-Bulgarian learning mode
+  .source-language::before {
+    content: "🇩🇪";
+    margin-right: 0.25rem;
+  }
+  
+  .target-language::before {
+    content: "🇧🇬";
+    margin-right: 0.25rem;
+  }
+  
+  .language-direction-indicator::after {
+    content: "Deutsch → Български";
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+}
+
+.lang-bg-de {
+  // Bulgarian-to-German learning mode
+  .source-language::before {
+    content: "🇧🇬";
+    margin-right: 0.25rem;
+  }
+  
+  .target-language::before {
+    content: "🇩🇪";
+    margin-right: 0.25rem;
+  }
+  
+  .language-direction-indicator::after {
+    content: "Български → Deutsch";
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+}
+
+// Enhanced vocabulary card styles for language direction
+.vocab-card {
+  .lang-de-bg & {
+    .vocab-word {
+      // Bulgarian word (target language)
+      color: var(--color-primary);
+      
+      &::after {
+        content: " 🇧🇬";
+        opacity: 0.6;
+        font-size: 0.8em;
+      }
+    }
+    
+    .vocab-translation {
+      // German translation (source language)
+      color: var(--color-text-primary);
+      
+      &::after {
+        content: " 🇩🇪";
+        opacity: 0.6;
+        font-size: 0.8em;
+      }
+    }
+  }
+  
+  .lang-bg-de & {
+    .vocab-word {
+      // Bulgarian word (source language)
+      color: var(--color-text-primary);
+      
+      &::after {
+        content: " 🇧🇬";
+        opacity: 0.6;
+        font-size: 0.8em;
+      }
+    }
+    
+    .vocab-translation {
+      // German translation (target language)
+      color: var(--color-primary);
+      
+      &::after {
+        content: " 🇩🇪";
+        opacity: 0.6;
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+// Enhanced flashcard styles for language direction
+.flashcard {
+  .lang-de-bg & {
+    .flashcard-front {
+      // Show German word (source)
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border-left: 4px solid #fdcb6e;
+      
+      .word-text::before {
+        content: "🇩🇪 ";
+        opacity: 0.7;
+      }
+    }
+    
+    .flashcard-back {
+      // Show Bulgarian translation (target)
+      background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+      
+      .translation-text::before {
+        content: "🇧🇬 ";
+        opacity: 0.9;
+      }
+    }
+  }
+  
+  .lang-bg-de & {
+    .flashcard-front {
+      // Show Bulgarian word (source)
+      background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+      color: white;
+      
+      .word-text::before {
+        content: "🇧🇬 ";
+        opacity: 0.9;
+      }
+    }
+    
+    .flashcard-back {
+      // Show German translation (target)
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      color: var(--color-text-primary);
+      border-left: 4px solid #fdcb6e;
+      
+      .translation-text::before {
+        content: "🇩🇪 ";
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+// Language-specific typography
+.lang-de-bg {
+  .german-text {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-weight: 500;
+  }
+  
+  .bulgarian-text {
+    font-family: "Segoe UI", "DejaVu Sans", sans-serif;
+    font-weight: 600;
+  }
+}
+
+.lang-bg-de {
+  .bulgarian-text {
+    font-family: "Segoe UI", "DejaVu Sans", sans-serif;
+    font-weight: 500;
+  }
+  
+  .german-text {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-weight: 600;
+  }
+}
+
+// Direction indicator for UI elements
+.direction-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  
+  .lang-de-bg & {
+    &::before {
+      content: "🇩🇪→🇧🇬";
+    }
+  }
+  
+  .lang-bg-de & {
+    &::before {
+      content: "🇧🇬→🇩🇪";
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .language-toggle-btn {
+    padding: 0.4rem 0.8rem;
+    
+    .toggle-text {
+      font-size: 0.8rem;
+    }
+  }
+  
+  .floating-controls {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  
+  // Hide flag emojis on small screens to save space
+  .vocab-card .vocab-word::after,
+  .vocab-card .vocab-translation::after,
+  .flashcard .word-text::before,
+  .flashcard .translation-text::before {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .language-toggle-btn {
+    .toggle-text {
+      display: none;
+    }
+    
+    .toggle-icon {
+      font-size: 1rem;
+    }
+  }
+}

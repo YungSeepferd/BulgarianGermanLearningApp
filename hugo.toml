@@ -1,0 +1,149 @@
+baseURL = 'https://yungseepferd.github.io/BulgarianGermanLearningApp'
+languageCode = 'en-us'
+title = 'Bulgarian-German Learning App'
+theme = 'learn'
+
+# Build configuration
+publishDir = 'public'
+contentDir = 'content'
+dataDir = 'data'
+layoutDir = 'layouts'
+staticDir = 'static'
+archetypeDir = 'archetypes'
+assetDir = 'assets'
+
+# Content settings
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+canonifyURLs = true
+
+# Markup configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = 'github'
+    lineNos = true
+    codeFences = true
+
+# Asset processing configuration
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.128.0"
+  
+  [[module.mounts]]
+    source = "assets/scss"
+    target = "assets/scss"
+  
+  [[module.mounts]]
+    source = "assets/js"
+    target = "assets/js"
+  
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+
+# Build configuration
+[build]
+  writeStats = true
+  useResourceCacheWhen = "fallback"
+  noJSConfigInAssets = true
+  [build.buildStats]
+    enable = true
+    disableClasses = false
+    disableTags = false
+    disableHugoVariablesInject = false
+    disableHugoVersion = false
+    disablePathToLower = false
+    disableAliases = false
+    disableGitInfo = false
+    disableEnvironment = false
+    disablePath = false
+    disableKind = false
+    disableSection = false
+    disableTaxonomy = false
+    disableLanguage = false
+    disableTranslationKey = false
+    disableTranslation = false
+    disableMenu = false
+    disablePage = false
+    disableResource = false
+    disableHugo = false
+    disableGo = false
+    disableCss = false
+    disableJs = false
+    disableJson = false
+    disableXml = false
+    disableYaml = false
+    disableToml = false
+    disableCsv = false
+    disableHtml = false
+    disableText = false
+    disableOther = false
+
+# Output configuration
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ['HTML']
+  section = ['HTML', 'RSS']
+
+[outputFormats]
+  [outputFormats.SCSS]
+    mediaType = "text/css"
+    isPlainText = true
+    notAlternative = true
+    
+  [outputFormats.SearchIndex]
+    mediaType = 'application/json'
+    baseName = 'search-index'
+    isPlainText = true
+    notAlternative = true
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    name = 'Vocabulary'
+    url = '/vocabulary/'
+    weight = 10
+  [[menu.main]]
+    name = 'Grammar'
+    url = '/grammar/'
+    weight = 20
+  [[menu.main]]
+    name = 'Practice'
+    url = '/practice/'
+    weight = 30
+
+# Site parameters
+[params]
+  description = 'Learn Bulgarian and German with spaced repetition'
+  author = 'Bulgarian-German Learning App'
+  enablePWA = true
+  enableAudio = true
+  defaultSessionLength = 20
+  themeColor = '#4a6fa5'
+  shortName = 'BG-DE Learn'
+  githubRepo = 'https://github.com/dinz/BulgarianApp-Fresh'
+  
+  # Social media
+  [params.social]
+    github = 'dinz/BulgarianApp-Fresh'
+
+# Taxonomies
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+  level = 'levels'
+
+
+# Minification
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false

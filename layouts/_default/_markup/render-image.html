@@ -1,0 +1,35 @@
+{{- $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) -}}
+{{- $isExternal := hasPrefix .Destination "http" -}}
+{{- $alt := .PlainText | safeHTML -}}
+{{- $title := .Title | safeHTML -}}
+
+<figure class="image-container">
+  {{- if $isExternal -}}
+    <img src="{{ .Destination | safeURL }}" alt="{{ $alt }}" {{ with $title }}title="{{ . }}"{{ end }} loading="lazy" />
+  {{- else -}}
+    {{- with $image -}}
+      {{- $small := .Resize "800x" -}}
+      {{- $medium := .Resize "1200x" -}}
+      <img 
+        srcset="{{ $small.RelPermalink }} 800w, {{ $medium.RelPermalink }} 1200w, {{ .RelPermalink }} {{ .Width }}w"
+        sizes="(max-width: 800px) 100vw, 800px"
+        src="{{ .RelPermalink }}" 
+        alt="{{ $alt }}" 
+        {{ with $title }}title="{{ . }}"{{ end }}
+        loading="lazy"
+      />
+    {{- else -}}
+      <img src="{{ .Destination | safeURL }}" alt="{{ $alt }}" {{ with $title }}title="{{ . }}"{{ end }} loading="lazy" />
+    {{- end -}}
+  {{- end -}}
+  
+  {{- if or $title $alt -}}
+    <figcaption>
+      {{- with $title -}}
+        {{ . }}
+      {{- else -}}
+        {{ $alt }}
+      {{- end -}}
+    </figcaption>
+  {{- end -}}
+</figure>

@@ -1,0 +1,20 @@
+// Main SCSS file - imports all components and pages
+@import 'variables';
+@import 'mixins';
+@import 'base';
+// Import component styles
+@import 'components/header';
+@import 'components/footer';
+@import 'components/vocab-cards';
+@import 'components/language-toggle';
+@import 'components/forms';
+@import 'components/badges';
+@import 'components/flashcards';
+@import 'components/progress';
+@import 'components/search';
+@import 'components/cultural-context';
+@import 'components/code';
+@import 'pages/home';
+@import 'pages/vocabulary';
+@import 'pages/grammar';
+@import 'pages/practice';

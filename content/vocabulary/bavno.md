@@ -1,0 +1,20 @@
+---
+title: "Бавно"
+translation: "langsam"
+category: "Adverb"
+level: "A1"
+type: "vocabulary"
+weight: 10
+tags: ["A1", "Adverb"]
+audio: "/audio/bavno.mp3"
+date: 2025-08-17
+---
+
+# Бавно
+
+**Translation:** langsam
+
+**Category:** Adverb
+
+**Level:** A1
+

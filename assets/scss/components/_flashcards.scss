@@ -1,0 +1,497 @@
+// Flashcard Practice Component Styles
+// Interactive flashcard system with flip animations and grading interface
+
+.flashcards-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  min-height: 600px;
+}
+
+// Session Header
+.flashcards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.session-info {
+  .session-title {
+    margin: 0 0 0.5rem 0;
+    color: var(--color-text-primary);
+    font-size: 1.25rem;
+  }
+  
+  .session-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+  }
+}
+
+.session-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+// Progress Bar
+.progress-container {
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--color-border);
+  border-radius: var(--border-radius-full);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  transition: width 0.3s ease;
+  border-radius: var(--border-radius-full);
+}
+
+// Main Flashcard Stage
+.flashcard-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  margin-bottom: 2rem;
+}
+
+.flashcard {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+  
+  &:focus {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 4px;
+    border-radius: var(--border-radius);
+  }
+  
+  &.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  border-radius: var(--border-radius-lg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--color-border);
+}
+
+.flashcard-front {
+  background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+  color: var(--color-text-primary);
+}
+
+.flashcard-back {
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.word-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  word-break: break-word;
+  text-align: center;
+}
+
+.translation-text {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  word-break: break-word;
+  text-align: center;
+}
+
+.word-meta {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+  
+  .word-category,
+  .word-level {
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-full);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .word-category {
+    background: var(--color-secondary);
+    color: var(--color-text-primary);
+  }
+  
+  .word-level {
+    background: var(--color-accent);
+    color: white;
+  }
+}
+
+.word-notes {
+  font-size: 1rem;
+  line-height: 1.4;
+  opacity: 0.9;
+  margin-top: 1rem;
+  text-align: center;
+  max-width: 80%;
+}
+
+.flip-hint {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+  
+  .flip-icon {
+    font-size: 1rem;
+    animation: pulse 2s infinite;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+// Review Statistics
+.review-stats {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    
+    .stat-label {
+      font-size: 0.7rem;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .stat-value {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+}
+
+// Grading Controls
+.grading-controls {
+  text-align: center;
+  padding: 2rem;
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  
+  .grading-prompt {
+    margin-bottom: 2rem;
+    
+    h4 {
+      margin: 0 0 0.5rem 0;
+      color: var(--color-text-primary);
+      font-size: 1.25rem;
+    }
+    
+    .grading-help {
+      color: var(--color-text-secondary);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+  }
+}
+
+.grade-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.grade-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: var(--color-bg-primary);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-align: center;
+  
+  &:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  
+  &.selected {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    transform: scale(1.05);
+  }
+  
+  .grade-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+  }
+  
+  .grade-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .grade-desc {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    line-height: 1.2;
+  }
+  
+  &.selected .grade-number {
+    color: white;
+  }
+}
+
+// Flashcard Buttons
+.flashcard-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  
+  &.primary {
+    background: var(--color-primary);
+    color: white;
+    
+    &:hover {
+      background: var(--color-primary-dark);
+      transform: translateY(-1px);
+    }
+  }
+  
+  &.secondary {
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    
+    &:hover {
+      background: var(--color-bg-primary);
+      transform: translateY(-1px);
+    }
+  }
+  
+  &.danger {
+    background: var(--color-error);
+    color: white;
+    
+    &:hover {
+      background: var(--color-error-dark);
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// Loading and Error States
+.flashcards-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: var(--color-text-secondary);
+  
+  .loading-spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 3px solid var(--color-border);
+    border-top: 3px solid var(--color-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .flashcards-container {
+    padding: 0.5rem;
+    min-height: 500px;
+  }
+  
+  .flashcard {
+    height: 300px;
+    
+    .card-content {
+      padding: 1rem;
+      
+      .word {
+        font-size: 1.5rem;
+      }
+      
+      .translation {
+        font-size: 1.25rem;
+      }
+    }
+  }
+  
+  .flashcard-controls {
+    .btn {
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+      
+      // Ensure touch targets are at least 44px
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+  
+  .session-info .session-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .grade-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+// Mobile-first responsive design for 360px viewport
+@media (max-width: 360px) {
+  .flashcards-container {
+    padding: 0.25rem;
+    min-height: 450px;
+  }
+  
+  .flashcard {
+    height: 280px;
+    margin: 0.5rem 0;
+    
+    .card-content {
+      padding: 0.75rem;
+      
+      .word {
+        font-size: 1.25rem;
+        line-height: 1.3;
+      }
+      
+      .translation {
+        font-size: 1.1rem;
+        line-height: 1.3;
+      }
+    }
+  }
+  
+  .flashcard-controls {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    
+    .btn {
+      flex: 1;
+      min-width: 120px;
+      padding: 0.75rem 0.5rem;
+      font-size: 0.85rem;
+      
+      // Ensure adequate touch targets
+      min-height: 48px;
+    }
+  }
+  
+  .flashcards-header {
+    padding: 0.75rem;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+  
+  .session-controls {
+    width: 100%;
+    justify-content: center;
+  }
+}

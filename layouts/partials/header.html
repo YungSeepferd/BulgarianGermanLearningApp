@@ -1,0 +1,44 @@
+<header class="site-header">
+    <nav class="main-nav">
+        <div class="nav-brand">
+            <a href="/" class="brand-link">
+                <span class="brand-text">{{ .Site.Title }}</span>
+            </a>
+        </div>
+        
+        <div class="nav-menu">
+            <a href="/vocabulary/" class="nav-link {{ if eq .Section "vocabulary" }}active{{ end }}">
+                Wortschatz / Речник
+            </a>
+            <a href="/grammar/" class="nav-link {{ if eq .Section "grammar" }}active{{ end }}">
+                Grammatik / Граматика
+            </a>
+            <a href="/practice/" class="nav-link {{ if eq .Section "practice" }}active{{ end }}">
+                Üben / Упражнения
+            </a>
+            
+            {{ if .Site.Params.enableProgress }}
+            <a href="/progress/" class="nav-link {{ if eq .Section "progress" }}active{{ end }}">
+                Fortschritt / Прогрес
+            </a>
+            {{ end }}
+        </div>
+        
+        <div class="nav-actions">
+            {{ partial "language-toggle.html" . }}
+            
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+            
+            <button id="search-toggle" class="search-toggle" aria-label="Toggle search">
+                <span class="search-icon">🔍</span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Search overlay -->
+    <div class="search-overlay hidden" id="search-overlay">
+        {{ partial "search.html" . }}
+    </div>
+</header>

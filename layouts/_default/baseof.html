@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ block "description" . }}{{ .Site.Params.description }}{{ end }}">
+    
+    {{ $style := resources.Get "scss/main.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+    
+    {{ if .Site.Params.enablePWA }}
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="{{ .Site.Params.themeColor }}">
+    {{ end }}
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="{{ $style.RelPermalink }}" as="style" integrity="{{ $style.Data.Integrity }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+    {{ partial "header.html" . }}
+    
+    <main id="main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+    
+    {{ partial "footer.html" . }}
+    
+    <!-- JavaScript -->
+    {{ $js := resources.Get "js/app.js" | resources.Minify }}
+    <script src="{{ $js.RelPermalink }}"></script>
+    
+    {{ $codeJs := resources.Get "js/code.js" | resources.Minify }}
+    <script src="{{ $codeJs.RelPermalink }}" defer></script>
+    
+    <!-- Enhanced Bidirectional Learning Modules -->
+    {{ $vocabAdapter := resources.Get "js/vocabulary-adapter.js" | resources.Minify }}
+    <script src="{{ $vocabAdapter.RelPermalink }}"></script>
+    
+    {{ $enhancedSR := resources.Get "js/enhanced-spaced-repetition.js" | resources.Minify }}
+    <script src="{{ $enhancedSR.RelPermalink }}"></script>
+    
+    {{ $enhancedVocab := resources.Get "js/enhanced-vocab-cards.js" | resources.Minify }}
+    <script src="{{ $enhancedVocab.RelPermalink }}"></script>
+    
+    {{ $culturalToggle := resources.Get "js/cultural-context-toggle.js" | resources.Minify }}
+    <script src="{{ $culturalToggle.RelPermalink }}"></script>
+    
+    {{ $enhancedPractice := resources.Get "js/enhanced-practice-session.js" | resources.Minify }}
+    <script src="{{ $enhancedPractice.RelPermalink }}"></script>
+    
+    {{ block "scripts" . }}{{ end }}
+    
+    {{ if .Site.Params.enablePWA }}
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+    {{ end }}
+</body>
+</html>

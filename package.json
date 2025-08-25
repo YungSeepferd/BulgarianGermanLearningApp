@@ -1,0 +1,24 @@
+{
+  "name": "bulgarian-german-learning-app",
+  "version": "1.0.0",
+  "description": "Learn Bulgarian and German with spaced repetition",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hugo server --buildDrafts --buildFuture",
+    "build": "hugo --gc --minify",
+    "process-data": "./hugo-bg-de process-data",
+    "build-tools": "cd tools && go build -o ../hugo-bg-de ./cmd/hugo-bg-de"
+  },
+  "keywords": [
+    "hugo",
+    "language-learning",
+    "spaced-repetition",
+    "bulgarian",
+    "german"
+  ],
+  "author": "Bulgarian-German Learning App",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}

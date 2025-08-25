@@ -1,0 +1,579 @@
+# Go Backend Services for Hugo Bulgarian-German Learning App
+
+## Go Data Processing and Build Tools
+
+CLASS GoDataProcessor
+    """
+    Go-based data processing tools for Hugo site generation
+    Handles JSON data transformation and content generation
+    """
+    
+    FIELDS:
+        vocabulary_data: []VocabularyItem
+        grammar_data: []GrammarItem
+        output_dir: String
+        hugo_config: HugoConfig
+        
+    METHODS:
+        load_json_data(file_path: String) -> ([]byte, error)
+            """
+            Load and validate JSON data files
+            """
+            data, err := ioutil.ReadFile(file_path)
+            IF err != nil THEN
+                RETURN nil, fmt.Errorf("failed to read file %s: %w", file_path, err)
+            END IF
+            
+            # Validate JSON structure
+            var temp interface{}
+            err = json.Unmarshal(data, &temp)
+            IF err != nil THEN
+                RETURN nil, fmt.Errorf("invalid JSON in %s: %w", file_path, err)
+            END IF
+            
+            RETURN data, nil
+            
+        process_vocabulary_data() -> error
+            """
+            Process vocabulary JSON and generate Hugo content files
+            """
+            vocab_json, err := load_json_data("data/vocabulary.json")
+            IF err != nil THEN
+                RETURN err
+            END IF
+            
+            var vocabulary_items []VocabularyItem
+            err = json.Unmarshal(vocab_json, &vocabulary_items)
+            IF err != nil THEN
+                RETURN fmt.Errorf("failed to parse vocabulary data: %w", err)
+            END IF
+            
+            FOR EACH item IN vocabulary_items
+                # Generate slug for URL
+                item.Slug = generate_slug(item.Word)
+                
+                # Create Hugo front matter
+                front_matter := create_vocabulary_front_matter(item)
+                
+                # Generate markdown content
+                content := create_vocabulary_content(item)
+                
+                # Write content file
+                file_path := fmt.Sprintf("content/vocabulary/%s.md", item.Slug)
+                err := write_content_file(file_path, front_matter, content)
+                IF err != nil THEN
+                    RETURN fmt.Errorf("failed to write vocabulary file %s: %w", file_path, err)
+                END IF
+            END FOR
+            
+            RETURN nil
+            
+        process_grammar_data() -> error
+            """
+            Process grammar JSON and generate Hugo content files
+            """
+            grammar_json, err := load_json_data("data/grammar.json")
+            IF err != nil THEN
+                RETURN err
+            END IF
+            
+            var grammar_items []GrammarItem
+            err = json.Unmarshal(grammar_json, &grammar_items)
+            IF err != nil THEN
+                RETURN fmt.Errorf("failed to parse grammar data: %w", err)
+            END IF
+            
+            FOR EACH item IN grammar_items
+                item.Slug = generate_slug(item.Title)
+                
+                # Generate exercises if needed
+                IF len(item.Examples) > 0 THEN
+                    item.Exercises = generate_grammar_exercises(item)
+                END IF
+                
+                front_matter := create_grammar_front_matter(item)
+                content := create_grammar_content(item)
+                
+                file_path := fmt.Sprintf("content/grammar/%s.md", item.Slug)
+                err := write_content_file(file_path, front_matter, content)
+                IF err != nil THEN
+                    RETURN fmt.Errorf("failed to write grammar file %s: %w", file_path, err)
+                END IF
+            END FOR
+            
+            RETURN nil
+            
+        generate_search_index() -> error
+            """
+            Generate search index JSON for client-side search
+            """
+            search_index := SearchIndex{
+                Vocabulary: make([]SearchEntry, 0),
+                Grammar:    make([]SearchEntry, 0),
+            }
+            
+            # Add vocabulary entries
+            FOR EACH item IN vocabulary_data
+                entry := SearchEntry{
+                    ID:          item.Slug,
+                    Title:       item.Word,
+                    Content:     item.Word + " " + item.Translation,
+                    Category:    item.Category,
+                    Level:       item.Level,
+                    URL:         "/vocabulary/" + item.Slug + "/",
+                    Type:        "vocabulary",
+                }
+                search_index.Vocabulary = append(search_index.Vocabulary, entry)
+            END FOR
+            
+            # Add grammar entries
+            FOR EACH item IN grammar_data
+                entry := SearchEntry{
+                    ID:          item.Slug,
+                    Title:       item.Title,
+                    Content:     item.Description,
+                    Level:       item.Level,
+                    URL:         "/grammar/" + item.Slug + "/",
+                    Type:        "grammar",
+                }
+                search_index.Grammar = append(search_index.Grammar, entry)
+            END FOR
+            
+            # Write search index file
+            index_json, err := json.MarshalIndent(search_index, "", "  ")
+            IF err != nil THEN
+                RETURN fmt.Errorf("failed to marshal search index: %w", err)
+            END IF
+            
+            err = ioutil.WriteFile("static/search-index.json", index_json, 0644)
+            IF err != nil THEN
+                RETURN fmt.Errorf("failed to write search index: %w", err)
+            END IF
+            
+            RETURN nil
+
+## Go Utility Functions
+
+CLASS GoUtilities
+    """
+    Utility functions for data processing and content generation
+    """
+    
+    METHODS:
+        generate_slug(text: String) -> String
+            """
+            Generate URL-friendly slug from text
+            """
+            # Convert to lowercase
+            slug := strings.ToLower(text)
+            
+            # Replace spaces and special characters
+            slug = regexp.MustCompile(`[^\p{L}\p{N}]+`).ReplaceAllString(slug, "-")
+            
+            # Remove leading/trailing hyphens
+            slug = strings.Trim(slug, "-")
+            
+            # Handle Bulgarian/German special characters
+            replacements := map[string]string{
+                "ä": "ae", "ö": "oe", "ü": "ue", "ß": "ss",
+                "а": "a", "б": "b", "в": "v", "г": "g", "д": "d",
+                "е": "e", "ж": "zh", "з": "z", "и": "i", "й": "y",
+                "к": "k", "л": "l", "м": "m", "н": "n", "о": "o",
+                "п": "p", "р": "r", "с": "s", "т": "t", "у": "u",
+                "ф": "f", "х": "h", "ц": "ts", "ч": "ch", "ш": "sh",
+                "щ": "sht", "ъ": "a", "ь": "y", "ю": "yu", "я": "ya",
+            }
+            
+            FOR key, value IN replacements
+                slug = strings.ReplaceAll(slug, key, value)
+            END FOR
+            
+            RETURN slug
+            
+        create_vocabulary_front_matter(item: VocabularyItem) -> String
+            """
+            Create Hugo front matter for vocabulary items
+            """
+            front_matter := fmt.Sprintf(`---
+title: "%s"
+translation: "%s"
+category: "%s"
+level: "%s"
+type: "vocabulary"
+weight: %d
+tags: ["%s", "%s"]
+audio: "%s"
+date: %s
+---
+
+`, item.Word, item.Translation, item.Category, item.Level, 
+    calculate_weight(item), item.Level, item.Category, 
+    generate_audio_path(item.Word), time.Now().Format("2006-01-02"))
+    
+            RETURN front_matter
+            
+        create_grammar_front_matter(item: GrammarItem) -> String
+            """
+            Create Hugo front matter for grammar items
+            """
+            front_matter := fmt.Sprintf(`---
+title: "%s"
+description: "%s"
+level: "%s"
+type: "grammar"
+weight: %d
+examples: %d
+date: %s
+---
+
+`, item.Title, item.Description, item.Level, 
+    calculate_grammar_weight(item), len(item.Examples), 
+    time.Now().Format("2006-01-02"))
+    
+            RETURN front_matter
+            
+        generate_grammar_exercises(item: GrammarItem) -> []Exercise
+            """
+            Generate practice exercises from grammar examples
+            """
+            exercises := make([]Exercise, 0)
+            
+            FOR EACH example IN item.Examples
+                # Parse example to extract Bulgarian and German parts
+                parts := strings.Split(example, " – ")
+                IF len(parts) >= 2 THEN
+                    bulgarian := strings.TrimSpace(parts[0])
+                    german := strings.TrimSpace(parts[1])
+                    
+                    # Create fill-in-the-blank exercise
+                    exercise := Exercise{
+                        Type:           "fill-blank",
+                        Question:       create_fill_blank_question(bulgarian),
+                        CorrectAnswer:  extract_blank_answer(bulgarian),
+                        Options:        generate_multiple_choice_options(bulgarian),
+                        Explanation:    german,
+                    }
+                    
+                    exercises = append(exercises, exercise)
+                END IF
+            END FOR
+            
+            RETURN exercises
+
+## Go Build Integration
+
+CLASS GoBuildIntegration
+    """
+    Integration with Hugo build process
+    """
+    
+    METHODS:
+        pre_build_hook() -> error
+            """
+            Run before Hugo build process
+            """
+            log.Println("Starting pre-build data processing...")
+            
+            processor := &GoDataProcessor{
+                output_dir: "content/",
+            }
+            
+            # Process vocabulary data
+            err := processor.process_vocabulary_data()
+            IF err != nil THEN
+                RETURN fmt.Errorf("vocabulary processing failed: %w", err)
+            END IF
+            
+            # Process grammar data
+            err = processor.process_grammar_data()
+            IF err != nil THEN
+                RETURN fmt.Errorf("grammar processing failed: %w", err)
+            END IF
+            
+            # Generate search index
+            err = processor.generate_search_index()
+            IF err != nil THEN
+                RETURN fmt.Errorf("search index generation failed: %w", err)
+            END IF
+            
+            # Generate PWA manifest
+            err = generate_pwa_manifest()
+            IF err != nil THEN
+                RETURN fmt.Errorf("PWA manifest generation failed: %w", err)
+            END IF
+            
+            log.Println("Pre-build processing completed successfully")
+            RETURN nil
+            
+        post_build_hook() -> error
+            """
+            Run after Hugo build process
+            """
+            log.Println("Starting post-build optimizations...")
+            
+            # Optimize generated files
+            err := optimize_static_assets()
+            IF err != nil THEN
+                RETURN fmt.Errorf("asset optimization failed: %w", err)
+            END IF
+            
+            # Generate service worker
+            err = generate_service_worker()
+            IF err != nil THEN
+                RETURN fmt.Errorf("service worker generation failed: %w", err)
+            END IF
+            
+            # Validate build output
+            err = validate_build_output()
+            IF err != nil THEN
+                RETURN fmt.Errorf("build validation failed: %w", err)
+            END IF
+            
+            log.Println("Post-build processing completed successfully")
+            RETURN nil
+            
+        optimize_static_assets() -> error
+            """
+            Optimize CSS, JS, and images in the public directory
+            """
+            public_dir := "public/"
+            
+            # Minify CSS files
+            css_files, err := filepath.Glob(public_dir + "**/*.css")
+            IF err == nil THEN
+                FOR EACH css_file IN css_files
+                    err := minify_css_file(css_file)
+                    IF err != nil THEN
+                        log.Printf("Warning: failed to minify CSS file %s: %v", css_file, err)
+                    END IF
+                END FOR
+            END IF
+            
+            # Minify JavaScript files
+            js_files, err := filepath.Glob(public_dir + "**/*.js")
+            IF err == nil THEN
+                FOR EACH js_file IN js_files
+                    err := minify_js_file(js_file)
+                    IF err != nil THEN
+                        log.Printf("Warning: failed to minify JS file %s: %v", js_file, err)
+                    END IF
+                END FOR
+            END IF
+            
+            # Compress images
+            img_files, err := filepath.Glob(public_dir + "**/*.{jpg,jpeg,png}")
+            IF err == nil THEN
+                FOR EACH img_file IN img_files
+                    err := compress_image(img_file)
+                    IF err != nil THEN
+                        log.Printf("Warning: failed to compress image %s: %v", img_file, err)
+                    END IF
+                END FOR
+            END IF
+            
+            RETURN nil
+            
+        generate_service_worker() -> error
+            """
+            Generate service worker for offline functionality
+            """
+            # Get list of all static assets
+            assets, err := get_static_asset_list("public/")
+            IF err != nil THEN
+                RETURN fmt.Errorf("failed to get asset list: %w", err)
+            END IF
+            
+            # Create service worker content
+            sw_content := create_service_worker_template(assets)
+            
+            # Write service worker file
+            err = ioutil.WriteFile("public/sw.js", []byte(sw_content), 0644)
+            IF err != nil THEN
+                RETURN fmt.Errorf("failed to write service worker: %w", err)
+            END IF
+            
+            RETURN nil
+
+## Go CLI Tool
+
+CLASS GoCLITool
+    """
+    Command-line interface for the Go build tools
+    """
+    
+    METHODS:
+        main() -> Void
+            """
+            Main CLI entry point
+            """
+            app := &cli.App{
+                Name:  "hugo-bg-de",
+                Usage: "Bulgarian-German learning app build tools",
+                Commands: []*cli.Command{
+                    {
+                        Name:   "build",
+                        Usage:  "Build the Hugo site with data processing",
+                        Action: build_command,
+                    },
+                    {
+                        Name:   "dev",
+                        Usage:  "Start development server with auto-rebuild",
+                        Action: dev_command,
+                    },
+                    {
+                        Name:   "process-data",
+                        Usage:  "Process JSON data files only",
+                        Action: process_data_command,
+                    },
+                    {
+                        Name:   "validate",
+                        Usage:  "Validate data files and build output",
+                        Action: validate_command,
+                    },
+                },
+            }
+            
+            err := app.Run(os.Args)
+            IF err != nil THEN
+                log.Fatal(err)
+            END IF
+            
+        build_command(c: *cli.Context) -> error
+            """
+            Build command implementation
+            """
+            log.Println("Building Bulgarian-German learning app...")
+            
+            # Run pre-build hooks
+            err := pre_build_hook()
+            IF err != nil THEN
+                RETURN err
+            END IF
+            
+            # Run Hugo build
+            cmd := exec.Command("hugo", "--minify")
+            cmd.Stdout = os.Stdout
+            cmd.Stderr = os.Stderr
+            err = cmd.Run()
+            IF err != nil THEN
+                RETURN fmt.Errorf("Hugo build failed: %w", err)
+            END IF
+            
+            # Run post-build hooks
+            err = post_build_hook()
+            IF err != nil THEN
+                RETURN err
+            END IF
+            
+            log.Println("Build completed successfully!")
+            RETURN nil
+            
+        dev_command(c: *cli.Context) -> error
+            """
+            Development server command
+            """
+            log.Println("Starting development server...")
+            
+            # Run initial data processing
+            err := process_data_command(c)
+            IF err != nil THEN
+                RETURN err
+            END IF
+            
+            # Start Hugo development server
+            cmd := exec.Command("hugo", "server", "--buildDrafts", "--buildFuture")
+            cmd.Stdout = os.Stdout
+            cmd.Stderr = os.Stderr
+            
+            # Set up file watcher for data files
+            go watch_data_files()
+            
+            RETURN cmd.Run()
+            
+        watch_data_files() -> Void
+            """
+            Watch data files for changes and reprocess
+            """
+            watcher, err := fsnotify.NewWatcher()
+            IF err != nil THEN
+                log.Printf("Failed to create file watcher: %v", err)
+                RETURN
+            END IF
+            defer watcher.Close()
+            
+            # Watch data directory
+            err = watcher.Add("data/")
+            IF err != nil THEN
+                log.Printf("Failed to watch data directory: %v", err)
+                RETURN
+            END IF
+            
+            FOR {
+                SELECT {
+                    CASE event := <-watcher.Events:
+                        IF event.Op&fsnotify.Write == fsnotify.Write THEN
+                            log.Printf("Data file changed: %s", event.Name)
+                            err := process_data_files()
+                            IF err != nil THEN
+                                log.Printf("Failed to reprocess data: %v", err)
+                            END IF
+                        END IF
+                    CASE err := <-watcher.Errors:
+                        log.Printf("File watcher error: %v", err)
+                }
+            }
+
+## Go Data Structures
+
+STRUCT VocabularyItem {
+    Word        string   `json:"word"`
+    Translation string   `json:"translation"`
+    Category    string   `json:"category"`
+    Level       string   `json:"level"`
+    Notes       string   `json:"notes,omitempty"`
+    Audio       string   `json:"audio,omitempty"`
+    Slug        string   `json:"slug,omitempty"`
+    Weight      int      `json:"weight,omitempty"`
+    Tags        []string `json:"tags,omitempty"`
+}
+
+STRUCT GrammarItem {
+    Title       string     `json:"title"`
+    Description string     `json:"description"`
+    Examples    []string   `json:"examples"`
+    Level       string     `json:"level"`
+    Slug        string     `json:"slug,omitempty"`
+    Weight      int        `json:"weight,omitempty"`
+    Exercises   []Exercise `json:"exercises,omitempty"`
+}
+
+STRUCT Exercise {
+    Type          string   `json:"type"`
+    Question      string   `json:"question"`
+    Options       []string `json:"options,omitempty"`
+    CorrectAnswer string   `json:"correct_answer"`
+    Explanation   string   `json:"explanation,omitempty"`
+}
+
+STRUCT SearchIndex {
+    Vocabulary []SearchEntry `json:"vocabulary"`
+    Grammar    []SearchEntry `json:"grammar"`
+}
+
+STRUCT SearchEntry {
+    ID       string `json:"id"`
+    Title    string `json:"title"`
+    Content  string `json:"content"`
+    Category string `json:"category,omitempty"`
+    Level    string `json:"level"`
+    URL      string `json:"url"`
+    Type     string `json:"type"`
+}
+
+STRUCT HugoConfig {
+    BaseURL     string            `toml:"baseURL"`
+    Title       string            `toml:"title"`
+    Theme       string            `toml:"theme"`
+    Params      map[string]interface{} `toml:"params"`
+    Languages   map[string]interface{} `toml:"languages"`
+}

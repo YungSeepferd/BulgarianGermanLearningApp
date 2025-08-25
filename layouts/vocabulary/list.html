@@ -1,0 +1,196 @@
+{{ define "title" }}Vocabulary - {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+
+<div class="vocabulary-container">
+    <div class="page-header">
+        <h1>Wortschatz / Речник</h1>
+        <p>Lernen Sie bulgarischen und deutschen Wortschatz mit Wiederholung in Abständen / Учете български и немски речник с повторение на интервали</p>
+    </div>
+    
+    <div class="filters">
+        <select id="level-filter">
+            <option value="">Alle Niveaus / Всички нива</option>
+            <option value="A1">A1 - Anfänger / Начинаещи</option>
+            <option value="A2">A2 - Grundstufe / Основно</option>
+            <option value="B1">B1 - Mittelstufe / Средно</option>
+            <option value="B2">B2 - Obere Mittelstufe / Горно средно</option>
+        </select>
+        
+        <select id="category-filter">
+            <option value="">Alle Kategorien / Всички категории</option>
+            {{ $categories := slice }}
+            {{ range .Site.Data.vocabulary }}
+                {{ $categories = $categories | append .category }}
+            {{ end }}
+            {{ range ($categories | uniq | sort) }}
+            <option value="{{ . }}">{{ . }}</option>
+            {{ end }}
+        </select>
+        
+        <input type="text" id="search-input" placeholder="Wortschatz suchen... / Търсене на речник..." class="search-input">
+        
+        <button id="practice-selected" class="btn-primary">Ausgewählte üben / Упражнявайте избраните</button>
+    </div>
+    
+    <!-- Cultural Context Toggle -->
+    <div id="cultural-context-container"></div>
+    
+    <div class="vocabulary-stats">
+        <span class="stat">Gesamt / Общо: <span id="total-count">{{ len .Site.Data.vocabulary }}</span></span>
+        <span class="stat">Angezeigt / Показани: <span id="showing-count">{{ len .Site.Data.vocabulary }}</span></span>
+    </div>
+    
+    <div class="vocabulary-grid" id="vocabulary-grid">
+        {{ range .Site.Data.vocabulary }}
+        <div class="vocab-card" 
+             data-level="{{ .level }}" 
+             data-category="{{ .category }}"
+             data-word="{{ .word | lower }}"
+             data-translation="{{ .translation | lower }}"
+             data-slug="{{ .word | urlize }}">
+            
+            <div class="vocab-header">
+                <div class="vocab-word">{{ .word }}</div>
+                <input type="checkbox" class="vocab-select" data-word="{{ .word }}">
+            </div>
+            
+            <div class="vocab-translation">{{ .translation }}</div>
+            
+            {{ if .audio }}
+            <button class="audio-btn" data-audio="{{ .audio }}" title="Play pronunciation">
+                <span class="audio-icon">🔊</span>
+            </button>
+            {{ end }}
+            
+            <div class="vocab-meta">
+                <span class="level-badge level-{{ .level | lower }}">{{ .level }}</span>
+                <span class="category-tag">{{ .category }}</span>
+            </div>
+            
+            {{ if .notes }}
+            <div class="vocab-notes">{{ .notes }}</div>
+            {{ end }}
+            
+            <div class="vocab-actions">
+                <button class="practice-single-btn" data-word="{{ .word }}">Üben / Упражнение</button>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    
+    <div class="no-results hidden" id="no-results">
+        <p>Keine Wortschatzeinträge gefunden, die Ihren Kriterien entsprechen. / Не са намерени думи, отговарящи на вашите критерии.</p>
+        <button id="clear-filters" class="btn-secondary">Filter löschen / Изчистване на филтрите</button>
+    </div>
+</div>
+
+{{ end }}
+
+{{ define "scripts" }}
+<!-- Vocabulary data for JavaScript -->
+<script id="vocabulary-data" type="application/json">
+{{ .Site.Data.vocabulary | jsonify }}
+</script>
+
+<script>
+// Initialize enhanced vocabulary with bidirectional learning
+document.addEventListener('DOMContentLoaded', function() {
+    // Load vocabulary data from script tag
+    const vocabularyData = JSON.parse(document.getElementById('vocabulary-data').textContent);
+    
+    // Initialize vocabulary adapter for backward compatibility
+    const adapter = new VocabularyAdapter(vocabularyData);
+    
+    // Initialize enhanced vocabulary cards
+    const enhancedVocab = new EnhancedVocabCards({
+        container: '#vocabulary-grid',
+        adapter: adapter,
+        showCulturalContext: true,
+        enableInteractions: true
+    });
+    
+    enhancedVocab.init();
+    
+    // Initialize cultural context toggle
+    const culturalToggle = new CulturalContextToggle({
+        container: document.getElementById('cultural-context-container')
+    });
+    culturalToggle.init();
+    
+    // Initialize filtering and search
+    const filters = {
+        level: document.getElementById('level-filter'),
+        category: document.getElementById('category-filter'),
+        search: document.getElementById('search-input')
+    };
+    
+    // Filter functionality
+    function applyFilters() {
+        const currentDirection = localStorage.getItem('bgde:learning_direction') || 'bg_to_de';
+        const items = adapter.getItemsForDirection(currentDirection);
+        
+        let filtered = items.filter(item => {
+            const levelMatch = !filters.level.value || item.level === filters.level.value;
+            const categoryMatch = !filters.category.value || item.category === filters.category.value;
+            const searchMatch = !filters.search.value || 
+                item.word.toLowerCase().includes(filters.search.value.toLowerCase()) ||
+                item.translation.toLowerCase().includes(filters.search.value.toLowerCase());
+            
+            return levelMatch && categoryMatch && searchMatch;
+        });
+        
+        enhancedVocab.renderItems(filtered);
+        document.getElementById('showing-count').textContent = filtered.length;
+        
+        // Show/hide no results message
+        const noResults = document.getElementById('no-results');
+        if (filtered.length === 0) {
+            noResults.classList.remove('hidden');
+        } else {
+            noResults.classList.add('hidden');
+        }
+    }
+    
+    // Add event listeners
+    filters.level.addEventListener('change', applyFilters);
+    filters.category.addEventListener('change', applyFilters);
+    
+    // Debounced search
+    let searchTimeout;
+    filters.search.addEventListener('input', function() {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(applyFilters, 300);
+    });
+    
+    // Clear filters
+    document.getElementById('clear-filters').addEventListener('click', function() {
+        filters.level.value = '';
+        filters.category.value = '';
+        filters.search.value = '';
+        applyFilters();
+    });
+    
+    // Practice selected functionality
+    document.getElementById('practice-selected').addEventListener('click', function() {
+        const selected = Array.from(document.querySelectorAll('.vocab-select:checked'))
+            .map(checkbox => checkbox.dataset.word);
+        
+        if (selected.length > 0) {
+            // Store selected items for practice session
+            localStorage.setItem('bgde:practice_selection', JSON.stringify(selected));
+            window.location.href = '/practice/';
+        } else {
+            alert('Bitte wählen Sie mindestens ein Wortschatzelement zum Üben aus. / Моля, изберете поне един елемент от речника за упражнение.');
+        }
+    });
+    
+    // Listen for language direction changes
+    document.addEventListener('learning-direction-changed', function(event) {
+        applyFilters(); // Re-filter for new direction
+    });
+    
+    // Initial render
+    applyFilters();
+});
+</script>
+{{ end }}

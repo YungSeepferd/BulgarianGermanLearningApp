@@ -1,0 +1,32 @@
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>{{ .Site.Title }}</h3>
+            <p>{{ .Site.Params.description }}</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Learn</h4>
+            <ul>
+                <li><a href="/vocabulary/">Vocabulary</a></li>
+                <li><a href="/grammar/">Grammar</a></li>
+                <li><a href="/practice/">Practice</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>About</h4>
+            <ul>
+                <li><a href="/about/">About This App</a></li>
+                <li><a href="/methodology/">Learning Method</a></li>
+                {{ if .Site.Params.githubRepo }}
+                <li><a href="{{ .Site.Params.githubRepo }}" target="_blank">Source Code</a></li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; {{ now.Year }} {{ .Site.Title }}. Built with Hugo.</p>
+    </div>
+</footer>

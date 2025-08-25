@@ -1,0 +1,109 @@
+[
+  {
+    "title": "Word Order",
+    "description": "Bulgarian word order is flexible thanks to subject–verb agreement.\nThe neutral pattern is S + V + O + A (Subject, Verb, Object, Adjunct), but other orders such as A + S + V + O, O + S + V + A or S + V + A + O are also possible.\nYou can change the order to emphasise different parts of the sentence without changing the basic meaning.",
+    "examples": [
+      "Той видя момичето в далечината. – He saw the girl in the distance.",
+      "В далечината той видя момичето. – In the distance, he saw the girl.",
+      "Момичето той видя в далечината. – The girl he saw in the distance."
+    ],
+    "level": "A1"
+  },
+  {
+    "title": "Gender of Nouns",
+    "description": "Bulgarian nouns have three grammatical genders: masculine, feminine and neuter.\nMasculine nouns usually end in a consonant (мъж – man, син – son).\nFeminine nouns often end in –а/–я (жена – woman, ябълка – apple).\nNeuter nouns typically end in –е/–о (море – sea, месо – meat).\nThere are exceptions: some masculine nouns end in –а/–я (баща – father), some feminine nouns end in a consonant (любов – love), and some neuter nouns end in –и or –ю (такси – taxi).",
+    "examples": [
+      "мъж – man (masculine)",
+      "жена – woman (feminine)",
+      "море – sea (neuter)",
+      "баща – father (masculine ending in –а)",
+      "любов – love (feminine ending in consonant)"
+    ],
+    "level": "A1"
+  },
+  {
+    "title": "Singular and Plural",
+    "description": "Bulgarian nouns are either singular or plural.\nMasculine nouns form plurals with endings like –и, –е or –ове (стол – столове 'chair – chairs').\nFeminine nouns replace –а/–я with –и (жена – жени 'woman – women').\nNeuter nouns take –а or –ета (море – морета 'sea – seas').\nA historical dual number for pairs of inanimate masculine nouns survives with the ending –а (два стола – two chairs).",
+    "examples": [
+      "стол – столове (chair – chairs)",
+      "жена – жени (woman – women)",
+      "море – морета (sea – seas)",
+      "два стол а (two chairs – dual form)"
+    ],
+    "level": "A1"
+  },
+  {
+    "title": "Definite Article",
+    "description": "The Bulgarian definite article attaches to the end of the noun.\nMasculine nouns take –ът/–ят (студент – студентът 'the student', кон – конят 'the horse').\nFeminine nouns take –та (вода – водата 'the water', чиния – чинията 'the plate').\nNeuter nouns take –то (село – селото 'the village', море – морето 'the sea').\nFor plural nouns the article is –те for masculine and feminine plurals and –та for neuter plurals.",
+    "examples": [
+      "студент – студентът (student – the student)",
+      "вода – водата (water – the water)",
+      "село – селото (village – the village)",
+      "мъже – мъжете (men – the men)"
+    ],
+    "level": "A1"
+  },
+  {
+    "title": "Pronouns and Cases",
+    "description": "Bulgarian cases exist mainly in personal pronouns.\nThere are three cases: nominative (аз, ти, той, тя, то, ние, вие, те), accusative (ме, те, го, я, го, ни, ви, ги) and dative (ми, ти, му, й, му, ни, ви, им).\nUse the nominative for subjects, the accusative for direct objects and the dative for indirect objects.",
+    "examples": [
+      "Аз го попитах как се чувства. – I asked him how he was feeling. (go – accusative)",
+      "Аз му дадох моята книга. – I gave my book to him. (mu – dative)"
+    ],
+    "level": "A1"
+  },
+  {
+    "title": "Present and Future Tenses",
+    "description": "Bulgarian verbs conjugate for person and number.\nThe present tense expresses ongoing actions (Аз уча български – I study Bulgarian).\nFuture tense uses the particle ще and the present tense of the verb (Аз ще уча български – I will study Bulgarian).",
+    "examples": [
+      "Аз уча български. – I study Bulgarian.",
+      "Аз ще уча български. – I will study Bulgarian."
+    ],
+    "level": "A1"
+  },
+  {
+    "title": "Past Tenses",
+    "description": "For A2 learners it's useful to distinguish between the past aorist and the past imperfect.\nThe past aorist describes completed actions (Аз учих български – I studied Bulgarian), while the past imperfect describes continuous or habitual past actions (Аз учех български – I was studying Bulgarian).",
+    "examples": [
+      "Аз учих български. – I studied Bulgarian.",
+      "Аз учех български. – I was studying Bulgarian."
+    ],
+    "level": "A2"
+  },
+  {
+    "title": "Quantifiers and Numbers",
+    "description": "At level A2 you'll encounter quantifiers and numbers more frequently.\nThe words много (many/much), малко (few/little), всички (all), няколко (several) and никой (none) help quantify nouns.\nBulgarian numbers one through ten are: едно, две, три, четири, пет, шест, седем, осем, девет, десет.",
+    "examples": [
+      "Имам много книги. – I have many books.",
+      "Имаме няколко стола. – We have several chairs."
+    ],
+    "level": "A2"
+  },
+  {
+    "title": "Time Expressions",
+    "description": "Talking about time requires vocabulary for days and parts of the day.\nThe days of the week are понеделник, вторник, сряда, четвъртък, петък, събота and неделя.\nParts of the day include сутрин (morning), обед (noon), следобед (afternoon), вечер (evening) and нощ (night).",
+    "examples": [
+      "Срещаме се във вторник сутрин. – We meet on Tuesday morning.",
+      "Работя всеки ден следобед. – I work every afternoon."
+    ],
+    "level": "A2"
+  },
+  {
+    "title": "Food and Shopping Vocabulary",
+    "description": "Food and shopping conversations are frequent at A2.\nLearn common nouns for food (хляб – bread, мляко – milk, сирене – cheese) and verbs for shopping (купувам – to buy, продавам – to sell, пазарувам – to shop).\nUnderstanding basic currency words like лев (the Bulgarian currency) and евро (euro) is also helpful.",
+    "examples": [
+      "Купувам хляб от магазина. – I buy bread from the shop.",
+      "Колко струва това? – How much does this cost?"
+    ],
+    "level": "A2"
+  },
+  {
+    "title": "Travel and Directions",
+    "description": "At A2 you may need to ask for directions or discuss travel.\nKey nouns include автобус (bus), влак (train), самолет (airplane), такси (taxi), гара (train station) and летище (airport).\nThe noun билет means 'ticket', and карта means 'map'.",
+    "examples": [
+      "Къде е гарата? – Where is the train station?",
+      "Имам билет за автобуса. – I have a ticket for the bus."
+    ],
+    "level": "A2"
+  }
+]
