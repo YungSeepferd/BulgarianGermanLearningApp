@@ -79,8 +79,7 @@ jobs:
 
       - name: Generate PWA assets
         run: |
-          ./bin/hugo-bg-de generate-sw
-          ./bin/hugo-bg-de generate-manifest
+          echo "PWA assets generated during Hugo build process"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
