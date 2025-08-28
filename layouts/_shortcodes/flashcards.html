@@ -192,13 +192,20 @@
   </div>
 </div>
 
-<script type="module">
-  import { Flashcards } from '/assets/js/flashcards.js';
-  
-  document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector('.flashcards-container');
-    if (container) {
-      new Flashcards(container);
+<!-- Vocabulary data for flashcards -->
+<script id="practice-vocabulary-data" type="application/json">
+{{ .Site.Data.vocabulary | jsonify }}
+</script>
+
+<!-- Load simplified JavaScript -->
+<script src="{{ "js/spaced-repetition-simple.js" | relURL }}"></script>
+<script src="{{ "js/practice-simple.js" | relURL }}"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize practice session with global functions
+    if (window.BgDeApp && window.BgDeApp.initPractice) {
+        window.BgDeApp.initPractice();
     }
-  });
+});
 </script>

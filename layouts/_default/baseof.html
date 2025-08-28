@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
     
     {{ if .Site.Params.enablePWA }}
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="{{ "manifest.webmanifest" | relURL }}">
     <meta name="theme-color" content="{{ .Site.Params.themeColor }}">
     {{ end }}
     
@@ -36,21 +36,7 @@
     {{ $codeJs := resources.Get "js/code.js" | resources.Minify }}
     <script src="{{ $codeJs.RelPermalink }}" defer></script>
     
-    <!-- Enhanced Bidirectional Learning Modules -->
-    {{ $vocabAdapter := resources.Get "js/vocabulary-adapter.js" | resources.Minify }}
-    <script src="{{ $vocabAdapter.RelPermalink }}"></script>
-    
-    {{ $enhancedSR := resources.Get "js/enhanced-spaced-repetition.js" | resources.Minify }}
-    <script src="{{ $enhancedSR.RelPermalink }}"></script>
-    
-    {{ $enhancedVocab := resources.Get "js/enhanced-vocab-cards.js" | resources.Minify }}
-    <script src="{{ $enhancedVocab.RelPermalink }}"></script>
-    
-    {{ $culturalToggle := resources.Get "js/cultural-context-toggle.js" | resources.Minify }}
-    <script src="{{ $culturalToggle.RelPermalink }}"></script>
-    
-    {{ $enhancedPractice := resources.Get "js/enhanced-practice-session.js" | resources.Minify }}
-    <script src="{{ $enhancedPractice.RelPermalink }}"></script>
+    <!-- Core functionality loaded per page in scripts block -->
     
     {{ block "scripts" . }}{{ end }}
     
@@ -59,7 +45,7 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js')
+                navigator.serviceWorker.register('{{ "sw.js" | relURL }}')
                     .then(function(registration) {
                         console.log('SW registered: ', registration);
                     })

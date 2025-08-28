@@ -1,5 +1,85 @@
-{{ define "title" }}Practice Session - {{ .Site.Title }}{{ end }}
+{{ define "title" }}{{ if eq .Params.layout "flashcard-practice" }}{{ .Title }} - {{ .Site.Title }}{{ else }}Practice Session - {{ .Site.Title }}{{ end }}{{ end }}
 {{ define "main" }}
+
+{{ if eq .Params.layout "flashcard-practice" }}
+<!-- Markdown Flashcard Practice Layout -->
+<div class="flashcard-practice-container">
+  <div class="practice-header">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+  
+  <div class="flashcard-content">
+    {{ .Content }}
+  </div>
+</div>
+
+<style>
+.flashcard-practice-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.practice-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.practice-header h1 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.practice-header p {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.flashcard-content h1 {
+  display: none; /* Hide duplicate title from content */
+}
+
+.flashcard-content h2 {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
+  margin: 2rem 0 1.5rem 0;
+}
+
+.flashcard-content h3 {
+  color: #28a745;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.flashcard-content ol, .flashcard-content ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.flashcard-content li {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.flashcard-content strong {
+  color: #007bff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .flashcard-practice-container {
+    padding: 1rem;
+  }
+  
+  .practice-header h1 {
+    font-size: 1.8rem;
+  }
+}
+</style>
+
+{{ else }}
+<!-- JavaScript Practice Session Layout -->
 
 <div class="practice-container">
     <div class="practice-header">
@@ -76,54 +156,53 @@
     </div>
     
     <!-- Practice Session -->
-    <div class="practice-session hidden" id="practice-session">
-        <div class="flashcard-container">
-            <div class="flashcard" id="flashcard">
+    <div class="practice-session" id="practice-session" style="display: block;">
+        <div class="flashcard-container" style="max-width: 600px; margin: 0 auto; padding: 20px;">
+            <div class="flashcard" id="flashcard" style="background: white; border: 1px solid #ddd; border-radius: 8px; padding: 30px; min-height: 200px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                 <div class="flashcard-inner">
-                    <div class="flashcard-front">
-                        <div class="card-content">
-                            <div class="word" id="current-word"></div>
-                            <div class="word-meta">
-                                <span class="level-badge" id="word-level"></span>
-                                <span class="category-tag" id="word-category"></span>
+                    <div class="flashcard-front" id="flashcard-front">
+                        <div class="card-content" style="text-align: center;">
+                            <div class="word" id="current-word" style="font-size: 32px; font-weight: bold; color: #333; margin-bottom: 20px; min-height: 40px;">Здравей</div>
+                            <div class="meta-info" style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+                                <span class="level-badge" id="word-level" style="background: #007bff; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">A1</span>
+                                <span class="category-badge" id="word-category" style="background: #6c757d; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">Begrüßung</span>
                             </div>
                         </div>
-                        
                         {{ if .Site.Params.enableAudio }}
-                        <button class="audio-btn" id="play-audio" title="Play pronunciation">
+                        <button class="audio-btn" id="play-audio" title="Play pronunciation" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 20px;">
                             <span class="audio-icon">🔊</span>
                         </button>
                         {{ end }}
                     </div>
                     
-                    <div class="flashcard-back">
-                        <div class="card-content">
-                            <div class="translation" id="current-translation"></div>
-                            <div class="notes" id="current-notes"></div>
+                    <div class="flashcard-back" id="flashcard-back" style="display: none;">
+                        <div class="card-content" style="text-align: center;">
+                            <div class="translation" id="current-translation" style="font-size: 28px; font-weight: bold; color: #28a745; margin-bottom: 15px; min-height: 35px;">Hallo</div>
+                            <div class="notes" id="current-notes" style="font-size: 14px; color: #666; font-style: italic; margin-top: 15px;">Standard informal greeting used throughout the day in Bulgaria</div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="flashcard-controls">
-                <button id="show-answer" class="btn-primary">Antwort zeigen / Покажи отговора</button>
+            <div class="flashcard-controls" style="text-align: center; margin-top: 30px;">
+                <button id="show-answer" class="btn-primary" style="background: #007bff; color: white; border: none; padding: 12px 24px; border-radius: 6px; font-size: 16px; cursor: pointer; margin-bottom: 20px;">Antwort zeigen / Покажи отговора</button>
                 
-                <div class="response-buttons hidden" id="response-buttons">
-                    <button id="incorrect-btn" class="btn-incorrect">
+                <div class="response-buttons hidden" id="response-buttons" style="display: none; gap: 15px; justify-content: center; margin-top: 20px;">
+                    <button id="incorrect-btn" class="btn-incorrect" style="background: #dc3545; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
                         <span class="icon">✗</span>
                         <span class="text">Falsch / Грешно</span>
-                        <span class="shortcut">1</span>
+                        <span class="shortcut" style="background: rgba(255,255,255,0.3); padding: 2px 6px; border-radius: 3px; font-size: 12px;">1</span>
                     </button>
-                    <button id="correct-btn" class="btn-correct">
+                    <button id="correct-btn" class="btn-correct" style="background: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
                         <span class="icon">✓</span>
                         <span class="text">Richtig / Правилно</span>
-                        <span class="shortcut">2</span>
+                        <span class="shortcut" style="background: rgba(255,255,255,0.3); padding: 2px 6px; border-radius: 3px; font-size: 12px;">2</span>
                     </button>
                 </div>
                 
-                <div class="hint-section">
-                    <button id="show-hint" class="btn-hint">💡 Hinweis / Подсказка</button>
-                    <div class="hint-content hidden" id="hint-content"></div>
+                <div class="hint-section" style="margin-top: 20px;">
+                    <button id="show-hint" class="btn-hint" style="background: #ffc107; color: #212529; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer;">💡 Hinweis / Подсказка</button>
+                    <div class="hint-content hidden" id="hint-content" style="display: none; margin-top: 15px; padding: 15px; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 6px; font-size: 14px;"></div>
                 </div>
             </div>
         </div>
@@ -171,8 +250,10 @@
 </div>
 
 {{ end }}
+{{ end }}
 
 {{ define "scripts" }}
+{{ if ne .Params.layout "flashcard-practice" }}
 <!-- Vocabulary data for JavaScript -->
 <script id="practice-vocabulary-data" type="application/json">
 {{ .Site.Data.vocabulary | jsonify }}
@@ -186,59 +267,16 @@
 }
 </script>
 
+<!-- Load spaced repetition and practice JavaScript -->
+<script src="{{ "js/spaced-repetition-simple.js" | relURL }}"></script>
+<script src="{{ "js/practice-simple.js" | relURL }}"></script>
+
 <script>
-// Initialize enhanced practice session with bidirectional learning
+// Simple initialization - no classes needed
 document.addEventListener('DOMContentLoaded', function() {
-    // Load vocabulary data from script tag
-    const vocabularyData = JSON.parse(document.getElementById('practice-vocabulary-data').textContent);
-    
-    // Load practice configuration
-    const config = JSON.parse(document.getElementById('practice-config').textContent);
-    
-    // Initialize vocabulary adapter
-    const adapter = new VocabularyAdapter(vocabularyData);
-    
-    // Initialize enhanced spaced repetition
-    const spacedRepetition = new EnhancedSpacedRepetition();
-    
-    // Get current learning direction
-    const currentDirection = localStorage.getItem('bgde:learning_direction') || 'bg_to_de';
-    
-    // Get selected items from localStorage (if coming from vocabulary page)
-    const selectedItems = JSON.parse(localStorage.getItem('bgde:practice_selection') || '[]');
-    
-    // Initialize enhanced practice session
-    const practiceSession = new EnhancedPracticeSession({
-        adapter: adapter,
-        spacedRepetition: spacedRepetition,
-        selectedItems: selectedItems,
-        learningDirection: currentDirection,
-        enableAudio: config.enableAudio,
-        sessionLength: config.sessionLength
-    });
-    
-    practiceSession.init();
-    
-    // Keyboard shortcuts
-    document.addEventListener('keydown', function(e) {
-        if (e.key === '1') {
-            const incorrectBtn = document.getElementById('incorrect-btn');
-            if (incorrectBtn && !incorrectBtn.classList.contains('hidden')) {
-                incorrectBtn.click();
-            }
-        } else if (e.key === '2') {
-            const correctBtn = document.getElementById('correct-btn');
-            if (correctBtn && !correctBtn.classList.contains('hidden')) {
-                correctBtn.click();
-            }
-        } else if (e.key === ' ' || e.key === 'Enter') {
-            e.preventDefault();
-            const showAnswerBtn = document.getElementById('show-answer');
-            if (showAnswerBtn && !showAnswerBtn.classList.contains('hidden')) {
-                showAnswerBtn.click();
-            }
-        }
-    });
+    // BgDeApp.initPractice() is called automatically from practice-simple.js
+    // All functionality is handled by the global functions
 });
 </script>
+{{ end }}
 {{ end }}

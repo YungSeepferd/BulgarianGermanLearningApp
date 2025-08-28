@@ -3,7 +3,6 @@ package processor
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -11,6 +10,21 @@ import (
 	"time"
 
 	"github.com/dinz/BulgarianApp-Fresh/tools/internal/models"
+)
+
+// Weight constants for different CEFR levels
+const (
+	WeightA1      = 10
+	WeightA2      = 20
+	WeightB1      = 30
+	WeightB2      = 40
+	WeightDefault = 100
+)
+
+// File permissions
+const (
+	DirPermissions  = 0755
+	FilePermissions = 0644
 )
 
 // DataProcessor handles JSON data transformation and content generation
@@ -29,7 +43,7 @@ func NewDataProcessor(outputDir string) *DataProcessor {
 
 // LoadJSONData loads and validates JSON data files
 func (dp *DataProcessor) LoadJSONData(filePath string) ([]byte, error) {
-	data, err := ioutil.ReadFile(filePath)
+	data, err := os.ReadFile(filePath)
 	if err != nil {
 		return nil, fmt.Errorf("failed to read file %s: %w", filePath, err)
 	}
@@ -159,7 +173,7 @@ func (dp *DataProcessor) GenerateSearchIndex() error {
 		return fmt.Errorf("failed to marshal search index: %w", err)
 	}
 
-	err = ioutil.WriteFile("static/search-index.json", indexJSON, 0644)
+	err = os.WriteFile("static/search-index.json", indexJSON, FilePermissions)
 	if err != nil {
 		return fmt.Errorf("failed to write search index: %w", err)
 	}
@@ -167,21 +181,13 @@ func (dp *DataProcessor) GenerateSearchIndex() error {
 	return nil
 }
 
-// GenerateSlug creates URL-friendly slug from text
-func GenerateSlug(text string) string {
-	// Convert to lowercase
-	slug := strings.ToLower(text)
-
-	// Replace spaces and special characters
-	reg := regexp.MustCompile(`[^\p{L}\p{N}]+`)
-	slug = reg.ReplaceAllString(slug, "-")
-
-	// Remove leading/trailing hyphens
-	slug = strings.Trim(slug, "-")
-
-	// Handle Bulgarian/German special characters
-	replacements := map[string]string{
+// Character replacement maps for slug generation
+var (
+	germanReplacements = map[string]string{
 		"ä": "ae", "ö": "oe", "ü": "ue", "ß": "ss",
+	}
+	
+	bulgarianReplacements = map[string]string{
 		"а": "a", "б": "b", "в": "v", "г": "g", "д": "d",
 		"е": "e", "ж": "zh", "з": "z", "и": "i", "й": "y",
 		"к": "k", "л": "l", "м": "m", "н": "n", "о": "o",
@@ -189,12 +195,38 @@ func GenerateSlug(text string) string {
 		"ф": "f", "х": "h", "ц": "ts", "ч": "ch", "ш": "sh",
 		"щ": "sht", "ъ": "a", "ь": "y", "ю": "yu", "я": "ya",
 	}
+)
 
-	for key, value := range replacements {
-		slug = strings.ReplaceAll(slug, key, value)
+// GenerateSlug creates URL-friendly slug from text
+func GenerateSlug(text string) string {
+	if text == "" {
+		return ""
 	}
 
+	// Convert to lowercase
+	slug := strings.ToLower(text)
+
+	// Apply character replacements
+	slug = applyCharacterReplacements(slug, germanReplacements)
+	slug = applyCharacterReplacements(slug, bulgarianReplacements)
+
+	// Replace spaces and special characters with hyphens
+	reg := regexp.MustCompile(`[^\p{L}\p{N}]+`)
+	slug = reg.ReplaceAllString(slug, "-")
+
+	// Remove leading/trailing hyphens
+	slug = strings.Trim(slug, "-")
+
 	return slug
+}
+
+// applyCharacterReplacements applies a map of character replacements to a string
+func applyCharacterReplacements(text string, replacements map[string]string) string {
+	result := text
+	for old, new := range replacements {
+		result = strings.ReplaceAll(result, old, new)
+	}
+	return result
 }
 
 // CreateVocabularyFrontMatter creates Hugo front matter for vocabulary items
@@ -278,13 +310,13 @@ func (dp *DataProcessor) CreateGrammarContent(item models.GrammarItem) string {
 func (dp *DataProcessor) WriteContentFile(filePath, frontMatter, content string) error {
 	// Ensure directory exists
 	dir := filepath.Dir(filePath)
-	err := os.MkdirAll(dir, 0755)
+	err := os.MkdirAll(dir, DirPermissions)
 	if err != nil {
 		return fmt.Errorf("failed to create directory %s: %w", dir, err)
 	}
 
 	fullContent := frontMatter + content
-	err = ioutil.WriteFile(filePath, []byte(fullContent), 0644)
+	err = os.WriteFile(filePath, []byte(fullContent), FilePermissions)
 	if err != nil {
 		return fmt.Errorf("failed to write file %s: %w", filePath, err)
 	}
@@ -294,33 +326,33 @@ func (dp *DataProcessor) WriteContentFile(filePath, frontMatter, content string)
 
 // Helper functions
 func CalculateWeight(item models.VocabularyItem) int {
-	weight := 100
 	switch item.Level {
 	case "A1":
-		weight = 10
+		return WeightA1
 	case "A2":
-		weight = 20
+		return WeightA2
 	case "B1":
-		weight = 30
+		return WeightB1
 	case "B2":
-		weight = 40
+		return WeightB2
+	default:
+		return WeightDefault
 	}
-	return weight
 }
 
 func CalculateGrammarWeight(item models.GrammarItem) int {
-	weight := 100
 	switch item.Level {
 	case "A1":
-		weight = 10
+		return WeightA1
 	case "A2":
-		weight = 20
+		return WeightA2
 	case "B1":
-		weight = 30
+		return WeightB1
 	case "B2":
-		weight = 40
+		return WeightB2
+	default:
+		return WeightDefault
 	}
-	return weight
 }
 
 func GenerateAudioPath(word string) string {

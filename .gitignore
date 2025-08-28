@@ -39,6 +39,7 @@ Thumbs.db
 .env.development.local
 .env.test.local
 .env.production.local
+.env.production
 
 # Build and deployment artifacts
 dist/
@@ -57,3 +58,17 @@ Cargo.toml
 *_bg.wasm.d.ts
 web/pkg/
 web/dist/
+
+# Generated Hugo content (should not be committed)
+vocabulary/*/index.html
+grammar/*/index.html
+categories/*/
+tags/*/
+levels/*/
+difficulties/*/
+source_langs/*/
+target_langs/*/
+
+# Static web assets (generated)
+web/static/
+webfonts/

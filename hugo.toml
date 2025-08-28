@@ -51,6 +51,21 @@ canonifyURLs = true
   writeStats = true
   useResourceCacheWhen = "fallback"
   noJSConfigInAssets = true
+  
+# Production optimizations
+[caches]
+  [caches.getjson]
+    dir = ":cacheDir/:project"
+    maxAge = "10s"
+  [caches.getcsv]
+    dir = ":cacheDir/:project"
+    maxAge = "10s"
+  [caches.images]
+    dir = ":resourceDir/_gen"
+    maxAge = "720h"
+  [caches.assets]
+    dir = ":resourceDir/_gen"
+    maxAge = "720h"
   [build.buildStats]
     enable = true
     disableClasses = false
@@ -137,6 +152,9 @@ canonifyURLs = true
   category = 'categories'
   tag = 'tags'
   level = 'levels'
+  difficulty = 'difficulties'
+  source_lang = 'source_langs'
+  target_lang = 'target_langs'
 
 
 # Minification
@@ -147,3 +165,27 @@ canonifyURLs = true
   disableJSON = false
   disableSVG = false
   disableXML = false
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepDefaultAttrVals = false
+      keepDocumentTags = true
+      keepEndTags = true
+      keepQuotes = false
+    [minify.tdewolff.css]
+      keepCSS2 = true
+      precision = 0
+    [minify.tdewolff.js]
+      keepVarNames = false
+      precision = 0
+
+# Security headers
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$']
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']

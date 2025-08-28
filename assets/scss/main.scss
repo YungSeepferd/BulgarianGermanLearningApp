@@ -5,16 +5,17 @@
 // Import component styles
 @import 'components/header';
 @import 'components/footer';
-@import 'components/vocab-cards';
-@import 'components/language-toggle';
-@import 'components/forms';
-@import 'components/badges';
+@import 'components/buttons';
+@import 'components/cards';
+// Import all component styles
 @import 'components/flashcards';
-@import 'components/progress';
-@import 'components/search';
+@import 'components/vocab';
+@import 'components/practice';
+@import 'components/navigation';
+@import 'components/bidirectional-flashcards';
+@import 'components/service-worker';
 @import 'components/cultural-context';
 @import 'components/code';
 @import 'pages/home';
 @import 'pages/vocabulary';
 @import 'pages/grammar';
-@import 'pages/practice';

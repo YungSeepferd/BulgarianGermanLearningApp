@@ -1,0 +1,91 @@
+{
+  "expansion_strategy": {
+    "target_vocabulary_counts": {
+      "A1": 750,
+      "A2": 1500,
+      "B1": 2500,
+      "B2": 4000
+    },
+    "current_status": {
+      "total_items": 156,
+      "A1": 120,
+      "A2": 30,
+      "B1": 6,
+      "B2": 0
+    },
+    "priority_categories": [
+      {
+        "category": "Familie",
+        "missing_items": 25,
+        "cultural_focus": "Bulgarian extended family vs German nuclear family concepts"
+      },
+      {
+        "category": "Essen",
+        "missing_items": 40,
+        "cultural_focus": "Bulgarian cuisine traditions vs German meal structure"
+      },
+      {
+        "category": "Arbeit",
+        "missing_items": 35,
+        "cultural_focus": "Work-life balance differences, hierarchy concepts"
+      },
+      {
+        "category": "Wohnen",
+        "missing_items": 30,
+        "cultural_focus": "Bulgarian apartment culture vs German housing types"
+      },
+      {
+        "category": "Transport",
+        "missing_items": 20,
+        "cultural_focus": "Public transport culture differences"
+      }
+    ]
+  },
+  "annotation_enhancement_plan": {
+    "missing_etymology": 89,
+    "missing_cultural_notes": 67,
+    "missing_linguistic_notes": 78,
+    "missing_examples": 45,
+    "enhancement_priorities": [
+      "Add etymology for all Slavic vs Germanic roots",
+      "Cultural notes focusing on usage differences",
+      "Linguistic notes for pronunciation and stress",
+      "Context-rich examples for both directions"
+    ]
+  },
+  "bidirectional_difficulty_multipliers": {
+    "bg_to_de": {
+      "base_multiplier": 1.2,
+      "category_adjustments": {
+        "Grammatik": 1.4,
+        "Verben": 1.3,
+        "Adjektive": 1.1
+      }
+    },
+    "de_to_bg": {
+      "base_multiplier": 1.1,
+      "category_adjustments": {
+        "Aspekte": 1.5,
+        "Artikel": 1.3,
+        "Wortstellung": 1.2
+      }
+    }
+  },
+  "progressive_learning_path": {
+    "beginner_focus": [
+      "High-frequency words (frequency > 80)",
+      "Basic survival vocabulary",
+      "Cultural greeting patterns"
+    ],
+    "intermediate_focus": [
+      "Idiomatic expressions",
+      "Professional vocabulary",
+      "Cultural context understanding"
+    ],
+    "advanced_focus": [
+      "Nuanced cultural concepts",
+      "Literary and formal language",
+      "Cross-cultural communication patterns"
+    ]
+  }
+}

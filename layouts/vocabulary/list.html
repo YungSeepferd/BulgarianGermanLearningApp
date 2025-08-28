@@ -40,8 +40,22 @@
         <span class="stat">Angezeigt / Показани: <span id="showing-count">{{ len .Site.Data.vocabulary }}</span></span>
     </div>
     
+    <!-- Pagination Controls -->
+    {{ $vocabulary := .Site.Data.vocabulary }}
+    {{ $itemsPerPage := 50 }}
+    {{ $currentPage := .Params.page | default 1 }}
+    {{ $totalItems := len $vocabulary }}
+    {{ $totalPages := div (add $totalItems (sub $itemsPerPage 1)) $itemsPerPage }}
+    {{ $offset := mul (sub $currentPage 1) $itemsPerPage }}
+    {{ $paginatedItems := after $offset (first (add $offset $itemsPerPage) $vocabulary) }}
+    
+    <div class="pagination-info">
+        <span>Seite {{ $currentPage }} von {{ $totalPages }} / Страница {{ $currentPage }} от {{ $totalPages }}</span>
+        <span>({{ len $paginatedItems }} von {{ $totalItems }} Einträge / записи)</span>
+    </div>
+    
     <div class="vocabulary-grid" id="vocabulary-grid">
-        {{ range .Site.Data.vocabulary }}
+        {{ range $paginatedItems }}
         <div class="vocab-card" 
              data-level="{{ .level }}" 
              data-category="{{ .category }}"
@@ -78,6 +92,51 @@
         {{ end }}
     </div>
     
+    <!-- Pagination Navigation -->
+    {{ if gt $totalPages 1 }}
+    <nav class="pagination" role="navigation" aria-label="Vocabulary pagination">
+        <div class="pagination-controls">
+            {{ if gt $currentPage 1 }}
+                {{ $prevPage := sub $currentPage 1 }}
+                <a href="/vocabulary/?page={{ $prevPage }}" class="pagination-btn pagination-prev" rel="prev">
+                    <span class="pagination-icon">←</span>
+                    <span class="pagination-text">Vorherige / Предишна</span>
+                </a>
+            {{ end }}
+            
+            <div class="pagination-numbers">
+                <!-- First page -->
+                {{ if gt $currentPage 3 }}
+                    <a href="/vocabulary/?page=1" class="pagination-number">1</a>
+                    {{ if gt $currentPage 4 }}
+                        <span class="pagination-ellipsis">…</span>
+                    {{ end }}
+                {{ end }}
+            </div>
+            
+            {{ if lt $currentPage $totalPages }}
+                {{ $nextPage := add $currentPage 1 }}
+                <a href="/vocabulary/?page={{ $nextPage }}" class="pagination-btn pagination-next" rel="next">
+                    <span class="pagination-text">Nächste / Следваща</span>
+                    <span class="pagination-icon">→</span>
+                </a>
+            {{ end }}
+        </div>
+        
+        <!-- Quick jump -->
+        <div class="pagination-jump">
+            <label for="page-jump">Gehe zu Seite / Отиди на страница:</label>
+            <select id="page-jump" onchange="location.href='/vocabulary/?page=' + this.value">
+                {{ range seq $totalPages }}
+                    <option value="{{ . }}" {{ if eq . $currentPage }}selected{{ end }}>
+                        {{ . }}
+                    </option>
+                {{ end }}
+            </select>
+        </div>
+    </nav>
+    {{ end }}
+    
     <div class="no-results hidden" id="no-results">
         <p>Keine Wortschatzeinträge gefunden, die Ihren Kriterien entsprechen. / Не са намерени думи, отговарящи на вашите критерии.</p>
         <button id="clear-filters" class="btn-secondary">Filter löschen / Изчистване на филтрите</button>
@@ -92,105 +151,14 @@
 {{ .Site.Data.vocabulary | jsonify }}
 </script>
 
+<!-- Load simplified JavaScript -->
+<script src="{{ "assets/js/vocabulary.js" | relURL }}"></script>
+
 <script>
-// Initialize enhanced vocabulary with bidirectional learning
+// Simple initialization - no classes needed
 document.addEventListener('DOMContentLoaded', function() {
-    // Load vocabulary data from script tag
-    const vocabularyData = JSON.parse(document.getElementById('vocabulary-data').textContent);
-    
-    // Initialize vocabulary adapter for backward compatibility
-    const adapter = new VocabularyAdapter(vocabularyData);
-    
-    // Initialize enhanced vocabulary cards
-    const enhancedVocab = new EnhancedVocabCards({
-        container: '#vocabulary-grid',
-        adapter: adapter,
-        showCulturalContext: true,
-        enableInteractions: true
-    });
-    
-    enhancedVocab.init();
-    
-    // Initialize cultural context toggle
-    const culturalToggle = new CulturalContextToggle({
-        container: document.getElementById('cultural-context-container')
-    });
-    culturalToggle.init();
-    
-    // Initialize filtering and search
-    const filters = {
-        level: document.getElementById('level-filter'),
-        category: document.getElementById('category-filter'),
-        search: document.getElementById('search-input')
-    };
-    
-    // Filter functionality
-    function applyFilters() {
-        const currentDirection = localStorage.getItem('bgde:learning_direction') || 'bg_to_de';
-        const items = adapter.getItemsForDirection(currentDirection);
-        
-        let filtered = items.filter(item => {
-            const levelMatch = !filters.level.value || item.level === filters.level.value;
-            const categoryMatch = !filters.category.value || item.category === filters.category.value;
-            const searchMatch = !filters.search.value || 
-                item.word.toLowerCase().includes(filters.search.value.toLowerCase()) ||
-                item.translation.toLowerCase().includes(filters.search.value.toLowerCase());
-            
-            return levelMatch && categoryMatch && searchMatch;
-        });
-        
-        enhancedVocab.renderItems(filtered);
-        document.getElementById('showing-count').textContent = filtered.length;
-        
-        // Show/hide no results message
-        const noResults = document.getElementById('no-results');
-        if (filtered.length === 0) {
-            noResults.classList.remove('hidden');
-        } else {
-            noResults.classList.add('hidden');
-        }
-    }
-    
-    // Add event listeners
-    filters.level.addEventListener('change', applyFilters);
-    filters.category.addEventListener('change', applyFilters);
-    
-    // Debounced search
-    let searchTimeout;
-    filters.search.addEventListener('input', function() {
-        clearTimeout(searchTimeout);
-        searchTimeout = setTimeout(applyFilters, 300);
-    });
-    
-    // Clear filters
-    document.getElementById('clear-filters').addEventListener('click', function() {
-        filters.level.value = '';
-        filters.category.value = '';
-        filters.search.value = '';
-        applyFilters();
-    });
-    
-    // Practice selected functionality
-    document.getElementById('practice-selected').addEventListener('click', function() {
-        const selected = Array.from(document.querySelectorAll('.vocab-select:checked'))
-            .map(checkbox => checkbox.dataset.word);
-        
-        if (selected.length > 0) {
-            // Store selected items for practice session
-            localStorage.setItem('bgde:practice_selection', JSON.stringify(selected));
-            window.location.href = '/practice/';
-        } else {
-            alert('Bitte wählen Sie mindestens ein Wortschatzelement zum Üben aus. / Моля, изберете поне един елемент от речника за упражнение.');
-        }
-    });
-    
-    // Listen for language direction changes
-    document.addEventListener('learning-direction-changed', function(event) {
-        applyFilters(); // Re-filter for new direction
-    });
-    
-    // Initial render
-    applyFilters();
+    // BgDeApp.initVocabulary() is called automatically from vocabulary.js
+    // All functionality is handled by the global functions
 });
 </script>
 {{ end }}

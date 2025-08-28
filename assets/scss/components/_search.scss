@@ -171,7 +171,7 @@
     }
 
     .result-level {
-      @extend .level-badge;
+      @extend .level-badge !optional;
     }
   }
 }

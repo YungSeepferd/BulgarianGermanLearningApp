@@ -62,11 +62,8 @@ class BulgarianGermanApp {
 
     async initLanguageToggle() {
         try {
-            const { languageToggle } = await import('./language-toggle.js');
-            const container = document.getElementById('language-toggle-container');
-            if (container) {
-                languageToggle.init(container);
-            }
+            // Language toggle is now inline in the header template
+            console.log('Language toggle loaded inline in template');
         } catch (error) {
             console.warn('Language toggle not available:', error);
         }
