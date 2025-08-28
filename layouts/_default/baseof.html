@@ -36,6 +36,10 @@
     {{ $codeJs := resources.Get "js/code.js" | resources.Minify }}
     <script src="{{ $codeJs.RelPermalink }}" defer></script>
     
+    <!-- Language toggle functionality -->
+    {{ $languageToggle := resources.Get "js/language-toggle.js" | resources.Minify }}
+    <script src="{{ $languageToggle.RelPermalink }}" defer></script>
+    
     <!-- Core functionality loaded per page in scripts block -->
     
     {{ block "scripts" . }}{{ end }}

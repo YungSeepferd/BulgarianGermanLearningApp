@@ -267,15 +267,48 @@
 }
 </script>
 
-<!-- Load spaced repetition and practice JavaScript -->
-<script src="{{ "js/spaced-repetition-simple.js" | relURL }}"></script>
-<script src="{{ "js/practice-simple.js" | relURL }}"></script>
+<!-- Load JavaScript modules via Hugo resources -->
+{{ $spacedRepetition := resources.Get "js/enhanced-spaced-repetition.js" }}
+{{ if $spacedRepetition }}
+{{ $spacedRepetitionMin := $spacedRepetition | resources.Minify }}
+<script src="{{ $spacedRepetitionMin.RelPermalink }}" defer></script>
+{{ end }}
+
+{{ $enhancedBidirectionalSystem := resources.Get "js/enhanced-bidirectional-system.js" }}
+{{ if $enhancedBidirectionalSystem }}
+{{ $enhancedBidirectionalSystemMin := $enhancedBidirectionalSystem | resources.Minify }}
+<script src="{{ $enhancedBidirectionalSystemMin.RelPermalink }}" defer></script>
+{{ end }}
+
+{{ $enhancedPracticeSession := resources.Get "js/enhanced-practice-session.js" }}
+{{ if $enhancedPracticeSession }}
+{{ $enhancedPracticeSessionMin := $enhancedPracticeSession | resources.Minify }}
+<script src="{{ $enhancedPracticeSessionMin.RelPermalink }}" defer></script>
+{{ end }}
+
+<!-- Fallback to simple practice if enhanced not available -->
+{{ $practiceSimple := resources.Get "js/practice-simple.js" }}
+{{ if $practiceSimple }}
+{{ $practiceSimpleMin := $practiceSimple | resources.Minify }}
+<script src="{{ $practiceSimpleMin.RelPermalink }}" defer></script>
+{{ end }}
 
 <script>
-// Simple initialization - no classes needed
+// Initialize enhanced practice system
 document.addEventListener('DOMContentLoaded', function() {
-    // BgDeApp.initPractice() is called automatically from practice-simple.js
-    // All functionality is handled by the global functions
+    // Wait for all scripts to load
+    setTimeout(() => {
+        if (window.EnhancedPracticeSession) {
+            window.enhancedPracticeSession = new EnhancedPracticeSession();
+            console.log('Enhanced practice session initialized');
+        } else if (window.BgDeApp && window.BgDeApp.initPractice) {
+            // Fallback to simple practice
+            window.BgDeApp.initPractice();
+            console.log('Simple practice session initialized');
+        } else {
+            console.error('No practice system loaded');
+        }
+    }, 100);
 });
 </script>
 {{ end }}

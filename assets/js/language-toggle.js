@@ -4,7 +4,7 @@
  * Provides bidirectional vocabulary and grammar explanations
  */
 
-export class LanguageToggle {
+class LanguageToggle {
   constructor() {
     this.currentDirection = this.loadDirection();
     this.storageKey = 'bgde:language-direction';
@@ -280,8 +280,8 @@ export class LanguageToggle {
   }
 }
 
-// Create singleton instance
-export const languageToggle = new LanguageToggle();
+// Create singleton instance and make it globally available
+window.languageToggle = new LanguageToggle();
 
-// Export class for testing
-export default LanguageToggle;
+// Also expose the class for potential module usage
+window.LanguageToggle = LanguageToggle;
