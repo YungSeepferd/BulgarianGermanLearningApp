@@ -1,0 +1,312 @@
+/**
+ * Enhanced Practice Session System
+ * Bidirectional flashcard practice with spaced repetition integration
+ */
+
+class EnhancedPracticeSession {
+  constructor() {
+    this.vocabularyData = [];
+    this.sessionCards = [];
+    this.currentIndex = 0;
+    this.currentCard = null;
+    this.isFlipped = false;
+    this.sessionStats = {
+      correct: 0,
+      total: 0,
+      startTime: Date.now()
+    };
+    this.currentDirection = 'bg-de';
+    this.spacedRepetition = null;
+    
+    this.init();
+  }
+  
+  init() {
+    this.loadData();
+    this.initializeSpacedRepetition();
+    this.bindEvents();
+    this.startSession();
+  }
+  
+  loadData() {
+    // Load vocabulary data
+    const vocabScript = document.getElementById('practice-vocabulary-data');
+    if (vocabScript) {
+      try {
+        this.vocabularyData = JSON.parse(vocabScript.textContent);
+      } catch (error) {
+        console.error('Failed to load vocabulary data:', error);
+      }
+    }
+    
+    // Get current language direction
+    this.currentDirection = localStorage.getItem('bgde:learning_direction') || 'bg-de';
+  }
+  
+  initializeSpacedRepetition() {
+    if (window.EnhancedSpacedRepetition) {
+      this.spacedRepetition = new EnhancedSpacedRepetition();
+    } else if (window.BgDeApp && window.BgDeApp.spacedRepetition) {
+      this.spacedRepetition = window.BgDeApp.spacedRepetition;
+    }
+  }
+  
+  bindEvents() {
+    // Show answer button
+    const showAnswerBtn = document.getElementById('show-answer');
+    if (showAnswerBtn) {
+      showAnswerBtn.addEventListener('click', () => this.showAnswer());
+    }
+    
+    // Grade buttons
+    const correctBtn = document.getElementById('correct-btn');
+    const incorrectBtn = document.getElementById('incorrect-btn');
+    
+    if (correctBtn) {
+      correctBtn.addEventListener('click', () => this.gradeCard(4));
+    }
+    
+    if (incorrectBtn) {
+      incorrectBtn.addEventListener('click', () => this.gradeCard(1));
+    }
+    
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT') return;
+      
+      switch(e.key) {
+        case ' ':
+        case 'Enter':
+          e.preventDefault();
+          if (!this.isFlipped) {
+            this.showAnswer();
+          }
+          break;
+        case '1':
+          e.preventDefault();
+          if (this.isFlipped) this.gradeCard(1);
+          break;
+        case '2':
+          e.preventDefault();
+          if (this.isFlipped) this.gradeCard(4);
+          break;
+      }
+    });
+    
+    // Language direction changes
+    document.addEventListener('language-direction-changed', (e) => {
+      this.currentDirection = e.detail.direction;
+      this.updateCurrentCard();
+    });
+  }
+  
+  startSession() {
+    // Hide loading state
+    const loadingState = document.getElementById('loading-state');
+    if (loadingState) {
+      loadingState.style.display = 'none';
+    }
+    
+    // Prepare session cards
+    this.prepareSessionCards();
+    
+    if (this.sessionCards.length === 0) {
+      this.showNoItemsState();
+      return;
+    }
+    
+    // Show practice session
+    const practiceSession = document.getElementById('practice-session');
+    if (practiceSession) {
+      practiceSession.style.display = 'block';
+    }
+    
+    this.showCurrentCard();
+  }
+  
+  prepareSessionCards() {
+    // Get due items from spaced repetition system
+    let cards = [];
+    
+    if (this.spacedRepetition) {
+      const allStates = this.spacedRepetition.loadAllStates();
+      const dueItems = this.spacedRepetition.getDueItems(allStates);
+      
+      // Get vocabulary items for due reviews
+      cards = dueItems.map(state => {
+        return this.vocabularyData.find(item => item.id === state.itemId);
+      }).filter(Boolean);
+    }
+    
+    // If no due items, use random selection
+    if (cards.length === 0) {
+      cards = this.vocabularyData.slice(0, 20);
+    }
+    
+    this.sessionCards = cards;
+    this.currentIndex = 0;
+  }
+  
+  showCurrentCard() {
+    if (this.currentIndex >= this.sessionCards.length) {
+      this.completeSession();
+      return;
+    }
+    
+    this.currentCard = this.sessionCards[this.currentIndex];
+    this.isFlipped = false;
+    
+    this.updateCurrentCard();
+    this.updateUI();
+    this.updateProgress();
+  }
+  
+  updateCurrentCard() {
+    if (!this.currentCard) return;
+    
+    const isReverse = this.currentDirection === 'de-bg';
+    const frontText = isReverse ? this.currentCard.translation : this.currentCard.word;
+    const backText = isReverse ? this.currentCard.word : this.currentCard.translation;
+    
+    // Update card content
+    const currentWord = document.getElementById('current-word');
+    const currentTranslation = document.getElementById('current-translation');
+    const currentNotes = document.getElementById('current-notes');
+    const wordLevel = document.getElementById('word-level');
+    const wordCategory = document.getElementById('word-category');
+    
+    if (currentWord) currentWord.textContent = frontText || 'No word';
+    if (currentTranslation) currentTranslation.textContent = backText || 'No translation';
+    if (currentNotes) {
+      currentNotes.textContent = this.currentCard.notes || '';
+      currentNotes.style.display = this.currentCard.notes ? 'block' : 'none';
+    }
+    if (wordLevel) wordLevel.textContent = this.currentCard.level || 'A1';
+    if (wordCategory) wordCategory.textContent = this.currentCard.category || '';
+  }
+  
+  updateUI() {
+    const flashcard = document.getElementById('flashcard');
+    const showAnswerBtn = document.getElementById('show-answer');
+    const responseButtons = document.getElementById('response-buttons');
+    const flashcardFront = document.getElementById('flashcard-front');
+    const flashcardBack = document.getElementById('flashcard-back');
+    
+    if (flashcard) flashcard.classList.remove('flipped');
+    
+    if (this.isFlipped) {
+      if (flashcardFront) flashcardFront.style.display = 'none';
+      if (flashcardBack) flashcardBack.style.display = 'block';
+      if (showAnswerBtn) showAnswerBtn.style.display = 'none';
+      if (responseButtons) {
+        responseButtons.style.display = 'flex';
+        responseButtons.classList.remove('hidden');
+      }
+    } else {
+      if (flashcardFront) flashcardFront.style.display = 'block';
+      if (flashcardBack) flashcardBack.style.display = 'none';
+      if (showAnswerBtn) {
+        showAnswerBtn.style.display = 'block';
+        showAnswerBtn.classList.remove('hidden');
+      }
+      if (responseButtons) {
+        responseButtons.style.display = 'none';
+        responseButtons.classList.add('hidden');
+      }
+    }
+  }
+  
+  updateProgress() {
+    const progress = document.getElementById('progress');
+    const accuracy = document.getElementById('accuracy');
+    
+    if (progress) {
+      progress.textContent = `${this.currentIndex + 1}/${this.sessionCards.length}`;
+    }
+    
+    if (accuracy && this.sessionStats.total > 0) {
+      const accuracyPercent = Math.round((this.sessionStats.correct / this.sessionStats.total) * 100);
+      accuracy.textContent = `${accuracyPercent}%`;
+    }
+  }
+  
+  showAnswer() {
+    if (this.isFlipped) return;
+    
+    this.isFlipped = true;
+    this.updateUI();
+  }
+  
+  gradeCard(grade) {
+    if (!this.isFlipped || !this.currentCard) return;
+    
+    // Update session stats
+    this.sessionStats.total += 1;
+    if (grade >= 3) {
+      this.sessionStats.correct += 1;
+    }
+    
+    // Update spaced repetition
+    if (this.spacedRepetition) {
+      const state = this.spacedRepetition.loadState(this.currentCard.id, this.currentDirection);
+      const newState = this.spacedRepetition.scheduleNext(state, grade, this.currentDirection);
+      this.spacedRepetition.saveState(newState);
+    }
+    
+    // Move to next card
+    this.currentIndex += 1;
+    setTimeout(() => {
+      this.showCurrentCard();
+    }, 300);
+  }
+  
+  completeSession() {
+    const practiceSession = document.getElementById('practice-session');
+    const sessionComplete = document.getElementById('session-complete');
+    
+    if (practiceSession) practiceSession.style.display = 'none';
+    if (sessionComplete) {
+      sessionComplete.classList.remove('hidden');
+      sessionComplete.style.display = 'block';
+    }
+    
+    // Update final stats
+    this.updateFinalStats();
+  }
+  
+  updateFinalStats() {
+    const finalCorrect = document.getElementById('final-correct');
+    const finalTotal = document.getElementById('final-total');
+    const finalAccuracy = document.getElementById('final-accuracy');
+    const finalTime = document.getElementById('final-time');
+    
+    if (finalCorrect) finalCorrect.textContent = this.sessionStats.correct;
+    if (finalTotal) finalTotal.textContent = this.sessionStats.total;
+    
+    if (finalAccuracy && this.sessionStats.total > 0) {
+      const accuracyPercent = Math.round((this.sessionStats.correct / this.sessionStats.total) * 100);
+      finalAccuracy.textContent = `${accuracyPercent}%`;
+    }
+    
+    if (finalTime) {
+      const duration = Math.round((Date.now() - this.sessionStats.startTime) / 1000);
+      const minutes = Math.floor(duration / 60);
+      const seconds = duration % 60;
+      finalTime.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    }
+  }
+  
+  showNoItemsState() {
+    const loadingState = document.getElementById('loading-state');
+    const noItemsState = document.getElementById('no-items-state');
+    
+    if (loadingState) loadingState.style.display = 'none';
+    if (noItemsState) {
+      noItemsState.classList.remove('hidden');
+      noItemsState.style.display = 'block';
+    }
+  }
+}
+
+// Make globally available
+window.EnhancedPracticeSession = EnhancedPracticeSession;
