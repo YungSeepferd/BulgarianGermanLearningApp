@@ -23,12 +23,25 @@
 - [ ] **Playwright CI enablement** — Re-enable Playwright once runners with accessible localhost networking are available and update docs accordingly. *(Logged October 10, 2025)*
 - [ ] **MCP integration update** — Update `AGENTS.md` when `/mcp` reports active Codex/Figma/Playwright connectors. *(Logged October 10, 2025)*
 
-## Repository Cleanup Tasks (Added October 17, 2025)
+## 🚨 URGENT: Mobile Fixes for Public Launch (Added October 19, 2025)
 
-- [ ] **Phase 1: Remove build artifacts** — Remove committed build outputs (index.html, css/, js/, etc.) and update .gitignore. *(Critical - Do First)*
-- [ ] **Phase 2: Remove duplicate config.toml** — Keep only hugo.toml, verify deployment URL. *(Critical)*
-- [ ] **Phase 3: Delete deprecated JS files** — Remove practice-simple.js, spaced-repetition-simple.js, vocabulary-simple.js, vocabulary-old.js. *(High Priority)*
-- [ ] **Phase 4: Audit enhanced-*.js files** — Determine if enhanced modules should be merged into core or documented as feature additions. *(High Priority)*
+**Status**: Desktop ready, mobile blocked. Estimated 4-6 hours to unblock public launch.
+
+- [ ] **P0: Fix mobile navigation visibility (2-3 hours)** — Navigation links not visible on mobile viewports. 10+ tests failing. Files: `assets/scss/components/_navigation.scss`, `layouts/partials/header.html`. *(CRITICAL - Blocks launch)*
+- [ ] **P0: Fix vocabulary card loading timing (1-2 hours)** — Cards load inconsistently, causing blank states. 8 tests failing. Files: `assets/js/vocab-cards.js`, `assets/js/enhanced-vocab-cards.js`. *(CRITICAL - Blocks launch)*
+- [ ] **P1: Fix keyboard event persistence (1 hour)** — Keyboard grading lost after flashcard re-initialization. 5 tests failing. Files: `assets/js/flashcards.js`, use event delegation pattern. *(HIGH - UX issue)*
+- [ ] **P1: Fix language toggle state sync (1 hour)** — Practice sessions don't reflect language direction changes. 2 tests failing. Files: `assets/js/enhanced-practice-session.js`, localStorage sync. *(HIGH - Feature broken)*
+
+**After these fixes**: Re-run `npm test` and verify >80% pass rate before public launch.
+
+---
+
+## Repository Cleanup Tasks (Completed October 19, 2025)
+
+- [x] **Phase 1: Remove build artifacts** — Removed 140+ committed build outputs and updated .gitignore. *(Completed Oct 19, 2025)*
+- [x] **Phase 2: Remove duplicate config.toml** — Removed, keeping only hugo.toml. *(Completed Oct 19, 2025)*
+- [x] **Phase 3: Delete deprecated JS files** — Removed all *-simple.js and vocabulary-old.js files. *(Completed Oct 19, 2025)*
+- [x] **Phase 4: Audit enhanced-*.js files** — Verified all active in production, documented in assets/js/README.md. *(Completed Oct 19, 2025)*
 - [ ] **Phase 5: Convert theme to submodule** — Move themes/learn to git submodule to reduce repo bloat (209 files). *(Medium Priority)*
 - [ ] **Phase 6: Refactor Go tooling** — Remove minification TODOs from tools/cmd/hugo-bg-de/main.go, focus on data processing only. *(Medium Priority)*
 - [ ] **Phase 7: Document API persistence** — Complete TODO in docs/API.md line 108: "Document persistence lifecycle and fallback behavior". *(Medium Priority)*
