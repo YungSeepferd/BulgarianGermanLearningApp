@@ -104,9 +104,6 @@ class OnboardingFlow {
   }
   
   init() {
-    // Create screen reader announcements area
-    this.createScreenReaderAnnouncer();
-    
     // DON'T auto-show onboarding - let user trigger it manually
     // Check if help button exists and attach click handler
     this.attachHelpButtonHandler();
