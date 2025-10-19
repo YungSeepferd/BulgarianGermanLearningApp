@@ -104,17 +104,31 @@ class OnboardingFlow {
   }
   
   init() {
-    // Check if onboarding already completed
-    if (this.hasCompletedOnboarding()) {
-      console.log('[Onboarding] Already completed');
-      return;
-    }
+    // Create screen reader announcements area
+    this.createScreenReaderAnnouncer();
     
-    // Check if we're on a page where onboarding should show
-    if (this.shouldShowOnboarding()) {
-      console.log('[Onboarding] Starting onboarding flow');
-      this.showOnboarding();
+    // DON'T auto-show onboarding - let user trigger it manually
+    // Check if help button exists and attach click handler
+    this.attachHelpButtonHandler();
+    
+    console.log('[Onboarding] Onboarding ready (manual trigger only)');
+  }
+  
+  attachHelpButtonHandler() {
+    // Wait for DOM to be fully loaded
+    const helpButton = document.getElementById('onboarding-help-btn');
+    if (helpButton) {
+      helpButton.addEventListener('click', () => {
+        console.log('[Onboarding] Starting onboarding flow (user triggered)');
+        this.showOnboarding();
+      });
     }
+  }
+  
+  // Public method to manually trigger onboarding
+  startOnboarding() {
+    console.log('[Onboarding] Starting onboarding flow (programmatic)');
+    this.showOnboarding();
   }
   
   hasCompletedOnboarding() {

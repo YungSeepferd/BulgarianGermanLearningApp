@@ -230,7 +230,7 @@ class EnhancedPracticeSession {
     const frontText = isReverse ? this.currentCard.translation : this.currentCard.word;
     const backText = isReverse ? this.currentCard.word : this.currentCard.translation;
     
-    // Update card content
+    // Update card TEXT content only - updateUI() handles visibility
     const currentWord = document.getElementById('current-word');
     const currentTranslation = document.getElementById('current-translation');
     const currentNotes = document.getElementById('current-notes');
@@ -243,33 +243,9 @@ class EnhancedPracticeSession {
       currentNotes.textContent = this.currentCard.notes || '';
       currentNotes.style.display = this.currentCard.notes ? 'block' : 'none';
     }
-    const flashcardFront = document.getElementById('flashcard-front');
-    const flashcardBack = document.getElementById('flashcard-back');
-    const showAnswerBtn = document.getElementById('show-answer');
-    const responseButtons = document.getElementById('response-buttons');
     
-    if (flashcard) flashcard.classList.remove('flipped');
-    
-    if (this.isFlipped) {
-      if (flashcardFront) flashcardFront.style.display = 'none';
-      if (flashcardBack) flashcardBack.style.display = 'block';
-      if (showAnswerBtn) showAnswerBtn.style.display = 'none';
-      if (responseButtons) {
-        responseButtons.style.display = 'flex';
-        responseButtons.classList.remove('hidden');
-      }
-    } else {
-      if (flashcardFront) flashcardFront.style.display = 'block';
-      if (flashcardBack) flashcardBack.style.display = 'none';
-      if (showAnswerBtn) {
-        showAnswerBtn.style.display = 'block';
-        showAnswerBtn.classList.remove('hidden');
-      }
-      if (responseButtons) {
-        responseButtons.style.display = 'none';
-        responseButtons.classList.add('hidden');
-      }
-    }
+    if (wordLevel) wordLevel.textContent = this.currentCard.level || 'A1';
+    if (wordCategory) wordCategory.textContent = this.currentCard.category || '';
   }
   
   updateProgress() {
