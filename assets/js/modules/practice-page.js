@@ -8,7 +8,7 @@ class PracticePageModule {
         this.adapter = options.adapter;
         this.spacedRepetition = options.spacedRepetition;
         this.selectedItems = options.selectedItems || [];
-        this.learningDirection = options.learningDirection || 'bg_to_de';
+        this.learningDirection = this.normalizeDirection(options.learningDirection) || this.getInitialDirection();
         this.enableAudio = options.enableAudio || false;
         this.sessionLength = options.sessionLength || 20;
         
@@ -26,6 +26,36 @@ class PracticePageModule {
         // UI elements
         this.elements = {};
         this.isInitialized = false;
+    }
+
+    normalizeDirection(value) {
+        if (!value) {
+            return null;
+        }
+
+        const normalized = value.toString().toLowerCase();
+
+        if (normalized === 'bg-de' || normalized === 'bg_to_de') {
+            return 'bg-de';
+        }
+
+        if (normalized === 'de-bg' || normalized === 'de_to_bg') {
+            return 'de-bg';
+        }
+
+        return normalized === 'bg-de' || normalized === 'de-bg' ? normalized : null;
+    }
+
+    getInitialDirection() {
+        if (window.languageToggle && typeof window.languageToggle.getDirection === 'function') {
+            return window.languageToggle.getDirection();
+        }
+
+        const stored =
+            localStorage.getItem('bgde:language-direction') ||
+            localStorage.getItem('bgde:learning_direction');
+
+        return this.normalizeDirection(stored) || 'de-bg';
     }
 
     async init() {
@@ -217,6 +247,16 @@ class PracticePageModule {
         if (this.elements.showHint) {
             this.elements.showHint.addEventListener('click', () => this.toggleHint());
         }
+
+        document.addEventListener('language-direction-changed', (event) => {
+            const nextDirection = this.normalizeDirection(event?.detail?.direction);
+            if (!nextDirection || nextDirection === this.learningDirection) {
+                return;
+            }
+
+            this.learningDirection = nextDirection;
+            this.displayCurrentItem();
+        });
         
         // Settings
         if (this.elements.settingsToggle) {
@@ -273,14 +313,18 @@ class PracticePageModule {
         }
         
         const item = this.sessionItems[this.currentIndex];
-        
+
+        const isReverse = this.learningDirection === 'de-bg';
+        const frontText = isReverse ? item.translation : item.word;
+        const backText = isReverse ? item.word : item.translation;
+
         // Update flashcard content
         if (this.elements.currentWord) {
-            this.elements.currentWord.textContent = item.word;
+            this.elements.currentWord.textContent = frontText;
         }
-        
+
         if (this.elements.currentTranslation) {
-            this.elements.currentTranslation.textContent = item.translation;
+            this.elements.currentTranslation.textContent = backText;
         }
         
         if (this.elements.currentNotes) {

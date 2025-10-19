@@ -267,14 +267,23 @@ class SessionStatsDashboard {
             : sessions;
             
         const directionStats = {
-            'bg_to_de': { sessions: 0, accuracy: 0 },
-            'de_to_bg': { sessions: 0, accuracy: 0 }
+            'bg-de': { sessions: 0, accuracy: 0 },
+            'de-bg': { sessions: 0, accuracy: 0 }
+        };
+        
+        const normalizeDirection = (value) => {
+            if (!value) return null;
+            const normalized = value.toString().toLowerCase();
+            if (normalized === 'bg-de' || normalized === 'bg_to_de') return 'bg-de';
+            if (normalized === 'de-bg' || normalized === 'de_to_bg') return 'de-bg';
+            return directionStats[normalized] ? normalized : null;
         };
         
         filtered.forEach(session => {
-            if (session.direction && directionStats[session.direction]) {
-                directionStats[session.direction].sessions++;
-                directionStats[session.direction].accuracy += session.accuracy;
+            const directionKey = normalizeDirection(session.direction);
+            if (directionKey && directionStats[directionKey]) {
+                directionStats[directionKey].sessions++;
+                directionStats[directionKey].accuracy += session.accuracy;
             }
         });
         
@@ -381,8 +390,8 @@ class SessionStatsDashboard {
         const ctx = canvas.getContext('2d');
         const directionStats = this.data.directions;
         
-        const bgToDe = directionStats.bg_to_de.sessions;
-        const deToBg = directionStats.de_to_bg.sessions;
+        const bgToDe = directionStats['bg-de'].sessions;
+        const deToBg = directionStats['de-bg'].sessions;
         
         this.drawPieChart(ctx, {
             labels: ['BG → DE', 'DE → BG'],

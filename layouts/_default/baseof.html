@@ -21,11 +21,19 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
+    <!-- Skip Navigation Link for Accessibility -->
+    <a href="#main-content" class="skip-link">
+        Skip to main content / Към основното съдържание
+    </a>
+    
     {{ partial "header.html" . }}
     
     <main id="main-content">
         {{ block "main" . }}{{ end }}
     </main>
+    
+    <!-- Screen Reader Announcements -->
+    <div aria-live="polite" aria-atomic="true" class="sr-only" id="sr-announcements"></div>
     
     {{ partial "footer.html" . }}
     
@@ -36,9 +44,17 @@
     {{ $codeJs := resources.Get "js/code.js" | resources.Minify }}
     <script src="{{ $codeJs.RelPermalink }}" defer></script>
     
-    <!-- Language toggle functionality -->
+    <!-- Language toggle functionality - loaded early for global availability -->
     {{ $languageToggle := resources.Get "js/language-toggle.js" | resources.Minify }}
-    <script src="{{ $languageToggle.RelPermalink }}" defer></script>
+    <script src="{{ $languageToggle.RelPermalink }}"></script>
+    
+    <!-- Language Toggle Confirmation Modal -->
+    {{ $confirmation := resources.Get "js/language-toggle-confirmation.js" | resources.Minify }}
+    <script src="{{ $confirmation.RelPermalink }}" defer></script>
+    
+    <!-- Onboarding Flow -->
+    {{ $onboarding := resources.Get "js/onboarding.js" | resources.Minify }}
+    <script src="{{ $onboarding.RelPermalink }}" defer></script>
     
     <!-- Core functionality loaded per page in scripts block -->
     

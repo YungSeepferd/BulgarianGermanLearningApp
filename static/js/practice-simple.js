@@ -22,6 +22,36 @@ BgDeApp.practice = {
   }
 };
 
+BgDeApp.normalizeDirection = function(value) {
+  if (!value) {
+    return null;
+  }
+
+  const normalized = value.toString().toLowerCase();
+
+  if (normalized === 'bg-de' || normalized === 'bg_to_de') {
+    return 'bg-de';
+  }
+
+  if (normalized === 'de-bg' || normalized === 'de_to_bg') {
+    return 'de-bg';
+  }
+
+  return normalized === 'bg-de' || normalized === 'de-bg' ? normalized : null;
+};
+
+BgDeApp.getLanguageDirection = function() {
+  if (window.languageToggle && typeof window.languageToggle.getDirection === 'function') {
+    return window.languageToggle.getDirection();
+  }
+
+  const stored =
+    localStorage.getItem('bgde:language-direction') ||
+    localStorage.getItem('bgde:learning_direction');
+
+  return BgDeApp.normalizeDirection(stored) || 'de-bg';
+};
+
 // Initialize practice session
 BgDeApp.initPractice = function() {
   BgDeApp.loadPracticeData();
@@ -166,8 +196,8 @@ BgDeApp.showCurrentCard = function() {
   BgDeApp.practice.currentCard = currentCard;
   BgDeApp.practice.isFlipped = false;
   
-  const direction = localStorage.getItem('bgde:learning_direction') || 'bg_to_de';
-  const isReverse = direction === 'de_to_bg';
+  const direction = BgDeApp.getLanguageDirection();
+  const isReverse = direction === 'de-bg';
   const frontText = isReverse ? currentCard.translation : currentCard.word;
   const backText = isReverse ? currentCard.word : currentCard.translation;
   

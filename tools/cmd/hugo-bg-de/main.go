@@ -5,7 +5,6 @@ import (
 	"log"
 	"os"
 	"os/exec"
-	"path/filepath"
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/urfave/cli/v2"
@@ -18,11 +17,6 @@ func main() {
 		Name:  "hugo-bg-de",
 		Usage: "Bulgarian-German learning app build tools",
 		Commands: []*cli.Command{
-			{
-				Name:   "build",
-				Usage:  "Build the Hugo site with data processing",
-				Action: buildCommand,
-			},
 			{
 				Name:   "dev",
 				Usage:  "Start development server with auto-rebuild",
@@ -47,33 +41,7 @@ func main() {
 	}
 }
 
-func buildCommand(c *cli.Context) error {
-	log.Println("Building Bulgarian-German learning app...")
-
-	// Run pre-build hooks
-	err := preBuildHook()
-	if err != nil {
-		return err
-	}
-
-	// Run Hugo build
-	cmd := exec.Command("hugo", "--minify")
-	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr
-	err = cmd.Run()
-	if err != nil {
-		return fmt.Errorf("Hugo build failed: %w", err)
-	}
-
-	// Run post-build hooks
-	err = postBuildHook()
-	if err != nil {
-		return err
-	}
-
-	log.Println("Build completed successfully!")
-	return nil
-}
+// buildCommand removed - use 'hugo --minify' directly or 'npm run build'
 
 func devCommand(c *cli.Context) error {
 	log.Println("Starting development server...")
@@ -188,24 +156,7 @@ func preBuildHook() error {
 	return nil
 }
 
-func postBuildHook() error {
-	log.Println("Starting post-build optimizations...")
-
-	// Optimize generated files
-	err := optimizeStaticAssets()
-	if err != nil {
-		return fmt.Errorf("asset optimization failed: %w", err)
-	}
-
-	// Generate service worker
-	err = generateServiceWorker()
-	if err != nil {
-		return fmt.Errorf("service worker generation failed: %w", err)
-	}
-
-	log.Println("Post-build processing completed successfully")
-	return nil
-}
+// postBuildHook removed - Hugo's --minify handles asset optimization
 
 func watchDataFiles() {
 	watcher, err := fsnotify.NewWatcher()
@@ -260,58 +211,9 @@ func processDataFiles() error {
 	return processor.GenerateSearchIndex()
 }
 
-func optimizeStaticAssets() error {
-	publicDir := "public/"
+// optimizeStaticAssets removed - Hugo's --minify handles this
 
-	// Check if public directory exists
-	if _, err := os.Stat(publicDir); os.IsNotExist(err) {
-		log.Println("Public directory doesn't exist, skipping asset optimization")
-		return nil
-	}
-
-	// Minify CSS files
-	cssFiles, err := filepath.Glob(publicDir + "**/*.css")
-	if err == nil {
-		for _, cssFile := range cssFiles {
-			err := minifyCSSFile(cssFile)
-			if err != nil {
-				log.Printf("Warning: failed to minify CSS file %s: %v", cssFile, err)
-			}
-		}
-	}
-
-	// Minify JavaScript files
-	jsFiles, err := filepath.Glob(publicDir + "**/*.js")
-	if err == nil {
-		for _, jsFile := range jsFiles {
-			err := minifyJSFile(jsFile)
-			if err != nil {
-				log.Printf("Warning: failed to minify JS file %s: %v", jsFile, err)
-			}
-		}
-	}
-
-	return nil
-}
-
-func generateServiceWorker() error {
-	// Get list of all static assets
-	assets, err := getStaticAssetList("public/")
-	if err != nil {
-		return fmt.Errorf("failed to get asset list: %w", err)
-	}
-
-	// Create service worker content
-	swContent := createServiceWorkerTemplate(assets)
-
-	// Write service worker file
-	err = os.WriteFile("public/sw.js", []byte(swContent), 0644)
-	if err != nil {
-		return fmt.Errorf("failed to write service worker: %w", err)
-	}
-
-	return nil
-}
+// generateServiceWorker removed - should be handled separately from build process
 
 func generatePWAManifest() error {
 	manifest := `{
@@ -350,63 +252,7 @@ func generatePWAManifest() error {
 	return nil
 }
 
-// Placeholder functions for asset optimization
-func minifyCSSFile(filePath string) error {
-	// TODO: Implement CSS minification
-	log.Printf("Minifying CSS file: %s", filePath)
-	return nil
-}
+// minifyCSSFile and minifyJSFile removed - Hugo handles minification via --minify flag
 
-func minifyJSFile(filePath string) error {
-	// TODO: Implement JS minification
-	log.Printf("Minifying JS file: %s", filePath)
-	return nil
-}
-
-func getStaticAssetList(dir string) ([]string, error) {
-	var assets []string
-	
-	err := filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-		if !info.IsDir() {
-			// Convert to relative path from public directory
-			relPath, err := filepath.Rel(dir, path)
-			if err != nil {
-				return err
-			}
-			assets = append(assets, "/"+relPath)
-		}
-		return nil
-	})
-	
-	return assets, err
-}
-
-func createServiceWorkerTemplate(assets []string) string {
-	return fmt.Sprintf(`const CACHE_NAME = 'bg-de-learn-v1';
-const urlsToCache = %v;
-
-self.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(function(cache) {
-        return cache.addAll(urlsToCache);
-      })
-  );
-});
-
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
-});`, fmt.Sprintf("%q", assets))
-}
+// Service worker generation functions removed - handle separately from build
+// Use static/sw.js or generate via dedicated tool

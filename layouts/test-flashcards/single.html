@@ -1,0 +1,185 @@
+{{ define "main" }}
+{{ $sample := first 3 .Site.Data.vocabulary }}
+<div class="flashcards-container" 
+     data-category="" 
+     data-level="" 
+     data-limit="3"
+     data-mode="practice"
+     data-shuffle="false">
+  
+  <div class="flashcards-header">
+    <div class="session-info">
+      <h3 class="session-title">Flashcard Practice (Test Harness)</h3>
+      <div class="session-meta">
+        <span id="session-progress" class="progress-text">0 / 0</span>
+        <span id="session-accuracy" class="accuracy-text">0% accuracy</span>
+      </div>
+    </div>
+    
+    <div class="session-controls">
+      <button id="pause-session" class="flashcard-btn secondary" aria-label="Pause session">
+        ⏸️ Pause
+      </button>
+      <button id="end-session" class="flashcard-btn danger" aria-label="End session">
+        ❌ End
+      </button>
+    </div>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+  </div>
+
+  <div class="flashcard-stage" id="flashcard-stage">
+    <div class="flashcard" id="current-flashcard" tabindex="0" role="button" aria-label="Click or press space to flip card">
+      <div class="flashcard-inner">
+        <div class="flashcard-front">
+          <div class="card-content">
+            <div class="word-text" id="word-text" lang="bg">Loading...</div>
+            <div class="word-meta" id="word-meta">
+              <span class="word-category"></span>
+              <span class="word-level"></span>
+            </div>
+          </div>
+          <div class="flip-hint">
+            <span class="flip-icon">🔄</span>
+            <span class="flip-text">Click to reveal</span>
+          </div>
+        </div>
+        
+        <div class="flashcard-back">
+          <div class="card-content">
+            <div class="translation-text" id="translation-text" lang="de">Translation</div>
+            <div class="word-notes" id="word-notes"></div>
+          </div>
+          <div class="review-stats" id="review-stats">
+            <div class="stat-item">
+              <span class="stat-label">Reviews:</span>
+              <span class="stat-value" id="total-reviews">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Accuracy:</span>
+              <span class="stat-value" id="word-accuracy">0%</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Streak:</span>
+              <span class="stat-value" id="word-streak">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grading-controls" id="grading-controls" style="display: none;">
+    <div class="grading-prompt">
+      <h4>How well did you know this word?</h4>
+      <p class="grading-help">Rate your knowledge to improve future reviews</p>
+    </div>
+    
+    <div class="grade-buttons" role="group" aria-label="Grade your knowledge">
+      <button class="grade-btn grade-0" data-grade="0" aria-label="Grade 0: Complete blackout">
+        <span class="grade-number">0</span>
+        <span class="grade-label">No idea</span>
+        <span class="grade-desc">Complete blackout</span>
+      </button>
+      <button class="grade-btn grade-1" data-grade="1" aria-label="Grade 1: Incorrect with familiar feeling">
+        <span class="grade-number">1</span>
+        <span class="grade-label">Wrong</span>
+        <span class="grade-desc">Incorrect but familiar</span>
+      </button>
+      <button class="grade-btn grade-2" data-grade="2" aria-label="Grade 2: Incorrect but close">
+        <span class="grade-number">2</span>
+        <span class="grade-label">Close</span>
+        <span class="grade-desc">Wrong but close</span>
+      </button>
+      <button class="grade-btn grade-3" data-grade="3" aria-label="Grade 3: Correct with difficulty">
+        <span class="grade-number">3</span>
+        <span class="grade-label">Hard</span>
+        <span class="grade-desc">Correct with effort</span>
+      </button>
+      <button class="grade-btn grade-4" data-grade="4" aria-label="Grade 4: Correct with hesitation">
+        <span class="grade-number">4</span>
+        <span class="grade-label">Good</span>
+        <span class="grade-desc">Correct after thinking</span>
+      </button>
+      <button class="grade-btn grade-5" data-grade="5" aria-label="Grade 5: Perfect recall">
+        <span class="grade-number">5</span>
+        <span class="grade-label">Easy</span>
+        <span class="grade-desc">Perfect recall</span>
+      </button>
+    </div>
+    
+    <div class="keyboard-hint">
+      <span>💡 Use keys 0-5 for quick grading</span>
+    </div>
+  </div>
+
+  <div class="session-complete" id="session-complete" style="display: none;">
+    <div class="complete-content">
+      <div class="complete-icon">🎉</div>
+      <h3>Session Complete!</h3>
+      
+      <div class="session-summary">
+        <div class="summary-stat">
+          <span class="stat-number" id="final-cards">0</span>
+          <span class="stat-label">Cards Reviewed</span>
+        </div>
+        <div class="summary-stat">
+          <span class="stat-number" id="final-accuracy">0%</span>
+          <span class="stat-label">Accuracy</span>
+        </div>
+        <div class="summary-stat">
+          <span class="stat-number" id="final-time">0m</span>
+          <span class="stat-label">Time Spent</span>
+        </div>
+      </div>
+      
+      <div class="complete-actions">
+        <button id="new-session" class="flashcard-btn primary">
+          🔄 New Session
+        </button>
+        <button id="review-mistakes" class="flashcard-btn secondary" style="display: none;">
+          📝 Review Mistakes
+        </button>
+        <button id="back-to-vocab" class="flashcard-btn secondary">
+          📚 Back to Vocabulary
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="flashcards-loading" id="flashcards-loading">
+    <div class="loading-spinner"></div>
+    <p>Preparing flashcards...</p>
+  </div>
+  
+  <div class="flashcards-error" id="flashcards-error" style="display: none;" role="alert">
+    <div class="error-icon">⚠️</div>
+    <h3>Unable to Load Flashcards</h3>
+    <p id="error-message">Failed to load vocabulary data.</p>
+    <button id="retry-flashcards" class="flashcard-btn primary">Try Again</button>
+  </div>
+</div>
+
+<script id="practice-vocabulary-data" type="application/json">
+{{ $sample | jsonify }}
+</script>
+{{ end }}
+
+{{ define "scripts" }}
+{{ $flashcards := resources.Get "js/flashcards.js" }}
+{{ $spaced := resources.Get "js/spaced-repetition.js" }}
+{{ $language := resources.Get "js/language-toggle.js" }}
+{{ $speech := resources.Get "js/speech-recognition.js" }}
+<link rel="modulepreload" href="{{ $spaced.RelPermalink }}">
+<link rel="modulepreload" href="{{ $language.RelPermalink }}">
+<link rel="modulepreload" href="{{ $speech.RelPermalink }}">
+<script type="module">
+  import Flashcards from "{{ $flashcards.RelPermalink }}";
+  const container = document.querySelector('.flashcards-container');
+  window.testFlashcards = new Flashcards(container);
+</script>
+{{ end }}

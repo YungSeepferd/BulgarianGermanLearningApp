@@ -1,201 +1,290 @@
 /**
- * Language Toggle System
- * Switches between German→Bulgarian and Bulgarian→German learning directions
- * Provides bidirectional vocabulary and grammar explanations
+ * @file language-toggle.js
+ * @description Bidirectional language learning direction controller
+ * @status ACTIVE
+ * @dependencies None (pure implementation)
+ * @used_by flashcards.js, vocab-cards.js, enhanced-*.js modules, layouts/partials/language-toggle.html
+ * @features
+ *   - Toggle between BG→DE and DE→BG learning directions
+ *   - localStorage persistence (bgde:language-direction)
+ *   - Event-based notifications for direction changes
+ *   - Cultural context adaptation based on native language
+ *   - Difficulty multipliers for SM-2 (BG→DE: 1.2x, DE→BG: 1.1x)
+ * @see docs/BIDIRECTIONAL_IMPLEMENTATION_PLAN.md for design
+ * @version 2.0.0
+ * @updated October 2025
  */
+
+const DIRECTION = {
+  BG_TO_DE: 'bg-de',
+  DE_TO_BG: 'de-bg'
+};
+
+const DEFAULT_DIRECTION = DIRECTION.DE_TO_BG;
+const VALID_DIRECTIONS = new Set([DIRECTION.BG_TO_DE, DIRECTION.DE_TO_BG]);
 
 class LanguageToggle {
   constructor() {
-    this.currentDirection = this.loadDirection();
     this.storageKey = 'bgde:language-direction';
-    
+    this.legacyStorageKey = 'bgde:learning_direction';
+    this.currentDirection = this.loadDirection();
+    this.toggleButton = null;
+
     this.init();
   }
-  
+
   init() {
     this.createToggleButton();
     this.applyDirection();
     this.bindEvents();
   }
-  
+
   createToggleButton() {
-    // Find existing theme toggle or create new container
-    let container = document.querySelector('.theme-toggle-container');
-    
-    if (!container) {
-      container = document.createElement('div');
-      container.className = 'language-controls';
-      
-      // Try to add to header or create floating control
-      const header = document.querySelector('header') || document.querySelector('.header');
-      if (header) {
-        header.appendChild(container);
-      } else {
-        container.className += ' floating-controls';
-        document.body.appendChild(container);
+    let container = document.querySelector('[data-language-toggle]');
+
+    if (container) {
+      container.classList.add('language-controls');
+      container.innerHTML = '';
+    } else {
+      container = document.querySelector('.theme-toggle-container');
+
+      if (!container) {
+        container = document.createElement('div');
+        container.className = 'language-controls';
+
+        const header = document.querySelector('header') || document.querySelector('.header');
+        if (header) {
+          header.appendChild(container);
+        } else {
+          container.classList.add('floating-controls');
+          document.body.appendChild(container);
+        }
       }
     }
-    
-    // Create language toggle button
+
     const toggleButton = document.createElement('button');
     toggleButton.className = 'language-toggle-btn';
-    toggleButton.setAttribute('aria-label', 'Switch learning direction');
-    toggleButton.setAttribute('title', 'Switch between German→Bulgarian and Bulgarian→German');
+    toggleButton.type = 'button';
+    toggleButton.id = 'language-toggle-button';
+    
+    // Enhanced accessibility
+    toggleButton.setAttribute('aria-pressed', 'false');
+    toggleButton.setAttribute('aria-describedby', 'language-toggle-description');
+
+    // Create hidden description for screen readers
+    const description = document.createElement('span');
+    description.id = 'language-toggle-description';
+    description.className = 'sr-only';
+    description.textContent = 'Click to switch learning direction between German to Bulgarian and Bulgarian to German';
     
     this.updateToggleButton(toggleButton);
-    
+
     container.appendChild(toggleButton);
+    container.appendChild(description);
     this.toggleButton = toggleButton;
   }
-  
+
   updateToggleButton(button) {
+    if (!button) return;
+
     const directions = {
-      'de-bg': {
+      [DIRECTION.DE_TO_BG]: {
         icon: '🇩🇪→🇧🇬',
         text: 'DE→BG',
-        title: 'Learning Bulgarian (from German perspective)'
+        title: 'Learning Bulgarian (from German perspective)',
+        ariaLabel: 'Switch learning direction. Currently German to Bulgarian. Click to change to Bulgarian to German.'
       },
-      'bg-de': {
-        icon: '🇧🇬→🇩🇪', 
+      [DIRECTION.BG_TO_DE]: {
+        icon: '🇧🇬→🇩🇪',
         text: 'BG→DE',
-        title: 'Learning German (from Bulgarian perspective)'
+        title: 'Learning German (from Bulgarian perspective)',
+        ariaLabel: 'Switch learning direction. Currently Bulgarian to German. Click to change to German to Bulgarian.'
       }
     };
-    
-    const current = directions[this.currentDirection];
+
+    const current = directions[this.currentDirection] || directions[DEFAULT_DIRECTION];
     button.innerHTML = `
-      <span class="toggle-icon">${current.icon}</span>
+      <span class="toggle-icon" aria-hidden="true">${current.icon}</span>
       <span class="toggle-text">${current.text}</span>
+      <span class="sr-only">${current.ariaLabel}</span>
     `;
     button.setAttribute('title', current.title);
+    button.setAttribute('aria-label', current.ariaLabel);
+    button.setAttribute('data-direction', this.currentDirection);
   }
-  
+
   bindEvents() {
     if (this.toggleButton) {
       this.toggleButton.addEventListener('click', () => this.toggleDirection());
     }
-    
-    // Listen for custom events from other components
-    document.addEventListener('language-direction-changed', (e) => {
-      this.handleDirectionChange(e.detail);
+
+    const handleExternalChange = (event) => {
+      const detail = event?.detail;
+      if (!detail || detail.source === 'language-toggle') {
+        return;
+      }
+
+      this.setDirection(detail.direction, { silent: true });
+    };
+
+    document.addEventListener('language-direction-changed', handleExternalChange);
+    document.addEventListener('languageDirectionChanged', handleExternalChange);
+    window.addEventListener('learning-direction-changed', handleExternalChange);
+
+    window.addEventListener('storage', (event) => {
+      if (event.key === this.storageKey) {
+        this.setDirection(event.newValue, { silent: true });
+      } else if (event.key === this.legacyStorageKey) {
+        const migrated = this.migrateLegacyDirection(event.newValue);
+        if (migrated) {
+          this.setDirection(migrated, { silent: true });
+        }
+      }
     });
   }
-  
+
   toggleDirection() {
-    this.currentDirection = this.currentDirection === 'de-bg' ? 'bg-de' : 'de-bg';
+    const nextDirection =
+      this.currentDirection === DIRECTION.DE_TO_BG ? DIRECTION.BG_TO_DE : DIRECTION.DE_TO_BG;
+
+    // Show confirmation modal if available
+    if (typeof window.LanguageToggleConfirmation !== 'undefined') {
+      const confirmation = new window.LanguageToggleConfirmation();
+      confirmation.show(
+        this.currentDirection,
+        nextDirection,
+        (confirmedDirection) => {
+          // User confirmed, proceed with change
+          this.setDirection(confirmedDirection, { announce: true });
+        }
+      );
+    } else {
+      // Fallback: direct change without confirmation
+      this.setDirection(nextDirection, { announce: true });
+    }
+  }
+
+  setDirection(direction, { silent = false, announce = false } = {}) {
+    const normalized = this.normalizeDirection(direction) || DEFAULT_DIRECTION;
+    const changed = normalized !== this.currentDirection;
+
+    this.currentDirection = normalized;
     this.saveDirection();
     this.applyDirection();
     this.updateToggleButton(this.toggleButton);
-    
-    // Notify other components
-    this.broadcastDirectionChange();
-    
-    // Announce to screen readers
-    this.announceDirectionChange();
+
+    if (changed && !silent) {
+      this.broadcastDirectionChange();
+      if (announce) {
+        this.announceDirectionChange();
+      }
+    }
   }
-  
+
   applyDirection() {
-    // Add direction class to body for CSS styling
-    document.body.classList.remove('lang-de-bg', 'lang-bg-de');
-    document.body.classList.add(`lang-${this.currentDirection}`);
-    
-    // Set language attributes for better accessibility
-    const isGermanBase = this.currentDirection === 'de-bg';
+    const body = document.body;
+    if (body) {
+      if (body.classList) {
+        body.classList.remove('lang-de-bg', 'lang-bg-de');
+        body.classList.add(`lang-${this.currentDirection}`);
+      }
+
+      if (body.dataset) {
+        body.dataset.languageDirection = this.currentDirection;
+      }
+    }
+
+    const isGermanBase = this.isGermanBase();
     document.documentElement.setAttribute('lang', isGermanBase ? 'de' : 'bg');
-    
-    // Update meta description based on direction
+
     this.updateMetaDescription();
   }
-  
+
   updateMetaDescription() {
     const descriptions = {
-      'de-bg': 'Bulgarisch lernen für Deutsche - Interaktive Vokabeln und Grammatik mit Spaced Repetition',
-      'bg-de': 'Учене на немски за българи - Интерактивни думи и граматика със система за повторение'
+      [DIRECTION.DE_TO_BG]:
+        'Bulgarisch lernen für Deutsche - Interaktive Vokabeln und Grammatik mit Spaced Repetition',
+      [DIRECTION.BG_TO_DE]:
+        'Учене на немски за българи - Интерактивни думи и граматика със система за повторение'
     };
-    
+
+    const content = descriptions[this.currentDirection] || descriptions[DEFAULT_DIRECTION];
+
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {
       metaDesc = document.createElement('meta');
       metaDesc.setAttribute('name', 'description');
       document.head.appendChild(metaDesc);
     }
-    
-    metaDesc.setAttribute('content', descriptions[this.currentDirection]);
+
+    metaDesc.setAttribute('content', content);
   }
-  
+
   broadcastDirectionChange() {
-    const event = new CustomEvent('language-direction-changed', {
-      detail: {
-        direction: this.currentDirection,
-        isGermanBase: this.currentDirection === 'de-bg',
-        isBulgarianBase: this.currentDirection === 'bg-de'
-      }
-    });
-    
-    document.dispatchEvent(event);
+    const detail = {
+      direction: this.currentDirection,
+      isGermanBase: this.isGermanBase(),
+      isBulgarianBase: this.isBulgarianBase(),
+      source: 'language-toggle'
+    };
+
+    document.dispatchEvent(new CustomEvent('language-direction-changed', { detail }));
+    document.dispatchEvent(new CustomEvent('languageDirectionChanged', { detail }));
+    window.dispatchEvent(new CustomEvent('learning-direction-changed', { detail }));
   }
-  
-  handleDirectionChange(detail) {
-    // Handle direction changes from other components
-    if (detail.direction !== this.currentDirection) {
-      this.currentDirection = detail.direction;
-      this.saveDirection();
-      this.applyDirection();
-      this.updateToggleButton(this.toggleButton);
-    }
-  }
-  
+
   announceDirectionChange() {
     const announcements = {
-      'de-bg': 'Switched to German to Bulgarian learning mode',
-      'bg-de': 'Switched to Bulgarian to German learning mode'
+      [DIRECTION.DE_TO_BG]: 'Switched to German to Bulgarian learning mode. You will now see Bulgarian words to translate to German.',
+      [DIRECTION.BG_TO_DE]: 'Switched to Bulgarian to German learning mode. You will now see German words to translate to Bulgarian.'
     };
-    
-    this.announceToScreenReader(announcements[this.currentDirection]);
+
+    const message = announcements[this.currentDirection] || announcements[DEFAULT_DIRECTION];
+    this.announceToScreenReader(message);
+    this.showToastNotification(message);
   }
-  
+
   getDirection() {
     return this.currentDirection;
   }
-  
+
   isGermanBase() {
-    return this.currentDirection === 'de-bg';
+    return this.currentDirection === DIRECTION.DE_TO_BG;
   }
-  
+
   isBulgarianBase() {
-    return this.currentDirection === 'bg-de';
+    return this.currentDirection === DIRECTION.BG_TO_DE;
   }
-  
+
   getSourceLanguage() {
-    return this.currentDirection === 'de-bg' ? 'de' : 'bg';
+    return this.isGermanBase() ? 'de' : 'bg';
   }
-  
+
   getTargetLanguage() {
-    return this.currentDirection === 'de-bg' ? 'bg' : 'de';
+    return this.isGermanBase() ? 'bg' : 'de';
   }
-  
+
   getLanguageLabels() {
-    if (this.currentDirection === 'de-bg') {
+    if (this.isGermanBase()) {
       return {
         source: { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
         target: { code: 'bg', name: 'Български', flag: '🇧🇬' },
-        sourceField: 'translation', // German is in translation field
-        targetField: 'word'         // Bulgarian is in word field
-      };
-    } else {
-      return {
-        source: { code: 'bg', name: 'Български', flag: '🇧🇬' },
-        target: { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-        sourceField: 'word',        // Bulgarian is in word field  
-        targetField: 'translation'  // German is in translation field
+        sourceField: 'translation',
+        targetField: 'word'
       };
     }
+
+    return {
+      source: { code: 'bg', name: 'Български', flag: '🇧🇬' },
+      target: { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+      sourceField: 'word',
+      targetField: 'translation'
+    };
   }
-  
+
   getUITexts() {
     const texts = {
-      'de-bg': {
-        // German UI for learning Bulgarian
+      [DIRECTION.DE_TO_BG]: {
         loading: 'Lade Vokabeln...',
         error: 'Fehler beim Laden der Vokabeln',
         retry: 'Erneut versuchen',
@@ -218,8 +307,7 @@ class LanguageToggle {
         newSession: 'Neue Sitzung',
         backToVocab: 'Zurück zu Vokabeln'
       },
-      'bg-de': {
-        // Bulgarian UI for learning German
+      [DIRECTION.BG_TO_DE]: {
         loading: 'Зареждане на думи...',
         error: 'Грешка при зареждане на думите',
         retry: 'Опитай отново',
@@ -243,20 +331,63 @@ class LanguageToggle {
         backToVocab: 'Обратно към думи'
       }
     };
-    
-    return texts[this.currentDirection];
+
+    return texts[this.currentDirection] || texts[DEFAULT_DIRECTION];
   }
-  
+
   loadDirection() {
     try {
-      const saved = localStorage.getItem(this.storageKey);
-      return saved && ['de-bg', 'bg-de'].includes(saved) ? saved : 'de-bg';
+      const migrated = this.migrateLegacyDirection();
+      if (migrated) {
+        return migrated;
+      }
+
+      const stored = localStorage.getItem(this.storageKey);
+      return this.normalizeDirection(stored) || DEFAULT_DIRECTION;
     } catch (error) {
       console.warn('Failed to load language direction:', error);
-      return 'de-bg';
+      return DEFAULT_DIRECTION;
     }
   }
-  
+
+  migrateLegacyDirection(explicitValue) {
+    try {
+      const legacyValue =
+        explicitValue !== undefined ? explicitValue : localStorage.getItem(this.legacyStorageKey);
+
+      if (!legacyValue) {
+        return null;
+      }
+
+      const normalized = this.normalizeDirection(legacyValue);
+      if (normalized) {
+        localStorage.setItem(this.storageKey, normalized);
+      }
+
+      localStorage.removeItem(this.legacyStorageKey);
+      return normalized;
+    } catch (error) {
+      console.warn('Failed to migrate legacy language direction:', error);
+      return null;
+    }
+  }
+
+  normalizeDirection(value) {
+    if (!value) return null;
+
+    const normalized = value.toString().toLowerCase();
+
+    if (normalized === 'bg-de' || normalized === 'bg_to_de') {
+      return DIRECTION.BG_TO_DE;
+    }
+
+    if (normalized === 'de-bg' || normalized === 'de_to_bg') {
+      return DIRECTION.DE_TO_BG;
+    }
+
+    return VALID_DIRECTIONS.has(normalized) ? normalized : null;
+  }
+
   saveDirection() {
     try {
       localStorage.setItem(this.storageKey, this.currentDirection);
@@ -264,24 +395,118 @@ class LanguageToggle {
       console.warn('Failed to save language direction:', error);
     }
   }
-  
+
   announceToScreenReader(message) {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
+    // Use global announcement region if available
+    const globalAnnouncer = document.getElementById('sr-announcements');
+    if (globalAnnouncer) {
+      globalAnnouncer.textContent = message;
+      setTimeout(() => {
+        globalAnnouncer.textContent = '';
+      }, 3000);
+    } else {
+      // Fallback: create temporary element
+      const announcement = document.createElement('div');
+      announcement.setAttribute('role', 'status');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.className = 'sr-only';
+      announcement.textContent = message;
+
+      document.body.appendChild(announcement);
+
+      setTimeout(() => {
+        document.body.removeChild(announcement);
+      }, 1000);
+    }
+  }
+  
+  showToastNotification(message) {
+    // Check if toast container exists, create if not
+    let toastContainer = document.getElementById('toast-container');
+    if (!toastContainer) {
+      toastContainer = document.createElement('div');
+      toastContainer.id = 'toast-container';
+      toastContainer.className = 'toast-container';
+      toastContainer.setAttribute('aria-live', 'polite');
+      toastContainer.setAttribute('aria-atomic', 'true');
+      document.body.appendChild(toastContainer);
+    }
     
-    document.body.appendChild(announcement);
+    // Create toast
+    const toast = document.createElement('div');
+    toast.className = 'toast toast-success';
+    toast.setAttribute('role', 'alert');
     
+    const directionInfo = this.currentDirection === DIRECTION.DE_TO_BG 
+      ? '🇩🇪 → 🇧🇬' 
+      : '🇧🇬 → 🇩🇪';
+    
+    toast.innerHTML = `
+      <span class="toast-icon" aria-hidden="true">✓</span>
+      <span class="toast-message">
+        <strong>${directionInfo}</strong><br>
+        ${message}
+      </span>
+    `;
+    
+    toastContainer.appendChild(toast);
+    
+    // Trigger animation
     setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
+      toast.classList.add('toast-show');
+    }, 10);
+    
+    // Auto-remove after 4 seconds
+    setTimeout(() => {
+      toast.classList.remove('toast-show');
+      setTimeout(() => {
+        if (toast.parentNode === toastContainer) {
+          toastContainer.removeChild(toast);
+        }
+      }, 300);
+    }, 4000);
   }
 }
 
-// Create singleton instance and make it globally available
-window.languageToggle = new LanguageToggle();
+let languageToggle;
 
-// Also expose the class for potential module usage
-window.LanguageToggle = LanguageToggle;
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  languageToggle = window.languageToggle instanceof LanguageToggle
+    ? window.languageToggle
+    : new LanguageToggle();
+
+  window.languageToggle = languageToggle;
+  window.LanguageToggle = LanguageToggle;
+} else {
+  const noop = () => {};
+  languageToggle = {
+    currentDirection: DEFAULT_DIRECTION,
+    getDirection: () => DEFAULT_DIRECTION,
+    isGermanBase: () => DEFAULT_DIRECTION === DIRECTION.DE_TO_BG,
+    isBulgarianBase: () => DEFAULT_DIRECTION === DIRECTION.BG_TO_DE,
+    getSourceLanguage: () => (DEFAULT_DIRECTION === DIRECTION.DE_TO_BG ? 'de' : 'bg'),
+    getTargetLanguage: () => (DEFAULT_DIRECTION === DIRECTION.DE_TO_BG ? 'bg' : 'de'),
+    getLanguageLabels: () => ({
+      source: { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+      target: { code: 'bg', name: 'Български', flag: '🇧🇬' },
+      sourceField: 'translation',
+      targetField: 'word'
+    }),
+    getUITexts: () => ({
+      loading: 'Loading...',
+      error: 'Unable to load data',
+      retry: 'Retry'
+    }),
+    toggleDirection: noop,
+    setDirection: noop,
+    applyDirection: noop,
+    updateToggleButton: noop,
+    announceToScreenReader: noop
+  };
+}
+
+// Export for compatibility with modules that import this file
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { languageToggle, LanguageToggle, DIRECTION };
+  module.exports.default = languageToggle;
+}

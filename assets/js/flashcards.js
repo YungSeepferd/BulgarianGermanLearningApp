@@ -1,11 +1,24 @@
 /**
- * Flashcard Practice System
- * Integrates with spaced repetition for effective learning
- * Supports flip animations, grading, progress tracking, and bidirectional learning
+ * @file flashcards.js
+ * @description Core flashcard practice system with SM-2 spaced repetition integration
+ * @status ACTIVE
+ * @dependencies spaced-repetition.js, language-toggle.js, speech-recognition.js
+ * @used_by layouts/practice/single.html
+ * @features
+ *   - Flip animations with CSS transitions
+ *   - Keyboard shortcuts (Space/Enter to flip, 0-5 to grade)
+ *   - Progress tracking and session statistics
+ *   - Bidirectional learning (Bulgarian↔German)
+ *   - Speech recognition integration
+ *   - localStorage persistence via bgde: prefix
+ * @see docs/ARCHITECTURE.md for system design
+ * @version 2.0.0
+ * @updated October 2025
  */
 
 import { spacedRepetition } from './spaced-repetition.js';
 import { languageToggle } from './language-toggle.js';
+import SpeechPractice from './speech-recognition.js';
 
 export class Flashcards {
   constructor(container) {
@@ -44,6 +57,9 @@ export class Flashcards {
     this.sessionComplete = container.querySelector('#session-complete');
     this.loading = container.querySelector('#flashcards-loading');
     this.error = container.querySelector('#flashcards-error');
+    this.speechControls = container.querySelector('#speech-controls');
+    this.speechBtn = container.querySelector('#start-pronunciation');
+    this.speechFeedback = container.querySelector('#speech-feedback');
     
     // Progress elements
     this.progressFill = container.querySelector('#progress-fill');
@@ -54,6 +70,16 @@ export class Flashcards {
     this.pauseBtn = container.querySelector('#pause-session');
     this.endBtn = container.querySelector('#end-session');
     this.retryBtn = container.querySelector('#retry-flashcards');
+
+    // Cache bound handlers to avoid duplicate listeners on retries
+    this.onGlobalKeydown = this.handleGlobalKeyboard.bind(this);
+    this.globalKeyListenerAttached = false;
+    this.eventsBound = false;
+    this.speechPractice = null;
+    this.speechPracticeAvailable = false;
+    this.expectedSpeech = '';
+    this.isListening = false;
+    this.lastSpeechTone = 'info';
     
     this.init();
   }
@@ -73,8 +99,38 @@ export class Flashcards {
       this.showError(true, error.message);
     }
   }
+
+  readInlineVocabulary() {
+    const inlineElement = document.getElementById('practice-vocabulary-data');
+    if (!inlineElement) {
+      return null;
+    }
+
+    const rawContent = inlineElement.textContent;
+    if (!rawContent) {
+      console.warn('Embedded vocabulary JSON is empty.');
+      return null;
+    }
+
+    try {
+      const parsed = JSON.parse(rawContent);
+      if (!Array.isArray(parsed)) {
+        console.warn('Embedded vocabulary JSON is not an array.');
+        return null;
+      }
+      return parsed;
+    } catch (error) {
+      console.warn('Failed to parse embedded vocabulary JSON, falling back to network fetch.', error);
+      return null;
+    }
+  }
   
   bindEvents() {
+    if (this.eventsBound) {
+      return;
+    }
+    this.eventsBound = true;
+
     // Card flip events
     if (this.flashcard) {
       this.flashcard.addEventListener('click', () => this.handleCardClick());
@@ -100,7 +156,10 @@ export class Flashcards {
     }
     
     if (this.retryBtn) {
-      this.retryBtn.addEventListener('click', () => this.init());
+      this.retryBtn.addEventListener('click', () => {
+        this.stopSpeechPractice();
+        this.init();
+      });
     }
     
     // Session complete actions
@@ -126,15 +185,202 @@ export class Flashcards {
       this.renderCurrentCard(); // Re-render current card with new direction
     });
 
-    // Keyboard shortcuts
-    document.addEventListener('keydown', (e) => this.handleGlobalKeyboard(e));
+    if (!this.globalKeyListenerAttached) {
+      document.addEventListener('keydown', this.onGlobalKeydown);
+      this.globalKeyListenerAttached = true;
+    }
+
+    this.setupSpeechControls();
+
   }
-  
+
+  setupSpeechControls() {
+    if (!this.speechBtn) {
+      return;
+    }
+
+    if (!SpeechPractice || !SpeechPractice.isSupported()) {
+      this.speechPracticeAvailable = false;
+      this.speechBtn.setAttribute('disabled', 'disabled');
+      this.speechBtn.setAttribute('aria-disabled', 'true');
+      const label = this.speechBtn.querySelector('.label');
+      if (label) {
+        label.textContent = 'Speech Not Supported';
+      }
+      if (this.speechFeedback) {
+        this.speechFeedback.dataset.tone = 'warning';
+        this.speechFeedback.textContent = 'Speech recognition is not supported in this browser.';
+      }
+      return;
+    }
+
+    try {
+      this.speechPractice = new SpeechPractice({
+        onStatus: (status) => this.updateSpeechStatus(status),
+        onResult: (transcript) => this.handleSpeechResult(transcript),
+        onError: (message) => this.updateSpeechFeedback(message, 'error')
+      });
+      this.speechPracticeAvailable = true;
+      this.speechBtn.addEventListener('click', () => this.toggleSpeechPractice());
+      this.updateSpeechFeedback('Ready to practice pronunciation.', 'info');
+    } catch (error) {
+      this.speechPracticeAvailable = false;
+      this.speechBtn.setAttribute('disabled', 'disabled');
+      this.speechBtn.setAttribute('aria-disabled', 'true');
+      const label = this.speechBtn.querySelector('.label');
+      if (label) {
+        label.textContent = 'Speech Not Supported';
+      }
+      if (this.speechFeedback) {
+        this.speechFeedback.dataset.tone = 'error';
+        this.speechFeedback.textContent = error instanceof Error ? error.message : 'Speech recognition unavailable.';
+      }
+    }
+  }
+
+  toggleSpeechPractice() {
+    if (!this.speechPracticeAvailable || !this.speechPractice) {
+      return;
+    }
+
+    if (!this.currentCard) {
+      this.updateSpeechFeedback('Load a card before practicing pronunciation.', 'warning');
+      return;
+    }
+
+    if (this.isListening) {
+      this.stopSpeechPractice();
+      return;
+    }
+
+    const prompt = this.getCardText(this.currentCard).frontText;
+    this.expectedSpeech = prompt;
+    const langCode = this.languageDirection === 'bg-de' ? 'bg-BG' : 'de-DE';
+
+    this.updateSpeechFeedback(`Listening... say "${prompt}"`, 'info');
+    this.speechPractice.start({ lang: langCode });
+  }
+
+  stopSpeechPractice() {
+    if (this.speechPractice && this.isListening) {
+      this.speechPractice.stop();
+    }
+    this.isListening = false;
+    if (this.speechBtn) {
+      this.speechBtn.setAttribute('aria-pressed', 'false');
+      const label = this.speechBtn.querySelector('.label');
+      if (label) {
+        label.textContent = 'Practice Pronunciation';
+      }
+    }
+  }
+
+  resetSpeechPracticeForNextCard() {
+    this.expectedSpeech = '';
+    this.stopSpeechPractice();
+    if (this.speechPracticeAvailable && this.speechFeedback) {
+      this.lastSpeechTone = 'info';
+      this.speechFeedback.dataset.tone = 'info';
+    }
+  }
+
+  updateSpeechStatus(status) {
+    this.isListening = status === 'listening';
+
+    if (this.speechBtn) {
+      this.speechBtn.setAttribute('aria-pressed', this.isListening ? 'true' : 'false');
+      const label = this.speechBtn.querySelector('.label');
+      if (label) {
+        label.textContent = this.isListening ? 'Stop Listening' : 'Practice Pronunciation';
+      }
+    }
+
+    if (status === 'listening') {
+      this.lastSpeechTone = 'info';
+      if (this.speechFeedback) {
+        this.speechFeedback.dataset.tone = 'info';
+        this.speechFeedback.textContent = 'Listening...';
+      }
+    } else if (status === 'idle' && this.lastSpeechTone === 'info' && this.speechPracticeAvailable) {
+      this.updateSpeechFeedback('Microphone ready.', 'info');
+    }
+  }
+
+  updateSpeechFeedback(message, tone = 'info') {
+    if (!this.speechFeedback) return;
+    this.lastSpeechTone = tone;
+    this.speechFeedback.dataset.tone = tone;
+    this.speechFeedback.textContent = message;
+  }
+
+  handleSpeechResult(transcript) {
+    if (!transcript) {
+      this.updateSpeechFeedback('No audio detected. Please try again.', 'warning');
+      return;
+    }
+
+    const expected = this.normalizeSpeechText(this.expectedSpeech);
+    this.expectedSpeech = '';
+    const heard = this.normalizeSpeechText(transcript);
+
+    this.stopSpeechPractice();
+
+    if (!expected) {
+      this.updateSpeechFeedback(`Heard "${transcript}".`, 'info');
+      return;
+    }
+
+    const match =
+      heard.includes(expected) ||
+      expected.includes(heard);
+
+    if (match) {
+      this.updateSpeechFeedback(`Heard "${transcript}". Great pronunciation!`, 'success');
+      if (!this.isFlipped) {
+        this.flipCard();
+      }
+      setTimeout(() => this.handleGrade(5), 400);
+    } else {
+      this.updateSpeechFeedback(`Heard "${transcript}". Let's try again.`, 'warning');
+    }
+  }
+
+  normalizeSpeechText(value) {
+    if (!value) return '';
+    return value
+      .toString()
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^\p{Letter}\p{Number}\s]/gu, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  updateSpeechPrompt() {
+    if (!this.speechPracticeAvailable || !this.speechFeedback || !this.currentCard) {
+      return;
+    }
+
+    const prompt = this.getCardText(this.currentCard).frontText;
+    if (!prompt || this.isListening) return;
+
+    this.lastSpeechTone = 'info';
+    this.speechFeedback.dataset.tone = 'info';
+    this.speechFeedback.textContent = `Ready to practice "${prompt}" when you press the microphone button.`;
+  }
+
   async loadVocabulary() {
     try {
+      const inlineData = this.readInlineVocabulary();
+      if (inlineData && inlineData.length > 0) {
+        this.vocabularyData = inlineData;
+        return;
+      }
+
       // Try to load from Hugo's data directory first
       let response = await fetch('/data/vocabulary.json');
-      
+
       // Fallback to static directory if data directory fails
       if (!response.ok) {
         response = await fetch('/static/data/vocabulary.json');
@@ -212,6 +458,7 @@ export class Flashcards {
     this.currentIndex = index;
     this.currentCard = this.sessionCards[index];
     this.isFlipped = false;
+    this.resetSpeechPracticeForNextCard();
     
     // Reset card state
     this.flashcard.classList.remove('flipped');
@@ -220,6 +467,7 @@ export class Flashcards {
     
     // Update card content
     this.updateCardContent();
+    this.updateSpeechPrompt();
     this.updateProgress();
     
     // Focus the card for keyboard navigation
@@ -275,22 +523,23 @@ export class Flashcards {
     if (this.languageDirection === 'bg-de') {
       // Bulgarian to German: show Bulgarian word, translate to German
       return {
-        frontText: vocab.translation, // Bulgarian word
-        backText: vocab.word // German translation
-      };
-    } else {
-      // German to Bulgarian (default): show German word, translate to Bulgarian
-      return {
-        frontText: vocab.word, // German word
-        backText: vocab.translation // Bulgarian translation
+        frontText: vocab.word || '',
+        backText: vocab.translation || ''
       };
     }
+
+    // German to Bulgarian: show German word, translate to Bulgarian
+    return {
+      frontText: vocab.translation || '',
+      backText: vocab.word || ''
+    };
   }
   
   renderCurrentCard() {
     // Re-render the current card with updated language direction
     if (this.currentCard) {
       this.updateCardContent();
+      this.updateSpeechPrompt();
     }
   }
   
@@ -323,7 +572,7 @@ export class Flashcards {
   
   handleGlobalKeyboard(e) {
     // Only handle if flashcards are active
-    if (this.stage.style.display === 'none') return;
+    if (!this.stage || this.stage.style.display === 'none') return;
     
     // Grade shortcuts (0-5)
     if (e.key >= '0' && e.key <= '5' && this.isFlipped) {
@@ -459,6 +708,7 @@ export class Flashcards {
   }
   
   pauseSession() {
+    this.stopSpeechPractice();
     // Implementation for pause functionality
     const pauseOverlay = document.createElement('div');
     pauseOverlay.className = 'pause-overlay';
@@ -486,11 +736,13 @@ export class Flashcards {
   }
   
   endSession() {
+    this.stopSpeechPractice();
     this.sessionStats.endTime = new Date();
     this.completeSession();
   }
-  
+
   completeSession() {
+    this.stopSpeechPractice();
     this.sessionStats.endTime = this.sessionStats.endTime || new Date();
     
     // Hide main interface
@@ -530,6 +782,7 @@ export class Flashcards {
   }
   
   startNewSession() {
+    this.stopSpeechPractice();
     // Reset session state
     this.currentIndex = 0;
     this.sessionStats = {
@@ -549,6 +802,7 @@ export class Flashcards {
   }
   
   reviewMistakes() {
+    this.stopSpeechPractice();
     // Filter cards that were graded < 3
     const mistakeIndices = [];
     this.sessionStats.grades.forEach((grade, index) => {
@@ -565,6 +819,7 @@ export class Flashcards {
   }
   
   backToVocabulary() {
+    this.stopSpeechPractice();
     // Navigate back to vocabulary page
     window.location.href = '/vocabulary/';
   }

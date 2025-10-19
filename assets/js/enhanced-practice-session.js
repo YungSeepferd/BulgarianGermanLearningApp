@@ -22,7 +22,17 @@ class EnhancedPracticeSession {
   }
   
   init() {
+    console.log('[Practice] Initializing enhanced practice session');
     this.loadData();
+    
+    // Validate we have data before proceeding
+    if (!this.vocabularyData || this.vocabularyData.length === 0) {
+      console.error('[Practice] Cannot start session: no vocabulary data loaded');
+      this.showError('No vocabulary data available. Please check your data files.');
+      return;
+    }
+    
+    console.log(`[Practice] Loaded ${this.vocabularyData.length} vocabulary items`);
     this.initializeSpacedRepetition();
     this.bindEvents();
     this.startSession();
@@ -31,16 +41,52 @@ class EnhancedPracticeSession {
   loadData() {
     // Load vocabulary data
     const vocabScript = document.getElementById('practice-vocabulary-data');
-    if (vocabScript) {
-      try {
-        this.vocabularyData = JSON.parse(vocabScript.textContent);
-      } catch (error) {
-        console.error('Failed to load vocabulary data:', error);
+    if (!vocabScript) {
+      console.error('[Practice] Vocabulary data script tag (#practice-vocabulary-data) not found in DOM');
+      return;
+    }
+    
+    try {
+      const data = JSON.parse(vocabScript.textContent);
+      
+      // Validate data structure
+      if (!Array.isArray(data)) {
+        console.error('[Practice] Vocabulary data is not an array:', typeof data);
+        return;
       }
+      
+      if (data.length === 0) {
+        console.error('[Practice] Vocabulary data array is empty');
+        return;
+      }
+      
+      // Validate first item has required fields
+      const firstItem = data[0];
+      if (!firstItem.word && !firstItem.translation) {
+        console.error('[Practice] Vocabulary items missing required fields (word/translation)');
+        return;
+      }
+      
+      this.vocabularyData = data;
+      console.log(`[Practice] Successfully loaded and validated ${data.length} vocabulary items`);
+    } catch (error) {
+      console.error('[Practice] Failed to parse vocabulary data:', error);
+      console.error('[Practice] Script content length:', vocabScript.textContent.length);
     }
     
     // Get current language direction
-    this.currentDirection = localStorage.getItem('bgde:learning_direction') || 'bg-de';
+    if (window.languageToggle && typeof window.languageToggle.getDirection === 'function') {
+      this.currentDirection = window.languageToggle.getDirection();
+      console.log(`[Practice] Using language direction from toggle: ${this.currentDirection}`);
+    } else {
+      console.warn('[Practice] Language toggle not available, using localStorage fallback');
+      const stored =
+        localStorage.getItem('bgde:language-direction') ||
+        localStorage.getItem('bgde:learning_direction');
+      const normalized = this.normalizeDirection(stored);
+      this.currentDirection = normalized || 'de-bg';
+      console.log(`[Practice] Using language direction: ${this.currentDirection}`);
+    }
   }
   
   initializeSpacedRepetition() {
@@ -181,16 +227,10 @@ class EnhancedPracticeSession {
       currentNotes.textContent = this.currentCard.notes || '';
       currentNotes.style.display = this.currentCard.notes ? 'block' : 'none';
     }
-    if (wordLevel) wordLevel.textContent = this.currentCard.level || 'A1';
-    if (wordCategory) wordCategory.textContent = this.currentCard.category || '';
-  }
-  
-  updateUI() {
-    const flashcard = document.getElementById('flashcard');
-    const showAnswerBtn = document.getElementById('show-answer');
-    const responseButtons = document.getElementById('response-buttons');
     const flashcardFront = document.getElementById('flashcard-front');
     const flashcardBack = document.getElementById('flashcard-back');
+    const showAnswerBtn = document.getElementById('show-answer');
+    const responseButtons = document.getElementById('response-buttons');
     
     if (flashcard) flashcard.classList.remove('flipped');
     
@@ -224,10 +264,18 @@ class EnhancedPracticeSession {
       progress.textContent = `${this.currentIndex + 1}/${this.sessionCards.length}`;
     }
     
-    if (accuracy && this.sessionStats.total > 0) {
-      const accuracyPercent = Math.round((this.sessionStats.correct / this.sessionStats.total) * 100);
+    if (accuracy) {
+      const accuracyPercent = this.sessionStats.total > 0 
+        ? Math.round((this.sessionStats.correct / this.sessionStats.total) * 100) 
+        : 0;
       accuracy.textContent = `${accuracyPercent}%`;
     }
+  }
+  
+  updateUI() {
+    // This method is called after card changes to sync UI state
+    // The updateCurrentCard() method already handles most UI updates
+    console.log('[Practice] UI updated - flipped:', this.isFlipped);
   }
   
   showAnswer() {
@@ -306,7 +354,36 @@ class EnhancedPracticeSession {
       noItemsState.style.display = 'block';
     }
   }
+  
+  showError(message) {
+    console.error('[Practice] Showing error:', message);
+    const container = document.querySelector('.flashcard-practice-container') || 
+                     document.querySelector('.practice-container') ||
+                     document.querySelector('main');
+    
+    if (container) {
+      const errorHtml = `
+        <div class="practice-error" style="text-align: center; padding: 40px 20px; max-width: 600px; margin: 0 auto;">
+          <div style="font-size: 48px; margin-bottom: 20px;">⚠️</div>
+          <h3 style="color: #d32f2f; margin-bottom: 15px;">Error Loading Practice Session</h3>
+          <p style="color: #666; margin-bottom: 20px;">${message}</p>
+          <button onclick="location.reload()" style="background: #1976d2; color: white; border: none; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-size: 16px;">
+            Reload Page
+          </button>
+          <p style="margin-top: 20px; font-size: 14px; color: #999;">
+            If this problem persists, please check the browser console for details.
+          </p>
+        </div>
+      `;
+      
+      // Replace container content
+      const practiceArea = container.querySelector('.practice-area') || container;
+      practiceArea.innerHTML = errorHtml;
+    }
+  }
 }
 
-// Make globally available
-window.EnhancedPracticeSession = EnhancedPracticeSession;
+if (typeof window !== 'undefined') {
+  window.EnhancedPracticeSession = EnhancedPracticeSession;
+  console.log('[Practice] EnhancedPracticeSession class registered globally');
+}

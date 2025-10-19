@@ -5,7 +5,7 @@
 
 class BiDirectionalFlashcards {
     constructor() {
-        this.currentDirection = localStorage.getItem('bgde:learning_direction') || 'bg_to_de';
+        this.currentDirection = this.readDirection();
         this.init();
     }
 
@@ -16,24 +16,44 @@ class BiDirectionalFlashcards {
     }
 
     bindLanguageToggle() {
-        // Listen for language direction changes
-        document.addEventListener('languageDirectionChanged', (event) => {
-            this.currentDirection = event.detail.direction;
-            this.updateFlashcardDirection();
-        });
+        const handleDirectionChange = (event) => {
+            const detail = event?.detail;
+            const nextDirection = this.normalizeDirection(detail?.direction);
 
-        // Also listen for direct localStorage changes
+            if (!nextDirection) {
+                return;
+            }
+
+            this.currentDirection = nextDirection;
+            this.updateFlashcardDirection();
+        };
+
+        document.addEventListener('language-direction-changed', handleDirectionChange);
+        document.addEventListener('languageDirectionChanged', handleDirectionChange);
+        window.addEventListener('learning-direction-changed', handleDirectionChange);
+
         window.addEventListener('storage', (event) => {
-            if (event.key === 'bgde:learning_direction') {
-                this.currentDirection = event.newValue || 'bg_to_de';
-                this.updateFlashcardDirection();
+            if (event.key === 'bgde:language-direction') {
+                const nextDirection = this.normalizeDirection(event.newValue);
+                if (nextDirection) {
+                    this.currentDirection = nextDirection;
+                    this.updateFlashcardDirection();
+                }
+            } else if (event.key === 'bgde:learning_direction') {
+                const migrated = this.normalizeDirection(event.newValue);
+                if (migrated) {
+                    localStorage.removeItem('bgde:learning_direction');
+                    localStorage.setItem('bgde:language-direction', migrated);
+                    this.currentDirection = migrated;
+                    this.updateFlashcardDirection();
+                }
             }
         });
     }
 
     updateFlashcardDirection() {
         const flashcards = document.querySelectorAll('.flashcard-item');
-        const isReversed = this.currentDirection === 'de_to_bg';
+        const isReversed = this.currentDirection === 'de-bg';
 
         flashcards.forEach(flashcard => {
             this.updateSingleFlashcard(flashcard, isReversed);
@@ -126,7 +146,7 @@ class BiDirectionalFlashcards {
                             (node.classList?.contains('flashcard-item') ? [node] : []);
                         
                         flashcards.forEach(flashcard => {
-                            this.updateSingleFlashcard(flashcard, this.currentDirection === 'de_to_bg');
+                            this.updateSingleFlashcard(flashcard, this.currentDirection === 'de-bg');
                         });
                     }
                 });
@@ -139,16 +159,59 @@ class BiDirectionalFlashcards {
         });
     }
 
+    readDirection() {
+        if (window.languageToggle && typeof window.languageToggle.getDirection === 'function') {
+            return window.languageToggle.getDirection();
+        }
+
+        const stored =
+            localStorage.getItem('bgde:language-direction') ||
+            localStorage.getItem('bgde:learning_direction');
+
+        return this.normalizeDirection(stored) || 'de-bg';
+    }
+
+    normalizeDirection(value) {
+        if (!value) {
+            return null;
+        }
+
+        const normalized = value.toString().toLowerCase();
+
+        if (normalized === 'bg-de' || normalized === 'bg_to_de') {
+            return 'bg-de';
+        }
+
+        if (normalized === 'de-bg' || normalized === 'de_to_bg') {
+            return 'de-bg';
+        }
+
+        return normalized === 'bg-de' || normalized === 'de-bg' ? normalized : null;
+    }
+
     // Public method to manually trigger direction update
     setDirection(direction) {
-        this.currentDirection = direction;
-        localStorage.setItem('bgde:learning_direction', direction);
-        this.updateFlashcardDirection();
-        
-        // Dispatch event for other components
-        document.dispatchEvent(new CustomEvent('languageDirectionChanged', {
-            detail: { direction }
-        }));
+        const normalized = this.normalizeDirection(direction);
+        if (!normalized) {
+            return;
+        }
+
+        const changed = normalized !== this.currentDirection;
+        this.currentDirection = normalized;
+
+        if (window.languageToggle && typeof window.languageToggle.setDirection === 'function') {
+            window.languageToggle.setDirection(normalized, { announce: true });
+        } else {
+            localStorage.setItem('bgde:language-direction', normalized);
+            const detail = { direction: normalized, source: 'bidirectional-flashcards' };
+            document.dispatchEvent(new CustomEvent('language-direction-changed', { detail }));
+            document.dispatchEvent(new CustomEvent('languageDirectionChanged', { detail }));
+            window.dispatchEvent(new CustomEvent('learning-direction-changed', { detail }));
+        }
+
+        if (changed) {
+            this.updateFlashcardDirection();
+        }
     }
 }
 

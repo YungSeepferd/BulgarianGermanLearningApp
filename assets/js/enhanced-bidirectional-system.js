@@ -5,7 +5,7 @@
 
 class EnhancedBidirectionalSystem {
     constructor() {
-        this.currentDirection = localStorage.getItem('bgde:learning_direction') || 'bg_to_de';
+        this.currentDirection = this.readDirection();
         this.vocabularyData = [];
         this.culturalGrammarData = [];
         this.init();
@@ -40,24 +40,49 @@ class EnhancedBidirectionalSystem {
     }
 
     setupLanguageToggle() {
-        // Create language toggle if it doesn't exist
-        if (!document.querySelector('.language-toggle')) {
+        if (!window.languageToggle) {
             this.createLanguageToggle();
+        } else {
+            this.updateToggleState();
         }
 
-        // Listen for direction changes
-        document.addEventListener('languageDirectionChanged', (event) => {
-            this.currentDirection = event.detail.direction;
+        const handleDirectionChange = (event) => {
+            const detail = event?.detail;
+            const nextDirection = this.normalizeDirection(detail?.direction);
+
+            if (!nextDirection) {
+                return;
+            }
+
+            this.currentDirection = nextDirection;
             this.updateFlashcardDirection();
             this.updateDirectionIndicator();
-        });
+            this.updateToggleState();
+        };
 
-        // Listen for storage changes
+        document.addEventListener('language-direction-changed', handleDirectionChange);
+        document.addEventListener('languageDirectionChanged', handleDirectionChange);
+        window.addEventListener('learning-direction-changed', handleDirectionChange);
+
         window.addEventListener('storage', (event) => {
-            if (event.key === 'bgde:learning_direction') {
-                this.currentDirection = event.newValue || 'bg_to_de';
-                this.updateFlashcardDirection();
-                this.updateDirectionIndicator();
+            if (event.key === 'bgde:language-direction') {
+                const nextDirection = this.normalizeDirection(event.newValue);
+                if (nextDirection) {
+                    this.currentDirection = nextDirection;
+                    this.updateFlashcardDirection();
+                    this.updateDirectionIndicator();
+                    this.updateToggleState();
+                }
+            } else if (event.key === 'bgde:learning_direction') {
+                const migrated = this.normalizeDirection(event.newValue);
+                if (migrated) {
+                    localStorage.removeItem('bgde:learning_direction');
+                    localStorage.setItem('bgde:language-direction', migrated);
+                    this.currentDirection = migrated;
+                    this.updateFlashcardDirection();
+                    this.updateDirectionIndicator();
+                    this.updateToggleState();
+                }
             }
         });
     }
@@ -66,11 +91,11 @@ class EnhancedBidirectionalSystem {
         const toggle = document.createElement('div');
         toggle.className = 'language-toggle';
         toggle.innerHTML = `
-            <button class="toggle-btn" data-direction="bg_to_de">
+            <button class="toggle-btn" data-direction="bg-de">
                 <span class="flag">🇧🇬</span> → <span class="flag">🇩🇪</span>
                 <span class="label">Български → Deutsch</span>
             </button>
-            <button class="toggle-btn" data-direction="de_to_bg">
+            <button class="toggle-btn" data-direction="de-bg">
                 <span class="flag">🇩🇪</span> → <span class="flag">🇧🇬</span>
                 <span class="label">Deutsch → Български</span>
             </button>
@@ -91,7 +116,7 @@ class EnhancedBidirectionalSystem {
     }
 
     updateToggleState() {
-        const buttons = document.querySelectorAll('.toggle-btn');
+        const buttons = document.querySelectorAll('.language-toggle .toggle-btn');
         buttons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.direction === this.currentDirection);
         });
@@ -112,14 +137,14 @@ class EnhancedBidirectionalSystem {
         const indicator = document.getElementById('direction-indicator');
         if (!indicator) return;
 
-        const isReversed = this.currentDirection === 'de_to_bg';
+        const isReversed = this.currentDirection === 'de-bg';
         indicator.className = `language-direction-indicator ${isReversed ? 'de-to-bg' : 'bg-to-de'}`;
         indicator.textContent = isReversed ? 'Deutsch → Български' : 'Български → Deutsch';
     }
 
     updateFlashcardDirection() {
         const flashcards = document.querySelectorAll('.flashcard-item');
-        const isReversed = this.currentDirection === 'de_to_bg';
+        const isReversed = this.currentDirection === 'de-bg';
 
         flashcards.forEach(flashcard => {
             this.updateSingleFlashcard(flashcard, isReversed);
@@ -260,6 +285,36 @@ class EnhancedBidirectionalSystem {
         });
     }
 
+    readDirection() {
+        if (window.languageToggle && typeof window.languageToggle.getDirection === 'function') {
+            return window.languageToggle.getDirection();
+        }
+
+        const stored =
+            localStorage.getItem('bgde:language-direction') ||
+            localStorage.getItem('bgde:learning_direction');
+
+        return this.normalizeDirection(stored) || 'de-bg';
+    }
+
+    normalizeDirection(value) {
+        if (!value) {
+            return null;
+        }
+
+        const normalized = value.toString().toLowerCase();
+
+        if (normalized === 'bg-de' || normalized === 'bg_to_de') {
+            return 'bg-de';
+        }
+
+        if (normalized === 'de-bg' || normalized === 'de_to_bg') {
+            return 'de-bg';
+        }
+
+        return normalized === 'bg-de' || normalized === 'de-bg' ? normalized : null;
+    }
+
     observeFlashcards() {
         // Watch for dynamically added flashcards
         const observer = new MutationObserver((mutations) => {
@@ -271,7 +326,7 @@ class EnhancedBidirectionalSystem {
                             (node.classList?.contains('flashcard-item') ? [node] : []);
                         
                         flashcards.forEach(flashcard => {
-                            this.updateSingleFlashcard(flashcard, this.currentDirection === 'de_to_bg');
+                            this.updateSingleFlashcard(flashcard, this.currentDirection === 'de-bg');
                         });
                     }
                 });
@@ -285,18 +340,30 @@ class EnhancedBidirectionalSystem {
     }
 
     setDirection(direction) {
-        this.currentDirection = direction;
-        localStorage.setItem('bgde:learning_direction', direction);
-        this.updateFlashcardDirection();
-        this.updateDirectionIndicator();
-        this.updateToggleState();
-        
-        // Dispatch event for other components
-        document.dispatchEvent(new CustomEvent('languageDirectionChanged', {
-            detail: { direction }
-        }));
+        const normalized = this.normalizeDirection(direction);
+        if (!normalized) {
+            return;
+        }
 
-        console.log('Language direction changed to:', direction);
+        const changed = normalized !== this.currentDirection;
+        this.currentDirection = normalized;
+
+        if (window.languageToggle && typeof window.languageToggle.setDirection === 'function') {
+            window.languageToggle.setDirection(normalized, { announce: true });
+        } else {
+            localStorage.setItem('bgde:language-direction', normalized);
+            const detail = { direction: normalized, source: 'enhanced-bidirectional-system' };
+            document.dispatchEvent(new CustomEvent('language-direction-changed', { detail }));
+            document.dispatchEvent(new CustomEvent('languageDirectionChanged', { detail }));
+            window.dispatchEvent(new CustomEvent('learning-direction-changed', { detail }));
+        }
+
+        if (changed) {
+            this.updateFlashcardDirection();
+            this.updateDirectionIndicator();
+            this.updateToggleState();
+            console.log('Language direction changed to:', normalized);
+        }
     }
 
     // Public API methods

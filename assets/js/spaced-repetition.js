@@ -1,7 +1,19 @@
 /**
- * Spaced Repetition System (SM-2 Algorithm)
- * Client-side implementation for Bulgarian-German Learning App
- * Based on pseudocode/core/services.pseudo
+ * @file spaced-repetition.js
+ * @description SM-2 spaced repetition algorithm implementation
+ * @status ACTIVE
+ * @dependencies None (pure implementation)
+ * @used_by flashcards.js, practice.js, enhanced-practice-session.js
+ * @features
+ *   - SM-2 algorithm with ease factor calculation
+ *   - Interval scheduling (1, 6, then EF-scaled)
+ *   - localStorage persistence (bgde: prefix)
+ *   - In-memory fallback if localStorage unavailable
+ *   - Deterministic functions for testing
+ * @see pseudocode/core/services.pseudo for algorithm specification
+ * @see docs/API.md for state schema
+ * @version 1.0.0
+ * @updated October 2025
  */
 
 export class SpacedRepetition {

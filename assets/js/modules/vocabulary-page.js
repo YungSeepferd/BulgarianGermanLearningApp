@@ -211,7 +211,7 @@ class VocabularyPageModule {
     }
 
     applyFilters() {
-        const currentDirection = localStorage.getItem('bgde:learning_direction') || 'bg_to_de';
+        const currentDirection = this.getCurrentDirection();
         let items = this.adapter ? this.adapter.getItemsForDirection(currentDirection) : [];
 
         // Apply filters with performance optimization
@@ -289,6 +289,26 @@ class VocabularyPageModule {
         }
     }
 
+    normalizeDirection(value) {
+        if (!value) return null;
+        const normalized = value.toString().toLowerCase();
+        if (normalized === 'bg-de' || normalized === 'bg_to_de') return 'bg-de';
+        if (normalized === 'de-bg' || normalized === 'de_to_bg') return 'de-bg';
+        return normalized === 'bg-de' || normalized === 'de-bg' ? normalized : null;
+    }
+
+    getCurrentDirection() {
+        if (window.languageToggle && typeof window.languageToggle.getDirection === 'function') {
+            return window.languageToggle.getDirection();
+        }
+
+        const stored =
+            localStorage.getItem('bgde:language-direction') ||
+            localStorage.getItem('bgde:learning_direction');
+
+        return this.normalizeDirection(stored) || 'de-bg';
+    }
+
     handlePracticeSelected() {
         const selected = Array.from(document.querySelectorAll('.vocab-select:checked'))
             .map(checkbox => checkbox.dataset.word);
@@ -329,7 +349,7 @@ class VocabularyPageModule {
 
     performInitialRender() {
         // Load initial items with performance optimization
-        const currentDirection = localStorage.getItem('bgde:learning_direction') || 'bg_to_de';
+        const currentDirection = this.getCurrentDirection();
         this.allItems = this.adapter ? this.adapter.getItemsForDirection(currentDirection) : [];
         
         // Render first batch immediately, rest lazily

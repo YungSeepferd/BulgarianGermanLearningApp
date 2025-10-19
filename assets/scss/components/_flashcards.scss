@@ -60,6 +60,33 @@
   border-radius: var(--border-radius-full);
 }
 
+.speech-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+
+  .speech-feedback {
+    min-height: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+  }
+
+  .speech-feedback[data-tone='success'] {
+    color: var(--color-success);
+  }
+
+  .speech-feedback[data-tone='warning'] {
+    color: var(--color-warning);
+  }
+
+  .speech-feedback[data-tone='error'] {
+    color: var(--color-error);
+  }
+}
+
 // Main Flashcard Stage
 .flashcard-stage {
   display: flex;

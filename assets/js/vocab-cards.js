@@ -1,7 +1,18 @@
 /**
- * Interactive Vocabulary Cards System
- * Loads vocabulary from JSON data and renders interactive cards
- * Supports filtering, shuffling, accessibility features, and bidirectional learning
+ * @file vocab-cards.js
+ * @description Interactive vocabulary card display system
+ * @status ACTIVE
+ * @dependencies language-toggle.js
+ * @used_by layouts/_shortcodes/vocab.html, layouts/vocabulary/list.html
+ * @features
+ *   - Category and CEFR level filtering
+ *   - Text search with debouncing
+ *   - Card flip animations
+ *   - Bidirectional display (Bulgarian↔German)
+ *   - Accessibility (keyboard navigation, ARIA)
+ * @see docs/ARCHITECTURE.md for system design
+ * @version 1.0.0
+ * @updated October 2025
  */
 
 import { languageToggle } from './language-toggle.js';
@@ -61,42 +72,78 @@ export class VocabCards {
     });
     
     // Keyboard navigation
-    this.container.addEventListener('keydown', (e) => this.handleKeyboardNavigation(e));
   }
   
   async loadVocabulary() {
     try {
       this.showLoading(true);
-      
+
+      const inlineData = this.readInlineVocabulary();
+
+      if (inlineData) {
+        this.vocabularyData = inlineData;
+        this.populateFilters();
+        this.showError(false);
+        return;
+      }
+
       // Try to load from Hugo's data directory first
       let response = await fetch('/data/vocabulary.json');
-      
+
       // Fallback to static directory if data directory fails
       if (!response.ok) {
         response = await fetch('/static/data/vocabulary.json');
       }
-      
+
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
-      
+
       this.vocabularyData = await response.json();
-      
+
       if (!Array.isArray(this.vocabularyData) || this.vocabularyData.length === 0) {
         throw new Error('Invalid or empty vocabulary data');
       }
-      
+
       this.populateFilters();
       this.showError(false);
-      
+
     } catch (error) {
       console.error('Failed to load vocabulary:', error);
       this.showError(true, error.message);
-      
+
       // Fallback to empty array to prevent crashes
       this.vocabularyData = [];
     } finally {
       this.showLoading(false);
+    }
+  }
+
+  readInlineVocabulary() {
+    const inlineNode = this.container.querySelector('[data-vocab-inline]');
+
+    if (!inlineNode) {
+      return null;
+    }
+
+    try {
+      const inlineJson = inlineNode.textContent.trim();
+
+      if (!inlineJson) {
+        return null;
+      }
+
+      const parsed = JSON.parse(inlineJson);
+
+      if (!Array.isArray(parsed) || parsed.length === 0) {
+        console.warn('Inline vocabulary data is empty or invalid array.');
+        return null;
+      }
+
+      return parsed;
+    } catch (error) {
+      console.warn('Failed to parse inline vocabulary JSON:', error);
+      return null;
     }
   }
   
@@ -244,16 +291,16 @@ export class VocabCards {
     if (this.languageDirection === 'bg-de') {
       // Bulgarian to German: show Bulgarian word, translate to German
       return {
-        frontText: vocab.translation, // Bulgarian word
-        backText: vocab.word // German translation
-      };
-    } else {
-      // German to Bulgarian (default): show German word, translate to Bulgarian
-      return {
-        frontText: vocab.word, // German word
-        backText: vocab.translation // Bulgarian translation
+        frontText: vocab.word || '',
+        backText: vocab.translation || ''
       };
     }
+
+    // German to Bulgarian: show German word, translate to Bulgarian
+    return {
+      frontText: vocab.translation || '',
+      backText: vocab.word || ''
+    };
   }
   
   flipCard(card) {

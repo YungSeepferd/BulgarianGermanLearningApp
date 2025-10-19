@@ -13,6 +13,7 @@
 {{ $level := .Get "level" }}
 {{ $limit := .Get "limit" | default 0 }}
 {{ $interactive := .Get "interactive" | default "true" }}
+{{ $vocabData := site.Data.vocabulary }}
 
 <div class="vocab-container" 
      data-category="{{ $category }}" 
@@ -62,6 +63,12 @@
     <p>Failed to load vocabulary data. Please try again.</p>
     <button id="retry-load" class="vocab-btn">Retry</button>
   </div>
+
+  <script type="application/json"
+          data-vocab-inline
+          aria-hidden="true">
+    {{ $vocabData | jsonify | safeHTML }}
+  </script>
 </div>
 
 {{ if eq $interactive "true" }}

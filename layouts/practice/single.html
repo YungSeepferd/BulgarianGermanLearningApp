@@ -256,7 +256,7 @@
 {{ if ne .Params.layout "flashcard-practice" }}
 <!-- Vocabulary data for JavaScript -->
 <script id="practice-vocabulary-data" type="application/json">
-{{ .Site.Data.vocabulary | jsonify }}
+{{- .Site.Data.vocabulary | jsonify | safeJS -}}
 </script>
 
 <!-- Practice configuration -->
@@ -286,23 +286,28 @@
 <script src="{{ $enhancedPracticeSessionMin.RelPermalink }}" defer></script>
 {{ end }}
 
-<!-- Fallback to simple practice if enhanced not available -->
-{{ $practiceSimple := resources.Get "js/practice-simple.js" }}
-{{ if $practiceSimple }}
-{{ $practiceSimpleMin := $practiceSimple | resources.Minify }}
-<script src="{{ $practiceSimpleMin.RelPermalink }}" defer></script>
-{{ end }}
-
 <script>
 // Initialize enhanced practice system
 document.addEventListener('DOMContentLoaded', function() {
-    // Wait for all scripts to load
+    console.log('[Init] DOM loaded, initializing practice session');
+    
+    // Wait for all deferred scripts to load
     setTimeout(() => {
+        console.log('[Init] Checking for dependencies...');
+        console.log('[Init] - languageToggle available:', !!window.languageToggle);
+        console.log('[Init] - EnhancedPracticeSession available:', !!window.EnhancedPracticeSession);
+        
         if (window.EnhancedPracticeSession) {
-            window.enhancedPracticeSession = new EnhancedPracticeSession();
-            console.log('Enhanced practice session initialized');
+            try {
+                console.log('[Init] Creating EnhancedPracticeSession instance...');
+                window.enhancedPracticeSession = new EnhancedPracticeSession();
+            } catch (error) {
+                console.error('[Init] Failed to initialize practice session:', error);
+                console.error('[Init] Stack:', error.stack);
+            }
         } else if (window.BgDeApp && window.BgDeApp.initPractice) {
             // Fallback to simple practice
+            console.log('[Init] Using fallback BgDeApp.initPractice');
             window.BgDeApp.initPractice();
             console.log('Simple practice session initialized');
         } else {

@@ -7,7 +7,13 @@
     "dev": "hugo server --buildDrafts --buildFuture",
     "build": "hugo --gc --minify",
     "process-data": "./hugo-bg-de process-data",
-    "build-tools": "cd tools && go build -o ../hugo-bg-de ./cmd/hugo-bg-de"
+    "build-tools": "cd tools && go build -o ../hugo-bg-de ./cmd/hugo-bg-de",
+    "lint:data": "node scripts/validate-data.mjs",
+    "lint:esm": "node scripts/check-esm.mjs",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:debug": "PWDEBUG=1 playwright test",
+    "test:update-snapshots": "playwright test --update-snapshots"
   },
   "keywords": [
     "hugo",
@@ -19,6 +25,7 @@
   "author": "Bulgarian-German Learning App",
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.69.0"
+    "sass": "^1.69.0",
+    "@playwright/test": "^1.40.0"
   }
 }
