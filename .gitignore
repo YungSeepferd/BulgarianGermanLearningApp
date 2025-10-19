@@ -6,6 +6,13 @@ resources/_gen/
 # Hugo development
 hugo_stats.json
 
+# Hugo build outputs (should never be committed)
+index.html
+index.json
+index.xml
+search-index.json
+sitemap.xml
+
 # Node modules and package files
 node_modules/
 package-lock.json
@@ -60,15 +67,31 @@ web/pkg/
 web/dist/
 
 # Generated Hugo content (should not be committed)
-vocabulary/*/index.html
-grammar/*/index.html
-categories/*/
-tags/*/
-levels/*/
-difficulties/*/
-source_langs/*/
-target_langs/*/
+vocabulary/
+grammar/
+practice/
+categories/
+tags/
+levels/
+difficulties/
+source_langs/
+target_langs/
+offline/
 
 # Static web assets (generated)
 web/static/
 webfonts/
+css/
+js/
+fonts/
+images/
+mermaid/
+
+
+# Test artifacts
+playwright-report/
+test-results/
+.playwright/
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md

@@ -1,134 +1,112 @@
-# Bulgarian-German Learning App
+# Bulgarian–German Learning App
 
-A Hugo-based static site generator application for learning Bulgarian and German vocabulary with spaced repetition. Built with Hugo Extended, Go tools, and vanilla JavaScript.
+Hugo Extended site for learning Bulgarian and German with spaced repetition flashcards, vocabulary search, and offline-friendly PWA capabilities. The project pairs Hugo templates with vanilla ES modules and Go helper tools—no external JS frameworks.
 
 ## 🚀 Quick Start
 
 ```bash
-# Prerequisites: Hugo Extended v0.128.0+
+# Prerequisites: Hugo Extended v0.128.0+, Go 1.21+ (for tools), Node 18+
+
+# Start local dev server
 hugo server -D --logLevel=debug
 
-# Visit: http://localhost:1313/BulgarianGermanLearningApp/
+# or via npm script
+npm run dev
+
+# Build for production
+hugo --minify
+
+# Visit local site
+open http://localhost:1313/
 ```
 
 ## 📁 Project Structure
 
 ```text
 .
-├── content/              # Markdown content (vocabulary, grammar)
-├── layouts/              # Hugo templates and partials
-│   ├── _default/         # Default layouts
-│   ├── vocabulary/       # Vocabulary page templates
-│   ├── practice/         # Practice session templates
-│   └── partials/         # Reusable template components
-├── assets/               # Source assets
-│   ├── js/               # JavaScript functionality
-│   └── scss/             # SCSS stylesheets
-├── static/               # Static files (manifest, service worker)
-├── data/                 # JSON data files
-│   ├── vocabulary.json   # 1000+ vocabulary items
-│   └── grammar.json      # Grammar rules and examples
-├── tools/                # Go backend tools
-└── docs/                 # Comprehensive documentation
+├── assets/
+│   ├── js/                # ES module scripts (flashcards, spaced repetition, UI helpers)
+│   └── scss/              # SCSS sources compiled via Hugo Pipes
+├── content/               # Markdown content (practice pages, vocabulary articles)
+├── data/                  # JSON data sources (vocabulary, grammar, search index)
+├── docs/                  # Project documentation (architecture, development, testing)
+├── layouts/               # Hugo templates, partials, and shortcodes
+├── static/                # Manifest, service worker, and static assets
+├── tools/                 # Go utilities (no Go module in repo root)
+└── AGENTS.md              # Coding assistant instructions
 ```
 
 ## ✨ Key Features
 
-- **🧠 Spaced Repetition**: SM-2 algorithm for optimal learning intervals
-- **📚 1000+ Vocabulary Items**: Organized by CEFR levels (A1, A2, B1, B2)
-- **🔄 Bidirectional Learning**: Bulgarian ↔ German with difficulty adjustments
-- **📱 Progressive Web App**: Offline support with service worker
-- **🎯 Interactive Practice**: Flashcard sessions with keyboard shortcuts
-- **📊 Progress Tracking**: LocalStorage-based progress persistence
-- **🎨 Responsive Design**: Mobile-first, accessible interface
+- **🧠 Spaced repetition** powered by an SM-2 implementation in `assets/js/spaced-repetition.js`
+- **📚 Vocabulary explorer** with category, CEFR level, and text filters
+- **🔄 Bidirectional flashcards** with keyboard shortcuts and accessibility support
+- **📊 Progress persistence** stored under the `bgde:` localStorage namespace
+- **📱 PWA shell** with offline cache, manifest, and update handling
+- **🎨 Mobile-first design** compiled via Hugo Pipes with fingerprinted CSS
 
 ## 🛠️ Technology Stack
 
-**Core Technologies** (Hugo + Go only):
-- **Hugo Extended**: Static site generator with SCSS processing
-- **Go**: Backend tools and data processing
-- **Vanilla JavaScript**: Client-side interactivity (no frameworks)
-- **SCSS**: Styling with Hugo Pipes processing
-- **JSON**: Data storage and Hugo data pipeline
+- **Static site**: Hugo Extended (SCSS via `css.Sass | resources.Minify | resources.Fingerprint`)
+- **Client logic**: Vanilla JavaScript ES modules (no third-party dependencies)
+- **Styling**: SCSS partials compiled by Hugo Pipes
+- **Data**: JSON sources under `data/` consumed by Hugo and client scripts
+- **Tooling**: Go utilities in `tools/`, npm scripts for convenience
+- **Deployment**: GitHub Pages via `.github/workflows/deploy.yml`
 
-## 📖 Documentation
+## 📖 Documentation & Resources
 
-**⚠️ IMPORTANT**: Always check documentation first before implementing features!
+- **Project overview**: `README.md` (this file)
+- **Coding assistant guide**: [`AGENTS.md`](AGENTS.md)
+- **Development workflow**: [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md)
+- **Architecture reference**: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
+- **Testing checklist**: [`docs/TESTING.md`](docs/TESTING.md)
+- **Project plan**: [`docs/PROJECT_PLAN.md`](docs/PROJECT_PLAN.md)
+- **Programming references**: [`docs/PROGRAMMING_LINKS.md`](docs/PROGRAMMING_LINKS.md)
+- **Implementation pseudocode**: [`pseudocode/`](pseudocode/)
 
-### Documentation Priority Order:
-1. **[docs/PROGRAMMING_LINKS.md](docs/PROGRAMMING_LINKS.md)** - Official Hugo/Go documentation links
-2. **[docs/DEVELOPMENT.md](docs/DEVELOPMENT.md)** - Development setup and recent fixes
-3. **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** - System architecture
-4. **[pseudocode/](pseudocode/)** - Implementation guides
-5. **[README.md](README.md)** - This overview
-
-### Key Documentation Files:
-- **[DEVELOPMENT.md](docs/DEVELOPMENT.md)** - Setup, troubleshooting, recent fixes
-- **[ARCHITECTURE.md](docs/ARCHITECTURE.md)** - System design and decisions
-- **[PROGRAMMING_LINKS.md](docs/PROGRAMMING_LINKS.md)** - Hugo, Go, GitHub docs
-- **[TESTING.md](docs/TESTING.md)** - Testing strategy and validation
-- **[CONTRIBUTING.md](docs/CONTRIBUTING.md)** - Contribution guidelines
+> **Tip**: Start each work session by logging goal, plan, and results in `docs/notes/TODAY.md`.
 
 ## 🏗️ Development
 
-### Local Development
 ```bash
-# Start Hugo development server
+# Start dev server (drafts + future content)
 hugo server -D --logLevel=debug
 
-# Build for production
-hugo --minify
+# Build production bundle with garbage collection + minify
+npm run build
 
-# Test JavaScript syntax
-node -c assets/js/vocabulary.js
-node -c assets/js/practice-simple.js
+# Optional: build Go helper binary
+npm run build-tools
+
+# Regenerate derived data
+npm run process-data
 ```
 
-### Current Implementation Status
-- ✅ **Simplified JavaScript Architecture**: Global functions, no ES modules
-- ✅ **Vocabulary Browsing**: Filtering, search, card selection
-- ✅ **Practice Sessions**: Flashcard interface with spaced repetition
-- ✅ **SCSS Processing**: Hugo Pipes with css.Sass pipeline
-- ✅ **PWA Support**: Manifest, service worker, offline capability
-- ✅ **GitHub Pages Deployment**: Automated via GitHub Actions
+- **JavaScript syntax**: Use an ES module-aware checker (e.g., `node --experimental-warnings --check` or an esbuild/rollup dry run). Plain `node -c` is not ESM aware.
+- **Go tests**: Run inside `tools/` where modules are defined; repo root has no Go module.
+- **Accessibility**: Verify keyboard controls (space/enter to flip, digits 0–5 to grade).
+- **Mobile**: Test at 360 px width to ensure touch targets and layout behave.
 
-### Recent Fixes (August 2025)
-- Fixed Hugo SCSS compilation using `css.Sass | resources.Minify | resources.Fingerprint`
-- Simplified JavaScript from ES modules to global functions
-- Fixed practice page infinite loading by creating proper content files
-- Updated templates to use Hugo's `relURL` for proper path handling
-- Resolved vocabulary page button functionality with simplified event binding
+## 🎮 Usage Highlights
 
-## 🎮 Usage
-
-### Vocabulary Browsing
-1. Visit `/vocabulary/` to browse word collection
-2. Use filters: Level (A1-B2), Category, Search
-3. Select words by clicking cards
-4. Click "Practice Selected" to start session
-
-### Practice Sessions
-1. Navigate to `/practice/` or use "Practice Selected"
-2. Use keyboard shortcuts:
-   - **Space/Enter**: Flip card
-   - **1**: Mark incorrect
-   - **2**: Mark correct
-3. Track progress with session statistics
+- **Vocabulary browsing**: `/vocabulary/` lists words with filters for CEFR level, categories, and search.
+- **Flashcard practice**: `/practice/` or embedded shortcodes launch sessions with SM-2 grading (keys `0–5`).
+- **Progress**: Session stats and review states persist automatically via spaced-repetition engine.
+- **Offline**: Load once online to cache assets; service worker provides an offline shell.
 
 ## 🚀 Deployment
 
-Automatically deployed to GitHub Pages via GitHub Actions:
-- **Production URL**: https://yungseepferd.github.io/BulgarianGermanLearningApp/
-- **Trigger**: Push to `main` branch
-- **Build**: Hugo with minification and fingerprinting
+- **CI/CD**: `.github/workflows/deploy.yml` builds with `hugo --minify` and deploys to GitHub Pages.
+- **Production URL**: [yungseepferd.github.io/BulgarianGermanLearningApp](https://yungseepferd.github.io/BulgarianGermanLearningApp/)
+- **Cache busting**: Fingerprinted CSS/JS via Hugo Pipes keeps PWA cache clean.
 
 ## 🤝 Contributing
 
-1. Check [CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines
-2. Review [DEVELOPMENT.md](docs/DEVELOPMENT.md) for setup
-3. Follow Hugo + Go only constraint
-4. Test locally with `hugo server -D`
-5. Submit PR with detailed description
+- **Read first**: [`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md) and [`AGENTS.md`](AGENTS.md)
+- **Workflow**: One scoped change per PR; log notes in `docs/notes/TODAY.md`
+- **Testing**: Start `hugo server -D`, verify no console errors, and ensure accessibility checks pass
+- **PRs**: Include summary, acceptance checklist, and screenshots/GIFs for UI updates
 
 ## 📄 License
 
@@ -136,4 +114,4 @@ Open source under the [MIT License](LICENSE).
 
 ---
 
-**Built with ❤️ using Hugo Extended and Go**
+Built with ❤️ using Hugo Extended and Go.
