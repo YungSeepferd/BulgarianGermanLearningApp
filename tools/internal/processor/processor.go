@@ -364,23 +364,20 @@ func GenerateGrammarExercises(item models.GrammarItem) []models.Exercise {
 	exercises := make([]models.Exercise, 0)
 
 	for _, example := range item.Examples {
-		// Parse example to extract Bulgarian and German parts
-		parts := strings.Split(example, " – ")
-		if len(parts) >= 2 {
-			bulgarian := strings.TrimSpace(parts[0])
-			german := strings.TrimSpace(parts[1])
+		// Use the sentence and translation from the GrammarExample struct
+		bulgarian := example.Sentence
+		german := example.Translation
 
-			// Create fill-in-the-blank exercise
-			exercise := models.Exercise{
-				Type:          "fill-blank",
-				Question:      CreateFillBlankQuestion(bulgarian),
-				CorrectAnswer: ExtractBlankAnswer(bulgarian),
-				Options:       GenerateMultipleChoiceOptions(bulgarian),
-				Explanation:   german,
-			}
-
-			exercises = append(exercises, exercise)
+		// Create fill-in-the-blank exercise
+		exercise := models.Exercise{
+			Type:          "fill-blank",
+			Question:      CreateFillBlankQuestion(bulgarian),
+			CorrectAnswer: ExtractBlankAnswer(bulgarian),
+			Options:       GenerateMultipleChoiceOptions(bulgarian),
+			Explanation:   german,
 		}
+
+		exercises = append(exercises, exercise)
 	}
 
 	return exercises

@@ -415,7 +415,10 @@ func TestCreateGrammarFrontMatter(t *testing.T) {
 		Description: "Usage of definite articles in Bulgarian",
 		Level:       "A1",
 		Weight:      10,
-		Examples:    []string{"example1", "example2"},
+		Examples: []models.GrammarExample{
+			{Sentence: "example1", Translation: "translation1"},
+			{Sentence: "example2", Translation: "translation2"},
+		},
 	}
 
 	frontMatter := processor.CreateGrammarFrontMatter(item)
@@ -437,17 +440,17 @@ func TestCreateGrammarFrontMatter(t *testing.T) {
 
 func TestGenerateGrammarExercises(t *testing.T) {
 	item := models.GrammarItem{
-		Examples: []string{
-			"Аз съм студент – Ich bin Student",
-			"Ти си учител – Du bist Lehrer",
-			"invalid example without separator",
+		Examples: []models.GrammarExample{
+			{Sentence: "Аз съм студент", Translation: "Ich bin Student"},
+			{Sentence: "Ти си учител", Translation: "Du bist Lehrer"},
+			{Sentence: "invalid example", Translation: "without separator"},
 		},
 	}
 
 	exercises := GenerateGrammarExercises(item)
 
-	// Should generate exercises only for valid examples (those with " – " separator)
-	expectedCount := 2
+	// Should generate exercises for all examples
+	expectedCount := 3
 	if len(exercises) != expectedCount {
 		t.Errorf("Expected %d exercises, got %d", expectedCount, len(exercises))
 	}

@@ -15,15 +15,25 @@ type VocabularyItem struct {
 	Tags        []string `json:"tags,omitempty"`
 }
 
+// GrammarExample represents an example sentence with translation
+type GrammarExample struct {
+	Sentence    string `json:"sentence"`
+	Translation string `json:"translation"`
+}
+
 // GrammarItem represents a grammar rule or concept
 type GrammarItem struct {
-	Title       string     `json:"title"`
-	Description string     `json:"description"`
-	Examples    []string   `json:"examples"`
-	Level       string     `json:"level"`
-	Slug        string     `json:"slug,omitempty"`
-	Weight      int        `json:"weight,omitempty"`
-	Exercises   []Exercise `json:"exercises,omitempty"`
+	Title       string           `json:"title"`
+	Description string           `json:"description,omitempty"`
+	Content     string           `json:"content,omitempty"`
+	Summary     string           `json:"summary,omitempty"`
+	Examples    []GrammarExample `json:"examples"`
+	Level       string           `json:"level"`
+	ID          string           `json:"id,omitempty"`
+	Category    *string          `json:"category,omitempty"`
+	Slug        string           `json:"slug,omitempty"`
+	Weight      int              `json:"weight,omitempty"`
+	Exercises   []Exercise       `json:"exercises,omitempty"`
 }
 
 // Exercise represents a practice exercise
