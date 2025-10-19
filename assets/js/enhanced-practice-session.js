@@ -120,6 +120,22 @@ class EnhancedPracticeSession {
       showAnswerBtn.addEventListener('click', () => this.showAnswer());
     }
     
+    // Settings toggle button
+    const settingsToggle = document.getElementById('settings-toggle');
+    if (settingsToggle) {
+      settingsToggle.addEventListener('click', () => {
+        const panel = document.getElementById('settings-panel');
+        if (panel) {
+          const isHidden = panel.classList.contains('hidden');
+          if (isHidden) {
+            this.showScreen('settings-panel');
+          } else {
+            this.hideScreen('settings-panel');
+          }
+        }
+      });
+    }
+    
     // Grade buttons
     const correctBtn = document.getElementById('correct-btn');
     const incorrectBtn = document.getElementById('incorrect-btn');
@@ -163,27 +179,35 @@ class EnhancedPracticeSession {
   }
   
   startSession() {
-    // Hide loading state
-    const loadingState = document.getElementById('loading-state');
-    if (loadingState) {
-      loadingState.style.display = 'none';
-    }
+    // Hide all screens except practice
+    this.hideScreen('loading-state');
+    this.hideScreen('no-items-state');
+    this.hideScreen('session-complete');
+    this.hideScreen('settings-panel');
     
-    // Prepare session cards
     this.prepareSessionCards();
     
-    if (this.sessionCards.length === 0) {
-      this.showNoItemsState();
-      return;
-    }
-    
     // Show practice session
-    const practiceSession = document.getElementById('practice-session');
-    if (practiceSession) {
-      practiceSession.style.display = 'block';
-    }
+    this.showScreen('practice-session');
     
     this.showCurrentCard();
+  }
+  
+  // Screen management helpers
+  hideScreen(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.style.display = 'none';
+      el.classList.add('hidden');
+    }
+  }
+  
+  showScreen(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.style.display = 'block';
+      el.classList.remove('hidden');
+    }
   }
   
   prepareSessionCards() {
@@ -335,7 +359,10 @@ class EnhancedPracticeSession {
   }
   
   completeSession() {
-    const practiceSession = document.getElementById('practice-session');
+    // Hide practice, show complete
+    this.hideScreen('practice-session');
+    this.showScreen('session-complete');
+    
     const sessionComplete = document.getElementById('session-complete');
     
     if (practiceSession) practiceSession.style.display = 'none';
