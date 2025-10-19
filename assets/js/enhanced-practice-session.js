@@ -98,6 +98,22 @@ class EnhancedPracticeSession {
   }
   
   bindEvents() {
+    // Flashcard click to flip
+    const flashcard = document.getElementById('flashcard');
+    if (flashcard) {
+      flashcard.addEventListener('click', (e) => {
+        // Don't flip if clicking on buttons
+        if (e.target.tagName === 'BUTTON' || e.target.closest('button')) {
+          return;
+        }
+        if (!this.isFlipped) {
+          this.showAnswer();
+        }
+      });
+      // Add pointer cursor to indicate clickability
+      flashcard.style.cursor = 'pointer';
+    }
+    
     // Show answer button
     const showAnswerBtn = document.getElementById('show-answer');
     if (showAnswerBtn) {
@@ -274,8 +290,42 @@ class EnhancedPracticeSession {
   
   updateUI() {
     // This method is called after card changes to sync UI state
-    // The updateCurrentCard() method already handles most UI updates
     console.log('[Practice] UI updated - flipped:', this.isFlipped);
+    
+    // Toggle flashcard visibility based on flip state
+    const flashcardFront = document.getElementById('flashcard-front');
+    const flashcardBack = document.getElementById('flashcard-back');
+    const flashcard = document.getElementById('flashcard');
+    const showAnswerBtn = document.getElementById('show-answer');
+    const responseButtons = document.getElementById('response-buttons');
+    
+    if (flashcardFront && flashcardBack && flashcard) {
+      if (this.isFlipped) {
+        // Show back, hide front
+        flashcardFront.style.display = 'none';
+        flashcardBack.style.display = 'block';
+        flashcard.classList.add('flipped');
+        
+        // Update buttons
+        if (showAnswerBtn) showAnswerBtn.style.display = 'none';
+        if (responseButtons) {
+          responseButtons.style.display = 'flex';
+          responseButtons.classList.remove('hidden');
+        }
+      } else {
+        // Show front, hide back
+        flashcardFront.style.display = 'block';
+        flashcardBack.style.display = 'none';
+        flashcard.classList.remove('flipped');
+        
+        // Update buttons
+        if (showAnswerBtn) showAnswerBtn.style.display = 'inline-block';
+        if (responseButtons) {
+          responseButtons.style.display = 'none';
+          responseButtons.classList.add('hidden');
+        }
+      }
+    }
   }
   
   showAnswer() {

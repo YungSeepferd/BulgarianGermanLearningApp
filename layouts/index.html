@@ -137,11 +137,23 @@
 {{ define "scripts" }}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize home page functionality
-    const homeApp = new HomeApp({
-        vocabulary: {{ .Site.Data.vocabulary | jsonify }}
-    });
-    homeApp.init();
+    // Home page functionality - stats are rendered server-side
+    // Activity cards show "Loading..." until user has practice data
+    console.log('[Home] Page loaded with {{ len .Site.Data.vocabulary }} vocabulary items');
+    
+    // Update activity cards based on localStorage if available
+    try {
+        const dueCount = document.getElementById('due-count');
+        const newCount = document.getElementById('new-count');
+        const streakCount = document.getElementById('streak-count');
+        
+        // These will be populated by practice session data when available
+        if (dueCount) dueCount.textContent = 'Start practicing to track progress';
+        if (newCount) newCount.textContent = '{{ len .Site.Data.vocabulary }} items available';
+        if (streakCount) streakCount.textContent = '0 days - Start today!';
+    } catch (e) {
+        console.error('[Home] Error updating activity cards:', e);
+    }
 });
 </script>
 {{ end }}

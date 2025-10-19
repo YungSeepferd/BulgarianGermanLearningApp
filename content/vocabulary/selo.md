@@ -7,7 +7,7 @@ type: "vocabulary"
 weight: 10
 tags: ["A1", "Substantiv"]
 audio: "/audio/selo.mp3"
-date: 2025-08-17
+date: 2025-10-19
 ---
 
 # Село

@@ -7,7 +7,7 @@ type: "vocabulary"
 weight: 10
 tags: ["A1", "Ausdruck"]
 audio: "/audio/sazhalyavam.mp3"
-date: 2025-08-17
+date: 2025-10-19
 ---
 
 # Съжалявам

@@ -7,7 +7,7 @@ type: "vocabulary"
 weight: 10
 tags: ["A1", "Begrüßung"]
 audio: "/audio/leka-nosht.mp3"
-date: 2025-08-17
+date: 2025-10-19
 ---
 
 # Лека нощ

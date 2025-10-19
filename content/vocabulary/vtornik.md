@@ -7,7 +7,7 @@ type: "vocabulary"
 weight: 20
 tags: ["A2", "Tag"]
 audio: "/audio/vtornik.mp3"
-date: 2025-08-17
+date: 2025-10-19
 ---
 
 # Вторник

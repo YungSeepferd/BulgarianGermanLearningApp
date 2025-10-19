@@ -3,7 +3,7 @@
 // Progressive Web App registration and update handling
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('{{ "sw.js" | relURL }}')
       .then((registration) => {
         console.log('SW registered: ', registration);
         

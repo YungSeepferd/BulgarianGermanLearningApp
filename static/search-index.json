@@ -1409,7 +1409,7 @@
     {
       "id": "word-order",
       "title": "Word Order",
-      "content": "Bulgarian word order is flexible thanks to subject–verb agreement.\nThe neutral pattern is S + V + O + A (Subject, Verb, Object, Adjunct), but other orders such as A + S + V + O, O + S + V + A or S + V + A + O are also possible.\nYou can change the order to emphasise different parts of the sentence without changing the basic meaning.",
+      "content": "",
       "level": "A1",
       "url": "/grammar/word-order/",
       "type": "grammar"
@@ -1417,7 +1417,7 @@
     {
       "id": "gender-of-nouns",
       "title": "Gender of Nouns",
-      "content": "Bulgarian nouns have three grammatical genders: masculine, feminine and neuter.\nMasculine nouns usually end in a consonant (мъж – man, син – son).\nFeminine nouns often end in –а/–я (жена – woman, ябълка – apple).\nNeuter nouns typically end in –е/–о (море – sea, месо – meat).\nThere are exceptions: some masculine nouns end in –а/–я (баща – father), some feminine nouns end in a consonant (любов – love), and some neuter nouns end in –и or –ю (такси – taxi).",
+      "content": "",
       "level": "A1",
       "url": "/grammar/gender-of-nouns/",
       "type": "grammar"
@@ -1425,7 +1425,7 @@
     {
       "id": "singular-and-plural",
       "title": "Singular and Plural",
-      "content": "Bulgarian nouns are either singular or plural.\nMasculine nouns form plurals with endings like –и, –е or –ове (стол – столове 'chair – chairs').\nFeminine nouns replace –а/–я with –и (жена – жени 'woman – women').\nNeuter nouns take –а or –ета (море – морета 'sea – seas').\nA historical dual number for pairs of inanimate masculine nouns survives with the ending –а (два стола – two chairs).",
+      "content": "",
       "level": "A1",
       "url": "/grammar/singular-and-plural/",
       "type": "grammar"
@@ -1433,7 +1433,7 @@
     {
       "id": "definite-article",
       "title": "Definite Article",
-      "content": "The Bulgarian definite article attaches to the end of the noun.\nMasculine nouns take –ът/–ят (студент – студентът 'the student', кон – конят 'the horse').\nFeminine nouns take –та (вода – водата 'the water', чиния – чинията 'the plate').\nNeuter nouns take –то (село – селото 'the village', море – морето 'the sea').\nFor plural nouns the article is –те for masculine and feminine plurals and –та for neuter plurals.",
+      "content": "",
       "level": "A1",
       "url": "/grammar/definite-article/",
       "type": "grammar"
@@ -1441,7 +1441,7 @@
     {
       "id": "pronouns-and-cases",
       "title": "Pronouns and Cases",
-      "content": "Bulgarian cases exist mainly in personal pronouns.\nThere are three cases: nominative (аз, ти, той, тя, то, ние, вие, те), accusative (ме, те, го, я, го, ни, ви, ги) and dative (ми, ти, му, й, му, ни, ви, им).\nUse the nominative for subjects, the accusative for direct objects and the dative for indirect objects.",
+      "content": "",
       "level": "A1",
       "url": "/grammar/pronouns-and-cases/",
       "type": "grammar"
@@ -1449,7 +1449,7 @@
     {
       "id": "present-and-future-tenses",
       "title": "Present and Future Tenses",
-      "content": "Bulgarian verbs conjugate for person and number.\nThe present tense expresses ongoing actions (Аз уча български – I study Bulgarian).\nFuture tense uses the particle ще and the present tense of the verb (Аз ще уча български – I will study Bulgarian).",
+      "content": "",
       "level": "A1",
       "url": "/grammar/present-and-future-tenses/",
       "type": "grammar"
@@ -1457,7 +1457,7 @@
     {
       "id": "past-tenses",
       "title": "Past Tenses",
-      "content": "For A2 learners it's useful to distinguish between the past aorist and the past imperfect.\nThe past aorist describes completed actions (Аз учих български – I studied Bulgarian), while the past imperfect describes continuous or habitual past actions (Аз учех български – I was studying Bulgarian).",
+      "content": "",
       "level": "A2",
       "url": "/grammar/past-tenses/",
       "type": "grammar"
@@ -1465,7 +1465,7 @@
     {
       "id": "quantifiers-and-numbers",
       "title": "Quantifiers and Numbers",
-      "content": "At level A2 you'll encounter quantifiers and numbers more frequently.\nThe words много (many/much), малко (few/little), всички (all), няколко (several) and никой (none) help quantify nouns.\nBulgarian numbers one through ten are: едно, две, три, четири, пет, шест, седем, осем, девет, десет.",
+      "content": "",
       "level": "A2",
       "url": "/grammar/quantifiers-and-numbers/",
       "type": "grammar"
@@ -1473,7 +1473,7 @@
     {
       "id": "time-expressions",
       "title": "Time Expressions",
-      "content": "Talking about time requires vocabulary for days and parts of the day.\nThe days of the week are понеделник, вторник, сряда, четвъртък, петък, събота and неделя.\nParts of the day include сутрин (morning), обед (noon), следобед (afternoon), вечер (evening) and нощ (night).",
+      "content": "",
       "level": "A2",
       "url": "/grammar/time-expressions/",
       "type": "grammar"
@@ -1481,7 +1481,7 @@
     {
       "id": "food-and-shopping-vocabulary",
       "title": "Food and Shopping Vocabulary",
-      "content": "Food and shopping conversations are frequent at A2.\nLearn common nouns for food (хляб – bread, мляко – milk, сирене – cheese) and verbs for shopping (купувам – to buy, продавам – to sell, пазарувам – to shop).\nUnderstanding basic currency words like лев (the Bulgarian currency) and евро (euro) is also helpful.",
+      "content": "",
       "level": "A2",
       "url": "/grammar/food-and-shopping-vocabulary/",
       "type": "grammar"
@@ -1489,7 +1489,7 @@
     {
       "id": "travel-and-directions",
       "title": "Travel and Directions",
-      "content": "At A2 you may need to ask for directions or discuss travel.\nKey nouns include автобус (bus), влак (train), самолет (airplane), такси (taxi), гара (train station) and летище (airport).\nThe noun билет means 'ticket', and карта means 'map'.",
+      "content": "",
       "level": "A2",
       "url": "/grammar/travel-and-directions/",
       "type": "grammar"
