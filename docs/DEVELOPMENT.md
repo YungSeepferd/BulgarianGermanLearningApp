@@ -1,274 +1,154 @@
 # Development Guide
 
-This document outlines the development setup, workflow, and recent fixes for the Bulgarian-German Learning App.
+This document summarizes the day-to-day workflow for the Bulgarian–German Learning App. The stack is Hugo Extended + vanilla ES modules + SCSS with light Go tooling.
 
 ## Prerequisites
 
-- Hugo Extended (v0.128.0+)
-- Go (v1.19+)
-- Node.js (v16+)
+- Hugo Extended **v0.128.0+**
+- Go **v1.21+** (for building helpers in `tools/`)
+- Node.js **v18+** (for npm scripts / optional tooling)
 - Git
 
-## Recent Fixes and Improvements
+## Local Setup
 
-### Hugo SCSS Compilation Issues (Fixed)
+1. Clone the repository.
+2. Install the prerequisites above.
+3. Install npm dependencies (optional but convenient):
 
-**Problem**: Hugo v0.148.2 deprecated `resources.ToCSS` method, causing SCSS compilation failures.
+    ```bash
+    npm install
+    ```
 
-**Solution**: Updated `layouts/_default/baseof.html` to use the new `css.Sass` method:
+4. Start the Hugo server with drafts + future content:
 
-```html
-{{ $style := resources.Get "scss/main.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+    ```bash
+    hugo server -D --logLevel=debug
+    # or
+    npm run dev
+    ```
+
+5. Visit `http://localhost:1313/` to preview the site.
+
+## Project Structure Snapshot
+
+```text
+├── assets/            # SCSS + JS source (ES modules)
+│   ├── scss/
+│   └── js/
+├── content/           # Hugo content pages / sections
+├── data/              # JSON sources (vocabulary, grammar, etc.)
+├── docs/              # Guides (development, architecture, testing)
+├── layouts/           # Hugo templates, partials, shortcodes
+├── static/            # Manifest, service worker, static assets
+├── tools/             # Go helper utilities (built on demand)
+└── AGENTS.md          # Coding-assistant instructions
 ```
 
-**Key Changes Made**:
+## Common Commands
 
-1. Fixed SCSS variable definitions in `assets/scss/_variables.scss`
-2. Updated font variable references from `$font-family-sans` to `$font-sans`
-3. Added missing `$font-mono` variable for code blocks
-4. Cleaned up duplicate configuration sections in `hugo.toml`
-5. Updated Hugo template to use modern SCSS processing
-
-### Code Block Enhancements
-
-**Added Features**:
-
-- Custom code block rendering with syntax highlighting
-- Copy-to-clipboard functionality
-- Responsive code block styling
-- Language indicator display
-
-**Files Modified**:
-
-- `layouts/_default/_markup/render-codeblock.html`
-- `assets/scss/components/_code.scss`
-- `assets/js/code.js`
-
-## Local Development
-
-### Setup
-
-1. Clone the repository
-2. Install Hugo Extended (v0.128.0+)
-3. Run development server:
-   ```bash
-   hugo server -D --logLevel=debug
-   ```
-4. Visit `http://localhost:1313/BulgarianApp-Fresh/`
-
-### Project Structure
-
-```
-├── content/           # Markdown content files (vocabulary, grammar)
-├── layouts/           # Hugo templates and partials
-│   ├── _default/      # Default layouts
-│   └── _markup/       # Custom markdown renderers
-├── assets/            # SCSS, JS, and other assets
-│   ├── scss/          # SCSS stylesheets
-│   └── js/            # JavaScript files
-├── static/            # Static files (audio, images)
-├── data/              # Data files (vocabulary.json, grammar.json)
-└── themes/learn/      # Hugo Learn theme
-```
-
-## Build Process
-
-### Development Build
 ```bash
+# Dev server with live reload (drafts + future)
 hugo server -D --logLevel=debug
+
+# Production build with GC + minify
+npm run build          # wraps `hugo --gc --minify`
+
+# Build Go helper binary (writes ./hugo-bg-de)
+npm run build-tools
+
+# Regenerate derived JSON/Search data
+npm run process-data
 ```
 
-### Production Build
-```bash
-hugo --minify
-```
+### Data & Helper Tooling
 
-### Asset Processing
-- SCSS files are processed using Hugo's built-in Sass compiler
-- JavaScript files are minified and fingerprinted
-- All assets include integrity hashes for security
+- **`npm run process-data`** – Executes the Go helper under `tools/` to regenerate derived JSON (search index, pronunciation metadata). Rerun whenever `data/vocabulary.json` or `data/grammar.json` changes to keep the generated artifacts in sync.
+- **`npm run build-tools`** – Compiles the Go binary to `bin/hugo-bg-de`. This command is idempotent; use it after updating sources in `tools/` or when setting up a fresh environment.
+- **Manual helper invocation** – From `tools/`, run `go run ./cmd/process-data` to debug data transforms without triggering the full npm script. Ensure Go 1.21+ is installed.
 
-## Testing and Validation
+## Asset Pipeline
 
-### Local Testing Checklist
-- [ ] Hugo server starts without errors
-- [ ] SCSS compilation succeeds
-- [ ] JavaScript files load correctly
-- [ ] Code blocks display with copy functionality
-- [ ] Responsive design works on mobile
-- [ ] Search functionality operates
-- [ ] Audio files play correctly
+- SCSS is compiled via `css.Sass | resources.Minify | resources.Fingerprint` in `layouts/_default/baseof.html`.
+- JavaScript lives in `assets/js/` as ES modules (no bundler); Hugo fingerprints the compiled output.
+- Data files under `data/` feed Hugo templates and client-side scripts.
 
-### Build Validation
-```bash
-# Test SCSS compilation
-hugo build --logLevel=debug
+## Testing & QA
 
-# Validate JavaScript syntax
-node -c assets/js/app.js
-node -c assets/js/code.js
+- **Hugo**: `hugo server -D --logLevel=debug` must start cleanly with no console errors.
+- **JavaScript syntax**: run `npm run lint:esm` (wraps the offline ES module parser) before shipping JS changes.
+- **Accessibility**: confirm keyboard support (space/enter to flip cards, digits 0–5 for grading) and screen-reader announcements.
+- **Responsive layout**: verify UI at ~360 px width and desktop.
+- **PWA**: ensure service worker install, update flow, and offline shell still behave after asset changes.
+- **Go utilities**: run `GOCACHE=$(pwd)/.gocache go test ./tools/...` from the repo root to exercise the helper module.
 
-# Check generated assets
-find public -name "*.css" -o -name "*.js"
-```
+## Recent Fixes (2025)
 
-## Deployment
-
-The site is deployed to GitHub Pages using GitHub Actions. The workflow is defined in `.github/workflows/deploy.yml`.
-
-### Deployment Process
-1. Push to main branch
-2. GitHub Actions builds the site
-3. Generated files are deployed to `gh-pages` branch
-4. Site is available at the configured GitHub Pages URL
-
-## Technologies Used
-
-### Core Technologies
-- **Hugo**: Static site generator (v0.148.2+)
-- **SCSS**: CSS preprocessing
-- **JavaScript**: Client-side functionality
-- **Markdown**: Content authoring
-
-### Key Features
-- Responsive design with mobile-first approach
-- Progressive Web App (PWA) capabilities
-- Search functionality with JSON index
-- Audio pronunciation support
-- Spaced repetition learning algorithm
-- Multi-level content organization (A1, A2, etc.)
-
-## Contributing
-
-1. Create a feature branch from `main`
-2. Make your changes following the coding standards
-3. Test locally using `hugo server -D`
-4. Ensure all assets compile correctly
-5. Submit a pull request with detailed description
+- Migrated SCSS pipeline to `css.Sass | resources.Minify | resources.Fingerprint` to avoid deprecations.
+- Standardized flashcard SM-2 engine in `assets/js/spaced-repetition.js` with localStorage fallback.
+- Embedded vocabulary JSON into `layouts/_shortcodes/vocab.html` to allow offline initialization.
+- Documented coding-assistant practices in `AGENTS.md` for consistent AI collaboration.
 
 ## Troubleshooting
 
-### Common Issues and Solutions
+- **Hugo fails to compile SCSS** → confirm you are using Hugo Extended and check `assets/scss/_variables.scss` for typos.
+- **JS import errors** → ensure the script tag uses `type="module"` (handled in templates) and paths are relative to `assets/` pipeline output.
+- **LocalStorage quota errors** → spaced repetition engine logs warnings; clear `bgde:` keys in dev tools if needed.
+- **Go test cache errors** → run `GOCACHE=$(pwd)/.gocache go test ./tools/...` to keep build artifacts inside the repo.
 
-**SCSS Compilation Errors**
-- Ensure Hugo Extended is installed
-- Check SCSS variable definitions
-- Verify import paths in SCSS files
+## Contribution Workflow
 
-**Template Errors**
-- Check Hugo template syntax
-- Validate partial template paths
-- Ensure proper variable scoping
+1. Create a feature branch from `main`.
+2. Draft a plan in `docs/notes/TODAY.md` (goal, context, acceptance tests).
+3. Make minimal, well-scoped changes following project constraints (Hugo + vanilla JS + SCSS only).
+4. Validate locally (Hugo server, accessibility checks, targeted JS syntax check).
+5. Document results in `docs/notes/TODAY.md` and update relevant docs if behavior changed.
+6. Open a PR with summary, acceptance checklist, and visuals for UI tweaks.
 
-**Build Failures**
-- Review Hugo logs with `--logLevel=debug`
-- Check for missing dependencies
-- Validate configuration syntax
+## Reference Docs
 
-**JavaScript Issues**
-- Test syntax with `node -c filename.js`
-- Check browser console for runtime errors
-- Verify asset paths and loading
+- `README.md` – project overview and quick links.
+- `docs/ARCHITECTURE.md` – high-level architecture (Hugo + client modules).
+- `docs/TESTING.md` – detailed testing matrix.
+- `docs/PROGRAMMING_LINKS.md` – external references for Hugo, Go, JS, accessibility.
+- `AGENTS.md` – instructions for AI coding assistants.
 
-### Performance Optimization
+Stay within the approved stack: Hugo Extended, Go tooling in `tools/`, vanilla JS ES modules, SCSS compiled by Hugo Pipes. No external JS frameworks or additional build tools.
 
-**Asset Optimization**
-- SCSS is minified and fingerprinted
-- JavaScript files are minified
-- Images should be optimized before adding
-- Use Hugo's image processing for responsive images
+## Service Worker Runbook
 
-**Caching Strategy**
-- Assets include fingerprints for cache busting
-- Static files are cached by GitHub Pages
-- Use appropriate cache headers for different content types
+The app uses a minimal `static/sw.js` with cache versioning and safe strategies.
 
-## Development Workflow
+### Update
 
-1. **Start Development**: `hugo server -D`
-2. **Make Changes**: Edit content, templates, or assets
-3. **Test Changes**: Verify in browser at `localhost:1313`
-4. **Build for Production**: `hugo --minify`
-5. **Deploy**: Push to main branch for automatic deployment
+1. Bump `CACHE_NAME` (and `DATA_CACHE_NAME` if data strategy changes) in `static/sw.js`.
+2. Keep the precache list small; prefer runtime caching with stale-while-revalidate.
+3. Build and load the site locally, then open DevTools > Application > Service Workers.
+4. Check "Update on reload" and reload to verify the new SW takes control.
+5. Confirm the update toast/notice appears (if implemented) and that old caches are cleaned in logs.
 
-## Implementation Requirements
+### Rollback
 
-**IMPORTANT**: This project must be implemented using **Go and Hugo only**. No other frameworks or languages should be used for the core functionality.
+1. Revert `static/sw.js` changes (including cache version) and redeploy.
+2. In DevTools, unregister the service worker and clear site data.
+3. Reload to ensure the previous, working SW is active.
 
-### Approved Technology Stack
-- **Backend Logic**: Go (for spaced repetition algorithms, data processing)
-- **Frontend**: Hugo static site generator with Go templates
-- **Styling**: SCSS (processed by Hugo)
-- **Interactivity**: Minimal JavaScript with Hugo's built-in capabilities
-- **Data Storage**: JSON files processed by Hugo's data pipeline
-- **Build Tools**: Hugo CLI and Go toolchain
+### Offline Verification
 
-### Next Steps for Go/Hugo Implementation
+1. With the site loaded once, toggle DevTools Network to "Offline".
+2. Navigate to `/vocabulary/` and confirm cards render from inline JSON.
+3. Verify offline fallback for pages: `/offline/` is served when a page isn't cached.
 
-1. **Implement Go-based spaced repetition service** in `tools/` directory
-2. **Create Hugo shortcodes** for interactive vocabulary components
-3. **Build Go data processors** to generate practice sessions from JSON
-4. **Use Hugo's data pipeline** to create dynamic vocabulary pages
-5. **Implement Go backend services** for progress tracking (if needed)
-6. **Leverage Hugo Pipes** for asset processing and optimization
+## Data Pipeline Diagram
 
-## Resources
+The following diagram illustrates the flow from source JSON to UI:
 
-See `docs/PROGRAMMING_LINKS.md` for comprehensive links to:
-- Hugo documentation and best practices
-- Go programming resources
-- Frontend development guides
-- Community support channels
-
-## Project Structure
-
-- `apps/web` - Web application source code
-- `packages/core` - Shared core logic
-- `packages/ui` - Shared UI components
-- `public` - Static assets and build output
-- `tests` - Integration and E2E tests
-
-### Creating a New Component
-
-1. Create a new file in `apps/web/src/components/`
-2. Export the component in `apps/web/src/components/mod.rs`
-3. Import and use the component in your views
-
-### Adding a New Feature
-
-1. Create a new module in `apps/web/src/features/`
-2. Add the module to `apps/web/src/lib.rs`
-3. Create corresponding tests
-4. Update the documentation
-
-### Running Tests
-
-```bash
-# Run unit tests
-cargo test
-
-# Run web tests
-wasm-pack test --headless --firefox
-
-# Run integration tests
-cargo test --test integration
+```mermaid
+flowchart TD
+    A[data/vocabulary.json\n data/grammar.json] --> B[npm run process-data\n tools helpers]
+    B --> C[data/processed/*\n search index, audio manifests]
+    A --> D[Hugo templates/shortcodes\n layouts/]
+    C --> D
+    D --> E[Generated HTML\n + inline JSON blocks]
+    E --> F[Client JS (assets/js/*)\n vocab-cards.js, flashcards.js]
+    F --> G[UI: Cards, Filters, SM-2]
 ```
-
-## Code Style
-
-- Follow the Rust Style Guide
-- Use `rustfmt` for code formatting
-- Run `cargo clippy` for linting
-
-## Git Workflow
-
-1. Create a new branch for your feature or bugfix
-2. Make your changes
-3. Run tests
-4. Create a pull request
-5. Request a code review
-6. Merge after approval
-
-## Deployment
-
-The application is automatically deployed to GitHub Pages when changes are pushed to the `main` branch.

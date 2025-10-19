@@ -4,199 +4,81 @@
 
 This document provides comprehensive testing guidelines for the Bulgarian-German Learning App, including setup, execution, and best practices.
 
-## Testing Framework
+## Testing Strategy
 
-The project uses the **optimal testing framework** for Rust/WASM applications:
+Focus on lightweight, repeatable checks aligned with the Hugo + vanilla JS stack. Prioritize smoke tests during development and broaden coverage before release milestones.
 
-- **`wasm-bindgen-test`**: Industry standard for WASM-specific testing
-- **`cargo test`**: Standard Rust testing for core logic
-- **Browser-based testing**: Real browser environment testing
+### Local Smoke Tests
 
-## Test Structure
+- **Hugo server** – `hugo server -D --logLevel=debug` must start without warnings or template errors.
+- **Production build** – `npm run build` (wraps `hugo --gc --minify`) should succeed before merging.
+- **Linting/formatting** – Run `npm run lint` or equivalent when available; otherwise spot-check modified files.
 
-```
-tests/
-├── e2e/                    # End-to-end tests
-│   └── basic_flow.rs       # User journey tests
-├── integration/            # Integration tests
-└── unit/                   # Unit tests (in src/ alongside code)
+### JavaScript & Data Validation
 
-apps/web/tests/             # Web-specific tests
-├── integration_test.rs     # Web integration tests
-└── audio.rs               # Audio functionality tests
+- **Syntax check** – `node --experimental-warnings --check assets/js/flashcards.js` (repeat for other modules as touched).
+- **ES module syntax** – `npm run lint:esm` runs the offline parser to ensure browser modules parse cleanly.
+- **Data schema check** – `npm run lint:data` validates `data/vocabulary.json` and `data/grammar.json` against rules in `docs/API.md`.
+- **SM-2 helpers** – Add or update unit tests under `assets/js/` where feasible; use Jest-style assertions via `npm test` when configured.
+- **Data regeneration** – After editing `data/*.json`, run `npm run process-data` and verify output diffs.
 
-packages/core/tests/        # Core library tests
-├── models_test.rs         # Data model tests
-└── spaced_rep_test.rs     # Algorithm tests
-```
+### PWA & Offline Checks
 
-## Running Tests
+- **Service worker** – With the dev server running, load the app in Chrome, open DevTools > Application, and confirm `static/sw.js` registers without errors.
+- **Offline shell** – In DevTools, tick "Offline" and refresh; verify key pages render using cached assets.
+- **Update flow** – After touching assets, run `npm run build`, reload the site, and ensure the update toast appears when the service worker activates.
 
-### Quick Test (Recommended)
+### Accessibility & UX Manual Tests
+
+- **Keyboard navigation** – Ensure flashcards flip on Space/Enter and that grading via digits 1–5 works in `assets/js/flashcards.js` flows.
+- **Screen reader hints** – Validate ARIA announcements using VoiceOver or NVDA during flips and grading.
+- **Responsive layout** – Resize or use device emulation at 360 px width to confirm layout integrity.
+- **Speech practice** – In a browser that supports the Web Speech API (e.g., Chrome desktop with microphone access):
+  1. Visit `/test-flashcards/` and ensure the microphone button is enabled.
+  2. Trigger “Practice Pronunciation”, speak the prompted term, and confirm the feedback banner acknowledges the attempt.
+  3. Verify successful matches auto-grade the card (grade 5) and unsuccessful attempts surface a retry hint without breaking keyboard flows.
+
+### Optional Automated Coverage
+
+- **Playwright smoke suite** – Use scripts in `tests/playwright/` (if present) to cover navigation, grading, and filter interactions.
+- **Go helper tests** – When modules are added inside `tools/`, run `go test ./...` from that directory.
+
+## Debugging Checklist
+
+- **Console monitoring** – Keep DevTools open for JS errors and service-worker warnings.
+- **Local storage** – Inspect keys under the `bgde:` prefix to verify spaced-repetition persistence.
+- **Network throttling** – Test under "Slow 3G" to expose performance bottlenecks or missing lazy loading.
+
+## Release Readiness
+
+- **Acceptance walkthrough** – Execute the acceptance criteria from `docs/notes/TODAY.md` or the relevant task checklist.
+- **Lighthouse audit** – Run Lighthouse (Desktop + Mobile) targeting Performance, Accessibility, Best Practices, and SEO.
+- **Regression log** – Record test results and outstanding issues in `docs/notes/TODAY.md` before sign-off.
+
+### Playwright E2E Tests
+
+Use the Playwright smoke suite for basic navigation and vocabulary interactions.
+
+- Location: `tests/playwright/`
+- Config: `playwright.config.js`
+
+Setup (first time only):
+
 ```bash
-./test-runner.sh
+npm install
+npx playwright install
 ```
 
-### Manual Testing
+Run tests:
 
-#### Core Library Tests
 ```bash
-cd packages/core
-cargo test
+npm test            # headless
+npm run test:ui     # interactive UI mode
+npm run test:debug  # with debugger
 ```
 
-#### Web Application Tests
-```bash
-cd apps/web
+Notes:
 
-# Standard Rust tests
-cargo test
-
-# WASM tests in browser
-wasm-pack test --headless --chrome
-```
-
-#### Integration Tests
-```bash
-cargo test --test integration
-```
-
-## Test Categories
-
-### 1. Unit Tests
-- **Location**: Alongside source code in `src/` directories
-- **Purpose**: Test individual functions and components
-- **Framework**: Standard `cargo test`
-
-### 2. Integration Tests
-- **Location**: `apps/web/tests/` and `tests/integration/`
-- **Purpose**: Test component interactions
-- **Framework**: `wasm-bindgen-test`
-
-### 3. End-to-End Tests
-- **Location**: `tests/e2e/`
-- **Purpose**: Test complete user workflows
-- **Framework**: `wasm-bindgen-test` with browser automation
-
-## Writing Tests
-
-### Unit Test Example
-```rust
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_vocabulary_item_creation() {
-        let item = VocabularyItem {
-            word: "Здравей".to_string(),
-            translation: "Hallo".to_string(),
-            category: "Greetings".to_string(),
-            level: "A1".to_string(),
-            notes: Some("Formal greeting".to_string()),
-        };
-        
-        assert_eq!(item.word, "Здравей");
-        assert_eq!(item.translation, "Hallo");
-    }
-}
-```
-
-### WASM Test Example
-```rust
-use wasm_bindgen_test::*;
-
-wasm_bindgen_test_configure!(run_in_browser);
-
-#[wasm_bindgen_test]
-fn test_local_storage_integration() {
-    use gloo_storage::{LocalStorage, Storage};
-    
-    let test_data = "test_value";
-    LocalStorage::set("test_key", test_data).unwrap();
-    
-    let retrieved: String = LocalStorage::get("test_key").unwrap();
-    assert_eq!(test_data, retrieved);
-    
-    LocalStorage::delete("test_key");
-}
-```
-
-## Test Coverage Goals
-
-- **Core Logic**: 90%+ coverage
-- **State Management**: 85%+ coverage  
-- **UI Components**: 70%+ coverage
-- **Integration**: Key user flows covered
-
-## Continuous Integration
-
-Tests run automatically on:
-- Pull requests
-- Pushes to main branch
-- Scheduled daily runs
-
-## Performance Testing
-
-### Benchmarks
-```bash
-cd packages/core
-cargo bench
-```
-
-### WASM Bundle Size
-```bash
-cd apps/web
-wasm-pack build --release
-ls -la pkg/*.wasm
-```
-
-## Browser Compatibility Testing
-
-Supported browsers:
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-
-## Debugging Tests
-
-### Enable Debug Logging
-```bash
-RUST_LOG=debug cargo test
-```
-
-### Browser DevTools
-For WASM tests, use browser developer tools to inspect:
-- Console logs
-- Network requests
-- Local storage
-- Performance metrics
-
-## Best Practices
-
-1. **Test Naming**: Use descriptive names that explain what is being tested
-2. **Test Organization**: Group related tests in modules
-3. **Mock Data**: Use realistic test data in Bulgarian/German
-4. **Async Testing**: Properly handle async operations in WASM tests
-5. **Cleanup**: Always clean up test data (local storage, etc.)
-
-## Common Issues
-
-### WASM Test Failures
-- Ensure browser is available for headless testing
-- Check CORS policies for local development
-- Verify WASM target is installed: `rustup target add wasm32-unknown-unknown`
-
-### State Persistence Tests
-- Clear local storage between tests
-- Use unique keys for test data
-- Handle browser storage quotas
-
-## Future Enhancements
-
-- [ ] Visual regression testing
-- [ ] Accessibility testing
-- [ ] Performance benchmarking
-- [ ] Cross-browser automated testing
-- [ ] Mobile device testing
+- The config auto-starts `npm run dev` and targets `http://localhost:1313`.
+- Tests assert that vocabulary cards render via inline JSON or network fetch.
+- Extend with an offline test by toggling the browser context offline to verify inline data load.

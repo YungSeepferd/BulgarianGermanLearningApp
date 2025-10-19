@@ -9,53 +9,62 @@ An interactive web application for learning Bulgarian and German vocabulary and 
 ### Phase 1: Core Infrastructure (Weeks 1-2)
 
 #### 1.1 Project Setup & Architecture
-- [x] Set up monorepo structure
-- [x] Configure Rust workspace
-- [x] Set up WebAssembly build pipeline
-- [ ] Implement CI/CD workflows
 
-#### 1.2 Core Libraries
-- [x] Shared data models
-- [ ] State management system
-- [ ] API service layer
-- [ ] Error handling utilities
+- [x] Initialize Hugo Extended site structure
+- [x] Configure SCSS + JS pipelines via Hugo Pipes
+- [x] Establish data sources under `data/`
+- [ ] Harden CI/CD workflow for GitHub Pages
+
+#### 1.2 Core Foundations
+
+- [x] Define shared vocabulary/grammar schemas (`data/*.json`)
+- [ ] Formalize client-side state helpers (SM-2, storage utilities)
+- [ ] Document coding assistant practices (`AGENTS.md`)
+- [ ] Add error/reporting conventions for Go tooling in `tools/`
 
 ### Phase 2: Core Features (Weeks 3-6)
 
 #### 2.1 Vocabulary Module
-- [ ] Flashcard interface
-- [ ] Word search and filtering
-- [ ] Progress tracking
-- [ ] Spaced repetition system
+
+- [ ] Flashcard interface (Hugo shortcode + `assets/js/flashcards.js`)
+- [ ] Word search and filtering (`assets/js/vocab-cards.js`)
+- [ ] Progress tracking views
+- [ ] Spaced repetition scheduling (`assets/js/spaced-repetition.js`)
 
 #### 2.2 Grammar Module
-- [ ] Grammar rules browser
-- [ ] Interactive exercises
-- [ ] Examples with audio
+
+- [ ] Grammar rules browser (Markdown + shortcodes)
+- [ ] Interactive exercises (client-side quizzes)
+- [ ] Examples with audio playback
 - [ ] Progress tracking
 
 ### Phase 3: Enhanced Learning (Weeks 7-10)
 
-#### 3.1 Audio Features
-- [ ] Text-to-speech integration
-- [ ] Pronunciation practice
-- [ ] Audio flashcards
+#### 3.1 Audio & PWA Enhancements
+
+- [ ] Text-to-speech integration (Web Speech API)
+- [ ] Pronunciation practice workflows
+- [ ] Offline-ready audio flashcards
+- [ ] PWA offline shell + update UX
 
 #### 3.2 User Experience
-- [ ] Responsive design
-- [ ] Dark/light theme
-- [ ] Accessibility improvements
-- [ ] Performance optimizations
+
+- [ ] Responsive design polish
+- [ ] Dark/light theme toggle
+- [ ] Accessibility improvements (ARIA, keyboard flows)
+- [ ] Performance optimizations (lazy data loading)
 
 ### Phase 4: Testing & Polish (Weeks 11-12)
 
 #### 4.1 Testing
+
 - [ ] Unit tests
 - [ ] Integration tests
 - [ ] E2E tests
 - [ ] Performance testing
 
 #### 4.2 Polish
+
 - [ ] UI/UX refinements
 - [ ] Loading states
 - [ ] Error handling
