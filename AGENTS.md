@@ -91,15 +91,126 @@ Log any sandbox or environment-related failures with clear rationale (e.g., netw
 - Follow Windsurf workflows in `.windsurf/workflows/` when using automated loops.
 - Surface technical debt or blockers by logging TODOs in `docs/notes/NEXT.md`.
 
+## Bidirectional Tandem Learning System (✅ October 2025)
+
+**Status**: Fully implemented and tested
+
+### Core Requirements
+
+1. **Direction-Specific Explanations**:
+   - ALL vocabulary entries (157/157) have both `notes_de_to_bg` and `notes_bg_to_de`
+   - German explanations for German speakers learning Bulgarian
+   - Bulgarian explanations for Bulgarian speakers learning German
+   - Word breakdowns, roots, grammatical info included
+
+2. **Language-Aware Note Display**:
+   - Template includes both note variants with `data-direction` attributes
+   - JavaScript (`vocabulary-page.js`) shows/hides correct notes based on active direction
+   - Notes automatically switch language when user toggles DE→BG ↔ BG→DE
+   - Smooth UX without page reload
+
+3. **Icon-Based Quick Filters**:
+   - Visual, touch-friendly buttons for tandem sessions
+   - **Levels**: 🌐 All, 🌱 A1, 🌿 A2, 🌳 B1, 🏆 B2
+   - **Categories**: 📚 All, 👋 Begrüßung, 📦 Substantiv, ⚡ Verb, 🎨 Adjektiv, ⏩ Adverb, 💬 Ausdruck, 👨‍👩‍👧‍👦 Familie, 🍽️ Lebensmittel, ⏰ Zeit, 🔢 Zahl
+   - One-click filtering synced with dropdown selects
+   - Active state highlighting
+   - Mobile-responsive (≥80px touch targets)
+
+### Implementation Details
+
+**Data Structure**:
+```json
+{
+  "word": "Здравей",
+  "translation": "Hallo",
+  "notes_de_to_bg": "Für Deutschsprachige: 'Здравей' ≈ 'Hallo'; von 'здрав' (gesund)...",
+  "notes_bg_to_de": "Wörtlich ein Gesundheitsgruß; informell und ganztägig nutzbar...",
+  "etymology": "From Proto-Slavic 'zdravъ' (healthy)...",
+  "cultural_note": "Standard informal greeting...",
+  "linguistic_note": "Stress on first syllable..."
+}
+```
+
+**Template Pattern** (`layouts/vocabulary/list.html`):
+```html
+<!-- Both notes included; JS controls visibility -->
+<div class="vocab-note vocab-note-direction" data-direction="de-bg">
+  🎯 {{ .notes_de_to_bg }}
+</div>
+<div class="vocab-note vocab-note-direction" data-direction="bg-de">
+  🎯 {{ .notes_bg_to_de }}
+</div>
+```
+
+**JavaScript Control** (`assets/js/modules/vocabulary-page.js`):
+```javascript
+updateDirectionUI(dir) {
+  document.querySelectorAll('.vocab-note-direction').forEach(note => {
+    note.style.display = (note.dataset.direction === dir) ? '' : 'none';
+  });
+}
+```
+
+**Quick Filter Handler**:
+```javascript
+handleQuickFilter(event) {
+  const filterType = event.currentTarget.dataset.filterType;
+  const filterValue = event.currentTarget.dataset.filterValue;
+  this.filters[filterType].value = filterValue;
+  this.applyFilters();
+}
+```
+
+### Testing Checklist
+
+When modifying bidirectional features, verify:
+- [x] Direction notes switch language on toggle (DE→BG shows German, BG→DE shows Bulgarian)
+- [x] Quick filter buttons sync with dropdown selects
+- [x] Active button styling updates correctly
+- [x] Touch targets ≥80px on mobile
+- [x] Keyboard navigation works (Tab/Enter)
+- [x] Screen readers announce filter changes
+- [x] No console errors during direction switch
+- [x] Dark mode styling correct
+- [x] Notes display for ALL vocabulary (100% coverage)
+
+### Tandem Session Best Practices
+
+**For Developers**:
+- Never remove or modify `data-direction` attributes
+- Keep both `notes_de_to_bg` and `notes_bg_to_de` in sync semantically
+- Test both directions when adding new vocabulary
+- Maintain emoji consistency for category icons
+- Ensure quick filter buttons have descriptive titles
+
+**For Content Creators**:
+- Write direction notes from native speaker's perspective
+- Include word breakdown for compound words
+- Specify grammatical gender/form
+- Add usage frequency hints (sehr häufig/често използвана)
+- Keep translations culturally appropriate
+
+### Files to Know
+
+- **Data**: `data/vocabulary.json` (all 157 entries with bidirectional notes)
+- **Scripts**: `scripts/add-direction-notes.mjs` (systematic note generation)
+- **Template**: `layouts/vocabulary/list.html` (quick filters + note display)
+- **JS Module**: `assets/js/modules/vocabulary-page.js` (direction switching logic)
+- **Styles**: `assets/scss/components/_quick-filters.scss` (icon button styling)
+- **Docs**: `docs/BIDIRECTIONAL_TANDEM_ENHANCEMENT_COMPLETE.md` (full spec)
+
 ## Current Focus (October 2025)
 
-- Validate direction-aware vocabulary explanations on both the list and practice experiences.
+- Validate direction-aware vocabulary explanations on both the list and practice experiences. ✅ DONE
 - Exercise every learner flow (home → vocabulary → practice → results) after each change.
 - Keep live documentation tidy: archive completed reports, keep active guides in `docs/` root.
 - Treat `npm run dev` as the canonical dev server; confirm no stray SW registration in dev logs.
 - When testing, verify:
-  - Language toggle (`layouts/partials/language-toggle.html`) updates cards, notes, and practice queues.
-  - Vocabulary filters/search (`layouts/vocabulary/list.html`, `assets/js/modules/vocabulary-page.js`) change counts.
+  - Language toggle (`layouts/partials/language-toggle.html`) updates cards, notes, and practice queues. ✅ WORKING
+  - Vocabulary filters/search (`layouts/vocabulary/list.html`, `assets/js/modules/vocabulary-page.js`) change counts. ✅ WORKING
+  - Quick filter buttons (`assets/scss/components/_quick-filters.scss`) apply filters instantly. ✅ NEW
   - Practice session stats (`assets/js/unified-practice-session.js`) reflect user input and show direction-aware notes.
-  - Cultural/linguistic notes render for spotlight entries like `заедно`.
+  - Cultural/linguistic notes render for spotlight entries like `заедно`. ✅ ALL ENTRIES
+  - Direction-specific notes switch language correctly when toggling DE→BG ↔ BG→DE. ✅ NEW
 - Record findings and gaps in `docs/notes/TODAY.md` before finishing the day.

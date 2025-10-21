@@ -42,39 +42,41 @@ class VocabularyPageModule {
   }
 
   updateDirectionUI(dir) {
-      if (!this.vocabById) return;
+      // Update all vocabulary cards to show correct direction
       document.querySelectorAll('#vocabulary-grid .vocab-card').forEach(card => {
-          const id = card.getAttribute('data-id');
-          const item = id && this.vocabById.get(id);
-          if (!item) return;
-
-          const wordEl = card.querySelector('.vocab-word');
-          const transEl = card.querySelector('.vocab-translation');
-          const notesEl = card.querySelector('.vocab-notes');
-
-          if (wordEl && transEl) {
-              if (dir === 'de-bg') {
-                  wordEl.textContent = item.translation || '';
-                  transEl.textContent = item.word || '';
+          // Update direction-aware notes (show only the relevant direction)
+          const directionNotes = card.querySelectorAll('.vocab-note-direction');
+          directionNotes.forEach(note => {
+              const noteDirection = note.getAttribute('data-direction');
+              if (noteDirection === dir) {
+                  note.style.display = ''; // Show
               } else {
-                  wordEl.textContent = item.word || '';
-                  transEl.textContent = item.translation || '';
+                  note.style.display = 'none'; // Hide
               }
-          }
+          });
+          
+          // If using vocabById data, also update word/translation
+          if (this.vocabById) {
+              const id = card.getAttribute('data-id');
+              const item = id && this.vocabById.get(id);
+              if (!item) return;
 
-          if (notesEl) {
-              const notes = dir === 'de-bg'
-                  ? (item.notes_de_to_bg || item.notes)
-                  : (item.notes_bg_to_de || item.notes);
-              if (notes) {
-                  notesEl.textContent = notes;
-                  notesEl.style.display = '';
-              } else {
-                  notesEl.textContent = '';
-                  notesEl.style.display = 'none';
+              const wordEl = card.querySelector('.vocab-word');
+              const transEl = card.querySelector('.vocab-translation');
+
+              if (wordEl && transEl) {
+                  if (dir === 'de-bg') {
+                      wordEl.textContent = item.translation || '';
+                      transEl.textContent = item.word || '';
+                  } else {
+                      wordEl.textContent = item.word || '';
+                      transEl.textContent = item.translation || '';
+                  }
               }
           }
       });
+      
+      console.log(`[VocabularyPage] Updated direction UI to: ${dir}`);
   }
 
     async init() {
@@ -192,6 +194,12 @@ class VocabularyPageModule {
                 }
             });
         }
+
+        // Quick filter buttons (icon-based)
+        const quickFilterButtons = document.querySelectorAll('.quick-filter-btn');
+        quickFilterButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => this.handleQuickFilter(e));
+        });
 
         // Language direction changes
         document.addEventListener('learning-direction-changed', () => {
@@ -393,6 +401,29 @@ class VocabularyPageModule {
             localStorage.getItem('bgde:learning_direction');
 
         return this.normalizeDirection(stored) || 'de-bg';
+    }
+
+    handleQuickFilter(event) {
+        const button = event.currentTarget;
+        const filterType = button.dataset.filterType; // 'level' or 'category'
+        const filterValue = button.dataset.filterValue;
+        
+        // Update active state for visual feedback
+        const sameTypeButtons = document.querySelectorAll(`[data-filter-type="${filterType}"]`);
+        sameTypeButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        // Update corresponding select dropdown
+        if (filterType === 'level' && this.filters.level) {
+            this.filters.level.value = filterValue;
+        } else if (filterType === 'category' && this.filters.category) {
+            this.filters.category.value = filterValue;
+        }
+        
+        // Apply filters
+        this.applyFilters();
+        
+        console.log(`[QuickFilter] Applied ${filterType}: ${filterValue || 'all'}`);
     }
 
     handlePracticeSingle(button) {

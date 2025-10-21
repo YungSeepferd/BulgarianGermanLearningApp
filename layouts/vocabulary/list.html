@@ -7,6 +7,85 @@
         <p>Lernen Sie bulgarischen und deutschen Wortschatz mit Wiederholung in Abständen / Учете български и немски речник с повторение на интервали</p>
     </div>
     
+    <!-- Quick Icon-Based Filters for Tandem Learning -->
+    <div class="quick-filters">
+        <div class="quick-filter-section">
+            <h3>📊 Niveau / Ниво</h3>
+            <div class="quick-filter-buttons">
+                <button class="quick-filter-btn" data-filter-type="level" data-filter-value="" title="Alle Niveaus / Всички нива">
+                    <span class="icon">🌐</span>
+                    <span class="label">Alle / Всички</span>
+                </button>
+                <button class="quick-filter-btn" data-filter-type="level" data-filter-value="A1" title="A1 - Anfänger / Начинаещи">
+                    <span class="icon">🌱</span>
+                    <span class="label">A1</span>
+                </button>
+                <button class="quick-filter-btn" data-filter-type="level" data-filter-value="A2" title="A2 - Grundstufe / Основно">
+                    <span class="icon">🌿</span>
+                    <span class="label">A2</span>
+                </button>
+                <button class="quick-filter-btn" data-filter-type="level" data-filter-value="B1" title="B1 - Mittelstufe / Средно">
+                    <span class="icon">🌳</span>
+                    <span class="label">B1</span>
+                </button>
+                <button class="quick-filter-btn" data-filter-type="level" data-filter-value="B2" title="B2 - Obere Mittelstufe / Горно средно">
+                    <span class="icon">🏆</span>
+                    <span class="label">B2</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="quick-filter-section">
+            <h3>🏷️ Kategorien / Категории</h3>
+            <div class="quick-filter-buttons">
+                <button class="quick-filter-btn" data-filter-type="category" data-filter-value="" title="Alle Kategorien / Всички категории">
+                    <span class="icon">📚</span>
+                    <span class="label">Alle / Всички</span>
+                </button>
+                <button class="quick-filter-btn" data-filter-type="category" data-filter-value="Begrüßung" title="Greetings / Поздрави">
+                    <span class="icon">👋</span>
+                    <span class="label">Begrüßung</span>
+                </button>
+                <button class="quick-filter-btn" data-filter-type="category" data-filter-value="Substantiv" title="Nouns / Съществителни">
+                    <span class="icon">📦</span>
+                    <span class="label">Substantiv</span>
+                </button>
+                <button class="quick-filter-btn" data-filter-type="category" data-filter-value="Verb" title="Verbs / Глаголи">
+                    <span class="icon">⚡</span>
+                    <span class="label">Verb</span>
+                </button>
+                <button class="quick-filter-btn" data-filter-type="category" data-filter-value="Adjektiv" title="Adjectives / Прилагателни">
+                    <span class="icon">🎨</span>
+                    <span class="label">Adjektiv</span>
+                </button>
+                <button class="quick-filter-btn" data-filter-type="category" data-filter-value="Adverb" title="Adverbs / Наречия">
+                    <span class="icon">⏩</span>
+                    <span class="label">Adverb</span>
+                </button>
+                <button class="quick-filter-btn" data-filter-type="category" data-filter-value="Ausdruck" title="Expressions / Изрази">
+                    <span class="icon">💬</span>
+                    <span class="label">Ausdruck</span>
+                </button>
+                <button class="quick-filter-btn" data-filter-type="category" data-filter-value="Familie" title="Family / Семейство">
+                    <span class="icon">👨‍👩‍👧‍👦</span>
+                    <span class="label">Familie</span>
+                </button>
+                <button class="quick-filter-btn" data-filter-type="category" data-filter-value="Lebensmittel" title="Food / Храна">
+                    <span class="icon">🍽️</span>
+                    <span class="label">Lebensmittel</span>
+                </button>
+                <button class="quick-filter-btn" data-filter-type="category" data-filter-value="Zeit" title="Time / Време">
+                    <span class="icon">⏰</span>
+                    <span class="label">Zeit</span>
+                </button>
+                <button class="quick-filter-btn" data-filter-type="category" data-filter-value="Zahl" title="Numbers / Числа">
+                    <span class="icon">🔢</span>
+                    <span class="label">Zahl</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
     <div class="filters">
         <select id="level-filter">
             <option value="">Alle Niveaus / Всички нива</option>
@@ -84,13 +163,18 @@
             
             {{/* Display notes based on available fields - priority: direction-specific > cultural > general */}}
             {{ $hasNotes := false }}
-            <div class="vocab-notes-container">
-                {{/* Direction-aware notes */}}
+            <div class="vocab-notes-container" data-direction-aware="true">
+                {{/* Direction-aware notes - BOTH variants included, JS will show correct one */}}
                 {{ if .notes_de_to_bg }}
-                <div class="vocab-note vocab-note-de-bg">{{ .notes_de_to_bg }}</div>
+                <div class="vocab-note vocab-note-direction vocab-note-de-bg" data-direction="de-bg">
+                    <span class="note-label">🎯</span> {{ .notes_de_to_bg }}
+                </div>
                 {{ $hasNotes = true }}
-                {{ else if .notes_bg_to_de }}
-                <div class="vocab-note vocab-note-bg-de">{{ .notes_bg_to_de }}</div>
+                {{ end }}
+                {{ if .notes_bg_to_de }}
+                <div class="vocab-note vocab-note-direction vocab-note-bg-de" data-direction="bg-de">
+                    <span class="note-label">🎯</span> {{ .notes_bg_to_de }}
+                </div>
                 {{ $hasNotes = true }}
                 {{ end }}
                 
