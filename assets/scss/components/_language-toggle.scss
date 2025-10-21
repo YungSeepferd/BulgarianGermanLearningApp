@@ -205,24 +205,24 @@
 // Language-specific typography
 .lang-de-bg {
   .german-text {
-    font-family: "Segoe UI", system-ui, sans-serif;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-weight: 500;
   }
   
   .bulgarian-text {
-    font-family: "Segoe UI", "DejaVu Sans", sans-serif;
-    font-weight: 600;
+    font-family: "Roboto", "Noto Sans", "PT Sans", "Arial", sans-serif;
+    font-weight: 500;
   }
 }
 
 .lang-bg-de {
   .bulgarian-text {
-    font-family: "Segoe UI", "DejaVu Sans", sans-serif;
+    font-family: "Roboto", "Noto Sans", "PT Sans", "Arial", sans-serif;
     font-weight: 500;
   }
   
   .german-text {
-    font-family: "Segoe UI", system-ui, sans-serif;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-weight: 600;
   }
 }

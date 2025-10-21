@@ -210,7 +210,7 @@ constructor() {
 
 ### Priority 1: Hide Extra Screens
 
-**File**: `assets/js/enhanced-practice-session.js`
+**File**: `assets/js/unified-practice-session.js`
 
 **Add to constructor**:
 ```javascript
@@ -246,7 +246,7 @@ showScreen(id) {
 
 ### Priority 2: Settings Toggle
 
-**File**: `assets/js/enhanced-practice-session.js`
+**File**: `assets/js/unified-practice-session.js`
 
 **Add event listener**:
 ```javascript

@@ -264,8 +264,11 @@ class EnhancedPracticeSession {
     if (currentWord) currentWord.textContent = frontText || 'No word';
     if (currentTranslation) currentTranslation.textContent = backText || 'No translation';
     if (currentNotes) {
-      currentNotes.textContent = this.currentCard.notes || '';
-      currentNotes.style.display = this.currentCard.notes ? 'block' : 'none';
+      const directionalNotes = isReverse
+        ? (this.currentCard.notes_de_to_bg || this.currentCard.notes)
+        : (this.currentCard.notes_bg_to_de || this.currentCard.notes);
+      currentNotes.textContent = directionalNotes || '';
+      currentNotes.style.display = directionalNotes ? 'block' : 'none';
     }
     
     if (wordLevel) wordLevel.textContent = this.currentCard.level || 'A1';
@@ -365,7 +368,11 @@ class EnhancedPracticeSession {
     
     const sessionComplete = document.getElementById('session-complete');
     
-    if (practiceSession) practiceSession.style.display = 'none';
+    const practiceSession = document.getElementById('practice-session');
+    if (practiceSession) {
+      practiceSession.style.display = 'none';
+      practiceSession.classList.add('hidden');
+    }
     if (sessionComplete) {
       sessionComplete.classList.remove('hidden');
       sessionComplete.style.display = 'block';

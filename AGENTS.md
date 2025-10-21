@@ -90,3 +90,16 @@ Log any sandbox or environment-related failures with clear rationale (e.g., netw
 - Reference files using workspace-relative paths (`assets/js/flashcards.js:156`) in discussions.
 - Follow Windsurf workflows in `.windsurf/workflows/` when using automated loops.
 - Surface technical debt or blockers by logging TODOs in `docs/notes/NEXT.md`.
+
+## Current Focus (October 2025)
+
+- Validate direction-aware vocabulary explanations on both the list and practice experiences.
+- Exercise every learner flow (home → vocabulary → practice → results) after each change.
+- Keep live documentation tidy: archive completed reports, keep active guides in `docs/` root.
+- Treat `npm run dev` as the canonical dev server; confirm no stray SW registration in dev logs.
+- When testing, verify:
+  - Language toggle (`layouts/partials/language-toggle.html`) updates cards, notes, and practice queues.
+  - Vocabulary filters/search (`layouts/vocabulary/list.html`, `assets/js/modules/vocabulary-page.js`) change counts.
+  - Practice session stats (`assets/js/unified-practice-session.js`) reflect user input and show direction-aware notes.
+  - Cultural/linguistic notes render for spotlight entries like `заедно`.
+- Record findings and gaps in `docs/notes/TODAY.md` before finishing the day.

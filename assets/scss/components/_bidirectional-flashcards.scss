@@ -34,13 +34,13 @@
     transition: all 0.3s ease;
     
     &[data-lang="bg"] {
-      font-family: 'Segoe UI', 'Arial Unicode MS', sans-serif;
+      font-family: "Roboto", "Noto Sans", "PT Sans", "Arial", sans-serif;
       border-left: 3px solid #007bff;
       padding-left: 12px;
     }
     
     &[data-lang="de"] {
-      font-family: 'Segoe UI', 'Roboto', sans-serif;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       border-left: 3px solid #28a745;
       padding-left: 12px;
     }

@@ -24,18 +24,35 @@ These are the **actively maintained** modules used by the application:
 | `home.js` | 2KB | ✅ **ACTIVE** | homepage | Homepage-specific interactions |
 | `code.js` | 0.8KB | ✅ **ACTIVE** | code blocks | Syntax highlighting support |
 
-### Enhanced Modules
+### Unified Modules (v2.0 - October 2025)
 
-Extended functionality built on top of core modules for bidirectional learning:
+**Recommended for all new development**. These modules consolidate enhanced + legacy implementations:
 
-| Module | Size | Status | Extends | Used By | Purpose |
-|--------|------|--------|---------|---------|---------|
-| `enhanced-bidirectional-system.js` | 15KB | ✅ **ACTIVE** | language-toggle | vocabulary/list.html, practice/single.html | Direction-aware learning features, difficulty multipliers (BG→DE: 1.2x, DE→BG: 1.1x) |
-| `enhanced-practice-session.js` | 10KB | ✅ **ACTIVE** | practice.js | practice/single.html | Bidirectional flashcard practice with cultural context |
-| `enhanced-spaced-repetition.js` | 4KB | ✅ **ACTIVE** | spaced-repetition.js | practice/single.html | Direction-aware SM-2 algorithm with multipliers |
-| `enhanced-vocab-cards.js` | 2KB | ✅ **ACTIVE** | vocab-cards.js | vocabulary/list.html | Cultural context display in vocabulary cards |
+| Module | Size | Status | Replaces | Purpose |
+|--------|------|--------|----------|---------|
+| `unified-spaced-repetition.js` | 18KB | ✅ **ACTIVE** | enhanced-spaced-repetition.js, spaced-repetition.js | SM-2 algorithm v2 with automatic legacy migration, bidirectional support, schema versioning |
+| `unified-practice-session.js` | 21KB | ✅ **ACTIVE** | enhanced-practice-session.js, practice.js | Practice sessions with direction-aware notes, keyboard shortcuts, session history |
 
-**Status**: ✅ **VERIFIED** - All enhanced modules are actively used in production templates for bidirectional learning (Vincent & Ida user personas). These implement the core bidirectional features specified in `docs/archive/plans/BIDIRECTIONAL_IMPLEMENTATION_PLAN.md`.
+**Key Features**:
+- **Auto-migration**: Detects `bgde:review:<id>` and migrates to `bgde:review_<id>_<direction>`
+- **Schema v2**: Consistent camelCase fields, timestamp-based dates
+- **Direction multipliers**: BG→DE (1.1x), DE→BG (1.2x) preserved
+- **Export/import**: Schema-versioned with validation
+
+### Enhanced Modules (DEPRECATED - Use Unified Modules)
+
+⚠️ **Deprecation Notice (Oct 19, 2025)**: These modules are superseded by unified modules above. Kept for backward compatibility until all templates migrate.
+
+| Module | Size | Status | Replacement | Migration Status |
+|--------|------|--------|-------------|------------------|
+| `enhanced-bidirectional-system.js` | 15KB | ⚠️ **DEPRECATED** | `unified-practice-session.js` | Templates still reference; mark for removal after migration |
+| `enhanced-practice-session.js` | 10KB | ⚠️ **DEPRECATED** | `unified-practice-session.js` | Replaced by unified module |
+| `enhanced-spaced-repetition.js` | 4KB | ⚠️ **DEPRECATED** | `unified-spaced-repetition.js` | Replaced by unified module |
+| `enhanced-vocab-cards.js` | 2KB | ✅ **ACTIVE** | N/A | Still in use for vocabulary list display |
+| `practice.js` | 14KB | ⚠️ **DEPRECATED** | `unified-practice-session.js` | Replaced by unified module |
+| `spaced-repetition.js` | 13KB | ⚠️ **DEPRECATED** | `unified-spaced-repetition.js` | Replaced by unified module |
+
+**Migration Path**: Update template imports to use unified modules, test practice flow, remove deprecated modules once all templates migrated.
 
 ### Deprecated Modules (Removed)
 

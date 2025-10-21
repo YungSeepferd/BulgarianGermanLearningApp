@@ -302,7 +302,7 @@ Content EXISTS in DOM:
 4. **OR** Content not being populated into back element
 
 **Files to Investigate**:
-- `assets/js/enhanced-practice-session.js` - `updateUI()` method
+- `assets/js/unified-practice-session.js` - `updateUI()` method
 - `layouts/practice/single.html` - DOM structure
 - `assets/scss/components/_flashcards.scss` - Styles
 

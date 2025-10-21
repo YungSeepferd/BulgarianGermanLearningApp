@@ -19,10 +19,70 @@ class VocabularyPageModule {
         this.allItems = [];
     }
 
+  domApplyFilters() {
+      const levelSel = document.getElementById('level-filter');
+      const catSel = document.getElementById('category-filter');
+      const searchInput = document.getElementById('search-input');
+      const level = levelSel ? levelSel.value : '';
+      const cat = catSel ? catSel.value : '';
+      const q = (searchInput?.value || '').toLowerCase();
+
+      let shown = 0;
+      document.querySelectorAll('#vocabulary-grid .vocab-card').forEach(card => {
+          const l = card.getAttribute('data-level') || '';
+          const c = card.getAttribute('data-category') || '';
+          const w = (card.getAttribute('data-word') || '').toLowerCase();
+          const t = (card.getAttribute('data-translation') || '').toLowerCase();
+          const matches = (!level || l === level) && (!cat || c === cat) && (!q || w.includes(q) || t.includes(q));
+          card.style.display = matches ? '' : 'none';
+          if (matches) shown++;
+      });
+      const showing = document.getElementById('showing-count');
+      if (showing) showing.textContent = shown;
+  }
+
+  updateDirectionUI(dir) {
+      if (!this.vocabById) return;
+      document.querySelectorAll('#vocabulary-grid .vocab-card').forEach(card => {
+          const id = card.getAttribute('data-id');
+          const item = id && this.vocabById.get(id);
+          if (!item) return;
+
+          const wordEl = card.querySelector('.vocab-word');
+          const transEl = card.querySelector('.vocab-translation');
+          const notesEl = card.querySelector('.vocab-notes');
+
+          if (wordEl && transEl) {
+              if (dir === 'de-bg') {
+                  wordEl.textContent = item.translation || '';
+                  transEl.textContent = item.word || '';
+              } else {
+                  wordEl.textContent = item.word || '';
+                  transEl.textContent = item.translation || '';
+              }
+          }
+
+          if (notesEl) {
+              const notes = dir === 'de-bg'
+                  ? (item.notes_de_to_bg || item.notes)
+                  : (item.notes_bg_to_de || item.notes);
+              if (notes) {
+                  notesEl.textContent = notes;
+                  notesEl.style.display = '';
+              } else {
+                  notesEl.textContent = '';
+                  notesEl.style.display = 'none';
+              }
+          }
+      });
+  }
+
     async init() {
         try {
-            // Lazy load dependencies only when needed
+            // Ensure any optional globals are in place
             await this.loadDependencies();
+            // Parse inline data for direction-aware DOM updates
+            this.loadInlineData();
             
             // Initialize components
             this.initializeFilters();
@@ -41,25 +101,22 @@ class VocabularyPageModule {
         }
     }
 
-    async loadDependencies() {
-        // Dynamically import only required modules
-        const modules = await Promise.all([
-            this.loadModule('enhanced-vocab-cards'),
-            this.loadModule('cultural-context-toggle')
-        ]);
-        
-        return modules;
+    loadInlineData() {
+        try {
+            const script = document.getElementById('vocabulary-data');
+            const parsed = script ? JSON.parse(script.textContent || '[]') : [];
+            this.inlineVocab = Array.isArray(parsed) ? parsed : [];
+            this.vocabById = new Map(this.inlineVocab.map(it => [it.id, it]));
+        } catch (e) {
+            this.inlineVocab = [];
+            this.vocabById = new Map();
+            console.warn('Failed to parse inline vocabulary data', e);
+        }
     }
 
-    async loadModule(moduleName) {
-        try {
-            // Use dynamic imports for better performance
-            const module = await import(`../enhanced-${moduleName}.js`);
-            return module.default || module;
-        } catch (error) {
-            console.warn(`Failed to load module ${moduleName}:`, error);
-            return null;
-        }
+    async loadDependencies() {
+        // All dependencies are loaded via classic script tags; nothing to do here.
+        return [];
     }
 
     initializeFilters() {
@@ -71,28 +128,31 @@ class VocabularyPageModule {
     }
 
     initializeVocabularyCards() {
-        if (!this.adapter) return;
+        if (!window.EnhancedVocabCards) {
+            return;
+        }
 
-        this.enhancedVocab = new EnhancedVocabCards({
-            container: this.container,
-            adapter: this.adapter,
-            showCulturalContext: true,
-            enableInteractions: true,
-            virtualScrolling: true,
-            threshold: this.virtualScrollThreshold
-        });
-
-        this.enhancedVocab.init();
+        try {
+            this.enhancedVocab = new window.EnhancedVocabCards();
+        } catch (error) {
+            console.warn('Failed to initialise EnhancedVocabCards:', error);
+            this.enhancedVocab = null;
+        }
     }
 
     initializeCulturalToggle() {
         const container = document.getElementById('cultural-context-container');
-        if (!container) return;
+        if (!container || !window.CulturalContextToggle) return;
 
-        this.culturalToggle = new CulturalContextToggle({
-            container: container
-        });
-        this.culturalToggle.init();
+        try {
+            this.culturalToggle = new window.CulturalContextToggle({
+                container
+            });
+            this.culturalToggle.init();
+        } catch (error) {
+            console.warn('Failed to initialise CulturalContextToggle:', error);
+            this.culturalToggle = null;
+        }
     }
 
     initializeEventListeners() {
@@ -122,8 +182,27 @@ class VocabularyPageModule {
             clearBtn.addEventListener('click', () => this.clearFilters());
         }
 
+        // Individual practice buttons (using event delegation for dynamic content)
+        const vocabGrid = document.getElementById('vocabulary-grid');
+        if (vocabGrid) {
+            vocabGrid.addEventListener('click', (e) => {
+                const practiceBtn = e.target.closest('.practice-single-btn');
+                if (practiceBtn) {
+                    this.handlePracticeSingle(practiceBtn);
+                }
+            });
+        }
+
         // Language direction changes
-        document.addEventListener('learning-direction-changed', () => this.applyFilters());
+        document.addEventListener('learning-direction-changed', () => {
+            this.updateDirectionUI(this.getCurrentDirection());
+            this.applyFilters();
+        });
+        document.addEventListener('language-direction-changed', (e) => {
+            const dir = e?.detail?.direction || this.getCurrentDirection();
+            this.updateDirectionUI(dir);
+            this.applyFilters();
+        });
     }
 
     initializeVirtualScrolling() {
@@ -212,14 +291,19 @@ class VocabularyPageModule {
 
     applyFilters() {
         const currentDirection = this.getCurrentDirection();
-        let items = this.adapter ? this.adapter.getItemsForDirection(currentDirection) : [];
+        const hasAdapter = this.adapter && typeof this.adapter.getItemsForDirection === 'function';
+        if (!hasAdapter) {
+            // Fallback: filter existing DOM cards
+            this.domApplyFilters();
+            // Ensure direction labels/notes are correct
+            this.updateDirectionUI(currentDirection);
+            return;
+        }
 
-        // Apply filters with performance optimization
+        let items = this.adapter.getItemsForDirection(currentDirection) || [];
         const filtered = this.filterItems(items);
-        
-        // Update UI efficiently
         this.updateFilteredResults(filtered);
-    }
+  }
 
     filterItems(items) {
         const levelValue = this.filters.level?.value || '';
@@ -239,14 +323,16 @@ class VocabularyPageModule {
     }
 
     updateFilteredResults(filtered) {
-        // Update vocabulary cards efficiently
-        if (this.enhancedVocab) {
+        // Update vocabulary cards efficiently when available, otherwise fallback to DOM filtering
+        if (this.enhancedVocab && typeof this.enhancedVocab.renderItems === 'function') {
             this.enhancedVocab.renderItems(filtered);
+        } else {
+            this.domApplyFilters();
         }
 
         // Update counters
         const showingCount = document.getElementById('showing-count');
-        if (showingCount) {
+        if (showingCount && Array.isArray(filtered)) {
             showingCount.textContent = filtered.length;
         }
 
@@ -309,13 +395,28 @@ class VocabularyPageModule {
         return this.normalizeDirection(stored) || 'de-bg';
     }
 
+    handlePracticeSingle(button) {
+        const word = button.dataset.word;
+        const cardElement = button.closest('.vocab-card');
+        const itemId = cardElement?.dataset.id;
+        
+        if (word || itemId) {
+            // Store single word for practice session
+            localStorage.setItem('bgde:practice_selection', JSON.stringify([word || itemId]));
+            // Navigate to practice page (relative to parent)
+            window.location.href = '../practice/';
+        } else {
+            console.warn('Cannot practice: no word or ID found');
+        }
+    }
+
     handlePracticeSelected() {
         const selected = Array.from(document.querySelectorAll('.vocab-select:checked'))
             .map(checkbox => checkbox.dataset.word);
 
         if (selected.length > 0) {
             localStorage.setItem('bgde:practice_selection', JSON.stringify(selected));
-            window.location.href = '/practice/';
+            window.location.href = '../practice/';
         } else {
             this.showSelectionAlert();
         }
@@ -348,13 +449,10 @@ class VocabularyPageModule {
     }
 
     performInitialRender() {
-        // Load initial items with performance optimization
         const currentDirection = this.getCurrentDirection();
-        this.allItems = this.adapter ? this.adapter.getItemsForDirection(currentDirection) : [];
-        
-        // Render first batch immediately, rest lazily
-        this.renderInitialBatch();
-    }
+        this.updateDirectionUI(currentDirection);
+        this.domApplyFilters();
+  }
 
     renderInitialBatch() {
         const initialBatch = this.allItems.slice(0, 50); // Show first 50 items
@@ -417,5 +515,7 @@ class VocabularyPageModule {
     }
 }
 
-// Export for module loading
-export default VocabularyPageModule;
+// Expose globally for classic script inclusion
+if (typeof window !== 'undefined') {
+    window.VocabularyPageModule = VocabularyPageModule;
+}

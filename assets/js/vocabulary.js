@@ -252,8 +252,8 @@ BgDeApp.startPracticeWithSelected = function() {
     // Store selected words in localStorage for practice page
     localStorage.setItem('bgde:practice_selection', JSON.stringify(Array.from(BgDeApp.vocabulary.selectedWords)));
     
-    // Navigate to practice page
-    window.location.href = '/practice/';
+    // Navigate to practice page (relative to parent)
+    window.location.href = '../practice/';
 };
 
 // Utility function to shuffle array

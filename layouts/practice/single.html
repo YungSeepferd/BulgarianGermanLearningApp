@@ -269,7 +269,7 @@
 </script>
 
 <!-- Load JavaScript modules via Hugo resources -->
-{{ $spacedRepetition := resources.Get "js/enhanced-spaced-repetition.js" }}
+{{ $spacedRepetition := resources.Get "js/unified-spaced-repetition.js" }}
 {{ if $spacedRepetition }}
 {{ $spacedRepetitionMin := $spacedRepetition | resources.Minify }}
 <script src="{{ $spacedRepetitionMin.RelPermalink }}" defer></script>
@@ -281,14 +281,14 @@
 <script src="{{ $enhancedBidirectionalSystemMin.RelPermalink }}" defer></script>
 {{ end }}
 
-{{ $enhancedPracticeSession := resources.Get "js/enhanced-practice-session.js" }}
-{{ if $enhancedPracticeSession }}
-{{ $enhancedPracticeSessionMin := $enhancedPracticeSession | resources.Minify }}
-<script src="{{ $enhancedPracticeSessionMin.RelPermalink }}" defer></script>
+{{ $unifiedPracticeSession := resources.Get "js/unified-practice-session.js" }}
+{{ if $unifiedPracticeSession }}
+{{ $unifiedPracticeSessionMin := $unifiedPracticeSession | resources.Minify }}
+<script src="{{ $unifiedPracticeSessionMin.RelPermalink }}" defer></script>
 {{ end }}
 
 <script>
-// Initialize enhanced practice system
+// Initialize unified practice system
 document.addEventListener('DOMContentLoaded', function() {
     console.log('[Init] DOM loaded, initializing practice session');
     
@@ -296,12 +296,16 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         console.log('[Init] Checking for dependencies...');
         console.log('[Init] - languageToggle available:', !!window.languageToggle);
-        console.log('[Init] - EnhancedPracticeSession available:', !!window.EnhancedPracticeSession);
+        console.log('[Init] - UnifiedPracticeSession available:', !!window.UnifiedPracticeSession);
         
-        if (window.EnhancedPracticeSession) {
+        if (window.UnifiedPracticeSession) {
             try {
-                console.log('[Init] Creating EnhancedPracticeSession instance...');
-                window.enhancedPracticeSession = new EnhancedPracticeSession();
+                console.log('[Init] Creating UnifiedPracticeSession instance...');
+                const session = new window.UnifiedPracticeSession();
+                window.practiceSession = session;
+                // Backward compatibility alias
+                window.enhancedPracticeSession = session;
+                console.log('[Init] Practice session initialized successfully');
             } catch (error) {
                 console.error('[Init] Failed to initialize practice session:', error);
                 console.error('[Init] Stack:', error.stack);
@@ -312,7 +316,7 @@ document.addEventListener('DOMContentLoaded', function() {
             window.BgDeApp.initPractice();
             console.log('Simple practice session initialized');
         } else {
-            console.error('No practice system loaded');
+            console.error('[Init] No practice system loaded - check that unified-practice-session.js is included');
         }
     }, 100);
 });

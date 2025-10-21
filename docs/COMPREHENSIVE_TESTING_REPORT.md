@@ -67,7 +67,7 @@ Comprehensive testing revealed **multiple critical bugs** that severely impact u
 
 **Files Involved**:
 - `assets/scss/components/_flashcards.scss`
-- `assets/js/enhanced-practice-session.js`
+- `assets/js/unified-practice-session.js`
 - `layouts/practice/single.html`
 
 **Priority**: 🔴 **P0 - MUST FIX IMMEDIATELY**
@@ -389,7 +389,7 @@ Screenshots captured:
 
 **Files to check**:
 - `assets/scss/components/_flashcards.scss`
-- `assets/js/enhanced-practice-session.js`
+- `assets/js/unified-practice-session.js`
 - `layouts/practice/single.html`
 
 **Acceptance**:

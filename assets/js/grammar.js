@@ -198,8 +198,8 @@ class GrammarApp {
             timestamp: Date.now()
         }));
 
-        // Navigate to practice page
-        window.location.href = '/practice/';
+        // Navigate to practice page (relative to parent)
+        window.location.href = '../practice/';
     }
 
     toggleBookmark(grammarTitle, button) {

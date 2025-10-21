@@ -1,34 +1,59 @@
 {{ if .Site.Params.enablePWA }}
 <script>
 // Progressive Web App registration and update handling
+const __isDev = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('{{ "sw.js" | relURL }}')
-      .then((registration) => {
-        console.log('SW registered: ', registration);
-        
-        // Check for updates
-        registration.addEventListener('updatefound', () => {
-          const newWorker = registration.installing;
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              // New content available, show update notification
-              showUpdateNotification();
+  if (__isDev) {
+    console.log('Skipping SW registration in dev');
+  } else {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('{{ "sw.js" | relURL }}')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+          
+          // Check for updates
+          registration.addEventListener('updatefound', () => {
+            const newWorker = registration.installing;
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New content available, show update notification
+                showUpdateNotification();
+              }
+            });
+          });
+
+          navigator.serviceWorker.ready.then((readyRegistration) => {
+            try {
+              const precacheNode = document.getElementById('bgde-precache-assets');
+              if (!precacheNode || !precacheNode.textContent) {
+                return;
+              }
+              const urls = JSON.parse(precacheNode.textContent).filter(Boolean);
+              if (!Array.isArray(urls) || !urls.length) {
+                return;
+              }
+              const activeWorker = readyRegistration.active || registration.active;
+              if (activeWorker) {
+                activeWorker.postMessage({ type: 'PRECACHE_URLS', urls });
+              }
+            } catch (error) {
+              console.warn('[PWA] Failed to send precache asset list:', error);
             }
           });
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
         });
-      })
-      .catch((registrationError) => {
-        console.log('SW registration failed: ', registrationError);
-      });
-  });
+    });
 
-  // Listen for messages from service worker
-  navigator.serviceWorker.addEventListener('message', (event) => {
-    if (event.data.type === 'SW_ACTIVATED') {
-      console.log('Service Worker activated:', event.data.version);
-    }
-  });
+    // Listen for messages from service worker
+    navigator.serviceWorker.addEventListener('message', (event) => {
+      if (event.data.type === 'SW_ACTIVATED') {
+        console.log('Service Worker activated:', event.data.version);
+      }
+    });
+  }
 }
 
 function showUpdateNotification() {

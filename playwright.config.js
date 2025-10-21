@@ -43,7 +43,7 @@ module.exports = defineConfig({
   webServer: {
     command: 'hugo server --buildDrafts --buildFuture --bind 127.0.0.1 --baseURL http://127.0.0.1:1313/BulgarianGermanLearningApp/ --disableLiveReload --watch=false',
     url: 'http://127.0.0.1:1313/BulgarianGermanLearningApp/',
-    reuseExistingServer: false,
+    reuseExistingServer: process.env.PW_REUSE_SERVER === '1',
     timeout: 120 * 1000,
   },
 });

@@ -45,9 +45,15 @@ function validateVocabularyArray(arr) {
     if (!isOptionalString(it.category)) errs.push(`${ctx}: category must be string/null if present`);
     if (!isOptionalString(it.level)) errs.push(`${ctx}: level must be string/null if present`);
     if (!isOptionalString(it.notes)) errs.push(`${ctx}: notes must be string/null if present`);
+    if (!isOptionalString(it.notes_bg_to_de)) errs.push(`${ctx}: notes_bg_to_de must be string/null if present`);
+    if (!isOptionalString(it.notes_de_to_bg)) errs.push(`${ctx}: notes_de_to_bg must be string/null if present`);
     if (!isOptionalString(it.etymology)) errs.push(`${ctx}: etymology must be string/null if present`);
     if (!isOptionalString(it.cultural_note)) errs.push(`${ctx}: cultural_note must be string/null if present`);
     if (!isOptionalString(it.linguistic_note)) errs.push(`${ctx}: linguistic_note must be string/null if present`);
+    // Warn if directional notes are missing but generic notes exist
+    if (isString(it.notes) && !it.notes_bg_to_de && !it.notes_de_to_bg) {
+      console.warn(`⚠ ${ctx}: has generic notes but missing directional notes (notes_bg_to_de, notes_de_to_bg)`);
+    }
     if (!isOptionalNumberIn(it.difficulty, 1, 5)) errs.push(`${ctx}: difficulty must be number 1..5 if present`);
     if (!isOptionalNumberIn(it.frequency, 0, 100)) errs.push(`${ctx}: frequency must be number 0..100 if present`);
     if (isString(it.source_lang) && it.source_lang !== 'bg') errs.push(`${ctx}: source_lang should be 'bg'`);

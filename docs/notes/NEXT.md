@@ -30,7 +30,7 @@
 - [ ] **P0: Fix mobile navigation visibility (2-3 hours)** — Navigation links not visible on mobile viewports. 10+ tests failing. Files: `assets/scss/components/_navigation.scss`, `layouts/partials/header.html`. *(CRITICAL - Blocks launch)*
 - [ ] **P0: Fix vocabulary card loading timing (1-2 hours)** — Cards load inconsistently, causing blank states. 8 tests failing. Files: `assets/js/vocab-cards.js`, `assets/js/enhanced-vocab-cards.js`. *(CRITICAL - Blocks launch)*
 - [ ] **P1: Fix keyboard event persistence (1 hour)** — Keyboard grading lost after flashcard re-initialization. 5 tests failing. Files: `assets/js/flashcards.js`, use event delegation pattern. *(HIGH - UX issue)*
-- [ ] **P1: Fix language toggle state sync (1 hour)** — Practice sessions don't reflect language direction changes. 2 tests failing. Files: `assets/js/enhanced-practice-session.js`, localStorage sync. *(HIGH - Feature broken)*
+- [ ] **P1: Fix language toggle state sync (1 hour)** — Practice sessions don't reflect language direction changes. 2 tests failing. Files: `assets/js/unified-practice-session.js`, localStorage sync. *(HIGH - Feature broken)*
 
 **After these fixes**: Re-run `npm test` and verify >80% pass rate before public launch.
 

@@ -1,7 +1,7 @@
 // Service Worker for Bulgarian-German Learning App
 // Provides offline functionality and performance optimization
 
-const CACHE_NAME = 'bgde-app-v1.2.0';
+const CACHE_NAME = 'bgde-app-v1.3.0';
 const DATA_CACHE_NAME = 'bgde-data-v1.0.0';
 
 // Critical assets to cache immediately
@@ -11,15 +11,7 @@ const STATIC_CACHE_URLS = [
   '/vocabulary/',
   '/grammar/',
   '/practice/',
-  '/manifest.webmanifest',
-  // Core CSS (will be updated with fingerprinted versions)
-  '/scss/main.min.css',
-  // Core JS modules
-  '/js/app.min.js',
-  // Essential images
-  '/images/favicon.png',
-  // Fonts
-  '/fonts/Inconsolata.woff2'
+  '/manifest.webmanifest'
 ];
 
 // Data endpoints to cache with different strategy
@@ -302,6 +294,11 @@ self.addEventListener('message', (event) => {
     case 'PREFETCH_VOCABULARY':
       if (data && data.items) {
         prefetchVocabularyItems(data.items);
+      }
+      break;
+    case 'PRECACHE_URLS':
+      if (data && Array.isArray(data.urls) && data.urls.length) {
+        event.waitUntil(precacheRuntimeAssets(data.urls));
       }
       break;
       

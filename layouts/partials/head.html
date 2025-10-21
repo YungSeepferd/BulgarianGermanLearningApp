@@ -16,11 +16,25 @@
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
+<!-- Google Fonts: Roboto and Noto Sans for Bulgarian Cyrillic support -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
 <!-- Security headers -->
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="DENY">
 <meta http-equiv="X-XSS-Protection" content="1; mode=block">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+{{ $scriptSrc := slice "'self'" "'unsafe-inline'" }}
+{{ if .Site.Params.googleAnalytics }}
+  {{ $scriptSrc = $scriptSrc | append "https://www.googletagmanager.com" }}
+{{ end }}
+{{ $styleSrc := slice "'self'" "'unsafe-inline'" "https://fonts.googleapis.com" }}
+{{ $fontSrc := slice "'self'" "https://fonts.gstatic.com" }}
+{{ $imgSrc := "'self' data:" }}
+{{ $connectSrc := slice "'self'" }}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src {{ delimit $scriptSrc " " }}; style-src {{ delimit $styleSrc " " }}; font-src {{ delimit $fontSrc " " }}; img-src {{ $imgSrc }}; connect-src {{ delimit $connectSrc " " }}; manifest-src 'self'; frame-ancestors 'self';">
+<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
 
 <!-- SEO optimizations -->
 <meta name="robots" content="index, follow">

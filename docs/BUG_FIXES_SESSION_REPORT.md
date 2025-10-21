@@ -62,7 +62,7 @@ updateUI() {
 - Prevent button clicks from triggering flip
 
 **Files Modified**:
-- `assets/js/enhanced-practice-session.js`
+- `assets/js/unified-practice-session.js`
 
 **Testing Required**:
 - Click flashcard → should flip
@@ -229,7 +229,7 @@ This generates the correct path for GitHub Pages subdirectory deployment.
 ## 🔧 Technical Details
 
 ### Files Modified (4 files):
-1. **assets/js/enhanced-practice-session.js**
+1. **assets/js/unified-practice-session.js**
    - Added `updateUI()` DOM manipulation (35 lines)
    - Added flashcard click handler (15 lines)
    - Total: +50 lines

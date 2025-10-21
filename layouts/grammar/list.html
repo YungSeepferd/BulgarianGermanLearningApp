@@ -77,14 +77,19 @@
 {{ end }}
 
 {{ define "scripts" }}
+{{ $grammarJs := resources.Get "js/grammar.js" | resources.Minify }}
+<script src="{{ $grammarJs.RelPermalink }}" defer></script>
 <script>
-// Initialize grammar filtering and search
 document.addEventListener('DOMContentLoaded', function() {
-    const grammarApp = new GrammarApp({
+    if (!window.GrammarApp) {
+        console.warn('GrammarApp is not available.');
+        return;
+    }
+
+    new window.GrammarApp({
         data: {{ .Site.Data.grammar | jsonify }},
         container: '#grammar-list'
     });
-    grammarApp.init();
 });
 </script>
 {{ end }}

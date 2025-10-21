@@ -125,7 +125,7 @@ Extensive manual testing completed.
 ## 📝 CHANGES MADE
 
 ### Files Modified:
-1. **assets/js/enhanced-practice-session.js**
+1. **assets/js/unified-practice-session.js**
    - Added `hideScreen()` / `showScreen()` methods
    - Modified `startSession()` to hide all non-active screens
    - Added settings toggle handler

@@ -36,15 +36,24 @@ graph TD
 
 - **Hugo layer** renders HTML skeletons and embeds JSON data for offline-first behaviour. Shortcodes such as `flashcards.html` output ARIA-friendly markup and inline vocabulary payloads.
 - **Client modules** manage interaction:
-  - `flashcards.js` drives the practice session, sourcing card data, tracking SM-2 state, wiring accessibility, and coordinating speech practice.
-  - `spaced-repetition.js` persists scheduling metadata in `localStorage` (`bgde:review:*`) and exposes SM-2 helpers.
-  - `speech-recognition.js` wraps the Web Speech API to provide pronunciation feedback and auto-grading hooks.
-  - `language-toggle.js` synchronises study direction (DE→BG / BG→DE) across modules via custom events.
-  - `vocab-cards.js` powers listing pages, sharing data loading utilities with the flashcard flow.
+  - **Unified Modules (v2.0 - October 2025)**:
+    - `unified-spaced-repetition.js` (schema v2) handles SM-2 scheduling with automatic migration from legacy `bgde:review:<id>` to enhanced `bgde:review_<id>_<direction>` format. Supports bidirectional difficulty multipliers (BG→DE: 1.1x, DE→BG: 1.2x).
+    - `unified-practice-session.js` drives practice sessions with direction-aware notes, keyboard shortcuts, session history, and SM-2 integration.
+  - **Active Modules**:
+    - `flashcards.js` provides base flashcard functionality (being phased out for unified-practice-session).
+    - `spaced-repetition.js` legacy SM-2 implementation (deprecated - use unified).
+    - `speech-recognition.js` wraps the Web Speech API for pronunciation feedback.
+    - `language-toggle.js` synchronizes study direction (DE→BG / BG→DE) via custom events and localStorage.
+    - `vocab-cards.js` powers listing pages with filtering and search.
+    - `enhanced-vocab-cards.js` adds cultural context display.
 - **State management** is browser-local and deterministic:
-  - Session state (current card, accuracy, attempts) lives in-memory within `Flashcards`.
-  - Long-term spaced-repetition progress is stored per-word using JSON blobs keyed by `bgde:review:<slug>`.
-  - User preferences (theme, language direction, PWA hints) sit in `localStorage` via helper modules.
+  - **Session state** (current card, accuracy, attempts) lives in-memory within practice session modules.
+  - **Spaced-repetition progress** (SM-2 v2 schema):
+    - Modern format: `bgde:review_<id>_<direction>` with camelCase fields, timestamps
+    - Legacy format: `bgde:review:<id>` (auto-migrated on first load)
+    - Schema version 2 includes: `itemId`, `direction`, `easeFactor`, `interval`, `repetitions`, `nextReview`, `lastReview`, `totalReviews`, `correctAnswers`, `correctStreak`
+  - **User preferences**: Theme, language direction (`bgde:language-direction`), audio settings, PWA hints stored in localStorage.
+  - **Session history**: Last 50 sessions in `bgde:session_history` for progress tracking.
 - **PWA/service worker** under `static/sw.js` caches fingerprints and surfaced pages; updates rely on cache-version bumps documented in `docs/DEVELOPMENT.md`.
 
 ## High-Level Layout

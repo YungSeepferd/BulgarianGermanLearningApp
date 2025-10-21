@@ -16,6 +16,14 @@ class ServiceWorkerManager {
       return;
     }
 
+    const host = window.location.hostname;
+    const isDev = host === 'localhost' || host === '127.0.0.1';
+
+    if (isDev) {
+      console.log('[SW Manager] Skipping registration in development environment');
+      return;
+    }
+
     try {
       // Register service worker
       this.swRegistration = await navigator.serviceWorker.register('/sw.js', {

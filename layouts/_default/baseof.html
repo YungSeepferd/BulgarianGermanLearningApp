@@ -55,26 +55,17 @@
     <!-- Onboarding Flow -->
     {{ $onboarding := resources.Get "js/onboarding.js" | resources.Minify }}
     <script src="{{ $onboarding.RelPermalink }}" defer></script>
-    
+
     <!-- Core functionality loaded per page in scripts block -->
+    {{ $precache := slice $style.RelPermalink $js.RelPermalink $codeJs.RelPermalink $languageToggle.RelPermalink $confirmation.RelPermalink $onboarding.RelPermalink "/" "/offline/" "/manifest.webmanifest" }}
+    <script id="bgde-precache-assets" type="application/json">
+        {{ $precache | uniq | jsonify }}
+    </script>
     
     {{ block "scripts" . }}{{ end }}
     
     {{ if .Site.Params.enablePWA }}
-    <!-- Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('{{ "sw.js" | relURL }}')
-                    .then(function(registration) {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-    </script>
+        {{ partial "pwa-register.html" . }}
     {{ end }}
 </body>
 </html>
