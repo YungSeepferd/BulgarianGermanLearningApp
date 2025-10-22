@@ -38,6 +38,17 @@
             <div class="grammar-description">
                 {{ .description | markdownify }}
             </div>
+
+            {{ if or .notes_bg_to_de .notes_de_to_bg }}
+            <div class="grammar-notes" aria-live="polite">
+                {{ if .notes_bg_to_de }}
+                <div class="grammar-note-direction" data-direction="bg-de">{{ .notes_bg_to_de }}</div>
+                {{ end }}
+                {{ if .notes_de_to_bg }}
+                <div class="grammar-note-direction" data-direction="de-bg" style="display:none;">{{ .notes_de_to_bg }}</div>
+                {{ end }}
+            </div>
+            {{ end }}
             
             {{ if .examples }}
             <div class="grammar-examples">

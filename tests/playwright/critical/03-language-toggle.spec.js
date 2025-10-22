@@ -7,12 +7,12 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('Language Toggle', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.evaluate(() => localStorage.clear());
   });
 
   test('language toggle button exists and is clickable', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     
     // Find language toggle (various possible selectors)
     const toggle = page.locator('#language-toggle, .language-toggle, button:has-text("BG"), button:has-text("DE")').first();
@@ -23,7 +23,7 @@ test.describe('Language Toggle', () => {
   });
 
   test('changes learning direction and persists to localStorage', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     
     // Get initial direction
     const initialDirection = await page.evaluate(() => {
@@ -53,7 +53,7 @@ test.describe('Language Toggle', () => {
   });
 
   test('flashcards respect language direction', async ({ page }) => {
-    await page.goto('/practice/');
+    await page.goto('practice/');
     await page.waitForSelector('#flashcard', { state: 'visible', timeout: 15000 });
     
     // Get word in initial direction
@@ -77,7 +77,7 @@ test.describe('Language Toggle', () => {
     await page.waitForTimeout(500);
     
     // Reload to apply direction
-    await page.reload();
+    await page.reload({ waitUntil: 'domcontentloaded' });
     await page.waitForSelector('#flashcard', { state: 'visible', timeout: 15000 });
     
     // Get word after toggle
@@ -94,7 +94,7 @@ test.describe('Language Toggle', () => {
   });
 
   test('directional notes change with language toggle', async ({ page }) => {
-    await page.goto('/practice/');
+    await page.goto('practice/');
     await page.waitForSelector('#flashcard', { state: 'visible', timeout: 15000 });
     
     // Flip to see notes
@@ -117,7 +117,7 @@ test.describe('Language Toggle', () => {
       });
       
       // Reload and check again
-      await page.reload();
+      await page.reload({ waitUntil: 'domcontentloaded' });
       await page.waitForSelector('#flashcard', { state: 'visible', timeout: 15000 });
       await page.keyboard.press('Space');
       await page.waitForTimeout(200);
@@ -133,7 +133,7 @@ test.describe('Language Toggle', () => {
   });
 
   test('spaced repetition states are direction-specific', async ({ page }) => {
-    await page.goto('/practice/');
+    await page.goto('practice/');
     await page.waitForSelector('#flashcard', { state: 'visible', timeout: 15000 });
     
     // Get card ID
@@ -170,12 +170,12 @@ test.describe('Language Toggle', () => {
 
   test('vocabulary cards show correct direction on list page', async ({ page }) => {
     // Set direction to BG→DE
-    await page.goto('/');
+    await page.goto('./');
     await page.evaluate(() => {
       localStorage.setItem('bgde:language-direction', 'bg-de');
     });
     
-    await page.goto('/vocabulary/');
+    await page.goto('vocabulary/');
     await page.waitForSelector('.vocab-card', { state: 'visible', timeout: 10000 });
     
     // Get first card's displayed text
@@ -189,7 +189,7 @@ test.describe('Language Toggle', () => {
       localStorage.setItem('bgde:language-direction', 'de-bg');
     });
     
-    await page.reload();
+    await page.reload({ waitUntil: 'domcontentloaded' });
     await page.waitForSelector('.vocab-card', { state: 'visible', timeout: 10000 });
     
     const cardTextReversed = await firstCard.textContent();

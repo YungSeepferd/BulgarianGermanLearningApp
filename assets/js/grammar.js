@@ -4,6 +4,7 @@ class GrammarApp {
         this.data = options.data || [];
         this.container = options.container || '#grammar-list';
         this.filteredData = [...this.data];
+        this.languageDirection = this.getLanguageDirection();
         
         this.filters = {
             level: '',
@@ -17,6 +18,7 @@ class GrammarApp {
         this.bindEvents();
         this.render();
         this.updateStats();
+        this.updateDirectionNotes();
     }
 
     bindEvents() {
@@ -48,6 +50,11 @@ class GrammarApp {
                 this.clearAllFilters();
             });
         }
+
+        document.addEventListener('language-direction-changed', (e) => {
+            this.languageDirection = e?.detail?.direction || 'bg-de';
+            this.updateDirectionNotes();
+        });
 
         // Show more examples buttons
         document.addEventListener('click', (e) => {
@@ -117,11 +124,14 @@ class GrammarApp {
         noResults?.classList.add('hidden');
 
         container.innerHTML = this.filteredData.map(item => this.renderGrammarItem(item)).join('');
+
+        this.updateDirectionNotes();
     }
 
     renderGrammarItem(item) {
         const bookmarked = this.isBookmarked(item.title);
         const examplesId = `examples-${this.slugify(item.title)}`;
+        const notesHtml = this.buildNotesHtml(item);
         
         return `
             <article class="grammar-item" 
@@ -137,6 +147,8 @@ class GrammarApp {
                     ${this.markdownToHtml(item.description)}
                 </div>
                 
+                ${notesHtml}
+
                 ${item.examples && item.examples.length > 0 ? `
                     <div class="grammar-examples">
                         <h3>Examples:</h3>
@@ -172,6 +184,25 @@ class GrammarApp {
                     </button>
                 </div>
             </article>
+        `;
+    }
+
+    buildNotesHtml(item) {
+        const notesBg = item.notes_bg_to_de ? this.escapeHtml(item.notes_bg_to_de) : '';
+        const notesDe = item.notes_de_to_bg ? this.escapeHtml(item.notes_de_to_bg) : '';
+
+        if (!notesBg && !notesDe) {
+            return '';
+        }
+
+        const showBg = this.languageDirection === 'bg-de';
+        const showDe = this.languageDirection === 'de-bg';
+
+        return `
+            <div class="grammar-notes" aria-live="polite">
+                ${notesBg ? `<div class="grammar-note-direction" data-direction="bg-de" style="${showBg ? '' : 'display:none;'}">${notesBg}</div>` : ''}
+                ${notesDe ? `<div class="grammar-note-direction" data-direction="de-bg" style="${showDe ? '' : 'display:none;'}">${notesDe}</div>` : ''}
+            </div>
         `;
     }
 
@@ -240,6 +271,29 @@ class GrammarApp {
         if (showingCount) showingCount.textContent = this.filteredData.length;
     }
 
+    updateDirectionNotes() {
+        const containers = document.querySelectorAll('.grammar-notes');
+        containers.forEach(container => {
+            const notes = Array.from(container.querySelectorAll('.grammar-note-direction'));
+            let shown = false;
+            notes.forEach(note => {
+                if (!note.dataset.direction) {
+                    return;
+                }
+                const shouldShow = note.dataset.direction === this.languageDirection;
+                note.style.display = shouldShow ? '' : 'none';
+                if (shouldShow) shown = true;
+            });
+
+            if (!shown) {
+                const fallback = notes[0];
+                if (fallback) {
+                    fallback.style.display = '';
+                }
+            }
+        });
+    }
+
     clearAllFilters() {
         this.filters = { level: '', search: '' };
         
@@ -251,6 +305,18 @@ class GrammarApp {
         if (searchInput) searchInput.value = '';
 
         this.applyFilters();
+    }
+
+    getLanguageDirection() {
+        try {
+            if (window.languageToggle && typeof window.languageToggle.getDirection === 'function') {
+                return window.languageToggle.getDirection();
+            }
+            const stored = localStorage.getItem('bgde:language-direction') || localStorage.getItem('bgde:learning_direction');
+            return stored === 'de-bg' ? 'de-bg' : 'bg-de';
+        } catch (error) {
+            return 'bg-de';
+        }
     }
 
     markdownToHtml(text) {
@@ -267,6 +333,12 @@ class GrammarApp {
             .replace(/[^\w\s-]/g, '')
             .replace(/[\s_-]+/g, '-')
             .replace(/^-+|-+$/g, '');
+    }
+
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
     }
 }
 

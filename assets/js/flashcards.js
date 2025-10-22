@@ -83,6 +83,13 @@ export class Flashcards {
     
     this.init();
   }
+
+  getCardNote(vocab) {
+    if (this.languageDirection === 'bg-de') {
+      return vocab.notes_bg_to_de || vocab.notes || '';
+    }
+    return vocab.notes_de_to_bg || vocab.notes || '';
+  }
   
   async init() {
     try {
@@ -505,8 +512,9 @@ export class Flashcards {
     
     // Notes
     if (this.wordNotes) {
-      this.wordNotes.textContent = this.currentCard.notes || '';
-      this.wordNotes.style.display = this.currentCard.notes ? 'block' : 'none';
+      const noteText = this.getCardNote(this.currentCard);
+      this.wordNotes.textContent = noteText || '';
+      this.wordNotes.style.display = noteText ? 'block' : 'none';
     }
     
     // Review statistics

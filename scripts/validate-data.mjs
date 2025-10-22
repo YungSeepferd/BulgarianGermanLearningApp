@@ -47,6 +47,12 @@ function validateVocabularyArray(arr) {
     if (!isOptionalString(it.notes)) errs.push(`${ctx}: notes must be string/null if present`);
     if (!isOptionalString(it.notes_bg_to_de)) errs.push(`${ctx}: notes_bg_to_de must be string/null if present`);
     if (!isOptionalString(it.notes_de_to_bg)) errs.push(`${ctx}: notes_de_to_bg must be string/null if present`);
+    if (it.notes_bg_to_de && !/[А-Яа-яЁёЇїІіЄєҐґ]/.test(it.notes_bg_to_de)) {
+      errs.push(`${ctx}: notes_bg_to_de should contain Bulgarian Cyrillic text`);
+    }
+    if (it.notes_de_to_bg && !/[A-Za-zÄÖÜäöüß]/.test(it.notes_de_to_bg)) {
+      errs.push(`${ctx}: notes_de_to_bg should contain German/Latin text`);
+    }
     if (!isOptionalString(it.etymology)) errs.push(`${ctx}: etymology must be string/null if present`);
     if (!isOptionalString(it.cultural_note)) errs.push(`${ctx}: cultural_note must be string/null if present`);
     if (!isOptionalString(it.linguistic_note)) errs.push(`${ctx}: linguistic_note must be string/null if present`);

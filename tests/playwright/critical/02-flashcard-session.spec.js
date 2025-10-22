@@ -7,12 +7,12 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('Flashcard Practice Session', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.evaluate(() => localStorage.clear());
   });
 
   test('completes a full practice session with multiple cards', async ({ page }) => {
-    await page.goto('/practice/');
+    await page.goto('practice/');
     
     // Wait for session initialization
     await page.waitForSelector('#flashcard', { state: 'visible', timeout: 15000 });
@@ -74,7 +74,7 @@ test.describe('Flashcard Practice Session', () => {
   });
 
   test('flashcard flip works via Space key', async ({ page }) => {
-    await page.goto('/practice/');
+    await page.goto('practice/');
     await page.waitForSelector('#flashcard', { state: 'visible', timeout: 15000 });
     
     const flashcardBack = page.locator('#flashcard-back');

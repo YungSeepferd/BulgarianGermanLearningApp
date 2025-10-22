@@ -19,6 +19,8 @@
     "id": "word_order",
     "content": "Bulgarian word order is flexible thanks to subject–verb agreement.\nThe neutral pattern is S + V + O + A (Subject, Verb, Object, Adjunct), but other orders such as A + S + V + O, O + S + V + A or S + V + A + O are also possible.\nYou can change the order to emphasise different parts of the sentence without changing the basic meaning.",
     "summary": "Bulgarian word order is flexible thanks to subject–verb agreement.",
+    "notes_bg_to_de": "В немския език глаголът трябва да стои на втора позиция в главното изречение, а в подчиненото изречение отива накрая. Свободният български словоред не работи директно там, затова следи мястото на спрегнатия глагол.",
+    "notes_de_to_bg": "Im Bulgarischen kannst du Wörter verschieben, um den Fokus zu ändern; die Verbform trägt die Personinformation. Halte das Verb aber in Hörbeispielen im Blick, damit du die Betonung richtig übernimmst.",
     "category": null
   },
   {
@@ -49,6 +51,8 @@
     "id": "gender_of_nouns",
     "content": "Bulgarian nouns have three grammatical genders: masculine, feminine and neuter.\nMasculine nouns usually end in a consonant (мъж – man, син – son).\nFeminine nouns often end in –а/–я (жена – woman, ябълка – apple).\nNeuter nouns typically end in –е/–о (море – sea, месо – meat).\nThere are exceptions: some masculine nouns end in –а/–я (баща – father), some feminine nouns end in a consonant (любов – love), and some neuter nouns end in –и or –ю (такси – taxi).",
     "summary": "Bulgarian nouns have three grammatical genders: masculine, feminine and neuter.",
+    "notes_bg_to_de": "В немския всеки род има собствен член der/die/das и много съществителни не следват ясни окончания. Учете думата заедно с нейния член и множествено число.",
+    "notes_de_to_bg": "Im Bulgarischen erkennst du das Genus meist am Auslaut: -а/-я → feminin, съгласна → maskulin, -о/-е → neutrum. Merke dir Ausnahmen wie 'любов' (fem.) и 'баща' (mask.).",
     "category": null
   },
   {
@@ -75,6 +79,8 @@
     "id": "singular_and_plural",
     "content": "Bulgarian nouns are either singular or plural.\nMasculine nouns form plurals with endings like –и, –е or –ове (стол – столове 'chair – chairs').\nFeminine nouns replace –а/–я with –и (жена – жени 'woman – women').\nNeuter nouns take –а or –ета (море – морета 'sea – seas').\nA historical dual number for pairs of inanimate masculine nouns survives with the ending –а (два стола – two chairs).",
     "summary": "Bulgarian nouns are either singular or plural.",
+    "notes_bg_to_de": "В немския няма една формула за множествено число: често добавяме -e, -er, -n/-en и понякога умлаут (der Apfel → die Äpfel). Запомняй формата заедно с члена.",
+    "notes_de_to_bg": "Im Bulgarischen bilden viele maskuline Wörter Plural mit -и/-ове, feminine mit -и, neutrale mit -а/-ета. Die historische Dualform auf -а erscheint nur noch bei maskulinen Dingen (два стола).",
     "category": null
   },
   {
@@ -101,6 +107,8 @@
     "id": "definite_article",
     "content": "The Bulgarian definite article attaches to the end of the noun.\nMasculine nouns take –ът/–ят (студент – студентът 'the student', кон – конят 'the horse').\nFeminine nouns take –та (вода – водата 'the water', чиния – чинията 'the plate').\nNeuter nouns take –то (село – селото 'the village', море – морето 'the sea').\nFor plural nouns the article is –те for masculine and feminine plurals and –та for neuter plurals.",
     "summary": "The Bulgarian definite article attaches to the end of the noun.",
+    "notes_bg_to_de": "В немския определителният член е отделна дума пред съществителното (der/die/das) и се мени по падеж. Следи формата му в Nominativ, Akkusativ и Dativ.",
+    "notes_de_to_bg": "Im Bulgarischen hängt der Artikel als Suffix hinten (-ът/-та/-то/-те). Er verändert sich nicht nach Fällen, daher lernst du jede Kombination gleich mit dem Substantiv.",
     "category": null
   },
   {
@@ -119,6 +127,8 @@
     "id": "pronouns_and_cases",
     "content": "Bulgarian cases exist mainly in personal pronouns.\nThere are three cases: nominative (аз, ти, той, тя, то, ние, вие, те), accusative (ме, те, го, я, го, ни, ви, ги) and dative (ми, ти, му, й, му, ни, ви, им).\nUse the nominative for subjects, the accusative for direct objects and the dative for indirect objects.",
     "summary": "Bulgarian cases exist mainly in personal pronouns.",
+    "notes_bg_to_de": "В немския личните местоимения имат четири падежни форми: ich, mich, mir, meiner ...; най-често ще срещнете Nominativ, Akkusativ и Dativ. Упражнявайте ги с типични глаголи.",
+    "notes_de_to_bg": "Im Bulgarischen gibt es kaum Kasus, aber die Pronomen wechseln zwischen аз/ме/ми, ти/те/ти, той/го/му usw. Präge dir die drei Reihen ein, sie ersetzen die deutschen Fälle.",
     "category": null
   },
   {
@@ -137,6 +147,8 @@
     "id": "present_and_future_tenses",
     "content": "Bulgarian verbs conjugate for person and number.\nThe present tense expresses ongoing actions (Аз уча български – I study Bulgarian).\nFuture tense uses the particle ще and the present tense of the verb (Аз ще уча български – I will study Bulgarian).",
     "summary": "Bulgarian verbs conjugate for person and number.",
+    "notes_bg_to_de": "В немския Präsens покрива и бъдеще, ако добавиш време (morgen, später). Futur I се образува с 'werden' + инфинитив, но в ежедневието по-често се ползва Präsens.",
+    "notes_de_to_bg": "Im Bulgarischen bildest du die Zukunft mit der Partikel 'ще' + Präsensform: 'ще уча'. Es gibt kein konjugiertes Hilfsverb wie 'werden', also bleibt 'ще' unverändert.",
     "category": null
   },
   {
@@ -155,6 +167,8 @@
     "id": "past_tenses",
     "content": "For A2 learners it's useful to distinguish between the past aorist and the past imperfect.\nThe past aorist describes completed actions (Аз учих български – I studied Bulgarian), while the past imperfect describes continuous or habitual past actions (Аз учех български – I was studying Bulgarian).",
     "summary": "For A2 learners it's useful to distinguish between the past aorist and the past imperfect.",
+    "notes_bg_to_de": "В немския говорим език предпочита Perfekt (ich habe gelernt), а Präteritum се среща повече в писмени текстове. И двете времена покриват българския свършен и несвършен вид според контекста.",
+    "notes_de_to_bg": "Im Bulgarischen unterscheidet man свършен (аорист) und несвършен (имперfект) вид. 'Учих' signalisiert abgeschlossene Handlung, 'учех' beschreibt Verlauf oder Gewohnheit.",
     "category": null
   },
   {
@@ -173,6 +187,8 @@
     "id": "quantifiers_and_numbers",
     "content": "At level A2 you'll encounter quantifiers and numbers more frequently.\nThe words много (many/much), малко (few/little), всички (all), няколко (several) and никой (none) help quantify nouns.\nBulgarian numbers one through ten are: едно, две, три, четири, пет, шест, седем, осем, девет, десет.",
     "summary": "At level A2 you'll encounter quantifiers and numbers more frequently.",
+    "notes_bg_to_de": "В немския количествените думи (viel, wenig, einige, kein) се съгласуват по падеж. Числата eins, zwei, drei имат специални форми при съществителни (ein Kind, zwei Kinder).",
+    "notes_de_to_bg": "Im Bulgarischen Quantoren wie 'много', 'малко', 'няколко' bleiben unverändert; das Substantiv geht in Plural. Merke dir, dass 'два/две' spezielle Formen auslösen (двама, две).",
     "category": null
   },
   {
@@ -191,6 +207,8 @@
     "id": "time_expressions",
     "content": "Talking about time requires vocabulary for days and parts of the day.\nThe days of the week are понеделник, вторник, сряда, четвъртък, петък, събота and неделя.\nParts of the day include сутрин (morning), обед (noon), следобед (afternoon), вечер (evening) and нощ (night).",
     "summary": "Talking about time requires vocabulary for days and parts of the day.",
+    "notes_bg_to_de": "В немския използваш предлози: am Dienstag, am Morgen, um 9 Uhr, im Mai. Дните са Montag, Dienstag, Mittwoch... Запомни главна буква при дните и месеците.",
+    "notes_de_to_bg": "Im Bulgarischen sagst du 'във вторник', 'утре сутрин', 'в 9 часа'. Tage werden kleingeschrieben und die Präposition 'в' passt sich phonetisch an (във/в).",
     "category": null
   },
   {
@@ -209,6 +227,8 @@
     "id": "food_and_shopping_vocabulary",
     "content": "Food and shopping conversations are frequent at A2.\nLearn common nouns for food (хляб – bread, мляко – milk, сирене – cheese) and verbs for shopping (купувам – to buy, продавам – to sell, пазарувам – to shop).\nUnderstanding basic currency words like лев (the Bulgarian currency) and евро (euro) is also helpful.",
     "summary": "Food and shopping conversations are frequent at A2.",
+    "notes_bg_to_de": "В немския в магазина ще чуеш 'Wie viel kostet das?' и 'Ich hätte gern ...'. Запомни думи като der Supermarkt, der Markt, die Kasse, der Bon.",
+    "notes_de_to_bg": "Im Bulgarischen fragst du 'Колко струва?' oder 'Може ли...'. Wichtige Wörter: магазин (Laden), каса (Kasse), сметка (Rechnung), 'пазарувам' (einkaufen).",
     "category": null
   },
   {
@@ -227,6 +247,8 @@
     "id": "travel_and_directions",
     "content": "At A2 you may need to ask for directions or discuss travel.\nKey nouns include автобус (bus), влак (train), самолет (airplane), такси (taxi), гара (train station) and летище (airport).\nThe noun билет means 'ticket', and карта means 'map'.",
     "summary": "At A2 you may need to ask for directions or discuss travel.",
+    "notes_bg_to_de": "В немския попиташ 'Wo ist der Bahnhof?' или 'Welche Linie fährt zum Zentrum?'. За билети използвай 'eine Fahrkarte nach ...'.",
+    "notes_de_to_bg": "Im Bulgarischen lautet die Standardfrage 'Къде е ...?' (гарата, спирката). Für Fahrkarten sagst du 'един билет до ...' und beachtest die Aspektpaare при движение (отивам/отида).",
     "category": null
   }
 ]

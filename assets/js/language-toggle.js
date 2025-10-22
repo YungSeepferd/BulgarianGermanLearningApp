@@ -89,33 +89,55 @@ class LanguageToggle {
 
     const directions = {
       [DIRECTION.DE_TO_BG]: {
-        icon: '🇩🇪→🇧🇬',
-        text: 'DE→BG',
+        text: 'DE → BG',
+        subtitle: 'Deutsch zu Bulgarisch',
         title: 'Learning Bulgarian (from German perspective)',
-        ariaLabel: 'Switch learning direction. Currently German to Bulgarian. Click to change to Bulgarian to German.'
+        ariaLabel: 'Switch learning direction. Currently German to Bulgarian. Click to change to Bulgarian to German.',
+        leftFlag: 'de',
+        rightFlag: 'bg'
       },
       [DIRECTION.BG_TO_DE]: {
-        icon: '🇧🇬→🇩🇪',
-        text: 'BG→DE',
+        text: 'BG → DE',
+        subtitle: 'Български към Немски',
         title: 'Learning German (from Bulgarian perspective)',
-        ariaLabel: 'Switch learning direction. Currently Bulgarian to German. Click to change to German to Bulgarian.'
+        ariaLabel: 'Switch learning direction. Currently Bulgarian to German. Click to change to German to Bulgarian.',
+        leftFlag: 'bg',
+        rightFlag: 'de'
       }
     };
 
     const current = directions[this.currentDirection] || directions[DEFAULT_DIRECTION];
+    const partnerDirection = this.currentDirection === DIRECTION.DE_TO_BG
+      ? directions[DIRECTION.BG_TO_DE]
+      : directions[DIRECTION.DE_TO_BG];
+
     button.innerHTML = `
-      <span class="toggle-icon" aria-hidden="true">${current.icon}</span>
-      <span class="toggle-text">${current.text}</span>
+      <span class="toggle-flag flag-${current.leftFlag}" aria-hidden="true"></span>
+      <span class="toggle-arrow" aria-hidden="true">
+        <span class="arrow-icon"></span>
+      </span>
+      <span class="toggle-flag flag-${current.rightFlag}" aria-hidden="true"></span>
+      <span class="toggle-text" aria-hidden="true">
+        <span class="toggle-direction">${current.text}</span>
+        <span class="toggle-subtitle">${current.subtitle}</span>
+      </span>
       <span class="sr-only">${current.ariaLabel}</span>
     `;
+
     button.setAttribute('title', current.title);
     button.setAttribute('aria-label', current.ariaLabel);
     button.setAttribute('data-direction', this.currentDirection);
+    if (partnerDirection) {
+      button.setAttribute('data-next-direction', partnerDirection.leftFlag + '-' + partnerDirection.rightFlag);
+    }
   }
 
   bindEvents() {
     if (this.toggleButton) {
       this.toggleButton.addEventListener('click', () => this.toggleDirection());
+      this.toggleButton.addEventListener('animationend', () => {
+        this.toggleButton.classList.remove('is-animating');
+      });
     }
 
     const handleExternalChange = (event) => {
@@ -166,12 +188,21 @@ class LanguageToggle {
 
   setDirection(direction, { silent = false, announce = false } = {}) {
     const normalized = this.normalizeDirection(direction) || DEFAULT_DIRECTION;
+    const previousDirection = this.currentDirection;
     const changed = normalized !== this.currentDirection;
 
     this.currentDirection = normalized;
     this.saveDirection();
     this.applyDirection();
     this.updateToggleButton(this.toggleButton);
+    if (this.toggleButton) {
+      this.toggleButton.dataset.prevDirection = previousDirection || '';
+      if (changed) {
+        // Trigger morph animation
+        void this.toggleButton.offsetWidth;
+        this.toggleButton.classList.add('is-animating');
+      }
+    }
 
     if (changed && !silent) {
       this.broadcastDirectionChange();

@@ -245,6 +245,11 @@ export class VocabCards {
     card.className = 'vocab-card';
     card.setAttribute('role', 'button');
     card.setAttribute('tabindex', '0');
+    card.dataset.id = vocab.id || '';
+    card.dataset.level = vocab.level || '';
+    card.dataset.category = vocab.category || '';
+    card.dataset.word = vocab.word || '';
+    card.dataset.translation = vocab.translation || '';
     
     // Get display text based on language direction
     const { frontText, backText } = this.getCardText(vocab);
@@ -267,7 +272,7 @@ export class VocabCards {
     cardBack.className = 'vocab-card-back';
     cardBack.innerHTML = `
       <div class="vocab-translation">${this.escapeHtml(backText)}</div>
-      ${vocab.notes ? `<div class="vocab-notes">${this.escapeHtml(vocab.notes)}</div>` : ''}
+      ${this.buildNotesHtml(vocab)}
     `;
     
     cardInner.appendChild(cardFront);
@@ -284,6 +289,29 @@ export class VocabCards {
       });
     }
     return card;
+  }
+
+  buildNotesHtml(vocab) {
+    const notesBgToDe = vocab.notes_bg_to_de ? this.escapeHtml(vocab.notes_bg_to_de) : '';
+    const notesDeToBg = vocab.notes_de_to_bg ? this.escapeHtml(vocab.notes_de_to_bg) : '';
+    const generalNotes = vocab.notes ? this.escapeHtml(vocab.notes) : '';
+
+    if (notesBgToDe || notesDeToBg) {
+      const showBg = this.languageDirection === 'bg-de';
+      const showDe = this.languageDirection === 'de-bg';
+      return `
+        <div class="vocab-notes">
+          ${notesBgToDe ? `<div class="vocab-note-direction" data-direction="bg-de" style="${showBg ? '' : 'display:none;'}">${notesBgToDe}</div>` : ''}
+          ${notesDeToBg ? `<div class="vocab-note-direction" data-direction="de-bg" style="${showDe ? '' : 'display:none;'}">${notesDeToBg}</div>` : ''}
+        </div>
+      `;
+    }
+
+    if (generalNotes) {
+      return `<div class="vocab-notes">${generalNotes}</div>`;
+    }
+
+    return '';
   }
   
   getCardText(vocab) {
