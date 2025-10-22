@@ -91,7 +91,7 @@ test.describe('Flashcard Practice Session', () => {
   });
 
   test('flashcard flip works via Enter key', async ({ page }) => {
-    await page.goto('/practice/');
+    await page.goto('practice/');
     await page.waitForSelector('#flashcard', { state: 'visible', timeout: 15000 });
     
     const flashcardBack = page.locator('#flashcard-back');
@@ -108,7 +108,7 @@ test.describe('Flashcard Practice Session', () => {
   });
 
   test('all grade keys work correctly (1-5)', async ({ page }) => {
-    await page.goto('/practice/');
+    await page.goto('practice/');
     await page.waitForSelector('#flashcard', { state: 'visible', timeout: 15000 });
     
     const progress = page.locator('#progress');
@@ -135,7 +135,7 @@ test.describe('Flashcard Practice Session', () => {
   });
 
   test('displays session stats correctly', async ({ page }) => {
-    await page.goto('/practice/');
+    await page.goto('practice/');
     await page.waitForSelector('#flashcard', { state: 'visible', timeout: 15000 });
     
     const progress = page.locator('#progress');
@@ -177,7 +177,7 @@ test.describe('Flashcard Practice Session', () => {
   });
 
   test('persists progress to localStorage', async ({ page }) => {
-    await page.goto('/practice/');
+    await page.goto('practice/');
     await page.waitForSelector('#flashcard', { state: 'visible', timeout: 15000 });
     
     // Get the card ID
@@ -225,7 +225,7 @@ test.describe('Flashcard Practice Session', () => {
   });
 
   test('shows completion screen after session ends', async ({ page }) => {
-    await page.goto('/practice/');
+    await page.goto('practice/');
     await page.waitForSelector('#flashcard', { state: 'visible', timeout: 15000 });
     
     // Determine session length

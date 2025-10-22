@@ -60,6 +60,8 @@ open http://localhost:1313/
 - **Coding assistant guide**: [`AGENTS.md`](AGENTS.md)
 - **Development workflow**: [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md)
 - **Architecture reference**: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
+- **Hugo survival guide**: [`docs/HUGO_GUIDELINES.md`](docs/HUGO_GUIDELINES.md)
+- **Hugo official digest**: [`docs/HUGO_OFFICIAL_GUIDELINES.md`](docs/HUGO_OFFICIAL_GUIDELINES.md)
 - **Testing checklist**: [`docs/TESTING.md`](docs/TESTING.md)
 - **Project plan**: [`docs/PROJECT_PLAN.md`](docs/PROJECT_PLAN.md)
 - **Programming references**: [`docs/PROGRAMMING_LINKS.md`](docs/PROGRAMMING_LINKS.md)
