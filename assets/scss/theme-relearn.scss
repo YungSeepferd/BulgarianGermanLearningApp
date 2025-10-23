@@ -1,0 +1,410 @@
+/**
+ * Relearn Theme Customization for Bulgarian-German Learning App
+ * 
+ * This file overrides Relearn theme variables to match our existing color scheme
+ * and adds language learning specific customizations
+ */
+
+/* ==========================
+   RELEARN THEME OVERRIDES
+   ========================== */
+
+:root {
+  /* Primary Brand Colors - mapped to existing scheme */
+  --PRIMARY-color: #2563eb; /* var(--color-primary) */
+  --SECONDARY-color: #059669; /* var(--color-secondary) */
+  --ACCENT-color: #dc2626; /* var(--color-accent) */
+  
+  /* Menu Colors */
+  --MENU-HEADER-BG-color: #2563eb;
+  --MENU-HEADER-BORDER-color: #1d4ed8;
+  --MENU-HOME-LINK-color: #ffffff;
+  --MENU-HOME-LINK-HOVER-color: #f3f4f6;
+  
+  --MENU-SEARCH-color: #374151;
+  --MENU-SEARCH-BG-color: #f9fafb;
+  --MENU-SEARCH-BORDER-color: #e5e7eb;
+  
+  --MENU-SECTIONS-BG-color: #ffffff;
+  --MENU-SECTIONS-ACTIVE-BG-color: #eff6ff;
+  --MENU-SECTIONS-LINK-color: #374151;
+  --MENU-SECTIONS-LINK-HOVER-color: #2563eb;
+  
+  /* Main Content Colors */
+  --MAIN-TEXT-color: #111827; /* var(--text-primary) */
+  --MAIN-BG-color: #ffffff; /* var(--bg-primary) */
+  --MAIN-LINK-color: #2563eb;
+  --MAIN-LINK-HOVER-color: #1d4ed8;
+  
+  /* Code Blocks */
+  --CODE-BLOCK-color: #374151;
+  --CODE-BLOCK-BG-color: #f9fafb;
+  --CODE-BLOCK-BORDER-color: #e5e7eb;
+  
+  --CODE-INLINE-color: #dc2626;
+  --CODE-INLINE-BG-color: #fef2f2;
+  --CODE-INLINE-BORDER-color: #fecaca;
+  
+  /* Boxes & Notices */
+  --BOX-CAPTION-color: #374151;
+  --BOX-BG-color: #f9fafb;
+  --BOX-TEXT-color: #111827;
+  
+  /* Notice Colors */
+  --BOX-INFO-color: #3b82f6;
+  --BOX-TIP-color: #10b981;
+  --BOX-WARNING-color: #f59e0b;
+  --BOX-ERROR-color: #ef4444;
+  --BOX-NOTE-color: #6b7280;
+}
+
+/* Dark Theme Overrides */
+[data-theme="dark"] {
+  --PRIMARY-color: #3b82f6;
+  --SECONDARY-color: #10b981;
+  --ACCENT-color: #ef4444;
+  
+  --MENU-HEADER-BG-color: #1f2937;
+  --MENU-SEARCH-BG-color: #111827;
+  --MENU-SECTIONS-BG-color: #1f2937;
+  --MENU-SECTIONS-ACTIVE-BG-color: #374151;
+  --MENU-SECTIONS-LINK-color: #f3f4f6;
+  
+  --MAIN-TEXT-color: #f9fafb;
+  --MAIN-BG-color: #111827;
+  --MAIN-LINK-color: #60a5fa;
+  
+  --CODE-BLOCK-color: #e5e7eb;
+  --CODE-BLOCK-BG-color: #1f2937;
+  --CODE-INLINE-BG-color: #374151;
+}
+
+/* ==========================
+   LANGUAGE LEARNING CUSTOMIZATIONS
+   ========================== */
+
+/* Vocabulary Cards */
+.vocabulary-card {
+  background: var(--BOX-BG-color);
+  border: 2px solid var(--BOX-BORDER-color);
+  border-radius: var(--rounded-lg);
+  padding: var(--spacing-4);
+  margin: var(--spacing-2) 0;
+  transition: all var(--transition-base);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--PRIMARY-color);
+  }
+  
+  .word-bulgarian {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--PRIMARY-color);
+    margin-bottom: var(--spacing-2);
+  }
+  
+  .word-german {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--SECONDARY-color);
+    margin-bottom: var(--spacing-2);
+  }
+  
+  .word-level {
+    display: inline-block;
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--rounded-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    
+    &.level-a1 {
+      background-color: #d1fae5;
+      color: #065f46;
+    }
+    
+    &.level-a2 {
+      background-color: #dbeafe;
+      color: #1e40af;
+    }
+    
+    &.level-b1 {
+      background-color: #fef3c7;
+      color: #92400e;
+    }
+    
+    &.level-b2 {
+      background-color: #fee2e2;
+      color: #991b1b;
+    }
+    
+    &.level-c1 {
+      background-color: #e9d5ff;
+      color: #6b21a8;
+    }
+    
+    &.level-c2 {
+      background-color: #fce7f3;
+      color: #9f1239;
+    }
+  }
+}
+
+/* Practice Session Styles */
+.practice-session {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-6);
+  
+  .question-card {
+    background: var(--MAIN-BG-color);
+    border: 2px solid var(--PRIMARY-color);
+    border-radius: var(--rounded-xl);
+    padding: var(--spacing-8);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    
+    .question-text {
+      font-size: var(--font-size-3xl);
+      font-weight: var(--font-weight-bold);
+      color: var(--PRIMARY-color);
+      margin-bottom: var(--spacing-6);
+    }
+  }
+  
+  .answer-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-4);
+    margin-top: var(--spacing-6);
+    
+    button {
+      padding: var(--spacing-4) var(--spacing-6);
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-semibold);
+      border-radius: var(--rounded-lg);
+      border: 2px solid var(--border-primary);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--PRIMARY-color);
+        background: var(--PRIMARY-color);
+        color: white;
+      }
+      
+      &.correct {
+        background: var(--BOX-TIP-color);
+        border-color: var(--BOX-TIP-color);
+        color: white;
+      }
+      
+      &.incorrect {
+        background: var(--BOX-ERROR-color);
+        border-color: var(--BOX-ERROR-color);
+        color: white;
+      }
+    }
+  }
+  
+  .progress-indicator {
+    margin-top: var(--spacing-6);
+    
+    .progress-bar {
+      height: 8px;
+      background: var(--bg-tertiary);
+      border-radius: var(--rounded-full);
+      overflow: hidden;
+      
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--PRIMARY-color), var(--SECONDARY-color));
+        transition: width var(--transition-slow);
+      }
+    }
+    
+    .progress-text {
+      text-align: center;
+      margin-top: var(--spacing-2);
+      font-size: var(--font-size-sm);
+      color: var(--text-secondary);
+    }
+  }
+}
+
+/* Spaced Repetition Status Indicators */
+.sr-status {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: var(--spacing-2);
+  
+  &.new {
+    background-color: var(--progress-new);
+  }
+  
+  &.learning {
+    background-color: var(--progress-learning);
+  }
+  
+  &.familiar {
+    background-color: var(--progress-familiar);
+  }
+  
+  &.mastered {
+    background-color: var(--progress-mastered);
+  }
+}
+
+/* Grammar Tables */
+.grammar-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-4) 0;
+  
+  th {
+    background: var(--PRIMARY-color);
+    color: white;
+    padding: var(--spacing-3);
+    font-weight: var(--font-weight-semibold);
+    text-align: left;
+  }
+  
+  td {
+    padding: var(--spacing-3);
+    border: 1px solid var(--border-primary);
+    
+    &.bulgarian {
+      font-weight: var(--font-weight-medium);
+      color: var(--PRIMARY-color);
+    }
+    
+    &.german {
+      font-weight: var(--font-weight-medium);
+      color: var(--SECONDARY-color);
+    }
+  }
+  
+  tr:nth-child(even) {
+    background: var(--bg-secondary);
+  }
+}
+
+/* Audio Player Customization */
+.audio-player {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--bg-secondary);
+  border-radius: var(--rounded-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  
+  &:hover {
+    background: var(--PRIMARY-color);
+    color: white;
+  }
+  
+  .audio-icon {
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* Language Toggle Switch */
+.language-toggle {
+  display: inline-flex;
+  background: var(--bg-tertiary);
+  border-radius: var(--rounded-full);
+  padding: var(--spacing-1);
+  
+  button {
+    padding: var(--spacing-2) var(--spacing-4);
+    border: none;
+    background: transparent;
+    border-radius: var(--rounded-full);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    
+    &.active {
+      background: var(--PRIMARY-color);
+      color: white;
+    }
+    
+    &:not(.active):hover {
+      background: var(--bg-primary);
+    }
+  }
+}
+
+/* Statistics Dashboard */
+.stats-card {
+  background: var(--bg-secondary);
+  border-radius: var(--rounded-xl);
+  padding: var(--spacing-6);
+  text-align: center;
+  
+  .stat-value {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--PRIMARY-color);
+  }
+  
+  .stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin-top: var(--spacing-2);
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: $breakpoint-md) {
+  .vocabulary-card {
+    .word-bulgarian {
+      font-size: var(--font-size-xl);
+    }
+    
+    .word-german {
+      font-size: var(--font-size-lg);
+    }
+  }
+  
+  .practice-session {
+    padding: var(--spacing-4);
+    
+    .question-card {
+      padding: var(--spacing-6);
+      
+      .question-text {
+        font-size: var(--font-size-2xl);
+      }
+    }
+    
+    .answer-buttons {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+/* Print Styles for Study Materials */
+@media print {
+  .vocabulary-card {
+    page-break-inside: avoid;
+    border: 1px solid #000;
+    box-shadow: none;
+  }
+  
+  .practice-session,
+  .audio-player,
+  .language-toggle {
+    display: none;
+  }
+}

@@ -19,6 +19,8 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    {{ partial "head.html" . }}
 </head>
 <body>
     <!-- Skip Navigation Link for Accessibility -->
@@ -37,24 +39,24 @@
     
     {{ partial "footer.html" . }}
     
-    <!-- JavaScript -->
-    {{ $js := resources.Get "js/app.js" | resources.Minify }}
-    <script src="{{ $js.RelPermalink }}"></script>
+    <!-- JavaScript with fingerprinting and integrity -->
+    {{ $js := resources.Get "js/app.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
     
-    {{ $codeJs := resources.Get "js/code.js" | resources.Minify }}
-    <script src="{{ $codeJs.RelPermalink }}" defer></script>
+    {{ $codeJs := resources.Get "js/code.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $codeJs.RelPermalink }}" integrity="{{ $codeJs.Data.Integrity }}" defer></script>
     
     <!-- Language toggle functionality - loaded early for global availability -->
-    {{ $languageToggle := resources.Get "js/language-toggle.js" | resources.Minify }}
-    <script src="{{ $languageToggle.RelPermalink }}"></script>
+    {{ $languageToggle := resources.Get "js/language-toggle.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $languageToggle.RelPermalink }}" integrity="{{ $languageToggle.Data.Integrity }}"></script>
     
     <!-- Language Toggle Confirmation Modal -->
-    {{ $confirmation := resources.Get "js/language-toggle-confirmation.js" | resources.Minify }}
-    <script src="{{ $confirmation.RelPermalink }}" defer></script>
+    {{ $confirmation := resources.Get "js/language-toggle-confirmation.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $confirmation.RelPermalink }}" integrity="{{ $confirmation.Data.Integrity }}" defer></script>
     
     <!-- Onboarding Flow -->
-    {{ $onboarding := resources.Get "js/onboarding.js" | resources.Minify }}
-    <script src="{{ $onboarding.RelPermalink }}" defer></script>
+    {{ $onboarding := resources.Get "js/onboarding.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $onboarding.RelPermalink }}" integrity="{{ $onboarding.Data.Integrity }}" defer></script>
 
     <!-- Core functionality loaded per page in scripts block -->
     {{ $precache := slice $style.RelPermalink $js.RelPermalink $codeJs.RelPermalink $languageToggle.RelPermalink $confirmation.RelPermalink $onboarding.RelPermalink "/" "/offline/" "/manifest.webmanifest" }}

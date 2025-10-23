@@ -12,7 +12,6 @@
     "notes_de_to_bg": "Für Deutschsprachige: 'Здравей' (zdravej) ≈ 'Hallo'; von 'здрав' (gesund). 'Здрасти' = sehr informell.",
     "etymology": "From Proto-Slavic 'zdravъ' (healthy) - literally a wish for good health",
     "cultural_note": "Standard informal greeting used throughout the day in Bulgaria. More casual than 'Добър ден'",
-    "linguistic_note": "Stress on first syllable: ЗДРА-вей. Can be shortened to 'Здрасти' in very informal contexts",
     "difficulty": 1,
     "frequency": 95,
     "examples": [
@@ -21,7 +20,9 @@
         "translation": "Hallo, wie geht's?",
         "context": "informal"
       }
-    ]
+    ],
+    "linguistic_note_bg_to_de": "Stress on first syllable: ЗДРА-вей. Can be shortened to 'Здрасти' in very informal contexts",
+    "linguistic_note_de_to_bg": "Stress on first syllable: ЗДРА-вей. Can be shortened to 'Здрасти' in very informal contexts"
   },
   {
     "id": "dobro_utro_002",
@@ -36,7 +37,6 @@
     "notes_de_to_bg": "Entspricht 'Guten Morgen'; in Bulgarien endet er oft früher (~10 Uhr).",
     "etymology": "Compound: 'добро' (good) + 'утро' (morning). Common Slavic greeting pattern",
     "cultural_note": "Formal morning greeting used until approximately 10-11 AM in Bulgaria",
-    "linguistic_note": "Stress on 'до́бро у́тро'. Both words stressed separately",
     "difficulty": 1,
     "frequency": 85,
     "examples": [
@@ -45,7 +45,9 @@
         "translation": "Guten Morgen! Wie haben Sie geschlafen?",
         "context": "formal"
       }
-    ]
+    ],
+    "linguistic_note_bg_to_de": "Stress on 'до́бро у́тро'. Both words stressed separately",
+    "linguistic_note_de_to_bg": "Stress on 'до́бро у́тро'. Both words stressed separately"
   },
   {
     "word": "Добър ден",
@@ -60,9 +62,10 @@
     "target_lang": "de",
     "etymology": "Compound: 'добър' (good, from Proto-Slavic *dobrъ) + 'ден' (day, from Proto-Slavic *dьnь)",
     "cultural_note": "Most common formal daytime greeting in Bulgaria, used from late morning until evening. More neutral than time-specific greetings",
-    "linguistic_note": "Masculine adjective 'добър' remains unchanged in this fixed expression. Stress: до́бър де́н",
     "difficulty": 1,
-    "frequency": 100
+    "frequency": 100,
+    "linguistic_note_bg_to_de": "Masculine adjective 'добър' remains unchanged in this fixed expression. Stress: до́бър де́н",
+    "linguistic_note_de_to_bg": "Masculine adjective 'добър' remains unchanged in this fixed expression. Stress: до́бър де́н"
   },
   {
     "word": "Добър вечер",
@@ -77,9 +80,10 @@
     "target_lang": "de",
     "etymology": "Compound: 'добър' (good) + 'вечер' (evening, from Proto-Slavic *večerъ)",
     "cultural_note": "Evening greeting used after approximately 6 PM in Bulgaria. Considered more formal than casual greetings",
-    "linguistic_note": "Fixed masculine form. Evening greetings in Bulgaria mark a clear cultural transition from day to evening",
     "difficulty": 1,
-    "frequency": 100
+    "frequency": 100,
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Fixed masculine form. Evening greetings in Bulgaria mark a clear cultural transition from day to evening"
   },
   {
     "word": "Лека нощ",
@@ -94,9 +98,10 @@
     "target_lang": "de",
     "etymology": "Compound: 'лека' (light/easy, from леко) + 'нощ' (night, from Proto-Slavic *noktь)",
     "cultural_note": "Said when parting for the night, not as an evening greeting. Literally wishes someone an easy/light night",
-    "linguistic_note": "Feminine adjective 'лека' agrees with feminine noun 'нощ'. Stress: ле́ка но́щ",
     "difficulty": 1,
-    "frequency": 100
+    "frequency": 100,
+    "linguistic_note_bg_to_de": "Feminine adjective 'лека' agrees with feminine noun 'нощ'. Stress: ле́ка но́щ",
+    "linguistic_note_de_to_bg": "Feminine adjective 'лека' agrees with feminine noun 'нощ'. Stress: ле́ка но́щ"
   },
   {
     "word": "Довиждане",
@@ -111,9 +116,10 @@
     "target_lang": "de",
     "etymology": "Compound: 'до' (until) + 'виждане' (seeing, from root вид- 'to see'). Literally 'until seeing' = 'until we see each other'",
     "cultural_note": "Standard formal goodbye in Bulgaria. For informal settings, 'Чао' (Italian loanword) is more common",
-    "linguistic_note": "Verbal noun form. Alternative informal: 'До скоро' (see you soon). Stress: довиждане",
     "difficulty": 1,
-    "frequency": 100
+    "frequency": 100,
+    "linguistic_note_bg_to_de": "Verbal noun form. Alternative informal: 'До скоро' (see you soon). Stress: довиждане",
+    "linguistic_note_de_to_bg": "Verbal noun form. Alternative informal: 'До скоро' (see you soon). Stress: довиждане"
   },
   {
     "word": "Моля",
@@ -128,9 +134,10 @@
     "target_lang": "de",
     "etymology": "From verb 'моля се' (to pray, beg). Related to Old Church Slavonic 'молити'",
     "cultural_note": "Multifunctional: 'please' (request), 'you're welcome' (response), 'here you go' (offering). Essential politeness marker in Bulgarian",
-    "linguistic_note": "First person singular form used as standalone interjection. Can be intensified: 'много моля' (please very much)",
     "difficulty": 1,
-    "frequency": 100
+    "frequency": 100,
+    "linguistic_note_bg_to_de": "First person singular form used as standalone interjection. Can be intensified: 'много моля' (please very much)",
+    "linguistic_note_de_to_bg": "First person singular form used as standalone interjection. Can be intensified: 'много моля' (please very much)"
   },
   {
     "word": "Благодаря",
@@ -145,9 +152,10 @@
     "target_lang": "de",
     "etymology": "Compound: 'благо' (blessing, good) + 'даря' (to give). Literally 'I give thanks/blessing'",
     "cultural_note": "Standard thank you. Can be intensified with 'много' (много благодаря). Alternative: 'мерси' (French loanword, informal)",
-    "linguistic_note": "First person singular present tense of 'благодаря'. Stress: благодаря́. More formal than 'мерси'",
     "difficulty": 1,
-    "frequency": 100
+    "frequency": 100,
+    "linguistic_note_bg_to_de": "First person singular present tense of 'благодаря'. Stress: благодаря́. More formal than 'мерси'",
+    "linguistic_note_de_to_bg": "First person singular present tense of 'благодаря'. Stress: благодаря́. More formal than 'мерси'"
   },
   {
     "word": "Извинете",
@@ -162,9 +170,10 @@
     "target_lang": "de",
     "etymology": "Imperative of 'извинявам' (to excuse). Root: вина (fault, guilt)",
     "cultural_note": "Used both for apology and to get attention politely (like 'excuse me'). Important for Bulgarian social etiquette",
-    "linguistic_note": "Formal/plural imperative form. Informal singular: 'извини'. Stress: извине́те",
     "difficulty": 1,
-    "frequency": 100
+    "frequency": 100,
+    "linguistic_note_bg_to_de": "Formal/plural imperative form. Informal singular: 'извини'. Stress: извине́те",
+    "linguistic_note_de_to_bg": "Formal/plural imperative form. Informal singular: 'извини'. Stress: извине́те"
   },
   {
     "word": "Съжалявам",
@@ -179,9 +188,10 @@
     "target_lang": "de",
     "etymology": "From root жал- (grief, pity). Related to 'жалко' (pitiable, regrettable)",
     "cultural_note": "Expresses genuine regret or sympathy. Stronger and more personal than 'извинете'. Used when truly apologizing",
-    "linguistic_note": "First person singular present. Distinguishes regret (съжалявам) from politeness (извинете)",
     "difficulty": 1,
-    "frequency": 100
+    "frequency": 100,
+    "linguistic_note_bg_to_de": "First person singular present. Distinguishes regret (съжалявам) from politeness (извинете)",
+    "linguistic_note_de_to_bg": "First person singular present. Distinguishes regret (съжалявам) from politeness (извинете)"
   },
   {
     "word": "Човек",
@@ -194,11 +204,12 @@
     "target_lang": "de",
     "etymology": "From Proto-Slavic *čelověkъ. Related to Old Church Slavonic члов  ѣкъ",
     "cultural_note": "Basic word for 'person/human'. Also used impersonally like German 'man' or English 'one'",
-    "linguistic_note": "Irregular plural: 'хора' (people). Gender: masculine. Stress: чо́век",
     "difficulty": 1,
     "frequency": 98,
     "notes_de_to_bg": "Für Deutschsprachige: 'Човек' ≈ 'Mensch'. Betonung: чо́век. Maskulinum. Sehr häufig verwendet.",
-    "notes_bg_to_de": "В немски 'der Mensch' обозначава човек като вид и се използва в обобщени изрази като 'jeder Mensch'. Запомнете мъжкия род и множеството 'die Menschen'."
+    "notes_bg_to_de": "В немски 'der Mensch' обозначава човек като вид и се използва в обобщени изрази като 'jeder Mensch'. Запомнете мъжкия род и множеството 'die Menschen'.",
+    "linguistic_note_bg_to_de": "Irregular plural: 'хора' (people). Gender: masculine. Stress: чо́век",
+    "linguistic_note_de_to_bg": "Irregular plural: 'хора' (people). Gender: masculine. Stress: чо́век"
   },
   {
     "word": "Семейство",
@@ -211,11 +222,12 @@
     "target_lang": "de",
     "etymology": "From 'семе' (seed) + suffix -ейство. Related to Latin 'semen'. Literally 'those from the same seed'",
     "cultural_note": "Family is central in Bulgarian culture. Extended family gatherings are common and important",
-    "linguistic_note": "Neuter noun. Collective meaning. Stress: семе́йство",
     "difficulty": 1,
     "frequency": 93,
     "notes_de_to_bg": "Für Deutschsprachige: 'Семейство' ≈ 'Familie'; von 'семе (Samen)'. Betonung: семе́йство. Neutrum. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Die Familie' в немски съчетава близките роднини. Използвайте определителен член 'die' и множествено число 'die Familien' при разговор за повече семейства."
+    "notes_bg_to_de": "'Die Familie' в немски съчетава близките роднини. Използвайте определителен член 'die' и множествено число 'die Familien' при разговор за повече семейства.",
+    "linguistic_note_bg_to_de": "Neuter noun. Collective meaning. Stress: семе́йство",
+    "linguistic_note_de_to_bg": "Neuter noun. Collective meaning. Stress: семе́йство"
   },
   {
     "word": "Къща",
@@ -228,11 +240,12 @@
     "target_lang": "de",
     "etymology": "From Latin 'casa' (house) via Romanian. Replaced older Slavic 'дом' in Bulgarian",
     "cultural_note": "Traditional Bulgarian houses often have gardens. Home ownership culturally important",
-    "linguistic_note": "Feminine noun. Stress: къ́ща. Distinct from 'дом' (home, as concept)",
     "difficulty": 1,
     "frequency": 99,
     "notes_de_to_bg": "Für Deutschsprachige: 'Къща' ≈ 'Haus'. Betonung: къ́ща. Femininum. Sehr häufig verwendet.",
-    "notes_bg_to_de": "В немски 'das Haus' е родово понятие за къща или сграда. Членът 'das' показва среден род, а множественото 'die Häuser' има умлаут върху 'a'."
+    "notes_bg_to_de": "В немски 'das Haus' е родово понятие за къща или сграда. Членът 'das' показва среден род, а множественото 'die Häuser' има умлаут върху 'a'.",
+    "linguistic_note_bg_to_de": "Feminine noun. Stress: къ́ща. Distinct from 'дом' (home, as concept)",
+    "linguistic_note_de_to_bg": "Feminine noun. Stress: къ́ща. Distinct from 'дом' (home, as concept)"
   },
   {
     "word": "Училище",
@@ -245,11 +258,12 @@
     "target_lang": "de",
     "etymology": "From verb 'уча' (to learn/teach) + suffix -лище (place of). Place of learning",
     "cultural_note": "Education highly valued in Bulgaria. School year starts September 15th",
-    "linguistic_note": "Neuter noun. Stress: учи́лище. Related: учител (teacher)",
     "difficulty": 1,
     "frequency": 93,
     "notes_de_to_bg": "Für Deutschsprachige: 'Училище' ≈ 'Schule'; von 'уча (lernen)'. Betonung: учи́лище. Neutrum. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Die Schule' в немски покрива училището като институция. Често се използва с глагола 'gehen' – 'zur Schule gehen' означава 'ходя на училище'."
+    "notes_bg_to_de": "'Die Schule' в немски покрива училището като институция. Често се използва с глагола 'gehen' – 'zur Schule gehen' означава 'ходя на училище'.",
+    "linguistic_note_bg_to_de": "Neuter noun. Stress: учи́лище. Related: учител (teacher)",
+    "linguistic_note_de_to_bg": "Neuter noun. Stress: учи́лище. Related: учител (teacher)"
   },
   {
     "word": "Работа",
@@ -262,11 +276,12 @@
     "target_lang": "de",
     "etymology": "From Proto-Slavic *orbota (hard work, labor). Related to 'раб' (slave, worker)",
     "cultural_note": "Work-life balance gradually changing. Traditional strong work ethic in Bulgarian culture",
-    "linguistic_note": "Feminine noun. Also used as verb 'работя' (to work). Stress: рабо́та",
     "difficulty": 1,
     "frequency": 93,
     "notes_de_to_bg": "Für Deutschsprachige: 'Работа' ≈ 'Arbeit'. Betonung: рабо́та. Femininum. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Die Arbeit' обозначава както работното място, така и конкретната задача. Кажете 'zur Arbeit gehen' (отивам на работа) или 'viel Arbeit haben' (имам много работа)."
+    "notes_bg_to_de": "'Die Arbeit' обозначава както работното място, така и конкретната задача. Кажете 'zur Arbeit gehen' (отивам на работа) или 'viel Arbeit haben' (имам много работа).",
+    "linguistic_note_bg_to_de": "Feminine noun. Also used as verb 'работя' (to work). Stress: рабо́та",
+    "linguistic_note_de_to_bg": "Feminine noun. Also used as verb 'работя' (to work). Stress: рабо́та"
   },
   {
     "word": "Град",
@@ -279,11 +294,12 @@
     "target_lang": "de",
     "etymology": "From Proto-Slavic *gordъ (fortified settlement, castle). Related to Russian 'город'",
     "cultural_note": "Bulgaria has many historic cities. Sofia (София) is the capital",
-    "linguistic_note": "Masculine noun. Also means 'castle' in archaic usage. Stress: гра́д",
     "difficulty": 1,
     "frequency": 99,
     "notes_de_to_bg": "Für Deutschsprachige: 'Град' ≈ 'Stadt'. Betonung: гра́д. Maskulinum. Sehr häufig verwendet.",
-    "notes_bg_to_de": "В немски 'die Stadt' е град и е от женски род. Множественото 'die Städte' добавя умлаут на 'a' и наставка '-e'."
+    "notes_bg_to_de": "В немски 'die Stadt' е град и е от женски род. Множественото 'die Städte' добавя умлаут на 'a' и наставка '-e'.",
+    "linguistic_note_bg_to_de": "Masculine noun. Also means 'castle' in archaic usage. Stress: гра́д",
+    "linguistic_note_de_to_bg": "Masculine noun. Also means 'castle' in archaic usage. Stress: гра́д"
   },
   {
     "word": "Село",
@@ -296,11 +312,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
     "cultural_note": "Common everyday word in Bulgarian. Useful for A1 learners",
-    "linguistic_note": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
     "difficulty": 1,
     "frequency": 94,
     "notes_de_to_bg": "Für Deutschsprachige: 'Село' ≈ 'Dorf'. Neutrum. Sehr häufig verwendet.",
-    "notes_bg_to_de": "В немски 'das Dorf' описва малко населено място. Членът 'das' показва среден род, а множественото 'die Dörfer' добавя умлаут върху 'o'."
+    "notes_bg_to_de": "В немски 'das Dorf' описва малко населено място. Членът 'das' показва среден род, а множественото 'die Dörfer' добавя умлаут върху 'o'.",
+    "linguistic_note_bg_to_de": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+    "linguistic_note_de_to_bg": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то"
   },
   {
     "word": "Книга",
@@ -313,11 +330,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
     "cultural_note": "Common everyday word in Bulgarian. Useful for A1 learners",
-    "linguistic_note": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
     "difficulty": 1,
     "frequency": 98,
     "notes_de_to_bg": "Für Deutschsprachige: 'Книга' ≈ 'Buch'. Femininum. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Das Buch' е среден род и означава книга като предмет. Множественото 'die Bücher' образува умлаут върху 'u' и добавя '-er'."
+    "notes_bg_to_de": "'Das Buch' е среден род и означава книга като предмет. Множественото 'die Bücher' образува умлаут върху 'u' и добавя '-er'.",
+    "linguistic_note_bg_to_de": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+    "linguistic_note_de_to_bg": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то"
   },
   {
     "word": "Храна",
@@ -330,11 +348,12 @@
     "target_lang": "de",
     "etymology": "From Proto-Slavic *xorna (food, nourishment). Related to verb 'храня' (to feed)",
     "cultural_note": "Bulgarian cuisine features shopska salad, banitsa, kebapche. Food central to hospitality",
-    "linguistic_note": "Feminine noun. Related: 'хранене' (nutrition), 'хранителен' (nutritional). Stress: храна́",
     "difficulty": 1,
     "frequency": 96,
     "notes_de_to_bg": "Für Deutschsprachige: 'Храна' ≈ 'Essen'. Betonung: храна́. Femininum. Sehr häufig verwendet.",
-    "notes_bg_to_de": "В немски 'das Essen' назовава храната или самото хранене. Изразът 'etwas zu essen' означава 'нещо за ядене'."
+    "notes_bg_to_de": "В немски 'das Essen' назовава храната или самото хранене. Изразът 'etwas zu essen' означава 'нещо за ядене'.",
+    "linguistic_note_bg_to_de": "Feminine noun. Related: 'хранене' (nutrition), 'хранителен' (nutritional). Stress: храна́",
+    "linguistic_note_de_to_bg": "Feminine noun. Related: 'хранене' (nutrition), 'хранителен' (nutritional). Stress: храна́"
   },
   {
     "word": "Вода",
@@ -347,11 +366,12 @@
     "target_lang": "de",
     "etymology": "From Proto-Slavic *voda. Cognate with English 'water', German 'Wasser' (all from PIE *wódr̥)",
     "cultural_note": "Mineral water (минерална вода) very popular in Bulgaria. Many natural springs",
-    "linguistic_note": "Feminine noun. Plural: 'води' (waters, can mean bodies of water). Stress: вода́",
     "difficulty": 1,
     "frequency": 98,
     "notes_de_to_bg": "Für Deutschsprachige: 'Вода' ≈ 'Wasser'. Betonung: вода́. Femininum. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Das Wasser' е необроимо съществително. При поръчка кажете 'Ein Wasser, bitte', а за минерална вода използвайте 'Mineralwasser'."
+    "notes_bg_to_de": "'Das Wasser' е необроимо съществително. При поръчка кажете 'Ein Wasser, bitte', а за минерална вода използвайте 'Mineralwasser'.",
+    "linguistic_note_bg_to_de": "Feminine noun. Plural: 'води' (waters, can mean bodies of water). Stress: вода́",
+    "linguistic_note_de_to_bg": "Feminine noun. Plural: 'води' (waters, can mean bodies of water). Stress: вода́"
   },
   {
     "word": "Съм",
@@ -364,11 +384,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 2,
     "frequency": 100,
     "notes_de_to_bg": "Für Deutschsprachige: 'Съм' ≈ 'sein'. Bulgarisches Verb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "Глаголът 'sein' е неправилен и служи за описания и времена. Основните форми са 'ich bin', 'du bist', 'er/sie ist', 'wir sind', 'ihr seid', 'sie sind'."
+    "notes_bg_to_de": "Глаголът 'sein' е неправилен и служи за описания и времена. Основните форми са 'ich bin', 'du bist', 'er/sie ist', 'wir sind', 'ihr seid', 'sie sind'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Имам",
@@ -381,11 +402,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 2,
     "frequency": 100,
     "notes_de_to_bg": "Für Deutschsprachige: 'Имам' ≈ 'haben'. Bulgarisches Verb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Haben' е както смислов, така и спомагателен глагол. Запомнете неправилните форми 'ich habe', 'du hast', 'er/sie hat', 'wir haben', 'ihr habt', 'sie haben'."
+    "notes_bg_to_de": "'Haben' е както смислов, така и спомагателен глагол. Запомнете неправилните форми 'ich habe', 'du hast', 'er/sie hat', 'wir haben', 'ihr habt', 'sie haben'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Правя",
@@ -398,11 +420,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 2,
     "frequency": 100,
     "notes_de_to_bg": "Für Deutschsprachige: 'Правя' ≈ 'machen'. Bulgarisches Verb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Machen' е правилен глагол за 'правя' и често се комбинира със съществителни: 'Hausaufgaben machen' (правя домашни), 'Fotos machen' (правя снимки)."
+    "notes_bg_to_de": "'Machen' е правилен глагол за 'правя' и често се комбинира със съществителни: 'Hausaufgaben machen' (правя домашни), 'Fotos machen' (правя снимки).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Мога",
@@ -415,11 +438,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 2,
     "frequency": 97,
     "notes_de_to_bg": "Für Deutschsprachige: 'Мога' ≈ 'können'. Bulgarisches Verb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Können' е модален глагол, който показва възможност или умение: 'Ich kann schwimmen' (мога да плувам). Формите 'ich kann', 'du kannst', 'er kann' са неправилни."
+    "notes_bg_to_de": "'Können' е модален глагол, който показва възможност или умение: 'Ich kann schwimmen' (мога да плувам). Формите 'ich kann', 'du kannst', 'er kann' са неправилни.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Ходя",
@@ -432,11 +456,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 2,
     "frequency": 98,
     "notes_de_to_bg": "Für Deutschsprachige: 'Ходя' ≈ 'gehen'. Bulgarisches Verb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "Глаголът 'gehen' означава 'вървя/отивам'. Внимавайте с формата 'ich gehe', а миналото време е неправилно: 'ich ging', Partizip II 'gegangen'."
+    "notes_bg_to_de": "Глаголът 'gehen' означава 'вървя/отивам'. Внимавайте с формата 'ich gehe', а миналото време е неправилно: 'ich ging', Partizip II 'gegangen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Ям",
@@ -449,11 +474,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 2,
     "frequency": 95,
     "notes_de_to_bg": "Für Deutschsprachige: 'Ям' ≈ 'essen'. Bulgarisches Verb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Essen' е силен глагол: 'ich esse', 'du isst', 'er isst'; минало: 'nahm' няма, а 'aß' (ich aß). Полезен израз: 'zu Mittag essen' (ям обяд)."
+    "notes_bg_to_de": "'Essen' е силен глагол: 'ich esse', 'du isst', 'er isst'; минало: 'nahm' няма, а 'aß' (ich aß). Полезен израз: 'zu Mittag essen' (ям обяд).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Пия",
@@ -466,11 +492,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 2,
     "frequency": 100,
     "notes_de_to_bg": "Für Deutschsprachige: 'Пия' ≈ 'trinken'. Bulgarisches Verb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Trinken' е правилен глагол: 'ich trinke', 'du trinkst'. Изразът 'etwas trinken gehen' означава 'отивам да пия нещо'."
+    "notes_bg_to_de": "'Trinken' е правилен глагол: 'ich trinke', 'du trinkst'. Изразът 'etwas trinken gehen' означава 'отивам да пия нещо'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Говоря",
@@ -483,11 +510,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 2,
     "frequency": 100,
     "notes_de_to_bg": "Für Deutschsprachige: 'Говоря' ≈ 'sprechen'. Bulgarisches Verb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Sprechen' е неправилен: 'ich spreche', 'du sprichst', 'er spricht'; минало: 'sprach', Partizip II 'gesprochen'. Често се комбинира с езиков обект: 'Deutsch sprechen'."
+    "notes_bg_to_de": "'Sprechen' е неправилен: 'ich spreche', 'du sprichst', 'er spricht'; минало: 'sprach', Partizip II 'gesprochen'. Често се комбинира с езиков обект: 'Deutsch sprechen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Виждам",
@@ -500,11 +528,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 2,
     "frequency": 96,
     "notes_de_to_bg": "Für Deutschsprachige: 'Виждам' ≈ 'sehen'. Bulgarisches Verb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Sehen' се спряга 'ich sehe', 'du siehst', 'er sieht'; минало 'sah', Partizip II 'gesehen'. Използва се и като част от сложни глаголи: 'fernsehen'."
+    "notes_bg_to_de": "'Sehen' се спряга 'ich sehe', 'du siehst', 'er sieht'; минало 'sah', Partizip II 'gesehen'. Използва се и като част от сложни глаголи: 'fernsehen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Чувам",
@@ -517,11 +546,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 2,
     "frequency": 98,
     "notes_de_to_bg": "Für Deutschsprachige: 'Чувам' ≈ 'hören'. Bulgarisches Verb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Hören' е правилен: 'ich höre', 'du hörst'. Комбинация 'von etwas hören' означава 'чувам за нещо'. В израза 'anhören' става отделяем глагол."
+    "notes_bg_to_de": "'Hören' е правилен: 'ich höre', 'du hörst'. Комбинация 'von etwas hören' означава 'чувам за нещо'. В израза 'anhören' става отделяем глагол.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Добър",
@@ -534,11 +564,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о",
     "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender",
-    "linguistic_note": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
     "difficulty": 1,
     "frequency": 95,
     "notes_de_to_bg": "Für Deutschsprachige: 'Добър' ≈ 'gut'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet.",
-    "notes_bg_to_de": "Прилагателното 'gut' се степенува неправилно: 'besser', 'am besten'. Използва се и като наречие: 'gut schmecken'."
+    "notes_bg_to_de": "Прилагателното 'gut' се степенува неправилно: 'besser', 'am besten'. Използва се и като наречие: 'gut schmecken'.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)"
   },
   {
     "word": "Лош",
@@ -551,11 +582,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о",
     "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender",
-    "linguistic_note": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
     "difficulty": 1,
     "frequency": 99,
     "notes_de_to_bg": "Für Deutschsprachige: 'Лош' ≈ 'schlecht'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Schlecht' означава 'лош/зле'. За оценка на самочувствие се казва 'Es geht mir schlecht'. Степенуване: 'schlechter', 'am schlechtesten'."
+    "notes_bg_to_de": "'Schlecht' означава 'лош/зле'. За оценка на самочувствие се казва 'Es geht mir schlecht'. Степенуване: 'schlechter', 'am schlechtesten'.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)"
   },
   {
     "word": "Голям",
@@ -568,11 +600,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о",
     "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender",
-    "linguistic_note": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
     "difficulty": 1,
     "frequency": 93,
     "notes_de_to_bg": "Für Deutschsprachige: 'Голям' ≈ 'groß'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Groß' означава 'голям' или 'висок на ръст'. Степенуване: 'größer', 'am größten'. Умалително: 'großartig' (великолепен)."
+    "notes_bg_to_de": "'Groß' означава 'голям' или 'висок на ръст'. Степенуване: 'größer', 'am größten'. Умалително: 'großartig' (великолепен).",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)"
   },
   {
     "word": "Малък",
@@ -585,11 +618,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о",
     "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender",
-    "linguistic_note": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
     "difficulty": 1,
     "frequency": 95,
     "notes_de_to_bg": "Für Deutschsprachige: 'Малък' ≈ 'klein'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Klein' описва размер или ръст. Често се използва във фрази: 'Kleine Kinder' (малки деца). Степенуване: 'kleiner', 'am kleinsten'."
+    "notes_bg_to_de": "'Klein' описва размер или ръст. Често се използва във фрази: 'Kleine Kinder' (малки деца). Степенуване: 'kleiner', 'am kleinsten'.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)"
   },
   {
     "word": "Нов",
@@ -602,11 +636,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о",
     "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender",
-    "linguistic_note": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
     "difficulty": 1,
     "frequency": 93,
     "notes_de_to_bg": "Für Deutschsprachige: 'Нов' ≈ 'neu'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Neu' означава 'нов/ново'. Типичен израз: 'neue Wohnung', 'neu anfangen'. Степенуване: 'neuer', 'am neuesten'."
+    "notes_bg_to_de": "'Neu' означава 'нов/ново'. Типичен израз: 'neue Wohnung', 'neu anfangen'. Степенуване: 'neuer', 'am neuesten'.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)"
   },
   {
     "word": "Стар",
@@ -619,11 +654,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о",
     "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender",
-    "linguistic_note": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
     "difficulty": 1,
     "frequency": 95,
     "notes_de_to_bg": "Für Deutschsprachige: 'Стар' ≈ 'alt'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Alt' описва възраст или състояние: 'alt werden' (остарявам). Степенуване: 'älter', 'am ältesten'."
+    "notes_bg_to_de": "'Alt' описва възраст или състояние: 'alt werden' (остарявам). Степенуване: 'älter', 'am ältesten'.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)"
   },
   {
     "word": "Красив",
@@ -636,11 +672,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о",
     "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender",
-    "linguistic_note": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
     "difficulty": 1,
     "frequency": 98,
     "notes_de_to_bg": "Für Deutschsprachige: 'Красив' ≈ 'schön'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Schön' означава 'красив/приятен'. Фраза: 'Schön dich zu sehen!' (Радвам се да те видя). Степенуване: 'schöner', 'am schönsten'."
+    "notes_bg_to_de": "'Schön' означава 'красив/приятен'. Фраза: 'Schön dich zu sehen!' (Радвам се да те видя). Степенуване: 'schöner', 'am schönsten'.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)"
   },
   {
     "word": "Грозен",
@@ -653,11 +690,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о",
     "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender",
-    "linguistic_note": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
     "difficulty": 1,
     "frequency": 94,
     "notes_de_to_bg": "Für Deutschsprachige: 'Грозен' ≈ 'hässlich'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Hässlich' означава 'гръмен/неприятен'. Използвайте внимателно, защото е силна оценка. Степенуване: 'hässlicher', 'am hässlichsten'."
+    "notes_bg_to_de": "'Hässlich' означава 'гръмен/неприятен'. Използвайте внимателно, защото е силна оценка. Степенуване: 'hässlicher', 'am hässlichsten'.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)"
   },
   {
     "word": "Топъл",
@@ -670,11 +708,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о",
     "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender",
-    "linguistic_note": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
     "difficulty": 1,
     "frequency": 98,
     "notes_de_to_bg": "Für Deutschsprachige: 'Топъл' ≈ 'warm'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Warm' описва температура или атмосфера ('eine warme Atmosphäre'). Степенуване: 'wärmer', 'am wärmsten'."
+    "notes_bg_to_de": "'Warm' описва температура или атмосфера ('eine warme Atmosphäre'). Степенуване: 'wärmer', 'am wärmsten'.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)"
   },
   {
     "word": "Студен",
@@ -687,11 +726,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о",
     "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender",
-    "linguistic_note": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
     "difficulty": 1,
     "frequency": 95,
     "notes_de_to_bg": "Für Deutschsprachige: 'Студен' ≈ 'kalt'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Kalt' обозначава ниска температура. Израз: 'Mir ist kalt' (Студено ми е). Степенуване: 'kälter', 'am kältesten'."
+    "notes_bg_to_de": "'Kalt' обозначава ниска температура. Израз: 'Mir ist kalt' (Студено ми е). Степенуване: 'kälter', 'am kältesten'.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)"
   },
   {
     "word": "Тук",
@@ -704,11 +744,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A1 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives",
     "difficulty": 1,
     "frequency": 91,
     "notes_de_to_bg": "Für Deutschsprachige: 'Тук' ≈ 'hier'. Unveränderliches Adverb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "Наречието 'hier' показва близко място. Комбинира се с 'sein': 'Ich bin hier.' Противопоставя се на 'dort'."
+    "notes_bg_to_de": "Наречието 'hier' показва близко място. Комбинира се с 'sein': 'Ich bin hier.' Противопоставя се на 'dort'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives"
   },
   {
     "word": "Там",
@@ -721,11 +762,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A1 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives",
     "difficulty": 1,
     "frequency": 93,
     "notes_de_to_bg": "Für Deutschsprachige: 'Там' ≈ 'dort'. Unveränderliches Adverb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Dort' обозначава по-далечно място. В разговорите често се среща комбинацията 'da drüben' (там отсреща)."
+    "notes_bg_to_de": "'Dort' обозначава по-далечно място. В разговорите често се среща комбинацията 'da drüben' (там отсреща).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives"
   },
   {
     "word": "Сега",
@@ -738,11 +780,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A1 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives",
     "difficulty": 1,
     "frequency": 90,
     "notes_de_to_bg": "Für Deutschsprachige: 'Сега' ≈ 'jetzt'. Unveränderliches Adverb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Jetzt' означава 'сега, в този момент'. Фразата 'Bis gleich, bis gleich jetzt?' означава 'до след малко'."
+    "notes_bg_to_de": "'Jetzt' означава 'сега, в този момент'. Фразата 'Bis gleich, bis gleich jetzt?' означава 'до след малко'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives"
   },
   {
     "word": "Тогава",
@@ -755,11 +798,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A1 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives",
     "difficulty": 1,
     "frequency": 95,
     "notes_de_to_bg": "Für Deutschsprachige: 'Тогава' ≈ 'dann'. Unveränderliches Adverb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Dann' показва последователност: 'Zuerst ... dann ...'. Служи и като запълнително в разговорите ('Dann ...')."
+    "notes_bg_to_de": "'Dann' показва последователност: 'Zuerst ... dann ...'. Служи и като запълнително в разговорите ('Dann ...').",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives"
   },
   {
     "word": "Бързо",
@@ -772,11 +816,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A1 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives",
     "difficulty": 1,
     "frequency": 93,
     "notes_de_to_bg": "Für Deutschsprachige: 'Бързо' ≈ 'schnell'. Unveränderliches Adverb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "Наречието 'schnell' описва висока скорост: 'Das Auto fährt schnell.' Степенуване: 'schneller', 'am schnellsten'."
+    "notes_bg_to_de": "Наречието 'schnell' описва висока скорост: 'Das Auto fährt schnell.' Степенуване: 'schneller', 'am schnellsten'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives"
   },
   {
     "word": "Бавно",
@@ -789,11 +834,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A1 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives",
     "difficulty": 1,
     "frequency": 99,
     "notes_de_to_bg": "Für Deutschsprachige: 'Бавно' ≈ 'langsam'. Unveränderliches Adverb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Langsam' означава 'бавен/бавничко': 'Bitte sprechen Sie langsam.' Противоположно е на 'schnell'."
+    "notes_bg_to_de": "'Langsam' означава 'бавен/бавничко': 'Bitte sprechen Sie langsam.' Противоположно е на 'schnell'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives"
   },
   {
     "word": "Често",
@@ -806,11 +852,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A1 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives",
     "difficulty": 1,
     "frequency": 90,
     "notes_de_to_bg": "Für Deutschsprachige: 'Често' ≈ 'oft'. Unveränderliches Adverb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Oft' означава 'често' и стои обикновено пред глагола: 'Ich gehe oft einkaufen.' Антонимът е 'selten'."
+    "notes_bg_to_de": "'Oft' означава 'често' и стои обикновено пред глагола: 'Ich gehe oft einkaufen.' Антонимът е 'selten'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives"
   },
   {
     "word": "Редко",
@@ -823,11 +870,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A1 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives",
     "difficulty": 1,
     "frequency": 96,
     "notes_de_to_bg": "Für Deutschsprachige: 'Редко' ≈ 'selten'. Unveränderliches Adverb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Selten' изразява рядкост: 'Ich esse selten Fleisch.' За допълнителен акцент използвайте 'nur selten'."
+    "notes_bg_to_de": "'Selten' изразява рядкост: 'Ich esse selten Fleisch.' За допълнителен акцент използвайте 'nur selten'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives"
   },
   {
     "word": "Добре",
@@ -840,11 +888,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A1 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives",
     "difficulty": 1,
     "frequency": 91,
     "notes_de_to_bg": "Für Deutschsprachige: 'Добре' ≈ 'gut'. Unveränderliches Adverb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "Наречието 'gut' описва качество на действие: 'Er spricht gut Deutsch.' Степенуване: 'besser', 'am besten'."
+    "notes_bg_to_de": "Наречието 'gut' описва качество на действие: 'Er spricht gut Deutsch.' Степенуване: 'besser', 'am besten'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives"
   },
   {
     "word": "Зле",
@@ -857,11 +906,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A1 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives",
     "difficulty": 1,
     "frequency": 99,
     "notes_de_to_bg": "Für Deutschsprachige: 'Зле' ≈ 'schlecht'. Unveränderliches Adverb. Sehr häufig verwendet.",
-    "notes_bg_to_de": "'Schlecht' означава 'зле': 'Mir geht es schlecht.' Степенуване: 'schlechter', 'am schlechtesten'."
+    "notes_bg_to_de": "'Schlecht' означава 'зле': 'Mir geht es schlecht.' Степенуване: 'schlechter', 'am schlechtesten'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives"
   },
   {
     "word": "Маса",
@@ -874,11 +924,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
     "cultural_note": "Common everyday word in Bulgarian. Useful for A2 learners",
-    "linguistic_note": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
     "difficulty": 2,
     "frequency": 81,
     "notes_de_to_bg": "Für Deutschsprachige: 'Маса' ≈ 'Tisch'. Femininum. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Tisch' е мъжки род и означава маса. Множественото 'die Tische' добавя '-e'. Типичен израз: 'am Tisch sitzen'."
+    "notes_bg_to_de": "'Der Tisch' е мъжки род и означава маса. Множественото 'die Tische' добавя '-e'. Типичен израз: 'am Tisch sitzen'.",
+    "linguistic_note_bg_to_de": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+    "linguistic_note_de_to_bg": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то"
   },
   {
     "word": "Стол",
@@ -891,11 +942,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
     "cultural_note": "Common everyday word in Bulgarian. Useful for A2 learners",
-    "linguistic_note": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
     "difficulty": 2,
     "frequency": 82,
     "notes_de_to_bg": "Für Deutschsprachige: 'Стол' ≈ 'Stuhl'. Maskulinum. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Stuhl' е мъжки род. В множествено число 'die Stühle' се появява умлаут. Комбинация: 'am Tisch stehen Stühle'."
+    "notes_bg_to_de": "'Der Stuhl' е мъжки род. В множествено число 'die Stühle' се появява умлаут. Комбинация: 'am Tisch stehen Stühle'.",
+    "linguistic_note_bg_to_de": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+    "linguistic_note_de_to_bg": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то"
   },
   {
     "word": "Хладилник",
@@ -908,11 +960,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
     "cultural_note": "Common everyday word in Bulgarian. Useful for A2 learners",
-    "linguistic_note": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
     "difficulty": 2,
     "frequency": 79,
     "notes_de_to_bg": "Für Deutschsprachige: 'Хладилник' ≈ 'Kühlschrank'. Maskulinum. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Kühlschrank' е сложна дума ('kühl' + 'Schrank'). Множественото е 'die Kühlschränke'. Израз: 'etwas in den Kühlschrank stellen'."
+    "notes_bg_to_de": "'Der Kühlschrank' е сложна дума ('kühl' + 'Schrank'). Множественото е 'die Kühlschränke'. Израз: 'etwas in den Kühlschrank stellen'.",
+    "linguistic_note_bg_to_de": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+    "linguistic_note_de_to_bg": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то"
   },
   {
     "word": "Кухня",
@@ -925,11 +978,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
     "cultural_note": "Common everyday word in Bulgarian. Useful for A2 learners",
-    "linguistic_note": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
     "difficulty": 2,
     "frequency": 76,
     "notes_de_to_bg": "Für Deutschsprachige: 'Кухня' ≈ 'Küche'. Femininum. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Küche' е женски род. Употреба: 'in der Küche kochen'. Множествено число 'die Küchen'."
+    "notes_bg_to_de": "'Die Küche' е женски род. Употреба: 'in der Küche kochen'. Множествено число 'die Küchen'.",
+    "linguistic_note_bg_to_de": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+    "linguistic_note_de_to_bg": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то"
   },
   {
     "word": "Апартамент",
@@ -942,11 +996,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
     "cultural_note": "Common everyday word in Bulgarian. Useful for A2 learners",
-    "linguistic_note": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
     "difficulty": 2,
     "frequency": 77,
     "notes_de_to_bg": "Für Deutschsprachige: 'Апартамент' ≈ 'Wohnung'. Maskulinum. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Wohnung' означава жилище или апартамент. Израз: 'eine Wohnung mieten'. Множествено 'die Wohnungen'."
+    "notes_bg_to_de": "'Die Wohnung' означава жилище или апартамент. Израз: 'eine Wohnung mieten'. Множествено 'die Wohnungen'.",
+    "linguistic_note_bg_to_de": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+    "linguistic_note_de_to_bg": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то"
   },
   {
     "word": "Автомобил",
@@ -959,11 +1014,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
     "cultural_note": "Common everyday word in Bulgarian. Useful for A2 learners",
-    "linguistic_note": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
     "difficulty": 2,
     "frequency": 82,
     "notes_de_to_bg": "Für Deutschsprachige: 'Автомобил' ≈ 'Auto'. Maskulinum. Häufig verwendet.",
-    "notes_bg_to_de": "'Das Auto' е неутрален род и означава кола. В разговор се ползва и 'der Wagen'. Множествено 'die Autos'."
+    "notes_bg_to_de": "'Das Auto' е неутрален род и означава кола. В разговор се ползва и 'der Wagen'. Множествено 'die Autos'.",
+    "linguistic_note_bg_to_de": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+    "linguistic_note_de_to_bg": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то"
   },
   {
     "word": "Магазин",
@@ -976,11 +1032,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
     "cultural_note": "Common everyday word in Bulgarian. Useful for A2 learners",
-    "linguistic_note": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
     "difficulty": 2,
     "frequency": 81,
     "notes_de_to_bg": "Für Deutschsprachige: 'Магазин' ≈ 'Laden'. Maskulinum. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Laden' е мъжки род и означава малък магазин. В множествено число става 'die Läden' с умлаут. Израз: 'im Laden einkaufen'."
+    "notes_bg_to_de": "'Der Laden' е мъжки род и означава малък магазин. В множествено число става 'die Läden' с умлаут. Израз: 'im Laden einkaufen'.",
+    "linguistic_note_bg_to_de": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+    "linguistic_note_de_to_bg": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то"
   },
   {
     "word": "Градина",
@@ -993,11 +1050,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
     "cultural_note": "Common everyday word in Bulgarian. Useful for A2 learners",
-    "linguistic_note": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
     "difficulty": 2,
     "frequency": 74,
     "notes_de_to_bg": "Für Deutschsprachige: 'Градина' ≈ 'Garten'. Femininum. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Garten' е мъжки род. Множественото 'die Gärten' има умлаут. Фраза: 'im Garten arbeiten' (работя в градината)."
+    "notes_bg_to_de": "'Der Garten' е мъжки род. Множественото 'die Gärten' има умлаут. Фраза: 'im Garten arbeiten' (работя в градината).",
+    "linguistic_note_bg_to_de": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+    "linguistic_note_de_to_bg": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то"
   },
   {
     "word": "Часовник",
@@ -1010,11 +1068,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
     "cultural_note": "Common everyday word in Bulgarian. Useful for A2 learners",
-    "linguistic_note": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
     "difficulty": 2,
     "frequency": 80,
     "notes_de_to_bg": "Für Deutschsprachige: 'Часовник' ≈ 'Uhr'. Maskulinum. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Uhr' е женски род и означава часовник или час. За показване на време: 'Es ist zwei Uhr.' Настолен часовник е 'die Uhr', ръчен – 'die Armbanduhr'."
+    "notes_bg_to_de": "'Die Uhr' е женски род и означава часовник или час. За показване на време: 'Es ist zwei Uhr.' Настолен часовник е 'die Uhr', ръчен – 'die Armbanduhr'.",
+    "linguistic_note_bg_to_de": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+    "linguistic_note_de_to_bg": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то"
   },
   {
     "word": "Чета",
@@ -1027,11 +1086,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 3,
     "frequency": 81,
     "notes_de_to_bg": "Für Deutschsprachige: 'Чета' ≈ 'lesen'. Bulgarisches Verb. Häufig verwendet.",
-    "notes_bg_to_de": "'Lesen' е силен глагол: 'ich lese', 'du liest', 'er liest'; миналото 'las', Partizip II 'gelesen'. Израз: 'ein Buch lesen'."
+    "notes_bg_to_de": "'Lesen' е силен глагол: 'ich lese', 'du liest', 'er liest'; миналото 'las', Partizip II 'gelesen'. Израз: 'ein Buch lesen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Пиша",
@@ -1044,11 +1104,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 3,
     "frequency": 81,
     "notes_de_to_bg": "Für Deutschsprachige: 'Пиша' ≈ 'schreiben'. Bulgarisches Verb. Häufig verwendet.",
-    "notes_bg_to_de": "'Schreiben' е неправилен: Partizip II 'geschrieben'. Израз: 'Briefe schreiben' (пиша писма). Внимавайте с 'schreiben an + Akk.'"
+    "notes_bg_to_de": "'Schreiben' е неправилен: Partizip II 'geschrieben'. Израз: 'Briefe schreiben' (пиша писма). Внимавайте с 'schreiben an + Akk.'",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Карам",
@@ -1061,11 +1122,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 3,
     "frequency": 83,
     "notes_de_to_bg": "Für Deutschsprachige: 'Карам' ≈ 'fahren'. Bulgarisches Verb. Häufig verwendet.",
-    "notes_bg_to_de": "'Fahren' описва движение с превозно средство. Формите: 'ich fahre', 'du fährst', 'er fährt'; минало 'fuhr', Partizip 'gefahren'."
+    "notes_bg_to_de": "'Fahren' описва движение с превозно средство. Формите: 'ich fahre', 'du fährst', 'er fährt'; минало 'fuhr', Partizip 'gefahren'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Живея",
@@ -1078,11 +1140,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 3,
     "frequency": 79,
     "notes_de_to_bg": "Für Deutschsprachige: 'Живея' ≈ 'leben'. Bulgarisches Verb. Häufig verwendet.",
-    "notes_bg_to_de": "'Leben' означава 'живея/съществувам'. Израз: 'in Deutschland leben'. За 'живея в жилище' употребете 'wohnen'."
+    "notes_bg_to_de": "'Leben' означава 'живея/съществувам'. Израз: 'in Deutschland leben'. За 'живея в жилище' употребете 'wohnen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Работя",
@@ -1095,11 +1158,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 3,
     "frequency": 82,
     "notes_de_to_bg": "Für Deutschsprachige: 'Работя' ≈ 'arbeiten'. Bulgarisches Verb. Häufig verwendet.",
-    "notes_bg_to_de": "'Arbeiten' е правилен глагол, но добавя 'e' при някои лица: 'ich arbeite', 'du arbeitest'. Израз: 'bei Siemens arbeiten'."
+    "notes_bg_to_de": "'Arbeiten' е правилен глагол, но добавя 'e' при някои лица: 'ich arbeite', 'du arbeitest'. Израз: 'bei Siemens arbeiten'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Уча",
@@ -1112,11 +1176,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 3,
     "frequency": 79,
     "notes_de_to_bg": "Für Deutschsprachige: 'Уча' ≈ 'lernen'. Bulgarisches Verb. Häufig verwendet.",
-    "notes_bg_to_de": "'Lernen' покрива учене/подготовка: 'Deutsch lernen'. Не бъркайте с 'studieren', което означава следвам в университет."
+    "notes_bg_to_de": "'Lernen' покрива учене/подготовка: 'Deutsch lernen'. Не бъркайте с 'studieren', което означава следвам в университет.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Едно",
@@ -1129,11 +1194,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 75,
     "notes_de_to_bg": "Für Deutschsprachige: 'Едно' ≈ 'eins'. Zahlwort. Häufig verwendet.",
-    "notes_bg_to_de": "Числото 'eins' се използва самостоятелно или с съществително ('ein Auto' без -s). При броене следва 'eins, zwei, drei'."
+    "notes_bg_to_de": "Числото 'eins' се използва самостоятелно или с съществително ('ein Auto' без -s). При броене следва 'eins, zwei, drei'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Две",
@@ -1146,11 +1212,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 81,
     "notes_de_to_bg": "Für Deutschsprachige: 'Две' ≈ 'zwei'. Zahlwort. Häufig verwendet.",
-    "notes_bg_to_de": "'Zwei' е числото 2. При даване на телефон или адрес немците често произнасят ясно 'zwei' вместо 'zwo'."
+    "notes_bg_to_de": "'Zwei' е числото 2. При даване на телефон или адрес немците често произнасят ясно 'zwei' вместо 'zwo'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Три",
@@ -1163,11 +1230,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 77,
     "notes_de_to_bg": "Für Deutschsprachige: 'Три' ≈ 'drei'. Zahlwort. Häufig verwendet.",
-    "notes_bg_to_de": "Числото 'drei' се произнася като 'драй'. В сложни числа образува 'dreizehn' (13) и 'dreißig' (30)."
+    "notes_bg_to_de": "Числото 'drei' се произнася като 'драй'. В сложни числа образува 'dreizehn' (13) и 'dreißig' (30).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Четири",
@@ -1180,11 +1248,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 80,
     "notes_de_to_bg": "Für Deutschsprachige: 'Четири' ≈ 'vier'. Zahlwort. Häufig verwendet.",
-    "notes_bg_to_de": "'Vier' се произнася 'фиа' и запазва формата си в съставни числа: 'vierzehn', 'vierzig'. При броене използвайте 'eins, zwei, drei, vier'."
+    "notes_bg_to_de": "'Vier' се произнася 'фиа' и запазва формата си в съставни числа: 'vierzehn', 'vierzig'. При броене използвайте 'eins, zwei, drei, vier'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Пет",
@@ -1197,11 +1266,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 84,
     "notes_de_to_bg": "Für Deutschsprachige: 'Пет' ≈ 'fünf'. Zahlwort. Häufig verwendet.",
-    "notes_bg_to_de": "'Fünf' има умлаут ü (произнася се като между 'ю' и 'и'). Внимание при писане на 15: 'fünfzehn'."
+    "notes_bg_to_de": "'Fünf' има умлаут ü (произнася се като между 'ю' и 'и'). Внимание при писане на 15: 'fünfzehn'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Шест",
@@ -1214,11 +1284,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 80,
     "notes_de_to_bg": "Für Deutschsprachige: 'Шест' ≈ 'sechs'. Zahlwort. Häufig verwendet.",
-    "notes_bg_to_de": "'Sechs' завършва на -chs и се произнася като 'зекс'. В множествени съставки: 'sechzehn', 'sechzig'."
+    "notes_bg_to_de": "'Sechs' завършва на -chs и се произнася като 'зекс'. В множествени съставки: 'sechzehn', 'sechzig'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Седем",
@@ -1231,11 +1302,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 76,
     "notes_de_to_bg": "Für Deutschsprachige: 'Седем' ≈ 'sieben'. Zahlwort. Häufig verwendet.",
-    "notes_bg_to_de": "'Sieben' губи 'e' в 'siebzehn' (17) и 'siebzig' (70). Произношението е 'зибън'."
+    "notes_bg_to_de": "'Sieben' губи 'e' в 'siebzehn' (17) и 'siebzig' (70). Произношението е 'зибън'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Осем",
@@ -1248,11 +1320,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 83,
     "notes_de_to_bg": "Für Deutschsprachige: 'Осем' ≈ 'acht'. Zahlwort. Häufig verwendet.",
-    "notes_bg_to_de": "'Acht' се произнася с мек 'х' [ахт]. В съставни числа 'achtzehn', 'achtzig', 'achtundzwanzig'."
+    "notes_bg_to_de": "'Acht' се произнася с мек 'х' [ахт]. В съставни числа 'achtzehn', 'achtzig', 'achtundzwanzig'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Девет",
@@ -1265,11 +1338,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 82,
     "notes_de_to_bg": "Für Deutschsprachige: 'Девет' ≈ 'neun'. Zahlwort. Häufig verwendet.",
-    "notes_bg_to_de": "'Neun' се произнася 'нойн'. Запомнете формите 'neunzehn' и 'neunzig'."
+    "notes_bg_to_de": "'Neun' се произнася 'нойн'. Запомнете формите 'neunzehn' и 'neunzig'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Десет",
@@ -1282,11 +1356,487 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
-    "frequency": 80,
+    "frequency": 79,
     "notes_de_to_bg": "Für Deutschsprachige: 'Десет' ≈ 'zehn'. Zahlwort. Häufig verwendet.",
-    "notes_bg_to_de": "'Zehn' е основата за 'zehn', 'zehn Uhr' (десет часа) и съставни числа като 'zehnter' (десети)."
+    "notes_bg_to_de": "'Zehn' се произнася [tseːn] и образува сложни числа като 'zehn Uhr' (десет часа).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
+  },
+  {
+    "word": "Единадесет",
+    "translation": "elf",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "elf",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'един' (one) + 'над десет' (over ten). Literally 'one over ten'.",
+    "cultural_note": "Bulgarian teens (11-19) add 'надесет'. German writes 11-19 as one word without spaces.",
+    "difficulty": 1,
+    "frequency": 74,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Единадесет' entsteht aus 'един' + 'надесет'. Betonung: единаде́сет. Merken: zusätzliche Silbe 'на'.",
+    "notes_bg_to_de": "'Elf' се произнася кратко [ɛlf] и често обозначава възраст: 'Er ist elf Jahre alt'. Няма умлаут и не се променя в сложни числа като 'elf Uhr'.",
+    "examples": [
+      {
+        "sentence": "Той е на единадесет години.",
+        "translation": "Er ist elf Jahre alt.",
+        "context": "informal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on единаде́сет. German 'elf' is monosyllabic with [ɛlf].",
+    "linguistic_note_de_to_bg": "Stress on единаде́сет. German 'elf' is monosyllabic with [ɛlf]."
+  },
+  {
+    "word": "Дванадесет",
+    "translation": "zwölf",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "zwoelf",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'две' (two) + 'над десет' (over ten). Literally 'two over ten'.",
+    "cultural_note": "Used in both everyday counting and telling the time (e.g., noon).",
+    "difficulty": 1,
+    "frequency": 74,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Дванадесет' = 'zwölf'. Beachten Sie den Umlaut 'ö' in Deutsch und die Endung '-десет' im Bulgarischen.",
+    "notes_bg_to_de": "'Zwölf' е с умлаут ö и произношение [tsvœlf]. В часовник често се казва 'zwölf Uhr'. В съставни числа стои отпред: 'zwölfmal'.",
+    "examples": [
+      {
+        "sentence": "В класа има дванадесет ученици.",
+        "translation": "In der Klasse gibt es zwölf Schüler.",
+        "context": "informal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on дванаде́сет. German 'zwölf' carries Umlaut (ö) and [tsvœlf].",
+    "linguistic_note_de_to_bg": "Stress on дванаде́сет. German 'zwölf' carries Umlaut (ö) and [tsvœlf]."
+  },
+  {
+    "word": "Тринадесет",
+    "translation": "dreizehn",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "dreizehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'три' (three) + 'над десет'. Bulgarian pattern parallels German 'drei' + 'zehn'.",
+    "cultural_note": "Both cultures consider 13 sometimes unlucky, but it is common in daily use.",
+    "difficulty": 1,
+    "frequency": 72,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Тринадесет' folgt dem Muster Grundzahl + 'надесет'. Betonung auf '-де́-'.",
+    "notes_bg_to_de": "'Dreizehn' комбинира 'drei' + 'zehn' и се произнася [ˈdʁaɪ̯tseːn]. Използва се и като прилагателно: 'dreizehn Schüler'.",
+    "examples": [
+      {
+        "sentence": "Филмът започва в тринадесет часа.",
+        "translation": "Der Film beginnt um dreizehn Uhr.",
+        "context": "informal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on тринаде́сет. German 'dreizehn' keeps 'drei' stem and uses [ˈdʁaɪ̯tseːn].",
+    "linguistic_note_de_to_bg": "Stress on тринаде́сет. German 'dreizehn' keeps 'drei' stem and uses [ˈdʁaɪ̯tseːn]."
+  },
+  {
+    "word": "Четиринадесет",
+    "translation": "vierzehn",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "vierzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'четири' (four) with inserted 'на' + 'десет'. German forms 'vierzehn' (vier + zehn).",
+    "cultural_note": "Used in school contexts (grade levels, age milestones).",
+    "difficulty": 1,
+    "frequency": 70,
+    "notes_de_to_bg": "Für Deutschsprachige: Beachten Sie die zusätzliche Silbe 'на' in 'четиринадесет'.",
+    "notes_bg_to_de": "'Vierzehn' се произнася [ˈfiːɐ̯tseːn] и образува 'vierzehn Jahre', 'vierzehn Tage'. Запомнете писането с 'ie'.",
+    "examples": [
+      {
+        "sentence": "Тя ще стане на четиринадесет през юни.",
+        "translation": "Sie wird im Juni vierzehn.",
+        "context": "informal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on четиринаде́сет. German 'vierzehn' keeps long [iː] sound, spelled ohne Umlaut.",
+    "linguistic_note_de_to_bg": "Stress on четиринаде́сет. German 'vierzehn' keeps long [iː] sound, spelled ohne Umlaut."
+  },
+  {
+    "word": "Петнадесет",
+    "translation": "fünfzehn",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "fuenfzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'пет' (five) + 'над десет'. German combines 'fünf' + 'zehn' with spelling 'fünfzehn'.",
+    "cultural_note": "Relevant for school schedule (15 минути break) and telling time.",
+    "difficulty": 1,
+    "frequency": 70,
+    "notes_de_to_bg": "Für Deutschsprachige: Bulgarische Form behält 'пет'. Deutsch kürzt 'fünf' zu 'fünfzehn'.",
+    "notes_bg_to_de": "'Fünfzehn' се произнася [ˈfʏnfʦeːn]. Немският умлаут ü се чете [y]. Често се използва в часовете: 'fünfzehn Uhr'.",
+    "examples": [
+      {
+        "sentence": "Имаме петнадесет минути почивка.",
+        "translation": "Wir haben fünfzehn Minuten Pause.",
+        "context": "informal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on петнаде́сет. German 'fünfzehn' keeps Umlaut [ʏ].",
+    "linguistic_note_de_to_bg": "Stress on петнаде́сет. German 'fünfzehn' keeps Umlaut [ʏ]."
+  },
+  {
+    "word": "Шестнадесет",
+    "translation": "sechzehn",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "sechzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'шест' (six) + 'над десет'. German drops the 's' in 'sechzehn'.",
+    "cultural_note": "Driving age references in some countries (16).",
+    "difficulty": 1,
+    "frequency": 69,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Шестнадесет' folgt dem Grundmuster. Deutsche Besonderheit: 'sechzehn' ohne 's'.",
+    "notes_bg_to_de": "'Sechzehn' се пише без 's' (не 'sechszehn') и се произнася [ˈzɛçtseːn]. Запомнете изключението.",
+    "examples": [
+      {
+        "sentence": "Той навършва шестнадесет през май.",
+        "translation": "Er wird im Mai sechzehn.",
+        "context": "informal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on шестнаде́сет. German anomaly: 'sechzehn' ohne 's'.",
+    "linguistic_note_de_to_bg": "Stress on шестнаде́сет. German anomaly: 'sechzehn' ohne 's'."
+  },
+  {
+    "word": "Седемнадесет",
+    "translation": "siebzehn",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "siebzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'седем' (seven) + 'над десет'. German shortens 'sieben' to 'sieb-' in 'siebzehn'.",
+    "cultural_note": "Common for school grades and calendar references.",
+    "difficulty": 1,
+    "frequency": 69,
+    "notes_de_to_bg": "Für Deutschsprachige: Bulgarische Form behält 'седем'. Deutsch kürzt 'sieben' zu 'sieb-'.",
+    "notes_bg_to_de": "'Siebzehn' се пише без 'en' (не 'siebzehn'). Произношение [ˈziːptseːn]. Използва се в изрази като 'siebzehn Uhr'.",
+    "examples": [
+      {
+        "sentence": "Срещата е в седемнадесет часа.",
+        "translation": "Das Treffen ist um siebzehn Uhr.",
+        "context": "formal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on седемнаде́сет. German 'siebzehn' loses the 'en'.",
+    "linguistic_note_de_to_bg": "Stress on седемнаде́сет. German 'siebzehn' loses the 'en'."
+  },
+  {
+    "word": "Осемнадесет",
+    "translation": "achtzehn",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "achtzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'осем' (eight) + 'над десет'. German combines 'acht' + 'zehn'.",
+    "cultural_note": "Marks adulthood in many contexts (18th birthday celebrations).",
+    "difficulty": 1,
+    "frequency": 70,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Осемнадесет' hat eingefügtes 'на'. Deutsch behält 'acht'.",
+    "notes_bg_to_de": "'Achtzehn' се произнася [ˈaxtseːn] и е важна възрастова граница. В комбинации: 'achtzehnjährige'.",
+    "examples": [
+      {
+        "sentence": "Тя навърши осемнадесет миналата седмица.",
+        "translation": "Sie ist letzte Woche achtzehn geworden.",
+        "context": "informal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on осемнаде́сет. German 'achtzehn' keeps 't' pronunciation [ˈaxtseːn].",
+    "linguistic_note_de_to_bg": "Stress on осемнаде́сет. German 'achtzehn' keeps 't' pronunciation [ˈaxtseːn]."
+  },
+  {
+    "word": "Деветнадесет",
+    "translation": "neunzehn",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "neunzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'девет' (nine) + 'над десет'. German forms 'neun' + 'zehn'.",
+    "cultural_note": "Used frequently in dates (e.g., 19th century references).",
+    "difficulty": 1,
+    "frequency": 70,
+    "notes_de_to_bg": "Für Deutschsprachige: Bulgarisches Muster bleibt konstant ('девет' + 'надесет').",
+    "notes_bg_to_de": "'Neunzehn' се произнася [ˈnɔʏ̯ntseːn] и често се съкращава в разговор: 'neunzehn Uhr' (19 часа).",
+    "examples": [
+      {
+        "sentence": "Университетът е основан през деветнадесет век.",
+        "translation": "Die Universität wurde im neunzehnten Jahrhundert gegründet.",
+        "context": "formal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on деветнаде́сет. German 'neunzehn' uses diphthong [nɔɪ̯n].",
+    "linguistic_note_de_to_bg": "Stress on деветнаде́сет. German 'neunzehn' uses diphthong [nɔɪ̯n]."
+  },
+  {
+    "word": "Двадесет",
+    "translation": "zwanzig",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "zwanzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'два' (two) + 'десет'. German 'zwanzig' derives from 'zwei' + '-zig'.",
+    "cultural_note": "Round numbers like 20 are used in pricing and ages (20 години).",
+    "difficulty": 1,
+    "frequency": 73,
+    "notes_de_to_bg": "Für Deutschsprachige: Bulgarisch fügt 'десет' an, Deutsch nutzt die Endung '-zig'.",
+    "notes_bg_to_de": "'Zwanzig' се пише с 'z' и се произнася [ˈtsvanʦɪç]. В съставни числа (21) немският ред е 'einundzwanzig'.",
+    "examples": [
+      {
+        "sentence": "Той стана на двадесет миналия месец.",
+        "translation": "Er wurde letzten Monat zwanzig.",
+        "context": "informal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on два́десет. German 'zwanzig' pronounced [ˈtsvanʦɪç].",
+    "linguistic_note_de_to_bg": "Stress on два́десет. German 'zwanzig' pronounced [ˈtsvanʦɪç]."
+  },
+  {
+    "word": "Тридесет",
+    "translation": "dreißig",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "dreissig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'три' (three) + 'десет'. German uses 'dreißig' (drei + ßig).",
+    "cultural_note": "Milestone age (30).",
+    "difficulty": 1,
+    "frequency": 68,
+    "notes_de_to_bg": "Für Deutschsprachige: Bulgarische Form bleibt regelhaft. Deutsch verwendet 'ß'.",
+    "notes_bg_to_de": "'Dreißig' се изговаря [ˈdʁaɪ̯sɪç]. При писане без ß използвайте 'dreissig'.",
+    "examples": [
+      {
+        "sentence": "Компанията има тридесет служители.",
+        "translation": "Das Unternehmen hat dreißig Mitarbeitende.",
+        "context": "formal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on три́десет. German nutzt scharfes ß und Laut [ˈdʁaɪ̯sɪç].",
+    "linguistic_note_de_to_bg": "Stress on три́десет. German nutzt scharfes ß und Laut [ˈdʁaɪ̯sɪç]."
+  },
+  {
+    "word": "Четиридесет",
+    "translation": "vierzig",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "vierzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'четири' (four) + 'десет'. German 'vierzig' is vier + zig (without 'u').",
+    "cultural_note": "Used in pricing, e.g., 40 лева.",
+    "difficulty": 1,
+    "frequency": 66,
+    "notes_de_to_bg": "Für Deutschsprachige: Deutsche Form hat kein 'u' wie 'vier'.",
+    "notes_bg_to_de": "'Vierzig' се пише без 'u' (не 'vierzig'). Произношение [ˈfiːɐ̯tsɪç].",
+    "examples": [
+      {
+        "sentence": "Билетът струва четиридесет лева.",
+        "translation": "Das Ticket kostet vierzig Lewa.",
+        "context": "formal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on четириде́сет. German 'vierzig' pronounced [ˈfiːɐ̯tsɪç].",
+    "linguistic_note_de_to_bg": "Stress on четириде́сет. German 'vierzig' pronounced [ˈfiːɐ̯tsɪç]."
+  },
+  {
+    "word": "Петдесет",
+    "translation": "fünfzig",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "fuenfzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'пет' (five) + 'десет'. German shortens 'fünf' to 'fünfzig'.",
+    "cultural_note": "Used for measures (50 кг, 50%) and milestone birthdays.",
+    "difficulty": 1,
+    "frequency": 66,
+    "notes_de_to_bg": "Für Deutschsprachige: Bulgarisch bleibt regulär. Deutsch behält ü und fügt '-zig'.",
+    "notes_bg_to_de": "'Fünfzig' се произнася [ˈfʏnfʦɪç]. Немският ü се чете [y], а 'g' в края е [ç].",
+    "examples": [
+      {
+        "sentence": "Книгата има петдесет страници.",
+        "translation": "Das Buch hat fünfzig Seiten.",
+        "context": "informal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on петде́сет. German 'fünfzig' retains Umlaut [ʏ].",
+    "linguistic_note_de_to_bg": "Stress on петде́сет. German 'fünfzig' retains Umlaut [ʏ]."
+  },
+  {
+    "word": "Шестдесет",
+    "translation": "sechzig",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "sechzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'шест' (six) + 'десет'. German 'sechzig' loses the 's'.",
+    "cultural_note": "Common in time expressions (60 минути = 1 час).",
+    "difficulty": 1,
+    "frequency": 65,
+    "notes_de_to_bg": "Für Deutschsprachige: Beachten Sie die fehlende 's' in 'sechzig'.",
+    "notes_bg_to_de": "'Sechzig' се пише без 's' (не 'sechszig') и се произнася [ˈzɛçtsɪç].",
+    "examples": [
+      {
+        "sentence": "Един час има шестдесет минути.",
+        "translation": "Eine Stunde hat sechzig Minuten.",
+        "context": "informal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on шестде́сет. German anomaly: 'sechzig' ohne 's'.",
+    "linguistic_note_de_to_bg": "Stress on шестде́сет. German anomaly: 'sechzig' ohne 's'."
+  },
+  {
+    "word": "Седемдесет",
+    "translation": "siebzig",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "siebzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'седем' (seven) + 'десет'. German shortens 'sieben' to 'sieb-' in 'siebzig'.",
+    "cultural_note": "Appears in date references (70-те години).",
+    "difficulty": 1,
+    "frequency": 64,
+    "notes_de_to_bg": "Für Deutschsprachige: Muster wie bei 'siebzehn' – 'sieben' verliert '-en'.",
+    "notes_bg_to_de": "'Siebzig' се произнася [ˈziːptsɪç] и се пише без 'en'.",
+    "examples": [
+      {
+        "sentence": "Дядо ми е на седемдесет години.",
+        "translation": "Mein Großvater ist siebzig Jahre alt.",
+        "context": "informal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on седемде́сет. German 'siebzig' ohne 'en'.",
+    "linguistic_note_de_to_bg": "Stress on седемде́сет. German 'siebzig' ohne 'en'."
+  },
+  {
+    "word": "Осемдесет",
+    "translation": "achtzig",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "achtzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'осем' (eight) + 'десет'. German 'achtzig' keeps 't'.",
+    "cultural_note": "Common in speed limits (80 km/h).",
+    "difficulty": 1,
+    "frequency": 63,
+    "notes_de_to_bg": "Für Deutschsprachige: Struktur bleibt regelmäßig. Deutsch bewahrt 't'.",
+    "notes_bg_to_de": "'Achtzig' се произнася [ˈaxtsɪç] – 't' се чува ясно. Използва се в 'achtziger Jahre'.",
+    "examples": [
+      {
+        "sentence": "Осемдесет километра в час е ограничението тук.",
+        "translation": "Hier gilt eine Begrenzung von achtzig Stundenkilometern.",
+        "context": "formal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on осемде́сет. German [ˈaxtsɪç] with audible 't'.",
+    "linguistic_note_de_to_bg": "Stress on осемде́сет. German [ˈaxtsɪç] with audible 't'."
+  },
+  {
+    "word": "Деветдесет",
+    "translation": "neunzig",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "neunzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From 'девет' (nine) + 'десет'. German 'neun' + '-zig'.",
+    "cultural_note": "Used in percentages (90%) and pricing.",
+    "difficulty": 1,
+    "frequency": 62,
+    "notes_de_to_bg": "Für Deutschsprachige: Bulgarische Endung '-десет' bleibt; Deutsch sagt 'neunzig' mit Diphtong.",
+    "notes_bg_to_de": "'Neunzig' се произнася [ˈnɔʏ̯ntsɪç] и често се съкращава в разговор до 'neunzig Prozent'.",
+    "examples": [
+      {
+        "sentence": "Деветдесет процента от анкетираните са съгласни.",
+        "translation": "Neunzig Prozent der Befragten stimmen zu.",
+        "context": "formal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on деветде́сет. German diphthong [nɔʏ̯n].",
+    "linguistic_note_de_to_bg": "Stress on деветде́сет. German diphthong [nɔʏ̯n]."
+  },
+  {
+    "word": "Сто",
+    "translation": "hundert",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "hundert",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "Proto-Slavic *sъto (hundred). Cognate with Germanic 'hundert'.",
+    "cultural_note": "Used for percentages (100%) and academic grading (100 точки).",
+    "difficulty": 1,
+    "frequency": 78,
+    "notes_de_to_bg": "Für Deutschsprachige: Bulgarisches 'Сто' ist kurz und tonisch. Verwenden Sie Postposition bei zusammengesetzten Zahlen ('сто и пет').",
+    "notes_bg_to_de": "'Hundert' се произнася [ˈhʊndɐt]. В комбинации немският ред е обратно: 'hundertfünf'.",
+    "examples": [
+      {
+        "sentence": "Курсът струва сто лева.",
+        "translation": "Der Kurs kostet hundert Lewa.",
+        "context": "formal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on сто́. German 'hundert' pronounced [ˈhʊndɐt].",
+    "linguistic_note_de_to_bg": "Stress on сто́. German 'hundert' pronounced [ˈhʊndɐt]."
+  },
+  {
+    "word": "Хиляда",
+    "translation": "tausend",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": null,
+    "id": "tausend",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "From Proto-Slavic *tisyęta. German 'tausend' from Proto-Germanic *þūsundī. Cognates show Indo-European link.",
+    "cultural_note": "Used in financial contexts and large counts (e.g., 1000 лева).",
+    "difficulty": 1,
+    "frequency": 70,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Хиляда' hat weiches 'л' und endet auf -а. In zusammengesetzten Zahlen bleibt Plural unverändert.",
+    "notes_bg_to_de": "'Tausend' се произнася [ˈtaʊ̯zn̩t]. Немският ред е 'tausendzweihundert'. В писане често се използва точка за разделяне: 1.000.",
+    "examples": [
+      {
+        "sentence": "Градът има хиляда жители.",
+        "translation": "Die Stadt hat tausend Einwohner.",
+        "context": "informal"
+      }
+    ],
+    "linguistic_note_bg_to_de": "Stress on хиля́да. German 'tausend' [ˈtaʊ̯zn̩t].",
+    "linguistic_note_de_to_bg": "Stress on хиля́да. German 'tausend' [ˈtaʊ̯zn̩t]."
   },
   {
     "word": "Много",
@@ -1299,11 +1849,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 70,
     "notes_de_to_bg": "Für Deutschsprachige: 'Много' ≈ 'viele'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Viele' се използва с броими съществителни: 'viele Bücher'. За неброими използвайте 'viel'."
+    "notes_bg_to_de": "'Viele' се използва с броими съществителни: 'viele Bücher'. За неброими използвайте 'viel'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Малко",
@@ -1316,11 +1867,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 70,
     "notes_de_to_bg": "Für Deutschsprachige: 'Малко' ≈ 'wenig'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Wenig' означава 'малко'; за множествено може да чуете 'wenige Leute'. Противоположно на 'viel/viele'."
+    "notes_bg_to_de": "'Wenig' означава 'малко'; за множествено може да чуете 'wenige Leute'. Противоположно на 'viel/viele'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Всички",
@@ -1333,11 +1885,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 78,
     "notes_de_to_bg": "Für Deutschsprachige: 'Всички' ≈ 'alle'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Alle' изисква множествено число: 'alle Freunde'. В комбинация с определителен член става 'alle die'."
+    "notes_bg_to_de": "'Alle' изисква множествено число: 'alle Freunde'. В комбинация с определителен член става 'alle die'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Няколко",
@@ -1350,11 +1903,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 76,
     "notes_de_to_bg": "Für Deutschsprachige: 'Няколко' ≈ 'einige'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Einige' обозначава неопределен малък брой: 'einige Tage' (няколко дни)." 
+    "notes_bg_to_de": "'Einige' обозначава неопределен малък брой: 'einige Tage' (няколко дни).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Никой",
@@ -1367,11 +1921,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 75,
     "notes_de_to_bg": "Für Deutschsprachige: 'Никой' ≈ 'keiner'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Keiner' е отрицателен заменящ за хора: 'Keiner kommt.' За съществителни използвайте 'kein' + род ('kein Auto')."
+    "notes_bg_to_de": "'Keiner' е отрицателен заменящ за хора: 'Keiner kommt.' За съществителни използвайте 'kein' + род ('kein Auto').",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Понеделник",
@@ -1384,11 +1939,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 79,
     "notes_de_to_bg": "Für Deutschsprachige: 'Понеделник' ≈ 'Montag'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Montag' е първият работен ден. В изрази се използва с предлога 'am': 'am Montag'. Ударението е на първата сричка."
+    "notes_bg_to_de": "'Montag' е първият работен ден. В изрази се използва с предлога 'am': 'am Montag'. Ударението е на първата сричка.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Вторник",
@@ -1401,11 +1957,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 76,
     "notes_de_to_bg": "Für Deutschsprachige: 'Вторник' ≈ 'Dienstag'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Dienstag' се произнася 'динс-таг'. Комбинации: 'jeden Dienstag' (всеки вторник), 'am Dienstagabend'."
+    "notes_bg_to_de": "'Dienstag' се произнася 'динс-таг'. Комбинации: 'jeden Dienstag' (всеки вторник), 'am Dienstagabend'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Сряда",
@@ -1418,11 +1975,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 78,
     "notes_de_to_bg": "Für Deutschsprachige: 'Сряда' ≈ 'Mittwoch'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Mittwoch' буквално означава 'среда на седмицата'. Произнася се 'мит-вох'. Използвайте 'am Mittwoch'."
+    "notes_bg_to_de": "'Mittwoch' буквално означава 'среда на седмицата'. Произнася се 'мит-вох'. Използвайте 'am Mittwoch'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Четвъртък",
@@ -1435,11 +1993,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 73,
     "notes_de_to_bg": "Für Deutschsprachige: 'Четвъртък' ≈ 'Donnerstag'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Donnerstag' идва от 'Donner' (гръм). Фрази: 'Donnerstagvormittag'. Предлог 'am Donnerstag'."
+    "notes_bg_to_de": "'Donnerstag' идва от 'Donner' (гръм). Фрази: 'Donnerstagvormittag'. Предлог 'am Donnerstag'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Петък",
@@ -1452,11 +2011,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 78,
     "notes_de_to_bg": "Für Deutschsprachige: 'Петък' ≈ 'Freitag'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Freitag' е денят преди уикенда. Немците казват 'am Freitagabend ausgehen' (излизам петък вечер)."
+    "notes_bg_to_de": "'Freitag' е денят преди уикенда. Немците казват 'am Freitagabend ausgehen' (излизам петък вечер).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Събота",
@@ -1469,11 +2029,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 79,
     "notes_de_to_bg": "Für Deutschsprachige: 'Събота' ≈ 'Samstag'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Samstag' е стандартното название; на юг често се използва 'Sonnabend'. Използвайте 'am Samstag'."
+    "notes_bg_to_de": "'Samstag' е стандартното название; на юг често се използва 'Sonnabend'. Използвайте 'am Samstag'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Неделя",
@@ -1486,11 +2047,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 71,
     "notes_de_to_bg": "Für Deutschsprachige: 'Неделя' ≈ 'Sonntag'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Sonntag' е ден за почивка; много магазини са затворени. Комбинация: 'am Sonntagmorgen'."
+    "notes_bg_to_de": "'Sonntag' е ден за почивка; много магазини са затворени. Комбинация: 'am Sonntagmorgen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Час",
@@ -1503,11 +2065,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Time concept in Bulgarian. Note that времеmeans both 'time' and 'weather'",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 75,
     "notes_de_to_bg": "Für Deutschsprachige: 'Час' ≈ 'Stunde'. Zeitbegriff. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Stunde' означава 60 минути. Фраза: 'zwei Stunden warten'. Не се бърка с 'die Uhr' (часовник)."
+    "notes_bg_to_de": "'Die Stunde' означава 60 минути. Фраза: 'zwei Stunden warten'. Не се бърка с 'die Uhr' (часовник).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Минута",
@@ -1520,11 +2083,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Time concept in Bulgarian. Note that времеmeans both 'time' and 'weather'",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 79,
     "notes_de_to_bg": "Für Deutschsprachige: 'Минута' ≈ 'Minute'. Zeitbegriff. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Minute' е женски род. Във време на часовник: 'Es ist fünf Minuten nach neun.' Съкратено 'Min.'."
+    "notes_bg_to_de": "'Die Minute' е женски род. Във време на часовник: 'Es ist fünf Minuten nach neun.' Съкратено 'Min.'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Сутрин",
@@ -1537,11 +2101,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Time concept in Bulgarian. Note that времеmeans both 'time' and 'weather'",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 73,
     "notes_de_to_bg": "Für Deutschsprachige: 'Сутрин' ≈ 'Morgen'. Zeitbegriff. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Morgen' обозначава периода до обяд. Фраза: 'am Morgen', а при пожелание 'Guten Morgen!'."
+    "notes_bg_to_de": "'Der Morgen' обозначава периода до обяд. Фраза: 'am Morgen', а при пожелание 'Guten Morgen!'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Обед",
@@ -1554,11 +2119,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Time concept in Bulgarian. Note that времеmeans both 'time' and 'weather'",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 75,
     "notes_de_to_bg": "Für Deutschsprachige: 'Обед' ≈ 'Mittag'. Zeitbegriff. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Mittag' е обедът (~12 ч.). Изрази: 'am Mittag', 'Mittagessen' (обяд)."
+    "notes_bg_to_de": "'Der Mittag' е обедът (~12 ч.). Изрази: 'am Mittag', 'Mittagessen' (обяд).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Следобед",
@@ -1571,11 +2137,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Time concept in Bulgarian. Note that времеmeans both 'time' and 'weather'",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 73,
     "notes_de_to_bg": "Für Deutschsprachige: 'Следобед' ≈ 'Nachmittag'. Zeitbegriff. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Nachmittag' обхваща времето след 12 ч. до вечерта. Комбинация: 'am Nachmittag', 'Nachmittagsunterricht'."
+    "notes_bg_to_de": "'Der Nachmittag' обхваща времето след 12 ч. до вечерта. Комбинация: 'am Nachmittag', 'Nachmittagsunterricht'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Вечер",
@@ -1588,11 +2155,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Time concept in Bulgarian. Note that времеmeans both 'time' and 'weather'",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 71,
     "notes_de_to_bg": "Für Deutschsprachige: 'Вечер' ≈ 'Abend'. Zeitbegriff. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Abend' започва около 18 ч. и се използва в изрази като 'am Abend' или 'heute Abend'. Пожелание: 'Guten Abend!'."
+    "notes_bg_to_de": "'Der Abend' започва около 18 ч. и се използва в изрази като 'am Abend' или 'heute Abend'. Пожелание: 'Guten Abend!'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Нощ",
@@ -1605,11 +2173,12 @@
     "target_lang": "de",
     "etymology": "From Proto-Slavic *noktь (night). Cognate with Latin 'nox', Greek 'nyx'",
     "cultural_note": "Bulgarian nightlife vibrant in cities. Traditional early rising in rural areas",
-    "linguistic_note": "Feminine noun. Stress: нощ (short). Used in expression 'през нощта' (during the night)",
     "difficulty": 2,
     "frequency": 77,
     "notes_de_to_bg": "Für Deutschsprachige: 'Нощ' ≈ 'Nacht'. Betonung: нощ (short). Zeitbegriff. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Nacht' описва периода след полунощ; кажете 'in der Nacht' или 'nachts'. При пожелание: 'Gute Nacht!'."
+    "notes_bg_to_de": "'Die Nacht' описва периода след полунощ; кажете 'in der Nacht' или 'nachts'. При пожелание: 'Gute Nacht!'.",
+    "linguistic_note_bg_to_de": "Feminine noun. Stress: нощ (short). Used in expression 'през нощта' (during the night)",
+    "linguistic_note_de_to_bg": "Feminine noun. Stress: нощ (short). Used in expression 'през нощта' (during the night)"
   },
   {
     "word": "Как си?",
@@ -1622,11 +2191,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Important politeness expression in Bulgarian culture. Social etiquette highly valued",
-    "linguistic_note": "Bulgarian word at phrase level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 85,
     "notes_de_to_bg": "Für Deutschsprachige: 'Как си?' ≈ 'Wie geht's?'; zusammengesetzt aus 'Как' + 'си?'. Höflichkeitsausdruck. Häufig verwendet.",
-    "notes_bg_to_de": "'Wie geht's?' е разговорно съкратено от 'Wie geht es dir/Ihnen?'. Използва се като учтиво询аване за състояние."
+    "notes_bg_to_de": "'Wie geht's?' е разговорно съкратено от 'Wie geht es dir/Ihnen?'. Използва се като учтиво询аване за състояние.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at phrase level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Добре съм",
@@ -1639,11 +2209,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Important politeness expression in Bulgarian culture. Social etiquette highly valued",
-    "linguistic_note": "Bulgarian word at phrase level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 89,
     "notes_de_to_bg": "Für Deutschsprachige: 'Добре съм' ≈ 'Mir geht's gut'; zusammengesetzt aus 'Добре' + 'съм'. Höflichkeitsausdruck. Häufig verwendet.",
-    "notes_bg_to_de": "'Mir geht's gut' е стандартен отговор с дателен 'mir'. Формалната форма е 'Mir geht es gut, danke.'"
+    "notes_bg_to_de": "'Mir geht's gut' е стандартен отговор с дателен 'mir'. Формалната форма е 'Mir geht es gut, danke.'",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at phrase level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Извинявай",
@@ -1656,11 +2227,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Important politeness expression in Bulgarian culture. Social etiquette highly valued",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 81,
     "notes_de_to_bg": "Für Deutschsprachige: 'Извинявай' ≈ 'Entschuldige'. Höflichkeitsausdruck. Häufig verwendet.",
-    "notes_bg_to_de": "'Entschuldige' е неформален императив; за уважителна форма използвайте 'Entschuldigen Sie bitte'. Комбинира се с 'bitte'."
+    "notes_bg_to_de": "'Entschuldige' е неформален императив; за уважителна форма използвайте 'Entschuldigen Sie bitte'. Комбинира се с 'bitte'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Може ли?",
@@ -1673,11 +2245,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Important politeness expression in Bulgarian culture. Social etiquette highly valued",
-    "linguistic_note": "Bulgarian word at phrase level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 87,
     "notes_de_to_bg": "Für Deutschsprachige: 'Може ли?' ≈ 'Darf ich?'; zusammengesetzt aus 'Може' + 'ли?'. Höflichkeitsausdruck. Häufig verwendet.",
-    "notes_bg_to_de": "'Darf ich?' използва модалния глагол 'dürfen' за искане на разрешение: 'Darf ich hier sitzen?'."
+    "notes_bg_to_de": "'Darf ich?' използва модалния глагол 'dürfen' за искане на разрешение: 'Darf ich hier sitzen?'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at phrase level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Хляб",
@@ -1690,11 +2263,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian cuisine diverse, influenced by Ottoman, Greek, and Slavic traditions",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 75,
     "notes_de_to_bg": "Für Deutschsprachige: 'Хляб' ≈ 'Brot'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Das Brot' е среден род; множествено 'die Brote'. Типичен израз: 'ein frisches Brot kaufen'."
+    "notes_bg_to_de": "'Das Brot' е среден род; множествено 'die Brote'. Типичен израз: 'ein frisches Brot kaufen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Мляко",
@@ -1707,11 +2281,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian cuisine diverse, influenced by Ottoman, Greek, and Slavic traditions",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 74,
     "notes_de_to_bg": "Für Deutschsprachige: 'Мляко' ≈ 'Milch'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Milch' е необроимо; при видове се използва прилагателно: 'die Vollmilch', 'die Mandelmilch'."
+    "notes_bg_to_de": "'Die Milch' е необроимо; при видове се използва прилагателно: 'die Vollmilch', 'die Mandelmilch'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Сирене",
@@ -1724,11 +2299,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian cuisine diverse, influenced by Ottoman, Greek, and Slavic traditions",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 79,
     "notes_de_to_bg": "Für Deutschsprachige: 'Сирене' ≈ 'Käse'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Käse' е мъжки род; множествено рядко ('die Käse', 'die Käsesorten'). Израз: 'ein Stück Käse'."
+    "notes_bg_to_de": "'Der Käse' е мъжки род; множествено рядко ('die Käse', 'die Käsesorten'). Израз: 'ein Stück Käse'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Месо",
@@ -1741,11 +2317,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian cuisine diverse, influenced by Ottoman, Greek, and Slavic traditions",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 73,
     "notes_de_to_bg": "Für Deutschsprachige: 'Месо' ≈ 'Fleisch'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Das Fleisch' е неизброимо: 'Rindfleisch', 'Schweinefleisch'. Използва се и в израза 'kein Fleisch essen'."
+    "notes_bg_to_de": "'Das Fleisch' е неизброимо: 'Rindfleisch', 'Schweinefleisch'. Използва се и в израза 'kein Fleisch essen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Риба",
@@ -1758,11 +2335,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian cuisine diverse, influenced by Ottoman, Greek, and Slavic traditions",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 79,
     "notes_de_to_bg": "Für Deutschsprachige: 'Риба' ≈ 'Fisch'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Fisch' обозначава и рибата като храна, и животното. Множествено: 'die Fische'."
+    "notes_bg_to_de": "'Der Fisch' обозначава и рибата като храна, и животното. Множествено: 'die Fische'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Зеленчуци",
@@ -1775,11 +2353,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian cuisine diverse, influenced by Ottoman, Greek, and Slavic traditions",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 74,
     "notes_de_to_bg": "Für Deutschsprachige: 'Зеленчуци' ≈ 'Gemüse'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Das Gemüse' е колективно и няма множествено число. Пример: 'frisches Gemüse kaufen'."
+    "notes_bg_to_de": "'Das Gemüse' е колективно и няма множествено число. Пример: 'frisches Gemüse kaufen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Плодове",
@@ -1792,11 +2371,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian cuisine diverse, influenced by Ottoman, Greek, and Slavic traditions",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 71,
     "notes_de_to_bg": "Für Deutschsprachige: 'Плодове' ≈ 'Obst'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Das Obst' също е колективно; за различни видове се казва 'verschiedenes Obst' или 'Obstsorten'."
+    "notes_bg_to_de": "'Das Obst' също е колективно; за различни видове се казва 'verschiedenes Obst' или 'Obstsorten'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Сок",
@@ -1809,11 +2389,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian cuisine diverse, influenced by Ottoman, Greek, and Slavic traditions",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 73,
     "notes_de_to_bg": "Für Deutschsprachige: 'Сок' ≈ 'Saft'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Saft' има множествено 'die Säfte'. Пример: 'Apfelsaft', 'Orangensaft'."
+    "notes_bg_to_de": "'Der Saft' има множествено 'die Säfte'. Пример: 'Apfelsaft', 'Orangensaft'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Кафе",
@@ -1826,11 +2407,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian cuisine diverse, influenced by Ottoman, Greek, and Slavic traditions",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 70,
     "notes_de_to_bg": "Für Deutschsprachige: 'Кафе' ≈ 'Kaffee'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Kaffee' е мъжки род; напитката: 'eine Tasse Kaffee'. За кафене се използва 'das Café'."
+    "notes_bg_to_de": "'Der Kaffee' е мъжки род; напитката: 'eine Tasse Kaffee'. За кафене се използва 'das Café'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Автобус",
@@ -1843,11 +2425,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian public transport system includes buses, trams, metro (Sofia)",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 71,
     "notes_de_to_bg": "Für Deutschsprachige: 'Автобус' ≈ 'Bus'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Bus' в транспорт; множествено 'die Busse'. Израз: 'mit dem Bus fahren'."
+    "notes_bg_to_de": "'Der Bus' в транспорт; множествено 'die Busse'. Израз: 'mit dem Bus fahren'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Влак",
@@ -1860,11 +2443,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian public transport system includes buses, trams, metro (Sofia)",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 71,
     "notes_de_to_bg": "Für Deutschsprachige: 'Влак' ≈ 'Zug'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Zug' означава влак; множествено 'die Züge'. Израз: 'den Zug nehmen'."
+    "notes_bg_to_de": "'Der Zug' означава влак; множествено 'die Züge'. Израз: 'den Zug nehmen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Самолет",
@@ -1877,11 +2461,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian public transport system includes buses, trams, metro (Sofia)",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 72,
     "notes_de_to_bg": "Für Deutschsprachige: 'Самолет' ≈ 'Flugzeug'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Das Flugzeug' е среден род и означава летателен апарат. Израз: 'mit dem Flugzeug fliegen'."
+    "notes_bg_to_de": "'Das Flugzeug' е среден род и означава летателен апарат. Израз: 'mit dem Flugzeug fliegen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Такси",
@@ -1894,11 +2479,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian public transport system includes buses, trams, metro (Sofia)",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 78,
     "notes_de_to_bg": "Für Deutschsprachige: 'Такси' ≈ 'Taxi'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Das Taxi' е среден род; множествено 'die Taxis'. Често се използва изразът 'ein Taxi nehmen'."
+    "notes_bg_to_de": "'Das Taxi' е среден род; множествено 'die Taxis'. Често се използва изразът 'ein Taxi nehmen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Гара",
@@ -1911,11 +2497,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian public transport system includes buses, trams, metro (Sofia)",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 74,
     "notes_de_to_bg": "Für Deutschsprachige: 'Гара' ≈ 'Bahnhof'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Bahnhof' е мъжки род. Кажете 'am Bahnhof' или 'zum Bahnhof fahren'."
+    "notes_bg_to_de": "'Der Bahnhof' е мъжки род. Кажете 'am Bahnhof' или 'zum Bahnhof fahren'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Летище",
@@ -1928,11 +2515,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian public transport system includes buses, trams, metro (Sofia)",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 75,
     "notes_de_to_bg": "Für Deutschsprachige: 'Летище' ≈ 'Flughafen'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Flughafen' означава летище. Изрази: 'am Flughafen' (на летището), 'zum Flughafen fahren'."
+    "notes_bg_to_de": "'Der Flughafen' означава летище. Изрази: 'am Flughafen' (на летището), 'zum Flughafen fahren'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Хотел",
@@ -1945,11 +2533,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian public transport system includes buses, trams, metro (Sofia)",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 70,
     "notes_de_to_bg": "Für Deutschsprachige: 'Хотел' ≈ 'Hotel'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Das Hotel' е среден род; множествено 'die Hotels'. Резервация: 'ein Zimmer im Hotel buchen'."
+    "notes_bg_to_de": "'Das Hotel' е среден род; множествено 'die Hotels'. Резервация: 'ein Zimmer im Hotel buchen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Билет",
@@ -1962,11 +2551,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian public transport system includes buses, trams, metro (Sofia)",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 76,
     "notes_de_to_bg": "Für Deutschsprachige: 'Билет' ≈ 'Ticket'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Das Ticket' е неутрално; синоним в транспорта е 'die Fahrkarte'. Израз: 'ein Ticket kaufen'."
+    "notes_bg_to_de": "'Das Ticket' е неутрално; синоним в транспорта е 'die Fahrkarte'. Израз: 'ein Ticket kaufen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Път",
@@ -1979,11 +2569,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian public transport system includes buses, trams, metro (Sofia)",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 77,
     "notes_de_to_bg": "Für Deutschsprachige: 'Път' ≈ 'Straße'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Straße' е женски род и се пише с ß: 'Straße'. Израз: 'auf der Straße'."
+    "notes_bg_to_de": "'Die Straße' е женски род и се пише с ß: 'Straße'. Израз: 'auf der Straße'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Карта",
@@ -1996,11 +2587,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgarian public transport system includes buses, trams, metro (Sofia)",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 74,
     "notes_de_to_bg": "Für Deutschsprachige: 'Карта' ≈ 'Karte'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Karte' означава карта или билет. Пример: 'Stadtkarte' (градска карта), 'Speisekarte' (меню)."
+    "notes_bg_to_de": "'Die Karte' означава карта или билет. Пример: 'Stadtkarte' (градска карта), 'Speisekarte' (меню).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Лекар",
@@ -2013,11 +2605,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 74,
     "notes_de_to_bg": "Für Deutschsprachige: 'Лекар' ≈ 'Arzt'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Arzt' е мъжки род; множествено 'die Ärzte'. Женска форма: 'die Ärztin'."
+    "notes_bg_to_de": "'Der Arzt' е мъжки род; множествено 'die Ärzte'. Женска форма: 'die Ärztin'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Болница",
@@ -2030,11 +2623,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 78,
     "notes_de_to_bg": "Für Deutschsprachige: 'Болница' ≈ 'Krankenhaus'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Das Krankenhaus' е среден род; множествено 'die Krankenhäuser'. Израз: 'im Krankenhaus liegen'."
+    "notes_bg_to_de": "'Das Krankenhaus' е среден род; множествено 'die Krankenhäuser'. Израз: 'im Krankenhaus liegen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Аптека",
@@ -2047,11 +2641,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 76,
     "notes_de_to_bg": "Für Deutschsprachige: 'Аптека' ≈ 'Apotheke'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Apotheke' е женски род. Немците казват 'zur Apotheke gehen', за да купят лекарства."
+    "notes_bg_to_de": "'Die Apotheke' е женски род. Немците казват 'zur Apotheke gehen', за да купят лекарства.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Лекарства",
@@ -2064,11 +2659,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 74,
     "notes_de_to_bg": "Für Deutschsprachige: 'Лекарства' ≈ 'Medikamente'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Medikamente' е множествено число на 'das Medikament'. Пример: 'Medikamente einnehmen' (вземам лекарства)."
+    "notes_bg_to_de": "'Die Medikamente' е множествено число на 'das Medikament'. Пример: 'Medikamente einnehmen' (вземам лекарства).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Спешно",
@@ -2081,11 +2677,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 70,
     "notes_de_to_bg": "Für Deutschsprachige: 'Спешно' ≈ 'Notfall'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Notfall' е мъжки род и означава спешен случай. Израз: 'Im Notfall 112 anrufen'."
+    "notes_bg_to_de": "'Der Notfall' е мъжки род и означава спешен случай. Израз: 'Im Notfall 112 anrufen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Болка",
@@ -2098,11 +2695,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 74,
     "notes_de_to_bg": "Für Deutschsprachige: 'Болка' ≈ 'Schmerz'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Schmerz' е мъжки род; множествено 'die Schmerzen'. Казваме 'Schmerzen haben' (имам болки)."
+    "notes_bg_to_de": "'Der Schmerz' е мъжки род; множествено 'die Schmerzen'. Казваме 'Schmerzen haben' (имам болки).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Здраве",
@@ -2115,11 +2713,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 76,
     "notes_de_to_bg": "Für Deutschsprachige: 'Здраве' ≈ 'Gesundheit'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Gesundheit' е женски род и означава здраве. Фраза: 'Auf Ihre Gesundheit!' при наздравица."
+    "notes_bg_to_de": "'Die Gesundheit' е женски род и означава здраве. Фраза: 'Auf Ihre Gesundheit!' при наздравица.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Треска",
@@ -2132,11 +2731,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 70,
     "notes_de_to_bg": "Für Deutschsprachige: 'Треска' ≈ 'Fieber'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Das Fieber' е неутрално; казва се 'Fieber haben' или 'hohes Fieber'."
+    "notes_bg_to_de": "'Das Fieber' е неутрално; казва се 'Fieber haben' или 'hohes Fieber'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Настинка",
@@ -2149,11 +2749,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 73,
     "notes_de_to_bg": "Für Deutschsprachige: 'Настинка' ≈ 'Erkältung'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Erkältung' е женски род. Израз: 'eine starke Erkältung' или 'sich erkälten'."
+    "notes_bg_to_de": "'Die Erkältung' е женски род. Израз: 'eine starke Erkältung' или 'sich erkälten'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Помощ",
@@ -2166,11 +2767,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 77,
     "notes_de_to_bg": "Für Deutschsprachige: 'Помощ' ≈ 'Hilfe'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Hilfe' е женски род; казва се 'Hilfe rufen' (викам помощ) или 'Danke für die Hilfe'."
+    "notes_bg_to_de": "'Die Hilfe' е женски род; казва се 'Hilfe rufen' (викам помощ) или 'Danke für die Hilfe'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Слънце",
@@ -2183,11 +2785,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 70,
     "notes_de_to_bg": "Für Deutschsprachige: 'Слънце' ≈ 'Sonne'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Sonne' е женски род. Фраза: 'Die Sonne scheint' (слънцето грее)."
+    "notes_bg_to_de": "'Die Sonne' е женски род. Фраза: 'Die Sonne scheint' (слънцето грее).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Дъжд",
@@ -2200,11 +2803,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 72,
     "notes_de_to_bg": "Für Deutschsprachige: 'Дъжд' ≈ 'Regen'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Regen' е мъжки род; често се използва 'Es regnet' (вали)."
+    "notes_bg_to_de": "'Der Regen' е мъжки род; често се използва 'Es regnet' (вали).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Сняг",
@@ -2217,11 +2821,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 79,
     "notes_de_to_bg": "Für Deutschsprachige: 'Сняг' ≈ 'Schnee'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Schnee' е мъжки род. Израз: 'Es schneit' (вали сняг)."
+    "notes_bg_to_de": "'Der Schnee' е мъжки род. Израз: 'Es schneit' (вали сняг).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Вятър",
@@ -2234,11 +2839,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 72,
     "notes_de_to_bg": "Für Deutschsprachige: 'Вятър' ≈ 'Wind'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Wind' е мъжки род. Използва се в 'starker Wind' или 'es weht ein Wind'."
+    "notes_bg_to_de": "'Der Wind' е мъжки род. Използва се в 'starker Wind' или 'es weht ein Wind'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Температура",
@@ -2251,11 +2857,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 3,
     "frequency": 78,
     "notes_de_to_bg": "Für Deutschsprachige: 'Температура' ≈ 'Temperatur'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Temperatur' е женски род. Израз: 'die Temperatur messen' (меря температура)."
+    "notes_bg_to_de": "'Die Temperatur' е женски род. Израз: 'die Temperatur messen' (меря температура).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Облаци",
@@ -2268,11 +2875,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 76,
     "notes_de_to_bg": "Für Deutschsprachige: 'Облаци' ≈ 'Wolken'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Wolken' е множествено число; 'eine Wolke' е единичен облак. Фраза: 'am Himmel sind Wolken'."
+    "notes_bg_to_de": "'Die Wolken' е множествено число; 'eine Wolke' е единичен облак. Фраза: 'am Himmel sind Wolken'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Гора",
@@ -2285,11 +2893,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 74,
     "notes_de_to_bg": "Für Deutschsprachige: 'Гора' ≈ 'Wald'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Wald' е мъжки род. Типично: 'im Wald spazieren gehen'."
+    "notes_bg_to_de": "'Der Wald' е мъжки род. Типично: 'im Wald spazieren gehen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Река",
@@ -2302,11 +2911,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 79,
     "notes_de_to_bg": "Für Deutschsprachige: 'Река' ≈ 'Fluss'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Fluss' е мъжки род; множествено 'die Flüsse'. Израз: 'am Fluss wohnen'."
+    "notes_bg_to_de": "'Der Fluss' е мъжки род; множествено 'die Flüsse'. Израз: 'am Fluss wohnen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Планина",
@@ -2319,11 +2929,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 78,
     "notes_de_to_bg": "Für Deutschsprachige: 'Планина' ≈ 'Berg'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Berg' е мъжки род; множествено 'die Berge'. Фраза: 'in den Bergen wandern'."
+    "notes_bg_to_de": "'Der Berg' е мъжки род; множествено 'die Berge'. Фраза: 'in den Bergen wandern'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Море",
@@ -2336,11 +2947,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 70,
     "notes_de_to_bg": "Für Deutschsprachige: 'Море' ≈ 'Meer'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Das Meer' е неутрално. Израз: 'ans Meer fahren' (отивам на море)."
+    "notes_bg_to_de": "'Das Meer' е неутрално. Израз: 'ans Meer fahren' (отивам на море).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Майка",
@@ -2353,11 +2965,12 @@
     "target_lang": "de",
     "etymology": "From Proto-Slavic *mati, *matere. Cognate with Latin 'mater'",
     "cultural_note": "Mother's Day (8 March) and grandmother's role are particularly honored in Bulgarian culture",
-    "linguistic_note": "Irregular feminine noun. Vocative: 'мамо'. Diminutive: 'майчице'. Stress: ма́йка",
     "difficulty": 2,
     "frequency": 72,
     "notes_de_to_bg": "Für Deutschsprachige: 'Майка' ≈ 'Mutter'. Betonung: ма́йка. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Mutter' е женски род; множествено 'die Mütter'. Фраза: 'meine Mutter'."
+    "notes_bg_to_de": "'Die Mutter' е женски род; множествено 'die Mütter'. Фраза: 'meine Mutter'.",
+    "linguistic_note_bg_to_de": "Irregular feminine noun. Vocative: 'мамо'. Diminutive: 'майчице'. Stress: ма́йка",
+    "linguistic_note_de_to_bg": "Irregular feminine noun. Vocative: 'мамо'. Diminutive: 'майчице'. Stress: ма́йка"
   },
   {
     "word": "Баща",
@@ -2370,11 +2983,12 @@
     "target_lang": "de",
     "etymology": "From Proto-Slavic *batja (father). Related to 'батко' (old term)",
     "cultural_note": "Father's role traditionally patriarchal but evolving. Father's Day less celebrated than Mother's Day",
-    "linguistic_note": "Masculine noun. Vocative: 'бащо'. Colloquial: 'татко', 'тате'. Stress: ба́ща",
     "difficulty": 2,
     "frequency": 73,
     "notes_de_to_bg": "Für Deutschsprachige: 'Баща' ≈ 'Vater'. Betonung: ба́ща. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Vater' е мъжки род; множествено 'die Väter'. Фраза: 'mein Vater'."
+    "notes_bg_to_de": "'Der Vater' е мъжки род; множествено 'die Väter'. Фраза: 'mein Vater'.",
+    "linguistic_note_bg_to_de": "Masculine noun. Vocative: 'бащо'. Colloquial: 'татко', 'тате'. Stress: ба́ща",
+    "linguistic_note_de_to_bg": "Masculine noun. Vocative: 'бащо'. Colloquial: 'татко', 'тате'. Stress: ба́ща"
   },
   {
     "word": "Брат",
@@ -2387,11 +3001,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Family ties very strong in Bulgarian culture. Extended family gatherings common",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 76,
     "notes_de_to_bg": "Für Deutschsprachige: 'Брат' ≈ 'Bruder'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Bruder' е мъжки род; множествено 'die Brüder'. Фраза: 'mein großer Bruder'."
+    "notes_bg_to_de": "'Der Bruder' е мъжки род; множествено 'die Brüder'. Фраза: 'mein großer Bruder'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Сестра",
@@ -2404,11 +3019,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Family ties very strong in Bulgarian culture. Extended family gatherings common",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 78,
     "notes_de_to_bg": "Für Deutschsprachige: 'Сестра' ≈ 'Schwester'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Schwester' е женски род; множествено 'die Schwestern'. Израз: 'meine kleine Schwester'."
+    "notes_bg_to_de": "'Die Schwester' е женски род; множествено 'die Schwestern'. Израз: 'meine kleine Schwester'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Съпруг",
@@ -2421,11 +3037,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Family ties very strong in Bulgarian culture. Extended family gatherings common",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 79,
     "notes_de_to_bg": "Für Deutschsprachige: 'Съпруг' ≈ 'Ehemann'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Ehemann' е официална дума за съпруг. Разговорно: 'mein Mann'."
+    "notes_bg_to_de": "'Der Ehemann' е официална дума за съпруг. Разговорно: 'mein Mann'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Съпруга",
@@ -2438,11 +3055,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Family ties very strong in Bulgarian culture. Extended family gatherings common",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 73,
     "notes_de_to_bg": "Für Deutschsprachige: 'Съпруга' ≈ 'Ehefrau'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Ehefrau' е официално. Разговорно: 'meine Frau'."
+    "notes_bg_to_de": "'Die Ehefrau' е официално. Разговорно: 'meine Frau'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Дете",
@@ -2455,11 +3073,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Family ties very strong in Bulgarian culture. Extended family gatherings common",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 71,
     "notes_de_to_bg": "Für Deutschsprachige: 'Дете' ≈ 'Kind'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Das Kind' е неутрално; множествено 'die Kinder'. Израз: 'ein Kind haben'."
+    "notes_bg_to_de": "'Das Kind' е неутрално; множествено 'die Kinder'. Израз: 'ein Kind haben'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Приятел",
@@ -2472,11 +3091,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Family ties very strong in Bulgarian culture. Extended family gatherings common",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 76,
     "notes_de_to_bg": "Für Deutschsprachige: 'Приятел' ≈ 'Freund'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Freund' е мъжки род; множествено 'die Freunde'. Означава приятел или приятел (партньор) според контекста."
+    "notes_bg_to_de": "'Der Freund' е мъжки род; множествено 'die Freunde'. Означава приятел или приятел (партньор) според контекста.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Приятелка",
@@ -2489,11 +3109,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Family ties very strong in Bulgarian culture. Extended family gatherings common",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 77,
     "notes_de_to_bg": "Für Deutschsprachige: 'Приятелка' ≈ 'Freundin'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Freundin' е женски род и може да означава приятелка или партньорка. Множествено: 'die Freundinnen'."
+    "notes_bg_to_de": "'Die Freundin' е женски род и може да означава приятелка или партньорка. Множествено: 'die Freundinnen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Пари",
@@ -2506,11 +3127,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 71,
     "notes_de_to_bg": "Für Deutschsprachige: 'Пари' ≈ 'Geld'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Das Geld' е колективно съществително без множествено число. Израз: 'Geld verdienen' (печеля пари)."
+    "notes_bg_to_de": "'Das Geld' е колективно съществително без множествено число. Израз: 'Geld verdienen' (печеля пари).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Цена",
@@ -2523,11 +3145,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 79,
     "notes_de_to_bg": "Für Deutschsprachige: 'Цена' ≈ 'Preis'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Preis' е мъжки род. Израз: 'Der Preis ist hoch/niedrig'."
+    "notes_bg_to_de": "'Der Preis' е мъжки род. Израз: 'Der Preis ist hoch/niedrig'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Евро",
@@ -2540,11 +3163,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 73,
     "notes_de_to_bg": "Für Deutschsprachige: 'Евро' ≈ 'Euro'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Euro' е валута; при суми: '5 Euro'. Множествената форма в разговор е същата ('zwei Euro')."
+    "notes_bg_to_de": "'Der Euro' е валута; при суми: '5 Euro'. Множествената форма в разговор е същата ('zwei Euro').",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Лев",
@@ -2557,11 +3181,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 78,
     "notes_de_to_bg": "Für Deutschsprachige: 'Лев' ≈ 'Lew'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Lew' (BGN) се използва при обмен: '1 Lew = ... Euro'. В немски се изговаря 'лев'."
+    "notes_bg_to_de": "'Der Lew' (BGN) се използва при обмен: '1 Lew = ... Euro'. В немски се изговаря 'лев'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Сметка",
@@ -2574,11 +3199,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 76,
     "notes_de_to_bg": "Für Deutschsprachige: 'Сметка' ≈ 'Rechnung'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Rechnung' означава сметка за плащане. Израз: 'Die Rechnung bitte'."
+    "notes_bg_to_de": "'Die Rechnung' означава сметка за плащане. Израз: 'Die Rechnung bitte'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Касова бележка",
@@ -2591,11 +3217,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at phrase level. Pay attention to stress and pronunciation",
     "difficulty": 3,
     "frequency": 70,
     "notes_de_to_bg": "Für Deutschsprachige: 'Касова бележка' ≈ 'Quittung'; zusammengesetzt aus 'Касова' + 'бележка'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Die Quittung' е касова бележка. Синоним: 'der Kassenbon'."
+    "notes_bg_to_de": "'Die Quittung' е касова бележка. Синоним: 'der Kassenbon'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at phrase level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Отстъпка",
@@ -2608,11 +3235,12 @@
     "target_lang": "de",
     "etymology": "Slavic origin word. Related to other South Slavic languages",
     "cultural_note": "Common Bulgarian word at A2 level. Useful for everyday communication",
-    "linguistic_note": "Bulgarian word at word level. Pay attention to stress and pronunciation",
     "difficulty": 2,
     "frequency": 73,
     "notes_de_to_bg": "Für Deutschsprachige: 'Отстъпка' ≈ 'Rabatt'. Bulgarisches Wort. Häufig verwendet.",
-    "notes_bg_to_de": "'Der Rabatt' е мъжки род. Фраза: '10 Prozent Rabatt auf alles'."
+    "notes_bg_to_de": "'Der Rabatt' е мъжки род. Фраза: '10 Prozent Rabatt auf alles'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
   },
   {
     "word": "Купувам",
@@ -2625,11 +3253,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 3,
     "frequency": 79,
     "notes_de_to_bg": "Für Deutschsprachige: 'Купувам' ≈ 'kaufen'. Bulgarisches Verb. Häufig verwendet.",
-    "notes_bg_to_de": "'Kaufen' е правилен глагол: 'ich kaufe', 'du kaufst'. Израз: 'etwas kaufen'."
+    "notes_bg_to_de": "'Kaufen' е правилен глагол: 'ich kaufe', 'du kaufst'. Израз: 'etwas kaufen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Продавам",
@@ -2642,11 +3271,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 3,
     "frequency": 80,
     "notes_de_to_bg": "Für Deutschsprachige: 'Продавам' ≈ 'verkaufen'. Bulgarisches Verb. Häufig verwendet.",
-    "notes_bg_to_de": "'Verkaufen' означава 'продавам'. Спрежение: 'ich verkaufe', 'du verkaufst'. Израз: 'online verkaufen'."
+    "notes_bg_to_de": "'Verkaufen' означава 'продавам'. Спрежение: 'ich verkaufe', 'du verkaufst'. Израз: 'online verkaufen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "word": "Пазарувам",
@@ -2659,11 +3289,12 @@
     "target_lang": "de",
     "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
     "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
-    "linguistic_note": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
     "difficulty": 3,
     "frequency": 76,
     "notes_de_to_bg": "Für Deutschsprachige: 'Пазарувам' ≈ 'einkaufen'. Bulgarisches Verb. Häufig verwendet.",
-    "notes_bg_to_de": "'Einkaufen' е отделяем глагол: 'ich kaufe ein'. Използва се за ежедневни покупки."
+    "notes_bg_to_de": "'Einkaufen' е отделяем глагол: 'ich kaufe ein'. Използва се за ежедневни покупки.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
   },
   {
     "id": "zaedno_001",
@@ -2676,7 +3307,6 @@
     "notes": "Das bulgarische Wort 'заедно' (zaedno) bedeutet 'zusammen' und ist aus der Präposition 'за' (für, zu) und der Zahl 'едно' (eins) gebildet – wörtlich ‚für eins‘ bzw. ‚auf ein gemeinsames Ziel‘. Es spiegelt die kulturelle Betonung von Einheit, gemeinschaftlichem Handeln und geteiltem Zweck wider.",
     "etymology": "Compound of 'за' (for, towards) + 'едно' (one) — literally 'for one'/'towards one [goal]'.",
     "cultural_note": "Reflects a cultural emphasis on unity, collective action, and shared purpose.",
-    "linguistic_note": "Adverb; häufig mit 'с' (mit) verwendet: 'заедно с [jemandem]' = 'zusammen mit ...'.",
     "difficulty": 1,
     "frequency": 80,
     "examples": [
@@ -2692,6 +3322,8 @@
       }
     ],
     "notes_de_to_bg": "Für Deutschsprachige: 'заедно' ≈ 'zusammen'. Unveränderliches Adverb. Häufig verwendet.",
-    "notes_bg_to_de": "'Zusammen' е наречие; често се комбинира с глаголи: 'zusammen arbeiten', 'zusammen gehen'."
+    "notes_bg_to_de": "'Zusammen' е наречие; често се комбинира с глаголи: 'zusammen arbeiten', 'zusammen gehen'.",
+    "linguistic_note_bg_to_de": "Adverb; häufig mit 'с' (mit) verwendet: 'заедно с [jemandem]' = 'zusammen mit ...'.",
+    "linguistic_note_de_to_bg": "Adverb; häufig mit 'с' (mit) verwendet: 'заедно с [jemandem]' = 'zusammen mit ...'."
   }
 ]

@@ -1,0 +1,416 @@
+[
+  {
+    "id": "a1_foods_001",
+    "word": "Ябълка",
+    "translation": "Apfel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Lebensmittel",
+    "level": "A1",
+    "notes": "Една от най-често срещаните плодове, основна храна",
+    "notes_bg_to_de": "Der Apfel е мъжки род. Множествено число: die Äpfel (с умлаут върху 'a'). Често се използва в изрази като 'ein Apfel am Tag' (една ябълка на ден).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ябълка' ist femininum. Plural: ябълки. Betonung auf der ersten Silbe.",
+    "etymology": "From Proto-Slavic *ablъko, ultimately from Old High German apful. Borrowed into Slavic languages during early Germanic-Slavic contact",
+    "cultural_note": "Apples are popular in both Bulgarian and German cuisines. Germans love Apfelkuchen (apple cake), Bulgarians make ябълков компот (apple compote)",
+    "linguistic_note": "Feminine noun. Stress: я́бълка. Irregular plural ending pattern",
+    "difficulty": 1,
+    "frequency": 88,
+    "examples": [
+      {
+        "sentence": "Обичам да ям ябълки.",
+        "translation": "Ich esse gerne Äpfel.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_foods_002",
+    "word": "Домат",
+    "translation": "Tomate",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Lebensmittel",
+    "level": "A1",
+    "notes": "Основен зеленчук в българската кухня, използва се в шопската салата",
+    "notes_bg_to_de": "Die Tomate е женски род. Множествено: die Tomaten. Внимавайте с произношението - в немски ударението е на последната сричка: To-MA-te.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Домат' ist maskulin. Betonung: до́мат. Sehr wichtig in der bulgarischen Küche (Shopska-Salat).",
+    "etymology": "From French tomate, from Spanish tomate, from Nahuatl tomatl. International word that entered both languages through European contact with Americas",
+    "cultural_note": "Tomatoes are essential in Bulgarian cuisine (shopska salad). In Germany, they're popular but not as central to traditional cuisine",
+    "linguistic_note": "Masculine noun in Bulgarian (домат), feminine in German (die Tomate). Stress: до́мат",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "sentence": "Купих свежи домати.",
+        "translation": "Ich habe frische Tomaten gekauft.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_colors_001",
+    "word": "Червен",
+    "translation": "rot",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "Основен цвят, изменя се по род (червен, червена, червено)",
+    "notes_bg_to_de": "Das deutsche Adjektiv 'rot' wird nach Kasus, Genus und Numerus dekliniert: roter, rote, rotes. Unveränderlich als Adverb.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Червен' ändert sich je nach Genus: червен (m), червена (f), червено (n). Plural: червени",
+    "etymology": "From Proto-Slavic *čьrvenъ (red), from *čьrvь (worm, specifically the kermes insect used for red dye). Related to червей (worm)",
+    "cultural_note": "Red is symbolically important in both cultures. In Bulgaria, red is associated with health and life (червен пипер = red pepper is very popular)",
+    "linguistic_note": "Adjective with full gender/number agreement: червен (m), червена (f), червено (n), червени (pl). Stress: че́рвен",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "sentence": "Тя има червена рокля.",
+        "translation": "Sie hat ein rotes Kleid.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_verbs_001",
+    "word": "Спя",
+    "translation": "schlafen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verb",
+    "level": "A1",
+    "notes": "Основен глагол за почивка и сън",
+    "notes_bg_to_de": "'Schlafen' е силен глагол: ich schlafe, du schläfst, er schläft. Минало време: schlief, Partizip II: geschlafen. Често се използва с наречия: gut schlafen, lange schlafen.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Спя' ist regelmäßig: аз спя, ти спиш, той спи. Imperfekt: спях, Aorist: спах. Unterscheiden Sie спя (schlafen) von сън (Traum/Schlaf).",
+    "etymology": "From Proto-Slavic *sъpati (to sleep). Cognate with Russian спать, Czech spát. Indo-European root *swep- (to sleep)",
+    "cultural_note": "Sleep patterns differ: Bulgarians traditionally have later dinners and sleep later. Germans value early rising ('Morgenstund hat Gold im Mund')",
+    "linguistic_note": "First conjugation verb. Present: спя, спиш, спи. Imperfect: спях. Stress: спя́",
+    "difficulty": 2,
+    "frequency": 92,
+    "examples": [
+      {
+        "sentence": "Обичам да спя дълго.",
+        "translation": "Ich schlafe gerne lange.",
+        "context": "informal"
+      },
+      {
+        "sentence": "Спях осем часа снощи.",
+        "translation": "Ich habe gestern acht Stunden geschlafen.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_verbs_002",
+    "word": "Обичам",
+    "translation": "lieben",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verb",
+    "level": "A1",
+    "notes": "Глагол за силни чувства и предпочитания",
+    "notes_bg_to_de": "'Lieben' е правилен глагол: ich liebe, du liebst, er liebt. За по-слаби предпочитания използвайте 'mögen' (ich mag Äpfel). 'Gern haben' е по-меко от 'lieben'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Обичам' wird für Liebe zu Menschen und Vorlieben verwendet: обичам те (ich liebe dich), обичам ябълки (ich mag Äpfel). Präsens: обичам, обичаш, обича.",
+    "etymology": "From Old Church Slavonic обꙑчати (to love, to be accustomed to). Related to обичай (custom). Root связа́н с 'habit' concept",
+    "cultural_note": "Bulgarians use обичам more freely for preferences (обичам кафе). Germans distinguish more strictly between lieben (love) and mögen (like)",
+    "linguistic_note": "First conjugation verb. Present: обичам, обичаш, обича. Takes да + verb for 'love to': обичам да чета. Stress: оби́чам",
+    "difficulty": 2,
+    "frequency": 95,
+    "examples": [
+      {
+        "sentence": "Обичам те.",
+        "translation": "Ich liebe dich.",
+        "context": "intimate"
+      },
+      {
+        "sentence": "Обичам да чета книги.",
+        "translation": "Ich lese gerne Bücher.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_numbers_011",
+    "word": "Единадесет",
+    "translation": "elf",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahl",
+    "level": "A1",
+    "notes": "Число 11, следва след десет",
+    "notes_bg_to_de": "'Elf' е неизменяемо числително. За броене: eins, zwei, drei... zehn, elf, zwölf.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Единадесет' ist zusammengesetzt aus едно (eins) + на (auf) + десет (zehn). Wörtlich: 'eins auf zehn'.",
+    "etymology": "Compound: едно (one) + на (on) + десет (ten). Literally 'one on ten' = eleven. Common Slavic formation pattern for numbers 11-19",
+    "cultural_note": "Both languages have special forms for 11-12 before pattern formation at 13+",
+    "linguistic_note": "Invariable numeral. Used attributively: единадесет къщи (eleven houses). Stress: единаде́сет",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "sentence": "Имам единадесет години.",
+        "translation": "Ich bin elf Jahre alt.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_time_001",
+    "word": "Сутрин",
+    "translation": "morgens",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "Време на деня от раз­светване до обяд",
+    "notes_bg_to_de": "'Morgens' е наречие (сутрин), докато 'der Morgen' е съществително (утрото). За конкретно време: am Morgen, morgens (общо).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сутрин' ist ein Adverb der Zeit. Kann auch als 'утро' (Substantiv) verwendet werden. Morgenstunden: сутрешните часове.",
+    "etymology": "Related to Old Church Slavonic оутро (morning). Proto-Slavic *jutro. Related to *jьtrъ (tomorrow), ultimately from PIE *h₂ews- (dawn)",
+    "cultural_note": "Bulgarian mornings traditionally start a bit later than German ones. Germans emphasize 'Morgenstund hat Gold im Mund' (morning hour has gold in mouth)",
+    "linguistic_note": "Adverb of time. Can also function as noun (утро). Feminine form when noun: утрото. Stress: сутри́н",
+    "difficulty": 2,
+    "frequency": 82,
+    "examples": [
+      {
+        "sentence": "Ставам рано сутрин.",
+        "translation": "Ich stehe morgens früh auf.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a2_shopping_001",
+    "word": "Отстъпка",
+    "translation": "Rabatt",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Einkaufen",
+    "level": "A2",
+    "notes": "Намаление на цената при покупка",
+    "notes_bg_to_de": "'Der Rabatt' е мъжки род: großer Rabatt (голяма отстъпка). Често се среща и 'Ermäßigung'. В магазините: 'Sale', '20% Rabatt'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Отстъпка' ist feminin. Verwendet in: правя отстъпка (Rabatt geben), получавам отстъпка (Rabatt bekommen). Plural: отстъпки.",
+    "etymology": "From prefix от- (away) + root стъп- (step) + suffix -ка. Literally 'step-away/back' = discount, reduction",
+    "cultural_note": "Germans love a good Rabatt! 'Schnäppchen' culture strong. In Bulgaria, bargaining more common in markets than in Germany",
+    "linguistic_note": "Feminine noun. Stress: отсту́пка. Used with verbs: давам отстъпка, ползвам отстъпка",
+    "difficulty": 3,
+    "frequency": 70,
+    "examples": [
+      {
+        "sentence": "Има ли отстъпка за студенти?",
+        "translation": "Gibt es einen Studentenrabatt?",
+        "context": "shopping"
+      },
+      {
+        "sentence": "Получих 20% отстъпка.",
+        "translation": "Ich habe 20% Rabatt bekommen.",
+        "context": "shopping"
+      }
+    ]
+  },
+  {
+    "id": "a2_health_001",
+    "word": "Температура",
+    "translation": "Fieber",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gesundheit",
+    "level": "A2",
+    "notes": "Повишена телесна температура при болест",
+    "notes_bg_to_de": "'Das Fieber' е среден род. Казва се 'Fieber haben' (имам температура), 'hohes Fieber' (висока температура). Внимание: 'Temperatur' значи просто температура.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Температура' kann sowohl normale Temperatur als auch Fieber bedeuten. Kontext wichtig: имам температура (ich habe Fieber). Femininum.",
+    "etymology": "From Latin temperatura (proper mixture, temperature). International medical term borrowed through Russian or French",
+    "cultural_note": "Both cultures take fever seriously. In Germany, 38°C+ is considered fever. Bulgarians also use traditional remedies (чай, мед)",
+    "linguistic_note": "Feminine noun. Stress: температу́ра. Medical context: висока температура (high fever), мерям температура (take temperature)",
+    "difficulty": 3,
+    "frequency": 76,
+    "examples": [
+      {
+        "sentence": "Детето има температура.",
+        "translation": "Das Kind hat Fieber.",
+        "context": "health"
+      },
+      {
+        "sentence": "Измерих температурата си.",
+        "translation": "Ich habe meine Temperatur gemessen.",
+        "context": "health"
+      }
+    ]
+  },
+  {
+    "id": "a2_clothing_001",
+    "word": "Дреха",
+    "translation": "Kleidung",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Kleidung",
+    "level": "A2",
+    "notes": "Общо понятие за облекло",
+    "notes_bg_to_de": "'Die Kleidung' е женски род и обикновено е необроимо (колективно). За отделни парчета: das Kleidungsstück (парче облекло). Plural: die Kleider.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Дреха' kann sowohl ein Kleidungsstück als auch Kleidung allgemein bedeuten. Plural: дрехи (Kleider/Kleidungsstücke). Femininum.",
+    "etymology": "From Proto-Slavic *drega (rag, cloth). Related to Russian дерюга (coarse cloth). Root связа́н с 'to tear' concept",
+    "cultural_note": "Clothing culture differs. Germans dress more formally for work. Bulgarians have adapted modern casual styles but maintain some traditional dress codes",
+    "linguistic_note": "Feminine noun. Stress: дре́ха. Collective when singular (clothing), count noun in plural (clothes, garments)",
+    "difficulty": 2,
+    "frequency": 78,
+    "examples": [
+      {
+        "sentence": "Купих нови дрехи.",
+        "translation": "Ich habe neue Kleider gekauft.",
+        "context": "shopping"
+      }
+    ]
+  },
+  {
+    "id": "a2_emotions_001",
+    "word": "Щастлив",
+    "translation": "glücklich",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gefühle",
+    "level": "A2",
+    "notes": "Чувство на радост и удовлетворение",
+    "notes_bg_to_de": "'Glücklich' е прилагателно, което се склонява: glücklicher, glückliches, glückliche. Като наречие е неизменно: Er lächelt glücklich.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Щастлив' dekliniert nach Genus: щастлив (m), щастлива (f), щастливо (n). Plural: щастливи. Verwandt mit щастие (Glück).",
+    "etymology": "From Old Church Slavonic съчастие (participation, happiness). Root: часть (part) with prefix. Concept of 'having a good portion'",
+    "cultural_note": "Both cultures value happiness, but express it differently. Germans may seem more reserved. Bulgarians more openly emotional in expressing щастие",
+    "linguistic_note": "Adjective with full gender/number agreement. Stress: щастли́в. Can be used predicatively: Аз съм щастлив (I am happy)",
+    "difficulty": 3,
+    "frequency": 80,
+    "examples": [
+      {
+        "sentence": "Много съм щастлив днес.",
+        "translation": "Ich bin heute sehr glücklich.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a2_directions_001",
+    "word": "Наляво",
+    "translation": "links",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Richtungen",
+    "level": "A2",
+    "notes": "Посока обратна на дясно",
+    "notes_bg_to_de": "'Links' е наречие и прилагателно. Като наречие: gehen Sie links (завийте наляво). Като прилагателно: die linke Seite (лявата страна).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Наляво' ist ein Adverb (zur linken Seite). Das Adjektiv ist 'ляв' (link). Wichtig beim Wegbeschreiben.",
+    "etymology": "From на (on, to) + лево (left). Root from Proto-Slavic *lěvъ (left). Related to Latin laevus",
+    "cultural_note": "Direction-giving similar in both cultures. Germans may give more precise measurements (50 Meter links), Bulgarians more landmark-based",
+    "linguistic_note": "Adverb. Immutable. Related adjective: ляв (left). Stress: наля́во. Opposite: надясно (rechts)",
+    "difficulty": 2,
+    "frequency": 79,
+    "examples": [
+      {
+        "sentence": "Завийте наляво на светофара.",
+        "translation": "Biegen Sie an der Ampel links ab.",
+        "context": "directions"
+      }
+    ]
+  },
+  {
+    "id": "b1_technology_001",
+    "word": "Интернет",
+    "translation": "Internet",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Technologie",
+    "level": "B1",
+    "notes": "Глобална мрежа от свързани компютри",
+    "notes_bg_to_de": "'Das Internet' е среден род. Казва се 'im Internet' (в интернет), 'ins Internet gehen' (влизам в интернет). Артикулът винаги се използва.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Интернет' wird meist ohne Artikel verwendet: влизам в интернет (ich gehe ins Internet). Maskulinum in Bulgarian.",
+    "etymology": "English loanword from inter- (between) + net (network). Entered both languages in 1990s",
+    "cultural_note": "Internet adoption happened later in Bulgaria but is now widespread. Germany has strong data protection (Datenschutz) culture online",
+    "linguistic_note": "Masculine noun. Stress: интерне́т. Usually used without article: в интернет (no definite form common)",
+    "difficulty": 3,
+    "frequency": 82,
+    "examples": [
+      {
+        "sentence": "Търся информация в интернет.",
+        "translation": "Ich suche Informationen im Internet.",
+        "context": "technology"
+      },
+      {
+        "sentence": "Интернетът не работи.",
+        "translation": "Das Internet funktioniert nicht.",
+        "context": "technology"
+      }
+    ]
+  },
+  {
+    "id": "b1_environment_001",
+    "word": "Замърсяване",
+    "translation": "Verschmutzung",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Umwelt",
+    "level": "B1",
+    "notes": "Процес на внасяне на вредни вещества в околната среда",
+    "notes_bg_to_de": "'Die Verschmutzung' е женски род. Словообразувателен префикс 'ver-' + 'Schmutz' (мръсотия). Често се използва: Luftverschmutzung (замърсяване на въздуха).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Замърсяване' ist ein verbales Substantiv von замърсявам (verschmutzen). Femininum. Typ: замърсяване на въздуха (Luftverschmutzung).",
+    "etymology": "From prefix за- (causative) + root мърс- (dirty) + suffix -яване (verbal noun). Action noun: 'making dirty'",
+    "cultural_note": "Environmental consciousness higher in Germany. Bulgaria working to improve. Both face challenges with air quality in cities",
+    "linguistic_note": "Neuter verbal noun. Stress: замърся́ване. Formed from imperfective verb замърсявам. Types: водно, въздушно замърсяване",
+    "difficulty": 4,
+    "frequency": 72,
+    "examples": [
+      {
+        "sentence": "Замърсяването на въздуха е сериозен проблем.",
+        "translation": "Die Luftverschmutzung ist ein ernstes Problem.",
+        "context": "environmental"
+      }
+    ]
+  },
+  {
+    "id": "b1_work_001",
+    "word": "Заплата",
+    "translation": "Gehalt",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Arbeit",
+    "level": "B1",
+    "notes": "Парично възнаграждение за работа",
+    "notes_bg_to_de": "'Das Gehalt' е среден род. За работници често 'der Lohn'. Фрази: Gehalt bekommen/beziehen, hohes/niedriges Gehalt. Synonym: Bezahlung, Vergütung.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Заплата' ist feminin. Wichtig: получавам заплата (Gehalt bekommen), минимална заплата (Mindestlohn). Plural: заплати.",
+    "etymology": "From prefix за- (for) + root плат- (pay) + suffix -а. Related to плащам (to pay). Literally 'payment for'",
+    "cultural_note": "Salary discussion more open in Germany (collective bargaining). In Bulgaria, more private. Average salaries differ significantly between countries",
+    "linguistic_note": "Feminine noun. Stress: запла́та. Collocations: добра заплата, минимална заплата, издигам заплатата",
+    "difficulty": 3,
+    "frequency": 78,
+    "examples": [
+      {
+        "sentence": "Получавам заплатата си всеки месец.",
+        "translation": "Ich bekomme mein Gehalt jeden Monat.",
+        "context": "work"
+      }
+    ]
+  },
+  {
+    "id": "b2_business_001",
+    "word": "Договор",
+    "translation": "Vertrag",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Geschäft",
+    "level": "B2",
+    "notes": "Правно обвързващо споразумение между страни",
+    "notes_bg_to_de": "'Der Vertrag' е мъжки род. Важни типове: Arbeitsvertrag (трудов договор), Mietvertrag (договор за наем), Kaufvertrag (договор за покупко-продажба). Глагол: einen Vertrag abschließen.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Договор' ist maskulin. Wichtige Kollokationen: сключвам договор (Vertrag abschließen), разтроявам договор (Vertrag kündigen). Plural: договори.",
+    "etymology": "From prefix до- (up to, towards) + root говор- (speak) + suffix. Literally 'speaking up to agreement'. Related to говоря (to speak)",
+    "cultural_note": "Germany has strong contract culture (Vertragskultur) with detailed written agreements. Bulgaria increasingly formal, but still some flexibility in interpretation",
+    "linguistic_note": "Masculine noun. Stress: догово́р. Legal register. Types: трудов договор, граждански договор, търговски договор",
+    "difficulty": 4,
+    "frequency": 75,
+    "examples": [
+      {
+        "sentence": "Подписахме договор за сътрудничество.",
+        "translation": "Wir haben einen Kooperationsvertrag unterschrieben.",
+        "context": "business"
+      },
+      {
+        "sentence": "Условията на договора са ясни.",
+        "translation": "Die Vertragsbedingungen sind klar.",
+        "context": "business"
+      }
+    ]
+  }
+]

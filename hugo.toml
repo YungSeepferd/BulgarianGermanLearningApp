@@ -1,7 +1,8 @@
 baseURL = 'https://yungseepferd.github.io/BulgarianGermanLearningApp'
 languageCode = 'en-us'
 title = 'Bulgarian-German Learning App'
-theme = 'learn'
+# Using Relearn theme (https://github.com/McShelby/hugo-theme-relearn)
+theme = 'relearn'
 
 # Build configuration
 publishDir = 'public'
@@ -18,6 +19,27 @@ buildFuture = false
 buildExpired = false
 canonifyURLs = true
 
+# Multilingual configuration for Bulgarian-German learning
+# NOTE: This is configured for Relearn theme - will work better after migration
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    weight = 1
+    title = 'Bulgarian-German Learning App'
+  
+  [languages.bg]
+    languageName = 'Български'
+    weight = 2
+    title = 'Приложение за учене на български и немски'
+  
+  [languages.de]
+    languageName = 'Deutsch'
+    weight = 3
+    title = 'Bulgarisch-Deutsch Lern-App'
+
 # Markup configuration
 [markup]
   [markup.goldmark]
@@ -27,6 +49,7 @@ canonifyURLs = true
     style = 'github'
     lineNos = true
     codeFences = true
+    noClasses = false
 
 # Asset processing configuration
 [module]
@@ -56,52 +79,20 @@ canonifyURLs = true
 [caches]
   [caches.getjson]
     dir = ":cacheDir/:project"
-    maxAge = "10s"
+    maxAge = "1h"  # Increased from 10s for production performance
   [caches.getcsv]
     dir = ":cacheDir/:project"
-    maxAge = "10s"
+    maxAge = "1h"  # Increased from 10s for production performance
   [caches.images]
     dir = ":resourceDir/_gen"
     maxAge = "720h"
   [caches.assets]
     dir = ":resourceDir/_gen"
     maxAge = "720h"
-  [build.buildStats]
-    enable = true
-    disableClasses = false
-    disableTags = false
-    disableHugoVariablesInject = false
-    disableHugoVersion = false
-    disablePathToLower = false
-    disableAliases = false
-    disableGitInfo = false
-    disableEnvironment = false
-    disablePath = false
-    disableKind = false
-    disableSection = false
-    disableTaxonomy = false
-    disableLanguage = false
-    disableTranslationKey = false
-    disableTranslation = false
-    disableMenu = false
-    disablePage = false
-    disableResource = false
-    disableHugo = false
-    disableGo = false
-    disableCss = false
-    disableJs = false
-    disableJson = false
-    disableXml = false
-    disableYaml = false
-    disableToml = false
-    disableCsv = false
-    disableHtml = false
-    disableText = false
-    disableOther = false
 
 # Output configuration
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON", "SearchIndex"]
   page = ['HTML']
   section = ['HTML', 'RSS']
 
@@ -121,31 +112,52 @@ canonifyURLs = true
 [menu]
   [[menu.main]]
     name = 'Vocabulary'
-    url = '/vocabulary/'
+    pageRef = '/vocabulary'
     weight = 10
   [[menu.main]]
     name = 'Grammar'
-    url = '/grammar/'
+    pageRef = '/grammar'
     weight = 20
   [[menu.main]]
     name = 'Practice'
-    url = '/practice/'
+    pageRef = '/practice'
     weight = 30
 
 # Site parameters
 [params]
   description = 'Learn Bulgarian and German with spaced repetition'
   author = 'Bulgarian-German Learning App'
+  
+  # Language learning specific
   enablePWA = true
   enableAudio = true
   defaultSessionLength = 20
-  themeColor = '#4a6fa5'
   shortName = 'BG-DE Learn'
-  githubRepo = 'https://github.com/dinz/BulgarianApp-Fresh'
+  githubRepo = 'https://github.com/YungSeepferd/BulgarianGermanLearningApp'
+  
+  # Theme color for PWA
+  themeColor = '#4a6fa5'
+  
+  # Relearn theme specific parameters (for after migration)
+  themeVariant = ['auto', 'relearn-light', 'relearn-dark']
+  disableBreadcrumb = false
+  disableNextPrev = false
+  disableLandingPageButton = true
+  showVisitedLinks = true
+  collapsibleMenu = true
+  alwaysopen = false
+  
+  # Search configuration
+  searchMaxResults = 15
+  searchResultsLength = 500
+  searchMinLength = 2
+  
+  # Edit page link
+  editURL = "https://github.com/YungSeepferd/BulgarianGermanLearningApp/edit/main/content/"
   
   # Social media
   [params.social]
-    github = 'dinz/BulgarianApp-Fresh'
+    github = 'YungSeepferd/BulgarianGermanLearningApp'
 
 # Taxonomies
 [taxonomies]
@@ -155,7 +167,6 @@ canonifyURLs = true
   difficulty = 'difficulties'
   source_lang = 'source_langs'
   target_lang = 'target_langs'
-
 
 # Minification
 [minify]
