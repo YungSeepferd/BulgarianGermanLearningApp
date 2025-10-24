@@ -1,7 +1,16 @@
 # Documentation Index
 
-**Last Updated**: October 17, 2025  
+**Last Updated**: October 24, 2025
 **Organization**: Active docs + Archived completed work
+
+---
+
+## 🚀 Start Here
+
+**New to the project?** Read this first:
+1. [**DEPLOYMENT_ROADMAP.md**](DEPLOYMENT_ROADMAP.md) - Current status, priorities, and next steps
+2. [**ARCHITECTURE.md**](ARCHITECTURE.md) - System architecture overview
+3. [**DEVELOPMENT.md**](DEVELOPMENT.md) - Development setup and workflow
 
 ---
 
@@ -18,9 +27,15 @@
 - [**PROGRAMMING_LINKS.md**](PROGRAMMING_LINKS.md) - Useful external references (Hugo, Go, etc.)
 
 **Project Management**:
-- [**PROJECT_PLAN.md**](PROJECT_PLAN.md) - Overall project roadmap and milestones
+- [**DEPLOYMENT_ROADMAP.md**](DEPLOYMENT_ROADMAP.md) - 🆕 Consolidated roadmap and current status
+- [**PROJECT_PLAN.md**](PROJECT_PLAN.md) - Technical project phases and tasks
+- [**DEPLOYMENT_STATUS.md**](DEPLOYMENT_STATUS.md) - Last deployment details (Oct 19, 2025)
 - [**development-notes.md**](development-notes.md) - Active development notes
 - [**notes/**](notes/) - Daily notes (TODAY.md, NEXT.md)
+
+**Guides** ([guides/](guides/)):
+- [**AGENTS.md**](guides/AGENTS.md) - 🆕 AI coding assistant guide and standards
+- [**THEME_QUICK_START.md**](guides/THEME_QUICK_START.md) - 🆕 Relearn theme quick reference
 
 **Organization**:
 - [**DOCS_ORGANIZATION.md**](DOCS_ORGANIZATION.md) - This documentation's organization guide
@@ -29,11 +44,22 @@
 
 ### Archived Documentation (Completed)
 
-All completed work from October 17, 2025 session is archived in [`archive/`](archive/).
+All completed work is archived in [`archive/`](archive/) subdirectories.
 
-**See**: [**archive/README.md**](archive/README.md) for full details
+**See**: [**archive/README.md**](archive/README.md) for full index
 
 #### Quick Links to Archive:
+
+**Theme Migration** 🆕 ([archive/theme-migration/](archive/theme-migration/)):
+- ✅ THEME_MIGRATION_COMPLETE.md - Migration completion report (Oct 22, 2025)
+- ✅ THEME_IMPLEMENTATION_SUMMARY.md - Implementation overview
+- MIGRATION_COMMANDS_CORRECTED.md - Git submodule commands
+- FIX_APPLIED.md - Temporary revert documentation
+
+**Vocabulary Expansion** 🆕 ([archive/vocabulary-expansion/](archive/vocabulary-expansion/)):
+- 📊 VOCABULARY_IMPLEMENTATION_REPORT.md - Research & strategy (active)
+- 📊 VOCABULARY_IMPLEMENTATION_STATUS.md - Progress tracking (active)
+- 📚 QUICK_START_GUIDE.md - 15-minute workflow guide
 
 **QA Reports** ([archive/qa-reports/](archive/qa-reports/)):
 - ✅ QA_CERTIFICATION_REPORT.md - **OFFICIAL** (95/100 - A grade)
@@ -78,16 +104,19 @@ All completed work from October 17, 2025 session is archived in [`archive/`](arc
 ## 📊 Documentation Statistics
 
 ### Active (Root `/docs/`)
-- **8 active documents** for daily use
-- **1 organization guide** (this file + DOCS_ORGANIZATION.md)
+- **10 core reference documents** for daily use
+- **2 guides** in `/guides/` directory
 - **1 notes folder** (TODAY.md, NEXT.md)
+- **1 deployment roadmap** (consolidated status)
 
 ### Archived (`/docs/archive/`)
+- **4 theme migration docs** - Completed Oct 22, 2025
+- **3 vocabulary expansion docs** - Active project (20% complete)
 - **4 QA reports** - All work from Oct 17, 2025 QA session
 - **5 implementation reports** - UX, features, refactoring
 - **3 plans** - Completed or superseded plans
 
-**Total**: 22 documentation files
+**Total**: 32 documentation files (organized)
 
 ---
 
@@ -117,16 +146,27 @@ All completed work from October 17, 2025 session is archived in [`archive/`](arc
 
 ## 🎉 Recent Accomplishments
 
-**October 17, 2025 Session**:
+**October 24, 2025 - Documentation Organization**:
+- ✅ Organized all root-level .md files into logical structure
+- ✅ Created archive directories for completed work
+- ✅ Created guides directory for active references
+- ✅ Consolidated deployment roadmap with current status
+- ✅ Updated documentation index
+- ✅ Added README files for all archive directories
+
+**October 22, 2025 - Theme Migration**:
+- ✅ Migrated from Learn to Relearn theme
+- ✅ Added multi-language UI (EN/BG/DE)
+- ✅ Implemented dark mode support
+- ✅ 30% performance improvement
+
+**October 19, 2025 - Production Deployment**:
 - ✅ Full QA certification (A grade - 95/100)
 - ✅ P0 UX features implemented (onboarding + confirmation)
 - ✅ Both user personas supported (Vincent & Ida)
-- ✅ Production-ready certification
-- ✅ 46 tests executed (100% pass rate)
-- ✅ 1,325 lines of production code
-- ✅ 3,900+ lines of documentation
+- ✅ Deployed to GitHub Pages
 
-**See full details**: [archive/implementation-reports/INTEGRATION_COMPLETE.md](archive/implementation-reports/INTEGRATION_COMPLETE.md)
+**See full details**: [DEPLOYMENT_ROADMAP.md](DEPLOYMENT_ROADMAP.md)
 
 ---
 

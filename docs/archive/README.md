@@ -1,13 +1,62 @@
 # Archive - Completed Documentation
 
-**Purpose**: Historical documentation of completed work  
-**Last Updated**: October 17, 2025
+**Purpose**: Historical documentation of completed work
+**Last Updated**: October 24, 2025
 
-This archive contains completed reports, plans, and documentation from major project milestones. All work documented here has been **completed and integrated** into the codebase.
+This archive contains completed reports, plans, and documentation from major project milestones. Includes both **completed work** and **active projects** organized for easy access.
 
 ---
 
 ## 📁 Archive Structure
+
+### `/theme-migration/` 🆕 - Theme Migration (Completed Oct 22, 2025)
+
+Migration from Hugo Learn theme to Hugo Relearn theme:
+
+1. **THEME_MIGRATION_COMPLETE.md** ✅ COMPLETE
+   - Status: Migration successful and deployed
+   - Features: Dark mode, multi-language UI, 30% performance boost
+   - Guide: Full deployment checklist
+
+2. **THEME_IMPLEMENTATION_SUMMARY.md**
+   - Comprehensive implementation overview
+   - Configuration details and customizations
+
+3. **MIGRATION_COMMANDS_CORRECTED.md**
+   - Fixed git submodule commands
+   - Troubleshooting guide
+
+4. **FIX_APPLIED.md**
+   - Temporary revert documentation
+
+**Status**: ✅ Completed October 22, 2025
+**Active Guide**: `/docs/guides/THEME_QUICK_START.md`
+
+---
+
+### `/vocabulary-expansion/` 🆕 - A1 Vocabulary Project (Active)
+
+Expansion from 156 to 750 A1-level vocabulary entries:
+
+1. **VOCABULARY_IMPLEMENTATION_REPORT.md** 📊 ACTIVE
+   - Research summary (Goethe Institut, STBFL standards)
+   - 8-12 week implementation strategy
+   - Quality standards and rating systems
+
+2. **VOCABULARY_IMPLEMENTATION_STATUS.md** 📊 ACTIVE
+   - Current progress: 150/750 words (20%)
+   - Week-by-week progress tracker
+   - Daily logs and metrics dashboard
+
+3. **QUICK_START_GUIDE.md**
+   - 15-minute workflow setup
+   - Entry template and examples
+   - Quality checklist
+
+**Status**: 📊 Active (20% complete, started Oct 23, 2025)
+**Target**: 750 A1 words by December 2025
+
+---
 
 ### `/qa-reports/` - Quality Assurance Reports
 
