@@ -39,20 +39,21 @@ These are the **actively maintained** modules used by the application:
 - **Direction multipliers**: BG→DE (1.1x), DE→BG (1.2x) preserved
 - **Export/import**: Schema-versioned with validation
 
-### Enhanced Modules (DEPRECATED - Use Unified Modules)
+### Enhanced Modules (ARCHIVED - October 24, 2025)
 
-⚠️ **Deprecation Notice (Oct 19, 2025)**: These modules are superseded by unified modules above. Kept for backward compatibility until all templates migrate.
+✅ **Migration Complete (Oct 24, 2025)**: All templates now use unified modules. Deprecated modules archived to `assets/js/archive/`.
 
-| Module | Size | Status | Replacement | Migration Status |
-|--------|------|--------|-------------|------------------|
-| `enhanced-bidirectional-system.js` | 15KB | ⚠️ **DEPRECATED** | `unified-practice-session.js` | Templates still reference; mark for removal after migration |
-| `enhanced-practice-session.js` | 10KB | ⚠️ **DEPRECATED** | `unified-practice-session.js` | Replaced by unified module |
-| `enhanced-spaced-repetition.js` | 4KB | ⚠️ **DEPRECATED** | `unified-spaced-repetition.js` | Replaced by unified module |
-| `enhanced-vocab-cards.js` | 2KB | ✅ **ACTIVE** | N/A | Still in use for vocabulary list display |
-| `practice.js` | 14KB | ⚠️ **DEPRECATED** | `unified-practice-session.js` | Replaced by unified module |
-| `spaced-repetition.js` | 13KB | ⚠️ **DEPRECATED** | `unified-spaced-repetition.js` | Replaced by unified module |
+| Module | Size | Status | Replacement | Archive Date |
+|--------|------|--------|-------------|--------------|
+| `enhanced-bidirectional-system.js` | 15KB | ✅ **ARCHIVED** | `unified-practice-session.js` | Oct 24, 2025 |
+| `enhanced-practice-session.js` | 10KB | ✅ **ARCHIVED** | `unified-practice-session.js` | Oct 24, 2025 |
+| `enhanced-spaced-repetition.js` | 4KB | ✅ **ARCHIVED** | `unified-spaced-repetition.js` | Oct 24, 2025 |
+| `enhanced-vocab-cards.js` | 2KB | ✅ **ARCHIVED** | `vocab-cards.js` | Oct 24, 2025 |
+| `practice.js` | 14KB | ✅ **ARCHIVED** | `unified-practice-session.js` | Oct 24, 2025 |
+| `spaced-repetition.js` | 13KB | ✅ **ARCHIVED** | `unified-spaced-repetition.js` | Oct 24, 2025 |
 
-**Migration Path**: Update template imports to use unified modules, test practice flow, remove deprecated modules once all templates migrated.
+**Location**: All archived modules moved to `assets/js/archive/` for historical reference.
+**Breaking Changes**: None - unified modules provide backward compatibility.
 
 ### Deprecated Modules (Removed)
 
@@ -282,9 +283,10 @@ import { Practice } from '/assets/js/practice.js';
 
 ---
 
-**Last Updated**: October 19, 2025  
-**Maintained By**: Development Team  
+**Last Updated**: October 24, 2025
+**Maintained By**: Development Team
 **Change Log**:
+- Oct 24, 2025: **Phase 3 Complete** - Archived 6 deprecated modules (enhanced-*, practice.js, spaced-repetition.js) to assets/js/archive/. Updated layouts/practice/single.html to remove enhanced-bidirectional-system.js reference. All templates now use unified modules only.
 - Oct 19, 2025: Verified enhanced modules are active, deleted deprecated *-simple.js and vocabulary-old.js files, updated specialized modules list
 - Oct 17, 2025: Initial comprehensive module documentation created
 

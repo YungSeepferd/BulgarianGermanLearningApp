@@ -285,22 +285,16 @@
 </script>
 
 <!-- Load JavaScript modules via Hugo resources -->
-{{ $enhancedBidirectionalSystem := resources.Get "js/enhanced-bidirectional-system.js" }}
-{{ if $enhancedBidirectionalSystem }}
-{{ $enhancedBidirectionalSystemMin := $enhancedBidirectionalSystem | resources.Minify }}
-<script src="{{ $enhancedBidirectionalSystemMin.RelPermalink }}" defer></script>
-{{ end }}
-
 {{ $vocabularyAdapter := resources.Get "js/vocabulary-adapter.js" }}
 {{ if $vocabularyAdapter }}
 {{ $vocabularyAdapterMin := $vocabularyAdapter | resources.Minify }}
 <script src="{{ $vocabularyAdapterMin.RelPermalink }}" defer></script>
 {{ end }}
 
-{{ $enhancedVocabCards := resources.Get "js/enhanced-vocab-cards.js" }}
-{{ if $enhancedVocabCards }}
-{{ $enhancedVocabCardsMin := $enhancedVocabCards | resources.Minify }}
-<script src="{{ $enhancedVocabCardsMin.RelPermalink }}" defer></script>
+{{ $vocabCards := resources.Get "js/vocab-cards.js" }}
+{{ if $vocabCards }}
+{{ $vocabCardsMin := $vocabCards | resources.Minify }}
+<script src="{{ $vocabCardsMin.RelPermalink }}" defer></script>
 {{ end }}
 
 {{ $vocabularyPage := resources.Get "js/modules/vocabulary-page.js" }}

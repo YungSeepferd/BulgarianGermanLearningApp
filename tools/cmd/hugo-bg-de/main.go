@@ -74,11 +74,9 @@ func processDataCommand(c *cli.Context) error {
 		return fmt.Errorf("vocabulary processing failed: %w", err)
 	}
 
-	// Process grammar data
-	err = processor.ProcessGrammarData()
-	if err != nil {
-		return fmt.Errorf("grammar processing failed: %w", err)
-	}
+	// Grammar is now in Markdown files (content/grammar/*.md)
+	// No processing needed - Hugo handles MD files natively
+	log.Println("✓ Grammar content in Markdown format (no processing needed)")
 
 	// Generate search index
 	err = processor.GenerateSearchIndex()
@@ -96,7 +94,6 @@ func validateCommand(c *cli.Context) error {
 	// Check if required files exist
 	requiredFiles := []string{
 		"data/vocabulary.json",
-		"data/grammar.json",
 		"hugo.toml",
 	}
 
@@ -106,17 +103,28 @@ func validateCommand(c *cli.Context) error {
 		}
 	}
 
-	// Validate JSON files
+	// Validate vocabulary.json
 	processor := processor.NewDataProcessor("content/")
-	
-	_, err := processor.LoadJSONData("data/vocabulary.json")
+
+	vocabData, err := processor.LoadJSONData("data/vocabulary.json")
 	if err != nil {
 		return fmt.Errorf("vocabulary.json validation failed: %w", err)
 	}
 
-	_, err = processor.LoadJSONData("data/grammar.json")
-	if err != nil {
-		return fmt.Errorf("grammar.json validation failed: %w", err)
+	// Additional vocabulary validation
+	log.Printf("✓ vocabulary.json: loaded %d entries", len(vocabData))
+
+	// Check for grammar content (now in MD files, not JSON)
+	grammarFiles := 0
+	if entries, err := os.ReadDir("content/grammar"); err == nil {
+		for _, entry := range entries {
+			if !entry.IsDir() && entry.Name() != "_index.md" {
+				grammarFiles++
+			}
+		}
+		log.Printf("✓ Found %d grammar markdown files", grammarFiles)
+	} else {
+		log.Printf("⚠ Could not read grammar directory: %v", err)
 	}
 
 	log.Println("Validation completed successfully!")
@@ -134,11 +142,8 @@ func preBuildHook() error {
 		return fmt.Errorf("vocabulary processing failed: %w", err)
 	}
 
-	// Process grammar data
-	err = processor.ProcessGrammarData()
-	if err != nil {
-		return fmt.Errorf("grammar processing failed: %w", err)
-	}
+	// Grammar is now in Markdown files (no processing needed)
+	log.Println("✓ Grammar content in Markdown format (Hugo handles natively)")
 
 	// Generate search index
 	err = processor.GenerateSearchIndex()
@@ -203,10 +208,7 @@ func processDataFiles() error {
 		return err
 	}
 
-	err = processor.ProcessGrammarData()
-	if err != nil {
-		return err
-	}
+	// Grammar is now in Markdown files (no processing needed)
 
 	return processor.GenerateSearchIndex()
 }
