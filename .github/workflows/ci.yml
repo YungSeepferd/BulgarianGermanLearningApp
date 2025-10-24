@@ -40,8 +40,11 @@ jobs:
         with:
           go-version: '1.23'
 
+      - name: Build Go tools
+        run: npm run build-tools
+
       - name: Validate data
-        run: npm run lint:data
+        run: npm run validate
 
       - name: Check ES modules
         run: npm run lint:esm

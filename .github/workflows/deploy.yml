@@ -54,15 +54,12 @@ jobs:
         run: npm install
 
       - name: Build Go tools
-        run: |
-          cd tools
-          go mod download
-          go build -o ../bin/hugo-bg-de ./cmd/hugo-bg-de
+        run: npm run build-tools
 
-      - name: Process data with Go tools
+      - name: Process and validate data
         run: |
-          ./bin/hugo-bg-de process-data
-          ./bin/hugo-bg-de validate
+          npm run process-data
+          npm run validate
 
       - name: Build with Hugo
         env:

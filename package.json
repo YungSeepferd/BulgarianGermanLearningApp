@@ -8,6 +8,7 @@
     "build": "hugo --gc --minify",
     "process-data": "./hugo-bg-de process-data",
     "build-tools": "cd tools && go build -o ../hugo-bg-de ./cmd/hugo-bg-de",
+    "validate": "./hugo-bg-de validate && npm run lint:data",
     "lint:data": "node scripts/validate-data.mjs",
     "lint:esm": "node scripts/check-esm.mjs",
     "test": "playwright test",
