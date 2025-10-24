@@ -37,14 +37,14 @@ export class Flashcards {
       correctAnswers: 0,
       grades: []
     };
-    
+
     // Configuration from shortcode parameters
     this.category = container.dataset.category || '';
     this.level = container.dataset.level || '';
     this.limit = parseInt(container.dataset.limit) || 20;
     this.mode = container.dataset.mode || 'practice';
     this.shuffle = container.dataset.shuffle === 'true';
-    
+
     // DOM elements
     this.stage = container.querySelector('#flashcard-stage');
     this.flashcard = container.querySelector('#current-flashcard');
@@ -60,12 +60,12 @@ export class Flashcards {
     this.speechControls = container.querySelector('#speech-controls');
     this.speechBtn = container.querySelector('#start-pronunciation');
     this.speechFeedback = container.querySelector('#speech-feedback');
-    
+
     // Progress elements
     this.progressFill = container.querySelector('#progress-fill');
     this.sessionProgress = container.querySelector('#session-progress');
     this.sessionAccuracy = container.querySelector('#session-accuracy');
-    
+
     // Control buttons
     this.pauseBtn = container.querySelector('#pause-session');
     this.endBtn = container.querySelector('#end-session');
@@ -73,7 +73,9 @@ export class Flashcards {
 
     // Cache bound handlers to avoid duplicate listeners on retries
     this.onGlobalKeydown = this.handleGlobalKeyboard.bind(this);
+    this.onLanguageDirectionChanged = this.handleLanguageDirectionChange.bind(this);
     this.globalKeyListenerAttached = false;
+    this.languageListenerAttached = false;
     this.eventsBound = false;
     this.speechPractice = null;
     this.speechPracticeAvailable = false;
@@ -186,12 +188,13 @@ export class Flashcards {
       backToVocabBtn.addEventListener('click', () => this.backToVocabulary());
     }
     
-    // Listen for language direction changes
-    document.addEventListener('language-direction-changed', (e) => {
-      this.languageDirection = e.detail.direction;
-      this.renderCurrentCard(); // Re-render current card with new direction
-    });
+    // Listen for language direction changes (use bound handler for cleanup)
+    if (!this.languageListenerAttached) {
+      document.addEventListener('language-direction-changed', this.onLanguageDirectionChanged);
+      this.languageListenerAttached = true;
+    }
 
+    // Attach global keyboard listener (use bound handler for cleanup)
     if (!this.globalKeyListenerAttached) {
       document.addEventListener('keydown', this.onGlobalKeydown);
       this.globalKeyListenerAttached = true;
@@ -578,10 +581,15 @@ export class Flashcards {
     }
   }
   
+  handleLanguageDirectionChange(e) {
+    this.languageDirection = e.detail.direction;
+    this.renderCurrentCard(); // Re-render current card with new direction
+  }
+
   handleGlobalKeyboard(e) {
     // Only handle if flashcards are active
     if (!this.stage || this.stage.style.display === 'none') return;
-    
+
     // Grade shortcuts (0-5)
     if (e.key >= '0' && e.key <= '5' && this.isFlipped) {
       e.preventDefault();
@@ -589,7 +597,7 @@ export class Flashcards {
       this.handleGrade(grade);
       return;
     }
-    
+
     // Navigation shortcuts
     switch (e.key) {
       case 'Escape':
@@ -745,6 +753,7 @@ export class Flashcards {
   
   endSession() {
     this.stopSpeechPractice();
+    this.cleanup(); // Remove event listeners
     this.sessionStats.endTime = new Date();
     this.completeSession();
   }
@@ -752,15 +761,36 @@ export class Flashcards {
   completeSession() {
     this.stopSpeechPractice();
     this.sessionStats.endTime = this.sessionStats.endTime || new Date();
-    
+
     // Hide main interface
     this.stage.style.display = 'none';
     this.gradingControls.style.display = 'none';
-    
+
     // Show completion screen
     this.showSessionComplete();
-    
+
     this.announceToScreenReader('Flashcard session completed');
+  }
+
+  /**
+   * Cleanup method to remove event listeners
+   * Prevents keyboard event persistence issues (P1 bug fix)
+   */
+  cleanup() {
+    // Remove global keyboard listener
+    if (this.globalKeyListenerAttached) {
+      document.removeEventListener('keydown', this.onGlobalKeydown);
+      this.globalKeyListenerAttached = false;
+    }
+
+    // Remove language direction listener
+    if (this.languageListenerAttached) {
+      document.removeEventListener('language-direction-changed', this.onLanguageDirectionChanged);
+      this.languageListenerAttached = false;
+    }
+
+    // Stop speech practice if active
+    this.stopSpeechPractice();
   }
   
   showSessionComplete() {

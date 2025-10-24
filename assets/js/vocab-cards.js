@@ -27,7 +27,7 @@ export class VocabCards {
     this.limit = parseInt(container.dataset.limit) || 0;
     this.interactive = container.dataset.interactive === 'true';
     this.languageDirection = languageToggle.getDirection();
-    
+
     // DOM elements
     this.grid = container.querySelector('#vocab-grid');
     this.loading = container.querySelector('#vocab-loading');
@@ -37,7 +37,11 @@ export class VocabCards {
     this.levelFilter = container.querySelector('#level-filter');
     this.shuffleBtn = container.querySelector('#shuffle-cards');
     this.retryBtn = container.querySelector('#retry-load');
-    
+
+    // Bound event handlers for cleanup
+    this.onLanguageDirectionChanged = this.handleLanguageDirectionChange.bind(this);
+    this.languageListenerAttached = false;
+
     this.init();
   }
   
@@ -71,11 +75,11 @@ export class VocabCards {
       this.retryBtn.addEventListener('click', () => this.init());
     }
     
-    // Listen for language direction changes
-    document.addEventListener('language-direction-changed', (e) => {
-      this.languageDirection = e.detail.direction;
-      this.renderCards(); // Re-render cards with new direction
-    });
+    // Listen for language direction changes (use bound handler for cleanup)
+    if (!this.languageListenerAttached) {
+      document.addEventListener('language-direction-changed', this.onLanguageDirectionChanged);
+      this.languageListenerAttached = true;
+    }
     
     // Keyboard navigation
   }
@@ -455,18 +459,35 @@ export class VocabCards {
     return div.innerHTML;
   }
   
+  handleLanguageDirectionChange(e) {
+    this.languageDirection = e.detail.direction;
+    this.renderCards(); // Re-render cards with new direction
+  }
+
   announceToScreenReader(message) {
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
-    
+
     document.body.appendChild(announcement);
-    
+
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
+  }
+
+  /**
+   * Cleanup method to remove event listeners
+   * Prevents event listener accumulation (P1 bug fix)
+   */
+  cleanup() {
+    // Remove language direction listener
+    if (this.languageListenerAttached) {
+      document.removeEventListener('language-direction-changed', this.onLanguageDirectionChanged);
+      this.languageListenerAttached = false;
+    }
   }
 }
 
