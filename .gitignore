@@ -64,6 +64,8 @@ build/
 # Data backups (keep in data/archive)
 /*.backup*.json
 /vocabulary*.backup*.json
+/data/*.backup*.json
+/data/vocabulary*.backup*.json
 
 # Archive directories (old files)
 /archive/
