@@ -5,8 +5,17 @@
                 <span class="brand-text">{{ .Site.Title }}</span>
             </a>
         </div>
-        
-        <div class="nav-menu">
+
+        <!-- Mobile menu toggle button -->
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="hamburger-icon">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
+
+        <div class="nav-menu" id="nav-menu">
             <a href="/vocabulary/" class="nav-link {{ if eq .Section "vocabulary" }}active{{ end }}">
                 Wortschatz / Речник
             </a>
@@ -16,21 +25,21 @@
             <a href="/practice/" class="nav-link {{ if eq .Section "practice" }}active{{ end }}">
                 Üben / Упражнения
             </a>
-            
+
             {{ if .Site.Params.enableProgress }}
             <a href="/progress/" class="nav-link {{ if eq .Section "progress" }}active{{ end }}">
                 Fortschritt / Прогрес
             </a>
             {{ end }}
         </div>
-        
+
         <div class="nav-actions">
             {{ partial "language-toggle.html" . }}
-            
+
             <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
                 <span class="theme-icon">🌙</span>
             </button>
-            
+
             <button id="search-toggle" class="search-toggle" aria-label="Toggle search">
                 <span class="search-icon">🔍</span>
             </button>
