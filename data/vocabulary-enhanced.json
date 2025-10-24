@@ -3,157 +3,18 @@
     "id": "zdravej_001",
     "word": "Здравей",
     "translation": "Hallo",
-    "source_lang": "bg",
-    "target_lang": "de",
     "category": "Begrüßung",
     "level": "A1",
-    "notes": "Das Wort 'Здравей' leitet sich vom bulgarischen Wort 'здрав' (gesund) ab und ist wie ein Wunsch nach Gesundheit.",
-    "etymology": "From Proto-Slavic 'zdravъ' (healthy) - literally a wish for good health",
-    "cultural_note": "Standard informal greeting used throughout the day in Bulgaria. More casual than 'Добър ден'",
-    "linguistic_note": "Stress on first syllable: ЗДРА-вей. Can be shortened to 'Здрасти' in very informal contexts",
     "difficulty": 1,
-    "frequency": 95,
-    "examples": [
-      {
-        "sentence": "Здравей, как си?",
-        "translation": "Hallo, wie geht's?",
-        "context": "informal"
-      },
-      {
-        "sentence": "Здравей, мило!",
-        "translation": "Hallo, Schatz!",
-        "context": "intimate"
-      }
-    ]
+    "frequency": 95
   },
   {
-    "id": "dobur_den_002",
-    "word": "Добър ден",
-    "translation": "Guten Tag",
-    "source_lang": "bg",
-    "target_lang": "de",
+    "id": "dobro_utro_002",
+    "word": "Добро утро",
+    "translation": "Guten Morgen",
     "category": "Begrüßung",
     "level": "A1",
-    "notes": "Formelle Begrüßung, verwendet zwischen 12:00 und 18:00 Uhr",
-    "etymology": "добър (good) + ден (day) - direct calque from Latin 'bonus dies'",
-    "cultural_note": "More formal than 'Здравей'. Used in business contexts and with strangers",
-    "linguistic_note": "Stress pattern: ДО-бър ДЕН. Both words stressed equally",
-    "difficulty": 2,
-    "frequency": 85,
-    "examples": [
-      {
-        "sentence": "Добър ден, госпожо!",
-        "translation": "Guten Tag, gnädige Frau!",
-        "context": "formal"
-      }
-    ]
-  },
-  {
-    "id": "dom_003",
-    "word": "дом",
-    "translation": "Haus",
-    "source_lang": "bg",
-    "target_lang": "de",
-    "category": "Wohnen",
-    "level": "A1",
-    "notes": "Grundwort für Haus/Zuhause. Unterscheidet sich von 'къща' (physisches Gebäude)",
-    "etymology": "From Proto-Slavic 'domъ' - cognate with Latin 'domus'",
-    "cultural_note": "In Bulgarian culture, 'дом' implies emotional connection to home, not just building",
-    "linguistic_note": "Masculine noun, definite form: 'домът'. Stress on single syllable",
     "difficulty": 1,
-    "frequency": 90,
-    "examples": [
-      {
-        "sentence": "Вкъщи съм.",
-        "translation": "Ich bin zu Hause.",
-        "context": "everyday"
-      },
-      {
-        "sentence": "Домът ми е тук.",
-        "translation": "Mein Zuhause ist hier.",
-        "context": "emotional"
-      }
-    ]
-  },
-  {
-    "id": "voda_004",
-    "word": "вода",
-    "translation": "Wasser",
-    "source_lang": "bg",
-    "target_lang": "de",
-    "category": "Essen",
-    "level": "A1",
-    "notes": "Grundlegendes Substantiv für Wasser in allen Kontexten",
-    "etymology": "From Proto-Slavic 'voda' - cognate with Sanskrit 'udán'",
-    "cultural_note": "Bulgarian mineral water culture is significant - 'минерална вода' is preferred",
-    "linguistic_note": "Feminine noun, definite form: 'водата'. Stress on first syllable: ВО-да",
-    "difficulty": 1,
-    "frequency": 88,
-    "examples": [
-      {
-        "sentence": "Искам вода, моля.",
-        "translation": "Ich möchte Wasser, bitte.",
-        "context": "restaurant"
-      },
-      {
-        "sentence": "Водата е студена.",
-        "translation": "Das Wasser ist kalt.",
-        "context": "descriptive"
-      }
-    ]
-  },
-  {
-    "id": "rabota_005",
-    "word": "работа",
-    "translation": "Arbeit",
-    "source_lang": "bg",
-    "target_lang": "de",
-    "category": "Arbeit",
-    "level": "A2",
-    "notes": "Kann sowohl 'Arbeit' als auch 'Job' bedeuten, je nach Kontext",
-    "etymology": "From Proto-Slavic 'orbota' - related to 'раб' (slave), but evolved to mean general work",
-    "cultural_note": "Bulgarian work culture values personal relationships at work more than German efficiency focus",
-    "linguistic_note": "Feminine noun, definite form: 'работата'. Stress on second syllable: ра-БО-та",
-    "difficulty": 2,
-    "frequency": 82,
-    "examples": [
-      {
-        "sentence": "Отивам на работа.",
-        "translation": "Ich gehe zur Arbeit.",
-        "context": "daily routine"
-      },
-      {
-        "sentence": "Работата ми е интересна.",
-        "translation": "Meine Arbeit ist interessant.",
-        "context": "job satisfaction"
-      }
-    ]
-  },
-  {
-    "id": "kniga_006",
-    "word": "книга",
-    "translation": "Buch",
-    "source_lang": "bg",
-    "target_lang": "de",
-    "category": "Bildung",
-    "level": "A1",
-    "notes": "Grundwort für Buch. Bulgarisch hat reiche Literaturgeschichte",
-    "etymology": "From Old Church Slavonic 'кънига', ultimately from Chinese via Turkic languages",
-    "cultural_note": "Books highly valued in Bulgarian culture - 'Ден на българската просвета' celebrates literacy",
-    "linguistic_note": "Feminine noun, definite form: 'книгата'. Stress on first syllable: КНИ-га",
-    "difficulty": 1,
-    "frequency": 75,
-    "examples": [
-      {
-        "sentence": "Чета книга.",
-        "translation": "Ich lese ein Buch.",
-        "context": "activity"
-      },
-      {
-        "sentence": "Тази книга е интересна.",
-        "translation": "Dieses Buch ist interessant.",
-        "context": "opinion"
-      }
-    ]
+    "frequency": 85
   }
 ]
