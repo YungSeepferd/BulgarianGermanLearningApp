@@ -3461,5 +3461,718 @@
         "context": "opinion"
       }
     ]
+  },
+  {
+    "id": "a1_number_014",
+    "word": "Четиринадесет",
+    "translation": "vierzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 14 formed from 'четири' (four) + 'надесет' (over ten)",
+    "notes_bg_to_de": "В немски 'vierzehn' се образува от 'vier' + 'zehn'. Произнася се [ˈfiːɐ̯ˌtseːn]. Използва се при броене и възраст.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Четиринадесет' folgt dem Muster 'vier' + 'надесет'. Betonung: четиринаде́сет.",
+    "etymology": "From Proto-Slavic 'četyri' (four) + 'nadъ desętь' (over ten). The pattern mirrors German 'vierzehn'.",
+    "cultural_note": "Bulgarian teens (11-19) all use the suffix '-надесет'. In German, teens are written as one word ('vierzehn').",
+    "difficulty": 1,
+    "frequency": 65,
+    "examples": [
+      {
+        "sentence": "Тя е на четиринадесет години.",
+        "translation": "Sie ist vierzehn Jahre alt.",
+        "context": "stating age"
+      },
+      {
+        "sentence": "Купих четиринадесет яйца.",
+        "translation": "Ich habe vierzehn Eier gekauft.",
+        "context": "counting items"
+      }
+    ],
+    "linguistic_note": "Stress on the third-to-last syllable: четиринаде́сет [tʃɛtirināˈdɛsɛt]",
+    "linguistic_note_bg_to_de": "Четиринадесет се произнася [tʃɛtirināˈdɛsɛt]. В немски 'vierzehn' [ˈfiːɐ̯ˌtseːn] – 'r' не се произнася силно.",
+    "linguistic_note_de_to_bg": "Betonung auf четиринаде́сет. Alle bulgarischen Teens (11-19) tragen Betonung auf derselben Silbe '-де́-'."
+  },
+  {
+    "id": "a1_number_015",
+    "word": "Петнадесет",
+    "translation": "fünfzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 15 formed from 'пет' (five) + 'надесет' (over ten)",
+    "notes_bg_to_de": "В немски 'fünfzehn' се образува от 'fünf' + 'zehn'. Обърнете внимание на умлаута 'ü' [yː].",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Петнадесет' = 'fünfzehn'. Einfacher als Deutsch: kein Umlaut, direkte Kombination 'пет' + 'надесет'.",
+    "etymology": "From Proto-Slavic 'pętь' (five) + 'nadъ desętь' (over ten). Related to Latin 'quīnque' through Indo-European roots.",
+    "cultural_note": "Used for age, counting, and telling time. In Bulgaria, 15 minutes is often 'четвърт' (quarter) in time expressions.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "sentence": "Имам петнадесет лева.",
+        "translation": "Ich habe fünfzehn Lewa.",
+        "context": "money"
+      },
+      {
+        "sentence": "Урокът започва в петнадесет часа.",
+        "translation": "Der Unterricht beginnt um fünfzehn Uhr.",
+        "context": "24-hour time"
+      }
+    ],
+    "linguistic_note": "Stress on петнаде́сет [pɛtnāˈdɛsɛt]. Often shortened colloquially to 'петна́йсе'.",
+    "linguistic_note_bg_to_de": "Петнадесет [pɛtnāˈdɛsɛt]. В немски 'fünfzehn' [ˈfʏnfˌtseːn] – 'ü' се произнася с rounded lips.",
+    "linguistic_note_de_to_bg": "Betonung петнаде́сет. In Umgangssprache oft verkürzt zu 'петна́йсе' [pɛtnˈajsɛ]."
+  },
+  {
+    "id": "a1_number_016",
+    "word": "Шестнадесет",
+    "translation": "sechzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 16 formed from 'шест' (six) + 'надесет' (over ten)",
+    "notes_bg_to_de": "В немски 'sechzehn' произхожда от 'sechs' + 'zehn'. Обърнете внимание: 'sechs' губи 's' при образуване на 'sechzehn'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Шестнадесет' ist regelmäßig gebildet. Anders als Deutsch ('sechs' → 'sechzehn') bleibt im Bulgarischen 'шест' unverändert.",
+    "etymology": "From Proto-Slavic 'šestь' (six) + 'nadъ desętь'. The 'š' sound [ʃ] is preserved from ancient times.",
+    "cultural_note": "Age of consent and driving age in Bulgaria. Often used in sports scores and measurements.",
+    "difficulty": 1,
+    "frequency": 65,
+    "examples": [
+      {
+        "sentence": "Тя навърши шестнадесет години.",
+        "translation": "Sie ist sechzehn geworden.",
+        "context": "birthday/age milestone"
+      },
+      {
+        "sentence": "Автобусът тръгва в шестнадесет и тридесет.",
+        "translation": "Der Bus fährt um sechzehn Uhr dreißig ab.",
+        "context": "schedule"
+      }
+    ],
+    "linguistic_note": "Stress on шестнаде́сет [ʃɛstnāˈdɛsɛt]. The 'шест' part pronounced clearly.",
+    "linguistic_note_bg_to_de": "Шестнадесет [ʃɛstnāˈdɛsɛt]. В немски 'sechzehn' [ˈzɛçˌtseːn] – 'ch' е палатално [ç].",
+    "linguistic_note_de_to_bg": "Betonung шестнаде́сет. 'Шест' [ʃɛst] mit stimmlosem 'š' wie deutsches 'sch'."
+  },
+  {
+    "id": "a1_number_017",
+    "word": "Седемнадесет",
+    "translation": "siebzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 17 formed from 'седем' (seven) + 'надесет' (over ten)",
+    "notes_bg_to_de": "В немски 'siebzehn' произхожда от 'sieben' + 'zehn'. Забележете: 'sieben' губи '-en' и става 'sieb-'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Седемнадесет' behält 'седем' vollständig. Im Deutschen wird 'sieben' zu 'sieb-' verkürzt.",
+    "etymology": "From Proto-Slavic 'sedmь' (seven) + 'nadъ desętь'. Cognate with Latin 'septem' and Greek 'hepta'.",
+    "cultural_note": "In Bulgarian culture, no special significance. In German-speaking countries, 17 is just a regular number.",
+    "difficulty": 1,
+    "frequency": 60,
+    "examples": [
+      {
+        "sentence": "В групата има седемнадесет студенти.",
+        "translation": "In der Gruppe sind siebzehn Studenten.",
+        "context": "counting people"
+      },
+      {
+        "sentence": "Роденият ми ден е на седемнадесети май.",
+        "translation": "Mein Geburtstag ist am siebzehnten Mai.",
+        "context": "ordinal form/date"
+      }
+    ],
+    "linguistic_note": "Stress on седемнаде́сет [sɛdɛmnāˈdɛsɛt]. Longer word with clear syllable boundaries.",
+    "linguistic_note_bg_to_de": "Седемнадесет [sɛdɛmnāˈdɛsɛt]. В немски 'siebzehn' [ˈziːpˌtseːn] – забележете shortening 'sieb-'.",
+    "linguistic_note_de_to_bg": "Betonung седемнаде́сет. Alle fünf Silben werden deutlich ausgesprochen: се-дем-на-де-сет."
+  },
+  {
+    "id": "a1_number_018",
+    "word": "Осемнадесет",
+    "translation": "achtzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 18 formed from 'осем' (eight) + 'надесет' (over ten)",
+    "notes_bg_to_de": "В немски 'achtzehn' от 'acht' + 'zehn'. Забележете 'cht' [χt] – рязък гърлен звук.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Осемнадесет' regelmäßig gebildet aus 'осем' + 'надесет'. Betonung wie bei allen Teens auf '-де́-'.",
+    "etymology": "From Proto-Slavic 'osmь' (eight) + 'nadъ desętь'. The root 'os-' relates to Indo-European *oḱtṓ.",
+    "cultural_note": "Age of legal adulthood in Bulgaria (18 years). Important milestone for voting rights and legal responsibilities.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "sentence": "На осемнадесет години можеш да гласуваш.",
+        "translation": "Mit achtzehn Jahren darfst du wählen.",
+        "context": "legal age"
+      },
+      {
+        "sentence": "Температурата е осемнадесет градуса.",
+        "translation": "Die Temperatur ist achtzehn Grad.",
+        "context": "temperature"
+      }
+    ],
+    "linguistic_note": "Stress on осемнаде́сет [ɔsɛmnāˈdɛsɛt]. Clear pronunciation of all syllables.",
+    "linguistic_note_bg_to_de": "Осемнадесет [ɔsɛmnāˈdɛsɛt]. В немски 'achtzehn' [ˈaχtˌtseːn] – 'ch' е velares [χ].",
+    "linguistic_note_de_to_bg": "Betonung осемнаде́сет. Das 'о' wird als offenes [ɔ] ausgesprochen, nicht wie deutsches [o:]."
+  },
+  {
+    "id": "a1_number_019",
+    "word": "Деветнадесет",
+    "translation": "neunzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 19 formed from 'девет' (nine) + 'надесет' (over ten)",
+    "notes_bg_to_de": "В немски 'neunzehn' от 'neun' + 'zehn'. Забележете дифтонга 'eu' [ɔʏ] и носовото 'n'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Деветнадесет' einfach aus 'девет' + 'надесет'. Letztes Teen-Zahl vor Sprung zu 20.",
+    "etymology": "From Proto-Slavic 'devętь' (nine) + 'nadъ desętь'. Related to Latin 'novem' through PIE *h₁néwn̥.",
+    "cultural_note": "Last of the teen numbers. The transition from 19 to 20 marks entry into adulthood age range in many contexts.",
+    "difficulty": 1,
+    "frequency": 60,
+    "examples": [
+      {
+        "sentence": "Работя до деветнадесет часа.",
+        "translation": "Ich arbeite bis neunzehn Uhr.",
+        "context": "work schedule"
+      },
+      {
+        "sentence": "Стаята е на деветнадесети етаж.",
+        "translation": "Das Zimmer ist im neunzehnten Stock.",
+        "context": "ordinal/floor number"
+      }
+    ],
+    "linguistic_note": "Stress on деветнаде́сет [dɛvɛtnāˈdɛsɛt]. The longest single-syllable number name.",
+    "linguistic_note_bg_to_de": "Деветнадесет [dɛvɛtnāˈdɛsɛt]. В немски 'neunzehn' [ˈnɔʏnˌtseːn] – 'eu' [ɔʏ] дифтонг.",
+    "linguistic_note_de_to_bg": "Betonung деветнаде́сет. Fünf Silben: де-вет-на-де-сет, alle klar artikuliert."
+  },
+  {
+    "id": "a1_number_030",
+    "word": "Тридесет",
+    "translation": "dreißig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 30 - first of the tens after 20",
+    "notes_bg_to_de": "В немски 'dreißig' се пише с 'ß' (eszett), произнася се [ˈdʁaɪ̯sɪç]. Забележете: 'drei' + 'ßig' (не 'zehn').",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Тридесет' aus 'три' + 'десет'. Einfacher als Deutsch: kein 'ß', direkte Kombination.",
+    "etymology": "From Proto-Slavic 'tri' (three) + 'desętь' (ten). Pattern: base number + десет for all tens.",
+    "cultural_note": "Round numbers like 30 are common in prices and measurements. Bulgarian uses 'и' between tens and units (тридесет и един).",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "sentence": "Имам тридесет години.",
+        "translation": "Ich bin dreißig Jahre alt.",
+        "context": "age"
+      },
+      {
+        "sentence": "Това струва тридесет лева.",
+        "translation": "Das kostet dreißig Lewa.",
+        "context": "price"
+      }
+    ],
+    "linguistic_note": "Stress on триде́сет [triˈdɛsɛt]. Pattern continues for all tens: -де́сет stressed.",
+    "linguistic_note_bg_to_de": "Тридесет [triˈdɛsɛt]. В немски 'dreißig' [ˈdʁaɪ̯sɪç] – 'ß' е специален звук [s].",
+    "linguistic_note_de_to_bg": "Betonung триде́сет. Kombination ist regelmäßig: число + десет."
+  },
+  {
+    "id": "a1_number_040",
+    "word": "Четиридесет",
+    "translation": "vierzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 40 formed from 'четири' (four) + 'десет' (ten)",
+    "notes_bg_to_de": "В немски 'vierzig' има 'zig' окончание (не 'zehn'). Произнася се [ˈfiːɐ̯tsɪç].",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Четиридесет' behält 'четири' vollständig + 'десет'. Regelmäßiger als Deutsch.",
+    "etymology": "From 'четири' + 'десет'. Bulgarian tens are more regular than German (which has 'zig' vs 'zehn').",
+    "cultural_note": "40 is culturally significant: '40 days' appears in many Bulgarian traditions and Orthodox Christian practices.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "sentence": "Работя четиридесет часа седмично.",
+        "translation": "Ich arbeite vierzig Stunden pro Woche.",
+        "context": "work hours"
+      },
+      {
+        "sentence": "Температурата достигна четиридесет градуса.",
+        "translation": "Die Temperatur erreichte vierzig Grad.",
+        "context": "temperature"
+      }
+    ],
+    "linguistic_note": "Stress on четириде́сет [tʃɛtiriˈdɛsɛt]. Longest of the common tens.",
+    "linguistic_note_bg_to_de": "Четиридесет [tʃɛtiriˈdɛsɛt]. В немски 'vierzig' [ˈfiːɐ̯tsɪç] – 'g' става [ç].",
+    "linguistic_note_de_to_bg": "Betonung четириде́сет. Alle Silben klar: че-ти-ри-де-сет."
+  },
+  {
+    "id": "a1_number_050",
+    "word": "Петдесет",
+    "translation": "fünfzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 50 - midpoint of counting to 100",
+    "notes_bg_to_de": "В немски 'fünfzig' с умлаут 'ü'. Произнася се [ˈfʏnftsɪç]. Означава половината от 100.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Петдесет' aus 'пет' + 'десет'. Halbzahl, wichtig für Prozente und Teilungen.",
+    "etymology": "From 'пет' (five) + 'десет' (ten). Related to Proto-Slavic 'pętьdesętь'.",
+    "cultural_note": "50th birthday (полувековен юбилей) is a significant milestone in Bulgarian culture.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "sentence": "Вчера навърших петдесет години.",
+        "translation": "Gestern bin ich fünfzig geworden.",
+        "context": "birthday"
+      },
+      {
+        "sentence": "Дай ми петдесет лева.",
+        "translation": "Gib mir fünfzig Lewa.",
+        "context": "money"
+      }
+    ],
+    "linguistic_note": "Stress on петдесе́т [pɛtdɛˈsɛt]. Shorter than четиридесет.",
+    "linguistic_note_bg_to_de": "Петдесет [pɛtdɛˈsɛt]. В немски 'fünfzig' [ˈfʏnftsɪç] – 'ü' с rounded lips.",
+    "linguistic_note_de_to_bg": "Betonung петдесе́т. 'Пет' ohne Vokalwechsel wie im Deutschen (fünf → fünfzig)."
+  },
+  {
+    "id": "a1_number_060",
+    "word": "Шестдесет",
+    "translation": "sechzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 60 formed from 'шест' (six) + 'десет' (ten)",
+    "notes_bg_to_de": "В немски 'sechzig' губи 's' от 'sechs'. Произнася се [ˈzɛçtsɪç].",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Шестдесет' behält 'шест' vollständig, während Deutsch 'sechs' → 'sechzig' ändert.",
+    "etymology": "From 'шест' + 'десет'. The 'ш' [ʃ] sound is characteristic of Slavic languages.",
+    "cultural_note": "60 minutes = 1 hour. Used frequently in time expressions and retirement age discussions.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "sentence": "Той е на шестдесет години.",
+        "translation": "Er ist sechzig Jahre alt.",
+        "context": "age/retirement"
+      },
+      {
+        "sentence": "Преди шестдесет години.",
+        "translation": "Vor sechzig Jahren.",
+        "context": "historical time"
+      }
+    ],
+    "linguistic_note": "Stress on шестдесе́т [ʃɛstdɛˈsɛt]. 'Шест' clearly articulated.",
+    "linguistic_note_bg_to_de": "Шестдесет [ʃɛstdɛˈsɛt]. В немски 'sechzig' [ˈzɛçtsɪç] – 'ch' е палатално.",
+    "linguistic_note_de_to_bg": "Betonung шестдесе́т. 'Ш' ist wie deutsches 'sch' in 'Schule'."
+  },
+  {
+    "id": "a1_number_070",
+    "word": "Седемдесет",
+    "translation": "siebzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 70 formed from 'седем' (seven) + 'десет' (ten)",
+    "notes_bg_to_de": "В немски 'siebzig' произхожда от 'sieben'. Забележете скъсяването: 'sieb-' (не 'sieben-').",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Седемдесет' ist regelmäßig: 'седем' + 'десет', kein Vokalwechsel wie bei 'sieben' → 'siebzig'.",
+    "etymology": "From 'седем' + 'десет'. Cognate with Latin 'septuaginta' and Greek 'hebdomēkonta'.",
+    "cultural_note": "Average life expectancy in Bulgaria is around 70-75 years. Used in demographics and health statistics.",
+    "difficulty": 1,
+    "frequency": 65,
+    "examples": [
+      {
+        "sentence": "Баба ми е на седемдесет години.",
+        "translation": "Meine Oma ist siebzig Jahre alt.",
+        "context": "family/age"
+      },
+      {
+        "sentence": "Скоростта е седемдесет километра в час.",
+        "translation": "Die Geschwindigkeit ist siebzig Stundenkilometer.",
+        "context": "speed limit"
+      }
+    ],
+    "linguistic_note": "Stress on седемдесе́т [sɛdɛmdɛˈsɛt]. Five clear syllables.",
+    "linguistic_note_bg_to_de": "Седемдесет [sɛdɛmdɛˈsɛt]. В немски 'siebzig' [ˈziːptsɪç] – обърнете внимание на скъсяването.",
+    "linguistic_note_de_to_bg": "Betonung седемдесе́т. Vollform 'седем' bleibt erhalten, nicht verkürzt."
+  },
+  {
+    "id": "a1_number_080",
+    "word": "Осемдесет",
+    "translation": "achtzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 80 formed from 'осем' (eight) + 'десет' (ten)",
+    "notes_bg_to_de": "В немски 'achtzig' с 'cht' [χt]. Произнася се [ˈaχtsɪç]. Забележете 'zig' окончанието.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Осемдесет' folgt dem Standard: 'осем' + 'десет'. Regelmäßiger als Deutsch.",
+    "etymology": "From 'осем' + 'десет'. The root relates to Indo-European *oḱtṓ (eight).",
+    "cultural_note": "Living to 80 is considered a long life. Used in longevity wishes and demographic statistics.",
+    "difficulty": 1,
+    "frequency": 60,
+    "examples": [
+      {
+        "sentence": "Дядо ми живя осемдесет години.",
+        "translation": "Mein Opa lebte achtzig Jahre.",
+        "context": "lifespan"
+      },
+      {
+        "sentence": "В стаята има осемдесет стола.",
+        "translation": "Im Raum gibt es achtzig Stühle.",
+        "context": "counting objects"
+      }
+    ],
+    "linguistic_note": "Stress on осемдесе́т [ɔsɛmdɛˈsɛt]. 'Осем' retained fully.",
+    "linguistic_note_bg_to_de": "Осемдесет [ɔsɛmdɛˈsɛt]. В немски 'achtzig' [ˈaχtsɪç] – 'ch' е velares [χ].",
+    "linguistic_note_de_to_bg": "Betonung осемдесе́т. 'О' als offenes [ɔ], nicht geschlossenes [o:]."
+  },
+  {
+    "id": "a1_number_090",
+    "word": "Деветдесет",
+    "translation": "neunzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 90 - last of the tens before 100",
+    "notes_bg_to_de": "В немски 'neunzig' с дифтонг 'eu' [ɔʏ]. Произнася се [ˈnɔʏntsɪç]. Последното десятично число.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Деветдесет' aus 'девет' + 'десет'. Letztes Zehnerzahl vor 100.",
+    "etymology": "From 'девет' + 'десет'. Related to Latin 'nonaginta' through PIE *h₁néwn̥.",
+    "cultural_note": "The 1990s (деветдесетте години) mark Bulgaria's transition to democracy and market economy.",
+    "difficulty": 1,
+    "frequency": 60,
+    "examples": [
+      {
+        "sentence": "Той живя деветдесет години.",
+        "translation": "Er lebte neunzig Jahre.",
+        "context": "long lifespan"
+      },
+      {
+        "sentence": "През деветдесетте години.",
+        "translation": "In den Neunzigern.",
+        "context": "decade reference"
+      }
+    ],
+    "linguistic_note": "Stress on деветдесе́т [dɛvɛtdɛˈsɛt]. Five syllables like седемдесет.",
+    "linguistic_note_bg_to_de": "Деветдесет [dɛvɛtdɛˈsɛt]. В немски 'neunzig' [ˈnɔʏntsɪç] – 'eu' дифтонг [ɔʏ].",
+    "linguistic_note_de_to_bg": "Betonung деветдесе́т. Klar artikuliert: де-вет-де-сет."
+  },
+  {
+    "id": "a1_number_100",
+    "word": "Сто",
+    "translation": "hundert",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 100 - first three-digit number",
+    "notes_bg_to_de": "В немски 'hundert' [ˈhʊndɐt]. Забележете: 'ein hundert' vs просто 'hundert' (100).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сто' [sto] ist einfach und kurz. Wird ohne Artikel verwendet.",
+    "etymology": "From Proto-Slavic 'sъto', related to Latin 'centum' through PIE *ḱm̥tóm.",
+    "cultural_note": "Round numbers in Bulgarian: на сто години (100 years old) is a common longevity wish.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "sentence": "Това струва сто лева.",
+        "translation": "Das kostet hundert Lewa.",
+        "context": "price"
+      },
+      {
+        "sentence": "Живей сто години!",
+        "translation": "Lebe hundert Jahre! (Traditioneller Wunsch)",
+        "context": "toast/wish"
+      }
+    ],
+    "linguistic_note": "Stress on сто́ [sto]. Short, monosyllabic.",
+    "linguistic_note_bg_to_de": "Сто [sto] - едносрично. В немски 'hundert' [ˈhʊndɐt] - двусрично.",
+    "linguistic_note_de_to_bg": "Einfache Aussprache: [sto]. Betonung auf der einzigen Silbe."
+  },
+  {
+    "id": "a1_number_200",
+    "word": "Двеста",
+    "translation": "zweihundert",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 200 - irregular form using 'две' + 'ста'",
+    "notes_bg_to_de": "В немски 'zweihundert' е сложна дума: 'zwei' + 'hundert'. Винаги заедно.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Двеста' ist unregelmäßig: nicht 'две сто', sondern 'двеста' (спряганата форма).",
+    "etymology": "From 'две' (two) + 'ста' (archaic plural of 'сто'). Irregular: 200, 300, 400 use '-ста'.",
+    "cultural_note": "Used in prices, distances. Bulgarian highways: София-Пловдив е двеста километра.",
+    "difficulty": 1,
+    "frequency": 65,
+    "examples": [
+      {
+        "sentence": "Книгата струва двеста лева.",
+        "translation": "Das Buch kostet zweihundert Lewa.",
+        "context": "price"
+      },
+      {
+        "sentence": "Преди двеста години.",
+        "translation": "Vor zweihundert Jahren.",
+        "context": "historical"
+      }
+    ],
+    "linguistic_note": "Stress on двеста́ [dvɛˈsta]. Note the merged form, not две́ + сто́.",
+    "linguistic_note_bg_to_de": "Двеста [dvɛˈsta] - слято. В немски 'zweihundert' [ˈtsvaɪ̯hʊndɐt] - също слято.",
+    "linguistic_note_de_to_bg": "Betonung двеста́. Merke: 200-400 enden auf '-ста', ab 500 auf 'стотин'."
+  },
+  {
+    "id": "a1_number_1000",
+    "word": "Хиляда",
+    "translation": "tausend",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 1000 - first four-digit threshold",
+    "notes_bg_to_de": "В немски 'tausend' [ˈtaʊ̯zn̩t]. Забележете: 'eine Tausend' (женски род) vs 'ein Tausender' (мъжки).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Хиляда' ist feminin. Plural: 'хиляди' (Tausende).",
+    "etymology": "From Old Bulgarian 'хилѩда', possibly from Greek 'chiliás'. Different origin than other Slavic 'tysiąc'.",
+    "cultural_note": "Common in year dates: две хиляди и двадесет и пет (2025). Also in prices, populations.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "sentence": "В града живеят сто хиляди души.",
+        "translation": "In der Stadt leben hunderttausend Menschen.",
+        "context": "population"
+      },
+      {
+        "sentence": "Това струва хиляда евро.",
+        "translation": "Das kostet tausend Euro.",
+        "context": "price"
+      }
+    ],
+    "linguistic_note": "Stress on хи́ляда [ˈxiljɐdɐ]. Note the 'я' [jа] diphthong.",
+    "linguistic_note_bg_to_de": "Хиляда [ˈxiljɐdɐ]. 'Х' е фрикативен [x]. В немски 'tausend' [ˈtaʊ̯zn̩t].",
+    "linguistic_note_de_to_bg": "Betonung хи́ляда. 'Х' ist wie 'ch' in 'Bach', nicht wie deutsches 'h'."
+  },
+  {
+    "id": "a1_verb_001",
+    "word": "Искам",
+    "translation": "wollen / möchten",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Essential modal verb: to want, to wish",
+    "notes_bg_to_de": "В немски 'wollen' е силно желание, 'möchten' по-учтиво. 'Искам' покрива и двете.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Искам' = wollen/möchten. Konjugiert: искам, искаш, иска, искаме, искате, искат.",
+    "etymology": "From Proto-Slavic 'iskati' (to seek). Related to Russian 'искать'.",
+    "cultural_note": "Very common. Politeness: Искам + да + verb. E.g., 'Искам да дойда' (Ich möchte kommen).",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "sentence": "Искам вода, моля.",
+        "translation": "Ich möchte Wasser, bitte.",
+        "context": "polite request"
+      },
+      {
+        "sentence": "Искам да науча български.",
+        "translation": "Ich will Bulgarisch lernen.",
+        "context": "expressing desire"
+      }
+    ],
+    "linguistic_note": "Conjugation: искам, искаш, иска. Stress stays on и́скам throughout.",
+    "linguistic_note_bg_to_de": "Искам [ˈiskɐm] - ударение винаги на първата сричка. Спрежение: -ам, -аш, -а.",
+    "linguistic_note_de_to_bg": "Betonung и́скам. Präsens-Endungen: -ам, -аш, -а, -аме, -ате, -ат."
+  },
+  {
+    "id": "a1_verb_002",
+    "word": "Спя",
+    "translation": "schlafen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Essential daily activity verb: to sleep",
+    "notes_bg_to_de": "В немски 'schlafen' [ˈʃlaːfn̩]. Неправилен глагол: ich schlafe, du schläfst (умлаут!).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Спя' ist regelmäßig. Konjugation: спя, спиш, спи, спим, спите, спят.",
+    "etymology": "From Proto-Slavic 'sъpati'. Cognate with Latin 'sopor' (deep sleep).",
+    "cultural_note": "Afternoon nap: 'сиеста' (from Spanish) is uncommon in Bulgaria, unlike Mediterranean countries.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "sentence": "Спя осем часа на нощ.",
+        "translation": "Ich schlafe acht Stunden pro Nacht.",
+        "context": "routine"
+      },
+      {
+        "sentence": "Бебето спи.",
+        "translation": "Das Baby schläft.",
+        "context": "present action"
+      }
+    ],
+    "linguistic_note": "Conjugation: спя, спиш, спи. Root change in plural: спи-м, спи-те.",
+    "linguistic_note_bg_to_de": "Спя [spja]. Коренът 'сп-' се запазва. В немски 'schlafen' със strong conjugation.",
+    "linguistic_note_de_to_bg": "Stamm bleibt 'сп-': спя, спиш, спи. Plural добавя -и-: спим, спите."
+  },
+  {
+    "id": "a1_verb_003",
+    "word": "Пия",
+    "translation": "trinken",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Essential verb: to drink",
+    "notes_bg_to_de": "В немски 'trinken' [ˈtʁɪŋkn̩]. Силен глагол: trinken-trank-getrunken.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Пия' regelmäßig. Konjugation: пия, пиеш, пие, пием, пиете, пият.",
+    "etymology": "From Proto-Slavic 'piti'. Cognate with Latin 'potare', English 'potion'.",
+    "cultural_note": "Toasting culture: Наздраве! (Cheers!). Maintain eye contact when clinking glasses.",
+    "difficulty": 1,
+    "frequency": 92,
+    "examples": [
+      {
+        "sentence": "Пия кафе сутрин.",
+        "translation": "Ich trinke morgens Kaffee.",
+        "context": "habit"
+      },
+      {
+        "sentence": "Искаш ли да пиеш нещо?",
+        "translation": "Möchtest du etwas trinken?",
+        "context": "offer"
+      }
+    ],
+    "linguistic_note": "Conjugation: пия, пиеш, пие. Stem 'пи-' throughout, regular endings.",
+    "linguistic_note_bg_to_de": "Пия [ˈpijɐ]. Правилен: пия, пиеш, пие. В немски 'trinken' е силен глагол.",
+    "linguistic_note_de_to_bg": "Betonung пи́я. Stamm 'пи-', Endungen: -я, -еш, -е, -ем, -ете, -ят."
+  },
+  {
+    "id": "a1_verb_004",
+    "word": "Ям",
+    "translation": "essen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Essential verb: to eat",
+    "notes_bg_to_de": "В немски 'essen' [ˈɛsn̩]. Силен глагол: essen-aß-gegessen. Умлаут във 2-3 л. ед.ч.: du isst, er isst.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ям' regelmäßig. Konjugation: ям, ядеш, яде, ядем, ядете, ядат.",
+    "etymology": "From Proto-Slavic 'jěsti'. Root 'яд-' appears in plural forms.",
+    "cultural_note": "Meal culture: Обяд (lunch) is traditionally the main meal. Приятен апетит! = Guten Appetit!",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "sentence": "Ям на ресторанта.",
+        "translation": "Ich esse im Restaurant.",
+        "context": "location"
+      },
+      {
+        "sentence": "Какво ядеш?",
+        "translation": "Was isst du?",
+        "context": "question"
+      }
+    ],
+    "linguistic_note": "Irregular: ям (1st sg) but ядеш, яде... (different stem in 2nd/3rd person).",
+    "linguistic_note_bg_to_de": "Ям [jam]. Корен 'яд-' в множествено: ядем, ядете. В немски 'essen' също променлив.",
+    "linguistic_note_de_to_bg": "Stamm wechselt: ям vs яд-еш. Ähnlich wie Deutsch: ich esse vs du isst."
+  },
+  {
+    "id": "a1_verb_005",
+    "word": "Видя",
+    "translation": "sehen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Essential perception verb: to see",
+    "notes_bg_to_de": "В немски 'sehen' [ˈzeːən]. Силен глагол с умлаут: siehst, sieht. Imperфект: sah, gesehen.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Видя' perfektiv (vollendete Handlung). Imperfektiv: 'виждам' (wiederholtes Sehen).",
+    "etymology": "From Proto-Slavic 'viděti'. Cognate with Latin 'videre', English 'video'.",
+    "cultural_note": "Common phrase: Видяхме се! (Wir haben uns gesehen = Bis bald). Used as casual goodbye.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "sentence": "Виждам те.",
+        "translation": "Ich sehe dich.",
+        "context": "present continuous"
+      },
+      {
+        "sentence": "Видях филма.",
+        "translation": "Ich habe den Film gesehen.",
+        "context": "completed action"
+      }
+    ],
+    "linguistic_note": "Perfective aspect. Imperfective: виждам. Both used frequently.",
+    "linguistic_note_bg_to_de": "Видя [ˈvidjɐ] - перфектив. Имперфектив: виждам [ˈviʒdɐm]. Двойка глаголи.",
+    "linguistic_note_de_to_bg": "Aspektpaar: видя (perfektiv) / виждам (imperfektiv). Ähnlich polnisch 'zobaczyć/widzieć'."
+  },
+  {
+    "id": "a1_verb_006",
+    "word": "Мога",
+    "translation": "können",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Essential modal verb: can, to be able to",
+    "notes_bg_to_de": "В немски 'können' [ˈkœnən]. Модален глагол с умлаут: kann, kannst, kann. Неправилен.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Мога' = können. Konjugation: мога, можеш, може, можем, можете, могат.",
+    "etymology": "From Proto-Slavic 'mogti'. Cognate with 'might', German 'mögen' (related).",
+    "cultural_note": "Used for ability and permission. Може ли? (May I? / Is it possible?) is very common polite phrase.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "sentence": "Мога ли да вляза?",
+        "translation": "Kann ich reinkommen? / Darf ich reinkommen?",
+        "context": "permission"
+      },
+      {
+        "sentence": "Можеш ли да ми помогнеш?",
+        "translation": "Kannst du mir helfen?",
+        "context": "request"
+      }
+    ],
+    "linguistic_note": "Conjugation: мога, можеш, може. Stem change: мог- / мож-.",
+    "linguistic_note_bg_to_de": "Мога [ˈmɔɡɐ]. Корен мог-/мож-: мога vs можеш. В немски 'können' също променлив.",
+    "linguistic_note_de_to_bg": "Stammwechsel: мог-а vs мож-еш. Ähnlich deutsch: könn-en vs ich kann."
+  },
+  {
+    "id": "a1_verb_007",
+    "word": "Правя",
+    "translation": "machen / tun",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Essential general action verb: to do, to make",
+    "notes_bg_to_de": "В немски 'machen' [ˈmaxn̩] (do/make) е правилен. 'Tun' [tuːn] е алтернатива (неправилен).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Правя' = machen/tun. Sehr häufig. Konjugation: правя, правиш, прави.",
+    "etymology": "From Proto-Slavic 'praviti'. Originally 'to make right/straight', expanded to general 'do/make'.",
+    "cultural_note": "Multi-purpose verb. Какво правиш? (Was machst du?) is universal greeting question.",
+    "difficulty": 1,
+    "frequency": 98,
+    "examples": [
+      {
+        "sentence": "Какво правиш?",
+        "translation": "Was machst du?",
+        "context": "casual greeting"
+      },
+      {
+        "sentence": "Правя домашното.",
+        "translation": "Ich mache die Hausaufgaben.",
+        "context": "activity"
+      }
+    ],
+    "linguistic_note": "Regular conjugation: правя, правиш, прави. Stem 'прав-' throughout.",
+    "linguistic_note_bg_to_de": "Правя [ˈpravjɐ]. Правилен: правя, правиш, прави. В немски 'machen' също правилен.",
+    "linguistic_note_de_to_bg": "Betonung пра́вя. Stamm 'прав-', Endungen: -я, -иш, -и, -им, -ите, -ят."
   }
 ]
