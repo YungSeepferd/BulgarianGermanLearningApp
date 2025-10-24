@@ -49,7 +49,11 @@
     <!-- Language toggle functionality - loaded early for global availability -->
     {{ $languageToggle := resources.Get "js/language-toggle.js" | resources.Minify | resources.Fingerprint }}
     <script src="{{ $languageToggle.RelPermalink }}" integrity="{{ $languageToggle.Data.Integrity }}"></script>
-    
+
+    <!-- Mobile menu toggle -->
+    {{ $mobileMenu := resources.Get "js/mobile-menu.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $mobileMenu.RelPermalink }}" integrity="{{ $mobileMenu.Data.Integrity }}"></script>
+
     <!-- Language Toggle Confirmation Modal -->
     {{ $confirmation := resources.Get "js/language-toggle-confirmation.js" | resources.Minify | resources.Fingerprint }}
     <script src="{{ $confirmation.RelPermalink }}" integrity="{{ $confirmation.Data.Integrity }}" defer></script>
@@ -59,7 +63,7 @@
     <script src="{{ $onboarding.RelPermalink }}" integrity="{{ $onboarding.Data.Integrity }}" defer></script>
 
     <!-- Core functionality loaded per page in scripts block -->
-    {{ $precache := slice $style.RelPermalink $js.RelPermalink $codeJs.RelPermalink $languageToggle.RelPermalink $confirmation.RelPermalink $onboarding.RelPermalink "/" "/offline/" "/manifest.webmanifest" }}
+    {{ $precache := slice $style.RelPermalink $js.RelPermalink $codeJs.RelPermalink $languageToggle.RelPermalink $mobileMenu.RelPermalink $confirmation.RelPermalink $onboarding.RelPermalink "/" "/offline/" "/manifest.webmanifest" }}
     <script id="bgde-precache-assets" type="application/json">
         {{ $precache | uniq | jsonify }}
     </script>
