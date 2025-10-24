@@ -1,0 +1,376 @@
+[
+  {
+    "id": "a1_question_when",
+    "word": "Кога",
+    "translation": "wann",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewort",
+    "level": "A1",
+    "notes": "Essential question word for asking about time",
+    "notes_bg_to_de": "В немски 'wann' се използва за питания за време: 'Wann kommst du?' (Кога идваш?). Не бъркайте с 'wenn' (когато) и 'als' (когато в миналото).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Кога' = 'wann'. Verwendet für direkte Zeitfragen. Betonung auf der ersten Silbe: КО-га. Oft kombiniert mit Futur: 'Кога ще дойдеш?' (Wann wirst du kommen?).",
+    "etymology": "From Proto-Slavic *kogda (when). Related to Russian когда, Polish kiedy",
+    "cultural_note": "Frequently used in Bulgarian for planning and scheduling. Bulgarians often use it with present tense for future actions: 'Кога тръгваш?' (When are you leaving?)",
+    "linguistic_note": "Pronunciation: [kɔˈɡa]. Stress on first syllable. Invariable interrogative adverb. Can be used in indirect questions: 'Не знам кога' (I don't know when)",
+    "difficulty": 1,
+    "frequency": 92,
+    "examples": [
+      {
+        "sentence": "Кога започва филмът?",
+        "translation": "Wann beginnt der Film?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Кога имаш рожден ден?",
+        "translation": "Wann hast du Geburtstag?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Не знам кога ще се върна.",
+        "translation": "Ich weiß nicht, wann ich zurückkomme.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_question_where",
+    "word": "Къде",
+    "translation": "wo",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewort",
+    "level": "A1",
+    "notes": "Essential question word for asking about location",
+    "notes_bg_to_de": "Немското 'wo' пита за местоположение: 'Wo bist du?' (Къде си?). За посока използвайте 'wohin' (накъде) или 'woher' (откъде). Запомнете разликата!",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Къде' = 'wo'. Fragt nach statischer Position. Betonung: къ-ДЕ (zweite Silbe). Achtung: Bulgarisch hat nur ein Wort 'къде' für Ort, Deutsche unterscheiden wo/wohin/woher.",
+    "etymology": "From Proto-Slavic *kъde (where, whither). Related to Russian где, куда",
+    "cultural_note": "Very common in Bulgarian for asking directions or locations. Bulgarians may point or gesture while saying 'къде' to clarify meaning",
+    "linguistic_note": "Pronunciation: [kɤˈdɛ]. Stress on second syllable. Can mean both 'where' (location) and 'where to' (direction) depending on verb: 'Къде живееш?' vs 'Къде отиваш?'",
+    "difficulty": 1,
+    "frequency": 94,
+    "examples": [
+      {
+        "sentence": "Къде е гарата?",
+        "translation": "Wo ist der Bahnhof?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Къде работиш?",
+        "translation": "Wo arbeitest du?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Не знам къде е ключът.",
+        "translation": "Ich weiß nicht, wo der Schlüssel ist.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_question_why",
+    "word": "Защо",
+    "translation": "warum",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewort",
+    "level": "A1",
+    "notes": "Essential question word for asking about reasons",
+    "notes_bg_to_de": "В немски има три синонима: 'warum', 'weshalb', 'wieso' - всички означават 'защо'. 'Warum' е най-често срещаното. Отговорете с 'weil' (защото): 'Warum? - Weil...'",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Защо' = 'warum/weshalb/wieso'. Betonung: за-ЩО (zweite Silbe). Antworten oft mit 'защото' (weil): 'Защо? - Защото...'",
+    "etymology": "Compound: 'за' (for) + 'що' (what). Literally 'for what' = 'why'",
+    "cultural_note": "Bulgarians use 'защо' frequently in conversation. Children often ask 'Защо?' repeatedly, similar to English 'why?'",
+    "linguistic_note": "Pronunciation: [zɐˈʃtɔ]. Stress on second syllable. Commonly shortened in speech to [zaʃˈtɔ]. Can begin questions or appear mid-sentence",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "sentence": "Защо не идваш?",
+        "translation": "Warum kommst du nicht?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Защо си тъжен?",
+        "translation": "Warum bist du traurig?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Не разбирам защо.",
+        "translation": "Ich verstehe nicht, warum.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_question_how",
+    "word": "Как",
+    "translation": "wie",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewort",
+    "level": "A1",
+    "notes": "Essential question word for asking about manner or state",
+    "notes_bg_to_de": "Немското 'wie' има много употреби: 'Wie geht's?' (Как си?), 'Wie alt?' (На колко години?), 'Wie viel?' (Колко струва?). Често се среща в сравнения: 'so...wie' (толкова...колкото).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Как' = 'wie'. Betonung: КАК (einsilbig, betont). Sehr häufig in Grußformeln: 'Как си?' = 'Wie geht's?'. Auch für Vergleiche und Beschreibungen.",
+    "etymology": "From Proto-Slavic *kako (how, as). Related to Russian как, Polish jak",
+    "cultural_note": "The phrase 'Как си?' (How are you?) is the most common informal greeting in Bulgaria, even more than 'Здравей'",
+    "linguistic_note": "Pronunciation: [kak]. Single stressed syllable. Very versatile word - used for manner, comparison, exclamations. Can combine with other words: 'как така' (how so), 'как и' (as well as)",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "sentence": "Как си?",
+        "translation": "Wie geht's? / Wie geht es dir?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Как се казваш?",
+        "translation": "Wie heißt du?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Как се стига до центъра?",
+        "translation": "Wie kommt man zum Zentrum?",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_question_howmuch",
+    "word": "Колко",
+    "translation": "wie viel / wie viele",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewort",
+    "level": "A1",
+    "notes": "Essential question word for asking about quantity or amount",
+    "notes_bg_to_de": "Немското 'wie viel' се използва за неброими неща (wie viel Geld?), а 'wie viele' за броими (wie viele Bücher?). В български 'колко' покрива и двете.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Колко' = 'wie viel/wie viele'. Betonung: КОЛ-ко. Keine Unterscheidung zwischen zählbar/unzählbar wie im Deutschen. Auch für Alter: 'На колко години си?' (Wie alt bist du?)",
+    "etymology": "From 'коли-ко', related to количество (quantity). Proto-Slavic origin",
+    "cultural_note": "Essential for shopping and haggling in Bulgarian markets. Also used for time: 'Колко е часът?' (What time is it?)",
+    "linguistic_note": "Pronunciation: [ˈkɔɫkɔ]. Stress on first syllable. Can be used with various constructions: 'колко струва' (how much costs), 'колко време' (how much time)",
+    "difficulty": 1,
+    "frequency": 93,
+    "examples": [
+      {
+        "sentence": "Колко струва това?",
+        "translation": "Wie viel kostet das?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Колко си години?",
+        "translation": "Wie alt bist du?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Колко време отнема?",
+        "translation": "Wie viel Zeit braucht es?",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_question_whose",
+    "word": "Чий",
+    "translation": "wessen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewort",
+    "level": "A1",
+    "notes": "Question word for asking about possession or ownership",
+    "notes_bg_to_de": "Немското 'wessen' е генитив от 'wer' и се използва рядко в разговор. По-често казвайте 'Wem gehört...?' (На кого принадлежи...?). 'Wessen' звучи формално.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Чий' = 'wessen'. Flektiert nach Geschlecht: чий (m), чия (f), чие (n), чии (pl). Beispiel: 'Чия е тази книга?' (Wessen Buch ist das? / Wem gehört dieses Buch?)",
+    "etymology": "From Proto-Slavic *čьjь (whose). Related to Russian чей, Polish czyj",
+    "cultural_note": "Used frequently in Bulgarian to establish ownership or identify belongings. More common in everyday speech than German 'wessen'",
+    "linguistic_note": "Pronunciation: [t͡ʃiɪ̯]. Has four forms agreeing with gender/number of possessed object: чий/чия/чие/чии. The question asks about the possessor, but agrees with the possessed item",
+    "difficulty": 2,
+    "frequency": 75,
+    "examples": [
+      {
+        "sentence": "Чия е тази чанта?",
+        "translation": "Wem gehört diese Tasche?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Чий е този автомобил?",
+        "translation": "Wessen Auto ist das?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Чии са тези книги?",
+        "translation": "Wem gehören diese Bücher?",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_pronoun_i",
+    "word": "Аз",
+    "translation": "ich",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Pronomen",
+    "level": "A1",
+    "notes": "First person singular personal pronoun",
+    "notes_bg_to_de": "Немското 'ich' винаги се пише с малка буква (освен в началото на изречението), докато в български 'аз' може да се изпуска в разговор, защото глаголната форма е ясна: 'Отивам' (вместо 'Аз отивам').",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Аз' = 'ich'. Betonung: АЗ (einsilbig). Oft weggelassen im Bulgarischen, da Verben Personen anzeigen: 'съм уморен' (statt 'аз съм уморен'). Aber für Betonung nötig.",
+    "etymology": "From Proto-Slavic *azъ (I). Related to Russian я, Old Church Slavonic азъ",
+    "cultural_note": "Bulgarian speakers often omit 'аз' in casual speech since verb endings make the subject clear. Using it can add emphasis or formality",
+    "linguistic_note": "Pronunciation: [az]. Short vowel. Can be elided in rapid speech. No case changes in modern Bulgarian (unlike Russian). Used for emphasis: 'АЗ казвам' (I'M the one saying)",
+    "difficulty": 1,
+    "frequency": 98,
+    "examples": [
+      {
+        "sentence": "Аз съм студент.",
+        "translation": "Ich bin Student.",
+        "context": "informal"
+      },
+      {
+        "sentence": "Аз не говоря добре български.",
+        "translation": "Ich spreche nicht gut Bulgarisch.",
+        "context": "informal"
+      },
+      {
+        "sentence": "Аз искам да помогна.",
+        "translation": "Ich möchte helfen.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_pronoun_you_informal",
+    "word": "Ти",
+    "translation": "du",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Pronomen",
+    "level": "A1",
+    "notes": "Second person singular personal pronoun (informal)",
+    "notes_bg_to_de": "Немското 'du' се използва с приятели, семейство и деца. Винаги с малка буква (освен в писма). При запознанство питайте 'Können wir per Du sein?' преди да преминете на 'du'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ти' = 'du'. Betonung: ТИ (einsilbig). Informelle Form für Freunde, Familie, Kinder. Formal ist 'вие' (Sie). Unterschied wichtig in bulgarischer Kultur - Höflichkeit zeigen!",
+    "etymology": "From Proto-Slavic *ty (you sg.). Related to Russian ты, Latin tu, English thou",
+    "cultural_note": "Bulgarians use 'ти' with friends, family, children, and often with peers. Using 'вие' (formal you) shows respect to elders, strangers, or in business contexts",
+    "linguistic_note": "Pronunciation: [ti]. Short vowel. Often dropped in speech like 'аз'. Dative/accusative form is 'ти': 'Давам ти книгата' (I give you the book)",
+    "difficulty": 1,
+    "frequency": 97,
+    "examples": [
+      {
+        "sentence": "Ти си мой приятел.",
+        "translation": "Du bist mein Freund.",
+        "context": "informal"
+      },
+      {
+        "sentence": "Как си ти?",
+        "translation": "Wie geht es dir?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Ще ти помогна.",
+        "translation": "Ich werde dir helfen.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_pronoun_he",
+    "word": "Той",
+    "translation": "er",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Pronomen",
+    "level": "A1",
+    "notes": "Third person singular masculine personal pronoun",
+    "notes_bg_to_de": "Немското 'er' се отнася само за лица от мъжки род и предмети с мъжки член 'der'. Склонява се: Nominativ 'er', Akkusativ 'ihn', Dativ 'ihm'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Той' = 'er'. Betonung: ТОЙ (einsilbig, Diphthong). Nur für männliche Personen und Tiere. Bulgarische Nomen haben Genus, aber Pronomen ändern sich nicht nach Fall.",
+    "etymology": "From Proto-Slavic *tъ (that one, he). Related to Russian тот, Old Church Slavonic тъ",
+    "cultural_note": "Bulgarian uses 'той' for any masculine noun, whether animate or inanimate. Gender is grammatical, not always biological",
+    "linguistic_note": "Pronunciation: [tɔɪ̯]. Diphthong sound. No case changes in modern Bulgarian. Full forms: той (he), тя (she), то (it), те (they)",
+    "difficulty": 1,
+    "frequency": 96,
+    "examples": [
+      {
+        "sentence": "Той е учител.",
+        "translation": "Er ist Lehrer.",
+        "context": "informal"
+      },
+      {
+        "sentence": "Той живее в София.",
+        "translation": "Er wohnt in Sofia.",
+        "context": "informal"
+      },
+      {
+        "sentence": "Виждам го всеки ден. (го = него, той)",
+        "translation": "Ich sehe ihn jeden Tag.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_pronoun_she",
+    "word": "Тя",
+    "translation": "sie (Singular)",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Pronomen",
+    "level": "A1",
+    "notes": "Third person singular feminine personal pronoun",
+    "notes_bg_to_de": "Немското 'sie' (малка буква) за тя се различава от 'Sie' (голяма буква) за Вие (учтива форма). Склонява се: Nominativ 'sie', Akkusativ 'sie', Dativ 'ihr'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Тя' = 'sie' (klein). Betonung: ТЯ (einsilbig). Nur für feminine Substantive (Personen und Dinge). Objektform 'я': 'Виждам я' (Ich sehe sie).",
+    "etymology": "From Proto-Slavic *ta (that one, she). Feminine form of demonstrative/personal pronoun",
+    "cultural_note": "Bulgarian feminine pronoun is straightforward - used for all feminine nouns regardless of whether they refer to people or things",
+    "linguistic_note": "Pronunciation: [tʲa]. Palatalized 't' + 'a'. Short forms: я (accusative: her), ѝ/й (dative: to her). Example: 'Давам ѝ книга' (I give her a book)",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "sentence": "Тя е моя сестра.",
+        "translation": "Sie ist meine Schwester.",
+        "context": "informal"
+      },
+      {
+        "sentence": "Тя работи в банка.",
+        "translation": "Sie arbeitet in einer Bank.",
+        "context": "informal"
+      },
+      {
+        "sentence": "Виждам я често.",
+        "translation": "Ich sehe sie oft.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_pronoun_it",
+    "word": "То",
+    "translation": "es",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Pronomen",
+    "level": "A1",
+    "notes": "Third person singular neuter personal pronoun",
+    "notes_bg_to_de": "Немското 'es' се отнася за среден род 'das' и за безлични изрази: 'Es regnet' (Вали дъжд), 'Es ist kalt' (Студено е). Склонява се: Nominativ/Akkusativ 'es', Dativ 'ihm'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'То' = 'es'. Betonung: ТО (einsilbig). Für neutrale Substantive und Konzepte. Weniger häufig als 'той/тя' in Umgangssprache. Objektform: 'го'.",
+    "etymology": "From Proto-Slavic *to (that, it). Neuter form of demonstrative pronoun",
+    "cultural_note": "Bulgarian uses 'то' for neuter nouns and for children when gender is not specified or known. Less common than German 'es' in daily speech",
+    "linguistic_note": "Pronunciation: [tɔ]. Short 'o'. Short form: го (accusative: it). Example: 'Виждам го' (I see it). Modern Bulgarian tends to use 'то' less than German 'es'",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "sentence": "То е дете.",
+        "translation": "Es ist ein Kind.",
+        "context": "informal"
+      },
+      {
+        "sentence": "То спи в стаята.",
+        "translation": "Es schläft im Zimmer.",
+        "context": "informal"
+      },
+      {
+        "sentence": "Виждам го всеки ден.",
+        "translation": "Ich sehe es jeden Tag.",
+        "context": "informal"
+      }
+    ]
+  }
+]

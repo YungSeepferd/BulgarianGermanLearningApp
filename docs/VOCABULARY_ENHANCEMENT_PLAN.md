@@ -1,132 +1,127 @@
-# Vocabulary Enhancement Plan
+# План за обогатяване на речника / Vokabel-Erweiterungsplan
 
-**Date**: Oct 19, 2025  
-**Goal**: Add rich cultural & etymological notes to all 156 vocabulary items  
-**Current Status**: Only 2 words have complete notes (Здравей, Добро утро)  
-**Missing**: 154 words need enhancement
+**Дата / Datum**: 19.10.2025  
+**Цел / Ziel**: Добавяне на богати културни и етимологични бележки към всички 156 записа  
+**Текущо състояние / Aktueller Stand**: Само 2 думи имат пълни бележки (`Здравей`, `Добро утро`)  
+**Липсващи / Fehlend**: Нужни са още бележки за 154 думи
 
 ---
 
-## 📊 Current Data Analysis
+## 📊 Анализ на наличните данни / Datenanalyse
 
-### Complete Example (Здравей):
+### Пример с пълни данни / Vollständiges Beispiel (`Здравей`):
 ```json
 {
   "word": "Здравей",
   "translation": "Hallo",
   "notes": "Das Wort 'Здравей' leitet sich vom bulgarischen Wort 'здрав' (gesund) ab...",
-  "etymology": "From Proto-Slavic 'zdravъ' (healthy) - literally a wish for good health",
-  "cultural_note": "Standard informal greeting used throughout the day in Bulgaria...",
-  "linguistic_note": "Stress on first syllable: ЗДРА-вей. Can be shortened to 'Здрасти'..."
+  "etymology": "Произход: праславянското 'zdravъ' (здрав); пожелание за добро здраве.\nHerkunft: Proto-Slawisch 'zdravъ' („gesund") – traditioneller Gesundheitsgruß.",
+  "cultural_note": "Културен контекст: неформално обръщение за целия ден.\nKultureller Kontext: Informelle Begrüßung, ganztägig gebräuchlich.",
+  "linguistic_note": "Лингвистична бележка: ударение върху първата сричка (ЗДРА-вей); кратка форма 'Здрасти'.\nLinguistischer Hinweis: Betonung auf der ersten Silbe; Kurzform 'Здрасти'."
 }
 ```
 
-### Missing Data (154 words):
-- ❌ Добър ден
-- ❌ Довиждане
-- ❌ Моля
-- ❌ Благодаря
-- ❌ And 150 more...
+### Липсващи бележки / Fehlende Angaben (154 думи):
+- ❌ Добър ден / Guten Tag
+- ❌ Довиждане / Auf Wiedersehen
+- ❌ Моля / Bitte
+- ❌ Благодаря / Danke
+- ❌ още 150 думи
 
 ---
 
-## 🎯 Enhancement Guidelines
+## 🎯 Насоки за съдържание / Leitlinien für Anmerkungen
 
-### What Makes a Good Note (Your Example):
+### Пример за качествена бележка / Was macht eine gute Notiz aus?
 
-**Word**: zusammen / заедно (together)
+**Дума / Wort**: zusammen / заедно
 
-**Perfect Structure**:
-1. **Literal Breakdown**: "за" (for/towards) + "едно" (one)
-2. **Etymology**: Compound formation
-3. **Literal Translation**: "for one" / "towards one [goal]"
-4. **Cultural Insight**: "Reflects deep cultural emphasis on unity, collective action, shared purpose"
+**Структура / Aufbau**:
+1. **Буквален разбор / Zerlegung**: „за“ (към) + „едно“ (eins)
+2. **Етимология / Etymologie**: Сложно образуване (Kompositum)
+3. **Буквален превод / Wörtliche Übertragung**: „за едно“ / „auf ein Ziel hin“
+4. **Културен акцент / Kultureller Fokus**: Подчертава ценността на общността и съвместните действия
 
-### Fields to Fill:
+### Полета за попълване (само BG/DE) / Auszufüllende Felder (nur BG/DE)
 
-#### 1. `notes` (German explanation for app)
-- **Purpose**: Shown in flashcard back
-- **Language**: German
-- **Style**: Concise, user-friendly
-- **Example**: "Das Wort 'заедно' bedeutet wörtlich 'für eins' und spiegelt den bulgarischen Wert von Gemeinschaft wider"
+#### 1. `notes_de_to_bg`
+- **Функция / Funktion**: Обратна страна за германски учащи (DE → BG)
+- **Език / Sprache**: Deutsch
+- **Стил / Stil**: Кратко, ясно, фокус върху българската употреба
+- **Пример / Beispiel**: "Das Wort 'заедно' betont gemeinsames Handeln; wörtlich 'für eins' (за + едно)."
 
-#### 2. `etymology` (Linguistic origin)
-- **Purpose**: Understanding word roots
-- **Language**: English (technical)
-- **Style**: Academic but accessible
-- **Example**: "Compound: 'за' (for/towards) + 'едно' (one). Common in Slavic languages to express unity"
+#### 2. `notes_bg_to_de`
+- **Функция / Funktion**: Обратна страна за български учащи (BG → DE)
+- **Език / Sprache**: Български
+- **Стил / Stil**: Ясно, конкретно, с насоки за немски
+- **Пример / Beispiel**: "'zusammen' се поставя след спрегнатия глагол: Wir arbeiten zusammen."
 
-#### 3. `cultural_note` (Cultural context)
-- **Purpose**: Why this word matters culturally
-- **Language**: English
-- **Style**: Insightful, cultural awareness
-- **Example**: "Reflects Bulgarian emphasis on collective action and shared goals. Often used in contexts of cooperation and teamwork"
+#### 3. `etymology`
+- **Формат / Format**: Първо български резюме, после немско пояснение на нов ред
+- **Пример / Beispiel**:
+  - "Произход: комбинация 'за' + 'едно'."
+  - "Herkunft: Präfix 'за-' plus Zahlwort 'едно'."
 
-#### 4. `linguistic_note` (Pronunciation, usage)
-- **Purpose**: How to say/use correctly
-- **Language**: English/IPA
-- **Style**: Practical, pronunciation tips
-- **Example**: "Stress on за-ЕД-но. Can be used with 'си' for 'together with you': заедно си"
+#### 4. `cultural_note`
+- **Формат / Format**: Български абзац, следван от немски превод/обяснение
+- **Пример / Beispiel**:
+  - "Културен контекст: често в лозунги за солидарност."
+  - "Kultureller Kontext: Häufig in Kampagnen für Gemeinschaft."
 
----
-
-## 📝 Priority Categories (What to Enhance First)
-
-### Tier 1: Essential (A1 Level, High Frequency)
-**Category**: Greetings (Begrüßung)
-- Добър ден (Guten Tag) - MISSING
-- Добър вечер (Guten Abend) - MISSING
-- Лека нощ (Gute Nacht) - MISSING
-- Довиждане (Auf Wiedersehen) - MISSING
-
-**Category**: Politeness (Höflichkeit)
-- Моля (Bitte) - MISSING
-- Благодаря (Danke) - MISSING
-- Извинете (Entschuldigung) - MISSING
-- Съжалявам (Es tut mir leid) - MISSING
-
-**Category**: Family (Familie)
-- майка (Mutter)
-- баща (Vater)
-- дете (Kind)
-- брат/сестра (Bruder/Schwester)
-
-### Tier 2: Common Words (A1/A2, Medium-High Frequency)
-- Numbers, colors, time expressions
-- Food, body parts, directions
-- Common verbs (съм, имам, искам, etc.)
-
-### Tier 3: Specialized (A2/B1, Medium Frequency)
-- Weather, nature, emotions
-- Work, education, hobbies
-- Abstract concepts
+#### 5. `linguistic_note`
+- **Формат / Format**: Българско обяснение + немски ред за огледално уточнение
+- **Пример / Beispiel**:
+  - "Лингвистична бележка: ударение на втората сричка; форма неизменяема."
+  - "Linguistischer Hinweis: Zweite Silbe betont; unveränderliches Adverb."
 
 ---
 
-## 🔨 Enhancement Template
+## 📝 Приоритетни категории / Priorisierte Kategorien
 
-### Template for Each Word:
+### Ниво 1: Основни A1 думи / Stufe 1: A1 Kernwortschatz
+- **Приветствия / Begrüßungen**: Добър ден, Добър вечер, Лека нощ, Довиждане
+- **Учтивост / Höflichkeit**: Моля, Благодаря, Извинете, Съжалявам
+- **Семейство / Familie**: майка, баща, дете, брат, сестра
+
+### Ниво 2: Често срещани думи (A1/A2) / Stufe 2: Häufige Wörter (A1/A2)
+- Числителни, цветове, времеви изрази / Zahlen, Farben, Zeitangaben
+- Храна, части на тялото, посоки / Essen, Körperteile, Richtungen
+- Чести глаголи: съм, имам, искам и др. / Häufige Verben: sein, haben, wollen usw.
+
+### Ниво 3: Специализирани (A2/B1) / Stufe 3: Spezialisierte Themen (A2/B1)
+- Време, природа, емоции / Wetter, Natur, Emotionen
+- Работа, образование, хобита / Arbeit, Bildung, Hobbys
+- Абстрактни понятия / Abstrakte Begriffe
+
+---
+
+## 🔨 Шаблон / Vorlage
+
+### JSON структура / JSON-Struktur
 ```json
 {
-  "word": "[Bulgarian]",
-  "translation": "[German]",
-  "notes": "[German explanation for learners - what makes this word special]",
-  "etymology": "[English - word origin, root, formation]",
-  "cultural_note": "[English - why this matters culturally, usage context]",
-  "linguistic_note": "[English - pronunciation (IPA), stress, variants, usage tips]"
+  "word": "[Българска форма]",
+  "translation": "[Deutsche Übersetzung]",
+  "notes_de_to_bg": "[Kurzinfo auf Deutsch für DE→BG Lernende]",
+  "notes_bg_to_de": "[Кратко обяснение на български за BG→DE учащи]",
+  "etymology": "[Български резюме]\n[Deutsches Resümee]",
+  "cultural_note": "[Български контекст]\n[Deutscher Kontext]",
+  "linguistic_note": "[Българска бележка]\n[Deutscher Hinweis]",
+  "examples": [ ... ]
 }
 ```
 
-### Example Application: "Благодаря" (Danke/Thank you)
+### Пример: „Благодаря“ / „Danke“
 
 ```json
 {
   "word": "Благодаря",
   "translation": "Danke",
-  "notes": "Das Wort 'благодаря' kommt von 'благо' (Segen, Gutes) und bedeutet wörtlich 'ich danke für das Gute'. Es ist formeller als das kürzere 'мерси'",
-  "etymology": "From Old Church Slavonic 'blago' (blessing, good) + verb suffix '-darya' (to give). Literally: 'I give thanks for the good/blessing'",
-  "cultural_note": "Standard formal thank you in Bulgarian. Reflects cultural value of acknowledging kindness as a 'blessing'. More formal than borrowed 'мерси' (from French merci)",
-  "linguistic_note": "Stress on third syllable: бла-го-ДА-ря. Can add 'много' (very): 'много благодаря' for extra emphasis. Short form 'благодар' exists but rarely used"
+  "notes_de_to_bg": "'Благодаря' nutzt Bulgariens Wurzel 'благо' (Segen) und drückt formelle Dankbarkeit aus; formeller als das entlehnte 'мерси'.",
+  "notes_bg_to_de": "Немското 'Danke' има по-кратка форма, но също може да се подсили с 'schön' → 'Danke schön'.",
+  "etymology": "Произход: старобългарско 'благо' (добрина) + суфикса '-даря' (давам).\nHerkunft: Altbulgarisch 'благо' + Verbzusatz '-даря'.",
+  "cultural_note": "Културен контекст: стандартен учтив отговор; често се добавя 'много' за усилване.\nKultureller Kontext: Höfliche Standardformel, gern mit 'много' verstärkt (≈ 'vielen Dank').",
+  "linguistic_note": "Лингвистична бележка: ударение върху последната сричка (благодаря́); първо лице ед.ч. на глагола.\nLinguistischer Hinweis: Betonung auf der letzten Silbe; Verb im Präsens 1. Person Singular."
 }
 ```
 
@@ -211,10 +206,11 @@
   "target_lang": "de",
   "category": "Allgemein",
   "level": "A2",
-  "notes": "Das Wort 'заедно' bedeutet wörtlich 'für eins' (за + едно) und spiegelt den bulgarischen Wert von Gemeinschaft und gemeinsamer Zielverfolgung wider",
-  "etymology": "Compound: 'за' (for, towards) + 'едно' (one). Literally translates to 'for one' or 'towards one [goal]'. Common construction in Slavic languages",
-  "cultural_note": "Reflects deep cultural emphasis on unity, collective action, and shared purpose in Bulgarian society. Often used in contexts emphasizing cooperation, teamwork, and communal goals. Shows the value placed on togetherness over individualism",
-  "linguistic_note": "Stress: за-ЕД-но. Can be used with pronouns: 'заедно с теб' (together with you), 'заедно с него' (together with him). Adverb form, doesn't change",
+  "notes_de_to_bg": "'заедно' bedeutet wörtlich 'für eins' und wird genutzt, wenn gemeinsames Handeln betont werden soll.",
+  "notes_bg_to_de": "Немското 'zusammen' стои след спрегнатия глагол: Wir sind zusammen.",
+  "etymology": "Произход: добавяне на 'за' (за/към) към числителното 'едно'.\nHerkunft: Präfix 'за-' plus Zahlwort 'едно'.",
+  "cultural_note": "Културен контекст: подчертава общност и взаимна подкрепа; често в девизи.\nKultureller Kontext: Vermittelt Gemeinschaftsgefühl, z. B. в лозунги като 'Заедно напред'.",
+  "linguistic_note": "Лингвистична бележка: ударение на втората сричка (за-ЕД-но); не се изменя.\nLinguistischer Hinweis: Zweite Silbe betont; unveränderliche Form.",
   "difficulty": 2,
   "frequency": 70,
   "examples": [
@@ -234,22 +230,22 @@
 
 ---
 
-## 🎯 Recommended Approach
+## 🎯 Препоръчана стратегия / Empfohlene Vorgehensweise
 
-### Phase 1: Quick Wins (This Week)
-1. Add top 20 most frequent words
-2. Focus on A1 level
-3. Greetings + politeness + family
+### Фаза 1: Бързи резултати / Phase 1: Schnelle Erfolge
+1. Добавете 20-те най-чести думи / 20 häufigste Wörter ergänzen
+2. Фокус върху ниво A1 / Fokus auf A1
+3. Приветствия, учтивост, семейство / Begrüßung, Höflichkeit, Familie
 
-### Phase 2: Core Vocabulary (Next Sprint)
-1. Add all A1 words (est. 50-60 words)
-2. Common verbs and nouns
-3. Numbers, colors, time
+### Фаза 2: Ядро на речника / Phase 2: Kernwortschatz
+1. Покрийте всички A1 думи (~50–60) / Alle A1-Wörter (~50–60)
+2. Основни глаголи и съществителни / Kernverben und Nomen
+3. Числа, цветове, време / Zahlen, Farben, Zeitangaben
 
-### Phase 3: Expansion (Ongoing)
-1. A2 level words
-2. Specialized vocabulary
-3. Idiomatic expressions
+### Фаза 3: Разширение / Phase 3: Ausbau
+1. Думи на ниво A2 / Wortschatz A2
+2. Специализирани теми / Spezialisierte Themen
+3. Идиоми и изрази / Idiomatische Wendungen
 
 ---
 

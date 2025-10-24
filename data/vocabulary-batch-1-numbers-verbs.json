@@ -1,0 +1,782 @@
+[
+  {
+    "id": "a1_numbers_012",
+    "word": "Дванадесет",
+    "translation": "zwölf",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahl",
+    "level": "A1",
+    "notes_de_to_bg": "'Дванадесет' означава количество 12. Използва се за време ('двана́десет часа').",
+    "notes_bg_to_de": "'Zwölf' се произнася [tsvœlf] с умлаут върху 'ö'; често за часовете: 'zwölf Uhr'.",
+    "etymology": "Произход: 'два' + 'на' + 'десет' (два върху десет).\nHerkunft: Kombination aus 'два' (zwei) und 'десет' (zehn).",
+    "cultural_note": "Числото 12 маркира обед и полунощ.\nKultureller Kontext: 'Zwölf' steht für mittags und Mitternacht.",
+    "linguistic_note_bg_to_de": "Произношение: [dvanɐˈdɛsɛt]; ударение на трета сричка.",
+    "linguistic_note_de_to_bg": "Aussprache: Betonung auf der dritten Silbe (dva-na-DE-set).",
+    "difficulty": 1,
+    "frequency": 68,
+    "examples": [
+      {
+        "sentence": "Часът е дванадесет.",
+        "translation": "Es ist zwölf Uhr.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_numbers_013",
+    "word": "Тринадесет",
+    "translation": "dreizehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahl",
+    "level": "A1",
+    "notes_de_to_bg": "'Тринадесет' е с ударение на 'се́т'; образува се от 'три' + 'надесет'.",
+    "notes_bg_to_de": "'Dreizehn' [ˈdʁaɪ̯tseːn]; за 13-19 немският използва съставка '+zehn'.",
+    "etymology": "Произход: 'три' + 'на' + 'десет'.\nHerkunft: Slawisches Muster 'drei' + 'zehn'.",
+    "cultural_note": "Числото 13 понякога се смята за неблагоприятно.\nKultureller Kontext: In beiden Kulturen gelegentlich als Unglückszahl.",
+    "linguistic_note_bg_to_de": "Произношение: [trinɐˈdɛsɛt]; същият модел за 11–19.",
+    "linguistic_note_de_to_bg": "Aussprache: Schema wie bei allen Zahlwörtern auf '-zehn'.",
+    "difficulty": 1,
+    "frequency": 65,
+    "examples": [
+      {
+        "sentence": "Живея на тринадесети етаж.",
+        "translation": "Ich wohne im dreizehnten Stock.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_numbers_020",
+    "word": "Двадесет",
+    "translation": "zwanzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahl",
+    "level": "A1",
+    "notes_de_to_bg": "'Двадесет' означава две десетици. За 21: 'двадесет и едно'.",
+    "notes_bg_to_de": "'Zwanzig' [ˈtsvant͡sɪç] е основа за 'einundzwanzig'.",
+    "etymology": "Произход: 'два' + 'десет' (две десетици).\nHerkunft: Zusammensetzung aus 'dva' und 'deset'.",
+    "cultural_note": "Навършването на 20 бележи преход към зрялост.\nKultureller Kontext: Schwelle zum Erwachsensein.",
+    "linguistic_note_bg_to_de": "Произношение: [dvɐˈdɛsɛt]; ударение на втора сричка.",
+    "linguistic_note_de_to_bg": "Aussprache: Betonung auf der zweiten Silbe (dva-DE-set).",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "sentence": "Имам двадесет години.",
+        "translation": "Ich bin zwanzig Jahre alt.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_verb_work",
+    "word": "Работя",
+    "translation": "arbeiten",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verb",
+    "level": "A1",
+    "notes_de_to_bg": "'Работя' значи 'работя'; спрежение: аз работя, ти работиш, той работи.",
+    "notes_bg_to_de": "'Arbeiten' → ich arbeite, du arbeitest; често с 'bei' (bei Siemens).",
+    "etymology": "Произход: праслав. *orbota (труд).\nHerkunft: Gemeinsamer slawischer Stamm für Arbeit.",
+    "cultural_note": "Трудовата етика е важна; баланс работа-живот набира скорост.\nKultureller Kontext: Work-Life-Balance entwickelt sich weiter.",
+    "linguistic_note_bg_to_de": "Произношение: [rɐˈbotʲɐ]; мин. свършен 'работих'.",
+    "linguistic_note_de_to_bg": "Aussprache: [ˈaʁbaɪ̯tən]; regelmäßig, Präteritum 'arbeitete'.",
+    "difficulty": 2,
+    "frequency": 93,
+    "examples": [
+      {
+        "sentence": "Работя в офис.",
+        "translation": "Ich arbeite in einem Büro.",
+        "context": "informal"
+      },
+      {
+        "sentence": "Къде работиш?",
+        "translation": "Wo arbeitest du?",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_verb_study",
+    "word": "Уча",
+    "translation": "lernen / studieren",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verb",
+    "level": "A1",
+    "notes_de_to_bg": "'Уча' значи и 'уча', и 'преподавам' според контекста; спрежение: уча, учиш, учи.",
+    "notes_bg_to_de": "'Lernen' за училище, 'studieren' за университет. 'Ich lerne Bulgarisch'.",
+    "etymology": "Произход: праслав. *učiti (уча/преподавам).\nHerkunft: Slawischer Stamm für Lernen und Lehren.",
+    "cultural_note": "Образованието е високо ценено в България.\nKultureller Kontext: Bildung genießt hohen Stellenwert.",
+    "linguistic_note_bg_to_de": "Произношение: [ˈutʃɐ]; значението зависи от контекста.",
+    "linguistic_note_de_to_bg": "Aussprache: [ˈlɛʁnən]/[ʃtuˈdiːʁən] – zwei deutsche Verben je nach Kontext.",
+    "difficulty": 2,
+    "frequency": 89,
+    "examples": [
+      {
+        "sentence": "Уча немски език.",
+        "translation": "Ich lerne Deutsch.",
+        "context": "informal"
+      },
+      {
+        "sentence": "Уча в университета.",
+        "translation": "Ich studiere an der Universität.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_verb_love",
+    "word": "Обичам",
+    "translation": "lieben / mögen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verb",
+    "level": "A1",
+    "notes_de_to_bg": "'Обичам' покрива 'обичам' и 'харесвам'; спрежение: обичам, обичаш...",
+    "notes_bg_to_de": "Deutsch trennt 'lieben' (stark) und 'mögen' (mögen Speisen).",
+    "etymology": "Произход: *obьčьnъ (привичен).\nHerkunft: Verwandt mit Gewohnheit/Stamm 'obich'.",
+    "cultural_note": "Българите показват привързаност в семейството.\nKultureller Kontext: Zuneigung familiär offen, öffentlich zurückhaltend.",
+    "linguistic_note_bg_to_de": "Произношение: [oˈbit͡ʃɐm]; правилен глагол.",
+    "linguistic_note_de_to_bg": "Aussprache: [ˈliːbn̩]/[ˈmøːɡn̩]; Betonung zweite Silbe bzw. langes 'ö'.",
+    "difficulty": 2,
+    "frequency": 91,
+    "examples": [
+      {
+        "sentence": "Обичам баница.",
+        "translation": "Ich mag Banitsa.",
+        "context": "informal"
+      },
+      {
+        "sentence": "Обичам те.",
+        "translation": "Ich liebe dich.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_verb_give",
+    "word": "Давам",
+    "translation": "geben",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verb",
+    "level": "A1",
+    "notes_de_to_bg": "'Давам' е несвършен вид; перфектив 'дам'. Спрежение: давам, даваш, дава.",
+    "notes_bg_to_de": "'Geben' ist stark: ich gebe, du gibst, er gibt; Perfekt 'gegeben'.",
+    "etymology": "Произход: *davati (давам).\nHerkunft: Slawischer Stamm, verwandt mit russ. 'давать'.",
+    "cultural_note": "Подаръците са важни на имен ден и празници.\nKultureller Kontext: Geschenkekultur zu Namenstagen.",
+    "linguistic_note_bg_to_de": "Произношение: [dɐˈvam]; свършен 'дам'.",
+    "linguistic_note_de_to_bg": "Aussprache: [ˈɡeːbn̩]; Stammwechsel (gibst/gibt).",
+    "difficulty": 2,
+    "frequency": 85,
+    "examples": [
+      {
+        "sentence": "Давам ти книгата.",
+        "translation": "Ich gebe dir das Buch.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_verb_take",
+    "word": "Взимам",
+    "translation": "nehmen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verb",
+    "level": "A1",
+    "notes_de_to_bg": "'Взимам' (или 'вземам') е несвършен; перфектив 'взема'.",
+    "notes_bg_to_de": "'Nehmen' → ich nehme, du nimmst, er nimmt; Perfekt 'genommen'.",
+    "etymology": "Произход: *vъzęti (вземам).\nHerkunft: Slawischer Stamm für 'nehmen'.",
+    "cultural_note": "Използва се в покупки и ежедневни ситуации.\nKultureller Kontext: Häufig in Alltagstransaktionen.",
+    "linguistic_note_bg_to_de": "Произношение: [ˈvzimɐm]; начално 'vz'.",
+    "linguistic_note_de_to_bg": "Aussprache: [ˈneːmən]; Stammwechsel (nimmst/nimmt).",
+    "difficulty": 2,
+    "frequency": 87,
+    "examples": [
+      {
+        "sentence": "Взимам автобуса.",
+        "translation": "Ich nehme den Bus.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_verb_buy",
+    "word": "Купувам",
+    "translation": "kaufen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verb",
+    "level": "A1",
+    "notes_de_to_bg": "'Купувам' е несвършен (купувам); перфектив 'купя'.",
+    "notes_bg_to_de": "'Kaufen' ist regelmäßig, Perfekt 'gekauft'.",
+    "etymology": "Произход: заемка от лат. 'caupo'.\nHerkunft: Über romanische Sprachen ins Bulgarische.",
+    "cultural_note": "Пазаруването на пазара остава популярно.\nKultureller Kontext: Wochenmärkte sehr belebt.",
+    "linguistic_note_bg_to_de": "Произношение: [kuˈpuvɐm]; ударение на втора сричка.",
+    "linguistic_note_de_to_bg": "Aussprache: [ˈkaʊ̯fn̩]; regelmäßiges Verb.",
+    "difficulty": 2,
+    "frequency": 82,
+    "examples": [
+      {
+        "sentence": "Купувам хляб.",
+        "translation": "Ich kaufe Brot.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_verb_understand",
+    "word": "Разбирам",
+    "translation": "verstehen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verb",
+    "level": "A1",
+    "notes_de_to_bg": "'Разбирам' се спряга: разбирам, разбираш, разбира; несвършен вид.",
+    "notes_bg_to_de": "'Verstehen' → ich verstehe, du verstehst; Perfekt 'verstanden'.",
+    "etymology": "Произход: приставка 'раз-' + корен 'бирам'.\nHerkunft: Slawisches Präfix + Stamm für 'verstehen'.",
+    "cultural_note": "Фразата 'Не разбирам' е ключова за учащи.\nKultureller Kontext: Wichtig in Lern- und Alltagssituationen.",
+    "linguistic_note_bg_to_de": "Произношение: [rɐzˈbirɐm]; ударение на 'би'.",
+    "linguistic_note_de_to_bg": "Aussprache: [fɛɐ̯ˈʃteːən]; Perfekt 'verstanden'.",
+    "difficulty": 2,
+    "frequency": 90,
+    "examples": [
+      {
+        "sentence": "Не разбирам.",
+        "translation": "Ich verstehe nicht.",
+        "context": "informal"
+      },
+      {
+        "sentence": "Разбираш ли български?",
+        "translation": "Verstehst du Bulgarisch?",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_verb_know",
+    "word": "Знам",
+    "translation": "wissen / kennen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verb",
+    "level": "A1",
+    "notes_de_to_bg": "'Знам' се спряга: знам, знаеш, знае; покрива 'wissen' и 'kennen'.",
+    "notes_bg_to_de": "Deutsch unterscheidet 'wissen' (Fakten) und 'kennen' (Personen).",
+    "etymology": "Произход: *znati (знам).\nHerkunft: Gemeinsamer indoeuropäischer Stamm für 'wissen'.",
+    "cultural_note": "'Не знам' се казва директно и е приемливо.\nKultureller Kontext: Direkte Antwort in Alltagssituationen.",
+    "linguistic_note_bg_to_de": "Произношение: [znam]; едносрично.",
+    "linguistic_note_de_to_bg": "Aussprache: [ˈvɪsn̩]/[ˈkɛnən]; unterscheiden Facts/Personen.",
+    "difficulty": 2,
+    "frequency": 95,
+    "examples": [
+      {
+        "sentence": "Знам немски.",
+        "translation": "Ich kann Deutsch.",
+        "context": "informal"
+      },
+      {
+        "sentence": "Не знам отговора.",
+        "translation": "Ich weiß die Antwort nicht.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_food_apple",
+    "word": "Ябълка",
+    "translation": "der Apfel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Lebensmittel",
+    "level": "A1",
+    "notes": "Common fruit, basic food vocabulary",
+    "notes_bg_to_de": "'Der Apfel' е мъжки род. Plural: 'die Äpfel' с умлаут. 'Apfelbaum' е ябълково дърво.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ябълка' ist feminin. Plural: ябълки. Betonung: Я-бъл-ка.",
+    "etymology": "From Proto-Slavic *ablъko. Related to Latin abellana (apple tree)",
+    "cultural_note": "Apples very common in Bulgarian cuisine. Used in desserts and salads",
+    "linguistic_note": "Pronunciation: [ˈjabɤlkɐ]. Three syllables, stress on first",
+    "difficulty": 1,
+    "frequency": 73,
+    "examples": [
+      {
+        "sentence": "Ядем ябълки всеки ден.",
+        "translation": "Wir essen jeden Tag Äpfel.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_food_orange",
+    "word": "Портокал",
+    "translation": "die Orange",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Lebensmittel",
+    "level": "A1",
+    "notes": "Common citrus fruit",
+    "notes_bg_to_de": "'Die Orange' [oˈʁaːʒə] е женски род с френско произношение. Plural: die Orangen.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Портокал' ist maskulin. Plural: портокали. Betonung: порто-КАЛ.",
+    "etymology": "From Portuguese 'Portugal' (country of origin for oranges in Europe)",
+    "cultural_note": "Oranges popular in winter in Bulgaria. Often used for fresh juice",
+    "linguistic_note": "Pronunciation: [portoˈkal]. Stress on last syllable",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "sentence": "Обичам портокалов сок.",
+        "translation": "Ich mag Orangensaft.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_food_banana",
+    "word": "Банан",
+    "translation": "die Banane",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Lebensmittel",
+    "level": "A1",
+    "notes": "Common tropical fruit",
+    "notes_bg_to_de": "'Die Banane' е женски род. Plural: die Bananen. Лесна дума за учене.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Банан' ist maskulin. Plural: банани. Fast gleiche Aussprache.",
+    "etymology": "From Arabic banan (finger, toe) via Portuguese/Spanish. International word",
+    "cultural_note": "Bananas became affordable in Bulgaria only after 1989",
+    "linguistic_note": "Pronunciation: [bɐˈnan]. Stress on second syllable",
+    "difficulty": 1,
+    "frequency": 68,
+    "examples": [
+      {
+        "sentence": "Детето яде банан.",
+        "translation": "Das Kind isst eine Banane.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_food_tomato",
+    "word": "Домат",
+    "translation": "die Tomate",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Lebensmittel",
+    "level": "A1",
+    "notes": "Common vegetable, essential in Bulgarian cuisine",
+    "notes_bg_to_de": "'Die Tomate' е женски род. Plural: die Tomaten. В Австрия често 'der Paradeiser'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Домат' ist maskulin. Plural: домати. Betonung: до-МАТ.",
+    "etymology": "From Spanish/Portuguese tomate, ultimately from Nahuatl tomatl",
+    "cultural_note": "Central to Bulgarian cuisine. Shopska salad uses tomatoes prominently",
+    "linguistic_note": "Pronunciation: [doˈmat]. Stress on second syllable",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "sentence": "Купувам домати за салата.",
+        "translation": "Ich kaufe Tomaten für den Salat.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_food_potato",
+    "word": "Картоф",
+    "translation": "die Kartoffel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Lebensmittel",
+    "level": "A1",
+    "notes": "Staple food in Bulgarian cuisine",
+    "notes_bg_to_de": "'Die Kartoffel' е женски род. Plural: die Kartoffeln. Важна храна в Германия.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Картоф' ist maskulin. Plural: картофи. Von italienisch 'tartufolo'.",
+    "etymology": "From Italian tartufolo (little truffle), via German Kartoffel",
+    "cultural_note": "Potatoes very common in Bulgarian cooking. Often fried or baked",
+    "linguistic_note": "Pronunciation: [kɐrˈtof]. Stress on second syllable",
+    "difficulty": 1,
+    "frequency": 77,
+    "examples": [
+      {
+        "sentence": "Пържени картофи, моля.",
+        "translation": "Pommes frites, bitte.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_food_cucumber",
+    "word": "Краставица",
+    "translation": "die Gurke",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Lebensmittel",
+    "level": "A1",
+    "notes": "Essential vegetable in Bulgarian salads",
+    "notes_bg_to_de": "'Die Gurke' е женски род. Plural: die Gurken. 'Essiggurken' = кисели краставички.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Краставица' ist feminin. Plural: краставици. Längeres Wort.",
+    "etymology": "From Proto-Slavic *korstьnъ (rough, prickly), referring to cucumber skin",
+    "cultural_note": "Essential ingredient in Shopska salad and Bulgarian cuisine generally",
+    "linguistic_note": "Pronunciation: [krɐstɐˈvit͡sɐ]. Four syllables, stress on third",
+    "difficulty": 2,
+    "frequency": 72,
+    "examples": [
+      {
+        "sentence": "Режа краставица за салата.",
+        "translation": "Ich schneide Gurke für den Salat.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_food_coffee",
+    "word": "Кафе",
+    "translation": "der Kaffee",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Lebensmittel",
+    "level": "A1",
+    "notes": "Essential beverage, also means 'cafe'",
+    "notes_bg_to_de": "'Der Kaffee' е мъжки род. 'Ein Kaffee, bitte' (едно кафе, моля). Ohne Artikel: 'Kaffee trinken'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Кафе' ist Neutrum. Може да означава напитка или заведение.",
+    "etymology": "From Turkish kahve, from Arabic qahwa. International word via Ottoman influence",
+    "cultural_note": "Coffee culture very strong in Bulgaria. Turkish coffee traditional",
+    "linguistic_note": "Pronunciation: [kɐˈfɛ]. Stress on second syllable. Neuter gender",
+    "difficulty": 1,
+    "frequency": 88,
+    "examples": [
+      {
+        "sentence": "Пия кафе сутрин.",
+        "translation": "Ich trinke morgens Kaffee.",
+        "context": "informal"
+      },
+      {
+        "sentence": "Отиваме на кафе.",
+        "translation": "Wir gehen ins Café.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_food_tea",
+    "word": "Чай",
+    "translation": "der Tee",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Lebensmittel",
+    "level": "A1",
+    "notes": "Common hot beverage",
+    "notes_bg_to_de": "'Der Tee' е мъжки род. 'Eine Tasse Tee' (чаша чай). Често с билки в България.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Чай' ist maskulin. Plural: чайове. Aussprache wie deutsch.",
+    "etymology": "From Chinese 茶 (chá) via various trade routes. International word",
+    "cultural_note": "Herbal teas (билков чай) very popular in Bulgaria for health",
+    "linguistic_note": "Pronunciation: [t͡ʃaj]. One syllable, matches German pronunciation",
+    "difficulty": 1,
+    "frequency": 82,
+    "examples": [
+      {
+        "sentence": "Искам чаша чай.",
+        "translation": "Ich möchte eine Tasse Tee.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_food_juice",
+    "word": "Сок",
+    "translation": "der Saft",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Lebensmittel",
+    "level": "A1",
+    "notes": "Common beverage, fruit juice",
+    "notes_bg_to_de": "'Der Saft' е мъжки род. Plural: die Säfte с умлаут. 'Apfelsaft' = ябълков сок.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сок' ist maskulin. Plural: сокове. Kurzes Wort.",
+    "etymology": "From Proto-Slavic *sokъ (juice, sap). Related to Russian сок",
+    "cultural_note": "Fresh juices popular in Bulgaria. Natural juices preferred over processed",
+    "linguistic_note": "Pronunciation: [sok]. One syllable, simple word",
+    "difficulty": 1,
+    "frequency": 76,
+    "examples": [
+      {
+        "sentence": "Пия портокалов сок.",
+        "translation": "Ich trinke Orangensaft.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_food_beer",
+    "word": "Бира",
+    "translation": "das Bier",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Lebensmittel",
+    "level": "A1",
+    "notes": "Common alcoholic beverage",
+    "notes_bg_to_de": "'Das Bier' е среден род. 'Ein Bier, bitte' (една бира, моля). Немската бирена култура е силна.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Бира' ist feminin. Plural: бири. Von lateinisch 'biber' (Getränk).",
+    "etymology": "From Latin biber (beverage) via Germanic languages. Loanword in Bulgarian",
+    "cultural_note": "Beer culture developing in Bulgaria. Local brands like Zagorka, Kamenitza popular",
+    "linguistic_note": "Pronunciation: [ˈbirɐ]. Stress on first syllable",
+    "difficulty": 1,
+    "frequency": 74,
+    "examples": [
+      {
+        "sentence": "Две студени бири, моля.",
+        "translation": "Zwei kalte Bier, bitte.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_food_wine",
+    "word": "Вино",
+    "translation": "der Wein",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Lebensmittel",
+    "level": "A1",
+    "notes": "Common alcoholic beverage",
+    "notes_bg_to_de": "'Der Wein' е мъжки род. 'Ein Glas Wein' (чаша вино). 'Rotwein' = червено вино.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Вино' ist Neutrum. Plural: вина. Von lateinisch 'vinum'.",
+    "etymology": "From Latin vinum (wine) via Old Church Slavonic. Ancient loanword",
+    "cultural_note": "Bulgaria has ancient wine tradition. Mavrud and Melnik are famous varieties",
+    "linguistic_note": "Pronunciation: [viˈno]. Stress on second syllable",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "sentence": "Обичам червено вино.",
+        "translation": "Ich mag Rotwein.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_question_where",
+    "word": "Къде",
+    "translation": "wo",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewort",
+    "level": "A1",
+    "notes": "Essential question word for location",
+    "notes_bg_to_de": "'Wo' за място (къде), 'wohin' за посока (накъде), 'woher' за произход (откъде).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Къде' = nur 'wo' (Ort). Für Richtung: 'накъде', Herkunft: 'откъде'.",
+    "etymology": "From Proto-Slavic *kъde (where). Related to Russian где",
+    "cultural_note": "Used constantly in everyday conversation, essential for navigation",
+    "linguistic_note": "Pronunciation: [kɤˈdɛ]. Stress on second syllable",
+    "difficulty": 1,
+    "frequency": 94,
+    "examples": [
+      {
+        "sentence": "Къде живееш?",
+        "translation": "Wo wohnst du?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Къде е тоалетната?",
+        "translation": "Wo ist die Toilette?",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_question_when",
+    "word": "Кога",
+    "translation": "wann",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewort",
+    "level": "A1",
+    "notes": "Essential question word for time",
+    "notes_bg_to_de": "'Wann' за въпроси за време. 'Wenn' за условие: 'Wenn es regnet...' (Ако вали...).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Кога' = 'wann'. Immer für Fragen, nicht 'wenn'.",
+    "etymology": "From Proto-Slavic *kogъda (when). Related to Russian когда",
+    "cultural_note": "Time flexibility exists in Bulgarian culture, but punctuality improving",
+    "linguistic_note": "Pronunciation: [koˈɡa]. Stress on second syllable",
+    "difficulty": 1,
+    "frequency": 91,
+    "examples": [
+      {
+        "sentence": "Кога пристигаш?",
+        "translation": "Wann kommst du an?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Кога започва филмът?",
+        "translation": "Wann fängt der Film an?",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_question_how",
+    "word": "Как",
+    "translation": "wie",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewort",
+    "level": "A1",
+    "notes": "Essential question word for manner or method",
+    "notes_bg_to_de": "'Wie' за начин и състояние. 'Wie geht's?' = 'Как си?'. 'Wie machst du das?' = 'Как правиш това?'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Как' = 'wie'. Häufigste Verwendung: 'Как си?' (Wie geht's?).",
+    "etymology": "From Proto-Slavic *kako (how). Related to Russian как",
+    "cultural_note": "'Как си?' is the standard casual greeting in Bulgarian, not just asking about method",
+    "linguistic_note": "Pronunciation: [kak]. One syllable, simple pronunciation",
+    "difficulty": 1,
+    "frequency": 96,
+    "examples": [
+      {
+        "sentence": "Как си?",
+        "translation": "Wie geht es dir?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Как се казваш?",
+        "translation": "Wie heißt du?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Как се стига до гарата?",
+        "translation": "Wie komme ich zum Bahnhof?",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_question_why",
+    "word": "Защо",
+    "translation": "warum / wieso",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewort",
+    "level": "A1",
+    "notes": "Essential question word for reason",
+    "notes_bg_to_de": "Deutsch hat drei: 'warum', 'wieso', 'weshalb' - всички означават 'защо', без разлика.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Защо' = 'warum'. Nur ein Wort für alle drei deutschen Varianten.",
+    "etymology": "From 'за' (for) + 'що/что' (what). Literally 'for what'",
+    "cultural_note": "Asking 'why' can be seen as challenging authority, but becoming more common",
+    "linguistic_note": "Pronunciation: [zɐˈʃto]. Stress on second syllable",
+    "difficulty": 1,
+    "frequency": 88,
+    "examples": [
+      {
+        "sentence": "Защо не идваш?",
+        "translation": "Warum kommst du nicht?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Защо питаш?",
+        "translation": "Wieso fragst du?",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_question_how_much",
+    "word": "Колко",
+    "translation": "wie viel / wie viele",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewort",
+    "level": "A1",
+    "notes": "Essential question word for quantity",
+    "notes_bg_to_de": "'Wie viel' за маса, 'wie viele' за брой. Български използва 'колко' за двете.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Колко' = beide. Für Preis: 'Колко струва?' (Wie viel kostet es?).",
+    "etymology": "From 'ко-' (interrogative) + 'лько' (quantity). Old Slavic origin",
+    "cultural_note": "Essential for shopping and negotiations in markets",
+    "linguistic_note": "Pronunciation: [ˈkolko]. Stress on first syllable",
+    "difficulty": 1,
+    "frequency": 89,
+    "examples": [
+      {
+        "sentence": "Колко струва?",
+        "translation": "Wie viel kostet es?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Колко години имаш?",
+        "translation": "Wie alt bist du?",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_adjective_expensive",
+    "word": "Скъп",
+    "translation": "teuer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektiv",
+    "level": "A1",
+    "notes": "Common adjective for price",
+    "notes_bg_to_de": "'Teuer' се склонява: teurer, am teuersten. 'Das ist zu teuer' = Това е твърде скъпо.",
+    "notes_de_to_bg": "Für Deutschsprachige: Forms: скъп (m), скъпа (f), скъпо (n), скъпи (pl).",
+    "etymology": "From Proto-Slavic *skǫpъ (tight, expensive). Related to Russian скупой",
+    "cultural_note": "Price consciousness strong in Bulgaria. Bargaining still common in some contexts",
+    "linguistic_note": "Pronunciation: [skɤp]. Unusual 'ъ' vowel sound",
+    "difficulty": 1,
+    "frequency": 73,
+    "examples": [
+      {
+        "sentence": "Твърде скъпо е.",
+        "translation": "Das ist zu teuer.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_adjective_fast",
+    "word": "Бърз",
+    "translation": "schnell",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektiv",
+    "level": "A1",
+    "notes": "Common adjective for speed",
+    "notes_bg_to_de": "'Schnell' може да бъде прилагателно и наречие. Comparative: schneller, am schnellsten.",
+    "notes_de_to_bg": "Für Deutschsprachige: Forms: бърз (m), бърза (f), бързо (n), бързи (pl).",
+    "etymology": "From Proto-Slavic *bъrzъ (quick, fast). Related to Russian быстрый",
+    "cultural_note": "Speed valued in modern Bulgarian culture, especially in cities",
+    "linguistic_note": "Pronunciation: [bɤrz]. Contains difficult 'ъ' and final 'z'",
+    "difficulty": 2,
+    "frequency": 76,
+    "examples": [
+      {
+        "sentence": "Този влак е много бърз.",
+        "translation": "Dieser Zug ist sehr schnell.",
+        "context": "informal"
+      }
+    ]
+  },
+  {
+    "id": "a1_adjective_slow",
+    "word": "Бавен",
+    "translation": "langsam",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektiv",
+    "level": "A1",
+    "notes": "Common adjective for speed",
+    "notes_bg_to_de": "'Langsam' може да бъде и наречие: 'Fahr langsam!' (Карай бавно!).",
+    "notes_de_to_bg": "Für Deutschsprachige: Forms: бавен (m), бавна (f), бавно (n), бавни (pl).",
+    "etymology": "From Proto-Slavic *bavьnъ (slow, leisurely)",
+    "cultural_note": "Slower pace of life still exists outside major cities in Bulgaria",
+    "linguistic_note": "Pronunciation: [ˈbavɛn]. Stress on first syllable",
+    "difficulty": 1,
+    "frequency": 72,
+    "examples": [
+      {
+        "sentence": "Интернетът е много бавен.",
+        "translation": "Das Internet ist sehr langsam.",
+        "context": "informal"
+      }
+    ]
+  }
+]

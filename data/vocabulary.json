@@ -10,8 +10,8 @@
     "notes": "Das Wort 'Здравей' leitet sich vom bulgarischen Wort 'здрав' (gesund) ab und ist wie ein Wunsch nach Gesundheit.",
     "notes_bg_to_de": "В немски 'Hallo' е универсално и неформално приветствие, което можете да използвате през целия ден с познати, колеги и непознати в непринудена ситуация.",
     "notes_de_to_bg": "Für Deutschsprachige: 'Здравей' (zdravej) ≈ 'Hallo'; von 'здрав' (gesund). 'Здрасти' = sehr informell.",
-    "etymology": "From Proto-Slavic 'zdravъ' (healthy) - literally a wish for good health",
-    "cultural_note": "Standard informal greeting used throughout the day in Bulgaria. More casual than 'Добър ден'",
+    "etymology": "Произход: праслав. 'zdravъ' (здрав); буквално пожелание за здраве.\nHerkunft: Proto-slawisches 'zdravъ' („gesund").",
+    "cultural_note": "Неофициално приветствие през целия ден; по-непринудено от 'Добър ден'.\nKultureller Kontext: Informelle Begrüßung tagsüber.",
     "difficulty": 1,
     "frequency": 95,
     "examples": [
@@ -21,8 +21,8 @@
         "context": "informal"
       }
     ],
-    "linguistic_note_bg_to_de": "Stress on first syllable: ЗДРА-вей. Can be shortened to 'Здрасти' in very informal contexts",
-    "linguistic_note_de_to_bg": "Stress on first syllable: ЗДРА-вей. Can be shortened to 'Здрасти' in very informal contexts"
+    "linguistic_note_bg_to_de": "'Hallo' се произнася [ˈha.loː] и няма формални/неформални форми. В телефонен разговор е по-често 'Hallo?'",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: здраве́й. Kürzere Form 'Здрасти' nur in vertrauten Situationen."
   },
   {
     "id": "dobro_utro_002",
@@ -35,8 +35,8 @@
     "notes": null,
     "notes_bg_to_de": "'Guten Morgen' е сутрешно приветствие до около 11 ч. и звучи по-учтиво от 'Hallo'. Произнася се с ясно 'u' и двете думи винаги вървят заедно.",
     "notes_de_to_bg": "Entspricht 'Guten Morgen'; in Bulgarien endet er oft früher (~10 Uhr).",
-    "etymology": "Compound: 'добро' (good) + 'утро' (morning). Common Slavic greeting pattern",
-    "cultural_note": "Formal morning greeting used until approximately 10-11 AM in Bulgaria",
+    "etymology": "Произход: 'добро' + 'утро' (сложна форма).\nHerkunft: Zusammensetzung aus 'добро' (gut) und 'утро' (Morgen).",
+    "cultural_note": "Използва се до около 10–11 ч. за учтиво сутрешно приветствие.\nKultureller Kontext: Höfliche Morgenbegrüßung bis ca. 11 Uhr.",
     "difficulty": 1,
     "frequency": 85,
     "examples": [
@@ -46,8 +46,8 @@
         "context": "formal"
       }
     ],
-    "linguistic_note_bg_to_de": "Stress on 'до́бро у́тро'. Both words stressed separately",
-    "linguistic_note_de_to_bg": "Stress on 'до́бро у́тро'. Both words stressed separately"
+    "linguistic_note_bg_to_de": "'Guten Morgen' се произнася [ˈɡuːtn̩ ˈmɔʁɡn̩]; 'guten' завършва с беззвучно -n. Използва се при първи контакт сутрин.",
+    "linguistic_note_de_to_bg": "Beide Wörter tragen Akzent: до́бро у́тро. Nach 11 Uhr wechseln viele zu 'Добър ден'."
   },
   {
     "word": "Добър ден",
@@ -60,12 +60,12 @@
     "id": "guten_tag",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "Compound: 'добър' (good, from Proto-Slavic *dobrъ) + 'ден' (day, from Proto-Slavic *dьnь)",
-    "cultural_note": "Most common formal daytime greeting in Bulgaria, used from late morning until evening. More neutral than time-specific greetings",
+    "etymology": "Произход: 'добър' + 'ден' (праслав. *dobrъ + *dьnь).\nHerkunft: Zusammensetzung aus 'добър' (gut) und 'ден' (Tag).",
+    "cultural_note": "Стандартно дневно приветствие от късна сутрин до вечер.\nKultureller Kontext: Neutraler Tagesgruß in Bulgarien.",
     "difficulty": 1,
     "frequency": 100,
-    "linguistic_note_bg_to_de": "Masculine adjective 'добър' remains unchanged in this fixed expression. Stress: до́бър де́н",
-    "linguistic_note_de_to_bg": "Masculine adjective 'добър' remains unchanged in this fixed expression. Stress: до́бър де́н"
+    "linguistic_note_bg_to_de": "'Guten Tag' се произнася [ˈɡuːtn̩ ˈtaːk]; 'Tag' има дълго [aː] и гортално 'g'.",
+    "linguistic_note_de_to_bg": "Feststehender Ausdruck mit zwei Akzenten: до́бър де́н. Adjektiv bleibt maskulin, keine Flexion."
   },
   {
     "word": "Добър вечер",
@@ -78,12 +78,12 @@
     "id": "guten_abend",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "Compound: 'добър' (good) + 'вечер' (evening, from Proto-Slavic *večerъ)",
-    "cultural_note": "Evening greeting used after approximately 6 PM in Bulgaria. Considered more formal than casual greetings",
+    "etymology": "Произход: 'добър' + 'вечер' (праслав. *večerъ).\nHerkunft: Zusammensetzung aus 'добър' und 'вечер'.",
+    "cultural_note": "Учтиво вечерно приветствие след ~18 ч.\nKultureller Kontext: Höflicher Abendgruß.",
     "difficulty": 1,
     "frequency": 100,
-    "linguistic_note_bg_to_de": "",
-    "linguistic_note_de_to_bg": "Fixed masculine form. Evening greetings in Bulgaria mark a clear cultural transition from day to evening"
+    "linguistic_note_bg_to_de": "'Guten Abend' се произнася [ˈɡuːtn̩ ˈaːbn̩t]; средното 'e' не се чува, а 'Abend' има дълго [aː].",
+    "linguistic_note_de_to_bg": "Akzent auf обе Worte: до́бър ве́чер. Bleibt maskulin; nicht flektieren ('добра вечер' nur regional)."
   },
   {
     "word": "Лека нощ",
@@ -96,12 +96,12 @@
     "id": "gute_nacht",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "Compound: 'лека' (light/easy, from леко) + 'нощ' (night, from Proto-Slavic *noktь)",
-    "cultural_note": "Said when parting for the night, not as an evening greeting. Literally wishes someone an easy/light night",
+    "etymology": "Произход: 'лека' (облекчен) + 'нощ' (праслав. *noktь).\nHerkunft: Kombination aus 'лека' und 'нощ'.",
+    "cultural_note": "Прощаване преди сън, не приветствие при среща.\nKultureller Kontext: Abschied vor dem Schlafengehen.",
     "difficulty": 1,
     "frequency": 100,
-    "linguistic_note_bg_to_de": "Feminine adjective 'лека' agrees with feminine noun 'нощ'. Stress: ле́ка но́щ",
-    "linguistic_note_de_to_bg": "Feminine adjective 'лека' agrees with feminine noun 'нощ'. Stress: ле́ка но́щ"
+    "linguistic_note_bg_to_de": "'Gute Nacht' се произнася [ˈɡuːtə naxt]; крайното 'ch' е [x]. Използва се само при раздяла преди сън.",
+    "linguistic_note_de_to_bg": "Beide Wörter flektieren feminin: ле́ка но́щ. Nicht als Begrüßung verwenden, nur zum Abschied spätabends."
   },
   {
     "word": "Довиждане",
@@ -114,12 +114,12 @@
     "id": "auf_wiedersehen",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "Compound: 'до' (until) + 'виждане' (seeing, from root вид- 'to see'). Literally 'until seeing' = 'until we see each other'",
-    "cultural_note": "Standard formal goodbye in Bulgaria. For informal settings, 'Чао' (Italian loanword) is more common",
+    "etymology": "Произход: приставка 'до-' + 'виждане' (виждам).\nHerkunft: 'до-' + Stamm 'sehen'.",
+    "cultural_note": "Стандартно официално сбогуване; неформално 'Чао'.\nKultureller Kontext: Formelle Verabschiedung.",
     "difficulty": 1,
     "frequency": 100,
-    "linguistic_note_bg_to_de": "Verbal noun form. Alternative informal: 'До скоро' (see you soon). Stress: довиждане",
-    "linguistic_note_de_to_bg": "Verbal noun form. Alternative informal: 'До скоро' (see you soon). Stress: довиждане"
+    "linguistic_note_bg_to_de": "'Auf Wiedersehen' се произнася [aʊ̯f ˈviːdɐzeːən]; често се редуцира до [aʊ̯f ˈviːdɐzeːn].",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: дови́ждане. Informell ersetzt durch 'Чао' oder 'До скоро'."
   },
   {
     "word": "Моля",
@@ -132,12 +132,12 @@
     "id": "bitte",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "From verb 'моля се' (to pray, beg). Related to Old Church Slavonic 'молити'",
-    "cultural_note": "Multifunctional: 'please' (request), 'you're welcome' (response), 'here you go' (offering). Essential politeness marker in Bulgarian",
+    "etymology": "Произход: глагол 'моля (се)' – моля, умолявам.\nHerkunft: Verwandt mit altkirchenslawisch 'moliti'.",
+    "cultural_note": "Многофункционално учтиво слово: молба, отговор, подаване.\nKultureller Kontext: Höflichkeitswort mit mehreren Funktionen.",
     "difficulty": 1,
     "frequency": 100,
-    "linguistic_note_bg_to_de": "First person singular form used as standalone interjection. Can be intensified: 'много моля' (please very much)",
-    "linguistic_note_de_to_bg": "First person singular form used as standalone interjection. Can be intensified: 'много моля' (please very much)"
+    "linguistic_note_bg_to_de": "'Bitte' се произнася [ˈbɪtə] с кратко [ɪ] и без ударение върху втората сричка.",
+    "linguistic_note_de_to_bg": "Verbform 1. Pers. Sg.: мо́ля. Kann allein stehen; Betonung auf der ersten Silbe."
   },
   {
     "word": "Благодаря",
@@ -150,12 +150,12 @@
     "id": "danke",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "Compound: 'благо' (blessing, good) + 'даря' (to give). Literally 'I give thanks/blessing'",
-    "cultural_note": "Standard thank you. Can be intensified with 'много' (много благодаря). Alternative: 'мерси' (French loanword, informal)",
+    "etymology": "Произход: 'благо' (добрина) + суфикса '-даря' (давам).\nHerkunft: Altbulgarisches Kompositum 'благо' + '-даря'.",
+    "cultural_note": "Стандартно благодарност; усилва се с 'много'.\nKultureller Kontext: Formelle Dankesformel.",
     "difficulty": 1,
     "frequency": 100,
-    "linguistic_note_bg_to_de": "First person singular present tense of 'благодаря'. Stress: благодаря́. More formal than 'мерси'",
-    "linguistic_note_de_to_bg": "First person singular present tense of 'благодаря'. Stress: благодаря́. More formal than 'мерси'"
+    "linguistic_note_bg_to_de": "'Danke' се произнася [ˈdaŋkə] с носово [ŋk]; удължете 'a' само леко.",
+    "linguistic_note_de_to_bg": "Verbform 1. Pers. Sg.: благодарЯ [blagodaˈrʲa]. 'Я' am Ende wird wie [ja] ausgesprochen."
   },
   {
     "word": "Извинете",
@@ -168,12 +168,12 @@
     "id": "entschuldigung",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "Imperative of 'извинявам' (to excuse). Root: вина (fault, guilt)",
-    "cultural_note": "Used both for apology and to get attention politely (like 'excuse me'). Important for Bulgarian social etiquette",
+    "etymology": "Произход: повелително от 'извинявам' (< вина).\nHerkunft: Imperativform aus dem Verb 'извинявам'.",
+    "cultural_note": "Ползва се за извинение и привличане на внимание.\nKultureller Kontext: Höfliche Anrede in Bulgarien.",
     "difficulty": 1,
     "frequency": 100,
-    "linguistic_note_bg_to_de": "Formal/plural imperative form. Informal singular: 'извини'. Stress: извине́те",
-    "linguistic_note_de_to_bg": "Formal/plural imperative form. Informal singular: 'извини'. Stress: извине́те"
+    "linguistic_note_bg_to_de": "'Entschuldigung' се произнася [ɛntˈʃʊldɪɡʊŋ]; съкратената форма за близки е 'Entschuldige!'.",
+    "linguistic_note_de_to_bg": "Formelle Imperativform im Plural: извине́те. Einzahl für Freunde: 'извини'."
   },
   {
     "word": "Съжалявам",
@@ -186,12 +186,12 @@
     "id": "es_tut_mir_leid",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "From root жал- (grief, pity). Related to 'жалко' (pitiable, regrettable)",
-    "cultural_note": "Expresses genuine regret or sympathy. Stronger and more personal than 'извинете'. Used when truly apologizing",
+    "etymology": "Произход: корен 'жал-' (скръб, съчувствие).\nHerkunft: Stamm 'жал-' für Mitgefühl.",
+    "cultural_note": "Изразява лична съпричастност; по-силно от 'извинете'.\nKultureller Kontext: Ausdruck tieferer Reue.",
     "difficulty": 1,
     "frequency": 100,
-    "linguistic_note_bg_to_de": "First person singular present. Distinguishes regret (съжалявам) from politeness (извинете)",
-    "linguistic_note_de_to_bg": "First person singular present. Distinguishes regret (съжалявам) from politeness (извинете)"
+    "linguistic_note_bg_to_de": "'Es tut mir leid' се разчленява като [ɛs tuːt miːɐ̯ laɪ̯t]; ударението пада върху 'tut' и 'leid'.",
+    "linguistic_note_de_to_bg": "Verbform 1. Pers. Sg.: съжалЯвам [sɐʒɐˈlʲavɐm]. Betonung auf der vorletzten Silbe."
   },
   {
     "word": "Човек",
@@ -202,8 +202,8 @@
     "id": "mensch",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "From Proto-Slavic *čelověkъ. Related to Old Church Slavonic члов  ѣкъ",
-    "cultural_note": "Basic word for 'person/human'. Also used impersonally like German 'man' or English 'one'",
+    "etymology": "Произход: праслав. *čelověкъ; сродно на староцърковнославянското 'чловѣкъ'.\nHerkunft: Proto-slawisch *čelověкъ, verwandt mit Altkirchenslawisch 'чловѣкъ'.",
+    "cultural_note": "Основна дума за човек; използва се и безлично като 'man'.\nKultureller Kontext: Grundwort für Menschen, auch unpersönlich wie das deutsche 'man'.",
     "difficulty": 1,
     "frequency": 98,
     "notes_de_to_bg": "Für Deutschsprachige: 'Човек' ≈ 'Mensch'. Betonung: чо́век. Maskulinum. Sehr häufig verwendet.",
@@ -220,8 +220,8 @@
     "id": "familie",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "From 'семе' (seed) + suffix -ейство. Related to Latin 'semen'. Literally 'those from the same seed'",
-    "cultural_note": "Family is central in Bulgarian culture. Extended family gatherings are common and important",
+    "etymology": "Произход: 'семе' + суфикса '-ейство'; буквално 'тези от едно семе'.\nHerkunft: Von 'семе' (Same) + Suffix '-ейство', verwandt mit lat. 'semen'.",
+    "cultural_note": "Разширеното семейство е ядро на българската култура.\nKultureller Kontext: Großfamilientreffen sind zentral in Bulgarien.",
     "difficulty": 1,
     "frequency": 93,
     "notes_de_to_bg": "Für Deutschsprachige: 'Семейство' ≈ 'Familie'; von 'семе (Samen)'. Betonung: семе́йство. Neutrum. Sehr häufig verwendet.",
@@ -238,8 +238,8 @@
     "id": "haus",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "From Latin 'casa' (house) via Romanian. Replaced older Slavic 'дом' in Bulgarian",
-    "cultural_note": "Traditional Bulgarian houses often have gardens. Home ownership culturally important",
+    "etymology": "Произход: заемка от лат. 'casa' през румънски; измества старослав. 'дом'. Herkunft: Lehnwort von lat. 'casa' über Rumänisch, ersetzt das славische 'дом'.",
+    "cultural_note": "Традиционните къщи имат двор и лозя; собствеността е ценност. Kultureller Kontext: Häuser mit Gärten sind typisch, Eigentum gilt als wichtig.",
     "difficulty": 1,
     "frequency": 99,
     "notes_de_to_bg": "Für Deutschsprachige: 'Къща' ≈ 'Haus'. Betonung: къ́ща. Femininum. Sehr häufig verwendet.",
@@ -256,8 +256,8 @@
     "id": "schule",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "From verb 'уча' (to learn/teach) + suffix -лище (place of). Place of learning",
-    "cultural_note": "Education highly valued in Bulgaria. School year starts September 15th",
+    "etymology": "Произход: глагол 'уча' + наставка '-лище' (място); 'място за учене'.\nHerkunft: Verb 'уча' kombiniert mit Suffix '-лище' = Lernort.",
+    "cultural_note": "Учебната година започва на 15 септември и образованието е престижно.\nKultureller Kontext: Schuljahr startet am 15. September; Bildung hat hohen Stellenwert.",
     "difficulty": 1,
     "frequency": 93,
     "notes_de_to_bg": "Für Deutschsprachige: 'Училище' ≈ 'Schule'; von 'уча (lernen)'. Betonung: учи́лище. Neutrum. Sehr häufig verwendet.",
@@ -274,8 +274,8 @@
     "id": "arbeit",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "From Proto-Slavic *orbota (hard work, labor). Related to 'раб' (slave, worker)",
-    "cultural_note": "Work-life balance gradually changing. Traditional strong work ethic in Bulgarian culture",
+    "etymology": "Произход: праслав. *orbota („труд"), сродно с 'раб'.\nHerkunft: Proto-slawisch *orbota, verwandt mit 'раб' (Arbeiter).",
+    "cultural_note": "Силна трудова етика; баланс работа-живот се развива.\nKultureller Kontext: Traditionell hohe Arbeitsmoral, Work-Life-Balance im Wandel.",
     "difficulty": 1,
     "frequency": 93,
     "notes_de_to_bg": "Für Deutschsprachige: 'Работа' ≈ 'Arbeit'. Betonung: рабо́та. Femininum. Sehr häufig verwendet.",
@@ -292,8 +292,8 @@
     "id": "stadt",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "From Proto-Slavic *gordъ (fortified settlement, castle). Related to Russian 'город'",
-    "cultural_note": "Bulgaria has many historic cities. Sofia (София) is the capital",
+    "etymology": "Произход: праслав. *gordъ (укрепено селище); сродно на рус. 'город'.\nHerkunft: Proto-slawisch *gordъ für befestigte Siedlung, verwandt mit рус. 'город'.",
+    "cultural_note": "Българските градове пазят крепости и исторически центрове; столица е София.\nKultureller Kontext: Viele Städte mit Altstädten, Hauptstadt Sofia.",
     "difficulty": 1,
     "frequency": 99,
     "notes_de_to_bg": "Für Deutschsprachige: 'Град' ≈ 'Stadt'. Betonung: гра́д. Maskulinum. Sehr häufig verwendet.",
@@ -346,8 +346,8 @@
     "id": "essen",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "From Proto-Slavic *xorna (food, nourishment). Related to verb 'храня' (to feed)",
-    "cultural_note": "Bulgarian cuisine features shopska salad, banitsa, kebapche. Food central to hospitality",
+    "etymology": "Произход: праслав. *xorna (храна), свързано с глагола 'храня'.\nHerkunft: Proto-slawisch *xorna, verwandt mit Verb 'храня'.",
+    "cultural_note": "Гостоприемството включва ястия като шопска салата и баница.\nKultureller Kontext: Essen wie Shopska-Salat und Baniza prägt die Gastfreundschaft.",
     "difficulty": 1,
     "frequency": 96,
     "notes_de_to_bg": "Für Deutschsprachige: 'Храна' ≈ 'Essen'. Betonung: храна́. Femininum. Sehr häufig verwendet.",
@@ -364,8 +364,8 @@
     "id": "wasser",
     "source_lang": "bg",
     "target_lang": "de",
-    "etymology": "From Proto-Slavic *voda. Cognate with English 'water', German 'Wasser' (all from PIE *wódr̥)",
-    "cultural_note": "Mineral water (минерална вода) very popular in Bulgaria. Many natural springs",
+    "etymology": "Произход: праслав. *voda; сродно на нем. 'Wasser' и англ. 'water'.\nHerkunft: Proto-slawisch *voda, indogermanisch *wódr̥.",
+    "cultural_note": "Минералните извори и бутилираната вода са характерни за страната.\nKultureller Kontext: Bulgarien ist für Mineralwasserquellen bekannt.",
     "difficulty": 1,
     "frequency": 98,
     "notes_de_to_bg": "Für Deutschsprachige: 'Вода' ≈ 'Wasser'. Betonung: вода́. Femininum. Sehr häufig verwendet.",

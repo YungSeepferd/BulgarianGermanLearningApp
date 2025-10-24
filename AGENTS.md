@@ -24,6 +24,7 @@ This guide keeps human developers and AI collaborators aligned with the Bulgaria
 - Plan scope up front, keep diffs minimal, and avoid introducing new dependencies.
 - Prefer pure functions and small modules; add succinct comments only when logic is non-obvious.
 - Maintain accessibility, performance, and offline constraints described in `docs/DEVELOPMENT.md`.
+- Ensure all learner-facing strings and assets appear solely in Bulgarian or German; remove or translate any English content before shipping.
 
 ### Hugo Templates
 - Keep templates declarative; push imperative logic into JS modules.
