@@ -1,0 +1,37 @@
+{{- /*
+Learning Note Shortcode
+
+Usage:
+{{< learning-note direction="bg-to-de" >}}
+Your note content here...
+{{< /learning-note >}}
+
+Parameters:
+- direction: "bg-to-de" (for Bulgarian speakers learning German)
+            or "de-to-bg" (for German speakers learning Bulgarian)
+*/ -}}
+
+{{- $direction := .Get "direction" -}}
+{{- $title := "" -}}
+{{- $icon := "" -}}
+{{- $class := "learning-note" -}}
+
+{{- if eq $direction "bg-to-de" -}}
+  {{- $title = "За български говорещи (For Bulgarian Speakers)" -}}
+  {{- $icon = "🇧🇬 → 🇩🇪" -}}
+  {{- $class = "learning-note bg-to-de" -}}
+{{- else if eq $direction "de-to-bg" -}}
+  {{- $title = "Für Deutschsprachige (For German Speakers)" -}}
+  {{- $icon = "🇩🇪 → 🇧🇬" -}}
+  {{- $class = "learning-note de-to-bg" -}}
+{{- end -}}
+
+<div class="{{ $class }}">
+  <div class="note-header">
+    <span class="note-icon">{{ $icon }}</span>
+    <strong>{{ $title }}</strong>
+  </div>
+  <div class="note-content">
+    {{ .Inner | markdownify }}
+  </div>
+</div>
