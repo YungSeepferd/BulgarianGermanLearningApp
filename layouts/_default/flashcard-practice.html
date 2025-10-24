@@ -9,10 +9,13 @@
   
   <!-- Include flashcard styles -->
   <link rel="stylesheet" href="{{ "scss/components/_flashcards.scss" | relURL }}">
-  
-  <!-- Include enhanced bidirectional system -->
-  <script src="{{ "js/enhanced-bidirectional-system.js" | relURL }}" defer></script>
-  
+
+  <!-- Include unified practice modules (bidirectional support built-in) -->
+  {{ $unified := resources.Get "js/unified-practice-session.js" }}
+  {{ if $unified }}
+  <script src="{{ ($unified | resources.Minify).RelPermalink }}" defer></script>
+  {{ end }}
+
   <!-- Language direction indicator -->
   <div class="language-direction-indicator bg-to-de" id="direction-indicator">
     Bulgarian → German
