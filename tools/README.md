@@ -16,24 +16,25 @@ The `tools/` directory contains Go-based CLI utilities for processing JSON data 
 
 ### Prerequisites
 
-- Go 1.21+ (required)
+- Go 1.23+ (required)
 - Hugo Extended 0.128.0+ (for building the site)
+- Node.js 20+ (for npm scripts)
 
 ### Building the Tools
 
 From the **repository root**:
 
 ```bash
-# Build the CLI binary
+# Build the CLI binary (recommended)
 npm run build-tools
 
 # Or manually:
 cd tools/
-go build -o ../bin/hugo-bg-de ./cmd/hugo-bg-de
+go build -o ../hugo-bg-de ./cmd/hugo-bg-de
 cd ..
 ```
 
-Binary location: `bin/hugo-bg-de`
+Binary location: `./hugo-bg-de` (root directory)
 
 ---
 
@@ -41,23 +42,25 @@ Binary location: `bin/hugo-bg-de`
 
 ### 1. process-data
 
-Process vocabulary and grammar JSON files.
+Process vocabulary data and generate search index.
 
 **Usage**:
 ```bash
-./bin/hugo-bg-de process-data
+./hugo-bg-de process-data
+# Or via npm:
+npm run process-data
 ```
 
 **What it does**:
 - Validates `data/vocabulary.json` schema
-- Validates `data/grammar.json` schema  
 - Generates search index at `data/search-index.json`
 - Creates derived data files in `data/processed/` (if applicable)
 
+**Note**: Grammar content is now in Markdown files (`content/grammar/*.md`) and is processed natively by Hugo - no data processing needed.
+
 **When to use**:
 - After editing `data/vocabulary.json`
-- After editing `data/grammar.json`
-- Before committing data changes
+- Before committing vocabulary data changes
 - As part of CI/CD pipeline
 
 **Example**:
@@ -66,7 +69,7 @@ Process vocabulary and grammar JSON files.
 vim data/vocabulary.json
 
 # Process and validate
-./bin/hugo-bg-de process-data
+npm run process-data
 
 # Verify output
 cat data/search-index.json | jq '.items | length'
@@ -76,26 +79,37 @@ cat data/search-index.json | jq '.items | length'
 
 ### 2. validate
 
-Validate data files and check required files exist.
+Validate data files and content structure.
 
 **Usage**:
 ```bash
-./bin/hugo-bg-de validate
+./hugo-bg-de validate
+# Or via npm (includes additional JS validation):
+npm run validate
 ```
 
 **What it does**:
-- Checks existence of required files (`data/vocabulary.json`, `data/grammar.json`, `hugo.toml`)
-- Validates JSON syntax
-- Reports schema violations
+- Checks existence of required files (`data/vocabulary.json`, `hugo.toml`)
+- Validates vocabulary JSON syntax and schema
+- Verifies grammar Markdown files exist in `content/grammar/`
+- Reports entry counts and structural issues
 
 **When to use**:
 - Before building the site
-- In pre-commit hooks
+- In pre-commit hooks (automatic via `.git/hooks/pre-commit`)
 - CI/CD validation stage
+- After editing vocabulary data
 
 **Exit codes**:
 - `0`: All validations passed
 - `1`: Validation errors found
+
+**Example output**:
+```
+✓ vocabulary.json: loaded 181 entries
+✓ Found 11 grammar markdown files
+Validation completed successfully!
+```
 
 ---
 
@@ -105,11 +119,11 @@ Start development server with data file watching (⚠️ **Experimental**).
 
 **Usage**:
 ```bash
-./bin/hugo-bg-de dev
+./hugo-bg-de dev
 ```
 
 **What it does**:
-- Processes data files initially
+- Processes vocabulary data initially
 - Starts Hugo development server (`hugo server --buildDrafts --buildFuture`)
 - Watches `data/` directory for changes
 - Reprocesses data on file changes
@@ -124,8 +138,46 @@ Start development server with data file watching (⚠️ **Experimental**).
 npm run dev
 
 # Terminal 2: Watch and reprocess data manually
-watch -n 5 ./bin/hugo-bg-de process-data
+watch -n 5 ./hugo-bg-de process-data
 ```
+
+---
+
+## Automated Validation (Pre-commit Hook)
+
+The repository includes a **pre-commit hook** that automatically validates data files before every commit.
+
+**Location**: `.git/hooks/pre-commit`
+
+**What it validates**:
+1. Builds Go tools if not present (`npm run build-tools`)
+2. Runs Go validation (`./hugo-bg-de validate`)
+3. Runs JavaScript validation (`npm run lint:data`)
+
+**Behavior**:
+- ✅ If validation passes: Commit proceeds normally
+- ❌ If validation fails: Commit is blocked with error details
+
+**Bypass** (not recommended):
+```bash
+# Skip validation for this commit only
+git commit --no-verify -m "message"
+```
+
+**Test manually**:
+```bash
+# Run the pre-commit hook
+.git/hooks/pre-commit
+
+# Or use the npm script
+npm run validate
+```
+
+**Benefits**:
+- Prevents invalid data from being committed
+- Catches JSON syntax errors early
+- Ensures vocabulary entries have required fields
+- Verifies grammar content structure
 
 ---
 
@@ -143,10 +195,10 @@ watch -n 5 ./bin/hugo-bg-de process-data
 **Migration**:
 ```bash
 # Before (deprecated):
-./bin/hugo-bg-de build
+./hugo-bg-de build
 
 # After (current):
-hugo --minify
+hugo --gc --minify
 # or
 npm run build
 ```
@@ -221,11 +273,14 @@ The tools are integrated into npm scripts for convenience:
 
 | npm Script | Command | Purpose |
 |------------|---------|---------|
-| `npm run build-tools` | Build Go binary | Compile CLI tool |
-| `npm run process-data` | `./bin/hugo-bg-de process-data` | Process data files |
-| `npm run validate` | `./bin/hugo-bg-de validate` | Validate data |
+| `npm run build-tools` | `cd tools && go build -o ../hugo-bg-de ./cmd/hugo-bg-de` | Compile CLI tool |
+| `npm run process-data` | `./hugo-bg-de process-data` | Process vocabulary data |
+| `npm run validate` | `./hugo-bg-de validate && npm run lint:data` | Full validation (Go + JS) |
+| `npm run lint:data` | `node scripts/validate-data.mjs` | JavaScript data validation |
 
 **See**: `package.json` for full definitions
+
+**Pre-commit Hook**: Validation runs automatically before every commit via `.git/hooks/pre-commit`. This ensures data integrity before changes are committed.
 
 ---
 
@@ -338,8 +393,10 @@ From `tools/cmd/hugo-bg-de/main.go`:
 cd tools/
 go run ./cmd/hugo-bg-de validate
 
-# Correct:
-./bin/hugo-bg-de validate
+# Correct (from repository root):
+./hugo-bg-de validate
+# Or:
+npm run validate
 ```
 
 ### "failed to write search index"
@@ -350,7 +407,7 @@ go run ./cmd/hugo-bg-de validate
 ```bash
 mkdir -p data/processed
 chmod u+w data/
-./bin/hugo-bg-de process-data
+npm run process-data
 ```
 
 ### "vocabulary.json validation failed"
@@ -361,6 +418,7 @@ chmod u+w data/
 1. Validate JSON syntax: `jq . data/vocabulary.json`
 2. Check schema: See `docs/API.md` for required fields
 3. Review error message for specific field issues
+4. Common issue: Unescaped quotes in string values (use `\"` for literal quotes)
 
 ### Build fails: "cannot find package"
 
@@ -373,6 +431,19 @@ go mod download
 go mod tidy
 cd ..
 npm run build-tools
+```
+
+### Pre-commit hook not running
+
+**Cause**: Hook not executable or not installed.
+
+**Solution**:
+```bash
+# Make hook executable
+chmod +x .git/hooks/pre-commit
+
+# Test manually
+.git/hooks/pre-commit
 ```
 
 ---
@@ -399,28 +470,57 @@ npm run build-tools
 
 ## CI/CD Integration
 
-### GitHub Actions Example
+### GitHub Actions Workflows
+
+The repository includes two CI/CD workflows:
+
+**1. CI Workflow** (`.github/workflows/ci.yml`)
+- Runs on push to main and all pull requests
+- Validates data integrity
+- Runs tests and security audits
 
 ```yaml
-- name: Install Go
-  uses: actions/setup-go@v4
+- name: Setup Go
+  uses: actions/setup-go@v5
   with:
-    go-version: '1.21'
+    go-version: '1.23'
 
 - name: Build Go tools
   run: npm run build-tools
 
-- name: Validate data files
-  run: ./bin/hugo-bg-de validate
+- name: Validate data
+  run: npm run validate  # Runs both Go and JS validation
 
-- name: Process data
-  run: ./bin/hugo-bg-de process-data
+- name: Go unit tests
+  run: go test ./tools/...
 
-- name: Build site
-  run: hugo --minify
+- name: Security audit (Go)
+  run: govulncheck ./tools/...
 ```
 
-**See**: `.github/workflows/deploy.yml` for full workflow
+**2. Deploy Workflow** (`.github/workflows/deploy.yml`)
+- Runs on push to main
+- Builds and deploys to GitHub Pages
+
+```yaml
+- name: Setup Go
+  uses: actions/setup-go@v4
+  with:
+    go-version: '1.23'
+
+- name: Build Go tools
+  run: npm run build-tools
+
+- name: Process and validate data
+  run: |
+    npm run process-data
+    npm run validate
+
+- name: Build with Hugo
+  run: hugo --gc --minify
+```
+
+**See**: `.github/workflows/` for complete workflow definitions
 
 ---
 
@@ -474,9 +574,10 @@ Potential additions (not prioritized):
 
 ---
 
-**Last Updated**: October 17, 2025  
-**Maintained By**: Development Team  
+**Last Updated**: October 24, 2025 (Phase 4: Go Tools Integration)
+**Maintained By**: Development Team
 **See Also**:
 - `docs/DEVELOPMENT.md` - Development workflow
 - `docs/API.md` - Data schema documentation
-- `docs/REPOSITORY_AUDIT_AND_CLEANUP_PLAN.md` - Cleanup plan
+- `docs/HUGO_GO_REFACTORING_PLAN.md` - Complete refactoring plan
+- `.git/hooks/pre-commit` - Automated validation hook

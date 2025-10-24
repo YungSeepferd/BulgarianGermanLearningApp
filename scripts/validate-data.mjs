@@ -90,8 +90,9 @@ function validateGrammarArray(arr) {
 
 async function main() {
   const vocabPath = 'data/vocabulary.json';
-  const grammarPath = 'data/grammar.json';
   const outputs = [];
+
+  // Validate vocabulary.json
   try {
     const vocabRaw = await readFile(vocabPath, 'utf8');
     const vocab = JSON.parse(vocabRaw);
@@ -105,18 +106,11 @@ async function main() {
     outputs.push({ file: vocabPath, ok: false, errors: [e.message] });
   }
 
-  try {
-    const grammarRaw = await readFile(grammarPath, 'utf8');
-    const grammar = JSON.parse(grammarRaw);
-    const gErrs = validateGrammarArray(grammar);
-    if (gErrs.length) {
-      outputs.push({ file: grammarPath, ok: false, errors: gErrs });
-    } else {
-      outputs.push({ file: grammarPath, ok: true });
-    }
-  } catch (e) {
-    outputs.push({ file: grammarPath, ok: false, errors: [e.message] });
-  }
+  // Grammar is now in Markdown files (content/grammar/*.md)
+  // Grammar structure is validated by:
+  // 1. Hugo's markdown parsing (automatically)
+  // 2. Go CLI tool: ./hugo-bg-de validate (checks MD files exist)
+  console.log('ℹ Grammar content in Markdown format (validated by Go CLI tool)');
 
   let exitCode = 0;
   for (const out of outputs) {
