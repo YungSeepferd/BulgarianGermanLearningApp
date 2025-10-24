@@ -3,6 +3,9 @@ public/
 resources/_gen/
 .hugo_build.lock
 
+# Compiled SCSS (Hugo Pipes output)
+/scss/main.min*.css
+
 # Hugo development
 hugo_stats.json
 
@@ -53,6 +56,18 @@ dist/
 build/
 *.tgz
 *.tar.gz
+
+# Go build artifacts
+/hugo-bg-de
+/tools/hugo-bg-de
+
+# Data backups (keep in data/archive)
+/*.backup*.json
+/vocabulary*.backup*.json
+
+# Archive directories (old files)
+/archive/
+/data/archive/
 
 # Legacy Rust/WASM artifacts (should not exist but just in case)
 target/
