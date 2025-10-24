@@ -1,0 +1,362 @@
+[
+  {
+    "id": "a1_food_012",
+    "word": "Хляб",
+    "translation": "das Brot",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Essential food staple: bread",
+    "notes_bg_to_de": "В немски 'Brot' [bʁoːt] е среден род (das), единствено число. Множествено: 'Brote'. Основна храна.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Хляб' ist maskulin. Sehr wichtig in bulgarischer Kultur - Brot bei jeder Mahlzeit. Verschiedene Sorten.",
+    "etymology": "From Proto-Slavic '*xlěbъ'. Possibly borrowed from Gothic 'hlaifs'. Related to German 'Laib' (loaf).",
+    "cultural_note": "Bread is sacred in Bulgarian culture. Never throw away bread. Traditional round bread (пита) for special occasions. Breaking bread together symbolizes friendship.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "sentence": "Купи хляб, моля.",
+        "translation": "Kauf bitte Brot.",
+        "context": "shopping"
+      },
+      {
+        "sentence": "Искам хляб с масло.",
+        "translation": "Ich möchte Brot mit Butter.",
+        "context": "meal"
+      },
+      {
+        "sentence": "Прясно изпечен хляб.",
+        "translation": "Frisch gebackenes Brot.",
+        "context": "description"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Definite form: хлябът. Plural: хлябове.",
+    "linguistic_note_bg_to_de": "Хляб [xljap] - мъжки род. Определен член: хлябът [xljɐˈbɤt]. Множ.: хлябове.",
+    "linguistic_note_de_to_bg": "Maskulinum. 'Х' ist [x] wie 'ch' in 'Bach'. Betonung: хляб (monosyllabisch)."
+  },
+  {
+    "id": "a1_food_013",
+    "word": "Мляко",
+    "translation": "die Milch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Getränke",
+    "level": "A1",
+    "notes": "Essential dairy product: milk",
+    "notes_bg_to_de": "В немски 'Milch' [mɪlç] е женски род (die), uncountable. В български мляко е среден род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Мляко' ist neutrum. Sehr häufig zum Frühstück. Bulgarian yogurt (кисело мляко) is world-famous.",
+    "etymology": "From Proto-Slavic '*melko'. Cognate with Latin 'mulgere' (to milk), English 'milk' through PIE *h₂melǵ-.",
+    "cultural_note": "Bulgaria is famous for dairy products. Ayran (айрян) is diluted yogurt. Fresh milk (прясно мляко) vs long-life milk (трайно мляко).",
+    "difficulty": 1,
+    "frequency": 93,
+    "examples": [
+      {
+        "sentence": "Пия мляко сутрин.",
+        "translation": "Ich trinke morgens Milch.",
+        "context": "breakfast"
+      },
+      {
+        "sentence": "Има ли мляко в хладилника?",
+        "translation": "Gibt es Milch im Kühlschrank?",
+        "context": "household"
+      },
+      {
+        "sentence": "Кафе с мляко, моля.",
+        "translation": "Kaffee mit Milch, bitte.",
+        "context": "ordering"
+      }
+    ],
+    "linguistic_note": "Neuter noun. Definite form: млякото. Uncountable (no plural in normal usage).",
+    "linguistic_note_bg_to_de": "Мляко [ˈmljako] - среден род. Определен член: млякото [ˈmljakɔtɔ]. Несъществително.",
+    "linguistic_note_de_to_bg": "Neutrum. Meist unzählbar. Betonung auf первa Silbe: мля́ко."
+  },
+  {
+    "id": "a1_food_014",
+    "word": "Масло",
+    "translation": "die Butter",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Essential dairy product: butter (note: also means oil/grease)",
+    "notes_bg_to_de": "В немски 'Butter' [ˈbʊtɐ] е женски род. Внимание: 'масло' означава и butter и oil! Контекстът определя.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Масло' = Butter UND Öl! Context matters: 'масло за хляб' (Butter), 'олио' spezifischer für oil. Neutrum.",
+    "etymology": "From Proto-Slavic '*maslo'. From root '*maz-' (to smear, anoint). Related to 'мажа' (to spread), Russian 'масло'.",
+    "cultural_note": "Double meaning: butter (for bread) and oil (cooking). Sunflower oil (слънчогледово масло) very common in Bulgarian cooking. Clarify with context.",
+    "difficulty": 1,
+    "frequency": 88,
+    "examples": [
+      {
+        "sentence": "Хляб с масло и мед.",
+        "translation": "Brot mit Butter und Honig.",
+        "context": "breakfast - butter"
+      },
+      {
+        "sentence": "Готвя с олио.",
+        "translation": "Ich koche mit Öl.",
+        "context": "cooking - using 'олио' for clarity"
+      },
+      {
+        "sentence": "Сложи масло на хляба.",
+        "translation": "Schmier Butter aufs Brot.",
+        "context": "instruction"
+      }
+    ],
+    "linguistic_note": "Neuter noun. Definite: маслото. Note: covers both butter and oil in Bulgarian.",
+    "linguistic_note_bg_to_de": "Масло [ˈmaslɔ] - среден род. Определен: маслото. ВАЖНО: масло = butter И oil!",
+    "linguistic_note_de_to_bg": "Neutrum. Polysem: Butter UND Öl. Kontext wichtig. Betonung: ма́сло."
+  },
+  {
+    "id": "a1_food_015",
+    "word": "Сирене",
+    "translation": "der Käse",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Essential dairy product: cheese (typically refers to white brine cheese)",
+    "notes_bg_to_de": "В немски 'Käse' [ˈkɛːzə] е мъжки род. 'Сирене' в България обикновено означава бяло саламурено сирене (like feta).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сирене' meist weiße Salzlake-Käse (ähnlich Feta). Yellow cheese = 'кашкавал'. Bulgarian белo сирене is staple food.",
+    "etymology": "From Proto-Slavic '*syrъ' (raw, fresh). Originally 'fresh/raw cheese'. Related to Russian 'сыр', but meaning shifted in Bulgarian to brine cheese.",
+    "cultural_note": "Essential in Bulgarian cuisine: Shopska salad uses сирене. Breakfast often includes сирене. Different from yellow cheese (кашкавал). Made from sheep/cow milk.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "sentence": "Шопска салата със сирене.",
+        "translation": "Shopska-Salat mit Käse.",
+        "context": "traditional dish"
+      },
+      {
+        "sentence": "Баница със сирене.",
+        "translation": "Banitsa mit Käse.",
+        "context": "traditional pastry"
+      },
+      {
+        "sentence": "Сирене и домати за закуска.",
+        "translation": "Käse und Tomaten zum Frühstück.",
+        "context": "breakfast"
+      }
+    ],
+    "linguistic_note": "Neuter noun. Definite: сиренето. Type of cheese in Bulgaria: white brine cheese.",
+    "linguistic_note_bg_to_de": "Сирене [siˈrɛnɛ] - среден род. Определен: сиренето. Конкретно: бяло саламурено.",
+    "linguistic_note_de_to_bg": "Neutrum. Spezifisch für weißen Salzlakekäse. Gelber Käse = кашкавал. Betonung сире́не."
+  },
+  {
+    "id": "a1_food_016",
+    "word": "Месо",
+    "translation": "das Fleisch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Essential protein food: meat",
+    "notes_bg_to_de": "В немски 'Fleisch' [flaɪ̯ʃ] е среден род (das), общо за месо. Видове: Schweinefleisch, Rindfleisch, etc.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Месо' ist neutrum, Oberbegriff. Spezifisch: свинско (Schwein), телешко (Kalb), пилешко (Huhn).",
+    "etymology": "From Proto-Slavic '*mę́so'. Cognate with Russian 'мясо'. From PIE root meaning 'flesh, meat'.",
+    "cultural_note": "Meat dishes central to Bulgarian cuisine: кебапче, кюфте, шишчета (grilled meats). Pork (свинско) most common. Mixed grill (скара) popular.",
+    "difficulty": 1,
+    "frequency": 87,
+    "examples": [
+      {
+        "sentence": "Ядеш ли месо?",
+        "translation": "Isst du Fleisch?",
+        "context": "dietary question"
+      },
+      {
+        "sentence": "Свинско месо с ориз.",
+        "translation": "Schweinefleisch mit Reis.",
+        "context": "meal"
+      },
+      {
+        "sentence": "Не ям месо - вегетарианец съм.",
+        "translation": "Ich esse kein Fleisch - ich bin Vegetarier.",
+        "context": "dietary preference"
+      }
+    ],
+    "linguistic_note": "Neuter noun. Definite: месото. Types: свинско, телешко, пилешко.",
+    "linguistic_note_bg_to_de": "Месо [ˈmɛsɔ] - среден род. Определен: месото. Видове: свинско, телешко, пилешко.",
+    "linguistic_note_de_to_bg": "Neutrum. Oberbegriff. Betonung: ме́со. 'М' ist bilabial [m]."
+  },
+  {
+    "id": "a1_food_017",
+    "word": "Риба",
+    "translation": "der Fisch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Protein food: fish",
+    "notes_bg_to_de": "В немски 'Fisch' [fɪʃ] е мъжки род (der). Използва се за храна И за живото животно.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Риба' ist feminin. Sowohl das Tier als auch das Essen. Black Sea fish popular in Bulgaria.",
+    "etymology": "From Proto-Slavic '*ryba'. Ancient word, possibly pre-Indo-European. Cognate with Russian 'рыба', Polish 'ryba'.",
+    "cultural_note": "Black Sea fish: цаца (sprat), попче (goby). Grilled fish (риба на скара) popular in coastal regions. Fish soup (рибена чорба) traditional.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "sentence": "Обичам риба.",
+        "translation": "Ich mag Fisch.",
+        "context": "preference"
+      },
+      {
+        "sentence": "Пържена риба с лимон.",
+        "translation": "Gebratener Fisch mit Zitrone.",
+        "context": "dish"
+      },
+      {
+        "sentence": "Има ли свежа риба?",
+        "translation": "Gibt es frischen Fisch?",
+        "context": "market/restaurant"
+      }
+    ],
+    "linguistic_note": "Feminine noun. Definite: рибата. Plural: риби.",
+    "linguistic_note_bg_to_de": "Риба [ˈribɐ] - женски род. Определен: рибата. Множ.: риби.",
+    "linguistic_note_de_to_bg": "Femininum. 'Р' ist gerolltes [r]. Betonung: ри́ба."
+  },
+  {
+    "id": "a1_adj_004",
+    "word": "Добър",
+    "translation": "gut",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Most common positive adjective: good",
+    "notes_bg_to_de": "В немски 'gut' [ɡuːt] не се променя по род в номинатив (само падеж). В български: добър (м.), добра (ж.), добро (ср.).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Добър' hat Geschlechtsformen: добър/добра/добро. Auch Steigerung: по-добър (besser), най-добър (am besten).",
+    "etymology": "From Proto-Slavic '*dobrъ'. Cognate with Russian 'добрый'. From PIE root meaning 'fitting, proper'.",
+    "cultural_note": "Very common in greetings: Добро утро (Guten Morgen), Добър ден (Guten Tag). Also in toasts: Добре дошъл! (Willkommen!).",
+    "difficulty": 1,
+    "frequency": 98,
+    "examples": [
+      {
+        "sentence": "Добър ден!",
+        "translation": "Guten Tag!",
+        "context": "greeting"
+      },
+      {
+        "sentence": "Това е много добра книга.",
+        "translation": "Das ist ein sehr gutes Buch.",
+        "context": "description - feminine"
+      },
+      {
+        "sentence": "Имаш добро сърце.",
+        "translation": "Du hast ein gutes Herz.",
+        "context": "compliment - neuter"
+      }
+    ],
+    "linguistic_note": "Adjective with full declension. Forms: добър/добра/добро/добри. Comparative: по-добър.",
+    "linguistic_note_bg_to_de": "Добър [ˈdɔbɤr] - прилагателно с пълна промяна. М: добър, ж: добра, ср: добро, мн: добри.",
+    "linguistic_note_de_to_bg": "Geschlechtsformen: добър (m), добра (f), добро (n), добри (pl). Komparativ: по-добър."
+  },
+  {
+    "id": "a1_adj_005",
+    "word": "Лош",
+    "translation": "schlecht",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Common negative adjective: bad",
+    "notes_bg_to_de": "В немски 'schlecht' [ʃlɛçt] не се променя по род. В български: лош (м.), лоша (ж.), лошо (ср.). Антоним на 'добър'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Лош' = schlecht. Geschlechtsformen: лош/лоша/лошо. Gegenteil von 'добър'. Steigerung: по-лош, най-лош.",
+    "etymology": "From Proto-Slavic '*loxъ' (bad, evil). Related to Russian 'плохой'. Possibly connected to 'лукав' (cunning, evil).",
+    "cultural_note": "Used for quality, health, weather. 'Лош човек' (bad person - strong). 'Лошо време' (bad weather). Less harsh: 'не много добър'.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "sentence": "Лошо време днес.",
+        "translation": "Schlechtes Wetter heute.",
+        "context": "weather - neuter"
+      },
+      {
+        "sentence": "Това е лоша идея.",
+        "translation": "Das ist eine schlechte Idee.",
+        "context": "opinion - feminine"
+      },
+      {
+        "sentence": "Чувствам се лошо.",
+        "translation": "Ich fühle mich schlecht.",
+        "context": "health - adverb form"
+      }
+    ],
+    "linguistic_note": "Adjective with full declension. Forms: лош/лоша/лошо/лоши. Comparative: по-лош.",
+    "linguistic_note_bg_to_de": "Лош [lɔʃ] - променливо прилагателно. М: лош, ж: лоша, ср: лошо, мн: лоши.",
+    "linguistic_note_de_to_bg": "Geschlechtsformen: лош (m), лоша (f), лошо (n), лоши (pl). Antoným zu добър."
+  },
+  {
+    "id": "a1_adj_006",
+    "word": "Нов",
+    "translation": "neu",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Common descriptor adjective: new",
+    "notes_bg_to_de": "В немски 'neu' [nɔʏ̯] не се променя по род в номинатив. В български: нов (м.), нова (ж.), ново (ср.).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Нов' hat Geschlechtsformen: нов/нова/ново. Antoným: 'стар'. Sehr häufig für Gegenstände und Erfahrungen.",
+    "etymology": "From Proto-Slavic '*novъ'. Cognate with Latin 'novus', German 'neu', English 'new' through PIE *néwos.",
+    "cultural_note": "Common phrases: Нова година (Neujahr), нов живот (neues Leben). Also for news: новини (Nachrichten) shares same root.",
+    "difficulty": 1,
+    "frequency": 91,
+    "examples": [
+      {
+        "sentence": "Купих нова кола.",
+        "translation": "Ich habe ein neues Auto gekauft.",
+        "context": "purchase - feminine"
+      },
+      {
+        "sentence": "Честита Нова година!",
+        "translation": "Frohes Neues Jahr!",
+        "context": "celebration"
+      },
+      {
+        "sentence": "Имам ново télefon.",
+        "translation": "Ich habe ein neues Telefon.",
+        "context": "possession - neuter"
+      }
+    ],
+    "linguistic_note": "Adjective with full declension. Forms: нов/нова/ново/нови. Comparative: по-нов.",
+    "linguistic_note_bg_to_de": "Нов [nɔf] - променливо. М: нов, ж: нова, ср: ново, мн: нови.",
+    "linguistic_note_de_to_bg": "Geschlechtsformen: нов (m), нова (f), ново (n), нови (pl). Komparativ: по-нов."
+  },
+  {
+    "id": "a1_adj_007",
+    "word": "Стар",
+    "translation": "alt",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Common descriptor adjective: old (for things and age)",
+    "notes_bg_to_de": "В немски 'alt' [alt] не се променя по род. В български: стар (м.), стара (ж.), старо (ср.). За хора И за предмети.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Стар' = alt (für Personen UND Dinge). Geschlechtsformen: стар/стара/старо. Antoným: 'нов'. Auch für Alter: 'на 10 години' = 'стар 10 години'.",
+    "etymology": "From Proto-Slavic '*starъ'. Cognate with Latin 'stabilis' (firm, standing), English 'stare'. Originally 'standing long, established'.",
+    "cultural_note": "Respect for elderly: 'стар човек' (elderly person). Historic cities: Стария град (Altstadt). Age question: 'Колко си стар?' (Wie alt bist du?).",
+    "difficulty": 1,
+    "frequency": 89,
+    "examples": [
+      {
+        "sentence": "Колко си стар?",
+        "translation": "Wie alt bist du?",
+        "context": "asking age"
+      },
+      {
+        "sentence": "Живея в стара къща.",
+        "translation": "Ich wohne in einem alten Haus.",
+        "context": "description - feminine"
+      },
+      {
+        "sentence": "Старите традиции са важни.",
+        "translation": "Die alten Traditionen sind wichtig.",
+        "context": "cultural - plural definite"
+      }
+    ],
+    "linguistic_note": "Adjective with full declension. Forms: стар/стара/старо/стари. Comparative: по-стар.",
+    "linguistic_note_bg_to_de": "Стар [star] - променливо. М: стар, ж: стара, ср: старо, мн: стари. За възраст И за предмети.",
+    "linguistic_note_de_to_bg": "Geschlechtsformen: стар (m), стара (f), старо (n), стари (pl). Komparativ: по-стар. Antoným: нов."
+  }
+]
