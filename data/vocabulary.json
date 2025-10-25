@@ -5948,5 +5948,1085 @@
     "linguistic_note": "Stress on second syllable: сала́та [sɐˈlatɐ]. All vowels are pronounced clearly. Definite form: салатата [sɐˈlatɐtɐ].",
     "linguistic_note_bg_to_de": "Салата се произнася [sɐˈlatɐ] с ударение на 'ла'. Всички гласни са ясни. Определена форма: салатата.",
     "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: сала́та [sɐˈlatɐ]. Ähnlich wie deutsches 'Salat'. Alle Vokale werden klar ausgesprochen."
+  },
+  {
+    "id": "a1_color_001",
+    "word": "Черен",
+    "translation": "schwarz",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color black. Basic color adjective that declines by gender: черен (m), черна (f), черно (n), черни (pl). Very common in everyday descriptions.",
+    "notes_bg_to_de": "В немски 'schwarz' не се променя по род като прилагателно в предикатна позиция. В български 'черен' се променя: черен чай (m), черна котка (f), черно куче (n), черни обувки (pl).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Черен' ändert sich nach Genus und Numerus: черен (m), черна (f), черно (n), черни (pl). Ähnlich wie deutsche Adjektivdeklination, aber einfacher.",
+    "etymology": "From Proto-Slavic '*čьrnъ' (black), related to Russian 'чёрный' and Polish 'czarny'. The root may relate to darkness or charcoal.",
+    "cultural_note": "Black has traditional significance in Bulgarian culture. 'Черно море' (Black Sea) is Bulgaria's eastern border. Wearing black is standard for mourning. 'Черен хумор' (black humor) is a common expression.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Имам черна кола.",
+        "de": "Ich habe ein schwarzes Auto.",
+        "context": "Describing possession"
+      },
+      {
+        "bg": "Пия черно кафе.",
+        "de": "Ich trinke schwarzen Kaffee.",
+        "context": "Food preference"
+      },
+      {
+        "bg": "Черното котенце е сладко.",
+        "de": "Das schwarze Kätzchen ist süß.",
+        "context": "Description with definite article"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: че́рен [ˈt͡ʃɛrɛn]. The 'ч' is [t͡ʃ] like 'ch' in 'church'. Forms: черен/черна/черно/черни.",
+    "linguistic_note_bg_to_de": "Черен се произнася [ˈt͡ʃɛrɛn] с ударение на 'че'. Форми: черен (м.р.), черна (ж.р.), черно (ср.р.), черни (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: че́рен [ˈt͡ʃɛrɛn]. Das 'ч' ist wie deutsches 'tsch'. Formen: черен (m), черна (f), черно (n), черни (pl)."
+  },
+  {
+    "id": "a1_color_002",
+    "word": "Бял",
+    "translation": "weiß",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color white. Basic color adjective with gender forms: бял (m), бяла (f), бяло (n), бели (pl). Used in many common expressions.",
+    "notes_bg_to_de": "В немски 'weiß' не се променя по род в предикатна позиция. В български 'бял' се променя: бял хляб (m), бяла риза (f), бяло вино (n), бели зъби (pl).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Бял' dekliniert nach Genus: бял (m), бяла (f), бяло (n), бели (pl). Wichtig: 'бяло вино' (Weißwein) ist sehr gebräuchlich.",
+    "etymology": "From Proto-Slavic '*bělъ' (white), related to Russian 'белый' and Serbian 'бео/бели'. The root relates to brightness and light.",
+    "cultural_note": "'Бяло вино' (white wine) is popular in Bulgaria. 'Бяло сирене' (white cheese/feta) is a staple food. White is associated with purity and cleanliness. 'Бяла мечка' (polar bear) literally means 'white bear'.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Харесвам бялото вино.",
+        "de": "Ich mag Weißwein.",
+        "context": "Preference"
+      },
+      {
+        "bg": "Имам бяла риза.",
+        "de": "Ich habe ein weißes Hemd.",
+        "context": "Describing clothing"
+      },
+      {
+        "bg": "Снегът е бял.",
+        "de": "Der Schnee ist weiß.",
+        "context": "Natural description"
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: бя́л [bjal]. The 'я' is [ja]. Forms: бял/бяла/бяло/бели (note plural is 'бели' not *'бяли').",
+    "linguistic_note_bg_to_de": "Бял се произнася [bjal] с ударение на единствената сричка. Форми: бял (м.р.), бяла (ж.р.), бяло (ср.р.), бели (мн.ч.) - внимание: не 'бяли'!",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: бя́л [bjal]. Formen: бял (m), бяла (f), бяло (n), бели (pl) - Achtung: Plural ist 'бели', nicht *'бяли'!"
+  },
+  {
+    "id": "a1_color_003",
+    "word": "Червен",
+    "translation": "rot",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color red. Basic color adjective: червен (m), червена (f), червено (n), червени (pl). Very common in descriptions and expressions.",
+    "notes_bg_to_de": "В немски 'rot' остава непроменен в предикатна позиция. В български 'червен' се променя: червен домат (m), червена роза (f), червено вино (n), червени ябълки (pl).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Червен' dekliniert: червен (m), червена (f), червено (n), червени (pl). 'Червено вино' (Rotwein) ist sehr gebräuchlich.",
+    "etymology": "From Proto-Slavic '*čьrvenъ' (red), related to Russian 'червонный' (archaic, crimson) and 'червь' (worm) - red dye was historically made from insects. Also related to 'червен' meaning 'made red'.",
+    "cultural_note": "'Червен пипер' (red pepper) is essential in Bulgarian cuisine. 'Червено вино' (red wine) is popular. The 'Червена армия' (Red Army) has historical significance. Red is associated with passion, celebration, and in folklore, with protection against evil.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Обичам червено вино.",
+        "de": "Ich mag Rotwein.",
+        "context": "Preference"
+      },
+      {
+        "bg": "Червената роза е красива.",
+        "de": "Die rote Rose ist schön.",
+        "context": "Description"
+      },
+      {
+        "bg": "Купи червени домати.",
+        "de": "Kauf rote Tomaten.",
+        "context": "Shopping instruction"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: че́рвен [ˈt͡ʃɛrvɛn]. Forms: червен/червена/червено/червени.",
+    "linguistic_note_bg_to_de": "Червен се произнася [ˈt͡ʃɛrvɛn] с ударение на 'че'. Форми: червен (м.р.), червена (ж.р.), червено (ср.р.), червени (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: че́рвен [ˈt͡ʃɛrvɛn]. Formen: червен (m), червена (f), червено (n), червени (pl)."
+  },
+  {
+    "id": "a1_color_004",
+    "word": "Син",
+    "translation": "blau",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color blue. Also means 'son' in Bulgarian, but context makes meaning clear. Forms: син (m), синя (f), синьо (n), сини (pl).",
+    "notes_bg_to_de": "В немски 'blau' не се променя в предикатна позиция. В български 'син' се променя: син панталон (m), синя рокля (f), синьо небе (n), сини очи (pl). Внимание: 'син' също означава 'син' (son), но контекстът прави ясно значението.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Син' = 'blau' UND 'Sohn'. Der Kontext macht die Bedeutung klar. Als Farbe: син (m), синя (f), синьо (n), сини (pl).",
+    "etymology": "For color: from Proto-Slavic '*sinь' (blue, grey-blue), related to Russian 'синий'. For son: from Proto-Slavic '*synъ' (son). Different etymologies, same modern form.",
+    "cultural_note": "'Синьо небе' (blue sky) is in Bulgarian poetry and songs. The sea is sometimes described as 'синьо' (blue). 'Сини очи' (blue eyes) are less common in Bulgaria than in Northern Europe, making them notable. 'Син като небето' (blue as the sky) is a common comparison.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Небето е синьо.",
+        "de": "Der Himmel ist blau.",
+        "context": "Natural description"
+      },
+      {
+        "bg": "Имам синя рокля.",
+        "de": "Ich habe ein blaues Kleid.",
+        "context": "Describing clothing"
+      },
+      {
+        "bg": "Той има сини очи.",
+        "de": "Er hat blaue Augen.",
+        "context": "Physical description"
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: си́н [sin]. Forms: син/синя/синьо/сини. Note neuter is 'синьо' with 'ь' (soft sign).",
+    "linguistic_note_bg_to_de": "Син се произнася [sin] с ударение на единствената сричка. Форми: син (м.р.), синя (ж.р.), синьо (ср.р.), сини (мн.ч.). Внимание: средният род е 'синьо' с 'ь'.",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: си́н [sin]. Formen: син (m), синя (f), синьо (n - mit ь!), сини (pl)."
+  },
+  {
+    "id": "a1_color_005",
+    "word": "Зелен",
+    "translation": "grün",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color green. Basic color adjective: зелен (m), зелена (f), зелено (n), зелени (pl). Related to vegetables ('зеленчук' = green things).",
+    "notes_bg_to_de": "В немски 'grün' остава непроменен в предикатна позиция. В български 'зелен' се променя: зелен чай (m), зелена салата (f), зелено поле (n), зелени зеленчуци (pl). От 'зелен' идва 'зеленчук' (зеленчуци).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Зелен' dekliniert: зелен (m), зелена (f), зелено (n), зелени (pl). Von diesem Wort kommt 'зеленчук' (Gemüse - wörtlich 'grüne Dinge').",
+    "etymology": "From Proto-Slavic '*zelenъ' (green), related to Russian 'зелёный' and the root '*zel-' (green, to grow). Connected to spring, growth, and fresh plants.",
+    "cultural_note": "Green is associated with nature and freshness in Bulgarian culture. 'Зелен чай' (green tea) has become popular. 'Зелена салата' (lettuce, literally 'green salad') is a staple. The expression 'зелен като краставица' (green as a cucumber) means inexperienced or naive.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Обичам зелен чай.",
+        "de": "Ich mag grünen Tee.",
+        "context": "Preference"
+      },
+      {
+        "bg": "Полето е зелено.",
+        "de": "Das Feld ist grün.",
+        "context": "Natural description"
+      },
+      {
+        "bg": "Купи зелена салата.",
+        "de": "Kauf grünen Salat (Kopfsalat).",
+        "context": "Shopping"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: зе́лен [ˈzɛlɛn]. Forms: зелен/зелена/зелено/зелени.",
+    "linguistic_note_bg_to_de": "Зелен се произнася [ˈzɛlɛn] с ударение на 'зе'. Форми: зелен (м.р.), зелена (ж.р.), зелено (ср.р.), зелени (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: зе́лен [ˈzɛlɛn]. Formen: зелен (m), зелена (f), зелено (n), зелени (pl)."
+  },
+  {
+    "id": "a1_color_006",
+    "word": "Жълт",
+    "translation": "gelb",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color yellow. Forms: жълт (m), жълта (f), жълто (n), жълти (pl). Common in describing objects and natural elements.",
+    "notes_bg_to_de": "В немски 'gelb' остава непроменен в предикатна позиция. В български 'жълт' се променя: жълт лимон (m), жълта банан (f - в диалектите може да е ж.р.), жълто слънце (n), жълти цветя (pl).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Жълт' dekliniert: жълт (m), жълта (f), жълто (n), жълти (pl). Beachten Sie die spezielle Aussprache von 'жълт' mit 'ъ' als Schwa.",
+    "etymology": "From Proto-Slavic '*žьltъ' (yellow), related to Russian 'жёлтый' and Polish 'żółty'. The root may relate to gold and bile (both yellow).",
+    "cultural_note": "'Жълти павета' (yellow cobblestones/bricks) refers to Sofia's famous yellow paving stones - 'жълт павета' is iconic in Bulgarian cities. Yellow is associated with sunshine and warmth. 'Жълт като лимон' (yellow as a lemon) is a common comparison.",
+    "difficulty": 2,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Слънцето е жълто.",
+        "de": "Die Sonne ist gelb.",
+        "context": "Natural description"
+      },
+      {
+        "bg": "Имам жълта риза.",
+        "de": "Ich habe ein gelbes Hemd.",
+        "context": "Clothing"
+      },
+      {
+        "bg": "Жълтите цветя са красиви.",
+        "de": "Die gelben Blumen sind schön.",
+        "context": "Description"
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: жъ́лт [ʒɤlt]. The 'ъ' is schwa [ɤ], the 'ж' is [ʒ] like 's' in 'measure'. Forms: жълт/жълта/жълто/жълти.",
+    "linguistic_note_bg_to_de": "Жълт се произнася [ʒɤlt] с ударение на единствената сричка. Буквата 'ъ' е [ɤ]. Форми: жълт (м.р.), жълта (ж.р.), жълто (ср.р.), жълти (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: жъ́лт [ʒɤlt]. Das 'ж' ist wie 's' in 'Genie', das 'ъ' ist Schwa [ɤ]. Formen: жълт (m), жълта (f), жълто (n), жълти (pl)."
+  },
+  {
+    "id": "a1_color_007",
+    "word": "Оранжев",
+    "translation": "orange",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color orange. Loanword from French 'orange'. Forms: оранжев (m), оранжева (f), оранжево (n), оранжеви (pl).",
+    "notes_bg_to_de": "В немски 'orange' е неизменяемо прилагателно. В български 'оранжев' се променя: оранжев портокал (m), оранжева тиква (f), оранжево светло (n), оранжеви плодове (pl).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Оранжев' dekliniert: оранжев (m), оранжева (f), оранжево (n), оранжеви (pl). Im Deutschen ist 'orange' unveränderlich.",
+    "etymology": "From French 'orange' (the fruit and color), ultimately from Sanskrit 'naranga' via Persian and Arabic. Entered Bulgarian as a modern international loanword.",
+    "cultural_note": "Orange as a color term is relatively modern in Bulgarian. Traditionally, orange shades were described as 'червено-жълт' (red-yellow). The fruit 'портокал' (orange) can colloquially refer to the color as well.",
+    "difficulty": 2,
+    "frequency": 65,
+    "examples": [
+      {
+        "bg": "Оранжевият портокал е сочен.",
+        "de": "Die orange Orange ist saftig.",
+        "context": "Description"
+      },
+      {
+        "bg": "Тя носи оранжева рокля.",
+        "de": "Sie trägt ein oranges Kleid.",
+        "context": "Clothing"
+      },
+      {
+        "bg": "Залезът е оранжев.",
+        "de": "Der Sonnenuntergang ist orange.",
+        "context": "Natural phenomenon"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: оран́жев [ɔˈranʒɛf]. The final 'в' is devoiced to [f]. Forms: оранжев/оранжева/оранжево/оранжеви.",
+    "linguistic_note_bg_to_de": "Оранжев се произнася [ɔˈranʒɛf] с ударение на 'ран'. Крайното 'в' се оглушава на [f]. Форми: оранжев (м.р.), оранжева (ж.р.), оранжево (ср.р.), оранжеви (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: оран́жев [ɔˈranʒɛf]. Das finale 'в' wird als [f] ausgesprochen. Formen: оранжев (m), оранжева (f), оранжево (n), оранжеви (pl)."
+  },
+  {
+    "id": "a1_color_008",
+    "word": "Кафяв",
+    "translation": "braun",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color brown. Derived from 'кафе' (coffee). Forms: кафяв (m), кафява (f), кафяво (n), кафяви (pl). Common for describing hair, eyes, and objects.",
+    "notes_bg_to_de": "В немски 'braun' остава непроменен в предикатна позиция. В български 'кафяв' идва от 'кафе' (кафе) и се променя: кафяв панталон (m), кафява коса (f), кафяво куче (n), кафяви очи (pl).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Кафяв' kommt von 'кафе' (Kaffee). Dekliniert: кафяв (m), кафява (f), кафяво (n), кафяви (pl). Sehr gebräuchlich für Haare und Augen.",
+    "etymology": "From Bulgarian 'кафе' (coffee) + adjectival suffix '-яв'. 'Кафе' itself comes from Turkish 'kahve', ultimately from Arabic 'qahwa'. The color term arose from coffee's brown color.",
+    "cultural_note": "Brown is commonly used to describe eye and hair color in Bulgaria, where most people have 'кафяви очи' (brown eyes) and 'кафява коса' (brown hair). 'Кафяв захар' (brown sugar) is also a culinary term.",
+    "difficulty": 2,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Имам кафяви очи.",
+        "de": "Ich habe braune Augen.",
+        "context": "Physical description"
+      },
+      {
+        "bg": "Тя има кафява коса.",
+        "de": "Sie hat braune Haare.",
+        "context": "Physical description"
+      },
+      {
+        "bg": "Купи кафяв панталон.",
+        "de": "Kauf eine braune Hose.",
+        "context": "Shopping"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: кафя́в [kɐˈfjaf]. The final 'в' is devoiced to [f]. Forms: кафяв/кафява/кафяво/кафяви.",
+    "linguistic_note_bg_to_de": "Кафяв се произнася [kɐˈfjaf] с ударение на 'фя'. Крайното 'в' се оглушава на [f]. Форми: кафяв (м.р.), кафява (ж.р.), кафяво (ср.р.), кафяви (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: кафя́в [kɐˈfjaf]. Das finale 'в' wird als [f] ausgesprochen. Formen: кафяв (m), кафява (f), кафяво (n), кафяви (pl)."
+  },
+  {
+    "id": "a1_color_009",
+    "word": "Сив",
+    "translation": "grau",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color grey/gray. Forms: сив (m), сива (f), сиво (n), сиви (pl). Common for describing weather, objects, and hair.",
+    "notes_bg_to_de": "В немски 'grau' остава непроменен в предикатна позиция. В български 'сив' се променя: сив облак (m), сива мишка (f), сиво небе (n), сиви коси (pl - grey hairs).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сив' dekliniert: сив (m), сива (f), сиво (n), сиви (pl). 'Сиви коси' (graue Haare) ist sehr gebräuchlich.",
+    "etymology": "From Proto-Slavic '*sivъ' (grey, grey-blue), related to Russian 'сивый' (grey, especially of horses) and Ukrainian 'сивий'. May relate to the root for 'blue-grey' colors.",
+    "cultural_note": "'Сиво небе' (grey sky) is associated with melancholy in Bulgarian poetry. 'Сива зона' (grey zone/area) means ambiguous or unclear situation. 'Сив като мишка' (grey as a mouse) describes something dull or unremarkable.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "bg": "Небето е сиво днес.",
+        "de": "Der Himmel ist heute grau.",
+        "context": "Weather description"
+      },
+      {
+        "bg": "Имам сив костюм.",
+        "de": "Ich habe einen grauen Anzug.",
+        "context": "Clothing"
+      },
+      {
+        "bg": "Баща ми има сиви коси.",
+        "de": "Mein Vater hat graue Haare.",
+        "context": "Physical description"
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: си́в [sif]. The final 'в' is devoiced to [f]. Forms: сив/сива/сиво/сиви.",
+    "linguistic_note_bg_to_de": "Сив се произнася [sif] с ударение на единствената сричка. Крайното 'в' се оглушава на [f]. Форми: сив (м.р.), сива (ж.р.), сиво (ср.р.), сиви (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: си́в [sif]. Das finale 'в' wird als [f] ausgesprochen. Formen: сив (m), сива (f), сиво (n), сиви (pl)."
+  },
+  {
+    "id": "a1_color_010",
+    "word": "Розов",
+    "translation": "rosa, pink",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color pink/rose. Derived from 'роза' (rose). Forms: розов (m), розова (f), розово (n), розови (pl). Associated with femininity and flowers.",
+    "notes_bg_to_de": "В немски има 'rosa' (неизменяемо) и 'pink'. В български 'розов' идва от 'роза' (роза) и се променя: розов панталон (m), розова рокля (f), розово цвете (n), розови устни (pl).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Розов' kommt von 'роза' (Rose). Dekliniert: розов (m), розова (f), розово (n), розови (pl). Entspricht 'rosa' und 'pink' im Deutschen.",
+    "etymology": "From Bulgarian 'роза' (rose) + adjectival suffix '-ов'. 'Роза' comes from Latin 'rosa' via Old Church Slavonic. The color term developed from the flower's color.",
+    "cultural_note": "'Розовото масло' (rose oil) and 'Розовата долина' (Rose Valley) are famous in Bulgaria - the country is a major rose oil producer. Pink/rose is associated with the famous Bulgarian roses and femininity. 'Розов като роза' (pink as a rose) is a common expression.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "bg": "Тя носи розова рокля.",
+        "de": "Sie trägt ein rosa Kleid.",
+        "context": "Clothing"
+      },
+      {
+        "bg": "Розовите цветя са хубави.",
+        "de": "Die rosa Blumen sind schön.",
+        "context": "Description"
+      },
+      {
+        "bg": "Небето е розово на залез.",
+        "de": "Der Himmel ist rosa bei Sonnenuntergang.",
+        "context": "Natural phenomenon"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: ро́зов [ˈrɔzɔf]. The final 'в' is devoiced to [f]. Forms: розов/розова/розово/розови.",
+    "linguistic_note_bg_to_de": "Розов се произнася [ˈrɔzɔf] с ударение на 'ро'. Крайното 'в' се оглушава на [f]. Форми: розов (м.р.), розова (ж.р.), розово (ср.р.), розови (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: ро́зов [ˈrɔzɔf]. Das finale 'в' wird als [f] ausgesprochen. Formen: розов (m), розова (f), розово (n), розови (pl)."
+  },
+  {
+    "id": "a1_adj_008",
+    "word": "Голям",
+    "translation": "groß",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Big, large, great. Basic size adjective. Forms: голям (m), голяма (f), голямо (n), големи (pl). Very common in everyday descriptions.",
+    "notes_bg_to_de": "В немски 'groß' остава непроменен в предикатна позиция. В български 'голям' се променя: голям град (m), голяма къща (f), голямо дърво (n), големи хора (pl - важни хора, не само по размер).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Голям' dekliniert: голям (m), голяма (f), голямо (n), големи (pl - Achtung: nicht *'големи' sondern 'големи'!). Kann 'groß' (Größe) oder 'groß' (bedeutend) bedeuten.",
+    "etymology": "From Proto-Slavic '*golěmъ' (large, naked, bare), related to the root for 'bare/exposed'. The size meaning developed from 'exposed/prominent'. Unique to South Slavic languages - compare Russian 'большой' (different root).",
+    "cultural_note": "'Голям' can mean physically large or figuratively great/important. 'Голям човек' (great person) means someone important or admirable. 'Голяма сряда' and 'Голям петък' are religious holidays (Great Wednesday, Good Friday).",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "София е голям град.",
+        "de": "Sofia ist eine große Stadt.",
+        "context": "Describing size"
+      },
+      {
+        "bg": "Имам голяма къща.",
+        "de": "Ich habe ein großes Haus.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Това е голямо дърво.",
+        "de": "Das ist ein großer Baum.",
+        "context": "Description"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: голя́м [ɡɔˈljam]. Plural form 'големи' [ɡɔˈlɛmi] changes the vowel pattern - note the 'е' instead of 'я'.",
+    "linguistic_note_bg_to_de": "Голям се произнася [ɡɔˈljam] с ударение на 'лям'. Множественото число е 'големи' [ɡɔˈlɛmi] с промяна на гласната от 'я' на 'е'.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: голя́м [ɡɔˈljam]. Wichtig: Plural ist 'големи' [ɡɔˈlɛmi] mit Vokalwechsel von 'я' zu 'е'."
+  },
+  {
+    "id": "a1_adj_009",
+    "word": "Малък",
+    "translation": "klein",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Small, little. Basic size adjective. Forms: малък (m), малка (f), малко (n), малки (pl). Opposite of 'голям'. Very frequent in everyday speech.",
+    "notes_bg_to_de": "В немски 'klein' остава непроменен в предикатна позиция. В български 'малък' се променя: малък град (m), малка къща (f), малко дете (n), малки хора (pl). 'Малко' (н.р.) също означава 'малко' (a little, few) като наречие.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Малък' dekliniert: малък (m), малка (f), малко (n), малки (pl). Achtung: 'малко' (neuter) ist auch ein Adverb für 'ein wenig/wenige'.",
+    "etymology": "From Proto-Slavic '*malъ' (small), related to Russian 'малый' and Latin 'malus' (bad - possibly related). The root '*mal-' means small, little, young.",
+    "cultural_note": "'Малък' is used affectionately for children and young animals. 'Малки деца' (small children) is very common. The diminutive suffix '-че' can be added to nouns to express smallness: 'котенце' (little cat from 'котка').",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Имам малко куче.",
+        "de": "Ich habe einen kleinen Hund.",
+        "context": "Pet description"
+      },
+      {
+        "bg": "Това е малък град.",
+        "de": "Das ist eine kleine Stadt.",
+        "context": "Location description"
+      },
+      {
+        "bg": "Детето е много малко.",
+        "de": "Das Kind ist sehr klein.",
+        "context": "Age/size description"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: малъ́к [mɐˈlɤk]. The 'ъ' is schwa [ɤ]. Forms: малък/малка/малко/малки. Note 'малко' is both adjective (neuter) and adverb.",
+    "linguistic_note_bg_to_de": "Малък се произнася [mɐˈlɤk] с ударение на 'лък'. Буквата 'ъ' е [ɤ]. Форми: малък (м.р.), малка (ж.р.), малко (ср.р./наречие), малки (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: малъ́к [mɐˈlɤk]. Das 'ъ' ist Schwa [ɤ]. Formen: малък (m), малка (f), малко (n/Adverb), малки (pl)."
+  },
+  {
+    "id": "a1_adj_010",
+    "word": "Висок",
+    "translation": "hoch, groß (von Personen)",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Tall, high. Used for height of people, buildings, mountains. Forms: висок (m), висока (f), високо (n), високи (pl). Opposite of 'нисък'.",
+    "notes_bg_to_de": "В немски 'hoch' за височина на сгради/планини, 'groß' за хора. В български 'висок' се използва и за двете: висок човек (großer Mensch), висока планина (hoher Berg).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Висок' entspricht sowohl 'hoch' (für Objekte) als auch 'groß' (für Personen bezüglich Körpergröße). Keine Unterscheidung wie im Deutschen.",
+    "etymology": "From Proto-Slavic '*vysokъ' (high), related to Russian 'высокий' and the root '*vysъ' (height). Related to 'up' and 'elevated'.",
+    "cultural_note": "Height is often commented on in Bulgarian culture. 'Висок човек' (tall person) is a common neutral description. Mountain heights are frequently mentioned - Bulgaria has many high mountains (високи планини).",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Той е много висок.",
+        "de": "Er ist sehr groß (von der Körpergröße).",
+        "context": "Person description"
+      },
+      {
+        "bg": "Това е висока сграда.",
+        "de": "Das ist ein hohes Gebäude.",
+        "context": "Building description"
+      },
+      {
+        "bg": "Рила е висока планина.",
+        "de": "Rila ist ein hohes Gebirge.",
+        "context": "Geography"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: висо́к [viˈsɔk]. Forms: висок/висока/високо/високи.",
+    "linguistic_note_bg_to_de": "Висок се произнася [viˈsɔk] с ударение на 'со'. Форми: висок (м.р.), висока (ж.р.), високо (ср.р.), високи (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: висо́к [viˈsɔk]. Formen: висок (m), висока (f), високо (n), високи (pl)."
+  },
+  {
+    "id": "a1_adj_011",
+    "word": "Нисък",
+    "translation": "niedrig, klein (von Personen)",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Low, short (height). Used for low height of people, buildings, etc. Forms: нисък (m), ниска (f), ниско (n), ниски (pl). Opposite of 'висок'.",
+    "notes_bg_to_de": "В немски 'niedrig' за ниски обекти, 'klein' за хора. В български 'нисък' се използва за хора (низък човек) и обекти (ниска сграда). За къси вещи (дължина) се използва 'къс', не 'нисък'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Нисък' = 'niedrig' (Höhe) oder 'klein' (für Personen). Nicht verwechseln mit 'къс' (kurz - für Länge).",
+    "etymology": "From Proto-Slavic '*niskъ' (low), related to Russian 'низкий' and the root '*nizъ' (down, lower). Related to 'below' and 'under'.",
+    "cultural_note": "Commenting on someone being 'нисък' (short) can be sensitive in Bulgarian culture, just as in many cultures. It's more polite to use indirect descriptions or avoid mentioning height unless relevant.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Тя е ниска.",
+        "de": "Sie ist klein (von der Körpergröße).",
+        "context": "Person description"
+      },
+      {
+        "bg": "Масата е много ниска.",
+        "de": "Der Tisch ist sehr niedrig.",
+        "context": "Furniture description"
+      },
+      {
+        "bg": "Това е ниска сграда.",
+        "de": "Das ist ein niedriges Gebäude.",
+        "context": "Building description"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: нисъ́к [niˈsɤk]. The 'ъ' is schwa [ɤ]. Forms: нисък/ниска/ниско/ниски.",
+    "linguistic_note_bg_to_de": "Нисък се произнася [niˈsɤk] с ударение на 'сък'. Буквата 'ъ' е [ɤ]. Форми: нисък (м.р.), ниска (ж.р.), ниско (ср.р.), ниски (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: нисъ́к [niˈsɤk]. Das 'ъ' ist Schwa [ɤ]. Formen: нисък (m), ниска (f), ниско (n), ниски (pl)."
+  },
+  {
+    "id": "a1_adj_012",
+    "word": "Дълъг",
+    "translation": "lang",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Long (length, duration). Forms: дълъг (m), дълга (f), дълго (n), дълги (pl). Used for physical length and time duration. Opposite of 'къс'.",
+    "notes_bg_to_de": "В немски 'lang' се използва за дължина и продължителност. Също в български 'дълъг': дълъг път (langer Weg), дълго време (lange Zeit), дълга коса (langes Haar).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Дълъг' = 'lang' (sowohl räumlich als auch zeitlich). Beachten Sie die beiden 'ъ' im Wort - typisch bulgarisches Merkmal.",
+    "etymology": "From Proto-Slavic '*dьlgъ' (long), related to Russian 'долгий' and the root meaning 'long, stretched'. Also related to 'debt' (дълг) which is 'something long-lasting'.",
+    "cultural_note": "'Дълга коса' (long hair) is traditionally associated with femininity in Bulgarian culture. 'Дълъг път' (long road) appears often in Bulgarian songs and idioms about life's journey.",
+    "difficulty": 2,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Тя има дълга коса.",
+        "de": "Sie hat lange Haare.",
+        "context": "Physical description"
+      },
+      {
+        "bg": "Това е дълъг път.",
+        "de": "Das ist ein langer Weg.",
+        "context": "Distance"
+      },
+      {
+        "bg": "Филмът е много дълъг.",
+        "de": "Der Film ist sehr lang.",
+        "context": "Duration"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: дълъ́г [dɤˈlɤk]. Both 'ъ' are schwa [ɤ]. Forms: дълъг/дълга/дълго/дълги.",
+    "linguistic_note_bg_to_de": "Дълъг се произнася [dɤˈlɤk] с ударение на втората сричка. И двете 'ъ' са [ɤ]. Форми: дълъг (м.р.), дълга (ж.р.), дълго (ср.р.), дълги (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: дълъ́г [dɤˈlɤk]. Beide 'ъ' sind Schwa [ɤ]. Formen: дълъг (m), дълга (f), дълго (n), дълги (pl)."
+  },
+  {
+    "id": "a1_adj_013",
+    "word": "Къс",
+    "translation": "kurz",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Short (length, duration). Forms: къс (m), къса (f), късо (n), къси (pl). Used for physical shortness and brief time. Opposite of 'дълъг'.",
+    "notes_bg_to_de": "В немски 'kurz' се използва за дължина и продължителност. Също в български 'къс': къс панталон (kurze Hose), къса коса (kurzes Haar), късо време (kurze Zeit).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Къс' = 'kurz' (räumlich und zeitlich). Nicht verwechseln mit 'нисък' (niedrig - für Höhe). 'Къс' ist nur für Länge.",
+    "etymology": "From Proto-Slavic '*kъsъ' (short, cut), related to Bulgarian 'късам' (to cut/break). The root relates to cutting and shortness.",
+    "cultural_note": "'Къса коса' (short hair) was traditionally associated with masculinity, but modern Bulgaria has no strict gender associations. 'Да направим една къса пауза' (let's take a short break) is a common workplace phrase.",
+    "difficulty": 2,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Той има къса коса.",
+        "de": "Er hat kurze Haare.",
+        "context": "Physical description"
+      },
+      {
+        "bg": "Това е къс филм.",
+        "de": "Das ist ein kurzer Film.",
+        "context": "Duration"
+      },
+      {
+        "bg": "Нося къси панталони.",
+        "de": "Ich trage kurze Hosen.",
+        "context": "Clothing"
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: къ́с [kɤs]. The 'ъ' is schwa [ɤ]. Forms: къс/къса/късо/къси.",
+    "linguistic_note_bg_to_de": "Къс се произнася [kɤs] с ударение на единствената сричка. Буквата 'ъ' е [ɤ]. Форми: къс (м.р.), къса (ж.р.), късо (ср.р.), къси (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: къ́с [kɤs]. Das 'ъ' ist Schwa [ɤ]. Formen: къс (m), къса (f), късо (n), къси (pl)."
+  },
+  {
+    "id": "a1_adj_014",
+    "word": "Дебел",
+    "translation": "dick, fett",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Thick, fat. Used for thickness of objects and body weight. Forms: дебел (m), дебела (f), дебело (n), дебели (pl). Can be sensitive when describing people.",
+    "notes_bg_to_de": "В немски 'dick' може да е за дебелина на обекти или телесно тегло, 'fett' по-директно за наднормено тегло. В български 'дебел' се използва и за двете, но за хора може да звучи груб о.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Дебел' = 'dick' (für Objekte und Menschen). Wie 'dick' im Deutschen kann es bei Personenbeschreibungen unhöflich sein. Neutralere Alternative: 'едър' (korpulent).",
+    "etymology": "From Proto-Slavic '*debelъ' (thick, fat), related to Russian 'дебелый' (archaic) and the root meaning 'thick, stout'. Common in South Slavic languages.",
+    "cultural_note": "Calling someone 'дебел' can be offensive, especially in direct address. More polite alternatives include 'едър' (big/stout) or euphemisms. 'Дебела книга' (thick book) is neutral for objects.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "bg": "Това е дебела книга.",
+        "de": "Das ist ein dickes Buch.",
+        "context": "Object description"
+      },
+      {
+        "bg": "Дебелите стени са топли.",
+        "de": "Die dicken Wände sind warm.",
+        "context": "Architecture"
+      },
+      {
+        "bg": "Котката е станала дебела.",
+        "de": "Die Katze ist dick geworden.",
+        "context": "Animal description - less sensitive"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: де́бел [ˈdɛbɛl]. Forms: дебел/дебела/дебело/дебели.",
+    "linguistic_note_bg_to_de": "Дебел се произнася [ˈdɛbɛl] с ударение на 'де'. Форми: дебел (м.р.), дебела (ж.р.), дебело (ср.р.), дебели (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: де́бел [ˈdɛbɛl]. Formen: дебел (m), дебела (f), дебело (n), дебели (pl)."
+  },
+  {
+    "id": "a1_adj_015",
+    "word": "Тънък",
+    "translation": "dünn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Thin, slim. Used for thinness of objects and slimness of people/animals. Forms: тънък (m), тънка (f), тънко (n), тънки (pl). Opposite of 'дебел'.",
+    "notes_bg_to_de": "В немски 'dünn' за тънки обекти и слаби хора. В български 'тънък' също покрива и двете. За хора 'слаб' (schlank) е по-неутрална алтернатива.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Тънък' = 'dünn' (für Objekte und Personen). Für Menschen ist 'слаб' (schlank/dünn) oft eine neutralere Alternative. 'Тънък' kann negativ klingen (zu dünn).",
+    "etymology": "From Proto-Slavic '*tьnъkъ' (thin), related to Russian 'тонкий' and the root meaning 'stretched, thin, fine'. Related to delicacy and fineness.",
+    "cultural_note": "In Bulgarian culture, being 'too thin' (много тънък) can be seen as unhealthy. 'Тънка талия' (thin waist) is traditionally desirable. 'Тънка работа' (thin/delicate matter) is an idiom for a sensitive situation.",
+    "difficulty": 2,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е тънка книга.",
+        "de": "Das ist ein dünnes Buch.",
+        "context": "Object description"
+      },
+      {
+        "bg": "Тя има тънка талия.",
+        "de": "Sie hat eine schmale Taille.",
+        "context": "Physical description"
+      },
+      {
+        "bg": "Тънките стени не са топли.",
+        "de": "Die dünnen Wände sind nicht warm.",
+        "context": "Architecture problem"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: тънъ́к [tɤˈnɤk]. The 'ъ' is schwa [ɤ]. Forms: тънък/тънка/тънко/тънки.",
+    "linguistic_note_bg_to_de": "Тънък се произнася [tɤˈnɤk] с ударение на втората сричка. Буквата 'ъ' е [ɤ]. Форми: тънък (м.р.), тънка (ж.р.), тънко (ср.р.), тънки (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: тънъ́к [tɤˈnɤk]. Das 'ъ' ist Schwa [ɤ]. Formen: тънък (m), тънка (f), тънко (n), тънки (pl)."
+  },
+  {
+    "id": "a1_adj_016",
+    "word": "Хубав",
+    "translation": "schön, hübsch, nett",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Beautiful, nice, pretty, good. Very common positive adjective for appearance, weather, experiences. Forms: хубав (m), хубава (f), хубаво (n), хубави (pl). One of the most frequent positive adjectives.",
+    "notes_bg_to_de": "В немски има 'schön' (красив), 'hübsch' (хубав за хора), 'nett' (мил). Българското 'хубав' покрива всичките тези значения: хубав човек (netter Mensch), хубава къща (schönes Haus), хубаво време (schönes Wetter).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Хубав' ist sehr vielseitig: 'schön' (Aussehen), 'nett' (Persönlichkeit), 'gut' (Qualität). Eines der häufigsten positiven Adjektive im Bulgarischen.",
+    "etymology": "Possibly from Proto-Slavic '*xubavъ' or from Turkic influence during Ottoman period. Etymology debated. Some connect to 'hub-' root meaning 'good, beautiful'. Unique to Bulgarian among Slavic languages.",
+    "cultural_note": "'Хубаво!' (Nice!/Good!) is a very common exclamation. 'Хубав човек' (nice person) is high praise for character. 'Хубаво време' (nice weather) is a frequent conversation topic. Bulgarians use 'хубав' very liberally for positive descriptions.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Времето е хубаво днес.",
+        "de": "Das Wetter ist schön heute.",
+        "context": "Weather"
+      },
+      {
+        "bg": "Тя е много хубава.",
+        "de": "Sie ist sehr hübsch/schön.",
+        "context": "Appearance"
+      },
+      {
+        "bg": "Това е хубаво място.",
+        "de": "Das ist ein schöner Ort.",
+        "context": "Place description"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: ху́бав [ˈxubɐf]. The 'х' is [x] (like German 'ch' in 'Bach'). Final 'в' devoices to [f]. Forms: хубав/хубава/хубаво/хубави.",
+    "linguistic_note_bg_to_de": "Хубав се произнася [ˈxubɐf] с ударение на 'ху'. Буквата 'х' е [x]. Крайното 'в' се оглушава на [f]. Форми: хубав (м.р.), хубава (ж.р.), хубаво (ср.р.), хубави (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: ху́бав [ˈxubɐf]. Das 'х' ist wie deutsches 'ch' in 'Bach'. Finales 'в' wird [f]. Formen: хубав (m), хубава (f), хубаво (n), хубави (pl)."
+  },
+  {
+    "id": "a1_adj_017",
+    "word": "Грозен",
+    "translation": "hässlich",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Ugly, hideous. Negative adjective for appearance. Forms: грозен (m), грозна (f), грозно (n), грозни (pl). Less commonly used than 'хубав' - Bulgarians prefer positive descriptions or avoid comment.",
+    "notes_bg_to_de": "В немски 'hässlich' е пряк термин за грозно. В български 'грозен' се използва, но често хората предпочитат индиректни изрази: 'не е много хубав' (nicht sehr schön) вместо директно 'грозен'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Грозен' = 'hässlich'. Wie im Deutschen ist es unhöflich, dies direkt über Menschen zu sagen. Bulgaren verwenden oft indirekte Ausdrücke oder Vermeidungsstrategien.",
+    "etymology": "From Proto-Slavic '*groznъ' originally meaning 'terrible, frightening', related to 'гроза' (thunder, terror). The meaning shifted from 'frightening' to 'ugly' in Bulgarian. Related to Russian 'грозный' (terrible, formidable).",
+    "cultural_note": "Calling someone 'грозен' is very offensive. Even for objects, Bulgarians often prefer softer expressions. 'Грозно време' (ugly weather) is acceptable. The name 'Иван Грозни' (Ivan the Terrible) uses the archaic 'terrible' meaning.",
+    "difficulty": 1,
+    "frequency": 60,
+    "examples": [
+      {
+        "bg": "Времето е грозно днес.",
+        "de": "Das Wetter ist hässlich/schlecht heute.",
+        "context": "Weather (neutral usage)"
+      },
+      {
+        "bg": "Това е грозна сграда.",
+        "de": "Das ist ein hässliches Gebäude.",
+        "context": "Architecture criticism"
+      },
+      {
+        "bg": "Грозните думи боли.",
+        "de": "Hässliche Worte tun weh.",
+        "context": "Metaphorical usage"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: гро́зен [ˈɡrɔzɛn]. Forms: грозен/грозна/грозно/грозни.",
+    "linguistic_note_bg_to_de": "Грозен се произнася [ˈɡrɔzɛn] с ударение на 'гро'. Форми: грозен (м.р.), грозна (ж.р.), грозно (ср.р.), грозни (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: гро́зен [ˈɡrɔzɛn]. Formen: грозен (m), грозна (f), грозно (n), грозни (pl)."
+  },
+  {
+    "id": "a1_verb_038",
+    "word": "Гледам",
+    "translation": "schauen, sehen, ansehen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To watch, to look, to see. Very common verb for visual attention. Can mean casual looking or intentional watching. Present tense: гледам, гледаш, гледа, гледаме, гледате, гледат.",
+    "notes_bg_to_de": "В немски има 'sehen' (виждам - пасивно), 'schauen' (гледам - активно), 'ansehen' (гледам нещо). Българското 'гледам' покрива всичките: гледам телевизия (fernsehen), гледам към теб (schaue zu dir), гледам филм (sehe einen Film an).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Гледам' ist breiter als 'sehen' - es umfasst 'schauen', 'ansehen', 'fernsehen'. Für passives Sehen gibt es auch 'виждам'. 'Гледам' impliziert mehr Absicht.",
+    "etymology": "From Proto-Slavic '*gledati' (to look, watch), related to Russian 'глядеть' and the root '*gled-' (to look, observe). Related to attention and observation.",
+    "cultural_note": "'Гледам телевизия' (watching TV) is very common. 'Гледай!' (Look!/Watch out!) is used for warnings. 'Гледам да...' (I'm trying to...) is a common construction. Bulgarians use 'гледам' more broadly than English 'watch'.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Гледам филм.",
+        "de": "Ich schaue/sehe einen Film.",
+        "context": "Entertainment"
+      },
+      {
+        "bg": "Гледай къде вървиш!",
+        "de": "Schau, wohin du gehst! / Pass auf!",
+        "context": "Warning"
+      },
+      {
+        "bg": "Често гледам новините.",
+        "de": "Ich sehe oft die Nachrichten.",
+        "context": "Daily habit"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: гле́дам [ˈɡlɛdam]. Present tense conjugation: гледам/гледаш/гледа/гледаме/гледате/гледат. Regular -am verb.",
+    "linguistic_note_bg_to_de": "Гледам се произнася [ˈɡlɛdam] с ударение на 'гле'. Спрежение в сегашно време: аз гледам, ти гледаш, той/тя гледа, ние гледаме, вие гледате, те гледат.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: гле́дам [ˈɡlɛdam]. Konjugation Präsens: гледам/гледаш/гледа/гледаме/гледате/гледат. Regelmäßiges Verb auf -am."
+  },
+  {
+    "id": "a1_verb_039",
+    "word": "Отивам",
+    "translation": "gehen, fahren (weggehen)",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To go (away from speaker). Motion verb indicating movement away. Opposite of 'идвам' (to come). Used with direction: отивам на/в/до. Present: отивам, отиваш, отива, отиваме, отивате, отиват.",
+    "notes_bg_to_de": "В немски 'gehen' и 'fahren' зависи от превозното средство. В български 'отивам' се използва и за двете: отивам пеша (gehe), отивам с кола (fahre). 'Отивам' означава движение от говорещия.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Отивам' = 'gehen/fahren' (von einem weg). Unterschied: 'идвам' (kommen - zu einem hin), 'отивам' (gehen - von einem weg). Die Richtung relativ zum Sprecher ist wichtig.",
+    "etymology": "From Proto-Slavic '*otъ' (from, away) + '*iti' (to go). Literally 'to go away'. Related to Russian 'отходить' and the root indicating motion away.",
+    "cultural_note": "'Отивам на работа' (going to work) is very common. 'Отивам!' (I'm going!/I'm leaving!) is a standard goodbye. The distinction between 'отивам' and 'идвам' is important in Bulgarian - always consider the speaker's perspective.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Отивам на работа.",
+        "de": "Ich gehe zur Arbeit.",
+        "context": "Daily routine"
+      },
+      {
+        "bg": "Къде отиваш?",
+        "de": "Wohin gehst du?",
+        "context": "Question about destination"
+      },
+      {
+        "bg": "Отивам в магазина.",
+        "de": "Ich gehe in den Laden.",
+        "context": "Errand"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: оти́вам [ɔˈtivam]. Conjugation: отивам/отиваш/отива/отиваме/отивате/отиват. Regular -am verb.",
+    "linguistic_note_bg_to_de": "Отивам се произнася [ɔˈtivam] с ударение на 'ти'. Спрежение: аз отивам, ти отиваш, той/тя отива, ние отиваме, вие отивате, те отиват.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: оти́вам [ɔˈtivam]. Konjugation: отивам/отиваш/отива/отиваме/отивате/отиват."
+  },
+  {
+    "id": "a1_verb_040",
+    "word": "Идвам",
+    "translation": "kommen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To come (toward speaker). Motion verb indicating movement toward. Opposite of 'отивам' (to go). Used with source: идвам от. Present: идвам, идваш, идва, идваме, идвате, идват.",
+    "notes_bg_to_de": "В немски 'kommen' означава движение към говорещия. Също в български 'идвам': идвам при теб (komme zu dir), идвам от работа (komme von der Arbeit). Противоположно на 'отивам' (gehen).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Идвам' = 'kommen' (zu einem hin). Richtung zum Sprecher ist entscheidend. Vergleichen: 'идвам' (kommen) vs 'отивам' (gehen) - die Perspektive des Sprechers bestimmt die Wahl.",
+    "etymology": "From Proto-Slavic '*jьdti' (to go, come), related to Russian 'идти' and the root '*i-' (to go). Bulgarian developed the prefix meaning 'toward'.",
+    "cultural_note": "'Ела!' (Come!) is from the same root (imperative). 'Идвам!' (I'm coming!) is a common response when called. The perspective-based distinction between 'идвам' and 'отивам' is fundamental in Bulgarian directional thinking.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Идвам при теб.",
+        "de": "Ich komme zu dir.",
+        "context": "Movement toward"
+      },
+      {
+        "bg": "Откъде идваш?",
+        "de": "Woher kommst du?",
+        "context": "Origin question"
+      },
+      {
+        "bg": "Идвам от магазина.",
+        "de": "Ich komme vom Laden.",
+        "context": "Return"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: и́двам [ˈidvam]. Conjugation: идвам/идваш/идва/идваме/идвате/идват. Regular -am verb.",
+    "linguistic_note_bg_to_de": "Идвам се произнася [ˈidvam] с ударение на 'ид'. Спрежение: аз идвам, ти идваш, той/тя идва, ние идваме, вие идвате, те идват.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: и́двам [ˈidvam]. Konjugation: идвам/идваш/идва/идваме/идвате/идват."
+  },
+  {
+    "id": "a1_verb_041",
+    "word": "Ставам",
+    "translation": "aufstehen, werden",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To get up, to stand up, to become. Multifunctional verb. Can mean physical rising or state change. Present: ставам, ставаш, става, ставаме, ставате, стават.",
+    "notes_bg_to_de": "В немски 'aufstehen' (ставам от легло/стол) и 'werden' (ставам нещо = становя се нещо). В български 'ставам' покрива и двете: ставам в 7 часа (stehe um 7 auf), ставам учител (werde Lehrer).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ставам' hat zwei Hauptbedeutungen: 1) 'aufstehen' (physisch), 2) 'werden' (Zustandsänderung). Kontext macht die Bedeutung klar. Sehr gebräuchliches Verb.",
+    "etymology": "From Proto-Slavic '*stati' (to stand, become), related to Russian 'стать' and the root meaning 'to stand, to be placed'. The meanings of rising and becoming are related through the concept of assuming a position or state.",
+    "cultural_note": "'Ставам сутрин' (getting up in the morning) is part of daily routine discussions. 'Какво става?' (What's happening? / What's up?) is a very common greeting, literally 'What is becoming?'.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Ставам рано.",
+        "de": "Ich stehe früh auf.",
+        "context": "Morning routine"
+      },
+      {
+        "bg": "Става студено.",
+        "de": "Es wird kalt.",
+        "context": "Weather change"
+      },
+      {
+        "bg": "Какво става?",
+        "de": "Was ist los? / Was geht ab?",
+        "context": "Greeting/inquiry"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: става́м [stɐˈvam]. Conjugation: ставам/ставаш/става/ставаме/ставате/стават. Regular -am verb.",
+    "linguistic_note_bg_to_de": "Ставам се произнася [stɐˈvam] с ударение на 'вам'. Спрежение: аз ставам, ти ставаш, той/тя става, ние ставаме, вие ставате, те стават.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: става́м [stɐˈvam]. Konjugation: ставам/ставаш/става/ставаме/ставате/стават."
+  },
+  {
+    "id": "a1_verb_042",
+    "word": "Сядам",
+    "translation": "sich setzen, sich hinsetzen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To sit down. Action of taking a seated position. Different from 'седя' (to be sitting - state). Present: сядам, сядаш, сяда, сядаме, сядате, сядат.",
+    "notes_bg_to_de": "В немски 'sich setzen' (сядам - действие) vs 'sitzen' (седя - състояние). Българското 'сядам' е действие: сядам на стол (setze mich auf einen Stuhl). За състояние се използва 'седя'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сядам' = 'sich setzen' (Handlung). Nicht verwechseln mit 'седя' (sitzen - Zustand). 'Сядам' ist die Aktion des Platznehmen, 'седя' ist der Zustand des Sitzens.",
+    "etymology": "From Proto-Slavic '*sěd-' (to sit), with the suffix indicating action/process. Related to Russian 'садиться' and Bulgarian 'седя' (to be sitting). The root relates to sitting and settling.",
+    "cultural_note": "'Сядай!' (Sit down!) is a common invitation when hosting guests. Offering a seat is an important hospitality gesture in Bulgarian culture. 'Сядаме на масата' (we sit at the table) is part of mealtime culture.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Сядам на стола.",
+        "de": "Ich setze mich auf den Stuhl.",
+        "context": "Action"
+      },
+      {
+        "bg": "Сядай, моля!",
+        "de": "Setz dich, bitte!",
+        "context": "Invitation"
+      },
+      {
+        "bg": "Къде сядаш?",
+        "de": "Wo setzt du dich hin?",
+        "context": "Question"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: ся́дам [ˈsjadam]. Conjugation: сядам/сядаш/сяда/сядаме/сядате/сядат. Regular -am verb.",
+    "linguistic_note_bg_to_de": "Сядам се произнася [ˈsjadam] с ударение на 'ся'. Спрежение: аз сядам, ти сядаш, той/тя сяда, ние сядаме, вие сядате, те сядат.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: ся́дам [ˈsjadam]. Konjugation: сядам/сядаш/сяда/сядаме/сядате/сядат."
+  },
+  {
+    "id": "a1_verb_043",
+    "word": "Лягам",
+    "translation": "sich hinlegen, schlafen gehen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To lie down, to go to bed. Action of taking a lying position, often for sleep. Different from 'лежа' (to be lying). Present: лягам, лягаш, ляга, лягаме, лягате, лягат.",
+    "notes_bg_to_de": "В немски 'sich hinlegen' (лягам - действие) vs 'liegen' (лежа - състояние), 'schlafen gehen' (лягам да спя). Българското 'лягам' е действие: лягам в 10 часа (gehe um 10 ins Bett).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Лягам' = 'sich hinlegen' oder 'schlafen gehen' (Handlung). Nicht verwechseln mit 'лежа' (liegen - Zustand). 'Лягам' oft im Kontext von Schlafengehen.",
+    "etymology": "From Proto-Slavic '*legti' (to lie down), related to Russian 'лечь' and Bulgarian 'лежа' (to be lying). The root '*leg-' means to lay, to lie down.",
+    "cultural_note": "'Лягам късно' (going to bed late) and 'лягам рано' (going to bed early) are common in discussions about sleep habits. Bulgarians often discuss their sleep schedule. 'Лека нощ' (good night) is said before 'лягам'.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Лягам в 10 часа.",
+        "de": "Ich gehe um 10 Uhr ins Bett.",
+        "context": "Bedtime routine"
+      },
+      {
+        "bg": "Лягам да спя.",
+        "de": "Ich lege mich schlafen.",
+        "context": "Going to sleep"
+      },
+      {
+        "bg": "Кога лягаш обикновено?",
+        "de": "Wann gehst du normalerweise ins Bett?",
+        "context": "Question about habits"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: ля́гам [ˈljagam]. Conjugation: лягам/лягаш/ляга/лягаме/лягате/лягат. Regular -am verb.",
+    "linguistic_note_bg_to_de": "Лягам се произнася [ˈljagam] с ударение на 'ля'. Спрежение: аз лягам, ти лягаш, той/тя ляга, ние лягаме, вие лягате, те лягат.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: ля́гам [ˈljagam]. Konjugation: лягам/лягаш/ляга/лягаме/лягате/лягат."
+  },
+  {
+    "id": "a1_verb_044",
+    "word": "Нося",
+    "translation": "tragen, anhaben",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To carry, to wear. Used for carrying objects and wearing clothes. Present: нося, носиш, носи, носим, носите, носят. Note: 'нося' is 1st person, infinitive would be 'нося'.",
+    "notes_bg_to_de": "В немски 'tragen' за носене на вещи и дрехи, 'anhaben' само за дрехи. В български 'нося' покрива и двете: нося чанта (trage Tasche), нося риза (trage/habe... an ein Hemd).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Нося' = 'tragen' (Objekte und Kleidung) und 'anhaben' (Kleidung). Sehr gebräuchlich im Alltag. Keine Unterscheidung wie im Deutschen.",
+    "etymology": "From Proto-Slavic '*nositi' (to carry), related to Russian 'носить' and the root '*nos-' (to carry, bear). Related to bearing and carrying loads.",
+    "cultural_note": "'Нося' is used extensively for clothing descriptions. 'Какво носиш?' (What are you wearing?) is common when meeting. Bulgarians often discuss what they're wearing as part of social interaction.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Нося червена риза.",
+        "de": "Ich trage ein rotes Hemd.",
+        "context": "Clothing"
+      },
+      {
+        "bg": "Нося тежка чанта.",
+        "de": "Ich trage eine schwere Tasche.",
+        "context": "Carrying objects"
+      },
+      {
+        "bg": "Какво носиш днес?",
+        "de": "Was trägst du heute?",
+        "context": "Question about clothing"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: нося́ [nɔˈsja]. Conjugation: нося/носиш/носи/носим/носите/носят. Regular -я verb (2nd conjugation).",
+    "linguistic_note_bg_to_de": "Нося се произнася [nɔˈsja] с ударение на 'ся'. Спрежение: аз нося, ти носиш, той/тя носи, ние носим, вие носите, те носят.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: нося́ [nɔˈsja]. Konjugation: нося/носиш/носи/носим/носите/носят. Verben auf -я (2. Konjugation)."
+  },
+  {
+    "id": "a1_verb_045",
+    "word": "Купувам",
+    "translation": "kaufen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To buy. Common shopping and transaction verb. Present: купувам, купуваш, купува, купуваме, купувате, купуват. Often used with perfective 'купя' (to buy - completed action).",
+    "notes_bg_to_de": "В немски 'kaufen' е едно слово за купуване. В български 'купувам' (несвършен вид - процес) и 'купя' (свършен вид - завършено действие). 'Купувам хляб' (купувам редовно) vs 'Ще купя хляб' (ще го купя веднъж).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Купувам' = 'kaufen' (imperfektiv - Prozess/Gewohnheit). Es gibt auch 'купя' (perfektiv - einmalige vollendete Handlung). Aspektunterscheidung ist wichtig im Bulgarischen.",
+    "etymology": "From Proto-Slavic '*kupiti' (to buy, to trade), related to Russian 'покупать' and the root meaning 'to purchase, accumulate'. Related to commerce and acquisition.",
+    "cultural_note": "'Купувам от пазара' (buying from the market) is traditional in Bulgaria - fresh markets (пазари) are popular. 'Купувам онлайн' (buying online) has become common. Haggling is rare in modern Bulgarian shops.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Купувам хляб всеки ден.",
+        "de": "Ich kaufe jeden Tag Brot.",
+        "context": "Regular activity"
+      },
+      {
+        "bg": "Къде купуваш зеленчуци?",
+        "de": "Wo kaufst du Gemüse?",
+        "context": "Shopping question"
+      },
+      {
+        "bg": "Купувам подарък.",
+        "de": "Ich kaufe ein Geschenk.",
+        "context": "Gift shopping"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: купу́вам [kuˈpuvam]. Conjugation: купувам/купуваш/купува/купуваме/купувате/купуват. Regular -ам verb with -ув- infix.",
+    "linguistic_note_bg_to_de": "Купувам се произнася [kuˈpuvam] с ударение на 'пу'. Спрежение: аз купувам, ти купуваш, той/тя купува, ние купуваме, вие купувате, те купуват.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: купу́вам [kuˈpuvam]. Konjugation: купувам/купуваш/купува/купуваме/купувате/купуват."
+  },
+  {
+    "id": "a1_verb_046",
+    "word": "Взимам",
+    "translation": "nehmen, holen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To take, to get. General verb for taking or obtaining. Present: взимам, вземаш, взема, вземаме, вземате, взимат. Note conjugation changes. Perfective: 'взема' (to take - completed).",
+    "notes_bg_to_de": "В немски 'nehmen' (вземам) и 'holen' (взимам/отивам да взема). В български 'взимам' покрива и двете: взимам книгата (nehme das Buch), взимам от магазина (hole aus dem Laden).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Взимам' = 'nehmen' und 'holen'. Achtung: unregelmäßige Konjugation - 'взимам' (ich) aber 'вземаш' (du), 'взема' (er/sie/es). Eine der häufigsten Verben im Bulgarischen.",
+    "etymology": "From Proto-Slavic '*vьzęti' (to take), related to Russian 'взять' and the root meaning 'to seize, take'. The prefix 'vъz-' adds the sense of 'up' or 'toward oneself'.",
+    "cultural_note": "'Вземи!' (Take it!) is commonly used when offering something. 'Взимам решение' (taking a decision) is idiomatic. The verb is ubiquitous in daily speech for any kind of taking or obtaining action.",
+    "difficulty": 2,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Взимам книгата.",
+        "de": "Ich nehme das Buch.",
+        "context": "Taking object"
+      },
+      {
+        "bg": "Вземи си вода!",
+        "de": "Nimm dir Wasser!",
+        "context": "Offering"
+      },
+      {
+        "bg": "Откъде взимаш зеленчук?",
+        "de": "Woher holst du Gemüse?",
+        "context": "Source question"
+      }
+    ],
+    "linguistic_note": "Stress varies: взи́мам [ˈvzimam] but взе́маш [ˈvzɛmaʃ]. Conjugation: взимам/вземаш/взема/вземаме/вземате/взимат. Irregular conjugation pattern.",
+    "linguistic_note_bg_to_de": "Взимам се произнася [ˈvzimam] но спрежението е неправилно: аз взимам, ти вземаш, той/тя взема, ние вземаме, вие вземате, те взимат. Забележете промените.",
+    "linguistic_note_de_to_bg": "Betonung auf erstem Silbe: взи́мам [ˈvzimam]. Unregelmäßige Konjugation: взимам/вземаш/взема/вземаме/вземате/взимат. Wichtiges aber unregelmäßiges Verb."
+  },
+  {
+    "id": "a1_verb_047",
+    "word": "Давам",
+    "translation": "geben",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To give. Opposite of 'взимам' (to take). Present: давам, даваш, дава, даваме, давате, дават. Very common in exchanges and transactions. Perfective: 'дам' (to give - completed).",
+    "notes_bg_to_de": "В немски 'geben' означава предаване на нещо. Също в български 'давам': давам подарък (gebe Geschenk), давам пари (gebe Geld). Противоположно на 'взимам' (nehmen).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Давам' = 'geben'. Sehr häufig in alltäglichen Transaktionen. Perfektive Form 'дам' für vollendete Handlung: 'ще ти дам' (ich werde dir geben).",
+    "etymology": "From Proto-Slavic '*davati' (to give), related to Russian 'давать' and the root '*da-' (to give, grant). One of the most basic action verbs across Slavic languages.",
+    "cultural_note": "Gift-giving is important in Bulgarian culture. 'Давам подарък' (giving a gift) for birthdays, name days, and holidays. 'Давам дума' (giving one's word) means making a promise. 'Давам' appears in many idiomatic expressions.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Давам подарък.",
+        "de": "Ich gebe ein Geschenk.",
+        "context": "Gift-giving"
+      },
+      {
+        "bg": "Давай ми водата!",
+        "de": "Gib mir das Wasser!",
+        "context": "Request"
+      },
+      {
+        "bg": "Той дава много примери.",
+        "de": "Er gibt viele Beispiele.",
+        "context": "Teaching context"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: дава́м [dɐˈvam]. Conjugation: давам/даваш/дава/даваме/давате/дават. Regular -ам verb.",
+    "linguistic_note_bg_to_de": "Давам се произнася [dɐˈvam] с ударение на 'вам'. Спрежение: аз давам, ти даваш, той/тя дава, ние даваме, вие давате, те дават.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: дава́м [dɐˈvam]. Konjugation: давам/даваш/дава/даваме/давате/дават. Regelmäßiges Verb."
   }
 ]

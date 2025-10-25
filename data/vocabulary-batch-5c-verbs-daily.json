@@ -1,0 +1,362 @@
+[
+  {
+    "id": "a1_verb_038",
+    "word": "Гледам",
+    "translation": "schauen, sehen, ansehen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To watch, to look, to see. Very common verb for visual attention. Can mean casual looking or intentional watching. Present tense: гледам, гледаш, гледа, гледаме, гледате, гледат.",
+    "notes_bg_to_de": "В немски има 'sehen' (виждам - пасивно), 'schauen' (гледам - активно), 'ansehen' (гледам нещо). Българското 'гледам' покрива всичките: гледам телевизия (fernsehen), гледам към теб (schaue zu dir), гледам филм (sehe einen Film an).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Гледам' ist breiter als 'sehen' - es umfasst 'schauen', 'ansehen', 'fernsehen'. Für passives Sehen gibt es auch 'виждам'. 'Гледам' impliziert mehr Absicht.",
+    "etymology": "From Proto-Slavic '*gledati' (to look, watch), related to Russian 'глядеть' and the root '*gled-' (to look, observe). Related to attention and observation.",
+    "cultural_note": "'Гледам телевизия' (watching TV) is very common. 'Гледай!' (Look!/Watch out!) is used for warnings. 'Гледам да...' (I'm trying to...) is a common construction. Bulgarians use 'гледам' more broadly than English 'watch'.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Гледам филм.",
+        "de": "Ich schaue/sehe einen Film.",
+        "context": "Entertainment"
+      },
+      {
+        "bg": "Гледай къде вървиш!",
+        "de": "Schau, wohin du gehst! / Pass auf!",
+        "context": "Warning"
+      },
+      {
+        "bg": "Често гледам новините.",
+        "de": "Ich sehe oft die Nachrichten.",
+        "context": "Daily habit"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: гле́дам [ˈɡlɛdam]. Present tense conjugation: гледам/гледаш/гледа/гледаме/гледате/гледат. Regular -am verb.",
+    "linguistic_note_bg_to_de": "Гледам се произнася [ˈɡlɛdam] с ударение на 'гле'. Спрежение в сегашно време: аз гледам, ти гледаш, той/тя гледа, ние гледаме, вие гледате, те гледат.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: гле́дам [ˈɡlɛdam]. Konjugation Präsens: гледам/гледаш/гледа/гледаме/гледате/гледат. Regelmäßiges Verb auf -am."
+  },
+  {
+    "id": "a1_verb_039",
+    "word": "Отивам",
+    "translation": "gehen, fahren (weggehen)",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To go (away from speaker). Motion verb indicating movement away. Opposite of 'идвам' (to come). Used with direction: отивам на/в/до. Present: отивам, отиваш, отива, отиваме, отивате, отиват.",
+    "notes_bg_to_de": "В немски 'gehen' и 'fahren' зависи от превозното средство. В български 'отивам' се използва и за двете: отивам пеша (gehe), отивам с кола (fahre). 'Отивам' означава движение от говорещия.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Отивам' = 'gehen/fahren' (von einem weg). Unterschied: 'идвам' (kommen - zu einem hin), 'отивам' (gehen - von einem weg). Die Richtung relativ zum Sprecher ist wichtig.",
+    "etymology": "From Proto-Slavic '*otъ' (from, away) + '*iti' (to go). Literally 'to go away'. Related to Russian 'отходить' and the root indicating motion away.",
+    "cultural_note": "'Отивам на работа' (going to work) is very common. 'Отивам!' (I'm going!/I'm leaving!) is a standard goodbye. The distinction between 'отивам' and 'идвам' is important in Bulgarian - always consider the speaker's perspective.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Отивам на работа.",
+        "de": "Ich gehe zur Arbeit.",
+        "context": "Daily routine"
+      },
+      {
+        "bg": "Къде отиваш?",
+        "de": "Wohin gehst du?",
+        "context": "Question about destination"
+      },
+      {
+        "bg": "Отивам в магазина.",
+        "de": "Ich gehe in den Laden.",
+        "context": "Errand"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: оти́вам [ɔˈtivam]. Conjugation: отивам/отиваш/отива/отиваме/отивате/отиват. Regular -am verb.",
+    "linguistic_note_bg_to_de": "Отивам се произнася [ɔˈtivam] с ударение на 'ти'. Спрежение: аз отивам, ти отиваш, той/тя отива, ние отиваме, вие отивате, те отиват.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: оти́вам [ɔˈtivam]. Konjugation: отивам/отиваш/отива/отиваме/отивате/отиват."
+  },
+  {
+    "id": "a1_verb_040",
+    "word": "Идвам",
+    "translation": "kommen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To come (toward speaker). Motion verb indicating movement toward. Opposite of 'отивам' (to go). Used with source: идвам от. Present: идвам, идваш, идва, идваме, идвате, идват.",
+    "notes_bg_to_de": "В немски 'kommen' означава движение към говорещия. Също в български 'идвам': идвам при теб (komme zu dir), идвам от работа (komme von der Arbeit). Противоположно на 'отивам' (gehen).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Идвам' = 'kommen' (zu einem hin). Richtung zum Sprecher ist entscheidend. Vergleichen: 'идвам' (kommen) vs 'отивам' (gehen) - die Perspektive des Sprechers bestimmt die Wahl.",
+    "etymology": "From Proto-Slavic '*jьdti' (to go, come), related to Russian 'идти' and the root '*i-' (to go). Bulgarian developed the prefix meaning 'toward'.",
+    "cultural_note": "'Ела!' (Come!) is from the same root (imperative). 'Идвам!' (I'm coming!) is a common response when called. The perspective-based distinction between 'идвам' and 'отивам' is fundamental in Bulgarian directional thinking.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Идвам при теб.",
+        "de": "Ich komme zu dir.",
+        "context": "Movement toward"
+      },
+      {
+        "bg": "Откъде идваш?",
+        "de": "Woher kommst du?",
+        "context": "Origin question"
+      },
+      {
+        "bg": "Идвам от магазина.",
+        "de": "Ich komme vom Laden.",
+        "context": "Return"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: и́двам [ˈidvam]. Conjugation: идвам/идваш/идва/идваме/идвате/идват. Regular -am verb.",
+    "linguistic_note_bg_to_de": "Идвам се произнася [ˈidvam] с ударение на 'ид'. Спрежение: аз идвам, ти идваш, той/тя идва, ние идваме, вие идвате, те идват.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: и́двам [ˈidvam]. Konjugation: идвам/идваш/идва/идваме/идвате/идват."
+  },
+  {
+    "id": "a1_verb_041",
+    "word": "Ставам",
+    "translation": "aufstehen, werden",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To get up, to stand up, to become. Multifunctional verb. Can mean physical rising or state change. Present: ставам, ставаш, става, ставаме, ставате, стават.",
+    "notes_bg_to_de": "В немски 'aufstehen' (ставам от легло/стол) и 'werden' (ставам нещо = становя се нещо). В български 'ставам' покрива и двете: ставам в 7 часа (stehe um 7 auf), ставам учител (werde Lehrer).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ставам' hat zwei Hauptbedeutungen: 1) 'aufstehen' (physisch), 2) 'werden' (Zustandsänderung). Kontext macht die Bedeutung klar. Sehr gebräuchliches Verb.",
+    "etymology": "From Proto-Slavic '*stati' (to stand, become), related to Russian 'стать' and the root meaning 'to stand, to be placed'. The meanings of rising and becoming are related through the concept of assuming a position or state.",
+    "cultural_note": "'Ставам сутрин' (getting up in the morning) is part of daily routine discussions. 'Какво става?' (What's happening? / What's up?) is a very common greeting, literally 'What is becoming?'.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Ставам рано.",
+        "de": "Ich stehe früh auf.",
+        "context": "Morning routine"
+      },
+      {
+        "bg": "Става студено.",
+        "de": "Es wird kalt.",
+        "context": "Weather change"
+      },
+      {
+        "bg": "Какво става?",
+        "de": "Was ist los? / Was geht ab?",
+        "context": "Greeting/inquiry"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: става́м [stɐˈvam]. Conjugation: ставам/ставаш/става/ставаме/ставате/стават. Regular -am verb.",
+    "linguistic_note_bg_to_de": "Ставам се произнася [stɐˈvam] с ударение на 'вам'. Спрежение: аз ставам, ти ставаш, той/тя става, ние ставаме, вие ставате, те стават.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: става́м [stɐˈvam]. Konjugation: ставам/ставаш/става/ставаме/ставате/стават."
+  },
+  {
+    "id": "a1_verb_042",
+    "word": "Сядам",
+    "translation": "sich setzen, sich hinsetzen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To sit down. Action of taking a seated position. Different from 'седя' (to be sitting - state). Present: сядам, сядаш, сяда, сядаме, сядате, сядат.",
+    "notes_bg_to_de": "В немски 'sich setzen' (сядам - действие) vs 'sitzen' (седя - състояние). Българското 'сядам' е действие: сядам на стол (setze mich auf einen Stuhl). За състояние се използва 'седя'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сядам' = 'sich setzen' (Handlung). Nicht verwechseln mit 'седя' (sitzen - Zustand). 'Сядам' ist die Aktion des Platznehmen, 'седя' ist der Zustand des Sitzens.",
+    "etymology": "From Proto-Slavic '*sěd-' (to sit), with the suffix indicating action/process. Related to Russian 'садиться' and Bulgarian 'седя' (to be sitting). The root relates to sitting and settling.",
+    "cultural_note": "'Сядай!' (Sit down!) is a common invitation when hosting guests. Offering a seat is an important hospitality gesture in Bulgarian culture. 'Сядаме на масата' (we sit at the table) is part of mealtime culture.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Сядам на стола.",
+        "de": "Ich setze mich auf den Stuhl.",
+        "context": "Action"
+      },
+      {
+        "bg": "Сядай, моля!",
+        "de": "Setz dich, bitte!",
+        "context": "Invitation"
+      },
+      {
+        "bg": "Къде сядаш?",
+        "de": "Wo setzt du dich hin?",
+        "context": "Question"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: ся́дам [ˈsjadam]. Conjugation: сядам/сядаш/сяда/сядаме/сядате/сядат. Regular -am verb.",
+    "linguistic_note_bg_to_de": "Сядам се произнася [ˈsjadam] с ударение на 'ся'. Спрежение: аз сядам, ти сядаш, той/тя сяда, ние сядаме, вие сядате, те сядат.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: ся́дам [ˈsjadam]. Konjugation: сядам/сядаш/сяда/сядаме/сядате/сядат."
+  },
+  {
+    "id": "a1_verb_043",
+    "word": "Лягам",
+    "translation": "sich hinlegen, schlafen gehen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To lie down, to go to bed. Action of taking a lying position, often for sleep. Different from 'лежа' (to be lying). Present: лягам, лягаш, ляга, лягаме, лягате, лягат.",
+    "notes_bg_to_de": "В немски 'sich hinlegen' (лягам - действие) vs 'liegen' (лежа - състояние), 'schlafen gehen' (лягам да спя). Българското 'лягам' е действие: лягам в 10 часа (gehe um 10 ins Bett).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Лягам' = 'sich hinlegen' oder 'schlafen gehen' (Handlung). Nicht verwechseln mit 'лежа' (liegen - Zustand). 'Лягам' oft im Kontext von Schlafengehen.",
+    "etymology": "From Proto-Slavic '*legti' (to lie down), related to Russian 'лечь' and Bulgarian 'лежа' (to be lying). The root '*leg-' means to lay, to lie down.",
+    "cultural_note": "'Лягам късно' (going to bed late) and 'лягам рано' (going to bed early) are common in discussions about sleep habits. Bulgarians often discuss their sleep schedule. 'Лека нощ' (good night) is said before 'лягам'.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Лягам в 10 часа.",
+        "de": "Ich gehe um 10 Uhr ins Bett.",
+        "context": "Bedtime routine"
+      },
+      {
+        "bg": "Лягам да спя.",
+        "de": "Ich lege mich schlafen.",
+        "context": "Going to sleep"
+      },
+      {
+        "bg": "Кога лягаш обикновено?",
+        "de": "Wann gehst du normalerweise ins Bett?",
+        "context": "Question about habits"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: ля́гам [ˈljagam]. Conjugation: лягам/лягаш/ляга/лягаме/лягате/лягат. Regular -am verb.",
+    "linguistic_note_bg_to_de": "Лягам се произнася [ˈljagam] с ударение на 'ля'. Спрежение: аз лягам, ти лягаш, той/тя ляга, ние лягаме, вие лягате, те лягат.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: ля́гам [ˈljagam]. Konjugation: лягам/лягаш/ляга/лягаме/лягате/лягат."
+  },
+  {
+    "id": "a1_verb_044",
+    "word": "Нося",
+    "translation": "tragen, anhaben",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To carry, to wear. Used for carrying objects and wearing clothes. Present: нося, носиш, носи, носим, носите, носят. Note: 'нося' is 1st person, infinitive would be 'нося'.",
+    "notes_bg_to_de": "В немски 'tragen' за носене на вещи и дрехи, 'anhaben' само за дрехи. В български 'нося' покрива и двете: нося чанта (trage Tasche), нося риза (trage/habe... an ein Hemd).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Нося' = 'tragen' (Objekte und Kleidung) und 'anhaben' (Kleidung). Sehr gebräuchlich im Alltag. Keine Unterscheidung wie im Deutschen.",
+    "etymology": "From Proto-Slavic '*nositi' (to carry), related to Russian 'носить' and the root '*nos-' (to carry, bear). Related to bearing and carrying loads.",
+    "cultural_note": "'Нося' is used extensively for clothing descriptions. 'Какво носиш?' (What are you wearing?) is common when meeting. Bulgarians often discuss what they're wearing as part of social interaction.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Нося червена риза.",
+        "de": "Ich trage ein rotes Hemd.",
+        "context": "Clothing"
+      },
+      {
+        "bg": "Нося тежка чанта.",
+        "de": "Ich trage eine schwere Tasche.",
+        "context": "Carrying objects"
+      },
+      {
+        "bg": "Какво носиш днес?",
+        "de": "Was trägst du heute?",
+        "context": "Question about clothing"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: нося́ [nɔˈsja]. Conjugation: нося/носиш/носи/носим/носите/носят. Regular -я verb (2nd conjugation).",
+    "linguistic_note_bg_to_de": "Нося се произнася [nɔˈsja] с ударение на 'ся'. Спрежение: аз нося, ти носиш, той/тя носи, ние носим, вие носите, те носят.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: нося́ [nɔˈsja]. Konjugation: нося/носиш/носи/носим/носите/носят. Verben auf -я (2. Konjugation)."
+  },
+  {
+    "id": "a1_verb_045",
+    "word": "Купувам",
+    "translation": "kaufen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To buy. Common shopping and transaction verb. Present: купувам, купуваш, купува, купуваме, купувате, купуват. Often used with perfective 'купя' (to buy - completed action).",
+    "notes_bg_to_de": "В немски 'kaufen' е едно слово за купуване. В български 'купувам' (несвършен вид - процес) и 'купя' (свършен вид - завършено действие). 'Купувам хляб' (купувам редовно) vs 'Ще купя хляб' (ще го купя веднъж).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Купувам' = 'kaufen' (imperfektiv - Prozess/Gewohnheit). Es gibt auch 'купя' (perfektiv - einmalige vollendete Handlung). Aspektunterscheidung ist wichtig im Bulgarischen.",
+    "etymology": "From Proto-Slavic '*kupiti' (to buy, to trade), related to Russian 'покупать' and the root meaning 'to purchase, accumulate'. Related to commerce and acquisition.",
+    "cultural_note": "'Купувам от пазара' (buying from the market) is traditional in Bulgaria - fresh markets (пазари) are popular. 'Купувам онлайн' (buying online) has become common. Haggling is rare in modern Bulgarian shops.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Купувам хляб всеки ден.",
+        "de": "Ich kaufe jeden Tag Brot.",
+        "context": "Regular activity"
+      },
+      {
+        "bg": "Къде купуваш зеленчуци?",
+        "de": "Wo kaufst du Gemüse?",
+        "context": "Shopping question"
+      },
+      {
+        "bg": "Купувам подарък.",
+        "de": "Ich kaufe ein Geschenk.",
+        "context": "Gift shopping"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: купу́вам [kuˈpuvam]. Conjugation: купувам/купуваш/купува/купуваме/купувате/купуват. Regular -ам verb with -ув- infix.",
+    "linguistic_note_bg_to_de": "Купувам се произнася [kuˈpuvam] с ударение на 'пу'. Спрежение: аз купувам, ти купуваш, той/тя купува, ние купуваме, вие купувате, те купуват.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: купу́вам [kuˈpuvam]. Konjugation: купувам/купуваш/купува/купуваме/купувате/купуват."
+  },
+  {
+    "id": "a1_verb_046",
+    "word": "Взимам",
+    "translation": "nehmen, holen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To take, to get. General verb for taking or obtaining. Present: взимам, вземаш, взема, вземаме, вземате, взимат. Note conjugation changes. Perfective: 'взема' (to take - completed).",
+    "notes_bg_to_de": "В немски 'nehmen' (вземам) и 'holen' (взимам/отивам да взема). В български 'взимам' покрива и двете: взимам книгата (nehme das Buch), взимам от магазина (hole aus dem Laden).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Взимам' = 'nehmen' und 'holen'. Achtung: unregelmäßige Konjugation - 'взимам' (ich) aber 'вземаш' (du), 'взема' (er/sie/es). Eine der häufigsten Verben im Bulgarischen.",
+    "etymology": "From Proto-Slavic '*vьzęti' (to take), related to Russian 'взять' and the root meaning 'to seize, take'. The prefix 'vъz-' adds the sense of 'up' or 'toward oneself'.",
+    "cultural_note": "'Вземи!' (Take it!) is commonly used when offering something. 'Взимам решение' (taking a decision) is idiomatic. The verb is ubiquitous in daily speech for any kind of taking or obtaining action.",
+    "difficulty": 2,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Взимам книгата.",
+        "de": "Ich nehme das Buch.",
+        "context": "Taking object"
+      },
+      {
+        "bg": "Вземи си вода!",
+        "de": "Nimm dir Wasser!",
+        "context": "Offering"
+      },
+      {
+        "bg": "Откъде взимаш зеленчук?",
+        "de": "Woher holst du Gemüse?",
+        "context": "Source question"
+      }
+    ],
+    "linguistic_note": "Stress varies: взи́мам [ˈvzimam] but взе́маш [ˈvzɛmaʃ]. Conjugation: взимам/вземаш/взема/вземаме/вземате/взимат. Irregular conjugation pattern.",
+    "linguistic_note_bg_to_de": "Взимам се произнася [ˈvzimam] но спрежението е неправилно: аз взимам, ти вземаш, той/тя взема, ние вземаме, вие вземате, те взимат. Забележете промените.",
+    "linguistic_note_de_to_bg": "Betonung auf erstem Silbe: взи́мам [ˈvzimam]. Unregelmäßige Konjugation: взимам/вземаш/взема/вземаме/вземате/взимат. Wichtiges aber unregelmäßiges Verb."
+  },
+  {
+    "id": "a1_verb_047",
+    "word": "Давам",
+    "translation": "geben",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "To give. Opposite of 'взимам' (to take). Present: давам, даваш, дава, даваме, давате, дават. Very common in exchanges and transactions. Perfective: 'дам' (to give - completed).",
+    "notes_bg_to_de": "В немски 'geben' означава предаване на нещо. Също в български 'давам': давам подарък (gebe Geschenk), давам пари (gebe Geld). Противоположно на 'взимам' (nehmen).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Давам' = 'geben'. Sehr häufig in alltäglichen Transaktionen. Perfektive Form 'дам' für vollendete Handlung: 'ще ти дам' (ich werde dir geben).",
+    "etymology": "From Proto-Slavic '*davati' (to give), related to Russian 'давать' and the root '*da-' (to give, grant). One of the most basic action verbs across Slavic languages.",
+    "cultural_note": "Gift-giving is important in Bulgarian culture. 'Давам подарък' (giving a gift) for birthdays, name days, and holidays. 'Давам дума' (giving one's word) means making a promise. 'Давам' appears in many idiomatic expressions.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Давам подарък.",
+        "de": "Ich gebe ein Geschenk.",
+        "context": "Gift-giving"
+      },
+      {
+        "bg": "Давай ми водата!",
+        "de": "Gib mir das Wasser!",
+        "context": "Request"
+      },
+      {
+        "bg": "Той дава много примери.",
+        "de": "Er gibt viele Beispiele.",
+        "context": "Teaching context"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: дава́м [dɐˈvam]. Conjugation: давам/даваш/дава/даваме/давате/дават. Regular -ам verb.",
+    "linguistic_note_bg_to_de": "Давам се произнася [dɐˈvam] с ударение на 'вам'. Спрежение: аз давам, ти даваш, той/тя дава, ние даваме, вие давате, те дават.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: дава́м [dɐˈvam]. Konjugation: давам/даваш/дава/даваме/давате/дават. Regelmäßiges Verb."
+  }
+]
