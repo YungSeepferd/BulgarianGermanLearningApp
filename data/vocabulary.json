@@ -7028,5 +7028,1085 @@
     "linguistic_note": "Stress on second syllable: дава́м [dɐˈvam]. Conjugation: давам/даваш/дава/даваме/давате/дават. Regular -ам verb.",
     "linguistic_note_bg_to_de": "Давам се произнася [dɐˈvam] с ударение на 'вам'. Спрежение: аз давам, ти даваш, той/тя дава, ние даваме, вие давате, те дават.",
     "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: дава́м [dɐˈvam]. Konjugation: давам/даваш/дава/даваме/давате/дават. Regelmäßiges Verb."
+  },
+  {
+    "id": "a1_time_001",
+    "word": "Понеделник",
+    "translation": "Montag",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "Monday, first day of work week in Bulgaria. Days of week are masculine in Bulgarian. Used without article in most contexts.",
+    "notes_bg_to_de": "В немски седмицата започва с понеделник като работен ден. В български също: понеделник е първият работен ден. Дните от седмицата са мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Понеделник' = 'Montag'. Wochentage sind maskulin. Ohne Artikel verwendet: 'в понеделник' (am Montag, wörtlich: in Montag).",
+    "etymology": "From 'по' (after) + 'неделя' (Sunday), literally 'after Sunday'. The root shows Monday as the day following the week's end (Sunday/неделя).",
+    "cultural_note": "Work week starts Monday in Bulgaria. 'Понеделник сутрин' (Monday morning) is associated with returning to work. Bulgarians often say 'Лек понеделник!' (Easy Monday!) as a Monday greeting.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Днес е понеделник.",
+        "de": "Heute ist Montag.",
+        "context": "Stating day"
+      },
+      {
+        "bg": "В понеделник работя.",
+        "de": "Am Montag arbeite ich.",
+        "context": "Weekly schedule"
+      },
+      {
+        "bg": "Лек понеделник!",
+        "de": "Einen leichten Montag! (Grußformel)",
+        "context": "Monday greeting"
+      }
+    ],
+    "linguistic_note": "Stress on third syllable: понеде́лник [pɔnɛˈdɛlnik]. Masculine noun. Plural: понеделници (rarely used).",
+    "linguistic_note_bg_to_de": "Понеделник [pɔnɛˈdɛlnik], ударение на 'де'. Мъжки род. С предлог 'в': в понеделник (am Montag).",
+    "linguistic_note_de_to_bg": "Betonung auf dritter Silbe: понеде́лник [pɔnɛˈdɛlnik]. Maskulinum."
+  },
+  {
+    "id": "a1_time_002",
+    "word": "Вторник",
+    "translation": "Dienstag",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "Tuesday, second day of work week. From 'втори' (second). Masculine noun.",
+    "notes_bg_to_de": "Вторник идва от 'втори' (zweiter), тъй като е вторият работен ден след неделя.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Вторник' kommt von 'втори' (zweiter) - der zweite Tag nach Sonntag.",
+    "etymology": "From 'втори' (second) + noun suffix. Literally 'the second [day]'. Shows ordinal system for weekdays.",
+    "cultural_note": "No special cultural associations. Standard work day. Part of the pattern понеделник-вторник-сряда-четвъртък-петък for the work week.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Във вторник имам среща.",
+        "de": "Am Dienstag habe ich einen Termin.",
+        "context": "Appointment"
+      },
+      {
+        "bg": "Вторникът е труден ден.",
+        "de": "Der Dienstag ist ein schwerer Tag.",
+        "context": "With article"
+      },
+      {
+        "bg": "До вторник!",
+        "de": "Bis Dienstag!",
+        "context": "Farewell"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: вто́рник [ˈftɔrnik]. Masculine. Preposition: 'във вторник' (am Dienstag).",
+    "linguistic_note_bg_to_de": "Вторник [ˈftɔrnik], ударение на 'вто'. С предлог: във вторник.",
+    "linguistic_note_de_to_bg": "Betonung auf erster Silbe: вто́рник [ˈftɔrnik]."
+  },
+  {
+    "id": "a1_time_003",
+    "word": "Сряда",
+    "translation": "Mittwoch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "Wednesday, middle of work week. FEMININE noun (exception among weekdays). From 'среда' (middle).",
+    "notes_bg_to_de": "Сряда е женски род (различно от другите дни!). Идва от 'среда' (Mitte) - средата на седмицата.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сряда' ist FEMININ (Ausnahme!). Von 'среда' (Mitte) - Mitte der Woche.",
+    "etymology": "From 'среда' (middle, environment). Literally 'the middle [day]'. Feminine gender preserved from original noun.",
+    "cultural_note": "'Голяма сряда' (Great Wednesday) is part of Holy Week before Easter. Wednesday is midweek, often called 'средата на седмицата' (middle of the week).",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "В сряда не работя.",
+        "de": "Am Mittwoch arbeite ich nicht.",
+        "context": "Schedule"
+      },
+      {
+        "bg": "Срядата е средата на седмицата.",
+        "de": "Mittwoch ist die Mitte der Woche.",
+        "context": "With article"
+      },
+      {
+        "bg": "До сряда!",
+        "de": "Bis Mittwoch!",
+        "context": "Farewell"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: ся́да [ˈsrjada]. FEMININE (exception!). Preposition: 'в сряда'.",
+    "linguistic_note_bg_to_de": "Сряда [ˈsrjada], женски род! С предлог: в сряда.",
+    "linguistic_note_de_to_bg": "Betonung auf erster Silbe: ся́да [ˈsrjada]. FEMININ!"
+  },
+  {
+    "id": "a1_time_004",
+    "word": "Четвъртък",
+    "translation": "Donnerstag",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "Thursday, fourth day. From 'четвърти' (fourth). Masculine noun.",
+    "notes_bg_to_de": "Четвъртък идва от 'четвърти' (vierter) - четвъртият работен ден след неделя.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Четвъртък' kommt von 'четвърти' (vierter).",
+    "etymology": "From 'четвърти' (fourth) + noun suffix. The 'ъ' is characteristic of Bulgarian ordinal-derived nouns.",
+    "cultural_note": "'Голям четвъртък' (Maundy Thursday/Great Thursday) is part of Easter Holy Week. Otherwise a regular work day.",
+    "difficulty": 2,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "В четвъртък ще дойда.",
+        "de": "Am Donnerstag werde ich kommen.",
+        "context": "Future plan"
+      },
+      {
+        "bg": "Четвъртъкът е дълъг ден.",
+        "de": "Der Donnerstag ist ein langer Tag.",
+        "context": "With article"
+      },
+      {
+        "bg": "От четвъртък до неделя.",
+        "de": "Von Donnerstag bis Sonntag.",
+        "context": "Time span"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: четвъ́ртък [t͡ʃɛtˈvɤrtɤk]. Note two 'ъ' (schwa sounds). Masculine.",
+    "linguistic_note_bg_to_de": "Четвъртък [t͡ʃɛtˈvɤrtɤk], две 'ъ'. С предлог: в четвъртък.",
+    "linguistic_note_de_to_bg": "Betonung auf zweiter Silbe: четвъ́ртък [t͡ʃɛtˈvɤrtɤk]. Zwei Schwa-Laute."
+  },
+  {
+    "id": "a1_time_005",
+    "word": "Петък",
+    "translation": "Freitag",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "Friday, fifth day. Last work day. From 'пети' (fifth). Masculine noun.",
+    "notes_bg_to_de": "Петък е последният работен ден в България (като в Германия). 'Голям петък' (Karfreitag) е част от Великден.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Петък' = Freitag, letzter Arbeitstag. 'Голям петък' = Karfreitag.",
+    "etymology": "From 'пети' (fifth) + noun suffix. Shows the ordinal counting system from Sunday.",
+    "cultural_note": "'Голям петък' (Good Friday) is important religious day. Regular Friday is called 'Лек петък!' (Easy Friday!) as greeting. Weekend starts after Friday.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "В петък излизам.",
+        "de": "Am Freitag gehe ich aus.",
+        "context": "Weekend plan"
+      },
+      {
+        "bg": "Петъкът е любим ден.",
+        "de": "Freitag ist der Lieblingstag.",
+        "context": "Preference"
+      },
+      {
+        "bg": "Лек петък!",
+        "de": "Einen leichten Freitag!",
+        "context": "Greeting"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: петъ́к [pɛˈtɤk]. Masculine. Preposition: 'в петък'.",
+    "linguistic_note_bg_to_de": "Петък [pɛˈtɤk], ударение на 'тък'. С предлог: в петък.",
+    "linguistic_note_de_to_bg": "Betonung auf zweiter Silbe: петъ́к [pɛˈtɤk]."
+  },
+  {
+    "id": "a1_time_006",
+    "word": "Събота",
+    "translation": "Samstag, Sonnabend",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "Saturday, first weekend day. FEMININE noun. From Hebrew 'Sabbath' via Greek.",
+    "notes_bg_to_de": "Събота е женски род. Идва от еврейски 'шабат' (Sabbat). Първият почивен ден в България.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Събота' = Samstag. FEMININ. Erster freier Tag am Wochenende.",
+    "etymology": "From Hebrew 'shabbat' via Greek 'sabbaton'. Entered Slavic languages through Christianity. Feminine gender from Greek neuter.",
+    "cultural_note": "Saturday is shopping day in Bulgaria - markets and stores are busiest. 'Събота вечер' (Saturday evening) is prime social time. Religious: Holy Saturday before Easter.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "В събота не работя.",
+        "de": "Am Samstag arbeite ich nicht.",
+        "context": "Weekend"
+      },
+      {
+        "bg": "Съботата е за пазар.",
+        "de": "Samstag ist für Einkaufen.",
+        "context": "With article"
+      },
+      {
+        "bg": "Виждаме се в събота!",
+        "de": "Wir sehen uns am Samstag!",
+        "context": "Plans"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: съ́бота [ˈsɤbɔtɐ]. FEMININE. Preposition: 'в събота'.",
+    "linguistic_note_bg_to_de": "Събота [ˈsɤbɔtɐ], женски род! С предлог: в събота.",
+    "linguistic_note_de_to_bg": "Betonung auf erster Silbe: съ́бота [ˈsɤbɔtɐ]. FEMININ!"
+  },
+  {
+    "id": "a1_time_007",
+    "word": "Неделя",
+    "translation": "Sonntag",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "Sunday, last day of week/first of calendar week. FEMININE noun. From 'не' + 'дело' (no work).",
+    "notes_bg_to_de": "Неделя е женски род. Буквално 'не-дело' (kein Werk/keine Arbeit). Почивен ден и края на седмицата.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Неделя' = Sonntag. FEMININ. Wörtlich 'Nicht-Werk' (arbeitsfrei).",
+    "etymology": "From 'не' (not) + 'дѣло' (work, deed). Literally 'non-working day'. Unique Slavic etymology showing Sunday as day of rest.",
+    "cultural_note": "Traditional day of rest and church. Family day. 'Недел' (archaic) meant 'week', so Sunday was the week's defining day. Shops often closed or close early.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "В неделя почиваме.",
+        "de": "Am Sonntag ruhen wir.",
+        "context": "Rest day"
+      },
+      {
+        "bg": "Неделята е за семейството.",
+        "de": "Sonntag ist für die Familie.",
+        "context": "With article"
+      },
+      {
+        "bg": "Лека неделя!",
+        "de": "Einen schönen Sonntag!",
+        "context": "Greeting"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: неде́ля [nɛˈdɛlja]. FEMININE. Preposition: 'в неделя'.",
+    "linguistic_note_bg_to_de": "Неделя [nɛˈdɛlja], женски род! С предлог: в неделя.",
+    "linguistic_note_de_to_bg": "Betonung auf zweiter Silbe: неде́ля [nɛˈdɛlja]. FEMININ!"
+  },
+  {
+    "id": "a1_time_008",
+    "word": "Ден",
+    "translation": "der Tag",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "Day. Basic time unit. Masculine noun. Used for daylight and 24-hour period.",
+    "notes_bg_to_de": "'Ден' означава както светлата част (Tag/Tageslicht), така и 24-часовия период (24-Stunden-Tag).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ден' = 'Tag' (beide Bedeutungen: Tageslicht und 24-Stunden-Periode).",
+    "etymology": "From Proto-Slavic '*dьnь' (day), related to Russian 'день'. Root may connect to 'dawn' concepts.",
+    "cultural_note": "'Добър ден' (Good day) is standard greeting. 'Цял ден' (whole day) is common expression. 'Ден за ден' (day by day) means gradually.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Имам хубав ден.",
+        "de": "Ich habe einen schönen Tag.",
+        "context": "Description"
+      },
+      {
+        "bg": "Добър ден!",
+        "de": "Guten Tag!",
+        "context": "Greeting"
+      },
+      {
+        "bg": "Работя цял ден.",
+        "de": "Ich arbeite den ganzen Tag.",
+        "context": "Duration"
+      }
+    ],
+    "linguistic_note": "Single syllable: ден [dɛn]. Masculine. Plural: дни [dni] (irregular). Definite: денят.",
+    "linguistic_note_bg_to_de": "Ден [dɛn], мъжки род. Множествено: дни (неправилно!).",
+    "linguistic_note_de_to_bg": "Einsilbig: ден [dɛn]. Plural: дни (unregelmäßig!)."
+  },
+  {
+    "id": "a1_time_009",
+    "word": "Седмица",
+    "translation": "die Woche",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "Week, 7-day period. FEMININE noun. From 'седем' (seven).",
+    "notes_bg_to_de": "Седмица е период от 7 дни. Женски род. Идва от 'седем' (sieben).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Седмица' = 'Woche'. FEMININ. Von 'седем' (sieben) abgeleitet.",
+    "etymology": "From 'седем' (seven) + noun suffix '-ица'. Literally 'a seven [of days]'. Shows the seven-day unit.",
+    "cultural_note": "Work week is Monday-Friday. 'Цяла седмица' (whole week) is common. 'Седмица след седмица' (week after week) means continuously.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Работя цяла седмица.",
+        "de": "Ich arbeite die ganze Woche.",
+        "context": "Work schedule"
+      },
+      {
+        "bg": "След една седмица.",
+        "de": "Nach einer Woche. / In einer Woche.",
+        "context": "Future time"
+      },
+      {
+        "bg": "Тази седмица съм зает.",
+        "de": "Diese Woche bin ich beschäftigt.",
+        "context": "Current week"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: седми́ца [sɛdˈmit͡sɐ]. FEMININE. Plural: седмици.",
+    "linguistic_note_bg_to_de": "Седмица [sɛdˈmit͡sɐ], женски род. Множествено: седмици.",
+    "linguistic_note_de_to_bg": "Betonung auf zweiter Silbe: седми́ца [sɛdˈmit͡sɐ]. FEMININ."
+  },
+  {
+    "id": "a1_time_010",
+    "word": "Година",
+    "translation": "das Jahr",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "Year, 12-month period. FEMININE noun. Basic time unit for age, calendar.",
+    "notes_bg_to_de": "Година означава 12-месечен период и се използва за възраст: 'Колко години си?' (Wie alt bist du? - wörtlich: Wie viele Jahre bist du?).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Година' = 'Jahr'. FEMININ. Für Alter: 'години' (Jahre): 'Колко години имаш?' (Wie alt bist du?).",
+    "etymology": "From Proto-Slavic '*godina' (year, time, hour), related to Russian 'год' (year). Root may relate to 'appropriate time'.",
+    "cultural_note": "'Нова година' (New Year) is major holiday. Age expressed as 'години': '25 години' (25 years old). 'Година след година' (year after year) = continuously.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Тази година пътувам.",
+        "de": "Dieses Jahr reise ich.",
+        "context": "Current year"
+      },
+      {
+        "bg": "Имам 30 години.",
+        "de": "Ich bin 30 Jahre alt.",
+        "context": "Age"
+      },
+      {
+        "bg": "Честита Нова година!",
+        "de": "Frohes neues Jahr!",
+        "context": "Holiday greeting"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: годи́на [ɡɔˈdinɐ]. FEMININE. Plural: години.",
+    "linguistic_note_bg_to_de": "Година [ɡɔˈdinɐ], женски род. Множествено: години.",
+    "linguistic_note_de_to_bg": "Betonung auf zweiter Silbe: годи́на [ɡɔˈdinɐ]. FEMININ."
+  },
+  {
+    "id": "a1_month_001",
+    "word": "Януари",
+    "translation": "Januar",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "January, first month. Months are masculine in Bulgarian. Used with 'в' preposition: 'в януари'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в януари (im Januar).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Януари' = 'Januar'. Maskulin. Mit Präposition 'в': в януари.",
+    "etymology": "From Latin Ianuarius (Janus, Roman god of beginnings). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Bulgaria celebrates many holidays and name days throughout януари.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в януари.",
+        "de": "Ich bin im Januar geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В януари ще пътувам.",
+        "de": "Im Januar werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Януариът е хубав месец.",
+        "de": "Der Januar ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в януари (im Januar).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в януари.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в януари (im Januar)."
+  },
+  {
+    "id": "a1_month_002",
+    "word": "Февруари",
+    "translation": "Februar",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "February, second month. Months are masculine in Bulgarian. Used with 'в' preposition: 'в февруари'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в февруари (im Februar).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Февруари' = 'Februar'. Maskulin. Mit Präposition 'в': в февруари.",
+    "etymology": "From Latin Februarius (purification month). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Standard calendar month in Bulgaria.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в февруари.",
+        "de": "Ich bin im Februar geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В февруари ще пътувам.",
+        "de": "Im Februar werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Февруариът е хубав месец.",
+        "de": "Der Februar ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в февруари (im Februar).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в февруари.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в февруари (im Februar)."
+  },
+  {
+    "id": "a1_month_003",
+    "word": "Март",
+    "translation": "März",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "March, third month. Spring begins. Months are masculine in Bulgarian. Used with 'в' preposition: 'в март'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в март (im März).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Март' = 'März'. Maskulin. Mit Präposition 'в': в март.",
+    "etymology": "From Latin Martius (Mars, god of war). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Bulgaria celebrates many holidays and name days throughout март.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в март.",
+        "de": "Ich bin im März geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В март ще пътувам.",
+        "de": "Im März werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Мартът е хубав месец.",
+        "de": "Der März ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в март (im März).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в март.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в март (im März)."
+  },
+  {
+    "id": "a1_month_004",
+    "word": "Април",
+    "translation": "April",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "April, fourth month. Spring month. Months are masculine in Bulgarian. Used with 'в' preposition: 'в април'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в април (im April).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Април' = 'April'. Maskulin. Mit Präposition 'в': в април.",
+    "etymology": "From Latin Aprilis (opening/budding). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Bulgaria celebrates many holidays and name days throughout април.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в април.",
+        "de": "Ich bin im April geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В април ще пътувам.",
+        "de": "Im April werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Априлът е хубав месец.",
+        "de": "Der April ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в април (im April).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в април.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в април (im April)."
+  },
+  {
+    "id": "a1_month_005",
+    "word": "Май",
+    "translation": "Mai",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "May, fifth month. Late spring. Months are masculine in Bulgarian. Used with 'в' preposition: 'в май'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в май (im Mai).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Май' = 'Mai'. Maskulin. Mit Präposition 'в': в май.",
+    "etymology": "From Latin Maius (Maia, goddess). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Bulgaria celebrates many holidays and name days throughout май.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в май.",
+        "de": "Ich bin im Mai geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В май ще пътувам.",
+        "de": "Im Mai werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Майът е хубав месец.",
+        "de": "Der Mai ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в май (im Mai).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в май.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в май (im Mai)."
+  },
+  {
+    "id": "a1_month_006",
+    "word": "Юни",
+    "translation": "Juni",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "June, sixth month. Summer begins. Months are masculine in Bulgarian. Used with 'в' preposition: 'в юни'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в юни (im Juni).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Юни' = 'Juni'. Maskulin. Mit Präposition 'в': в юни.",
+    "etymology": "From Latin Junius (Juno, goddess). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Standard calendar month in Bulgaria.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в юни.",
+        "de": "Ich bin im Juni geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В юни ще пътувам.",
+        "de": "Im Juni werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Юниът е хубав месец.",
+        "de": "Der Juni ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в юни (im Juni).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в юни.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в юни (im Juni)."
+  },
+  {
+    "id": "a1_month_007",
+    "word": "Юли",
+    "translation": "Juli",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "July, seventh month. Summer. Months are masculine in Bulgarian. Used with 'в' preposition: 'в юли'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в юли (im Juli).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Юли' = 'Juli'. Maskulin. Mit Präposition 'в': в юли.",
+    "etymology": "From Latin Julius (Julius Caesar). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Standard calendar month in Bulgaria.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в юли.",
+        "de": "Ich bin im Juli geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В юли ще пътувам.",
+        "de": "Im Juli werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Юлиът е хубав месец.",
+        "de": "Der Juli ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в юли (im Juli).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в юли.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в юли (im Juli)."
+  },
+  {
+    "id": "a1_month_008",
+    "word": "Август",
+    "translation": "August",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "August, eighth month. Summer. Months are masculine in Bulgarian. Used with 'в' preposition: 'в август'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в август (im August).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Август' = 'August'. Maskulin. Mit Präposition 'в': в август.",
+    "etymology": "From Latin Augustus (Emperor Augustus). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Standard calendar month in Bulgaria.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в август.",
+        "de": "Ich bin im August geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В август ще пътувам.",
+        "de": "Im August werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Августът е хубав месец.",
+        "de": "Der August ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в август (im August).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в август.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в август (im August)."
+  },
+  {
+    "id": "a1_month_009",
+    "word": "Септември",
+    "translation": "September",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "September, ninth month. Autumn begins. Months are masculine in Bulgarian. Used with 'в' preposition: 'в септември'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в септември (im September).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Септември' = 'September'. Maskulin. Mit Präposition 'в': в септември.",
+    "etymology": "From Latin September (seventh in Roman calendar). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Standard calendar month in Bulgaria.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в септември.",
+        "de": "Ich bin im September geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В септември ще пътувам.",
+        "de": "Im September werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Септемвриът е хубав месец.",
+        "de": "Der September ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в септември (im September).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в септември.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в септември (im September)."
+  },
+  {
+    "id": "a1_month_010",
+    "word": "Октомври",
+    "translation": "Oktober",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "October, tenth month. Autumn. Months are masculine in Bulgarian. Used with 'в' preposition: 'в октомври'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в октомври (im Oktober).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Октомври' = 'Oktober'. Maskulin. Mit Präposition 'в': в октомври.",
+    "etymology": "From Latin October (eighth in Roman calendar). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Standard calendar month in Bulgaria.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в октомври.",
+        "de": "Ich bin im Oktober geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В октомври ще пътувам.",
+        "de": "Im Oktober werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Октомвриът е хубав месец.",
+        "de": "Der Oktober ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в октомври (im Oktober).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в октомври.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в октомври (im Oktober)."
+  },
+  {
+    "id": "a1_month_011",
+    "word": "Ноември",
+    "translation": "November",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "November, eleventh month. Late autumn. Months are masculine in Bulgarian. Used with 'в' preposition: 'в ноември'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в ноември (im November).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ноември' = 'November'. Maskulin. Mit Präposition 'в': в ноември.",
+    "etymology": "From Latin November (ninth in Roman calendar). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Standard calendar month in Bulgaria.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в ноември.",
+        "de": "Ich bin im November geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В ноември ще пътувам.",
+        "de": "Im November werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Ноемвриът е хубав месец.",
+        "de": "Der November ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в ноември (im November).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в ноември.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в ноември (im November)."
+  },
+  {
+    "id": "a1_month_012",
+    "word": "Декември",
+    "translation": "Dezember",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "December, twelfth month. Winter begins. Months are masculine in Bulgarian. Used with 'в' preposition: 'в декември'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в декември (im Dezember).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Декември' = 'Dezember'. Maskulin. Mit Präposition 'в': в декември.",
+    "etymology": "From Latin December (tenth in Roman calendar). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Bulgaria celebrates many holidays and name days throughout декември.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в декември.",
+        "de": "Ich bin im Dezember geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В декември ще пътувам.",
+        "de": "Im Dezember werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Декемвриът е хубав месец.",
+        "de": "Der Dezember ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в декември (im Dezember).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в декември.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в декември (im Dezember)."
+  },
+  {
+    "id": "a1_house_001",
+    "word": "Къща",
+    "translation": "das Haus",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Haus",
+    "level": "A1",
+    "notes": "House, building for living. From Proto-Slavic '*kǫtja'. Feminine noun.",
+    "notes_bg_to_de": "В български 'къща' е женски род. Основна дума за дома.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Къща' = 'das Haus'. Femininum.",
+    "etymology": "Proto-Slavic '*kǫtja'. Feminine noun.",
+    "cultural_note": "Essential vocabulary for home and housing in Bulgarian culture.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Имам къща.",
+        "de": "Ich habe Haus.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Къщата е голяма.",
+        "de": "Das Haus ist groß.",
+        "context": "Description"
+      },
+      {
+        "bg": "В къщата.",
+        "de": "Im/In der Haus.",
+        "context": "Location"
+      }
+    ],
+    "linguistic_note": "женски род. Къща [къща].",
+    "linguistic_note_bg_to_de": "Къща е женски род.",
+    "linguistic_note_de_to_bg": "Къща = Femininum."
+  },
+  {
+    "id": "a1_house_002",
+    "word": "Дом",
+    "translation": "das Heim, das Zuhause",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Haus",
+    "level": "A1",
+    "notes": "Home (abstract concept). From Proto-Slavic '*domъ'. Masculine. More emotional than къща.",
+    "notes_bg_to_de": "В български 'дом' е мъжки род. Основна дума за дома.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Дом' = 'das Heim, das Zuhause'. Maskulinum.",
+    "etymology": "Proto-Slavic '*domъ'. Masculine. More emotional than къща.",
+    "cultural_note": "Essential vocabulary for home and housing in Bulgarian culture.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Имам дом.",
+        "de": "Ich habe Heim.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Домът е голям.",
+        "de": "Das Heim ist groß.",
+        "context": "Description"
+      },
+      {
+        "bg": "В дома.",
+        "de": "Im/In der Heim.",
+        "context": "Location"
+      }
+    ],
+    "linguistic_note": "мъжки род. Дом [дом].",
+    "linguistic_note_bg_to_de": "Дом е мъжки род.",
+    "linguistic_note_de_to_bg": "Дом = Maskulinum."
+  },
+  {
+    "id": "a1_house_003",
+    "word": "Стая",
+    "translation": "das Zimmer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Haus",
+    "level": "A1",
+    "notes": "Room. From Old Church Slavonic 'stati' (to stand/stay). Feminine noun.",
+    "notes_bg_to_de": "В български 'стая' е женски род. Основна дума за дома.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Стая' = 'das Zimmer'. Femininum.",
+    "etymology": "Old Church Slavonic 'stati' (to stand/stay). Feminine noun.",
+    "cultural_note": "Essential vocabulary for home and housing in Bulgarian culture.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Имам стая.",
+        "de": "Ich habe Zimmer.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Стаята е голяма.",
+        "de": "Das Zimmer ist groß.",
+        "context": "Description"
+      },
+      {
+        "bg": "В стаята.",
+        "de": "Im/In der Zimmer.",
+        "context": "Location"
+      }
+    ],
+    "linguistic_note": "женски род. Стая [стая].",
+    "linguistic_note_bg_to_de": "Стая е женски род.",
+    "linguistic_note_de_to_bg": "Стая = Femininum."
+  },
+  {
+    "id": "a1_house_004",
+    "word": "Кухня",
+    "translation": "die Küche",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Haus",
+    "level": "A1",
+    "notes": "Kitchen. From Latin 'coquina' via Slavic. Feminine noun. Center of Bulgarian home.",
+    "notes_bg_to_de": "В български 'кухня' е женски род. Основна дума за дома.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Кухня' = 'die Küche'. Femininum.",
+    "etymology": "Latin 'coquina' via Slavic. Feminine noun. Center of Bulgarian home.",
+    "cultural_note": "Essential vocabulary for home and housing in Bulgarian culture.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Имам кухня.",
+        "de": "Ich habe Küche.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Кухнята е голяма.",
+        "de": "Die Küche ist groß.",
+        "context": "Description"
+      },
+      {
+        "bg": "В кухнята.",
+        "de": "Im/In der Küche.",
+        "context": "Location"
+      }
+    ],
+    "linguistic_note": "женски род. Кухня [кухня].",
+    "linguistic_note_bg_to_de": "Кухня е женски род.",
+    "linguistic_note_de_to_bg": "Кухня = Femininum."
+  },
+  {
+    "id": "a1_house_005",
+    "word": "Баня",
+    "translation": "das Badezimmer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Haus",
+    "level": "A1",
+    "notes": "Bathroom. From Proto-Slavic '*banja' (bath). Feminine. Also means 'bath/bathing'.",
+    "notes_bg_to_de": "В български 'баня' е женски род. Основна дума за дома.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Баня' = 'das Badezimmer'. Femininum.",
+    "etymology": "Proto-Slavic '*banja' (bath). Feminine. Also means 'bath/bathing'.",
+    "cultural_note": "Essential vocabulary for home and housing in Bulgarian culture.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Имам баня.",
+        "de": "Ich habe Badezimmer.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Банята е голяма.",
+        "de": "Das Badezimmer ist groß.",
+        "context": "Description"
+      },
+      {
+        "bg": "В банята.",
+        "de": "Im/In der Badezimmer.",
+        "context": "Location"
+      }
+    ],
+    "linguistic_note": "женски род. Баня [баня].",
+    "linguistic_note_bg_to_de": "Баня е женски род.",
+    "linguistic_note_de_to_bg": "Баня = Femininum."
+  },
+  {
+    "id": "a1_house_006",
+    "word": "Спалня",
+    "translation": "das Schlafzimmer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Haus",
+    "level": "A1",
+    "notes": "Bedroom. From 'спя' (to sleep). Feminine noun.",
+    "notes_bg_to_de": "В български 'спалня' е женски род. Основна дума за дома.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Спалня' = 'das Schlafzimmer'. Femininum.",
+    "etymology": "'спя' (to sleep). Feminine noun.",
+    "cultural_note": "Essential vocabulary for home and housing in Bulgarian culture.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Имам спалня.",
+        "de": "Ich habe Schlafzimmer.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Спалнята е голяма.",
+        "de": "Das Schlafzimmer ist groß.",
+        "context": "Description"
+      },
+      {
+        "bg": "В спалнята.",
+        "de": "Im/In der Schlafzimmer.",
+        "context": "Location"
+      }
+    ],
+    "linguistic_note": "женски род. Спалня [спалня].",
+    "linguistic_note_bg_to_de": "Спалня е женски род.",
+    "linguistic_note_de_to_bg": "Спалня = Femininum."
+  },
+  {
+    "id": "a1_house_007",
+    "word": "Прозорец",
+    "translation": "das Fenster",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Haus",
+    "level": "A1",
+    "notes": "Window. From Proto-Slavic '*prozorъ' (to see through). Masculine noun.",
+    "notes_bg_to_de": "В български 'прозорец' е мъжки род. Основна дума за дома.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Прозорец' = 'das Fenster'. Maskulinum.",
+    "etymology": "Proto-Slavic '*prozorъ' (to see through). Masculine noun.",
+    "cultural_note": "Essential vocabulary for home and housing in Bulgarian culture.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам прозорец.",
+        "de": "Ich habe Fenster.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Прозорецът е голям.",
+        "de": "Das Fenster ist groß.",
+        "context": "Description"
+      },
+      {
+        "bg": "В прозореца.",
+        "de": "Im/In der Fenster.",
+        "context": "Location"
+      }
+    ],
+    "linguistic_note": "мъжки род. Прозорец [прозорец].",
+    "linguistic_note_bg_to_de": "Прозорец е мъжки род.",
+    "linguistic_note_de_to_bg": "Прозорец = Maskulinum."
+  },
+  {
+    "id": "a1_house_008",
+    "word": "Врата",
+    "translation": "die Tür",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Haus",
+    "level": "A1",
+    "notes": "Door. From Proto-Slavic '*vort-'. Feminine. Plural: врати.",
+    "notes_bg_to_de": "В български 'врата' е женски род. Основна дума за дома.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Врата' = 'die Tür'. Femininum.",
+    "etymology": "Proto-Slavic '*vort-'. Feminine. Plural: врати.",
+    "cultural_note": "Essential vocabulary for home and housing in Bulgarian culture.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Имам врата.",
+        "de": "Ich habe Tür.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Вратата е голяма.",
+        "de": "Die Tür ist groß.",
+        "context": "Description"
+      },
+      {
+        "bg": "В вратата.",
+        "de": "Im/In der Tür.",
+        "context": "Location"
+      }
+    ],
+    "linguistic_note": "женски род. Врата [врата].",
+    "linguistic_note_bg_to_de": "Врата е женски род.",
+    "linguistic_note_de_to_bg": "Врата = Femininum."
   }
 ]

@@ -1,0 +1,434 @@
+[
+  {
+    "id": "a1_month_001",
+    "word": "Януари",
+    "translation": "Januar",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "January, first month. Months are masculine in Bulgarian. Used with 'в' preposition: 'в януари'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в януари (im Januar).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Януари' = 'Januar'. Maskulin. Mit Präposition 'в': в януари.",
+    "etymology": "From Latin Ianuarius (Janus, Roman god of beginnings). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Bulgaria celebrates many holidays and name days throughout януари.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в януари.",
+        "de": "Ich bin im Januar geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В януари ще пътувам.",
+        "de": "Im Januar werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Януариът е хубав месец.",
+        "de": "Der Januar ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в януари (im Januar).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в януари.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в януари (im Januar)."
+  },
+  {
+    "id": "a1_month_002",
+    "word": "Февруари",
+    "translation": "Februar",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "February, second month. Months are masculine in Bulgarian. Used with 'в' preposition: 'в февруари'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в февруари (im Februar).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Февруари' = 'Februar'. Maskulin. Mit Präposition 'в': в февруари.",
+    "etymology": "From Latin Februarius (purification month). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Standard calendar month in Bulgaria.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в февруари.",
+        "de": "Ich bin im Februar geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В февруари ще пътувам.",
+        "de": "Im Februar werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Февруариът е хубав месец.",
+        "de": "Der Februar ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в февруари (im Februar).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в февруари.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в февруари (im Februar)."
+  },
+  {
+    "id": "a1_month_003",
+    "word": "Март",
+    "translation": "März",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "March, third month. Spring begins. Months are masculine in Bulgarian. Used with 'в' preposition: 'в март'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в март (im März).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Март' = 'März'. Maskulin. Mit Präposition 'в': в март.",
+    "etymology": "From Latin Martius (Mars, god of war). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Bulgaria celebrates many holidays and name days throughout март.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в март.",
+        "de": "Ich bin im März geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В март ще пътувам.",
+        "de": "Im März werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Мартът е хубав месец.",
+        "de": "Der März ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в март (im März).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в март.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в март (im März)."
+  },
+  {
+    "id": "a1_month_004",
+    "word": "Април",
+    "translation": "April",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "April, fourth month. Spring month. Months are masculine in Bulgarian. Used with 'в' preposition: 'в април'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в април (im April).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Април' = 'April'. Maskulin. Mit Präposition 'в': в април.",
+    "etymology": "From Latin Aprilis (opening/budding). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Bulgaria celebrates many holidays and name days throughout април.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в април.",
+        "de": "Ich bin im April geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В април ще пътувам.",
+        "de": "Im April werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Априлът е хубав месец.",
+        "de": "Der April ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в април (im April).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в април.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в април (im April)."
+  },
+  {
+    "id": "a1_month_005",
+    "word": "Май",
+    "translation": "Mai",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "May, fifth month. Late spring. Months are masculine in Bulgarian. Used with 'в' preposition: 'в май'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в май (im Mai).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Май' = 'Mai'. Maskulin. Mit Präposition 'в': в май.",
+    "etymology": "From Latin Maius (Maia, goddess). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Bulgaria celebrates many holidays and name days throughout май.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в май.",
+        "de": "Ich bin im Mai geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В май ще пътувам.",
+        "de": "Im Mai werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Майът е хубав месец.",
+        "de": "Der Mai ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в май (im Mai).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в май.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в май (im Mai)."
+  },
+  {
+    "id": "a1_month_006",
+    "word": "Юни",
+    "translation": "Juni",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "June, sixth month. Summer begins. Months are masculine in Bulgarian. Used with 'в' preposition: 'в юни'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в юни (im Juni).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Юни' = 'Juni'. Maskulin. Mit Präposition 'в': в юни.",
+    "etymology": "From Latin Junius (Juno, goddess). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Standard calendar month in Bulgaria.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в юни.",
+        "de": "Ich bin im Juni geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В юни ще пътувам.",
+        "de": "Im Juni werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Юниът е хубав месец.",
+        "de": "Der Juni ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в юни (im Juni).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в юни.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в юни (im Juni)."
+  },
+  {
+    "id": "a1_month_007",
+    "word": "Юли",
+    "translation": "Juli",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "July, seventh month. Summer. Months are masculine in Bulgarian. Used with 'в' preposition: 'в юли'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в юли (im Juli).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Юли' = 'Juli'. Maskulin. Mit Präposition 'в': в юли.",
+    "etymology": "From Latin Julius (Julius Caesar). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Standard calendar month in Bulgaria.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в юли.",
+        "de": "Ich bin im Juli geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В юли ще пътувам.",
+        "de": "Im Juli werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Юлиът е хубав месец.",
+        "de": "Der Juli ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в юли (im Juli).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в юли.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в юли (im Juli)."
+  },
+  {
+    "id": "a1_month_008",
+    "word": "Август",
+    "translation": "August",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "August, eighth month. Summer. Months are masculine in Bulgarian. Used with 'в' preposition: 'в август'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в август (im August).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Август' = 'August'. Maskulin. Mit Präposition 'в': в август.",
+    "etymology": "From Latin Augustus (Emperor Augustus). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Standard calendar month in Bulgaria.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в август.",
+        "de": "Ich bin im August geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В август ще пътувам.",
+        "de": "Im August werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Августът е хубав месец.",
+        "de": "Der August ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в август (im August).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в август.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в август (im August)."
+  },
+  {
+    "id": "a1_month_009",
+    "word": "Септември",
+    "translation": "September",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "September, ninth month. Autumn begins. Months are masculine in Bulgarian. Used with 'в' preposition: 'в септември'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в септември (im September).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Септември' = 'September'. Maskulin. Mit Präposition 'в': в септември.",
+    "etymology": "From Latin September (seventh in Roman calendar). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Standard calendar month in Bulgaria.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в септември.",
+        "de": "Ich bin im September geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В септември ще пътувам.",
+        "de": "Im September werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Септемвриът е хубав месец.",
+        "de": "Der September ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в септември (im September).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в септември.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в септември (im September)."
+  },
+  {
+    "id": "a1_month_010",
+    "word": "Октомври",
+    "translation": "Oktober",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "October, tenth month. Autumn. Months are masculine in Bulgarian. Used with 'в' preposition: 'в октомври'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в октомври (im Oktober).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Октомври' = 'Oktober'. Maskulin. Mit Präposition 'в': в октомври.",
+    "etymology": "From Latin October (eighth in Roman calendar). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Standard calendar month in Bulgaria.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в октомври.",
+        "de": "Ich bin im Oktober geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В октомври ще пътувам.",
+        "de": "Im Oktober werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Октомвриът е хубав месец.",
+        "de": "Der Oktober ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в октомври (im Oktober).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в октомври.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в октомври (im Oktober)."
+  },
+  {
+    "id": "a1_month_011",
+    "word": "Ноември",
+    "translation": "November",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "November, eleventh month. Late autumn. Months are masculine in Bulgarian. Used with 'в' preposition: 'в ноември'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в ноември (im November).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ноември' = 'November'. Maskulin. Mit Präposition 'в': в ноември.",
+    "etymology": "From Latin November (ninth in Roman calendar). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Standard calendar month in Bulgaria.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в ноември.",
+        "de": "Ich bin im November geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В ноември ще пътувам.",
+        "de": "Im November werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Ноемвриът е хубав месец.",
+        "de": "Der November ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в ноември (im November).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в ноември.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в ноември (im November)."
+  },
+  {
+    "id": "a1_month_012",
+    "word": "Декември",
+    "translation": "Dezember",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zeit",
+    "level": "A1",
+    "notes": "December, twelfth month. Winter begins. Months are masculine in Bulgarian. Used with 'в' preposition: 'в декември'.",
+    "notes_bg_to_de": "В български месеците са мъжки род. Използваме: в декември (im Dezember).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Декември' = 'Dezember'. Maskulin. Mit Präposition 'в': в декември.",
+    "etymology": "From Latin December (tenth in Roman calendar). All month names in Bulgarian come from Latin via Church Slavonic.",
+    "cultural_note": "Bulgaria celebrates many holidays and name days throughout декември.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Родих се в декември.",
+        "de": "Ich bin im Dezember geboren.",
+        "context": "Birthday"
+      },
+      {
+        "bg": "В декември ще пътувам.",
+        "de": "Im Dezember werde ich reisen.",
+        "context": "Plans"
+      },
+      {
+        "bg": "Декемвриът е хубав месец.",
+        "de": "Der Dezember ist ein schöner Monat.",
+        "context": "With article"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Used with 'в': в декември (im Dezember).",
+    "linguistic_note_bg_to_de": "Мъжки род. С предлог 'в': в декември.",
+    "linguistic_note_de_to_bg": "Maskulinum. Präposition 'в': в декември (im Dezember)."
+  }
+]
