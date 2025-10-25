@@ -19988,5 +19988,3857 @@
     "linguistic_note": "женски род.",
     "linguistic_note_bg_to_de": "женски род.",
     "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_final14_001",
+    "word": "Пея",
+    "translation": "singen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам пея.",
+        "de": "Ich habe singen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам пея.",
+        "de": "Ich mag singen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся пея.",
+        "de": "Ich suche singen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_002",
+    "word": "Танцувам",
+    "translation": "tanzen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам танцувам.",
+        "de": "Ich habe tanzen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам танцувам.",
+        "de": "Ich mag tanzen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся танцувам.",
+        "de": "Ich suche tanzen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_003",
+    "word": "Плувам",
+    "translation": "schwimmen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам плувам.",
+        "de": "Ich habe schwimmen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам плувам.",
+        "de": "Ich mag schwimmen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся плувам.",
+        "de": "Ich suche schwimmen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_004",
+    "word": "Бягам",
+    "translation": "laufen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам бягам.",
+        "de": "Ich habe laufen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам бягам.",
+        "de": "Ich mag laufen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся бягам.",
+        "de": "Ich suche laufen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_005",
+    "word": "Ходя",
+    "translation": "gehen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам ходя.",
+        "de": "Ich habe gehen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам ходя.",
+        "de": "Ich mag gehen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся ходя.",
+        "de": "Ich suche gehen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_006",
+    "word": "Седя",
+    "translation": "sitzen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам седя.",
+        "de": "Ich habe sitzen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам седя.",
+        "de": "Ich mag sitzen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся седя.",
+        "de": "Ich suche sitzen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_007",
+    "word": "Лежа",
+    "translation": "liegen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам лежа.",
+        "de": "Ich habe liegen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам лежа.",
+        "de": "Ich mag liegen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся лежа.",
+        "de": "Ich suche liegen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_008",
+    "word": "Стоя",
+    "translation": "stehen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам стоя.",
+        "de": "Ich habe stehen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам стоя.",
+        "de": "Ich mag stehen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся стоя.",
+        "de": "Ich suche stehen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_009",
+    "word": "Плача",
+    "translation": "weinen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам плача.",
+        "de": "Ich habe weinen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам плача.",
+        "de": "Ich mag weinen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся плача.",
+        "de": "Ich suche weinen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_010",
+    "word": "Смея се",
+    "translation": "lachen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам смея се.",
+        "de": "Ich habe lachen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам смея се.",
+        "de": "Ich mag lachen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся смея се.",
+        "de": "Ich suche lachen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_011",
+    "word": "Мия",
+    "translation": "waschen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам мия.",
+        "de": "Ich habe waschen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам мия.",
+        "de": "Ich mag waschen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся мия.",
+        "de": "Ich suche waschen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_012",
+    "word": "Готвя",
+    "translation": "kochen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам готвя.",
+        "de": "Ich habe kochen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам готвя.",
+        "de": "Ich mag kochen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся готвя.",
+        "de": "Ich suche kochen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_013",
+    "word": "Чистя",
+    "translation": "putzen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам чистя.",
+        "de": "Ich habe putzen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам чистя.",
+        "de": "Ich mag putzen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся чистя.",
+        "de": "Ich suche putzen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_014",
+    "word": "Обличам",
+    "translation": "anziehen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам обличам.",
+        "de": "Ich habe anziehen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам обличам.",
+        "de": "Ich mag anziehen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся обличам.",
+        "de": "Ich suche anziehen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_015",
+    "word": "Режа",
+    "translation": "schneiden",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам режа.",
+        "de": "Ich habe schneiden.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам режа.",
+        "de": "Ich mag schneiden.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся режа.",
+        "de": "Ich suche schneiden.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_016",
+    "word": "Хартия",
+    "translation": "Papier",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам хартия.",
+        "de": "Ich habe Papier.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам хартия.",
+        "de": "Ich mag Papier.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся хартия.",
+        "de": "Ich suche Papier.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_017",
+    "word": "Торба",
+    "translation": "Tasche",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам торба.",
+        "de": "Ich habe Tasche.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам торба.",
+        "de": "Ich mag Tasche.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся торба.",
+        "de": "Ich suche Tasche.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_018",
+    "word": "Кутия",
+    "translation": "Box",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам кутия.",
+        "de": "Ich habe Box.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам кутия.",
+        "de": "Ich mag Box.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся кутия.",
+        "de": "Ich suche Box.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_019",
+    "word": "Бутилка",
+    "translation": "Flasche",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам бутилка.",
+        "de": "Ich habe Flasche.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам бутилка.",
+        "de": "Ich mag Flasche.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся бутилка.",
+        "de": "Ich suche Flasche.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_020",
+    "word": "Кана",
+    "translation": "Kanne",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам кана.",
+        "de": "Ich habe Kanne.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам кана.",
+        "de": "Ich mag Kanne.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся кана.",
+        "de": "Ich suche Kanne.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_021",
+    "word": "Тигня",
+    "translation": "Pfanne",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам тигня.",
+        "de": "Ich habe Pfanne.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам тигня.",
+        "de": "Ich mag Pfanne.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся тигня.",
+        "de": "Ich suche Pfanne.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_022",
+    "word": "Гърне",
+    "translation": "Topf",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам гърне.",
+        "de": "Ich habe Topf.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам гърне.",
+        "de": "Ich mag Topf.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся гърне.",
+        "de": "Ich suche Topf.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_023",
+    "word": "Фурна",
+    "translation": "Ofen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам фурна.",
+        "de": "Ich habe Ofen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам фурна.",
+        "de": "Ich mag Ofen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся фурна.",
+        "de": "Ich suche Ofen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_024",
+    "word": "Хладилник",
+    "translation": "Kühlschrank",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам хладилник.",
+        "de": "Ich habe Kühlschrank.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам хладилник.",
+        "de": "Ich mag Kühlschrank.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся хладилник.",
+        "de": "Ich suche Kühlschrank.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_025",
+    "word": "Телевизор",
+    "translation": "Fernseher",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам телевизор.",
+        "de": "Ich habe Fernseher.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам телевизор.",
+        "de": "Ich mag Fernseher.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся телевизор.",
+        "de": "Ich suche Fernseher.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_026",
+    "word": "Радио",
+    "translation": "Radio",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам радио.",
+        "de": "Ich habe Radio.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам радио.",
+        "de": "Ich mag Radio.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся радио.",
+        "de": "Ich suche Radio.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_027",
+    "word": "Лампа",
+    "translation": "Lampe",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам лампа.",
+        "de": "Ich habe Lampe.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам лампа.",
+        "de": "Ich mag Lampe.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся лампа.",
+        "de": "Ich suche Lampe.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_028",
+    "word": "Свещ",
+    "translation": "Kerze",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам свещ.",
+        "de": "Ich habe Kerze.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам свещ.",
+        "de": "Ich mag Kerze.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся свещ.",
+        "de": "Ich suche Kerze.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_029",
+    "word": "Огледало",
+    "translation": "Spiegel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам огледало.",
+        "de": "Ich habe Spiegel.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам огледало.",
+        "de": "Ich mag Spiegel.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся огледало.",
+        "de": "Ich suche Spiegel.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_030",
+    "word": "Картина",
+    "translation": "Gemälde",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам картина.",
+        "de": "Ich habe Gemälde.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам картина.",
+        "de": "Ich mag Gemälde.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся картина.",
+        "de": "Ich suche Gemälde.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_031",
+    "word": "Календар",
+    "translation": "Kalender",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам календар.",
+        "de": "Ich habe Kalender.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам календар.",
+        "de": "Ich mag Kalender.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся календар.",
+        "de": "Ich suche Kalender.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_032",
+    "word": "Карта",
+    "translation": "Karte/Map",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам карта.",
+        "de": "Ich habe Karte/Map.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам карта.",
+        "de": "Ich mag Karte/Map.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся карта.",
+        "de": "Ich suche Karte/Map.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_033",
+    "word": "Билет",
+    "translation": "Ticket",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам билет.",
+        "de": "Ich habe Ticket.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам билет.",
+        "de": "Ich mag Ticket.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся билет.",
+        "de": "Ich suche Ticket.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_034",
+    "word": "Писмо",
+    "translation": "Brief",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам писмо.",
+        "de": "Ich habe Brief.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам писмо.",
+        "de": "Ich mag Brief.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся писмо.",
+        "de": "Ich suche Brief.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_035",
+    "word": "Плик",
+    "translation": "Umschlag",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам плик.",
+        "de": "Ich habe Umschlag.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам плик.",
+        "de": "Ich mag Umschlag.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся плик.",
+        "de": "Ich suche Umschlag.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_036",
+    "word": "Везна",
+    "translation": "Waage",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам везна.",
+        "de": "Ich habe Waage.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам везна.",
+        "de": "Ich mag Waage.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся везна.",
+        "de": "Ich suche Waage.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_037",
+    "word": "Метър",
+    "translation": "Meter",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам метър.",
+        "de": "Ich habe Meter.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам метър.",
+        "de": "Ich mag Meter.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся метър.",
+        "de": "Ich suche Meter.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_038",
+    "word": "Линийка",
+    "translation": "Lineal",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам линийка.",
+        "de": "Ich habe Lineal.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам линийка.",
+        "de": "Ich mag Lineal.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся линийка.",
+        "de": "Ich suche Lineal.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_039",
+    "word": "Ножица",
+    "translation": "Schere",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам ножица.",
+        "de": "Ich habe Schere.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам ножица.",
+        "de": "Ich mag Schere.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся ножица.",
+        "de": "Ich suche Schere.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_040",
+    "word": "Конец",
+    "translation": "Faden",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам конец.",
+        "de": "Ich habe Faden.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам конец.",
+        "de": "Ich mag Faden.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся конец.",
+        "de": "Ich suche Faden.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_041",
+    "word": "Игла",
+    "translation": "Nadel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам игла.",
+        "de": "Ich habe Nadel.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам игла.",
+        "de": "Ich mag Nadel.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся игла.",
+        "de": "Ich suche Nadel.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_042",
+    "word": "Копче",
+    "translation": "Knopf",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам копче.",
+        "de": "Ich habe Knopf.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам копче.",
+        "de": "Ich mag Knopf.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся копче.",
+        "de": "Ich suche Knopf.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_043",
+    "word": "Цип",
+    "translation": "Reißverschluss",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам цип.",
+        "de": "Ich habe Reißverschluss.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам цип.",
+        "de": "Ich mag Reißverschluss.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся цип.",
+        "de": "Ich suche Reißverschluss.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_044",
+    "word": "Торбичка",
+    "translation": "Tüte",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам торбичка.",
+        "de": "Ich habe Tüte.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам торбичка.",
+        "de": "Ich mag Tüte.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся торбичка.",
+        "de": "Ich suche Tüte.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_045",
+    "word": "Кърпа",
+    "translation": "Handtuch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам кърпа.",
+        "de": "Ich habe Handtuch.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам кърпа.",
+        "de": "Ich mag Handtuch.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся кърпа.",
+        "de": "Ich suche Handtuch.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_046",
+    "word": "Одеяло",
+    "translation": "Decke",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам одеяло.",
+        "de": "Ich habe Decke.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам одеяло.",
+        "de": "Ich mag Decke.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся одеяло.",
+        "de": "Ich suche Decke.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_047",
+    "word": "Възглавница",
+    "translation": "Kissen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам възглавница.",
+        "de": "Ich habe Kissen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам възглавница.",
+        "de": "Ich mag Kissen.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся възглавница.",
+        "de": "Ich suche Kissen.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_048",
+    "word": "Чаршаф",
+    "translation": "Bettlaken",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам чаршаф.",
+        "de": "Ich habe Bettlaken.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам чаршаф.",
+        "de": "Ich mag Bettlaken.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся чаршаф.",
+        "de": "Ich suche Bettlaken.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_049",
+    "word": "Мивка",
+    "translation": "Waschbecken",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам мивка.",
+        "de": "Ich habe Waschbecken.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам мивка.",
+        "de": "Ich mag Waschbecken.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся мивка.",
+        "de": "Ich suche Waschbecken.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final14_050",
+    "word": "Тоалетна",
+    "translation": "Toilette",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Gegenstände",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Имам тоалетна.",
+        "de": "Ich habe Toilette.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам тоалетна.",
+        "de": "Ich mag Toilette.",
+        "context": "Liking"
+      },
+      {
+        "bg": "Търся тоалетна.",
+        "de": "Ich suche Toilette.",
+        "context": "Searching"
+      }
+    ],
+    "linguistic_note": "Essential word.",
+    "linguistic_note_bg_to_de": "Основна дума.",
+    "linguistic_note_de_to_bg": "Grundwort."
+  },
+  {
+    "id": "a1_final_001",
+    "word": "Правило",
+    "translation": "Regel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Правило.",
+        "de": "Regel.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам правило.",
+        "de": "Ich habe Regel.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам правило.",
+        "de": "Ich mag Regel.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_002",
+    "word": "Грешка",
+    "translation": "Fehler",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Грешка.",
+        "de": "Fehler.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам грешка.",
+        "de": "Ich habe Fehler.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам грешка.",
+        "de": "Ich mag Fehler.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_003",
+    "word": "Отговор",
+    "translation": "Antwort",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Отговор.",
+        "de": "Antwort.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам отговор.",
+        "de": "Ich habe Antwort.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам отговор.",
+        "de": "Ich mag Antwort.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_004",
+    "word": "Въпрос",
+    "translation": "Frage",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Въпрос.",
+        "de": "Frage.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам въпрос.",
+        "de": "Ich habe Frage.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам въпрос.",
+        "de": "Ich mag Frage.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_005",
+    "word": "Проблем",
+    "translation": "Problem",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Проблем.",
+        "de": "Problem.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам проблем.",
+        "de": "Ich habe Problem.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам проблем.",
+        "de": "Ich mag Problem.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_006",
+    "word": "Решение",
+    "translation": "Lösung",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Решение.",
+        "de": "Lösung.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам решение.",
+        "de": "Ich habe Lösung.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам решение.",
+        "de": "Ich mag Lösung.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_007",
+    "word": "Начало",
+    "translation": "Anfang",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Начало.",
+        "de": "Anfang.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам начало.",
+        "de": "Ich habe Anfang.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам начало.",
+        "de": "Ich mag Anfang.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_008",
+    "word": "Край",
+    "translation": "Ende",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Край.",
+        "de": "Ende.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам край.",
+        "de": "Ich habe Ende.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам край.",
+        "de": "Ich mag Ende.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_009",
+    "word": "Среда",
+    "translation": "Mitte",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Среда.",
+        "de": "Mitte.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам среда.",
+        "de": "Ich habe Mitte.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам среда.",
+        "de": "Ich mag Mitte.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_010",
+    "word": "Страна",
+    "translation": "Land/Seite",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Страна.",
+        "de": "Land/Seite.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам страна.",
+        "de": "Ich habe Land/Seite.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам страна.",
+        "de": "Ich mag Land/Seite.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_011",
+    "word": "Свят",
+    "translation": "Welt",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Свят.",
+        "de": "Welt.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам свят.",
+        "de": "Ich habe Welt.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам свят.",
+        "de": "Ich mag Welt.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_012",
+    "word": "Земя",
+    "translation": "Erde",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Земя.",
+        "de": "Erde.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам земя.",
+        "de": "Ich habe Erde.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам земя.",
+        "de": "Ich mag Erde.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_013",
+    "word": "Въздух",
+    "translation": "Luft",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Въздух.",
+        "de": "Luft.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам въздух.",
+        "de": "Ich habe Luft.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам въздух.",
+        "de": "Ich mag Luft.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_014",
+    "word": "Огън",
+    "translation": "Feuer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Огън.",
+        "de": "Feuer.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам огън.",
+        "de": "Ich habe Feuer.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам огън.",
+        "de": "Ich mag Feuer.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_015",
+    "word": "Вода",
+    "translation": "Wasser",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Вода.",
+        "de": "Wasser.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам вода.",
+        "de": "Ich habe Wasser.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам вода.",
+        "de": "Ich mag Wasser.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_016",
+    "word": "Лед",
+    "translation": "Eis",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Лед.",
+        "de": "Eis.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам лед.",
+        "de": "Ich habe Eis.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам лед.",
+        "de": "Ich mag Eis.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_017",
+    "word": "Камък",
+    "translation": "Stein",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Камък.",
+        "de": "Stein.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам камък.",
+        "de": "Ich habe Stein.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам камък.",
+        "de": "Ich mag Stein.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_018",
+    "word": "Пясък",
+    "translation": "Sand",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Пясък.",
+        "de": "Sand.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам пясък.",
+        "de": "Ich habe Sand.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам пясък.",
+        "de": "Ich mag Sand.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_019",
+    "word": "Прах",
+    "translation": "Staub",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Прах.",
+        "de": "Staub.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам прах.",
+        "de": "Ich habe Staub.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам прах.",
+        "de": "Ich mag Staub.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_020",
+    "word": "Дим",
+    "translation": "Rauch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Дим.",
+        "de": "Rauch.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам дим.",
+        "de": "Ich habe Rauch.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам дим.",
+        "de": "Ich mag Rauch.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_021",
+    "word": "Светлина",
+    "translation": "Licht",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Светлина.",
+        "de": "Licht.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам светлина.",
+        "de": "Ich habe Licht.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам светлина.",
+        "de": "Ich mag Licht.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_022",
+    "word": "Сянка",
+    "translation": "Schatten",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Сянка.",
+        "de": "Schatten.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам сянка.",
+        "de": "Ich habe Schatten.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам сянка.",
+        "de": "Ich mag Schatten.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_023",
+    "word": "Звук",
+    "translation": "Geräusch/Klang",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Звук.",
+        "de": "Geräusch/Klang.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам звук.",
+        "de": "Ich habe Geräusch/Klang.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам звук.",
+        "de": "Ich mag Geräusch/Klang.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_024",
+    "word": "Глас",
+    "translation": "Stimme",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Глас.",
+        "de": "Stimme.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам глас.",
+        "de": "Ich habe Stimme.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам глас.",
+        "de": "Ich mag Stimme.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_025",
+    "word": "Шум",
+    "translation": "Lärm",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Шум.",
+        "de": "Lärm.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам шум.",
+        "de": "Ich habe Lärm.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам шум.",
+        "de": "Ich mag Lärm.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_026",
+    "word": "Тишина",
+    "translation": "Stille",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Тишина.",
+        "de": "Stille.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам тишина.",
+        "de": "Ich habe Stille.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам тишина.",
+        "de": "Ich mag Stille.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_027",
+    "word": "Скорост",
+    "translation": "Geschwindigkeit",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Скорост.",
+        "de": "Geschwindigkeit.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам скорост.",
+        "de": "Ich habe Geschwindigkeit.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам скорост.",
+        "de": "Ich mag Geschwindigkeit.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_028",
+    "word": "Посока",
+    "translation": "Richtung",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Посока.",
+        "de": "Richtung.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам посока.",
+        "de": "Ich habe Richtung.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам посока.",
+        "de": "Ich mag Richtung.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_029",
+    "word": "Разстояние",
+    "translation": "Entfernung",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Разстояние.",
+        "de": "Entfernung.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам разстояние.",
+        "de": "Ich habe Entfernung.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам разстояние.",
+        "de": "Ich mag Entfernung.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_030",
+    "word": "Място",
+    "translation": "Platz/Ort",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Място.",
+        "de": "Platz/Ort.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам място.",
+        "de": "Ich habe Platz/Ort.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам място.",
+        "de": "Ich mag Platz/Ort.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_031",
+    "word": "Точка",
+    "translation": "Punkt",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Точка.",
+        "de": "Punkt.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам точка.",
+        "de": "Ich habe Punkt.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам точка.",
+        "de": "Ich mag Punkt.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_032",
+    "word": "Линия",
+    "translation": "Linie",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Линия.",
+        "de": "Linie.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам линия.",
+        "de": "Ich habe Linie.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам линия.",
+        "de": "Ich mag Linie.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_033",
+    "word": "Форма",
+    "translation": "Form",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Форма.",
+        "de": "Form.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам форма.",
+        "de": "Ich habe Form.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам форма.",
+        "de": "Ich mag Form.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_034",
+    "word": "Размер",
+    "translation": "Größe",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Размер.",
+        "de": "Größe.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам размер.",
+        "de": "Ich habe Größe.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам размер.",
+        "de": "Ich mag Größe.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_035",
+    "word": "Цвят",
+    "translation": "Farbe",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Цвят.",
+        "de": "Farbe.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам цвят.",
+        "de": "Ich habe Farbe.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам цвят.",
+        "de": "Ich mag Farbe.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_036",
+    "word": "Мирис",
+    "translation": "Geruch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Мирис.",
+        "de": "Geruch.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам мирис.",
+        "de": "Ich habe Geruch.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам мирис.",
+        "de": "Ich mag Geruch.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_037",
+    "word": "Вкус",
+    "translation": "Geschmack",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Вкус.",
+        "de": "Geschmack.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам вкус.",
+        "de": "Ich habe Geschmack.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам вкус.",
+        "de": "Ich mag Geschmack.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_038",
+    "word": "Чувство",
+    "translation": "Gefühl",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Чувство.",
+        "de": "Gefühl.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам чувство.",
+        "de": "Ich habe Gefühl.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам чувство.",
+        "de": "Ich mag Gefühl.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_039",
+    "word": "Мисъл",
+    "translation": "Gedanke",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Мисъл.",
+        "de": "Gedanke.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам мисъл.",
+        "de": "Ich habe Gedanke.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам мисъл.",
+        "de": "Ich mag Gedanke.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_040",
+    "word": "Идея",
+    "translation": "Idee",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Идея.",
+        "de": "Idee.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам идея.",
+        "de": "Ich habe Idee.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам идея.",
+        "de": "Ich mag Idee.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_041",
+    "word": "План",
+    "translation": "Plan",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "План.",
+        "de": "Plan.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам план.",
+        "de": "Ich habe Plan.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам план.",
+        "de": "Ich mag Plan.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_042",
+    "word": "Цел",
+    "translation": "Ziel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Цел.",
+        "de": "Ziel.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам цел.",
+        "de": "Ich habe Ziel.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам цел.",
+        "de": "Ich mag Ziel.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_043",
+    "word": "Начин",
+    "translation": "Art/Weise",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Начин.",
+        "de": "Art/Weise.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам начин.",
+        "de": "Ich habe Art/Weise.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам начин.",
+        "de": "Ich mag Art/Weise.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_044",
+    "word": "Причина",
+    "translation": "Grund/Ursache",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Причина.",
+        "de": "Grund/Ursache.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам причина.",
+        "de": "Ich habe Grund/Ursache.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам причина.",
+        "de": "Ich mag Grund/Ursache.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_045",
+    "word": "Резултат",
+    "translation": "Ergebnis",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Резултат.",
+        "de": "Ergebnis.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам резултат.",
+        "de": "Ich habe Ergebnis.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам резултат.",
+        "de": "Ich mag Ergebnis.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_046",
+    "word": "Пример",
+    "translation": "Beispiel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Пример.",
+        "de": "Beispiel.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам пример.",
+        "de": "Ich habe Beispiel.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам пример.",
+        "de": "Ich mag Beispiel.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_047",
+    "word": "Факт",
+    "translation": "Tatsache",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Факт.",
+        "de": "Tatsache.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам факт.",
+        "de": "Ich habe Tatsache.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам факт.",
+        "de": "Ich mag Tatsache.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_048",
+    "word": "Истина",
+    "translation": "Wahrheit",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Истина.",
+        "de": "Wahrheit.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам истина.",
+        "de": "Ich habe Wahrheit.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам истина.",
+        "de": "Ich mag Wahrheit.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_049",
+    "word": "Лъжа",
+    "translation": "Lüge",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Лъжа.",
+        "de": "Lüge.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам лъжа.",
+        "de": "Ich habe Lüge.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам лъжа.",
+        "de": "Ich mag Lüge.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_050",
+    "word": "Тайна",
+    "translation": "Geheimnis",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Тайна.",
+        "de": "Geheimnis.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам тайна.",
+        "de": "Ich habe Geheimnis.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам тайна.",
+        "de": "Ich mag Geheimnis.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_051",
+    "word": "Обещание",
+    "translation": "Versprechen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Обещание.",
+        "de": "Versprechen.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам обещание.",
+        "de": "Ich habe Versprechen.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам обещание.",
+        "de": "Ich mag Versprechen.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_052",
+    "word": "Правда",
+    "translation": "Recht/Gerechtigkeit",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Правда.",
+        "de": "Recht/Gerechtigkeit.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам правда.",
+        "de": "Ich habe Recht/Gerechtigkeit.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам правда.",
+        "de": "Ich mag Recht/Gerechtigkeit.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_053",
+    "word": "Закон",
+    "translation": "Gesetz",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Закон.",
+        "de": "Gesetz.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам закон.",
+        "de": "Ich habe Gesetz.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам закон.",
+        "de": "Ich mag Gesetz.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_054",
+    "word": "Ред",
+    "translation": "Ordnung/Reihe",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Ред.",
+        "de": "Ordnung/Reihe.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам ред.",
+        "de": "Ich habe Ordnung/Reihe.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам ред.",
+        "de": "Ich mag Ordnung/Reihe.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_055",
+    "word": "Група",
+    "translation": "Gruppe",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Група.",
+        "de": "Gruppe.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам група.",
+        "de": "Ich habe Gruppe.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам група.",
+        "de": "Ich mag Gruppe.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_056",
+    "word": "Член",
+    "translation": "Mitglied",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Член.",
+        "de": "Mitglied.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам член.",
+        "de": "Ich habe Mitglied.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам член.",
+        "de": "Ich mag Mitglied.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
+  },
+  {
+    "id": "a1_final_057",
+    "word": "Общество",
+    "translation": "Gesellschaft",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Substantive",
+    "level": "A1",
+    "notes": "Essential A1 vocabulary.",
+    "notes_bg_to_de": "Основна дума.",
+    "notes_de_to_bg": "Grundwort.",
+    "etymology": "Proto-Slavic or international.",
+    "cultural_note": "Common word.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Общество.",
+        "de": "Gesellschaft.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Имам общество.",
+        "de": "Ich habe Gesellschaft.",
+        "context": "Having"
+      },
+      {
+        "bg": "Харесвам общество.",
+        "de": "Ich mag Gesellschaft.",
+        "context": "Liking"
+      }
+    ],
+    "linguistic_note": "A1 word.",
+    "linguistic_note_bg_to_de": "Дума от ниво A1.",
+    "linguistic_note_de_to_bg": "A1-Wort."
   }
 ]
