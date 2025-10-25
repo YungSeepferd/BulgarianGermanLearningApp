@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "a1_profession_001",
+    "word": "Учител",
+    "translation": "der Lehrer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Berufe",
+    "level": "A1",
+    "notes": "Teacher. мъжки род.",
+    "notes_bg_to_de": "'Учител' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Учител' = 'der Lehrer'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Berufe vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Аз съм учител.",
+        "de": "Ich bin Lehrer.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Учителът/та/то е добър/а/о.",
+        "de": "der Lehrer ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам учитела/та/то.",
+        "de": "Ich mag Lehrer.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_profession_002",
+    "word": "Учителка",
+    "translation": "die Lehrerin",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Berufe",
+    "level": "A1",
+    "notes": "Teacher (f). женски род.",
+    "notes_bg_to_de": "'Учителка' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Учителка' = 'die Lehrerin'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Berufe vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Аз съм учителка.",
+        "de": "Ich bin Lehrerin.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Учителкаът/та/то е добър/а/о.",
+        "de": "die Lehrerin ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам учителкаа/та/то.",
+        "de": "Ich mag Lehrerin.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_profession_003",
+    "word": "Лекар",
+    "translation": "der Arzt",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Berufe",
+    "level": "A1",
+    "notes": "Doctor. мъжки род.",
+    "notes_bg_to_de": "'Лекар' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Лекар' = 'der Arzt'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Berufe vocabulary.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Аз съм лекар.",
+        "de": "Ich bin Arzt.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Лекарът/та/то е добър/а/о.",
+        "de": "der Arzt ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам лекара/та/то.",
+        "de": "Ich mag Arzt.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_profession_004",
+    "word": "Лекарка",
+    "translation": "die Ärztin",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Berufe",
+    "level": "A1",
+    "notes": "Doctor (f). женски род.",
+    "notes_bg_to_de": "'Лекарка' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Лекарка' = 'die Ärztin'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Berufe vocabulary.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Аз съм лекарка.",
+        "de": "Ich bin Ärztin.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Лекаркаът/та/то е добър/а/о.",
+        "de": "die Ärztin ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам лекаркаа/та/то.",
+        "de": "Ich mag Ärztin.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_profession_005",
+    "word": "Студент",
+    "translation": "der Student",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Berufe",
+    "level": "A1",
+    "notes": "Student. мъжки род.",
+    "notes_bg_to_de": "'Студент' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Студент' = 'der Student'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Berufe vocabulary.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Аз съм студент.",
+        "de": "Ich bin Student.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Студентът/та/то е добър/а/о.",
+        "de": "der Student ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам студента/та/то.",
+        "de": "Ich mag Student.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_profession_006",
+    "word": "Студентка",
+    "translation": "die Studentin",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Berufe",
+    "level": "A1",
+    "notes": "Student (f). женски род.",
+    "notes_bg_to_de": "'Студентка' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Студентка' = 'die Studentin'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Berufe vocabulary.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Аз съм студентка.",
+        "de": "Ich bin Studentin.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Студенткаът/та/то е добър/а/о.",
+        "de": "die Studentin ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам студенткаа/та/то.",
+        "de": "Ich mag Studentin.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_profession_007",
+    "word": "Инженер",
+    "translation": "der Ingenieur",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Berufe",
+    "level": "A1",
+    "notes": "Engineer. мъжки род.",
+    "notes_bg_to_de": "'Инженер' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Инженер' = 'der Ingenieur'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Berufe vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Аз съм инженер.",
+        "de": "Ich bin Ingenieur.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Инженерът/та/то е добър/а/о.",
+        "de": "der Ingenieur ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам инженера/та/то.",
+        "de": "Ich mag Ingenieur.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_profession_008",
+    "word": "Програмист",
+    "translation": "der Programmierer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Berufe",
+    "level": "A1",
+    "notes": "Programmer. мъжки род.",
+    "notes_bg_to_de": "'Програмист' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Програмист' = 'der Programmierer'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Berufe vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Аз съм програмист.",
+        "de": "Ich bin Programmierer.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Програмистът/та/то е добър/а/о.",
+        "de": "der Programmierer ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам програмиста/та/то.",
+        "de": "Ich mag Programmierer.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_profession_009",
+    "word": "Продавач",
+    "translation": "der Verkäufer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Berufe",
+    "level": "A1",
+    "notes": "Salesperson. мъжки род.",
+    "notes_bg_to_de": "'Продавач' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Продавач' = 'der Verkäufer'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Berufe vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Аз съм продавач.",
+        "de": "Ich bin Verkäufer.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Продавачът/та/то е добър/а/о.",
+        "de": "der Verkäufer ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам продавача/та/то.",
+        "de": "Ich mag Verkäufer.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_profession_010",
+    "word": "Шофьор",
+    "translation": "der Fahrer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Berufe",
+    "level": "A1",
+    "notes": "Driver. мъжки род.",
+    "notes_bg_to_de": "'Шофьор' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Шофьор' = 'der Fahrer'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Berufe vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Аз съм шофьор.",
+        "de": "Ich bin Fahrer.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Шофьорът/та/то е добър/а/о.",
+        "de": "der Fahrer ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам шофьора/та/то.",
+        "de": "Ich mag Fahrer.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_profession_011",
+    "word": "Готвач",
+    "translation": "der Koch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Berufe",
+    "level": "A1",
+    "notes": "Cook. мъжки род.",
+    "notes_bg_to_de": "'Готвач' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Готвач' = 'der Koch'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Berufe vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Аз съм готвач.",
+        "de": "Ich bin Koch.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Готвачът/та/то е добър/а/о.",
+        "de": "der Koch ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам готвача/та/то.",
+        "de": "Ich mag Koch.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_profession_012",
+    "word": "Официант",
+    "translation": "der Kellner",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Berufe",
+    "level": "A1",
+    "notes": "Waiter. мъжки род.",
+    "notes_bg_to_de": "'Официант' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Официант' = 'der Kellner'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Berufe vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Аз съм официант.",
+        "de": "Ich bin Kellner.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Официантът/та/то е добър/а/о.",
+        "de": "der Kellner ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам официанта/та/то.",
+        "de": "Ich mag Kellner.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_profession_013",
+    "word": "Полицай",
+    "translation": "der Polizist",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Berufe",
+    "level": "A1",
+    "notes": "Police. мъжки род.",
+    "notes_bg_to_de": "'Полицай' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Полицай' = 'der Polizist'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Berufe vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Аз съм полицай.",
+        "de": "Ich bin Polizist.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Полицайът/та/то е добър/а/о.",
+        "de": "der Polizist ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам полицайа/та/то.",
+        "de": "Ich mag Polizist.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_profession_014",
+    "word": "Художник",
+    "translation": "der Künstler",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Berufe",
+    "level": "A1",
+    "notes": "Artist. мъжки род.",
+    "notes_bg_to_de": "'Художник' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Художник' = 'der Künstler'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Berufe vocabulary.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "bg": "Аз съм художник.",
+        "de": "Ich bin Künstler.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Художникът/та/то е добър/а/о.",
+        "de": "der Künstler ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам художника/та/то.",
+        "de": "Ich mag Künstler.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_profession_015",
+    "word": "Певец",
+    "translation": "der Sänger",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Berufe",
+    "level": "A1",
+    "notes": "Singer. мъжки род.",
+    "notes_bg_to_de": "'Певец' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Певец' = 'der Sänger'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Berufe vocabulary.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "bg": "Аз съм певец.",
+        "de": "Ich bin Sänger.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Певецът/та/то е добър/а/о.",
+        "de": "der Sänger ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам певеца/та/то.",
+        "de": "Ich mag Sänger.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_place_001",
+    "word": "Град",
+    "translation": "die Stadt",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "City. мъжки род.",
+    "notes_bg_to_de": "'Град' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Град' = 'die Stadt'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Отивам на град.",
+        "de": "Ich gehe zu/in Stadt.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Градът/та/то е добър/а/о.",
+        "de": "die Stadt ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам града/та/то.",
+        "de": "Ich mag Stadt.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_place_002",
+    "word": "Село",
+    "translation": "das Dorf",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Village. среден род.",
+    "notes_bg_to_de": "'Село' е среден род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Село' = 'das Dorf'. Neutrum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Отивам на село.",
+        "de": "Ich gehe zu/in Dorf.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Селоът/та/то е добър/а/о.",
+        "de": "das Dorf ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам селоа/та/то.",
+        "de": "Ich mag Dorf.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_place_003",
+    "word": "Център",
+    "translation": "das Zentrum",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Center. мъжки род.",
+    "notes_bg_to_de": "'Център' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Център' = 'das Zentrum'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Отивам на център.",
+        "de": "Ich gehe zu/in Zentrum.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Центърът/та/то е добър/а/о.",
+        "de": "das Zentrum ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам центъра/та/то.",
+        "de": "Ich mag Zentrum.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_place_004",
+    "word": "Парк",
+    "translation": "der Park",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Park. мъжки род.",
+    "notes_bg_to_de": "'Парк' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Парк' = 'der Park'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Отивам на парк.",
+        "de": "Ich gehe zu/in Park.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Паркът/та/то е добър/а/о.",
+        "de": "der Park ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам парка/та/то.",
+        "de": "Ich mag Park.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_place_005",
+    "word": "Площад",
+    "translation": "der Platz",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Square. мъжки род.",
+    "notes_bg_to_de": "'Площад' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Площад' = 'der Platz'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Отивам на площад.",
+        "de": "Ich gehe zu/in Platz.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Площадът/та/то е добър/а/о.",
+        "de": "der Platz ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам площада/та/то.",
+        "de": "Ich mag Platz.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_place_006",
+    "word": "Мост",
+    "translation": "die Brücke",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Bridge. мъжки род.",
+    "notes_bg_to_de": "'Мост' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Мост' = 'die Brücke'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Отивам на мост.",
+        "de": "Ich gehe zu/in Brücke.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Мостът/та/то е добър/а/о.",
+        "de": "die Brücke ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам моста/та/то.",
+        "de": "Ich mag Brücke.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_place_007",
+    "word": "Гара",
+    "translation": "der Bahnhof",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Station. женски род.",
+    "notes_bg_to_de": "'Гара' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Гара' = 'der Bahnhof'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Отивам на гара.",
+        "de": "Ich gehe zu/in Bahnhof.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Гараът/та/то е добър/а/о.",
+        "de": "der Bahnhof ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам гараа/та/то.",
+        "de": "Ich mag Bahnhof.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_place_008",
+    "word": "Летище",
+    "translation": "der Flughafen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Airport. среден род.",
+    "notes_bg_to_de": "'Летище' е среден род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Летище' = 'der Flughafen'. Neutrum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Отивам на летище.",
+        "de": "Ich gehe zu/in Flughafen.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Летищеът/та/то е добър/а/о.",
+        "de": "der Flughafen ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам летищеа/та/то.",
+        "de": "Ich mag Flughafen.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_place_009",
+    "word": "Музей",
+    "translation": "das Museum",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Museum. мъжки род.",
+    "notes_bg_to_de": "'Музей' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Музей' = 'das Museum'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Отивам на музей.",
+        "de": "Ich gehe zu/in Museum.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Музейът/та/то е добър/а/о.",
+        "de": "das Museum ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам музейа/та/то.",
+        "de": "Ich mag Museum.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_place_010",
+    "word": "Театър",
+    "translation": "das Theater",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Theater. мъжки род.",
+    "notes_bg_to_de": "'Театър' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Театър' = 'das Theater'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Отивам на театър.",
+        "de": "Ich gehe zu/in Theater.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Театърът/та/то е добър/а/о.",
+        "de": "das Theater ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам театъра/та/то.",
+        "de": "Ich mag Theater.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_place_011",
+    "word": "Кино",
+    "translation": "das Kino",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Cinema. среден род.",
+    "notes_bg_to_de": "'Кино' е среден род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Кино' = 'das Kino'. Neutrum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Отивам на кино.",
+        "de": "Ich gehe zu/in Kino.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Киноът/та/то е добър/а/о.",
+        "de": "das Kino ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам киноа/та/то.",
+        "de": "Ich mag Kino.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_place_012",
+    "word": "Библиотека",
+    "translation": "die Bibliothek",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Library. женски род.",
+    "notes_bg_to_de": "'Библиотека' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Библиотека' = 'die Bibliothek'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Отивам на библиотека.",
+        "de": "Ich gehe zu/in Bibliothek.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Библиотекаът/та/то е добър/а/о.",
+        "de": "die Bibliothek ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам библиотекаа/та/то.",
+        "de": "Ich mag Bibliothek.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_place_013",
+    "word": "Банка",
+    "translation": "die Bank",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Bank. женски род.",
+    "notes_bg_to_de": "'Банка' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Банка' = 'die Bank'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Отивам на банка.",
+        "de": "Ich gehe zu/in Bank.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Банкаът/та/то е добър/а/о.",
+        "de": "die Bank ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам банкаа/та/то.",
+        "de": "Ich mag Bank.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_place_014",
+    "word": "Поща",
+    "translation": "die Post",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Post office. женски род.",
+    "notes_bg_to_de": "'Поща' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Поща' = 'die Post'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Отивам на поща.",
+        "de": "Ich gehe zu/in Post.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Пощаът/та/то е добър/а/о.",
+        "de": "die Post ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам пощаа/та/то.",
+        "de": "Ich mag Post.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_place_015",
+    "word": "Аптека",
+    "translation": "die Apotheke",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Pharmacy. женски род.",
+    "notes_bg_to_de": "'Аптека' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Аптека' = 'die Apotheke'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Отивам на аптека.",
+        "de": "Ich gehe zu/in Apotheke.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Аптекаът/та/то е добър/а/о.",
+        "de": "die Apotheke ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам аптекаа/та/то.",
+        "de": "Ich mag Apotheke.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_weather_001",
+    "word": "Време",
+    "translation": "das Wetter",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Weather. среден род.",
+    "notes_bg_to_de": "'Време' е среден род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Време' = 'das Wetter'. Neutrum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Отивам в време.",
+        "de": "Ich gehe zu/in Wetter.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Времеът/та/то е добър/а/о.",
+        "de": "das Wetter ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам времеа/та/то.",
+        "de": "Ich mag Wetter.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_weather_002",
+    "word": "Дъжд",
+    "translation": "der Regen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Rain. мъжки род.",
+    "notes_bg_to_de": "'Дъжд' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Дъжд' = 'der Regen'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Отивам в дъжд.",
+        "de": "Ich gehe zu/in Regen.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Дъждът/та/то е добър/а/о.",
+        "de": "der Regen ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам дъжда/та/то.",
+        "de": "Ich mag Regen.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_weather_003",
+    "word": "Сняг",
+    "translation": "der Schnee",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Snow. мъжки род.",
+    "notes_bg_to_de": "'Сняг' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сняг' = 'der Schnee'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Отивам в сняг.",
+        "de": "Ich gehe zu/in Schnee.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Снягът/та/то е добър/а/о.",
+        "de": "der Schnee ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам сняга/та/то.",
+        "de": "Ich mag Schnee.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_weather_004",
+    "word": "Вятър",
+    "translation": "der Wind",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Wind. мъжки род.",
+    "notes_bg_to_de": "'Вятър' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Вятър' = 'der Wind'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Отивам в вятър.",
+        "de": "Ich gehe zu/in Wind.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Вятърът/та/то е добър/а/о.",
+        "de": "der Wind ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам вятъра/та/то.",
+        "de": "Ich mag Wind.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_weather_005",
+    "word": "Облак",
+    "translation": "die Wolke",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Cloud. мъжки род.",
+    "notes_bg_to_de": "'Облак' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Облак' = 'die Wolke'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Отивам в облак.",
+        "de": "Ich gehe zu/in Wolke.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Облакът/та/то е добър/а/о.",
+        "de": "die Wolke ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам облака/та/то.",
+        "de": "Ich mag Wolke.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_weather_006",
+    "word": "Гръм",
+    "translation": "der Donner",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Thunder. мъжки род.",
+    "notes_bg_to_de": "'Гръм' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Гръм' = 'der Donner'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "bg": "Отивам в гръм.",
+        "de": "Ich gehe zu/in Donner.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Гръмът/та/то е добър/а/о.",
+        "de": "der Donner ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам гръма/та/то.",
+        "de": "Ich mag Donner.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_weather_007",
+    "word": "Пролет",
+    "translation": "der Frühling",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Spring. женски род.",
+    "notes_bg_to_de": "'Пролет' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Пролет' = 'der Frühling'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Отивам в пролет.",
+        "de": "Ich gehe zu/in Frühling.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Пролетът/та/то е добър/а/о.",
+        "de": "der Frühling ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам пролета/та/то.",
+        "de": "Ich mag Frühling.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_weather_008",
+    "word": "Лято",
+    "translation": "der Sommer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Summer. среден род.",
+    "notes_bg_to_de": "'Лято' е среден род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Лято' = 'der Sommer'. Neutrum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Отивам в лято.",
+        "de": "Ich gehe zu/in Sommer.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Лятоът/та/то е добър/а/о.",
+        "de": "der Sommer ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам лятоа/та/то.",
+        "de": "Ich mag Sommer.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_weather_009",
+    "word": "Есен",
+    "translation": "der Herbst",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Autumn. женски род.",
+    "notes_bg_to_de": "'Есен' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Есен' = 'der Herbst'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Отивам в есен.",
+        "de": "Ich gehe zu/in Herbst.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Есенът/та/то е добър/а/о.",
+        "de": "der Herbst ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам есена/та/то.",
+        "de": "Ich mag Herbst.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_weather_010",
+    "word": "Зима",
+    "translation": "der Winter",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Winter. женски род.",
+    "notes_bg_to_de": "'Зима' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Зима' = 'der Winter'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Отивам в зима.",
+        "de": "Ich gehe zu/in Winter.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Зимаът/та/то е добър/а/о.",
+        "de": "der Winter ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам зимаа/та/то.",
+        "de": "Ich mag Winter.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_activity_001",
+    "word": "Спорт",
+    "translation": "der Sport",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Aktivitäten",
+    "level": "A1",
+    "notes": "Sport. мъжки род.",
+    "notes_bg_to_de": "'Спорт' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Спорт' = 'der Sport'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Aktivitäten vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Отивам в спорт.",
+        "de": "Ich gehe zu/in Sport.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Спортът/та/то е добър/а/о.",
+        "de": "der Sport ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам спорта/та/то.",
+        "de": "Ich mag Sport.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_activity_002",
+    "word": "Игра",
+    "translation": "das Spiel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Aktivitäten",
+    "level": "A1",
+    "notes": "Game. женски род.",
+    "notes_bg_to_de": "'Игра' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Игра' = 'das Spiel'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Aktivitäten vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Отивам в игра.",
+        "de": "Ich gehe zu/in Spiel.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Играът/та/то е добър/а/о.",
+        "de": "das Spiel ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам играа/та/то.",
+        "de": "Ich mag Spiel.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_activity_003",
+    "word": "Музика",
+    "translation": "die Musik",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Aktivitäten",
+    "level": "A1",
+    "notes": "Music. женски род.",
+    "notes_bg_to_de": "'Музика' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Музика' = 'die Musik'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Aktivitäten vocabulary.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Отивам в музика.",
+        "de": "Ich gehe zu/in Musik.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Музикаът/та/то е добър/а/о.",
+        "de": "die Musik ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам музикаа/та/то.",
+        "de": "Ich mag Musik.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_activity_004",
+    "word": "Песен",
+    "translation": "das Lied",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Aktivitäten",
+    "level": "A1",
+    "notes": "Song. женски род.",
+    "notes_bg_to_de": "'Песен' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Песен' = 'das Lied'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Aktivitäten vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Отивам в песен.",
+        "de": "Ich gehe zu/in Lied.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Песенът/та/то е добър/а/о.",
+        "de": "das Lied ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам песена/та/то.",
+        "de": "Ich mag Lied.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_activity_005",
+    "word": "Танц",
+    "translation": "der Tanz",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Aktivitäten",
+    "level": "A1",
+    "notes": "Dance. мъжки род.",
+    "notes_bg_to_de": "'Танц' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Танц' = 'der Tanz'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Aktivitäten vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Отивам в танц.",
+        "de": "Ich gehe zu/in Tanz.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Танцът/та/то е добър/а/о.",
+        "de": "der Tanz ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам танца/та/то.",
+        "de": "Ich mag Tanz.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_activity_006",
+    "word": "Хоби",
+    "translation": "das Hobby",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Aktivitäten",
+    "level": "A1",
+    "notes": "Hobby. среден род.",
+    "notes_bg_to_de": "'Хоби' е среден род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Хоби' = 'das Hobby'. Neutrum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Aktivitäten vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Отивам в хоби.",
+        "de": "Ich gehe zu/in Hobby.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Хобиът/та/то е добър/а/о.",
+        "de": "das Hobby ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам хобиа/та/то.",
+        "de": "Ich mag Hobby.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_activity_007",
+    "word": "Филм",
+    "translation": "der Film",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Aktivitäten",
+    "level": "A1",
+    "notes": "Film. мъжки род.",
+    "notes_bg_to_de": "'Филм' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Филм' = 'der Film'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Aktivitäten vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Отивам в филм.",
+        "de": "Ich gehe zu/in Film.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Филмът/та/то е добър/а/о.",
+        "de": "der Film ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам филма/та/то.",
+        "de": "Ich mag Film.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_activity_008",
+    "word": "Снимка",
+    "translation": "das Foto",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Aktivitäten",
+    "level": "A1",
+    "notes": "Photo. женски род.",
+    "notes_bg_to_de": "'Снимка' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Снимка' = 'das Foto'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Aktivitäten vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Отивам в снимка.",
+        "de": "Ich gehe zu/in Foto.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Снимкаът/та/то е добър/а/о.",
+        "de": "das Foto ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам снимкаа/та/то.",
+        "de": "Ich mag Foto.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_activity_009",
+    "word": "Рисунка",
+    "translation": "die Zeichnung",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Aktivitäten",
+    "level": "A1",
+    "notes": "Drawing. женски род.",
+    "notes_bg_to_de": "'Рисунка' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Рисунка' = 'die Zeichnung'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Aktivitäten vocabulary.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "bg": "Отивам в рисунка.",
+        "de": "Ich gehe zu/in Zeichnung.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Рисункаът/та/то е добър/а/о.",
+        "de": "die Zeichnung ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам рисункаа/та/то.",
+        "de": "Ich mag Zeichnung.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_activity_010",
+    "word": "Урок",
+    "translation": "die Unterrichtsstunde",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Aktivitäten",
+    "level": "A1",
+    "notes": "Lesson. мъжки род.",
+    "notes_bg_to_de": "'Урок' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Урок' = 'die Unterrichtsstunde'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Aktivitäten vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Отивам в урок.",
+        "de": "Ich gehe zu/in Unterrichtsstunde.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Урокът/та/то е добър/а/о.",
+        "de": "die Unterrichtsstunde ist gut.",
+        "context": "Quality"
+      },
+      {
+        "bg": "Харесвам урока/та/то.",
+        "de": "Ich mag Unterrichtsstunde.",
+        "context": "Like"
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  }
+]
