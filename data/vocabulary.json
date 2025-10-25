@@ -5218,5 +5218,735 @@
     "linguistic_note": "Adjective with full declension. Forms: стар/стара/старо/стари. Comparative: по-стар.",
     "linguistic_note_bg_to_de": "Стар [star] - променливо. М: стар, ж: стара, ср: старо, мн: стари. За възраст И за предмети.",
     "linguistic_note_de_to_bg": "Geschlechtsformen: стар (m), стара (f), старо (n), стари (pl). Komparativ: по-стар. Antoným: нов."
+  },
+  {
+    "id": "a1_question_003",
+    "word": "Кога",
+    "translation": "wann",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Essential question word for asking about time. Unlike English 'when', Bulgarian 'кога' is used for both specific times and general time periods.",
+    "notes_bg_to_de": "В немски 'wann' се използва за въпроси за време, докато 'wenn' се използва за условни изречения ('ако') или повторени действия.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Кога' entspricht nur 'wann' (Fragewort), nicht 'wenn' (Konjunktion). Für 'wenn' gibt es andere bulgarische Wörter (ако, когато).",
+    "etymology": "From Proto-Slavic '*kъgda' (when), related to Russian 'когда' and Serbian 'када'. The question particle 'къ-' is related to 'кой' (who/which).",
+    "cultural_note": "In Bulgarian conversations, 'кога' questions are very direct. Unlike in German where you might soften with 'vielleicht' or 'eventuell', Bulgarians typically ask directly 'Кога идваш?' (When are you coming?).",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Кога е урокът?",
+        "de": "Wann ist die Unterrichtsstunde?",
+        "context": "Asking about lesson time"
+      },
+      {
+        "bg": "Кога идваш?",
+        "de": "Wann kommst du?",
+        "context": "Asking when someone is coming"
+      },
+      {
+        "bg": "От кога работиш тук?",
+        "de": "Seit wann arbeitest du hier?",
+        "context": "Asking about duration from past"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: ко́га [ˈkɔɡɐ]. The 'о' is pronounced clearly, not reduced.",
+    "linguistic_note_bg_to_de": "Кога се произнася [ˈkɔɡɐ] с ударение на първата сричка. Не редуцирайте 'о' до 'ъ' като в 'когато'.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: ко́га [ˈkɔɡɐ]. Das 'о' wird klar ausgesprochen, nicht reduziert wie in manchen längeren Wörtern."
+  },
+  {
+    "id": "a1_question_004",
+    "word": "Къде",
+    "translation": "wo",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Essential question word for location. Can be combined with prepositions for directional questions: 'откъде' (from where), 'накъде' (to where).",
+    "notes_bg_to_de": "В немски 'wo' пита за местоположение, докато 'wohin' (накъде) пита за посока и 'woher' (откъде) пита за произход.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Къде' = 'wo' (statisch). Für Richtung gibt es separate Wörter: 'накъде' (wohin) und 'откъде' (woher).",
+    "etymology": "From Proto-Slavic '*kъde' (where), with the question particle 'къ-' and locative element '-де'. Related to Russian 'где' (but note Bulgarian retains the 'къ').",
+    "cultural_note": "When giving directions in Bulgaria, people often use landmarks rather than street names. A common response to 'Къде е...?' might be 'До [landmark]' (next to [landmark]).",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Къде живееш?",
+        "de": "Wo wohnst du?",
+        "context": "Asking about residence"
+      },
+      {
+        "bg": "Къде е тоалетната?",
+        "de": "Wo ist die Toilette?",
+        "context": "Essential practical question"
+      },
+      {
+        "bg": "Къде работиш?",
+        "de": "Wo arbeitest du?",
+        "context": "Asking about workplace"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: къ́де [ˈkɤdɛ]. The 'ъ' is the schwa sound [ɤ], similar to the 'a' in English 'about'.",
+    "linguistic_note_bg_to_de": "Къде се произнася [ˈkɤdɛ] с ударение на 'къ'. Гласната 'ъ' е централна [ɤ], уникална за български.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: къ́де [ˈkɤdɛ]. Das 'ъ' ist ein Schwa-Laut [ɤ], ähnlich wie das 'a' in englisch 'about', kommt im Deutschen nicht vor."
+  },
+  {
+    "id": "a1_question_005",
+    "word": "Защо",
+    "translation": "warum",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question word for reason or cause. Common in everyday conversation. Can also be used in statements as 'because' when followed by a comma.",
+    "notes_bg_to_de": "В немски има три думи за 'защо': 'warum' (най-често), 'wieso', 'weshalb'. Всички се превеждат като 'защо' на български.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Защо' deckt alle Varianten ab: 'warum', 'wieso', 'weshalb'. Bulgaren unterscheiden nicht zwischen diesen Nuancen.",
+    "etymology": "Compound word from 'за' (for) + 'що' (what, archaic). Literally 'for what'. The form 'що' is archaic Bulgarian for 'какво' (what).",
+    "cultural_note": "Bulgarians tend to be direct with 'защо' questions, even in formal settings. Unlike German business culture where asking 'warum' might seem confrontational, Bulgarian workplace culture accepts direct 'защо' questions.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Защо не идваш?",
+        "de": "Warum kommst du nicht?",
+        "context": "Asking reason for absence"
+      },
+      {
+        "bg": "Защо учиш български?",
+        "de": "Warum lernst du Bulgarisch?",
+        "context": "Asking about motivation"
+      },
+      {
+        "bg": "Не разбирам защо.",
+        "de": "Ich verstehe nicht, warum.",
+        "context": "Expressing confusion about reason"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: защо́ [zɐˈʃtɔ]. The 'щ' is a single consonant sound [ʃt], not two separate sounds.",
+    "linguistic_note_bg_to_de": "Защо се произнася [zɐˈʃtɔ] с ударение на 'о'. Буквата 'щ' е един звук [ʃt], не 'ш' + 'т'.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: защо́ [zɐˈʃtɔ]. Das 'щ' ist ein einzelner Konsonant [ʃt], ähnlich wie 'scht' in 'Deutsch', aber als ein Laut."
+  },
+  {
+    "id": "a1_question_006",
+    "word": "Как",
+    "translation": "wie",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question word for manner or method. Also used in greetings: 'Как си?' (How are you?). Can mean 'how' (manner) or 'what' in certain fixed expressions.",
+    "notes_bg_to_de": "В немски 'wie' се използва за начин ('как'), количество ('wie viel' = 'колко') и в сравнения ('wie du' = 'като теб').",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Как' = 'wie' für Fragen nach Art und Weise. Für Mengenangaben ('wie viel') nutzt man 'колко', nicht 'как'.",
+    "etymology": "From Proto-Slavic '*kako' (how), related to Russian 'как' and Serbian 'како'. The 'к' root relates to questions and manner.",
+    "cultural_note": "The greeting 'Как си?' (How are you?) is universal in Bulgaria. Unlike in Germany where 'Wie geht's?' might get a detailed answer, Bulgarians typically respond briefly: 'Добре' (Good) or 'Нормално' (Okay).",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Как си?",
+        "de": "Wie geht es dir?",
+        "context": "Standard greeting"
+      },
+      {
+        "bg": "Как се прави това?",
+        "de": "Wie macht man das?",
+        "context": "Asking for instructions"
+      },
+      {
+        "bg": "Как се казваш?",
+        "de": "Wie heißt du?",
+        "context": "Asking for name"
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: ка́к [kak]. The 'к' sounds are both hard [k], pronounced distinctly at beginning and end.",
+    "linguistic_note_bg_to_de": "Как се произнася [kak] с ударение на единствената сричка. И двете 'к' се произнасят твърдо и ясно.",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: ка́к [kak]. Beide 'к' werden hart ausgesprochen, wie deutsches 'k' in 'Kaffee'."
+  },
+  {
+    "id": "a1_question_007",
+    "word": "Колко",
+    "translation": "wie viel, wie viele",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question word for quantity or number. Unlike German which distinguishes 'wie viel' (uncountable) and 'wie viele' (countable), Bulgarian uses 'колко' for both.",
+    "notes_bg_to_de": "В немски разграничаваме 'wie viel' (за нещо неизброимо: wie viel Milch) и 'wie viele' (за броими: wie viele Äpfel). И двете са 'колко' на български.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Колко' entspricht sowohl 'wie viel' (für nicht zählbare Dinge) als auch 'wie viele' (für zählbare Dinge). Kein Unterschied im Bulgarischen.",
+    "etymology": "From Proto-Slavic '*koľko' (how much/many), related to Russian 'сколько'. The root '*kol-' relates to quantity and totality.",
+    "cultural_note": "When asking prices in Bulgaria, 'Колко струва?' (How much does it cost?) is the standard phrase. In markets, haggling is less common than in other Balkan countries - prices are usually fixed.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Колко струва?",
+        "de": "Wie viel kostet das?",
+        "context": "Asking about price"
+      },
+      {
+        "bg": "Колко години си?",
+        "de": "Wie alt bist du? (literally: how many years are you?)",
+        "context": "Asking about age"
+      },
+      {
+        "bg": "Колко хора има?",
+        "de": "Wie viele Leute gibt es?",
+        "context": "Asking about number of people"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: ко́лко [ˈkɔlkɔ]. Both 'о' sounds are pronounced clearly, not reduced.",
+    "linguistic_note_bg_to_de": "Колко се произнася [ˈkɔlkɔ] с ударение на 'ко'. И двете 'о' се произнасят ясно, без редукция.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: ко́лко [ˈkɔlkɔ]. Beide 'о' werden klar ausgesprochen, ähnlich wie deutsches 'o' in 'Konto'."
+  },
+  {
+    "id": "a1_question_008",
+    "word": "Чий",
+    "translation": "wessen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question word for possession. Declines by gender and number: чий (m), чия (f), чие (n), чии (pl). Used to ask who owns something.",
+    "notes_bg_to_de": "В немски 'wessen' е формата за всички родове. В български 'чий' се променя: чий (м.р.), чия (ж.р.), чие (ср.р.), чии (мн.ч.).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Чий' ändert sich nach Genus und Numerus des besessenen Objects: чий телефон (welches Telefon - m), чия книга (welches Buch - f), чие дете (welches Kind - n), чии обувки (welche Schuhe - pl).",
+    "etymology": "From Proto-Slavic '*čьjь' (whose), related to Russian 'чей' and the base question word 'what/who'. The root is related to 'че' (that).",
+    "cultural_note": "In Bulgarian culture, asking 'Чий е?' about an object is common and direct. Unlike in some cultures where claiming ownership immediately is expected, Bulgarians might respond 'Не знам' (I don't know) neutrally without implying they're avoiding responsibility.",
+    "difficulty": 2,
+    "frequency": 70,
+    "examples": [
+      {
+        "bg": "Чий е този телефон?",
+        "de": "Wessen Telefon ist das?",
+        "context": "Asking about phone ownership (masculine)"
+      },
+      {
+        "bg": "Чия е тази чанта?",
+        "de": "Wessen Tasche ist das?",
+        "context": "Asking about bag ownership (feminine)"
+      },
+      {
+        "bg": "Чие е детето?",
+        "de": "Wessen Kind ist das?",
+        "context": "Asking about child (neuter)"
+      },
+      {
+        "bg": "Чии са тези книги?",
+        "de": "Wessen Bücher sind das?",
+        "context": "Asking about books (plural)"
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: чи́й [t͡ʃij]. The 'й' at the end is a clear [j] sound, like English 'y' in 'yes'.",
+    "linguistic_note_bg_to_de": "Чий се произнася [t͡ʃij] с ударение на единствената сричка. Краят 'й' е ясен [j] звук.",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: чи́й [t͡ʃij]. Das 'ч' ist wie deutsches 'tsch', das 'й' am Ende ist ein klares [j] wie in 'ja'."
+  },
+  {
+    "id": "a1_question_009",
+    "word": "Какъв",
+    "translation": "was für ein, welcher Art",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question word asking about type, kind, or quality. Declines by gender and number: какъв (m), каква (f), какво (n), какви (pl). Related to 'какво' (what) but asks about characteristics.",
+    "notes_bg_to_de": "В немски 'was für ein' пита за вид или качество, докато 'welcher' избира от известна група. 'Какъв' е по-близо до 'was für ein'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Какъв' = 'was für ein' (fragt nach Art/Qualität). Nicht zu verwechseln mit 'какво' (was) oder 'кой' (welcher - für Auswahl aus bekannter Gruppe).",
+    "etymology": "From Proto-Slavic '*kakovъ' (what kind of), compound of '*kako' (how) + adjectival ending. Related to Russian 'каков' (archaic) and Serbian 'какав'.",
+    "cultural_note": "When Bulgarians ask 'Какъв е?' about a person, they're usually asking about character/personality, not physical appearance. For appearance, they'd ask 'Как изглежда?' (How does he/she look?).",
+    "difficulty": 2,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Какъв е филмът?",
+        "de": "Was für ein Film ist das? / Wie ist der Film?",
+        "context": "Asking about film quality/type (masculine)"
+      },
+      {
+        "bg": "Каква е храната?",
+        "de": "Wie ist das Essen?",
+        "context": "Asking about food quality (feminine)"
+      },
+      {
+        "bg": "Какво е времето?",
+        "de": "Wie ist das Wetter?",
+        "context": "Asking about weather (neuter)"
+      },
+      {
+        "bg": "Какви са хората?",
+        "de": "Was für Leute sind das? / Wie sind die Leute?",
+        "context": "Asking about people's character (plural)"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: какъ́в [kɐˈkɤf]. The 'ъ' is schwa [ɤ], the final 'в' is devoiced to [f] in this position.",
+    "linguistic_note_bg_to_de": "Какъв се произнася [kɐˈkɤf] с ударение на 'къ'. Финалното 'в' се оглушава на [f].",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: какъ́в [kɐˈkɤf]. Das finale 'в' wird als [f] ausgesprochen (Auslautverhärtung), ähnlich wie im Deutschen."
+  },
+  {
+    "id": "a1_question_010",
+    "word": "Откъде",
+    "translation": "woher",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question word for origin or source. Compound of 'от' (from) + 'къде' (where). Used to ask where someone/something comes from.",
+    "notes_bg_to_de": "В немски 'woher' пита за произход. Българското 'откъде' е по-директен превод (от + къде = from + where), докато в немски е едно слово.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Откъде' = 'woher'. Wörtlich bedeutet es 'von wo' (от къде), wird aber als ein Wort geschrieben und behandelt.",
+    "etymology": "Compound word: 'от' (from, Proto-Slavic '*otъ') + 'къде' (where, Proto-Slavic '*kъde'). The combination is standard across South Slavic languages.",
+    "cultural_note": "'Откъде си?' (Where are you from?) is one of the first questions Bulgarians ask when meeting foreigners. Regional identity is strong in Bulgaria, and people often specify not just city but neighborhood or district.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Откъде си?",
+        "de": "Woher kommst du?",
+        "context": "Asking about origin/hometown"
+      },
+      {
+        "bg": "Откъде идваш?",
+        "de": "Woher kommst du? (right now)",
+        "context": "Asking where someone is coming from now"
+      },
+      {
+        "bg": "Откъде знаеш?",
+        "de": "Woher weißt du das?",
+        "context": "Asking about source of knowledge"
+      }
+    ],
+    "linguistic_note": "Stress on middle syllable: откъ́де [ɔtˈkɤdɛ]. The 'ъ' is schwa [ɤ], and the compound is pronounced as one word without pause.",
+    "linguistic_note_bg_to_de": "Откъде се произнася [ɔtˈkɤdɛ] с ударение на 'къ'. Произнася се като една дума, без пауза между 'от' и 'къде'.",
+    "linguistic_note_de_to_bg": "Betonung auf der mittleren Silbe: откъ́де [ɔtˈkɤdɛ]. Wird als ein Wort ausgesprochen, ohne Pause zwischen 'от' und 'къде'."
+  },
+  {
+    "id": "a1_question_011",
+    "word": "Накъде",
+    "translation": "wohin",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question word for direction or destination. Compound of 'на' (to/toward) + 'къде' (where). Used to ask where someone is going.",
+    "notes_bg_to_de": "В немски 'wohin' пита за посока/направление. Българското 'накъде' е съставено от 'на' (към) + 'къде' (къде), но се пише и произнася като едно слово.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Накъде' = 'wohin'. Unterschied zu 'къде' (wo - statisch): 'къде си?' (wo bist du?) vs. 'накъде отиваш?' (wohin gehst du?).",
+    "etymology": "Compound word: 'на' (to/toward, Proto-Slavic '*na') + 'къде' (where). The preposition 'на' indicates direction toward a location.",
+    "cultural_note": "When asked 'Накъде?' on the street, Bulgarians typically give the destination directly without pleasantries. In contrast to German culture where you might explain your route, Bulgarians usually just state the endpoint: 'До центъра' (To the center).",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Накъде отиваш?",
+        "de": "Wohin gehst du?",
+        "context": "Asking about destination"
+      },
+      {
+        "bg": "Накъде сте?",
+        "de": "Wohin fahren Sie? / Wo sind Sie unterwegs?",
+        "context": "Polite form, asking direction"
+      },
+      {
+        "bg": "Накъде е автобусът?",
+        "de": "Wohin fährt der Bus?",
+        "context": "Asking bus destination"
+      }
+    ],
+    "linguistic_note": "Stress on middle syllable: накъ́де [nɐˈkɤdɛ]. The 'ъ' is schwa [ɤ], and like 'откъде', it's pronounced as one word.",
+    "linguistic_note_bg_to_de": "Накъде се произнася [nɐˈkɤdɛ] с ударение на 'къ'. Произнася се като една дума без пауза.",
+    "linguistic_note_de_to_bg": "Betonung auf der mittleren Silbe: накъ́де [nɐˈkɤdɛ]. Wird als ein Wort ausgesprochen, ohne Pause zwischen 'на' und 'къде'."
+  },
+  {
+    "id": "a1_question_012",
+    "word": "Дали",
+    "translation": "ob",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question particle introducing yes/no questions in indirect speech. Equivalent to German 'ob'. Can also be used to form polite questions or express uncertainty.",
+    "notes_bg_to_de": "В немски 'ob' въвежда непреки въпроси (Ich frage, ob...). В български 'дали' има същата функция, но може и да започва директни учтиви въпроси: 'Дали искаш кафе?' = 'Möchtest du vielleicht Kaffee?'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Дали' = 'ob' für indirekte Fragen. Aber Achtung: 'дали' kann auch am Anfang direkter Fragen stehen um Höflichkeit auszudrücken, was mit 'ob' im Deutschen nicht geht.",
+    "etymology": "From Proto-Slavic '*da li' (if, whether), compound of '*da' (yes/if) + question particle '*li'. Related to Russian 'ли' (question particle used alone).",
+    "cultural_note": "Using 'дали' at the start of a question adds politeness and tentativeness, similar to 'perhaps' or 'maybe' in English. It's common in service situations: 'Дали имате маса?' (Might you have a table?) is more polite than just 'Имате ли маса?'.",
+    "difficulty": 2,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Не знам дали ще дойда.",
+        "de": "Ich weiß nicht, ob ich komme.",
+        "context": "Indirect question expressing uncertainty"
+      },
+      {
+        "bg": "Дали искаш да идеш?",
+        "de": "Möchtest du vielleicht gehen?",
+        "context": "Polite direct question"
+      },
+      {
+        "bg": "Питам дали има време.",
+        "de": "Ich frage, ob es Zeit gibt.",
+        "context": "Indirect question"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: да́ли [ˈdɐli]. The 'а' is clear, the 'и' at the end is unstressed and slightly reduced.",
+    "linguistic_note_bg_to_de": "Дали се произнася [ˈdɐli] с ударение на 'да'. Крайното 'и' е неударено и леко редуцирано.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: да́ли [ˈdɐli]. Das 'и' am Ende ist unbetont, ähnlich wie deutsches '-e' in 'Liebe'."
+  },
+  {
+    "id": "a1_food_018",
+    "word": "Зеленчук",
+    "translation": "das Gemüse",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "General term for vegetables. The word literally means 'green things'. Used as a collective noun, can also refer to a single vegetable in context.",
+    "notes_bg_to_de": "В немски 'das Gemüse' е събирателно за зеленчуци, както и в български 'зеленчук'. За отделни видове използваме: домат, морков, картоф и т.н.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Зеленчук' = 'Gemüse' (Kollektivbegriff). Kommt von 'зелен' (grün), ähnlich wie deutsches 'Grünzeug' (umgangssprachlich).",
+    "etymology": "From Bulgarian 'зелен' (green) + diminutive suffix '-чук'. Reflects that vegetables are primarily green or plant-based. The etymology is uniquely Bulgarian - most Slavic languages use variants of 'овощь/овоч'.",
+    "cultural_note": "Bulgarian cuisine is heavily vegetable-based. The word 'зеленчук' has positive connotations - fresh vegetables are central to Bulgarian food culture. Markets (пазар) are filled with locally grown seasonal зеленчуци.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Обичам зеленчуци.",
+        "de": "Ich mag Gemüse.",
+        "context": "Expressing preference"
+      },
+      {
+        "bg": "Купувам зеленчук от пазара.",
+        "de": "Ich kaufe Gemüse vom Markt.",
+        "context": "Shopping context"
+      },
+      {
+        "bg": "Ядете повече зеленчуци!",
+        "de": "Esst mehr Gemüse!",
+        "context": "Health advice"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: зеле́нчук [zɛˈlent͡ʃuk]. The 'н' before 'ч' creates a slight palatalization. Plural: зеленчуци.",
+    "linguistic_note_bg_to_de": "Зеленчук се произнася [zɛˈlent͡ʃuk] с ударение на 'лен'. Множествено число: зеленчуци [zɛˈlent͡ʃut͡si].",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: зеле́нчук [zɛˈlent͡ʃuk]. Plural: зеленчуци. Das 'ч' wird wie 'tsch' ausgesprochen."
+  },
+  {
+    "id": "a1_food_019",
+    "word": "Плод",
+    "translation": "die Frucht, das Obst",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Word for fruit. Can mean both a single fruit (die Frucht) or fruits collectively (das Obst). Plural 'плодове' is used for multiple fruits.",
+    "notes_bg_to_de": "В немски има два термина: 'die Frucht' (отделен плод) и 'das Obst' (плодове като събирателно). Българското 'плод' покрива и двете значения.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Плод' kann sowohl 'Frucht' (einzeln) als auch 'Obst' (kollektiv) bedeuten. Plural 'плодове' (Früchte) macht den Unterschied klarer.",
+    "etymology": "From Proto-Slavic '*plodъ' (fruit, offspring), related to Russian 'плод' and Latin 'fetus'. The root '*pel-' means 'to fill' - fruit that fills/nourishes.",
+    "cultural_note": "Bulgaria is famous for its fruits, especially plums (сливи), apricots (кайсии), and cherries (череши). The phrase 'плодородна земя' (fruitful land) reflects the agricultural importance of fruit cultivation in Bulgarian culture.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Обичам плодове.",
+        "de": "Ich mag Obst.",
+        "context": "General preference"
+      },
+      {
+        "bg": "Яж пресни плодове.",
+        "de": "Iss frisches Obst.",
+        "context": "Health advice"
+      },
+      {
+        "bg": "Този плод е сладък.",
+        "de": "Diese Frucht ist süß.",
+        "context": "Describing single fruit"
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: пло́д [plɔt]. The final 'д' is devoiced to [t]. Plural: плодове [ˈplɔdɔvɛ].",
+    "linguistic_note_bg_to_de": "Плод се произнася [plɔt] с ударение на единствената сричка. Финалното 'д' се оглушава на [t]. Множествено: плодове.",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: пло́д [plɔt]. Das finale 'д' wird als [t] ausgesprochen (Auslautverhärtung). Plural: плодове."
+  },
+  {
+    "id": "a1_food_020",
+    "word": "Ябълка",
+    "translation": "der Apfel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Apple. One of the most common fruits in Bulgarian cuisine. Note the unique Bulgarian form 'ябълка' differs from most other Slavic languages.",
+    "notes_bg_to_de": "В немски 'der Apfel' е мъжки род, докато в български 'ябълка' е женски род. Внимавайте с местоименията: der Apfel - er (той), ябълката - тя.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ябълка' ist feminin (im Gegensatz zu maskulinem 'der Apfel'). Die Form ist einzigartig bulgarisch - vergleiche russisch 'яблоко'.",
+    "etymology": "From Proto-Slavic '*ablъko' (apple), but Bulgarian evolved uniquely to 'ябълка' with metathesis (sound switching) and the characteristic 'ъ'. Related to Russian 'яблоко' but structurally different.",
+    "cultural_note": "Apples are central to Bulgarian folklore and cuisine. 'Ябълка на раздора' (apple of discord) is a common idiom. Baked apples and apple preserves (компот) are traditional, especially in winter.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Ям ябълка всеки ден.",
+        "de": "Ich esse jeden Tag einen Apfel.",
+        "context": "Daily habit"
+      },
+      {
+        "bg": "Тази ябълка е червена.",
+        "de": "Dieser Apfel ist rot.",
+        "context": "Describing color"
+      },
+      {
+        "bg": "Колко струва една ябълка?",
+        "de": "Wie viel kostet ein Apfel?",
+        "context": "Shopping"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: ябъ́лка [jɐˈbɤlkɐ]. The 'ъ' is schwa [ɤ]. The initial 'я' is [jɐ]. Plural: ябълки.",
+    "linguistic_note_bg_to_de": "Ябълка се произнася [jɐˈbɤlkɐ] с ударение на 'бъл'. Буквата 'ъ' е [ɤ]. Множествено: ябълки.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: ябъ́лка [jɐˈbɤlkɐ]. Das 'я' am Anfang ist [jɐ], das 'ъ' ist Schwa [ɤ]. Plural: ябълки."
+  },
+  {
+    "id": "a1_food_021",
+    "word": "Банан",
+    "translation": "die Banane",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Banana. An international loanword, easily recognizable. Note the stress difference from German and the masculine gender in Bulgarian.",
+    "notes_bg_to_de": "В немски 'die Banane' е женски род, докато в български 'банан' е мъжки род. Ударението също е различно: нем. Banáne [baˈnaːnə], бълг. бана́н [bɐˈnan].",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Банан' ist maskulin (im Gegensatz zu femininem 'die Banane'). Betonung auf der letzten Silbe, nicht wie im Deutschen auf der zweiten.",
+    "etymology": "International loanword, ultimately from West African languages via Portuguese 'banana'. Entered Bulgarian via European languages in the 19th-20th century.",
+    "cultural_note": "Bananas were considered exotic in Bulgaria during communist times and were available mainly for special occasions. Today they're common, but older Bulgarians remember them as a luxury item. 'Банана е извита, но е сладка' (The banana is curved, but it's sweet) - a saying about accepting imperfections.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Обичам банани.",
+        "de": "Ich mag Bananen.",
+        "context": "Preference"
+      },
+      {
+        "bg": "Купи банан за закуска.",
+        "de": "Kauf eine Banane zum Frühstück.",
+        "context": "Shopping instruction"
+      },
+      {
+        "bg": "Този банан е узрял.",
+        "de": "Diese Banane ist reif.",
+        "context": "Describing ripeness"
+      }
+    ],
+    "linguistic_note": "Stress on last syllable: бана́н [bɐˈnan]. Both 'а' sounds are pronounced clearly. Plural: банани [bɐˈnani].",
+    "linguistic_note_bg_to_de": "Банан се произнася [bɐˈnan] с ударение на последната сричка. И двете 'а' са ясни. Множествено: банани.",
+    "linguistic_note_de_to_bg": "Betonung auf der letzten Silbe: бана́н [bɐˈnan], anders als deutsches Banáne. Beide 'а' werden klar ausgesprochen. Plural: банани."
+  },
+  {
+    "id": "a1_food_022",
+    "word": "Портокал",
+    "translation": "die Orange, die Apfelsine",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Orange (fruit). The word comes from Portuguese 'Portugal' - oranges arrived via Portuguese trade routes. Can also refer to the color orange colloquially.",
+    "notes_bg_to_de": "В немски има два термина: 'die Orange' (по-често на север) и 'die Apfelsine' (традиционно на юг). Българското 'портокал' идва от 'Portugal', защото портокалите са дошли чрез португалска търговия.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Портокал' kommt von 'Portugal' (woher die Früchte ursprünglich kamen). Maskulines Genus, im Gegensatz zu femininem 'die Orange'.",
+    "etymology": "From Portuguese 'Portugal', via Ottoman Turkish 'portakal'. Reflects the historical trade route of oranges from Portugal through the Ottoman Empire to the Balkans.",
+    "cultural_note": "Oranges are associated with winter in Bulgaria - fresh oranges become abundant and cheap in winter months. 'Портокалов сок' (orange juice) is a breakfast staple. The phrase 'свеж като портокал' (fresh as an orange) means energetic and vibrant.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Обичам пресен портокал.",
+        "de": "Ich mag frische Orangen.",
+        "context": "Preference"
+      },
+      {
+        "bg": "Портокалов сок, моля.",
+        "de": "Orangensaft, bitte.",
+        "context": "Ordering drinks"
+      },
+      {
+        "bg": "Този портокал е сочен.",
+        "de": "Diese Orange ist saftig.",
+        "context": "Describing quality"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: порто́кал [pɔrˈtɔkal]. All vowels are pronounced clearly. Plural: портокали [pɔrtɔˈkali].",
+    "linguistic_note_bg_to_de": "Портокал се произнася [pɔrˈtɔkal] с ударение на 'то'. Всички гласни са ясни. Множествено: портокали.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: порто́кал [pɔrˈtɔkal]. Alle Vokale werden klar ausgesprochen. Plural: портокали."
+  },
+  {
+    "id": "a1_food_023",
+    "word": "Домат",
+    "translation": "die Tomate",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Tomato. Essential ingredient in Bulgarian cuisine. The word is similar across many languages but with Bulgarian phonetic characteristics.",
+    "notes_bg_to_de": "В немски 'die Tomate' е женски род, докато в български 'домат' е мъжки род. Домати са основна съставка в българската кухня - шопска салата, люта, таратор.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Домат' ist maskulin (im Gegensatz zu femininem 'die Tomate'). Aussprache ähnlich, aber mit bulgarischem [ɔ]-Laut.",
+    "etymology": "From Nahuatl 'tomatl' via Spanish 'tomate', entered Bulgarian via Turkish 'domates'. The Bulgarian form reflects the Ottoman Turkish intermediary.",
+    "cultural_note": "Tomatoes are ubiquitous in Bulgarian cuisine. Fresh tomatoes are a summer staple, and 'домашен домат' (homegrown tomato) is considered far superior to store-bought. The peak of summer is 'сезон на доматите' (tomato season) when they're cheapest and tastiest.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Искам домати за салата.",
+        "de": "Ich möchte Tomaten für den Salat.",
+        "context": "Shopping"
+      },
+      {
+        "bg": "Този домат е сочен.",
+        "de": "Diese Tomate ist saftig.",
+        "context": "Describing quality"
+      },
+      {
+        "bg": "Купи три домата.",
+        "de": "Kauf drei Tomaten.",
+        "context": "Shopping instruction"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: дома́т [dɔˈmat]. The 'о' is open [ɔ]. Plural: домати [dɔˈmati].",
+    "linguistic_note_bg_to_de": "Домат се произнася [dɔˈmat] с ударение на 'мат'. Буквата 'о' е отворена [ɔ]. Множествено: домати.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: дома́т [dɔˈmat]. Das 'о' ist ein offenes [ɔ] wie in 'Tomate'. Plural: домати."
+  },
+  {
+    "id": "a1_food_024",
+    "word": "Картоф",
+    "translation": "die Kartoffel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Potato. Staple food in Bulgarian cuisine. The word comes from German 'Kartoffel' via Russian, showing the European origin of the potato in Bulgaria.",
+    "notes_bg_to_de": "В немски 'die Kartoffel' е женски род, докато в български 'картоф' е мъжки род. Думата е заемка от немски през руски 'картофель'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Картоф' kommt etymologisch von deutschem 'Kartoffel' (via Russisch). Aber: maskulines Genus in Bulgarisch.",
+    "etymology": "From German 'Kartoffel' via Russian 'картофель'. The German word itself comes from Italian 'tartufolo' (truffle). Potatoes arrived in Bulgaria in the 18th-19th century via European influence.",
+    "cultural_note": "Potatoes are a staple in Bulgarian cuisine, especially in colder months. 'Пържени картофи' (fried potatoes) are a classic side dish. 'Картофена салата' (potato salad) is mandatory at celebrations. The phrase 'прост като картоф' (simple as a potato) means something is basic or unsophisticated.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Обичам пържени картофи.",
+        "de": "Ich mag Bratkartoffeln.",
+        "context": "Food preference"
+      },
+      {
+        "bg": "Купи килограм картофи.",
+        "de": "Kauf ein Kilo Kartoffeln.",
+        "context": "Shopping"
+      },
+      {
+        "bg": "Картофите са изварени.",
+        "de": "Die Kartoffeln sind gekocht.",
+        "context": "Cooking status"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: карто́ф [kɐrˈtɔf]. The final 'ф' is [f]. Plural: картофи [kɐrˈtɔfi].",
+    "linguistic_note_bg_to_de": "Картоф се произнася [kɐrˈtɔf] с ударение на 'то'. Крайното 'ф' е [f]. Множествено: картофи.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: карто́ф [kɐrˈtɔf]. Ähnlich wie deutsches 'Kartoffel' aber ohne das finale '-el'. Plural: картофи."
+  },
+  {
+    "id": "a1_food_025",
+    "word": "Морков",
+    "translation": "die Karotte, die Möhre",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Carrot. Common vegetable in Bulgarian cuisine. The word is of Slavic origin and related to similar words in other Slavic languages.",
+    "notes_bg_to_de": "В немски има два термина: 'die Karotte' (общо) и 'die Möhre' (по-често на север). Българското 'морков' е мъжки род и покрива и двете немски думи.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Морков' ist maskulin (im Gegensatz zu femininen 'die Karotte/Möhre'). Das Wort ist slawischen Ursprungs, im Gegensatz zum lateinstämmigen 'Karotte'.",
+    "etymology": "From Proto-Slavic '*mъrky' (carrot), related to Russian 'морковь' and Czech 'mrkev'. The root may relate to colors or root vegetables generally.",
+    "cultural_note": "Carrots are essential in Bulgarian cuisine, especially in winter salads and as a base for many dishes. 'Морковена халва' (carrot halva) is a traditional sweet. Fresh carrots from the market are preferred over packaged ones.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Обичам моркови.",
+        "de": "Ich mag Karotten.",
+        "context": "Preference"
+      },
+      {
+        "bg": "Рендай морков за салатата.",
+        "de": "Reibe Karotte für den Salat.",
+        "context": "Cooking instruction"
+      },
+      {
+        "bg": "Тези моркови са пресни.",
+        "de": "Diese Karotten sind frisch.",
+        "context": "Describing quality"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: морко́в [mɔrˈkɔf]. The final 'в' is devoiced to [f]. Plural: моркови [mɔrˈkɔvi].",
+    "linguistic_note_bg_to_de": "Морков се произнася [mɔrˈkɔf] с ударение на 'ко'. Крайното 'в' се оглушава на [f]. Множествено: моркови.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: морко́в [mɔrˈkɔf]. Das finale 'в' wird als [f] ausgesprochen (Auslautverhärtung). Plural: моркови."
+  },
+  {
+    "id": "a1_food_026",
+    "word": "Лук",
+    "translation": "die Zwiebel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Onion. Essential ingredient in Bulgarian cooking. Note: 'лук' can also mean 'bow' (weapon/tool) in different contexts, but context makes it clear.",
+    "notes_bg_to_de": "В немски 'die Zwiebel' е женски род, докато в български 'лук' е мъжки род. Лукът е основна съставка в българската кухня - почти всяко ястие започва с 'запръжка от лук'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Лук' ist maskulin (im Gegensatz zu femininem 'die Zwiebel'). Achtung: Das Wort bedeutet auch 'Bogen' (Waffe/Werkzeug), aber der Kontext macht die Bedeutung klar.",
+    "etymology": "From Proto-Slavic '*lǫkъ' (onion, bend/bow). The semantic connection between 'onion' and 'bow' comes from the curved shape. Related to Russian 'лук' which has both meanings.",
+    "cultural_note": "Onions are the base of most Bulgarian dishes. 'Сурово лукче' (raw onion) is often served with grilled meats. Crying from cutting onions is jokingly called 'лукът ме кара да плача' (the onion makes me cry). Spring onions ('пресен лук') are a seasonal delicacy.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "bg": "Нарежи лук за яхнията.",
+        "de": "Schneide Zwiebeln für den Eintopf.",
+        "context": "Cooking instruction"
+      },
+      {
+        "bg": "Обичам ли сурово лукче?",
+        "de": "Mag ich rohe Zwiebeln?",
+        "context": "Food preference question"
+      },
+      {
+        "bg": "Лукът е здравословен.",
+        "de": "Zwiebeln sind gesund.",
+        "context": "Health statement"
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: лу́к [luk]. Clear 'л' and 'у' sounds, final 'к' is hard [k]. Plural: лукове [ˈlukɔvɛ].",
+    "linguistic_note_bg_to_de": "Лук се произнася [luk] с ударение на единствената сричка. Крайното 'к' е твърдо [k]. Множествено: лукове.",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: лу́к [luk]. Das finale 'к' wird hart ausgesprochen wie deutsches 'k'. Plural: лукове (Ausnahme: nicht *лукци)."
+  },
+  {
+    "id": "a1_food_027",
+    "word": "Салата",
+    "translation": "der Salat",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Salad. Can refer to both the dish (салата) and lettuce leaves (зелена салата). Very important in Bulgarian cuisine - meals often start with a salad.",
+    "notes_bg_to_de": "В немски 'der Salat' е мъжки род, както и в български. Думата означава и ястието 'салата' и зеленчука 'маруля'. В контекста става ясно кое е.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Салата' = 'Salat' (beide Bedeutungen: Gericht und Pflanze). Die berühmte 'шопска салата' (Schopska-Salat) ist Bulgarians Nationalgericht.",
+    "etymology": "From Italian 'insalata' (salted), via Turkish 'salata'. The word entered Bulgarian during Ottoman times when Mediterranean culinary influence increased.",
+    "cultural_note": "Salads are central to Bulgarian meals. 'Шопска салата' (tomatoes, cucumbers, peppers, onions, white cheese) is the national salad. Every region has its own salad specialty. Fresh salads are mandatory at celebrations, and 'без салата не е ядене' (without salad, it's not a meal) is a common saying.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Правя шопска салата.",
+        "de": "Ich mache Schopska-Salat.",
+        "context": "Cooking"
+      },
+      {
+        "bg": "Искам зелена салата.",
+        "de": "Ich möchte grünen Salat (Blattsalat).",
+        "context": "Ordering food"
+      },
+      {
+        "bg": "Салатата е свежа.",
+        "de": "Der Salat ist frisch.",
+        "context": "Describing food"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: сала́та [sɐˈlatɐ]. All vowels are pronounced clearly. Definite form: салатата [sɐˈlatɐtɐ].",
+    "linguistic_note_bg_to_de": "Салата се произнася [sɐˈlatɐ] с ударение на 'ла'. Всички гласни са ясни. Определена форма: салатата.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: сала́та [sɐˈlatɐ]. Ähnlich wie deutsches 'Salat'. Alle Vokale werden klar ausgesprochen."
   }
 ]
