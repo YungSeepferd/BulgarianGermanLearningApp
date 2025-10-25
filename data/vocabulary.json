@@ -16388,5 +16388,1805 @@
     "linguistic_note": "мъжки род.",
     "linguistic_note_bg_to_de": "мъжки род.",
     "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_adverb_001",
+    "word": "Много",
+    "translation": "sehr, viel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Very, much/many. Essential adverb.",
+    "notes_bg_to_de": "'Много' е наречие. Very, much/many",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Много' = 'sehr, viel'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Много работя.",
+        "de": "Ich bin sehr, viel/arbeite sehr, viel/spreche sehr, viel.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е много.",
+        "de": "Er ist/macht sehr, viel.",
+        "context": "Description"
+      },
+      {
+        "bg": "Много е добре.",
+        "de": "Sehr, viel ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Very, much/many",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_002",
+    "word": "Малко",
+    "translation": "wenig, ein bisschen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Little, few. Essential adverb.",
+    "notes_bg_to_de": "'Малко' е наречие. Little, few",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Малко' = 'wenig, ein bisschen'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Малко говоря.",
+        "de": "Ich bin wenig, ein bisschen/arbeite wenig, ein bisschen/spreche wenig, ein bisschen.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е малко.",
+        "de": "Er ist/macht wenig, ein bisschen.",
+        "context": "Description"
+      },
+      {
+        "bg": "Малко е добре.",
+        "de": "Wenig, ein bisschen ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Little, few",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_003",
+    "word": "Добре",
+    "translation": "gut",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Well, good. Essential adverb.",
+    "notes_bg_to_de": "'Добре' е наречие. Well, good",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Добре' = 'gut'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Добре съм тук.",
+        "de": "Ich bin gut/arbeite gut/spreche gut.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е добре.",
+        "de": "Er ist/macht gut.",
+        "context": "Description"
+      },
+      {
+        "bg": "Добре е добре.",
+        "de": "Gut ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Well, good",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_004",
+    "word": "Лошо",
+    "translation": "schlecht",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Badly. Essential adverb.",
+    "notes_bg_to_de": "'Лошо' е наречие. Badly",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Лошо' = 'schlecht'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Лошо работя.",
+        "de": "Ich bin schlecht/arbeite schlecht/spreche schlecht.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е лошо.",
+        "de": "Er ist/macht schlecht.",
+        "context": "Description"
+      },
+      {
+        "bg": "Лошо е добре.",
+        "de": "Schlecht ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Badly",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_005",
+    "word": "Бързо",
+    "translation": "schnell",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Quickly, fast. Essential adverb.",
+    "notes_bg_to_de": "'Бързо' е наречие. Quickly, fast",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Бързо' = 'schnell'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Бързо говоря.",
+        "de": "Ich bin schnell/arbeite schnell/spreche schnell.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е бързо.",
+        "de": "Er ist/macht schnell.",
+        "context": "Description"
+      },
+      {
+        "bg": "Бързо е добре.",
+        "de": "Schnell ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Quickly, fast",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_006",
+    "word": "Бавно",
+    "translation": "langsam",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Slowly. Essential adverb.",
+    "notes_bg_to_de": "'Бавно' е наречие. Slowly",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Бавно' = 'langsam'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Бавно съм тук.",
+        "de": "Ich bin langsam/arbeite langsam/spreche langsam.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е бавно.",
+        "de": "Er ist/macht langsam.",
+        "context": "Description"
+      },
+      {
+        "bg": "Бавно е добре.",
+        "de": "Langsam ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Slowly",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_007",
+    "word": "Винаги",
+    "translation": "immer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Always. Essential adverb.",
+    "notes_bg_to_de": "'Винаги' е наречие. Always",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Винаги' = 'immer'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Винаги работя.",
+        "de": "Ich bin immer/arbeite immer/spreche immer.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е винаги.",
+        "de": "Er ist/macht immer.",
+        "context": "Description"
+      },
+      {
+        "bg": "Винаги е добре.",
+        "de": "Immer ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Always",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_008",
+    "word": "Никога",
+    "translation": "nie",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Never. Essential adverb.",
+    "notes_bg_to_de": "'Никога' е наречие. Never",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Никога' = 'nie'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Никога говоря.",
+        "de": "Ich bin nie/arbeite nie/spreche nie.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е никога.",
+        "de": "Er ist/macht nie.",
+        "context": "Description"
+      },
+      {
+        "bg": "Никога е добре.",
+        "de": "Nie ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Never",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_009",
+    "word": "Често",
+    "translation": "oft",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Often. Essential adverb.",
+    "notes_bg_to_de": "'Често' е наречие. Often",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Често' = 'oft'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Често съм тук.",
+        "de": "Ich bin oft/arbeite oft/spreche oft.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е често.",
+        "de": "Er ist/macht oft.",
+        "context": "Description"
+      },
+      {
+        "bg": "Често е добре.",
+        "de": "Oft ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Often",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_010",
+    "word": "Рядко",
+    "translation": "selten",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Rarely. Essential adverb.",
+    "notes_bg_to_de": "'Рядко' е наречие. Rarely",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Рядко' = 'selten'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Рядко работя.",
+        "de": "Ich bin selten/arbeite selten/spreche selten.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е рядко.",
+        "de": "Er ist/macht selten.",
+        "context": "Description"
+      },
+      {
+        "bg": "Рядко е добре.",
+        "de": "Selten ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Rarely",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_011",
+    "word": "Вече",
+    "translation": "schon, bereits",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Already. Essential adverb.",
+    "notes_bg_to_de": "'Вече' е наречие. Already",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Вече' = 'schon, bereits'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Вече говоря.",
+        "de": "Ich bin schon, bereits/arbeite schon, bereits/spreche schon, bereits.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е вече.",
+        "de": "Er ist/macht schon, bereits.",
+        "context": "Description"
+      },
+      {
+        "bg": "Вече е добре.",
+        "de": "Schon, bereits ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Already",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_012",
+    "word": "Още",
+    "translation": "noch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Still, more. Essential adverb.",
+    "notes_bg_to_de": "'Още' е наречие. Still, more",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Още' = 'noch'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Още съм тук.",
+        "de": "Ich bin noch/arbeite noch/spreche noch.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е още.",
+        "de": "Er ist/macht noch.",
+        "context": "Description"
+      },
+      {
+        "bg": "Още е добре.",
+        "de": "Noch ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Still, more",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_013",
+    "word": "Сега",
+    "translation": "jetzt",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Now. Essential adverb.",
+    "notes_bg_to_de": "'Сега' е наречие. Now",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сега' = 'jetzt'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Сега работя.",
+        "de": "Ich bin jetzt/arbeite jetzt/spreche jetzt.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е сега.",
+        "de": "Er ist/macht jetzt.",
+        "context": "Description"
+      },
+      {
+        "bg": "Сега е добре.",
+        "de": "Jetzt ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Now",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_014",
+    "word": "После",
+    "translation": "später, danach",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Later, after. Essential adverb.",
+    "notes_bg_to_de": "'После' е наречие. Later, after",
+    "notes_de_to_bg": "Für Deutschsprachige: 'После' = 'später, danach'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "После говоря.",
+        "de": "Ich bin später, danach/arbeite später, danach/spreche später, danach.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е после.",
+        "de": "Er ist/macht später, danach.",
+        "context": "Description"
+      },
+      {
+        "bg": "После е добре.",
+        "de": "Später, danach ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Later, after",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_015",
+    "word": "Вчера",
+    "translation": "gestern",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Yesterday. Essential adverb.",
+    "notes_bg_to_de": "'Вчера' е наречие. Yesterday",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Вчера' = 'gestern'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Вчера съм тук.",
+        "de": "Ich bin gestern/arbeite gestern/spreche gestern.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е вчера.",
+        "de": "Er ist/macht gestern.",
+        "context": "Description"
+      },
+      {
+        "bg": "Вчера е добре.",
+        "de": "Gestern ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Yesterday",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_016",
+    "word": "Утре",
+    "translation": "morgen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Tomorrow. Essential adverb.",
+    "notes_bg_to_de": "'Утре' е наречие. Tomorrow",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Утре' = 'morgen'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Утре работя.",
+        "de": "Ich bin morgen/arbeite morgen/spreche morgen.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е утре.",
+        "de": "Er ist/macht morgen.",
+        "context": "Description"
+      },
+      {
+        "bg": "Утре е добре.",
+        "de": "Morgen ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Tomorrow",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_017",
+    "word": "Днес",
+    "translation": "heute",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Today. Essential adverb.",
+    "notes_bg_to_de": "'Днес' е наречие. Today",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Днес' = 'heute'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Днес говоря.",
+        "de": "Ich bin heute/arbeite heute/spreche heute.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е днес.",
+        "de": "Er ist/macht heute.",
+        "context": "Description"
+      },
+      {
+        "bg": "Днес е добре.",
+        "de": "Heute ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Today",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_018",
+    "word": "Тук",
+    "translation": "hier",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Here. Essential adverb.",
+    "notes_bg_to_de": "'Тук' е наречие. Here",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Тук' = 'hier'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Тук съм тук.",
+        "de": "Ich bin hier/arbeite hier/spreche hier.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е тук.",
+        "de": "Er ist/macht hier.",
+        "context": "Description"
+      },
+      {
+        "bg": "Тук е добре.",
+        "de": "Hier ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Here",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_019",
+    "word": "Там",
+    "translation": "dort",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "There. Essential adverb.",
+    "notes_bg_to_de": "'Там' е наречие. There",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Там' = 'dort'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Там работя.",
+        "de": "Ich bin dort/arbeite dort/spreche dort.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е там.",
+        "de": "Er ist/macht dort.",
+        "context": "Description"
+      },
+      {
+        "bg": "Там е добре.",
+        "de": "Dort ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. There",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adverb_020",
+    "word": "Къде",
+    "translation": "wo",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adverbien",
+    "level": "A1",
+    "notes": "Where - adverb form. Essential adverb.",
+    "notes_bg_to_de": "'Къде' е наречие. Where - adverb form",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Къде' = 'wo'. Adverb.",
+    "etymology": "Proto-Slavic or derived from adjectives.",
+    "cultural_note": "Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Къде говоря.",
+        "de": "Ich bin wo/arbeite wo/spreche wo.",
+        "context": "Usage"
+      },
+      {
+        "bg": "Той е къде.",
+        "de": "Er ist/macht wo.",
+        "context": "Description"
+      },
+      {
+        "bg": "Къде е добре.",
+        "de": "Wo ist gut.",
+        "context": "State"
+      }
+    ],
+    "linguistic_note": "Adverb. Where - adverb form",
+    "linguistic_note_bg_to_de": "Наречие.",
+    "linguistic_note_de_to_bg": "Adverb."
+  },
+  {
+    "id": "a1_adj_043",
+    "word": "Важен",
+    "translation": "wichtig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Important. Forms: важен/важна/важно/важни",
+    "notes_bg_to_de": "'Важен' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Важен' = 'wichtig'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е важен.",
+        "de": "Das ist wichtig.",
+        "context": "State"
+      },
+      {
+        "bg": "Имам важен книга.",
+        "de": "Ich habe einen/eine wichtig Stuhl/Buch.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Важеното нещо е там.",
+        "de": "Die wichtige Sache ist dort.",
+        "context": "Definite"
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_044",
+    "word": "Интересен",
+    "translation": "interessant",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Interesting. Forms: интересен/интересна/интересно/интересни",
+    "notes_bg_to_de": "'Интересен' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Интересен' = 'interessant'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е интересен.",
+        "de": "Das ist interessant.",
+        "context": "State"
+      },
+      {
+        "bg": "Имам интересен стол.",
+        "de": "Ich habe einen/eine interessant Stuhl/Buch.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Интересеното нещо е там.",
+        "de": "Die interessante Sache ist dort.",
+        "context": "Definite"
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_045",
+    "word": "Красив",
+    "translation": "schön, hübsch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Beautiful. Forms: красив/Красива/Красиво/Красиви",
+    "notes_bg_to_de": "'Красив' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Красив' = 'schön, hübsch'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е красив.",
+        "de": "Das ist schön.",
+        "context": "State"
+      },
+      {
+        "bg": "Имам красив книга.",
+        "de": "Ich habe einen/eine schön Stuhl/Buch.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Красивото нещо е там.",
+        "de": "Die schöne Sache ist dort.",
+        "context": "Definite"
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_046",
+    "word": "Чист",
+    "translation": "sauber, rein",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Clean. Forms: чист/Чиста/Чисто/Чисти",
+    "notes_bg_to_de": "'Чист' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Чист' = 'sauber, rein'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е чист.",
+        "de": "Das ist sauber.",
+        "context": "State"
+      },
+      {
+        "bg": "Имам чист стол.",
+        "de": "Ich habe einen/eine sauber Stuhl/Buch.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Чистото нещо е там.",
+        "de": "Die saubere Sache ist dort.",
+        "context": "Definite"
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_047",
+    "word": "Мръсен",
+    "translation": "schmutzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Dirty. Forms: мръсен/мръсна/мръсно/мръсни",
+    "notes_bg_to_de": "'Мръсен' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Мръсен' = 'schmutzig'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е мръсен.",
+        "de": "Das ist schmutzig.",
+        "context": "State"
+      },
+      {
+        "bg": "Имам мръсен книга.",
+        "de": "Ich habe einen/eine schmutzig Stuhl/Buch.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Мръсеното нещо е там.",
+        "de": "Die schmutzige Sache ist dort.",
+        "context": "Definite"
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_048",
+    "word": "Пълен",
+    "translation": "voll",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Full. Forms: пълен/пълна/пълно/пълни",
+    "notes_bg_to_de": "'Пълен' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Пълен' = 'voll'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е пълен.",
+        "de": "Das ist voll.",
+        "context": "State"
+      },
+      {
+        "bg": "Имам пълен стол.",
+        "de": "Ich habe einen/eine voll Stuhl/Buch.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Пъленото нещо е там.",
+        "de": "Die volle Sache ist dort.",
+        "context": "Definite"
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_049",
+    "word": "Празен",
+    "translation": "leer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Empty. Forms: празен/празна/празно/празни",
+    "notes_bg_to_de": "'Празен' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Празен' = 'leer'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е празен.",
+        "de": "Das ist leer.",
+        "context": "State"
+      },
+      {
+        "bg": "Имам празен книга.",
+        "de": "Ich habe einen/eine leer Stuhl/Buch.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Празеното нещо е там.",
+        "de": "Die leere Sache ist dort.",
+        "context": "Definite"
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_050",
+    "word": "Отворен",
+    "translation": "offen, geöffnet",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Open. Forms: отворен/отворна/отворно/отворни",
+    "notes_bg_to_de": "'Отворен' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Отворен' = 'offen, geöffnet'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е отворен.",
+        "de": "Das ist offen.",
+        "context": "State"
+      },
+      {
+        "bg": "Имам отворен стол.",
+        "de": "Ich habe einen/eine offen Stuhl/Buch.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Отвореното нещо е там.",
+        "de": "Die offene Sache ist dort.",
+        "context": "Definite"
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_051",
+    "word": "Затворен",
+    "translation": "geschlossen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Closed. Forms: затворен/затворна/затворно/затворни",
+    "notes_bg_to_de": "'Затворен' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Затворен' = 'geschlossen'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е затворен.",
+        "de": "Das ist geschlossen.",
+        "context": "State"
+      },
+      {
+        "bg": "Имам затворен книга.",
+        "de": "Ich habe einen/eine geschlossen Stuhl/Buch.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Затвореното нещо е там.",
+        "de": "Die geschlossene Sache ist dort.",
+        "context": "Definite"
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_052",
+    "word": "Прав",
+    "translation": "gerade, richtig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Straight, right. Forms: прав/Права/Право/Прави",
+    "notes_bg_to_de": "'Прав' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Прав' = 'gerade, richtig'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е прав.",
+        "de": "Das ist gerade.",
+        "context": "State"
+      },
+      {
+        "bg": "Имам прав стол.",
+        "de": "Ich habe einen/eine gerade Stuhl/Buch.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Правото нещо е там.",
+        "de": "Die geradee Sache ist dort.",
+        "context": "Definite"
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_053",
+    "word": "Криви",
+    "translation": "krumm, schief",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Crooked. Forms: криви/Кривиа/Кривио/Кривии",
+    "notes_bg_to_de": "'Криви' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Криви' = 'krumm, schief'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е криви.",
+        "de": "Das ist krumm.",
+        "context": "State"
+      },
+      {
+        "bg": "Имам криви книга.",
+        "de": "Ich habe einen/eine krumm Stuhl/Buch.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Кривиото нещо е там.",
+        "de": "Die krumme Sache ist dort.",
+        "context": "Definite"
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_054",
+    "word": "Мек",
+    "translation": "weich",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Soft. Forms: мек/Мека/Меко/Меки",
+    "notes_bg_to_de": "'Мек' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Мек' = 'weich'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е мек.",
+        "de": "Das ist weich.",
+        "context": "State"
+      },
+      {
+        "bg": "Имам мек стол.",
+        "de": "Ich habe einen/eine weich Stuhl/Buch.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Мекото нещо е там.",
+        "de": "Die weiche Sache ist dort.",
+        "context": "Definite"
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_055",
+    "word": "Твърд",
+    "translation": "hart",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Hard. Forms: твърд/Твърда/Твърдо/Твърди",
+    "notes_bg_to_de": "'Твърд' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Твърд' = 'hart'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е твърд.",
+        "de": "Das ist hart.",
+        "context": "State"
+      },
+      {
+        "bg": "Имам твърд книга.",
+        "de": "Ich habe einen/eine hart Stuhl/Buch.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Твърдото нещо е там.",
+        "de": "Die harte Sache ist dort.",
+        "context": "Definite"
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_056",
+    "word": "Гладък",
+    "translation": "glatt",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Smooth. Forms: гладък/Гладъка/Гладъко/Гладъки",
+    "notes_bg_to_de": "'Гладък' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Гладък' = 'glatt'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е гладък.",
+        "de": "Das ist glatt.",
+        "context": "State"
+      },
+      {
+        "bg": "Имам гладък стол.",
+        "de": "Ich habe einen/eine glatt Stuhl/Buch.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Гладъкото нещо е там.",
+        "de": "Die glatte Sache ist dort.",
+        "context": "Definite"
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_057",
+    "word": "Груб",
+    "translation": "rau, grob",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Rough, coarse. Forms: груб/Груба/Грубо/Груби",
+    "notes_bg_to_de": "'Груб' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Груб' = 'rau, grob'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е груб.",
+        "de": "Das ist rau.",
+        "context": "State"
+      },
+      {
+        "bg": "Имам груб книга.",
+        "de": "Ich habe einen/eine rau Stuhl/Buch.",
+        "context": "Possession"
+      },
+      {
+        "bg": "Грубото нещо е там.",
+        "de": "Die raue Sache ist dort.",
+        "context": "Definite"
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_grammar_006",
+    "word": "В",
+    "translation": "in",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "In, at. Предлог.",
+    "notes_bg_to_de": "'В' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'В' = 'in'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Аз съм В София.",
+        "de": "Ich bin in Sofia/hier.",
+        "context": "Basic"
+      },
+      {
+        "bg": "В къщата.",
+        "de": "In dem Haus.",
+        "context": "Use"
+      },
+      {
+        "bg": "Вярвам В теб.",
+        "de": "Ich glaube in dich.",
+        "context": "Belief"
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_007",
+    "word": "На",
+    "translation": "auf, zu",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "On, to, at. Предлог.",
+    "notes_bg_to_de": "'На' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'На' = 'auf, zu'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Аз съм На София.",
+        "de": "Ich bin auf, zu Sofia/hier.",
+        "context": "Basic"
+      },
+      {
+        "bg": "На къщата.",
+        "de": "Auf, zu dem Haus.",
+        "context": "Use"
+      },
+      {
+        "bg": "Вярвам На теб.",
+        "de": "Ich glaube auf, zu dich.",
+        "context": "Belief"
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_008",
+    "word": "С",
+    "translation": "mit",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "With. Предлог.",
+    "notes_bg_to_de": "'С' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'С' = 'mit'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Аз съм С София.",
+        "de": "Ich bin mit Sofia/hier.",
+        "context": "Basic"
+      },
+      {
+        "bg": "С къщата.",
+        "de": "Mit dem Haus.",
+        "context": "Use"
+      },
+      {
+        "bg": "Вярвам С теб.",
+        "de": "Ich glaube mit dich.",
+        "context": "Belief"
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_009",
+    "word": "Без",
+    "translation": "ohne",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "Without. Предлог.",
+    "notes_bg_to_de": "'Без' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Без' = 'ohne'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Аз съм Без София.",
+        "de": "Ich bin ohne Sofia/hier.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Без къщата.",
+        "de": "Ohne dem Haus.",
+        "context": "Use"
+      },
+      {
+        "bg": "Вярвам Без теб.",
+        "de": "Ich glaube ohne dich.",
+        "context": "Belief"
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_010",
+    "word": "До",
+    "translation": "bis, neben",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "Until, next to. Предлог.",
+    "notes_bg_to_de": "'До' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'До' = 'bis, neben'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Аз съм До София.",
+        "de": "Ich bin bis, neben Sofia/hier.",
+        "context": "Basic"
+      },
+      {
+        "bg": "До къщата.",
+        "de": "Bis, neben dem Haus.",
+        "context": "Use"
+      },
+      {
+        "bg": "Вярвам До теб.",
+        "de": "Ich glaube bis, neben dich.",
+        "context": "Belief"
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_011",
+    "word": "Към",
+    "translation": "zu, nach",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "Toward. Предлог.",
+    "notes_bg_to_de": "'Към' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Към' = 'zu, nach'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Аз съм Към София.",
+        "de": "Ich bin zu, nach Sofia/hier.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Към къщата.",
+        "de": "Zu, nach dem Haus.",
+        "context": "Use"
+      },
+      {
+        "bg": "Вярвам Към теб.",
+        "de": "Ich glaube zu, nach dich.",
+        "context": "Belief"
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_012",
+    "word": "Пред",
+    "translation": "vor",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "Before, in front of. Предлог.",
+    "notes_bg_to_de": "'Пред' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Пред' = 'vor'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Аз съм Пред София.",
+        "de": "Ich bin vor Sofia/hier.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Пред къщата.",
+        "de": "Vor dem Haus.",
+        "context": "Use"
+      },
+      {
+        "bg": "Вярвам Пред теб.",
+        "de": "Ich glaube vor dich.",
+        "context": "Belief"
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_013",
+    "word": "След",
+    "translation": "nach",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "After. Предлог.",
+    "notes_bg_to_de": "'След' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'След' = 'nach'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Аз съм След София.",
+        "de": "Ich bin nach Sofia/hier.",
+        "context": "Basic"
+      },
+      {
+        "bg": "След къщата.",
+        "de": "Nach dem Haus.",
+        "context": "Use"
+      },
+      {
+        "bg": "Вярвам След теб.",
+        "de": "Ich glaube nach dich.",
+        "context": "Belief"
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_014",
+    "word": "Над",
+    "translation": "über",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "Above, over. Предлог.",
+    "notes_bg_to_de": "'Над' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Над' = 'über'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Аз съм Над София.",
+        "de": "Ich bin über Sofia/hier.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Над къщата.",
+        "de": "Über dem Haus.",
+        "context": "Use"
+      },
+      {
+        "bg": "Вярвам Над теб.",
+        "de": "Ich glaube über dich.",
+        "context": "Belief"
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_015",
+    "word": "Под",
+    "translation": "unter",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "Under, below. Предлог.",
+    "notes_bg_to_de": "'Под' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Под' = 'unter'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Аз съм Под София.",
+        "de": "Ich bin unter Sofia/hier.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Под къщата.",
+        "de": "Unter dem Haus.",
+        "context": "Use"
+      },
+      {
+        "bg": "Вярвам Под теб.",
+        "de": "Ich glaube unter dich.",
+        "context": "Belief"
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_016",
+    "word": "Между",
+    "translation": "zwischen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "Between. Предлог.",
+    "notes_bg_to_de": "'Между' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Между' = 'zwischen'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Аз съм Между София.",
+        "de": "Ich bin zwischen Sofia/hier.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Между къщата.",
+        "de": "Zwischen dem Haus.",
+        "context": "Use"
+      },
+      {
+        "bg": "Вярвам Между теб.",
+        "de": "Ich glaube zwischen dich.",
+        "context": "Belief"
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_017",
+    "word": "При",
+    "translation": "bei",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "At, by, with. Предлог.",
+    "notes_bg_to_de": "'При' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'При' = 'bei'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Аз съм При София.",
+        "de": "Ich bin bei Sofia/hier.",
+        "context": "Basic"
+      },
+      {
+        "bg": "При къщата.",
+        "de": "Bei dem Haus.",
+        "context": "Use"
+      },
+      {
+        "bg": "Вярвам При теб.",
+        "de": "Ich glaube bei dich.",
+        "context": "Belief"
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_018",
+    "word": "Че",
+    "translation": "dass",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "That (conjunction). Съюз.",
+    "notes_bg_to_de": "'Че' е съюз.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Че' = 'dass'. Konjunktion.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Аз съм Че тук.",
+        "de": "Ich bin dass Sofia/hier.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Че идвам.",
+        "de": "Dass ich komme.",
+        "context": "Use"
+      },
+      {
+        "bg": "Вярвам Че е добре.",
+        "de": "Ich glaube dass es ist gut.",
+        "context": "Belief"
+      }
+    ],
+    "linguistic_note": "Съюз.",
+    "linguistic_note_bg_to_de": "Съюз.",
+    "linguistic_note_de_to_bg": "Konjunktion."
+  },
+  {
+    "id": "a1_grammar_019",
+    "word": "Ако",
+    "translation": "wenn, falls",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "If. Съюз.",
+    "notes_bg_to_de": "'Ако' е съюз.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ако' = 'wenn, falls'. Konjunktion.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Аз съм Ако тук.",
+        "de": "Ich bin wenn, falls Sofia/hier.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Ако идвам.",
+        "de": "Wenn, falls ich komme.",
+        "context": "Use"
+      },
+      {
+        "bg": "Вярвам Ако е добре.",
+        "de": "Ich glaube wenn, falls es ist gut.",
+        "context": "Belief"
+      }
+    ],
+    "linguistic_note": "Съюз.",
+    "linguistic_note_bg_to_de": "Съюз.",
+    "linguistic_note_de_to_bg": "Konjunktion."
+  },
+  {
+    "id": "a1_grammar_020",
+    "word": "Когато",
+    "translation": "wenn, als",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "When. Съюз.",
+    "notes_bg_to_de": "'Когато' е съюз.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Когато' = 'wenn, als'. Konjunktion.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Аз съм Когато тук.",
+        "de": "Ich bin wenn, als Sofia/hier.",
+        "context": "Basic"
+      },
+      {
+        "bg": "Когато идвам.",
+        "de": "Wenn, als ich komme.",
+        "context": "Use"
+      },
+      {
+        "bg": "Вярвам Когато е добре.",
+        "de": "Ich glaube wenn, als es ist gut.",
+        "context": "Belief"
+      }
+    ],
+    "linguistic_note": "Съюз.",
+    "linguistic_note_bg_to_de": "Съюз.",
+    "linguistic_note_de_to_bg": "Konjunktion."
   }
 ]
