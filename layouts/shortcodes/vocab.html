@@ -1,0 +1,85 @@
+{{/* 
+  Vocabulary Cards Shortcode
+  Usage: {{< vocab category="Begrüßung" level="A1" limit="10" >}}
+  
+  Parameters:
+  - category: Filter by category (optional)
+  - level: Filter by level A1/A2 (optional) 
+  - limit: Number of cards to show (default: all)
+  - interactive: Enable interactive mode (default: true)
+*/}}
+
+{{ $category := .Get "category" }}
+{{ $level := .Get "level" }}
+{{ $limit := .Get "limit" | default 0 }}
+{{ $interactive := .Get "interactive" | default "true" }}
+{{ $vocabData := site.Data.vocabulary }}
+
+<div class="vocab-container" 
+     data-category="{{ $category }}" 
+     data-level="{{ $level }}" 
+     data-limit="{{ $limit }}"
+     data-interactive="{{ $interactive }}">
+  
+  <div class="vocab-controls" aria-label="Vocabulary controls">
+    <div class="vocab-filters">
+      <label for="category-filter">Category:</label>
+      <select id="category-filter" class="vocab-filter">
+        <option value="">All Categories</option>
+        {{ range (index .Site.Data.vocabulary | first 100) }}
+          {{ if .category }}
+            <option value="{{ .category }}">{{ .category }}</option>
+          {{ end }}
+        {{ end }}
+      </select>
+      
+      <label for="level-filter">Level:</label>
+      <select id="level-filter" class="vocab-filter">
+        <option value="">All Levels</option>
+        <option value="A1">A1</option>
+        <option value="A2">A2</option>
+      </select>
+      
+      <button id="shuffle-cards" class="vocab-btn" aria-label="Shuffle cards">
+        🔀 Shuffle
+      </button>
+    </div>
+    
+    <div class="vocab-stats" aria-live="polite">
+      <span id="card-count">0 cards</span>
+    </div>
+  </div>
+
+  <div class="vocab-grid" id="vocab-grid" role="grid" aria-label="Vocabulary cards">
+    <!-- Cards will be populated by JavaScript -->
+  </div>
+  
+  <div class="vocab-loading" id="vocab-loading" aria-hidden="true">
+    <div class="loading-spinner"></div>
+    <p>Loading vocabulary...</p>
+  </div>
+  
+  <div class="vocab-error" id="vocab-error" aria-hidden="true" role="alert">
+    <p>Failed to load vocabulary data. Please try again.</p>
+    <button id="retry-load" class="vocab-btn">Retry</button>
+  </div>
+
+  <script type="application/json"
+          data-vocab-inline
+          aria-hidden="true">
+    {{ $vocabData | jsonify | safeHTML }}
+  </script>
+</div>
+
+{{ if eq $interactive "true" }}
+<script type="module">
+  import { VocabCards } from '/assets/js/vocab-cards.js';
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.vocab-container');
+    if (container) {
+      new VocabCards(container);
+    }
+  });
+</script>
+{{ end }}
