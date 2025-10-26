@@ -1,0 +1,398 @@
+[
+  {
+    "id": "a1_question_001",
+    "word": "Кой",
+    "translation": "wer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Essential question word: who - has gender forms",
+    "notes_bg_to_de": "В немски 'wer' [veːɐ̯] е единствена форма. В български има родови форми: кой (м.), коя (ж.), кое (ср.), кои (мн.).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Кой' hat Geschlechtsformen: кой (m), коя (f), кое (n), кои (pl). Deutsch 'wer' ist geschlechtsneutral.",
+    "etymology": "From Proto-Slavic '*kъjь'. Cognate with Latin 'quis', English 'who' through PIE *kʷis.",
+    "cultural_note": "Very common in greetings: 'Кой е там?' (Wer ist da?). Politeness: add 'моля' (bitte) to soften questions.",
+    "difficulty": 1,
+    "frequency": 98,
+    "examples": [
+      {
+        "sentence": "Кой е той?",
+        "translation": "Wer ist er?",
+        "context": "asking identity"
+      },
+      {
+        "sentence": "Коя е тази жена?",
+        "translation": "Wer ist diese Frau?",
+        "context": "feminine form"
+      },
+      {
+        "sentence": "Кои са те?",
+        "translation": "Wer sind sie?",
+        "context": "plural form"
+      }
+    ],
+    "linguistic_note": "Declension: кой/коя/кое/кои. Stress on single syllable: кой [kɔj].",
+    "linguistic_note_bg_to_de": "Кой [kɔj], коя [kɔˈja], кое [kɔˈɛ], кои [kɔˈi]. В немски 'wer' няма родови форми.",
+    "linguistic_note_de_to_bg": "Geschlechtsformen: кой (maskulin), коя (feminin), кое (neutral), кои (Plural). Deklination nach Geschlecht des Bezugswortes."
+  },
+  {
+    "id": "a1_question_002",
+    "word": "Какво",
+    "translation": "was",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Most common question word: what",
+    "notes_bg_to_de": "В немски 'was' [vas] е най-честата въпросителна дума. Използва се за предмети и понятия (не за хора).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Какво' = was. Sehr häufig in Alltagsfragen. Umgangssprachlich oft verkürzt zu 'какво' → 'що'.",
+    "etymology": "From Proto-Slavic '*kakъ' + '*vo'. Related to Russian 'что' and Polish 'co'.",
+    "cultural_note": "Universal greeting question: 'Какво правиш?' (Was machst du? / Wie geht's?). Can be shortened to 'Ало?' on phone.",
+    "difficulty": 1,
+    "frequency": 99,
+    "examples": [
+      {
+        "sentence": "Какво е това?",
+        "translation": "Was ist das?",
+        "context": "asking about object"
+      },
+      {
+        "sentence": "Какво правиш?",
+        "translation": "Was machst du?",
+        "context": "casual greeting"
+      },
+      {
+        "sentence": "Какво искаш?",
+        "translation": "Was willst du?",
+        "context": "asking desire"
+      }
+    ],
+    "linguistic_note": "Stress on какво́ [kɐkˈvɔ]. Colloquial form: 'що' [ʃtɔ] (very informal).",
+    "linguistic_note_bg_to_de": "Какво [kɐkˈvɔ]. Разговорна форма 'що' [ʃtɔ]. В немски 'was' [vas] - къса форма.",
+    "linguistic_note_de_to_bg": "Betonung какво́. In schneller Rede oft 'що' statt 'какво'. Ähnlich deutsch 'was' vs 'wat'."
+  },
+  {
+    "id": "a1_verb_008",
+    "word": "Говоря",
+    "translation": "sprechen / reden",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Essential communication verb: to speak, to talk",
+    "notes_bg_to_de": "В немски 'sprechen' [ˈʃpʁɛçn̩] е за официално говорене, 'reden' [ˈʁeːdn̩] за разговор. 'Говоря' покрива и двете.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Говоря' = sprechen/reden. Konjugation: говоря, говориш, говори. Sehr häufig mit 'с' (mit): говоря с теб.",
+    "etymology": "From Proto-Slavic '*govoriti'. Related to 'говор' (speech) and Russian 'говорить'.",
+    "cultural_note": "Language learning context: 'Говоря български' (Ich spreche Bulgarisch). Phone etiquette: 'С кого говоря?' (Mit wem spreche ich?).",
+    "difficulty": 1,
+    "frequency": 96,
+    "examples": [
+      {
+        "sentence": "Говоря немски и български.",
+        "translation": "Ich spreche Deutsch und Bulgarisch.",
+        "context": "languages"
+      },
+      {
+        "sentence": "Говоря с приятел.",
+        "translation": "Ich rede mit einem Freund.",
+        "context": "conversation"
+      },
+      {
+        "sentence": "Говориш ли английски?",
+        "translation": "Sprichst du Englisch?",
+        "context": "question"
+      }
+    ],
+    "linguistic_note": "Conjugation: говоря, говориш, говори. Stem 'говор-' throughout.",
+    "linguistic_note_bg_to_de": "Говоря [ɡɔvɔˈrjɐ]. Правилен глагол: говоря, говориш, говори. В немски 'sprechen' е силен глагол.",
+    "linguistic_note_de_to_bg": "Stamm 'говор-', Endungen: -я, -иш, -и. Betonung verschiebt sich: гово́ря, гово́риш."
+  },
+  {
+    "id": "a1_verb_009",
+    "word": "Слушам",
+    "translation": "hören / zuhören",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Essential perception verb: to listen, to hear",
+    "notes_bg_to_de": "В немски 'hören' [ˈhøːʁən] означава чувам, 'zuhören' [ˈtsuːhøːʁən] е активно слушане. 'Слушам' покрива и двете.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Слушам' = hören/zuhören. Regelmäßig: слушам, слушаш, слуша. Oft mit 'музика' (Musik).",
+    "etymology": "From Proto-Slavic '*sluxati'. Related to 'слух' (hearing) and Russian 'слушать'.",
+    "cultural_note": "Common phrases: 'Слушам музика' (Musik hören), 'Слушам те' (Ich höre dir zu). In commands: 'Слушай!' (Hör zu!).",
+    "difficulty": 1,
+    "frequency": 92,
+    "examples": [
+      {
+        "sentence": "Слушам музика.",
+        "translation": "Ich höre Musik.",
+        "context": "activity"
+      },
+      {
+        "sentence": "Слушай ме внимателно.",
+        "translation": "Hör mir aufmerksam zu.",
+        "context": "imperative"
+      },
+      {
+        "sentence": "Слушаш ли радио?",
+        "translation": "Hörst du Radio?",
+        "context": "question"
+      }
+    ],
+    "linguistic_note": "Regular conjugation: слушам, слушаш, слуша. Stem 'слуша-' constant.",
+    "linguistic_note_bg_to_de": "Слушам [ˈsluʃɐm]. Правилен: слушам, слушаш, слуша. В немски 'hören' също правилен.",
+    "linguistic_note_de_to_bg": "Stamm 'слуша-', Endungen: -м, -ш, -∅. Betonung сл́ушам bleibt konstant."
+  },
+  {
+    "id": "a1_verb_010",
+    "word": "Чета",
+    "translation": "lesen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Essential literacy verb: to read",
+    "notes_bg_to_de": "В немски 'lesen' [ˈleːzn̩] е силен глагол с умлаут: liest. Перфект: gelesen.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Чета' ist regelmäßig. Konjugation: чета, четеш, чете. Oft mit 'книга' (Buch).",
+    "etymology": "From Proto-Slavic '*čьtǫ'. Related to 'четивo' (reading material) and Russian 'читать'.",
+    "cultural_note": "Reading culture: Libraries (библиотека) are popular in Bulgaria. Book fairs (книжарници) are common social events.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "sentence": "Чета книга.",
+        "translation": "Ich lese ein Buch.",
+        "context": "activity"
+      },
+      {
+        "sentence": "Четеш ли вестник?",
+        "translation": "Liest du Zeitung?",
+        "context": "question"
+      },
+      {
+        "sentence": "Обичам да чета.",
+        "translation": "Ich lese gern.",
+        "context": "preference"
+      }
+    ],
+    "linguistic_note": "Regular: чета, четеш, чете. Stem 'чет-' throughout.",
+    "linguistic_note_bg_to_de": "Чета [tʃɛˈtɐ]. Правилен: чета, четеш, чете. В немски 'lesen' е силен глагол.",
+    "linguistic_note_de_to_bg": "Stamm 'чет-', Endungen: -а, -еш, -е. Betonung чет́а bleibt auf Stamm."
+  },
+  {
+    "id": "a1_verb_011",
+    "word": "Пиша",
+    "translation": "schreiben",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Essential literacy verb: to write",
+    "notes_bg_to_de": "В немски 'schreiben' [ˈʃʁaɪ̯bn̩] е силен глагол: schrieb, geschrieben. Важен за учене.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Пиша' ist regelmäßig. Konjugation: пиша, пишеш, пише. Wichtig für Schule und Arbeit.",
+    "etymology": "From Proto-Slavic '*pisati'. Related to 'писмо' (letter) and Russian 'писать'. Root meaning 'to paint/draw'.",
+    "cultural_note": "Cyrillic script: Bulgarians write in Cyrillic (кирилица). Learning context: 'пиша на български' (auf Bulgarisch schreiben).",
+    "difficulty": 1,
+    "frequency": 94,
+    "examples": [
+      {
+        "sentence": "Пиша писмо.",
+        "translation": "Ich schreibe einen Brief.",
+        "context": "correspondence"
+      },
+      {
+        "sentence": "Пишеш ли на кирилица?",
+        "translation": "Schreibst du auf Kyrillisch?",
+        "context": "script question"
+      },
+      {
+        "sentence": "Ученикът пише домашно.",
+        "translation": "Der Schüler schreibt Hausaufgaben.",
+        "context": "school"
+      }
+    ],
+    "linguistic_note": "Regular: пиша, пишеш, пише. Stem 'пиш-' constant.",
+    "linguistic_note_bg_to_de": "Пиша [ˈpiʃɐ]. Правилен: пиша, пишеш, пише. В немски 'schreiben' е силен.",
+    "linguistic_note_de_to_bg": "Stamm 'пиш-', Endungen: -а, -еш, -е. Betonung пи́ша konstant."
+  },
+  {
+    "id": "a1_verb_012",
+    "word": "Живея",
+    "translation": "leben / wohnen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Essential existence verb: to live, to reside",
+    "notes_bg_to_de": "В немски 'leben' [ˈleːbn̩] е за живот, 'wohnen' [ˈvoːnən] за местоживеене. 'Живея' покрива и двете значения.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Живея' = leben/wohnen. Doppeldeutig: Existenz und Wohnort. Konjugation: живея, живееш, живее.",
+    "etymology": "From Proto-Slavic '*žiti'. Cognate with 'живот' (life), Russian 'жить', Latin 'vivere'.",
+    "cultural_note": "Common question: 'Къде живееш?' (Wo wohnst du?). Used for both residence and lifestyle: 'живея добре' (gut leben).",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "sentence": "Живея в София.",
+        "translation": "Ich wohne in Sofia.",
+        "context": "residence"
+      },
+      {
+        "sentence": "Живеем щастливо.",
+        "translation": "Wir leben glücklich.",
+        "context": "lifestyle"
+      },
+      {
+        "sentence": "Къде живееш?",
+        "translation": "Wo wohnst du?",
+        "context": "question"
+      }
+    ],
+    "linguistic_note": "Regular: живея, живееш, живее. Stem 'живе-' with double 'е' in 2nd/3rd person.",
+    "linguistic_note_bg_to_de": "Живея [ʒiˈvɛjɐ]. Правилен: живея, живееш (double е!), живее. В немски 'leben' правилен.",
+    "linguistic_note_de_to_bg": "Stamm 'живе-', Endungen: -я, -еш, -е. Betonung живе́я verschiebt sich: живея́, живе́еш."
+  },
+  {
+    "id": "a1_verb_013",
+    "word": "Започвам",
+    "translation": "anfangen / beginnen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Essential action verb: to start, to begin (imperfective)",
+    "notes_bg_to_de": "В немски 'anfangen' [ˈanfaŋən] и 'beginnen' [bəˈɡɪnən] са синоними. 'Започвам' е имперфективен (начало + процес).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Започвам' = anfangen/beginnen (imperfektiv). Perfektiv: 'започна' (einen Anfang machen).",
+    "etymology": "From 'за-' (prefix) + 'почвам' (begin). Related to 'почне' (it starts) and 'начало' (beginning).",
+    "cultural_note": "Work/school: 'Работата започва в 9 часа' (Die Arbeit beginnt um 9 Uhr). Common in schedules and timetables.",
+    "difficulty": 1,
+    "frequency": 88,
+    "examples": [
+      {
+        "sentence": "Започвам работа утре.",
+        "translation": "Ich fange morgen mit der Arbeit an.",
+        "context": "starting job"
+      },
+      {
+        "sentence": "Филмът започва в 8 часа.",
+        "translation": "Der Film beginnt um 8 Uhr.",
+        "context": "schedule"
+      },
+      {
+        "sentence": "Започваме урока.",
+        "translation": "Wir beginnen die Stunde.",
+        "context": "school"
+      }
+    ],
+    "linguistic_note": "Imperfective. Regular: започвам, започваш, започва. Perfective pair: започна.",
+    "linguistic_note_bg_to_de": "Започвам [zɐpɔtʃˈvam]. Имперфективен. Перфектив: започна [zɐpɔtʃˈna]. Двойка глаголи.",
+    "linguistic_note_de_to_bg": "Aspektpaar: започвам (imperfektiv) / започна (perfektiv). Stamm 'започва-'."
+  },
+  {
+    "id": "a1_verb_014",
+    "word": "Завършвам",
+    "translation": "beenden / abschließen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Essential completion verb: to finish, to end (imperfective)",
+    "notes_bg_to_de": "В немски 'beenden' [bəˈʔɛndn̩] е завършвам нещо, 'abschließen' [ˈapʃliːsn̩] е довеждам до край. 'Завършвам' покрива и двете.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Завършвам' = beenden/abschließen (imperfektiv). Perfektiv: 'завърша'. Auch für Abschluss: училище (Schule).",
+    "etymology": "From 'за-' + 'върша' (accomplish). Related to 'връх' (peak, top) - bringing to the top/end.",
+    "cultural_note": "Education: 'завърша университет' (Uni abschließen). Also for completing tasks: 'завърша работата' (Arbeit beenden).",
+    "difficulty": 1,
+    "frequency": 86,
+    "examples": [
+      {
+        "sentence": "Завършвам работа в 6 часа.",
+        "translation": "Ich beende die Arbeit um 6 Uhr.",
+        "context": "work schedule"
+      },
+      {
+        "sentence": "Завърших университет.",
+        "translation": "Ich habe die Uni abgeschlossen.",
+        "context": "education - perfective"
+      },
+      {
+        "sentence": "Кога завършваш?",
+        "translation": "Wann bist du fertig?",
+        "context": "question"
+      }
+    ],
+    "linguistic_note": "Imperfective. Regular: завършвам, завършваш, завършва. Perfective: завърша.",
+    "linguistic_note_bg_to_de": "Завършвам [zɐvɐrʃˈvam]. Имперфективен. Перфектив: завърша [zɐvɐrˈʃa].",
+    "linguistic_note_de_to_bg": "Aspektpaar: завършвам/завърша. Stamm 'завършва-' (impf), 'завърш-' (pf)."
+  },
+  {
+    "id": "a1_verb_015",
+    "word": "Чакам",
+    "translation": "warten",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Common action verb: to wait",
+    "notes_bg_to_de": "В немски 'warten' [ˈvaʁtn̩]. Често с 'auf' (на): warten auf. В български: чакам + пряко допълнение.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Чакам' = warten. Ohne Präposition wie 'auf': 'чакам автобус' (auf Bus warten). Konjugation: чакам, чакаш, чака.",
+    "etymology": "From Proto-Slavic '*čakati'. Related to Russian 'ждать' (different root) and Polish 'czekać'.",
+    "cultural_note": "Patience culture: 'Чакам те' (Ich warte auf dich) is common. Public transport: 'Чакам автобуса' (Ich warte auf den Bus).",
+    "difficulty": 1,
+    "frequency": 91,
+    "examples": [
+      {
+        "sentence": "Чакам автобус.",
+        "translation": "Ich warte auf den Bus.",
+        "context": "transport"
+      },
+      {
+        "sentence": "Чакай малко!",
+        "translation": "Warte kurz!",
+        "context": "imperative"
+      },
+      {
+        "sentence": "Чакам те от час.",
+        "translation": "Ich warte seit einer Stunde auf dich.",
+        "context": "time duration"
+      }
+    ],
+    "linguistic_note": "Regular: чакам, чакаш, чака. Stem 'чака-' constant.",
+    "linguistic_note_bg_to_de": "Чакам [ˈtʃakɐm]. Правилен: чакам, чакаш, чака. В немски 'warten' също правилен.",
+    "linguistic_note_de_to_bg": "Stamm 'чака-', Endungen: -м, -ш, -∅. Betonung ча́кам konstant."
+  },
+  {
+    "id": "a1_verb_016",
+    "word": "Търся",
+    "translation": "suchen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Verben",
+    "level": "A1",
+    "notes": "Essential search verb: to look for, to search",
+    "notes_bg_to_de": "В немски 'suchen' [ˈzuːxn̩] е правилен глагол. Често с 'nach' (за): suchen nach. В български: търся + пряко допълнение.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Търся' = suchen. Ohne 'nach': 'търся ключове' (Schlüssel suchen). Konjugation: търся, търсиш, търси.",
+    "etymology": "From Proto-Slavic '*tьrsti'. Related to 'търсене' (search) and Russian 'искать' (different root but same meaning).",
+    "cultural_note": "Common in daily life: 'Търся работа' (Job suchen), 'Търся апартамент' (Wohnung suchen). Also figurative: 'търся решение' (Lösung suchen).",
+    "difficulty": 1,
+    "frequency": 89,
+    "examples": [
+      {
+        "sentence": "Търся ключовете си.",
+        "translation": "Ich suche meine Schlüssel.",
+        "context": "lost items"
+      },
+      {
+        "sentence": "Търсиш ли работа?",
+        "translation": "Suchst du eine Arbeit?",
+        "context": "employment"
+      },
+      {
+        "sentence": "Търся информация в интернет.",
+        "translation": "Ich suche Informationen im Internet.",
+        "context": "research"
+      }
+    ],
+    "linguistic_note": "Regular: търся, търсиш, търси. Stem 'търс-' with '-я/-иш/-и' endings.",
+    "linguistic_note_bg_to_de": "Търся [ˈtɤrsja]. Правилен: търся, търсиш, търси. В немски 'suchen' също правилен.",
+    "linguistic_note_de_to_bg": "Stamm 'търс-', Endungen: -я, -иш, -и. Betonung тъ́рся konstant."
+  }
+]

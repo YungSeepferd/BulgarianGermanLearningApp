@@ -1,0 +1,130 @@
+{{/* 
+  Vocabulary Card Shortcode - Server-side rendered vocabulary card
+  Usage: {{< vocab-card word="Haus" translation="къща" level="A1" category="Familie" >}}
+  Or with data: {{< vocab-card data=.vocabulary_item >}}
+*/}}
+
+{{ $word := .Get "word" }}
+{{ $translation := .Get "translation" }}
+{{ $level := .Get "level" }}
+{{ $category := .Get "category" }}
+{{ $notes := .Get "notes" }}
+{{ $etymology := .Get "etymology" }}
+{{ $cultural_note := .Get "cultural_note" }}
+{{ $linguistic_note := .Get "linguistic_note" }}
+{{ $difficulty := .Get "difficulty" | default 1 }}
+{{ $frequency := .Get "frequency" | default 1 }}
+{{ $examples := .Get "examples" }}
+{{ $audio := .Get "audio" }}
+{{ $id := .Get "id" }}
+
+{{/* If data parameter is provided, use it */}}
+{{ if .Get "data" }}
+  {{ $data := .Get "data" }}
+  {{ $word = $data.word }}
+  {{ $translation = $data.translation }}
+  {{ $level = $data.level }}
+  {{ $category = $data.category }}
+  {{ $notes = $data.notes }}
+  {{ $etymology = $data.etymology }}
+  {{ $cultural_note = $data.cultural_note }}
+  {{ $linguistic_note = $data.linguistic_note }}
+  {{ $difficulty = $data.difficulty | default 1 }}
+  {{ $frequency = $data.frequency | default 1 }}
+  {{ $examples = $data.examples }}
+  {{ $audio = $data.audio }}
+  {{ $id = $data.id }}
+{{ end }}
+
+<div class="vocab-card" 
+     data-word="{{ $word | lower }}" 
+     data-translation="{{ $translation | lower }}"
+     data-level="{{ $level }}" 
+     data-category="{{ $category }}"
+     data-difficulty="{{ $difficulty }}"
+     data-frequency="{{ $frequency }}"
+     {{ if $id }}data-id="{{ $id }}"{{ end }}>
+  
+  <div class="vocab-card-inner">
+    <!-- Front of card -->
+    <div class="vocab-card-front">
+      <div class="vocab-word">{{ $word }}</div>
+      
+      <div class="vocab-meta">
+        {{ if $level }}
+        <span class="level-badge level-{{ $level | lower }}">{{ $level }}</span>
+        {{ end }}
+        {{ if $category }}
+        <span class="category-tag">{{ $category }}</span>
+        {{ end }}
+        {{ if $difficulty }}
+        {{ $difficultyInt := $difficulty | int }}
+        <span class="difficulty-indicator" title="Difficulty: {{ $difficultyInt }}/5">
+          {{ range seq $difficultyInt }}★{{ end }}{{ range seq (sub 5 $difficultyInt) }}☆{{ end }}
+        </span>
+        {{ end }}
+      </div>
+      
+      {{ if $audio }}
+      <button class="audio-btn" data-audio="{{ $audio }}" title="Play pronunciation" aria-label="Play pronunciation for {{ $word }}">
+        <span class="audio-icon">🔊</span>
+      </button>
+      {{ end }}
+    </div>
+    
+    <!-- Back of card -->
+    <div class="vocab-card-back">
+      <div class="vocab-translation">{{ $translation }}</div>
+      
+      {{ if $notes }}
+      <div class="vocab-notes">{{ $notes | markdownify }}</div>
+      {{ end }}
+      
+      {{ if $etymology }}
+      <div class="vocab-etymology">
+        <strong>Etymology:</strong> {{ $etymology }}
+      </div>
+      {{ end }}
+      
+      {{ if $cultural_note }}
+      <div class="vocab-cultural-note">
+        <strong>Cultural Note:</strong> {{ $cultural_note }}
+      </div>
+      {{ end }}
+      
+      {{ if $linguistic_note }}
+      <div class="vocab-linguistic-note">
+        <strong>Linguistic Note:</strong> {{ $linguistic_note }}
+      </div>
+      {{ end }}
+      
+      {{ if $examples }}
+      <div class="vocab-examples">
+        <strong>Examples:</strong>
+        {{ if reflect.IsSlice $examples }}
+          {{ range $examples }}
+          <div class="example">
+            <div class="example-sentence">{{ .sentence | default . }}</div>
+            {{ if .translation }}
+            <div class="example-translation">{{ .translation }}</div>
+            {{ end }}
+          </div>
+          {{ end }}
+        {{ else }}
+          <div class="example">{{ $examples }}</div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  
+  <div class="vocab-card-actions">
+    <button class="flip-btn" onclick="this.closest('.vocab-card').classList.toggle('flipped')" aria-label="Flip card">
+      <span class="flip-icon">↻</span>
+    </button>
+    <button class="practice-btn" data-word="{{ $word }}" aria-label="Practice this word">
+      Practice
+    </button>
+    <input type="checkbox" class="select-checkbox" data-word="{{ $word }}" aria-label="Select for practice">
+  </div>
+</div>
