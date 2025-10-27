@@ -126,7 +126,9 @@ defaultContentLanguageInSubdir = false
 # Site parameters
 [params]
   description = 'Learn Bulgarian and German with spaced repetition'
-  author = 'Bulgarian-German Learning App'
+
+  [params.author]
+    name = 'Bulgarian-German Learning App'
   
   # Language learning specific
   enablePWA = true

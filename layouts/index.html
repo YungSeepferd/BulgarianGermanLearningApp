@@ -14,7 +14,7 @@
                     <span class="stat-label">Речникови единици / Wortschatz-Einträge</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">{{ len .Site.Data.grammar }}</span>
+                    <span class="stat-number">{{ len (index .Site.Data "cultural-grammar") }}</span>
                     <span class="stat-label">Граматични правила / Grammatikregeln</span>
                 </div>
                 <div class="stat-item">
