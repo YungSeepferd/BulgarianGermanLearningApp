@@ -7,10 +7,9 @@
 <!-- Google Fonts: Roboto and Noto Sans for Bulgarian Cyrillic support -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-<!-- Security headers -->
+<!-- Security headers - Note: X-Frame-Options should be set as HTTP header, not meta tag -->
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="DENY">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<!-- X-Frame-Options via meta is deprecated, should use HTTP header instead -->
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
 {{ $scriptSrc := slice "'self'" "'unsafe-inline'" }}
