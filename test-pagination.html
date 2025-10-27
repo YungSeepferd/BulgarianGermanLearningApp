@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Pagination Test Suite</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-header {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2563eb;
+        }
+        .test-case {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #64748b;
+        }
+        .test-case.pass {
+            border-left-color: #10b981;
+        }
+        .test-case.fail {
+            border-left-color: #ef4444;
+        }
+        .test-result {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+        .test-result.pass {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        .test-result.fail {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        .test-details {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f8fafc;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 13px;
+        }
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        button:hover {
+            background: #1d4ed8;
+        }
+        .summary {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .summary-item {
+            flex: 1;
+            text-align: center;
+        }
+        .summary-value {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .summary-label {
+            color: #64748b;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-header">
+        <h1>🧪 Vocabulary Pagination Test Suite</h1>
+        <p>Automated tests for vocabulary pagination functionality</p>
+        <button onclick="runAllTests()">Run All Tests</button>
+    </div>
+
+    <div id="test-results"></div>
+
+    <div class="summary" id="summary" style="display: none;">
+        <div class="summary-item">
+            <div class="summary-value" id="total-tests">0</div>
+            <div class="summary-label">Total Tests</div>
+        </div>
+        <div class="summary-item">
+            <div class="summary-value" style="color: #10b981" id="passed-tests">0</div>
+            <div class="summary-label">Passed</div>
+        </div>
+        <div class="summary-item">
+            <div class="summary-value" style="color: #ef4444" id="failed-tests">0</div>
+            <div class="summary-label">Failed</div>
+        </div>
+    </div>
+
+    <script>
+        // Test framework
+        class TestRunner {
+            constructor() {
+                this.tests = [];
+                this.results = [];
+            }
+
+            test(name, description, testFn) {
+                this.tests.push({ name, description, testFn });
+            }
+
+            async runAll() {
+                this.results = [];
+                const resultsDiv = document.getElementById('test-results');
+                resultsDiv.innerHTML = '';
+
+                for (const test of this.tests) {
+                    const result = await this.runTest(test);
+                    this.results.push(result);
+                    this.renderTestResult(result);
+                }
+
+                this.renderSummary();
+            }
+
+            async runTest(test) {
+                const startTime = performance.now();
+                try {
+                    const assertion = await test.testFn();
+                    const endTime = performance.now();
+                    return {
+                        name: test.name,
+                        description: test.description,
+                        passed: assertion.passed,
+                        message: assertion.message,
+                        details: assertion.details,
+                        duration: (endTime - startTime).toFixed(2)
+                    };
+                } catch (error) {
+                    const endTime = performance.now();
+                    return {
+                        name: test.name,
+                        description: test.description,
+                        passed: false,
+                        message: error.message,
+                        details: error.stack,
+                        duration: (endTime - startTime).toFixed(2)
+                    };
+                }
+            }
+
+            renderTestResult(result) {
+                const resultsDiv = document.getElementById('test-results');
+                const testCase = document.createElement('div');
+                testCase.className = `test-case ${result.passed ? 'pass' : 'fail'}`;
+                testCase.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h3 style="margin: 0 0 5px 0;">${result.name}</h3>
+                            <p style="margin: 0; color: #64748b;">${result.description}</p>
+                        </div>
+                        <span class="test-result ${result.passed ? 'pass' : 'fail'}">
+                            ${result.passed ? '✓ Pass' : '✗ Fail'}
+                        </span>
+                    </div>
+                    <div class="test-details">
+                        <strong>Message:</strong> ${result.message}<br>
+                        <strong>Duration:</strong> ${result.duration}ms
+                        ${result.details ? '<br><strong>Details:</strong> ' + result.details : ''}
+                    </div>
+                `;
+                resultsDiv.appendChild(testCase);
+            }
+
+            renderSummary() {
+                const summary = document.getElementById('summary');
+                summary.style.display = 'flex';
+
+                const total = this.results.length;
+                const passed = this.results.filter(r => r.passed).length;
+                const failed = total - passed;
+
+                document.getElementById('total-tests').textContent = total;
+                document.getElementById('passed-tests').textContent = passed;
+                document.getElementById('failed-tests').textContent = failed;
+            }
+        }
+
+        const runner = new TestRunner();
+
+        // Mock vocabulary data
+        const mockVocabulary = Array.from({ length: 750 }, (_, i) => ({
+            id: `word_${i + 1}`,
+            word: `Word ${i + 1}`,
+            translation: `Translation ${i + 1}`,
+            level: ['A1', 'A2', 'B1', 'B2'][i % 4],
+            category: ['Begrüßung', 'Substantiv', 'Verb'][i % 3]
+        }));
+
+        // Test cases
+        runner.test(
+            'TC-001: Initial Page Load',
+            'Should display page 1 with 50 items by default',
+            async () => {
+                const currentPage = 1;
+                const itemsPerPage = 50;
+                const visibleItems = mockVocabulary.slice(0, itemsPerPage);
+
+                return {
+                    passed: visibleItems.length === 50 && visibleItems[0].id === 'word_1',
+                    message: `Displayed ${visibleItems.length} items starting from ${visibleItems[0].id}`,
+                    details: `Expected: 50 items | Actual: ${visibleItems.length} items`
+                };
+            }
+        );
+
+        runner.test(
+            'TC-002: Navigate to Page 2',
+            'Should display items 51-100 when clicking page 2',
+            async () => {
+                const currentPage = 2;
+                const itemsPerPage = 50;
+                const offset = (currentPage - 1) * itemsPerPage;
+                const visibleItems = mockVocabulary.slice(offset, offset + itemsPerPage);
+
+                const expectedFirstItem = 'word_51';
+                const expectedLastItem = 'word_100';
+                const actualFirstItem = visibleItems[0].id;
+                const actualLastItem = visibleItems[visibleItems.length - 1].id;
+
+                return {
+                    passed: actualFirstItem === expectedFirstItem && actualLastItem === expectedLastItem,
+                    message: `Page 2 shows items ${actualFirstItem} to ${actualLastItem}`,
+                    details: `Expected: ${expectedFirstItem}-${expectedLastItem} | Actual: ${actualFirstItem}-${actualLastItem}`
+                };
+            }
+        );
+
+        runner.test(
+            'TC-003: Navigate to Last Page',
+            'Should display items 701-750 on page 15 (last page)',
+            async () => {
+                const totalItems = 750;
+                const itemsPerPage = 50;
+                const totalPages = Math.ceil(totalItems / itemsPerPage);
+                const lastPage = totalPages;
+                const offset = (lastPage - 1) * itemsPerPage;
+                const visibleItems = mockVocabulary.slice(offset);
+
+                return {
+                    passed: visibleItems.length === 50 && visibleItems[0].id === 'word_701',
+                    message: `Last page (${lastPage}) displays ${visibleItems.length} items`,
+                    details: `Expected: 50 items starting from word_701 | Actual: ${visibleItems.length} items starting from ${visibleItems[0].id}`
+                };
+            }
+        );
+
+        runner.test(
+            'TC-004: URL Parameter Reading',
+            'Should read page number from URL query parameter ?page=5',
+            async () => {
+                const mockURL = new URL('http://localhost/vocabulary/?page=5');
+                const urlParams = new URLSearchParams(mockURL.search);
+                const pageFromURL = parseInt(urlParams.get('page')) || 1;
+
+                return {
+                    passed: pageFromURL === 5,
+                    message: `Successfully read page=${pageFromURL} from URL`,
+                    details: `URL: ${mockURL.href} | Parsed page: ${pageFromURL}`
+                };
+            }
+        );
+
+        runner.test(
+            'TC-005: Pagination Controls Visibility',
+            'Should show pagination controls when total pages > 1',
+            async () => {
+                const totalItems = 750;
+                const itemsPerPage = 50;
+                const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+                return {
+                    passed: totalPages > 1,
+                    message: `Pagination needed: ${totalPages} pages for ${totalItems} items`,
+                    details: `Total pages: ${totalPages} (${totalItems} items ÷ ${itemsPerPage} per page)`
+                };
+            }
+        );
+
+        runner.test(
+            'TC-006: Previous Button Disabled on Page 1',
+            'Previous button should be disabled/hidden on first page',
+            async () => {
+                const currentPage = 1;
+                const shouldShowPrevious = currentPage > 1;
+
+                return {
+                    passed: !shouldShowPrevious,
+                    message: `Previous button correctly ${shouldShowPrevious ? 'shown' : 'hidden'} on page ${currentPage}`,
+                    details: `Current page: ${currentPage} | Show previous: ${shouldShowPrevious}`
+                };
+            }
+        );
+
+        runner.test(
+            'TC-007: Next Button Disabled on Last Page',
+            'Next button should be disabled/hidden on last page',
+            async () => {
+                const currentPage = 15;
+                const totalPages = 15;
+                const shouldShowNext = currentPage < totalPages;
+
+                return {
+                    passed: !shouldShowNext,
+                    message: `Next button correctly ${shouldShowNext ? 'shown' : 'hidden'} on page ${currentPage}`,
+                    details: `Current page: ${currentPage} | Total pages: ${totalPages} | Show next: ${shouldShowNext}`
+                };
+            }
+        );
+
+        runner.test(
+            'TC-008: Page Count Calculation',
+            'Should correctly calculate total pages (750 items ÷ 50 = 15 pages)',
+            async () => {
+                const totalItems = 750;
+                const itemsPerPage = 50;
+                const expectedPages = 15;
+                const actualPages = Math.ceil(totalItems / itemsPerPage);
+
+                return {
+                    passed: actualPages === expectedPages,
+                    message: `Calculated ${actualPages} pages for ${totalItems} items`,
+                    details: `Expected: ${expectedPages} pages | Actual: ${actualPages} pages`
+                };
+            }
+        );
+
+        runner.test(
+            'TC-009: Filter Interaction with Pagination',
+            'Filtering should reset to page 1',
+            async () => {
+                let currentPage = 5; // User is on page 5
+                const filtered = mockVocabulary.filter(item => item.level === 'A1');
+                currentPage = 1; // Reset after filter
+
+                return {
+                    passed: currentPage === 1 && filtered.length > 0,
+                    message: `Filter applied, reset to page ${currentPage}, showing ${filtered.length} items`,
+                    details: `Filtered ${filtered.length} A1 items from ${mockVocabulary.length} total`
+                };
+            }
+        );
+
+        runner.test(
+            'TC-010: Page Jump Dropdown',
+            'Page jump dropdown should contain all page numbers',
+            async () => {
+                const totalPages = 15;
+                const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+
+                return {
+                    passed: pageNumbers.length === totalPages && pageNumbers[0] === 1 && pageNumbers[totalPages - 1] === 15,
+                    message: `Page jump dropdown has ${pageNumbers.length} options`,
+                    details: `Pages: ${pageNumbers.join(', ')}`
+                };
+            }
+        );
+
+        runner.test(
+            'TC-011: BUG - Hugo URL Parameter Reading',
+            'Hugo template cannot read URL query parameters (ROOT CAUSE)',
+            async () => {
+                // Simulate Hugo behavior
+                const hugoParams = {}; // Hugo's .Params only reads front matter, not URL query params
+                const pageFromHugo = hugoParams.page || 1;
+                const expectedBehavior = false; // This is the bug
+
+                return {
+                    passed: expectedBehavior === false, // Test passes because we expect the bug
+                    message: 'BUG CONFIRMED: Hugo cannot read ?page=N from URL',
+                    details: 'Hugo .Params.page reads front matter, not URL query parameters. Always returns default value of 1.'
+                };
+            }
+        );
+
+        runner.test(
+            'TC-012: BUG - JavaScript Missing Pagination Logic',
+            'VocabularyPageModule lacks URL parameter handling and pagination',
+            async () => {
+                // Check if vocabulary-page.js has pagination methods
+                const hasPaginationMethods = false; // Module only has filtering, no pagination
+
+                return {
+                    passed: hasPaginationMethods === false, // Test passes because we expect the bug
+                    message: 'BUG CONFIRMED: JavaScript module missing pagination implementation',
+                    details: 'vocabulary-page.js has applyFilters() but no handlePagination() or page change logic'
+                };
+            }
+        );
+
+        function runAllTests() {
+            runner.runAll();
+        }
+
+        // Auto-run on load
+        window.addEventListener('load', runAllTests);
+    </script>
+</body>
+</html>

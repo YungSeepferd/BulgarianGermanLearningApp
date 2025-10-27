@@ -12,11 +12,17 @@ class VocabularyPageModule {
         this.filters = {};
         this.searchTimeout = null;
         this.isSearching = false;
-        
+
         // Performance optimization: Virtual scrolling threshold
         this.virtualScrollThreshold = 100;
         this.visibleItems = [];
         this.allItems = [];
+
+        // Pagination state
+        this.currentPage = 1;
+        this.itemsPerPage = 50;
+        this.totalPages = 1;
+        this.paginatedItems = [];
     }
 
   domApplyFilters() {
@@ -85,21 +91,233 @@ class VocabularyPageModule {
             await this.loadDependencies();
             // Parse inline data for direction-aware DOM updates
             this.loadInlineData();
-            
+
+            // Initialize pagination from URL
+            this.initializePaginationFromURL();
+
             // Initialize components
             this.initializeFilters();
             this.initializeVocabularyCards();
             this.initializeCulturalToggle();
             this.initializeEventListeners();
+            this.initializePagination();
             this.initializeVirtualScrolling();
-            
+
             // Initial render with performance optimization
             this.performInitialRender();
-            
+
             console.log('VocabularyPageModule initialized successfully');
         } catch (error) {
             console.error('Failed to initialize VocabularyPageModule:', error);
             this.showErrorState();
+        }
+    }
+
+    initializePaginationFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const pageParam = urlParams.get('page');
+        this.currentPage = pageParam ? parseInt(pageParam, 10) : 1;
+
+        // Validate page number
+        if (this.currentPage < 1 || isNaN(this.currentPage)) {
+            this.currentPage = 1;
+        }
+
+        console.log(`[Pagination] Initialized from URL: page ${this.currentPage}`);
+    }
+
+    initializePagination() {
+        // Calculate total pages based on all items
+        this.calculatePagination();
+
+        // Setup pagination controls
+        this.setupPaginationControls();
+
+        // Listen for browser back/forward navigation
+        window.addEventListener('popstate', () => {
+            this.initializePaginationFromURL();
+            this.renderCurrentPage();
+        });
+
+        console.log(`[Pagination] Setup complete: ${this.totalPages} pages`);
+    }
+
+    calculatePagination() {
+        const vocabGrid = document.getElementById('vocabulary-grid');
+        if (!vocabGrid) return;
+
+        // Get all vocabulary cards
+        const allCards = Array.from(vocabGrid.querySelectorAll('.vocab-card'));
+        this.allItems = allCards;
+
+        // Calculate total pages
+        this.totalPages = Math.ceil(allCards.length / this.itemsPerPage);
+
+        // Ensure current page is within bounds
+        if (this.currentPage > this.totalPages) {
+            this.currentPage = this.totalPages;
+        }
+    }
+
+    setupPaginationControls() {
+        // Previous button
+        const prevBtns = document.querySelectorAll('.pagination-prev');
+        prevBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.goToPage(this.currentPage - 1);
+            });
+        });
+
+        // Next button
+        const nextBtns = document.querySelectorAll('.pagination-next');
+        nextBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.goToPage(this.currentPage + 1);
+            });
+        });
+
+        // Page jump dropdown
+        const pageJump = document.getElementById('page-jump');
+        if (pageJump) {
+            pageJump.addEventListener('change', (e) => {
+                const page = parseInt(e.target.value, 10);
+                this.goToPage(page);
+            });
+        }
+
+        // Page number links
+        const pageNumbers = document.querySelectorAll('.pagination-number');
+        pageNumbers.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const page = parseInt(link.textContent, 10);
+                this.goToPage(page);
+            });
+        });
+    }
+
+    goToPage(page) {
+        // Validate page number
+        if (page < 1 || page > this.totalPages) {
+            console.warn(`[Pagination] Invalid page: ${page}`);
+            return;
+        }
+
+        this.currentPage = page;
+
+        // Update URL without reload
+        const url = new URL(window.location);
+        url.searchParams.set('page', page);
+        window.history.pushState({ page }, '', url);
+
+        // Render the new page
+        this.renderCurrentPage();
+
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        console.log(`[Pagination] Navigated to page ${page}`);
+    }
+
+    renderCurrentPage() {
+        const vocabGrid = document.getElementById('vocabulary-grid');
+        if (!vocabGrid) return;
+
+        // Get all cards (respecting current filters)
+        const allCards = Array.from(vocabGrid.querySelectorAll('.vocab-card'));
+        const visibleCards = allCards.filter(card => card.style.display !== 'none');
+
+        // Calculate pagination for visible cards
+        const totalVisible = visibleCards.length;
+        this.totalPages = Math.ceil(totalVisible / this.itemsPerPage);
+
+        // Ensure current page is within bounds
+        if (this.currentPage > this.totalPages && this.totalPages > 0) {
+            this.currentPage = this.totalPages;
+        }
+
+        // Calculate slice indices
+        const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+        const endIndex = startIndex + this.itemsPerPage;
+
+        // Hide all cards first
+        allCards.forEach(card => {
+            if (card.style.display !== 'none') {
+                card.style.display = 'none';
+                card.dataset.paginated = 'true';
+            }
+        });
+
+        // Show only cards for current page
+        const pageCards = visibleCards.slice(startIndex, endIndex);
+        pageCards.forEach(card => {
+            card.style.display = '';
+        });
+
+        // Update pagination UI
+        this.updatePaginationUI();
+
+        // Update showing count
+        const showingCount = document.getElementById('showing-count');
+        if (showingCount) {
+            showingCount.textContent = pageCards.length;
+        }
+
+        console.log(`[Pagination] Rendered page ${this.currentPage}: showing ${pageCards.length} of ${totalVisible} items`);
+    }
+
+    updatePaginationUI() {
+        // Update pagination info
+        const paginationInfo = document.querySelector('.pagination-info');
+        if (paginationInfo) {
+            const span = paginationInfo.querySelector('span');
+            if (span) {
+                span.textContent = `Seite ${this.currentPage} von ${this.totalPages} / Страница ${this.currentPage} от ${this.totalPages}`;
+            }
+        }
+
+        // Update previous button
+        const prevBtns = document.querySelectorAll('.pagination-prev');
+        prevBtns.forEach(btn => {
+            if (this.currentPage <= 1) {
+                btn.style.display = 'none';
+            } else {
+                btn.style.display = '';
+            }
+        });
+
+        // Update next button
+        const nextBtns = document.querySelectorAll('.pagination-next');
+        nextBtns.forEach(btn => {
+            if (this.currentPage >= this.totalPages) {
+                btn.style.display = 'none';
+            } else {
+                btn.style.display = '';
+            }
+        });
+
+        // Update page jump dropdown
+        const pageJump = document.getElementById('page-jump');
+        if (pageJump) {
+            // Rebuild options
+            pageJump.innerHTML = '';
+            for (let i = 1; i <= this.totalPages; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = i;
+                if (i === this.currentPage) {
+                    option.selected = true;
+                }
+                pageJump.appendChild(option);
+            }
+        }
+
+        // Show/hide pagination controls
+        const paginationNav = document.querySelector('.pagination');
+        if (paginationNav) {
+            paginationNav.style.display = this.totalPages > 1 ? '' : 'none';
         }
     }
 
@@ -298,6 +516,9 @@ class VocabularyPageModule {
     }
 
     applyFilters() {
+        // Reset to page 1 when filters change
+        this.currentPage = 1;
+
         const currentDirection = this.getCurrentDirection();
         const hasAdapter = this.adapter && typeof this.adapter.getItemsForDirection === 'function';
         if (!hasAdapter) {
@@ -305,12 +526,16 @@ class VocabularyPageModule {
             this.domApplyFilters();
             // Ensure direction labels/notes are correct
             this.updateDirectionUI(currentDirection);
+            // Re-render pagination after filtering
+            this.renderCurrentPage();
             return;
         }
 
         let items = this.adapter.getItemsForDirection(currentDirection) || [];
         const filtered = this.filterItems(items);
         this.updateFilteredResults(filtered);
+        // Re-render pagination after filtering
+        this.renderCurrentPage();
   }
 
     filterItems(items) {
@@ -483,6 +708,8 @@ class VocabularyPageModule {
         const currentDirection = this.getCurrentDirection();
         this.updateDirectionUI(currentDirection);
         this.domApplyFilters();
+        // Render the current page after initial load
+        this.renderCurrentPage();
   }
 
     renderInitialBatch() {
