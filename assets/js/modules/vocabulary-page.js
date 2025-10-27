@@ -23,6 +23,7 @@ class VocabularyPageModule {
         this.currentPage = 1;
         this.itemsPerPage = 50;
         this.totalPages = 1;
+        this.totalItems = 0; // Total items in dataset (unfiltered)
         this.paginatedItems = [];
 
         // Pagination persistence
@@ -338,19 +339,25 @@ class VocabularyPageModule {
 
     calculatePagination() {
         const vocabGrid = document.getElementById('vocabulary-grid');
-        if (!vocabGrid) return;
+        if (!vocabGrid) {
+            console.warn('[Pagination] vocabulary-grid not found');
+            return;
+        }
 
         // Get all vocabulary cards
         const allCards = Array.from(vocabGrid.querySelectorAll('.vocab-card'));
         this.allItems = allCards;
+        this.totalItems = allCards.length; // Store total unfiltered count
 
-        // Calculate total pages
-        this.totalPages = Math.ceil(allCards.length / this.itemsPerPage);
+        // Calculate total pages based on all items
+        this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage);
 
         // Ensure current page is within bounds
-        if (this.currentPage > this.totalPages) {
+        if (this.currentPage > this.totalPages && this.totalPages > 0) {
             this.currentPage = this.totalPages;
         }
+
+        console.log(`[Pagination] Calculated: ${this.totalItems} total items, ${this.totalPages} pages`);
     }
 
     setupPaginationControls() {
@@ -583,9 +590,17 @@ class VocabularyPageModule {
         }
 
         // Show/hide pagination controls
+        // CRITICAL FIX: Always show pagination if total items > itemsPerPage,
+        // even if current filter shows fewer items. This prevents pagination
+        // from disappearing when filters are applied or during initial load.
         const paginationNav = document.querySelector('.pagination');
         if (paginationNav) {
-            paginationNav.style.display = this.totalPages > 1 ? '' : 'none';
+            const shouldShowPagination = this.totalItems > this.itemsPerPage || this.totalPages > 1;
+            paginationNav.style.display = shouldShowPagination ? '' : 'none';
+
+            if (shouldShowPagination) {
+                console.log(`[Pagination] Showing pagination: ${this.totalItems} total items, ${this.totalPages} pages`);
+            }
         }
     }
 
