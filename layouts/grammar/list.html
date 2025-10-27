@@ -19,13 +19,14 @@
         <input type="text" id="grammar-search" placeholder="Search grammar topics..." class="search-input">
     </div>
     
+    {{ $grammarPages := where .Site.RegularPages "Section" "grammar" }}
     <div class="grammar-stats">
-        <span class="stat">Total Topics: <span id="grammar-total">{{ len .Pages }}</span></span>
-        <span class="stat">Showing: <span id="grammar-showing">{{ len .Pages }}</span></span>
+        <span class="stat">Total Topics: <span id="grammar-total">{{ len $grammarPages }}</span></span>
+        <span class="stat">Showing: <span id="grammar-showing">{{ len $grammarPages }}</span></span>
     </div>
 
     <div class="grammar-list" id="grammar-list">
-        {{ range .Pages.ByWeight }}
+        {{ range $grammarPages.ByWeight }}
         <article class="grammar-item"
                  data-level="{{ .Params.level }}"
                  data-title="{{ .Title | lower }}"
