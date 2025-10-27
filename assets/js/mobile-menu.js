@@ -1,9 +1,11 @@
 /**
  * Mobile Menu Toggle
  * Handles the mobile navigation menu toggle functionality
+ * Note: This class is not exported as a module - it's instantiated automatically
+ * and available globally for debugging if needed via window.MobileMenu
  */
 
-export class MobileMenu {
+class MobileMenu {
   constructor() {
     this.menuToggle = document.getElementById('mobile-menu-toggle');
     this.navMenu = document.getElementById('nav-menu');
@@ -78,8 +80,8 @@ export class MobileMenu {
 // Initialize when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
-    new MobileMenu();
+    window.mobileMenu = new MobileMenu();
   });
 } else {
-  new MobileMenu();
+  window.mobileMenu = new MobileMenu();
 }
