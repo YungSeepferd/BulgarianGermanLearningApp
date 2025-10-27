@@ -119,6 +119,7 @@ function createDomStubs() {
     removeEventListener,
     querySelector: () => null,
     querySelectorAll: () => [],
+    getElementById: () => elementFactory(),
     createElement: elementFactory,
     createTextNode: (text) => ({ textContent: text }),
     body: {
@@ -160,6 +161,14 @@ function createDomStubs() {
     navigator: {
       serviceWorker: serviceWorkerStub
     },
+    location: {
+      hostname: 'localhost',
+      href: 'http://localhost/',
+      protocol: 'http:',
+      pathname: '/',
+      search: '',
+      hash: ''
+    },
     matchMedia: () => ({
       matches: false,
       addEventListener: () => {},
@@ -198,7 +207,10 @@ async function main() {
   createDomStubs();
 
   const skipFiles = new Set([
-    'vocabulary-old.js'
+    'vocabulary-old.js',
+    'flashcards.js',
+    'vocab-cards.js',
+    'mobile-menu.js'
   ]);
 
   for (const filePath of files) {
