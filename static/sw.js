@@ -1,8 +1,8 @@
 // Service Worker for Bulgarian-German Learning App
 // Provides offline functionality and performance optimization
 
-const CACHE_NAME = 'bgde-app-v1.3.0';
-const DATA_CACHE_NAME = 'bgde-data-v1.0.0';
+const CACHE_NAME = 'bgde-app-v1.4.0';
+const DATA_CACHE_NAME = 'bgde-data-v1.1.0';
 
 // Critical assets to cache immediately
 const STATIC_CACHE_URLS = [
@@ -11,6 +11,8 @@ const STATIC_CACHE_URLS = [
   '/vocabulary/',
   '/grammar/',
   '/practice/',
+  '/about/',
+  '/methodology/',
   '/manifest.webmanifest'
 ];
 

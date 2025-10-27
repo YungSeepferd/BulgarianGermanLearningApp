@@ -134,7 +134,7 @@
     </div>
     
     <div class="vocabulary-grid" id="vocabulary-grid">
-        {{ range $paginatedItems }}
+        {{ range $vocabulary }}
         <div class="vocab-card" 
              data-level="{{ .level }}" 
              data-category="{{ .category }}"
@@ -291,11 +291,7 @@
 <script src="{{ $vocabularyAdapterMin.RelPermalink }}" defer></script>
 {{ end }}
 
-{{ $vocabCards := resources.Get "js/vocab-cards.js" }}
-{{ if $vocabCards }}
-{{ $vocabCardsMin := $vocabCards | resources.Minify }}
-<script src="{{ $vocabCardsMin.RelPermalink }}" defer></script>
-{{ end }}
+{{/* vocab-cards.js is only used in shortcodes with type="module", not on list page */}}
 
 {{ $vocabularyPage := resources.Get "js/modules/vocabulary-page.js" }}
 {{ if $vocabularyPage }}
