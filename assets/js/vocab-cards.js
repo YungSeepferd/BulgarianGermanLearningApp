@@ -315,23 +315,66 @@ export class VocabCards {
   }
 
   buildNotesHtml(vocab) {
-    const notesBgToDe = vocab.notes_bg_to_de ? this.escapeHtml(vocab.notes_bg_to_de) : '';
-    const notesDeToBg = vocab.notes_de_to_bg ? this.escapeHtml(vocab.notes_de_to_bg) : '';
-    const generalNotes = vocab.notes ? this.escapeHtml(vocab.notes) : '';
+    const isBgToDe = this.languageDirection === 'bg-de';
 
-    if (notesBgToDe || notesDeToBg) {
-      const showBg = this.languageDirection === 'bg-de';
-      const showDe = this.languageDirection === 'de-bg';
-      return `
-        <div class="vocab-notes">
-          ${notesBgToDe ? `<div class="vocab-note-direction" data-direction="bg-de" style="${showBg ? '' : 'display:none;'}">${notesBgToDe}</div>` : ''}
-          ${notesDeToBg ? `<div class="vocab-note-direction" data-direction="de-bg" style="${showDe ? '' : 'display:none;'}">${notesDeToBg}</div>` : ''}
-        </div>
-      `;
+    // Get direction-specific content
+    const notes = this.getDirectionSpecificContent(vocab, 'notes');
+    const etymology = this.getDirectionSpecificContent(vocab, 'etymology');
+    const culturalNote = this.getDirectionSpecificContent(vocab, 'cultural_note');
+    const linguisticNote = this.getDirectionSpecificContent(vocab, 'linguistic_note');
+
+    let html = '';
+
+    if (notes) {
+      html += `<div class="vocab-notes">${this.escapeHtml(notes)}</div>`;
     }
 
-    if (generalNotes) {
-      return `<div class="vocab-notes">${generalNotes}</div>`;
+    if (etymology) {
+      html += `<div class="vocab-etymology"><strong>${isBgToDe ? 'Произход:' : 'Etymologie:'}</strong> ${this.escapeHtml(etymology)}</div>`;
+    }
+
+    if (culturalNote) {
+      html += `<div class="vocab-cultural-note"><strong>${isBgToDe ? 'Културна бележка:' : 'Kulturelle Anmerkung:'}</strong> ${this.escapeHtml(culturalNote)}</div>`;
+    }
+
+    if (linguisticNote) {
+      html += `<div class="vocab-linguistic-note"><strong>${isBgToDe ? 'Лингвистична бележка:' : 'Linguistische Anmerkung:'}</strong> ${this.escapeHtml(linguisticNote)}</div>`;
+    }
+
+    return html;
+  }
+
+  /**
+   * Get language-direction-specific content from vocabulary item
+   * @param {Object} vocab - Vocabulary item
+   * @param {string} fieldName - Base field name (e.g., 'notes', 'etymology')
+   * @returns {string} Content in appropriate language
+   */
+  getDirectionSpecificContent(vocab, fieldName) {
+    const isBgToDe = this.languageDirection === 'bg-de';
+
+    // Try direction-specific field first (e.g., notes_bg_to_de, notes_de_to_bg)
+    const directionField = isBgToDe
+      ? `${fieldName}_bg_to_de`
+      : `${fieldName}_de_to_bg`;
+
+    if (vocab[directionField]) {
+      return vocab[directionField];
+    }
+
+    // Try parsing bilingual field (Bulgarian\nGerman format)
+    const generalField = vocab[fieldName];
+    if (generalField && typeof generalField === 'string') {
+      // Check if field contains bilingual content separated by newline
+      const parts = generalField.split('\n').filter(p => p.trim());
+
+      // If we have exactly 2 parts, assume first is Bulgarian, second is German
+      if (parts.length === 2) {
+        return isBgToDe ? parts[0] : parts[1];
+      }
+
+      // Otherwise return as-is (fallback to English or single-language content)
+      return generalField;
     }
 
     return '';
