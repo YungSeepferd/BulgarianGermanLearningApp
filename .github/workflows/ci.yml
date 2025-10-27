@@ -51,12 +51,14 @@ jobs:
         run: npm run lint:esm
 
       - name: Go unit tests
-        run: go test ./tools/...
+        run: go test ./...
+        working-directory: tools
 
       - name: Security audit (Go)
         run: |
           go install golang.org/x/vuln/cmd/govulncheck@latest
-          govulncheck ./tools/...
+          govulncheck ./...
+        working-directory: tools
         continue-on-error: true
 
       - name: Build site
