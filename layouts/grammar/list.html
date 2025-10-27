@@ -19,7 +19,7 @@
         <input type="text" id="grammar-search" placeholder="Search grammar topics..." class="search-input">
     </div>
     
-    {{ $grammarPages := where .Site.RegularPages "Section" "grammar" }}
+    {{ $grammarPages := where .Site.RegularPages "Type" "grammar" }}
     <div class="grammar-stats">
         <span class="stat">Total Topics: <span id="grammar-total">{{ len $grammarPages }}</span></span>
         <span class="stat">Showing: <span id="grammar-showing">{{ len $grammarPages }}</span></span>
