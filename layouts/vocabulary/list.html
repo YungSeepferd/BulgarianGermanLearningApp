@@ -288,7 +288,7 @@
 {{ $vocabularyAdapter := resources.Get "js/vocabulary-adapter.js" }}
 {{ if $vocabularyAdapter }}
 {{ $vocabularyAdapterMin := $vocabularyAdapter | resources.Minify }}
-<script src="{{ $vocabularyAdapterMin.RelPermalink }}" defer></script>
+<script src="{{ $vocabularyAdapterMin.RelPermalink }}"></script>
 {{ end }}
 
 {{/* vocab-cards.js is only used in shortcodes with type="module", not on list page */}}
@@ -296,19 +296,87 @@
 {{ $vocabularyPage := resources.Get "js/modules/vocabulary-page.js" }}
 {{ if $vocabularyPage }}
 {{ $vocabularyPageMin := $vocabularyPage | resources.Minify }}
-<script src="{{ $vocabularyPageMin.RelPermalink }}" defer></script>
+<script src="{{ $vocabularyPageMin.RelPermalink }}"></script>
 {{ end }}
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  if (!window.VocabularyPageModule || !window.VocabularyAdapter) return;
-  const adapter = new window.VocabularyAdapter();
-  const module = new window.VocabularyPageModule({
-    container: '#vocabulary-grid',
-    adapter
-  });
-  module.init();
-});
+// Enhanced initialization with retry logic and debugging
+(function initVocabularyPage() {
+  const maxRetries = 50; // 5 seconds max wait
+  let retryCount = 0;
+  
+  function attemptInit() {
+    console.log(`[VocabPage] Init attempt ${retryCount + 1}/${maxRetries}`);
+    console.log('[VocabPage] VocabularyAdapter available:', !!window.VocabularyAdapter);
+    console.log('[VocabPage] VocabularyPageModule available:', !!window.VocabularyPageModule);
+    
+    if (window.VocabularyPageModule && window.VocabularyAdapter) {
+      try {
+        console.log('[VocabPage] Initializing with adapter...');
+        const adapter = new window.VocabularyAdapter();
+        const module = new window.VocabularyPageModule({
+          container: '#vocabulary-grid',
+          adapter
+        });
+        
+        // Store globally for debugging
+        window.vocabPageInstance = module;
+        
+        module.init();
+        console.log('[VocabPage] ✅ Successfully initialized with adapter');
+        return true;
+      } catch (error) {
+        console.error('[VocabPage] ❌ Initialization failed:', error);
+        return false;
+      }
+    }
+    
+    retryCount++;
+    if (retryCount < maxRetries) {
+      setTimeout(attemptInit, 100);
+    } else {
+      console.warn('[VocabPage] ⚠️ Timeout - falling back to basic DOM filtering');
+      // Fallback to basic search functionality
+      initBasicSearch();
+    }
+  }
+  
+  function initBasicSearch() {
+    const searchInput = document.getElementById('search-input');
+    if (!searchInput) return;
+    
+    console.log('[VocabPage] 🔄 Initializing basic search fallback');
+    
+    searchInput.addEventListener('input', function(e) {
+      const query = e.target.value.toLowerCase();
+      let visibleCount = 0;
+      
+      document.querySelectorAll('#vocabulary-grid .vocab-card').forEach(card => {
+        const word = (card.getAttribute('data-word') || '').toLowerCase();
+        const translation = (card.getAttribute('data-translation') || '').toLowerCase();
+        const matches = !query || word.includes(query) || translation.includes(query);
+        
+        card.style.display = matches ? '' : 'none';
+        if (matches) visibleCount++;
+      });
+      
+      // Update counter
+      const showingCount = document.getElementById('showing-count');
+      if (showingCount) {
+        showingCount.textContent = visibleCount;
+      }
+      
+      console.log(`[VocabPage] 🔍 Search "${query}" -> ${visibleCount} results`);
+    });
+  }
+  
+  // Start initialization
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', attemptInit);
+  } else {
+    attemptInit();
+  }
+})();
 </script>
 {{ end }}
 
