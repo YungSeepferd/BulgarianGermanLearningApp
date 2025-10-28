@@ -23,6 +23,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:lang(bg) {
+  font-family: $font-bulgarian;
+  font-feature-settings: "locl" 1;
+  -webkit-locale: "bg";
+}
+
 // Typography
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 $spacing-4 0;
