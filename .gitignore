@@ -49,6 +49,8 @@ Thumbs.db
 .env.test.local
 .env.production.local
 .env.production
+.claude/settings.local.json
+.mcp.local.json
 
 # Build and deployment artifacts
 dist/
