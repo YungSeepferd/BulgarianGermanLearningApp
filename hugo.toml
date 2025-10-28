@@ -92,19 +92,13 @@ defaultContentLanguageInSubdir = false
 
 # Output configuration
 [outputs]
-  home = ["HTML", "RSS", "JSON", "SearchIndex"]
+  home = ["HTML", "RSS"]
   page = ['HTML']
   section = ['HTML', 'RSS']
 
 [outputFormats]
   [outputFormats.SCSS]
     mediaType = "text/css"
-    isPlainText = true
-    notAlternative = true
-    
-  [outputFormats.SearchIndex]
-    mediaType = 'application/json'
-    baseName = 'search-index'
     isPlainText = true
     notAlternative = true
 

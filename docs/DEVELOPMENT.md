@@ -33,15 +33,22 @@ This document summarizes the day-to-day workflow for the Bulgarian–German Lear
 
 ```text
 ├── assets/            # SCSS + JS source (ES modules)
-│   ├── scss/
-│   └── js/
+│   ├── scss/          # Component-driven SCSS
+│   ├── js/            # Unified ES modules (v2.0)
+│   │   ├── modules/   # Specialized modules
+│   │   └── unified-*.js # Core unified modules
 ├── content/           # Hugo content pages / sections
-├── data/              # JSON sources (vocabulary, grammar, etc.)
-├── docs/              # Guides (development, architecture, testing)
+├── data/              # JSON sources - consolidated
+│   ├── vocabulary.json # Single vocabulary database
+│   ├── cultural-grammar.json # Grammar rules
+│   └── archive-data-cleanup/ # Legacy files (archived)
+├── docs/              # Streamlined documentation
+│   ├── archive-docs-cleanup/ # Historical reports (archived)
+│   └── *.md          # Current essential docs
 ├── layouts/           # Hugo templates, partials, shortcodes
 ├── static/            # Manifest, service worker, static assets
 ├── tools/             # Go helper utilities (built on demand)
-└── AGENTS.md          # Coding-assistant instructions
+└── CLAUDE.md          # Claude Code guidance
 ```
 
 ## Common Commands
@@ -69,8 +76,8 @@ npm run process-data
 ## Asset Pipeline
 
 - SCSS is compiled via `css.Sass | resources.Minify | resources.Fingerprint` in `layouts/_default/baseof.html`.
-- JavaScript lives in `assets/js/` as ES modules (no bundler); Hugo fingerprints the compiled output.
-- Data files under `data/` feed Hugo templates and client-side scripts.
+- JavaScript uses unified ES modules (v2.0) in `assets/js/` - no bundler needed; Hugo fingerprints the compiled output.
+- Single vocabulary database (`data/vocabulary.json`) feeds Hugo templates and client-side scripts for better performance.
 
 ## Testing & QA
 
@@ -81,12 +88,13 @@ npm run process-data
 - **PWA**: ensure service worker install, update flow, and offline shell still behave after asset changes.
 - **Go utilities**: run `GOCACHE=$(pwd)/.gocache go test ./tools/...` from the repo root to exercise the helper module.
 
-## Recent Fixes (2025)
+## Recent Refactoring (October 2025)
 
-- Migrated SCSS pipeline to `css.Sass | resources.Minify | resources.Fingerprint` to avoid deprecations.
-- Standardized flashcard SM-2 engine in `assets/js/spaced-repetition.js` with localStorage fallback.
-- Embedded vocabulary JSON into `layouts/_shortcodes/vocab.html` to allow offline initialization.
-- Documented coding-assistant practices in `AGENTS.md` for consistent AI collaboration.
+- **Code Consolidation**: Merged legacy `flashcards.js` and `spaced-repetition.js` into unified modules (`unified-practice-session.js`, `unified-spaced-repetition.js`) for better maintainability.
+- **Data Cleanup**: Consolidated 24 vocabulary batch files into single `vocabulary.json` source, archived legacy files in `data/archive-data-cleanup/`.
+- **Documentation Streamlining**: Moved 25 historical completion reports to `docs/archive-docs-cleanup/`, keeping only essential documentation active.
+- **Performance Optimization**: Eliminated duplicate JS modules and fragmented data loading for faster builds and runtime performance.
+- **Module Organization**: Established consistent structure with `assets/js/modules/` for specialized functionality and unified core modules.
 
 ## Troubleshooting
 
@@ -144,11 +152,11 @@ The following diagram illustrates the flow from source JSON to UI:
 
 ```mermaid
 flowchart TD
-    A[data/vocabulary.json\n data/grammar.json] --> B[npm run process-data\n tools helpers]
+    A[data/vocabulary.json\n data/cultural-grammar.json] --> B[npm run process-data\n tools helpers]
     B --> C[data/processed/*\n search index, audio manifests]
     A --> D[Hugo templates/shortcodes\n layouts/]
     C --> D
     D --> E[Generated HTML\n + inline JSON blocks]
-    E --> F[Client JS (assets/js/*)\n vocab-cards.js, flashcards.js]
-    F --> G[UI: Cards, Filters, SM-2]
+    E --> F[Unified Client JS\n unified-practice-session.js\n unified-spaced-repetition.js]
+    F --> G[UI: Cards, Filters, SM-2 v2]
 ```

@@ -25,32 +25,39 @@ open http://localhost:1313/
 ```text
 .
 ├── assets/
-│   ├── js/                # ES module scripts (flashcards, spaced repetition, UI helpers)
+│   ├── js/                # Unified ES modules (v2.0) - no legacy duplication
+│   │   ├── modules/       # Specialized modules (search, API client, etc.)
+│   │   └── unified-*.js   # Core unified modules for practice & spaced repetition
 │   └── scss/              # SCSS sources compiled via Hugo Pipes
 ├── content/               # Markdown content (practice pages, vocabulary articles)
-├── data/                  # JSON data sources (vocabulary, grammar, search index)
-├── docs/                  # Project documentation (architecture, development, testing)
+├── data/                  # Consolidated JSON sources - single source of truth
+│   ├── vocabulary.json    # Main vocabulary database (968KB)
+│   ├── cultural-grammar.json # Grammar rules and cultural notes
+│   └── archive-data-cleanup/ # Legacy batch files (safely archived)
+├── docs/                  # Streamlined documentation - essential files only
+│   ├── archive-docs-cleanup/ # Historical completion reports (archived)
+│   └── *.md              # Current project documentation
 ├── layouts/               # Hugo templates, partials, and shortcodes
 ├── static/                # Manifest, service worker, and static assets
 ├── tools/                 # Go utilities (no Go module in repo root)
-└── AGENTS.md              # Coding assistant instructions
+└── CLAUDE.md              # Claude Code guidance for future development
 ```
 
 ## ✨ Key Features
 
-- **🧠 Spaced repetition** powered by an SM-2 implementation in `assets/js/spaced-repetition.js`
-- **📚 Vocabulary explorer** with category, CEFR level, and text filters
-- **🔄 Bidirectional flashcards** with keyboard shortcuts and accessibility support
-- **📊 Progress persistence** stored under the `bgde:` localStorage namespace
+- **🧠 Spaced repetition** powered by unified SM-2 v2 implementation in `unified-spaced-repetition.js`
+- **📚 Vocabulary explorer** with category, CEFR level, and text filters - single consolidated database
+- **🔄 Bidirectional flashcards** with direction-aware difficulty multipliers and session management
+- **📊 Progress persistence** with automatic schema migration stored under the `bgde:` localStorage namespace
 - **📱 PWA shell** with offline cache, manifest, and update handling
 - **🎨 Mobile-first design** compiled via Hugo Pipes with fingerprinted CSS
 
 ## 🛠️ Technology Stack
 
 - **Static site**: Hugo Extended (SCSS via `css.Sass | resources.Minify | resources.Fingerprint`)
-- **Client logic**: Vanilla JavaScript ES modules (no third-party dependencies)
-- **Styling**: SCSS partials compiled by Hugo Pipes
-- **Data**: JSON sources under `data/` consumed by Hugo and client scripts
+- **Client logic**: Unified vanilla JavaScript ES modules v2.0 (zero dependencies, consolidated architecture)
+- **Styling**: Component-driven SCSS partials compiled by Hugo Pipes
+- **Data**: Single vocabulary database + grammar JSON for optimal performance
 - **Tooling**: Go utilities in `tools/`, npm scripts for convenience
 - **Deployment**: GitHub Pages via `.github/workflows/deploy.yml`
 

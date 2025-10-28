@@ -17,7 +17,7 @@ graph TD
     end
 
     subgraph Browser Runtime
-        I[flashcards.js] --> J[spaced-repetition.js]
+        I[unified-practice-session.js] --> J[unified-spaced-repetition.js]
         I --> K[language-toggle.js]
         I --> L[speech-recognition.js]
         I --> M[localStorage<br/>bgde:*]
@@ -36,16 +36,14 @@ graph TD
 
 - **Hugo layer** renders HTML skeletons and embeds JSON data for offline-first behaviour. Shortcodes such as `flashcards.html` output ARIA-friendly markup and inline vocabulary payloads.
 - **Client modules** manage interaction:
-  - **Unified Modules (v2.0 - October 2025)**:
+  - **Core Modules (v2.0 - October 2025)**:
     - `unified-spaced-repetition.js` (schema v2) handles SM-2 scheduling with automatic migration from legacy `bgde:review:<id>` to enhanced `bgde:review_<id>_<direction>` format. Supports bidirectional difficulty multipliers (BG→DE: 1.1x, DE→BG: 1.2x).
     - `unified-practice-session.js` drives practice sessions with direction-aware notes, keyboard shortcuts, session history, and SM-2 integration.
-  - **Active Modules**:
-    - `flashcards.js` provides base flashcard functionality (being phased out for unified-practice-session).
-    - `spaced-repetition.js` legacy SM-2 implementation (deprecated - use unified).
     - `speech-recognition.js` wraps the Web Speech API for pronunciation feedback.
     - `language-toggle.js` synchronizes study direction (DE→BG / BG→DE) via custom events and localStorage.
     - `vocab-cards.js` powers listing pages with filtering and search.
-    - `enhanced-vocab-cards.js` adds cultural context display.
+  - **Legacy Modules (archived)**:
+    - Legacy `flashcards.js` and `spaced-repetition.js` have been consolidated into the unified modules above for better maintainability and performance.
 - **State management** is browser-local and deterministic:
   - **Session state** (current card, accuracy, attempts) lives in-memory within practice session modules.
   - **Spaced-repetition progress** (SM-2 v2 schema):
@@ -83,22 +81,29 @@ graph TD
 
 ```text
 ├── assets/
-│   ├── js/                # ES modules (flashcards, spaced repetition, UI helpers)
+│   ├── js/                # ES modules (unified modules, UI helpers)
+│   │   ├── modules/       # Specialized modules (API client, search, etc.)
+│   │   └── unified-*.js   # Core unified modules (v2.0)
 │   └── scss/              # SCSS partials compiled via Hugo Pipes
 ├── content/               # Hugo content pages (practice, vocabulary articles)
-├── data/                  # JSON sources (vocabulary, grammar, search index)
-├── docs/                  # Project documentation
+├── data/                  # JSON sources (vocabulary, grammar) - cleaned up
+│   ├── vocabulary.json    # Main vocabulary database (single source)
+│   ├── cultural-grammar.json # Grammar rules and cultural notes
+│   └── archive-data-cleanup/ # Legacy batch files (archived)
+├── docs/                  # Project documentation - streamlined
+│   ├── archive-docs-cleanup/ # Historical reports (archived)
+│   └── *.md              # Current essential documentation
 ├── layouts/               # Templates, partials, shortcodes
 ├── static/                # Manifest, service worker, static images/audio
 ├── tools/                 # Go utilities for preprocessing data
-└── AGENTS.md              # AI assistant guidance
+└── CLAUDE.md              # Claude Code guidance
 ```
 
 ## Core Components
 
 - **Templates & Shortcodes (`layouts/`)**: Render vocabulary lists, flashcard interfaces, and embed JSON for offline initialization.
-- **Client Modules (`assets/js/`)**: Implement SM-2 scheduling (`spaced-repetition.js`), flashcard UI (`flashcards.js`), language toggles, and storage helpers.
-- **Data Sources (`data/`)**: Central vocabulary and grammar JSON files used by Hugo at build time and injected into the front end.
+- **Client Modules (`assets/js/`)**: Unified modules implement SM-2 scheduling (`unified-spaced-repetition.js`), practice sessions (`unified-practice-session.js`), language toggles, and storage helpers.
+- **Data Sources (`data/`)**: Single vocabulary database (`vocabulary.json`) and grammar rules (`cultural-grammar.json`) used by Hugo at build time and injected into the front end.
 - **Styles (`assets/scss/`)**: Component-driven SCSS compiled to a fingerprinted stylesheet referenced from `layouts/_default/baseof.html`.
 - **Go Tools (`tools/`)**: Optional command-line helpers for data processing; no long-running backend services.
 
@@ -107,9 +112,9 @@ graph TD
 1. **Build time**: Hugo loads JSON from `data/`, renders pages and shortcodes, and embeds serialized vocabulary data into HTML.
 2. **Page load**: Browser downloads HTML, CSS, and ES modules. Service worker handles caching for offline reuse.
 3. **Runtime interactions**:
-   - `flashcards.js` parses embedded JSON or fetches fallback endpoints.
-   - User flips cards and assigns grades; `spaced-repetition.js` recalculates schedule and writes to `localStorage` (prefix `bgde:`).
-   - UI updates reflect progress, accuracy, and next-review intervals.
+   - `unified-practice-session.js` parses embedded JSON and manages flashcard sessions.
+   - User flips cards and assigns grades; `unified-spaced-repetition.js` recalculates schedule and writes to `localStorage` (prefix `bgde:`).
+   - UI updates reflect progress, accuracy, and next-review intervals with bidirectional learning support.
 
 ## Non-Functional Considerations
 
