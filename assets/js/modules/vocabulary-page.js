@@ -831,8 +831,14 @@ class VocabularyPageModule {
         const levelValue = this.filters.level?.value || '';
         const categoryValue = this.filters.category?.value || '';
         const searchValue = this.filters.search?.value?.toLowerCase() || '';
+        
+        console.log(`[VocabPage] 🔧 Filtering ${items.length} items with:`, {
+            level: levelValue || '(any)',
+            category: categoryValue || '(any)', 
+            search: searchValue || '(none)'
+        });
 
-        return items.filter(item => {
+        const filtered = items.filter(item => {
             const levelMatch = !levelValue || item.level === levelValue;
             const categoryMatch = !categoryValue || item.category === categoryValue;
             const searchMatch = !searchValue || 
@@ -842,15 +848,16 @@ class VocabularyPageModule {
 
             return levelMatch && categoryMatch && searchMatch;
         });
+        
+        console.log(`[VocabPage] ✅ Filtered to ${filtered.length} items`);
+        return filtered;
     }
 
     updateFilteredResults(filtered) {
-        // Update vocabulary cards efficiently when available, otherwise fallback to DOM filtering
-        if (this.enhancedVocab && typeof this.enhancedVocab.renderItems === 'function') {
-            this.enhancedVocab.renderItems(filtered);
-        } else {
-            this.domApplyFilters();
-        }
+        console.log(`[VocabPage] 🔍 updateFilteredResults called with ${filtered.length} items`);
+        
+        // Apply filtering to DOM cards based on filtered results
+        this.renderFilteredResults(filtered);
 
         // Update counters
         const showingCount = document.getElementById('showing-count');
@@ -860,6 +867,24 @@ class VocabularyPageModule {
 
         // Show/hide no results message
         this.toggleNoResultsMessage(filtered.length === 0);
+    }
+    
+    renderFilteredResults(filtered) {
+        const allCards = document.querySelectorAll('#vocabulary-grid .vocab-card');
+        
+        // Create a set of IDs from filtered results for fast lookup
+        const filteredIds = new Set(filtered.map(item => item.id));
+        
+        let visibleCount = 0;
+        allCards.forEach(card => {
+            const cardId = card.getAttribute('data-id');
+            const shouldShow = filteredIds.has(cardId);
+            
+            card.style.display = shouldShow ? '' : 'none';
+            if (shouldShow) visibleCount++;
+        });
+        
+        console.log(`[VocabPage] 🎯 Rendered ${visibleCount} of ${allCards.length} cards`);
     }
 
     toggleNoResultsMessage(show) {

@@ -1,0 +1,8 @@
+Run `npm run lint:esm` and summarize the errors (ES module syntax and imports).
+
+For each error that is straightforward to fix, provide a minimal unified-diff patch that only touches files under `assets/js/`.
+
+Rules:
+- Do not edit files outside `assets/js/`.
+- If a fix is unclear or risky, describe the problem and propose a manual action instead of applying it.
+- Keep diffs minimal and include a short explanation for each change.

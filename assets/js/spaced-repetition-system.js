@@ -1,19 +1,219 @@
 /**
- * @file unified-spaced-repetition.js
- * @description Unified SM-2 spaced repetition with bidirectional support, 6-phase system, and legacy migration
- * @status ACTIVE
- * @replaces enhanced-spaced-repetition.js, spaced-repetition.js
- * @features
- *   - Direction-aware SM-2 (bg-de, de-bg with difficulty multipliers)
- *   - 6-phase learning progression system integrated with SM-2
- *   - Automatic migration from legacy schema (bgde:review:<id>) to enhanced (bgde:review_<id>_<direction>)
- *   - Phase tracking and progression based on ease factor
- *   - Backward-compatible state loading
- *   - Export/import with schema version tracking
- * @version 3.0.0
+ * @file spaced-repetition-system.js
+ * @description Bundled file containing PhaseCalculator and UnifiedSpacedRepetition with profile isolation
+ * @version 3.1.0 - Added profile namespacing support
  * @updated November 2025
  */
 
+// ============================================================================
+// PHASE CALCULATOR
+// ============================================================================
+
+/**
+ * Phase Calculator Module
+ * Maps SM-2 ease factors to 6-phase learning progression system
+ *
+ * Phase System:
+ * - Phase 1 (New): EF < 2.0 - Just introduced, frequent reviews
+ * - Phase 2 (Learning): EF 2.0-2.2 - Building familiarity
+ * - Phase 3 (Familiar): EF 2.2-2.4 - Recognizable but needs practice
+ * - Phase 4 (Known): EF 2.4-2.6 - Comfortable recall
+ * - Phase 5 (Mastered): EF 2.6-2.8 - Strong retention
+ * - Phase 6 (Expert): EF 2.8-3.0 - Nearly perfect
+ * - Learned: EF ≥ 3.0 - Long-term memory, periodic maintenance
+ */
+class PhaseCalculator {
+  constructor() {
+    // Phase thresholds based on ease factor
+    this.PHASE_THRESHOLDS = {
+      PHASE_1: { min: 0, max: 2.0, name: 'New', color: '#ef4444' },
+      PHASE_2: { min: 2.0, max: 2.2, name: 'Learning', color: '#f97316' },
+      PHASE_3: { min: 2.2, max: 2.4, name: 'Familiar', color: '#eab308' },
+      PHASE_4: { min: 2.4, max: 2.6, name: 'Known', color: '#84cc16' },
+      PHASE_5: { min: 2.6, max: 2.8, name: 'Mastered', color: '#22c55e' },
+      PHASE_6: { min: 2.8, max: 3.0, name: 'Expert', color: '#10b981' },
+      LEARNED: { min: 3.0, max: Infinity, name: 'Learned', color: '#06b6d4' }
+    };
+
+    // Minimum correct reviews required to advance from Phase 1
+    this.MIN_REVIEWS_TO_ADVANCE = 3;
+
+    // Learned status requires sustained high performance
+    this.LEARNED_MIN_REPETITIONS = 5;
+  }
+
+  calculatePhase(easeFactor, repetitions = 0) {
+    const ef = Math.max(1.3, easeFactor);
+    if (ef >= 3.0 && repetitions >= this.LEARNED_MIN_REPETITIONS) {
+      return 0; // Learned status
+    }
+    if (ef < 2.0) return 1;
+    if (ef < 2.2) return 2;
+    if (ef < 2.4) return 3;
+    if (ef < 2.6) return 4;
+    if (ef < 2.8) return 5;
+    if (ef < 3.0) return 6;
+    return 6;
+  }
+
+  getPhaseDetails(phase) {
+    switch (phase) {
+      case 0: return this.PHASE_THRESHOLDS.LEARNED;
+      case 1: return this.PHASE_THRESHOLDS.PHASE_1;
+      case 2: return this.PHASE_THRESHOLDS.PHASE_2;
+      case 3: return this.PHASE_THRESHOLDS.PHASE_3;
+      case 4: return this.PHASE_THRESHOLDS.PHASE_4;
+      case 5: return this.PHASE_THRESHOLDS.PHASE_5;
+      case 6: return this.PHASE_THRESHOLDS.PHASE_6;
+      default: return this.PHASE_THRESHOLDS.PHASE_1;
+    }
+  }
+
+  calculateNewPhase(currentPhase, quality, newEaseFactor, repetitions) {
+    if (quality < 3) {
+      return Math.max(1, currentPhase - 1);
+    }
+    const newPhase = this.calculatePhase(newEaseFactor, repetitions);
+    if (newPhase === 0 && currentPhase === 6) {
+      return 0;
+    }
+    if (newPhase > currentPhase) {
+      return Math.min(newPhase, currentPhase + 1);
+    }
+    return newPhase;
+  }
+
+  canAdvanceToNextPhase(currentPhase, repetitions, easeFactor) {
+    if (currentPhase === 0) {
+      return false;
+    }
+    if (currentPhase === 1 && repetitions < this.MIN_REVIEWS_TO_ADVANCE) {
+      return false;
+    }
+    const nextPhaseThreshold = this.getPhaseDetails(currentPhase + 1).min;
+    return easeFactor >= nextPhaseThreshold;
+  }
+
+  getPhaseProgress(phase, easeFactor) {
+    if (phase === 0) {
+      return 100;
+    }
+    const phaseDetails = this.getPhaseDetails(phase);
+    const range = phaseDetails.max - phaseDetails.min;
+    if (range === 0 || range === Infinity) {
+      return 0;
+    }
+    const progress = (easeFactor - phaseDetails.min) / range;
+    return Math.max(0, Math.min(100, progress * 100));
+  }
+
+  getPhaseStatistics(reviews) {
+    const stats = {
+      learned: { count: 0, percentage: 0 },
+      phase1: { count: 0, percentage: 0 },
+      phase2: { count: 0, percentage: 0 },
+      phase3: { count: 0, percentage: 0 },
+      phase4: { count: 0, percentage: 0 },
+      phase5: { count: 0, percentage: 0 },
+      phase6: { count: 0, percentage: 0 },
+      total: reviews.length
+    };
+
+    if (reviews.length === 0) {
+      return stats;
+    }
+
+    reviews.forEach(review => {
+      const phase = review.phase ?? this.calculatePhase(review.easeFactor || 2.5, review.repetitions || 0);
+      switch (phase) {
+        case 0: stats.learned.count++; break;
+        case 1: stats.phase1.count++; break;
+        case 2: stats.phase2.count++; break;
+        case 3: stats.phase3.count++; break;
+        case 4: stats.phase4.count++; break;
+        case 5: stats.phase5.count++; break;
+        case 6: stats.phase6.count++; break;
+      }
+    });
+
+    Object.keys(stats).forEach(key => {
+      if (key !== 'total' && stats[key].count !== undefined) {
+        stats[key].percentage = ((stats[key].count / stats.total) * 100).toFixed(1);
+      }
+    });
+
+    return stats;
+  }
+
+  getPhaseIntervalMultiplier(phase) {
+    switch (phase) {
+      case 0: return 3.0;
+      case 6: return 2.0;
+      case 5: return 1.5;
+      case 4: return 1.2;
+      case 3: return 1.0;
+      case 2: return 0.9;
+      case 1:
+      default: return 0.8;
+    }
+  }
+
+  needsMaintenanceReview(lastReviewDate, easeFactor) {
+    if (!lastReviewDate) {
+      return true;
+    }
+    const daysSinceReview = (Date.now() - new Date(lastReviewDate).getTime()) / (1000 * 60 * 60 * 24);
+    let maintenanceInterval = 90;
+    if (easeFactor >= 3.5) {
+      maintenanceInterval = 180;
+    } else if (easeFactor >= 3.2) {
+      maintenanceInterval = 120;
+    }
+    return daysSinceReview >= maintenanceInterval;
+  }
+
+  getPhaseName(phase, language = 'en') {
+    const names = {
+      0: { en: 'Learned', de: 'Gelernt', bg: 'Научен' },
+      1: { en: 'New', de: 'Neu', bg: 'Нов' },
+      2: { en: 'Learning', de: 'Lernen', bg: 'Учене' },
+      3: { en: 'Familiar', de: 'Vertraut', bg: 'Познат' },
+      4: { en: 'Known', de: 'Bekannt', bg: 'Известен' },
+      5: { en: 'Mastered', de: 'Gemeistert', bg: 'Овладян' },
+      6: { en: 'Expert', de: 'Experte', bg: 'Експерт' }
+    };
+    return names[phase]?.[language] || names[phase]?.en || 'Unknown';
+  }
+
+  getPhaseIcon(phase) {
+    const icons = {
+      0: '🎓', 1: '🌱', 2: '📖', 3: '👁️',
+      4: '✅', 5: '⭐', 6: '🏆'
+    };
+    return icons[phase] || '❓';
+  }
+}
+
+// ============================================================================
+// UNIFIED SPACED REPETITION
+// ============================================================================
+
+/**
+ * @file unified-spaced-repetition.js
+ * @description Unified SM-2 spaced repetition with bidirectional support, 6-phase system, profile isolation, and legacy migration
+ * @status ACTIVE
+ * @features
+ *   - Direction-aware SM-2 (bg-de, de-bg with difficulty multipliers)
+ *   - 6-phase learning progression system integrated with SM-2
+ *   - Profile-isolated data storage (dual profile support)
+ *   - Automatic migration from non-profiled to profile-namespaced storage
+ *   - Automatic migration from legacy schema to enhanced schema
+ *   - Phase tracking and progression based on ease factor
+ *   - Backward-compatible state loading
+ *   - Export/import with schema version tracking
+ * @version 3.1.0 - Added profile isolation
+ * @updated November 2025
+ */
 class UnifiedSpacedRepetition {
   constructor(phaseCalculator = null, profileManager = null) {
     this.storagePrefix = 'bgde:';
@@ -38,21 +238,14 @@ class UnifiedSpacedRepetition {
   }
 
   init() {
-    console.log('[UnifiedSR] Initialized unified spaced repetition system v3.0 with 6-phase progression');
-
-    // Check for legacy data and offer migration
+    const profileStatus = this.profileManager ? 'with profile isolation' : 'without profile isolation';
+    console.log(`[UnifiedSR] Initialized unified spaced repetition system v3.1 with 6-phase progression ${profileStatus}`);
     this.detectLegacyData();
-
-    // Check for reviews without phase field (schema v2 -> v3 migration)
     this.detectPhaselessReviews();
   }
 
-  /**
-   * Detect reviews without phase field (v2 schema) and log migration opportunities
-   */
   detectPhaselessReviews() {
     const phaselessKeys = [];
-
     try {
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
@@ -63,7 +256,6 @@ class UnifiedSpacedRepetition {
           }
         }
       }
-
       if (phaselessKeys.length > 0) {
         console.log(`[UnifiedSR] Found ${phaselessKeys.length} reviews without phase field. Auto-migration will occur on next load.`);
       }
@@ -72,12 +264,8 @@ class UnifiedSpacedRepetition {
     }
   }
 
-  /**
-   * Detect legacy localStorage keys and log migration opportunities
-   */
   detectLegacyData() {
     const legacyKeys = [];
-    
     try {
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
@@ -85,7 +273,6 @@ class UnifiedSpacedRepetition {
           legacyKeys.push(key);
         }
       }
-      
       if (legacyKeys.length > 0) {
         console.log(`[UnifiedSR] Found ${legacyKeys.length} legacy review states. Migration available.`);
         this.migrationLog.push({
@@ -99,155 +286,88 @@ class UnifiedSpacedRepetition {
     }
   }
 
-  /**
-   * Initialize review state for a new vocabulary item
-   * @param {string} itemId - Unique identifier for the vocabulary item
-   * @param {string} direction - Learning direction ('bg-de' or 'de-bg')
-   * @returns {Object} Initial review state
-   */
   initReviewState(itemId, direction = 'bg-de') {
     const now = Date.now();
-
-    // Calculate initial phase (should be Phase 1 for new items)
-    const initialPhase = this.phaseCalculator
-      ? this.phaseCalculator.calculatePhase(2.5, 0)
-      : 1;
-
+    const initialPhase = this.phaseCalculator ? this.phaseCalculator.calculatePhase(2.5, 0) : 1;
     return {
-      itemId,
-      direction,
+      itemId, direction,
       schemaVersion: this.schemaVersion,
-      interval: 1,
-      easeFactor: 2.5,
-      repetitions: 0,
-      phase: initialPhase, // Phase tracking (1-6, or 0 for "Learned")
-      nextReview: now,
-      lastReview: null,
-      totalReviews: 0,
-      correctAnswers: 0,
-      correctStreak: 0,
-      created: now,
-      updated: now
+      interval: 1, easeFactor: 2.5, repetitions: 0,
+      phase: initialPhase,
+      nextReview: now, lastReview: null,
+      totalReviews: 0, correctAnswers: 0, correctStreak: 0,
+      created: now, updated: now
     };
   }
 
-  /**
-   * Calculate next review using SM-2 algorithm with direction multipliers and phase tracking
-   * @param {Object} state - Current review state
-   * @param {number} grade - Quality of response (0-5, where 3+ is correct)
-   * @param {string} direction - Learning direction (optional, uses state.direction if not provided)
-   * @returns {Object} Updated review state
-   */
   scheduleNext(state, grade, direction = null) {
     if (!state || grade < 0 || grade > 5) {
       throw new Error('Invalid review state or grade');
     }
-
     const now = Date.now();
     const updatedState = { ...state };
     const activeDirection = direction || state.direction || 'bg-de';
 
-    // Update metadata
     updatedState.lastReview = now;
     updatedState.totalReviews = (updatedState.totalReviews || 0) + 1;
     updatedState.updated = now;
     updatedState.direction = activeDirection;
     updatedState.schemaVersion = this.schemaVersion;
 
-    // Determine if response is correct (grade 3+)
     const isCorrect = grade >= 3;
-
-    // Store current phase for phase progression calculation
     const currentPhase = updatedState.phase || 1;
 
     if (isCorrect) {
       updatedState.correctAnswers = (updatedState.correctAnswers || 0) + 1;
       updatedState.correctStreak = (updatedState.correctStreak || 0) + 1;
-
-      // Calculate new ease factor using SM-2 formula
-      const newEF = Math.max(1.3,
-        updatedState.easeFactor + (0.1 - (5 - grade) * (0.08 + (5 - grade) * 0.02))
-      );
+      const newEF = Math.max(1.3, updatedState.easeFactor + (0.1 - (5 - grade) * (0.08 + (5 - grade) * 0.02)));
       updatedState.easeFactor = Math.round(newEF * 100) / 100;
 
-      // Calculate interval based on repetition count
       if (updatedState.repetitions === 0) {
         updatedState.interval = 1;
       } else if (updatedState.repetitions === 1) {
         updatedState.interval = 6;
       } else {
-        // Apply direction-specific difficulty multiplier
         const multiplier = this.difficultyMultipliers[activeDirection] || 1.0;
         updatedState.interval = Math.round(updatedState.interval * updatedState.easeFactor * multiplier);
       }
-
       updatedState.repetitions = (updatedState.repetitions || 0) + 1;
-
     } else {
-      // Reset on incorrect answer
       updatedState.correctStreak = 0;
       updatedState.repetitions = 0;
       updatedState.interval = 1;
-      // Reduce ease factor but keep minimum at 1.3
       updatedState.easeFactor = Math.max(1.3, updatedState.easeFactor - 0.2);
     }
 
-    // Calculate next review date (interval is in days)
     updatedState.nextReview = now + (updatedState.interval * 24 * 60 * 60 * 1000);
 
-    // Update phase based on new ease factor and repetitions
     if (this.phaseCalculator) {
-      const newPhase = this.phaseCalculator.calculateNewPhase(
-        currentPhase,
-        grade,
-        updatedState.easeFactor,
-        updatedState.repetitions
-      );
+      const newPhase = this.phaseCalculator.calculateNewPhase(currentPhase, grade, updatedState.easeFactor, updatedState.repetitions);
       updatedState.phase = newPhase;
-
-      // Apply phase-based interval multiplier for learned items
-      if (newPhase === 0) { // Learned status
+      if (newPhase === 0) {
         const phaseMultiplier = this.phaseCalculator.getPhaseIntervalMultiplier(0);
         updatedState.interval = Math.round(updatedState.interval * phaseMultiplier);
         updatedState.nextReview = now + (updatedState.interval * 24 * 60 * 60 * 1000);
       }
-
-      // Log phase transitions
       if (newPhase !== currentPhase) {
         console.log(`[UnifiedSR] Phase transition: ${currentPhase} → ${newPhase} (EF: ${updatedState.easeFactor})`);
       }
     } else {
-      // Fallback if no phase calculator
       updatedState.phase = currentPhase;
     }
-
     return updatedState;
   }
 
-  /**
-   * Load review state with automatic legacy migration and phase auto-migration
-   * @param {string} itemId - Item identifier
-   * @param {string} direction - Learning direction
-   * @returns {Object} Review state (migrated if necessary)
-   */
   loadState(itemId, direction = 'bg-de') {
-    // Build base key
     const baseKey = `review_${itemId}_${direction}`;
-
-    // Try profile-namespaced key first (if profileManager available)
     const profiledKey = this.profileManager
       ? this.profileManager.getNamespacedKey(baseKey)
       : `${this.storagePrefix}${baseKey}`;
 
     const profiledData = this.loadFromStorage(profiledKey);
-
     if (profiledData) {
-      // Auto-migrate if phase field is missing (schema v2 -> v3)
       if (profiledData.phase === undefined && this.phaseCalculator) {
-        profiledData.phase = this.phaseCalculator.calculatePhase(
-          profiledData.easeFactor || 2.5,
-          profiledData.repetitions || 0
-        );
+        profiledData.phase = this.phaseCalculator.calculatePhase(profiledData.easeFactor || 2.5, profiledData.repetitions || 0);
         profiledData.schemaVersion = this.schemaVersion;
         this.saveState(profiledData);
         console.log(`[UnifiedSR] Auto-migrated review ${itemId} to v3 with phase ${profiledData.phase}`);
@@ -255,84 +375,50 @@ class UnifiedSpacedRepetition {
       return profiledData;
     }
 
-    // Try non-profiled enhanced key for backward compatibility
     const enhancedKey = `${this.storagePrefix}review_${itemId}_${direction}`;
     const enhancedData = this.loadFromStorage(enhancedKey);
-
     if (enhancedData) {
-      // Migrate to profile-namespaced storage if profileManager available
       if (this.profileManager) {
         console.log(`[UnifiedSR] Migrating ${itemId} to profile-namespaced storage`);
         enhancedData.schemaVersion = this.schemaVersion;
-
-        // Add phase if missing
         if (enhancedData.phase === undefined && this.phaseCalculator) {
-          enhancedData.phase = this.phaseCalculator.calculatePhase(
-            enhancedData.easeFactor || 2.5,
-            enhancedData.repetitions || 0
-          );
+          enhancedData.phase = this.phaseCalculator.calculatePhase(enhancedData.easeFactor || 2.5, enhancedData.repetitions || 0);
         }
-
-        // Save to profile-namespaced key
         this.saveState(enhancedData);
-
-        // Remove old non-profiled key
         localStorage.removeItem(enhancedKey);
       }
       return enhancedData;
     }
 
-    // Try legacy key and migrate if found
     const legacyKey = `${this.storagePrefix}review:${itemId}`;
     const legacyData = this.loadFromStorage(legacyKey);
-
     if (legacyData) {
       console.log(`[UnifiedSR] Migrating legacy state for ${itemId}`);
       const migrated = this.migrateLegacyState(legacyData, itemId, direction);
       this.saveState(migrated);
-
-      // Log migration
       this.migrationLog.push({
         timestamp: Date.now(),
         type: 'migration',
-        itemId,
-        direction,
+        itemId, direction,
         from: 'legacy',
         to: 'enhanced'
       });
-
       return migrated;
     }
 
-    // No existing state, return initialized state
     return this.initReviewState(itemId, direction);
   }
 
-  /**
-   * Migrate legacy state to enhanced schema with phase calculation
-   * @param {Object} legacyState - Legacy review state
-   * @param {string} itemId - Item ID
-   * @param {string} direction - Target direction
-   * @returns {Object} Enhanced state with phase field
-   */
   migrateLegacyState(legacyState, itemId, direction) {
     const now = Date.now();
     const easeFactor = legacyState.easinessFactor || legacyState.easeFactor || 2.5;
     const repetitions = legacyState.repetitions || 0;
-
-    // Calculate phase based on ease factor and repetitions
-    const phase = this.phaseCalculator
-      ? this.phaseCalculator.calculatePhase(easeFactor, repetitions)
-      : 1; // Default to Phase 1 if no calculator
-
+    const phase = this.phaseCalculator ? this.phaseCalculator.calculatePhase(easeFactor, repetitions) : 1;
     return {
-      itemId: itemId,
-      direction: direction,
+      itemId, direction,
       schemaVersion: this.schemaVersion,
       interval: legacyState.interval || 1,
-      easeFactor: easeFactor,
-      repetitions: repetitions,
-      phase: phase, // NEW: Include phase in migrated data
+      easeFactor, repetitions, phase,
       nextReview: legacyState.nextReviewDate ? new Date(legacyState.nextReviewDate).getTime() : now,
       lastReview: legacyState.lastReviewDate ? new Date(legacyState.lastReviewDate).getTime() : null,
       totalReviews: legacyState.totalReviews || 0,
@@ -343,23 +429,14 @@ class UnifiedSpacedRepetition {
     };
   }
 
-  /**
-   * Load data from localStorage with error handling
-   * @param {string} key - Storage key
-   * @returns {Object|null} Parsed state or null
-   */
   loadFromStorage(key) {
     try {
       const data = localStorage.getItem(key);
       if (!data) return null;
-      
       const parsed = JSON.parse(data);
-      
-      // Validate basic structure
       if (typeof parsed === 'object' && parsed !== null) {
         return parsed;
       }
-      
       return null;
     } catch (error) {
       console.warn(`[UnifiedSR] Failed to load state from ${key}:`, error);
@@ -367,82 +444,50 @@ class UnifiedSpacedRepetition {
     }
   }
 
-  /**
-   * Save review state to localStorage with profile namespacing
-   * @param {Object} state - Review state
-   * @returns {boolean} Success status
-   */
   saveState(state) {
     if (!state || !state.itemId || !state.direction) {
       console.warn('[UnifiedSR] Cannot save invalid state:', state);
       return false;
     }
-
     try {
-      // Build base key
       const baseKey = `review_${state.itemId}_${state.direction}`;
-
-      // Use profile namespacing if profileManager is available
       const key = this.profileManager
         ? this.profileManager.getNamespacedKey(baseKey)
         : `${this.storagePrefix}${baseKey}`;
-
       const data = JSON.stringify(state);
       localStorage.setItem(key, data);
       return true;
     } catch (error) {
       console.error('[UnifiedSR] Failed to save state:', error);
-
-      // Handle quota exceeded
       if (error.name === 'QuotaExceededError') {
         console.warn('[UnifiedSR] Storage quota exceeded. Consider cleanup.');
       }
-
       return false;
     }
   }
 
-  /**
-   * Get all items due for review (profile-aware)
-   * @param {string} direction - Optional direction filter
-   * @returns {Array} Array of due states
-   */
   getDueItems(direction = null) {
     const now = Date.now();
     const dueStates = [];
-
-    // Get current profile ID if profileManager available
-    const currentProfileId = this.profileManager
-      ? this.profileManager.getActiveProfileId()
-      : null;
+    const currentProfileId = this.profileManager ? this.profileManager.getActiveProfileId() : null;
 
     try {
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-
-        // Check profile-namespaced keys
         if (key && this.profiledKeyPattern.test(key)) {
           const match = key.match(this.profiledKeyPattern);
           const keyProfileId = match ? match[1] : null;
-
-          // Skip if doesn't match current profile
           if (currentProfileId && keyProfileId !== currentProfileId) {
             continue;
           }
-
           const state = this.loadFromStorage(key);
-
           if (state && state.nextReview <= now) {
-            // Apply direction filter if specified
             if (!direction || state.direction === direction) {
               dueStates.push(state);
             }
           }
-        }
-        // Backward compatibility: check non-profiled keys if no profileManager
-        else if (!this.profileManager && key && this.enhancedKeyPattern.test(key)) {
+        } else if (!this.profileManager && key && this.enhancedKeyPattern.test(key)) {
           const state = this.loadFromStorage(key);
-
           if (state && state.nextReview <= now) {
             if (!direction || state.direction === direction) {
               dueStates.push(state);
@@ -453,69 +498,42 @@ class UnifiedSpacedRepetition {
     } catch (error) {
       console.error('[UnifiedSR] Failed to get due items:', error);
     }
-
     return dueStates;
   }
 
-  /**
-   * Get statistics for a specific direction or overall (profile-aware)
-   * @param {string} direction - Optional direction filter
-   * @returns {Object} Statistics
-   */
   getStats(direction = null) {
-    let total = 0;
-    let due = 0;
-    let totalEF = 0;
-    let totalAccuracy = 0;
-    let itemsWithReviews = 0;
-
-    // Get current profile ID if profileManager available
-    const currentProfileId = this.profileManager
-      ? this.profileManager.getActiveProfileId()
-      : null;
+    let total = 0, due = 0, totalEF = 0, totalAccuracy = 0, itemsWithReviews = 0;
+    const currentProfileId = this.profileManager ? this.profileManager.getActiveProfileId() : null;
 
     try {
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-
-        // Check profile-namespaced keys
         if (key && this.profiledKeyPattern.test(key)) {
           const match = key.match(this.profiledKeyPattern);
           const keyProfileId = match ? match[1] : null;
-
-          // Skip if doesn't match current profile
           if (currentProfileId && keyProfileId !== currentProfileId) {
             continue;
           }
-
           const state = this.loadFromStorage(key);
-
           if (state && (!direction || state.direction === direction)) {
             total++;
             totalEF += state.easeFactor || 2.5;
-
             if (state.nextReview <= Date.now()) {
               due++;
             }
-
             if (state.totalReviews > 0) {
               itemsWithReviews++;
               totalAccuracy += (state.correctAnswers / state.totalReviews) * 100;
             }
           }
-        }
-        // Backward compatibility: check non-profiled keys if no profileManager
-        else if (!this.profileManager && key && this.enhancedKeyPattern.test(key)) {
+        } else if (!this.profileManager && key && this.enhancedKeyPattern.test(key)) {
           const state = this.loadFromStorage(key);
-
           if (state && (!direction || state.direction === direction)) {
             total++;
             totalEF += state.easeFactor || 2.5;
-
             if (state.nextReview <= Date.now()) {
               due++;
             }
-
             if (state.totalReviews > 0) {
               itemsWithReviews++;
               totalAccuracy += (state.correctAnswers / state.totalReviews) * 100;
@@ -526,57 +544,36 @@ class UnifiedSpacedRepetition {
     } catch (error) {
       console.error('[UnifiedSR] Failed to calculate stats:', error);
     }
-
     return {
-      total,
-      due,
+      total, due,
       avgEaseFactor: total > 0 ? Math.round((totalEF / total) * 100) / 100 : 2.5,
       avgAccuracy: itemsWithReviews > 0 ? Math.round(totalAccuracy / itemsWithReviews) : 0,
       direction: direction || 'all'
     };
   }
 
-  /**
-   * Batch migrate all legacy keys to enhanced format
-   * @param {string} defaultDirection - Default direction for migration ('bg-de' or 'de-bg')
-   * @returns {Object} Migration results
-   */
   migrateAllLegacy(defaultDirection = 'bg-de') {
-    const results = {
-      migrated: 0,
-      failed: 0,
-      skipped: 0
-    };
-    
+    const results = { migrated: 0, failed: 0, skipped: 0 };
     try {
       const legacyKeys = [];
-      
-      // Collect all legacy keys
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key && this.legacyKeyPattern.test(key)) {
           legacyKeys.push(key);
         }
       }
-      
-      // Migrate each legacy key
       for (const legacyKey of legacyKeys) {
         const itemId = legacyKey.replace(this.legacyKeyPattern, '');
         const legacyData = this.loadFromStorage(legacyKey);
-        
         if (!legacyData) {
           results.failed++;
           continue;
         }
-        
-        // Check if enhanced version already exists
         const enhancedKey = `${this.storagePrefix}review_${itemId}_${defaultDirection}`;
         if (localStorage.getItem(enhancedKey)) {
           results.skipped++;
           continue;
         }
-        
-        // Migrate
         const migrated = this.migrateLegacyState(legacyData, itemId, defaultDirection);
         if (this.saveState(migrated)) {
           results.migrated++;
@@ -585,35 +582,18 @@ class UnifiedSpacedRepetition {
           results.failed++;
         }
       }
-      
-      this.migrationLog.push({
-        timestamp: Date.now(),
-        type: 'batch_migration',
-        results
-      });
-      
+      this.migrationLog.push({ timestamp: Date.now(), type: 'batch_migration', results });
     } catch (error) {
       console.error('[UnifiedSR] Batch migration failed:', error);
     }
-    
     return results;
   }
 
-  /**
-   * Export all review data with schema version
-   * @returns {string} JSON string of all data
-   */
   exportData() {
-    const exportData = {
-      version: this.schemaVersion,
-      exported: Date.now(),
-      states: {}
-    };
-    
+    const exportData = { version: this.schemaVersion, exported: Date.now(), states: {} };
     try {
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        
         if (key && this.enhancedKeyPattern.test(key)) {
           const state = this.loadFromStorage(key);
           if (state) {
@@ -621,7 +601,6 @@ class UnifiedSpacedRepetition {
           }
         }
       }
-      
       return JSON.stringify(exportData, null, 2);
     } catch (error) {
       console.error('[UnifiedSR] Export failed:', error);
@@ -629,25 +608,13 @@ class UnifiedSpacedRepetition {
     }
   }
 
-  /**
-   * Import review data with schema validation
-   * @param {string} jsonData - JSON export string
-   * @returns {Object} Import results
-   */
   importData(jsonData) {
-    const results = {
-      imported: 0,
-      skipped: 0,
-      failed: 0
-    };
-    
+    const results = { imported: 0, skipped: 0, failed: 0 };
     try {
       const data = JSON.parse(jsonData);
-      
       if (!data.states || typeof data.states !== 'object') {
         throw new Error('Invalid export format');
       }
-      
       for (const [key, state] of Object.entries(data.states)) {
         if (this.validateState(state)) {
           if (this.saveState(state)) {
@@ -659,43 +626,47 @@ class UnifiedSpacedRepetition {
           results.skipped++;
         }
       }
-      
       console.log(`[UnifiedSR] Import complete:`, results);
     } catch (error) {
       console.error('[UnifiedSR] Import failed:', error);
       results.failed++;
     }
-    
     return results;
   }
 
-  /**
-   * Validate state object structure
-   * @param {Object} state - State to validate
-   * @returns {boolean} Validation result
-   */
   validateState(state) {
     return !!(
-      state &&
-      typeof state === 'object' &&
-      state.itemId &&
-      state.direction &&
+      state && typeof state === 'object' &&
+      state.itemId && state.direction &&
       typeof state.easeFactor === 'number' &&
       typeof state.interval === 'number'
     );
   }
 
-  /**
-   * Get migration log
-   * @returns {Array} Migration history
-   */
   getMigrationLog() {
     return [...this.migrationLog];
   }
 }
 
-// Export class for use in bundled spaced-repetition-system.js
-// No singleton initialization here - handled by bundled file
-if (typeof window !== 'undefined') {
-  window.UnifiedSpacedRepetition = UnifiedSpacedRepetition;
+// ============================================================================
+// INITIALIZATION
+// ============================================================================
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    window.phaseCalculator = new PhaseCalculator();
+    window.unifiedSpacedRepetition = new UnifiedSpacedRepetition(
+      window.phaseCalculator,
+      window.profileManager // Pass profileManager for data isolation
+    );
+    console.log('[SpacedRepetitionSystem] Initialized with 6-phase progression and profile isolation');
+  });
+} else {
+  window.phaseCalculator = new PhaseCalculator();
+  window.unifiedSpacedRepetition = new UnifiedSpacedRepetition(
+    window.phaseCalculator,
+    window.profileManager // Pass profileManager for data isolation
+  );
+  console.log('[SpacedRepetitionSystem] Initialized with 6-phase progression and profile isolation');
 }
