@@ -1,0 +1,97 @@
+# Vocabulary fetching template
+# Input: URL or text content
+# Output: Structured vocabulary entries with metadata
+
+Extract vocabulary items and metadata from source:
+
+URL Validation:
+1. Check for valid language learning resource
+2. Verify content reliability and accuracy
+3. Extract publication/last update date
+4. Note any regional/dialect focus
+
+Content Processing:
+1. Word/phrase extraction with context
+2. Translation verification (BG ↔ DE)
+3. Usage pattern analysis
+4. CEFR level assessment
+
+Required Entry Fields:
+1. Bulgarian term with pronunciation
+2. German translation(s)
+3. Part of speech
+4. CEFR level (A1-C2)
+5. Usage examples
+6. Category tags
+7. Source metadata
+
+Example desired output format:
+```json
+{
+  "source_metadata": {
+    "url": "https://example.com/bulgarian-lessons/daily-routines",
+    "accessed_date": "2024-01-20",
+    "content_date": "2023-12-15",
+    "reliability_score": 0.95,
+    "dialect_focus": "standard Bulgarian"
+  },
+  "vocabulary_entries": [
+    {
+      "bg": {
+        "term": "ставам",
+        "pronunciation": "stavam",
+        "pos": "verb",
+        "conjugation": "Type 3",
+        "aspect": "imperfective"
+      },
+      "de": {
+        "primary": "aufstehen",
+        "alternatives": ["sich erheben"],
+        "usage_notes": "Used for getting up from bed/chair"
+      },
+      "examples": [
+        {
+          "bg": "Всяка сутрин ставам в 7 часа.",
+          "de": "Jeden Morgen stehe ich um 7 Uhr auf.",
+          "context": "daily routine"
+        }
+      ],
+      "level": "A1",
+      "frequency": "high",
+      "tags": ["daily_routines", "morning", "verbs"],
+      "related_grammar": ["verb_aspect", "time_expressions"],
+      "regional_notes": "Standard usage across regions"
+    }
+  ],
+  "validation": {
+    "human_verified": true,
+    "last_checked": "2024-01-20",
+    "verification_method": "native speaker review"
+  }
+}
+```
+
+Content Analysis Rules:
+1. Extract core meaning and nuances
+2. Note register (formal/informal)
+3. Identify collocations
+4. Map to existing categories
+5. Link to related vocabulary
+6. Document source reliability
+
+Quality Checks:
+1. Verify translations with reliable sources
+2. Check for regional variations
+3. Validate CEFR level assignment
+4. Confirm example authenticity
+5. Cross-reference with existing entries
+
+DO NOT:
+- Include unverified machine translations
+- Mix dialect variations without clear notes
+- Skip any required metadata fields
+- Ignore context-specific usage patterns
+- Assign CEFR levels without justification
+- Include examples without both languages
+- Skip pronunciation information
+- Omit source validation steps

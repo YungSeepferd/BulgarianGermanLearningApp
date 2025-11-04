@@ -55,6 +55,15 @@
     {{ $mobileMenu := resources.Get "js/mobile-menu.js" | resources.Minify | resources.Fingerprint }}
     <script src="{{ $mobileMenu.RelPermalink }}" integrity="{{ $mobileMenu.Data.Integrity }}"></script>
 
+    <!-- Profile System (dual profile support) -->
+    {{ $profileSystem := resources.Get "js/profile-system.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $profileSystem.RelPermalink }}" integrity="{{ $profileSystem.Data.Integrity }}"></script>
+
+    <!-- Spaced Repetition System (SM-2 with 6-phase progression) -->
+    {{ $spacedRepetition := resources.Get "js/spaced-repetition-system.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $spacedRepetition.RelPermalink }}" integrity="{{ $spacedRepetition.Data.Integrity }}"></script>
+
+
     <!-- Language Toggle Confirmation Modal -->
     {{ $confirmation := resources.Get "js/language-toggle-confirmation.js" | resources.Minify | resources.Fingerprint }}
     <script src="{{ $confirmation.RelPermalink }}" integrity="{{ $confirmation.Data.Integrity }}" defer></script>
@@ -64,7 +73,7 @@
     <script src="{{ $onboarding.RelPermalink }}" integrity="{{ $onboarding.Data.Integrity }}" defer></script>
 
     <!-- Core functionality loaded per page in scripts block -->
-    {{ $precache := slice $style.RelPermalink $js.RelPermalink $codeJs.RelPermalink $languageToggle.RelPermalink $mobileMenu.RelPermalink $confirmation.RelPermalink $onboarding.RelPermalink "/" "/offline/" "/manifest.webmanifest" }}
+    {{ $precache := slice $style.RelPermalink $js.RelPermalink $codeJs.RelPermalink $languageToggle.RelPermalink $mobileMenu.RelPermalink $profileSystem.RelPermalink $spacedRepetition.RelPermalink $confirmation.RelPermalink $onboarding.RelPermalink "/" "/offline/" "/manifest.webmanifest" }}
     <script id="bgde-precache-assets" type="application/json">
         {{ $precache | uniq | jsonify }}
     </script>

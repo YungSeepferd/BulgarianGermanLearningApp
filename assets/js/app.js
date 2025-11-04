@@ -326,6 +326,14 @@ document.addEventListener('DOMContentLoaded', function() {
     window.app = new BulgarianGermanApp();
     window.progressTracker = new ProgressTracker();
     window.audioManager = new AudioManager();
+
+    // Listen for profile switches to update page data
+    window.addEventListener('profile-switched', (event) => {
+        console.log('[App] Profile switched:', event.detail.profileId);
+
+        // Reinitialize progress tracker with new profile data
+        window.progressTracker = new ProgressTracker();
+    });
 });
 
 // Export for use in other modules
