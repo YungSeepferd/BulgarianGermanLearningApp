@@ -243,27 +243,31 @@ function displayResults(results, query, searchTime) {
           </div>
         </div>
         <div class="vocab-card-back">
-          <div class="vocab-translation">${highlightMatch(item.translation, query)}</div>
-          ${item.notes ? `<div class="vocab-notes">${highlightMatch(item.notes, query)}</div>` : ''}
-          ${item.etymology ? `<div class="vocab-etymology"><strong>Etymology:</strong> ${item.etymology}</div>` : ''}
-          ${item.cultural_note ? `<div class="vocab-cultural-note"><strong>Cultural Note:</strong> ${item.cultural_note}</div>` : ''}
-          ${item.linguistic_note ? `<div class="vocab-linguistic-note"><strong>Linguistic Note:</strong> ${item.linguistic_note}</div>` : ''}
+          <div class="vocab-translation">${highlightMatch(escapeHtml(item.translation), escapeHtml(query))}</div>
+          ${item.notes ? `<div class="vocab-notes">${highlightMatch(escapeHtml(item.notes), escapeHtml(query))}</div>` : ''}
+          ${item.etymology ? `<div class="vocab-etymology"><strong>Etymology:</strong> ${escapeHtml(item.etymology)}</div>` : ''}
+          ${item.cultural_note ? `<div class="vocab-cultural-note"><strong>Cultural Note:</strong> ${escapeHtml(item.cultural_note)}</div>` : ''}
+          ${item.linguistic_note ? `<div class="vocab-linguistic-note"><strong>Linguistic Note:</strong> ${escapeHtml(item.linguistic_note)}</div>` : ''}
         </div>
       </div>
       <div class="vocab-card-actions">
         <button class="flip-btn" onclick="this.closest('.vocab-card').classList.toggle('flipped')">↻</button>
-        <button class="practice-btn" data-word="${item.word}">Practice</button>
-        <input type="checkbox" class="select-checkbox" data-word="${item.word}">
+        <button class="practice-btn" data-word="${escapeHtml(item.word)}">Practice</button>
+        <input type="checkbox" class="select-checkbox" data-word="${escapeHtml(item.word)}">
       </div>
     </div>
   `).join('');
 }
+  // text is assumed HTML-escaped. This will safely wrap matched fragments in <mark>.
 
 function highlightMatch(text, query) {
   if (!query || !text) return text;
   
   const regex = new RegExp(`(${escapeRegex(query)})`, 'gi');
-  return text.replace(regex, '<mark>$1</mark>');
+  // Replace all matches with <mark> ... </mark>, no risk of user HTML injection in content.
+  return text.replace(regex, function(match) {
+    return `<mark>${match}</mark>`;
+  });
 }
 
 function escapeRegex(string) {
