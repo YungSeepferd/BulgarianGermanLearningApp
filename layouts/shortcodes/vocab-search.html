@@ -182,6 +182,15 @@ function performSearch() {
   }, 300);
 }
 
+function escapeHtml(str) {
+  if (typeof str !== 'string') return str;
+  return str.replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+}
+
 function displayResults(results, query, searchTime) {
   const resultsContainer = document.getElementById('search-results');
   const noResults = document.getElementById('no-results');
@@ -217,14 +226,18 @@ function displayResults(results, query, searchTime) {
   
   // Render results using the vocab-card shortcode structure
   resultsContainer.innerHTML = results.map(item => `
-    <div class="vocab-card search-result" data-word="${item.word.toLowerCase()}" data-translation="${item.translation.toLowerCase()}" data-level="${item.level}" data-category="${item.category}">
+    <div class="vocab-card search-result"
+      data-word="${escapeHtml(item.word.toLowerCase())}"
+      data-translation="${escapeHtml(item.translation.toLowerCase())}"
+      data-level="${escapeHtml(item.level)}"
+      data-category="${escapeHtml(item.category)}">
       <div class="vocab-card-inner">
         <div class="vocab-card-front">
-          <div class="vocab-word">${highlightMatch(item.word, query)}</div>
+          <div class="vocab-word">${highlightMatch(escapeHtml(item.word), escapeHtml(query))}</div>
           <div class="vocab-meta">
-            <span class="level-badge level-${item.level.toLowerCase()}">${item.level}</span>
-            <span class="category-tag">${item.category}</span>
-            <span class="difficulty-indicator" title="Difficulty: ${item.difficulty}/5">
+            <span class="level-badge level-${escapeHtml(item.level.toLowerCase())}">${escapeHtml(item.level)}</span>
+            <span class="category-tag">${escapeHtml(item.category)}</span>
+            <span class="difficulty-indicator" title="Difficulty: ${escapeHtml(String(item.difficulty))}/5">
               ${'★'.repeat(item.difficulty)}${'☆'.repeat(5 - item.difficulty)}
             </span>
           </div>
