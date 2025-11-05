@@ -452,7 +452,11 @@ class LearningSession {
 
   // Utility methods
   generateSessionId() {
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    // Use crypto.getRandomValues for secure randomness
+    const array = new Uint8Array(9);
+    window.crypto.getRandomValues(array);
+    const randomStr = Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+    return `session_${Date.now()}_${randomStr}`;
   }
 
   shuffleArray(array) {
