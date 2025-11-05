@@ -22342,7 +22342,7 @@
     "linguistic_note_de_to_bg": "A1-Wort."
   },
   {
-    "id": "dobur_den_002",
+    "id": "dobur_den_002_dup1",
     "word": "Добър ден",
     "translation": "Guten Tag",
     "source_lang": "bg",
@@ -22369,7 +22369,7 @@
     "linguistic_note_de_to_bg": "Feststehender Ausdruck mit zwei Akzenten: до́бър де́н. Adjektiv bleibt maskulin, keine Flexion."
   },
   {
-    "id": "rabota_005",
+    "id": "rabota_005_dup1",
     "word": "работа",
     "translation": "Arbeit",
     "source_lang": "bg",
@@ -22401,7 +22401,7 @@
     "linguistic_note_de_to_bg": "Feminine noun. Also used as verb 'работя' (to work). Stress: рабо́та"
   },
   {
-    "id": "kniga_006",
+    "id": "kniga_006_dup1",
     "word": "книга",
     "translation": "Buch",
     "source_lang": "bg",
@@ -22433,7 +22433,7 @@
     "linguistic_note_de_to_bg": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то"
   },
   {
-    "id": "a1_final_015",
+    "id": "a1_final_015_dup1",
     "word": "Вода",
     "translation": "Wasser",
     "source_lang": "bg",
@@ -22480,7 +22480,7 @@
     "originalIndex": 707
   },
   {
-    "id": "a1_verb_071",
+    "id": "a1_verb_071_dup1",
     "word": "Имам",
     "translation": "haben",
     "source_lang": "bg",
@@ -22517,7 +22517,7 @@
     "originalIndex": 396
   },
   {
-    "id": "a1_verb_006",
+    "id": "a1_verb_006_dup1",
     "word": "Мога",
     "translation": "können",
     "source_lang": "bg",
@@ -22549,7 +22549,7 @@
     "originalIndex": 202
   },
   {
-    "id": "a1_final14_005",
+    "id": "a1_final14_005_dup1",
     "word": "Ходя",
     "translation": "gehen",
     "source_lang": "bg",
@@ -22586,7 +22586,7 @@
     "originalIndex": 647
   },
   {
-    "id": "a1_verb_004",
+    "id": "a1_verb_004_dup1",
     "word": "Ям",
     "translation": "essen",
     "source_lang": "bg",
@@ -22618,7 +22618,7 @@
     "originalIndex": 200
   },
   {
-    "id": "a1_verb_003",
+    "id": "a1_verb_003_dup1",
     "word": "Пия",
     "translation": "trinken",
     "source_lang": "bg",
@@ -22650,7 +22650,7 @@
     "originalIndex": 199
   },
   {
-    "id": "a1_verb_087",
+    "id": "a1_verb_087_dup1",
     "word": "Виждам",
     "translation": "sehen",
     "source_lang": "bg",
@@ -22687,7 +22687,7 @@
     "originalIndex": 472
   },
   {
-    "id": "a1_adj_004",
+    "id": "a1_adj_004_dup1",
     "word": "Добър",
     "translation": "gut",
     "source_lang": "bg",
@@ -22724,7 +22724,7 @@
     "originalIndex": 229
   },
   {
-    "id": "a1_adj_005",
+    "id": "a1_adj_005_dup1",
     "word": "Лош",
     "translation": "schlecht",
     "source_lang": "bg",
@@ -22761,7 +22761,7 @@
     "originalIndex": 230
   },
   {
-    "id": "a1_adj_008",
+    "id": "a1_adj_008_dup1",
     "word": "Голям",
     "translation": "groß",
     "source_lang": "bg",
@@ -22798,7 +22798,7 @@
     "originalIndex": 263
   },
   {
-    "id": "a1_adj_009",
+    "id": "a1_adj_009_dup1",
     "word": "Малък",
     "translation": "klein",
     "source_lang": "bg",
@@ -22835,7 +22835,7 @@
     "originalIndex": 264
   },
   {
-    "id": "a1_adj_006",
+    "id": "a1_adj_006_dup1",
     "word": "Нов",
     "translation": "neu",
     "source_lang": "bg",
@@ -22872,7 +22872,7 @@
     "originalIndex": 231
   },
   {
-    "id": "a1_adj_007",
+    "id": "a1_adj_007_dup1",
     "word": "Стар",
     "translation": "alt",
     "source_lang": "bg",
@@ -22924,7 +22924,7 @@
     "originalIndex": 232
   },
   {
-    "id": "a1_adj_017",
+    "id": "a1_adj_017_dup1",
     "word": "Грозен",
     "translation": "hässlich",
     "source_lang": "bg",
@@ -22961,7 +22961,7 @@
     "originalIndex": 272
   },
   {
-    "id": "a1_adj_022",
+    "id": "a1_adj_022_dup1",
     "word": "Топъл",
     "translation": "warm",
     "source_lang": "bg",
@@ -22998,7 +22998,7 @@
     "originalIndex": 367
   },
   {
-    "id": "a1_adj_021",
+    "id": "a1_adj_021_dup1",
     "word": "Студен",
     "translation": "kalt",
     "source_lang": "bg",
@@ -23035,7 +23035,7 @@
     "originalIndex": 366
   },
   {
-    "id": "a1_adverb_018",
+    "id": "a1_adverb_018_dup1",
     "word": "Тук",
     "translation": "hier",
     "source_lang": "bg",
@@ -23072,7 +23072,7 @@
     "originalIndex": 560
   },
   {
-    "id": "a1_adverb_019",
+    "id": "a1_adverb_019_dup1",
     "word": "Там",
     "translation": "dort",
     "source_lang": "bg",
@@ -23109,7 +23109,7 @@
     "originalIndex": 561
   },
   {
-    "id": "a1_adverb_013",
+    "id": "a1_adverb_013_dup1",
     "word": "Сега",
     "translation": "jetzt",
     "source_lang": "bg",
@@ -23146,7 +23146,7 @@
     "originalIndex": 555
   },
   {
-    "id": "a1_adverb_005",
+    "id": "a1_adverb_005_dup1",
     "word": "Бързо",
     "translation": "schnell",
     "source_lang": "bg",
@@ -23183,7 +23183,7 @@
     "originalIndex": 547
   },
   {
-    "id": "a1_adverb_006",
+    "id": "a1_adverb_006_dup1",
     "word": "Бавно",
     "translation": "langsam",
     "source_lang": "bg",
@@ -23220,7 +23220,7 @@
     "originalIndex": 548
   },
   {
-    "id": "a1_adverb_009",
+    "id": "a1_adverb_009_dup1",
     "word": "Често",
     "translation": "oft",
     "source_lang": "bg",
@@ -23257,7 +23257,7 @@
     "originalIndex": 551
   },
   {
-    "id": "a1_adverb_003",
+    "id": "a1_adverb_003_dup1",
     "word": "Добре",
     "translation": "gut",
     "source_lang": "bg",
@@ -23294,7 +23294,7 @@
     "originalIndex": 545
   },
   {
-    "id": "a1_final14_024",
+    "id": "a1_final14_024_dup1",
     "word": "Хладилник",
     "translation": "Kühlschrank",
     "source_lang": "bg",
@@ -23331,7 +23331,7 @@
     "originalIndex": 666
   },
   {
-    "id": "a1_verb_010",
+    "id": "a1_verb_010_dup1",
     "word": "Чета",
     "translation": "lesen",
     "source_lang": "bg",
@@ -23378,7 +23378,7 @@
     "originalIndex": 208
   },
   {
-    "id": "a1_verb_011",
+    "id": "a1_verb_011_dup1",
     "word": "Пиша",
     "translation": "schreiben",
     "source_lang": "bg",
@@ -23430,7 +23430,7 @@
     "originalIndex": 209
   },
   {
-    "id": "a1_verb_048",
+    "id": "a1_verb_048_dup1",
     "word": "Работя",
     "translation": "arbeiten",
     "source_lang": "bg",
@@ -23467,7 +23467,7 @@
     "originalIndex": 343
   },
   {
-    "id": "a1_number_014",
+    "id": "a1_number_014_dup1",
     "word": "Четиринадесет",
     "translation": "vierzehn",
     "source_lang": "bg",
@@ -23504,7 +23504,7 @@
     "originalIndex": 181
   },
   {
-    "id": "a1_number_015",
+    "id": "a1_number_015_dup1",
     "word": "Петнадесет",
     "translation": "fünfzehn",
     "source_lang": "bg",
@@ -23541,7 +23541,7 @@
     "originalIndex": 182
   },
   {
-    "id": "a1_number_016",
+    "id": "a1_number_016_dup1",
     "word": "Шестнадесет",
     "translation": "sechzehn",
     "source_lang": "bg",
@@ -23578,7 +23578,7 @@
     "originalIndex": 183
   },
   {
-    "id": "a1_number_017",
+    "id": "a1_number_017_dup1",
     "word": "Седемнадесет",
     "translation": "siebzehn",
     "source_lang": "bg",
@@ -23615,7 +23615,7 @@
     "originalIndex": 184
   },
   {
-    "id": "a1_number_018",
+    "id": "a1_number_018_dup1",
     "word": "Осемнадесет",
     "translation": "achtzehn",
     "source_lang": "bg",
@@ -23652,7 +23652,7 @@
     "originalIndex": 185
   },
   {
-    "id": "a1_number_019",
+    "id": "a1_number_019_dup1",
     "word": "Деветнадесет",
     "translation": "neunzehn",
     "source_lang": "bg",
@@ -23689,7 +23689,7 @@
     "originalIndex": 186
   },
   {
-    "id": "a1_number_030",
+    "id": "a1_number_030_dup1",
     "word": "Тридесет",
     "translation": "dreißig",
     "source_lang": "bg",
@@ -23726,7 +23726,7 @@
     "originalIndex": 187
   },
   {
-    "id": "a1_number_040",
+    "id": "a1_number_040_dup1",
     "word": "Четиридесет",
     "translation": "vierzig",
     "source_lang": "bg",
@@ -23763,7 +23763,7 @@
     "originalIndex": 188
   },
   {
-    "id": "a1_number_050",
+    "id": "a1_number_050_dup1",
     "word": "Петдесет",
     "translation": "fünfzig",
     "source_lang": "bg",
@@ -23800,7 +23800,7 @@
     "originalIndex": 189
   },
   {
-    "id": "a1_number_060",
+    "id": "a1_number_060_dup1",
     "word": "Шестдесет",
     "translation": "sechzig",
     "source_lang": "bg",
@@ -23837,7 +23837,7 @@
     "originalIndex": 190
   },
   {
-    "id": "a1_number_070",
+    "id": "a1_number_070_dup1",
     "word": "Седемдесет",
     "translation": "siebzig",
     "source_lang": "bg",
@@ -23874,7 +23874,7 @@
     "originalIndex": 191
   },
   {
-    "id": "a1_number_080",
+    "id": "a1_number_080_dup1",
     "word": "Осемдесет",
     "translation": "achtzig",
     "source_lang": "bg",
@@ -23911,7 +23911,7 @@
     "originalIndex": 192
   },
   {
-    "id": "a1_number_090",
+    "id": "a1_number_090_dup1",
     "word": "Деветдесет",
     "translation": "neunzig",
     "source_lang": "bg",
@@ -23948,7 +23948,7 @@
     "originalIndex": 193
   },
   {
-    "id": "a1_number_100",
+    "id": "a1_number_100_dup1",
     "word": "Сто",
     "translation": "hundert",
     "source_lang": "bg",
@@ -23985,7 +23985,7 @@
     "originalIndex": 194
   },
   {
-    "id": "a1_number_1000",
+    "id": "a1_number_1000_dup1",
     "word": "Хиляда",
     "translation": "tausend",
     "source_lang": "bg",
@@ -24022,7 +24022,7 @@
     "originalIndex": 196
   },
   {
-    "id": "a1_time_001",
+    "id": "a1_time_001_dup1",
     "word": "Понеделник",
     "translation": "Montag",
     "source_lang": "bg",
@@ -24059,7 +24059,7 @@
     "originalIndex": 283
   },
   {
-    "id": "a1_time_002",
+    "id": "a1_time_002_dup1",
     "word": "Вторник",
     "translation": "Dienstag",
     "source_lang": "bg",
@@ -24096,7 +24096,7 @@
     "originalIndex": 284
   },
   {
-    "id": "a1_time_003",
+    "id": "a1_time_003_dup1",
     "word": "Сряда",
     "translation": "Mittwoch",
     "source_lang": "bg",
@@ -24133,7 +24133,7 @@
     "originalIndex": 285
   },
   {
-    "id": "a1_time_004",
+    "id": "a1_time_004_dup1",
     "word": "Четвъртък",
     "translation": "Donnerstag",
     "source_lang": "bg",
@@ -24170,7 +24170,7 @@
     "originalIndex": 286
   },
   {
-    "id": "a1_time_005",
+    "id": "a1_time_005_dup1",
     "word": "Петък",
     "translation": "Freitag",
     "source_lang": "bg",
@@ -24207,7 +24207,7 @@
     "originalIndex": 287
   },
   {
-    "id": "a1_time_007",
+    "id": "a1_time_007_dup1",
     "word": "Неделя",
     "translation": "Sonntag",
     "source_lang": "bg",
@@ -24244,7 +24244,7 @@
     "originalIndex": 289
   },
   {
-    "id": "a1_final14_033",
+    "id": "a1_final14_033_dup1",
     "word": "Билет",
     "translation": "Ticket",
     "source_lang": "bg",
@@ -24281,7 +24281,7 @@
     "originalIndex": 675
   },
   {
-    "id": "a1_verb_045",
+    "id": "a1_verb_045_dup1",
     "word": "Купувам",
     "translation": "kaufen",
     "source_lang": "bg",
@@ -24318,7 +24318,7 @@
     "originalIndex": 280
   },
   {
-    "id": "a1_verb_021",
+    "id": "a1_verb_021_dup1",
     "word": "Продавам",
     "translation": "verkaufen",
     "source_lang": "bg",
@@ -24355,7 +24355,7 @@
     "originalIndex": 219
   },
   {
-    "id": "a1_question_002",
+    "id": "a1_question_002_dup1",
     "word": "Какво",
     "translation": "was",
     "source_lang": "bg",
@@ -24407,7 +24407,7 @@
     "originalIndex": 205
   },
   {
-    "id": "a1_verb_066",
+    "id": "a1_verb_066_dup1",
     "word": "Търся",
     "translation": "suchen",
     "source_lang": "bg",
@@ -24459,7 +24459,7 @@
     "originalIndex": 361
   },
   {
-    "id": "a1_food_017",
+    "id": "a1_food_017_dup1",
     "word": "Риба",
     "translation": "der Fisch",
     "source_lang": "bg",
@@ -24511,7 +24511,7 @@
     "originalIndex": 228
   },
   {
-    "id": "a1_question_004",
+    "id": "a1_question_004_dup1",
     "word": "Къде",
     "translation": "wo",
     "source_lang": "bg",
@@ -24563,7 +24563,7 @@
     "originalIndex": 234
   },
   {
-    "id": "a1_house_007",
+    "id": "a1_house_007_dup1",
     "word": "Прозорец",
     "translation": "das Fenster",
     "source_lang": "bg",
@@ -24615,7 +24615,7 @@
     "originalIndex": 311
   },
   {
-    "id": "a1_verb_050",
+    "id": "a1_verb_050_dup1",
     "word": "Разбирам",
     "translation": "verstehen",
     "source_lang": "bg",
@@ -24652,7 +24652,7 @@
     "originalIndex": 345
   },
   {
-    "id": "a1_animal_010",
+    "id": "a1_animal_010_dup1",
     "word": "Мишка",
     "translation": "die Maus",
     "source_lang": "bg",
