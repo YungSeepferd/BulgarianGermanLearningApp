@@ -686,7 +686,11 @@ class PracticePageModule {
     }
 
     generateSessionId() {
-        return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        // Use crypto.getRandomValues for secure random ID
+        const array = new Uint8Array(9);
+        window.crypto.getRandomValues(array);
+        const randomString = Array.from(array, b => b.toString(16).padStart(2, '0')).join('');
+        return `session_${Date.now()}_${randomString}`;
     }
 
     endSession() {
