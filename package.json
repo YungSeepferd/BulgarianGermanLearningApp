@@ -28,7 +28,7 @@
   "author": "Bulgarian-German Learning App",
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.69.0",
+    "sass": "^1.93.3",
     "@playwright/test": "^1.40.0"
   }
 }
