@@ -1,0 +1,285 @@
+{{/*
+  Progress Dashboard Shortcode - Display learning statistics and charts
+  Usage: {{< progress-dashboard >}}
+*/}}
+
+<div class="progress-dashboard">
+  <!-- Profile Information -->
+  <div class="dashboard-header">
+    <h2>📊 Learning Progress Dashboard</h2>
+    <div class="profile-info">
+      <p>Active Profile: <span id="active-profile-name">Loading...</span></p>
+    </div>
+  </div>
+
+  <!-- Key Metrics -->
+  <div class="key-metrics">
+    <div class="metric-card">
+      <div class="metric-value" id="total-words">0</div>
+      <div class="metric-label">Total Words</div>
+    </div>
+    <div class="metric-card learned">
+      <div class="metric-value" id="learned-count">0</div>
+      <div class="metric-label">Learned (Phase 0)</div>
+    </div>
+    <div class="metric-card in-progress">
+      <div class="metric-value" id="in-progress-count">0</div>
+      <div class="metric-label">In Progress</div>
+    </div>
+    <div class="metric-card not-started">
+      <div class="metric-value" id="not-started-count">0</div>
+      <div class="metric-label">Not Started</div>
+    </div>
+  </div>
+
+  <!-- Charts Section -->
+  <div class="charts-section">
+    <!-- Phase Distribution -->
+    <div class="chart-container">
+      <div class="chart-header">
+        <h3>📈 Phase Distribution</h3>
+        <p class="chart-subtitle">How your vocabulary is distributed across learning phases</p>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="phase-chart" aria-label="Phase distribution doughnut chart"></canvas>
+      </div>
+    </div>
+
+    <!-- Language Direction Performance -->
+    <div class="chart-container">
+      <div class="chart-header">
+        <h3>🔄 Direction Performance</h3>
+        <p class="chart-subtitle">Progress in each learning direction</p>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="direction-chart" aria-label="Language direction bar chart"></canvas>
+      </div>
+    </div>
+
+    <!-- Category Performance -->
+    <div class="chart-container">
+      <div class="chart-header">
+        <h3>📚 Category Breakdown</h3>
+        <p class="chart-subtitle">Words studied by category</p>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="category-chart" aria-label="Category bar chart"></canvas>
+      </div>
+    </div>
+
+    <!-- Weekly Activity -->
+    <div class="chart-container full-width">
+      <div class="chart-header">
+        <h3>📅 Learning Activity (7 Days)</h3>
+        <p class="chart-subtitle">Number of items reviewed each day</p>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="activity-chart" aria-label="Weekly activity line chart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Session History -->
+  <div class="session-history">
+    <div class="history-header">
+      <h3>📋 Recent Sessions</h3>
+      <p id="total-sessions">Total Sessions: 0</p>
+    </div>
+    <div class="table-container">
+      <table id="session-table" aria-label="Session history table">
+        <thead>
+          <tr>
+            <th>Date & Time</th>
+            <th>Words Reviewed</th>
+            <th>Accuracy</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody id="session-tbody">
+          <tr>
+            <td colspan="4" class="no-data">No sessions yet. Start practicing to track your progress!</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Empty State -->
+  <div id="empty-state" class="empty-state" style="display: none;">
+    <div class="empty-state-content">
+      <h3>📚 No Learning Data Yet</h3>
+      <p>Start by visiting the <a href="/BulgarianGermanLearningApp/vocabulary/">vocabulary page</a> and beginning a practice session to track your progress.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Load Chart.js library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+<!-- Progress Dashboard - Inline Initialization -->
+<script>
+// Wait for Chart.js to load and profile/phase systems to initialize
+function initProgressDashboard() {
+  if (!window.Chart || !window.profileManager || !window.phaseCalculator) {
+    console.log('[ProgressDashboard] Waiting for dependencies...');
+    setTimeout(initProgressDashboard, 100);
+    return;
+  }
+
+  console.log('[ProgressDashboard] Dependencies ready, initializing...');
+
+  // Get vocabulary data embedded in page (if available)
+  const getVocabularyData = () => {
+    if (window.vocabulary && Array.isArray(window.vocabulary)) {
+      return window.vocabulary;
+    }
+    const vocabScript = document.querySelector('script[type="application/json"][data-vocab]');
+    if (vocabScript) {
+      try {
+        return JSON.parse(vocabScript.textContent);
+      } catch (e) {
+        console.warn('[ProgressDashboard] Error parsing vocabulary:', e);
+      }
+    }
+    return [];
+  };
+
+  const getReviewData = (storageKey) => {
+    try {
+      const data = localStorage.getItem(storageKey);
+      return data ? JSON.parse(data) : null;
+    } catch (e) {
+      return null;
+    }
+  };
+
+  const getPhaseFromData = (reviewData) => {
+    if (reviewData.phase !== undefined) {
+      return reviewData.phase.toString();
+    }
+    if (reviewData.easeFactor !== undefined) {
+      const repetitions = reviewData.repetitions || 0;
+      return window.phaseCalculator.calculatePhase(reviewData.easeFactor, repetitions).toString();
+    }
+    return 'not-started';
+  };
+
+  // Initialize dashboard
+  try {
+    const profileId = window.profileManager.getActiveProfileId() || 'german_learner';
+    const vocabulary = getVocabularyData();
+
+    if (!vocabulary || vocabulary.length === 0) {
+      console.log('[ProgressDashboard] No vocabulary data available');
+      document.getElementById('active-profile-name').textContent = profileId === 'german_learner' ? 'German Learner 🇩🇪' : 'Bulgarian Learner 🇧🇬';
+      return;
+    }
+
+    // Calculate metrics
+    const phaseDistribution = {
+      '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, 'not-started': 0
+    };
+    const categoryStats = {};
+    const directionStats = { 'de-bg': { reviewed: 0, learned: 0 }, 'bg-de': { reviewed: 0, learned: 0 } };
+
+    vocabulary.forEach(item => {
+      if (!categoryStats[item.category]) {
+        categoryStats[item.category] = { total: 0, learned: 0, reviewed: 0 };
+      }
+      categoryStats[item.category].total++;
+
+      const directions = ['de_bg', 'bg_de'];
+      let hasReviewData = false;
+
+      directions.forEach(direction => {
+        const storageKey = `bgde:${profileId}:review_${item.id}_${direction}`;
+        const reviewData = getReviewData(storageKey);
+
+        if (reviewData) {
+          hasReviewData = true;
+          categoryStats[item.category].reviewed++;
+
+          const directionKey = direction === 'de_bg' ? 'de-bg' : 'bg-de';
+          directionStats[directionKey].reviewed++;
+
+          const phase = getPhaseFromData(reviewData);
+          phaseDistribution[phase]++;
+
+          if (phase === '0') {
+            directionStats[directionKey].learned++;
+            categoryStats[item.category].learned++;
+          }
+        }
+      });
+
+      if (!hasReviewData) {
+        phaseDistribution['not-started']++;
+      }
+    });
+
+    // Update metrics display
+    const totalWords = vocabulary.length;
+    const learnedCount = phaseDistribution['0'] || 0;
+    const notStartedCount = phaseDistribution['not-started'] || 0;
+    const inProgressCount = totalWords - learnedCount - notStartedCount;
+
+    document.getElementById('total-words').textContent = totalWords;
+    document.getElementById('learned-count').textContent = learnedCount;
+    document.getElementById('not-started-count').textContent = notStartedCount;
+    document.getElementById('in-progress-count').textContent = inProgressCount;
+
+    const profileName = profileId === 'german_learner' ? 'German Learner 🇩🇪' : 'Bulgarian Learner 🇧🇬';
+    document.getElementById('active-profile-name').textContent = profileName;
+
+    // Render Phase Distribution Chart
+    const phaseCtx = document.getElementById('phase-chart');
+    if (phaseCtx) {
+      const labels = ['Phase 0 (Learned)', 'Phase 1 (New)', 'Phase 2 (Learning)', 'Phase 3 (Familiar)', 'Phase 4 (Known)', 'Phase 5 (Mastered)', 'Phase 6 (Expert)', 'Not Started'];
+      const values = [
+        phaseDistribution['0'] || 0,
+        phaseDistribution['1'] || 0,
+        phaseDistribution['2'] || 0,
+        phaseDistribution['3'] || 0,
+        phaseDistribution['4'] || 0,
+        phaseDistribution['5'] || 0,
+        phaseDistribution['6'] || 0,
+        phaseDistribution['not-started'] || 0
+      ];
+      const colors = ['#10b981', '#f59e0b', '#f97316', '#ec4899', '#8b5cf6', '#3b82f6', '#06b6d4', '#6b7280'];
+
+      new Chart(phaseCtx, {
+        type: 'doughnut',
+        data: { labels: labels, datasets: [{ data: values, backgroundColor: colors, borderColor: '#ffffff', borderWidth: 2 }] },
+        options: { responsive: true, maintainAspectRatio: true, plugins: { legend: { position: 'bottom', labels: { padding: 15, font: { size: 12 } } } } }
+      });
+    }
+
+    // Render Direction Performance Chart
+    const directionCtx = document.getElementById('direction-chart');
+    if (directionCtx) {
+      new Chart(directionCtx, {
+        type: 'bar',
+        data: {
+          labels: ['German → Bulgarian', 'Bulgarian → German'],
+          datasets: [
+            { label: 'Reviewed', data: [directionStats['de-bg'].reviewed || 0, directionStats['bg-de'].reviewed || 0], backgroundColor: '#3b82f6' },
+            { label: 'Learned', data: [directionStats['de-bg'].learned || 0, directionStats['bg-de'].learned || 0], backgroundColor: '#10b981' }
+          ]
+        },
+        options: { responsive: true, maintainAspectRatio: true, plugins: { legend: { position: 'bottom' } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } } }
+      });
+    }
+
+    console.log('[ProgressDashboard] Initialization complete');
+  } catch (error) {
+    console.error('[ProgressDashboard] Initialization failed:', error);
+  }
+}
+
+// Initialize when document is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initProgressDashboard);
+} else {
+  initProgressDashboard();
+}
+</script>

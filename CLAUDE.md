@@ -220,6 +220,87 @@ Example templates included (see `.claude/prompts/`):
   2. List of commands/tests run to verify behavior (e.g., `npm test`, `npm run lint:esm`, `hugo --minify`).
   3. At least one human reviewer approval before merging.
 
+### CI/CD Monitoring & Verification (CRITICAL)
+
+**ALWAYS check GitHub after pushing changes** to verify CI/CD pipelines passed and no conflicts occurred.
+
+#### Checking Workflow Status via GitHub MCP Tools
+
+Use GitHub MCP tools to programmatically verify CI/CD status:
+
+```javascript
+// Check recent commits and their status
+mcp__github__list_commits({
+  owner: "YungSeepferd",
+  repo: "BulgarianGermanLearningApp",
+  per_page: 3
+})
+
+// Check for open issues that might indicate failures
+mcp__github__list_issues({
+  owner: "YungSeepferd",
+  repo: "BulgarianGermanLearningApp",
+  state: "open",
+  per_page: 10
+})
+
+// Check recent PRs for merge conflicts or failures
+mcp__github__list_pull_requests({
+  owner: "YungSeepferd",
+  repo: "BulgarianGermanLearningApp",
+  state: "all",
+  per_page: 5,
+  sort: "updated",
+  direction: "desc"
+})
+```
+
+#### Post-Push Verification Checklist
+
+After every `git push`, **immediately verify**:
+
+1. **Check GitHub Actions**: Navigate to `https://github.com/{owner}/{repo}/actions` and verify the latest workflow run passed
+2. **Check for merge conflicts**: If your local branch was behind origin, conflicts may have occurred
+3. **Check for validation errors**: Data validation workflows may catch issues (e.g., duplicate IDs, schema violations)
+4. **Review security alerts**: GitHub CodeQL may flag security issues in new code
+5. **Monitor for failed builds**: Hugo build failures, test failures, or linting errors
+
+#### Common CI/CD Failure Patterns
+
+**Data Validation Failures**:
+- Duplicate vocabulary IDs (check with: `cat data/vocabulary.json | jq '[.[] | .id] | group_by(.) | map(select(length > 1))'`)
+- Missing required fields in JSON
+- Invalid CEFR levels or categories
+
+**Build Failures**:
+- SCSS compilation errors
+- Hugo template syntax errors
+- Missing dependencies in package.json
+
+**Test Failures**:
+- Playwright E2E test regressions
+- Broken flashcard functionality
+- PWA offline mode issues
+
+#### Automated Duplicate Detection Example
+
+Recent issue: Vocabulary data had 61 duplicate IDs causing validation failures. Always verify uniqueness after bulk edits:
+
+```bash
+# Check for duplicate IDs
+cat data/vocabulary.json | jq '[.[] | .id] | group_by(.) | map(select(length > 1)) | length'
+
+# Output: 0 = no duplicates, >0 = number of duplicate ID groups
+```
+
+#### Memory & Learning Points
+
+**Save to memory**:
+- Always check GitHub after pushing changes
+- Use GitHub MCP tools for automated verification
+- Monitor security scanning alerts (CodeQL, Dependabot)
+- Validate data integrity before committing (duplicate IDs, schema compliance)
+
 ### Where to store curated prompts (optional)
 
 - Create `.claude/prompts/` (committed) for small, non-sensitive templates. Keep them short and generic; never store secrets.
