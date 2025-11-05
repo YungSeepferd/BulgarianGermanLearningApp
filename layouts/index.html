@@ -30,69 +30,38 @@
         </div>
     </section>
     
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">🧠</div>
-                <h3>Повторения на интервали / Spaced Repetition</h3>
-                <p>Научавайте ефективно с доказания SM-2 алгоритъм, който оптимизира интервалите за преговор / Lernen Sie effizient mit dem bewährten SM-2-Algorithmus, der die Wiederholungsintervalle optimiert</p>
+    <!-- Learning Progress Dashboard -->
+    <section class="dashboard-section">
+        <h2>Вашият напредък / Ihr Fortschritt</h2>
+
+        <!-- Phase Distribution Widget -->
+        <div class="widget phase-distribution-widget" id="phase-widget">
+            <div class="widget-header">
+                <h3>📊 Разпределение по фази / Phasenverteilung</h3>
+                <a href="/principles/" class="widget-link">Какво означават фазите? / Was bedeuten die Phasen?</a>
             </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">📚</div>
-                <h3>Богато съдържание / Umfangreiche Inhalte</h3>
-                <p>Пълноценен речник и граматика за нивата A1–B2 на двата езика / Umfassender Wortschatz und Grammatik für die Niveaus A1–B2 in beiden Sprachen</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">📱</div>
-                <h3>Прогресивно уеб приложение / Progressive Web App</h3>
-                <p>Работи офлайн и може да бъде инсталирано за учене навсякъде и по всяко време / Funktioniert offline und lässt sich für das Lernen jederzeit und überall installieren</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">🎯</div>
-                <h3>Персонализирано обучение / Personalisierte Lernpfade</h3>
-                <p>Адаптивна трудност и индивидуални графици за преговор според вашето представяне / Adaptive Schwierigkeit und persönliche Wiederholungspläne je nach Leistung</p>
+            <div class="phase-bars" id="phase-bars">
+                <div class="phase-bar-loading">Зареждане... / Wird geladen...</div>
             </div>
         </div>
-    </section>
-    
-    <!-- Quick Start Section -->
-    <section class="quick-start-section">
-        <h2>Бърз старт / Schnellstart</h2>
-        <div class="quick-start-grid">
-            <div class="quick-start-card">
-                <h3>1. Изберете своето ниво / Wählen Sie Ihr Niveau</h3>
-                <p>Започнете от A1 (начинаещ) или преминете към текущото си ниво / Starten Sie mit A1 (Anfänger) oder springen Sie zu Ihrem aktuellen Niveau</p>
-                <div class="level-badges">
-                    <span class="level-badge level-a1">A1</span>
-                    <span class="level-badge level-a2">A2</span>
-                    <span class="level-badge level-b1">B1</span>
-                    <span class="level-badge level-b2">B2</span>
-                </div>
+
+        <!-- Today's Session Widget -->
+        <div class="widget today-session-widget" id="today-widget">
+            <div class="widget-header">
+                <h3>📅 Днес / Heute</h3>
             </div>
-            
-            <div class="quick-start-card">
-                <h3>2. Упражнявайте се ежедневно / Üben Sie täglich</h3>
-                <p>Редовните 10–15 минути дневно носят най-добрите резултати / Tägliche 10–15 Minuten bringen die besten Ergebnisse</p>
-                <div class="practice-preview">
-                    <div class="mini-flashcard">
-                        <div class="mini-word">здравей</div>
-                        <div class="mini-translation">Hallo</div>
-                    </div>
+            <div class="today-stats" id="today-stats">
+                <div class="today-stat">
+                    <span class="today-stat-value" id="today-reviews">0</span>
+                    <span class="today-stat-label">Прегледани / Überprüft</span>
                 </div>
-            </div>
-            
-            <div class="quick-start-card">
-                <h3>3. Следете напредъка / Verfolgen Sie den Fortschritt</h3>
-                <p>Проследявайте своето обучение с подробни статистики и постижения / Behalten Sie Ihren Lernweg mit detaillierten Statistiken und Erfolgen im Blick</p>
-                <div class="progress-preview">
-                    <div class="mini-progress-bar">
-                        <div class="mini-progress-fill" style="width: 65%"></div>
-                    </div>
-                    <span class="mini-progress-text">65% усвоени / 65% gemeistert</span>
+                <div class="today-stat">
+                    <span class="today-stat-value" id="today-correct">0%</span>
+                    <span class="today-stat-label">Точност / Genauigkeit</span>
+                </div>
+                <div class="today-stat">
+                    <span class="today-stat-value" id="today-time">0m</span>
+                    <span class="today-stat-label">Време / Zeit</span>
                 </div>
             </div>
         </div>
@@ -137,23 +106,150 @@
 {{ define "scripts" }}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Home page functionality - stats are rendered server-side
-    // Activity cards show "Loading..." until user has practice data
     console.log('[Home] Page loaded with {{ len .Site.Data.vocabulary }} vocabulary items');
-    
-    // Update activity cards based on localStorage if available
-    try {
-        const dueCount = document.getElementById('due-count');
-        const newCount = document.getElementById('new-count');
-        const streakCount = document.getElementById('streak-count');
-        
-        // These will be populated by practice session data when available
-        if (dueCount) dueCount.textContent = 'Започнете упражненията, за да следите напредъка / Beginnen Sie zu üben, um Ihren Fortschritt zu verfolgen';
-        if (newCount) newCount.textContent = '{{ len .Site.Data.vocabulary }} думи налични / Wörter verfügbar';
-        if (streakCount) streakCount.textContent = '0 дни – започнете днес! / 0 Tage – starten Sie heute!';
-    } catch (e) {
-        console.error('[Home] Error updating activity cards:', e);
+
+    // Populate phase distribution widget
+    function populatePhaseWidget() {
+        if (!window.unifiedSpacedRepetition || !window.phaseCalculator) {
+            console.warn('[Home] SR system not loaded yet');
+            return;
+        }
+
+        try {
+            const stats = window.unifiedSpacedRepetition.getStats();
+            const phaseBarsContainer = document.getElementById('phase-bars');
+
+            if (!phaseBarsContainer) return;
+
+            // Get counts for each phase
+            const phases = [
+                { phase: 0, name: window.phaseCalculator.getPhaseName(0, 'bg'), icon: '🎓', count: 0, color: '#06b6d4' },
+                { phase: 1, name: window.phaseCalculator.getPhaseName(1, 'bg'), icon: '🌱', count: 0, color: '#ef4444' },
+                { phase: 2, name: window.phaseCalculator.getPhaseName(2, 'bg'), icon: '📖', count: 0, color: '#f97316' },
+                { phase: 3, name: window.phaseCalculator.getPhaseName(3, 'bg'), icon: '👁️', count: 0, color: '#eab308' },
+                { phase: 4, name: window.phaseCalculator.getPhaseName(4, 'bg'), icon: '✅', count: 0, color: '#84cc16' },
+                { phase: 5, name: window.phaseCalculator.getPhaseName(5, 'bg'), icon: '⭐', count: 0, color: '#22c55e' },
+                { phase: 6, name: window.phaseCalculator.getPhaseName(6, 'bg'), icon: '🏆', count: 0, color: '#10b981' }
+            ];
+
+            // Count reviews in each phase
+            const reviews = [];
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key && key.includes(':review_') && window.profileManager) {
+                    const profileId = window.profileManager.getActiveProfileId();
+                    if (key.startsWith(`bgde:${profileId}:`)) {
+                        try {
+                            const data = JSON.parse(localStorage.getItem(key));
+                            if (data && data.phase !== undefined) {
+                                const phase = phases.find(p => p.phase === data.phase);
+                                if (phase) phase.count++;
+                            }
+                        } catch (e) {}
+                    }
+                }
+            }
+
+            const totalReviews = phases.reduce((sum, p) => sum + p.count, 0);
+
+            // Build phase bars HTML
+            let html = '';
+            phases.forEach(phase => {
+                const percentage = totalReviews > 0 ? (phase.count / totalReviews * 100).toFixed(1) : 0;
+                html += `
+                    <div class="phase-bar-row">
+                        <div class="phase-label">
+                            <span class="phase-icon">${phase.icon}</span>
+                            <span class="phase-name">${phase.name}</span>
+                        </div>
+                        <div class="phase-bar-container">
+                            <div class="phase-bar-fill" style="width: ${percentage}%; background-color: ${phase.color};"></div>
+                        </div>
+                        <div class="phase-count">${phase.count}</div>
+                    </div>
+                `;
+            });
+
+            if (totalReviews === 0) {
+                html = '<div class="phase-empty">Започнете учене, за да видите напредъка си / Beginnen Sie zu lernen, um Ihren Fortschritt zu sehen</div>';
+            }
+
+            phaseBarsContainer.innerHTML = html;
+        } catch (e) {
+            console.error('[Home] Error populating phase widget:', e);
+        }
     }
+
+    // Populate today's session widget
+    function populateTodayWidget() {
+        try {
+            const todayReviews = document.getElementById('today-reviews');
+            const todayCorrect = document.getElementById('today-correct');
+            const todayTime = document.getElementById('today-time');
+
+            // Get today's session history
+            const historyKey = `bgde:${window.profileManager?.getActiveProfileId() || 'german_learner'}:session_history`;
+            const historyData = localStorage.getItem(historyKey);
+
+            if (historyData) {
+                const history = JSON.parse(historyData);
+                const today = new Date().toDateString();
+                const todaySessions = history.filter(s => new Date(s.timestamp).toDateString() === today);
+
+                let totalReviews = 0;
+                let totalCorrect = 0;
+                let totalTime = 0;
+
+                todaySessions.forEach(session => {
+                    totalReviews += session.cardsReviewed || 0;
+                    totalCorrect += session.correctAnswers || 0;
+                    totalTime += session.duration || 0;
+                });
+
+                if (todayReviews) todayReviews.textContent = totalReviews;
+                if (todayCorrect) todayCorrect.textContent = totalReviews > 0 ? Math.round(totalCorrect / totalReviews * 100) + '%' : '0%';
+                if (todayTime) todayTime.textContent = Math.round(totalTime / 60) + 'm';
+            }
+        } catch (e) {
+            console.error('[Home] Error populating today widget:', e);
+        }
+    }
+
+    // Populate activity cards
+    function populateActivityCards() {
+        try {
+            const dueCount = document.getElementById('due-count');
+            const newCount = document.getElementById('new-count');
+            const streakCount = document.getElementById('streak-count');
+
+            if (window.unifiedSpacedRepetition) {
+                // Get due items
+                const dueItems = window.unifiedSpacedRepetition.getDueItems();
+                if (dueCount) {
+                    if (dueItems.length > 0) {
+                        dueCount.textContent = `${dueItems.length} думи / Wörter`;
+                    } else {
+                        dueCount.textContent = 'Започнете упражненията, за да следите напредъка / Beginnen Sie zu üben, um Ihren Fortschritt zu verfolgen';
+                    }
+                }
+            }
+
+            // New items count
+            if (newCount) newCount.textContent = '{{ len .Site.Data.vocabulary }} думи налични / Wörter verfügbar';
+
+            // Streak (TODO: implement streak tracking)
+            if (streakCount) streakCount.textContent = '0 дни – започнете днес! / 0 Tage – starten Sie heute!';
+        } catch (e) {
+            console.error('[Home] Error updating activity cards:', e);
+        }
+    }
+
+    // Initialize all widgets
+    setTimeout(() => {
+        populatePhaseWidget();
+        populateTodayWidget();
+        populateActivityCards();
+    }, 100);
 });
 </script>
 {{ end }}
