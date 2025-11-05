@@ -587,7 +587,27 @@ class PerformanceMonitor {
   }
 
   generateSessionId() {
-    return `perf_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    // Use cryptographically secure random values for session id
+    let randStr;
+    if (typeof window !== 'undefined' && window.crypto && window.crypto.getRandomValues) {
+      // Browser: Use crypto.getRandomValues
+      const buf = new Uint32Array(3); // 96 bits
+      window.crypto.getRandomValues(buf);
+      randStr = Array.from(buf).map(val => val.toString(36)).join('');
+    } else if (typeof require !== 'undefined') {
+      // NodeJS: Use crypto.randomBytes
+      try {
+        const crypto = require('crypto');
+        randStr = crypto.randomBytes(12).toString('base64url'); // 12 bytes -> 16 chars
+      } catch (e) {
+        // Fallback to Math.random only if secure RNG is missing (not recommended)
+        randStr = Math.random().toString(36).substr(2, 9);
+      }
+    } else {
+      // Fallback (not recommended): use Math.random
+      randStr = Math.random().toString(36).substr(2, 9);
+    }
+    return `perf_${Date.now()}_${randStr}`;
   }
 
   // Configuration
