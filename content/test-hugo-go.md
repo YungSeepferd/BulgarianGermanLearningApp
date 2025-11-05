@@ -1,7 +1,7 @@
 ---
 title: "Hugo/Go Optimization Test"
 date: 2024-01-01
-draft: false
+draft: true
 ---
 
 This page demonstrates the new server-side rendering capabilities that replace JavaScript functionality.

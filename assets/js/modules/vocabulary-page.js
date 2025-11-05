@@ -38,6 +38,7 @@ class VocabularyPageModule {
       const level = levelSel ? levelSel.value : '';
       const cat = catSel ? catSel.value : '';
       const q = (searchInput?.value || '').toLowerCase();
+      const phase = this.activePhaseFilter || '';
 
       let shown = 0;
       document.querySelectorAll('#vocabulary-grid .vocab-card').forEach(card => {
@@ -45,7 +46,16 @@ class VocabularyPageModule {
           const c = card.getAttribute('data-category') || '';
           const w = (card.getAttribute('data-word') || '').toLowerCase();
           const t = (card.getAttribute('data-translation') || '').toLowerCase();
-          const matches = (!level || l === level) && (!cat || c === cat) && (!q || w.includes(q) || t.includes(q));
+          const itemId = card.getAttribute('data-id');
+
+          // Check phase match if phase filter is active
+          let phaseMatches = true;
+          if (phase && itemId) {
+              const itemPhase = this.getItemPhase(itemId);
+              phaseMatches = itemPhase.toString() === phase;
+          }
+
+          const matches = (!level || l === level) && (!cat || c === cat) && (!q || w.includes(q) || t.includes(q)) && phaseMatches;
           card.style.display = matches ? '' : 'none';
           if (matches) shown++;
       });
@@ -626,8 +636,12 @@ class VocabularyPageModule {
         this.filters = {
             level: document.getElementById('level-filter'),
             category: document.getElementById('category-filter'),
-            search: document.getElementById('search-input')
+            search: document.getElementById('search-input'),
+            phase: null // Phase is filter type only, no single input element
         };
+
+        // Store active phase filter value
+        this.activePhaseFilter = '';
     }
 
     initializeVocabularyCards() {
@@ -831,24 +845,33 @@ class VocabularyPageModule {
         const levelValue = this.filters.level?.value || '';
         const categoryValue = this.filters.category?.value || '';
         const searchValue = this.filters.search?.value?.toLowerCase() || '';
-        
+        const phaseValue = this.activePhaseFilter || '';
+
         console.log(`[VocabPage] 🔧 Filtering ${items.length} items with:`, {
             level: levelValue || '(any)',
-            category: categoryValue || '(any)', 
-            search: searchValue || '(none)'
+            category: categoryValue || '(any)',
+            search: searchValue || '(none)',
+            phase: phaseValue || '(any)'
         });
 
         const filtered = items.filter(item => {
             const levelMatch = !levelValue || item.level === levelValue;
             const categoryMatch = !categoryValue || item.category === categoryValue;
-            const searchMatch = !searchValue || 
+            const searchMatch = !searchValue ||
                 item.word.toLowerCase().includes(searchValue) ||
                 item.translation.toLowerCase().includes(searchValue) ||
                 (item.notes && item.notes.toLowerCase().includes(searchValue));
 
-            return levelMatch && categoryMatch && searchMatch;
+            // Phase filtering: get current phase for this item
+            let phaseMatch = true;
+            if (phaseValue) {
+                const itemPhase = this.getItemPhase(item.id);
+                phaseMatch = itemPhase.toString() === phaseValue;
+            }
+
+            return levelMatch && categoryMatch && searchMatch && phaseMatch;
         });
-        
+
         console.log(`[VocabPage] ✅ Filtered to ${filtered.length} items`);
         return filtered;
     }
@@ -944,25 +967,69 @@ class VocabularyPageModule {
 
     handleQuickFilter(event) {
         const button = event.currentTarget;
-        const filterType = button.dataset.filterType; // 'level' or 'category'
+        const filterType = button.dataset.filterType; // 'level', 'category', or 'phase'
         const filterValue = button.dataset.filterValue;
-        
+
         // Update active state for visual feedback
         const sameTypeButtons = document.querySelectorAll(`[data-filter-type="${filterType}"]`);
         sameTypeButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
-        
-        // Update corresponding select dropdown
+
+        // Update corresponding select dropdown or active filter state
         if (filterType === 'level' && this.filters.level) {
             this.filters.level.value = filterValue;
         } else if (filterType === 'category' && this.filters.category) {
             this.filters.category.value = filterValue;
+        } else if (filterType === 'phase') {
+            // Phase filter doesn't have a dropdown, store value directly
+            this.activePhaseFilter = filterValue;
         }
-        
+
         // Apply filters
         this.applyFilters();
-        
+
         console.log(`[QuickFilter] Applied ${filterType}: ${filterValue || 'all'}`);
+    }
+
+    /**
+     * Get the current phase for a vocabulary item from localStorage
+     * @param {string} itemId - Vocabulary item ID
+     * @returns {number|string} Phase number (0-6) or 'not-started'
+     */
+    getItemPhase(itemId) {
+        if (!itemId) return 'not-started';
+
+        // Get current profile from profile manager
+        const profileId = window.profileManager?.getActiveProfileId() || 'german_learner';
+        const currentDirection = this.getCurrentDirection();
+
+        // Build storage key for this item
+        const storageKey = `bgde:${profileId}:review_${itemId}_${currentDirection}`;
+
+        try {
+            const reviewData = localStorage.getItem(storageKey);
+            if (!reviewData) {
+                return 'not-started'; // No review data = not started
+            }
+
+            const data = JSON.parse(reviewData);
+
+            // If phase is stored directly, use it
+            if (data.phase !== undefined) {
+                return data.phase;
+            }
+
+            // Otherwise calculate phase from easeFactor using PhaseCalculator
+            if (window.phaseCalculator && data.easeFactor !== undefined) {
+                const repetitions = data.repetitions || 0;
+                return window.phaseCalculator.calculatePhase(data.easeFactor, repetitions);
+            }
+
+            return 'not-started';
+        } catch (error) {
+            console.warn(`[Phase] Error getting phase for ${itemId}:`, error);
+            return 'not-started';
+        }
     }
 
     handlePracticeSingle(button) {
@@ -1015,6 +1082,18 @@ class VocabularyPageModule {
         if (this.filters.level) this.filters.level.value = '';
         if (this.filters.category) this.filters.category.value = '';
         if (this.filters.search) this.filters.search.value = '';
+        this.activePhaseFilter = '';
+
+        // Clear active state from all quick filter buttons
+        document.querySelectorAll('.quick-filter-btn.active').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // Set "Alle" buttons as active for each filter type
+        document.querySelectorAll('.quick-filter-btn[data-filter-value=""]').forEach(btn => {
+            btn.classList.add('active');
+        });
+
         this.applyFilters();
     }
 
