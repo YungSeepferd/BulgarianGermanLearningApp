@@ -249,7 +249,7 @@
         <!-- Quick jump -->
         <div class="pagination-jump">
             <label for="page-jump">Gehe zu Seite / Отиди на страница:</label>
-            <select id="page-jump" onchange="location.href='/vocabulary/?page=' + this.value">
+            <select id="page-jump">
                 {{ range seq $totalPages }}
                     <option value="{{ . }}" {{ if eq . $currentPage }}selected{{ end }}>
                         {{ . }}
