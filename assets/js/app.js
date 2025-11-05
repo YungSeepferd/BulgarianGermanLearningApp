@@ -276,16 +276,28 @@ class ProgressTracker {
     }
 }
 
-// Audio manager
+// Import and initialize TextToSpeech module
+// Note: This will be imported as ES module in the actual page templates
+// For now, we provide a fallback AudioManager that wraps TextToSpeech if available
 class AudioManager {
     constructor() {
         this.enabled = localStorage.getItem('audio-enabled') !== 'false';
         this.synthesis = window.speechSynthesis;
         this.voices = [];
-        this.loadVoices();
+
+        // Try to use enhanced TextToSpeech if available
+        if (window.TextToSpeech) {
+            this.tts = new window.TextToSpeech({ enabled: this.enabled });
+            this.useEnhancedTTS = true;
+        } else {
+            this.useEnhancedTTS = false;
+            this.loadVoices();
+        }
     }
 
     loadVoices() {
+        if (this.useEnhancedTTS) return;
+
         this.voices = this.synthesis.getVoices();
         if (this.voices.length === 0) {
             this.synthesis.addEventListener('voiceschanged', () => {
@@ -295,28 +307,55 @@ class AudioManager {
     }
 
     playWord(word, language = 'bg') {
-        if (!this.enabled || !this.synthesis) return;
+        if (!this.enabled) return;
+
+        // Use enhanced TTS if available
+        if (this.useEnhancedTTS && this.tts) {
+            const lang = language === 'bg' ? 'bg-BG' : 'de-DE';
+            this.tts.speak(word, lang);
+            return;
+        }
+
+        // Fallback to basic TTS
+        if (!this.synthesis) return;
 
         const utterance = new SpeechSynthesisUtterance(word);
-        
+
         // Try to find appropriate voice
-        const voice = this.voices.find(v => 
+        const voice = this.voices.find(v =>
             v.lang.startsWith(language === 'bg' ? 'bg' : 'de')
         );
-        
+
         if (voice) {
             utterance.voice = voice;
         }
-        
-        utterance.rate = 0.8;
+
+        utterance.rate = 0.85;
         utterance.pitch = 1;
-        
+        utterance.volume = 1;
+
         this.synthesis.speak(utterance);
+    }
+
+    /**
+     * Stop current speech
+     */
+    stop() {
+        if (this.useEnhancedTTS && this.tts) {
+            this.tts.stop();
+        } else if (this.synthesis) {
+            this.synthesis.cancel();
+        }
     }
 
     toggle() {
         this.enabled = !this.enabled;
         localStorage.setItem('audio-enabled', this.enabled.toString());
+
+        if (this.useEnhancedTTS && this.tts) {
+            this.tts.enabled = this.enabled;
+        }
+
         return this.enabled;
     }
 }

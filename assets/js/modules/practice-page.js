@@ -525,12 +525,22 @@ class PracticePageModule {
 
     playAudio() {
         const currentItem = this.sessionItems[this.currentIndex];
-        if (!currentItem || !currentItem.audio) return;
-        
-        // Use Web Speech API or audio file
+        if (!currentItem || !currentItem.word) return;
+
+        // Use enhanced TextToSpeech if available
+        if (window.audioManager && window.audioManager.useEnhancedTTS && window.audioManager.tts) {
+            const lang = this.learningDirection === 'de-bg' ? 'bg-BG' : 'de-DE';
+            window.audioManager.tts.speak(currentItem.word, lang);
+            return;
+        }
+
+        // Fallback to basic Web Speech API
         if ('speechSynthesis' in window) {
             const utterance = new SpeechSynthesisUtterance(currentItem.word);
-            utterance.lang = this.learningDirection.startsWith('bg') ? 'bg-BG' : 'de-DE';
+            utterance.lang = this.learningDirection === 'de-bg' ? 'bg-BG' : 'de-DE';
+            utterance.rate = 0.85;
+            utterance.pitch = 1;
+            utterance.volume = 1;
             speechSynthesis.speak(utterance);
         }
     }
