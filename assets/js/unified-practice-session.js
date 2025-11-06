@@ -202,6 +202,64 @@ class UnifiedPracticeSession {
       this.updateCurrentCard();
       console.log('[UnifiedPractice] Direction changed to:', this.currentDirection);
     });
+
+    // End session button
+    const endSessionBtn = document.getElementById('end-session');
+    if (endSessionBtn) {
+      endSessionBtn.addEventListener('click', () => {
+        if (confirm('Sitzung beenden? / Край на сесията?')) {
+          this.completeSession();
+        }
+      });
+    }
+
+    // New session button (restart)
+    const newSessionBtn = document.getElementById('new-session');
+    if (newSessionBtn) {
+      newSessionBtn.addEventListener('click', () => {
+        console.log('[UnifiedPractice] Starting new session');
+        this.currentIndex = 0;
+        this.sessionStats = {
+          correct: 0,
+          total: 0,
+          startTime: Date.now(),
+          mistakes: []
+        };
+        this.startSession();
+      });
+    }
+
+    // Review mistakes button
+    const reviewMistakesBtn = document.getElementById('review-mistakes');
+    if (reviewMistakesBtn) {
+      reviewMistakesBtn.addEventListener('click', () => {
+        console.log('[UnifiedPractice] Reviewing mistakes');
+        if (this.sessionStats.mistakes.length > 0) {
+          // Filter to only show mistakes for next session
+          const mistakeIds = this.sessionStats.mistakes.map(m => m.id);
+          this.sessionCards = this.sessionCards.filter(card => mistakeIds.includes(card.id));
+          this.currentIndex = 0;
+          this.sessionStats = {
+            correct: 0,
+            total: 0,
+            startTime: Date.now(),
+            mistakes: []
+          };
+          this.showScreen('practice-session');
+          this.hideScreen('session-complete');
+          this.showCurrentCard();
+        }
+      });
+    }
+
+    // Settings panel toggle
+    const settingsToggle = document.getElementById('settings-toggle');
+    const settingsPanel = document.getElementById('settings-panel');
+    if (settingsToggle && settingsPanel) {
+      settingsToggle.addEventListener('click', () => {
+        settingsPanel.classList.toggle('hidden');
+      });
+    }
   }
 
   startSession() {
@@ -225,24 +283,24 @@ class UnifiedPracticeSession {
 
   prepareSessionCards() {
     let cards = [];
-    
+
     // Priority 1: Check for user-selected vocabulary
     const selectionJson = localStorage.getItem('bgde:practice_selection');
     if (selectionJson) {
       try {
         const selectedWords = JSON.parse(selectionJson);
-        
+
         if (Array.isArray(selectedWords) && selectedWords.length > 0) {
           // Filter vocabulary to only include selected words
-          cards = this.vocabularyData.filter(item => 
+          cards = this.vocabularyData.filter(item =>
             selectedWords.includes(item.word) || selectedWords.includes(item.id)
           );
-          
+
           console.log(`[UnifiedPractice] Using ${cards.length} user-selected items`);
-          
+
           // Clean up selection after loading
           localStorage.removeItem('bgde:practice_selection');
-          
+
           // If we found the selected cards, use them and skip other checks
           if (cards.length > 0) {
             this.sessionCards = cards;
@@ -255,26 +313,42 @@ class UnifiedPracticeSession {
         localStorage.removeItem('bgde:practice_selection'); // Clean up bad data
       }
     }
-    
+
     // Priority 2: Get due items from spaced repetition
     const dueItems = this.spacedRepetition.getDueItems(this.currentDirection);
-    
-    if (dueItems.length > 0) {
+
+    if (dueItems && dueItems.length > 0) {
       // Map due items to vocabulary data
       cards = dueItems.map(state => {
         return this.vocabularyData.find(item => item.id === state.itemId);
       }).filter(Boolean);
-      
+
       console.log(`[UnifiedPractice] Found ${cards.length} due items for review`);
     }
-    
-    // Priority 3: If no selection or due items, use random selection
+
+    // Priority 3: If no selection or due items, use random selection with better randomization
     if (cards.length === 0) {
-      const shuffled = this.shuffleArray([...this.vocabularyData]);
-      cards = shuffled.slice(0, this.sessionLength);
-      console.log(`[UnifiedPractice] No due items, using ${cards.length} random cards`);
+      // Apply difficulty filter if selected
+      const difficultyFilter = localStorage.getItem('bgde:practice_difficulty');
+      let filteredVocabulary = [...this.vocabularyData];
+
+      if (difficultyFilter && difficultyFilter !== '') {
+        filteredVocabulary = filteredVocabulary.filter(item => item.level === difficultyFilter);
+        console.log(`[UnifiedPractice] Filtered to ${filteredVocabulary.length} items for level ${difficultyFilter}`);
+      }
+
+      // Ensure we have enough vocabulary
+      if (filteredVocabulary.length === 0) {
+        filteredVocabulary = [...this.vocabularyData];
+      }
+
+      // Shuffle with better randomization (multiple passes for better distribution)
+      const shuffled = this.shuffleArray(filteredVocabulary);
+      cards = shuffled.slice(0, Math.min(this.sessionLength, shuffled.length));
+
+      console.log(`[UnifiedPractice] No due items, using ${cards.length} random cards from ${filteredVocabulary.length} total`);
     }
-    
+
     this.sessionCards = cards;
     this.currentIndex = 0;
   }
