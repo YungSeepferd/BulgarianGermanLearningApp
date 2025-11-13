@@ -1,0 +1,313 @@
+{
+  "timestamp": "2025-11-13T15:49:48.866Z",
+  "summary": {
+    "totalFiles": 12,
+    "byLevel": {
+      "A1": {
+        "count": 7,
+        "avgWordCount": 3711.714285714286,
+        "withBidirectionalNotes": 7,
+        "withExamples": 0,
+        "completeness": 66
+      },
+      "A2": {
+        "count": 1,
+        "avgWordCount": 179,
+        "withBidirectionalNotes": 1,
+        "withExamples": 1,
+        "completeness": 60
+      },
+      "B1": {
+        "count": 0,
+        "avgWordCount": 0,
+        "withBidirectionalNotes": 0,
+        "withExamples": 0,
+        "completeness": 0
+      },
+      "B2": {
+        "count": 0,
+        "avgWordCount": 0,
+        "withBidirectionalNotes": 0,
+        "withExamples": 0,
+        "completeness": 0
+      },
+      "C1": {
+        "count": 0,
+        "avgWordCount": 0,
+        "withBidirectionalNotes": 0,
+        "withExamples": 0,
+        "completeness": 0
+      },
+      "C2": {
+        "count": 0,
+        "avgWordCount": 0,
+        "withBidirectionalNotes": 0,
+        "withExamples": 0,
+        "completeness": 0
+      }
+    },
+    "needsEnhancement": 12
+  },
+  "files": [
+    {
+      "file": "definite-article.md",
+      "title": "Definite Article",
+      "level": "A1",
+      "completeness": 60,
+      "missingComponents": [
+        "Examples section",
+        "Cultural context"
+      ],
+      "suggestions": [
+        {
+          "component": "Cultural Context",
+          "priority": "HIGH",
+          "suggestion": "Add a \"Cultural Context\" section comparing how Bulgarians and Germans conceptualize this grammar rule differently."
+        },
+        {
+          "component": "Examples",
+          "priority": "MEDIUM",
+          "suggestion": "Add more examples showing Bulgarian ↔ German contrasts with explanations."
+        }
+      ]
+    },
+    {
+      "file": "food-and-shopping-vocabulary.md",
+      "title": "Food and Shopping Vocabulary",
+      "level": "A2",
+      "completeness": 40,
+      "missingComponents": [
+        "Cultural context",
+        "Common mistakes section",
+        "Content is too short (under 200 words)"
+      ],
+      "suggestions": [
+        {
+          "component": "Cultural Context",
+          "priority": "HIGH",
+          "suggestion": "Add a \"Cultural Context\" section comparing how Bulgarians and Germans conceptualize this grammar rule differently."
+        },
+        {
+          "component": "Common Mistakes",
+          "priority": "MEDIUM",
+          "suggestion": "Add a \"Common Mistakes\" section split by direction:\n\n## Common Mistakes\n\n### For Bulgarian Speakers\n- [mistake 1]\n- [mistake 2]\n\n### For German Speakers\n- [mistake 1]\n- [mistake 2]"
+        },
+        {
+          "component": "Examples",
+          "priority": "MEDIUM",
+          "suggestion": "Add more examples showing Bulgarian ↔ German contrasts with explanations."
+        }
+      ]
+    },
+    {
+      "file": "gender-of-nouns.md",
+      "title": "Gender of Nouns",
+      "level": "A1",
+      "completeness": 80,
+      "missingComponents": [
+        "Examples section"
+      ],
+      "suggestions": [
+        {
+          "component": "Examples",
+          "priority": "MEDIUM",
+          "suggestion": "Add more examples showing Bulgarian ↔ German contrasts with explanations."
+        }
+      ]
+    },
+    {
+      "file": "past-tenses.md",
+      "title": "Past Tenses",
+      "level": "A1-A2",
+      "completeness": 60,
+      "missingComponents": [
+        "Examples section",
+        "Cultural context"
+      ],
+      "suggestions": [
+        {
+          "component": "Cultural Context",
+          "priority": "HIGH",
+          "suggestion": "Add a \"Cultural Context\" section comparing how Bulgarians and Germans conceptualize this grammar rule differently."
+        },
+        {
+          "component": "Examples",
+          "priority": "MEDIUM",
+          "suggestion": "Add more examples showing Bulgarian ↔ German contrasts with explanations."
+        }
+      ]
+    },
+    {
+      "file": "present-and-future-tenses.md",
+      "title": "Present and Future Tenses",
+      "level": "A1",
+      "completeness": 60,
+      "missingComponents": [
+        "Examples section",
+        "Cultural context"
+      ],
+      "suggestions": [
+        {
+          "component": "Cultural Context",
+          "priority": "HIGH",
+          "suggestion": "Add a \"Cultural Context\" section comparing how Bulgarians and Germans conceptualize this grammar rule differently."
+        },
+        {
+          "component": "Examples",
+          "priority": "MEDIUM",
+          "suggestion": "Add more examples showing Bulgarian ↔ German contrasts with explanations."
+        }
+      ]
+    },
+    {
+      "file": "pronouns-and-cases.md",
+      "title": "Pronouns and Cases",
+      "level": "A1",
+      "completeness": 60,
+      "missingComponents": [
+        "Examples section",
+        "Cultural context"
+      ],
+      "suggestions": [
+        {
+          "component": "Cultural Context",
+          "priority": "HIGH",
+          "suggestion": "Add a \"Cultural Context\" section comparing how Bulgarians and Germans conceptualize this grammar rule differently."
+        },
+        {
+          "component": "Examples",
+          "priority": "MEDIUM",
+          "suggestion": "Add more examples showing Bulgarian ↔ German contrasts with explanations."
+        }
+      ]
+    },
+    {
+      "file": "quantifiers-and-numbers.md",
+      "title": "Quantifiers and Numbers",
+      "level": "A1-A2",
+      "completeness": 60,
+      "missingComponents": [
+        "Examples section",
+        "Cultural context"
+      ],
+      "suggestions": [
+        {
+          "component": "Cultural Context",
+          "priority": "HIGH",
+          "suggestion": "Add a \"Cultural Context\" section comparing how Bulgarians and Germans conceptualize this grammar rule differently."
+        },
+        {
+          "component": "Examples",
+          "priority": "MEDIUM",
+          "suggestion": "Add more examples showing Bulgarian ↔ German contrasts with explanations."
+        }
+      ]
+    },
+    {
+      "file": "singular-and-plural.md",
+      "title": "Singular and Plural",
+      "level": "A1",
+      "completeness": 60,
+      "missingComponents": [
+        "Examples section",
+        "Cultural context"
+      ],
+      "suggestions": [
+        {
+          "component": "Cultural Context",
+          "priority": "HIGH",
+          "suggestion": "Add a \"Cultural Context\" section comparing how Bulgarians and Germans conceptualize this grammar rule differently."
+        },
+        {
+          "component": "Examples",
+          "priority": "MEDIUM",
+          "suggestion": "Add more examples showing Bulgarian ↔ German contrasts with explanations."
+        }
+      ]
+    },
+    {
+      "file": "time-expressions.md",
+      "title": "Time Expressions",
+      "level": "A1-A2",
+      "completeness": 60,
+      "missingComponents": [
+        "Examples section",
+        "Cultural context"
+      ],
+      "suggestions": [
+        {
+          "component": "Cultural Context",
+          "priority": "HIGH",
+          "suggestion": "Add a \"Cultural Context\" section comparing how Bulgarians and Germans conceptualize this grammar rule differently."
+        },
+        {
+          "component": "Examples",
+          "priority": "MEDIUM",
+          "suggestion": "Add more examples showing Bulgarian ↔ German contrasts with explanations."
+        }
+      ]
+    },
+    {
+      "file": "travel-and-directions.md",
+      "title": "Travel and Directions",
+      "level": "A1-A2",
+      "completeness": 40,
+      "missingComponents": [
+        "Examples section",
+        "Cultural context",
+        "Practice section"
+      ],
+      "suggestions": [
+        {
+          "component": "Cultural Context",
+          "priority": "HIGH",
+          "suggestion": "Add a \"Cultural Context\" section comparing how Bulgarians and Germans conceptualize this grammar rule differently."
+        },
+        {
+          "component": "Examples",
+          "priority": "MEDIUM",
+          "suggestion": "Add more examples showing Bulgarian ↔ German contrasts with explanations."
+        }
+      ]
+    },
+    {
+      "file": "verb-aspects-and-tenses.md",
+      "title": "Verb Aspects and Tenses",
+      "level": "A1",
+      "completeness": 80,
+      "missingComponents": [
+        "Examples section"
+      ],
+      "suggestions": [
+        {
+          "component": "Examples",
+          "priority": "MEDIUM",
+          "suggestion": "Add more examples showing Bulgarian ↔ German contrasts with explanations."
+        }
+      ]
+    },
+    {
+      "file": "word-order.md",
+      "title": "Word Order",
+      "level": "A1",
+      "completeness": 60,
+      "missingComponents": [
+        "Examples section",
+        "Cultural context"
+      ],
+      "suggestions": [
+        {
+          "component": "Cultural Context",
+          "priority": "HIGH",
+          "suggestion": "Add a \"Cultural Context\" section comparing how Bulgarians and Germans conceptualize this grammar rule differently."
+        },
+        {
+          "component": "Examples",
+          "priority": "MEDIUM",
+          "suggestion": "Add more examples showing Bulgarian ↔ German contrasts with explanations."
+        }
+      ]
+    }
+  ],
+  "recommendations": []
+}
