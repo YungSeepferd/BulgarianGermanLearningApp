@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-13T15:49:48.866Z",
+  "timestamp": "2025-11-13T16:46:04.775Z",
   "summary": {
-    "totalFiles": 12,
+    "totalFiles": 15,
     "byLevel": {
       "A1": {
         "count": 7,
@@ -11,11 +11,11 @@
         "completeness": 66
       },
       "A2": {
-        "count": 1,
-        "avgWordCount": 179,
-        "withBidirectionalNotes": 1,
+        "count": 4,
+        "avgWordCount": 3776.75,
+        "withBidirectionalNotes": 4,
         "withExamples": 1,
-        "completeness": 60
+        "completeness": 85
       },
       "B1": {
         "count": 0,
@@ -46,7 +46,7 @@
         "completeness": 0
       }
     },
-    "needsEnhancement": 12
+    "needsEnhancement": 14
   },
   "files": [
     {
@@ -75,23 +75,27 @@
       "file": "food-and-shopping-vocabulary.md",
       "title": "Food and Shopping Vocabulary",
       "level": "A2",
-      "completeness": 40,
+      "completeness": 80,
       "missingComponents": [
-        "Cultural context",
-        "Common mistakes section",
-        "Content is too short (under 200 words)"
+        "Examples section"
       ],
       "suggestions": [
         {
-          "component": "Cultural Context",
-          "priority": "HIGH",
-          "suggestion": "Add a \"Cultural Context\" section comparing how Bulgarians and Germans conceptualize this grammar rule differently."
-        },
-        {
-          "component": "Common Mistakes",
+          "component": "Examples",
           "priority": "MEDIUM",
-          "suggestion": "Add a \"Common Mistakes\" section split by direction:\n\n## Common Mistakes\n\n### For Bulgarian Speakers\n- [mistake 1]\n- [mistake 2]\n\n### For German Speakers\n- [mistake 1]\n- [mistake 2]"
-        },
+          "suggestion": "Add more examples showing Bulgarian ↔ German contrasts with explanations."
+        }
+      ]
+    },
+    {
+      "file": "future-tenses-intentions.md",
+      "title": "Future Tenses: Expressing Future Actions and Intentions in Bulgarian and German",
+      "level": "A2",
+      "completeness": 80,
+      "missingComponents": [
+        "Examples section"
+      ],
+      "suggestions": [
         {
           "component": "Examples",
           "priority": "MEDIUM",
@@ -114,6 +118,30 @@
           "suggestion": "Add more examples showing Bulgarian ↔ German contrasts with explanations."
         }
       ]
+    },
+    {
+      "file": "modal-verbs-comparison.md",
+      "title": "Modal Verbs: Expressing Ability, Permission, and Necessity in Bulgarian and German",
+      "level": "A2",
+      "completeness": 80,
+      "missingComponents": [
+        "Examples section"
+      ],
+      "suggestions": [
+        {
+          "component": "Examples",
+          "priority": "MEDIUM",
+          "suggestion": "Add more examples showing Bulgarian ↔ German contrasts with explanations."
+        }
+      ]
+    },
+    {
+      "file": "past-tenses-detailed.md",
+      "title": "Past Tenses: Bulgarian Aorist & Imperfect vs German Präteritum & Perfekt",
+      "level": "A2",
+      "completeness": 100,
+      "missingComponents": [],
+      "suggestions": []
     },
     {
       "file": "past-tenses.md",
