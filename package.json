@@ -24,7 +24,10 @@
     "test:update-snapshots": "playwright test --update-snapshots",
     "test:a11y": "playwright test --grep @a11y",
     "vocab:fetch": "node scripts/fetch-vocabulary.js",
-    "vocab:analyze": "node scripts/analyze-vocabulary.js"
+    "vocab:analyze": "node scripts/analyze-vocabulary.js",
+    "grammar:fetch": "node scripts/fetch-grammar.mjs",
+    "grammar:enhance": "node scripts/enhance-grammar.mjs",
+    "grammar:migrate": "node scripts/migrate-grammar.mjs"
   },
   "keywords": [
     "hugo",

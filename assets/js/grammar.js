@@ -1,24 +1,40 @@
 // Grammar management and filtering
 class GrammarApp {
     constructor(options) {
-        this.data = options.data || [];
         this.container = options.container || '#grammar-list';
-        this.filteredData = [...this.data];
         this.languageDirection = this.getLanguageDirection();
-        
+
+        // If data is provided, use data-based rendering, otherwise use server-rendered DOM
+        this.data = options.data || [];
+        this.useServerRendering = this.data.length === 0;
+        this.filteredData = [...this.data];
+
         this.filters = {
             level: '',
             search: ''
         };
-        
+
+        // If using server-rendered content, get items from DOM
+        if (this.useServerRendering) {
+            this.items = this.getServerRenderedItems();
+        }
+
         this.init();
     }
 
     init() {
         this.bindEvents();
-        this.render();
+        if (this.useServerRendering) {
+            this.applyFiltersToDOM();
+        }
         this.updateStats();
         this.updateDirectionNotes();
+    }
+
+    getServerRenderedItems() {
+        const container = document.querySelector(this.container);
+        if (!container) return [];
+        return Array.from(container.querySelectorAll('.grammar-item'));
     }
 
     bindEvents() {
@@ -81,6 +97,58 @@ class GrammarApp {
     }
 
     applyFilters() {
+        if (this.useServerRendering) {
+            this.applyFiltersToDOM();
+        } else {
+            this.applyFiltersToData();
+        }
+        this.updateStats();
+    }
+
+    applyFiltersToDOM() {
+        const items = this.getServerRenderedItems();
+        let visibleCount = 0;
+
+        items.forEach(item => {
+            let shouldShow = true;
+
+            // Level filter
+            if (this.filters.level) {
+                const itemLevel = item.dataset.level;
+                if (itemLevel !== this.filters.level) {
+                    shouldShow = false;
+                }
+            }
+
+            // Search filter
+            if (this.filters.search && shouldShow) {
+                const itemTitle = item.dataset.title || '';
+                const itemDescription = item.dataset.description || '';
+                const searchableText = itemTitle + ' ' + itemDescription;
+
+                if (!searchableText.includes(this.filters.search)) {
+                    shouldShow = false;
+                }
+            }
+
+            item.style.display = shouldShow ? '' : 'none';
+            if (shouldShow) visibleCount++;
+        });
+
+        // Show/hide no results message
+        const container = document.querySelector(this.container);
+        const noResults = document.getElementById('grammar-no-results');
+
+        if (visibleCount === 0) {
+            container?.classList.add('no-results-state');
+            noResults?.classList.remove('hidden');
+        } else {
+            container?.classList.remove('no-results-state');
+            noResults?.classList.add('hidden');
+        }
+    }
+
+    applyFiltersToData() {
         this.filteredData = this.data.filter(item => {
             // Level filter
             if (this.filters.level && item.level !== this.filters.level) {
@@ -95,7 +163,7 @@ class GrammarApp {
                     item.description,
                     ...(item.examples || [])
                 ].join(' ').toLowerCase();
-                
+
                 if (!searchableText.includes(searchTerm)) {
                     return false;
                 }
@@ -105,10 +173,14 @@ class GrammarApp {
         });
 
         this.render();
-        this.updateStats();
     }
 
     render() {
+        // Only render if using data-based approach (not server rendering)
+        if (this.useServerRendering) {
+            return; // DOM is already rendered by server
+        }
+
         const container = document.querySelector(this.container);
         const noResults = document.getElementById('grammar-no-results');
 
@@ -267,8 +339,16 @@ class GrammarApp {
         const totalCount = document.getElementById('grammar-total');
         const showingCount = document.getElementById('grammar-showing');
 
-        if (totalCount) totalCount.textContent = this.data.length;
-        if (showingCount) showingCount.textContent = this.filteredData.length;
+        if (this.useServerRendering) {
+            const items = this.getServerRenderedItems();
+            const visibleItems = items.filter(item => item.style.display !== 'none');
+
+            if (totalCount) totalCount.textContent = items.length;
+            if (showingCount) showingCount.textContent = visibleItems.length;
+        } else {
+            if (totalCount) totalCount.textContent = this.data.length;
+            if (showingCount) showingCount.textContent = this.filteredData.length;
+        }
     }
 
     updateDirectionNotes() {
