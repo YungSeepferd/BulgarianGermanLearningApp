@@ -16,7 +16,10 @@
     "test:debug": "PWDEBUG=1 playwright test",
     "test:update-snapshots": "playwright test --update-snapshots",
     "vocab:fetch": "node scripts/fetch-vocabulary.js",
-    "vocab:analyze": "node scripts/analyze-vocabulary.js"
+    "vocab:analyze": "node scripts/analyze-vocabulary.js",
+    "grammar:fetch": "node scripts/fetch-grammar.mjs",
+    "grammar:enhance": "node scripts/enhance-grammar.mjs",
+    "grammar:migrate": "node scripts/migrate-grammar.mjs"
   },
   "keywords": [
     "hugo",
