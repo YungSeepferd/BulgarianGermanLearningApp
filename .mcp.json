@@ -1,12 +1,5 @@
 {
   "mcpServers": {
-    "everything": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-everything"
-      ]
-    },
     "filesystem": {
       "command": "npx",
       "args": [
@@ -75,13 +68,6 @@
       ],
       "disabled": false,
       "disabledTools": []
-    },
-    "browsermcp": {
-      "command": "npx",
-      "args": [
-        "@browsermcp/mcp@latest"
-      ],
-      "disabled": true
     }
   }
 }

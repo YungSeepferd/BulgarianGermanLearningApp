@@ -1,0 +1,5 @@
+node_modules
+public
+themes
+tools
+*.min.js

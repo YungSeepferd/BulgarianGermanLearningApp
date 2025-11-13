@@ -1,0 +1,20 @@
+{
+  "assets/js/**/*.{js,mjs}": [
+    "eslint --fix",
+    "prettier --write"
+  ],
+  "scripts/**/*.{js,mjs}": [
+    "eslint --fix",
+    "prettier --write"
+  ],
+  "assets/scss/**/*.scss": [
+    "stylelint --fix",
+    "prettier --write"
+  ],
+  "layouts/**/*.html": [
+    "prettier --write"
+  ],
+  "*.{md,json}": [
+    "prettier --write"
+  ]
+}
