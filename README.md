@@ -95,7 +95,108 @@ npm run process-data
 - **JavaScript syntax**: Use an ES module-aware checker (e.g., `node --experimental-warnings --check` or an esbuild/rollup dry run). Plain `node -c` is not ESM aware.
 - **Go tests**: Run inside `tools/` where modules are defined; repo root has no Go module.
 - **Accessibility**: Verify keyboard controls (space/enter to flip, digits 0–5 to grade).
-- **Mobile**: Test at 360 px width to ensure touch targets and layout behave.
+- **Mobile**: Test at 360 px width to ensure touch targets and layout behave.
+
+## ✅ Code Quality & Testing
+
+This project enforces code quality standards through automated linting, formatting, and testing. All developers should follow these guidelines.
+
+### Quick Commands
+
+```bash
+# Install dependencies (required once)
+npm install
+
+# Enable pre-commit hooks (automatically runs linters before commit)
+npx husky install
+
+# Run all quality checks
+npm run lint              # Check all code
+npm run format            # Auto-format code (ESLint, Prettier, Stylelint)
+
+# Run tests
+npm run test:unit         # Jest unit tests
+npm run test:coverage     # Generate coverage report
+npm test                  # Playwright end-to-end tests
+
+# Build and validate
+npm run build             # Production build
+npm run validate          # Full validation suite
+```
+
+### Quality Standards
+
+**Code Linting** (ESLint + Unicorn Plugin):
+- ES2021 environment with strict rules
+- Semicolons required, single quotes, const/let only
+- 100-character line limit, 2-space indentation
+- `===` equality checks, arrow functions required
+- Pre-commit hooks automatically fix auto-fixable issues
+
+**Code Formatting** (Prettier):
+- Automatically formats JavaScript, SCSS, HTML, JSON, Markdown
+- 100-character line width
+- Single quotes with escape avoidance
+- Trailing commas: none
+- Runs automatically before commits via husky
+
+**SCSS Linting** (Stylelint):
+- Standard SCSS rules
+- Kebab-case selectors, variables, mixins
+- Validated before commits
+
+**Testing** (Jest + Playwright):
+- Unit tests: Jest with jsdom environment (`tests/unit/`)
+- E2E tests: Playwright (`tests/playwright/`)
+- Minimum coverage threshold: 70% (branches, functions, lines, statements)
+- SM-2 algorithm thoroughly tested with 25+ unit test cases
+
+### Contribution Guidelines
+
+Before submitting a pull request:
+
+1. **Read** [`CONTRIBUTING.md`](CONTRIBUTING.md) for detailed guidelines
+2. **Run locally**:
+   ```bash
+   npm run lint              # Must pass with 0 errors
+   npm run format            # Auto-fixes most issues
+   npm run test:unit         # All tests must pass
+   npm run build             # Must build successfully
+   ```
+3. **Commit** with descriptive messages (see CONTRIBUTING.md for format)
+4. **PR template** must be completed with:
+   - Description of changes
+   - Type of change (bug fix, feature, refactor, etc.)
+   - Testing details and results
+   - Link to related issues
+
+### CI/CD Enforcement
+
+GitHub Actions enforces code quality on every push and pull request:
+
+- ✅ Security audits (npm audit, Go vulncheck, CodeQL)
+- ✅ ESLint validation
+- ✅ SCSS linting
+- ✅ Unit test execution
+- ✅ Code coverage tracking (Codecov)
+- ✅ Build validation
+- ✅ Data integrity checks
+
+All checks must pass before merging to main.
+
+### Data & Tools
+
+**Data Validation**:
+- Vocabulary data validated before every commit
+- Pre-commit hook checks JSON syntax and schema
+- Run manually: `npm run validate`
+
+**Go Tools** (in `tools/` directory):
+- `npm run build-tools` - Compile CLI utilities
+- `npm run process-data` - Process vocabulary data
+- See [`tools/README.md`](tools/README.md) for detailed documentation
+
+**For Detailed Info**: See [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`tools/README.md`](tools/README.md)
 
 ## 🎮 Usage Highlights
 
@@ -112,7 +213,7 @@ npm run process-data
 
 ## 🤝 Contributing
 
-- **Read first**: [`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md) and [`AGENTS.md`](AGENTS.md)
+- **Read first**: [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`AGENTS.md`](AGENTS.md)
 - **Workflow**: One scoped change per PR; log notes in `docs/notes/TODAY.md`
 - **Testing**: Start `hugo server -D`, verify no console errors, and ensure accessibility checks pass
 - **PRs**: Include summary, acceptance checklist, and screenshots/GIFs for UI updates

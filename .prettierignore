@@ -1,0 +1,8 @@
+node_modules
+public
+.hugo_build.lock
+*.lock
+tools/
+themes/
+data/vocabulary.json
+data/cultural-grammar.json

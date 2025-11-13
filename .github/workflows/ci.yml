@@ -29,7 +29,6 @@ jobs:
 
       - name: Security audit (npm)
         run: npm audit --audit-level=high
-        continue-on-error: true
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@16361eb4acea8698b220b76c0d4e84e1fd22c61d # v2.6.0
@@ -52,6 +51,12 @@ jobs:
       - name: Check ES modules
         run: npm run lint:esm
 
+      - name: Lint JavaScript
+        run: npm run lint:js
+
+      - name: Lint SCSS
+        run: npm run lint:scss
+
       - name: Go unit tests
         run: go test ./...
         working-directory: tools
@@ -61,10 +66,23 @@ jobs:
           go install golang.org/x/vuln/cmd/govulncheck@latest
           govulncheck ./...
         working-directory: tools
-        continue-on-error: true
 
       - name: Build site
         run: npm run build
+
+      - name: Run unit tests
+        run: npm run test:unit
+
+      - name: Generate coverage report
+        run: npm run test:coverage
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./coverage/coverage-final.json
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: false
 
       - name: Install Playwright
         run: npx playwright install --with-deps
