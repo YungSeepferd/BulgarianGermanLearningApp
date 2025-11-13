@@ -87,7 +87,7 @@ web/pkg/
 web/dist/
 
 # Generated Hugo content (should not be committed)
-vocabulary/
+
 grammar/
 practice/
 categories/
