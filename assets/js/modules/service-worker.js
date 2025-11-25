@@ -26,7 +26,7 @@ class ServiceWorkerManager {
 
     try {
       // Register service worker
-      this.swRegistration = await navigator.serviceWorker.register('/sw.js', {
+      this.swRegistration = await navigator.serviceWorker.register('/sw-workbox.js', {
         scope: '/'
       });
 
@@ -91,22 +91,27 @@ class ServiceWorkerManager {
 
   handleServiceWorkerMessage(data) {
     switch (data.type) {
-      case 'SW_ACTIVATED':
-        console.log('[SW Manager] Service Worker activated, version:', data.version);
-        this.hideUpdateNotification();
-        break;
+    case 'SW_ACTIVATED': {
+      console.log('[SW Manager] Service Worker activated, version:', data.version);
+      this.hideUpdateNotification();
+      break;
+    }
         
-      case 'CACHE_UPDATED':
-        console.log('[SW Manager] Cache updated for:', data.url);
-        break;
+    case 'CACHE_UPDATED': {
+      console.log('[SW Manager] Cache updated for:', data.url);
+      break;
+    }
         
-      default:
-        console.log('[SW Manager] Unknown message from SW:', data);
+    default: {
+      console.log('[SW Manager] Unknown message from SW:', data);
+    }
     }
   }
 
   async checkForUpdates() {
-    if (!this.swRegistration) return;
+    if (!this.swRegistration) {
+      return;
+    }
 
     try {
       await this.swRegistration.update();
@@ -145,25 +150,25 @@ class ServiceWorkerManager {
       </div>
     `;
 
-    document.body.appendChild(notification);
+    document.body.append(notification);
 
     // Add event listeners
-    document.getElementById('sw-update-btn').addEventListener('click', () => {
+    document.querySelector('#sw-update-btn').addEventListener('click', () => {
       this.applyUpdate();
     });
 
-    document.getElementById('sw-dismiss-btn').addEventListener('click', () => {
+    document.querySelector('#sw-dismiss-btn').addEventListener('click', () => {
       this.hideUpdateNotification();
     });
 
     // Auto-hide after 10 seconds
     setTimeout(() => {
       this.hideUpdateNotification();
-    }, 10000);
+    }, 10_000);
   }
 
   hideUpdateNotification() {
-    const notification = document.getElementById('sw-update-notification');
+    const notification = document.querySelector('#sw-update-notification');
     if (notification) {
       notification.remove();
     }
@@ -186,9 +191,11 @@ class ServiceWorkerManager {
     // Only show if not already installed and user hasn't dismissed recently
     const lastDismissed = localStorage.getItem('bgde:pwa-install-dismissed');
     const now = Date.now();
-    const dismissedRecently = lastDismissed && (now - parseInt(lastDismissed)) < 7 * 24 * 60 * 60 * 1000; // 7 days
+    const dismissedRecently = lastDismissed && (now - Number.parseInt(lastDismissed)) < 7 * 24 * 60 * 60 * 1000; // 7 days
 
-    if (dismissedRecently) return;
+    if (dismissedRecently) {
+      return;
+    }
 
     const prompt = document.createElement('div');
     prompt.id = 'pwa-install-prompt';
@@ -207,10 +214,10 @@ class ServiceWorkerManager {
       </div>
     `;
 
-    document.body.appendChild(prompt);
+    document.body.append(prompt);
 
     // Add event listeners
-    document.getElementById('pwa-install-btn').addEventListener('click', async () => {
+    document.querySelector('#pwa-install-btn').addEventListener('click', async () => {
       try {
         await event.prompt();
         const choiceResult = await event.userChoice;
@@ -227,7 +234,7 @@ class ServiceWorkerManager {
       }
     });
 
-    document.getElementById('pwa-dismiss-btn').addEventListener('click', () => {
+    document.querySelector('#pwa-dismiss-btn').addEventListener('click', () => {
       localStorage.setItem('bgde:pwa-install-dismissed', now.toString());
       this.hideInstallPrompt();
     });
@@ -235,11 +242,11 @@ class ServiceWorkerManager {
     // Auto-hide after 15 seconds
     setTimeout(() => {
       this.hideInstallPrompt();
-    }, 15000);
+    }, 15_000);
   }
 
   hideInstallPrompt() {
-    const prompt = document.getElementById('pwa-install-prompt');
+    const prompt = document.querySelector('#pwa-install-prompt');
     if (prompt) {
       prompt.remove();
     }
@@ -259,8 +266,10 @@ class ServiceWorkerManager {
 
   showConnectionNotification(isOnline) {
     // Remove existing notification
-    const existing = document.getElementById('connection-notification');
-    if (existing) existing.remove();
+    const existing = document.querySelector('#connection-notification');
+    if (existing) {
+      existing.remove();
+    }
 
     const notification = document.createElement('div');
     notification.id = 'connection-notification';
@@ -275,17 +284,21 @@ class ServiceWorkerManager {
       </div>
     `;
 
-    document.body.appendChild(notification);
+    document.body.append(notification);
 
     // Auto-hide after 3 seconds
     setTimeout(() => {
-      const notif = document.getElementById('connection-notification');
-      if (notif) notif.remove();
+      const notif = document.querySelector('#connection-notification');
+      if (notif) {
+        notif.remove();
+      }
     }, 3000);
   }
 
   async syncWhenOnline() {
-    if (!this.swRegistration || !this.isOnline) return;
+    if (!this.swRegistration || !this.isOnline) {
+      return;
+    }
 
     try {
       // Trigger background sync if supported

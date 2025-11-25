@@ -1,0 +1,594 @@
+[
+  {
+    "id": "a1_food_012",
+    "word": "Хляб",
+    "translation": "das Brot",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Essential food staple: bread",
+    "notes_bg_to_de": "В немски 'Brot' [bʁoːt] е среден род (das), единствено число. Множествено: 'Brote'. Основна храна.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Хляб' ist maskulin. Sehr wichtig in bulgarischer Kultur - Brot bei jeder Mahlzeit. Verschiedene Sorten.",
+    "etymology": "From Proto-Slavic '*xlěbъ'. Possibly borrowed from Gothic 'hlaifs'. Related to German 'Laib' (loaf).",
+    "cultural_note": "Bread is sacred in Bulgarian culture. Never throw away bread. Traditional round bread (пита) for special occasions. Breaking bread together symbolizes friendship.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "sentence": "Купи хляб, моля.",
+        "translation": "Kauf bitte Brot.",
+        "context": "shopping"
+      },
+      {
+        "sentence": "Искам хляб с масло.",
+        "translation": "Ich möchte Brot mit Butter.",
+        "context": "meal"
+      },
+      {
+        "sentence": "Прясно изпечен хляб.",
+        "translation": "Frisch gebackenes Brot.",
+        "context": "description"
+      }
+    ],
+    "linguistic_note": "Masculine noun. Definite form: хлябът. Plural: хлябове.",
+    "linguistic_note_bg_to_de": "Хляб [xljap] - мъжки род. Определен член: хлябът [xljɐˈbɤt]. Множ.: хлябове.",
+    "linguistic_note_de_to_bg": "Maskulinum. 'Х' ist [x] wie 'ch' in 'Bach'. Betonung: хляб (monosyllabisch)."
+  },
+  {
+    "id": "a1_food_014",
+    "word": "Масло",
+    "translation": "die Butter",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Essential dairy product: butter (note: also means oil/grease)",
+    "notes_bg_to_de": "В немски 'Butter' [ˈbʊtɐ] е женски род. Внимание: 'масло' означава и butter и oil! Контекстът определя.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Масло' = Butter UND Öl! Context matters: 'масло за хляб' (Butter), 'олио' spezifischer für oil. Neutrum.",
+    "etymology": "From Proto-Slavic '*maslo'. From root '*maz-' (to smear, anoint). Related to 'мажа' (to spread), Russian 'масло'.",
+    "cultural_note": "Double meaning: butter (for bread) and oil (cooking). Sunflower oil (слънчогледово масло) very common in Bulgarian cooking. Clarify with context.",
+    "difficulty": 1,
+    "frequency": 88,
+    "examples": [
+      {
+        "sentence": "Хляб с масло и мед.",
+        "translation": "Brot mit Butter und Honig.",
+        "context": "breakfast - butter"
+      },
+      {
+        "sentence": "Готвя с олио.",
+        "translation": "Ich koche mit Öl.",
+        "context": "cooking - using 'олио' for clarity"
+      },
+      {
+        "sentence": "Сложи масло на хляба.",
+        "translation": "Schmier Butter aufs Brot.",
+        "context": "instruction"
+      }
+    ],
+    "linguistic_note": "Neuter noun. Definite: маслото. Note: covers both butter and oil in Bulgarian.",
+    "linguistic_note_bg_to_de": "Масло [ˈmaslɔ] - среден род. Определен: маслото. ВАЖНО: масло = butter И oil!",
+    "linguistic_note_de_to_bg": "Neutrum. Polysem: Butter UND Öl. Kontext wichtig. Betonung: ма́сло."
+  },
+  {
+    "id": "a1_food_015",
+    "word": "Сирене",
+    "translation": "der Käse",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Essential dairy product: cheese (typically refers to white brine cheese)",
+    "notes_bg_to_de": "В немски 'Käse' [ˈkɛːzə] е мъжки род. 'Сирене' в България обикновено означава бяло саламурено сирене (like feta).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сирене' meist weiße Salzlake-Käse (ähnlich Feta). Yellow cheese = 'кашкавал'. Bulgarian белo сирене is staple food.",
+    "etymology": "From Proto-Slavic '*syrъ' (raw, fresh). Originally 'fresh/raw cheese'. Related to Russian 'сыр', but meaning shifted in Bulgarian to brine cheese.",
+    "cultural_note": "Essential in Bulgarian cuisine: Shopska salad uses сирене. Breakfast often includes сирене. Different from yellow cheese (кашкавал). Made from sheep/cow milk.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "sentence": "Шопска салата със сирене.",
+        "translation": "Shopska-Salat mit Käse.",
+        "context": "traditional dish"
+      },
+      {
+        "sentence": "Баница със сирене.",
+        "translation": "Banitsa mit Käse.",
+        "context": "traditional pastry"
+      },
+      {
+        "sentence": "Сирене и домати за закуска.",
+        "translation": "Käse und Tomaten zum Frühstück.",
+        "context": "breakfast"
+      }
+    ],
+    "linguistic_note": "Neuter noun. Definite: сиренето. Type of cheese in Bulgaria: white brine cheese.",
+    "linguistic_note_bg_to_de": "Сирене [siˈrɛnɛ] - среден род. Определен: сиренето. Конкретно: бяло саламурено.",
+    "linguistic_note_de_to_bg": "Neutrum. Spezifisch für weißen Salzlakekäse. Gelber Käse = кашкавал. Betonung сире́не."
+  },
+  {
+    "id": "a1_food_016",
+    "word": "Месо",
+    "translation": "das Fleisch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Essential protein food: meat",
+    "notes_bg_to_de": "В немски 'Fleisch' [flaɪ̯ʃ] е среден род (das), общо за месо. Видове: Schweinefleisch, Rindfleisch, etc.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Месо' ist neutrum, Oberbegriff. Spezifisch: свинско (Schwein), телешко (Kalb), пилешко (Huhn).",
+    "etymology": "From Proto-Slavic '*mę́so'. Cognate with Russian 'мясо'. From PIE root meaning 'flesh, meat'.",
+    "cultural_note": "Meat dishes central to Bulgarian cuisine: кебапче, кюфте, шишчета (grilled meats). Pork (свинско) most common. Mixed grill (скара) popular.",
+    "difficulty": 1,
+    "frequency": 87,
+    "examples": [
+      {
+        "sentence": "Ядеш ли месо?",
+        "translation": "Isst du Fleisch?",
+        "context": "dietary question"
+      },
+      {
+        "sentence": "Свинско месо с ориз.",
+        "translation": "Schweinefleisch mit Reis.",
+        "context": "meal"
+      },
+      {
+        "sentence": "Не ям месо - вегетарианец съм.",
+        "translation": "Ich esse kein Fleisch - ich bin Vegetarier.",
+        "context": "dietary preference"
+      }
+    ],
+    "linguistic_note": "Neuter noun. Definite: месото. Types: свинско, телешко, пилешко.",
+    "linguistic_note_bg_to_de": "Месо [ˈmɛsɔ] - среден род. Определен: месото. Видове: свинско, телешко, пилешко.",
+    "linguistic_note_de_to_bg": "Neutrum. Oberbegriff. Betonung: ме́со. 'М' ist bilabial [m]."
+  },
+  {
+    "id": "a1_food_017",
+    "word": "Риба",
+    "translation": "der Fisch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Protein food: fish",
+    "notes_bg_to_de": "В немски 'Fisch' [fɪʃ] е мъжки род (der). Използва се за храна И за живото животно.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Риба' ist feminin. Sowohl das Tier als auch das Essen. Black Sea fish popular in Bulgaria.",
+    "etymology": "From Proto-Slavic '*ryba'. Ancient word, possibly pre-Indo-European. Cognate with Russian 'рыба', Polish 'ryba'.",
+    "cultural_note": "Black Sea fish: цаца (sprat), попче (goby). Grilled fish (риба на скара) popular in coastal regions. Fish soup (рибена чорба) traditional.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "sentence": "Обичам риба.",
+        "translation": "Ich mag Fisch.",
+        "context": "preference"
+      },
+      {
+        "sentence": "Пържена риба с лимон.",
+        "translation": "Gebratener Fisch mit Zitrone.",
+        "context": "dish"
+      },
+      {
+        "sentence": "Има ли свежа риба?",
+        "translation": "Gibt es frischen Fisch?",
+        "context": "market/restaurant"
+      }
+    ],
+    "linguistic_note": "Feminine noun. Definite: рибата. Plural: риби.",
+    "linguistic_note_bg_to_de": "Риба [ˈribɐ] - женски род. Определен: рибата. Множ.: риби.",
+    "linguistic_note_de_to_bg": "Femininum. 'Р' ist gerolltes [r]. Betonung: ри́ба."
+  },
+  {
+    "id": "a1_food_018",
+    "word": "Зеленчук",
+    "translation": "das Gemüse",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "General term for vegetables. The word literally means 'green things'. Used as a collective noun, can also refer to a single vegetable in context.",
+    "notes_bg_to_de": "В немски 'das Gemüse' е събирателно за зеленчуци, както и в български 'зеленчук'. За отделни видове използваме: домат, морков, картоф и т.н.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Зеленчук' = 'Gemüse' (Kollektivbegriff). Kommt von 'зелен' (grün), ähnlich wie deutsches 'Grünzeug' (umgangssprachlich).",
+    "etymology": "From Bulgarian 'зелен' (green) + diminutive suffix '-чук'. Reflects that vegetables are primarily green or plant-based. The etymology is uniquely Bulgarian - most Slavic languages use variants of 'овощь/овоч'.",
+    "cultural_note": "Bulgarian cuisine is heavily vegetable-based. The word 'зеленчук' has positive connotations - fresh vegetables are central to Bulgarian food culture. Markets (пазар) are filled with locally grown seasonal зеленчуци.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Expressing preference",
+        "sentence": "Обичам зеленчуци.",
+        "translation": "Ich mag Gemüse."
+      },
+      {
+        "context": "Shopping context",
+        "sentence": "Купувам зеленчук от пазара.",
+        "translation": "Ich kaufe Gemüse vom Markt."
+      },
+      {
+        "context": "Health advice",
+        "sentence": "Ядете повече зеленчуци!",
+        "translation": "Esst mehr Gemüse!"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: зеле́нчук [zɛˈlent͡ʃuk]. The 'н' before 'ч' creates a slight palatalization. Plural: зеленчуци.",
+    "linguistic_note_bg_to_de": "Зеленчук се произнася [zɛˈlent͡ʃuk] с ударение на 'лен'. Множествено число: зеленчуци [zɛˈlent͡ʃut͡si].",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: зеле́нчук [zɛˈlent͡ʃuk]. Plural: зеленчуци. Das 'ч' wird wie 'tsch' ausgesprochen."
+  },
+  {
+    "id": "a1_food_019",
+    "word": "Плод",
+    "translation": "die Frucht, das Obst",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Word for fruit. Can mean both a single fruit (die Frucht) or fruits collectively (das Obst). Plural 'плодове' is used for multiple fruits.",
+    "notes_bg_to_de": "В немски има два термина: 'die Frucht' (отделен плод) и 'das Obst' (плодове като събирателно). Българското 'плод' покрива и двете значения.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Плод' kann sowohl 'Frucht' (einzeln) als auch 'Obst' (kollektiv) bedeuten. Plural 'плодове' (Früchte) macht den Unterschied klarer.",
+    "etymology": "From Proto-Slavic '*plodъ' (fruit, offspring), related to Russian 'плод' and Latin 'fetus'. The root '*pel-' means 'to fill' - fruit that fills/nourishes.",
+    "cultural_note": "Bulgaria is famous for its fruits, especially plums (сливи), apricots (кайсии), and cherries (череши). The phrase 'плодородна земя' (fruitful land) reflects the agricultural importance of fruit cultivation in Bulgarian culture.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "General preference",
+        "sentence": "Обичам плодове.",
+        "translation": "Ich mag Obst."
+      },
+      {
+        "context": "Health advice",
+        "sentence": "Яж пресни плодове.",
+        "translation": "Iss frisches Obst."
+      },
+      {
+        "context": "Describing single fruit",
+        "sentence": "Този плод е сладък.",
+        "translation": "Diese Frucht ist süß."
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: пло́д [plɔt]. The final 'д' is devoiced to [t]. Plural: плодове [ˈplɔdɔvɛ].",
+    "linguistic_note_bg_to_de": "Плод се произнася [plɔt] с ударение на единствената сричка. Финалното 'д' се оглушава на [t]. Множествено: плодове.",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: пло́д [plɔt]. Das finale 'д' wird als [t] ausgesprochen (Auslautverhärtung). Plural: плодове."
+  },
+  {
+    "id": "a1_food_020",
+    "word": "Ябълка",
+    "translation": "der Apfel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Apple. One of the most common fruits in Bulgarian cuisine. Note the unique Bulgarian form 'ябълка' differs from most other Slavic languages.",
+    "notes_bg_to_de": "В немски 'der Apfel' е мъжки род, докато в български 'ябълка' е женски род. Внимавайте с местоименията: der Apfel - er (той), ябълката - тя.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ябълка' ist feminin (im Gegensatz zu maskulinem 'der Apfel'). Die Form ist einzigartig bulgarisch - vergleiche russisch 'яблоко'.",
+    "etymology": "From Proto-Slavic '*ablъko' (apple), but Bulgarian evolved uniquely to 'ябълка' with metathesis (sound switching) and the characteristic 'ъ'. Related to Russian 'яблоко' but structurally different.",
+    "cultural_note": "Apples are central to Bulgarian folklore and cuisine. 'Ябълка на раздора' (apple of discord) is a common idiom. Baked apples and apple preserves (компот) are traditional, especially in winter.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Daily habit",
+        "sentence": "Ям ябълка всеки ден.",
+        "translation": "Ich esse jeden Tag einen Apfel."
+      },
+      {
+        "context": "Describing color",
+        "sentence": "Тази ябълка е червена.",
+        "translation": "Dieser Apfel ist rot."
+      },
+      {
+        "context": "Shopping",
+        "sentence": "Колко струва една ябълка?",
+        "translation": "Wie viel kostet ein Apfel?"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: ябъ́лка [jɐˈbɤlkɐ]. The 'ъ' is schwa [ɤ]. The initial 'я' is [jɐ]. Plural: ябълки.",
+    "linguistic_note_bg_to_de": "Ябълка се произнася [jɐˈbɤlkɐ] с ударение на 'бъл'. Буквата 'ъ' е [ɤ]. Множествено: ябълки.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: ябъ́лка [jɐˈbɤlkɐ]. Das 'я' am Anfang ist [jɐ], das 'ъ' ist Schwa [ɤ]. Plural: ябълки."
+  },
+  {
+    "id": "a1_food_021",
+    "word": "Банан",
+    "translation": "die Banane",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Banana. An international loanword, easily recognizable. Note the stress difference from German and the masculine gender in Bulgarian.",
+    "notes_bg_to_de": "В немски 'die Banane' е женски род, докато в български 'банан' е мъжки род. Ударението също е различно: нем. Banáne [baˈnaːnə], бълг. бана́н [bɐˈnan].",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Банан' ist maskulin (im Gegensatz zu femininem 'die Banane'). Betonung auf der letzten Silbe, nicht wie im Deutschen auf der zweiten.",
+    "etymology": "International loanword, ultimately from West African languages via Portuguese 'banana'. Entered Bulgarian via European languages in the 19th-20th century.",
+    "cultural_note": "Bananas were considered exotic in Bulgaria during communist times and were available mainly for special occasions. Today they're common, but older Bulgarians remember them as a luxury item. 'Банана е извита, но е сладка' (The banana is curved, but it's sweet) - a saying about accepting imperfections.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Preference",
+        "sentence": "Обичам банани.",
+        "translation": "Ich mag Bananen."
+      },
+      {
+        "context": "Shopping instruction",
+        "sentence": "Купи банан за закуска.",
+        "translation": "Kauf eine Banane zum Frühstück."
+      },
+      {
+        "context": "Describing ripeness",
+        "sentence": "Този банан е узрял.",
+        "translation": "Diese Banane ist reif."
+      }
+    ],
+    "linguistic_note": "Stress on last syllable: бана́н [bɐˈnan]. Both 'а' sounds are pronounced clearly. Plural: банани [bɐˈnani].",
+    "linguistic_note_bg_to_de": "Банан се произнася [bɐˈnan] с ударение на последната сричка. И двете 'а' са ясни. Множествено: банани.",
+    "linguistic_note_de_to_bg": "Betonung auf der letzten Silbe: бана́н [bɐˈnan], anders als deutsches Banáne. Beide 'а' werden klar ausgesprochen. Plural: банани."
+  },
+  {
+    "id": "a1_food_022",
+    "word": "Портокал",
+    "translation": "die Orange, die Apfelsine",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Orange (fruit). The word comes from Portuguese 'Portugal' - oranges arrived via Portuguese trade routes. Can also refer to the color orange colloquially.",
+    "notes_bg_to_de": "В немски има два термина: 'die Orange' (по-често на север) и 'die Apfelsine' (традиционно на юг). Българското 'портокал' идва от 'Portugal', защото портокалите са дошли чрез португалска търговия.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Портокал' kommt von 'Portugal' (woher die Früchte ursprünglich kamen). Maskulines Genus, im Gegensatz zu femininem 'die Orange'.",
+    "etymology": "From Portuguese 'Portugal', via Ottoman Turkish 'portakal'. Reflects the historical trade route of oranges from Portugal through the Ottoman Empire to the Balkans.",
+    "cultural_note": "Oranges are associated with winter in Bulgaria - fresh oranges become abundant and cheap in winter months. 'Портокалов сок' (orange juice) is a breakfast staple. The phrase 'свеж като портокал' (fresh as an orange) means energetic and vibrant.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Preference",
+        "sentence": "Обичам пресен портокал.",
+        "translation": "Ich mag frische Orangen."
+      },
+      {
+        "context": "Ordering drinks",
+        "sentence": "Портокалов сок, моля.",
+        "translation": "Orangensaft, bitte."
+      },
+      {
+        "context": "Describing quality",
+        "sentence": "Този портокал е сочен.",
+        "translation": "Diese Orange ist saftig."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: порто́кал [pɔrˈtɔkal]. All vowels are pronounced clearly. Plural: портокали [pɔrtɔˈkali].",
+    "linguistic_note_bg_to_de": "Портокал се произнася [pɔrˈtɔkal] с ударение на 'то'. Всички гласни са ясни. Множествено: портокали.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: порто́кал [pɔrˈtɔkal]. Alle Vokale werden klar ausgesprochen. Plural: портокали."
+  },
+  {
+    "id": "a1_food_023",
+    "word": "Домат",
+    "translation": "die Tomate",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Tomato. Essential ingredient in Bulgarian cuisine. The word is similar across many languages but with Bulgarian phonetic characteristics.",
+    "notes_bg_to_de": "В немски 'die Tomate' е женски род, докато в български 'домат' е мъжки род. Домати са основна съставка в българската кухня - шопска салата, люта, таратор.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Домат' ist maskulin (im Gegensatz zu femininem 'die Tomate'). Aussprache ähnlich, aber mit bulgarischem [ɔ]-Laut.",
+    "etymology": "From Nahuatl 'tomatl' via Spanish 'tomate', entered Bulgarian via Turkish 'domates'. The Bulgarian form reflects the Ottoman Turkish intermediary.",
+    "cultural_note": "Tomatoes are ubiquitous in Bulgarian cuisine. Fresh tomatoes are a summer staple, and 'домашен домат' (homegrown tomato) is considered far superior to store-bought. The peak of summer is 'сезон на доматите' (tomato season) when they're cheapest and tastiest.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Shopping",
+        "sentence": "Искам домати за салата.",
+        "translation": "Ich möchte Tomaten für den Salat."
+      },
+      {
+        "context": "Describing quality",
+        "sentence": "Този домат е сочен.",
+        "translation": "Diese Tomate ist saftig."
+      },
+      {
+        "context": "Shopping instruction",
+        "sentence": "Купи три домата.",
+        "translation": "Kauf drei Tomaten."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: дома́т [dɔˈmat]. The 'о' is open [ɔ]. Plural: домати [dɔˈmati].",
+    "linguistic_note_bg_to_de": "Домат се произнася [dɔˈmat] с ударение на 'мат'. Буквата 'о' е отворена [ɔ]. Множествено: домати.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: дома́т [dɔˈmat]. Das 'о' ist ein offenes [ɔ] wie in 'Tomate'. Plural: домати."
+  },
+  {
+    "id": "a1_food_024",
+    "word": "Картоф",
+    "translation": "die Kartoffel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Potato. Staple food in Bulgarian cuisine. The word comes from German 'Kartoffel' via Russian, showing the European origin of the potato in Bulgaria.",
+    "notes_bg_to_de": "В немски 'die Kartoffel' е женски род, докато в български 'картоф' е мъжки род. Думата е заемка от немски през руски 'картофель'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Картоф' kommt etymologisch von deutschem 'Kartoffel' (via Russisch). Aber: maskulines Genus in Bulgarisch.",
+    "etymology": "From German 'Kartoffel' via Russian 'картофель'. The German word itself comes from Italian 'tartufolo' (truffle). Potatoes arrived in Bulgaria in the 18th-19th century via European influence.",
+    "cultural_note": "Potatoes are a staple in Bulgarian cuisine, especially in colder months. 'Пържени картофи' (fried potatoes) are a classic side dish. 'Картофена салата' (potato salad) is mandatory at celebrations. The phrase 'прост като картоф' (simple as a potato) means something is basic or unsophisticated.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Food preference",
+        "sentence": "Обичам пържени картофи.",
+        "translation": "Ich mag Bratkartoffeln."
+      },
+      {
+        "context": "Shopping",
+        "sentence": "Купи килограм картофи.",
+        "translation": "Kauf ein Kilo Kartoffeln."
+      },
+      {
+        "context": "Cooking status",
+        "sentence": "Картофите са изварени.",
+        "translation": "Die Kartoffeln sind gekocht."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: карто́ф [kɐrˈtɔf]. The final 'ф' is [f]. Plural: картофи [kɐrˈtɔfi].",
+    "linguistic_note_bg_to_de": "Картоф се произнася [kɐrˈtɔf] с ударение на 'то'. Крайното 'ф' е [f]. Множествено: картофи.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: карто́ф [kɐrˈtɔf]. Ähnlich wie deutsches 'Kartoffel' aber ohne das finale '-el'. Plural: картофи."
+  },
+  {
+    "id": "a1_food_025",
+    "word": "Морков",
+    "translation": "die Karotte, die Möhre",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Carrot. Common vegetable in Bulgarian cuisine. The word is of Slavic origin and related to similar words in other Slavic languages.",
+    "notes_bg_to_de": "В немски има два термина: 'die Karotte' (общо) и 'die Möhre' (по-често на север). Българското 'морков' е мъжки род и покрива и двете немски думи.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Морков' ist maskulin (im Gegensatz zu femininen 'die Karotte/Möhre'). Das Wort ist slawischen Ursprungs, im Gegensatz zum lateinstämmigen 'Karotte'.",
+    "etymology": "From Proto-Slavic '*mъrky' (carrot), related to Russian 'морковь' and Czech 'mrkev'. The root may relate to colors or root vegetables generally.",
+    "cultural_note": "Carrots are essential in Bulgarian cuisine, especially in winter salads and as a base for many dishes. 'Морковена халва' (carrot halva) is a traditional sweet. Fresh carrots from the market are preferred over packaged ones.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Preference",
+        "sentence": "Обичам моркови.",
+        "translation": "Ich mag Karotten."
+      },
+      {
+        "context": "Cooking instruction",
+        "sentence": "Рендай морков за салатата.",
+        "translation": "Reibe Karotte für den Salat."
+      },
+      {
+        "context": "Describing quality",
+        "sentence": "Тези моркови са пресни.",
+        "translation": "Diese Karotten sind frisch."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: морко́в [mɔrˈkɔf]. The final 'в' is devoiced to [f]. Plural: моркови [mɔrˈkɔvi].",
+    "linguistic_note_bg_to_de": "Морков се произнася [mɔrˈkɔf] с ударение на 'ко'. Крайното 'в' се оглушава на [f]. Множествено: моркови.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: морко́в [mɔrˈkɔf]. Das finale 'в' wird als [f] ausgesprochen (Auslautverhärtung). Plural: моркови."
+  },
+  {
+    "id": "a1_food_026",
+    "word": "Лук",
+    "translation": "die Zwiebel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Onion. Essential ingredient in Bulgarian cooking. Note: 'лук' can also mean 'bow' (weapon/tool) in different contexts, but context makes it clear.",
+    "notes_bg_to_de": "В немски 'die Zwiebel' е женски род, докато в български 'лук' е мъжки род. Лукът е основна съставка в българската кухня - почти всяко ястие започва с 'запръжка от лук'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Лук' ist maskulin (im Gegensatz zu femininem 'die Zwiebel'). Achtung: Das Wort bedeutet auch 'Bogen' (Waffe/Werkzeug), aber der Kontext macht die Bedeutung klar.",
+    "etymology": "From Proto-Slavic '*lǫkъ' (onion, bend/bow). The semantic connection between 'onion' and 'bow' comes from the curved shape. Related to Russian 'лук' which has both meanings.",
+    "cultural_note": "Onions are the base of most Bulgarian dishes. 'Сурово лукче' (raw onion) is often served with grilled meats. Crying from cutting onions is jokingly called 'лукът ме кара да плача' (the onion makes me cry). Spring onions ('пресен лук') are a seasonal delicacy.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Cooking instruction",
+        "sentence": "Нарежи лук за яхнията.",
+        "translation": "Schneide Zwiebeln für den Eintopf."
+      },
+      {
+        "context": "Food preference question",
+        "sentence": "Обичам ли сурово лукче?",
+        "translation": "Mag ich rohe Zwiebeln?"
+      },
+      {
+        "context": "Health statement",
+        "sentence": "Лукът е здравословен.",
+        "translation": "Zwiebeln sind gesund."
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: лу́к [luk]. Clear 'л' and 'у' sounds, final 'к' is hard [k]. Plural: лукове [ˈlukɔvɛ].",
+    "linguistic_note_bg_to_de": "Лук се произнася [luk] с ударение на единствената сричка. Крайното 'к' е твърдо [k]. Множествено: лукове.",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: лу́к [luk]. Das finale 'к' wird hart ausgesprochen wie deutsches 'k'. Plural: лукове (Ausnahme: nicht *лукци)."
+  },
+  {
+    "id": "a1_food_027",
+    "word": "Салата",
+    "translation": "der Salat",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Salad. Can refer to both the dish (салата) and lettuce leaves (зелена салата). Very important in Bulgarian cuisine - meals often start with a salad.",
+    "notes_bg_to_de": "В немски 'der Salat' е мъжки род, както и в български. Думата означава и ястието 'салата' и зеленчука 'маруля'. В контекста става ясно кое е.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Салата' = 'Salat' (beide Bedeutungen: Gericht und Pflanze). Die berühmte 'шопска салата' (Schopska-Salat) ist Bulgarians Nationalgericht.",
+    "etymology": "From Italian 'insalata' (salted), via Turkish 'salata'. The word entered Bulgarian during Ottoman times when Mediterranean culinary influence increased.",
+    "cultural_note": "Salads are central to Bulgarian meals. 'Шопска салата' (tomatoes, cucumbers, peppers, onions, white cheese) is the national salad. Every region has its own salad specialty. Fresh salads are mandatory at celebrations, and 'без салата не е ядене' (without salad, it's not a meal) is a common saying.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Cooking",
+        "sentence": "Правя шопска салата.",
+        "translation": "Ich mache Schopska-Salat."
+      },
+      {
+        "context": "Ordering food",
+        "sentence": "Искам зелена салата.",
+        "translation": "Ich möchte grünen Salat (Blattsalat)."
+      },
+      {
+        "context": "Describing food",
+        "sentence": "Салатата е свежа.",
+        "translation": "Der Salat ist frisch."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: сала́та [sɐˈlatɐ]. All vowels are pronounced clearly. Definite form: салатата [sɐˈlatɐtɐ].",
+    "linguistic_note_bg_to_de": "Салата се произнася [sɐˈlatɐ] с ударение на 'ла'. Всички гласни са ясни. Определена форма: салатата.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: сала́та [sɐˈlatɐ]. Ähnlich wie deutsches 'Salat'. Alle Vokale werden klar ausgesprochen."
+  },
+  {
+    "id": "a1_food_017_dup1",
+    "word": "Риба",
+    "translation": "der Fisch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Essen",
+    "level": "A1",
+    "notes": "Protein food: fish | Fish - already covered but essential animal. женски род.",
+    "notes_bg_to_de": "В немски 'Fisch' [fɪʃ] е мъжки род (der). Използва се за храна И за живото животно. | 'Риба' е женски род. Fish - already covered but essential animal",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Риба' ist feminin. Sowohl das Tier als auch das Essen. Black Sea fish popular in Bulgaria. | Für Deutschsprachige: 'Риба' = 'der Fisch'. Femininum.",
+    "etymology": "From Proto-Slavic '*ryba'. Ancient word, possibly pre-Indo-European. Cognate with Russian 'рыба', Polish 'ryba'. | Proto-Slavic *ryba",
+    "cultural_note": "Black Sea fish: цаца (sprat), попче (goby). Grilled fish (риба на скара) popular in coastal regions. Fish soup (рибена чорба) traditional. | Common animal in Bulgarian culture/agriculture. Fish - already covered but essential animal",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "sentence": "Обичам риба.",
+        "translation": "Ich mag Fisch.",
+        "context": "preference"
+      },
+      {
+        "sentence": "Пържена риба с лимон.",
+        "translation": "Gebratener Fisch mit Zitrone.",
+        "context": "dish"
+      },
+      {
+        "sentence": "Има ли свежа риба?",
+        "translation": "Gibt es frischen Fisch?",
+        "context": "market/restaurant"
+      },
+      {
+        "context": "Seeing",
+        "sentence": "Виждам риба.",
+        "translation": "Ich sehe Fisch."
+      },
+      {
+        "context": "Size",
+        "sentence": "Рибато/та е голяма.",
+        "translation": "der Fisch ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам риба.",
+        "translation": "Ich habe Fisch."
+      }
+    ],
+    "linguistic_note": "Feminine noun. Definite: рибата. Plural: риби. | женски род.",
+    "linguistic_note_bg_to_de": "Риба [ˈribɐ] - женски род. Определен: рибата. Множ.: риби. | Риба е женски род.",
+    "linguistic_note_de_to_bg": "Femininum. 'Р' ist gerolltes [r]. Betonung: ри́ба. | Femininum.",
+    "originalIndex": 228
+  }
+]

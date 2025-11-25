@@ -10,6 +10,7 @@ module.exports = defineConfig({
   reporter: [
     ['list'],
     ['html', { open: 'never' }],
+    ['junit', { outputFile: 'test-results/results.xml' }],
   ],
   use: {
     // Hugo serves under a subpath per current config
@@ -17,6 +18,11 @@ module.exports = defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'on-first-retry',
+    // Accessibility testing configuration
+    accessibility: {
+      enabled: true,
+      rules: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']
+    }
   },
   projects: [
     {

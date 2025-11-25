@@ -159,7 +159,7 @@
     <!-- Practice Session -->
     <div class="practice-session" id="practice-session" style="display: block;">
         <div class="flashcard-container" style="max-width: 600px; margin: 0 auto; padding: 20px;">
-            <div class="flashcard" id="flashcard" style="background: white; border: 1px solid #ddd; border-radius: 8px; padding: 30px; min-height: 200px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <div class="flashcard" id="flashcard" role="region" aria-label="Vocabulary flashcard - click or press space to flip" style="background: white; border: 1px solid #ddd; border-radius: 8px; padding: 30px; min-height: 200px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                 <div class="flashcard-inner" style="position: relative;">
                     <div class="flashcard-front" id="flashcard-front" style="display: block;">
                         <div class="card-content" style="text-align: center;">
@@ -186,15 +186,15 @@
             </div>
             
             <div class="flashcard-controls" style="text-align: center; margin-top: 30px;">
-                <button id="show-answer" class="btn-primary" style="background: #007bff; color: white; border: none; padding: 12px 24px; border-radius: 6px; font-size: 16px; cursor: pointer; margin-bottom: 20px;">Antwort zeigen / Покажи отговора</button>
+                <button id="show-answer" class="btn-primary" aria-label="Show answer - press space or enter" style="background: #007bff; color: white; border: none; padding: 12px 24px; border-radius: 6px; font-size: 16px; cursor: pointer; margin-bottom: 20px;">Antwort zeigen / Покажи отговора</button>
                 
                 <div class="response-buttons hidden" id="response-buttons" style="display: none; gap: 15px; justify-content: center; margin-top: 20px;">
-                    <button id="incorrect-btn" class="btn-incorrect" style="background: #dc3545; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+                    <button id="incorrect-btn" class="btn-incorrect" aria-label="Mark as incorrect - press 1" style="background: #dc3545; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
                         <span class="icon">✗</span>
                         <span class="text">Falsch / Грешно</span>
                         <span class="shortcut" style="background: rgba(255,255,255,0.3); padding: 2px 6px; border-radius: 3px; font-size: 12px;">1</span>
                     </button>
-                    <button id="correct-btn" class="btn-correct" style="background: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+                    <button id="correct-btn" class="btn-correct" aria-label="Mark as correct - press 2" style="background: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
                         <span class="icon">✓</span>
                         <span class="text">Richtig / Правилно</span>
                         <span class="shortcut" style="background: rgba(255,255,255,0.3); padding: 2px 6px; border-radius: 3px; font-size: 12px;">2</span>
@@ -202,7 +202,7 @@
                 </div>
                 
                 <div class="hint-section" style="margin-top: 20px;">
-                    <button id="show-hint" class="btn-hint" style="background: #ffc107; color: #212529; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer;">💡 Hinweis / Подсказка</button>
+                    <button id="show-hint" class="btn-hint" aria-label="Show hint" style="background: #ffc107; color: #212529; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer;">💡 Hinweis / Подсказка</button>
                     <div class="hint-content hidden" id="hint-content" style="display: none; margin-top: 15px; padding: 15px; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 6px; font-size: 14px;"></div>
                 </div>
             </div>

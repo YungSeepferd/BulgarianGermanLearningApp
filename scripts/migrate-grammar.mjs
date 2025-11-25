@@ -16,9 +16,9 @@
  * - Archive old grammar.json after migration
  */
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -26,7 +26,7 @@ const rootDir = path.resolve(__dirname, '..');
 
 // Load grammar JSON data
 const grammarData = JSON.parse(
-  fs.readFileSync(path.join(rootDir, 'data', 'grammar.json'), 'utf-8')
+  fs.readFileSync(path.join(rootDir, 'data', 'grammar.json'), 'utf8')
 );
 
 console.log(`📚 Loaded ${grammarData.length} grammar topics from data/grammar.json\n`);
@@ -57,24 +57,24 @@ if (!fs.existsSync(backupDir)) {
 
 // Backup existing MD files
 const existingFiles = fs.readdirSync(contentDir).filter(f => f.endsWith('.md') && f !== '_index.md');
-existingFiles.forEach(file => {
+for (const file of existingFiles) {
   const src = path.join(contentDir, file);
   const dest = path.join(backupDir, file);
   fs.copyFileSync(src, dest);
-});
+}
 
 console.log(`✅ Backed up ${existingFiles.length} existing grammar MD files to ${backupDir}\n`);
 
 // Generate enriched markdown for each grammar topic
 let migratedCount = 0;
-let warnings = [];
+const warnings = [];
 
-grammarData.forEach((topic) => {
+for (const topic of grammarData) {
   const filename = fileMapping[topic.id];
 
   if (!filename) {
     warnings.push(`⚠️  No filename mapping for ID: ${topic.id}`);
-    return;
+    continue;
   }
 
   const filePath = path.join(contentDir, filename);
@@ -101,20 +101,16 @@ grammarData.forEach((topic) => {
   let markdown = '---\n';
 
   // Write frontmatter in YAML
-  Object.entries(frontmatter).forEach(([key, value]) => {
+  for (const [key, value] of Object.entries(frontmatter)) {
     if (typeof value === 'string') {
       // Escape quotes and handle multiline
-      if (value.includes('\n') || value.includes('"') || value.includes(':')) {
-        markdown += `${key}: |\n  ${value.replace(/\n/g, '\n  ')}\n`;
-      } else {
-        markdown += `${key}: "${value}"\n`;
-      }
+      markdown += value.includes('\n') || value.includes('"') || value.includes(':') ? `${key}: |\n  ${value.replaceAll('\n', '\n  ')}\n` : `${key}: "${value}"\n`;
     } else if (Array.isArray(value)) {
       markdown += `${key}:\n${value.map(v => `  - "${v}"`).join('\n')}\n`;
     } else {
       markdown += `${key}: ${value}\n`;
     }
-  });
+  }
 
   markdown += '---\n\n';
 
@@ -123,61 +119,63 @@ grammarData.forEach((topic) => {
 
   // Add summary
   if (topic.summary) {
-    markdown += `## Overview\n\n`;
+    markdown += '## Overview\n\n';
     markdown += `${topic.summary}\n\n`;
   }
 
   // Add detailed explanation
-  markdown += `## Explanation\n\n`;
+  markdown += '## Explanation\n\n';
   markdown += topic.content.split('\n').join('\n\n') + '\n\n';
 
   // Add bidirectional learning notes
   if (topic.notes_bg_to_de || topic.notes_de_to_bg) {
-    markdown += `## Learning Notes\n\n`;
+    markdown += '## Learning Notes\n\n';
 
     if (topic.notes_de_to_bg) {
-      markdown += `### For German Speakers (Für Deutschsprachige)\n\n`;
+      markdown += '### For German Speakers (Für Deutschsprachige)\n\n';
       markdown += `${topic.notes_de_to_bg}\n\n`;
     }
 
     if (topic.notes_bg_to_de) {
-      markdown += `### For Bulgarian Speakers (За български говорещи)\n\n`;
+      markdown += '### For Bulgarian Speakers (За български говорещи)\n\n';
       markdown += `${topic.notes_bg_to_de}\n\n`;
     }
   }
 
   // Add examples
   if (topic.examples && topic.examples.length > 0) {
-    markdown += `## Examples\n\n`;
+    markdown += '## Examples\n\n';
 
-    topic.examples.forEach((example, index) => {
+    for (const [index, example] of topic.examples.entries()) {
       markdown += `${index + 1}. **${example.sentence}**\n`;
       markdown += `   - *${example.translation}*\n\n`;
-    });
+    }
   }
 
   // Add practice section placeholder
-  markdown += `## Practice\n\n`;
-  markdown += `Try creating your own sentences using the patterns above. Focus on understanding how the grammar rule applies in different contexts.\n\n`;
+  markdown += '## Practice\n\n';
+  markdown += 'Try creating your own sentences using the patterns above. Focus on understanding how the grammar rule applies in different contexts.\n\n';
 
   // Write the file
   fs.writeFileSync(filePath, markdown, 'utf-8');
   migratedCount++;
   console.log(`✅ Migrated: ${topic.title} → ${filename}`);
-});
+}
 
-console.log(`\n📊 Migration Summary:`);
+console.log('\n📊 Migration Summary:');
 console.log(`   Topics migrated: ${migratedCount}/${grammarData.length}`);
 console.log(`   Files updated: ${migratedCount}`);
 
 if (warnings.length > 0) {
-  console.log(`\n⚠️  Warnings:`);
-  warnings.forEach(w => console.log(`   ${w}`));
+  console.log('\n⚠️  Warnings:');
+  for (const w of warnings) {
+    console.log(`   ${w}`);
+  }
 }
 
-console.log(`\n🎉 Grammar migration complete!`);
-console.log(`\nNext steps:`);
-console.log(`1. Review migrated files in content/grammar/`);
-console.log(`2. Test with Hugo: npm run dev`);
-console.log(`3. Archive data/grammar.json: mv data/grammar.json data/archive/`);
-console.log(`4. Commit changes`);
+console.log('\n🎉 Grammar migration complete!');
+console.log('\nNext steps:');
+console.log('1. Review migrated files in content/grammar/');
+console.log('2. Test with Hugo: npm run dev');
+console.log('3. Archive data/grammar.json: mv data/grammar.json data/archive/');
+console.log('4. Commit changes');

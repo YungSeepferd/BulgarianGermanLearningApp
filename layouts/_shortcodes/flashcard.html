@@ -20,7 +20,7 @@ Usage: {{< flashcard word="Здравей" translation="Hallo" level="A1" catego
   <input type="checkbox" id="flip-{{ $id }}" class="flashcard-toggle" hidden>
   
   <div class="flashcard-container">
-    <div class="flashcard">
+    <div class="flashcard" role="region" aria-label="Vocabulary flashcard - click or press space to flip">
       <!-- Front Side -->
       <div class="flashcard-front">
         <div class="card-content">
@@ -42,11 +42,11 @@ Usage: {{< flashcard word="Здравей" translation="Hallo" level="A1" catego
           <div class="translation" data-lang="{{ $backLang }}">{{ $backText }}</div>
           {{ if $notes }}<div class="notes">{{ $notes }}</div>{{ end }}
         </div>
-        <div class="response-buttons">
-          <button class="btn-incorrect" onclick="this.closest('.flashcard-item').classList.add('answered-incorrect')">
+        <div class="response-buttons" role="group" aria-label="Grade your answer">
+          <button class="btn-incorrect" role="button" aria-label="Mark as incorrect - difficulty level 1" onclick="this.closest('.flashcard-item').classList.add('answered-incorrect')">
             ✗ Falsch / Грешно
           </button>
-          <button class="btn-correct" onclick="this.closest('.flashcard-item').classList.add('answered-correct')">
+          <button class="btn-correct" role="button" aria-label="Mark as correct - difficulty level 5" onclick="this.closest('.flashcard-item').classList.add('answered-correct')">
             ✓ Richtig / Правилно
           </button>
         </div>

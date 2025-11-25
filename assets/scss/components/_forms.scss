@@ -65,6 +65,7 @@ input[type="checkbox"] {
 // Filter controls
 .filters {
   @include flex-center;
+
   gap: $spacing-4;
   margin-bottom: $spacing-6;
   padding: $spacing-4;
@@ -180,11 +181,13 @@ input[type="checkbox"] {
     .result-snippet {
       font-size: $font-size-sm;
       color: var(--text-secondary);
+
       @include text-clamp(2);
     }
 
     .result-meta {
       @include flex-center;
+
       gap: $spacing-2;
       margin-top: $spacing-2;
       font-size: $font-size-xs;
@@ -214,6 +217,7 @@ input[type="checkbox"] {
 
     label {
       @include flex-center;
+
       gap: $spacing-2;
       font-size: $font-size-sm;
       color: var(--text-primary);

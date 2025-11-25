@@ -6,10 +6,10 @@
  * environment to ensure they parse correctly.
  */
 
-import { mkdtemp, readdir, mkdir, readFile, writeFile, rm } from 'fs/promises';
-import os from 'os';
-import path from 'path';
-import { fileURLToPath, pathToFileURL } from 'url';
+import { mkdtemp, readdir, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -21,7 +21,9 @@ async function collectFiles(dir, extension) {
   const files = [];
 
   for (const entry of entries) {
-    if (entry.name.startsWith('.')) continue;
+    if (entry.name.startsWith('.')) {
+      continue;
+    }
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       const nested = await collectFiles(fullPath, extension);
@@ -36,10 +38,10 @@ async function collectFiles(dir, extension) {
 
 function rewriteImports(code) {
   const patterns = [
-    /(from\s+['"])(\.{1,2}\/[^'"]+?)\.js(['"])/g,
-    /(import\s*\(\s*['"])(\.{1,2}\/[^'"]+?)\.js(['"]\s*\))/g,
-    /(import\s+['"])(\.{1,2}\/[^'"]+?)\.js(['"])/g,
-    /(export\s+\*\s+from\s+['"])(\.{1,2}\/[^'"]+?)\.js(['"])/g
+    /(from\s+["'])(\.{1,2}\/[^"']+?)\.js(["'])/g,
+    /(import\s*\(\s*["'])(\.{1,2}\/[^"']+?)\.js(["']\s*\))/g,
+    /(import\s+["'])(\.{1,2}\/[^"']+?)\.js(["'])/g,
+    /(export\s+\*\s+from\s+["'])(\.{1,2}\/[^"']+?)\.js(["'])/g
   ];
 
   let rewritten = code;
@@ -60,7 +62,9 @@ async function copyModulesToTemp(srcDir) {
     const entries = await readdir(src, { withFileTypes: true });
 
     for (const entry of entries) {
-      if (entry.name.startsWith('.')) continue;
+      if (entry.name.startsWith('.')) {
+        continue;
+      }
       const srcPath = path.join(src, entry.name);
       if (entry.isDirectory()) {
         await copyRecursive(srcPath, path.join(dest, entry.name));
@@ -108,7 +112,7 @@ function createDomStubs() {
     setItem: (key, value) => storage.set(String(key), String(value)),
     removeItem: (key) => storage.delete(key),
     clear: () => storage.clear(),
-    key: (index) => Array.from(storage.keys())[index] ?? null,
+    key: (index) => [...storage.keys()][index] ?? null,
     get length() {
       return storage.size;
     }

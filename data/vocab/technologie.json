@@ -1,0 +1,326 @@
+[
+  {
+    "id": "a1_tech_001",
+    "word": "Интернет",
+    "translation": "das Internet",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Technologie",
+    "level": "A1",
+    "notes": "Internet. мъжки род.",
+    "notes_bg_to_de": "Словото 'Интернет' е мъжки род.",
+    "notes_de_to_bg": "Das Wort 'Интернет' = 'das Internet'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential technology vocabulary.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам интернет.",
+        "translation": "Ich habe Internet."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся интернет.",
+        "translation": "Ich suche Internet."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам интернет.",
+        "translation": "Ich mag Internet."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_tech_002",
+    "word": "Имейл",
+    "translation": "die E-Mail",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Technologie",
+    "level": "A1",
+    "notes": "Email. мъжки род.",
+    "notes_bg_to_de": "Словото 'Имейл' е мъжки род.",
+    "notes_de_to_bg": "Das Wort 'Имейл' = 'die E-Mail'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential technology vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам имейл.",
+        "translation": "Ich habe E-Mail."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся имейл.",
+        "translation": "Ich suche E-Mail."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам имейл.",
+        "translation": "Ich mag E-Mail."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_tech_003",
+    "word": "Екран",
+    "translation": "der Bildschirm",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Technologie",
+    "level": "A1",
+    "notes": "Screen. мъжки род.",
+    "notes_bg_to_de": "Словото 'Екран' е мъжки род.",
+    "notes_de_to_bg": "Das Wort 'Екран' = 'der Bildschirm'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential technology vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам екран.",
+        "translation": "Ich habe Bildschirm."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся екран.",
+        "translation": "Ich suche Bildschirm."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам екран.",
+        "translation": "Ich mag Bildschirm."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_tech_004",
+    "word": "Клавиатура",
+    "translation": "die Tastatur",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Technologie",
+    "level": "A1",
+    "notes": "Keyboard. женски род.",
+    "notes_bg_to_de": "Словото 'Клавиатура' е женски род.",
+    "notes_de_to_bg": "Das Wort 'Клавиатура' = 'die Tastatur'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential technology vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам клавиатура.",
+        "translation": "Ich habe Tastatur."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся клавиатура.",
+        "translation": "Ich suche Tastatur."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам клавиатура.",
+        "translation": "Ich mag Tastatur."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_tech_006",
+    "word": "Принтер",
+    "translation": "der Drucker",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Technologie",
+    "level": "A1",
+    "notes": "Printer. мъжки род.",
+    "notes_bg_to_de": "Словото 'Принтер' е мъжки род.",
+    "notes_de_to_bg": "Das Wort 'Принтер' = 'der Drucker'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential technology vocabulary.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам принтер.",
+        "translation": "Ich habe Drucker."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся принтер.",
+        "translation": "Ich suche Drucker."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам принтер.",
+        "translation": "Ich mag Drucker."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_tech_007",
+    "word": "Файл",
+    "translation": "die Datei",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Technologie",
+    "level": "A1",
+    "notes": "File. мъжки род.",
+    "notes_bg_to_de": "Словото 'Файл' е мъжки род.",
+    "notes_de_to_bg": "Das Wort 'Файл' = 'die Datei'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential technology vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам файл.",
+        "translation": "Ich habe Datei."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся файл.",
+        "translation": "Ich suche Datei."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам файл.",
+        "translation": "Ich mag Datei."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_tech_008",
+    "word": "Папка",
+    "translation": "der Ordner",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Technologie",
+    "level": "A1",
+    "notes": "Folder. женски род.",
+    "notes_bg_to_de": "Словото 'Папка' е женски род.",
+    "notes_de_to_bg": "Das Wort 'Папка' = 'der Ordner'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential technology vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам папка.",
+        "translation": "Ich habe Ordner."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся папка.",
+        "translation": "Ich suche Ordner."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам папка.",
+        "translation": "Ich mag Ordner."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_tech_009",
+    "word": "Паролла",
+    "translation": "das Passwort",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Technologie",
+    "level": "A1",
+    "notes": "Password. женски род.",
+    "notes_bg_to_de": "Словото 'Паролла' е женски род.",
+    "notes_de_to_bg": "Das Wort 'Паролла' = 'das Passwort'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential technology vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам паролла.",
+        "translation": "Ich habe Passwort."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся паролла.",
+        "translation": "Ich suche Passwort."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам паролла.",
+        "translation": "Ich mag Passwort."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_tech_010",
+    "word": "Софтуер",
+    "translation": "die Software",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Technologie",
+    "level": "A1",
+    "notes": "Software. мъжки род.",
+    "notes_bg_to_de": "Словото 'Софтуер' е мъжки род.",
+    "notes_de_to_bg": "Das Wort 'Софтуер' = 'die Software'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential technology vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам софтуер.",
+        "translation": "Ich habe Software."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся софтуер.",
+        "translation": "Ich suche Software."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам софтуер.",
+        "translation": "Ich mag Software."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  }
+]

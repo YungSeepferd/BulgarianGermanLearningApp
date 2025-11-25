@@ -171,8 +171,8 @@ class SearchEngine {
     // Normalize text: lowercase, remove punctuation, split into words
     const normalized = text
       .toLowerCase()
-      .replace(/[^\w\s\u0400-\u04FF]/g, ' ') // Keep Cyrillic characters
-      .replace(/\s+/g, ' ')
+      .replaceAll(/[^\s\w\u0400-\u04FF]/g, ' ') // Keep Cyrillic characters
+      .replaceAll(/\s+/g, ' ')
       .trim();
     
     const words = normalized.split(' ');
@@ -188,18 +188,18 @@ class SearchEngine {
       
       // Add prefixes for partial matching
       for (let i = 2; i <= Math.min(word.length, 6); i++) {
-        terms.add(word.substring(0, i));
+        terms.add(word.slice(0, Math.max(0, i)));
       }
       
       // Add suffixes for inflected forms
       if (word.length > 4) {
         for (let i = Math.max(2, word.length - 3); i < word.length; i++) {
-          terms.add(word.substring(i));
+          terms.add(word.slice(Math.max(0, i)));
         }
       }
     }
     
-    return Array.from(terms);
+    return [...terms];
   }
 
   optimizeIndex() {
@@ -290,7 +290,7 @@ class SearchEngine {
     }
     
     // Remove quoted phrases from query and get individual terms
-    const remainingQuery = query.replace(quotedRegex, '').trim();
+    const remainingQuery = query.replaceAll(quotedRegex, '').trim();
     const individualTerms = this.extractTerms(remainingQuery);
     
     return [...phrases, ...individualTerms].filter(term => term.length >= 2);
@@ -329,7 +329,7 @@ class SearchEngine {
       match.score = this.calculateRelevanceScore(match, searchTerms);
     }
     
-    return Array.from(matches.values());
+    return [...matches.values()];
   }
 
   findTermMatches(term) {
@@ -374,10 +374,14 @@ class SearchEngine {
   }
 
   levenshteinDistance(str1, str2) {
-    const matrix = Array(str2.length + 1).fill().map(() => Array(str1.length + 1).fill(0));
+    const matrix = Array.from({ length: str2.length + 1 }).fill().map(() => Array.from({ length: str1.length + 1 }).fill(0));
     
-    for (let i = 0; i <= str1.length; i++) matrix[0][i] = i;
-    for (let j = 0; j <= str2.length; j++) matrix[j][0] = j;
+    for (let i = 0; i <= str1.length; i++) {
+      matrix[0][i] = i;
+    }
+    for (let j = 0; j <= str2.length; j++) {
+      matrix[j][0] = j;
+    }
     
     for (let j = 1; j <= str2.length; j++) {
       for (let i = 1; i <= str1.length; i++) {
@@ -456,17 +460,14 @@ class SearchEngine {
   }
 
   sortResults(matches, sortBy) {
-    switch (sortBy) {
-      case 'alphabetical':
-        return matches.sort((a, b) => a.doc.title.localeCompare(b.doc.title));
-      
-      case 'difficulty':
-        return matches.sort((a, b) => (a.doc.difficulty || 1) - (b.doc.difficulty || 1));
-      
-      case 'relevance':
-      default:
-        return matches.sort((a, b) => b.score - a.score);
-    }
+    const sortFunctions = {
+      alphabetical: (a, b) => a.doc.title.localeCompare(b.doc.title),
+      difficulty: (a, b) => (a.doc.difficulty || 1) - (b.doc.difficulty || 1),
+      relevance: (a, b) => b.score - a.score
+    };
+    
+    const sortFunction = sortFunctions[sortBy] || sortFunctions.relevance;
+    return matches.sort(sortFunction);
   }
 
   buildResult(match, searchTerms) {
@@ -487,7 +488,7 @@ class SearchEngine {
   }
 
   generateSnippet(content, searchTerms, maxLength = 200) {
-    const sentences = content.split(/[.!?]+/);
+    const sentences = content.split(/[!.?]+/);
     let bestSentence = '';
     let maxMatches = 0;
     
@@ -503,10 +504,10 @@ class SearchEngine {
     }
     
     if (bestSentence.length > maxLength) {
-      bestSentence = bestSentence.substring(0, maxLength) + '...';
+      bestSentence = bestSentence.slice(0, Math.max(0, maxLength)) + '...';
     }
     
-    return bestSentence || content.substring(0, maxLength) + '...';
+    return bestSentence || content.slice(0, Math.max(0, maxLength)) + '...';
   }
 
   generateHighlights(doc, searchTerms) {
@@ -530,7 +531,7 @@ class SearchEngine {
   }
 
   escapeRegex(string) {
-    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return string.replaceAll(/[$()*+.?[\\\]^{|}]/g, '\\$&');
   }
 
   // Search suggestions and autocomplete
@@ -552,7 +553,7 @@ class SearchEngine {
     }
     
     // Add popular search terms
-    const popularTerms = Array.from(this.searchStats.popularTerms.entries())
+    const popularTerms = [...this.searchStats.popularTerms.entries()]
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5)
       .map(([term]) => term);
@@ -649,7 +650,7 @@ class SearchEngine {
     }
     
     // Estimate document size
-    for (const [id, doc] of this.documents) {
+    for (const [, doc] of this.documents) {
       size += JSON.stringify(doc).length * 2;
     }
     

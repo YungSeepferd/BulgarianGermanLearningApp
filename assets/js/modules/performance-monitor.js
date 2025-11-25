@@ -10,10 +10,10 @@ class PerformanceMonitor {
       enableCustomMetrics: true,
       enableResourceTiming: true,
       enableNavigationTiming: true,
-      sampleRate: 1.0, // 100% sampling by default
+      sampleRate: 1, // 100% sampling by default
       reportingEndpoint: null,
       bufferSize: 100,
-      reportingInterval: 30000 // 30 seconds
+      reportingInterval: 30_000 // 30 seconds
     };
     
     this.buffer = [];
@@ -77,12 +77,14 @@ class PerformanceMonitor {
   }
 
   observeLCP() {
-    if (!('PerformanceObserver' in window)) return;
+    if (!('PerformanceObserver' in window)) {
+      return;
+    }
 
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+        const lastEntry = entries.at(-1);
         
         this.recordMetric('LCP', {
           value: lastEntry.startTime,
@@ -101,7 +103,9 @@ class PerformanceMonitor {
   }
 
   observeFID() {
-    if (!('PerformanceObserver' in window)) return;
+    if (!('PerformanceObserver' in window)) {
+      return;
+    }
 
     try {
       const observer = new PerformanceObserver((list) => {
@@ -125,7 +129,9 @@ class PerformanceMonitor {
   }
 
   observeCLS() {
-    if (!('PerformanceObserver' in window)) return;
+    if (!('PerformanceObserver' in window)) {
+      return;
+    }
 
     let clsValue = 0;
     let sessionValue = 0;
@@ -136,7 +142,7 @@ class PerformanceMonitor {
         for (const entry of list.getEntries()) {
           if (!entry.hadRecentInput) {
             const firstSessionEntry = sessionEntries[0];
-            const lastSessionEntry = sessionEntries[sessionEntries.length - 1];
+            const lastSessionEntry = sessionEntries.at(-1);
 
             if (sessionValue && 
                 entry.startTime - lastSessionEntry.startTime < 1000 &&
@@ -170,7 +176,9 @@ class PerformanceMonitor {
   }
 
   observeFCP() {
-    if (!('PerformanceObserver' in window)) return;
+    if (!('PerformanceObserver' in window)) {
+      return;
+    }
 
     try {
       const observer = new PerformanceObserver((list) => {
@@ -234,10 +242,10 @@ class PerformanceMonitor {
     
     // Monitor when vocabulary data is loaded
     document.addEventListener('DOMContentLoaded', () => {
-      const vocabContainer = document.getElementById('vocabulary-grid');
+      const vocabContainer = document.querySelector('#vocabulary-grid');
       if (vocabContainer) {
         const observer = new MutationObserver((mutations) => {
-          mutations.forEach((mutation) => {
+          for (const mutation of mutations) {
             if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
               const loadTime = performance.now() - startTime;
               
@@ -245,12 +253,12 @@ class PerformanceMonitor {
                 value: loadTime,
                 itemCount: vocabContainer.children.length,
                 timestamp: Date.now(),
-                rating: loadTime < 1000 ? 'good' : loadTime < 2500 ? 'needs-improvement' : 'poor'
+                rating: loadTime < 1000 ? 'good' : (loadTime < 2500 ? 'needs-improvement' : 'poor')
               });
               
               observer.disconnect();
             }
-          });
+          }
         });
         
         observer.observe(vocabContainer, { childList: true });
@@ -264,11 +272,11 @@ class PerformanceMonitor {
       const { query, resultCount, responseTime } = event.detail;
       
       this.recordMetric('SearchPerformance', {
-        query: query.substring(0, 50), // Limit query length for privacy
+        query: query.slice(0, 50), // Limit query length for privacy
         resultCount,
         responseTime,
         timestamp: Date.now(),
-        rating: responseTime < 100 ? 'good' : responseTime < 300 ? 'needs-improvement' : 'poor'
+        rating: responseTime < 100 ? 'good' : (responseTime < 300 ? 'needs-improvement' : 'poor')
       });
     });
   }
@@ -282,7 +290,7 @@ class PerformanceMonitor {
         duration,
         accuracy,
         itemCount,
-        itemsPerMinute: itemCount / (duration / 60000),
+        itemsPerMinute: itemCount / (duration / 60_000),
         timestamp: Date.now()
       });
     });
@@ -299,7 +307,7 @@ class PerformanceMonitor {
           jsHeapSizeLimit: memory.jsHeapSizeLimit,
           timestamp: Date.now()
         });
-      }, 30000); // Every 30 seconds
+      }, 30_000); // Every 30 seconds
     }
   }
 
@@ -310,7 +318,7 @@ class PerformanceMonitor {
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
-        stack: event.error?.stack?.substring(0, 500) || '',
+        stack: event.error?.stack?.slice(0, 500) || '',
         timestamp: Date.now()
       });
     });
@@ -325,7 +333,9 @@ class PerformanceMonitor {
 
   // Resource Timing
   initResourceTiming() {
-    if (!('PerformanceObserver' in window)) return;
+    if (!('PerformanceObserver' in window)) {
+      return;
+    }
 
     try {
       const observer = new PerformanceObserver((list) => {
@@ -414,7 +424,7 @@ class PerformanceMonitor {
       name,
       sessionId: this.sessionId,
       url: window.location.pathname,
-      userAgent: navigator.userAgent.substring(0, 100),
+      userAgent: navigator.userAgent.slice(0, 100),
       ...data
     };
 
@@ -432,32 +442,52 @@ class PerformanceMonitor {
 
   // Web Vitals Rating Functions
   rateLCP(value) {
-    if (value <= 2500) return 'good';
-    if (value <= 4000) return 'needs-improvement';
+    if (value <= 2500) {
+      return 'good';
+    }
+    if (value <= 4000) {
+      return 'needs-improvement';
+    }
     return 'poor';
   }
 
   rateFID(value) {
-    if (value <= 100) return 'good';
-    if (value <= 300) return 'needs-improvement';
+    if (value <= 100) {
+      return 'good';
+    }
+    if (value <= 300) {
+      return 'needs-improvement';
+    }
     return 'poor';
   }
 
   rateCLS(value) {
-    if (value <= 0.1) return 'good';
-    if (value <= 0.25) return 'needs-improvement';
+    if (value <= 0.1) {
+      return 'good';
+    }
+    if (value <= 0.25) {
+      return 'needs-improvement';
+    }
     return 'poor';
   }
 
   rateFCP(value) {
-    if (value <= 1800) return 'good';
-    if (value <= 3000) return 'needs-improvement';
+    if (value <= 1800) {
+      return 'good';
+    }
+    if (value <= 3000) {
+      return 'needs-improvement';
+    }
     return 'poor';
   }
 
   rateTTFB(value) {
-    if (value <= 800) return 'good';
-    if (value <= 1800) return 'needs-improvement';
+    if (value <= 800) {
+      return 'good';
+    }
+    if (value <= 1800) {
+      return 'needs-improvement';
+    }
     return 'poor';
   }
 
@@ -471,7 +501,9 @@ class PerformanceMonitor {
   }
 
   async sendReport() {
-    if (this.buffer.length === 0) return;
+    if (this.buffer.length === 0) {
+      return;
+    }
 
     const report = {
       sessionId: this.sessionId,
@@ -511,7 +543,9 @@ class PerformanceMonitor {
         .sort()
         .reverse();
       
-      keys.slice(10).forEach(key => localStorage.removeItem(key));
+      for (const key of keys.slice(10)) {
+        localStorage.removeItem(key);
+      }
       
     } catch (error) {
       console.warn('[PerformanceMonitor] Failed to store local report:', error);
@@ -520,13 +554,13 @@ class PerformanceMonitor {
 
   // Public API
   getMetrics() {
-    return Array.from(this.metrics.values());
+    return [...this.metrics.values()];
   }
 
   getWebVitals() {
     const vitals = {};
     
-    for (const [key, metric] of this.metrics) {
+    for (const [, metric] of this.metrics) {
       if (['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(metric.name)) {
         vitals[metric.name] = metric;
       }
@@ -553,10 +587,14 @@ class PerformanceMonitor {
   calculateOverallScore(webVitals) {
     const scores = Object.values(webVitals).map(metric => {
       switch (metric.rating) {
-        case 'good': return 100;
-        case 'needs-improvement': return 50;
-        case 'poor': return 0;
-        default: return 50;
+      case 'good': { return 100;
+      }
+      case 'needs-improvement': { return 50;
+      }
+      case 'poor': { return 0;
+      }
+      default: { return 50;
+      }
       }
     });
 
@@ -593,19 +631,19 @@ class PerformanceMonitor {
       // Browser: Use crypto.getRandomValues
       const buf = new Uint32Array(3); // 96 bits
       window.crypto.getRandomValues(buf);
-      randStr = Array.from(buf).map(val => val.toString(36)).join('');
-    } else if (typeof require !== 'undefined') {
+      randStr = [...buf].map(val => val.toString(36)).join('');
+    } else if (typeof require === 'undefined') {
+      // Fallback (not recommended): use Math.random
+      randStr = Math.random().toString(36).slice(2, 11);
+    } else {
       // NodeJS: Use crypto.randomBytes
       try {
-        const crypto = require('crypto');
+        const crypto = require('node:crypto');
         randStr = crypto.randomBytes(12).toString('base64url'); // 12 bytes -> 16 chars
-      } catch (e) {
+      } catch {
         // Fallback to Math.random only if secure RNG is missing (not recommended)
-        randStr = Math.random().toString(36).substr(2, 9);
+        randStr = Math.random().toString(36).slice(2, 11);
       }
-    } else {
-      // Fallback (not recommended): use Math.random
-      randStr = Math.random().toString(36).substr(2, 9);
     }
     return `perf_${Date.now()}_${randStr}`;
   }

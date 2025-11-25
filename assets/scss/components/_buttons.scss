@@ -9,6 +9,7 @@
 
 .btn-correct {
   @include button-base;
+
   background-color: var(--color-success);
   color: var(--text-inverse);
 
@@ -17,7 +18,7 @@
   }
 
   .shortcut {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.20);
     padding: $spacing-1 $spacing-2;
     border-radius: $radius-sm;
     font-size: $font-size-xs;
@@ -27,6 +28,7 @@
 
 .btn-incorrect {
   @include button-base;
+
   background-color: var(--color-error);
   color: var(--text-inverse);
 
@@ -35,7 +37,7 @@
   }
 
   .shortcut {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.20);
     padding: $spacing-1 $spacing-2;
     border-radius: $radius-sm;
     font-size: $font-size-xs;
@@ -45,6 +47,7 @@
 
 .btn-hint {
   @include button-base;
+
   background-color: var(--color-warning);
   color: var(--text-inverse);
   font-size: $font-size-sm;
@@ -67,6 +70,7 @@
 // Audio button
 .audio-btn {
   @include flex-center;
+
   width: 36px;
   height: 36px;
   background: transparent;
@@ -96,6 +100,7 @@
 .practice-single-btn,
 .start-exercise-btn {
   @include button-base;
+
   background-color: var(--color-primary);
   color: var(--text-inverse);
   font-size: $font-size-sm;
@@ -109,6 +114,7 @@
 // Bookmark button
 .bookmark-btn {
   @include flex-center;
+
   width: 32px;
   height: 32px;
   background: transparent;

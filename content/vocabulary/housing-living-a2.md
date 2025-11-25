@@ -19,9 +19,7 @@ notes_bg_to_de: |
 
   Типични жилища:
   - WG (Wohngemeinschaft): Споделено жилище (студенти, млади)
-  - Einzimmerwohnung: Stu
-
-dio (1 стая) - малък, скъп
+  - Einzimmerwohnung: Studio (1 стая) - малък, скъп
   - 2-Zimmer-Wohnung: 1 спалня + дневна
   - Altbau: Стари сгради (1900-1930) - висок таван, дебели стени
   - Neubau: Нови сгради - модерни, но скъпи
@@ -33,9 +31,7 @@ dio (1 стая) - малък, скъп
 
   Важно:
   - Ruhezeit: "Тих час" 22:00-07:00 и 13:00-15:00 неделя!
-  - Mülltr
-
-ennung: ЗАДЪЛЖИТЕЛНО разделяне на боклука!
+  - Mülltrennung: ЗАДЪЛЖИТЕЛНО разделяне на боклука!
   - Hausordnung: Правила на сградата - МНОГО важни!
 notes_de_to_bg: |
   Der bulgarische Wohnungsmarkt ist VIEL zugänglicher als der deutsche!
@@ -249,9 +245,7 @@ Bulgaria has an **affordable, ownership-oriented** housing market with less regu
 | живея | wohnen | to live / reside | Regular verb |
 | наемам | mieten | to rent | Regular verb |
 | давам под наем | vermieten | to rent out | Separable verb |
-| нас
-
-елявам се | einziehen | to move in | Separable verb |
+| настанявам се | einziehen | to move in | Separable verb |
 | изнасям се | ausziehen | to move out | Separable verb |
 | почиствам | putzen / reinigen | to clean | Both verbs used |
 | мия | waschen | to wash | Irregular: wäscht |
@@ -288,7 +282,7 @@ Bulgaria has an **affordable, ownership-oriented** housing market with less regu
 | Обзаведен ли е? | Ist sie möbliert? | Is it furnished? | Less common in Germany |
 | Колко е депозитът? | Wie hoch ist die Kaution? | How much is the deposit? | 2-3 months typical |
 | Има ли кухня? | Gibt es eine Einbauküche? | Is there a kitchen? | Often NO in Germany! |
-| Кога мога да се нас еля? | Wann kann ich einziehen? | When can I move in? | Timing question |
+| Кога мога да се настаня? | Wann kann ich einziehen? | When can I move in? | Timing question |
 | Трябва ли да подпиша договор? | Muss ich einen Mietvertrag unterschreiben? | Do I need to sign a contract? | Always YES |
 | Има ли проблеми? | Gibt es Probleme? | Are there any problems? | Before renting |
 | Къде е пералнята? | Wo ist die Waschmaschine? | Where is the washing machine? | Often in basement in Germany |

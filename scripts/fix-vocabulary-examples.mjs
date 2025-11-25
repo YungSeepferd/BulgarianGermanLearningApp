@@ -8,7 +8,7 @@
  * This script normalizes all examples to the expected schema.
  */
 
-import { readFile, writeFile } from 'fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 
 async function main() {
   const vocabPath = 'data/vocabulary.json';
@@ -20,7 +20,9 @@ async function main() {
   let exampleCount = 0;
 
   for (const entry of data) {
-    if (!entry.examples || !Array.isArray(entry.examples)) continue;
+    if (!entry.examples || !Array.isArray(entry.examples)) {
+      continue;
+    }
 
     let entryFixed = false;
     for (const example of entry.examples) {
@@ -69,7 +71,7 @@ async function main() {
   console.log('✨ Done! Run `npm run lint:data` to verify.');
 }
 
-main().catch(err => {
-  console.error('❌ Error:', err);
+main().catch(error => {
+  console.error('❌ Error:', error);
   process.exit(1);
 });

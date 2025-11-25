@@ -129,7 +129,8 @@
     </div>
     
     <div class="filters">
-        <select id="level-filter">
+        <label for="level-filter" class="sr-only">Filter by vocabulary level</label>
+        <select id="level-filter" aria-label="Filter vocabulary by CEFR level">
             <option value="">Alle Niveaus / Всички нива</option>
             <option value="A1">A1 - Anfänger / Начинаещи</option>
             <option value="A2">A2 - Grundstufe / Основно</option>
@@ -137,7 +138,8 @@
             <option value="B2">B2 - Obere Mittelstufe / Горно средно</option>
         </select>
         
-        <select id="category-filter">
+        <label for="category-filter" class="sr-only">Filter by vocabulary category</label>
+        <select id="category-filter" aria-label="Filter vocabulary by category">
             <option value="">Alle Kategorien / Всички категории</option>
             {{ $categories := slice }}
             {{ range .Site.Data.vocabulary }}
@@ -148,7 +150,8 @@
             {{ end }}
         </select>
         
-        <input type="text" id="search-input" placeholder="Wortschatz suchen... / Търсене на речник..." class="search-input">
+        <label for="search-input" class="sr-only">Search vocabulary</label>
+        <input type="text" id="search-input" placeholder="Wortschatz suchen... / Търсене на речник..." class="search-input" aria-label="Search vocabulary by word or translation">
         
         <button id="practice-selected" class="btn-primary">Ausgewählte üben / Упражнявайте избраните</button>
     </div>

@@ -1,0 +1,362 @@
+[
+  {
+    "id": "a1_body_001",
+    "word": "Глава",
+    "translation": "der Kopf",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Körper",
+    "level": "A1",
+    "notes": "Head. женски род.",
+    "notes_bg_to_de": "В български 'глава' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Глава' = 'der Kopf'. Femininum.",
+    "etymology": "Proto-Slavic *golva",
+    "cultural_note": "'Боли ме главата' (my head hurts)",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Pain",
+        "sentence": "Боли ме главата/ът/то.",
+        "translation": "Mein/Meine Kopf tut weh."
+      },
+      {
+        "context": "Health",
+        "sentence": "Главата/ът/то е здрав/а/о.",
+        "translation": "Das/Die/Der Kopf ist gesund."
+      },
+      {
+        "context": "Description",
+        "sentence": "Имам силен/на/но глава.",
+        "translation": "Ich habe starke/n/s Kopf."
+      }
+    ],
+    "linguistic_note": "женски род. Глава.",
+    "linguistic_note_bg_to_de": "Глава е женски род.",
+    "linguistic_note_de_to_bg": "Глава = Femininum."
+  },
+  {
+    "id": "a1_body_002",
+    "word": "Ръка",
+    "translation": "die Hand, der Arm",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Körper",
+    "level": "A1",
+    "notes": "Hand/arm (no distinction). женски род.",
+    "notes_bg_to_de": "В български 'ръка' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ръка' = 'die Hand, der Arm'. Femininum.",
+    "etymology": "Proto-Slavic *rǫka",
+    "cultural_note": "Same word for hand and arm in Bulgarian",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Pain",
+        "sentence": "Боли ме ръката/ът/то.",
+        "translation": "Mein/Meine Hand tut weh."
+      },
+      {
+        "context": "Health",
+        "sentence": "Ръката/ът/то е здрав/а/о.",
+        "translation": "Das/Die/Der Hand ist gesund."
+      },
+      {
+        "context": "Description",
+        "sentence": "Имам силен/на/но ръка.",
+        "translation": "Ich habe starke/n/s Hand."
+      }
+    ],
+    "linguistic_note": "женски род. Ръка.",
+    "linguistic_note_bg_to_de": "Ръка е женски род.",
+    "linguistic_note_de_to_bg": "Ръка = Femininum."
+  },
+  {
+    "id": "a1_body_003",
+    "word": "Крак",
+    "translation": "der Fuß, das Bein",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Körper",
+    "level": "A1",
+    "notes": "Foot/leg (no distinction). мъжки род.",
+    "notes_bg_to_de": "В български 'крак' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Крак' = 'der Fuß, das Bein'. Maskulinum.",
+    "etymology": "Proto-Slavic *krokъ",
+    "cultural_note": "Same word for foot and leg",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Pain",
+        "sentence": "Боли ме кракта/ът/то.",
+        "translation": "Mein/Meine Fuß tut weh."
+      },
+      {
+        "context": "Health",
+        "sentence": "Кракта/ът/то е здрав/а/о.",
+        "translation": "Das/Die/Der Fuß ist gesund."
+      },
+      {
+        "context": "Description",
+        "sentence": "Имам силен/на/но крак.",
+        "translation": "Ich habe starke/n/s Fuß."
+      }
+    ],
+    "linguistic_note": "мъжки род. Крак.",
+    "linguistic_note_bg_to_de": "Крак е мъжки род.",
+    "linguistic_note_de_to_bg": "Крак = Maskulinum."
+  },
+  {
+    "id": "a1_body_004",
+    "word": "Око",
+    "translation": "das Auge",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Körper",
+    "level": "A1",
+    "notes": "Eye. Neuter noun. среден род.",
+    "notes_bg_to_de": "В български 'око' е среден род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Око' = 'das Auge'. Neutrum.",
+    "etymology": "Proto-Slavic *oko",
+    "cultural_note": "Plural: очи (irregular)",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Pain",
+        "sentence": "Боли ме окота/ът/то.",
+        "translation": "Mein/Meine Auge tut weh."
+      },
+      {
+        "context": "Health",
+        "sentence": "Окота/ът/то е здрав/а/о.",
+        "translation": "Das/Die/Der Auge ist gesund."
+      },
+      {
+        "context": "Description",
+        "sentence": "Имам силен/на/но око.",
+        "translation": "Ich habe starke/n/s Auge."
+      }
+    ],
+    "linguistic_note": "среден род. Око.",
+    "linguistic_note_bg_to_de": "Око е среден род.",
+    "linguistic_note_de_to_bg": "Око = Neutrum."
+  },
+  {
+    "id": "a1_body_005",
+    "word": "Ухо",
+    "translation": "das Ohr",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Körper",
+    "level": "A1",
+    "notes": "Ear. Neuter noun. среден род.",
+    "notes_bg_to_de": "В български 'ухо' е среден род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ухо' = 'das Ohr'. Neutrum.",
+    "etymology": "Proto-Slavic *uxo",
+    "cultural_note": "Plural: уши (irregular)",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Pain",
+        "sentence": "Боли ме ухота/ът/то.",
+        "translation": "Mein/Meine Ohr tut weh."
+      },
+      {
+        "context": "Health",
+        "sentence": "Ухота/ът/то е здрав/а/о.",
+        "translation": "Das/Die/Der Ohr ist gesund."
+      },
+      {
+        "context": "Description",
+        "sentence": "Имам силен/на/но ухо.",
+        "translation": "Ich habe starke/n/s Ohr."
+      }
+    ],
+    "linguistic_note": "среден род. Ухо.",
+    "linguistic_note_bg_to_de": "Ухо е среден род.",
+    "linguistic_note_de_to_bg": "Ухо = Neutrum."
+  },
+  {
+    "id": "a1_body_006",
+    "word": "Нос",
+    "translation": "die Nase",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Körper",
+    "level": "A1",
+    "notes": "Nose. мъжки род.",
+    "notes_bg_to_de": "В български 'нос' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Нос' = 'die Nase'. Maskulinum.",
+    "etymology": "Proto-Slavic *nosъ",
+    "cultural_note": "Simple and direct term",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Pain",
+        "sentence": "Боли ме носта/ът/то.",
+        "translation": "Mein/Meine Nase tut weh."
+      },
+      {
+        "context": "Health",
+        "sentence": "Носта/ът/то е здрав/а/о.",
+        "translation": "Das/Die/Der Nase ist gesund."
+      },
+      {
+        "context": "Description",
+        "sentence": "Имам силен/на/но нос.",
+        "translation": "Ich habe starke/n/s Nase."
+      }
+    ],
+    "linguistic_note": "мъжки род. Нос.",
+    "linguistic_note_bg_to_de": "Нос е мъжки род.",
+    "linguistic_note_de_to_bg": "Нос = Maskulinum."
+  },
+  {
+    "id": "a1_body_007",
+    "word": "Уста",
+    "translation": "der Mund",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Körper",
+    "level": "A1",
+    "notes": "Mouth (formal). женски род.",
+    "notes_bg_to_de": "В български 'уста' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Уста' = 'der Mund'. Femininum.",
+    "etymology": "Proto-Slavic *usta",
+    "cultural_note": "Plural form used as singular. Informal: 'устата'",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Pain",
+        "sentence": "Боли ме устата/ът/то.",
+        "translation": "Mein/Meine Mund tut weh."
+      },
+      {
+        "context": "Health",
+        "sentence": "Устата/ът/то е здрав/а/о.",
+        "translation": "Das/Die/Der Mund ist gesund."
+      },
+      {
+        "context": "Description",
+        "sentence": "Имам силен/на/но уста.",
+        "translation": "Ich habe starke/n/s Mund."
+      }
+    ],
+    "linguistic_note": "женски род. Уста.",
+    "linguistic_note_bg_to_de": "Уста е женски род.",
+    "linguistic_note_de_to_bg": "Уста = Femininum."
+  },
+  {
+    "id": "a1_body_008",
+    "word": "Зъб",
+    "translation": "der Zahn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Körper",
+    "level": "A1",
+    "notes": "Tooth. мъжки род.",
+    "notes_bg_to_de": "В български 'зъб' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Зъб' = 'der Zahn'. Maskulinum.",
+    "etymology": "Proto-Slavic *zǫbъ",
+    "cultural_note": "Plural: зъби",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Pain",
+        "sentence": "Боли ме зъбта/ът/то.",
+        "translation": "Mein/Meine Zahn tut weh."
+      },
+      {
+        "context": "Health",
+        "sentence": "Зъбта/ът/то е здрав/а/о.",
+        "translation": "Das/Die/Der Zahn ist gesund."
+      },
+      {
+        "context": "Description",
+        "sentence": "Имам силен/на/но зъб.",
+        "translation": "Ich habe starke/n/s Zahn."
+      }
+    ],
+    "linguistic_note": "мъжки род. Зъб.",
+    "linguistic_note_bg_to_de": "Зъб е мъжки род.",
+    "linguistic_note_de_to_bg": "Зъб = Maskulinum."
+  },
+  {
+    "id": "a1_body_009",
+    "word": "Коса",
+    "translation": "das Haar, die Haare",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Körper",
+    "level": "A1",
+    "notes": "Hair. женски род.",
+    "notes_bg_to_de": "В български 'коса' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Коса' = 'das Haar, die Haare'. Femininum.",
+    "etymology": "Proto-Slavic *kosa",
+    "cultural_note": "Collective noun for hair",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Pain",
+        "sentence": "Боли ме косата/ът/то.",
+        "translation": "Mein/Meine Haar tut weh."
+      },
+      {
+        "context": "Health",
+        "sentence": "Косата/ът/то е здрав/а/о.",
+        "translation": "Das/Die/Der Haar ist gesund."
+      },
+      {
+        "context": "Description",
+        "sentence": "Имам силен/на/но коса.",
+        "translation": "Ich habe starke/n/s Haar."
+      }
+    ],
+    "linguistic_note": "женски род. Коса.",
+    "linguistic_note_bg_to_de": "Коса е женски род.",
+    "linguistic_note_de_to_bg": "Коса = Femininum."
+  },
+  {
+    "id": "a1_body_010",
+    "word": "Сърце",
+    "translation": "das Herz",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Körper",
+    "level": "A1",
+    "notes": "Heart. Neuter. среден род.",
+    "notes_bg_to_de": "В български 'сърце' е среден род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сърце' = 'das Herz'. Neutrum.",
+    "etymology": "Proto-Slavic *sьrdьce",
+    "cultural_note": "Also used metaphorically for emotions",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Pain",
+        "sentence": "Боли ме сърцета/ът/то.",
+        "translation": "Mein/Meine Herz tut weh."
+      },
+      {
+        "context": "Health",
+        "sentence": "Сърцета/ът/то е здрав/а/о.",
+        "translation": "Das/Die/Der Herz ist gesund."
+      },
+      {
+        "context": "Description",
+        "sentence": "Имам силен/на/но сърце.",
+        "translation": "Ich habe starke/n/s Herz."
+      }
+    ],
+    "linguistic_note": "среден род. Сърце.",
+    "linguistic_note_bg_to_de": "Сърце е среден род.",
+    "linguistic_note_de_to_bg": "Сърце = Neutrum."
+  }
+]

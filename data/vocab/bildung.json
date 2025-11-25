@@ -1,0 +1,601 @@
+[
+  {
+    "id": "kniga_006",
+    "word": "книга",
+    "translation": "Buch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Grundwort für Buch. Bulgarisch hat reiche Literaturgeschichte",
+    "etymology": "From Old Church Slavonic 'кънига', ultimately from Chinese via Turkic languages",
+    "cultural_note": "Books highly valued in Bulgarian culture - 'Ден на българската просвета' celebrates literacy",
+    "linguistic_note": "Feminine noun, definite form: 'книгата'. Stress on first syllable: КНИ-га",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "sentence": "Чета книга.",
+        "translation": "Ich lese ein Buch.",
+        "context": "activity"
+      },
+      {
+        "sentence": "Тази книга е интересна.",
+        "translation": "Dieses Buch ist interessant.",
+        "context": "opinion"
+      }
+    ]
+  },
+  {
+    "id": "a1_education_001",
+    "word": "Образование",
+    "translation": "die Bildung",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Education. среден род.",
+    "notes_bg_to_de": "Словото 'Образование' е среден род.",
+    "notes_de_to_bg": "Das Wort 'Образование' = 'die Bildung'. Neutrum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential education vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам образование.",
+        "translation": "Ich habe Bildung."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся образование.",
+        "translation": "Ich suche Bildung."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам образование.",
+        "translation": "Ich mag Bildung."
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_education_002",
+    "word": "Знание",
+    "translation": "das Wissen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Knowledge. среден род.",
+    "notes_bg_to_de": "Словото 'Знание' е среден род.",
+    "notes_de_to_bg": "Das Wort 'Знание' = 'das Wissen'. Neutrum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential education vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам знание.",
+        "translation": "Ich habe Wissen."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся знание.",
+        "translation": "Ich suche Wissen."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам знание.",
+        "translation": "Ich mag Wissen."
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_education_003",
+    "word": "Задача",
+    "translation": "die Aufgabe",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Task. женски род.",
+    "notes_bg_to_de": "Словото 'Задача' е женски род.",
+    "notes_de_to_bg": "Das Wort 'Задача' = 'die Aufgabe'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential education vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам задача.",
+        "translation": "Ich habe Aufgabe."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся задача.",
+        "translation": "Ich suche Aufgabe."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам задача.",
+        "translation": "Ich mag Aufgabe."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_education_004",
+    "word": "Изпит",
+    "translation": "die Prüfung",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Exam. мъжки род.",
+    "notes_bg_to_de": "Словото 'Изпит' е мъжки род.",
+    "notes_de_to_bg": "Das Wort 'Изпит' = 'die Prüfung'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential education vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам изпит.",
+        "translation": "Ich habe Prüfung."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся изпит.",
+        "translation": "Ich suche Prüfung."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам изпит.",
+        "translation": "Ich mag Prüfung."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_education_005",
+    "word": "Тест",
+    "translation": "der Test",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Test. мъжки род.",
+    "notes_bg_to_de": "Словото 'Тест' е мъжки род.",
+    "notes_de_to_bg": "Das Wort 'Тест' = 'der Test'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential education vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам тест.",
+        "translation": "Ich habe Test."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся тест.",
+        "translation": "Ich suche Test."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам тест.",
+        "translation": "Ich mag Test."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_education_006",
+    "word": "Оценка",
+    "translation": "die Note",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Grade. женски род.",
+    "notes_bg_to_de": "Словото 'Оценка' е женски род.",
+    "notes_de_to_bg": "Das Wort 'Оценка' = 'die Note'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential education vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам оценка.",
+        "translation": "Ich habe Note."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся оценка.",
+        "translation": "Ich suche Note."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам оценка.",
+        "translation": "Ich mag Note."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_education_007",
+    "word": "Диплома",
+    "translation": "das Diplom",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Diploma. женски род.",
+    "notes_bg_to_de": "Словото 'Диплома' е женски род.",
+    "notes_de_to_bg": "Das Wort 'Диплома' = 'das Diplom'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential education vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам диплома.",
+        "translation": "Ich habe Diplom."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся диплома.",
+        "translation": "Ich suche Diplom."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам диплома.",
+        "translation": "Ich mag Diplom."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_education_008",
+    "word": "Молив",
+    "translation": "der Bleistift",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Pencil. мъжки род.",
+    "notes_bg_to_de": "Словото 'Молив' е мъжки род.",
+    "notes_de_to_bg": "Das Wort 'Молив' = 'der Bleistift'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential education vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам молив.",
+        "translation": "Ich habe Bleistift."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся молив.",
+        "translation": "Ich suche Bleistift."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам молив.",
+        "translation": "Ich mag Bleistift."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_education_009",
+    "word": "Химикалка",
+    "translation": "der Kugelschreiber",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Pen. женски род.",
+    "notes_bg_to_de": "Словото 'Химикалка' е женски род.",
+    "notes_de_to_bg": "Das Wort 'Химикалка' = 'der Kugelschreiber'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential education vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам химикалка.",
+        "translation": "Ich habe Kugelschreiber."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся химикалка.",
+        "translation": "Ich suche Kugelschreiber."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам химикалка.",
+        "translation": "Ich mag Kugelschreiber."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_education_010",
+    "word": "Тетрадка",
+    "translation": "das Heft",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Notebook. женски род.",
+    "notes_bg_to_de": "Словото 'Тетрадка' е женски род.",
+    "notes_de_to_bg": "Das Wort 'Тетрадка' = 'das Heft'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential education vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам тетрадка.",
+        "translation": "Ich habe Heft."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся тетрадка.",
+        "translation": "Ich suche Heft."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам тетрадка.",
+        "translation": "Ich mag Heft."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_education_011",
+    "word": "Учебник",
+    "translation": "das Lehrbuch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Textbook. мъжки род.",
+    "notes_bg_to_de": "Словото 'Учебник' е мъжки род.",
+    "notes_de_to_bg": "Das Wort 'Учебник' = 'das Lehrbuch'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential education vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам учебник.",
+        "translation": "Ich habe Lehrbuch."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся учебник.",
+        "translation": "Ich suche Lehrbuch."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам учебник.",
+        "translation": "Ich mag Lehrbuch."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_education_012",
+    "word": "Речник",
+    "translation": "das Wörterbuch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Dictionary. мъжки род.",
+    "notes_bg_to_de": "Словото 'Речник' е мъжки род.",
+    "notes_de_to_bg": "Das Wort 'Речник' = 'das Wörterbuch'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential education vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам речник.",
+        "translation": "Ich habe Wörterbuch."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся речник.",
+        "translation": "Ich suche Wörterbuch."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам речник.",
+        "translation": "Ich mag Wörterbuch."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_education_013",
+    "word": "Дъска",
+    "translation": "die Tafel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Board. женски род.",
+    "notes_bg_to_de": "Словото 'Дъска' е женски род.",
+    "notes_de_to_bg": "Das Wort 'Дъска' = 'die Tafel'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential education vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам дъска.",
+        "translation": "Ich habe Tafel."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся дъска.",
+        "translation": "Ich suche Tafel."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам дъска.",
+        "translation": "Ich mag Tafel."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_education_014",
+    "word": "Час",
+    "translation": "die Stunde",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Hour/Class. мъжки род.",
+    "notes_bg_to_de": "Словото 'Час' е мъжки род.",
+    "notes_de_to_bg": "Das Wort 'Час' = 'die Stunde'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential education vocabulary.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам час.",
+        "translation": "Ich habe Stunde."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся час.",
+        "translation": "Ich suche Stunde."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам час.",
+        "translation": "Ich mag Stunde."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_education_015",
+    "word": "Минута",
+    "translation": "die Minute",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "Minute. женски род.",
+    "notes_bg_to_de": "Словото 'Минута' е женски род.",
+    "notes_de_to_bg": "Das Wort 'Минута' = 'die Minute'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential education vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Having",
+        "sentence": "Имам минута.",
+        "translation": "Ich habe Minute."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся минута.",
+        "translation": "Ich suche Minute."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам минута.",
+        "translation": "Ich mag Minute."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "kniga_006_dup1",
+    "word": "книга",
+    "translation": "Buch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Bildung",
+    "level": "A1",
+    "notes": "'Книга' stammt aus dem Altslawischen und war ursprünglich eine Bezeichnung für eine Schriftrolle oder ein gebundenes Werk. | Grundwort für Buch. Bulgarisch hat reiche Literaturgeschichte",
+    "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian | From Old Church Slavonic 'кънига', ultimately from Chinese via Turkic languages",
+    "cultural_note": "Common everyday word in Bulgarian. Useful for A1 learners | Books highly valued in Bulgarian culture - 'Ден на българската просвета' celebrates literacy",
+    "linguistic_note": "Feminine noun, definite form: 'книгата'. Stress on first syllable: КНИ-га",
+    "difficulty": 1,
+    "frequency": 98,
+    "examples": [
+      {
+        "sentence": "Чета книга.",
+        "translation": "Ich lese ein Buch.",
+        "context": "activity"
+      },
+      {
+        "sentence": "Тази книга е интересна.",
+        "translation": "Dieses Buch ist interessant.",
+        "context": "opinion"
+      }
+    ],
+    "originalIndex": 180,
+    "notes_bg_to_de": "'Das Buch' е среден род и означава книга като предмет. Множественото 'die Bücher' образува умлаут върху 'u' и добавя '-er'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Книга' ≈ 'Buch'. Femininum. Sehr häufig verwendet.",
+    "linguistic_note_bg_to_de": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+    "linguistic_note_de_to_bg": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то"
+  }
+]

@@ -59,7 +59,7 @@
   &:hover {
     background: var(--primary-hover, #0056b3);
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.30);
   }
 
   &:focus {
@@ -229,11 +229,11 @@
 // High contrast mode support
 @media (prefers-contrast: high) {
   .pagination-btn {
-    border: 2px solid currentColor;
+    border: 2px solid currentcolor;
   }
 
   .pagination-number {
-    border: 2px solid currentColor;
+    border: 2px solid currentcolor;
   }
 
   .pagination-current {

@@ -205,7 +205,7 @@ class APIClient {
       const data = await response.json();
       
       if (useCache) {
-        this.setCache(cacheKey, data, 60000); // Short cache for practice data
+        this.setCache(cacheKey, data, 60_000); // Short cache for practice data
       }
       
       return data;
@@ -293,7 +293,9 @@ class APIClient {
   }
 
   isCached(key) {
-    if (!this.cache.has(key)) return false;
+    if (!this.cache.has(key)) {
+      return false;
+    }
     
     const cached = this.cache.get(key);
     const isExpired = Date.now() - cached.timestamp > cached.timeout;
@@ -404,7 +406,7 @@ class APIClient {
       success: result.status === 'fulfilled' && !result.value.error,
       data: result.status === 'fulfilled' ? result.value : null,
       error: result.status === 'rejected' ? result.reason : 
-             (result.value && result.value.error ? result.value.error : null)
+        (result.value && result.value.error ? result.value.error : null)
     }));
   }
 

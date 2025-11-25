@@ -17,20 +17,20 @@ export class TextToSpeech {
       'bg-BG': {
         names: ['Google Bulgarian', 'Microsoft Zira', 'Bulgarian', 'voice_0'],
         rate: options.bgRate || 0.85,
-        pitch: options.bgPitch || 1.0,
-        volume: options.bgVolume || 1.0,
+        pitch: options.bgPitch || 1,
+        volume: options.bgVolume || 1
       },
       'de-DE': {
         names: ['Google Deutsch', 'Microsoft David', 'Deutsche', 'German', 'voice_0'],
         rate: options.deRate || 0.9,
-        pitch: options.dePitch || 1.0,
-        volume: options.deVolume || 1.0,
+        pitch: options.dePitch || 1,
+        volume: options.deVolume || 1
       },
       'de-AT': {
         names: ['Google Deutsch (Austria)', 'Österreichisches Deutsch'],
         rate: options.deRate || 0.9,
-        pitch: options.dePitch || 1.0,
-        volume: options.deVolume || 1.0,
+        pitch: options.dePitch || 1,
+        volume: options.deVolume || 1
       }
     };
 
@@ -49,11 +49,11 @@ export class TextToSpeech {
       // Log available voices in development
       if (typeof console !== 'undefined') {
         console.log('[TextToSpeech] Loaded voices:', this.voices.length);
-        this.voices.forEach((v, i) => {
+        for (const [i, v] of this.voices.entries()) {
           if (v.lang.includes('bg') || v.lang.includes('de')) {
             console.log(`  [${i}] ${v.name} (${v.lang})`);
           }
-        });
+        }
       }
     };
 

@@ -34,7 +34,7 @@
     transition: all 0.3s ease;
     
     &[data-lang="bg"] {
-      font-family: "Roboto", "Noto Sans", "PT Sans", "Arial", sans-serif;
+      font-family: Roboto, "Noto Sans", "PT Sans", Arial, sans-serif;
       border-left: 3px solid #007bff;
       padding-left: 12px;
     }
@@ -113,10 +113,12 @@
     opacity: 1;
     transform: translateX(0);
   }
+
   50% {
     opacity: 0.3;
     transform: translateX(-20px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -134,7 +136,7 @@
   padding: 8px 12px;
   font-size: 0.85rem;
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
   z-index: 1000;
   transition: all 0.3s ease;
 

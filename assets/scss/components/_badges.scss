@@ -10,27 +10,27 @@
   letter-spacing: 0.025em;
 
   &.level-a1 {
-    background-color: rgba(16, 185, 129, 0.1);
+    background-color: rgba(16, 185, 129, 0.10);
     color: var(--level-a1);
-    border: 1px solid rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.20);
   }
 
   &.level-a2 {
-    background-color: rgba(59, 130, 246, 0.1);
+    background-color: rgba(59, 130, 246, 0.10);
     color: var(--level-a2);
-    border: 1px solid rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.20);
   }
 
   &.level-b1 {
-    background-color: rgba(245, 158, 11, 0.1);
+    background-color: rgba(245, 158, 11, 0.10);
     color: var(--level-b1);
-    border: 1px solid rgba(245, 158, 11, 0.2);
+    border: 1px solid rgba(245, 158, 11, 0.20);
   }
 
   &.level-b2 {
-    background-color: rgba(239, 68, 68, 0.1);
+    background-color: rgba(239, 68, 68, 0.10);
     color: var(--level-b2);
-    border: 1px solid rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.20);
   }
 }
 
@@ -56,22 +56,22 @@
   font-weight: $font-weight-medium;
 
   &.status-new {
-    background-color: rgba(107, 114, 128, 0.1);
+    background-color: rgba(107, 114, 128, 0.10);
     color: var(--color-gray-600);
   }
 
   &.status-learning {
-    background-color: rgba(245, 158, 11, 0.1);
+    background-color: rgba(245, 158, 11, 0.10);
     color: var(--color-warning);
   }
 
   &.status-familiar {
-    background-color: rgba(59, 130, 246, 0.1);
+    background-color: rgba(59, 130, 246, 0.10);
     color: var(--color-info);
   }
 
   &.status-mastered {
-    background-color: rgba(16, 185, 129, 0.1);
+    background-color: rgba(16, 185, 129, 0.10);
     color: var(--color-success);
   }
 }

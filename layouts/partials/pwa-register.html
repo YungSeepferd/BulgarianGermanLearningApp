@@ -8,7 +8,7 @@ if ('serviceWorker' in navigator) {
     console.log('Skipping SW registration in dev');
   } else {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('{{ "sw.js" | relURL }}')
+      navigator.serviceWorker.register('{{ "sw-workbox.js" | relURL }}')
         .then((registration) => {
           console.log('SW registered: ', registration);
           
