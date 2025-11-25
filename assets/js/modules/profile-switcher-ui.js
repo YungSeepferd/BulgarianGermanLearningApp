@@ -54,7 +54,9 @@ class ProfileSwitcherUI {
    * Render the profile switcher UI
    */
   render() {
-    if (!this.container) return;
+    if (!this.container) {
+      return;
+    }
 
     const activeProfile = this.profileManager.getActiveProfile();
     if (!activeProfile) {
@@ -125,12 +127,15 @@ class ProfileSwitcherUI {
    */
   getProfileIcon(profileId) {
     switch (profileId) {
-      case this.profileManager.PROFILE_IDS.GERMAN_LEARNER:
-        return '🇩🇪';
-      case this.profileManager.PROFILE_IDS.BULGARIAN_LEARNER:
-        return '🇧🇬';
-      default:
-        return '🌍';
+    case this.profileManager.PROFILE_IDS.GERMAN_LEARNER: {
+      return '🇩🇪';
+    }
+    case this.profileManager.PROFILE_IDS.BULGARIAN_LEARNER: {
+      return '🇧🇬';
+    }
+    default: {
+      return '🌍';
+    }
     }
   }
 
@@ -139,12 +144,15 @@ class ProfileSwitcherUI {
    */
   getProfileShortLabel(direction) {
     switch (direction) {
-      case 'bg-de':
-        return 'BG→DE';
-      case 'de-bg':
-        return 'DE→BG';
-      default:
-        return direction.toUpperCase();
+    case 'bg-de': {
+      return 'BG→DE';
+    }
+    case 'de-bg': {
+      return 'DE→BG';
+    }
+    default: {
+      return direction.toUpperCase();
+    }
     }
   }
 
@@ -153,12 +161,15 @@ class ProfileSwitcherUI {
    */
   getDirectionLabel(direction) {
     switch (direction) {
-      case 'bg-de':
-        return 'Bulgarian → German';
-      case 'de-bg':
-        return 'German → Bulgarian';
-      default:
-        return direction;
+    case 'bg-de': {
+      return 'Bulgarian → German';
+    }
+    case 'de-bg': {
+      return 'German → Bulgarian';
+    }
+    default: {
+      return direction;
+    }
     }
   }
 
@@ -167,7 +178,7 @@ class ProfileSwitcherUI {
    */
   attachEventListeners() {
     // Toggle dropdown
-    const toggleBtn = document.getElementById('profile-toggle');
+    const toggleBtn = document.querySelector('#profile-toggle');
     if (toggleBtn) {
       toggleBtn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -198,7 +209,7 @@ class ProfileSwitcherUI {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && this.isOpen) {
         this.closeDropdown();
-        document.getElementById('profile-toggle')?.focus();
+        document.querySelector('#profile-toggle')?.focus();
       }
     });
 
@@ -225,8 +236,8 @@ class ProfileSwitcherUI {
    * Open dropdown
    */
   openDropdown() {
-    const dropdown = document.getElementById('profile-dropdown');
-    const toggleBtn = document.getElementById('profile-toggle');
+    const dropdown = document.querySelector('#profile-dropdown');
+    const toggleBtn = document.querySelector('#profile-toggle');
 
     if (dropdown && toggleBtn) {
       dropdown.classList.remove('hidden');
@@ -240,8 +251,8 @@ class ProfileSwitcherUI {
    * Close dropdown
    */
   closeDropdown() {
-    const dropdown = document.getElementById('profile-dropdown');
-    const toggleBtn = document.getElementById('profile-toggle');
+    const dropdown = document.querySelector('#profile-dropdown');
+    const toggleBtn = document.querySelector('#profile-toggle');
 
     if (dropdown && toggleBtn) {
       dropdown.classList.add('hidden');
@@ -291,7 +302,9 @@ class ProfileSwitcherUI {
    */
   showSwitchConfirmation(profileId) {
     const profile = this.profileManager.getProfile(profileId);
-    if (!profile) return;
+    if (!profile) {
+      return;
+    }
 
     // Create temporary toast notification
     const toast = document.createElement('div');
@@ -301,7 +314,7 @@ class ProfileSwitcherUI {
       <span class="toast-message">Switched to ${profile.displayName}</span>
     `;
 
-    document.body.appendChild(toast);
+    document.body.append(toast);
 
     // Animate in
     setTimeout(() => toast.classList.add('show'), 10);
@@ -349,7 +362,9 @@ class ProfileSwitcherUI {
    */
   updateStatistics() {
     const activeProfile = this.profileManager.getActiveProfile();
-    if (!activeProfile) return;
+    if (!activeProfile) {
+      return;
+    }
 
     // This method can be called by dashboard to update stats
     console.log('[ProfileSwitcherUI] Statistics updated for profile:', activeProfile.id);

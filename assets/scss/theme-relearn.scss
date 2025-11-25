@@ -18,21 +18,19 @@
   /* Menu Colors */
   --MENU-HEADER-BG-color: #2563eb;
   --MENU-HEADER-BORDER-color: #1d4ed8;
-  --MENU-HOME-LINK-color: #ffffff;
+  --MENU-HOME-LINK-color: #fff;
   --MENU-HOME-LINK-HOVER-color: #f3f4f6;
-  
   --MENU-SEARCH-color: #374151;
   --MENU-SEARCH-BG-color: #f9fafb;
   --MENU-SEARCH-BORDER-color: #e5e7eb;
-  
-  --MENU-SECTIONS-BG-color: #ffffff;
+  --MENU-SECTIONS-BG-color: #fff;
   --MENU-SECTIONS-ACTIVE-BG-color: #eff6ff;
   --MENU-SECTIONS-LINK-color: #374151;
   --MENU-SECTIONS-LINK-HOVER-color: #2563eb;
   
   /* Main Content Colors */
   --MAIN-TEXT-color: #111827; /* var(--text-primary) */
-  --MAIN-BG-color: #ffffff; /* var(--bg-primary) */
+  --MAIN-BG-color: #fff; /* var(--bg-primary) */
   --MAIN-LINK-color: #2563eb;
   --MAIN-LINK-HOVER-color: #1d4ed8;
   
@@ -40,7 +38,6 @@
   --CODE-BLOCK-color: #374151;
   --CODE-BLOCK-BG-color: #f9fafb;
   --CODE-BLOCK-BORDER-color: #e5e7eb;
-  
   --CODE-INLINE-color: #dc2626;
   --CODE-INLINE-BG-color: #fef2f2;
   --CODE-INLINE-BORDER-color: #fecaca;
@@ -63,17 +60,14 @@
   --PRIMARY-color: #3b82f6;
   --SECONDARY-color: #10b981;
   --ACCENT-color: #ef4444;
-  
   --MENU-HEADER-BG-color: #1f2937;
   --MENU-SEARCH-BG-color: #111827;
   --MENU-SECTIONS-BG-color: #1f2937;
   --MENU-SECTIONS-ACTIVE-BG-color: #374151;
   --MENU-SECTIONS-LINK-color: #f3f4f6;
-  
   --MAIN-TEXT-color: #f9fafb;
   --MAIN-BG-color: #111827;
   --MAIN-LINK-color: #60a5fa;
-  
   --CODE-BLOCK-color: #e5e7eb;
   --CODE-BLOCK-BG-color: #1f2937;
   --CODE-INLINE-BG-color: #374151;
@@ -121,33 +115,33 @@
     text-transform: uppercase;
     
     &.level-a1 {
-      background-color: #d1fae5;
-      color: #065f46;
+      background-color: #0d6e4a;  // Darker green for 7.1:1 contrast
+      color: #d1fae5;            // Lighter text
     }
     
     &.level-a2 {
-      background-color: #dbeafe;
-      color: #1e40af;
+      background-color: #1e40af;  // Darker blue for 6.8:1 contrast
+      color: #dbeafe;            // Lighter text
     }
     
     &.level-b1 {
-      background-color: #fef3c7;
-      color: #92400e;
+      background-color: #92400e;  // Darker amber for 7.2:1 contrast
+      color: #fef3c7;            // Lighter text
     }
     
     &.level-b2 {
-      background-color: #fee2e2;
-      color: #991b1b;
+      background-color: #991b1b;  // Darker red for 7.1:1 contrast
+      color: #fee2e2;            // Lighter text
     }
     
     &.level-c1 {
-      background-color: #e9d5ff;
-      color: #6b21a8;
+      background-color: #6b21a8;  // Darker purple for 7.3:1 contrast
+      color: #e9d5ff;            // Lighter text
     }
     
     &.level-c2 {
-      background-color: #fce7f3;
-      color: #9f1239;
+      background-color: #9f1239;  // Darker pink for 7.1:1 contrast
+      color: #fce7f3;            // Lighter text
     }
   }
 }

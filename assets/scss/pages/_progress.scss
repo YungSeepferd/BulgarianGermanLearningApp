@@ -18,7 +18,7 @@
   margin-bottom: 30px;
 
   h2 {
-    margin: 0 0 15px 0;
+    margin: 0 0 15px;
     font-size: 28px;
     color: #1f2937;
   }
@@ -54,7 +54,7 @@
 }
 
 .metric-card {
-  background: #ffffff;
+  background: #fff;
   border: 2px solid #e5e7eb;
   border-radius: 12px;
   padding: 20px;
@@ -63,7 +63,7 @@
 
   &:hover {
     border-color: #3b82f6;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.10);
     transform: translateY(-2px);
   }
 
@@ -125,11 +125,11 @@
 }
 
 .chart-container {
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
 
   &.full-width {
     grid-column: 1 / -1;
@@ -144,7 +144,7 @@
   margin-bottom: 20px;
 
   h3 {
-    margin: 0 0 8px 0;
+    margin: 0 0 8px;
     font-size: 18px;
     color: #1f2937;
   }
@@ -182,11 +182,11 @@
 
 /* Session History */
 .session-history {
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
   margin-bottom: 20px;
 }
 
@@ -194,7 +194,7 @@
   margin-bottom: 20px;
 
   h3 {
-    margin: 0 0 8px 0;
+    margin: 0 0 8px;
     font-size: 18px;
     color: #1f2937;
   }
@@ -270,7 +270,7 @@
 
 .empty-state-content {
   h3 {
-    margin: 0 0 12px 0;
+    margin: 0 0 12px;
     font-size: 20px;
     color: #1f2937;
   }

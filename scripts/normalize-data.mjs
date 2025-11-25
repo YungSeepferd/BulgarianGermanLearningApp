@@ -5,9 +5,9 @@
  * - Upgrades grammar entries to provide summary/content and structured examples.
  */
 
-import { readFile, writeFile } from 'fs/promises';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { readFile, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,21 +16,27 @@ const rootDir = path.resolve(__dirname, '..');
 const dataPath = (relative) => path.join(rootDir, 'data', relative);
 
 function slugify(value, fallback) {
-  if (!value) return fallback;
+  if (!value) {
+    return fallback;
+  }
   const normalized = value
     .toString()
     .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
+    .replaceAll(/[\u0300-\u036F]/g, '')
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '_')
-    .replace(/^_|_$/g, '');
+    .replaceAll(/[^\da-z]+/g, '_')
+    .replaceAll(/^_|_$/g, '');
   return normalized || fallback;
 }
 
 function coerceNumberInRange(value, min, max) {
-  if (value === undefined || value === null || value === '') return undefined;
+  if (value === undefined || value === null || value === '') {
+    return;
+  }
   const num = Number(value);
-  if (!Number.isFinite(num)) return undefined;
+  if (!Number.isFinite(num)) {
+    return;
+  }
   return Math.min(max, Math.max(min, num));
 }
 
@@ -50,13 +56,19 @@ function ensureUniqueId(base, used) {
 const latinRegex = /^[\p{Script=Latin}A-Za-z]/u;
 
 function formatExamples(examples, { preserveEmpty = false } = {}) {
-  if (!Array.isArray(examples)) return preserveEmpty ? [] : undefined;
+  if (!Array.isArray(examples)) {
+    return preserveEmpty ? [] : undefined;
+  }
   return examples
     .map((example) => {
-      if (!example) return null;
+      if (!example) {
+        return null;
+      }
       if (typeof example === 'string') {
         const trimmed = example.trim();
-        if (!trimmed) return null;
+        if (!trimmed) {
+          return null;
+        }
         const parenMatch = trimmed.match(/^(.*?)(?:\s*\(([^)]*)\))?$/);
         const baseText = parenMatch?.[1]?.trim() || trimmed;
         const parenNote = parenMatch?.[2]?.trim();
@@ -89,9 +101,9 @@ function formatExamples(examples, { preserveEmpty = false } = {}) {
         }
 
         if (!translation) {
-          translation = dashIndex !== -1
-            ? baseText.slice(baseText.indexOf(' – ') + 3).trim() || sentence
-            : sentence;
+          translation = dashIndex === -1
+            ? sentence
+            : baseText.slice(baseText.indexOf(' – ') + 3).trim() || sentence;
         }
 
         return { sentence, translation };
@@ -101,7 +113,7 @@ function formatExamples(examples, { preserveEmpty = false } = {}) {
           sentence: example.sentence?.trim() || '',
           translation: example.translation?.trim() || '',
           context: example.context ?? undefined,
-          note: example.note ?? undefined,
+          note: example.note ?? undefined
         };
       }
       return null;
@@ -110,16 +122,15 @@ function formatExamples(examples, { preserveEmpty = false } = {}) {
     .map((example) => ({
       ...example,
       sentence: example.sentence?.trim() || '',
-      translation: example.translation?.trim() || '',
+      translation: example.translation?.trim() || ''
     }))
     .filter((example) => example.sentence || example.translation)
-    .reduce((acc, example) => {
+    .map((example) => {
       if (!example.translation) {
-        example.translation = example.sentence;
+        return { ...example, translation: example.sentence };
       }
-      acc.push(example);
-      return acc;
-    }, []);
+      return example;
+    });
 }
 
 async function normalizeVocabulary() {
@@ -128,7 +139,9 @@ async function normalizeVocabulary() {
   const usedIds = new Set();
 
   const normalized = vocab.map((entry, index) => {
-    if (!entry || typeof entry !== 'object') return entry;
+    if (!entry || typeof entry !== 'object') {
+      return entry;
+    }
     const copy = { ...entry };
 
     const fallbackBase =
@@ -146,36 +159,36 @@ async function normalizeVocabulary() {
         ? copy.translation.trim()
         : copy.translation;
     copy.source_lang =
-      typeof copy.source_lang === 'string' && copy.source_lang.trim().length
+      typeof copy.source_lang === 'string' && copy.source_lang.trim().length > 0
         ? copy.source_lang.trim()
         : 'bg';
     copy.target_lang =
-      typeof copy.target_lang === 'string' && copy.target_lang.trim().length
+      typeof copy.target_lang === 'string' && copy.target_lang.trim().length > 0
         ? copy.target_lang.trim()
         : 'de';
     copy.category =
-      typeof copy.category === 'string' && copy.category.trim().length
+      typeof copy.category === 'string' && copy.category.trim().length > 0
         ? copy.category.trim()
         : copy.category ?? null;
     copy.level =
-      typeof copy.level === 'string' && copy.level.trim().length
+      typeof copy.level === 'string' && copy.level.trim().length > 0
         ? copy.level.trim()
         : copy.level ?? null;
     copy.notes =
-      typeof copy.notes === 'string' && copy.notes.trim().length
+      typeof copy.notes === 'string' && copy.notes.trim().length > 0
         ? copy.notes.trim()
         : copy.notes ?? null;
     copy.etymology =
-      typeof copy.etymology === 'string' && copy.etymology.trim().length
+      typeof copy.etymology === 'string' && copy.etymology.trim().length > 0
         ? copy.etymology.trim()
         : copy.etymology ?? null;
     copy.cultural_note =
-      typeof copy.cultural_note === 'string' && copy.cultural_note.trim().length
+      typeof copy.cultural_note === 'string' && copy.cultural_note.trim().length > 0
         ? copy.cultural_note.trim()
         : copy.cultural_note ?? null;
     copy.linguistic_note =
       typeof copy.linguistic_note === 'string' &&
-      copy.linguistic_note.trim().length
+      copy.linguistic_note.trim().length > 0
         ? copy.linguistic_note.trim()
         : copy.linguistic_note ?? null;
 
@@ -198,7 +211,7 @@ async function normalizeVocabulary() {
 
 function deriveSummary(content, title) {
   if (content && typeof content === 'string') {
-    const firstSentenceMatch = content.trim().match(/^(.*?[\.\!\?])( |\n|$)/);
+    const firstSentenceMatch = content.trim().match(/^(.*?[!.?])( |\n|$)/);
     if (firstSentenceMatch && firstSentenceMatch[1]) {
       return firstSentenceMatch[1].trim();
     }
@@ -212,11 +225,13 @@ async function normalizeGrammar() {
   const usedIds = new Set();
 
   const normalized = grammar.map((entry, index) => {
-    if (!entry || typeof entry !== 'object') return entry;
+    if (!entry || typeof entry !== 'object') {
+      return entry;
+    }
     const copy = { ...entry };
 
     const title =
-      typeof copy.title === 'string' && copy.title.trim().length
+      typeof copy.title === 'string' && copy.title.trim().length > 0
         ? copy.title.trim()
         : `Grammar Topic ${index + 1}`;
     copy.title = title;
@@ -225,29 +240,29 @@ async function normalizeGrammar() {
     copy.id = ensureUniqueId(baseId, usedIds);
 
     const content =
-      typeof copy.content === 'string' && copy.content.trim().length
+      typeof copy.content === 'string' && copy.content.trim().length > 0
         ? copy.content.trim()
-        : typeof copy.description === 'string' && copy.description.trim().length
-        ? copy.description.trim()
-        : '';
+        : (typeof copy.description === 'string' && copy.description.trim().length > 0
+          ? copy.description.trim()
+          : '');
 
     copy.content = content;
     copy.summary =
-      typeof copy.summary === 'string' && copy.summary.trim().length
+      typeof copy.summary === 'string' && copy.summary.trim().length > 0
         ? copy.summary.trim()
         : deriveSummary(content, title);
 
     copy.category =
-      typeof copy.category === 'string' && copy.category.trim().length
+      typeof copy.category === 'string' && copy.category.trim().length > 0
         ? copy.category.trim()
         : copy.category ?? null;
     copy.level =
-      typeof copy.level === 'string' && copy.level.trim().length
+      typeof copy.level === 'string' && copy.level.trim().length > 0
         ? copy.level.trim()
         : copy.level ?? null;
 
     const formattedExamples = formatExamples(copy.examples, {
-      preserveEmpty: true,
+      preserveEmpty: true
     });
     copy.examples = formattedExamples;
 

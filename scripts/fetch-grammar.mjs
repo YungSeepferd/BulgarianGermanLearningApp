@@ -20,10 +20,10 @@
  *   node scripts/fetch-grammar.mjs ./docs/grammar-source.pdf
  */
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { execSync } from 'node:child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -98,7 +98,7 @@ async function parseGrammarFromFile(filePath) {
   let content = '';
 
   if (ext === '.md' || ext === '.txt') {
-    content = fs.readFileSync(absolutePath, 'utf-8');
+    content = fs.readFileSync(absolutePath, 'utf8');
   } else if (ext === '.pdf') {
     console.log('⚠️  PDF parsing requires external tools. Please convert to markdown first.');
     throw new Error('PDF parsing not yet implemented. Use: pdftotext or similar tool.');
@@ -121,8 +121,10 @@ function parseMarkdownToGrammar(markdown) {
   // Split by H1 or H2 headers
   const sections = markdown.split(/\n#{1,2}\s+/);
 
-  sections.forEach((section, index) => {
-    if (!section.trim()) return;
+  for (const [index, section] of sections.entries()) {
+    if (!section.trim()) {
+      continue;
+    }
 
     const lines = section.split('\n');
     const title = lines[0].trim();
@@ -131,29 +133,29 @@ function parseMarkdownToGrammar(markdown) {
     const rule = {
       id: slugify(title),
       title: title,
-      bulgarian_concept: extractPattern(section, /Bulgarian:\s*(.+)/i) || '',
-      german_concept: extractPattern(section, /German:\s*(.+)/i) || '',
-      difficulty: extractPattern(section, /Level:\s*(A1|A2|B1|B2|C1|C2)/i) || 'A1',
+      bulgarian_concept: extractPattern(section, /bulgarian:\s*(.+)/i) || '',
+      german_concept: extractPattern(section, /german:\s*(.+)/i) || '',
+      difficulty: extractPattern(section, /level:\s*(a1|a2|b1|b2|c1|c2)/i) || 'A1',
       cultural_context: {
-        bulgarian_perspective: extractPattern(section, /Bulgarian perspective:\s*(.+)/is) || '',
-        german_perspective: extractPattern(section, /German perspective:\s*(.+)/is) || ''
+        bulgarian_perspective: extractPattern(section, /bulgarian perspective:\s*(.+)/is) || '',
+        german_perspective: extractPattern(section, /german perspective:\s*(.+)/is) || ''
       },
       cross_linguistic_explanation: {
-        bg_to_de: extractPattern(section, /For Bulgarian speakers.*?:\s*(.+)/is) || '',
-        de_to_bg: extractPattern(section, /For German speakers.*?:\s*(.+)/is) || ''
+        bg_to_de: extractPattern(section, /for bulgarian speakers.*?:\s*(.+)/is) || '',
+        de_to_bg: extractPattern(section, /for german speakers.*?:\s*(.+)/is) || ''
       },
       examples: extractExamples(section),
       common_mistakes: {
         bg_to_de: [],
         de_to_bg: []
       },
-      cultural_insight: extractPattern(section, /Cultural insight:\s*(.+)/is) || ''
+      cultural_insight: extractPattern(section, /cultural insight:\s*(.+)/is) || ''
     };
 
     if (rule.title && rule.id) {
       rules.push(rule);
     }
-  });
+  }
 
   return rules;
 }
@@ -171,7 +173,7 @@ function extractPattern(text, pattern) {
  */
 function extractExamples(section) {
   const examples = [];
-  const examplePattern = /Example:\s*(.+?)\s*-\s*(.+)/gi;
+  const examplePattern = /example:\s*(.+?)\s*-\s*(.+)/gi;
   let match;
 
   while ((match = examplePattern.exec(section)) !== null) {
@@ -235,19 +237,15 @@ function generateMarkdownFile(rule, outputDir) {
   let markdown = '---\n';
 
   // Write frontmatter
-  Object.entries(frontmatter).forEach(([key, value]) => {
+  for (const [key, value] of Object.entries(frontmatter)) {
     if (typeof value === 'string') {
-      if (value.includes('\n') || value.includes('"') || value.includes(':')) {
-        markdown += `${key}: |\n  ${value.replace(/\n/g, '\n  ')}\n`;
-      } else {
-        markdown += `${key}: "${value}"\n`;
-      }
+      markdown += value.includes('\n') || value.includes('"') || value.includes(':') ? `${key}: |\n  ${value.replaceAll('\n', '\n  ')}\n` : `${key}: "${value}"\n`;
     } else if (Array.isArray(value)) {
       markdown += `${key}:\n${value.map(v => `  - "${v}"`).join('\n')}\n`;
     } else {
       markdown += `${key}: ${value}\n`;
     }
-  });
+  }
 
   markdown += '---\n\n';
 
@@ -261,7 +259,7 @@ function generateMarkdownFile(rule, outputDir) {
 
   // Cultural Context
   if (rule.cultural_context) {
-    markdown += `## Cultural Context\n\n`;
+    markdown += '## Cultural Context\n\n';
 
     if (rule.cultural_context.bulgarian_perspective) {
       markdown += `### Bulgarian Perspective\n\n${rule.cultural_context.bulgarian_perspective}\n\n`;
@@ -273,7 +271,7 @@ function generateMarkdownFile(rule, outputDir) {
   }
 
   // Bidirectional Learning
-  markdown += `## Learning Notes\n\n`;
+  markdown += '## Learning Notes\n\n';
 
   if (rule.cross_linguistic_explanation?.de_to_bg) {
     markdown += `### For German Speakers (Für Deutschsprachige)\n\n${rule.cross_linguistic_explanation.de_to_bg}\n\n`;
@@ -285,9 +283,9 @@ function generateMarkdownFile(rule, outputDir) {
 
   // Examples
   if (rule.examples && rule.examples.length > 0) {
-    markdown += `## Examples\n\n`;
+    markdown += '## Examples\n\n';
 
-    rule.examples.forEach((ex, index) => {
+    for (const [index, ex] of rule.examples.entries()) {
       markdown += `${index + 1}. **${ex.bulgarian}** → **${ex.german}**\n`;
       if (ex.explanation_bg_to_de) {
         markdown += `   - For BG speakers: ${ex.explanation_bg_to_de}\n`;
@@ -296,33 +294,33 @@ function generateMarkdownFile(rule, outputDir) {
         markdown += `   - For DE speakers: ${ex.explanation_de_to_bg}\n`;
       }
       markdown += '\n';
-    });
+    }
   }
 
   // Common Mistakes
   if (rule.common_mistakes) {
-    markdown += `## Common Mistakes\n\n`;
+    markdown += '## Common Mistakes\n\n';
 
     if (rule.common_mistakes.bg_to_de && rule.common_mistakes.bg_to_de.length > 0) {
-      markdown += `### For Bulgarian Speakers\n\n`;
-      rule.common_mistakes.bg_to_de.forEach(mistake => {
+      markdown += '### For Bulgarian Speakers\n\n';
+      for (const mistake of rule.common_mistakes.bg_to_de) {
         markdown += `- ${mistake}\n`;
-      });
+      }
       markdown += '\n';
     }
 
     if (rule.common_mistakes.de_to_bg && rule.common_mistakes.de_to_bg.length > 0) {
-      markdown += `### For German Speakers\n\n`;
-      rule.common_mistakes.de_to_bg.forEach(mistake => {
+      markdown += '### For German Speakers\n\n';
+      for (const mistake of rule.common_mistakes.de_to_bg) {
         markdown += `- ${mistake}\n`;
-      });
+      }
       markdown += '\n';
     }
   }
 
   // Practice section
-  markdown += `## Practice\n\n`;
-  markdown += `Try creating your own sentences using this grammar pattern. Pay attention to the differences between Bulgarian and German approaches.\n\n`;
+  markdown += '## Practice\n\n';
+  markdown += 'Try creating your own sentences using this grammar pattern. Pay attention to the differences between Bulgarian and German approaches.\n\n';
 
   fs.writeFileSync(filePath, markdown, 'utf-8');
   console.log(`✅ Generated: ${filename}`);
@@ -338,7 +336,7 @@ function updateCulturalGrammarJSON(newRules) {
 
   let existing = [];
   if (fs.existsSync(jsonPath)) {
-    existing = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
+    existing = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
   }
 
   // Merge new rules (avoid duplicates by ID)
@@ -361,9 +359,9 @@ function updateCulturalGrammarJSON(newRules) {
 function slugify(text) {
   return text
     .toLowerCase()
-    .replace(/[^\w\s-]/g, '')
-    .replace(/[\s_-]+/g, '_')
-    .replace(/^-+|-+$/g, '');
+    .replaceAll(/[^\s\w-]/g, '')
+    .replaceAll(/[\s_-]+/g, '_')
+    .replaceAll(/^-+|-+$/g, '');
 }
 
 function getLevelWeight(level) {
@@ -440,17 +438,13 @@ Options:
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  console.log(`🚀 Starting grammar fetching process...\n`);
+  console.log('🚀 Starting grammar fetching process...\n');
 
   let grammarRules = [];
 
   try {
     // Determine if source is URL or file
-    if (source.startsWith('http://') || source.startsWith('https://')) {
-      grammarRules = await fetchGrammarFromURL(source);
-    } else {
-      grammarRules = await parseGrammarFromFile(source);
-    }
+    grammarRules = await (source.startsWith('http://') || source.startsWith('https://') ? fetchGrammarFromURL(source) : parseGrammarFromFile(source));
 
     console.log(`\n📊 Extracted ${grammarRules.length} grammar rules\n`);
 
@@ -458,17 +452,19 @@ Options:
     let validCount = 0;
     let errorCount = 0;
 
-    grammarRules.forEach((rule, index) => {
+    for (const [index, rule] of grammarRules.entries()) {
       const errors = validateGrammarRule(rule);
 
       if (errors.length > 0) {
         console.log(`⚠️  Rule ${index + 1} (${rule.title || 'untitled'}) has errors:`);
-        errors.forEach(err => console.log(`   - ${err}`));
+        for (const err of errors) {
+          console.log(`   - ${err}`);
+        }
         errorCount++;
       } else {
         validCount++;
       }
-    });
+    }
 
     console.log(`\n✅ Valid rules: ${validCount}`);
     console.log(`❌ Rules with errors: ${errorCount}\n`);
@@ -476,21 +472,21 @@ Options:
     // Generate markdown files for valid rules
     const validRules = grammarRules.filter(r => validateGrammarRule(r).length === 0);
 
-    console.log(`📝 Generating markdown files...\n`);
+    console.log('📝 Generating markdown files...\n');
 
-    validRules.forEach(rule => {
+    for (const rule of validRules) {
       generateMarkdownFile(rule, outputDir);
-    });
+    }
 
     // Update cultural-grammar.json
     updateCulturalGrammarJSON(validRules);
 
-    console.log(`\n🎉 Grammar fetching complete!`);
-    console.log(`\nNext steps:`);
-    console.log(`1. Review generated files in content/grammar/`);
-    console.log(`2. Test with Hugo: npm run dev`);
-    console.log(`3. Verify grammar page renders correctly at /grammar/`);
-    console.log(`4. Commit changes to git\n`);
+    console.log('\n🎉 Grammar fetching complete!');
+    console.log('\nNext steps:');
+    console.log('1. Review generated files in content/grammar/');
+    console.log('2. Test with Hugo: npm run dev');
+    console.log('3. Verify grammar page renders correctly at /grammar/');
+    console.log('4. Commit changes to git\n');
 
   } catch (error) {
     console.error('\n❌ Error:', error.message);

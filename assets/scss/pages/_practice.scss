@@ -16,6 +16,7 @@
 // Practice header
 .practice-header {
   @include flex-between;
+
   align-items: flex-start;
   margin-bottom: $spacing-8;
   padding: $spacing-6;
@@ -31,12 +32,14 @@
 
 .session-controls {
   @include flex-center;
+
   gap: $spacing-3;
 }
 
 // Practice session
 .practice-session {
   @include flex-column;
+
   gap: $spacing-8;
 
   &.hidden {
@@ -47,6 +50,7 @@
 // Session complete
 .session-complete {
   @include flex-column;
+
   align-items: center;
   gap: $spacing-8;
   padding: $spacing-12;
@@ -61,6 +65,7 @@
 
 .session-actions {
   @include flex-center;
+
   gap: $spacing-4;
   margin-top: $spacing-6;
   flex-wrap: wrap;
@@ -103,6 +108,7 @@
 
   .content-meta {
     @include flex-center;
+
     gap: $spacing-4;
     justify-content: center;
     flex-wrap: wrap;
@@ -158,6 +164,7 @@
 
 .examples-list {
   @include flex-column;
+
   gap: $spacing-4;
 
   .example-item {
@@ -171,6 +178,7 @@
 
 .exercises-list {
   @include flex-column;
+
   gap: $spacing-6;
 
   .exercise-item {
@@ -210,22 +218,26 @@
 
 .content-actions {
   @include flex-center;
+
   gap: $spacing-4;
   margin-bottom: $spacing-8;
   flex-wrap: wrap;
 
   button {
     @include flex-center;
+
     gap: $spacing-2;
   }
 }
 
 .content-navigation {
   @include flex-between;
+
   gap: $spacing-4;
 
   .nav-link {
     @include flex-column;
+
     gap: $spacing-1;
     padding: $spacing-4;
     background-color: var(--bg-secondary);
@@ -259,6 +271,7 @@
     .nav-title {
       color: var(--text-primary);
       font-weight: $font-weight-medium;
+
       @include text-clamp(2);
     }
   }

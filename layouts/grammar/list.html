@@ -8,7 +8,8 @@
     </div>
     
     <div class="grammar-filters">
-        <select id="grammar-level-filter">
+        <label for="grammar-level-filter" class="sr-only">Filter by grammar level</label>
+        <select id="grammar-level-filter" aria-label="Filter grammar content by CEFR level">
             <option value="">All Levels</option>
             <option value="A1">A1 - Beginner</option>
             <option value="A2">A2 - Elementary</option>
@@ -16,7 +17,7 @@
             <option value="B2">B2 - Upper Intermediate</option>
         </select>
         
-        <input type="text" id="grammar-search" placeholder="Search grammar topics..." class="search-input">
+        <input type="text" id="grammar-search" placeholder="Search grammar topics..." class="search-input" aria-label="Search grammar topics">
     </div>
     
     {{ $grammarPages := where .Site.RegularPages "Type" "grammar" }}
@@ -58,7 +59,7 @@
 
             <div class="grammar-actions">
                 <a href="{{ .RelPermalink }}" class="btn-primary">View Full Topic</a>
-                <button class="bookmark-btn" data-grammar-title="{{ .Title }}" title="Bookmark this rule">
+                <button class="bookmark-btn" data-grammar-title="{{ .Title }}" title="Bookmark this rule" aria-label="Bookmark {{ .Title }} grammar rule">
                     ⭐
                 </button>
             </div>

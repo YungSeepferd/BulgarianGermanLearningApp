@@ -118,6 +118,8 @@ npm run format            # Auto-format code (ESLint, Prettier, Stylelint)
 npm run test:unit         # Jest unit tests
 npm run test:coverage     # Generate coverage report
 npm test                  # Playwright end-to-end tests
+npm run test:a11y         # Accessibility tests (axe-core)
+npm run test:keyboard     # Keyboard navigation tests
 
 # Build and validate
 npm run build             # Production build
@@ -145,9 +147,10 @@ npm run validate          # Full validation suite
 - Kebab-case selectors, variables, mixins
 - Validated before commits
 
-**Testing** (Jest + Playwright):
+**Testing** (Jest + Playwright + axe-core):
 - Unit tests: Jest with jsdom environment (`tests/unit/`)
 - E2E tests: Playwright (`tests/playwright/`)
+- Accessibility tests: axe-core integration with WCAG 2.1 AA compliance
 - Minimum coverage threshold: 70% (branches, functions, lines, statements)
 - SM-2 algorithm thoroughly tested with 25+ unit test cases
 
@@ -181,6 +184,8 @@ GitHub Actions enforces code quality on every push and pull request:
 - ✅ Code coverage tracking (Codecov)
 - ✅ Build validation
 - ✅ Data integrity checks
+- ✅ Accessibility testing (axe-core WCAG 2.1 AA)
+- ✅ Keyboard navigation testing
 
 All checks must pass before merging to main.
 
@@ -215,7 +220,8 @@ All checks must pass before merging to main.
 
 - **Read first**: [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`AGENTS.md`](AGENTS.md)
 - **Workflow**: One scoped change per PR; log notes in `docs/notes/TODAY.md`
-- **Testing**: Start `hugo server -D`, verify no console errors, and ensure accessibility checks pass
+- **Testing**: Start `hugo server -D`, verify no console errors, and ensure accessibility tests pass
+- **Accessibility**: Run `npm run test:a11y` to verify WCAG 2.1 AA compliance
 - **PRs**: Include summary, acceptance checklist, and screenshots/GIFs for UI updates
 
 ## 📄 License

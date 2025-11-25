@@ -178,7 +178,7 @@ export class VocabularyManager {
    */
   generateId() {
     const timestamp = Date.now();
-    const random = Math.random().toString(36).substring(2, 9);
+    const random = Math.random().toString(36).slice(2, 9);
     return `custom_${timestamp}_${random}`;
   }
 
@@ -236,7 +236,7 @@ export class VocabularyManager {
       value = String(value);
     }
     if (value.includes(',') || value.includes('"') || value.includes('\n')) {
-      return `"${value.replace(/"/g, '""')}"`;
+      return `"${value.replaceAll('"', '""')}"`;
     }
     return value;
   }
@@ -262,9 +262,9 @@ export class VocabularyManager {
       const values = this.parseCSVLine(lines[i]);
       const entry = {};
 
-      headers.forEach((header, index) => {
+      for (const [index, header] of headers.entries()) {
         entry[header] = values[index]?.trim() || '';
-      });
+      }
 
       // Skip empty rows
       if (!entry.bulgarian && !entry.german) {
@@ -331,10 +331,10 @@ export class VocabularyManager {
     const levelCounts = {};
     const categoryCounts = {};
 
-    all.forEach(item => {
+    for (const item of all) {
       levelCounts[item.level] = (levelCounts[item.level] || 0) + 1;
       categoryCounts[item.category] = (categoryCounts[item.category] || 0) + 1;
-    });
+    }
 
     return {
       totalEntries: all.length,
@@ -371,7 +371,7 @@ export class VocabularyManager {
       const imported = [];
       const errors = [];
 
-      entries.forEach((entry, index) => {
+      for (const [index, entry] of entries.entries()) {
         const result = this.createEntry(entry);
         if (result.success) {
           imported.push(result.entry);
@@ -381,7 +381,7 @@ export class VocabularyManager {
             errors: result.errors
           });
         }
-      });
+      }
 
       return {
         success: errors.length === 0,

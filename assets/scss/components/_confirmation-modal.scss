@@ -4,10 +4,7 @@
 
 .confirmation-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(3px);
   z-index: 9999;
@@ -19,9 +16,9 @@
 }
 
 .confirmation-modal {
-  background: var(--bg-primary, #ffffff);
+  background: var(--bg-primary, #fff);
   border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.30);
   max-width: 500px;
   width: 100%;
   animation: scaleIn 0.3s ease;
@@ -81,7 +78,7 @@
 .direction-description {
   font-size: 14px;
   color: var(--text-secondary, #757575);
-  margin: 0 0 16px 0;
+  margin: 0 0 16px;
 }
 
 .confirmation-arrow {
@@ -102,7 +99,7 @@
 .impact-title {
   font-size: 14px;
   font-weight: 600;
-  margin: 0 0 12px 0;
+  margin: 0 0 12px;
 }
 
 .impact-list {

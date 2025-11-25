@@ -16,6 +16,7 @@
 // Grammar list
 .grammar-list {
   @include flex-column;
+
   gap: $spacing-6;
   margin-bottom: $spacing-8;
 }

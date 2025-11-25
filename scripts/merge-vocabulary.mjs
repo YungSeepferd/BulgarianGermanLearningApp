@@ -5,8 +5,8 @@
  * @usage node scripts/merge-vocabulary.mjs [--dry-run] [--output=path]
  */
 
-import { readFile, writeFile } from 'fs/promises';
-import { existsSync } from 'fs';
+import { readFile, writeFile } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 
 const PRIMARY_PATH = 'data/vocabulary.json';
 const ENHANCED_PATH = 'data/vocabulary-enhanced.json';
@@ -16,13 +16,13 @@ function mergeExamples(primEx = [], enhEx = []) {
   const seen = new Set();
   const merged = [];
   
-  [...primEx, ...enhEx].forEach(ex => {
+  for (const ex of [...primEx, ...enhEx]) {
     const key = ex.sentence?.trim().toLowerCase();
     if (key && !seen.has(key)) {
       seen.add(key);
       merged.push(ex);
     }
-  });
+  }
   
   return merged.length > 0 ? merged : undefined;
 }
@@ -32,11 +32,15 @@ function mergeEntries(prim, enh) {
   const merged = { ...prim };
   
   // Override with enhanced values if present and non-null
-  Object.keys(enh).forEach(key => {
+  for (const key of Object.keys(enh)) {
     if (enh[key] !== null && enh[key] !== undefined) {
       // Skip overwriting for certain fields
-      if (key === 'examples') return; // Handle separately
-      if (key === 'id') return; // Never override ID
+      if (key === 'examples') {
+        continue;
+      } // Handle separately
+      if (key === 'id') {
+        continue;
+      } // Never override ID
       
       // For string fields, prefer non-empty enhanced value
       if (typeof enh[key] === 'string' && enh[key].trim().length > 0) {
@@ -45,7 +49,7 @@ function mergeEntries(prim, enh) {
         merged[key] = enh[key];
       }
     }
-  });
+  }
   
   // Merge examples arrays
   merged.examples = mergeExamples(prim.examples, enh.examples);
@@ -94,9 +98,9 @@ async function main() {
   
   // Build ID map from primary
   const idMap = new Map();
-  primary.forEach(entry => {
+  for (const entry of primary) {
     idMap.set(entry.id, { source: 'primary', data: entry });
-  });
+  }
   
   console.log(`📚 Primary dataset: ${primary.length} entries`);
   console.log(`✨ Enhanced dataset: ${enhanced ? enhanced.length : 0} entries\n`);
@@ -106,10 +110,10 @@ async function main() {
   let addedCount = 0;
   
   if (enhanced && Array.isArray(enhanced)) {
-    enhanced.forEach(enhEntry => {
+    for (const enhEntry of enhanced) {
       if (!enhEntry.id) {
-        console.warn(`⚠️  Skipping enhanced entry without ID`);
-        return;
+        console.warn('⚠️  Skipping enhanced entry without ID');
+        continue;
       }
       
       if (idMap.has(enhEntry.id)) {
@@ -121,11 +125,11 @@ async function main() {
         idMap.set(enhEntry.id, { source: 'enhanced', data: enhEntry });
         addedCount++;
       }
-    });
+    }
   }
   
   // Build final merged array
-  const mergedArray = Array.from(idMap.values()).map(entry => entry.data);
+  const mergedArray = [...idMap.values()].map(entry => entry.data);
   
   // Report
   console.log('📊 Merge Statistics:');
@@ -136,14 +140,14 @@ async function main() {
   
   // Check for entries with generic notes but missing directional notes
   let warningCount = 0;
-  mergedArray.forEach(entry => {
+  for (const entry of mergedArray) {
     if (entry.notes && !entry.notes_bg_to_de && !entry.notes_de_to_bg) {
       if (warningCount < 5) {
         console.warn(`⚠️  ${entry.id}: has generic notes but missing directional notes`);
       }
       warningCount++;
     }
-  });
+  }
   
   if (warningCount > 5) {
     console.warn(`   ... and ${warningCount - 5} more warnings\n`);
@@ -192,7 +196,7 @@ async function main() {
   }
 }
 
-main().catch(err => {
-  console.error('❌ Merge script failed:', err);
+main().catch(error => {
+  console.error('❌ Merge script failed:', error);
   process.exit(1);
 });

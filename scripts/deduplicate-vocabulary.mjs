@@ -14,9 +14,9 @@
  *   --report     Generate detailed deduplication report
  */
 
-import fs from 'fs/promises';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -26,9 +26,9 @@ const BACKUP_DIR = path.join(__dirname, '../data/backups');
 const REPORT_FILE = path.join(__dirname, '../docs/vocabulary/DEDUPLICATION_REPORT.md');
 
 // Parse command line arguments
-const args = process.argv.slice(2);
-const DRY_RUN = args.includes('--dry-run');
-const GENERATE_REPORT = args.includes('--report');
+const args = new Set(process.argv.slice(2));
+const DRY_RUN = args.has('--dry-run');
+const GENERATE_REPORT = args.has('--report');
 
 /**
  * Main deduplication engine
@@ -47,7 +47,7 @@ class VocabularyDeduplicator {
   findDuplicates() {
     const seen = new Map();
 
-    this.vocabulary.forEach((entry, index) => {
+    for (const [index, entry] of this.vocabulary.entries()) {
       const key = `${entry.word}|${entry.translation}`.toLowerCase();
 
       if (!seen.has(key)) {
@@ -55,10 +55,10 @@ class VocabularyDeduplicator {
       }
 
       seen.get(key).push({ ...entry, originalIndex: index });
-    });
+    }
 
     // Filter to only groups with duplicates
-    this.duplicateGroups = Array.from(seen.entries())
+    this.duplicateGroups = [...seen.entries()]
       .filter(([_, entries]) => entries.length > 1)
       .map(([key, entries]) => ({
         key,
@@ -74,7 +74,7 @@ class VocabularyDeduplicator {
    * Strategy: Keep entry with richest metadata as base, merge all content
    */
   mergeDuplicates() {
-    this.duplicateGroups.forEach(group => {
+    for (const group of this.duplicateGroups) {
       // Select best entry as base (most complete metadata)
       const baseEntry = this.selectBestEntry(group.entries);
 
@@ -88,7 +88,7 @@ class VocabularyDeduplicator {
 
       this.mergedEntries.push(merged);
       this.removedIds.push(...removedIds);
-    });
+    }
   }
 
   /**
@@ -96,11 +96,15 @@ class VocabularyDeduplicator {
    * Criteria: Most examples, most notes, highest frequency
    */
   selectBestEntry(entries) {
-    return entries.reduce((best, current) => {
+    let best = entries[0];
+    for (const current of entries) {
       const bestScore = this.calculateCompletenessScore(best);
       const currentScore = this.calculateCompletenessScore(current);
-      return currentScore > bestScore ? current : best;
-    });
+      if (currentScore > bestScore) {
+        best = current;
+      }
+    }
+    return best;
   }
 
   /**
@@ -113,16 +117,32 @@ class VocabularyDeduplicator {
     score += (entry.examples?.length || 0) * 10;
 
     // Notes and linguistic information
-    if (entry.notes && entry.notes !== null) score += 5;
-    if (entry.notes_bg_to_de) score += 5;
-    if (entry.notes_de_to_bg) score += 5;
-    if (entry.linguistic_note) score += 3;
-    if (entry.linguistic_note_bg_to_de) score += 3;
-    if (entry.linguistic_note_de_to_bg) score += 3;
+    if (entry.notes && entry.notes !== null) {
+      score += 5;
+    }
+    if (entry.notes_bg_to_de) {
+      score += 5;
+    }
+    if (entry.notes_de_to_bg) {
+      score += 5;
+    }
+    if (entry.linguistic_note) {
+      score += 3;
+    }
+    if (entry.linguistic_note_bg_to_de) {
+      score += 3;
+    }
+    if (entry.linguistic_note_de_to_bg) {
+      score += 3;
+    }
 
     // Cultural and etymological data
-    if (entry.etymology) score += 4;
-    if (entry.cultural_note) score += 4;
+    if (entry.etymology) {
+      score += 4;
+    }
+    if (entry.cultural_note) {
+      score += 4;
+    }
 
     // Frequency indicates importance
     score += (entry.frequency || 0) / 10;
@@ -169,7 +189,9 @@ class VocabularyDeduplicator {
     const seen = new Set();
     return examples.filter(ex => {
       const key = ex.sentence.toLowerCase();
-      if (seen.has(key)) return false;
+      if (seen.has(key)) {
+        return false;
+      }
       seen.add(key);
       return true;
     });
@@ -183,12 +205,18 @@ class VocabularyDeduplicator {
       .map(e => e[fieldName])
       .filter(v => v !== null && v !== undefined && v.trim() !== '');
 
-    if (values.length === 0) return null;
-    if (values.length === 1) return values[0];
+    if (values.length === 0) {
+      return null;
+    }
+    if (values.length === 1) {
+      return values[0];
+    }
 
     // Check if all values are identical
     const uniqueValues = [...new Set(values)];
-    if (uniqueValues.length === 1) return uniqueValues[0];
+    if (uniqueValues.length === 1) {
+      return uniqueValues[0];
+    }
 
     // Combine different values with separator
     return uniqueValues.join(' | ');
@@ -213,26 +241,26 @@ class VocabularyDeduplicator {
     const totalDuplicates = this.removedIds.length;
     const groupCount = this.duplicateGroups.length;
 
-    let report = `# Vocabulary Deduplication Report\n\n`;
+    let report = '# Vocabulary Deduplication Report\n\n';
     report += `**Date**: ${new Date().toISOString().split('T')[0]}\n\n`;
-    report += `## Summary\n\n`;
+    report += '## Summary\n\n';
     report += `- **Duplicate Groups Found**: ${groupCount}\n`;
     report += `- **Total Duplicate Entries Removed**: ${totalDuplicates}\n`;
     report += `- **Original Entry Count**: ${this.vocabulary.length}\n`;
     report += `- **Final Entry Count**: ${this.vocabulary.length - totalDuplicates}\n\n`;
 
-    report += `## Duplicate Groups\n\n`;
+    report += '## Duplicate Groups\n\n';
 
-    this.duplicateGroups.forEach((group, index) => {
+    for (const [index, group] of this.duplicateGroups.entries()) {
       report += `### ${index + 1}. ${group.key}\n\n`;
       report += `**Occurrences**: ${group.count}\n\n`;
 
-      group.entries.forEach((entry, i) => {
+      for (const [i, entry] of group.entries.entries()) {
         report += `#### Entry ${i + 1}: \`${entry.id}\`\n`;
         report += `- **Examples**: ${entry.examples?.length || 0}\n`;
         report += `- **Frequency**: ${entry.frequency || 'N/A'}\n`;
         report += `- **Completeness Score**: ${this.calculateCompletenessScore(entry)}\n\n`;
-      });
+      }
 
       // Find the merged entry
       const mergedEntry = this.mergedEntries.find(m =>
@@ -245,14 +273,14 @@ class VocabularyDeduplicator {
         report += `- **Frequency**: ${mergedEntry.frequency}\n\n`;
       }
 
-      report += `---\n\n`;
-    });
+      report += '---\n\n';
+    }
 
-    report += `## Removed Entry IDs\n\n`;
-    report += `The following entry IDs were removed during deduplication:\n\n`;
+    report += '## Removed Entry IDs\n\n';
+    report += 'The following entry IDs were removed during deduplication:\n\n';
     report += this.removedIds.map(id => `- \`${id}\``).join('\n');
-    report += `\n\n---\n\n`;
-    report += `**Note**: All unique content from removed entries has been merged into the kept entries.\n`;
+    report += '\n\n---\n\n';
+    report += '**Note**: All unique content from removed entries has been merged into the kept entries.\n';
 
     return report;
   }
@@ -266,7 +294,7 @@ async function main() {
 
   // Load vocabulary
   console.log('📖 Loading vocabulary...');
-  const vocabData = JSON.parse(await fs.readFile(VOCAB_FILE, 'utf-8'));
+  const vocabData = JSON.parse(await fs.readFile(VOCAB_FILE, 'utf8'));
   console.log(`   Loaded ${vocabData.length} entries\n`);
 
   // Initialize deduplicator
@@ -284,9 +312,9 @@ async function main() {
 
   // Display duplicate summary
   console.log('📊 Duplicate Summary:');
-  duplicateGroups.forEach((group, index) => {
+  for (const [index, group] of duplicateGroups.entries()) {
     console.log(`   ${index + 1}. "${group.key}" - ${group.count} occurrences`);
-  });
+  }
   console.log();
 
   // Merge duplicates
@@ -311,7 +339,7 @@ async function main() {
     // Create backup
     console.log('💾 Creating backup...');
     await fs.mkdir(BACKUP_DIR, { recursive: true });
-    const timestamp = new Date().toISOString().replace(/:/g, '-').split('.')[0];
+    const timestamp = new Date().toISOString().replaceAll(':', '-').split('.')[0];
     const backupFile = path.join(BACKUP_DIR, `vocabulary-${timestamp}.json`);
     await fs.writeFile(backupFile, JSON.stringify(vocabData, null, 2));
     console.log(`   Backup saved: ${backupFile}\n`);

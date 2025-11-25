@@ -1,6 +1,7 @@
 // Home page styles
 .home-container {
   @include flex-column;
+
   gap: $spacing-16;
 }
 
@@ -57,6 +58,7 @@
 
 .hero-actions {
   @include flex-center;
+
   gap: $spacing-4;
   margin-top: $spacing-8;
   flex-wrap: wrap;
@@ -81,6 +83,7 @@
 
 .features-grid {
   @include grid-responsive(280px);
+
   max-width: 1200px;
   margin: 0 auto;
 
@@ -111,6 +114,7 @@
 
 .quick-start-grid {
   @include grid-responsive(300px);
+
   max-width: 1000px;
   margin: 0 auto;
 
@@ -141,6 +145,7 @@
 
 .activity-cards {
   @include grid-responsive(300px);
+
   max-width: 1000px;
   margin: 0 auto;
 

@@ -38,6 +38,7 @@
 // Vocabulary grid
 .vocabulary-grid {
   @include grid-responsive(320px);
+
   margin-bottom: $spacing-8;
 
   @include lg {
@@ -48,6 +49,7 @@
 // No results state
 .no-results {
   @include flex-column;
+
   align-items: center;
   justify-content: center;
   gap: $spacing-6;

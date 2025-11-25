@@ -105,11 +105,11 @@ class UserPreferences {
     if (keys) {
       // Reset specific keys
       const keysArray = Array.isArray(keys) ? keys : [keys];
-      keysArray.forEach(key => {
+      for (const key of keysArray) {
         if (key in this.defaults) {
           this.preferences[key] = this.defaults[key];
         }
-      });
+      }
     } else {
       // Reset all preferences
       this.preferences = { ...this.defaults };
@@ -175,7 +175,7 @@ class UserPreferences {
 
   // Learning preferences
   setSessionLength(length) {
-    const numLength = parseInt(length);
+    const numLength = Number.parseInt(length);
     if (isNaN(numLength) || numLength < 5 || numLength > 100) {
       throw new Error('Session length must be between 5 and 100');
     }
@@ -210,8 +210,8 @@ class UserPreferences {
   }
 
   setPreferredLevels(levels) {
-    const validLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
-    const filteredLevels = levels.filter(level => validLevels.includes(level));
+    const validLevels = new Set(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
+    const filteredLevels = levels.filter(level => validLevels.has(level));
     this.set('preferredLevels', filteredLevels);
   }
 
@@ -222,7 +222,7 @@ class UserPreferences {
     const updates = {};
     
     if (easyMultiplier !== undefined) {
-      if (easyMultiplier < 1.1 || easyMultiplier > 3.0) {
+      if (easyMultiplier < 1.1 || easyMultiplier > 3) {
         throw new Error('Easy multiplier must be between 1.1 and 3.0');
       }
       updates.easyMultiplier = easyMultiplier;
@@ -260,9 +260,9 @@ class UserPreferences {
     if (theme === 'auto') {
       // Use system preference
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+      root.dataset.theme = prefersDark ? 'dark' : 'light';
     } else {
-      root.setAttribute('data-theme', theme);
+      root.dataset.theme = theme;
     }
   }
 
@@ -305,10 +305,10 @@ class UserPreferences {
     const animationsEnabled = this.get('animationsEnabled');
     const root = document.documentElement;
     
-    if (!animationsEnabled) {
-      root.classList.add('no-animations');
-    } else {
+    if (animationsEnabled) {
       root.classList.remove('no-animations');
+    } else {
+      root.classList.add('no-animations');
     }
   }
 
@@ -323,13 +323,13 @@ class UserPreferences {
   }
 
   notifyListeners(event, data) {
-    this.listeners.forEach(callback => {
+    for (const callback of this.listeners) {
       try {
         callback(event, data);
       } catch (error) {
         console.error('[UserPreferences] Listener error:', error);
       }
-    });
+    }
   }
 
   // Import/Export
@@ -346,11 +346,11 @@ class UserPreferences {
       if (data.version && data.preferences) {
         // Validate imported preferences
         const validPrefs = {};
-        Object.keys(this.defaults).forEach(key => {
+        for (const key of Object.keys(this.defaults)) {
           if (key in data.preferences) {
             validPrefs[key] = data.preferences[key];
           }
-        });
+        }
         
         this.preferences = { ...this.defaults, ...validPrefs };
         this.save();
@@ -369,8 +369,12 @@ class UserPreferences {
   // Utility methods
   isDarkMode() {
     const theme = this.get('theme');
-    if (theme === 'dark') return true;
-    if (theme === 'light') return false;
+    if (theme === 'dark') {
+      return true;
+    }
+    if (theme === 'light') {
+      return false;
+    }
     
     // Auto mode - check system preference
     return window.matchMedia('(prefers-color-scheme: dark)').matches;

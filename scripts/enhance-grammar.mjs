@@ -16,9 +16,9 @@
  *   node scripts/enhance-grammar.mjs --level A1
  */
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,10 +28,10 @@ const rootDir = path.resolve(__dirname, '..');
  * Parse frontmatter and content from markdown file
  */
 function parseMarkdownFile(filePath) {
-  const content = fs.readFileSync(filePath, 'utf-8');
+  const content = fs.readFileSync(filePath, 'utf8');
 
   // Extract frontmatter
-  const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  const frontmatterMatch = content.match(/^---\n([\S\s]*?)\n---\n([\S\s]*)$/);
 
   if (!frontmatterMatch) {
     return { frontmatter: {}, content: content };
@@ -47,11 +47,11 @@ function parseMarkdownFile(filePath) {
   let currentKey = null;
   let multilineValue = [];
 
-  lines.forEach(line => {
+  for (const line of lines) {
     // Handle multiline values (|)
     if (currentKey && (line.startsWith('  ') || line.startsWith('\t'))) {
       multilineValue.push(line.trim());
-      return;
+      continue;
     }
 
     // Save previous multiline value
@@ -71,7 +71,7 @@ function parseMarkdownFile(filePath) {
       if (value === '|') {
         currentKey = key;
         multilineValue = [];
-        return;
+        continue;
       }
 
       // Remove quotes
@@ -81,7 +81,7 @@ function parseMarkdownFile(filePath) {
 
       frontmatter[key] = value;
     }
-  });
+  }
 
   // Save last multiline value
   if (currentKey && multilineValue.length > 0) {
@@ -146,12 +146,12 @@ function extractSections(content) {
   const sections = [];
   const lines = content.split('\n');
 
-  lines.forEach(line => {
+  for (const line of lines) {
     const match = line.match(/^#{2,3}\s+(.+)$/);
     if (match) {
       sections.push(match[1].trim());
     }
-  });
+  }
 
   return sections;
 }
@@ -180,7 +180,7 @@ notes_de_to_bg: |
     suggestions.push({
       component: 'Cultural Context',
       priority: 'HIGH',
-      suggestion: `Add a "Cultural Context" section comparing how Bulgarians and Germans conceptualize this grammar rule differently.`
+      suggestion: 'Add a "Cultural Context" section comparing how Bulgarians and Germans conceptualize this grammar rule differently.'
     });
   }
 
@@ -226,23 +226,28 @@ function analyzeGrammarProgression(analyses) {
     C2: []
   };
 
-  analyses.forEach(analysis => {
+  for (const analysis of analyses) {
     if (byLevel[analysis.level]) {
       byLevel[analysis.level].push(analysis);
     }
-  });
+  }
 
   const progression = {};
-
-  Object.entries(byLevel).forEach(([level, items]) => {
+  
+  for (const [level, items] of Object.entries(byLevel)) {
+    let totalWordCount = 0;
+    for (const item of items) {
+      totalWordCount += item.wordCount;
+    }
+    
     progression[level] = {
       count: items.length,
-      avgWordCount: items.reduce((sum, a) => sum + a.wordCount, 0) / items.length || 0,
+      avgWordCount: totalWordCount / items.length || 0,
       withBidirectionalNotes: items.filter(a => a.hasBidirectionalNotes).length,
       withExamples: items.filter(a => a.hasExamples).length,
       completeness: calculateCompleteness(items)
     };
-  });
+  }
 
   return progression;
 }
@@ -251,18 +256,32 @@ function analyzeGrammarProgression(analyses) {
  * Calculate completeness percentage
  */
 function calculateCompleteness(analyses) {
-  if (analyses.length === 0) return 0;
+  if (analyses.length === 0) {
+    return 0;
+  }
 
   const totalComponents = analyses.length * 5; // 5 required components
-  const presentComponents = analyses.reduce((sum, a) => {
+  let presentComponents = 0;
+  
+  for (const analysis of analyses) {
     let count = 0;
-    if (a.hasBidirectionalNotes) count++;
-    if (a.hasExamples) count++;
-    if (a.hasCulturalContext) count++;
-    if (a.hasPracticeSection) count++;
-    if (a.hasCommonMistakes) count++;
-    return sum + count;
-  }, 0);
+    if (analysis.hasBidirectionalNotes) {
+      count++;
+    }
+    if (analysis.hasExamples) {
+      count++;
+    }
+    if (analysis.hasCulturalContext) {
+      count++;
+    }
+    if (analysis.hasPracticeSection) {
+      count++;
+    }
+    if (analysis.hasCommonMistakes) {
+      count++;
+    }
+    presentComponents += count;
+  }
 
   return Math.round((presentComponents / totalComponents) * 100);
 }
@@ -285,38 +304,40 @@ Total grammar files analyzed: ${analyses.length}
   // Progression by level
   console.log('📈 PROGRESSION BY CEFR LEVEL\n');
 
-  Object.entries(progression).forEach(([level, stats]) => {
-    if (stats.count === 0) return;
+  for (const [level, stats] of Object.entries(progression)) {
+    if (stats.count === 0) {
+      continue;
+    }
 
     console.log(`${level}: ${stats.count} topics (${stats.completeness}% complete)`);
     console.log(`   Avg word count: ${Math.round(stats.avgWordCount)}`);
     console.log(`   With bidirectional notes: ${stats.withBidirectionalNotes}/${stats.count}`);
     console.log(`   With examples: ${stats.withExamples}/${stats.count}`);
     console.log('');
-  });
+  }
 
   // Files needing enhancement
   const needsWork = analyses.filter(a => a.missingComponents.length > 0);
 
   console.log(`\n⚠️  FILES NEEDING ENHANCEMENT (${needsWork.length}/${analyses.length})\n`);
 
-  needsWork.forEach(analysis => {
+  for (const analysis of needsWork) {
     console.log(`📄 ${analysis.file} (${analysis.level})`);
     console.log(`   Title: ${analysis.title}`);
     console.log(`   Missing components: ${analysis.missingComponents.length}`);
-    analysis.missingComponents.forEach(comp => {
+    for (const comp of analysis.missingComponents) {
       console.log(`   - ${comp}`);
-    });
+    }
 
     const suggestions = generateEnhancementSuggestions(analysis);
     if (suggestions.length > 0) {
-      console.log(`   \n   💡 Priority suggestions:`);
-      suggestions.filter(s => s.priority === 'HIGH').forEach(s => {
+      console.log('   \n   💡 Priority suggestions:');
+      for (const s of suggestions.filter(s => s.priority === 'HIGH')) {
         console.log(`   • ${s.component}: ${s.suggestion.split('\n')[0]}`);
-      });
+      }
     }
     console.log('');
-  });
+  }
 
   // Overall statistics
   const withBidirectional = analyses.filter(a => a.hasBidirectionalNotes).length;
@@ -343,17 +364,17 @@ Cultural context:             ${withCultural}/${analyses.length} (${Math.round(w
   }
 
   if (needsWork.length > analyses.length * 0.3) {
-    console.log(`2. Focus on completing high-priority enhancements`);
+    console.log('2. Focus on completing high-priority enhancements');
   }
 
-  const levels = Object.keys(progression).filter(l => progression[l].count > 0);
-  const missingLevels = ['A1', 'A2', 'B1', 'B2'].filter(l => !levels.includes(l));
+  const levels = new Set(Object.keys(progression).filter(l => progression[l].count > 0));
+  const missingLevels = ['A1', 'A2', 'B1', 'B2'].filter(l => !levels.has(l));
 
   if (missingLevels.length > 0) {
     console.log(`3. Create content for missing levels: ${missingLevels.join(', ')}`);
   }
 
-  console.log(`\n✅ Analysis complete!\n`);
+  console.log('\n✅ Analysis complete!\n');
 }
 
 /**
@@ -426,11 +447,11 @@ async function main() {
   // Save detailed report
   saveDetailedReport(analyses, progression);
 
-  console.log(`Next steps:`);
-  console.log(`1. Review the analysis report`);
-  console.log(`2. Enhance files with missing components`);
-  console.log(`3. Use fetch-grammar.mjs to add content for missing levels`);
-  console.log(`4. Re-run this script to track progress\n`);
+  console.log('Next steps:');
+  console.log('1. Review the analysis report');
+  console.log('2. Enhance files with missing components');
+  console.log('3. Use fetch-grammar.mjs to add content for missing levels');
+  console.log('4. Re-run this script to track progress\n');
 }
 
 // Run if called directly

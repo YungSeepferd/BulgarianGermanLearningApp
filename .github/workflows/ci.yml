@@ -91,3 +91,22 @@ jobs:
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
         run: npm test
+
+      - name: Run Accessibility Tests
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+        run: npm run test:a11y
+
+      - name: Run Keyboard Navigation Tests
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+        run: npm run test:keyboard
+
+      - name: Upload Accessibility Test Results
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: accessibility-test-results
+          path: |
+            test-results/
+            playwright-report/

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 const vocabPath = path.join(__dirname, '../data/vocabulary.json');
 const batchPath = path.join(__dirname, '../data/vocabulary-batch-1-numbers-verbs.json');
@@ -12,7 +12,7 @@ let content = fs.readFileSync(vocabPath, 'utf8');
 // Fix all instances of \\n to \n (double backslash-n to single backslash-n)
 console.log('Fixing \\\\n to \\n...');
 const originalLength = content.length;
-content = content.replace(/\\\\n/g, '\\n');
+content = content.replaceAll('\\\\n', '\\n');
 console.log(`Replaced ${originalLength - content.length} characters`);
 
 // Write the fixed content
@@ -37,7 +37,9 @@ try {
   
   if (duplicates.length > 0) {
     console.log(`\nFound ${duplicates.length} duplicate entries (will skip):`);
-    duplicates.forEach(e => console.log(`  - ${e.id}: ${e.word}`));
+    for (const e of duplicates) {
+      console.log(`  - ${e.id}: ${e.word}`);
+    }
   }
   
   console.log(`\nMerging ${newEntries.length} new entries...`);
@@ -47,8 +49,8 @@ try {
   fs.writeFileSync(vocabPath, JSON.stringify(mergedData, null, 2), 'utf8');
   console.log(`✓ Merged successfully! Total entries: ${mergedData.length}`);
   
-} catch (e) {
-  console.error('✗ JSON parse error after fix:', e.message);
+} catch (error) {
+  console.error('✗ JSON parse error after fix:', error.message);
   process.exit(1);
 }
 

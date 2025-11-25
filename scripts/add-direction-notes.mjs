@@ -4,9 +4,9 @@
  * @purpose Enable proper bidirectional learning with language-specific explanations
  */
 
-import fs from 'fs/promises';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const VOCAB_PATH = path.join(__dirname, '../data/vocabulary.json');
@@ -17,7 +17,7 @@ const VOCAB_PATH = path.join(__dirname, '../data/vocabulary.json');
  * @returns {string} German explanation
  */
 function generateNotesDeToБg(entry) {
-  const { word, translation, category, etymology, linguistic_note } = entry;
+  const { word, translation, linguistic_note } = entry;
   
   // Extract key information
   const wordParts = analyzeWord(word);
@@ -32,7 +32,7 @@ function generateNotesDeToБg(entry) {
   
   // Add pronunciation hint
   if (linguistic_note && linguistic_note.includes('Stress')) {
-    const stressMatch = linguistic_note.match(/Stress.*?[:：]\s*(.+?)(?:\.|$)/i);
+    const stressMatch = linguistic_note.match(/stress.*?[:：]\s*(.+?)(?:\.|$)/i);
     if (stressMatch) {
       explanation += `. Betonung: ${stressMatch[1]}`;
     }
@@ -53,7 +53,7 @@ function generateNotesDeToБg(entry) {
  * @returns {string} Bulgarian explanation
  */
 function generateNotesBgToDe(entry) {
-  const { word, translation, category } = entry;
+  const { word, translation } = entry;
   
   // Bulgarian explanations in Bulgarian
   let explanation = `За българите: '${word}' на немски е '${translation}'`;
@@ -96,7 +96,7 @@ function analyzeWord(word) {
     'Довиждане': { root: 'до + виждане' },
     'Училище': { root: 'уча (lernen)' },
     'Семейство': { root: 'семе (Samen)' },
-    'Здравей': { root: 'здрав (gesund)' },
+    'Здравей': { root: 'здрав (gesund)' }
   };
   
   if (compoundPatterns[word]) {
@@ -126,7 +126,7 @@ function analyzeGermanWord(word) {
     'Guten Abend': ['Guten', 'Abend'],
     'Gute Nacht': ['Gute', 'Nacht'],
     'Auf Wiedersehen': ['Auf', 'Wiedersehen'],
-    'Es tut mir leid': ['Es tut mir leid'],
+    'Es tut mir leid': ['Es tut mir leid']
   };
   
   if (compounds[word]) {
@@ -141,7 +141,7 @@ function analyzeGermanWord(word) {
  * Gets grammar note in target language
  */
 function getGrammarNote(entry, targetLang) {
-  const { category, word, translation } = entry;
+  const { category, word } = entry;
   
   if (targetLang === 'de') {
     // German explanations
@@ -149,13 +149,13 @@ function getGrammarNote(entry, targetLang) {
       'Begrüßung': 'Feste Redewendung.',
       'Ausdruck': 'Höflichkeitsausdruck.',
       'Substantiv': word.endsWith('а') || word.endsWith('я') ? 'Femininum.' : 
-                    word.endsWith('о') || word.endsWith('е') ? 'Neutrum.' : 'Maskulinum.',
+        (word.endsWith('о') || word.endsWith('е') ? 'Neutrum.' : 'Maskulinum.'),
       'Verb': 'Bulgarisches Verb.',
       'Adjektiv': 'Bulgarisches Adjektiv (flektiert nach Geschlecht).',
       'Adverb': 'Unveränderliches Adverb.',
       'Zahl': 'Zahlwort.',
       'Zeit': 'Zeitbegriff.',
-      'Pronomen': 'Pronomen.',
+      'Pronomen': 'Pronomen.'
     };
     return notes[category] || 'Bulgarisches Wort.';
   } else {
@@ -169,7 +169,7 @@ function getGrammarNote(entry, targetLang) {
       'Adverb': 'Наречие.',
       'Zahl': 'Числително.',
       'Zeit': 'Понятие за време.',
-      'Pronomen': 'Местоимение.',
+      'Pronomen': 'Местоимение.'
     };
     return notes[category] || 'Немска дума.';
   }
@@ -179,17 +179,29 @@ function getGrammarNote(entry, targetLang) {
  * Gets usage level description
  */
 function getUsageLevel(entry, targetLang) {
-  const { level, frequency } = entry;
+  const { frequency } = entry;
   
   if (targetLang === 'de') {
-    if (frequency >= 90) return 'Sehr häufig verwendet.';
-    if (frequency >= 70) return 'Häufig verwendet.';
-    if (frequency >= 50) return 'Mäßig häufig.';
+    if (frequency >= 90) {
+      return 'Sehr häufig verwendet.';
+    }
+    if (frequency >= 70) {
+      return 'Häufig verwendet.';
+    }
+    if (frequency >= 50) {
+      return 'Mäßig häufig.';
+    }
     return 'Seltener verwendet.';
   } else {
-    if (frequency >= 90) return 'Много често използвана дума.';
-    if (frequency >= 70) return 'Често използвана.';
-    if (frequency >= 50) return 'Умерено често.';
+    if (frequency >= 90) {
+      return 'Много често използвана дума.';
+    }
+    if (frequency >= 70) {
+      return 'Често използвана.';
+    }
+    if (frequency >= 50) {
+      return 'Умерено често.';
+    }
     return 'По-рядко използвана.';
   }
 }
@@ -241,11 +253,11 @@ async function addDirectionNotes() {
     
     // Save
     await fs.writeFile(VOCAB_PATH, JSON.stringify(enhanced, null, 2), 'utf8');
-    console.log(`✅ Enhanced vocabulary saved`);
+    console.log('✅ Enhanced vocabulary saved');
     
     // Stats
     const complete = enhanced.filter(e => e.notes_de_to_bg && e.notes_bg_to_de);
-    console.log(`\n📊 Statistics:`);
+    console.log('\n📊 Statistics:');
     console.log(`   Total: ${enhanced.length}`);
     console.log(`   Complete bidirectional notes: ${complete.length}`);
     console.log(`   Coverage: ${Math.round(complete.length / enhanced.length * 100)}%`);

@@ -1,0 +1,362 @@
+[
+  {
+    "id": "a1_weather_001",
+    "word": "Време",
+    "translation": "das Wetter",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Weather. среден род.",
+    "notes_bg_to_de": "'Време' е среден род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Време' = 'das Wetter'. Neutrum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам в време.",
+        "translation": "Ich gehe zu/in Wetter."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Времеът/та/то е добър/а/о.",
+        "translation": "das Wetter ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам времеа/та/то.",
+        "translation": "Ich mag Wetter."
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_weather_002",
+    "word": "Дъжд",
+    "translation": "der Regen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Rain. мъжки род.",
+    "notes_bg_to_de": "'Дъжд' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Дъжд' = 'der Regen'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам в дъжд.",
+        "translation": "Ich gehe zu/in Regen."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Дъждът/та/то е добър/а/о.",
+        "translation": "der Regen ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам дъжда/та/то.",
+        "translation": "Ich mag Regen."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_weather_003",
+    "word": "Сняг",
+    "translation": "der Schnee",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Snow. мъжки род.",
+    "notes_bg_to_de": "'Сняг' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сняг' = 'der Schnee'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам в сняг.",
+        "translation": "Ich gehe zu/in Schnee."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Снягът/та/то е добър/а/о.",
+        "translation": "der Schnee ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам сняга/та/то.",
+        "translation": "Ich mag Schnee."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_weather_004",
+    "word": "Вятър",
+    "translation": "der Wind",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Wind. мъжки род.",
+    "notes_bg_to_de": "'Вятър' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Вятър' = 'der Wind'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам в вятър.",
+        "translation": "Ich gehe zu/in Wind."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Вятърът/та/то е добър/а/о.",
+        "translation": "der Wind ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам вятъра/та/то.",
+        "translation": "Ich mag Wind."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_weather_005",
+    "word": "Облак",
+    "translation": "die Wolke",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Cloud. мъжки род.",
+    "notes_bg_to_de": "'Облак' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Облак' = 'die Wolke'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам в облак.",
+        "translation": "Ich gehe zu/in Wolke."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Облакът/та/то е добър/а/о.",
+        "translation": "die Wolke ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам облака/та/то.",
+        "translation": "Ich mag Wolke."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_weather_006",
+    "word": "Гръм",
+    "translation": "der Donner",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Thunder. мъжки род.",
+    "notes_bg_to_de": "'Гръм' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Гръм' = 'der Donner'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам в гръм.",
+        "translation": "Ich gehe zu/in Donner."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Гръмът/та/то е добър/а/о.",
+        "translation": "der Donner ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам гръма/та/то.",
+        "translation": "Ich mag Donner."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_weather_007",
+    "word": "Пролет",
+    "translation": "der Frühling",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Spring. женски род.",
+    "notes_bg_to_de": "'Пролет' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Пролет' = 'der Frühling'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам в пролет.",
+        "translation": "Ich gehe zu/in Frühling."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Пролетът/та/то е добър/а/о.",
+        "translation": "der Frühling ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам пролета/та/то.",
+        "translation": "Ich mag Frühling."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_weather_008",
+    "word": "Лято",
+    "translation": "der Sommer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Summer. среден род.",
+    "notes_bg_to_de": "'Лято' е среден род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Лято' = 'der Sommer'. Neutrum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам в лято.",
+        "translation": "Ich gehe zu/in Sommer."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Лятоът/та/то е добър/а/о.",
+        "translation": "der Sommer ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам лятоа/та/то.",
+        "translation": "Ich mag Sommer."
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_weather_009",
+    "word": "Есен",
+    "translation": "der Herbst",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Autumn. женски род.",
+    "notes_bg_to_de": "'Есен' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Есен' = 'der Herbst'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам в есен.",
+        "translation": "Ich gehe zu/in Herbst."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Есенът/та/то е добър/а/о.",
+        "translation": "der Herbst ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам есена/та/то.",
+        "translation": "Ich mag Herbst."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_weather_010",
+    "word": "Зима",
+    "translation": "der Winter",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Wetter",
+    "level": "A1",
+    "notes": "Winter. женски род.",
+    "notes_bg_to_de": "'Зима' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Зима' = 'der Winter'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Wetter vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам в зима.",
+        "translation": "Ich gehe zu/in Winter."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Зимаът/та/то е добър/а/о.",
+        "translation": "der Winter ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам зимаа/та/то.",
+        "translation": "Ich mag Winter."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  }
+]

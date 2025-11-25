@@ -1,0 +1,542 @@
+[
+  {
+    "id": "a1_place_001",
+    "word": "Град",
+    "translation": "die Stadt",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "City. мъжки род.",
+    "notes_bg_to_de": "'Град' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Град' = 'die Stadt'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам на град.",
+        "translation": "Ich gehe zu/in Stadt."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Градът/та/то е добър/а/о.",
+        "translation": "die Stadt ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам града/та/то.",
+        "translation": "Ich mag Stadt."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_place_002",
+    "word": "Село",
+    "translation": "das Dorf",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Village. среден род.",
+    "notes_bg_to_de": "'Село' е среден род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Село' = 'das Dorf'. Neutrum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам на село.",
+        "translation": "Ich gehe zu/in Dorf."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Селоът/та/то е добър/а/о.",
+        "translation": "das Dorf ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам селоа/та/то.",
+        "translation": "Ich mag Dorf."
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_place_003",
+    "word": "Център",
+    "translation": "das Zentrum",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Center. мъжки род.",
+    "notes_bg_to_de": "'Център' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Център' = 'das Zentrum'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам на център.",
+        "translation": "Ich gehe zu/in Zentrum."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Центърът/та/то е добър/а/о.",
+        "translation": "das Zentrum ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам центъра/та/то.",
+        "translation": "Ich mag Zentrum."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_place_004",
+    "word": "Парк",
+    "translation": "der Park",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Park. мъжки род.",
+    "notes_bg_to_de": "'Парк' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Парк' = 'der Park'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам на парк.",
+        "translation": "Ich gehe zu/in Park."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Паркът/та/то е добър/а/о.",
+        "translation": "der Park ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам парка/та/то.",
+        "translation": "Ich mag Park."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_place_005",
+    "word": "Площад",
+    "translation": "der Platz",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Square. мъжки род.",
+    "notes_bg_to_de": "'Площад' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Площад' = 'der Platz'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам на площад.",
+        "translation": "Ich gehe zu/in Platz."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Площадът/та/то е добър/а/о.",
+        "translation": "der Platz ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам площада/та/то.",
+        "translation": "Ich mag Platz."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_place_006",
+    "word": "Мост",
+    "translation": "die Brücke",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Bridge. мъжки род.",
+    "notes_bg_to_de": "'Мост' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Мост' = 'die Brücke'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам на мост.",
+        "translation": "Ich gehe zu/in Brücke."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Мостът/та/то е добър/а/о.",
+        "translation": "die Brücke ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам моста/та/то.",
+        "translation": "Ich mag Brücke."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_place_007",
+    "word": "Гара",
+    "translation": "der Bahnhof",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Station. женски род.",
+    "notes_bg_to_de": "'Гара' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Гара' = 'der Bahnhof'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам на гара.",
+        "translation": "Ich gehe zu/in Bahnhof."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Гараът/та/то е добър/а/о.",
+        "translation": "der Bahnhof ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам гараа/та/то.",
+        "translation": "Ich mag Bahnhof."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_place_008",
+    "word": "Летище",
+    "translation": "der Flughafen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Airport. среден род.",
+    "notes_bg_to_de": "'Летище' е среден род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Летище' = 'der Flughafen'. Neutrum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам на летище.",
+        "translation": "Ich gehe zu/in Flughafen."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Летищеът/та/то е добър/а/о.",
+        "translation": "der Flughafen ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам летищеа/та/то.",
+        "translation": "Ich mag Flughafen."
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_place_009",
+    "word": "Музей",
+    "translation": "das Museum",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Museum. мъжки род.",
+    "notes_bg_to_de": "'Музей' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Музей' = 'das Museum'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам на музей.",
+        "translation": "Ich gehe zu/in Museum."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Музейът/та/то е добър/а/о.",
+        "translation": "das Museum ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам музейа/та/то.",
+        "translation": "Ich mag Museum."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_place_010",
+    "word": "Театър",
+    "translation": "das Theater",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Theater. мъжки род.",
+    "notes_bg_to_de": "'Театър' е мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Театър' = 'das Theater'. Maskulinum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам на театър.",
+        "translation": "Ich gehe zu/in Theater."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Театърът/та/то е добър/а/о.",
+        "translation": "das Theater ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам театъра/та/то.",
+        "translation": "Ich mag Theater."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_place_011",
+    "word": "Кино",
+    "translation": "das Kino",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Cinema. среден род.",
+    "notes_bg_to_de": "'Кино' е среден род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Кино' = 'das Kino'. Neutrum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам на кино.",
+        "translation": "Ich gehe zu/in Kino."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Киноът/та/то е добър/а/о.",
+        "translation": "das Kino ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам киноа/та/то.",
+        "translation": "Ich mag Kino."
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_place_012",
+    "word": "Библиотека",
+    "translation": "die Bibliothek",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Library. женски род.",
+    "notes_bg_to_de": "'Библиотека' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Библиотека' = 'die Bibliothek'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам на библиотека.",
+        "translation": "Ich gehe zu/in Bibliothek."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Библиотекаът/та/то е добър/а/о.",
+        "translation": "die Bibliothek ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам библиотекаа/та/то.",
+        "translation": "Ich mag Bibliothek."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_place_013",
+    "word": "Банка",
+    "translation": "die Bank",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Bank. женски род.",
+    "notes_bg_to_de": "'Банка' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Банка' = 'die Bank'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам на банка.",
+        "translation": "Ich gehe zu/in Bank."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Банкаът/та/то е добър/а/о.",
+        "translation": "die Bank ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам банкаа/та/то.",
+        "translation": "Ich mag Bank."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_place_014",
+    "word": "Поща",
+    "translation": "die Post",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Post office. женски род.",
+    "notes_bg_to_de": "'Поща' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Поща' = 'die Post'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам на поща.",
+        "translation": "Ich gehe zu/in Post."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Пощаът/та/то е добър/а/о.",
+        "translation": "die Post ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам пощаа/та/то.",
+        "translation": "Ich mag Post."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_place_015",
+    "word": "Аптека",
+    "translation": "die Apotheke",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Orte",
+    "level": "A1",
+    "notes": "Pharmacy. женски род.",
+    "notes_bg_to_de": "'Аптека' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Аптека' = 'die Apotheke'. Femininum.",
+    "etymology": "Proto-Slavic or international origin.",
+    "cultural_note": "Essential Orte vocabulary.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Отивам на аптека.",
+        "translation": "Ich gehe zu/in Apotheke."
+      },
+      {
+        "context": "Quality",
+        "sentence": "Аптекаът/та/то е добър/а/о.",
+        "translation": "die Apotheke ist gut."
+      },
+      {
+        "context": "Like",
+        "sentence": "Харесвам аптекаа/та/то.",
+        "translation": "Ich mag Apotheke."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  }
+]

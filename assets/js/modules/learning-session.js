@@ -166,23 +166,33 @@ class LearningSession {
   }
 
   async selectItems() {
-    const { maxItems, categories, levels, direction, reviewType } = this.config;
+    const { maxItems, categories, levels, reviewType } = this.config;
     
     // This would typically call the API client or spaced repetition service
     // For now, we'll simulate the selection logic
     
     let selectedItems = [];
     
-    if (reviewType === 'due') {
+    switch (reviewType) {
+    case 'due': {
       // Get due items from spaced repetition
       selectedItems = await this.getDueItems();
-    } else if (reviewType === 'new') {
+    
+      break;
+    }
+    case 'new': {
       // Get new items user hasn't seen
       selectedItems = await this.getNewItems();
-    } else if (reviewType === 'review') {
+    
+      break;
+    }
+    case 'review': {
       // Get items for review (recently learned)
       selectedItems = await this.getReviewItems();
-    } else {
+    
+      break;
+    }
+    default: {
       // Mixed selection
       const dueItems = await this.getDueItems();
       const newItems = await this.getNewItems();
@@ -194,6 +204,7 @@ class LearningSession {
         ...newItems.slice(0, Math.floor(maxItems * 0.3)),
         ...reviewItems.slice(0, Math.floor(maxItems * 0.2))
       ];
+    }
     }
     
     // Apply filters
@@ -351,7 +362,7 @@ class LearningSession {
     
     // Calculate additional metrics
     this.stats.itemsPerMinute = this.stats.totalTime > 0 ? 
-      (this.stats.completedItems / (this.stats.totalTime / 60000)) : 0;
+      (this.stats.completedItems / (this.stats.totalTime / 60_000)) : 0;
     
     this.stats.efficiencyScore = this.calculateEfficiencyScore();
     this.stats.difficultyRating = this.calculateDifficultyRating();
@@ -372,9 +383,15 @@ class LearningSession {
 
   calculateDifficultyRating() {
     // Estimate session difficulty based on performance
-    if (this.stats.accuracy >= 90) return 'easy';
-    if (this.stats.accuracy >= 70) return 'medium';
-    if (this.stats.accuracy >= 50) return 'hard';
+    if (this.stats.accuracy >= 90) {
+      return 'easy';
+    }
+    if (this.stats.accuracy >= 70) {
+      return 'medium';
+    }
+    if (this.stats.accuracy >= 50) {
+      return 'hard';
+    }
     return 'very_hard';
   }
 
@@ -396,10 +413,16 @@ class LearningSession {
 
   responseToGrade(response) {
     // Convert response to SM-2 grade (0-5)
-    if (!response.isCorrect) return 0; // Failed
+    if (!response.isCorrect) {
+      return 0;
+    } // Failed
     
-    if (response.hintsUsed > 0) return 3; // Correct with hints
-    if (response.responseTime > 10000) return 4; // Slow but correct
+    if (response.hintsUsed > 0) {
+      return 3;
+    } // Correct with hints
+    if (response.responseTime > 10_000) {
+      return 4;
+    } // Slow but correct
     return 5; // Quick and correct
   }
 
@@ -469,7 +492,9 @@ class LearningSession {
   }
 
   getTotalTime() {
-    if (!this.state.startTime) return 0;
+    if (!this.state.startTime) {
+      return 0;
+    }
     
     const endTime = this.state.endTime || Date.now();
     return endTime - this.state.startTime - this.state.pausedTime;
@@ -498,10 +523,10 @@ class LearningSession {
 
   getItemTypeDistribution() {
     const distribution = {};
-    this.state.items.forEach(item => {
+    for (const item of this.state.items) {
       const type = item.type || 'vocabulary';
       distribution[type] = (distribution[type] || 0) + 1;
-    });
+    }
     return distribution;
   }
 
@@ -512,7 +537,7 @@ class LearningSession {
       if (this.state.status === 'active') {
         this.saveSession();
       }
-    }, 30000); // Auto-save every 30 seconds
+    }, 30_000); // Auto-save every 30 seconds
   }
 
   clearAutoSave() {
@@ -540,13 +565,13 @@ class LearningSession {
 
   emit(event, data) {
     if (this.listeners.has(event)) {
-      this.listeners.get(event).forEach(callback => {
+      for (const callback of this.listeners.get(event)) {
         try {
           callback(data);
         } catch (error) {
           console.error('[LearningSession] Event listener error:', error);
         }
-      });
+      }
     }
   }
 
