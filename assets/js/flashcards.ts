@@ -17,44 +17,27 @@
  */
 
 import UnifiedSpacedRepetition from './unified-spaced-repetition';
-import { languageToggle } from './language-toggle';
+import languageToggle from './language-toggle';
 import SpeechPractice from './speech-recognition';
-import type { DueItemsStats, ReviewState } from './types.js';
+import type {
+  DueItemsStats,
+  ReviewState,
+  SessionStats,
+  CardText,
+  FlashcardVocabularyItem,
+  FlashcardMode,
+  LanguageDirection,
+  FlashcardInstance
+} from './types.js';
 
-interface VocabularyItem {
-  word: string;
-  translation: string;
-  category?: string;
-  level?: string;
-  notes?: string;
-  notes_bg_to_de?: string;
-  notes_de_to_bg?: string;
-}
-
-interface SessionStats {
-  startTime: Date | null;
-  endTime: Date | null;
-  totalCards: number;
-  reviewedCards: number;
-  correctAnswers: number;
-  grades: number[];
-}
-
-interface CardText {
-  frontText: string;
-  backText: string;
-}
-
-// SpeechPracticeOptions interface removed as it's unused
-
-export class Flashcards {
+export class Flashcards implements FlashcardInstance {
   private container: HTMLElement;
-  private vocabularyData: VocabularyItem[] = [];
-  private sessionCards: VocabularyItem[] = [];
+  private vocabularyData: FlashcardVocabularyItem[] = [];
+  private sessionCards: FlashcardVocabularyItem[] = [];
   private currentIndex = 0;
-  private currentCard: VocabularyItem | null = null;
+  private currentCard: FlashcardVocabularyItem | null = null;
   private isFlipped = false;
-  private languageDirection: string;
+  private languageDirection: LanguageDirection;
   private sessionStats: SessionStats = {
     startTime: null,
     endTime: null,
@@ -69,7 +52,7 @@ export class Flashcards {
   private category: string;
   private level: string;
   private limit: number;
-  private mode: string;
+  private mode: FlashcardMode;
   private shuffle: boolean;
 
   // DOM elements
@@ -112,14 +95,14 @@ export class Flashcards {
   
   constructor(container: HTMLElement) {
     this.container = container;
-    this.languageDirection = languageToggle.getDirection();
+    this.languageDirection = (languageToggle as any).getDirection() as LanguageDirection;
     this.spacedRepetition = new UnifiedSpacedRepetition();
 
     // Configuration from shortcode parameters
     this.category = container.dataset.category || '';
     this.level = container.dataset.level || '';
     this.limit = Number.parseInt(container.dataset.limit || '20');
-    this.mode = container.dataset.mode || 'practice';
+    this.mode = (container.dataset.mode || 'practice') as FlashcardMode;
     this.shuffle = container.dataset.shuffle === 'true';
 
     // DOM elements
@@ -155,7 +138,7 @@ export class Flashcards {
     this.init();
   }
 
-  getCardNote(vocab: VocabularyItem): string {
+  getCardNote(vocab: FlashcardVocabularyItem): string {
     if (this.languageDirection === 'bg-de') {
       return vocab.notes_bg_to_de || vocab.notes || '';
     }
@@ -178,7 +161,7 @@ export class Flashcards {
     }
   }
 
-  readInlineVocabulary(): VocabularyItem[] | null {
+  readInlineVocabulary(): FlashcardVocabularyItem[] | null {
     const inlineElement = document.querySelector('#practice-vocabulary-data');
     if (!inlineElement) {
       return null;
@@ -196,7 +179,7 @@ export class Flashcards {
         console.warn('Embedded vocabulary JSON is not an array.');
         return null;
       }
-      return parsed as VocabularyItem[];
+      return parsed as FlashcardVocabularyItem[];
     } catch (error) {
       console.warn('Failed to parse embedded vocabulary JSON, falling back to network fetch.', error);
       return null;
@@ -633,7 +616,7 @@ export class Flashcards {
     }
   }
   
-  getCardText(vocab: VocabularyItem): CardText {
+  getCardText(vocab: FlashcardVocabularyItem): CardText {
     // Return appropriate text based on language direction
     if (this.languageDirection === 'bg-de') {
       // Bulgarian to German: show Bulgarian word, translate to German
@@ -693,7 +676,7 @@ export class Flashcards {
     }
   }
   
-  handleLanguageDirectionChange(e: CustomEvent): void {
+  handleLanguageDirectionChange(e: CustomEvent<{ direction: LanguageDirection }>): void {
     this.languageDirection = e.detail.direction;
     this.renderCurrentCard(); // Re-render current card with new direction
   }
@@ -1009,7 +992,7 @@ export class Flashcards {
     }
     
     // Create new session with only mistake cards
-    this.sessionCards = mistakeIndices.map(index => this.sessionCards[index]).filter((item): item is VocabularyItem => item !== undefined);
+    this.sessionCards = mistakeIndices.map(index => this.sessionCards[index]).filter((item): item is FlashcardVocabularyItem => item !== undefined);
     this.startNewSession();
   }
   

@@ -2,107 +2,46 @@
  * Main application entry point
  */
 
-// Vocabulary item interface
-interface VocabularyItem {
-  id: string;
-  word: string;
-  translation: string;
-  category: string;
-  level: string;
-  difficulty: number;
-  frequency: number;
-  examples: Array<{
-    sentence: string;
-    translation: string;
-    context: string;
-  }>;
-  notes?: string;
-  etymology?: string;
-  cultural_note?: string;
-}
+// Import types from global definitions
+// Note: These types are defined globally in types.ts and available without explicit import
 
-// Vocabulary filters interface
-interface VocabularyFilters {
-  level: string;
-  category: string;
-  search: string;
-}
-
-// Vocabulary state interface
-interface VocabularyState {
-  data: VocabularyItem[];
-  filteredData: VocabularyItem[];
-  selectedWords: Set<string>;
-  filters: VocabularyFilters;
-}
-
-// Declare global BgDeApp interface
-interface BgDeAppNamespace {
-  init: () => void;
-  initNavigation: () => void;
-  initLanguageToggle: () => void;
-  initPerformanceMonitor: () => void;
-  initVocabulary: () => void;
-  initGrammar: () => void;
-  initPracticeSession: () => void;
-  initProgressDashboard: () => void;
-  updateLanguageText: (lang: string) => void;
-  startPractice: (level: string, category: string) => void;
-  initChart: (container: HTMLElement, chartType: string) => void;
-  handleError: (error: Error, context: string) => void;
-  debounce: <T extends (...args: unknown[]) => void>(func: T, wait: number) => T;
-  throttle: <T extends (...args: unknown[]) => void>(func: T, limit: number) => T;
-  vocabulary: VocabularyState;
-  loadVocabularyData: () => void;
-  bindVocabularyEvents: () => void;
-  renderVocabulary: () => void;
-  updateVocabularyStats: () => void;
-  applyVocabularyFilters: () => void;
-  clearAllVocabularyFilters: () => void;
-  bindCardSelectionEvents: () => void;
-  toggleWordSelection: (word: string, cardElement: HTMLElement) => void;
-  flipVocabularyCard: (cardElement: HTMLElement) => void;
-  startPracticeWithSelected: () => void;
-  shuffleArray: <T>(array: T[]) => T[];
-}
-
-// Global namespace
+// Use the global BgDeApp interface from types.ts
 interface WindowWithBgDeApp {
-  BgDeApp?: BgDeAppNamespace;
+  BgDeApp?: Window['BgDeApp'];
   gtag?: (command: string, eventName: string, params?: Record<string, unknown>) => void;
 }
 
-(window as Window & WindowWithBgDeApp).BgDeApp = (window as Window & WindowWithBgDeApp).BgDeApp || {};
+(window as Window & WindowWithBgDeApp).BgDeApp = (window as Window & WindowWithBgDeApp).BgDeApp || {} as Window['BgDeApp'];
 
 // Initialize application
-((window as Window & WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).init = function(): void {
+((window as Window & WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).init = function(): void {
   console.log('BulgarianGermanLearningApp initialized');
   
   // Initialize various modules
-  ((window as WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).initNavigation();
-  ((window as WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).initLanguageToggle();
-  ((window as WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).initPerformanceMonitor();
+  ((window as WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).initNavigation();
+  ((window as WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).initLanguageToggle();
+  ((window as WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).initPerformanceMonitor();
   
   // Initialize specific page functionality
   if (document.querySelector('#vocabulary-grid')) {
-    ((window as WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).initVocabulary();
+    ((window as WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).initVocabulary();
   }
   
   if (document.querySelector('#grammar-content')) {
-    ((window as WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).initGrammar();
+    ((window as WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).initGrammar();
   }
   
   if (document.querySelector('#practice-session')) {
-    ((window as WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).initPracticeSession();
+    ((window as WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).initPracticeSession();
   }
   
   if (document.querySelector('#progress-dashboard')) {
-    ((window as WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).initProgressDashboard();
+    ((window as WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).initProgressDashboard();
   }
 };
 
 // Initialize navigation
-((window as Window & WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).initNavigation = function(): void {
+((window as Window & WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).initNavigation = function(): void {
   const mobileMenuToggle = document.querySelector('#mobile-menu-toggle');
   const mobileMenu = document.querySelector('#mobile-menu');
   
@@ -124,7 +63,7 @@ interface WindowWithBgDeApp {
 };
 
 // Initialize language toggle
-((window as Window & WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).initLanguageToggle = function(): void {
+((window as Window & WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).initLanguageToggle = function(): void {
   const languageToggle = document.querySelector('#language-toggle');
   
   if (languageToggle) {
@@ -136,13 +75,13 @@ interface WindowWithBgDeApp {
       localStorage.setItem('bgde:language', newLang);
       
       // Update UI text based on language
-      ((window as WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).updateLanguageText(newLang);
+      ((window as WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).updateLanguageText(newLang);
     });
   }
 };
 
 // Update UI text based on language
-((window as Window & WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).updateLanguageText = function(lang: string): void {
+((window as Window & WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).updateLanguageText = function(lang: string): void {
   const elements = document.querySelectorAll('[data-lang-en], [data-lang-de]');
   
   for (const element of elements) {
@@ -158,7 +97,7 @@ interface WindowWithBgDeApp {
 };
 
 // Initialize grammar functionality
-((window as Window & WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).initGrammar = function(): void {
+((window as Window & WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).initGrammar = function(): void {
   // Grammar-specific initialization
   const grammarToggles = document.querySelectorAll('.grammar-toggle');
   
@@ -176,7 +115,7 @@ interface WindowWithBgDeApp {
 };
 
 // Initialize practice session
-((window as Window & WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).initPracticeSession = function(): void {
+((window as Window & WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).initPracticeSession = function(): void {
   // Practice session initialization
   const startButtons = document.querySelectorAll('.start-practice');
   
@@ -186,14 +125,14 @@ interface WindowWithBgDeApp {
       const category = button.dataset.category;
       
       if (level && category) {
-        ((window as WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).startPractice(level, category);
+        ((window as WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).startPractice(level, category);
       }
     });
   }
 };
 
 // Start practice session
-((window as Window & WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).startPractice = function(level: string, category: string): void {
+((window as Window & WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).startPractice = function(level: string, category: string): void {
   // Store practice settings
   localStorage.setItem('bgde:practice_level', level);
   localStorage.setItem('bgde:practice_category', category);
@@ -203,7 +142,7 @@ interface WindowWithBgDeApp {
 };
 
 // Initialize progress dashboard
-((window as Window & WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).initProgressDashboard = function(): void {
+((window as Window & WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).initProgressDashboard = function(): void {
   // Progress dashboard initialization
   const chartContainers = document.querySelectorAll('.chart-container');
   
@@ -211,13 +150,13 @@ interface WindowWithBgDeApp {
     const chartType = container.dataset.chartType;
     
     if (chartType) {
-      ((window as WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).initChart(container as HTMLElement, chartType);
+      ((window as WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).initChart(container as HTMLElement, chartType);
     }
   }
 };
 
 // Initialize chart
-((window as Window & WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).initChart = function(container: HTMLElement, chartType: string): void {
+((window as Window & WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).initChart = function(container: HTMLElement, chartType: string): void {
   // Chart initialization logic
   console.log(`Initializing ${chartType} chart in`, container);
   
@@ -226,7 +165,7 @@ interface WindowWithBgDeApp {
 };
 
 // Initialize performance monitor
-((window as Window & WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).initPerformanceMonitor = function(): void {
+((window as Window & WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).initPerformanceMonitor = function(): void {
   // Performance monitoring initialization
   if (typeof performance !== 'undefined') {
     performance.mark('app-init-start');
@@ -242,7 +181,7 @@ interface WindowWithBgDeApp {
 };
 
 // Error handling
-((window as Window & WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).handleError = function(error: Error, context: string): void {
+((window as Window & WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).handleError = function(error: Error, context: string): void {
   console.error(`Error in ${context}:`, error);
   
   // Send error to analytics if available
@@ -255,19 +194,19 @@ interface WindowWithBgDeApp {
 };
 
 // Utility functions
-((window as Window & WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).debounce = function<T extends (...args: unknown[]) => void>(func: T, wait: number): T {
+((window as Window & WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).debounce = function<T extends (...args: unknown[]) => void>(func: T, wait: number): T {
   let timeout: number;
   return function(...args: Parameters<T>): void {
     clearTimeout(timeout);
-    timeout = window.setTimeout(() => func.apply(null, args), wait);
+    timeout = window.setTimeout(() => func(...args), wait);
   } as T;
 };
 
-((window as Window & WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).throttle = function<T extends (...args: unknown[]) => void>(func: T, limit: number): T {
+((window as Window & WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).throttle = function<T extends (...args: unknown[]) => void>(func: T, limit: number): T {
   let inThrottle: boolean;
   return function(...args: Parameters<T>): void {
     if (!inThrottle) {
-      func.apply(null, args);
+      func(...args);
       inThrottle = true;
       setTimeout(() => inThrottle = false, limit);
     }
@@ -276,7 +215,7 @@ interface WindowWithBgDeApp {
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function(): void {
-  ((window as Window & WindowWithBgDeApp).BgDeApp as BgDeAppNamespace).init();
+  ((window as Window & WindowWithBgDeApp).BgDeApp as Window['BgDeApp']).init();
 });
 
 // Export for module usage if needed

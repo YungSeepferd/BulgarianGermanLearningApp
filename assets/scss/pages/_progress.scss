@@ -63,7 +63,7 @@
 
   &:hover {
     border-color: #3b82f6;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.10);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
     transform: translateY(-2px);
   }
 
@@ -129,7 +129,7 @@
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
   &.full-width {
     grid-column: 1 / -1;
@@ -186,7 +186,7 @@
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 

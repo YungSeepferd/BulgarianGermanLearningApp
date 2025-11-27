@@ -49,7 +49,6 @@ Thumbs.db
 .env.test.local
 .env.production.local
 .env.production
-.claude/settings.local.json
 .mcp.local.json
 
 # Build and deployment artifacts
@@ -111,11 +110,24 @@ web/static/
 /images/
 /mermaid/
 
-
 # Test artifacts
 playwright-report/
 test-results/
 .playwright/
 
-#Ignore vscode AI rules
+# Coverage reports
+coverage/
+*.lcov
+.nyc_output
+
+# TypeScript build artifacts
+*.tsbuildinfo
+
+# Temporary analysis and debug files
+*-fixes.log
+*-debug.html
+*-debug.png
+eslint-report.json
+
+# Ignore vscode AI rules
 .github/instructions/codacy.instructions.md

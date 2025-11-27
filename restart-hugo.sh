@@ -94,7 +94,7 @@ if [ -n "$MISSING_FILES" ]; then
     echo -e "$MISSING_FILES"
     echo ""
     echo "   You need to pull the latest changes:"
-    echo "   git pull origin claude/session-011CUYMVoVQzLc2YQfUqit8C"
+    echo "   git pull origin main"
     exit 1
 else
     echo "✅ All new files present"

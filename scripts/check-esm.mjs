@@ -96,6 +96,7 @@ function createDomStubs() {
   const elementFactory = () => ({
     setAttribute: () => {},
     appendChild: () => {},
+    append: () => {},
     removeChild: () => {},
     addEventListener: () => {},
     removeEventListener: () => {},
@@ -103,7 +104,8 @@ function createDomStubs() {
     classList: { add: () => {}, remove: () => {} },
     style: {},
     innerHTML: '',
-    textContent: ''
+    textContent: '',
+    dataset: {}
   });
 
   const storage = new Map();
@@ -128,16 +130,19 @@ function createDomStubs() {
     createTextNode: (text) => ({ textContent: text }),
     body: {
       appendChild: () => {},
+      append: () => {},
       removeChild: () => {},
       classList: { add: () => {}, remove: () => {} }
     },
     head: {
-      appendChild: () => {}
+      appendChild: () => {},
+      append: () => {}
     },
     documentElement: {
       setAttribute: () => {},
       style: { setProperty: () => {} },
-      classList: { add: () => {}, remove: () => {} }
+      classList: { add: () => {}, remove: () => {} },
+      dataset: {}
     }
   };
 

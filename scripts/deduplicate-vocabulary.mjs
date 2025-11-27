@@ -59,7 +59,7 @@ class VocabularyDeduplicator {
 
     // Filter to only groups with duplicates
     this.duplicateGroups = [...seen.entries()]
-      .filter(([_, entries]) => entries.length > 1)
+      .filter(([, entries]) => entries.length > 1)
       .map(([key, entries]) => ({
         key,
         entries,

@@ -8,6 +8,11 @@
 
 // Exportable interfaces for module usage
 
+// Import ProgressDashboardInstance from progress-dashboard-init
+interface ProgressDashboardInstance {
+  initialize(): Promise<void>;
+}
+
 /**
  * Vocabulary example structure
  */
@@ -227,6 +232,155 @@ export interface PhaseStatistics {
 }
 
 /**
+ * Flashcard session statistics
+ */
+export interface SessionStats {
+  startTime: Date | null;
+  endTime: Date | null;
+  totalCards: number;
+  reviewedCards: number;
+  correctAnswers: number;
+  grades: number[];
+}
+
+/**
+ * Flashcard text content (front and back)
+ */
+export interface CardText {
+  frontText: string;
+  backText: string;
+}
+
+/**
+ * Speech recognition status and feedback
+ */
+export interface SpeechRecognitionState {
+  isListening: boolean;
+  isSupported: boolean;
+  expectedSpeech: string;
+  lastTone: 'info' | 'success' | 'warning' | 'error';
+  feedback: string;
+}
+
+/**
+ * Flashcard configuration options
+ */
+export interface FlashcardConfig {
+  category: string;
+  level: string;
+  limit: number;
+  mode: 'practice' | 'due' | 'review';
+  shuffle: boolean;
+}
+
+/**
+ * Flashcard practice modes
+ */
+export type FlashcardMode = 'practice' | 'due' | 'review';
+
+/**
+ * Language direction for flashcards
+ */
+export type LanguageDirection = 'bg-de' | 'de-bg';
+
+/**
+ * Grade feedback information
+ */
+export interface GradeFeedback {
+  grade: number;
+  nextReview: string;
+  interval: number;
+  phase?: number;
+  phaseName?: string;
+}
+
+/**
+ * Speech recognition event data
+ */
+export interface SpeechRecognitionEvent {
+  status: 'listening' | 'idle' | 'error' | 'result';
+  transcript?: string;
+  confidence?: number;
+  error?: string;
+}
+
+/**
+ * Flashcard UI state
+ */
+export interface FlashcardUIState {
+  isLoading: boolean;
+  hasError: boolean;
+  errorMessage: string;
+  isPaused: boolean;
+  isComplete: boolean;
+  currentCardIndex: number;
+  isFlipped: boolean;
+  showGradingControls: boolean;
+}
+
+/**
+ * Practice session result
+ */
+export interface PracticeSessionResult {
+  sessionId: string;
+  startTime: Date;
+  endTime: Date;
+  totalCards: number;
+  reviewedCards: number;
+  correctAnswers: number;
+  accuracy: number;
+  averageGrade: number;
+  duration: number; // in minutes
+  mistakes: number[];
+  newWordsLearned: number[];
+  wordsReviewed: string[];
+}
+
+/**
+ * Keyboard shortcuts for flashcard navigation
+ */
+export interface FlashcardKeyboardShortcuts {
+  flip: 'Space' | 'Enter' | 'f' | 'F';
+  grade: '0' | '1' | '2' | '3' | '4' | '5';
+  pause: 'Escape';
+  next: 'n' | 'N';
+  previous: 'p' | 'P';
+  speech: 's' | 'S';
+}
+
+/**
+ * Accessibility announcements
+ */
+export interface ScreenReaderAnnouncement {
+  message: string;
+  priority: 'polite' | 'assertive';
+  timeout: number;
+}
+
+/**
+ * Flashcard animation states
+ */
+export interface FlashcardAnimationState {
+  isFlipping: boolean;
+  flipDirection: 'horizontal' | 'vertical';
+  duration: number;
+  easing: string;
+}
+
+/**
+ * Vocabulary item for flashcards (simplified version)
+ */
+export interface FlashcardVocabularyItem {
+  word: string;
+  translation: string;
+  category?: string;
+  level?: string;
+  notes?: string;
+  notes_bg_to_de?: string;
+  notes_de_to_bg?: string;
+}
+
+/**
  * Profile comparison data
  */
 export interface ProfileComparison {
@@ -243,6 +397,94 @@ export interface ProfileComparisonItem {
   accuracy: string;
   streak: number;
   lastAccessed: string;
+}
+
+/**
+ * Vocabulary API response types
+ */
+export interface VocabularyAPIResponse {
+  data: VocabularyItem[];
+  total: number;
+  loaded: number;
+  hasMore: boolean;
+  timestamp: number;
+}
+
+/**
+ * Vocabulary loading state
+ */
+export interface VocabularyLoadingState {
+  isLoading: boolean;
+  progress: number;
+  totalChunks: number;
+  loadedChunks: number;
+  currentChunk: string;
+  error: string | null;
+}
+
+/**
+ * Vocabulary chunk metadata
+ */
+export interface VocabularyChunkMetadata {
+  name: string;
+  level: string;
+  category: string;
+  count: number;
+  size: number;
+  lastModified: number;
+}
+
+/**
+ * Background sync queue item
+ */
+export interface BackgroundSyncItem {
+  id: string;
+  type: 'progress' | 'vocabulary' | 'preferences';
+  data: unknown;
+  timestamp: number;
+  retryCount: number;
+  status: 'pending' | 'syncing' | 'completed' | 'failed';
+}
+
+/**
+ * Performance metrics
+ */
+export interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  cacheHitRate: number;
+  networkRequests: number;
+  errorCount: number;
+}
+
+/**
+ * Error context information
+ */
+export interface ErrorContext {
+  component: string;
+  action: string;
+  userId?: string;
+  sessionId?: string;
+  timestamp: number;
+  userAgent: string;
+  url: string;
+  stackTrace?: string;
+}
+
+/**
+ * Flashcard instance interface
+ */
+export interface FlashcardInstance {
+  init(): Promise<void>;
+  showCard(index: number): void;
+  handleGrade(grade: number): void;
+  flipCard(): void;
+  pauseSession(): void;
+  endSession(): void;
+  startNewSession(): void;
+  reviewMistakes(): void;
+  cleanup(): void;
 }
 
 /**
@@ -284,8 +526,8 @@ declare global {
       onProfileChange(callback: () => void): void;
     };
     profileSwitcherUI: unknown;
-    progressDashboard: unknown;
-    unifiedSpacedRepetition: unknown;
+    progressDashboard?: ProgressDashboardInstance;
+    UnifiedSpacedRepetition: unknown;
     languageToggle?: {
       getDirection(): string;
     };
@@ -297,6 +539,29 @@ declare global {
     vocabulary?: VocabularyItem[];
     phaseCalculator?: {
       calculatePhase(easeFactor: number, repetitions: number): number;
+    };
+    unifiedSpacedRepetition?: {
+      initReviewState(itemId: string, direction?: LanguageDirection): ReviewState;
+      scheduleNext(state: ReviewState, grade: number, direction?: LanguageDirection): ReviewState;
+      loadState(itemId: string, direction?: LanguageDirection): ReviewState;
+      saveState(state: ReviewState): boolean;
+      getDueItems(direction?: LanguageDirection): ReviewState[];
+      getStats(direction?: LanguageDirection): DueItemsStats;
+    };
+    vocabularyAPI?: {
+      loadAll(): Promise<VocabularyItem[]>;
+      loadChunk(chunkName: string): Promise<VocabularyItem[]>;
+      getMetadata(): VocabularyChunkMetadata[];
+      isLoading(): boolean;
+      getProgress(): VocabularyLoadingState;
+    };
+    flashcards?: {
+      new (container: HTMLElement): FlashcardInstance;
+    };
+    speechPractice?: {
+      isSupported(): boolean;
+      start(options: { lang: string }): void;
+      stop(): void;
     };
   }
 

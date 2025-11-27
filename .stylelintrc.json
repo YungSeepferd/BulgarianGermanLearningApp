@@ -1,17 +1,14 @@
 {
-  "extends": "stylelint-config-standard-scss",
+  "extends": ["stylelint-config-standard-scss"],
   "rules": {
-    "selector-class-pattern": "^[a-z][a-z0-9-]*$",
-    "scss/dollar-variable-pattern": "^[a-z][a-z0-9-]*$",
-    "scss/at-function-pattern": "^[a-z][a-z0-9-]*$",
-    "scss/at-mixin-pattern": "^[a-z][a-z0-9-]*$",
-    "scss/percent-placeholder-pattern": "^[a-z][a-z0-9-]*$",
-    "no-descending-specificity": null,
-    "selector-pseudo-element-no-unknown": [
-      true,
-      {
-        "ignorePseudoElements": ["v-deep"]
-      }
-    ]
+    "color-function-notation": null,
+    "alpha-value-notation": null,
+    "keyframes-name-pattern": null,
+    "custom-property-pattern": null,
+    "no-duplicate-selectors": null,
+    "declaration-block-single-line-max-declarations": null,
+    "scss/at-extend-no-missing-placeholder": null,
+    "media-feature-range-notation": null,
+    "no-descending-specificity": null
   }
 }

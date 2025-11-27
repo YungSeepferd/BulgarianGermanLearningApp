@@ -86,11 +86,11 @@
         <div class="session-stats">
             <span class="stat">
                 <span class="stat-label">Fortschritt / Прогрес:</span>
-                <span class="stat-value" id="progress">0/0</span>
+                <span class="stat-value" id="progress" aria-live="polite" aria-atomic="true">0/0</span>
             </span>
             <span class="stat">
                 <span class="stat-label">Genauigkeit / Точност:</span>
-                <span class="stat-value" id="accuracy">0%</span>
+                <span class="stat-value" id="accuracy" aria-live="polite" aria-atomic="true">0%</span>
             </span>
             <span class="stat">
                 <span class="stat-label">Zeit / Време:</span>
@@ -108,8 +108,8 @@
     <!-- Session Settings Panel -->
     <div class="settings-panel hidden" id="settings-panel">
         <div class="setting-group">
-            <label for="session-length">Sitzungslänge / Дължина на сесията:</label>
-            <select id="session-length">
+            <label for="session-length" id="session-length-label">Sitzungslänge / Дължина на сесията:</label>
+            <select id="session-length" aria-labelledby="session-length-label">
                 <option value="10">10 Elemente / елемента</option>
                 <option value="20" selected>20 Elemente / елемента</option>
                 <option value="30">30 Elemente / елемента</option>
@@ -118,8 +118,8 @@
         </div>
         
         <div class="setting-group">
-            <label for="difficulty-filter">Schwierigkeit / Трудност:</label>
-            <select id="difficulty-filter">
+            <label for="difficulty-filter" id="difficulty-filter-label">Schwierigkeit / Трудност:</label>
+            <select id="difficulty-filter" aria-labelledby="difficulty-filter-label">
                 <option value="">Alle Niveaus / Всички нива</option>
                 <option value="A1">A1 - Anfänger / Начинаещи</option>
                 <option value="A2">A2 - Grundstufe / Основно</option>
@@ -129,8 +129,8 @@
         </div>
         
         <div class="setting-group">
-            <label>
-                <input type="checkbox" id="audio-enabled" checked>
+            <label for="audio-enabled" id="audio-enabled-label">
+                <input type="checkbox" id="audio-enabled" checked aria-labelledby="audio-enabled-label">
                 Audio aktivieren / Включване на аудио
             </label>
         </div>
@@ -161,11 +161,11 @@
         <div class="flashcard-container" style="max-width: 600px; margin: 0 auto; padding: 20px;">
             <div class="flashcard" id="flashcard" role="region" aria-label="Vocabulary flashcard - click or press space to flip" style="background: white; border: 1px solid #ddd; border-radius: 8px; padding: 30px; min-height: 200px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                 <div class="flashcard-inner" style="position: relative;">
-                    <div class="flashcard-front" id="flashcard-front" style="display: block;">
+                    <div class="flashcard-front" id="flashcard-front" style="display: block;" aria-hidden="false">
                         <div class="card-content" style="text-align: center;">
                             <div class="word" id="current-word" style="font-size: 32px; font-weight: bold; color: #333; margin-bottom: 20px; min-height: 40px;">Здравей</div>
                             <div class="meta-info" style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
-                                <span class="level-badge" id="word-level" style="background: #007bff; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">A1</span>
+                                <span class="level-badge" id="word-level" style="background: #0056b3; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">A1</span>
                                 <span class="category-badge" id="word-category" style="background: #6c757d; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">Begrüßung</span>
                             </div>
                         </div>
@@ -176,7 +176,7 @@
                         {{ end }}
                     </div>
                     
-                    <div class="flashcard-back" id="flashcard-back" style="display: none; position: relative; transform: none !important;">
+                    <div class="flashcard-back" id="flashcard-back" style="display: none; position: relative; transform: none !important;" aria-hidden="true">
                         <div class="card-content" style="text-align: center;">
                             <div class="translation" id="current-translation" style="font-size: 28px; font-weight: bold; color: #28a745; margin-bottom: 15px; min-height: 35px;">Hallo</div>
                             <div class="notes" id="current-notes" style="font-size: 14px; color: #666; font-style: italic; margin-top: 15px;">Standard informal greeting used throughout the day in Bulgaria</div>
@@ -186,15 +186,15 @@
             </div>
             
             <div class="flashcard-controls" style="text-align: center; margin-top: 30px;">
-                <button id="show-answer" class="btn-primary" aria-label="Show answer - press space or enter" style="background: #007bff; color: white; border: none; padding: 12px 24px; border-radius: 6px; font-size: 16px; cursor: pointer; margin-bottom: 20px;">Antwort zeigen / Покажи отговора</button>
+                <button id="show-answer" class="btn-primary" aria-label="Show answer - press space or enter" style="background: #0056b3; color: white; border: none; padding: 12px 24px; border-radius: 6px; font-size: 16px; cursor: pointer; margin-bottom: 20px;">Antwort zeigen / Покажи отговора</button>
                 
-                <div class="response-buttons hidden" id="response-buttons" style="display: none; gap: 15px; justify-content: center; margin-top: 20px;">
-                    <button id="incorrect-btn" class="btn-incorrect" aria-label="Mark as incorrect - press 1" style="background: #dc3545; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+                <div class="response-buttons" id="response-buttons" style="display: flex; gap: 15px; justify-content: center; margin-top: 20px;">
+                    <button id="incorrect-btn" class="btn-incorrect" role="button" aria-label="Grade 1: Incorrect response" style="background: #dc3545; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
                         <span class="icon">✗</span>
                         <span class="text">Falsch / Грешно</span>
                         <span class="shortcut" style="background: rgba(255,255,255,0.3); padding: 2px 6px; border-radius: 3px; font-size: 12px;">1</span>
                     </button>
-                    <button id="correct-btn" class="btn-correct" aria-label="Mark as correct - press 2" style="background: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+                    <button id="correct-btn" class="btn-correct" role="button" aria-label="Grade 2: Correct response" style="background: #1e7e34; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
                         <span class="icon">✓</span>
                         <span class="text">Richtig / Правилно</span>
                         <span class="shortcut" style="background: rgba(255,255,255,0.3); padding: 2px 6px; border-radius: 3px; font-size: 12px;">2</span>
@@ -269,16 +269,14 @@
 </script>
 
 <!-- Load unified JavaScript modules via Hugo resources -->
-{{ $spacedRepetition := resources.Get "js/unified-spaced-repetition.js" }}
+{{ $spacedRepetition := resources.Get "js/unified-spaced-repetition.ts" }}
 {{ if $spacedRepetition }}
-{{ $spacedRepetitionMin := $spacedRepetition | resources.Minify }}
-<script src="{{ $spacedRepetitionMin.RelPermalink }}" defer></script>
+<script src="{{ $spacedRepetition.RelPermalink }}" type="module" defer></script>
 {{ end }}
 
-{{ $unifiedPracticeSession := resources.Get "js/unified-practice-session.js" }}
+{{ $unifiedPracticeSession := resources.Get "js/unified-practice-session.ts" }}
 {{ if $unifiedPracticeSession }}
-{{ $unifiedPracticeSessionMin := $unifiedPracticeSession | resources.Minify }}
-<script src="{{ $unifiedPracticeSessionMin.RelPermalink }}" defer></script>
+<script src="{{ $unifiedPracticeSession.RelPermalink }}" type="module" defer></script>
 {{ end }}
 
 <script>
@@ -291,6 +289,12 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('[Init] Checking for dependencies...');
         console.log('[Init] - languageToggle available:', !!window.languageToggle);
         console.log('[Init] - UnifiedPracticeSession available:', !!window.UnifiedPracticeSession);
+        
+        // Force window assignment if minification removed it
+        if (typeof UnifiedPracticeSession !== 'undefined' && !window.UnifiedPracticeSession) {
+            window.UnifiedPracticeSession = UnifiedPracticeSession;
+            console.log('[Init] Forced window assignment for UnifiedPracticeSession');
+        }
         
         if (window.UnifiedPracticeSession) {
             try {
@@ -310,7 +314,7 @@ document.addEventListener('DOMContentLoaded', function() {
             window.BgDeApp.initPractice();
             console.log('Simple practice session initialized');
         } else {
-            console.error('[Init] No practice system loaded - check that unified-practice-session.js is included');
+            console.error('[Init] No practice system loaded - check that unified-practice-session.ts is included');
         }
     }, 100);
 });

@@ -19,7 +19,7 @@ These are the **actively maintained** modules used by the application:
 | `vocabulary.js` | 9KB | ✅ **ACTIVE** | vocabulary pages | Vocabulary browsing and filtering |
 | `grammar.js` | 9KB | ✅ **ACTIVE** | grammar pages | Grammar rules display |
 | `app.js` | 9KB | ✅ **ACTIVE** | global | Main app initialization |
-| `language-toggle.js` | 13KB | ✅ **ACTIVE** | global | Bidirectional language switching |
+| `language-toggle.ts` | 13KB | ✅ **ACTIVE** | global | Bidirectional language switching |
 | `speech-recognition.js` | 2KB | ✅ **ACTIVE** | flashcards | Speech practice integration |
 | `home.js` | 2KB | ✅ **ACTIVE** | homepage | Homepage-specific interactions |
 | `code.js` | 0.8KB | ✅ **ACTIVE** | code blocks | Syntax highlighting support |
@@ -147,7 +147,7 @@ Every JavaScript module should include:
  * @description Core flashcard system with SM-2 spaced repetition integration
  * @status ACTIVE | REVIEW | DEPRECATED
  * @replaces None (current implementation) | [old-file.js]
- * @dependencies spaced-repetition.js, language-toggle.js
+ * @dependencies spaced-repetition.js, language-toggle.ts
  * @used_by layouts/practice/single.html, layouts/_shortcodes/flashcards.html
  * @see docs/ARCHITECTURE.md for system design
  * @version 2.0.0

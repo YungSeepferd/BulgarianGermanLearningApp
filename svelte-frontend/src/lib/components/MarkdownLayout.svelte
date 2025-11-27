@@ -88,7 +88,7 @@
 	
 	<main class="markdown-body">
 		{#if content}
-			{@render content()}
+			{@html content()}
 		{/if}
 	</main>
 </article>

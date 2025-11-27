@@ -173,22 +173,34 @@
   }
 
   // Clear announcement after timeout
+  let announcementTimeout: NodeJS.Timeout | null = null;
+  
   $: if (announcement) {
-    const timeout = setTimeout(() => {
-      announcement = null;
-    }, announcement.timeout);
+    // Clear any existing timeout
+    if (announcementTimeout) {
+      clearTimeout(announcementTimeout);
+    }
     
-    return () => clearTimeout(timeout);
+    // Set new timeout
+    announcementTimeout = setTimeout(() => {
+      announcement = null;
+      announcementTimeout = null;
+    }, announcement.timeout);
   }
+  
+  onDestroy(() => {
+    if (announcementTimeout) {
+      clearTimeout(announcementTimeout);
+    }
+  });
 </script>
 
 <!-- Grade Controls Container -->
-<div 
+<div
   class="grade-controls {compact ? 'compact' : ''}"
   role="group"
   aria-label="Grade your answer"
   on:keydown={handleKeyDown}
-  bind:this={$$scope}
 >
   <!-- Instructions -->
   <div class="grade-instructions">

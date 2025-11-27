@@ -60,10 +60,10 @@ Steps to verify the changes:
 ## AI-assisted Changes?
 
 - [ ] No
-- [ ] Yes — tool: Claude Code (claude.ai / claude)
+- [ ] Yes — tool: Roo Code with Ollama models
 
 If AI-assisted, please include:
-- Short summary of the AI prompt used (or path to `.claude/prompts/` template)
+- Short summary of the AI prompt used (or path to Roo Code model/profile used)
 - Files/areas touched by the AI
 - Verification performed (commands and brief results): e.g. `npm run lint:esm` -> 0 errors, `npm test` -> all pass
 

@@ -6,11 +6,11 @@
  */
 
 import type { PageLoad } from './$types';
-import type { PracticeSettings, VocabularyEntry } from '$lib/types/index.js';
+import type { PracticeSettings } from '$lib/types/index.js';
 import { error } from '@sveltejs/kit';
 import { validatePracticeSettings } from '$lib/utils/validation.js';
 
-export const load: PageLoad = async ({ url, params }) => {
+export const load: PageLoad = async ({ url }) => {
   try {
     // Extract and validate practice settings from URL parameters
     const rawSettings: Record<string, string> = {};
@@ -32,17 +32,17 @@ export const load: PageLoad = async ({ url, params }) => {
     return {
       settings,
       // Pass any additional server-side data needed
-      serverTimestamp: new Date().toISOString(),
+      serverTimestamp: new Date().toISOString()
       // You could pre-load some vocabulary here if needed
       // vocabulary: await loadVocabularyChunk(settings)
     };
 
-  } catch (err) {
-    console.error('[Practice Page Load] Error:', err);
+  } catch (error_) {
+    console.error('[Practice Page Load] Error:', error_);
     
     // Return a user-friendly error
-    if (err instanceof Error) {
-      throw error(500, `Failed to load practice session: ${err.message}`);
+    if (error_ instanceof Error) {
+      throw error(500, `Failed to load practice session: ${error_.message}`);
     }
     
     throw error(500, 'An unexpected error occurred while loading the practice session');

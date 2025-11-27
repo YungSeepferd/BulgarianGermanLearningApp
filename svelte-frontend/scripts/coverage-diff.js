@@ -6,9 +6,9 @@
  * and detects regressions in test coverage
  */
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('node:fs');
+const path = require('node:path');
+const { execSync } = require('node:child_process');
 
 // Configuration
 const COVERAGE_DIR = path.join(process.cwd(), 'coverage');
@@ -85,7 +85,7 @@ function createBaseline() {
 function getGitCommit() {
   try {
     return execSync('git rev-parse HEAD', { encoding: 'utf8' }).trim();
-  } catch (error) {
+  } catch {
     return 'unknown';
   }
 }
@@ -96,7 +96,7 @@ function getGitCommit() {
 function getGitBranch() {
   try {
     return execSync('git rev-parse --abbrev-ref HEAD', { encoding: 'utf8' }).trim();
-  } catch (error) {
+  } catch {
     return 'unknown';
   }
 }
@@ -108,7 +108,7 @@ function getPackageVersion() {
   try {
     const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
     return packageJson.version || 'unknown';
-  } catch (error) {
+  } catch {
     return 'unknown';
   }
 }
@@ -340,8 +340,12 @@ function printDiffResults(diff) {
   console.log('\n📋 Overall Status:');
   if (hasRegressions || hasNewFilesBelowThreshold) {
     console.log('  ❌ Coverage issues detected');
-    if (hasRegressions) console.log(`     - ${regressions.length} files with regressions`);
-    if (hasNewFilesBelowThreshold) console.log(`     - ${diff.added.filter(f => !f.coverage.meetsThreshold.overall).length} new files below threshold`);
+    if (hasRegressions) {
+      console.log(`     - ${regressions.length} files with regressions`);
+    }
+    if (hasNewFilesBelowThreshold) {
+      console.log(`     - ${diff.added.filter(f => !f.coverage.meetsThreshold.overall).length} new files below threshold`);
+    }
   } else {
     console.log('  ✅ No coverage issues detected');
   }
@@ -375,15 +379,15 @@ function saveDiffReport(diff) {
  * Main execution
  */
 function main() {
-  const args = process.argv.slice(2);
+  const args = new Set(process.argv.slice(2));
   
   // Handle command line arguments
-  if (args.includes('--create-baseline')) {
+  if (args.has('--create-baseline')) {
     createBaseline();
     return;
   }
 
-  if (args.includes('--help')) {
+  if (args.has('--help')) {
     console.log('Usage: node coverage-diff.js [options]');
     console.log('');
     console.log('Options:');

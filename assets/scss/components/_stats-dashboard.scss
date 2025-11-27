@@ -226,7 +226,7 @@
 }
 
 // Responsive Design
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .stats-dashboard {
     padding: 1rem;
     
@@ -273,7 +273,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .stats-dashboard {
     padding: 0.5rem;
   }
@@ -316,18 +316,18 @@
 @media (prefers-color-scheme: dark) {
   .word-item {
     &.difficult {
-      background: linear-gradient(135deg, rgba(239, 68, 68, 0.10), rgba(239, 68, 68, 0.20));
+      background: linear-gradient(135deg, rgb(239 68 68 / 10%), rgb(239 68 68 / 20%));
       
       &:hover {
-        background: linear-gradient(135deg, rgba(239, 68, 68, 0.20), rgba(239, 68, 68, 0.30));
+        background: linear-gradient(135deg, rgb(239 68 68 / 20%), rgb(239 68 68 / 30%));
       }
     }
     
     &.mastered {
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.10), rgba(16, 185, 129, 0.20));
+      background: linear-gradient(135deg, rgb(16 185 129 / 10%), rgb(16 185 129 / 20%));
       
       &:hover {
-        background: linear-gradient(135deg, rgba(16, 185, 129, 0.20), rgba(16, 185, 129, 0.30));
+        background: linear-gradient(135deg, rgb(16 185 129 / 20%), rgb(16 185 129 / 30%));
       }
     }
   }

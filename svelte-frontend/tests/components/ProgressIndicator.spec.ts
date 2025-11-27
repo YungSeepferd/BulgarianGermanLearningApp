@@ -106,7 +106,7 @@ test.describe('ProgressIndicator Component', () => {
   test('displays time information when session has duration', async ({ page }) => {
     const sessionWithTime = {
       ...mockSessionStats,
-      startTime: new Date(Date.now() - 300000), // 5 minutes ago
+      startTime: new Date(Date.now() - 300_000), // 5 minutes ago
       endTime: new Date()
     };
     
@@ -278,12 +278,12 @@ test.describe('ProgressIndicator Component', () => {
 
   test('handles very large numbers gracefully', async ({ page }) => {
     const largeStats = {
-      startTime: new Date(Date.now() - 3600000), // 1 hour ago
+      startTime: new Date(Date.now() - 3_600_000), // 1 hour ago
       endTime: new Date(),
       totalCards: 1000,
       reviewedCards: 750,
       correctAnswers: 600,
-      grades: Array(750).fill(0).map(() => Math.floor(Math.random() * 5) + 1)
+      grades: Array.from({ length: 750 }).fill(0).map(() => Math.floor(Math.random() * 5) + 1)
     };
     
     const component = await mountProgressIndicator({
@@ -299,7 +299,7 @@ test.describe('ProgressIndicator Component', () => {
     // Test short session (seconds)
     const shortSession = {
       ...mockSessionStats,
-      startTime: new Date(Date.now() - 30000), // 30 seconds ago
+      startTime: new Date(Date.now() - 30_000), // 30 seconds ago
       endTime: new Date()
     };
     
@@ -312,7 +312,7 @@ test.describe('ProgressIndicator Component', () => {
     // Test long session (hours)
     const longSession = {
       ...mockSessionStats,
-      startTime: new Date(Date.now() - 7200000), // 2 hours ago
+      startTime: new Date(Date.now() - 7_200_000), // 2 hours ago
       endTime: new Date()
     };
     

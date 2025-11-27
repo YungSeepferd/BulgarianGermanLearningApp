@@ -138,8 +138,8 @@ export function createErrorContext(
     component,
     action,
     timestamp: Date.now(),
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'Unknown',
-    url: typeof window !== 'undefined' ? window.location.href : 'Unknown',
+    userAgent: typeof navigator === 'undefined' ? 'Unknown' : navigator.userAgent,
+    url: typeof window === 'undefined' ? 'Unknown' : window.location.href,
     ...additionalContext
   };
 }
@@ -154,8 +154,8 @@ export function getErrorStack(error: Error): string | undefined {
   
   try {
     throw new Error();
-  } catch (e) {
-    return (e as Error).stack;
+  } catch (error_) {
+    return (error_ as Error).stack;
   }
 }
 
@@ -429,7 +429,7 @@ export const safeLocalStorage = {
   setItem(key: string, value: string, context?: ErrorContext): void {
     try {
       if (typeof localStorage === 'undefined') {
-        throw new Error('localStorage is not available');
+        throw new TypeError('localStorage is not available');
       }
       localStorage.setItem(key, value);
     } catch (error) {
@@ -542,7 +542,7 @@ export function createErrorReport(
  * Generate unique error ID
  */
 function generateErrorId(): string {
-  return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  return `err_${Date.now()}_${Math.random().toString(36).slice(2, 11)}`;
 }
 
 /**
@@ -658,7 +658,8 @@ export function formatErrorForDisplay(error: Error | SvelteKitError): {
 
 // Export all error types and utilities
 export {
-  type ErrorContext,
+  
   type ErrorBoundaryState,
   type ErrorReport
 };
+export { type ErrorContext } from '$lib/types/index.js';

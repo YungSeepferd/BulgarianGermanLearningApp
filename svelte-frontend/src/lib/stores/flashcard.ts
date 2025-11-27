@@ -7,20 +7,17 @@
  */
 
 import { writable, derived, readable } from 'svelte/store';
-import type { 
-  VocabularyItem, 
-  ReviewState, 
-  LanguageDirection, 
-  SessionStats, 
-  FlashcardUIState, 
-  FlashcardStoreState, 
+import type {
+  VocabularyItem,
+  ReviewState,
+  LanguageDirection,
+  SessionStats,
+  FlashcardStoreState,
   FlashcardStoreActions,
-  GradeFeedback,
   FlashcardConfig
 } from '$lib/types/index.js';
-import { 
-  UnifiedSpacedRepetition, 
-  PhaseCalculator, 
+import {
+  PhaseCalculator,
   createSpacedRepetitionSystem,
   generateGradeFeedback,
   isValidGrade,
@@ -99,7 +96,9 @@ const phaseCalculator = new PhaseCalculator();
 export const cardTextStore = derived(
   [flashcardStore, directionStore],
   ([$flashcardStore, $direction]) => {
-    if (!$flashcardStore.currentCard) return { frontText: '', backText: '' };
+    if (!$flashcardStore.currentCard) {
+      return { frontText: '', backText: '' };
+    }
     
     const card = $flashcardStore.currentCard;
     const isBgToDe = $direction === 'bg-de';
@@ -176,7 +175,9 @@ export const currentReviewStateStore = readable<ReviewState | null>(null, (set) 
   });
   
   return () => {
-    if (unsubscribe) unsubscribe();
+    if (unsubscribe) {
+      unsubscribe();
+    }
   };
 });
 
@@ -292,7 +293,9 @@ export const flashcardActions: FlashcardStoreActions = {
     }
 
     flashcardStore.update(state => {
-      if (!state.currentCard) return state;
+      if (!state.currentCard) {
+        return state;
+      }
 
       // Get current review state
       const currentDirection = state.currentCard.source_lang === 'bg' ? 'bg-de' : 'de-bg';
@@ -554,13 +557,5 @@ export function importSessionData(jsonData: string) {
 }
 
 // Export all stores and utilities
-export {
-  type FlashcardStoreState,
-  type FlashcardStoreActions,
-  type FlashcardConfig,
-  type LanguageDirection,
-  type VocabularyItem,
-  type ReviewState,
-  type SessionStats,
-  type GradeFeedback
-};
+
+export { type GradeFeedback, type FlashcardStoreState, type FlashcardStoreActions, type FlashcardConfig, type LanguageDirection, type VocabularyItem, type ReviewState, type SessionStats } from '$lib/types/index.js';

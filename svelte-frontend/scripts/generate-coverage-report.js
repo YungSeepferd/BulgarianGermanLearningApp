@@ -6,9 +6,9 @@
  * detailed reports in multiple formats
  */
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('node:fs');
+const path = require('node:path');
+const { execSync } = require('node:child_process');
 
 // Configuration
 const COVERAGE_DIR = path.join(process.cwd(), 'coverage');
@@ -222,8 +222,12 @@ function generateHtmlReport(summary) {
  * Get CSS class for metric based on threshold
  */
 function getMetricClass(percentage) {
-  if (percentage >= 90) return 'good';
-  if (percentage >= 70) return 'warning';
+  if (percentage >= 90) {
+    return 'good';
+  }
+  if (percentage >= 70) {
+    return 'warning';
+  }
   return 'danger';
 }
 
@@ -358,7 +362,7 @@ function generateMarkdownFileList(summary) {
  */
 function generateCoverageBadge(summary) {
   const percentage = Math.round(summary.total.statements.pct);
-  const color = percentage >= 90 ? '4caf50' : percentage >= 70 ? 'ffeb3b' : 'f44336';
+  const color = percentage >= 90 ? '4caf50' : (percentage >= 70 ? 'ffeb3b' : 'f44336');
   
   const badge = {
     schemaVersion: 1,
@@ -398,10 +402,18 @@ function main() {
       console.log('\n✅ All coverage thresholds met!');
     } else {
       console.log('\n⚠️  Some coverage thresholds not met:');
-      if (!thresholdCheck.statements) console.log(`  Statements: ${summary.total.statements.pct}% < ${THRESHOLDS.statements}%`);
-      if (!thresholdCheck.branches) console.log(`  Branches: ${summary.total.branches.pct}% < ${THRESHOLDS.branches}%`);
-      if (!thresholdCheck.functions) console.log(`  Functions: ${summary.total.functions.pct}% < ${THRESHOLDS.functions}%`);
-      if (!thresholdCheck.lines) console.log(`  Lines: ${summary.total.lines.pct}% < ${THRESHOLDS.lines}%`);
+      if (!thresholdCheck.statements) {
+        console.log(`  Statements: ${summary.total.statements.pct}% < ${THRESHOLDS.statements}%`);
+      }
+      if (!thresholdCheck.branches) {
+        console.log(`  Branches: ${summary.total.branches.pct}% < ${THRESHOLDS.branches}%`);
+      }
+      if (!thresholdCheck.functions) {
+        console.log(`  Functions: ${summary.total.functions.pct}% < ${THRESHOLDS.functions}%`);
+      }
+      if (!thresholdCheck.lines) {
+        console.log(`  Lines: ${summary.total.lines.pct}% < ${THRESHOLDS.lines}%`);
+      }
     }
     
     console.log(`\n📁 Reports available in: ${REPORTS_DIR}`);

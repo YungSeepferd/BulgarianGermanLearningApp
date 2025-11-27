@@ -44,7 +44,7 @@
 
     &:focus {
       border-color: var(--color-primary);
-      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.10);
+      box-shadow: 0 0 0 4px rgb(37 99 235 / 10%);
       outline: none;
     }
 
@@ -182,7 +182,7 @@
 
 // Search highlights
 .search-highlight {
-  background-color: rgba(245, 158, 11, 0.30);
+  background-color: rgb(245 158 11 / 30%);
   color: var(--text-primary);
   padding: 0 2px;
   border-radius: 2px;

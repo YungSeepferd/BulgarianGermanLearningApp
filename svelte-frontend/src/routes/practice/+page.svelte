@@ -1,10 +1,10 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import type { PageData } from './$types';
-  import type { VocabularyEntry, SessionStats as SessionStatsType, PracticeSettings } from '$lib/types/index.js';
+  import type { VocabularyItem, SessionStats } from '$lib/types/index.js';
   
 
-  let loading: boolean = true;
+  let loading = true;
   let error: Error | null = null;
 
   onMount(async () => {

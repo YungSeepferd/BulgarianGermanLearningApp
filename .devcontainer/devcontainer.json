@@ -13,7 +13,6 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "anthropic.claude-code",
         "golang.go",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
@@ -36,16 +35,10 @@
           "editor.defaultFormatter": "vscode.markdown-language-features"
         },
         "go.toolsManagement.checkForUpdates": "local",
-        "go.useLanguageServer": true,
-        "claude-code.environmentVariables": {
-          "CLAUDE_CODE_SKIP_AUTH_LOGIN": "false"
-        }
+        "go.useLanguageServer": true
       }
     }
   },
   "postCreateCommand": "npm install && go mod download",
-  "remoteUser": "node",
-  "mounts": [
-    "source=${localWorkspaceFolder}/.claude,target=/home/node/.claude,type=bind,consistency=cached"
-  ]
+  "remoteUser": "node"
 }

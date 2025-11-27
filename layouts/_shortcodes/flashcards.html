@@ -54,7 +54,7 @@
   <div class="flashcard-stage" id="flashcard-stage" role="region" aria-label="Flashcard practice area">
     <div class="flashcard" id="current-flashcard" tabindex="0" role="button" aria-label="Click or press space to flip card">
       <div class="flashcard-inner">
-        <div class="flashcard-front">
+        <div class="flashcard-front" id="flashcard-front" aria-hidden="false">
           <div class="card-content">
             <div class="word-text" id="word-text" lang="bg">Loading...</div>
             <div class="word-meta" id="word-meta">
@@ -68,12 +68,12 @@
           </div>
         </div>
         
-        <div class="flashcard-back">
+        <div class="flashcard-back" id="flashcard-back" aria-hidden="true">
           <div class="card-content">
             <div class="translation-text" id="translation-text" lang="de">Translation</div>
             <div class="word-notes" id="word-notes"></div>
           </div>
-          <div class="review-stats" id="review-stats">
+          <div class="review-stats" id="review-stats" aria-live="polite" aria-atomic="true">
             <div class="stat-item">
               <span class="stat-label">Reviews:</span>
               <span class="stat-value" id="total-reviews">0</span>
@@ -109,37 +109,37 @@
     </div>
     
     <div class="grade-buttons" role="group" aria-label="Grade your knowledge">
-      <button class="grade-btn grade-0" data-grade="0" aria-label="Grade 0: Complete blackout">
+      <button class="grade-btn grade-0" data-grade="0" role="button" aria-label="Grade 0: Complete blackout">
         <span class="grade-number">0</span>
         <span class="grade-label">No idea</span>
         <span class="grade-desc">Complete blackout</span>
       </button>
       
-      <button class="grade-btn grade-1" data-grade="1" aria-label="Grade 1: Incorrect with familiar feeling">
+      <button class="grade-btn grade-1" data-grade="1" role="button" aria-label="Grade 1: Incorrect with familiar feeling">
         <span class="grade-number">1</span>
         <span class="grade-label">Wrong</span>
         <span class="grade-desc">Incorrect but familiar</span>
       </button>
       
-      <button class="grade-btn grade-2" data-grade="2" aria-label="Grade 2: Incorrect but close">
+      <button class="grade-btn grade-2" data-grade="2" role="button" aria-label="Grade 2: Incorrect but close">
         <span class="grade-number">2</span>
         <span class="grade-label">Close</span>
         <span class="grade-desc">Wrong but close</span>
       </button>
       
-      <button class="grade-btn grade-3" data-grade="3" aria-label="Grade 3: Correct with difficulty">
+      <button class="grade-btn grade-3" data-grade="3" role="button" aria-label="Grade 3: Correct with difficulty">
         <span class="grade-number">3</span>
         <span class="grade-label">Hard</span>
         <span class="grade-desc">Correct with effort</span>
       </button>
       
-      <button class="grade-btn grade-4" data-grade="4" aria-label="Grade 4: Correct with hesitation">
+      <button class="grade-btn grade-4" data-grade="4" role="button" aria-label="Grade 4: Correct with hesitation">
         <span class="grade-number">4</span>
         <span class="grade-label">Good</span>
         <span class="grade-desc">Correct after thinking</span>
       </button>
       
-      <button class="grade-btn grade-5" data-grade="5" aria-label="Grade 5: Perfect recall">
+      <button class="grade-btn grade-5" data-grade="5" role="button" aria-label="Grade 5: Perfect recall">
         <span class="grade-number">5</span>
         <span class="grade-label">Easy</span>
         <span class="grade-desc">Perfect recall</span>

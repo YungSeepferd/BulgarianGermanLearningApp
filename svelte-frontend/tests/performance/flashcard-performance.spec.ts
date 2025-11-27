@@ -161,7 +161,7 @@ describe('Flashcard Performance Tests', () => {
     }
     
     // Check memory usage
-    expect(mockPerformance.memory.usedJSHeapSize).toBeLessThan(100 * 1024 * 1024);
+    expect((window as any).performance.memory.usedJSHeapSize).toBeLessThan(100 * 1024 * 1024);
   });
 
   it('should respect reduced motion preferences', async () => {
@@ -176,8 +176,8 @@ describe('Flashcard Performance Tests', () => {
         removeListener: vi.fn(),
         addEventListener: vi.fn(),
         removeEventListener: vi.fn(),
-        dispatchEvent: vi.fn(),
-      })),
+        dispatchEvent: vi.fn()
+      }))
     });
     
     const { getByTestId } = render(Flashcard, {

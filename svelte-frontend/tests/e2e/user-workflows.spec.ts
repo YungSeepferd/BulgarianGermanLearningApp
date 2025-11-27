@@ -16,7 +16,7 @@ test.describe('End-to-End User Workflows', () => {
       await expect(page).toHaveURL('/practice');
       
       // Wait for vocabulary to load
-      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10_000 });
       
       // Verify initial state
       await expect(page.locator('[data-testid="progress-indicator"]')).toContainText('0 /');
@@ -61,7 +61,7 @@ test.describe('End-to-End User Workflows', () => {
           await page.locator('[data-testid="grade-button-3"]').click();
           await page.waitForTimeout(300);
           cardsCompleted++;
-        } catch (error) {
+        } catch {
           // Session might be complete
           break;
         }
@@ -77,7 +77,7 @@ test.describe('End-to-End User Workflows', () => {
     test('user can pause and resume learning session', async ({ page }) => {
       // Start practice session
       await page.locator('[data-testid="nav-practice"]').click();
-      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10_000 });
       
       // Complete a few cards
       for (let i = 0; i < 3; i++) {
@@ -109,7 +109,7 @@ test.describe('End-to-End User Workflows', () => {
     test('user can use keyboard shortcuts throughout session', async ({ page }) => {
       // Start practice session
       await page.locator('[data-testid="nav-practice"]').click();
-      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10_000 });
       
       // Test keyboard navigation
       await page.keyboard.press('Tab');
@@ -143,7 +143,7 @@ test.describe('End-to-End User Workflows', () => {
       
       // Start practice session
       await page.locator('[data-testid="nav-practice"]').click();
-      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10_000 });
       
       // Verify mobile layout
       await expect(page.locator('[data-testid="flashcard-container"]')).toHaveClass(/mobile/);
@@ -187,7 +187,7 @@ test.describe('End-to-End User Workflows', () => {
       
       // Start practice session and complete some cards
       await page.locator('[data-testid="nav-practice"]').click();
-      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10_000 });
       
       for (let i = 0; i < 3; i++) {
         await page.locator('[data-testid="flashcard-container"]').click();
@@ -216,7 +216,7 @@ test.describe('End-to-End User Workflows', () => {
       
       // Start practice session
       await page.locator('[data-testid="nav-practice"]').click();
-      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10_000 });
       
       // Verify ARIA labels and roles
       await expect(page.locator('[data-testid="flashcard-container"]')).toHaveAttribute('role', 'article');
@@ -262,7 +262,7 @@ test.describe('End-to-End User Workflows', () => {
       
       // Start practice session
       await page.locator('[data-testid="nav-practice"]').click();
-      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10_000 });
       
       // Test larger click targets
       const gradeButton = page.locator('[data-testid="grade-button-3"]');
@@ -293,7 +293,7 @@ test.describe('End-to-End User Workflows', () => {
     test('user can use app offline and sync when back online', async ({ page }) => {
       // Start practice session online
       await page.locator('[data-testid="nav-practice"]').click();
-      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10_000 });
       
       // Complete some cards
       for (let i = 0; i < 3; i++) {
@@ -328,7 +328,7 @@ test.describe('End-to-End User Workflows', () => {
     test('app handles network interruptions gracefully', async ({ page }) => {
       // Start practice session
       await page.locator('[data-testid="nav-practice"]').click();
-      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10_000 });
       
       // Simulate network interruption
       await page.route('/api/vocabulary/**', route => {
@@ -373,13 +373,13 @@ test.describe('End-to-End User Workflows', () => {
       await page.locator('[data-testid="retry-button"]').click();
       
       // Should recover and load vocabulary
-      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10_000 });
     });
 
     test('app handles component errors without crashing', async ({ page }) => {
       // Start practice session
       await page.locator('[data-testid="nav-practice"]').click();
-      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10_000 });
       
       // Simulate component error
       await page.evaluate(() => {
@@ -414,7 +414,7 @@ test.describe('End-to-End User Workflows', () => {
       const startTime = Date.now();
       await page.locator('[data-testid="nav-practice"]').click();
       
-      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10_000 });
       const loadTime = Date.now() - startTime;
       
       // Should load within reasonable time
@@ -436,7 +436,7 @@ test.describe('End-to-End User Workflows', () => {
     test('app remains responsive during intensive use', async ({ page }) => {
       // Start practice session
       await page.locator('[data-testid="nav-practice"]').click();
-      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10_000 });
       
       // Rapidly interact with the app
       for (let i = 0; i < 10; i++) {
@@ -466,7 +466,7 @@ test.describe('End-to-End User Workflows', () => {
     test('app works consistently across different browsers', async ({ page, browserName }) => {
       // Start practice session
       await page.locator('[data-testid="nav-practice"]').click();
-      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('[data-testid="flashcard-container"]')).toBeVisible({ timeout: 10_000 });
       
       // Complete basic workflow
       for (let i = 0; i < 3; i++) {

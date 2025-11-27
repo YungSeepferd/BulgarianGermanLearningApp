@@ -1,8 +1,0 @@
-Summarize how SM-2 (or the repo's custom variant) is implemented in `assets/js/unified-spaced-repetition.js`.
-
-Deliverables:
-- A 6–10 sentence summary describing inputs, outputs, and where review state is stored (localStorage keys).
-- A short list of 3 low-risk doc or code improvements and where to apply them (file and one-line suggestion).
-
-Rules:
-- Do not modify code in this prompt. Only return summary and suggestions.

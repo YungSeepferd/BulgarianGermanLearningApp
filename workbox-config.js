@@ -1,155 +1,109 @@
-// Workbox configuration for Bulgarian-German Learning App
-// Generates service worker with optimized caching strategies
+/**
+ * Workbox configuration for BulgarianGermanLearningApp PWA
+ * Generates service worker with precaching and runtime caching strategies
+ */
 
 module.exports = {
-  // Glob patterns to precache during service worker installation
-  globDirectory: 'static/',
+  // Glob patterns to include in precache manifest
+  globDirectory: 'public/',
   globPatterns: [
-    '**/*.{html,css,js,json,webmanifest,svg,png,jpg,jpeg,gif,webp,woff,woff2,ttf,eot}'
+    '**/*.{html,css,js,json,png,jpg,jpeg,svg,gif,ico,webp,woff,woff2,ttf,eot}',
+    'manifest.webmanifest'
   ],
   
-  // Additional files to precache that might not be matched by glob patterns
+  // Files to ignore in precache
   globIgnores: [
-    '**/sw.js', // Don't precache the service worker itself
-    'sw.js',
-    'workbox-*.js'
+    '**/node_modules/**',
+    '**/tests/**',
+    '**/coverage/**',
+    '**/docs/**',
+    '**/scripts/**',
+    '**/web/**',
+    '**/workbox-*.js'
   ],
   
-  // Maximum file size to precache (in bytes)
-  maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
-  
-  // Service worker file output
-  swDest: 'static/sw.js',
+  // Additional files to precache (not matched by glob patterns)
+  additionalManifestEntries: [
+    {
+      url: '/offline.html',
+      revision: 'offline-v1'
+    }
+  ],
   
   // Cache ID for versioning
-  cacheId: 'bgde-app-workbox',
+  cacheId: 'bgde-learn-app',
   
-  // Skip waiting for activation
+  // Maximum cache size (in MB)
+  maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
+  
+  // Service worker destination
+  swDest: 'public/sw.js',
+  
+  // Skip waiting and claim clients immediately
   skipWaiting: true,
-  
-  // Claim clients immediately
   clientsClaim: true,
   
   // Runtime caching strategies
   runtimeCaching: [
-    // Network-first for HTML pages (always try network first, fallback to cache)
     {
-      urlPattern: /\.html$/,
-      handler: 'NetworkFirst',
-      options: {
-        cacheName: 'html-pages',
-        networkTimeoutSeconds: 3,
-        plugins: [
-          {
-            cacheWillUpdate: async ({ request, response, event, state }) => {
-              // Only cache successful responses
-              return response && response.status === 200 ? response : null;
-            }
-          }
-        ]
-      }
-    },
-    
-    // Cache-first for static assets (CSS, JS, images, fonts)
-    {
-      urlPattern: /\.(?:css|js|svg|png|jpg|jpeg|gif|webp|woff|woff2|ttf|eot)$/,
-      handler: 'CacheFirst',
-      options: {
-        cacheName: 'static-assets',
-        plugins: [
-          {
-            cacheWillUpdate: async ({ request, response, event, state }) => {
-              // Only cache successful responses
-              return response && response.status === 200 ? response : null;
-            },
-            cacheKeyWillBeUsed: async ({ request, mode }) => {
-              // Use URL without query parameters as cache key
-              return request.url.split('?')[0];
-            }
-          }
-        ]
-      }
-    },
-    
-    // Stale-while-revalidate for JSON data (vocabulary, grammar, search index)
-    {
-      urlPattern: /\.json$/,
-      handler: 'StaleWhileRevalidate',
-      options: {
-        cacheName: 'data-cache',
-        plugins: [
-          {
-            cacheWillUpdate: async ({ request, response, event, state }) => {
-              // Only cache successful responses
-              return response && response.status === 200 ? response : null;
-            }
-          }
-        ]
-      }
-    },
-    
-    // Network-first for API requests (if any future API endpoints are added)
-    {
-      urlPattern: /\/api\//,
-      handler: 'NetworkFirst',
-      options: {
-        cacheName: 'api-cache',
-        networkTimeoutSeconds: 5,
-        plugins: [
-          {
-            cacheWillUpdate: async ({ request, response, event, state }) => {
-              // Only cache successful responses
-              return response && response.status === 200 ? response : null;
-            }
-          }
-        ]
-      }
-    },
-    
-    // Cache Google Fonts
-    {
+      // Google Fonts - network first strategy
       urlPattern: /^https:\/\/fonts\.(?:googleapis|gstatic)\.com\/.*/,
-      handler: 'CacheFirst',
+      handler: 'NetworkFirst',
       options: {
         cacheName: 'google-fonts',
         expiration: {
           maxEntries: 10,
           maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
+        },
+        networkTimeoutSeconds: 3
+      }
+    },
+    {
+      // API requests - network first with fallback
+      urlPattern: /\.json$/,
+      handler: 'NetworkFirst',
+      options: {
+        cacheName: 'api-data',
+        expiration: {
+          maxEntries: 50,
+          maxAgeSeconds: 60 * 60 * 24 // 1 day
+        },
+        networkTimeoutSeconds: 3
+      }
+    },
+    {
+      // Images - cache first strategy
+      urlPattern: /\.(?:png|jpg|jpeg|svg|gif|webp)$/,
+      handler: 'CacheFirst',
+      options: {
+        cacheName: 'images',
+        expiration: {
+          maxEntries: 100,
+          maxAgeSeconds: 60 * 60 * 24 * 30 // 30 days
         }
       }
     },
-    
-    // Cache CDN assets (jsDelivr, etc.)
     {
-      urlPattern: /^https:\/\/cdn\.jsdelivr\.net\/.*/,
-      handler: 'CacheFirst',
+      // CSS and JS - stale while revalidate
+      urlPattern: /\.(?:css|js)$/,
+      handler: 'StaleWhileRevalidate',
       options: {
-        cacheName: 'cdn-assets',
+        cacheName: 'static-assets',
         expiration: {
-          maxEntries: 20,
+          maxEntries: 100,
           maxAgeSeconds: 60 * 60 * 24 * 30 // 30 days
         }
       }
     }
   ],
   
-  // Navigation preload (improves performance for navigation requests)
-  navigationPreload: true,
+  // Navigation fallback for SPA-like behavior
+  navigateFallback: '/offline.html',
+  navigateFallbackAllowlist: [/^(?!\/__)/], // Allow all except __ paths
   
-  // Ignore URL parameters for certain file types
-  ignoreURLParametersMatching: [
-    /^utm_/,
-    /^fbclid$/,
-    /^gclid$/,
-    /^msclkid$/
-  ],
+  // Source maps for debugging
+  sourcemap: false,
   
-  // Don't cache these file types
-  dontCacheBustURLsMatching: /\.\w{8}\./, // Files with 8-character hashes
-  
-  // Source map configuration
-  sourcemap: false, // Don't include source maps in service worker
-  
-  // Mode configuration
-  mode: 'production'
+  // Mode (development or production)
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development'
 };

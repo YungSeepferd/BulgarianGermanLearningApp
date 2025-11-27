@@ -172,7 +172,7 @@
 {{ define "scripts" }}
 {{ $flashcards := resources.Get "js/flashcards.js" }}
 {{ $spaced := resources.Get "js/spaced-repetition.js" }}
-{{ $language := resources.Get "js/language-toggle.js" }}
+{{ $language := resources.Get "js/language-toggle.ts" }}
 {{ $speech := resources.Get "js/speech-recognition.js" }}
 <link rel="modulepreload" href="{{ $spaced.RelPermalink }}">
 <link rel="modulepreload" href="{{ $language.RelPermalink }}">

@@ -6,6 +6,7 @@
  */
 
 import type { PerformanceMetrics, LazyLoadConfig, MemoryInfo } from '$lib/types/index.js';
+import { debounce, throttle, requestIdleCallback } from './common.js';
 
 /**
  * Performance monitoring class
@@ -96,7 +97,9 @@ export class PerformanceMonitor {
    * Cleanup observers
    */
   cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
+    for (const observer of this.observers) {
+      observer.disconnect();
+    }
     this.observers = [];
     this.metrics.clear();
   }
@@ -182,7 +185,7 @@ export class LazyIntersectionObserver {
 
     this.observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach(entry => {
+        for (const entry of entries) {
           if (entry.isIntersecting) {
             const callback = this.callbacks.get(entry.target);
             if (callback) {
@@ -191,7 +194,7 @@ export class LazyIntersectionObserver {
               this.callbacks.delete(entry.target);
             }
           }
-        });
+        }
       },
       {
         threshold: this.config.threshold || 0.1,
@@ -261,7 +264,7 @@ export class MemoryManager {
   /**
    * Store data in cache with TTL
    */
-  set(key: string, data: any, ttl: number = 300000): void { // Default 5 minutes
+  set(key: string, data: any, ttl: number = 300_000): void { // Default 5 minutes
     this.cache.set(key, {
       data,
       timestamp: Date.now(),
@@ -274,7 +277,9 @@ export class MemoryManager {
    */
   get<T>(key: string): T | null {
     const item = this.cache.get(key);
-    if (!item) return null;
+    if (!item) {
+      return null;
+    }
 
     if (Date.now() - item.timestamp > item.ttl) {
       this.cache.delete(key);
@@ -311,7 +316,7 @@ export class MemoryManager {
   private startCleanup(): void {
     this.cleanupInterval = setInterval(() => {
       this.cleanup();
-    }, 60000); // Cleanup every minute
+    }, 60_000); // Cleanup every minute
   }
 
   /**
@@ -402,47 +407,19 @@ export class PerformanceOptimizer {
   }
 
   /**
-   * Debounce function calls
+   * Debounce function calls - Uses consolidated utility
    */
-  debounce<T extends (...args: any[]) => any>(
-    func: T,
-    wait: number
-  ): (...args: Parameters<T>) => void {
-    let timeout: NodeJS.Timeout;
-    return (...args: Parameters<T>) => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func(...args), wait);
-    };
-  }
+  debounce = debounce;
 
   /**
-   * Throttle function calls
+   * Throttle function calls - Uses consolidated utility
    */
-  throttle<T extends (...args: any[]) => any>(
-    func: T,
-    limit: number
-  ): (...args: Parameters<T>) => void {
-    let inThrottle: boolean;
-    return (...args: Parameters<T>) => {
-      if (!inThrottle) {
-        func(...args);
-        inThrottle = true;
-        setTimeout(() => inThrottle = false, limit);
-      }
-    };
-  }
+  throttle = throttle;
 
   /**
-   * Request idle callback for non-critical tasks
+   * Request idle callback for non-critical tasks - Uses consolidated utility
    */
-  requestIdleCallback(callback: () => void, options?: { timeout?: number }): void {
-    if ('requestIdleCallback' in window) {
-      (window as any).requestIdleCallback(callback, options);
-    } else {
-      // Fallback for browsers without requestIdleCallback
-      setTimeout(callback, 1);
-    }
-  }
+  requestIdleCallback = requestIdleCallback;
 
   /**
    * Check if device is low-end
@@ -453,7 +430,7 @@ export class PerformanceOptimizer {
     
     // Check for low memory (if available)
     const memory = this.monitor.getMemoryInfo();
-    const lowMemory = memory ? memory.totalJSHeapSize < 1000000000 : false; // Less than 1GB
+    const lowMemory = memory ? memory.totalJSHeapSize < 1_000_000_000 : false; // Less than 1GB
     
     // Check for slow connection
     const slowConnection = 'connection' in navigator && 
@@ -538,7 +515,9 @@ export const optimizeComponent = {
    */
   optimizeImages(container: HTMLElement): void {
     const images = container.querySelectorAll('img');
-    images.forEach(img => performanceOptimizer.optimizeImageLoading(img));
+    for (const img of images) {
+      performanceOptimizer.optimizeImageLoading(img);
+    }
   },
 
   /**
@@ -568,5 +547,5 @@ if (typeof document !== 'undefined') {
       100% { background-position: -200% 0; }
     }
   `;
-  document.head.appendChild(style);
+  document.head.append(style);
 }

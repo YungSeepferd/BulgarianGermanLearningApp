@@ -129,8 +129,8 @@
     </div>
     
     <div class="filters">
-        <label for="level-filter" class="sr-only">Filter by vocabulary level</label>
-        <select id="level-filter" aria-label="Filter vocabulary by CEFR level">
+        <label for="level-filter" id="level-filter-label" class="filter-label">Filter by vocabulary level / Филтриране по ниво:</label>
+        <select id="level-filter" aria-labelledby="level-filter-label">
             <option value="">Alle Niveaus / Всички нива</option>
             <option value="A1">A1 - Anfänger / Начинаещи</option>
             <option value="A2">A2 - Grundstufe / Основно</option>
@@ -138,8 +138,8 @@
             <option value="B2">B2 - Obere Mittelstufe / Горно средно</option>
         </select>
         
-        <label for="category-filter" class="sr-only">Filter by vocabulary category</label>
-        <select id="category-filter" aria-label="Filter vocabulary by category">
+        <label for="category-filter" id="category-filter-label" class="filter-label">Filter by vocabulary category / Филтриране по категория:</label>
+        <select id="category-filter" aria-labelledby="category-filter-label">
             <option value="">Alle Kategorien / Всички категории</option>
             {{ $categories := slice }}
             {{ range .Site.Data.vocabulary }}
@@ -150,8 +150,8 @@
             {{ end }}
         </select>
         
-        <label for="search-input" class="sr-only">Search vocabulary</label>
-        <input type="text" id="search-input" placeholder="Wortschatz suchen... / Търсене на речник..." class="search-input" aria-label="Search vocabulary by word or translation">
+        <label for="search-input" id="search-input-label" class="filter-label">Search vocabulary / Търсене на речник:</label>
+        <input type="text" id="search-input" placeholder="Wortschatz suchen... / Търсене на речник..." class="search-input" aria-labelledby="search-input-label">
         
         <button id="practice-selected" class="btn-primary">Ausgewählte üben / Упражнявайте избраните</button>
     </div>
@@ -190,7 +190,11 @@
             
             <div class="vocab-header">
                 <div class="vocab-word">{{ .word }}</div>
-                <input type="checkbox" class="vocab-select" data-word="{{ .word }}">
+                <label class="vocab-select-label">
+                    <input type="checkbox" class="vocab-select" data-word="{{ .word }}"
+                           aria-label="Select {{ .word }} for practice">
+                    <span class="sr-only">Select {{ .word }} for practice</span>
+                </label>
             </div>
             
             <div class="vocab-translation">{{ .translation }}</div>
@@ -293,8 +297,8 @@
         
         <!-- Quick jump -->
         <div class="pagination-jump">
-            <label for="page-jump">Gehe zu Seite / Отиди на страница:</label>
-            <select id="page-jump">
+            <label for="page-jump" id="page-jump-label" class="filter-label">Gehe zu Seite / Отиди на страница:</label>
+            <select id="page-jump" aria-labelledby="page-jump-label">
                 {{ range seq $totalPages }}
                     <option value="{{ . }}" {{ if eq . $currentPage }}selected{{ end }}>
                         {{ . }}

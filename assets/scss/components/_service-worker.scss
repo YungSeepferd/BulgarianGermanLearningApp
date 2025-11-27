@@ -229,12 +229,12 @@
   font-weight: 500;
   
   &.online {
-    background: rgba(40, 167, 69, 0.10);
+    background: rgba(40, 167, 69, 0.1);
     color: var(--success-color, #28a745);
   }
   
   &.offline {
-    background: rgba(220, 53, 69, 0.10);
+    background: rgba(220, 53, 69, 0.1);
     color: var(--danger-color, #dc3545);
   }
 }
@@ -265,7 +265,7 @@
   position: fixed;
   bottom: 1rem;
   left: 1rem;
-  background: rgba(0, 0, 0, 0.80);
+  background: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 0.75rem;
   border-radius: 0.5rem;
@@ -295,7 +295,7 @@
   
   .sw-action-btn {
     padding: 0.25rem 0.5rem;
-    background: rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.2);
     border: none;
     border-radius: 0.25rem;
     color: white;
@@ -303,7 +303,7 @@
     cursor: pointer;
     
     &:hover {
-      background: rgba(255, 255, 255, 0.30);
+      background: rgba(255, 255, 255, 0.3);
     }
   }
 }

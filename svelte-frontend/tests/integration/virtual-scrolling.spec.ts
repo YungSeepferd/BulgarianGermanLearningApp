@@ -304,7 +304,7 @@ test.describe('VirtualScrollingManager', () => {
 
   test.describe('Edge cases', () => {
     test('should handle very large datasets', () => {
-      const items = generateMockVocabularyItems(10000); // 10k items
+      const items = generateMockVocabularyItems(10_000); // 10k items
       const manager = new VirtualScrollingManager(items);
       
       manager.updateContainerHeight(600);

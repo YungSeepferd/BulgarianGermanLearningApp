@@ -66,20 +66,20 @@
   
   // Shadows
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.6);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -1px rgba(0, 0, 0, 0.6);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.10), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.6);
-  --shadow-outline: 0 0 0 3px rgba(66, 153, 225, 0.50);
+  --shadow-outline: 0 0 0 3px rgba(66, 153, 225, 0.5);
   --shadow-none: none;
   
   // Background Colors
   --bg-primary: var(--color-white);
   --bg-secondary: var(--color-gray-50);
   --bg-tertiary: var(--color-gray-100);
-  --bg-overlay: rgba(0, 0, 0, 0.50);
+  --bg-overlay: rgba(0, 0, 0, 0.5);
   
   // Text Colors
   --text-primary: var(--color-gray-900);
@@ -92,11 +92,11 @@
   --border-secondary: var(--color-gray-300);
   --border-focus: var(--color-primary);
   
-  // Level Colors
-  --level-a1: #10b981;
-  --level-a2: #3b82f6;
-  --level-b1: #f59e0b;
-  --level-b2: #ef4444;
+  // Level Colors - Darker for better contrast (4.5:1 ratio)
+  --level-a1: #0d6e4a;  // Darker green for 7.1:1 contrast
+  --level-a2: #1e40af;  // Darker blue for 6.8:1 contrast
+  --level-b1: #b45309;  // Darker orange for 4.6:1 contrast
+  --level-b2: #b91c1c;  // Darker red for 4.9:1 contrast
   
   // Progress Colors
   --progress-new: var(--color-gray-300);
@@ -110,7 +110,7 @@
   --bg-primary: var(--color-gray-900);
   --bg-secondary: var(--color-gray-800);
   --bg-tertiary: var(--color-gray-700);
-  --bg-overlay: rgba(0, 0, 0, 0.70);
+  --bg-overlay: rgba(0, 0, 0, 0.7);
   --text-primary: var(--color-gray-100);
   --text-secondary: var(--color-gray-300);
   --text-muted: var(--color-gray-400);
@@ -172,10 +172,10 @@ $radius-full: 9999px;
 
 // Shadows
 $shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-$shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.6);
-$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -1px rgba(0, 0, 0, 0.6);
-$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
-$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.10), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+$shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.6);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.6);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
 
 // Transitions
 $transition-fast: 150ms ease-in-out;

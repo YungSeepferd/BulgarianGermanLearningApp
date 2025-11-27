@@ -1,9 +1,0 @@
-Scan `layouts/` and `assets/js/` for keyboard navigation and ARIA accessibility issues.
-
-Produce:
-- A short list of issues (max 8 items), each with a one-sentence severity and location.
-- For each issue, provide either a one-file unified-diff patch or a one-paragraph code suggestion that a developer can apply.
-
-Rules:
-- Prioritize keyboard navigation, focus order, and ARIA roles.
-- Avoid touching unrelated template code; prefer single-file patches.

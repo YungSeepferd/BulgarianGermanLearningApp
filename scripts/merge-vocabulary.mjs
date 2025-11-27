@@ -6,7 +6,6 @@
  */
 
 import { readFile, writeFile } from 'node:fs/promises';
-import { existsSync } from 'node:fs';
 
 const PRIMARY_PATH = 'data/vocabulary.json';
 const ENHANCED_PATH = 'data/vocabulary-enhanced.json';

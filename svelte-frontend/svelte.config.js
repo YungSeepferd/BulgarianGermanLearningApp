@@ -27,8 +27,8 @@ const config = {
 	// File extensions - temporarily remove mdsvex extensions
 	// extensions: ['.svelte', '.md', '.svx'],
 	
-	// Disable runes mode temporarily for mdsvex compatibility
-	// TODO: Remove this when mdsvex fully supports Svelte 5 runes
+	// Enable Svelte 5 runes mode for full Svelte 5 compatibility
+	// Temporarily disabled for component testing compatibility
 	compilerOptions: {
 		runes: false
 	},
