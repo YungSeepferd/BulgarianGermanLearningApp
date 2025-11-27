@@ -8,109 +8,148 @@
 <script lang="ts">
   import { createEventDispatcher, onMount } from 'svelte';
   import type { ErrorContext, ErrorSeverity } from '$lib/types/index.js';
-  {#if error}
-    <div class="error-boundary" role="alert" aria-live="polite">
-      <div class="error-container">
-        <!-- Error Icon and Title -->
-        <div class="error-header">
-          <div class="error-icon" aria-hidden="true">⚠️</div>
-          <h2 class="error-title">Something went wrong</h2>
-        </div>
 
-        <!-- Error Message -->
-        <div class="error-content">
-          <p class="error-message">
-            {error.message || 'An unexpected error occurred'}
-          </p>
-          
-          <!-- Error Details (Development) -->
-          {#if devMode && error.stack}
-            <details class="error-details">
-              <summary>Error Details</summary>
-              <pre class="error-stack">{error.stack}</pre>
-            </details>
-          {/if}
+  // Props
+  export let error: Error | null = null;
+  export let errorContext: ErrorContext | null = null;
+  export let devMode: boolean = false;
+  export let showReportButton: boolean = true;
+  export let fallback: (() => void) | null = null;
 
-          <!-- Error Context -->
-          {#if errorContext}
-            <div class="error-context">
-              <h3>Context Information</h3>
-              <div class="context-grid">
-                <div class="context-item">
-                  <span class="context-label">Component:</span>
-                  <span class="context-value">{errorContext.componentName || 'Unknown'}</span>
-                </div>
-                <div class="context-item">
-                  <span class="context-label">Severity:</span>
-                  <span class="context-value severity-{errorContext.severity || 'medium'}">
-                    {errorContext.severity || 'medium'}
-                  </span>
-                </div>
-                {#if errorContext.userAction}
-                  <div class="context-item">
-                    <span class="context-label">Action:</span>
-                    <span class="context-value">{errorContext.userAction}</span>
-                  </div>
-                {/if}
-                {#if errorContext.timestamp}
-                  <div class="context-item">
-                    <span class="context-label">Time:</span>
-                    <span class="context-value">{errorContext.timestamp.toLocaleString()}</span>
-                  </div>
-                {/if}
+  // Event dispatcher
+  const dispatch = createEventDispatcher();
+
+  // Handle retry action
+  function handleRetry(): void {
+    dispatch('retry');
+  }
+
+  // Handle reload action
+  function handleReload(): void {
+    window.location.reload();
+  }
+
+  // Handle report action
+  function handleReport(): void {
+    dispatch('report', { error, errorContext });
+  }
+
+  // Auto-detect dev mode
+  onMount(() => {
+    if (typeof window !== 'undefined') {
+      devMode = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    }
+  });
+</script>
+
+{#if error}
+  <div class="error-boundary" role="alert" aria-live="polite">
+    <div class="error-container">
+      <!-- Error Icon and Title -->
+      <div class="error-header">
+        <div class="error-icon" aria-hidden="true">⚠️</div>
+        <h2 class="error-title">Something went wrong</h2>
+      </div>
+
+      <!-- Error Message -->
+      <div class="error-content">
+        <p class="error-message">
+          {error.message || 'An unexpected error occurred'}
+        </p>
+        
+        <!-- Error Details (Development) -->
+        {#if devMode && error.stack}
+          <details class="error-details">
+            <summary>Error Details</summary>
+            <pre class="error-stack">{error.stack}</pre>
+          </details>
+        {/if}
+
+        <!-- Error Context -->
+        {#if errorContext}
+          <div class="error-context">
+            <h3>Context Information</h3>
+            <div class="context-grid">
+              <div class="context-item">
+                <span class="context-label">Component:</span>
+                <span class="context-value">{errorContext.componentName || 'Unknown'}</span>
               </div>
+              <div class="context-item">
+                <span class="context-label">Severity:</span>
+                <span class="context-value severity-{errorContext.severity || 'medium'}">
+                  {errorContext.severity || 'medium'}
+                </span>
+              </div>
+              {#if errorContext.userAction}
+                <div class="context-item">
+                  <span class="context-label">Action:</span>
+                  <span class="context-value">{errorContext.userAction}</span>
+                </div>
+              {/if}
+              {#if errorContext.timestamp}
+                <div class="context-item">
+                  <span class="context-label">Time:</span>
+                  <span class="context-value">{errorContext.timestamp.toLocaleString()}</span>
+                </div>
+              {/if}
             </div>
-          {/if}
-        </div>
+          </div>
+        {/if}
+      </div>
 
-        <!-- Recovery Actions -->
-        <div class="error-actions">
+      <!-- Recovery Actions -->
+      <div class="error-actions">
+        <button 
+          class="action-button primary"
+          on:click={handleRetry}
+          aria-label="Try again"
+        >
+          🔄 Try Again
+        </button>
+        
+        <button 
+          class="action-button secondary"
+          on:click={handleReload}
+          aria-label="Reload page"
+        >
+          🔃 Reload Page
+        </button>
+        
+        {#if showReportButton}
           <button 
-            class="action-button primary"
-            on:click={handleRetry}
-            aria-label="Try again"
+            class="action-button tertiary"
+            on:click={handleReport}
+            aria-label="Report error"
           >
-            🔄 Try Again
+            📝 Report Issue
           </button>
-          
-          <button 
-            class="action-button secondary"
-            on:click={handleReload}
-            aria-label="Reload page"
-          >
-            🔃 Reload Page
-          </button>
-          
-          {#if showReportButton}
-            <button 
-              class="action-button tertiary"
-              on:click={handleReport}
-              aria-label="Report error"
-            >
-              📝 Report Issue
-            </button>
-          {/if}
-        </div>
+        {/if}
+      </div>
 
-        <!-- Help Section -->
-        <div class="error-help">
-          <h3>Need Help?</h3>
-          <ul class="help-list">
-            <li>Try refreshing the page</li>
-            <li>Check your internet connection</li>
-            <li>Clear your browser cache</li>
-            <li>Contact support if the problem persists</li>
-          </ul>
-        </div>
+      <!-- Help Section -->
+      <div class="error-help">
+        <h3>Need Help?</h3>
+        <ul class="help-list">
+          <li>Try refreshing the page</li>
+          <li>Check your internet connection</li>
+          <li>Clear your browser cache</li>
+          <li>Contact support if the problem persists</li>
+        </ul>
       </div>
     </div>
-  {/if}
+  </div>
+{/if}
 
-  <!-- Fallback UI for when no error is present -->
-  {#if !error && fallback}
-    {@render fallback()}
-  {/if}
-</script>
+<!-- Fallback UI for when no error is present -->
+{#if !error && fallback}
+  <div class="fallback-content">
+    {#if typeof fallback === 'function'}
+      {@html fallback()}
+    {:else}
+      {fallback}
+    {/if}
+  </div>
+{/if}
 
 <!-- Styles -->
 <style>

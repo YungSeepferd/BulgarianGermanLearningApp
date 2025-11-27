@@ -8,7 +8,9 @@ interface ProgressDashboardInstance {
 }
 
 declare global {
-  var progressDashboard: ProgressDashboardInstance | undefined;
+  interface Window {
+    progressDashboard?: ProgressDashboardInstance;
+  }
 }
 
 console.log('[ProgressDashboard-Init] Module loaded');
@@ -26,8 +28,9 @@ async function initializeProgressDashboard(): Promise<void> {
     }
 
     console.log('[ProgressDashboard] Initializing...');
-    window.progressDashboard = new ProgressDashboard();
-    await window.progressDashboard.initialize();
+    const dashboard = new ProgressDashboard();
+    window.progressDashboard = dashboard;
+    await dashboard.initialize();
     console.log('[ProgressDashboard] Initialization complete');
   } catch (error) {
     console.error('[ProgressDashboard] Initialization failed:', error);

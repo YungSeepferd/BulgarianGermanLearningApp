@@ -2,6 +2,7 @@
 // Provides enhanced caching strategies and offline functionality
 
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/7.4.0/workbox-sw.js');
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/7.4.0/workbox-background-sync.prod.js');
 
 // Configure Workbox
 workbox.setConfig({
@@ -133,6 +134,200 @@ workbox.routing.registerRoute(
   })
 );
 
+// Background sync queues for offline data
+const progressQueue = new workbox.backgroundSync.Queue('progress-queue', {
+  maxRetentionTime: 24 * 60 * 60, // 24 hours
+  onSync: async ({ queue }) => {
+    console.log('[Background Sync] Processing progress queue');
+    const entries = await queue.getAll();
+    for (const entry of entries) {
+      try {
+        const response = await fetch(entry.request, {
+          method: 'POST',
+          body: entry.request.body,
+          headers: entry.request.headers
+        });
+        
+        if (response.ok) {
+          await queue.delete(entry.request);
+          console.log('[Background Sync] Progress update synced:', entry.request.url);
+          
+          // Notify clients about successful sync
+          const clients = await self.clients.matchAll();
+          clients.forEach(client => {
+            client.postMessage({
+              type: 'SYNC_SUCCESS',
+              data: { type: 'progress', url: entry.request.url }
+            });
+          });
+        } else {
+          console.warn('[Background Sync] Failed to sync progress:', response.status);
+        }
+      } catch (error) {
+        console.error('[Background Sync] Error syncing progress:', error);
+      }
+    }
+  }
+});
+
+const vocabularyProgressQueue = new workbox.backgroundSync.Queue('vocabulary-progress-queue', {
+  maxRetentionTime: 7 * 24 * 60 * 60, // 7 days
+  onSync: async ({ queue }) => {
+    console.log('[Background Sync] Processing vocabulary progress queue');
+    const entries = await queue.getAll();
+    for (const entry of entries) {
+      try {
+        const response = await fetch(entry.request, {
+          method: 'POST',
+          body: entry.request.body,
+          headers: {
+            'Content-Type': 'application/json',
+            ...entry.request.headers
+          }
+        });
+        
+        if (response.ok) {
+          await queue.delete(entry.request);
+          console.log('[Background Sync] Vocabulary progress synced:', entry.request.url);
+          
+          // Notify clients about successful sync
+          const clients = await self.clients.matchAll();
+          clients.forEach(client => {
+            client.postMessage({
+              type: 'SYNC_SUCCESS',
+              data: { type: 'vocabulary-progress', url: entry.request.url }
+            });
+          });
+        } else {
+          console.warn('[Background Sync] Failed to sync vocabulary progress:', response.status);
+        }
+      } catch (error) {
+        console.error('[Background Sync] Error syncing vocabulary progress:', error);
+      }
+    }
+  }
+});
+
+const userPreferencesQueue = new workbox.backgroundSync.Queue('user-preferences-queue', {
+  maxRetentionTime: 30 * 24 * 60 * 60, // 30 days
+  onSync: async ({ queue }) => {
+    console.log('[Background Sync] Processing user preferences queue');
+    const entries = await queue.getAll();
+    for (const entry of entries) {
+      try {
+        const response = await fetch(entry.request, {
+          method: 'PUT',
+          body: entry.request.body,
+          headers: {
+            'Content-Type': 'application/json',
+            ...entry.request.headers
+          }
+        });
+        
+        if (response.ok) {
+          await queue.delete(entry.request);
+          console.log('[Background Sync] User preferences synced:', entry.request.url);
+          
+          // Notify clients about successful sync
+          const clients = await self.clients.matchAll();
+          clients.forEach(client => {
+            client.postMessage({
+              type: 'SYNC_SUCCESS',
+              data: { type: 'user-preferences', url: entry.request.url }
+            });
+          });
+        } else {
+          console.warn('[Background Sync] Failed to sync user preferences:', response.status);
+        }
+      } catch (error) {
+        console.error('[Background Sync] Error syncing user preferences:', error);
+      }
+    }
+  }
+});
+
+// Network-only strategies with background sync for API endpoints
+workbox.routing.registerRoute(
+  /\/api\/progress/,
+  async ({ request }) => {
+    try {
+      const response = await fetch(request);
+      return response;
+    } catch (error) {
+      // Queue the request for background sync
+      const clonedRequest = request.clone();
+      await progressQueue.pushRequest({ request: clonedRequest });
+      console.log('[Background Sync] Progress request queued for sync:', request.url);
+      
+      // Return a cached response or fallback
+      return new Response(
+        JSON.stringify({
+          status: 'queued',
+          message: 'Progress update will be synced when online'
+        }),
+        {
+          status: 202,
+          headers: { 'Content-Type': 'application/json' }
+        }
+      );
+    }
+  }
+);
+
+workbox.routing.registerRoute(
+  /\/api\/vocabulary\/progress/,
+  async ({ request }) => {
+    try {
+      const response = await fetch(request);
+      return response;
+    } catch (error) {
+      // Queue the request for background sync
+      const clonedRequest = request.clone();
+      await vocabularyProgressQueue.pushRequest({ request: clonedRequest });
+      console.log('[Background Sync] Vocabulary progress request queued for sync:', request.url);
+      
+      // Return a cached response or fallback
+      return new Response(
+        JSON.stringify({
+          status: 'queued',
+          message: 'Vocabulary progress will be synced when online'
+        }),
+        {
+          status: 202,
+          headers: { 'Content-Type': 'application/json' }
+        }
+      );
+    }
+  }
+);
+
+workbox.routing.registerRoute(
+  /\/api\/user\/preferences/,
+  async ({ request }) => {
+    try {
+      const response = await fetch(request);
+      return response;
+    } catch (error) {
+      // Queue the request for background sync
+      const clonedRequest = request.clone();
+      await userPreferencesQueue.pushRequest({ request: clonedRequest });
+      console.log('[Background Sync] User preferences request queued for sync:', request.url);
+      
+      // Return a cached response or fallback
+      return new Response(
+        JSON.stringify({
+          status: 'queued',
+          message: 'User preferences will be synced when online'
+        }),
+        {
+          status: 202,
+          headers: { 'Content-Type': 'application/json' }
+        }
+      );
+    }
+  }
+);
+
 // Custom message handling for backward compatibility
 self.addEventListener('message', (event) => {
   const { type, data } = event.data;
@@ -173,6 +368,42 @@ self.addEventListener('message', (event) => {
       if (data && Array.isArray(data.urls) && data.urls.length) {
         event.waitUntil(precacheRuntimeAssets(data.urls));
       }
+      break;
+      
+    case 'SYNC_NOW':
+      // Trigger immediate sync for all queues
+      event.waitUntil(
+        (async () => {
+          try {
+            await Promise.all([
+              progressQueue.sync(),
+              vocabularyProgressQueue.sync(),
+              userPreferencesQueue.sync()
+            ]);
+            event.ports[0]?.postMessage({ success: true, message: 'Sync triggered' });
+          } catch (error) {
+            event.ports[0]?.postMessage({ success: false, error: error.message });
+          }
+        })()
+      );
+      break;
+      
+    case 'GET_SYNC_STATUS':
+      // Get status of all sync queues
+      event.waitUntil(
+        (async () => {
+          try {
+            const status = {
+              progress: await progressQueue.getAll(),
+              vocabularyProgress: await vocabularyProgressQueue.getAll(),
+              userPreferences: await userPreferencesQueue.getAll()
+            };
+            event.ports[0]?.postMessage({ success: true, status });
+          } catch (error) {
+            event.ports[0]?.postMessage({ success: false, error: error.message });
+          }
+        })()
+      );
       break;
       
     default:
@@ -274,12 +505,49 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Background sync for offline data (future enhancement)
+// Background sync event listener
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'background-sync') {
-    console.log('[Workbox SW] Background sync triggered');
-    // Future: sync user progress when back online
+  console.log('[Workbox SW] Background sync event triggered:', event.tag);
+  
+  // Handle different sync tags
+  switch (event.tag) {
+    case 'background-sync':
+    case 'progress-sync':
+      event.waitUntil(progressQueue.sync());
+      break;
+    case 'vocabulary-progress-sync':
+      event.waitUntil(vocabularyProgressQueue.sync());
+      break;
+    case 'user-preferences-sync':
+      event.waitUntil(userPreferencesQueue.sync());
+      break;
+    default:
+      console.log('[Workbox SW] Unknown sync tag:', event.tag);
   }
 });
+
+// Periodic sync for background data (if supported)
+if ('periodicSync' in self.registration) {
+  self.addEventListener('periodicsync', (event) => {
+    console.log('[Workbox SW] Periodic sync triggered:', event.tag);
+    
+    if (event.tag === 'periodic-background-sync') {
+      event.waitUntil(
+        (async () => {
+          try {
+            await Promise.all([
+              progressQueue.sync(),
+              vocabularyProgressQueue.sync(),
+              userPreferencesQueue.sync()
+            ]);
+            console.log('[Workbox SW] Periodic sync completed successfully');
+          } catch (error) {
+            console.error('[Workbox SW] Periodic sync failed:', error);
+          }
+        })()
+      );
+    }
+  });
+}
 
 console.log('[Workbox SW] Service worker loaded successfully');

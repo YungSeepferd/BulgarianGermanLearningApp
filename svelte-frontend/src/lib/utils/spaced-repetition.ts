@@ -6,18 +6,18 @@
  * @updated November 2025
  */
 
-import type { 
-  ReviewState, 
-  LanguageDirection, 
-  PhaseDetails, 
+import type {
+  ReviewState,
+  LanguageDirection,
+  PhaseDetails,
   PhaseStatistics,
   GradeFeedback,
   MigrationLogEntry,
-  MigrationResults,
-  ExportData,
-  ImportResults,
+  
+  
   DueItemsStats
 } from '$lib/types/index.js';
+import { formatInterval } from './common.js';
 
 // ============================================================================
 // PHASE CALCULATOR
@@ -65,12 +65,24 @@ export class PhaseCalculator {
     if (ef >= 3 && repetitions >= this.LEARNED_MIN_REPETITIONS) {
       return 0; // Learned status
     }
-    if (ef < 2) return 1;
-    if (ef < 2.2) return 2;
-    if (ef < 2.4) return 3;
-    if (ef < 2.6) return 4;
-    if (ef < 2.8) return 5;
-    if (ef < 3) return 6;
+    if (ef < 2) {
+      return 1;
+    }
+    if (ef < 2.2) {
+      return 2;
+    }
+    if (ef < 2.4) {
+      return 3;
+    }
+    if (ef < 2.6) {
+      return 4;
+    }
+    if (ef < 2.8) {
+      return 5;
+    }
+    if (ef < 3) {
+      return 6;
+    }
     return 6;
   }
 
@@ -553,7 +565,9 @@ export class UnifiedSpacedRepetition {
   private loadFromStorage(key: string): ReviewState | null {
     try {
       const data = localStorage.getItem(key);
-      if (!data) return null;
+      if (!data) {
+        return null;
+      }
       const parsed = JSON.parse(data);
       if (typeof parsed === 'object' && parsed !== null) {
         return parsed as ReviewState;
@@ -726,18 +740,7 @@ export function createSpacedRepetitionSystem(): UnifiedSpacedRepetition {
   return new UnifiedSpacedRepetition(phaseCalculator);
 }
 
-/**
- * Format interval for human-readable display
- * @param interval - Interval in days
- * @returns Formatted interval string
- */
-export function formatInterval(interval: number): string {
-  if (interval === 1) return '1 day';
-  if (interval < 7) return `${interval} days`;
-  if (interval < 30) return `${Math.round(interval / 7)} weeks`;
-  if (interval < 365) return `${Math.round(interval / 30)} months`;
-  return `${Math.round(interval / 365)} years`;
-}
+// Note: formatInterval is now imported from './common.js' to eliminate duplication
 
 /**
  * Calculate grade feedback message
@@ -750,43 +753,19 @@ export function getGradeFeedbackMessage(grade: number, feedback: GradeFeedback):
   const gradeName = gradeNames[grade] || 'Unknown';
   
   if (grade < 3) {
-    return `${gradeName} - Review again in ${feedback.interval} day${feedback.interval !== 1 ? 's' : ''}`;
+    return `${gradeName} - Review again in ${feedback.interval} day${feedback.interval === 1 ? '' : 's'}`;
   }
   
   const phaseInfo = feedback.phaseName ? ` (${feedback.phaseName})` : '';
   return `${gradeName} - Next review in ${formatInterval(feedback.interval)}${phaseInfo}`;
 }
 
-/**
- * Validate grade input
- * @param grade - Grade to validate
- * @returns Whether grade is valid
- */
-export function isValidGrade(grade: number): boolean {
-  return Number.isInteger(grade) && grade >= 0 && grade <= 5;
-}
-
-/**
- * Get grade color for UI display
- * @param grade - Grade received (0-5)
- * @returns CSS color class
- */
-export function getGradeColor(grade: number): string {
-  const colors = ['text-red-600', 'text-orange-600', 'text-yellow-600', 'text-green-600', 'text-blue-600', 'text-purple-600'];
-  return colors[grade] || 'text-gray-600';
-}
+// Note: isValidGrade and getGradeColor are now imported from './common.js' to eliminate duplication
 
 // Export all utilities
 export {
-  type ProfileManager,
-  type LanguageDirection,
-  type ReviewState,
-  type PhaseDetails,
-  type PhaseStatistics,
-  type GradeFeedback,
-  type MigrationLogEntry,
-  type MigrationResults,
-  type ExportData,
-  type ImportResults,
-  type DueItemsStats
+  type ProfileManager
+  
+  
 };
+export { type MigrationResults, type ExportData, type ImportResults, type LanguageDirection, type ReviewState, type PhaseDetails, type PhaseStatistics, type GradeFeedback, type MigrationLogEntry, type DueItemsStats } from '$lib/types/index.js';

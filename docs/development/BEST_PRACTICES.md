@@ -87,7 +87,7 @@ git push origin feature/vocabulary-search-enhancement
  */
 
 // Imports at top
-import { languageToggle } from './language-toggle.js';
+import { languageToggle } from './language-toggle.ts';
 import { searchEngine } from './modules/search-engine.js';
 
 // Class-based modules for complex functionality

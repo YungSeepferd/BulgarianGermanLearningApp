@@ -62,8 +62,8 @@ test.describe('LoadingSpinner Component', () => {
       });
       
       await expect(component).toBeVisible();
-      await expect(component.locator('.spinner')).toHaveClass(new RegExp(`w-${size === 'small' ? '4' : size === 'medium' ? '8' : '12'}`));
-      await expect(component.locator('.spinner')).toHaveClass(new RegExp(`h-${size === 'small' ? '4' : size === 'medium' ? '8' : '12'}`));
+      await expect(component.locator('.spinner')).toHaveClass(new RegExp(`w-${size === 'small' ? '4' : (size === 'medium' ? '8' : '12')}`));
+      await expect(component.locator('.spinner')).toHaveClass(new RegExp(`h-${size === 'small' ? '4' : (size === 'medium' ? '8' : '12')}`));
     }
   });
 
@@ -77,17 +77,31 @@ test.describe('LoadingSpinner Component', () => {
       
       await expect(component).toBeVisible();
       
-      if (variant === 'spinner') {
+      switch (variant) {
+      case 'spinner': {
         await expect(component.locator('.spinner')).toBeVisible();
-      } else if (variant === 'dots') {
+      
+        break;
+      }
+      case 'dots': {
         await expect(component.locator('.dots-container')).toBeVisible();
         await expect(component.locator('.dot')).toHaveCount(3);
-      } else if (variant === 'pulse') {
+      
+        break;
+      }
+      case 'pulse': {
         await expect(component.locator('.pulse-container')).toBeVisible();
         await expect(component.locator('.pulse-dot')).toBeVisible();
-      } else if (variant === 'bars') {
+      
+        break;
+      }
+      case 'bars': {
         await expect(component.locator('.bars-container')).toBeVisible();
         await expect(component.locator('.bar')).toHaveCount(4);
+      
+        break;
+      }
+      // No default
       }
     }
   });
@@ -103,16 +117,33 @@ test.describe('LoadingSpinner Component', () => {
       await expect(component).toBeVisible();
       
       // Check that appropriate color classes are applied
-      if (color === 'primary') {
+      switch (color) {
+      case 'primary': {
         await expect(component.locator('.spinner')).toHaveClass(/border-blue-600/);
-      } else if (color === 'secondary') {
+      
+        break;
+      }
+      case 'secondary': {
         await expect(component.locator('.spinner')).toHaveClass(/border-gray-600/);
-      } else if (color === 'success') {
+      
+        break;
+      }
+      case 'success': {
         await expect(component.locator('.spinner')).toHaveClass(/border-green-600/);
-      } else if (color === 'warning') {
+      
+        break;
+      }
+      case 'warning': {
         await expect(component.locator('.spinner')).toHaveClass(/border-yellow-600/);
-      } else if (color === 'error') {
+      
+        break;
+      }
+      case 'error': {
         await expect(component.locator('.spinner')).toHaveClass(/border-red-600/);
+      
+        break;
+      }
+      // No default
       }
     }
   });
@@ -366,14 +397,18 @@ test.describe('LoadingSpinner Component', () => {
     
     // Hide programmatically
     await component.evaluate((node: any) => {
-      if (node.hide) node.hide();
+      if (node.hide) {
+        node.hide();
+      }
     });
     
     await expect(component).not.toBeVisible();
     
     // Show programmatically
     await component.evaluate((node: any) => {
-      if (node.show) node.show();
+      if (node.show) {
+        node.show();
+      }
     });
     
     await expect(component).toBeVisible();
@@ -421,12 +456,16 @@ test.describe('LoadingSpinner Component', () => {
     // Rapid show/hide cycles
     for (let i = 0; i < 5; i++) {
       await component.evaluate((node: any) => {
-        if (node.hide) node.hide();
+        if (node.hide) {
+          node.hide();
+        }
       });
       await page.waitForTimeout(50);
       
       await component.evaluate((node: any) => {
-        if (node.show) node.show();
+        if (node.show) {
+          node.show();
+        }
       });
       await page.waitForTimeout(50);
     }

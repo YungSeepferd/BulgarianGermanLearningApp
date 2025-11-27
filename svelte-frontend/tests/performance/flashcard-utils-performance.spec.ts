@@ -42,8 +42,8 @@ describe('Flashcard Utils Performance Tests', () => {
         removeListener: vi.fn(),
         addEventListener: vi.fn(),
         removeEventListener: vi.fn(),
-        dispatchEvent: vi.fn(),
-      })),
+        dispatchEvent: vi.fn()
+      }))
     });
   });
 
@@ -71,7 +71,7 @@ describe('Flashcard Utils Performance Tests', () => {
     
     // Test caching functionality
     const testData = { key: 'test', value: 'data' };
-    memoryManager.set('test-key', testData, 60000); // 1 minute TTL
+    memoryManager.set('test-key', testData, 60_000); // 1 minute TTL
     
     const retrieved = memoryManager.get('test-key');
     expect(retrieved).toEqual(testData);
@@ -106,7 +106,7 @@ describe('Flashcard Utils Performance Tests', () => {
     
     monitor.startTimer('interaction');
     // Simulate some work
-    const array = new Array(1000).fill(0).map((_, i) => i);
+    const array = Array.from({ length: 1000 }).fill(0).map((_, i) => i);
     const sum = array.reduce((a, b) => a + b, 0);
     
     // Add a small delay to ensure duration > 0
@@ -119,7 +119,7 @@ describe('Flashcard Utils Performance Tests', () => {
     
     expect(interactionTime).toBeGreaterThan(0);
     expect(interactionTime).toBeLessThan(100); // Should be very fast
-    expect(sum).toBe(499500); // Verify work was done
+    expect(sum).toBe(499_500); // Verify work was done
   });
 
   it('should handle memory pressure gracefully', () => {
@@ -127,7 +127,7 @@ describe('Flashcard Utils Performance Tests', () => {
     
     // Test with multiple items
     for (let i = 0; i < 10; i++) {
-      memoryManager.set(`item-${i}`, { data: `test-${i}` }, 60000);
+      memoryManager.set(`item-${i}`, { data: `test-${i}` }, 60_000);
     }
     
     expect(memoryManager.size()).toBe(10);
@@ -150,11 +150,15 @@ describe('Flashcard Utils Performance Tests', () => {
     
     // Add small delays
     const start1 = Date.now();
-    while (Date.now() - start1 < 1) {}
+    while (Date.now() - start1 < 1) {
+      // Wait 1ms
+    }
     const time1 = monitor1.endTimer('test1');
     
     const start2 = Date.now();
-    while (Date.now() - start2 < 1) {}
+    while (Date.now() - start2 < 1) {
+      // Wait 1ms
+    }
     const time2 = monitor2.endTimer('test2');
     
     expect(time1).toBeGreaterThan(0);
@@ -172,16 +176,18 @@ describe('Flashcard Utils Performance Tests', () => {
       
       // Add a small delay
       const start = Date.now();
-      while (Date.now() - start < 1) {}
+      while (Date.now() - start < 1) {
+        // Wait 1ms
+      }
       
       const time = monitor.endTimer(`measure-${i}`);
       measurements.push(time);
     }
     
     // All measurements should be very fast
-    measurements.forEach(time => {
+    for (const time of measurements) {
       expect(time).toBeLessThan(10); // Should be under 10ms each
-    });
+    }
   });
 
   it('should provide device-specific optimizations', () => {
@@ -239,9 +245,9 @@ describe('Flashcard Utils Performance Tests', () => {
     }
     
     expect(results.length).toBe(3);
-    results.forEach(time => {
+    for (const time of results) {
       expect(time).toBeGreaterThan(0);
       expect(time).toBeLessThan(100); // Each operation under 100ms
-    });
+    }
   });
 });

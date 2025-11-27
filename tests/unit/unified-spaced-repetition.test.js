@@ -59,12 +59,12 @@ describe('UnifiedSpacedRepetition', () => {
     test('should calculate correct ease factor for grade 0 (incorrect)', () => {
       const currentEF = 2.5;
       const grade = 0;
-      // For grade 0: EF' = 2.5 + (0.1 - 5 * (0.08 + 5 * 0.02)) = 2.5 + (0.1 - 0.7) = 1.9
+      // For grade 0: EF' = 2.5 + (0.1 - 5 * (0.08 + 5 * 0.02)) = 2.5 + (0.1 - 0.9) = 1.7
       const newEF = Math.max(
         1.3,
         currentEF + (0.1 - (5 - grade) * (0.08 + (5 - grade) * 0.02))
       );
-      expect(Math.round(newEF * 100) / 100).toBe(1.9);
+      expect(Math.round(newEF * 100) / 100).toBe(1.7);
     });
 
     test('should enforce minimum ease factor of 1.3', () => {

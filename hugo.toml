@@ -1,4 +1,4 @@
-baseURL = 'https://yungseepferd.github.io/BulgarianGermanLearningApp'
+baseURL = 'http://127.0.0.1:1313/BulgarianGermanLearningApp/'
 languageCode = 'en-us'
 title = 'Bulgarian-German Learning App'
 # Using Relearn theme (https://github.com/McShelby/hugo-theme-relearn)

@@ -8,7 +8,7 @@ This audit covers every JavaScript file under `assets/js/` and `assets/js/module
 
 ## Summary Findings
 
-- **Active entry points:** `assets/js/app.js`, `assets/js/code.js`, `assets/js/language-toggle.js`, `assets/js/language-toggle-confirmation.js`, and `assets/js/onboarding.js` are loaded globally from `layouts/_default/baseof.html:41-57`.
+- **Active entry points:** `assets/js/app.js`, `assets/js/code.js`, `assets/js/language-toggle.ts`, `assets/js/language-toggle-confirmation.js`, and `assets/js/onboarding.js` are loaded globally from `layouts/_default/baseof.html:41-57`.
 - **Practice stack:** `assets/js/unified-practice-session.js`, `assets/js/enhanced-bidirectional-system.js`, and `assets/js/enhanced-spaced-repetition.js` are loaded by `layouts/practice/single.html:272-288` for the modern session flow. They depend on the unified practice session class and SM-2 helpers exported on `window`.
 - **Vocabulary page:** `assets/js/modules/vocabulary-page.js`, `assets/js/enhanced-vocab-cards.js`, `assets/js/vocabulary-adapter.js`, and shared cultural data scripts are loaded via `layouts/vocabulary/list.html:166-199`.
 - **Legacy / fallback code:** `assets/js/flashcards.js`, `assets/js/practice.js`, `assets/js/bidirectional-flashcards.js`, `assets/js/session-stats-dashboard.js`, `assets/js/home.js`, and the modules bundle in `assets/js/modules/` (other than `vocabulary-page.js`) are not referenced by current templates. They appear to be legacy or experimental slices preserved for backwards compatibility but no longer wired up.
@@ -21,7 +21,7 @@ This audit covers every JavaScript file under `assets/js/` and `assets/js/module
 | --- | ---: | --- | ---: | --- | --- | --- | --- |
 | `assets/js/app.js` | 10,083 | 2025-10-19 | 1 | `layouts/_default/baseof.html:41-42` | ACTIVE | NO | Core bootstrap, theme toggle, SW registration; removal breaks global initialization. |
 | `assets/js/code.js` | 878 | 2025-08-17 | 1 | `layouts/_default/baseof.html:44-45` | ACTIVE | NO | Handles copy-to-clipboard for `render-codeblock`; removing breaks code block UX. |
-| `assets/js/language-toggle.js` | 16,944 | 2025-10-17 | 2 | `layouts/_default/baseof.html:48-49`, imports in `flashcards.js`, `vocab-cards.js` | ACTIVE | NO | Critical for site-wide language state. |
+| `assets/js/language-toggle.ts` | 16,944 | 2025-10-17 | 2 | `layouts/_default/baseof.html:48-49`, imports in `flashcards.js`, `vocab-cards.js` | ACTIVE | NO | Critical for site-wide language state. |
 | `assets/js/language-toggle-confirmation.js` | 6,946 | 2025-10-17 | 1 | `layouts/_default/baseof.html:52-53` | ACTIVE | NO | Provides confirmation modal for language switch. |
 | `assets/js/onboarding.js` | 23,090 | 2025-10-19 | 1 | `layouts/_default/baseof.html:56-57` | ACTIVE | NO | Guides new users through onboarding; interacts with `window.enhancedPracticeSession`. |
 | `assets/js/enhanced-bidirectional-system.js` | 15,042 | 2025-10-12 | 2 | `layouts/practice/single.html:278-282`, `layouts/vocabulary/list.html:166-181` | ACTIVE | NO | Central logic for bidirectional vocabulary, event bus for language direction. |
@@ -68,11 +68,11 @@ This audit covers every JavaScript file under `assets/js/` and `assets/js/module
 
 ## Import Chain Highlights
 
-- `layouts/_default/baseof.html` → `app.js`, `code.js`, `language-toggle.js`, `language-toggle-confirmation.js`, `onboarding.js`.
+- `layouts/_default/baseof.html` → `app.js`, `code.js`, `language-toggle.ts`, `language-toggle-confirmation.js`, `onboarding.js`.
 - `layouts/practice/single.html` (JS layout) → `enhanced-spaced-repetition.js` → `window.EnhancedSpacedRepetition`; `enhanced-bidirectional-system.js` → event bus; `enhanced-practice-session.js` → session UI.
 - `layouts/vocabulary/list.html` → `enhanced-bidirectional-system.js`, `vocabulary-adapter.js`, `enhanced-vocab-cards.js`, `modules/vocabulary-page.js`.
 - `layouts/_shortcodes/flashcards.html` → fallback `window.BgDeApp.initPractice()` which depends on globals defined in legacy `assets/js/practice.js` chain (requires confirmation).
-- `layouts/test-flashcards/single.html` → `flashcards.js` (ES module importing `spaced-repetition.js`, `language-toggle.js`, `speech-recognition.js`). This template appears to be a sandbox for manual testing and not part of production build.
+- `layouts/test-flashcards/single.html` → `flashcards.js` (ES module importing `spaced-repetition.js`, `language-toggle.ts`, `speech-recognition.js`). This template appears to be a sandbox for manual testing and not part of production build.
 
 ## Recommendations
 

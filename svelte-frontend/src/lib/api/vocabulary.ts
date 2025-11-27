@@ -45,7 +45,9 @@ class VocabularyCache {
   
   get(key: string): VocabularyItem[] | null {
     const entry = this.cache.get(key);
-    if (!entry) return null;
+    if (!entry) {
+      return null;
+    }
     
     if (Date.now() - entry.timestamp > API_CONFIG.cacheTimeout) {
       this.cache.delete(key);
@@ -121,7 +123,9 @@ async function retryWithBackoff<T>(
   try {
     return await fn();
   } catch (error) {
-    if (attempts <= 1) throw error;
+    if (attempts <= 1) {
+      throw error;
+    }
     
     console.warn(`[VocabularyAPI] Retrying after error: ${error instanceof Error ? error.message : 'Unknown error'}`);
     await new Promise(resolve => setTimeout(resolve, delay));
@@ -318,10 +322,18 @@ export class VocabularyAPI {
 
       // Build query parameters
       const params = new URLSearchParams();
-      if (filters.level && filters.level !== 'all') params.append('level', filters.level);
-      if (filters.category && filters.category !== 'all') params.append('category', filters.category);
-      if (filters.search) params.append('search', filters.search);
-      if (direction) params.append('direction', direction);
+      if (filters.level && filters.level !== 'all') {
+        params.append('level', filters.level);
+      }
+      if (filters.category && filters.category !== 'all') {
+        params.append('category', filters.category);
+      }
+      if (filters.search) {
+        params.append('search', filters.search);
+      }
+      if (direction) {
+        params.append('direction', direction);
+      }
 
       const url = `${API_CONFIG.baseUrl}/filtered${params.toString() ? `?${params.toString()}` : ''}`;
 
@@ -456,7 +468,9 @@ export class VocabularyAPI {
         limit: limit.toString()
       });
       
-      if (direction) params.append('direction', direction);
+      if (direction) {
+        params.append('direction', direction);
+      }
 
       const response = await retryWithBackoff(async () => {
         const res = await fetch(`${API_CONFIG.baseUrl}/search?${params.toString()}`);
@@ -514,7 +528,7 @@ export class VocabularyAPI {
   getCacheStats(): { size: number; keys: string[] } {
     return {
       size: vocabularyCache.size(),
-      keys: Array.from((vocabularyCache as any).cache.keys())
+      keys: [...(vocabularyCache as any).cache.keys()]
     };
   }
 
@@ -640,11 +654,5 @@ export function filterVocabularyItems(
 }
 
 // Export all types and utilities
-export {
-  type VocabularyAPIResponse,
-  type VocabularyLoadingState,
-  type VocabularyChunkMetadata,
-  type VocabularyFilters,
-  type LanguageDirection,
-  type VocabularyItem
-};
+
+export { type VocabularyAPIResponse, type VocabularyLoadingState, type VocabularyChunkMetadata, type VocabularyFilters, type LanguageDirection, type VocabularyItem } from '$lib/types/index.js';

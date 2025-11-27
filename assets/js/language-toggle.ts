@@ -3,7 +3,7 @@
  * @description Bidirectional language learning direction controller
  * @status ACTIVE
  * @dependencies None (pure implementation)
- * @used_by flashcards.js, vocab-cards.js, enhanced-*.js modules, layouts/partials/language-toggle.html
+ * @used_by flashcards.ts, vocab-cards.ts, enhanced-*.ts modules, layouts/partials/language-toggle.html
  * @features
  *   - Toggle between BG→DE and DE→BG learning directions
  *   - localStorage persistence (bgde:language-direction)
@@ -14,21 +14,6 @@
  * @version 2.0.0
  * @updated October 2025
  */
-
-interface LanguageToggleConfirmation {
-  new(): LanguageToggleConfirmation;
-  show(currentDirection: Direction, nextDirection: Direction, callback: (confirmedDirection: Direction) => void): void;
-}
-
-const DIRECTION = {
-  BG_TO_DE: 'bg-de',
-  DE_TO_BG: 'de-bg'
-} as const;
-
-const DEFAULT_DIRECTION = DIRECTION.DE_TO_BG;
-const VALID_DIRECTIONS = new Set([DIRECTION.BG_TO_DE, DIRECTION.DE_TO_BG]);
-
-type Direction = typeof DIRECTION[keyof typeof DIRECTION];
 
 interface DirectionConfig {
   text: string;
@@ -46,7 +31,7 @@ interface LanguageLabels {
   targetField: string;
 }
 
-interface GradeInfo {
+interface GradeConfig {
   label: string;
   desc: string;
 }
@@ -62,47 +47,45 @@ interface UITexts {
   flip: string;
   grade: string;
   gradeHelp: string;
-  grades: Record<number, GradeInfo>;
+  grades: Record<number, GradeConfig>;
   sessionComplete: string;
   newSession: string;
   backToVocab: string;
 }
 
-interface SetDirectionOptions {
-  silent?: boolean;
-  announce?: boolean;
-}
+const DIRECTION = {
+  BG_TO_DE: 'bg-de',
+  DE_TO_BG: 'de-bg'
+} as const;
+
+const DEFAULT_DIRECTION = DIRECTION.DE_TO_BG;
+const VALID_DIRECTIONS = new Set([DIRECTION.BG_TO_DE, DIRECTION.DE_TO_BG]);
 
 class LanguageToggle {
-  private storageKey = 'bgde:language-direction';
-  private legacyStorageKey = 'bgde:learning_direction';
-  private currentDirection: Direction;
+  private storageKey: string = 'bgde:language-direction';
+  private legacyStorageKey: string = 'bgde:learning_direction';
   private toggleButton: HTMLButtonElement | null = null;
+  private currentDirection: string = DEFAULT_DIRECTION;
 
   constructor() {
     this.currentDirection = this.loadDirection();
     this.init();
   }
-
-  init(): void {
+  private init(): void {
     this.createToggleButton();
     this.applyDirection();
     this.bindEvents();
   }
-
   private createToggleButton(): void {
     let container = document.querySelector('[data-language-toggle]') as HTMLElement;
-
     if (container) {
       container.classList.add('language-controls');
       container.innerHTML = '';
     } else {
       container = document.querySelector('.theme-toggle-container') as HTMLElement;
-
       if (!container) {
         container = document.createElement('div');
         container.className = 'language-controls';
-
         const header = document.querySelector('header') || document.querySelector('.header');
         if (header) {
           header.append(container);
@@ -112,40 +95,35 @@ class LanguageToggle {
         }
       }
     }
-
     const toggleButton = document.createElement('button');
     toggleButton.className = 'language-toggle-btn';
     toggleButton.type = 'button';
     toggleButton.id = 'language-toggle-button';
-    
     // Enhanced accessibility
     toggleButton.setAttribute('aria-pressed', 'false');
     toggleButton.setAttribute('aria-describedby', 'language-toggle-description');
-
     // Create hidden description for screen readers
     const description = document.createElement('span');
     description.id = 'language-toggle-description';
     description.className = 'sr-only';
-    description.textContent = 'Click to switch learning direction between German to Bulgarian and Bulgarian to German';
-    
+    description.textContent =
+      'Click to switch learning direction between German to Bulgarian and Bulgarian to German';
     this.updateToggleButton(toggleButton);
-
     container.append(toggleButton);
     container.append(description);
     this.toggleButton = toggleButton;
   }
-
-  private updateToggleButton(button: HTMLButtonElement | null): void {
+  private updateToggleButton(button: HTMLButtonElement): void {
     if (!button) {
       return;
     }
-
-    const directions: Record<Direction, DirectionConfig> = {
+    const directions: Record<string, DirectionConfig> = {
       [DIRECTION.DE_TO_BG]: {
         text: 'DE → BG',
         subtitle: 'Deutsch zu Bulgarisch',
         title: 'Learning Bulgarian (from German perspective)',
-        ariaLabel: 'Switch learning direction. Currently German to Bulgarian. Click to change to Bulgarian to German.',
+        ariaLabel:
+          'Switch learning direction. Currently German to Bulgarian. Click to change to Bulgarian to German.',
         leftFlag: 'de',
         rightFlag: 'bg'
       },
@@ -153,17 +131,17 @@ class LanguageToggle {
         text: 'BG → DE',
         subtitle: 'Български към Немски',
         title: 'Learning German (from Bulgarian perspective)',
-        ariaLabel: 'Switch learning direction. Currently Bulgarian to German. Click to change to German to Bulgarian.',
+        ariaLabel:
+          'Switch learning direction. Currently Bulgarian to German. Click to change to German to Bulgarian.',
         leftFlag: 'bg',
         rightFlag: 'de'
       }
     };
-
     const current = directions[this.currentDirection] || directions[DEFAULT_DIRECTION];
-    const partnerDirection = this.currentDirection === DIRECTION.DE_TO_BG
-      ? directions[DIRECTION.BG_TO_DE]
-      : directions[DIRECTION.DE_TO_BG];
-
+    const partnerDirection =
+      this.currentDirection === DIRECTION.DE_TO_BG
+        ? directions[DIRECTION.BG_TO_DE]
+        : directions[DIRECTION.DE_TO_BG];
     button.innerHTML = `
       <span class="toggle-flag flag-${current.leftFlag}" aria-hidden="true"></span>
       <span class="toggle-arrow" aria-hidden="true">
@@ -176,7 +154,6 @@ class LanguageToggle {
       </span>
       <span class="sr-only">${current.ariaLabel}</span>
     `;
-
     button.setAttribute('title', current.title);
     button.setAttribute('aria-label', current.ariaLabel);
     button.dataset.direction = this.currentDirection;
@@ -184,7 +161,6 @@ class LanguageToggle {
       button.dataset.nextDirection = partnerDirection.leftFlag + '-' + partnerDirection.rightFlag;
     }
   }
-
   private bindEvents(): void {
     if (this.toggleButton) {
       this.toggleButton.addEventListener('click', () => this.toggleDirection());
@@ -192,23 +168,19 @@ class LanguageToggle {
         this.toggleButton?.classList.remove('is-animating');
       });
     }
-
     const handleExternalChange = (event: CustomEvent) => {
       const detail = event?.detail;
       if (!detail || detail.source === 'language-toggle') {
         return;
       }
-
       this.setDirection(detail.direction, { silent: true });
     };
-
     document.addEventListener('language-direction-changed', handleExternalChange as EventListener);
     document.addEventListener('languageDirectionChanged', handleExternalChange as EventListener);
     window.addEventListener('learning-direction-changed', handleExternalChange as EventListener);
-
     window.addEventListener('storage', (event: StorageEvent) => {
       if (event.key === this.storageKey) {
-        this.setDirection(event.newValue as Direction, { silent: true });
+        this.setDirection(event.newValue, { silent: true });
       } else if (event.key === this.legacyStorageKey) {
         const migrated = this.migrateLegacyDirection(event.newValue || undefined);
         if (migrated) {
@@ -217,38 +189,31 @@ class LanguageToggle {
       }
     });
   }
-
-  toggleDirection(): void {
-    const nextDirection: Direction =
+  private toggleDirection(): void {
+    const nextDirection =
       this.currentDirection === DIRECTION.DE_TO_BG ? DIRECTION.BG_TO_DE : DIRECTION.DE_TO_BG;
-
     // Show confirmation modal if available
-    const LanguageToggleConfirmation = (window as { LanguageToggleConfirmation?: LanguageToggleConfirmation }).LanguageToggleConfirmation;
+    const LanguageToggleConfirmation = (window as any).LanguageToggleConfirmation;
     if (LanguageToggleConfirmation === undefined) {
       // Fallback: direct change without confirmation
-      this.setDirection(nextDirection, { announce: true });
+      this.setDirection(nextDirection, { silent: false, announce: true });
     } else {
       const confirmation = new LanguageToggleConfirmation();
-      confirmation.show(
-        this.currentDirection,
-        nextDirection,
-        (confirmedDirection: Direction) => {
-          // User confirmed, proceed with change
-          this.setDirection(confirmedDirection, { announce: true });
-        }
-      );
+      confirmation.show(this.currentDirection, nextDirection, (confirmedDirection: string) => {
+        // User confirmed, proceed with change
+        this.setDirection(confirmedDirection, { silent: false, announce: true });
+      });
     }
   }
-
-  setDirection(direction: Direction, { silent = false, announce = false }: SetDirectionOptions = {}): void {
+  private setDirection(direction: string, options: { silent?: boolean; announce?: boolean } = {}): void {
+    const { silent = false, announce = false } = options;
     const normalized = this.normalizeDirection(direction) || DEFAULT_DIRECTION;
     const previousDirection = this.currentDirection;
     const changed = normalized !== this.currentDirection;
-
     this.currentDirection = normalized;
     this.saveDirection();
     this.applyDirection();
-    this.updateToggleButton(this.toggleButton);
+    this.updateToggleButton(this.toggleButton!);
     if (this.toggleButton) {
       this.toggleButton.dataset.prevDirection = previousDirection || '';
       if (changed) {
@@ -257,7 +222,6 @@ class LanguageToggle {
         this.toggleButton.classList.add('is-animating');
       }
     }
-
     if (changed && !silent) {
       this.broadcastDirectionChange();
       if (announce) {
@@ -265,7 +229,6 @@ class LanguageToggle {
       }
     }
   }
-
   private applyDirection(): void {
     const body = document.body;
     if (body) {
@@ -273,38 +236,30 @@ class LanguageToggle {
         body.classList.remove('lang-de-bg', 'lang-bg-de');
         body.classList.add(`lang-${this.currentDirection}`);
       }
-
       if (body.dataset) {
         body.dataset.languageDirection = this.currentDirection;
       }
     }
-
     const isGermanBase = this.isGermanBase();
     document.documentElement.setAttribute('lang', isGermanBase ? 'de' : 'bg');
-
     this.updateMetaDescription();
   }
-
   private updateMetaDescription(): void {
-    const descriptions: Record<Direction, string> = {
+    const descriptions: Record<string, string> = {
       [DIRECTION.DE_TO_BG]:
         'Bulgarisch lernen für Deutsche - Interaktive Vokabeln und Grammatik mit Spaced Repetition',
       [DIRECTION.BG_TO_DE]:
         'Учене на немски за българи - Интерактивни думи и граматика със система за повторение'
     };
-
     const content = descriptions[this.currentDirection] || descriptions[DEFAULT_DIRECTION];
-
-    let metaDesc = document.querySelector('meta[name="description"]');
+    let metaDesc = document.querySelector('meta[name="description"]') as HTMLMetaElement;
     if (!metaDesc) {
       metaDesc = document.createElement('meta');
       metaDesc.setAttribute('name', 'description');
       document.head.append(metaDesc);
     }
-
     metaDesc.setAttribute('content', content);
   }
-
   private broadcastDirectionChange(): void {
     const detail = {
       direction: this.currentDirection,
@@ -312,24 +267,22 @@ class LanguageToggle {
       isBulgarianBase: this.isBulgarianBase(),
       source: 'language-toggle'
     };
-
     document.dispatchEvent(new CustomEvent('language-direction-changed', { detail }));
     document.dispatchEvent(new CustomEvent('languageDirectionChanged', { detail }));
     window.dispatchEvent(new CustomEvent('learning-direction-changed', { detail }));
   }
-
   private announceDirectionChange(): void {
-    const announcements: Record<Direction, string> = {
-      [DIRECTION.DE_TO_BG]: 'Switched to German to Bulgarian learning mode. You will now see Bulgarian words to translate to German.',
-      [DIRECTION.BG_TO_DE]: 'Switched to Bulgarian to German learning mode. You will now see German words to translate to Bulgarian.'
+    const announcements: Record<string, string> = {
+      [DIRECTION.DE_TO_BG]:
+        'Switched to German to Bulgarian learning mode. You will now see Bulgarian words to translate to German.',
+      [DIRECTION.BG_TO_DE]:
+        'Switched to Bulgarian to German learning mode. You will now see German words to translate to Bulgarian.'
     };
-
     const message = announcements[this.currentDirection] || announcements[DEFAULT_DIRECTION];
     this.announceToScreenReader(message);
     this.showToastNotification(message);
   }
-
-  getDirection(): Direction {
+  getDirection(): string {
     return this.currentDirection;
   }
 
@@ -348,7 +301,6 @@ class LanguageToggle {
   getTargetLanguage(): string {
     return this.isGermanBase() ? 'bg' : 'de';
   }
-
   getLanguageLabels(): LanguageLabels {
     if (this.isGermanBase()) {
       return {
@@ -358,7 +310,6 @@ class LanguageToggle {
         targetField: 'word'
       };
     }
-
     return {
       source: { code: 'bg', name: 'Български', flag: '🇧🇬' },
       target: { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
@@ -366,9 +317,8 @@ class LanguageToggle {
       targetField: 'translation'
     };
   }
-
   getUITexts(): UITexts {
-    const texts: Record<Direction, UITexts> = {
+    const texts: Record<string, UITexts> = {
       [DIRECTION.DE_TO_BG]: {
         loading: 'Lade Vokabeln...',
         error: 'Fehler beim Laden der Vokabeln',
@@ -416,17 +366,14 @@ class LanguageToggle {
         backToVocab: 'Обратно към думи'
       }
     };
-
     return texts[this.currentDirection] || texts[DEFAULT_DIRECTION];
   }
-
-  private loadDirection(): Direction {
+  private loadDirection(): string {
     try {
       const migrated = this.migrateLegacyDirection();
       if (migrated) {
         return migrated;
       }
-
       const stored = localStorage.getItem(this.storageKey);
       return this.normalizeDirection(stored) || DEFAULT_DIRECTION;
     } catch (error) {
@@ -434,21 +381,17 @@ class LanguageToggle {
       return DEFAULT_DIRECTION;
     }
   }
-
-  private migrateLegacyDirection(explicitValue?: string): Direction | null {
+  private migrateLegacyDirection(explicitValue?: string): string | null {
     try {
       const legacyValue =
         explicitValue === undefined ? localStorage.getItem(this.legacyStorageKey) : explicitValue;
-
       if (!legacyValue) {
         return null;
       }
-
       const normalized = this.normalizeDirection(legacyValue);
       if (normalized) {
         localStorage.setItem(this.storageKey, normalized);
       }
-
       localStorage.removeItem(this.legacyStorageKey);
       return normalized;
     } catch (error) {
@@ -456,25 +399,19 @@ class LanguageToggle {
       return null;
     }
   }
-
-  private normalizeDirection(value: string | null): Direction | null {
+  private normalizeDirection(value: string | null): string | null {
     if (!value) {
       return null;
     }
-
     const normalized = value.toString().toLowerCase();
-
     if (normalized === 'bg-de' || normalized === 'bg_to_de') {
       return DIRECTION.BG_TO_DE;
     }
-
     if (normalized === 'de-bg' || normalized === 'de_to_bg') {
       return DIRECTION.DE_TO_BG;
     }
-
-    return VALID_DIRECTIONS.has(normalized as Direction) ? normalized as Direction : null;
+    return VALID_DIRECTIONS.has(normalized as any) ? normalized : null;
   }
-
   private saveDirection(): void {
     try {
       localStorage.setItem(this.storageKey, this.currentDirection);
@@ -482,10 +419,9 @@ class LanguageToggle {
       console.warn('Failed to save language direction:', error);
     }
   }
-
   private announceToScreenReader(message: string): void {
     // Use global announcement region if available
-    const globalAnnouncer = document.querySelector('#sr-announcements');
+    const globalAnnouncer = document.querySelector('#sr-announcements') as HTMLElement;
     if (globalAnnouncer) {
       globalAnnouncer.textContent = message;
       setTimeout(() => {
@@ -498,16 +434,13 @@ class LanguageToggle {
       announcement.setAttribute('aria-live', 'polite');
       announcement.className = 'sr-only';
       announcement.textContent = message;
-
       document.body.append(announcement);
-
       setTimeout(() => {
         announcement.remove();
       }, 1000);
     }
   }
-  
-  private showToastNotification(message: string): void {
+  showToastNotification(message) {
     // Check if toast container exists, create if not
     let toastContainer = document.querySelector('#toast-container');
     if (!toastContainer) {
@@ -518,16 +451,11 @@ class LanguageToggle {
       toastContainer.setAttribute('aria-atomic', 'true');
       document.body.append(toastContainer);
     }
-    
     // Create toast
     const toast = document.createElement('div');
     toast.className = 'toast toast-success';
     toast.setAttribute('role', 'alert');
-    
-    const directionInfo = this.currentDirection === DIRECTION.DE_TO_BG 
-      ? '🇩🇪 → 🇧🇬' 
-      : '🇧🇬 → 🇩🇪';
-    
+    const directionInfo = this.currentDirection === DIRECTION.DE_TO_BG ? '🇩🇪 → 🇧🇬' : '🇧🇬 → 🇩🇪';
     toast.innerHTML = `
       <span class="toast-icon" aria-hidden="true">✓</span>
       <span class="toast-message">
@@ -535,14 +463,11 @@ class LanguageToggle {
         ${message}
       </span>
     `;
-    
     toastContainer.append(toast);
-    
     // Trigger animation
     setTimeout(() => {
       toast.classList.add('toast-show');
     }, 10);
-    
     // Auto-remove after 4 seconds
     setTimeout(() => {
       toast.classList.remove('toast-show');
@@ -554,31 +479,16 @@ class LanguageToggle {
     }, 4000);
   }
 }
-
-let languageToggle: LanguageToggle | { 
-  currentDirection: Direction;
-  getDirection: () => Direction;
-  isGermanBase: () => boolean;
-  isBulgarianBase: () => boolean;
-  getSourceLanguage: () => string;
-  getTargetLanguage: () => string;
-  getLanguageLabels: () => LanguageLabels;
-  getUITexts: () => UITexts;
-  toggleDirection: () => void;
-  setDirection: (direction: Direction, options?: SetDirectionOptions) => void;
-  applyDirection: () => void;
-  updateToggleButton: (button: HTMLButtonElement | null) => void;
-  announceToScreenReader: (message: string) => void;
-};
-
+let languageToggle;
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-  const existingLanguageToggle = (window as unknown as { languageToggle?: LanguageToggle }).languageToggle;
-  languageToggle = existingLanguageToggle instanceof LanguageToggle
-    ? existingLanguageToggle
-    : new LanguageToggle();
-
-  (window as unknown as { languageToggle?: LanguageToggle }).languageToggle = languageToggle;
-  (window as unknown as { LanguageToggle?: typeof LanguageToggle }).LanguageToggle = LanguageToggle;
+  const existingLanguageToggle = window.languageToggle;
+  languageToggle =
+    existingLanguageToggle instanceof LanguageToggle
+      ? existingLanguageToggle
+      : new LanguageToggle();
+  window.languageToggle = {
+    getDirection: () => languageToggle.getDirection()
+  };
 } else {
   const noop = () => {};
   languageToggle = {
@@ -624,6 +534,6 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     announceToScreenReader: noop
   };
 }
-
 export { languageToggle, LanguageToggle, DIRECTION };
 export default languageToggle;
+//# sourceMappingURL=language-toggle.js.map

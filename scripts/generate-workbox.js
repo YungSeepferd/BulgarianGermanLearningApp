@@ -58,6 +58,9 @@ async function generateWorkboxServiceWorker() {
     // Add custom logic to the generated service worker
     await enhanceServiceWorker();
     
+    // Verify background sync functionality
+    await verifyBackgroundSync();
+    
   } catch (error) {
     console.error('❌ Failed to generate Workbox service worker:', error);
     process.exit(1);
@@ -66,162 +69,95 @@ async function generateWorkboxServiceWorker() {
 
 async function enhanceServiceWorker() {
   const swPath = path.join(process.cwd(), 'static/sw.js');
+  const customSwPath = path.join(process.cwd(), 'static/sw-workbox.js');
   
   if (!fs.existsSync(swPath)) {
-    console.error('❌ Service worker file not found:', swPath);
+    console.error('❌ Generated service worker file not found:', swPath);
     return;
   }
   
-  let swContent = fs.readFileSync(swPath, 'utf8');
-  
-  // Add custom message handling for backward compatibility
-  const customMessageHandling = `
-// Custom message handling for backward compatibility
-self.addEventListener('message', (event) => {
-  const { type, data } = event.data;
-  
-  switch (type) {
-    case 'SKIP_WAITING':
-      console.log('[Workbox SW] Received skip waiting message');
-      self.skipWaiting();
-      break;
-      
-    case 'GET_VERSION':
-      event.ports[0]?.postMessage({
-        version: 'bgde-app-workbox',
-        dataVersion: 'bgde-data-workbox'
-      });
-      break;
-      
-    case 'CLEAR_CACHE':
-      console.log('[Workbox SW] Clearing all caches...');
-      caches.keys().then((cacheNames) => {
-        return Promise.all(
-          cacheNames.map((cacheName) => caches.delete(cacheName))
-        );
-      }).then(() => {
-        event.ports[0]?.postMessage({ success: true });
-      }).catch((error) => {
-        event.ports[0]?.postMessage({ success: false, error: error.message });
-      });
-      break;
-      
-    case 'PREFETCH_VOCABULARY':
-      if (data && data.items) {
-        prefetchVocabularyItems(data.items);
-      }
-      break;
-      
-    case 'PRECACHE_URLS':
-      if (data && Array.isArray(data.urls) && data.urls.length) {
-        event.waitUntil(precacheRuntimeAssets(data.urls));
-      }
-      break;
-      
-    default:
-      console.log('[Workbox SW] Unknown message type:', type);
-  }
-});
-
-// Prefetch vocabulary items for offline use
-async function prefetchVocabularyItems(items) {
-  const cache = await caches.open('data-cache');
-  const prefetchPromises = [];
-  
-  items.forEach((item) => {
-    // Prefetch audio files if available
-    if (item.audio_url) {
-      prefetchPromises.push(
-        fetch(item.audio_url)
-          .then((response) => {
-            if (response.ok) {
-              cache.put(item.audio_url, response.clone());
-            }
-          })
-          .catch(() => {}) // Ignore prefetch errors
-      );
-    }
-    
-    // Prefetch individual vocabulary pages
-    const vocabUrl = \`/vocabulary/\${item.id}/\`;
-    prefetchPromises.push(
-      fetch(vocabUrl)
-        .then((response) => {
-          if (response.ok) {
-            cache.put(vocabUrl, response.clone());
-          }
-        })
-        .catch(() => {}) // Ignore prefetch errors
-    );
-  });
-  
-  // Limit concurrent prefetch requests
-  const batchSize = 5;
-  for (let i = 0; i < prefetchPromises.length; i += batchSize) {
-    const batch = prefetchPromises.slice(i, i + batchSize);
-    await Promise.allSettled(batch);
-    
-    // Small delay between batches to avoid overwhelming the network
-    await new Promise(resolve => setTimeout(resolve, 100));
+  if (!fs.existsSync(customSwPath)) {
+    console.error('❌ Custom service worker template not found:', customSwPath);
+    return;
   }
   
-  console.log('[Workbox SW] Prefetch completed for', items.length, 'vocabulary items');
-}
-
-// Precache runtime assets
-async function precacheRuntimeAssets(urls) {
-  const cache = await caches.open('html-pages');
-  const precachePromises = urls.map(url => 
-    fetch(url)
-      .then(response => {
-        if (response.ok) {
-          cache.put(url, response.clone());
-        }
-      })
-      .catch(() => {}) // Ignore errors
+  // Read the generated Workbox service worker
+  const generatedSwContent = fs.readFileSync(swPath, 'utf8');
+  
+  // Read our custom service worker template
+  const customSwContent = fs.readFileSync(customSwPath, 'utf8');
+  
+  // Extract the precache manifest from the generated service worker
+  const precacheMatch = generatedSwContent.match(/e\.precacheAndRoute\((\[.*?])\)/);
+  let precacheManifest = '[]';
+  
+  if (precacheMatch) {
+    precacheManifest = precacheMatch[1];
+    console.log(`📦 Extracted precache manifest with ${precacheManifest.split(',').length} entries`);
+  }
+  
+  // Create the final service worker by combining custom template with generated manifest
+  let finalSwContent = customSwContent;
+  
+  // Replace the placeholder precache manifest with the actual one
+  finalSwContent = finalSwContent.replace(
+    /workbox(?:\.precache){2}AndRoute\(\[\s*\/{2}.*\s*]\)/,
+    `workbox.precaching.precacheAndRoute(${precacheManifest})`
   );
   
-  await Promise.allSettled(precachePromises);
-  console.log('[Workbox SW] Runtime precache completed for', urls.length, 'URLs');
+  // Write the final service worker
+  fs.writeFileSync(swPath, finalSwContent, 'utf8');
+  console.log('✅ Enhanced service worker with background sync functionality');
 }
 
-// Enhanced activation with custom notifications
-const originalActivate = self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    (async () => {
-      // Call original activation logic
-      await self.clients.claim();
-      
-      // Notify all clients about the update
-      const clients = await self.clients.matchAll();
-      clients.forEach((client) => {
-        client.postMessage({
-          type: 'SW_ACTIVATED',
-          version: 'bgde-app-workbox'
-        });
-      });
-      
-      console.log('[Workbox SW] Enhanced activation completed');
-    })()
-  );
-});
-`;
-
-  // Find the position to inject custom code (after Workbox's main logic)
-  const injectionPoint = swContent.lastIndexOf('workbox.precaching.precacheAndRoute');
+async function verifyBackgroundSync() {
+  const swPath = path.join(process.cwd(), 'static/sw.js');
   
-  if (injectionPoint === -1) {
-    console.warn('⚠️  Could not find injection point for custom code');
+  if (!fs.existsSync(swPath)) {
+    console.error('❌ Service worker file not found for verification');
+    return;
+  }
+  
+  const swContent = fs.readFileSync(swPath, 'utf8');
+  
+  // Check if background sync is properly imported
+  if (swContent.includes('workbox-background-sync.prod.js')) {
+    console.log('✅ Background sync module imported');
   } else {
-    // Find the next line after the precache call
-    const nextLineIndex = swContent.indexOf('\n', injectionPoint) + 1;
-    
-    // Inject custom code
-    swContent = swContent.slice(0, nextLineIndex) + customMessageHandling + swContent.slice(nextLineIndex);
-    
-    fs.writeFileSync(swPath, swContent, 'utf8');
-    console.log('✅ Enhanced service worker with custom functionality');
+    console.warn('⚠️  Background sync module not imported');
   }
+  
+  // Check if background sync queues are created
+  if (swContent.includes('new workbox.backgroundSync.Queue')) {
+    console.log('✅ Background sync queues created');
+  } else {
+    console.warn('⚠️  Background sync queues not found');
+  }
+  
+  // Check if sync event listeners are present
+  if (swContent.includes("addEventListener('sync'")) {
+    console.log('✅ Sync event listeners present');
+  } else {
+    console.warn('⚠️  Sync event listeners not found');
+  }
+  
+  // Check if API routes are registered with background sync
+  const apiRoutes = ['/api/progress', '/api/vocabulary/progress', '/api/user/preferences'];
+  let apiRoutesRegistered = 0;
+  
+  for (const route of apiRoutes) {
+    if (swContent.includes(route)) {
+      apiRoutesRegistered++;
+    }
+  }
+  
+  if (apiRoutesRegistered === apiRoutes.length) {
+    console.log('✅ All API routes registered with background sync');
+  } else {
+    console.warn(`⚠️  Only ${apiRoutesRegistered}/${apiRoutes.length} API routes registered`);
+  }
+  
+  console.log('✅ Background sync verification completed');
 }
 
 // Run the generator

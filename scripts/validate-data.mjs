@@ -123,45 +123,6 @@ function validateVocabularyArray(arr) {
   return errs;
 }
 
-function validateGrammarArray(arr) {
-  const errs = [];
-  if (!Array.isArray(arr)) {
-    return ['grammar.json root must be an array'];
-  }
-  const ids = new Set();
-  for (const [idx, it] of arr.entries()) {
-    const ctx = `grammar[${idx}] (id=${it?.id ?? 'n/a'})`;
-    if (!it || typeof it !== 'object') {
-      errs.push(`${ctx}: entry must be object`); continue; 
-    }
-    if (!isString(it.id)) {
-      errs.push(`${ctx}: id is required string`);
-    }
-    if (ids.has(it.id)) {
-      errs.push(`${ctx}: id must be unique (duplicate)`);
-    } else {
-      ids.add(it.id);
-    }
-    if (!isString(it.title)) {
-      errs.push(`${ctx}: title is required string`);
-    }
-    if (!isString(it.summary)) {
-      errs.push(`${ctx}: summary is required string`);
-    }
-    if (!isString(it.content)) {
-      errs.push(`${ctx}: content is required string`);
-    }
-    if (!isOptionalString(it.category)) {
-      errs.push(`${ctx}: category must be string/null if present`);
-    }
-    if (!isOptionalString(it.level)) {
-      errs.push(`${ctx}: level must be string/null if present`);
-    }
-    validateExamples(it.examples, ctx, errs);
-  }
-  return errs;
-}
-
 async function main() {
   const vocabPath = 'data/vocabulary.json';
   const outputs = [];

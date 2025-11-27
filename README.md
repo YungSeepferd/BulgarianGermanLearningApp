@@ -1,233 +1,256 @@
-# Bulgarian–German Learning App
+# Bulgarian-German Learning App
 
-Hugo Extended site for learning Bulgarian and German with spaced repetition flashcards, vocabulary search, and offline-friendly PWA capabilities. The project pairs Hugo templates with vanilla ES modules and Go helper tools—no external JS frameworks.
+A comprehensive web application for learning Bulgarian and German languages with flashcards, spaced repetition, and interactive exercises.
 
-## 🚀 Quick Start
+![CI](https://github.com/your-username/bulgarian-german-app/workflows/CI/badge.svg)
+![Coverage](https://codecov.io/gh/your-username/bulgarian-german-app/branch/main/graph/badge.svg)
+![Lighthouse](https://github.com/your-username/bulgarian-german-app/workflows/Lighthouse/badge.svg)
+![PWA](https://img.shields.io/badge/PWA-Ready-blue)
+![Accessibility](https://img.shields.io/badge/Accessibility-95%25-brightgreen)
 
-```bash
-# Prerequisites: Hugo Extended v0.128.0+, Go 1.21+ (for tools), Node 18+
+## 🚀 Features
 
-# Start local dev server
-hugo server -D --logLevel=debug
-
-# or via npm script
-npm run dev
-
-# Build for production
-hugo --minify
-
-# Visit local site
-open http://localhost:1313/
-```
-
-## 📁 Project Structure
-
-```text
-.
-├── assets/
-│   ├── js/                # Unified ES modules (v2.0) - no legacy duplication
-│   │   ├── modules/       # Specialized modules (search, API client, etc.)
-│   │   └── unified-*.js   # Core unified modules for practice & spaced repetition
-│   └── scss/              # SCSS sources compiled via Hugo Pipes
-├── content/               # Markdown content (practice pages, vocabulary articles)
-├── data/                  # Consolidated JSON sources - single source of truth
-│   ├── vocabulary.json    # Main vocabulary database (968KB)
-│   ├── cultural-grammar.json # Grammar rules and cultural notes
-│   └── archive-data-cleanup/ # Legacy batch files (safely archived)
-├── docs/                  # Streamlined documentation - essential files only
-│   ├── archive-docs-cleanup/ # Historical completion reports (archived)
-│   └── *.md              # Current project documentation
-├── layouts/               # Hugo templates, partials, and shortcodes
-├── static/                # Manifest, service worker, and static assets
-├── tools/                 # Go utilities (no Go module in repo root)
-└── CLAUDE.md              # Claude Code guidance for future development
-```
-
-## ✨ Key Features
-
-- **🧠 Spaced repetition** powered by unified SM-2 v2 implementation in `unified-spaced-repetition.js`
-- **📚 Vocabulary explorer** with category, CEFR level, and text filters - single consolidated database
-- **🔄 Bidirectional flashcards** with direction-aware difficulty multipliers and session management
-- **📊 Progress persistence** with automatic schema migration stored under the `bgde:` localStorage namespace
-- **📱 PWA shell** with offline cache, manifest, and update handling
-- **🎨 Mobile-first design** compiled via Hugo Pipes with fingerprinted CSS
+- **Bilingual Learning**: Learn Bulgarian to German and German to Bulgarian
+- **Spaced Repetition**: Optimized learning schedule with SM-2 algorithm
+- **Interactive Flashcards**: Engaging flashcard system with progress tracking
+- **Performance Monitoring**: Real-time performance metrics and analytics
+- **PWA Support**: Installable progressive web app with offline capabilities
+- **Accessibility First**: WCAG 2.1 AA compliant with 95%+ Lighthouse accessibility score
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
 
 ## 🛠️ Technology Stack
 
-- **Static site**: Hugo Extended (SCSS via `css.Sass | resources.Minify | resources.Fingerprint`)
-- **Client logic**: Unified vanilla JavaScript ES modules v2.0 (zero dependencies, consolidated architecture)
-- **Styling**: Component-driven SCSS partials compiled by Hugo Pipes
-- **Data**: Single vocabulary database + grammar JSON for optimal performance
-- **Tooling**: Go utilities in `tools/`, npm scripts for convenience
-- **Deployment**: GitHub Pages via `.github/workflows/deploy.yml`
+### Frontend
+- **SvelteKit**: Modern framework for building web applications
+- **TypeScript**: Type-safe JavaScript development
+- **Tailwind CSS**: Utility-first CSS framework
+- **Workbox**: Service worker for PWA functionality
 
-## 📖 Documentation & Resources
+### Backend
+- **SvelteKit API Routes**: Server-side API endpoints
+- **Static Data**: JSON-based vocabulary and grammar data
 
-- **Project overview**: `README.md` (this file)
-- **Coding assistant guide**: [`AGENTS.md`](AGENTS.md)
-- **Development workflow**: [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md)
-- **Architecture reference**: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
-- **Hugo survival guide**: [`docs/HUGO_GUIDELINES.md`](docs/HUGO_GUIDELINES.md)
-- **Hugo official digest**: [`docs/HUGO_OFFICIAL_GUIDELINES.md`](docs/HUGO_OFFICIAL_GUIDELINES.md)
-- **Testing checklist**: [`docs/TESTING.md`](docs/TESTING.md)
-- **Project plan**: [`docs/PROJECT_PLAN.md`](docs/PROJECT_PLAN.md)
-- **Programming references**: [`docs/PROGRAMMING_LINKS.md`](docs/PROGRAMMING_LINKS.md)
-- **Implementation pseudocode**: [`pseudocode/`](pseudocode/)
+### Development Tools
+- **ESLint**: Code linting with jsx-a11y accessibility rules
+- **Prettier**: Code formatting
+- **Vitest**: Unit testing framework
+- **Playwright**: End-to-end testing
+- **Lighthouse CI**: Automated performance and accessibility testing
 
-> **Tip**: Start each work session by logging goal, plan, and results in `docs/notes/TODAY.md`.
+## 📱 Installation
 
-## 🏗️ Development
+### Prerequisites
+- Node.js 18+ and npm
+- Git
 
-```bash
-# Start dev server (drafts + future content)
-hugo server -D --logLevel=debug
+### Setup
 
-# Build production bundle with garbage collection + minify
-npm run build
-
-# Optional: build Go helper binary
-npm run build-tools
-
-# Regenerate derived data
-npm run process-data
-```
-
-- **JavaScript syntax**: Use an ES module-aware checker (e.g., `node --experimental-warnings --check` or an esbuild/rollup dry run). Plain `node -c` is not ESM aware.
-- **Go tests**: Run inside `tools/` where modules are defined; repo root has no Go module.
-- **Accessibility**: Verify keyboard controls (space/enter to flip, digits 0–5 to grade).
-- **Mobile**: Test at 360 px width to ensure touch targets and layout behave.
-
-## ✅ Code Quality & Testing
-
-This project enforces code quality standards through automated linting, formatting, and testing. All developers should follow these guidelines.
-
-### Quick Commands
-
-```bash
-# Install dependencies (required once)
-npm install
-
-# Enable pre-commit hooks (automatically runs linters before commit)
-npx husky install
-
-# Run all quality checks
-npm run lint              # Check all code
-npm run format            # Auto-format code (ESLint, Prettier, Stylelint)
-
-# Run tests
-npm run test:unit         # Jest unit tests
-npm run test:coverage     # Generate coverage report
-npm test                  # Playwright end-to-end tests
-npm run test:a11y         # Accessibility tests (axe-core)
-npm run test:keyboard     # Keyboard navigation tests
-
-# Build and validate
-npm run build             # Production build
-npm run validate          # Full validation suite
-```
-
-### Quality Standards
-
-**Code Linting** (ESLint + Unicorn Plugin):
-- ES2021 environment with strict rules
-- Semicolons required, single quotes, const/let only
-- 100-character line limit, 2-space indentation
-- `===` equality checks, arrow functions required
-- Pre-commit hooks automatically fix auto-fixable issues
-
-**Code Formatting** (Prettier):
-- Automatically formats JavaScript, SCSS, HTML, JSON, Markdown
-- 100-character line width
-- Single quotes with escape avoidance
-- Trailing commas: none
-- Runs automatically before commits via husky
-
-**SCSS Linting** (Stylelint):
-- Standard SCSS rules
-- Kebab-case selectors, variables, mixins
-- Validated before commits
-
-**Testing** (Jest + Playwright + axe-core):
-- Unit tests: Jest with jsdom environment (`tests/unit/`)
-- E2E tests: Playwright (`tests/playwright/`)
-- Accessibility tests: axe-core integration with WCAG 2.1 AA compliance
-- Minimum coverage threshold: 70% (branches, functions, lines, statements)
-- SM-2 algorithm thoroughly tested with 25+ unit test cases
-
-### Contribution Guidelines
-
-Before submitting a pull request:
-
-1. **Read** [`CONTRIBUTING.md`](CONTRIBUTING.md) for detailed guidelines
-2. **Run locally**:
+1. **Clone the repository**
    ```bash
-   npm run lint              # Must pass with 0 errors
-   npm run format            # Auto-fixes most issues
-   npm run test:unit         # All tests must pass
-   npm run build             # Must build successfully
+   git clone https://github.com/your-username/bulgarian-german-app.git
+   cd bulgarian-german-app
    ```
-3. **Commit** with descriptive messages (see CONTRIBUTING.md for format)
-4. **PR template** must be completed with:
-   - Description of changes
-   - Type of change (bug fix, feature, refactor, etc.)
-   - Testing details and results
-   - Link to related issues
 
-### CI/CD Enforcement
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-GitHub Actions enforces code quality on every push and pull request:
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-- ✅ Security audits (npm audit, Go vulncheck, CodeQL)
-- ✅ ESLint validation
-- ✅ SCSS linting
-- ✅ Unit test execution
-- ✅ Code coverage tracking (Codecov)
-- ✅ Build validation
-- ✅ Data integrity checks
-- ✅ Accessibility testing (axe-core WCAG 2.1 AA)
-- ✅ Keyboard navigation testing
+4. **Open your browser**
+   Navigate to `http://localhost:5173`
 
-All checks must pass before merging to main.
+## 🧪 Testing
 
-### Data & Tools
+### Unit Tests
+```bash
+npm run test:unit
+```
 
-**Data Validation**:
-- Vocabulary data validated before every commit
-- Pre-commit hook checks JSON syntax and schema
-- Run manually: `npm run validate`
+### Component Tests
+```bash
+npm run test:component
+```
 
-**Go Tools** (in `tools/` directory):
-- `npm run build-tools` - Compile CLI utilities
-- `npm run process-data` - Process vocabulary data
-- See [`tools/README.md`](tools/README.md) for detailed documentation
+### End-to-End Tests
+```bash
+npm run test:e2e
+```
 
-**For Detailed Info**: See [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`tools/README.md`](tools/README.md)
+### Coverage Reports
+```bash
+npm run test:coverage
+```
 
-## 🎮 Usage Highlights
+## 📊 Quality Gates
 
-- **Vocabulary browsing**: `/vocabulary/` lists words with filters for CEFR level, categories, and search.
-- **Flashcard practice**: `/practice/` or embedded shortcodes launch sessions with SM-2 grading (keys `0–5`).
-- **Progress**: Session stats and review states persist automatically via spaced-repetition engine.
-- **Offline**: Load once online to cache assets; service worker provides an offline shell.
+This project maintains high code quality standards:
 
-## 🚀 Deployment
+### ESLint
+- **0 errors, minimal warnings**
+- jsx-a11y plugin for accessibility compliance
+- Automated fixing with `npm run lint:fix`
 
-- **CI/CD**: `.github/workflows/deploy.yml` builds with `hugo --minify` and deploys to GitHub Pages.
-- **Production URL**: [yungseepferd.github.io/BulgarianGermanLearningApp](https://yungseepferd.github.io/BulgarianGermanLearningApp/)
-- **Cache busting**: Fingerprinted CSS/JS via Hugo Pipes keeps PWA cache clean.
+### Test Coverage
+- **80%+ coverage requirement**
+- Coverage diff checks in CI to prevent regression
+- Detailed coverage reports with `npm run test:coverage`
+
+### Lighthouse
+- **Performance**: 90+
+- **Accessibility**: 95+
+- **Best Practices**: 90+
+- **SEO**: 90+
+
+### PWA
+- **Service Worker**: Workbox-powered caching
+- **Offline Support**: Core functionality available offline
+- **Installable**: Add to home screen capability
+
+## 🏗️ Architecture
+
+### SvelteKit Structure
+```
+svelte-frontend/
+├── src/
+│   ├── lib/
+│   │   ├── api/          # API client functions
+│   │   ├── components/   # Reusable Svelte components
+│   │   ├── stores/       # Svelte stores for state management
+│   │   ├── types/        # TypeScript type definitions
+│   │   └── utils/        # Utility functions
+│   ├── routes/
+│   │   ├── api/          # API routes
+│   │   └── +layout.svelte # Root layout
+│   └── app.html          # HTML template
+├── tests/                # Test files
+└── package.json
+```
+
+### API Endpoints
+
+- `GET /api/vocabulary/all` - Load all vocabulary items
+- `GET /api/vocabulary/chunk/[chunkName]` - Load vocabulary chunk
+- `GET /api/vocabulary/filtered` - Load filtered vocabulary
+- `GET /api/vocabulary/due` - Load due cards for spaced repetition
+- `GET /api/vocabulary/metadata` - Get vocabulary metadata
+- `GET /api/vocabulary/search` - Search vocabulary items
+
+### Data Structure
+
+Each vocabulary item includes:
+- Bulgarian and German words
+- Pronunciation guides
+- Cultural context
+- Example sentences
+- Difficulty level
+- Frequency rating
+- Learning notes
+
+## 🔄 Development Workflow
+
+### Branch Strategy
+- `main` - Production-ready code
+- `develop` - Integration branch
+- `feature/*` - Feature branches
+- `hotfix/*` - Critical fixes
+
+### CI/CD Pipeline
+
+1. **Linting** - ESLint with accessibility rules
+2. **Testing** - Unit, component, and E2E tests
+3. **Coverage** - Code coverage with diff checks
+4. **Audit** - Security vulnerability scanning
+5. **Build** - Production build verification
+6. **Lighthouse** - Performance and accessibility testing
+
+### Code Quality
+
+- **TypeScript**: Strict mode enabled
+- **ESLint**: jsx-a11y accessibility rules
+- **Prettier**: Consistent code formatting
+- **Husky**: Pre-commit hooks
+- **lint-staged**: Staged file linting
+
+## 📈 Performance
+
+### Optimization Strategies
+- **Code Splitting**: Lazy loading of components
+- **Image Optimization**: WebP format with fallbacks
+- **Caching**: Service worker with Workbox
+- **Bundle Analysis**: Regular bundle size monitoring
+- **Virtual Scrolling**: Efficient list rendering
+
+### Monitoring
+- **Performance Metrics**: Load time, interaction metrics
+- **Error Tracking**: Comprehensive error logging
+- **User Analytics**: Learning progress tracking
+
+## 🌐 Accessibility
+
+### WCAG 2.1 AA Compliance
+- **Keyboard Navigation**: Full keyboard accessibility
+- **Screen Reader**: ARIA labels and semantic HTML
+- **Color Contrast**: 4.5:1 minimum contrast ratio
+- **Focus Management**: Visible focus indicators
+- **Text Scaling**: 200% zoom support
+
+### Testing
+- **Automated**: Lighthouse accessibility testing
+- **Manual**: Keyboard-only navigation testing
+- **Screen Reader**: NVDA and VoiceOver testing
+
+## 🔒 Security
+
+### Measures
+- **Content Security Policy**: Restrictive CSP headers
+- **Dependency Auditing**: Regular npm audit checks
+- **HTTPS Only**: Production deployment over HTTPS
+- **Input Validation**: Server-side validation
+- **XSS Prevention**: Content sanitization
+
+## 📚 Documentation
+
+- [API Documentation](docs/API_DOCUMENTATION.md)
+- [Technical Debt](docs/TECH_DEBT.md)
+- [Migration Guide](docs/MIGRATION_TO_SVELTEKIT.md)
+- [Contributing Guide](CONTRIBUTING.md)
+- [Security Policy](SECURITY.md)
 
 ## 🤝 Contributing
 
-- **Read first**: [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`AGENTS.md`](AGENTS.md)
-- **Workflow**: One scoped change per PR; log notes in `docs/notes/TODAY.md`
-- **Testing**: Start `hugo server -D`, verify no console errors, and ensure accessibility tests pass
-- **Accessibility**: Run `npm run test:a11y` to verify WCAG 2.1 AA compliance
-- **PRs**: Include summary, acceptance checklist, and screenshots/GIFs for UI updates
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### Development Setup
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests for new functionality
+5. Ensure all tests pass
+6. Submit a pull request
 
 ## 📄 License
 
-Open source under the [MIT License](LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Bulgarian and German language learners
+- Open source community
+- Accessibility advocates
+- Language education experts
+
+## 📞 Support
+
+For support and questions:
+- Create an issue on GitHub
+- Check the documentation
+- Review existing issues
 
 ---
 
-Built with ❤️ using Hugo Extended and Go.
+**Built with ❤️ for language learners everywhere**

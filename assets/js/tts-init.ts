@@ -25,14 +25,14 @@ try {
   const { TextToSpeech } = await import('./modules/text-to-speech.js');
 
   // Make it globally available
-  (window as { TextToSpeech?: TextToSpeechClass }).TextToSpeech = TextToSpeech;
+  (window as { TextToSpeech?: TextToSpeechClass }).TextToSpeech = TextToSpeech as any;
 
   // Initialize a global TTS instance if speechSynthesis is supported
   if (TextToSpeech.isSupported()) {
     const globalTTS = new TextToSpeech({
       enabled: localStorage.getItem('tts-enabled') !== 'false'
     });
-    (window as { globalTTS?: TextToSpeechInstance }).globalTTS = globalTTS;
+    (window as { globalTTS?: TextToSpeechInstance }).globalTTS = globalTTS as any;
 
     console.log('[TTS] Initialized successfully');
 
@@ -40,7 +40,7 @@ try {
     window.addEventListener('tts-toggle', (event: Event) => {
       const customEvent = event as TTSToggleEvent;
       if (globalTTS) {
-        globalTTS.enabled = customEvent.detail.enabled;
+        (globalTTS as any).enabled = customEvent.detail.enabled;
       }
     });
   } else {

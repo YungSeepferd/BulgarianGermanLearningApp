@@ -228,12 +228,14 @@ export async function measureItemHeights(
   container: HTMLElement,
   measuredHeights: Map<number, number>
 ): Promise<void> {
-  if (!container) return;
+  if (!container) {
+    return;
+  }
 
-  const itemsToMeasure = Array.from(container.querySelectorAll('[data-index]'));
+  const itemsToMeasure = [...container.querySelectorAll('[data-index]')];
   
   for (const item of itemsToMeasure) {
-    const index = parseInt(item.getAttribute('data-index') || '0');
+    const index = parseInt(item.dataset.index || '0');
     const height = (item as HTMLElement).getBoundingClientRect().height;
     
     if (height > 0) {
@@ -304,7 +306,7 @@ export function shouldEnableVirtualScrolling(
 
   // Check device capabilities
   const isLowEndDevice = 
-    device.memory < 4000000000 || // Less than 4GB RAM
+    device.memory < 4_000_000_000 || // Less than 4GB RAM
     device.cores < 4 || // Less than 4 cores
     (device.connection && (
       device.connection.effectiveType === '2g' ||
@@ -328,17 +330,17 @@ export function optimizeConfigForDevice(
   const optimized = { ...config };
 
   // Reduce overscan for low-end devices
-  if (device.memory < 4000000000 || device.cores < 4) {
+  if (device.memory < 4_000_000_000 || device.cores < 4) {
     optimized.overscan = Math.max(2, config.overscan - 2);
   }
 
   // Disable auto-height detection for low-end devices
-  if (device.memory < 2000000000) {
+  if (device.memory < 2_000_000_000) {
     optimized.autoDetectHeight = false;
   }
 
   // Reduce performance monitoring for very low-end devices
-  if (device.memory < 1000000000) {
+  if (device.memory < 1_000_000_000) {
     optimized.performanceMonitoring = false;
   }
 
@@ -470,7 +472,9 @@ export class VirtualScrollingManager {
    * @returns {Promise<void>}
    */
   async measureItemHeights(container: HTMLElement): Promise<void> {
-    if (!this.config.autoDetectHeight) return;
+    if (!this.config.autoDetectHeight) {
+      return;
+    }
     
     await measureItemHeights(container, this.state.measuredHeights);
     this.calculateVisibleRange();
@@ -502,7 +506,9 @@ export class VirtualScrollingManager {
    * @param {Function} callback - Callback function
    */
   setupIntersectionObserver(container: HTMLElement, callback: () => void): void {
-    if (!this.config.autoDetectHeight) return;
+    if (!this.config.autoDetectHeight) {
+      return;
+    }
 
     if (this.intersectionObserver) {
       this.intersectionObserver.disconnect();
@@ -567,17 +573,3 @@ export class VirtualScrollingManager {
     this.calculateVisibleRange();
   }
 }
-
-// Export utility functions and classes
-export {
-  calculateVisibleRange,
-  calculateTotalHeight,
-  calculateTransformOffset,
-  getItemsToRender,
-  measureItemHeights,
-  createPerformanceMetrics,
-  updatePerformanceMetrics,
-  shouldEnableVirtualScrolling,
-  optimizeConfigForDevice,
-  VirtualScrollingManager
-};

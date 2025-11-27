@@ -23,7 +23,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { execSync } from 'node:child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -33,15 +32,6 @@ const rootDir = path.resolve(__dirname, '..');
 const VALID_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
 // Grammar categories
-const VALID_CATEGORIES = [
-  'morphology',
-  'syntax',
-  'phonetics',
-  'verb_system',
-  'noun_system',
-  'sentence_structure',
-  'pragmatics'
-];
 
 /**
  * Fetch and process grammar from a URL
@@ -51,25 +41,22 @@ async function fetchGrammarFromURL(url) {
 
   try {
     // Use WebFetch or similar tool to get content
-    const prompt = `Extract Bulgarian and German grammar rules from this source.
 
-For each grammar rule, provide:
-1. A unique ID (lowercase, underscores, e.g., "verb_aspects_bg")
-2. Title (in English)
-3. Bulgarian concept name (in Bulgarian)
-4. German concept name (in German)
-5. CEFR difficulty level (A1, A2, B1, B2, C1, or C2)
-6. Cultural context explaining how Bulgarians and Germans think about this concept differently
-7. Cross-linguistic explanations:
-   - bg_to_de: Explanation for Bulgarian speakers learning German (in German)
-   - de_to_bg: Explanation for German speakers learning Bulgarian (in English or simple Bulgarian)
-8. Examples with both languages
-9. Common mistakes for both directions
-10. Cultural insights
-
-Return ONLY valid JSON array format.
-
-URL: ${url}`;
+    // For each grammar rule, provide:
+    // 1. A unique ID (lowercase, underscores, e.g., "verb_aspects_bg")
+    // 2. Title (in English)
+    // 3. Bulgarian concept name (in Bulgarian)
+    // 4. German concept name (in German)
+    // 5. CEFR difficulty level (A1, A2, B1, B2, C1, or C2)
+    // 6. Cultural context explaining how Bulgarians and Germans think about this concept differently
+    // 7. Cross-linguistic explanations:
+    //    - bg_to_de: Explanation for Bulgarian speakers learning German (in German)
+    //    - de_to_bg: Explanation for German speakers learning Bulgarian (in English or simple Bulgarian)
+    // 8. Examples with both languages
+    // 9. Common mistakes for both directions
+    // 10. Cultural insights
+    // Return ONLY valid JSON array format.
+    // URL: ${url}
 
     // In real implementation, this would call an AI service or scraping tool
     // For now, provide a template structure
@@ -121,7 +108,7 @@ function parseMarkdownToGrammar(markdown) {
   // Split by H1 or H2 headers
   const sections = markdown.split(/\n#{1,2}\s+/);
 
-  for (const [index, section] of sections.entries()) {
+  for (const [, section] of sections.entries()) {
     if (!section.trim()) {
       continue;
     }

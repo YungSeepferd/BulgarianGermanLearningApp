@@ -40,12 +40,16 @@
 - **[PROGRAMMING_LINKS.md](PROGRAMMING_LINKS.md)** - Useful external references
 
 ## Archive Structure
-- **[archive-docs-cleanup/](archive-docs-cleanup/)** - Historical completion reports and legacy documentation
-- **[archive/](archive/)** - Structured archive of implementation reports and specialized documentation
+- **[archive/](archive/)** - Organized historical documentation including:
+  - `historical-reports/` - Phase completion reports and execution summaries
+  - `implementation-reports/` - Feature implementation and vocabulary documentation
+  - `migration-reports/` - Completed migration documentation
+  - `qa-reports/` - Quality assurance reports and testing results
+  - `development-reports/` - Development procedures and technical notes
 - **[audit/](audit/)** - Technical audit results and system inventories
 
 ---
 
-**Note**: This documentation has been consolidated and organized. All similar files have been merged into comprehensive guides to improve navigation and reduce duplication.
+**Note**: This documentation has been consolidated and organized as of November 2025. The archive structure has been reorganized to improve navigation and reduce duplication. Historical documentation has been properly categorized and archived.
 
 For complete project information, see **[PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md)**.

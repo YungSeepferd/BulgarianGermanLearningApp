@@ -184,68 +184,8 @@ export function validateSpacedRepetitionData(data: any): boolean {
   return true;
 }
 
-/**
- * Sanitizes user input text
- * @param text - Text to sanitize
- * @param maxLength - Maximum allowed length
- * @returns Sanitized text
- */
-export function sanitizeText(text: string, maxLength: number = 1000): string {
-  if (typeof text !== 'string') {
-    return '';
-  }
-
-  // Remove HTML tags
-  let sanitized = text.replace(/<[^>]*>/g, '');
-
-  // Trim whitespace
-  sanitized = sanitized.trim();
-
-  // Limit length
-  if (sanitized.length > maxLength) {
-    sanitized = sanitized.substring(0, maxLength);
-  }
-
-  return sanitized;
-}
-
-/**
- * Validates a grade value (1-5)
- * @param grade - Grade to validate
- * @returns True if valid, false otherwise
- */
-export function validateGrade(grade: number): boolean {
-  return typeof grade === 'number' && grade >= 1 && grade <= 5 && Number.isInteger(grade);
-}
-
-/**
- * Validates a session ID
- * @param sessionId - Session ID to validate
- * @returns True if valid, false otherwise
- */
-export function validateSessionId(sessionId: string): boolean {
-  if (typeof sessionId !== 'string') {
-    return false;
-  }
-
-  // Check if it's a valid UUID format (simplified validation)
-  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
-  return uuidRegex.test(sessionId);
-}
-
-/**
- * Validates a date string
- * @param dateString - Date string to validate
- * @returns True if valid, false otherwise
- */
-export function validateDateString(dateString: string): boolean {
-  if (typeof dateString !== 'string') {
-    return false;
-  }
-
-  const date = new Date(dateString);
-  return !isNaN(date.getTime()) && dateString === date.toISOString();
-}
+// Note: sanitizeText, validateGrade, validateSessionId, and validateDateString
+// are now imported from './common.js' to eliminate duplication
 
 /**
  * Validates an array of vocabulary entries
@@ -254,7 +194,7 @@ export function validateDateString(dateString: string): boolean {
  */
 export function validateVocabularyArray(entries: VocabularyEntry[]): boolean {
   if (!Array.isArray(entries)) {
-    throw new Error('Vocabulary data must be an array');
+    throw new TypeError('Vocabulary data must be an array');
   }
 
   if (entries.length === 0) {
@@ -262,9 +202,9 @@ export function validateVocabularyArray(entries: VocabularyEntry[]): boolean {
   }
 
   // Validate each entry
-  for (let i = 0; i < entries.length; i++) {
+  for (const [i, entry] of entries.entries()) {
     try {
-      validateVocabularyEntry(entries[i]);
+      validateVocabularyEntry(entry);
     } catch (error) {
       throw new Error(`Vocabulary entry at index ${i} is invalid: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
@@ -294,28 +234,32 @@ export function validateApiResponse(data: any, expectedType: 'vocabulary' | 'sta
   }
 
   switch (expectedType) {
-    case 'vocabulary':
-      if (!Array.isArray(data)) {
-        throw new Error('Vocabulary API response must be an array');
+  case 'vocabulary': {
+    if (!Array.isArray(data)) {
+      throw new TypeError('Vocabulary API response must be an array');
+    }
+    return validateVocabularyArray(data);
+  }
+
+  case 'stats': {
+    // Validate stats object structure
+    const requiredStatsFields = ['reviewedCards', 'correctAnswers', 'grades', 'startTime'];
+    for (const field of requiredStatsFields) {
+      if (!(field in data)) {
+        throw new Error(`Stats API response missing required field: ${field}`);
       }
-      return validateVocabularyArray(data);
+    }
+    return true;
+  }
 
-    case 'stats':
-      // Validate stats object structure
-      const requiredStatsFields = ['reviewedCards', 'correctAnswers', 'grades', 'startTime'];
-      for (const field of requiredStatsFields) {
-        if (!(field in data)) {
-          throw new Error(`Stats API response missing required field: ${field}`);
-        }
-      }
-      return true;
+  case 'settings': {
+    // Validate settings object structure
+    return validatePracticeSettings(data);
+  }
 
-    case 'settings':
-      // Validate settings object structure
-      return validatePracticeSettings(data);
-
-    default:
-      throw new Error(`Unknown expected type: ${expectedType}`);
+  default: {
+    throw new Error(`Unknown expected type: ${expectedType}`);
+  }
   }
 }
 

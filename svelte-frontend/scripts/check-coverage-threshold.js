@@ -6,8 +6,8 @@
  * and exits with appropriate error codes for CI/CD integration
  */
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 // Configuration
 const COVERAGE_DIR = path.join(process.cwd(), 'coverage');

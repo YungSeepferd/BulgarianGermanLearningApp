@@ -1,6 +1,8 @@
 name: CI
 permissions:
   contents: read
+  checks: write
+  pull-requests: write
 
 on:
   push:
@@ -27,8 +29,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Security audit (npm)
-        run: npm audit --audit-level=high
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@16361eb4acea8698b220b76c0d4e84e1fd22c61d # v2.6.0
@@ -48,21 +48,16 @@ jobs:
       - name: Validate data
         run: npm run validate
 
-      - name: Check ES modules
-        run: npm run lint:esm
-
-      - name: Lint JavaScript
-        run: npm run lint:js
-
-      - name: Lint SCSS
-        run: npm run lint:scss
+      - name: Run lint checks
+        run: npm run lint
 
       - name: Go unit tests
         run: go test ./...
         working-directory: tools
 
-      - name: Security audit (Go)
+      - name: Run security audits
         run: |
+          npm audit --audit-level=high
           go install golang.org/x/vuln/cmd/govulncheck@latest
           govulncheck ./...
         working-directory: tools
@@ -84,6 +79,28 @@ jobs:
           name: codecov-umbrella
           fail_ci_if_error: false
 
+      - name: Enforce Coverage Threshold
+        run: |
+          COVERAGE=$(node -e "console.log(require('./coverage/coverage-summary.json').total.lines.pct)")
+          echo "Current coverage: ${COVERAGE}%"
+          if (( $(echo "$COVERAGE < 80" | node -e "process.exit(Math.floor(parseFloat(process.argv[1]) < 80) ? 1 : 0)") )); then
+            echo "❌ Coverage ${COVERAGE}% is below 80% threshold"
+            echo "Please add more tests to improve coverage before merging."
+            exit 1
+          else
+            echo "✅ Coverage ${COVERAGE}% meets 80% minimum threshold"
+          fi
+
+      - name: Coverage Diff Check
+        run: |
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            echo "Running coverage diff check for PR #${{ github.event.number }}"
+            node svelte-frontend/scripts/coverage-diff.js
+            echo "✅ Coverage diff check completed"
+          else
+            echo "Skipping coverage diff check (not a pull request)"
+          fi
+
       - name: Install Playwright
         run: npx playwright install --with-deps
 
@@ -101,6 +118,20 @@ jobs:
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
         run: npm run test:keyboard
+
+      - name: Run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.12.x
+          lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+      - name: Upload Lighthouse Results
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: lighthouse-results
+          path: .lighthouseci/
 
       - name: Upload Accessibility Test Results
         uses: actions/upload-artifact@v3

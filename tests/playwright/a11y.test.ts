@@ -103,8 +103,16 @@ test.describe('Accessibility Tests @a11y', () => {
   test('flashcard component should have proper ARIA attributes', async ({ page }) => {
     await page.goto('practice/');
     
-    // Wait for flashcard to load
+    // Wait for flashcard to load and practice session to initialize
     await page.waitForSelector('#flashcard');
+    
+    // Wait for the show answer button to be visible and ready
+    await page.waitForSelector('#show-answer:not(.hidden)');
+    
+    // Wait for JavaScript module to be fully initialized
+    await page.waitForFunction(() => {
+      return window.UnifiedPracticeSession !== undefined;
+    }, { timeout: 10000 });
     
     // Check ARIA attributes on flashcard
     const flashcard = page.locator('#flashcard');
@@ -120,7 +128,7 @@ test.describe('Accessibility Tests @a11y', () => {
     
     // Flip the card and check ARIA updates
     await page.keyboard.press('Space');
-    await page.waitForTimeout(300);
+    await page.waitForTimeout(500); // Increased timeout for animation
     
     await expect(front).toHaveAttribute('aria-hidden', 'true');
     await expect(back).toHaveAttribute('aria-hidden', 'false');
@@ -130,9 +138,17 @@ test.describe('Accessibility Tests @a11y', () => {
     await page.goto('practice/');
     await page.waitForSelector('#flashcard');
     
+    // Wait for the show answer button to be visible and ready
+    await page.waitForSelector('#show-answer:not(.hidden)');
+    
+    // Wait for JavaScript module to be fully initialized
+    await page.waitForFunction(() => {
+      return window.UnifiedPracticeSession !== undefined;
+    }, { timeout: 10000 });
+    
     // Flip card to show response buttons
     await page.keyboard.press('Space');
-    await page.waitForTimeout(300);
+    await page.waitForTimeout(500); // Increased timeout for animation
     
     const responseButtons = page.locator('#response-buttons button');
     const count = await responseButtons.count();

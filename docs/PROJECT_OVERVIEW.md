@@ -59,8 +59,12 @@ The Bulgarian-German Learning App is a Hugo-based static site that provides voca
 ### 📁 Archive Documentation
 | Location | Purpose |
 |----------|---------|
-| [archive-docs-cleanup/](archive-docs-cleanup/) | Historical completion reports and legacy documentation |
-| [archive/](archive/) | Structured archive of implementation reports, plans, and specialized documentation |
+| [archive/](archive/) | Organized historical documentation including: |
+| | - `historical-reports/` - Phase completion reports and execution summaries |
+| | - `implementation-reports/` - Feature implementation and vocabulary documentation |
+| | - `migration-reports/` - Completed migration documentation |
+| | - `qa-reports/` - Quality assurance reports and testing results |
+| | - `development-reports/` - Development procedures and technical notes |
 | [audit/](audit/) | Technical audit results and inventories |
 
 ---

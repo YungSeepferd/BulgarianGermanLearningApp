@@ -34,7 +34,6 @@ async function testVocabularyFiles() {
     // Test 2: Check if key vocabulary files exist
     console.log('\n📁 Test 2: Checking key vocabulary files...');
     const keyFiles = ['A1-A1.json', 'begrüßung.json', 'verben-A1.json'];
-    let validFiles = 0;
     
     for (const file of keyFiles) {
       const filePath = join(vocabDir, file);
@@ -42,7 +41,6 @@ async function testVocabularyFiles() {
         const content = await readFile(filePath, 'utf8');
         const entries = JSON.parse(content);
         console.log(`✅ ${file}: ${entries.length} entries`);
-        validFiles++;
       } else {
         console.log(`❌ ${file}: Not found`);
       }

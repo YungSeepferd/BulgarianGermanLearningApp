@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="{{ "scss/components/_flashcards.scss" | relURL }}">
 
   <!-- Include unified practice modules (bidirectional support built-in) -->
-  {{ $unified := resources.Get "js/unified-practice-session.js" }}
+  {{ $unified := resources.Get "js/unified-practice-session.ts" }}
   {{ if $unified }}
   <script src="{{ ($unified | resources.Minify).RelPermalink }}" defer></script>
   {{ end }}

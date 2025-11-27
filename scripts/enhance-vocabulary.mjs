@@ -143,7 +143,7 @@ const enhancementRules = {
 /**
  * Generates etymology based on word and linguistic knowledge
  */
-function generateEtymology(word, category, translation) {
+function generateEtymology(word, category) {
   // Common Slavic roots
   if (word.includes('благ')) {
     return "From 'благо' (good, blessing), Proto-Slavic *bolgъ";
@@ -199,7 +199,7 @@ function generateCulturalNote(word, category, translation, level) {
 /**
  * Generates linguistic guidance
  */
-function generateLinguisticNote(word, category, translation) {
+function generateLinguisticNote(word, category) {
   if (category === 'Verb') {
     return 'Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important';
   }
@@ -281,7 +281,7 @@ function enhanceEntry(entry) {
   
   // Check predefined knowledge base first
   const wordKey = enhanced.word;
-  for (const [categoryKey, words] of Object.entries(enhancementRules)) {
+  for (const [, words] of Object.entries(enhancementRules)) {
     if (words[wordKey]) {
       const knowledge = words[wordKey];
       enhanced.etymology = enhanced.etymology || knowledge.etymology;

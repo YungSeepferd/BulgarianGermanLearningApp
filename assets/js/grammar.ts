@@ -23,9 +23,13 @@ interface LanguageToggle {
 }
 
 // Extend Window interface - this extends the global Window interface
-interface Window {
-  languageToggle?: LanguageToggle;
-  GrammarApp?: typeof GrammarApp;
+export {};
+
+declare global {
+  interface Window {
+    languageToggle?: LanguageToggle;
+    GrammarApp?: typeof GrammarApp;
+  }
 }
 
 class GrammarApp {

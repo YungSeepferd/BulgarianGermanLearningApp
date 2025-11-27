@@ -15,7 +15,7 @@ import {
   testKeyboardNavigation,
   testResponsive,
   commonViewports
-} from '../test-utils';
+} from '../playwright-utils';
 
 test.describe('GradeControls Component', () => {
   test('renders correctly with default props', async ({ page }) => {
@@ -131,7 +131,7 @@ test.describe('GradeControls Component', () => {
     // Grade 5 (Excellent) - Green
     const grade5Button = component.locator('button[aria-label="Grade 5"]');
     await expect(grade5Button).toHaveClass(/grade-5/);
-    await expect(grade5Button).toHaveCSS('background-color', /rgb(16, 185, 129\)/); // emerald-600
+    await expect(grade5Button).toHaveCSS('background-color', /rgb\(16, 185, 129\)/); // emerald-600
   });
 
   test('shows feedback message when grade is selected', async ({ page }) => {

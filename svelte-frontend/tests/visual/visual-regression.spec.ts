@@ -21,7 +21,7 @@ test.describe('Visual Regression Tests', () => {
   const themes = ['light', 'dark'];
 
   test.describe('Flashcard Component Visual Tests', () => {
-    viewports.forEach(viewport => {
+    for (const viewport of viewports) {
       test(`Flashcard - ${viewport.name} viewport`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: viewport.height });
         
@@ -31,7 +31,7 @@ test.describe('Visual Regression Tests', () => {
         await page.evaluate(([mockVocab]) => {
           const container = document.createElement('div');
           container.id = 'test-container';
-          document.body.appendChild(container);
+          document.body.append(container);
           
           // Mount component (simplified for visual testing)
           container.innerHTML = `
@@ -60,7 +60,7 @@ test.describe('Visual Regression Tests', () => {
         await page.evaluate(([mockVocab]) => {
           const container = document.createElement('div');
           container.id = 'test-container';
-          document.body.appendChild(container);
+          document.body.append(container);
           
           container.innerHTML = `
             <div data-testid="flashcard-container" role="article" aria-label="Flashcard" tabindex="0">
@@ -78,7 +78,7 @@ test.describe('Visual Regression Tests', () => {
 
         await expect(page.locator('#test-container')).toHaveScreenshot(`flashcard-${viewport.name}-back.png`);
       });
-    });
+    }
 
     test('Flashcard with long content', async ({ page }) => {
       await page.setViewportSize({ width: 1200, height: 800 });
@@ -93,7 +93,7 @@ test.describe('Visual Regression Tests', () => {
       await page.evaluate(([longVocab]) => {
         const container = document.createElement('div');
         container.id = 'test-container';
-        document.body.appendChild(container);
+        document.body.append(container);
         
         container.innerHTML = `
           <div data-testid="flashcard-container" role="article" aria-label="Flashcard" tabindex="0">
@@ -124,7 +124,7 @@ test.describe('Visual Regression Tests', () => {
       await page.evaluate(([vocabWithExamples]) => {
         const container = document.createElement('div');
         container.id = 'test-container';
-        document.body.appendChild(container);
+        document.body.append(container);
         
         container.innerHTML = `
           <div data-testid="flashcard-container" role="article" aria-label="Flashcard" tabindex="0">
@@ -150,7 +150,7 @@ test.describe('Visual Regression Tests', () => {
   });
 
   test.describe('GradeControls Component Visual Tests', () => {
-    viewports.forEach(viewport => {
+    for (const viewport of viewports) {
       test(`GradeControls - ${viewport.name} viewport`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: viewport.height });
         
@@ -158,7 +158,7 @@ test.describe('Visual Regression Tests', () => {
         await page.evaluate(() => {
           const container = document.createElement('div');
           container.id = 'test-container';
-          document.body.appendChild(container);
+          document.body.append(container);
           
           container.innerHTML = `
             <div data-testid="grade-controls" class="grade-controls">
@@ -188,7 +188,7 @@ test.describe('Visual Regression Tests', () => {
 
         await expect(page.locator('#test-container')).toHaveScreenshot(`grade-controls-${viewport.name}.png`);
       });
-    });
+    }
 
     test('GradeControls disabled state', async ({ page }) => {
       await page.setViewportSize({ width: 1200, height: 800 });
@@ -197,7 +197,7 @@ test.describe('Visual Regression Tests', () => {
       await page.evaluate(() => {
         const container = document.createElement('div');
         container.id = 'test-container';
-        document.body.appendChild(container);
+        document.body.append(container);
         
         container.innerHTML = `
           <div data-testid="grade-controls" class="grade-controls">
@@ -235,7 +235,7 @@ test.describe('Visual Regression Tests', () => {
       await page.evaluate(() => {
         const container = document.createElement('div');
         container.id = 'test-container';
-        document.body.appendChild(container);
+        document.body.append(container);
         
         container.innerHTML = `
           <div data-testid="grade-controls" class="grade-controls processing">
@@ -269,7 +269,7 @@ test.describe('Visual Regression Tests', () => {
   });
 
   test.describe('ProgressIndicator Component Visual Tests', () => {
-    viewports.forEach(viewport => {
+    for (const viewport of viewports) {
       test(`ProgressIndicator - ${viewport.name} viewport`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: viewport.height });
         
@@ -279,7 +279,7 @@ test.describe('Visual Regression Tests', () => {
         await page.evaluate(([mockStats]) => {
           const container = document.createElement('div');
           container.id = 'test-container';
-          document.body.appendChild(container);
+          document.body.append(container);
           
           container.innerHTML = `
             <div data-testid="progress-indicator" class="progress-indicator">
@@ -306,7 +306,7 @@ test.describe('Visual Regression Tests', () => {
 
         await expect(page.locator('#test-container')).toHaveScreenshot(`progress-indicator-${viewport.name}.png`);
       });
-    });
+    }
 
     test('ProgressIndicator different progress levels', async ({ page }) => {
       await page.setViewportSize({ width: 1200, height: 800 });
@@ -318,7 +318,7 @@ test.describe('Visual Regression Tests', () => {
         await page.evaluate(([progress]) => {
           const container = document.createElement('div');
           container.id = 'test-container';
-          document.body.appendChild(container);
+          document.body.append(container);
           
           container.innerHTML = `
             <div data-testid="progress-indicator" class="progress-indicator">
@@ -339,7 +339,7 @@ test.describe('Visual Regression Tests', () => {
   });
 
   test.describe('SessionStats Component Visual Tests', () => {
-    viewports.forEach(viewport => {
+    for (const viewport of viewports) {
       test(`SessionStats - ${viewport.name} viewport`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: viewport.height });
         
@@ -349,7 +349,7 @@ test.describe('Visual Regression Tests', () => {
         await page.evaluate(([mockStats]) => {
           const container = document.createElement('div');
           container.id = 'test-container';
-          document.body.appendChild(container);
+          document.body.append(container);
           
           container.innerHTML = `
             <div data-testid="session-stats" class="session-stats">
@@ -403,11 +403,11 @@ test.describe('Visual Regression Tests', () => {
 
         await expect(page.locator('#test-container')).toHaveScreenshot(`session-stats-${viewport.name}.png`);
       });
-    });
+    }
   });
 
   test.describe('ErrorBoundary Component Visual Tests', () => {
-    viewports.forEach(viewport => {
+    for (const viewport of viewports) {
       test(`ErrorBoundary - ${viewport.name} viewport`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: viewport.height });
         
@@ -415,7 +415,7 @@ test.describe('Visual Regression Tests', () => {
         await page.evaluate(() => {
           const container = document.createElement('div');
           container.id = 'test-container';
-          document.body.appendChild(container);
+          document.body.append(container);
           
           container.innerHTML = `
             <div data-testid="error-boundary" class="error-boundary">
@@ -440,11 +440,11 @@ test.describe('Visual Regression Tests', () => {
 
         await expect(page.locator('#test-container')).toHaveScreenshot(`error-boundary-${viewport.name}.png`);
       });
-    });
+    }
   });
 
   test.describe('LoadingSpinner Component Visual Tests', () => {
-    viewports.forEach(viewport => {
+    for (const viewport of viewports) {
       test(`LoadingSpinner - ${viewport.name} viewport`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: viewport.height });
         
@@ -452,7 +452,7 @@ test.describe('Visual Regression Tests', () => {
         await page.evaluate(() => {
           const container = document.createElement('div');
           container.id = 'test-container';
-          document.body.appendChild(container);
+          document.body.append(container);
           
           container.innerHTML = `
             <div data-testid="loading-spinner" class="loading-spinner">
@@ -468,7 +468,7 @@ test.describe('Visual Regression Tests', () => {
 
         await expect(page.locator('#test-container')).toHaveScreenshot(`loading-spinner-${viewport.name}.png`);
       });
-    });
+    }
 
     test('LoadingSpinner different variants', async ({ page }) => {
       await page.setViewportSize({ width: 1200, height: 800 });
@@ -480,7 +480,7 @@ test.describe('Visual Regression Tests', () => {
         await page.evaluate(([variant]) => {
           const container = document.createElement('div');
           container.id = 'test-container';
-          document.body.appendChild(container);
+          document.body.append(container);
           
           const variantHTML = {
             spinner: `
@@ -526,7 +526,7 @@ test.describe('Visual Regression Tests', () => {
   });
 
   test.describe('Full Page Visual Tests', () => {
-    viewports.forEach(viewport => {
+    for (const viewport of viewports) {
       test(`Practice Session Page - ${viewport.name} viewport`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: viewport.height });
         
@@ -534,14 +534,14 @@ test.describe('Visual Regression Tests', () => {
         await page.goto('/practice');
         
         // Wait for page to load
-        await page.waitForSelector('[data-testid="practice-page"]', { timeout: 10000 });
+        await page.waitForSelector('[data-testid="practice-page"]', { timeout: 10_000 });
         
         // Take full page screenshot
         await expect(page.locator('body')).toHaveScreenshot(`practice-page-${viewport.name}.png`, {
           fullPage: true
         });
       });
-    });
+    }
 
     test('Practice Session Page with different states', async ({ page }) => {
       await page.setViewportSize({ width: 1200, height: 800 });
@@ -566,14 +566,14 @@ test.describe('Visual Regression Tests', () => {
   });
 
   test.describe('Theme Visual Tests', () => {
-    themes.forEach(theme => {
+    for (const theme of themes) {
       test(`Theme - ${theme} mode`, async ({ page }) => {
         await page.setViewportSize({ width: 1200, height: 800 });
         
         // Set theme
         await page.goto('/practice');
         await page.evaluate(([theme]) => {
-          document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.dataset.theme = theme;
           if (theme === 'dark') {
             document.body.classList.add('dark-theme');
           }
@@ -585,7 +585,7 @@ test.describe('Visual Regression Tests', () => {
           fullPage: true
         });
       });
-    });
+    }
   });
 
   test.describe('Responsive Design Tests', () => {
@@ -599,18 +599,18 @@ test.describe('Visual Regression Tests', () => {
       { name: 'large-desktop', width: 1440, height: 900 }
     ];
 
-    responsiveViewports.forEach(viewport => {
+    for (const viewport of responsiveViewports) {
       test(`Responsive Design - ${viewport.name}`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: viewport.height });
         
         await page.goto('/practice');
-        await page.waitForSelector('[data-testid="flashcard-container"]', { timeout: 10000 });
+        await page.waitForSelector('[data-testid="flashcard-container"]', { timeout: 10_000 });
         
         await expect(page.locator('body')).toHaveScreenshot(`responsive-${viewport.name}.png`, {
           fullPage: true
         });
       });
-    });
+    }
   });
 
   test.describe('Interaction State Visual Tests', () => {

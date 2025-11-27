@@ -569,7 +569,10 @@ export type {
   FlashcardInstance,
   FlashcardComponentProps,
   FlashcardStoreState,
-  FlashcardStoreActions
+  FlashcardStoreActions,
+  MemoryInfo
+};
+
 /**
  * Memory information
  */
@@ -671,5 +674,4 @@ export type {
   PerformanceRecommendation,
   DeviceCapabilities,
   OptimizationStrategy
-};
 };

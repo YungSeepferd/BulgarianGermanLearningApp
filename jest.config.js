@@ -1,11 +1,15 @@
 export default {
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/tests/unit'],
-  testMatch: ['**/__tests__/**/*.js', '**/?(*.)+(spec|test).js'],
+  roots: ['<rootDir>/tests/unit', '<rootDir>/tests/build-flag'],
+  testMatch: [
+    '**/__tests__/**/*.(js|ts)',
+    '**/?(*.)+(spec|test).(js|ts)'
+  ],
   collectCoverageFrom: [
-    'assets/js/**/*.js',
+    'assets/js/**/*.(js|ts)',
     '!assets/js/modules/vendor/**',
-    '!**/*.min.js'
+    '!**/*.min.js',
+    '!**/*.d.ts'
   ],
   coverageThreshold: {
     global: {
@@ -15,10 +19,27 @@ export default {
       statements: 70
     }
   },
-  transform: {},
-  moduleFileExtensions: ['js', 'mjs'],
+  transform: {
+    '^.+\\.(js|ts)$': ['ts-jest', {
+      tsconfig: 'tsconfig.json',
+      useESM: true
+    }]
+  },
+  moduleFileExtensions: ['js', 'ts', 'mjs'],
   testPathIgnorePatterns: ['/node_modules/', '/public/', '/tools/'],
   coveragePathIgnorePatterns: ['/node_modules/', '/tests/'],
   verbose: true,
-  collectCoverage: false
+  collectCoverage: true,
+  setupFilesAfterEnv: ['<rootDir>/tests/setup.js'],
+  extensionsToTreatAsEsm: ['.ts'],
+  globals: {
+    'ts-jest': {
+      useESM: true,
+      tsconfig: {
+        target: 'es2020',
+        module: 'esnext',
+        allowSyntheticDefaultImports: true
+      }
+    }
+  }
 };

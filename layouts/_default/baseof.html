@@ -6,7 +6,7 @@
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ block "description" . }}{{ .Site.Params.description }}{{ end }}">
     
-    {{ $style := resources.Get "scss/main.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+    {{ $style := resources.Get "scss/main.scss" | toCSS | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
     
     {{ if .Site.Params.enablePWA }}
@@ -31,7 +31,7 @@
     
     {{ partial "header.html" . }}
     
-    <main id="main-content">
+    <main id="main-content" role="main">
         {{ block "main" . }}{{ end }}
     </main>
     
@@ -41,35 +41,35 @@
     {{ partial "footer.html" . }}
     
     <!-- JavaScript with fingerprinting and integrity -->
-    {{ $js := resources.Get "js/app.js" | resources.Minify | resources.Fingerprint }}
+    {{ $js := resources.Get "js/app.ts" | resources.Fingerprint }}
     <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
     
-    {{ $codeJs := resources.Get "js/code.js" | resources.Minify | resources.Fingerprint }}
+    {{ $codeJs := resources.Get "js/code.ts" | resources.Fingerprint }}
     <script src="{{ $codeJs.RelPermalink }}" integrity="{{ $codeJs.Data.Integrity }}" defer></script>
     
     <!-- Language toggle functionality - loaded early for global availability -->
-    {{ $languageToggle := resources.Get "js/language-toggle.js" | resources.Minify | resources.Fingerprint }}
+    {{ $languageToggle := resources.Get "js/language-toggle.ts" | resources.Fingerprint }}
     <script src="{{ $languageToggle.RelPermalink }}" integrity="{{ $languageToggle.Data.Integrity }}"></script>
 
     <!-- Mobile menu toggle -->
-    {{ $mobileMenu := resources.Get "js/mobile-menu.js" | resources.Minify | resources.Fingerprint }}
+    {{ $mobileMenu := resources.Get "js/mobile-menu.ts" | resources.Fingerprint }}
     <script src="{{ $mobileMenu.RelPermalink }}" integrity="{{ $mobileMenu.Data.Integrity }}"></script>
 
     <!-- Profile System (dual profile support) -->
-    {{ $profileSystem := resources.Get "js/profile-system.js" | resources.Minify | resources.Fingerprint }}
+    {{ $profileSystem := resources.Get "js/profile-system.ts" | resources.Fingerprint }}
     <script src="{{ $profileSystem.RelPermalink }}" integrity="{{ $profileSystem.Data.Integrity }}"></script>
 
     <!-- Spaced Repetition System (SM-2 with 6-phase progression) -->
-    {{ $spacedRepetition := resources.Get "js/spaced-repetition-system.js" | resources.Minify | resources.Fingerprint }}
+    {{ $spacedRepetition := resources.Get "js/spaced-repetition-system.ts" | resources.Fingerprint }}
     <script src="{{ $spacedRepetition.RelPermalink }}" integrity="{{ $spacedRepetition.Data.Integrity }}"></script>
 
 
     <!-- Language Toggle Confirmation Modal -->
-    {{ $confirmation := resources.Get "js/language-toggle-confirmation.js" | resources.Minify | resources.Fingerprint }}
+    {{ $confirmation := resources.Get "js/language-toggle-confirmation.ts" | resources.Fingerprint }}
     <script src="{{ $confirmation.RelPermalink }}" integrity="{{ $confirmation.Data.Integrity }}" defer></script>
     
     <!-- Onboarding Flow -->
-    {{ $onboarding := resources.Get "js/onboarding.js" | resources.Minify | resources.Fingerprint }}
+    {{ $onboarding := resources.Get "js/onboarding.ts" | resources.Fingerprint }}
     <script src="{{ $onboarding.RelPermalink }}" integrity="{{ $onboarding.Data.Integrity }}" defer></script>
 
     <!-- Core functionality loaded per page in scripts block -->

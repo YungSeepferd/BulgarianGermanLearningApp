@@ -47,7 +47,6 @@ const fileMapping = {
 };
 
 // Create backup
-const timestamp = new Date().toISOString().split('T')[0];
 const contentDir = path.join(rootDir, 'content', 'grammar');
 const backupDir = path.join(rootDir, 'archive', 'old-grammar-md');
 

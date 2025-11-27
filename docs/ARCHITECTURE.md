@@ -18,7 +18,7 @@ graph TD
 
     subgraph Browser Runtime
         I[unified-practice-session.js] --> J[unified-spaced-repetition.js]
-        I --> K[language-toggle.js]
+        I --> K[language-toggle.ts]
         I --> L[speech-recognition.js]
         I --> M[localStorage<br/>bgde:*]
         N[vocab-cards.js] --> K
@@ -40,7 +40,7 @@ graph TD
     - `unified-spaced-repetition.js` (schema v2) handles SM-2 scheduling with automatic migration from legacy `bgde:review:<id>` to enhanced `bgde:review_<id>_<direction>` format. Supports bidirectional difficulty multipliers (BG→DE: 1.1x, DE→BG: 1.2x).
     - `unified-practice-session.js` drives practice sessions with direction-aware notes, keyboard shortcuts, session history, and SM-2 integration.
     - `speech-recognition.js` wraps the Web Speech API for pronunciation feedback.
-    - `language-toggle.js` synchronizes study direction (DE→BG / BG→DE) via custom events and localStorage.
+    - `language-toggle.ts` synchronizes study direction (DE→BG / BG→DE) via custom events and localStorage.
     - `vocab-cards.js` powers listing pages with filtering and search.
   - **Legacy Modules (archived)**:
     - Legacy `flashcards.js` and `spaced-repetition.js` have been consolidated into the unified modules above for better maintainability and performance.

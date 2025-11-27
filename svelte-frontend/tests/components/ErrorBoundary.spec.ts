@@ -14,7 +14,7 @@ import {
   testResponsive,
   commonViewports,
   expectError
-} from '../test-utils';
+} from '../playwright-utils';
 
 test.describe('ErrorBoundary Component', () => {
   test('renders correctly when no error is present', async ({ page }) => {
