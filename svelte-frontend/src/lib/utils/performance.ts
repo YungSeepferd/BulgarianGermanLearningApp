@@ -53,11 +53,11 @@ export class PerformanceMonitor {
    * Get all performance metrics
    */
   getAllMetrics(): PerformanceMetrics {
-    const result: PerformanceMetrics = {};
+    const result: Partial<PerformanceMetrics> = {};
     for (const [key, value] of this.metrics.entries()) {
-      result[key] = value;
+      (result as any)[key] = value;
     }
-    return result;
+    return result as PerformanceMetrics;
   }
 
   /**
@@ -449,7 +449,7 @@ export class PerformanceOptimizer {
     const memory = this.monitor.getMemoryInfo();
 
     // Check render time
-    const renderTime = metrics.component_render;
+    const renderTime = (metrics as any).component_render;
     if (renderTime && renderTime > 100) {
       recommendations.push('Component render time is high. Consider optimizing the component.');
     }
@@ -492,7 +492,7 @@ export const optimizeComponent = {
   /**
    * Add CSS containment to element
    */
-  addContainment(element: HTMLElement, types: 'layout' | 'style' | 'paint' | 'size'[] = ['layout', 'style', 'paint']): void {
+  addContainment(element: HTMLElement, types: ('layout' | 'style' | 'paint' | 'size')[] = ['layout', 'style', 'paint']): void {
     element.style.contain = types.join(' ');
   },
 

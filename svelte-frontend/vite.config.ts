@@ -1,5 +1,6 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import { configDefaults } from 'vitest/config';
 
 export default defineConfig({
   plugins: [sveltekit()],
@@ -39,13 +40,9 @@ export default defineConfig({
         replacement: '$app/stores/browser'
       }
     ],
-    // Force client-side Svelte compilation for tests
-    environmentVariables: {
-      VITE_TEST_CLIENT: 'true'
-    },
     // Force DOM environment for Svelte components
     server: {
-      middlewareMode: false
+      // middlewareMode is not needed for SvelteKit
     }
   },
   server: {

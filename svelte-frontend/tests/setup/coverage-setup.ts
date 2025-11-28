@@ -9,8 +9,7 @@ import { vi } from 'vitest';
 
 // Configure testing library
 configure({
-  testIdAttribute: 'data-testid',
-  asyncWrapperUtil: 'waitFor'
+  testIdAttribute: 'data-testid'
 });
 
 // Mock global APIs that might not be available in test environment
@@ -73,8 +72,11 @@ global.performance = {
 };
 
 // Mock requestAnimationFrame
-global.requestAnimationFrame = vi.fn((cb) => setTimeout(cb, 16));
-global.cancelAnimationFrame = vi.fn((id) => clearTimeout(id));
+global.requestAnimationFrame = vi.fn((cb) => {
+  const timeoutId = setTimeout(cb, 16);
+  return timeoutId as unknown as number;
+});
+global.cancelAnimationFrame = vi.fn((id) => clearTimeout(id as unknown as NodeJS.Timeout));
 
 // Mock Web Speech API (for accessibility testing)
 global.SpeechSynthesisUtterance = vi.fn();
@@ -86,30 +88,36 @@ global.speechSynthesis = {
   getVoices: vi.fn(() => []),
   pending: false,
   speaking: false,
-  paused: false
-};
+  paused: false,
+  addEventListener: vi.fn(),
+  removeEventListener: vi.fn(),
+  dispatchEvent: vi.fn()
+} as any;
 
 // Mock MediaDevices API (for camera/microphone access)
-global.navigator.mediaDevices = {
-  getUserMedia: vi.fn(() => Promise.resolve({
-    getTracks: () => [],
-    getAudioTracks: () => [],
-    getVideoTracks: () => [],
-    addTrack: vi.fn(),
-    removeTrack: vi.fn(),
-    clone: vi.fn(),
-    stop: vi.fn(),
-    getCapabilities: vi.fn(),
-    getSettings: vi.fn(),
-    applyConstraints: vi.fn(),
-    onactive: null,
-    oninactive: null,
-    onaddtrack: null,
-    onremovetrack: null
-  })),
-  enumerateDevices: vi.fn(() => Promise.resolve([])),
-  getSupportedConstraints: vi.fn(() => ({}))
-};
+Object.defineProperty(global.navigator, 'mediaDevices', {
+  value: {
+    getUserMedia: vi.fn(() => Promise.resolve({
+      getTracks: () => [],
+      getAudioTracks: () => [],
+      getVideoTracks: () => [],
+      addTrack: vi.fn(),
+      removeTrack: vi.fn(),
+      clone: vi.fn(),
+      stop: vi.fn(),
+      getCapabilities: vi.fn(),
+      getSettings: vi.fn(),
+      applyConstraints: vi.fn(),
+      onactive: null,
+      oninactive: null,
+      onaddtrack: null,
+      onremovetrack: null
+    })),
+    enumerateDevices: vi.fn(() => Promise.resolve([])),
+    getSupportedConstraints: vi.fn(() => ({}))
+  },
+  writable: true
+});
 
 // Mock Touch events for mobile testing
 global.TouchEvent = vi.fn();
@@ -119,48 +127,54 @@ global.Touch = vi.fn();
 global.PointerEvent = vi.fn();
 
 // Mock Clipboard API
-global.navigator.clipboard = {
-  writeText: vi.fn(() => Promise.resolve()),
-  readText: vi.fn(() => Promise.resolve('')),
-  write: vi.fn(() => Promise.resolve()),
-  read: vi.fn(() => Promise.resolve([]))
-};
+Object.defineProperty(global.navigator, 'clipboard', {
+  value: {
+    writeText: vi.fn(() => Promise.resolve()),
+    readText: vi.fn(() => Promise.resolve('')),
+    write: vi.fn(() => Promise.resolve()),
+    read: vi.fn(() => Promise.resolve([]))
+  },
+  writable: true
+});
 
 // Mock Service Worker registration
-global.navigator.serviceWorker = {
-  register: vi.fn(() => Promise.resolve({
-    installing: null,
-    waiting: null,
-    active: null,
-    scope: '',
-    pushManager: {
-      subscribe: vi.fn(() => Promise.resolve({ endpoint: '' })),
-      getSubscription: vi.fn(() => Promise.resolve(null)),
-      permissionState: vi.fn(() => Promise.resolve('granted'))
-    },
-    sync: {
-      register: vi.fn(() => Promise.resolve()),
-      getTags: vi.fn(() => Promise.resolve([]))
-    },
-    update: vi.fn(() => Promise.resolve()),
-    unregister: vi.fn(() => Promise.resolve(true))
-  })),
-  getRegistration: vi.fn(() => Promise.resolve(null)),
-  getRegistrations: vi.fn(() => Promise.resolve([])),
-  ready: Promise.resolve(null),
-  controller: null,
-  oncontrollerchange: null,
-  onmessage: null
-};
+Object.defineProperty(global.navigator, 'serviceWorker', {
+  value: {
+    register: vi.fn(() => Promise.resolve({
+      installing: null,
+      waiting: null,
+      active: null,
+      scope: '',
+      pushManager: {
+        subscribe: vi.fn(() => Promise.resolve({ endpoint: '' })),
+        getSubscription: vi.fn(() => Promise.resolve(null)),
+        permissionState: vi.fn(() => Promise.resolve('granted'))
+      },
+      sync: {
+        register: vi.fn(() => Promise.resolve()),
+        getTags: vi.fn(() => Promise.resolve([]))
+      },
+      update: vi.fn(() => Promise.resolve()),
+      unregister: vi.fn(() => Promise.resolve(true))
+    })),
+    getRegistration: vi.fn(() => Promise.resolve(null)),
+    getRegistrations: vi.fn(() => Promise.resolve([])),
+    ready: Promise.resolve(null),
+    controller: null,
+    oncontrollerchange: null,
+    onmessage: null
+  },
+  writable: true
+});
 
 // Mock Background Sync API
-global.SyncManager = vi.fn().mockImplementation(() => ({
+(global as any).SyncManager = vi.fn().mockImplementation(() => ({
   register: vi.fn(() => Promise.resolve()),
   getTags: vi.fn(() => Promise.resolve([]))
 }));
 
 // Mock Notification API
-global.Notification = vi.fn().mockImplementation((title, options) => ({
+(global as any).Notification = vi.fn().mockImplementation((title: string, options?: any) => ({
   title,
   ...options,
   close: vi.fn(),
@@ -170,61 +184,82 @@ global.Notification = vi.fn().mockImplementation((title, options) => ({
   onshow: null
 }));
 
-global.Notification.requestPermission = vi.fn(() => Promise.resolve('granted'));
-global.Notification.permission = 'granted';
+(global as any).Notification.requestPermission = vi.fn(() => Promise.resolve('granted' as NotificationPermission));
+Object.defineProperty((global as any).Notification, 'permission', {
+  value: 'granted' as NotificationPermission,
+  writable: true
+});
 
 // Mock Web Share API
-global.navigator.share = vi.fn(() => Promise.resolve());
-global.navigator.canShare = vi.fn(() => true);
+Object.defineProperty(global.navigator, 'share', {
+  value: vi.fn(() => Promise.resolve()),
+  writable: true
+});
+Object.defineProperty(global.navigator, 'canShare', {
+  value: vi.fn(() => true),
+  writable: true
+});
 
 // Mock Screen Orientation API
-global.screen.orientation = {
-  angle: 0,
-  type: 'landscape-primary',
-  lock: vi.fn(() => Promise.resolve()),
-  unlock: vi.fn(),
-  addEventListener: vi.fn(),
-  removeEventListener: vi.fn(),
-  dispatchEvent: vi.fn()
-};
+Object.defineProperty(global.screen, 'orientation', {
+  value: {
+    angle: 0,
+    type: 'landscape-primary',
+    lock: vi.fn(() => Promise.resolve()),
+    unlock: vi.fn(),
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+    dispatchEvent: vi.fn()
+  },
+  writable: true
+});
 
 // Mock Device Orientation API
 global.DeviceOrientationEvent = vi.fn();
 global.DeviceMotionEvent = vi.fn();
 
 // Mock Geolocation API
-global.navigator.geolocation = {
-  getCurrentPosition: vi.fn((success, error) => {
-    success({
-      coords: {
-        latitude: 0,
-        longitude: 0,
-        accuracy: 0,
-        altitude: null,
-        altitudeAccuracy: null,
-        heading: null,
-        speed: null
-      },
-      timestamp: Date.now()
-    });
-  }),
-  watchPosition: vi.fn(() => 1),
-  clearWatch: vi.fn()
-};
+Object.defineProperty(global.navigator, 'geolocation', {
+  value: {
+    getCurrentPosition: vi.fn((success: any, error: any) => {
+      success({
+        coords: {
+          latitude: 0,
+          longitude: 0,
+          accuracy: 0,
+          altitude: null,
+          altitudeAccuracy: null,
+          heading: null,
+          speed: null
+        },
+        timestamp: Date.now()
+      });
+    }),
+    watchPosition: vi.fn(() => 1),
+    clearWatch: vi.fn()
+  },
+  writable: true
+});
 
 // Mock Battery API
-global.navigator.getBattery = vi.fn(() => Promise.resolve({
-  charging: true,
-  chargingTime: 0,
-  dischargingTime: Infinity,
-  level: 1,
-  addEventListener: vi.fn(),
-  removeEventListener: vi.fn(),
-  dispatchEvent: vi.fn()
-}));
+Object.defineProperty(global.navigator, 'getBattery', {
+  value: vi.fn(() => Promise.resolve({
+    charging: true,
+    chargingTime: 0,
+    dischargingTime: Infinity,
+    level: 1,
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+    dispatchEvent: vi.fn()
+  })),
+  writable: true
+});
 
 // Mock Vibration API
-global.navigator.vibrate = vi.fn(() => true);
+Object.defineProperty(global.navigator, 'vibrate', {
+  value: vi.fn(() => true),
+  writable: true
+});
 
 // Mock Fullscreen API
 global.Element.prototype.requestFullscreen = vi.fn(() => Promise.resolve());
@@ -244,7 +279,7 @@ Object.defineProperty(document, 'visibilityState', {
 });
 
 // Mock Web Components
-global.customElements = {
+(global as any).customElements = {
   define: vi.fn(),
   get: vi.fn(),
   upgrade: vi.fn(),
@@ -252,14 +287,14 @@ global.customElements = {
 };
 
 // Mock CSS Custom Properties
-global.CSS = {
+(global as any).CSS = {
   supports: vi.fn(() => true),
-  escape: vi.fn((str) => str),
+  escape: vi.fn((str: string) => str),
   registerProperty: vi.fn()
 };
 
 // Mock Web Animations API
-global.Element.prototype.animate = vi.fn(() => ({
+(global.Element.prototype as any).animate = vi.fn(() => ({
   play: vi.fn(),
   pause: vi.fn(),
   cancel: vi.fn(),

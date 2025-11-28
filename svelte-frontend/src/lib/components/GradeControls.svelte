@@ -6,31 +6,29 @@
 -->
 
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte';
   import type { ReviewState, GradeFeedback, ScreenReaderAnnouncement } from '$lib/types/index.js';
-  import { 
-    generateGradeFeedback, 
-    getGradeFeedbackMessage, 
-    getGradeColor, 
-    isValidGrade,
-    formatInterval
+  import {
+    generateGradeFeedback,
+    getGradeFeedbackMessage,
+    isValidGrade
   } from '$lib/utils/spaced-repetition.js';
+  import { formatInterval } from '$lib/utils/common.js';
 
-  // Props
-  export let onGrade: ((grade: number, feedback: GradeFeedback) => void) | undefined = undefined;
-  export let disabled: boolean = false;
-  export let showFeedback: boolean = true;
-  export let compact: boolean = false;
-  export let reviewState: ReviewState | null = null;
+  // Props using Svelte 5 runes
+  let {
+    onGrade = undefined,
+    disabled = false,
+    showFeedback = true,
+    compact = false,
+    reviewState = null,
+    dispatch
+  } = $props();
 
-  // Local state
-  let selectedGrade: number | null = null;
-  let isProcessing: boolean = false;
-  let announcement: ScreenReaderAnnouncement | null = null;
-  let lastFeedback: GradeFeedback | null = null;
-
-  // Event dispatcher
-  const dispatch = createEventDispatcher();
+  // Local state using Svelte 5 runes
+  let selectedGrade = $state<number | null>(null);
+  let isProcessing = $state(false);
+  let announcement = $state<ScreenReaderAnnouncement | null>(null);
+  let lastFeedback = $state<GradeFeedback | null>(null);
 
   // Grade options with descriptions
   const gradeOptions = [
@@ -175,23 +173,27 @@
   // Clear announcement after timeout
   let announcementTimeout: NodeJS.Timeout | null = null;
   
-  $: if (announcement) {
-    // Clear any existing timeout
-    if (announcementTimeout) {
-      clearTimeout(announcementTimeout);
+  $effect(() => {
+    if (announcement) {
+      // Clear any existing timeout
+      if (announcementTimeout) {
+        clearTimeout(announcementTimeout);
+      }
+      
+      // Set new timeout
+      announcementTimeout = setTimeout(() => {
+        announcement = null;
+        announcementTimeout = null;
+      }, announcement.timeout);
     }
-    
-    // Set new timeout
-    announcementTimeout = setTimeout(() => {
-      announcement = null;
-      announcementTimeout = null;
-    }, announcement.timeout);
-  }
+  });
   
-  onDestroy(() => {
-    if (announcementTimeout) {
-      clearTimeout(announcementTimeout);
-    }
+  $effect(() => {
+    return () => {
+      if (announcementTimeout) {
+        clearTimeout(announcementTimeout);
+      }
+    };
   });
 </script>
 
@@ -200,7 +202,7 @@
   class="grade-controls {compact ? 'compact' : ''}"
   role="group"
   aria-label="Grade your answer"
-  on:keydown={handleKeyDown}
+  onkeydown={handleKeyDown}
 >
   <!-- Instructions -->
   <div class="grade-instructions">
@@ -219,7 +221,7 @@
         disabled={disabled || isProcessing}
         aria-label={`${option.label} - ${option.description}`}
         aria-pressed={selectedGrade === option.value}
-        on:click={() => handleGrade(option.value)}
+        onclick={() => handleGrade(option.value)}
       >
         <div class="grade-content">
           <span class="grade-number">{option.value}</span>

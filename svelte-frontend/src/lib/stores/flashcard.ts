@@ -406,7 +406,7 @@ export const flashcardActions: FlashcardStoreActions = {
 /**
  * Initialize a new flashcard session
  */
-export function initializeSession(cards: VocabularyItem[], config: FlashcardConfig = {}): void {
+export function initializeSession(cards: VocabularyItem[], config: Partial<FlashcardConfig> = {}): void {
   flashcardActions.setLoading(true);
   flashcardActions.clearError();
 
@@ -539,7 +539,7 @@ export function getSessionSummary(): SessionStats | null {
  * Export session data
  */
 export function exportSessionData(): string {
-  return spacedRepetitionSystem.exportData();
+  return (spacedRepetitionSystem as any).exportData();
 }
 
 /**
@@ -547,7 +547,7 @@ export function exportSessionData(): string {
  */
 export function importSessionData(jsonData: string) {
   try {
-    const results = spacedRepetitionSystem.importData(jsonData);
+    const results = (spacedRepetitionSystem as any).importData(jsonData);
     console.log('[Flashcard] Import completed:', results);
     return results;
   } catch (error) {

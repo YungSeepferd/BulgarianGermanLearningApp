@@ -261,7 +261,10 @@ describe('OptimizedFlashcardRenderer', () => {
       }));
       
       const renderedCards = renderer.renderVisibleCards(
-        mockVocabulary,
+        mockVocabulary.map(item => ({
+          ...item,
+          id: item.id.toString()
+        })),
         0, // scrollTop
         500 // containerHeight
       );
@@ -289,11 +292,17 @@ describe('OptimizedFlashcardRenderer', () => {
       }));
       
       // Initial render
-      renderer.renderVisibleCards(mockVocabulary, 0, 500);
+      renderer.renderVisibleCards(mockVocabulary.map(item => ({
+        ...item,
+        id: item.id.toString()
+      })), 0, 500);
       
       // Scroll down
       const renderedCards = renderer.renderVisibleCards(
-        mockVocabulary,
+        mockVocabulary.map(item => ({
+          ...item,
+          id: item.id.toString()
+        })),
         1000, // scrollTop
         500 // containerHeight
       );
@@ -312,7 +321,10 @@ describe('OptimizedFlashcardRenderer', () => {
         category: 'nouns' as const
       }));
       
-      renderer.renderVisibleCards(mockVocabulary, 0, 500);
+      renderer.renderVisibleCards(mockVocabulary.map(item => ({
+        ...item,
+        id: item.id.toString()
+      })), 0, 500);
       
       const visibleRange = renderer.getVisibleRange();
 

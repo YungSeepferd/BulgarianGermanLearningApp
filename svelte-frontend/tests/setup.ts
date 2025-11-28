@@ -1,5 +1,9 @@
-import { vi, beforeEach, afterEach } from 'vitest';
+import { vi, beforeEach, afterEach, expect } from 'vitest';
 import type { MockedFunction } from 'vitest';
+import * as matchers from '@testing-library/jest-dom';
+
+// Add jest-dom matchers to expect
+expect.extend(matchers);
 
 // Mock console methods to reduce noise in tests
 const originalConsole = global.console;

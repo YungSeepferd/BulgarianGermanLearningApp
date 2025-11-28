@@ -1,10 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { mount } from '@playwright/experimental-ct-svelte';
 import { createMockVocabulary, createMockSessionStats } from '../test-utils';
 import type { VocabularyItem, SessionStats } from '$lib/types';
-
-// Import the practice session page component
-import PracticeSession from '$lib/routes/practice/+page.svelte';
 
 test.describe('Practice Session Integration Tests', () => {
   let mockVocabulary: VocabularyItem[];

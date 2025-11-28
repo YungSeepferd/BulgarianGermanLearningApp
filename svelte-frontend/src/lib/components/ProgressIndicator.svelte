@@ -9,34 +9,44 @@
   import { createEventDispatcher } from 'svelte';
   import type { SessionStats } from '$lib/types/index.js';
 
-  // Props
-  export let current: number = 0;
-  export let total: number = 0;
-  export let sessionStats: SessionStats | null = null;
-  export let showDetails: boolean = true;
-  export let showTime: boolean = true;
-  export let compact: boolean = false;
-  export let showPercentage: boolean = true;
+  // Props using Svelte 5 $props
+  let {
+    current = 0,
+    total = 0,
+    sessionStats = null,
+    showDetails = true,
+    showTime = true,
+    compact = false,
+    showPercentage = true
+  } = $props<{
+    current?: number;
+    total?: number;
+    sessionStats?: SessionStats | null;
+    showDetails?: boolean;
+    showTime?: boolean;
+    compact?: boolean;
+    showPercentage?: boolean;
+  }>();
 
   // Event dispatcher
   const dispatch = createEventDispatcher();
 
-  // Computed values
-  $: percentage = total > 0 ? (current / total) * 100 : 0;
-  $: accuracy = sessionStats && sessionStats.reviewedCards > 0 
-    ? (sessionStats.correctAnswers / sessionStats.reviewedCards) * 100 
-    : 0;
-  $: averageGrade = sessionStats && sessionStats.grades.length > 0
+  // Computed values using $derived
+  let percentage = $derived(total > 0 ? (current / total) * 100 : 0);
+  let accuracy = $derived(sessionStats && sessionStats.reviewedCards > 0
+    ? (sessionStats.correctAnswers / sessionStats.reviewedCards) * 100
+    : 0);
+  let averageGrade = $derived(sessionStats && sessionStats.grades.length > 0
     ? sessionStats.grades.reduce((sum, grade) => sum + grade, 0) / sessionStats.grades.length
-    : 0;
-  $: duration = sessionStats && sessionStats.startTime && sessionStats.endTime
+    : 0);
+  let duration = $derived(sessionStats && sessionStats.startTime && sessionStats.endTime
     ? (sessionStats.endTime.getTime() - sessionStats.startTime.getTime()) / 1000 / 60 // in minutes
     : sessionStats && sessionStats.startTime
     ? (Date.now() - sessionStats.startTime.getTime()) / 1000 / 60
-    : 0;
+    : 0);
 
   // Progress color based on performance
-  $: progressColor = percentage >= 75 ? 'bg-green-500' : percentage >= 50 ? 'bg-blue-500' : percentage >= 25 ? 'bg-yellow-500' : 'bg-red-500';
+  let progressColor = $derived(percentage >= 75 ? 'bg-green-500' : percentage >= 50 ? 'bg-blue-500' : percentage >= 25 ? 'bg-yellow-500' : 'bg-red-500');
 
   // Format time display
   function formatTime(seconds: number): string {
@@ -88,7 +98,7 @@
     return distribution;
   }
 
-  $: gradeDistribution = getGradeDistribution();
+  let gradeDistribution = $derived(getGradeDistribution());
 </script>
 
 <!-- Progress Indicator Container -->

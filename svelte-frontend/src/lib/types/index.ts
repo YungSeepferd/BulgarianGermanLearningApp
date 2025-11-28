@@ -14,7 +14,7 @@ interface ProgressDashboardInstance {
 /**
  * Vocabulary example structure
  */
-export interface VocabularyExample {
+interface VocabularyExample {
   sentence: string;
   translation: string;
   context: string;
@@ -23,7 +23,7 @@ export interface VocabularyExample {
 /**
  * Main vocabulary item interface
  */
-export interface VocabularyItem {
+interface VocabularyItem {
   id: string;
   word: string;
   translation: string;
@@ -48,7 +48,7 @@ export interface VocabularyItem {
 /**
  * Vocabulary filter interface
  */
-export interface VocabularyFilters {
+interface VocabularyFilters {
   level: string;
   category: string;
   search: string;
@@ -57,14 +57,14 @@ export interface VocabularyFilters {
 /**
  * Vocabulary state interface
  */
-export interface VocabularyState {
+interface VocabularyState {
   data: VocabularyItem[];
   filteredData: VocabularyItem[];
   selectedWords: Set<string>;
   filters: VocabularyFilters;
 }
 
-export interface ReviewState {
+interface ReviewState {
   itemId: string;
   direction: 'bg-de' | 'de-bg';
   schemaVersion: number;
@@ -84,7 +84,7 @@ export interface ReviewState {
 /**
  * Legacy review state (for migration purposes)
  */
-export interface LegacyReviewState {
+interface LegacyReviewState {
   interval?: number;
   easeFactor?: number;
   easinessFactor?: number;
@@ -101,7 +101,7 @@ export interface LegacyReviewState {
 /**
  * Profile interface for dual-profile system
  */
-export interface Profile {
+interface Profile {
   id: string;
   name: string;
   displayName: string;
@@ -120,7 +120,7 @@ export interface Profile {
 /**
  * Profile statistics
  */
-export interface ProfileStatistics {
+interface ProfileStatistics {
   totalReviews: number;
   totalCorrect: number;
   totalTime: number;
@@ -130,7 +130,7 @@ export interface ProfileStatistics {
 /**
  * Profile settings
  */
-export interface ProfileSettings {
+interface ProfileSettings {
   dailyGoal: number;
   autoPlayAudio: boolean;
   voiceGender: 'male' | 'female';
@@ -139,7 +139,7 @@ export interface ProfileSettings {
 /**
  * Custom vocabulary entry
  */
-export interface CustomVocabularyEntry {
+interface CustomVocabularyEntry {
   id: string;
   bulgarian: string;
   german: string;
@@ -157,7 +157,7 @@ export interface CustomVocabularyEntry {
 /**
  * Phase details for 6-phase learning system
  */
-export interface PhaseDetails {
+interface PhaseDetails {
   min: number;
   max: number;
   name: string;
@@ -167,7 +167,7 @@ export interface PhaseDetails {
 /**
  * Migration log entry
  */
-export interface MigrationLogEntry {
+interface MigrationLogEntry {
   timestamp: number;
   type: 'detection' | 'migration' | 'batch_migration';
   count?: number;
@@ -181,7 +181,7 @@ export interface MigrationLogEntry {
 /**
  * Migration results
  */
-export interface MigrationResults {
+interface MigrationResults {
   migrated: number;
   failed: number;
   skipped: number;
@@ -190,7 +190,7 @@ export interface MigrationResults {
 /**
  * Export data structure
  */
-export interface ExportData {
+interface ExportData {
   version: number;
   exported: number;
   states: Record<string, ReviewState>;
@@ -199,7 +199,7 @@ export interface ExportData {
 /**
  * Import results
  */
-export interface ImportResults {
+interface ImportResults {
   imported: number;
   skipped: number;
   failed: number;
@@ -208,7 +208,7 @@ export interface ImportResults {
 /**
  * Statistics for due items
  */
-export interface DueItemsStats {
+interface DueItemsStats {
   total: number;
   due: number;
   avgEaseFactor: number;
@@ -219,7 +219,7 @@ export interface DueItemsStats {
 /**
  * Phase statistics
  */
-export interface PhaseStatistics {
+interface PhaseStatistics {
   learned: { count: number; percentage: string };
   phase1: { count: number; percentage: string };
   phase2: { count: number; percentage: string };
@@ -233,7 +233,7 @@ export interface PhaseStatistics {
 /**
  * Flashcard session statistics
  */
-export interface SessionStats {
+interface SessionStats {
   startTime: Date | null;
   endTime: Date | null;
   totalCards: number;
@@ -245,7 +245,7 @@ export interface SessionStats {
 /**
  * Flashcard text content (front and back)
  */
-export interface CardText {
+interface CardText {
   frontText: string;
   backText: string;
 }
@@ -253,7 +253,7 @@ export interface CardText {
 /**
  * Speech recognition status and feedback
  */
-export interface SpeechRecognitionState {
+interface SpeechRecognitionState {
   isListening: boolean;
   isSupported: boolean;
   expectedSpeech: string;
@@ -264,28 +264,28 @@ export interface SpeechRecognitionState {
 /**
  * Flashcard configuration options
  */
-export interface FlashcardConfig {
-  category: string;
-  level: string;
-  limit: number;
-  mode: 'practice' | 'due' | 'review';
-  shuffle: boolean;
+interface FlashcardConfig {
+  category?: string;
+  level?: string;
+  limit?: number;
+  mode?: 'practice' | 'due' | 'review';
+  shuffle?: boolean;
 }
 
 /**
  * Flashcard practice modes
  */
-export type FlashcardMode = 'practice' | 'due' | 'review';
+type FlashcardMode = 'practice' | 'due' | 'review';
 
 /**
  * Language direction for flashcards
  */
-export type LanguageDirection = 'bg-de' | 'de-bg';
+type LanguageDirection = 'bg-de' | 'de-bg';
 
 /**
  * Grade feedback information
  */
-export interface GradeFeedback {
+interface GradeFeedback {
   grade: number;
   nextReview: string;
   interval: number;
@@ -296,7 +296,7 @@ export interface GradeFeedback {
 /**
  * Speech recognition event data
  */
-export interface SpeechRecognitionEvent {
+interface SpeechRecognitionEvent {
   status: 'listening' | 'idle' | 'error' | 'result';
   transcript?: string;
   confidence?: number;
@@ -306,7 +306,7 @@ export interface SpeechRecognitionEvent {
 /**
  * Flashcard UI state
  */
-export interface FlashcardUIState {
+interface FlashcardUIState {
   isLoading: boolean;
   hasError: boolean;
   errorMessage: string;
@@ -320,7 +320,7 @@ export interface FlashcardUIState {
 /**
  * Practice session result
  */
-export interface PracticeSessionResult {
+interface PracticeSessionResult {
   sessionId: string;
   startTime: Date;
   endTime: Date;
@@ -338,7 +338,7 @@ export interface PracticeSessionResult {
 /**
  * Keyboard shortcuts for flashcard navigation
  */
-export interface FlashcardKeyboardShortcuts {
+interface FlashcardKeyboardShortcuts {
   flip: 'Space' | 'Enter' | 'f' | 'F';
   grade: '0' | '1' | '2' | '3' | '4' | '5';
   pause: 'Escape';
@@ -350,7 +350,7 @@ export interface FlashcardKeyboardShortcuts {
 /**
  * Accessibility announcements
  */
-export interface ScreenReaderAnnouncement {
+interface ScreenReaderAnnouncement {
   message: string;
   priority: 'polite' | 'assertive';
   timeout: number;
@@ -359,7 +359,7 @@ export interface ScreenReaderAnnouncement {
 /**
  * Flashcard animation states
  */
-export interface FlashcardAnimationState {
+interface FlashcardAnimationState {
   isFlipping: boolean;
   flipDirection: 'horizontal' | 'vertical';
   duration: number;
@@ -369,7 +369,7 @@ export interface FlashcardAnimationState {
 /**
  * Vocabulary item for flashcards (simplified version)
  */
-export interface FlashcardVocabularyItem {
+interface FlashcardVocabularyItem {
   word: string;
   translation: string;
   category?: string;
@@ -382,7 +382,7 @@ export interface FlashcardVocabularyItem {
 /**
  * Profile comparison data
  */
-export interface ProfileComparison {
+interface ProfileComparison {
   german_learner: ProfileComparisonItem;
   bulgarian_learner: ProfileComparisonItem;
 }
@@ -390,7 +390,7 @@ export interface ProfileComparison {
 /**
  * Profile comparison item
  */
-export interface ProfileComparisonItem {
+interface ProfileComparisonItem {
   name: string;
   totalReviews: number;
   accuracy: string;
@@ -401,18 +401,21 @@ export interface ProfileComparisonItem {
 /**
  * Vocabulary API response types
  */
-export interface VocabularyAPIResponse {
-  data: VocabularyItem[];
+interface VocabularyAPIResponse {
+  items?: VocabularyItem[];
+  data?: VocabularyItem[];
   total: number;
   loaded: number;
   hasMore: boolean;
   timestamp: number;
+  page?: number;
+  pageSize?: number;
 }
 
 /**
  * Vocabulary loading state
  */
-export interface VocabularyLoadingState {
+interface VocabularyLoadingState {
   isLoading: boolean;
   progress: number;
   totalChunks: number;
@@ -424,19 +427,23 @@ export interface VocabularyLoadingState {
 /**
  * Vocabulary chunk metadata
  */
-export interface VocabularyChunkMetadata {
+interface VocabularyChunkMetadata {
   name: string;
   level: string;
   category: string;
   count: number;
   size: number;
+  totalItems: number;
+  levels: string[];
+  categories: string[];
+  description: string;
   lastModified: number;
 }
 
 /**
  * Background sync queue item
  */
-export interface BackgroundSyncItem {
+interface BackgroundSyncItem {
   id: string;
   type: 'progress' | 'vocabulary' | 'preferences';
   data: unknown;
@@ -448,7 +455,7 @@ export interface BackgroundSyncItem {
 /**
  * Performance metrics
  */
-export interface PerformanceMetrics {
+interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
@@ -460,7 +467,7 @@ export interface PerformanceMetrics {
 /**
  * Error context information
  */
-export interface ErrorContext {
+interface ErrorContext {
   component: string;
   action: string;
   userId?: string;
@@ -474,7 +481,7 @@ export interface ErrorContext {
 /**
  * Flashcard instance interface
  */
-export interface FlashcardInstance {
+interface FlashcardInstance {
   init(): Promise<void>;
   showCard(index: number): void;
   handleGrade(grade: number): void;
@@ -489,7 +496,7 @@ export interface FlashcardInstance {
 /**
  * SvelteKit specific types for flashcard components
  */
-export interface FlashcardComponentProps {
+interface FlashcardComponentProps {
   vocabularyItem: VocabularyItem;
   direction: LanguageDirection;
   onGrade?: (grade: number, state: ReviewState) => void;
@@ -499,7 +506,7 @@ export interface FlashcardComponentProps {
   autoFlip?: boolean;
 }
 
-export interface FlashcardStoreState {
+interface FlashcardStoreState {
   currentCard: VocabularyItem | null;
   currentIndex: number;
   cards: VocabularyItem[];
@@ -511,7 +518,7 @@ export interface FlashcardStoreState {
   uiState: FlashcardUIState;
 }
 
-export interface FlashcardStoreActions {
+interface FlashcardStoreActions {
   setCurrentCard: (index: number) => void;
   flipCard: () => void;
   nextCard: () => void;
@@ -570,13 +577,22 @@ export type {
   FlashcardComponentProps,
   FlashcardStoreState,
   FlashcardStoreActions,
-  MemoryInfo
+  MemoryInfo,
+  LazyLoadConfig,
+  PerformanceMonitoringOptions,
+  ComponentPerformance,
+  PerformanceBudget,
+  PerformanceRecommendation,
+  DeviceCapabilities,
+  OptimizationStrategy,
+  PracticeSettings,
+  VocabularyEntry
 };
 
 /**
  * Memory information
  */
-export interface MemoryInfo {
+interface MemoryInfo {
   usedJSHeapSize: number;
   totalJSHeapSize: number;
   jsHeapSizeLimit: number;
@@ -585,7 +601,7 @@ export interface MemoryInfo {
 /**
  * Lazy loading configuration
  */
-export interface LazyLoadConfig {
+interface LazyLoadConfig {
   threshold?: number;
   rootMargin?: string;
   enabled?: boolean;
@@ -594,7 +610,7 @@ export interface LazyLoadConfig {
 /**
  * Performance monitoring options
  */
-export interface PerformanceMonitoringOptions {
+interface PerformanceMonitoringOptions {
   enableLongTaskMonitoring?: boolean;
   enableMemoryMonitoring?: boolean;
   enableNetworkMonitoring?: boolean;
@@ -604,7 +620,7 @@ export interface PerformanceMonitoringOptions {
 /**
  * Component performance data
  */
-export interface ComponentPerformance {
+interface ComponentPerformance {
   mountTime: number;
   renderTime: number;
   updateTime: number;
@@ -617,7 +633,7 @@ export interface ComponentPerformance {
 /**
  * Performance budget
  */
-export interface PerformanceBudget {
+interface PerformanceBudget {
   maxLoadTime: number;
   maxRenderTime: number;
   maxMemoryUsage: number;
@@ -628,7 +644,7 @@ export interface PerformanceBudget {
 /**
  * Performance recommendation
  */
-export interface PerformanceRecommendation {
+interface PerformanceRecommendation {
   type: 'warning' | 'error' | 'info';
   category: 'performance' | 'memory' | 'network' | 'accessibility';
   message: string;
@@ -639,7 +655,7 @@ export interface PerformanceRecommendation {
 /**
  * Device capabilities
  */
-export interface DeviceCapabilities {
+interface DeviceCapabilities {
   memory: number;
   cores: number;
   connection: {
@@ -655,7 +671,7 @@ export interface DeviceCapabilities {
 /**
  * Performance optimization strategy
  */
-export interface OptimizationStrategy {
+interface OptimizationStrategy {
   lazyLoading: boolean;
   codeSplitting: boolean;
   virtualScrolling: boolean;
@@ -664,14 +680,33 @@ export interface OptimizationStrategy {
   memoryOptimization: boolean;
 }
 
-// Export new performance types
-export type {
-  MemoryInfo,
-  LazyLoadConfig,
-  PerformanceMonitoringOptions,
-  ComponentPerformance,
-  PerformanceBudget,
-  PerformanceRecommendation,
-  DeviceCapabilities,
-  OptimizationStrategy
-};
+/**
+ * Practice settings interface
+ */
+interface PracticeSettings {
+  direction: 'bg-de' | 'de-bg' | 'all';
+  level: string;
+  category: string;
+  maxCards: number;
+  showHints: boolean;
+  autoAdvance: boolean;
+  difficulty: 'easy' | 'medium' | 'hard';
+}
+
+/**
+ * Vocabulary entry interface (legacy format)
+ */
+interface VocabularyEntry {
+  id: string;
+  bg: string;
+  de: string;
+  level: string;
+  category: string;
+  pronunciation?: string;
+  gender?: 'masculine' | 'feminine' | 'neuter';
+  wordType?: string;
+  examples?: string[];
+  tags?: string[];
+  notes?: string;
+  spacedRepetition?: any;
+}

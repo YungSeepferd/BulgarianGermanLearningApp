@@ -364,7 +364,7 @@ export const POST: RequestHandler = async ({ request }) => {
       responseData.context = {
         totalVocabularyItems: validatedItems.length,
         availableLevels: ['A1', 'A2', 'B1', 'B2', 'C1'],
-        availableCategories: [...new Set(validatedItems.map(item => item.category))].sort(),
+        availableCategories: [...new Set(validatedItems.map((item: VocabularyItem) => item.category))].sort(),
         availableDirections: ['bg-de', 'de-bg']
       };
     }

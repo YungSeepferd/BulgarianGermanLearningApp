@@ -269,7 +269,9 @@ test.describe('End-to-End User Workflows', () => {
       const buttonBox = await gradeButton.boundingBox();
       
       // Click with some offset (simulating imprecise clicking)
-      await page.mouse.click(buttonBox.x + buttonBox.width / 2, buttonBox.y + buttonBox.height / 2);
+      if (buttonBox) {
+        await page.mouse.click(buttonBox.x + buttonBox.width / 2, buttonBox.y + buttonBox.height / 2);
+      }
       
       // Verify button still works
       await page.waitForTimeout(500);

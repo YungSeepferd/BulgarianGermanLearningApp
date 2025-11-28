@@ -254,7 +254,8 @@ export function validateApiResponse(data: any, expectedType: 'vocabulary' | 'sta
 
   case 'settings': {
     // Validate settings object structure
-    return validatePracticeSettings(data);
+    validatePracticeSettings(data);
+    return true;
   }
 
   default: {

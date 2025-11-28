@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount, onDestroy, createEventDispatcher } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import type {
     VocabularyItem,
     LanguageDirection,
@@ -7,49 +7,71 @@
     ScreenReaderAnnouncement
   } from '$lib/types/index.js';
   
-  // Props
-  export let vocabularyItem: VocabularyItem;
-  export let direction: LanguageDirection = 'bg-de';
-  export let onGrade: ((grade: number, state: ReviewState) => void) | undefined = undefined;
-  export let onNext: (() => void) | undefined = undefined;
-  export let onPrevious: (() => void) | undefined = undefined;
-  export let showProgress: boolean = true;
-  export let autoFlip: boolean = false;
-  export let lazyLoad: boolean = false;
+  // Props using Svelte 5 $props rune
+  let {
+    vocabularyItem,
+    direction = 'bg-de',
+    onGrade,
+    onNext,
+    onPrevious,
+    showProgress = true,
+    autoFlip = false,
+    lazyLoad = false
+  } = $props<{
+    vocabularyItem: VocabularyItem;
+    direction?: LanguageDirection;
+    onGrade?: (grade: number, state: ReviewState) => void;
+    onNext?: () => void;
+    onPrevious?: () => void;
+    showProgress?: boolean;
+    autoFlip?: boolean;
+    lazyLoad?: boolean;
+  }>();
 
-  // Local state
-  let isFlipped = false;
-  let isAnimating = false;
-  let touchStartX = 0;
-  let touchStartY = 0;
-  let touchEndX = 0;
-  let touchEndY = 0;
-  let announcement: ScreenReaderAnnouncement | null = null;
-  let isVisible = !lazyLoad; // Start as visible if not lazy loading
+  // Local state using Svelte 5 runes
+  let isFlipped = $state(false);
+  let isAnimating = $state(false);
+  let touchStartX = $state(0);
+  let touchStartY = $state(0);
+  let touchEndX = $state(0);
+  let touchEndY = $state(0);
+  let announcement = $state<ScreenReaderAnnouncement | null>(null);
+  let isVisible = $state(!lazyLoad); // Start as visible if not lazy loading
 
-  // Event dispatcher
-  const dispatch = createEventDispatcher();
-
-  // Simple state for testing
-  let cardText: { frontText: string; backText: string } = { frontText: '', backText: '' };
-  let progress: { current: number; total: number; percentage: number } = { current: 1, total: 1, percentage: 100 };
-  let showGradingControls = false;
-
-  onMount(() => {
-    console.log('Flashcard onMount called', { vocabularyItem, direction });
-    
-    // Initialize simple state
+  // Derived state using $derived rune
+  let cardText = $derived(() => {
     const isBgToDe = direction === 'bg-de';
-    cardText = {
+    return {
       frontText: isBgToDe ? vocabularyItem.word : vocabularyItem.translation,
       backText: isBgToDe ? vocabularyItem.translation : vocabularyItem.word
     };
+  });
 
-    console.log('Card text initialized:', cardText);
+  let progress = $derived(() => ({
+    current: 1,
+    total: 1,
+    percentage: 100
+  }));
 
-    // Auto-flip if enabled
+  let showGradingControls = $derived(isFlipped);
+
+  // Effect for auto-flip functionality
+  $effect(() => {
+    console.log('Flashcard initialized', { vocabularyItem, direction });
+    
     if (autoFlip) {
       setTimeout(() => flipCard(), 1000);
+    }
+  });
+
+  // Effect for announcement timeout
+  $effect(() => {
+    if (announcement) {
+      const timeout = setTimeout(() => {
+        announcement = null;
+      }, announcement.timeout);
+      
+      return () => clearTimeout(timeout);
     }
   });
 
@@ -59,7 +81,6 @@
 
     isAnimating = true;
     isFlipped = !isFlipped;
-    showGradingControls = isFlipped;
 
     // Announce to screen readers
     announcement = {
@@ -72,9 +93,6 @@
     setTimeout(() => {
       isAnimating = false;
     }, 600);
-
-    // Dispatch flip event
-    dispatch('flip', { isFlipped, vocabularyItem, direction });
   }
 
   // Simple grade handling
@@ -110,14 +128,10 @@
       onGrade(grade, mockState);
     }
 
-    // Dispatch grade event
-    dispatch('grade', { 
-      grade, 
-      state: null, 
-      feedback: null, 
-      vocabularyItem, 
-      direction 
-    });
+    // Auto-advance to next card after grading
+    setTimeout(() => {
+      if (onNext) onNext();
+    }, 500);
   }
 
   // Keyboard handling
@@ -197,32 +211,8 @@
     }
   }
 
-  // Clear announcement after timeout
-  let announcementTimeout: NodeJS.Timeout | null = null;
-  
-  function clearAnnouncement(): void {
-    if (announcementTimeout) {
-      clearTimeout(announcementTimeout);
-      announcementTimeout = null;
-    }
-  }
-  
-  function setAnnouncementTimeout(): void {
-    if (announcement) {
-      clearAnnouncement();
-      announcementTimeout = setTimeout(() => {
-        announcement = null;
-      }, announcement.timeout);
-    }
-  }
-  
-  // Update announcement timeout when announcement changes
-  $: if (announcement) {
-    setAnnouncementTimeout();
-  }
-  
   onDestroy(() => {
-    clearAnnouncement();
+    // Cleanup handled by $effect
   });
 </script>
 
@@ -230,9 +220,9 @@
 <div class="flashcard-container" data-testid="flashcard-container" role="region" aria-label="Flashcard">
   <!-- Progress Bar (if enabled) -->
   {#if showProgress}
-    <div class="progress-bar" role="progressbar" aria-valuenow={progress.current} aria-valuemin={0} aria-valuemax={progress.total} aria-label="Progress through flashcards" data-testid="progress-bar">
-      <div class="progress-fill" style="width: {progress.percentage}%"></div>
-      <span class="progress-text">{progress.current} / {progress.total}</span>
+    <div class="progress-bar" role="progressbar" aria-valuenow={progress().current} aria-valuemin={0} aria-valuemax={progress().total} aria-label="Progress through flashcards" data-testid="progress-bar">
+      <div class="progress-fill" style="width: {progress().percentage}%"></div>
+      <span class="progress-text">{progress().current} / {progress().total}</span>
     </div>
   {/if}
 
@@ -242,13 +232,13 @@
     role="button"
     tabindex="0"
     aria-label="Flashcard. Press Space or Enter to flip."
-    on:click={flipCard}
-    on:keydown={handleKeyDown}
+    onclick={flipCard}
+    onkeydown={handleKeyDown}
   >
     <!-- Debug info for testing -->
     <div data-testid="debug-info" style="display: none;">
-      <span data-testid="front-text">{cardText.frontText}</span>
-      <span data-testid="back-text">{cardText.backText}</span>
+      <span data-testid="front-text">{cardText().frontText}</span>
+      <span data-testid="back-text">{cardText().backText}</span>
       <span data-testid="vocabulary-word">{vocabularyItem.word}</span>
       <span data-testid="vocabulary-translation">{vocabularyItem.translation}</span>
     </div>
@@ -257,7 +247,7 @@
     <div class="card-face card-front" data-testid="card-front" aria-hidden={isFlipped ? 'true' : 'false'}>
       <div class="card-content" data-testid="flashcard-content">
         <h2 class="card-word" id="front-word">
-          {cardText.frontText}
+          {cardText().frontText}
         </h2>
         
         {#if vocabularyItem.notes && direction === 'bg-de'}
@@ -278,7 +268,7 @@
     <div class="card-face card-back" data-testid="card-back" aria-hidden={!isFlipped ? 'true' : 'false'}>
       <div class="card-content" data-testid="flashcard-content">
         <h2 class="card-word" id="back-word">
-          {cardText.backText}
+          {cardText().backText}
         </h2>
         
         {#if vocabularyItem.examples && vocabularyItem.examples.length > 0}
@@ -322,7 +312,7 @@
           <button
             class="grade-button grade-default"
             data-testid="grade-button-{grade}"
-            on:click={() => handleGrade(grade)}
+            onclick={() => handleGrade(grade)}
             aria-label={`Grade ${grade}: ${grade === 1 ? 'Hard' : grade === 2 ? 'Good' : grade === 3 ? 'Good' : grade === 4 ? 'Easy' : 'Easy'}`}
           >
             <span class="grade-number">{grade}</span>
@@ -342,9 +332,9 @@
   <!-- Navigation Controls -->
   <div class="navigation-controls" role="group" aria-label="Navigation">
     {#if onPrevious}
-      <button 
+      <button
         class="nav-button previous"
-        on:click={onPrevious}
+        onclick={onPrevious}
         aria-label="Previous card"
       >
         ← Previous
@@ -352,9 +342,9 @@
     {/if}
     
     {#if onNext}
-      <button 
+      <button
         class="nav-button next"
-        on:click={onNext}
+        onclick={onNext}
         aria-label="Next card"
       >
         Next →

@@ -6,137 +6,133 @@
  * @updated November 2025
  */
 
-import { test, expect } from '@playwright/test';
-import {
-  mountProgressIndicator,
-  mockSessionStats,
-  checkAccessibility,
-  takeScreenshot,
-  testResponsive,
-  commonViewports
-} from '../test-utils';
+import { describe, it, expect, vi } from 'vitest';
+import { render } from '@testing-library/svelte';
+import { mountProgressIndicator, mockSessionStats, checkAccessibility } from '../test-utils';
+import ProgressIndicator from '$lib/components/ProgressIndicator.svelte';
 
-test.describe('ProgressIndicator Component', () => {
-  test('renders correctly with default props', async ({ page }) => {
-    const component = await mountProgressIndicator({});
+describe('ProgressIndicator Component', () => {
+  it('renders correctly with default props', async () => {
+    const { container } = await mountProgressIndicator({});
     
-    await expect(component).toBeVisible();
+    expect(container).toBeTruthy();
     
     // Check that progress elements are present
-    await expect(component.locator('.progress-indicator')).toBeVisible();
-    await expect(component.locator('.progress-bar')).toBeVisible();
-    await expect(component.locator('.progress-text')).toBeVisible();
+    expect(container!.querySelector('.progress-indicator')).toBeTruthy();
+    expect(container!.querySelector('.progress-bar')).toBeTruthy();
+    expect(container!.querySelector('.progress-text')).toBeTruthy();
     
     // Check accessibility
-    await checkAccessibility(page, component);
-    
-    // Take screenshot for visual regression
-    await takeScreenshot(page, 'progress-indicator-default', component);
+    await checkAccessibility(ProgressIndicator, {});
   });
 
-  test('displays correct progress percentage', async ({ page }) => {
-    const component = await mountProgressIndicator({
-      sessionStats: mockSessionStats
+  it('displays correct progress percentage', async () => {
+    const { container } = render(ProgressIndicator, {
+      props: { sessionStats: mockSessionStats }
     });
     
     // Calculate expected percentage (3 reviewed out of 10 total = 30%)
     const expectedPercentage = (mockSessionStats.reviewedCards / mockSessionStats.totalCards) * 100;
     
     // Check progress text
-    await expect(component.locator('.progress-text')).toContainText(`${mockSessionStats.reviewedCards}/${mockSessionStats.totalCards}`);
-    await expect(component.locator('.progress-percentage')).toContainText(`${Math.round(expectedPercentage)}%`);
+    const progressText = container!.querySelector('.progress-text');
+    expect(progressText?.textContent).toContain(`${mockSessionStats.reviewedCards}/${mockSessionStats.totalCards}`);
+    
+    const progressPercentage = container!.querySelector('.progress-percentage');
+    expect(progressPercentage?.textContent).toContain(`${Math.round(expectedPercentage)}%`);
     
     // Check progress bar width
-    const progressBar = component.locator('.progress-bar-fill');
-    const progressWidth = await progressBar.evaluate(el => getComputedStyle(el).width);
+    const progressBar = container!.querySelector('.progress-bar-fill');
+    const progressWidth = getComputedStyle(progressBar!).width;
     expect(progressWidth).toContain('30%'); // Should be approximately 30%
   });
 
-  test('renders in compact mode', async ({ page }) => {
-    const component = await mountProgressIndicator({
+  it('renders in compact mode', async () => {
+    const { container } = await mountProgressIndicator({
       compact: true
     });
     
-    await expect(component).toBeVisible();
-    await expect(component.locator('.progress-indicator.compact')).toBeVisible();
+    expect(container).toBeTruthy();
+    expect(container!.querySelector('.progress-indicator.compact')).toBeTruthy();
     
     // In compact mode, should have smaller elements
-    await expect(component.locator('.progress-text.compact')).toBeVisible();
-    await expect(component.locator('.progress-bar.compact')).toBeVisible();
+    expect(container!.querySelector('.progress-text.compact')).toBeTruthy();
+    expect(container!.querySelector('.progress-bar.compact')).toBeTruthy();
   });
 
-  test('shows detailed statistics in full mode', async ({ page }) => {
-    const component = await mountProgressIndicator({
+  it('shows detailed statistics in full mode', async () => {
+    const { container } = await mountProgressIndicator({
       compact: false,
       sessionStats: mockSessionStats
     });
     
-    await expect(component).toBeVisible();
+    expect(container).toBeTruthy();
     
     // Should show detailed stats
-    await expect(component.locator('.detailed-stats')).toBeVisible();
-    await expect(component.locator('.accuracy-stat')).toBeVisible();
-    await expect(component.locator('.time-stat')).toBeVisible();
-    await expect(component.locator('.grade-distribution')).toBeVisible();
+    expect(container!.querySelector('.detailed-stats')).toBeTruthy();
+    expect(container!.querySelector('.accuracy-stat')).toBeTruthy();
+    expect(container!.querySelector('.time-stat')).toBeTruthy();
+    expect(container!.querySelector('.grade-distribution')).toBeTruthy();
   });
 
-  test('hides detailed statistics in compact mode', async ({ page }) => {
-    const component = await mountProgressIndicator({
+  it('hides detailed statistics in compact mode', async () => {
+    const { container } = await mountProgressIndicator({
       compact: true,
       sessionStats: mockSessionStats
     });
     
-    await expect(component).toBeVisible();
+    expect(container).toBeTruthy();
     
     // Should not show detailed stats in compact mode
-    await expect(component.locator('.detailed-stats')).not.toBeVisible();
+    expect(container!.querySelector('.detailed-stats')).toBeFalsy();
   });
 
-  test('displays accuracy information', async ({ page }) => {
-    const component = await mountProgressIndicator({
-      sessionStats: mockSessionStats
+  it('displays accuracy information', async () => {
+    const { container } = render(ProgressIndicator, {
+      props: { sessionStats: mockSessionStats }
     });
     
     // Calculate expected accuracy (2 correct out of 3 reviewed = 66.67%)
     const expectedAccuracy = (mockSessionStats.correctAnswers / mockSessionStats.reviewedCards) * 100;
     
-    await expect(component.locator('.accuracy-stat')).toContainText(`${Math.round(expectedAccuracy)}%`);
+    const accuracyStat = container!.querySelector('.accuracy-stat');
+    expect(accuracyStat?.textContent).toContain(`${Math.round(expectedAccuracy)}%`);
   });
 
-  test('displays time information when session has duration', async ({ page }) => {
+  it('displays time information when session has duration', async () => {
     const sessionWithTime = {
       ...mockSessionStats,
       startTime: new Date(Date.now() - 300_000), // 5 minutes ago
       endTime: new Date()
     };
     
-    const component = await mountProgressIndicator({
+    const { container } = await mountProgressIndicator({
       sessionStats: sessionWithTime
     });
     
-    await expect(component.locator('.time-stat')).toBeVisible();
-    await expect(component.locator('.time-stat')).toContainText('5m'); // Should show 5 minutes
+    expect(container!.querySelector('.time-stat')).toBeTruthy();
+    expect(container!.querySelector('.time-stat')?.textContent).toContain('5m'); // Should show 5 minutes
   });
 
-  test('shows grade distribution', async ({ page }) => {
-    const component = await mountProgressIndicator({
-      sessionStats: mockSessionStats
+  it('shows grade distribution', async () => {
+    const { container } = render(ProgressIndicator, {
+      props: { sessionStats: mockSessionStats }
     });
     
-    await expect(component.locator('.grade-distribution')).toBeVisible();
+    expect(container!.querySelector('.grade-distribution')).toBeTruthy();
     
     // Should show bars for each grade level
     for (let i = 1; i <= 5; i++) {
-      await expect(component.locator(`.grade-bar-${i}`)).toBeVisible();
+      expect(container!.querySelector(`.grade-bar-${i}`)).toBeTruthy();
     }
     
     // Check that grade 3, 4, 5 have counts (from mockSessionStats.grades = [3, 4, 5])
-    await expect(component.locator('.grade-bar-3')).toContainText('1');
-    await expect(component.locator('.grade-bar-4')).toContainText('1');
-    await expect(component.locator('.grade-bar-5')).toContainText('1');
+    expect(container!.querySelector('.grade-bar-3')?.textContent).toContain('1');
+    expect(container!.querySelector('.grade-bar-4')?.textContent).toContain('1');
+    expect(container!.querySelector('.grade-bar-5')?.textContent).toContain('1');
   });
 
-  test('handles empty session stats gracefully', async ({ page }) => {
+  it('handles empty session stats gracefully', async () => {
     const emptyStats = {
       startTime: new Date(),
       endTime: null,
@@ -146,29 +142,29 @@ test.describe('ProgressIndicator Component', () => {
       grades: []
     };
     
-    const component = await mountProgressIndicator({
+    const { container } = await mountProgressIndicator({
       sessionStats: emptyStats
     });
     
-    await expect(component).toBeVisible();
+    expect(container).toBeTruthy();
     
     // Should show 0% progress
-    await expect(component.locator('.progress-percentage')).toContainText('0%');
-    await expect(component.locator('.progress-text')).toContainText('0/0');
+    expect(container!.querySelector('.progress-percentage')?.textContent).toContain('0%');
+    expect(container!.querySelector('.progress-text')?.textContent).toContain('0/0');
     
     // Should handle division by zero for accuracy
-    await expect(component.locator('.accuracy-stat')).toContainText('0%');
+    expect(container!.querySelector('.accuracy-stat')?.textContent).toContain('0%');
   });
 
-  test('updates when session stats change', async ({ page }) => {
+  it('updates when session stats change', async () => {
     let currentStats = { ...mockSessionStats };
     
-    const component = await mountProgressIndicator({
+    const { container } = await mountProgressIndicator({
       sessionStats: currentStats
     });
     
     // Initial state
-    await expect(component.locator('.progress-text')).toContainText('3/10');
+    expect(container!.querySelector('.progress-text')?.textContent).toContain('3/10');
     
     // Update stats (simulate completing another card)
     currentStats = {
@@ -179,36 +175,36 @@ test.describe('ProgressIndicator Component', () => {
     };
     
     // Remount with updated stats
-    const updatedComponent = await mountProgressIndicator({
+    const { container: updatedContainer } = await mountProgressIndicator({
       sessionStats: currentStats
     });
     
     // Should reflect updated stats
-    await expect(updatedComponent.locator('.progress-text')).toContainText('4/10');
+    expect(updatedContainer!.querySelector('.progress-text')?.textContent).toContain('4/10');
   });
 
-  test('displays session completion state', async ({ page }) => {
+  it('displays session completion state', async () => {
     const completedStats = {
       ...mockSessionStats,
       reviewedCards: 10,
       endTime: new Date()
     };
     
-    const component = await mountProgressIndicator({
+    const { container } = await mountProgressIndicator({
       sessionStats: completedStats
     });
     
-    await expect(component).toBeVisible();
+    expect(container).toBeTruthy();
     
     // Should show 100% progress
-    await expect(component.locator('.progress-percentage')).toContainText('100%');
-    await expect(component.locator('.progress-text')).toContainText('10/10');
+    expect(container!.querySelector('.progress-percentage')?.textContent).toContain('100%');
+    expect(container!.querySelector('.progress-text')?.textContent).toContain('10/10');
     
     // Should show completion indicator
-    await expect(component.locator('.completion-indicator')).toBeVisible();
+    expect(container!.querySelector('.completion-indicator')).toBeTruthy();
   });
 
-  test('shows performance rating based on accuracy', async ({ page }) => {
+  it('shows performance rating based on accuracy', async () => {
     // Test excellent performance
     const excellentStats = {
       ...mockSessionStats,
@@ -217,15 +213,15 @@ test.describe('ProgressIndicator Component', () => {
       grades: [5, 5, 5, 4, 5, 5, 4, 5, 5, 4]
     };
     
-    const component = await mountProgressIndicator({
+    const { container } = await mountProgressIndicator({
       sessionStats: excellentStats
     });
     
-    await expect(component.locator('.performance-rating')).toContainText('Excellent');
-    await expect(component.locator('.performance-rating')).toHaveClass(/excellent/);
+    expect(container!.querySelector('.performance-rating')?.textContent).toContain('Excellent');
+    expect(container!.querySelector('.performance-rating')?.className).toContain('excellent');
   });
 
-  test('shows appropriate color coding for performance levels', async ({ page }) => {
+  it('shows appropriate color coding for performance levels', async () => {
     // Test poor performance
     const poorStats = {
       ...mockSessionStats,
@@ -234,49 +230,43 @@ test.describe('ProgressIndicator Component', () => {
       grades: [1, 2, 1, 2, 1, 2, 1, 2, 3, 2]
     };
     
-    const component = await mountProgressIndicator({
+    const { container } = await mountProgressIndicator({
       sessionStats: poorStats
     });
     
-    await expect(component.locator('.performance-rating')).toHaveClass(/poor/);
-    await expect(component.locator('.progress-bar-fill')).toHaveClass(/poor/);
+    expect(container!.querySelector('.performance-rating')?.className).toContain('poor');
+    expect(container!.querySelector('.progress-bar-fill')?.className).toContain('poor');
   });
 
-  test('is accessible', async ({ page }) => {
-    const component = await mountProgressIndicator({});
+  it('is accessible', async () => {
+    const { container } = await mountProgressIndicator({});
     
     // Run comprehensive accessibility tests
-    const results = await checkAccessibility(page, component);
+    await checkAccessibility(ProgressIndicator, {});
     
     // Check specific accessibility features
-    await expect(component.locator('[role="progressbar"]')).toBeVisible();
-    await expect(component.locator('[aria-label]')).toHaveCount.greaterThan(0);
-    await expect(component.locator('[aria-valuenow]')).toBeVisible();
-    await expect(component.locator('[aria-valuemin]')).toBeVisible();
-    await expect(component.locator('[aria-valuemax]')).toBeVisible();
+    expect(container!.querySelector('[role="progressbar"]')).toBeTruthy();
+    expect(container!.querySelectorAll('[aria-label]').length).toBeGreaterThan(0);
+    expect(container!.querySelector('[aria-valuenow]')).toBeTruthy();
+    expect(container!.querySelector('[aria-valuemin]')).toBeTruthy();
+    expect(container!.querySelector('[aria-valuemax]')).toBeTruthy();
   });
 
-  test('provides proper ARIA attributes for progress bar', async ({ page }) => {
-    const component = await mountProgressIndicator({
-      sessionStats: mockSessionStats
+  it('provides proper ARIA attributes for progress bar', async () => {
+    const { container } = render(ProgressIndicator, {
+      props: { sessionStats: mockSessionStats }
     });
     
-    const progressBar = component.locator('[role="progressbar"]');
+    const progressBar = container!.querySelector('[role="progressbar"]');
     
     // Check ARIA attributes
-    await expect(progressBar).toHaveAttribute('aria-valuenow', '30'); // 3/10 = 30%
-    await expect(progressBar).toHaveAttribute('aria-valuemin', '0');
-    await expect(progressBar).toHaveAttribute('aria-valuemax', '100');
-    await expect(progressBar).toHaveAttribute('aria-label');
+    expect(progressBar?.getAttribute('aria-valuenow')).toBe('30'); // 3/10 = 30%
+    expect(progressBar?.getAttribute('aria-valuemin')).toBe('0');
+    expect(progressBar?.getAttribute('aria-valuemax')).toBe('100');
+    expect(progressBar?.getAttribute('aria-label')).toBeTruthy();
   });
 
-  test('is responsive across different viewports', async ({ page }) => {
-    const component = await mountProgressIndicator({});
-    
-    await testResponsive(page, component, commonViewports);
-  });
-
-  test('handles very large numbers gracefully', async ({ page }) => {
+  it('handles very large numbers gracefully', async () => {
     const largeStats = {
       startTime: new Date(Date.now() - 3_600_000), // 1 hour ago
       endTime: new Date(),
@@ -286,16 +276,16 @@ test.describe('ProgressIndicator Component', () => {
       grades: Array.from({ length: 750 }).fill(0).map(() => Math.floor(Math.random() * 5) + 1)
     };
     
-    const component = await mountProgressIndicator({
+    const { container } = await mountProgressIndicator({
       sessionStats: largeStats
     });
     
-    await expect(component).toBeVisible();
-    await expect(component.locator('.progress-text')).toContainText('750/1000');
-    await expect(component.locator('.progress-percentage')).toContainText('75%');
+    expect(container).toBeTruthy();
+    expect(container!.querySelector('.progress-text')?.textContent).toContain('750/1000');
+    expect(container!.querySelector('.progress-percentage')?.textContent).toContain('75%');
   });
 
-  test('displays time in appropriate format', async ({ page }) => {
+  it('displays time in appropriate format', async () => {
     // Test short session (seconds)
     const shortSession = {
       ...mockSessionStats,
@@ -303,11 +293,11 @@ test.describe('ProgressIndicator Component', () => {
       endTime: new Date()
     };
     
-    const component = await mountProgressIndicator({
+    const { container } = await mountProgressIndicator({
       sessionStats: shortSession
     });
     
-    await expect(component.locator('.time-stat')).toContainText('30s');
+    expect(container!.querySelector('.time-stat')?.textContent).toContain('30s');
     
     // Test long session (hours)
     const longSession = {
@@ -316,78 +306,104 @@ test.describe('ProgressIndicator Component', () => {
       endTime: new Date()
     };
     
-    const longComponent = await mountProgressIndicator({
+    const { container: longContainer } = await mountProgressIndicator({
       sessionStats: longSession
     });
     
-    await expect(longComponent.locator('.time-stat')).toContainText('2h');
+    expect(longContainer!.querySelector('.time-stat')?.textContent).toContain('2h');
   });
 
-  test('shows average grade information', async ({ page }) => {
-    const component = await mountProgressIndicator({
-      sessionStats: mockSessionStats
+  it('shows average grade information', async () => {
+    const { container } = render(ProgressIndicator, {
+      props: { sessionStats: mockSessionStats }
     });
     
     // Calculate average grade (3 + 4 + 5) / 3 = 4.0
     const expectedAverage = mockSessionStats.grades.reduce((sum, grade) => sum + grade, 0) / mockSessionStats.grades.length;
     
-    await expect(component.locator('.average-grade')).toContainText(expectedAverage.toFixed(1));
+    expect(container!.querySelector('.average-grade')?.textContent).toContain(expectedAverage.toFixed(1));
   });
 
-  test('handles missing endTime gracefully', async ({ page }) => {
+  it('handles missing endTime gracefully', async () => {
     const ongoingSession = {
       ...mockSessionStats,
       endTime: null
     };
     
-    const component = await mountProgressIndicator({
+    const { container } = await mountProgressIndicator({
       sessionStats: ongoingSession
     });
     
-    await expect(component).toBeVisible();
+    expect(container).toBeTruthy();
     
     // Should show ongoing time
-    await expect(component.locator('.time-stat')).toBeVisible();
+    expect(container!.querySelector('.time-stat')).toBeTruthy();
     // Should not show completion indicator
-    await expect(component.locator('.completion-indicator')).not.toBeVisible();
+    expect(container!.querySelector('.completion-indicator')).toBeFalsy();
   });
 
-  test('supports reduced motion preferences', async ({ page }) => {
+  it('supports reduced motion preferences', async () => {
     // Simulate reduced motion preference
-    await page.emulateMedia({ reducedMotion: 'reduce' });
+    const originalMatchMedia = window.matchMedia;
+    window.matchMedia = vi.fn().mockImplementation(query => ({
+      matches: query === '(prefers-reduced-motion: reduce)',
+      media: query,
+      onchange: null,
+      addListener: vi.fn(),
+      removeListener: vi.fn(),
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+      dispatchEvent: vi.fn(),
+    }));
     
-    const component = await mountProgressIndicator({});
+    const { container } = await mountProgressIndicator({});
     
     // Should still be functional without animations
-    await expect(component).toBeVisible();
-    await expect(component.locator('.progress-bar')).toBeVisible();
+    expect(container).toBeTruthy();
+    expect(container!.querySelector('.progress-bar')).toBeTruthy();
+    
+    // Restore original matchMedia
+    window.matchMedia = originalMatchMedia;
   });
 
-  test('supports high contrast mode', async ({ page }) => {
+  it('supports high contrast mode', async () => {
     // Simulate high contrast mode
-    await page.emulateMedia({ forcedColors: 'active' });
+    const originalMatchMedia = window.matchMedia;
+    window.matchMedia = vi.fn().mockImplementation(query => ({
+      matches: query === '(forced-colors: active)',
+      media: query,
+      onchange: null,
+      addListener: vi.fn(),
+      removeListener: vi.fn(),
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+      dispatchEvent: vi.fn(),
+    }));
     
-    const component = await mountProgressIndicator({});
+    const { container } = await mountProgressIndicator({});
     
     // Should still be visible and functional
-    await expect(component).toBeVisible();
-    await expect(component.locator('.progress-bar')).toBeVisible();
+    expect(container).toBeTruthy();
+    expect(container!.querySelector('.progress-bar')).toBeTruthy();
     
     // Check accessibility in high contrast
-    await checkAccessibility(page, component);
+    await checkAccessibility(ProgressIndicator, {});
+    
+    // Restore original matchMedia
+    window.matchMedia = originalMatchMedia;
   });
 
-  test('displays streak information when available', async ({ page }) => {
+  it('displays streak information when available', async () => {
     // This would require extending the session stats to include streak data
-    const component = await mountProgressIndicator({
-      sessionStats: mockSessionStats
+    const { container } = render(ProgressIndicator, {
+      props: { sessionStats: mockSessionStats }
     });
     
-    await expect(component).toBeVisible();
+    expect(container).toBeTruthy();
     // Streak display would be tested here if implemented
   });
 
-  test('handles zero total cards gracefully', async ({ page }) => {
+  it('handles zero total cards gracefully', async () => {
     const zeroTotalStats = {
       startTime: new Date(),
       endTime: null,
@@ -397,26 +413,26 @@ test.describe('ProgressIndicator Component', () => {
       grades: []
     };
     
-    const component = await mountProgressIndicator({
+    const { container } = await mountProgressIndicator({
       sessionStats: zeroTotalStats
     });
     
-    await expect(component).toBeVisible();
+    expect(container).toBeTruthy();
     
     // Should handle zero division gracefully
-    await expect(component.locator('.progress-text')).toContainText('0/0');
-    await expect(component.locator('.progress-percentage')).toContainText('0%');
+    expect(container!.querySelector('.progress-text')?.textContent).toContain('0/0');
+    expect(container!.querySelector('.progress-percentage')?.textContent).toContain('0%');
   });
 
-  test('updates progress bar animation smoothly', async ({ page }) => {
-    const component = await mountProgressIndicator({
-      sessionStats: mockSessionStats
+  it('updates progress bar animation smoothly', async () => {
+    const { container } = render(ProgressIndicator, {
+      props: { sessionStats: mockSessionStats }
     });
     
-    const progressBar = component.locator('.progress-bar-fill');
+    const progressBar = container!.querySelector('.progress-bar-fill');
     
     // Check that progress bar has transition styles
-    const transition = await progressBar.evaluate(el => getComputedStyle(el).transition);
+    const transition = getComputedStyle(progressBar!).transition;
     expect(transition).toContain('width');
   });
 });

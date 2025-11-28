@@ -1,13 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createMockVocabulary, createMockSessionStats } from '../test-utils';
 
-// Import components for visual testing
-import Flashcard from '$src/components/Flashcard.svelte';
-import GradeControls from '$src/components/GradeControls.svelte';
-import ProgressIndicator from '$src/components/ProgressIndicator.svelte';
-import SessionStats from '$src/components/SessionStats.svelte';
-import ErrorBoundary from '$src/components/ErrorBoundary.svelte';
-import LoadingSpinner from '$src/components/LoadingSpinner.svelte';
 
 test.describe('Visual Regression Tests', () => {
   // Test configurations for different viewports
@@ -38,11 +31,11 @@ test.describe('Visual Regression Tests', () => {
             <div data-testid="flashcard-container" role="article" aria-label="Flashcard" tabindex="0">
               <div data-testid="flashcard-front" class="flashcard-side">
                 <h3>Bulgarian</h3>
-                <p>${mockVocab.bulgarian}</p>
+                <p>${mockVocab.word}</p>
               </div>
               <div data-testid="flashcard-back" class="flashcard-side" style="display: none;">
                 <h3>German</h3>
-                <p>${mockVocab.german}</p>
+                <p>${mockVocab.translation}</p>
               </div>
             </div>
           `;
@@ -66,11 +59,11 @@ test.describe('Visual Regression Tests', () => {
             <div data-testid="flashcard-container" role="article" aria-label="Flashcard" tabindex="0">
               <div data-testid="flashcard-front" class="flashcard-side" style="display: none;">
                 <h3>Bulgarian</h3>
-                <p>${mockVocab.bulgarian}</p>
+                <p>${mockVocab.word}</p>
               </div>
               <div data-testid="flashcard-back" class="flashcard-side">
                 <h3>German</h3>
-                <p>${mockVocab.german}</p>
+                <p>${mockVocab.translation}</p>
               </div>
             </div>
           `;
@@ -85,8 +78,8 @@ test.describe('Visual Regression Tests', () => {
       
       const longVocab = {
         ...createMockVocabulary(1)[0],
-        bulgarian: 'Това е много дълъг български текст, който трябва да се покаже правилно на флашкарта и да се тества как се справя с дълго съдържание без да се счупи оформлението.',
-        german: 'Dies ist ein sehr langer deutscher Text, der korrekt auf der Karteikarte angezeigt werden sollte und testen soll, wie er mit langem Inhalten umgeht, ohne das Layout zu beschädigen.'
+        word: 'Това е много дълъг български текст, който трябва да се покаже правилно на флашкарта и да се тества как се справя с дълго съдържание без да се счупи оформлението.',
+        translation: 'Dies ist ein sehr langer deutscher Text, der korrekt auf der Karteikarte angezeigt werden sollte und testen soll, wie er mit langem Inhalten umgeht, ohne das Layout zu beschädigen.'
       };
       
       await page.goto('/');
@@ -99,7 +92,7 @@ test.describe('Visual Regression Tests', () => {
           <div data-testid="flashcard-container" role="article" aria-label="Flashcard" tabindex="0">
             <div data-testid="flashcard-front" class="flashcard-side">
               <h3>Bulgarian</h3>
-              <p>${longVocab.bulgarian}</p>
+              <p>${longVocab.word}</p>
             </div>
           </div>
         `;
@@ -130,7 +123,7 @@ test.describe('Visual Regression Tests', () => {
           <div data-testid="flashcard-container" role="article" aria-label="Flashcard" tabindex="0">
             <div data-testid="flashcard-back" class="flashcard-side">
               <h3>German</h3>
-              <p>${vocabWithExamples.german}</p>
+              <p>${vocabWithExamples.translation}</p>
               <div class="examples">
                 <h4>Examples:</h4>
                 ${vocabWithExamples.examples.map((ex, i) => `
@@ -361,11 +354,11 @@ test.describe('Visual Regression Tests', () => {
                 <div class="stats-grid">
                   <div class="stat-card">
                     <h4>Cards Studied</h4>
-                    <p class="stat-value">${mockStats.cardsStudied}</p>
+                    <p class="stat-value">${mockStats.totalCards}</p>
                   </div>
                   <div class="stat-card">
                     <h4>Accuracy</h4>
-                    <p class="stat-value">${mockStats.accuracy}%</p>
+                    <p class="stat-value">${mockStats.accuracyRate}%</p>
                   </div>
                   <div class="stat-card">
                     <h4>Average Grade</h4>
@@ -514,7 +507,7 @@ test.describe('Visual Regression Tests', () => {
           
           container.innerHTML = `
             <div data-testid="loading-spinner" class="loading-spinner">
-              ${variantHTML[variant]}
+              ${variantHTML[variant as keyof typeof variantHTML]}
               <p class="loading-message">Loading vocabulary...</p>
             </div>
           `;

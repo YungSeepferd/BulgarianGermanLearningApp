@@ -1,28 +1,40 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	
-	export let title: string = '';
-	export let date: string = '';
-	export let author: string = '';
-	export let description: string = '';
-	export let tags: string[] = [];
-	export let category: string = '';
-	export let level: string = '';
-	export let draft: boolean = false;
+	// Props using Svelte 5 $props
+	let {
+		title = '',
+		date = '',
+		author = '',
+		description = '',
+		tags = [],
+		category = '',
+		level = '',
+		draft = false,
+		metadata = {},
+		content
+	} = $props<{
+		title?: string;
+		date?: string;
+		author?: string;
+		description?: string;
+		tags?: string[];
+		category?: string;
+		level?: string;
+		draft?: boolean;
+		metadata?: any;
+		content?: Snippet;
+	}>();
 	
-	// For mdsvex compatibility, use export let for frontmatter
-	export let metadata: any = {};
-	export let content: Snippet;
-	
-	// Use metadata if available, fallback to props
-	$: pageTitle = metadata?.title || title;
-	$: pageDate = metadata?.date || date;
-	$: pageAuthor = metadata?.author || author;
-	$: pageDescription = metadata?.description || description;
-	$: pageTags = metadata?.tags || tags;
-	$: pageCategory = metadata?.category || category;
-	$: pageLevel = metadata?.level || level;
-	$: pageDraft = metadata?.draft || draft;
+	// Derived values using $derived
+	let pageTitle = $derived(metadata?.title || title);
+	let pageDate = $derived(metadata?.date || date);
+	let pageAuthor = $derived(metadata?.author || author);
+	let pageDescription = $derived(metadata?.description || description);
+	let pageTags = $derived(metadata?.tags || tags);
+	let pageCategory = $derived(metadata?.category || category);
+	let pageLevel = $derived(metadata?.level || level);
+	let pageDraft = $derived(metadata?.draft || draft);
 </script>
 
 <svelte:head>

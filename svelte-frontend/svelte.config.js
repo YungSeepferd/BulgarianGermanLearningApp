@@ -28,9 +28,9 @@ const config = {
 	// extensions: ['.svelte', '.md', '.svx'],
 	
 	// Enable Svelte 5 runes mode for full Svelte 5 compatibility
-	// Temporarily disabled for component testing compatibility
 	compilerOptions: {
-		runes: false
+	  runes: true,
+	  enableSourcemap: true
 	},
 
 	kit: {

@@ -122,7 +122,7 @@ export class VocabularyPerformanceMonitor {
     monitor.endTimer('vocabulary-render');
     
     const totalTime = loadTime + parseTime + renderTime;
-    const itemCount = vocabulary.length;
+    const itemCount = (await vocabulary).length;
     const itemsPerSecond = (itemCount / totalTime) * 1000;
     
     // Get memory usage

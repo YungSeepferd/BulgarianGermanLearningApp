@@ -235,7 +235,7 @@ export async function measureItemHeights(
   const itemsToMeasure = [...container.querySelectorAll('[data-index]')];
   
   for (const item of itemsToMeasure) {
-    const index = parseInt(item.dataset.index || '0');
+    const index = parseInt((item as HTMLElement).dataset.index || '0');
     const height = (item as HTMLElement).getBoundingClientRect().height;
     
     if (height > 0) {

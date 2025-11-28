@@ -8,7 +8,7 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, fireEvent, waitFor } from '@testing-library/svelte';
 import Flashcard from '$lib/components/Flashcard.svelte';
-import { createMockVocabulary } from '../test-utils.js';
+import { createMockVocabulary, toBeInTheDocument, toHaveAttribute } from '../test-utils.js';
 import type { VocabularyItem } from '$lib/types/index.js';
 
 // Mock IntersectionObserver
@@ -89,7 +89,7 @@ describe('Flashcard Performance Tests', () => {
     });
 
     // Should show placeholder initially
-    expect(getByTestId('flashcard-placeholder')).toBeInTheDocument();
+    toBeInTheDocument(getByTestId('flashcard-placeholder'));
     
     // Should load within reasonable time
     const loadTime = Date.now() - startTime;
@@ -101,11 +101,11 @@ describe('Flashcard Performance Tests', () => {
 
     // Wait for lazy loading to complete
     await waitFor(() => {
-      expect(queryByTestId('flashcard-placeholder')).not.toBeInTheDocument();
+      expect(queryByTestId('flashcard-placeholder')).toBeNull();
     }, { timeout: 1000 });
     
     // Should show actual content after loading
-    expect(getByTestId('flashcard')).toBeInTheDocument();
+    toBeInTheDocument(getByTestId('flashcard'));
   });
 
   it('should handle rapid interactions without performance degradation', async () => {
@@ -130,8 +130,8 @@ describe('Flashcard Performance Tests', () => {
     expect(interactionTime).toBeLessThan(2000);
     
     // Component should still be responsive
-    expect(getByTestId('flashcard')).toBeInTheDocument();
-    expect(getByTestId('flashcard-content')).toBeInTheDocument();
+    toBeInTheDocument(getByTestId('flashcard'));
+    toBeInTheDocument(getByTestId('flashcard-content'));
   });
 
   it('should optimize memory usage with multiple instances', async () => {
@@ -157,7 +157,7 @@ describe('Flashcard Performance Tests', () => {
     
     // All components should be visible
     for (const component of components) {
-      expect(component).toBeInTheDocument();
+      toBeInTheDocument(component);
     }
     
     // Check memory usage
@@ -188,9 +188,9 @@ describe('Flashcard Performance Tests', () => {
     });
 
     // Should still be functional
-    expect(getByTestId('flashcard')).toBeInTheDocument();
+    toBeInTheDocument(getByTestId('flashcard'));
     fireEvent.click(getByTestId('flashcard'));
-    expect(getByTestId('card-back')).toBeInTheDocument();
+    toBeInTheDocument(getByTestId('card-back'));
     
     // Check that animations are disabled
     const flashcardElement = getByTestId('flashcard');
@@ -214,7 +214,7 @@ describe('Flashcard Performance Tests', () => {
     });
 
     // Should still load and be functional
-    expect(getByTestId('flashcard')).toBeInTheDocument();
+    toBeInTheDocument(getByTestId('flashcard'));
     
     // Should load within reasonable time even on low-end device
     const startTime = Date.now();
@@ -224,7 +224,7 @@ describe('Flashcard Performance Tests', () => {
     mockCallback([{ isIntersecting: true, target: getByTestId('flashcard-container') }]);
 
     await waitFor(() => {
-      expect(getByTestId('flashcard')).toBeInTheDocument();
+      toBeInTheDocument(getByTestId('flashcard'));
     }, { timeout: 3000 });
     
     const loadTime = Date.now() - startTime;
@@ -240,8 +240,8 @@ describe('Flashcard Performance Tests', () => {
     });
 
     // Initially should show placeholder (not intersecting)
-    expect(getByTestId('flashcard-placeholder')).toBeInTheDocument();
-    expect(queryByTestId('flashcard')).not.toBeInTheDocument();
+    toBeInTheDocument(getByTestId('flashcard-placeholder'));
+    expect(queryByTestId('flashcard')).toBeNull();
 
     // Simulate intersection
     const mockCallback = mockIntersectionObserver.mock.calls[0][0];
@@ -249,10 +249,10 @@ describe('Flashcard Performance Tests', () => {
 
     // Should load after intersection
     await waitFor(() => {
-      expect(getByTestId('flashcard')).toBeInTheDocument();
+      toBeInTheDocument(getByTestId('flashcard'));
     }, { timeout: 1000 });
     
-    expect(queryByTestId('flashcard-placeholder')).not.toBeInTheDocument();
+    expect(queryByTestId('flashcard-placeholder')).toBeNull();
   });
 
   it('should handle dynamic imports efficiently', async () => {
@@ -264,7 +264,7 @@ describe('Flashcard Performance Tests', () => {
     });
 
     // Should not load heavy dependencies initially
-    expect(getByTestId('flashcard-placeholder')).toBeInTheDocument();
+    toBeInTheDocument(getByTestId('flashcard-placeholder'));
 
     // Simulate intersection to trigger lazy loading
     const mockCallback = mockIntersectionObserver.mock.calls[0][0];
@@ -272,7 +272,7 @@ describe('Flashcard Performance Tests', () => {
 
     // Should load dependencies when needed
     await waitFor(() => {
-      expect(getByTestId('flashcard')).toBeInTheDocument();
+      toBeInTheDocument(getByTestId('flashcard'));
     }, { timeout: 1000 });
   });
 
@@ -290,21 +290,21 @@ describe('Flashcard Performance Tests', () => {
 
     // Wait for lazy loading to complete
     await waitFor(() => {
-      expect(getByTestId('flashcard')).toBeInTheDocument();
+      toBeInTheDocument(getByTestId('flashcard'));
     }, { timeout: 1000 });
     
     // Check accessibility
-    expect(getByTestId('flashcard')).toHaveAttribute('role', 'button');
-    expect(getByTestId('flashcard')).toHaveAttribute('aria-label');
-    expect(getByTestId('flashcard')).toHaveAttribute('tabindex');
+    toHaveAttribute(getByTestId('flashcard'), 'role', 'button');
+    toHaveAttribute(getByTestId('flashcard'), 'aria-label');
+    toHaveAttribute(getByTestId('flashcard'), 'tabindex');
     
     // Should support keyboard navigation
     getByTestId('flashcard').focus();
     fireEvent.keyDown(getByTestId('flashcard'), { key: ' ' });
-    expect(getByTestId('card-back')).toBeInTheDocument();
+    toBeInTheDocument(getByTestId('card-back'));
     
     // Should have screen reader announcements
-    expect(getByTestId('screen-reader-announcements')).toBeInTheDocument();
+    toBeInTheDocument(getByTestId('screen-reader-announcements'));
   });
 
   it('should optimize CSS rendering with containment', async () => {
@@ -338,7 +338,7 @@ describe('Flashcard Performance Tests', () => {
     });
 
     // Should handle error without crashing
-    expect(getByTestId('flashcard')).toBeInTheDocument();
+    toBeInTheDocument(getByTestId('flashcard'));
   });
 
   it('should measure and report performance metrics', async () => {

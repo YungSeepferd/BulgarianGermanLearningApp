@@ -373,7 +373,7 @@ export function mergeObjects<T extends Record<string, any>>(target: T, ...source
  * @param keys - Keys to pick
  * @returns Object with picked properties
  */
-export function pick<T, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> {
+export function pick<T extends Record<string, unknown>, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> {
   const result = {} as Pick<T, K>;
   for (const key of keys) {
     if (key in obj) {
@@ -389,10 +389,10 @@ export function pick<T, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> {
  * @param keys - Keys to omit
  * @returns Object without omitted properties
  */
-export function omit<T, K extends keyof T>(obj: T, keys: K[]): Omit<T, K> {
+export function omit<T extends Record<string, unknown>, K extends keyof T>(obj: T, keys: K[]): Omit<T, K> {
   const result = { ...obj } as Omit<T, K>;
   for (const key of keys) {
-    delete result[key];
+    delete (result as any)[key];
   }
   return result;
 }

@@ -56,6 +56,9 @@ function generateChunkMetadata(items: VocabularyItem[]): VocabularyChunkMetadata
     
     chunks.push({
       name: i.toString(),
+      level: getUniqueLevels(chunkItems)[0] || 'A1',
+      category: getUniqueCategories(chunkItems)[0] || 'general',
+      count: chunkItems.length,
       size: chunkItems.length,
       totalItems: chunkItems.length,
       levels: getUniqueLevels(chunkItems),
@@ -72,6 +75,9 @@ function generateChunkMetadata(items: VocabularyItem[]): VocabularyChunkMetadata
     if (levelItems.length > 0) {
       chunks.push({
         name: level,
+        level: level,
+        category: getUniqueCategories(levelItems)[0] || 'general',
+        count: levelItems.length,
         size: levelItems.length,
         totalItems: levelItems.length,
         levels: [level],
@@ -92,6 +98,9 @@ function generateChunkMetadata(items: VocabularyItem[]): VocabularyChunkMetadata
     const categoryItems = items.filter(item => item.category === category);
     chunks.push({
       name: category,
+      level: getUniqueLevels(categoryItems)[0] || 'A1',
+      category: category,
+      count: categoryItems.length,
       size: categoryItems.length,
       totalItems: categoryItems.length,
       levels: getUniqueLevels(categoryItems),
@@ -251,15 +260,15 @@ export const POST: RequestHandler = async ({ request }) => {
       const { level, category, direction } = filters;
       
       if (level && level !== 'all') {
-        validatedItems = validatedItems.filter(item => item.level === level);
+        validatedItems = validatedItems.filter((item: VocabularyItem) => item.level === level);
       }
-      
+
       if (category && category !== 'all') {
-        validatedItems = validatedItems.filter(item => item.category === category);
+        validatedItems = validatedItems.filter((item: VocabularyItem) => item.category === category);
       }
-      
+
       if (direction) {
-        validatedItems = validatedItems.filter(item => 
+        validatedItems = validatedItems.filter((item: VocabularyItem) =>
           (direction === 'bg-de' && item.source_lang === 'bg') ||
           (direction === 'de-bg' && item.source_lang === 'de')
         );

@@ -232,7 +232,8 @@ export class VocabularyAPI {
       });
 
       const data = await this.validateResponse(response);
-      const validatedItems = data.items.map(validateVocabularyItem);
+      const items = data.items || data.data || [];
+      const validatedItems = items.map(validateVocabularyItem);
       
       vocabularyCache.set(cacheKey, validatedItems);
       
@@ -281,7 +282,8 @@ export class VocabularyAPI {
       });
 
       const data = await this.validateResponse(response);
-      const validatedItems = data.items.map(validateVocabularyItem);
+      const items = data.items || data.data || [];
+      const validatedItems = items.map(validateVocabularyItem);
       
       vocabularyCache.set(cacheKey, validatedItems);
       
@@ -346,7 +348,8 @@ export class VocabularyAPI {
       });
 
       const data = await this.validateResponse(response);
-      const validatedItems = data.items.map(validateVocabularyItem);
+      const items = data.items || data.data || [];
+      const validatedItems = items.map(validateVocabularyItem);
       
       vocabularyCache.set(cacheKey, validatedItems);
       
@@ -394,7 +397,8 @@ export class VocabularyAPI {
       });
 
       const data = await this.validateResponse(response);
-      const validatedItems = data.items.map(validateVocabularyItem);
+      const items = data.items || data.data || [];
+      const validatedItems = items.map(validateVocabularyItem);
       
       vocabularyCache.set(cacheKey, validatedItems);
       
@@ -481,7 +485,8 @@ export class VocabularyAPI {
       });
 
       const data = await this.validateResponse(response);
-      const validatedItems = data.items.map(validateVocabularyItem);
+      const items = data.items || data.data || [];
+      const validatedItems = items.map(validateVocabularyItem);
       
       vocabularyCache.set(cacheKey, validatedItems);
       
@@ -540,14 +545,17 @@ export class VocabularyAPI {
       throw new ValidationError('Invalid API response: must be an object');
     }
 
-    if (!Array.isArray(response.items)) {
-      throw new ValidationError('Invalid API response: items must be an array');
+    // Support both 'items' and 'data' properties for backward compatibility
+    const items = response.items || response.data;
+    
+    if (!Array.isArray(items)) {
+      throw new ValidationError('Invalid API response: items/data must be an array');
     }
 
     return {
-      data: response.items,
-      total: response.total || response.items.length,
-      loaded: response.loaded || response.items.length,
+      data: items,
+      total: response.total || items.length,
+      loaded: response.loaded || items.length,
       hasMore: response.hasMore || false,
       timestamp: response.timestamp || Date.now()
     };

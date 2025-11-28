@@ -3,11 +3,12 @@
   import type { PageData } from './$types';
   import type { VocabularyItem, SessionStats } from '$lib/types/index.js';
   
+  // State using Svelte 5 runes
+  let loading = $state(true);
+  let error = $state<Error | null>(null);
 
-  let loading = true;
-  let error: Error | null = null;
-
-  onMount(async () => {
+  // Effect for initialization
+  $effect(() => {
     try {
       // Simple initialization for now
       loading = false;

@@ -762,9 +762,44 @@ export function getGradeFeedbackMessage(grade: number, feedback: GradeFeedback):
 
 // Note: isValidGrade and getGradeColor are now imported from './common.js' to eliminate duplication
 
+/**
+ * Validate grade value (1-5)
+ * @param grade - Grade to validate
+ * @returns True if valid, false otherwise
+ */
+export function validateGrade(grade: number): boolean {
+  return typeof grade === 'number' && grade >= 1 && grade <= 5 && Number.isInteger(grade);
+}
+
+/**
+ * Alias for validateGrade for backward compatibility
+ */
+export const isValidGrade = validateGrade;
+
+/**
+ * Generate grade feedback for user (standalone function)
+ * @param grade - Grade received (0-5)
+ * @param state - Updated review state
+ * @param phaseCalculator - Phase calculator instance
+ * @returns Grade feedback information
+ */
+export function generateGradeFeedback(grade: number, state: ReviewState, phaseCalculator?: PhaseCalculator): GradeFeedback {
+  const nextReviewDate = new Date(state.nextReview);
+  const phaseName = phaseCalculator ? phaseCalculator.getPhaseName(state.phase || 1) : undefined;
+  
+  return {
+    grade,
+    nextReview: nextReviewDate.toLocaleDateString(),
+    interval: state.interval,
+    phase: state.phase,
+    phaseName
+  };
+}
+
 // Export all utilities
 export {
-  type ProfileManager
+  type ProfileManager,
+  formatInterval
   
   
 };

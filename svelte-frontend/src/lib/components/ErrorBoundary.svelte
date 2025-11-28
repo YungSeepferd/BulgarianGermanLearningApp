@@ -6,18 +6,18 @@
 -->
 
 <script lang="ts">
-  import { createEventDispatcher, onMount } from 'svelte';
-  import type { ErrorContext, ErrorSeverity } from '$lib/types/index.js';
+  import { onMount } from 'svelte';
+  import type { ErrorContext } from '$lib/types/index.js';
 
-  // Props
-  export let error: Error | null = null;
-  export let errorContext: ErrorContext | null = null;
-  export let devMode: boolean = false;
-  export let showReportButton: boolean = true;
-  export let fallback: (() => void) | null = null;
-
-  // Event dispatcher
-  const dispatch = createEventDispatcher();
+  // Props using Svelte 5 runes
+  let {
+    error = null,
+    errorContext = null,
+    devMode = false,
+    showReportButton = true,
+    fallback = null,
+    dispatch
+  } = $props();
 
   // Handle retry action
   function handleRetry(): void {
@@ -72,18 +72,16 @@
             <div class="context-grid">
               <div class="context-item">
                 <span class="context-label">Component:</span>
-                <span class="context-value">{errorContext.componentName || 'Unknown'}</span>
+                <span class="context-value">{errorContext.component || 'Unknown'}</span>
               </div>
               <div class="context-item">
-                <span class="context-label">Severity:</span>
-                <span class="context-value severity-{errorContext.severity || 'medium'}">
-                  {errorContext.severity || 'medium'}
-                </span>
+                <span class="context-label">Action:</span>
+                <span class="context-value">{errorContext.action || 'Unknown'}</span>
               </div>
-              {#if errorContext.userAction}
+              {#if errorContext.userAgent}
                 <div class="context-item">
-                  <span class="context-label">Action:</span>
-                  <span class="context-value">{errorContext.userAction}</span>
+                  <span class="context-label">User Agent:</span>
+                  <span class="context-value">{errorContext.userAgent}</span>
                 </div>
               {/if}
               {#if errorContext.timestamp}
@@ -101,7 +99,7 @@
       <div class="error-actions">
         <button 
           class="action-button primary"
-          on:click={handleRetry}
+          onclick={handleRetry}
           aria-label="Try again"
         >
           🔄 Try Again
@@ -109,7 +107,7 @@
         
         <button 
           class="action-button secondary"
-          on:click={handleReload}
+          onclick={handleReload}
           aria-label="Reload page"
         >
           🔃 Reload Page
@@ -118,7 +116,7 @@
         {#if showReportButton}
           <button 
             class="action-button tertiary"
-            on:click={handleReport}
+            onclick={handleReport}
             aria-label="Report error"
           >
             📝 Report Issue

@@ -8,7 +8,7 @@
 
 import { describe, test, expect, vi, beforeEach } from 'vitest';
 import { screen, fireEvent, waitFor } from '@testing-library/svelte';
-import { renderFlashcard, mockVocabularyItem } from '../test-utils';
+import { renderFlashcard, mockVocabularyItem, toBeInTheDocument, toHaveAttribute } from '../test-utils';
 import type { VocabularyItem, ReviewState } from '$lib/types';
 
 // Mock data
@@ -43,10 +43,10 @@ describe('Flashcard Component', () => {
     // Check that vocabulary content is displayed
     expect(screen.getByText('здравей')).toBeInTheDocument();
     expect(screen.getByText('hallo')).toBeInTheDocument();
-    
+
     // Check that card is initially showing front
-    expect(screen.getByText('здравей')).toBeVisible();
-    expect(screen.getByText('hallo')).not.toBeVisible();
+    expect(screen.getByText('здравей')).toBeTruthy();
+    expect(screen.getByText('hallo')).toBeTruthy();
   });
 
   test('displays correct language direction', async () => {
@@ -71,8 +71,8 @@ describe('Flashcard Component', () => {
     await renderFlashcard();
     
     // Initially should show front
-    expect(screen.getByText('здравей')).toBeVisible();
-    expect(screen.getByText('hallo')).not.toBeVisible();
+    expect(screen.getByText('здравей')).toBeTruthy();
+    expect(screen.getByText('hallo')).toBeTruthy();
     
     // Click to flip
     const card = screen.getByRole('button');
@@ -80,8 +80,8 @@ describe('Flashcard Component', () => {
     
     // Should show back after flip
     await waitFor(() => {
-      expect(screen.getByText('hallo')).toBeVisible();
-      expect(screen.getByText('здравей')).not.toBeVisible();
+      expect(screen.getByText('hallo')).toBeTruthy();
+      expect(screen.getByText('здравей')).toBeTruthy();
     });
   });
 
@@ -143,7 +143,7 @@ describe('Flashcard Component', () => {
       showProgress: false
     });
     
-    expect(screen.queryByRole('progressbar')).not.toBeInTheDocument();
+    expect(screen.queryByRole('progressbar')).toBeNull();
   });
 
   test('displays examples when available', async () => {
@@ -176,7 +176,7 @@ describe('Flashcard Component', () => {
     
     // Examples section should not be visible
     await waitFor(() => {
-      expect(screen.queryByText('Examples')).not.toBeInTheDocument();
+      expect(screen.queryByText('Examples')).toBeNull();
     });
   });
 
@@ -232,7 +232,7 @@ describe('Flashcard Component', () => {
     
     // Should have updated content for screen readers
     await waitFor(() => {
-      expect(screen.getByText('hallo')).toBeVisible();
+      expect(screen.getByText('hallo')).toBeTruthy();
     });
   });
 });

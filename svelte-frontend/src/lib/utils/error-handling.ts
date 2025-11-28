@@ -345,7 +345,7 @@ export async function retryAsync<T>(
   maxAttempts: number = 3,
   baseDelay: number = 1000
 ): Promise<T> {
-  let lastError: Error;
+  let lastError: Error | null = null;
   
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     try {
@@ -364,12 +364,13 @@ export async function retryAsync<T>(
     }
   }
   
+  const finalError = lastError || new Error('Retry failed without specific error');
   throw new SvelteKitError(
-    `Failed after ${maxAttempts} attempts: ${lastError.message}`,
+    `Failed after ${maxAttempts} attempts: ${finalError.message}`,
     'RETRY_FAILED',
     500,
     context,
-    lastError
+    finalError
   );
 }
 
@@ -616,7 +617,7 @@ export function getErrorSeverity(error: Error | SvelteKitError): 'low' | 'medium
     return 'high';
   }
   
-  if (error.statusCode && error.statusCode >= 500) {
+  if ('statusCode' in error && (error as any).statusCode && (error as any).statusCode >= 500) {
     return 'critical';
   }
   
@@ -659,7 +660,7 @@ export function formatErrorForDisplay(error: Error | SvelteKitError): {
 // Export all error types and utilities
 export {
   
-  type ErrorBoundaryState,
-  type ErrorReport
+  type ErrorBoundaryState as ErrorBoundaryStateType,
+  type ErrorReport as ErrorReportType
 };
 export { type ErrorContext } from '$lib/types/index.js';

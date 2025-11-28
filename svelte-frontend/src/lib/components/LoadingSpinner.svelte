@@ -9,21 +9,34 @@
   import { onMount } from 'svelte';
 
   // Props
-  export let size: 'small' | 'medium' | 'large' = 'medium';
-  export let variant: 'spinner' | 'dots' | 'pulse' | 'bars' = 'spinner';
-  export let color: 'primary' | 'secondary' | 'success' | 'warning' | 'error' = 'primary';
-  export let text: string = '';
-  export let showText: boolean = true;
-  export let centered: boolean = true;
-  export let overlay: boolean = false;
-  export let fullscreen: boolean = false;
-  export let delay: number = 0; // Delay in ms before showing
-  export let timeout: number = 30000; // Auto-hide after timeout (0 = disabled)
+  let {
+    size = 'medium',
+    variant = 'spinner',
+    color = 'primary',
+    text = '',
+    showText = true,
+    centered = true,
+    overlay = false,
+    fullscreen = false,
+    delay = 0,
+    timeout = 30000
+  } = $props<{
+    size?: 'small' | 'medium' | 'large';
+    variant?: 'spinner' | 'dots' | 'pulse' | 'bars';
+    color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error';
+    text?: string;
+    showText?: boolean;
+    centered?: boolean;
+    overlay?: boolean;
+    fullscreen?: boolean;
+    delay?: number;
+    timeout?: number;
+  }>();
 
   // Local state
-  let visible: boolean = false;
-  let timeoutTimer: number | null = null;
-  let delayTimer: number | null = null;
+  let visible = $state(false);
+  let timeoutTimer = $state<NodeJS.Timeout | null>(null);
+  let delayTimer = $state<NodeJS.Timeout | null>(null);
 
   // Size classes
   const sizeClasses = {
@@ -89,9 +102,9 @@
   };
 
   // Get CSS classes
-  $: spinnerSize = sizeClasses[size][variant];
-  $: spinnerColor = colorClasses[color][variant];
-  $: textSize = textSizeClasses[size];
+  let spinnerSize = $derived(sizeClasses[size as keyof typeof sizeClasses][variant as keyof typeof sizeClasses.small]);
+  let spinnerColor = $derived(colorClasses[color as keyof typeof colorClasses][variant as keyof typeof colorClasses.primary]);
+  let textSize = $derived(textSizeClasses[size as keyof typeof textSizeClasses]);
 
   // Show loading with delay
   function showLoading(): void {
@@ -143,9 +156,11 @@
   });
 
   // Handle prop changes
-  $: if (text || delay > 0) {
-    showLoading();
-  }
+  $effect(() => {
+    if (text || delay > 0) {
+      showLoading();
+    }
+  });
 
   // Expose methods
   export function show(): void {
