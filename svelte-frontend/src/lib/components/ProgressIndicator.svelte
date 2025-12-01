@@ -37,7 +37,7 @@
     ? (sessionStats.correctAnswers / sessionStats.reviewedCards) * 100
     : 0);
   let averageGrade = $derived(sessionStats && sessionStats.grades.length > 0
-    ? sessionStats.grades.reduce((sum, grade) => sum + grade, 0) / sessionStats.grades.length
+    ? sessionStats.grades.reduce((sum: number, grade: number) => sum + grade, 0) / sessionStats.grades.length
     : 0);
   let duration = $derived(sessionStats && sessionStats.startTime && sessionStats.endTime
     ? (sessionStats.endTime.getTime() - sessionStats.startTime.getTime()) / 1000 / 60 // in minutes
@@ -46,7 +46,7 @@
     : 0);
 
   // Progress color based on performance
-  let progressColor = $derived(percentage >= 75 ? 'bg-green-500' : percentage >= 50 ? 'bg-blue-500' : percentage >= 25 ? 'bg-yellow-500' : 'bg-red-500');
+  const progressColor = $derived(percentage >= 75 ? 'bg-green-500' : percentage >= 50 ? 'bg-blue-500' : percentage >= 25 ? 'bg-yellow-500' : 'bg-red-500');
 
   // Format time display
   function formatTime(seconds: number): string {
@@ -73,7 +73,7 @@
 
   // Handle progress bar click (jump to specific position)
   function handleProgressClick(event: MouseEvent): void {
-    if (!compact && total > 0) {
+    if (!compact && total > 0 && event.currentTarget instanceof HTMLElement) {
       const rect = event.currentTarget.getBoundingClientRect();
       const clickX = event.clientX - rect.left;
       const clickPercentage = clickX / rect.width;
@@ -98,7 +98,7 @@
     return distribution;
   }
 
-  let gradeDistribution = $derived(getGradeDistribution());
+  const gradeDistribution = $derived(getGradeDistribution());
 </script>
 
 <!-- Progress Indicator Container -->

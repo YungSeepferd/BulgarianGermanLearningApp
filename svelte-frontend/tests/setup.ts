@@ -1,8 +1,7 @@
 import { vi, beforeEach, afterEach, expect } from 'vitest';
-import type { MockedFunction } from 'vitest';
-import * as matchers from '@testing-library/jest-dom';
+import * as matchers from '@testing-library/jest-dom/matchers';
 
-// Add jest-dom matchers to expect
+// Extend expect with jest-dom matchers
 expect.extend(matchers);
 
 // Mock console methods to reduce noise in tests
@@ -88,8 +87,11 @@ Object.defineProperty(window, 'performance', {
 });
 
 // Mock requestAnimationFrame
-global.requestAnimationFrame = vi.fn((cb) => setTimeout(cb, 16));
-global.cancelAnimationFrame = vi.fn((id) => clearTimeout(id));
+global.requestAnimationFrame = vi.fn((cb) => {
+  const id = setTimeout(cb, 16);
+  return id as unknown as number;
+});
+global.cancelAnimationFrame = vi.fn((id) => clearTimeout(id as unknown as NodeJS.Timeout));
 
 // Mock crypto
 Object.defineProperty(window, 'crypto', {
@@ -186,8 +188,8 @@ const setIntervalMock = vi.fn().mockImplementation((fn, interval) => {
 const clearTimeoutMock = vi.fn();
 const clearIntervalMock = vi.fn();
 
-global.setTimeout = setTimeoutMock;
-global.setInterval = setIntervalMock;
+global.setTimeout = setTimeoutMock as unknown as typeof setTimeout;
+global.setInterval = setIntervalMock as unknown as typeof setInterval;
 global.clearTimeout = clearTimeoutMock;
 global.clearInterval = clearIntervalMock;
 
@@ -209,11 +211,7 @@ global.Selection = vi.fn().mockImplementation(() => ({
   toString: vi.fn(() => ''),
 })) as any;
 
-global.getSelection = vi.fn(() => ({
-  removeAllRanges: vi.fn(),
-  addRange: vi.fn(),
-  toString: vi.fn(() => ''),
-}));
+global.getSelection = vi.fn(() => null);
 
 // Mock DOMRect
 global.DOMRect = vi.fn().mockImplementation(() => ({
@@ -231,20 +229,39 @@ global.DOMRect = vi.fn().mockImplementation(() => ({
 Element.prototype.getBoundingClientRect = vi.fn(() => ({
   x: 0,
   y: 0,
-  width: 0,
-  height: 0,
+  width: 100,
+  height: 100,
   top: 0,
-  right: 0,
-  bottom: 0,
+  right: 100,
+  bottom: 100,
   left: 0,
+  toJSON: vi.fn(() => ({
+    x: 0,
+    y: 0,
+    width: 100,
+    height: 100,
+    top: 0,
+    right: 100,
+    bottom: 100,
+    left: 0
+  }))
 }));
 
-// Mock getComputedStyle
-global.getComputedStyle = vi.fn(() => ({
-  getPropertyValue: vi.fn(() => ''),
-  setProperty: vi.fn(),
-  removeProperty: vi.fn(),
-}));
+// Mock getComputedStyle - return a minimal CSSStyleDeclaration
+global.getComputedStyle = vi.fn(() => {
+  const style = {
+    getPropertyValue: vi.fn(() => ''),
+    setProperty: vi.fn(),
+    removeProperty: vi.fn()
+  } as any;
+  
+  // Add required CSSStyleDeclaration properties
+  Object.defineProperty(style, 'accentColor', { value: '', writable: true });
+  Object.defineProperty(style, 'alignContent', { value: '', writable: true });
+  // Add other required properties as needed...
+  
+  return style;
+});
 
 // Mock MutationObserver
 global.MutationObserver = vi.fn().mockImplementation(() => ({

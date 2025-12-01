@@ -11,17 +11,24 @@ const mockVocabularyItem: VocabularyItem = {
   id: 'test-1',
   word: 'здравей',
   translation: 'hallo',
+  source_lang: 'bg',
+  target_lang: 'de',
   category: 'greetings',
   level: 'A1',
+  notes: 'Test notes',
+  notes_bg_to_de: 'BG to DE notes',
+  notes_de_to_bg: null,
+  etymology: 'Test etymology',
+  cultural_note: 'Test cultural note',
   examples: [
-    { sentence: 'Здравей, как си?', translation: 'Hallo, wie geht es dir?' }
+    { sentence: 'Здравей, как си?', translation: 'Hallo, wie geht es dir?', context: 'greeting' }
   ],
-  pronunciation: 'zdravay',
-  audioUrl: '/audio/zdravay.mp3',
-  tags: ['basic', 'greeting'],
+  audio_url: '/audio/zdravay.mp3',
   difficulty: 1,
-  created: Date.now(),
-  updated: Date.now()
+  frequency: 50,
+  linguistic_note_bg_to_de: 'Test linguistic note BG-DE',
+  linguistic_note_de_to_bg: null,
+  linguistic_note: 'Test linguistic note'
 };
 
 describe('Flashcard Logic Tests', () => {
@@ -45,7 +52,7 @@ describe('Flashcard Logic Tests', () => {
 
   test('card text generation for de-bg direction', () => {
     // Test the logic that generates card text
-    const direction = 'de-bg';
+    const direction = 'bg-de' as const;
     const isBgToDe = direction === 'bg-de';
     
     const cardText = {

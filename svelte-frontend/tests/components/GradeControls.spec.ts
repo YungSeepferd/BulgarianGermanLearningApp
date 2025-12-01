@@ -29,10 +29,10 @@ describe('GradeControls Component', () => {
       compact: true
     });
     
-    expect(container.querySelector('.grade-controls.compact')).toBeInTheDocument();
+    expect(container!.querySelector('.grade-controls.compact')).toBeInTheDocument();
     
     // In compact mode, should have buttons
-    const buttons = container.querySelectorAll('.grade-button');
+    const buttons = container!.querySelectorAll('.grade-button');
     expect(buttons.length).toBe(4); // 0-3 grades
   });
 
@@ -41,7 +41,7 @@ describe('GradeControls Component', () => {
       showFeedback: true
     });
     
-    expect(container.querySelector('.feedback-section')).toBeInTheDocument();
+    expect(container!.querySelector('.feedback-section')).toBeInTheDocument();
   });
 
   test('hides feedback when showFeedback is false', async () => {
@@ -49,7 +49,7 @@ describe('GradeControls Component', () => {
       showFeedback: false
     });
     
-    expect(container.querySelector('.feedback-section')).toBeNull();
+    expect(container!.querySelector('.feedback-section')).toBeNull();
   });
 
   test('calls onGrade callback when grade button is clicked', async () => {
@@ -108,7 +108,7 @@ describe('GradeControls Component', () => {
     
     // Should show feedback
     await waitFor(() => {
-      expect(container.querySelector('.feedback-message')).toBeInTheDocument();
+      expect(container!.querySelector('.feedback-message')).toBeInTheDocument();
     });
   });
 
@@ -131,7 +131,7 @@ describe('GradeControls Component', () => {
       
       // Check feedback message contains grade label
       await waitFor(() => {
-        const feedback = container.querySelector('.feedback-message');
+        const feedback = container!.querySelector('.feedback-message');
         if (feedback) {
           expect(feedback.textContent).toContain(feedbackMessages[i]);
         }
@@ -143,9 +143,9 @@ describe('GradeControls Component', () => {
     const { container } = await mountGradeControls({});
     
     // Focus on the component
-    const gradeControls = container.querySelector('.grade-controls');
+    const gradeControls = container!.querySelector('.grade-controls');
     if (gradeControls) {
-      gradeControls.focus();
+      (gradeControls as HTMLElement).focus();
     }
     
     // Test keyboard events can be fired
@@ -198,7 +198,7 @@ describe('GradeControls Component', () => {
     const { container } = await mountGradeControls({});
     
     // Check specific accessibility features
-    const buttons = container.querySelectorAll('button[aria-label*="Grade"]');
+    const buttons = container!.querySelectorAll('button[aria-label*="Grade"]');
     
     for (let i = 0; i < buttons.length; i++) {
       const button = buttons[i];
@@ -218,7 +218,7 @@ describe('GradeControls Component', () => {
     
     // Should have screen reader announcement
     await waitFor(() => {
-      const liveRegion = container.querySelector('[aria-live="polite"]');
+      const liveRegion = container!.querySelector('[aria-live="polite"]');
       expect(liveRegion).toBeInTheDocument();
     });
   });
@@ -227,7 +227,7 @@ describe('GradeControls Component', () => {
     const { container } = await mountGradeControls({});
     
     // Basic responsiveness test - component should render
-    expect(container.querySelector('.grade-controls')).toBeInTheDocument();
+    expect(container!.querySelector('.grade-controls')).toBeInTheDocument();
   });
 
   test('handles rapid clicking gracefully', async () => {
@@ -254,8 +254,8 @@ describe('GradeControls Component', () => {
     const { container } = await mountGradeControls({});
     
     // Should have base styling classes
-    expect(container.querySelector('.grade-controls')).toBeInTheDocument();
-    expect(container.querySelectorAll('.grade-button').length).toBe(4);
+    expect(container!.querySelector('.grade-controls')).toBeInTheDocument();
+    expect(container!.querySelectorAll('.grade-button').length).toBe(4);
   });
 
   test('supports keyboard shortcuts with number keys', async () => {

@@ -7,7 +7,7 @@
  */
 
 import { test, expect } from '@playwright/test';
-import { render } from '@testing-library/svelte';
+import { render, screen } from '@testing-library/svelte';
 import type { VocabularyItem } from '$lib/types';
 import { VirtualScrollingManager, DEFAULT_VIRTUAL_SCROLLING_CONFIG } from '$lib/utils/virtual-scrolling';
 import VirtualList from '$lib/components/VirtualList.svelte';
@@ -60,7 +60,7 @@ test.describe('VirtualList Component', () => {
     test('should render all items when virtual scrolling is disabled', async ({ page }) => {
       const items = generateMockVocabularyItems(50);
       
-      const { container } = render(VirtualList, {
+      const { container } = await render(VirtualList, {
         props: {
           items,
           enabled: false,
@@ -76,7 +76,7 @@ test.describe('VirtualList Component', () => {
     test('should render virtual scrolling when enabled with large dataset', async ({ page }) => {
       const items = generateMockVocabularyItems(1000);
       
-      const { container } = render(VirtualList, {
+      const { container } = await render(VirtualList, {
         props: {
           items,
           enabled: true,
@@ -91,14 +91,14 @@ test.describe('VirtualList Component', () => {
     });
 
     test('should handle empty items array', async () => {
-      const { container } = render(VirtualList, {
+      const { container } = await render(VirtualList, {
         props: {
           items: [],
           enabled: true
         }
       });
 
-      await expect(screen.getByText('No vocabulary items to display')).toBeTruthy();
+      expect(screen.getByText('No vocabulary items to display')).toBeTruthy();
     });
   });
 
@@ -106,7 +106,7 @@ test.describe('VirtualList Component', () => {
     test('should only render visible items with overscan', async ({ page }) => {
       const items = generateMockVocabularyItems(500);
       
-      const { container } = render(VirtualList, {
+      const { container } = await render(VirtualList, {
         props: {
           items,
           enabled: true,
@@ -127,7 +127,7 @@ test.describe('VirtualList Component', () => {
       const initialItems = generateMockVocabularyItems(100);
       const updatedItems = generateMockVocabularyItems(200);
       
-      const { container } = render(VirtualList, {
+      const { container, rerender } = await render(VirtualList, {
         props: {
           items: initialItems,
           enabled: true,
@@ -138,7 +138,7 @@ test.describe('VirtualList Component', () => {
       await expect(page.locator('text=Word 0')).toBeVisible();
 
       // Update items - re-render with new props
-      component.rerender({ props: { items: updatedItems } });
+      await rerender({ items: updatedItems });
 
       await expect(page.locator('text=Word 0')).toBeVisible();
       // Should handle the increased item count
@@ -152,15 +152,15 @@ test.describe('VirtualList Component', () => {
     test('should have proper ARIA attributes', async ({ page }) => {
       const items = generateMockVocabularyItems(100);
       
-      const { container } = render(VirtualList, {
+      const { container } = await render(VirtualList, {
         props: {
           items,
           enabled: true
         }
       });
 
-      const container = screen.getByRole('list');
-      expect(container).toHaveAttribute('aria-label', 'Vocabulary list');
+      const listContainer = container.querySelector('[role="list"]');
+      expect(listContainer?.getAttribute('aria-label')).toBe('Vocabulary list');
       
       const listItems = page.locator('role=listitem');
       const itemCount = await listItems.count();
@@ -177,7 +177,7 @@ test.describe('VirtualList Component', () => {
     test('should handle keyboard navigation', async ({ page }) => {
       const items = generateMockVocabularyItems(100);
       
-      const { container } = render(VirtualList, {
+      const { container } = await render(VirtualList, {
         props: {
           items,
           enabled: true
@@ -198,7 +198,7 @@ test.describe('VirtualList Component', () => {
     test('should respect threshold configuration', async ({ page }) => {
       const items = generateMockVocabularyItems(150); // Above threshold
       
-      const { container } = render(VirtualList, {
+      const { container } = await render(VirtualList, {
         props: {
           items,
           enabled: true,
@@ -215,7 +215,7 @@ test.describe('VirtualList Component', () => {
     test('should apply custom CSS classes', async ({ page }) => {
       const items = generateMockVocabularyItems(50);
       
-      const { container } = render(VirtualList, {
+      const { container } = await render(VirtualList, {
         props: {
           items,
           containerClass: 'custom-container',
@@ -223,8 +223,8 @@ test.describe('VirtualList Component', () => {
         }
       });
 
-      const container = screen.getByRole('list');
-      expect(container).toHaveClass('custom-container');
+      const listContainer = container.querySelector('[role="list"]');
+      expect(listContainer?.className).toContain('custom-container');
       
       const itemsList = page.locator('role=listitem');
       const firstItem = itemsList.first();
@@ -349,7 +349,7 @@ test.describe('Virtual Scrolling Integration', () => {
   test('should handle realistic scrolling scenarios', async ({ page }) => {
     const items = generateMockVocabularyItems(2000);
     
-    const { container } = render(VirtualList, {
+    const { container, rerender } = await render(VirtualList, {
       props: {
         items,
         enabled: true,
@@ -366,7 +366,7 @@ test.describe('Virtual Scrolling Integration', () => {
     await expect(listContainer).toBeVisible();
     
     // Simulate scroll by updating component props
-    component.rerender({ props: { scrollPosition: 1000 } });
+    await rerender({ items: generateMockVocabularyItems(100) });
     
     // Should render different items after scroll
     await expect(page.locator('text=Word 0')).not.toBeVisible();
@@ -379,7 +379,7 @@ test.describe('Virtual Scrolling Integration', () => {
     
     const renderStart = performance.now();
     
-    const { container } = render(VirtualList, {
+    const { container } = await render(VirtualList, {
       props: {
         items,
         enabled: true,
@@ -398,7 +398,7 @@ test.describe('Virtual Scrolling Integration', () => {
   test('should handle rapid scroll events', async ({ page }) => {
     const items = generateMockVocabularyItems(1000);
     
-    const { container } = render(VirtualList, {
+    const { container, rerender } = await render(VirtualList, {
       props: {
         items,
         enabled: true
@@ -409,7 +409,7 @@ test.describe('Virtual Scrolling Integration', () => {
 
     // Simulate rapid scrolling
     for (let i = 0; i < 10; i++) {
-      component.rerender({ props: { scrollPosition: i * 100 } });
+      await rerender({ items: generateMockVocabularyItems(i + 1) });
     }
 
     // Should handle rapid scrolling without errors
@@ -427,7 +427,7 @@ test.describe('Virtual Scrolling Performance Benchmarks', () => {
       const items = generateMockVocabularyItems(size);
       const startTime = performance.now();
       
-      const { container } = render(VirtualList, {
+      const { container } = await render(VirtualList, {
         props: { items, enabled: true }
       });
 

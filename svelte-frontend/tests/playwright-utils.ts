@@ -49,25 +49,9 @@ export const mockSessionStats = {
 
 // Extend Playwright test with custom fixtures
 export const test = base.extend({
-  // Custom fixture for mounting components
-  mountComponent: async ({ page }, use) => {
-    const mount = async (componentPath: string, props: Record<string, any> = {}) => {
-      await page.goto('http://localhost:5173'); // Assuming dev server is running
-      
-      // Create a simple test page that can render components
-      await page.evaluate((componentPath, props) => {
-        // This would need to be implemented with a proper test harness
-        // For now, return a mock element
-        const container = document.createElement('div');
-        container.dataset.testid = 'component-container';
-        document.body.append(container);
-        return container;
-      }, componentPath, props);
-      
-      return page.locator('[data-testid="component-container"]');
-    };
-    
-    await use(mount);
+  page: async ({ page }, use) => {
+    await page.goto('http://localhost:5173'); // Assuming dev server is running
+    await use(page);
   }
 });
 
@@ -87,7 +71,7 @@ export async function mountFlashcard(page: Page, props = {}) {
   // Set component props via page context
   await page.evaluate((props) => {
     // This would be implemented with a proper test harness
-    window.testProps = props;
+    (window as any).testProps = props;
   }, defaultProps);
   
   return page.locator('[data-testid="flashcard-container"]');
@@ -102,9 +86,6 @@ export async function mountGradeControls(page: Page, props = {}) {
   
   await page.goto('http://localhost:5173/test/grade-controls');
   
-  await page.evaluate((props) => {
-    window.testProps = props;
-  }, defaultProps);
   
   return page.locator('[data-testid="grade-controls-container"]');
 }
@@ -117,9 +98,6 @@ export async function mountErrorBoundary(page: Page, props = {}) {
   
   await page.goto('http://localhost:5173/test/error-boundary');
   
-  await page.evaluate((props) => {
-    window.testProps = props;
-  }, defaultProps);
   
   return page.locator('[data-testid="error-boundary-container"]');
 }

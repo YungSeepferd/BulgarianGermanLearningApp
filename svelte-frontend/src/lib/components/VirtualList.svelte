@@ -1,6 +1,4 @@
-<script lang="ts">
-  import { onMount, onDestroy, tick } from 'svelte';
-  import { writable, derived } from 'svelte/store';
+<script context="module" lang="ts">
   import type { VocabularyItem } from '../types';
   import type { PerformanceMetrics, DeviceCapabilities } from '../types';
 
@@ -15,6 +13,11 @@
     renderItem?: (item: VocabularyItem, index: number) => string;
     autoDetectHeight?: boolean;
   }
+</script>
+
+<script lang="ts">
+  import { onMount, onDestroy, tick } from 'svelte';
+  import { writable, derived } from 'svelte/store';
 
   // Default props
   const defaultProps: Required<Omit<VirtualListProps, 'items'>> = {
@@ -37,16 +40,28 @@
     autoDetectHeight: false
   };
 
-  // Export props for TypeScript
-  export let items: VocabularyItem[] = [];
-  export let itemHeight: number = defaultProps.itemHeight;
-  export let overscan: number = defaultProps.overscan;
-  export let threshold: number = defaultProps.threshold;
-  export let enabled: boolean = defaultProps.enabled;
-  export let containerClass: string = defaultProps.containerClass;
-  export let itemClass: string = defaultProps.itemClass;
-  export let renderItem: (item: VocabularyItem, index: number) => string = defaultProps.renderItem;
-  export let autoDetectHeight: boolean = defaultProps.autoDetectHeight;
+  // Props using Svelte 5 syntax
+  const {
+    items = [],
+    itemHeight = defaultProps.itemHeight,
+    overscan = defaultProps.overscan,
+    threshold = defaultProps.threshold,
+    enabled = defaultProps.enabled,
+    containerClass = defaultProps.containerClass,
+    itemClass = defaultProps.itemClass,
+    renderItem = defaultProps.renderItem,
+    autoDetectHeight = defaultProps.autoDetectHeight
+  } = $props<{
+    items?: VocabularyItem[];
+    itemHeight?: number;
+    overscan?: number;
+    threshold?: number;
+    enabled?: boolean;
+    containerClass?: string;
+    itemClass?: string;
+    renderItem?: (item: VocabularyItem, index: number) => string;
+    autoDetectHeight?: boolean;
+  }>();
 
   // Internal state
   let container: HTMLElement;
@@ -59,6 +74,9 @@
   // Stores for reactive state
   const visibleRange = writable({ start: 0, end: 0 });
   const totalHeight = writable(0);
+  const itemsStore = writable(items);
+  const measuredHeightsStore = writable(new Map<number, number>());
+  const itemHeightStore = writable(itemHeight);
   const performanceMetrics = writable<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
@@ -70,16 +88,16 @@
 
   // Derived stores
   const visibleItems = derived(
-    [visibleRange, $ => items],
-    ([range, items]) => {
+    [visibleRange, itemsStore],
+    ([range, items]: [{ start: number; end: number }, VocabularyItem[]]) => {
       if (!enabled || items.length <= threshold) {
-        return items.map((item, index) => ({ item, index, visible: true }));
+        return items.map((item: VocabularyItem, index: number) => ({ item, index, visible: true }));
       }
 
       const start = Math.max(0, range.start - overscan);
       const end = Math.min(items.length, range.end + overscan);
       
-      return items.slice(start, end).map((item, relativeIndex) => ({
+      return items.slice(start, end).map((item: VocabularyItem, relativeIndex: number) => ({
         item,
         index: start + relativeIndex,
         visible: true
@@ -88,8 +106,8 @@
   );
 
   const transformOffset = derived(
-    [visibleRange, $ => items, $ => itemHeight, $ => measuredHeights],
-    ([range, items, height, measured]) => {
+    [visibleRange, itemsStore, itemHeightStore, measuredHeightsStore],
+    ([range, items, height, measured]: [{ start: number; end: number }, VocabularyItem[], number, Map<number, number>]) => {
       if (!enabled || items.length <= threshold) {
         return 0;
       }
@@ -169,6 +187,10 @@
       
       if (height > 0) {
         measuredHeights.set(index, height);
+        measuredHeightsStore.update(map => {
+          map.set(index, height);
+          return map;
+        });
       }
     }
 
@@ -300,9 +322,10 @@
     }
   });
 
-  // React to items changes
-  $: {
+  // React to items changes using Svelte 5 effects
+  $effect(() => {
     if (items) {
+      itemsStore.set(items);
       updateTotalHeight();
       const newRange = calculateVisibleRange();
       visibleRange.set(newRange);
@@ -310,18 +333,31 @@
       if (autoDetectHeight) {
         // Reset measured heights when items change
         measuredHeights.clear();
+        measuredHeightsStore.set(new Map<number, number>());
         // Schedule height measurement
         setTimeout(() => measureItemHeights(), 0);
       }
     }
-  }
+  });
+
+  // React to itemHeight changes
+  $effect(() => {
+    if (itemHeight !== undefined) {
+      itemHeightStore.set(itemHeight);
+      updateTotalHeight();
+      const newRange = calculateVisibleRange();
+      visibleRange.set(newRange);
+    }
+  });
 
   // React to enabled changes
-  $: if (enabled !== undefined) {
-    updateTotalHeight();
-    const newRange = calculateVisibleRange();
-    visibleRange.set(newRange);
-  }
+  $effect(() => {
+    if (enabled !== undefined) {
+      updateTotalHeight();
+      const newRange = calculateVisibleRange();
+      visibleRange.set(newRange);
+    }
+  });
 </script>
 
 <div class="virtual-list-wrapper">
@@ -332,13 +368,13 @@
     role="list"
     aria-label="Vocabulary list"
   >
-    {#if $visibleItems.length === 0}
+    {#if ($visibleItems as any).length === 0}
       <div class="virtual-list-empty" role="status" aria-live="polite">
         <p>No vocabulary items to display</p>
       </div>
     {:else if !enabled || items.length <= threshold}
       <!-- Render all items when virtual scrolling is disabled -->
-      {#each $visibleItems as { item, index } (item.id)}
+      {#each ($visibleItems as any) as { item, index } (item.id)}
         <div
           class="{itemClass}"
           data-index={index}
@@ -362,7 +398,7 @@
           style="transform: translateY({$transformOffset}px); position: absolute; top: 0; left: 0; right: 0;"
           role="presentation"
         >
-          {#each $visibleItems as { item, index } (item.id)}
+          {#each ($visibleItems as any) as { item, index } (item.id)}
             <div
               class="{itemClass}"
               data-index={index}
@@ -385,7 +421,7 @@
     <div class="virtual-list-debug" style="position: fixed; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: white; padding: 10px; font-size: 12px; z-index: 1000;">
       <div>Items: {items.length}</div>
       <div>Visible: {$visibleRange.start} - {$visibleRange.end}</div>
-      <div>Rendering: {$visibleItems.length}</div>
+      <div>Rendering: {($visibleItems as any).length}</div>
       <div>Load Time: {$performanceMetrics.loadTime.toFixed(2)}ms</div>
       <div>Render Time: {$performanceMetrics.renderTime.toFixed(2)}ms</div>
     </div>

@@ -36,7 +36,7 @@ describe('Simple Flashcard Test', () => {
     // Render the component directly without SvelteKit infrastructure
     const { container } = render(Flashcard, {
       props: {
-        vocabularyItem: mockVocabularyItem,
+        vocabularyItem: mockVocabularyItem as any,
         direction: 'bg-de',
         showProgress: true
       }
@@ -60,7 +60,7 @@ describe('Simple Flashcard Test', () => {
   test('flips card when clicked', async () => {
     const { container } = render(Flashcard, {
       props: {
-        vocabularyItem: mockVocabularyItem,
+        vocabularyItem: mockVocabularyItem as any,
         direction: 'bg-de'
       }
     });
@@ -85,7 +85,7 @@ describe('Simple Flashcard Test', () => {
     
     const { container } = render(Flashcard, {
       props: {
-        vocabularyItem: mockVocabularyItem,
+        vocabularyItem: mockVocabularyItem as any,
         direction: 'bg-de',
         onGrade: mockOnGrade
       }

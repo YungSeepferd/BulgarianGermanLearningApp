@@ -4,7 +4,7 @@
  */
 
 import { render, fireEvent, waitFor } from '@testing-library/svelte';
-import type { ComponentType } from 'svelte';
+import type { ComponentType, SvelteComponent } from 'svelte';
 import type { VocabularyItem, SessionStats } from '$lib/types/index.js';
 import { vi } from 'vitest';
 
@@ -13,56 +13,38 @@ export const mockVocabularyItem: VocabularyItem = {
   id: 'test-1',
   word: 'здравей',
   translation: 'hallo',
+  source_lang: 'bg',
+  target_lang: 'de',
   category: 'greetings',
   level: 'A1',
+  notes: 'Test notes',
+  notes_bg_to_de: 'BG to DE notes',
+  notes_de_to_bg: null,
+  etymology: 'Test etymology',
+  cultural_note: 'Test cultural note',
   examples: [
-    { sentence: 'Здравей, как си?', translation: 'Hallo, wie geht es dir?' }
+    {
+      sentence: 'Здравей, как си?',
+      translation: 'Hallo, wie geht es dir?',
+      context: 'Greeting context'
+    }
   ],
-  pronunciation: 'zdravay',
-  audioUrl: '/audio/zdravay.mp3',
-  tags: ['basic', 'greeting'],
+  audio_url: '/audio/zdravay.mp3',
   difficulty: 1,
-  created: Date.now(),
-  updated: Date.now()
+  frequency: 50,
+  linguistic_note_bg_to_de: 'Test linguistic note BG-DE',
+  linguistic_note_de_to_bg: null,
+  linguistic_note: 'Test linguistic note'
 };
 
 // Mock session stats for testing
 export const mockSessionStats: SessionStats = {
   totalCards: 10,
-  studiedCards: 5,
   correctAnswers: 4,
-  incorrectAnswers: 1,
-  averageResponseTime: 2500,
-  sessionDuration: 300_000,
   startTime: new Date(Date.now() - 300_000),
-  currentStreak: 3,
-  bestStreak: 5,
-  accuracy: 0.8,
-  efficiency: 0.85,
-  difficultyDistribution: {
-    A1: 3,
-    A2: 2,
-    B1: 0,
-    B2: 0,
-    C1: 0,
-    C2: 0
-  },
-  categoryPerformance: {
-    greetings: { correct: 2, total: 2, accuracy: 1 },
-    nouns: { correct: 1, total: 2, accuracy: 0.5 },
-    verbs: { correct: 1, total: 1, accuracy: 1 }
-  },
-  weakAreas: ['nouns'],
-  strongAreas: ['greetings', 'verbs'],
-  recommendations: [
-    'Focus on noun declensions',
-    'Review basic greetings'
-  ],
-  progressHistory: [
-    { timestamp: new Date(Date.now() - 200_000), accuracy: 0.7, cardsStudied: 2 },
-    { timestamp: new Date(Date.now() - 100_000), accuracy: 0.8, cardsStudied: 3 },
-    { timestamp: new Date(), accuracy: 0.8, cardsStudied: 5 }
-  ]
+  reviewedCards: 10,
+  grades: [3, 4, 2, 5],
+  endTime: new Date()
 };
 
 // Default props for Flashcard component
@@ -139,7 +121,7 @@ export const defaultLoadingSpinnerProps = {
  * @param props - Props to pass to the component
  * @returns Render result with query helpers
  */
-export async function safeRender<T extends ComponentType>(
+export async function safeRender<T extends ComponentType | any>(
   Component: T,
   props: Record<string, any> = {}
 ) {
@@ -151,7 +133,7 @@ export async function safeRender<T extends ComponentType>(
 
     // Always use actual render in test environment
     // Vitest runs with jsdom, so we should have window and document
-    const result = render(Component, { props });
+    const result = render(Component as any, { props });
     
     // Wait a tick for the component to mount and update
     await new Promise(resolve => setTimeout(resolve, 0));
@@ -546,40 +528,11 @@ export function createMockVocabulary(count = 10): VocabularyItem[] {
 export function createMockSessionStats(overrides: Partial<SessionStats> = {}): SessionStats {
   const baseStats: SessionStats = {
     totalCards: 10,
-    studiedCards: 5,
     correctAnswers: 4,
-    incorrectAnswers: 1,
-    averageResponseTime: 2500,
-    sessionDuration: 300_000,
     startTime: new Date(Date.now() - 300_000),
-    currentStreak: 3,
-    bestStreak: 5,
-    accuracy: 0.8,
-    efficiency: 0.85,
-    difficultyDistribution: {
-      A1: 3,
-      A2: 2,
-      B1: 0,
-      B2: 0,
-      C1: 0,
-      C2: 0
-    },
-    categoryPerformance: {
-      greetings: { correct: 2, total: 2, accuracy: 1 },
-      nouns: { correct: 1, total: 2, accuracy: 0.5 },
-      verbs: { correct: 1, total: 1, accuracy: 1 }
-    },
-    weakAreas: ['nouns'],
-    strongAreas: ['greetings', 'verbs'],
-    recommendations: [
-      'Focus on noun declensions',
-      'Review basic greetings'
-    ],
-    progressHistory: [
-      { timestamp: new Date(Date.now() - 200_000), accuracy: 0.7, cardsStudied: 2 },
-      { timestamp: new Date(Date.now() - 100_000), accuracy: 0.8, cardsStudied: 3 },
-      { timestamp: new Date(), accuracy: 0.8, cardsStudied: 5 }
-    ]
+    reviewedCards: 10,
+    grades: [3, 4, 2, 5],
+    endTime: new Date()
   };
   
   return { ...baseStats, ...overrides };
@@ -691,9 +644,8 @@ export { expect } from 'vitest';
 export type { RenderResult } from '@testing-library/svelte';
 export { fireEvent, render } from '@testing-library/svelte';
 
-// Import and re-export testing-library matchers
-import * as matchers from '@testing-library/jest-dom';
-export { matchers };
+// Import jest-dom matchers - they are automatically added to expect
+import '@testing-library/jest-dom';
 
 // Export testing library query functions
 export const queries = {
@@ -779,6 +731,5 @@ export const toBeDisabled = (element: HTMLElement) => {
   expect(element.hasAttribute('disabled')).toBeTruthy();
 };
 
-export const toBeTruthy = expect.toBeTruthy;
-export const toBeFalsy = expect.toBeFalsy;
-export const toBeNull = expect.toBeNull;
+// Jest-style matchers are now handled by @testing-library/jest-dom
+// No need to re-export them manually

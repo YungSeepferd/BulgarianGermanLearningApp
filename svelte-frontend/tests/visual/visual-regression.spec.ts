@@ -357,35 +357,35 @@ test.describe('Visual Regression Tests', () => {
                     <p class="stat-value">${mockStats.totalCards}</p>
                   </div>
                   <div class="stat-card">
-                    <h4>Accuracy</h4>
-                    <p class="stat-value">${mockStats.accuracyRate}%</p>
+                    <h4>Reviewed Cards</h4>
+                    <p class="stat-value">${mockStats.reviewedCards}</p>
                   </div>
                   <div class="stat-card">
-                    <h4>Average Grade</h4>
-                    <p class="stat-value">${mockStats.averageGrade}</p>
+                    <h4>Correct Answers</h4>
+                    <p class="stat-value">${mockStats.correctAnswers}</p>
                   </div>
                   <div class="stat-card">
-                    <h4>Study Time</h4>
-                    <p class="stat-value">${Math.floor(mockStats.studyTime / 60)}:${(mockStats.studyTime % 60).toString().padStart(2, '0')}</p>
+                    <h4>Duration</h4>
+                    <p class="stat-value">${mockStats.endTime && mockStats.startTime ? Math.floor((mockStats.endTime.getTime() - mockStats.startTime.getTime()) / 1000 / 60) + ':' + (((mockStats.endTime.getTime() - mockStats.startTime.getTime()) / 1000) % 60).toString().padStart(2, '0') : '00:00'}</p>
                   </div>
                 </div>
                 <div class="grade-distribution">
                   <h4>Grade Distribution</h4>
                   <div class="distribution-chart">
-                    <div class="grade-bar grade-1" style="width: ${mockStats.gradeDistribution[1] * 20}%">
-                      <span>1: ${mockStats.gradeDistribution[1]}</span>
+                    <div class="grade-bar grade-1" style="width: ${(mockStats.grades.filter(g => g === 1).length / mockStats.grades.length) * 20}%">
+                      <span>1: ${mockStats.grades.filter(g => g === 1).length}</span>
                     </div>
-                    <div class="grade-bar grade-2" style="width: ${mockStats.gradeDistribution[2] * 20}%">
-                      <span>2: ${mockStats.gradeDistribution[2]}</span>
+                    <div class="grade-bar grade-2" style="width: ${(mockStats.grades.filter(g => g === 2).length / mockStats.grades.length) * 20}%">
+                      <span>2: ${mockStats.grades.filter(g => g === 2).length}</span>
                     </div>
-                    <div class="grade-bar grade-3" style="width: ${mockStats.gradeDistribution[3] * 20}%">
-                      <span>3: ${mockStats.gradeDistribution[3]}</span>
+                    <div class="grade-bar grade-3" style="width: ${(mockStats.grades.filter(g => g === 3).length / mockStats.grades.length) * 20}%">
+                      <span>3: ${mockStats.grades.filter(g => g === 3).length}</span>
                     </div>
-                    <div class="grade-bar grade-4" style="width: ${mockStats.gradeDistribution[4] * 20}%">
-                      <span>4: ${mockStats.gradeDistribution[4]}</span>
+                    <div class="grade-bar grade-4" style="width: ${(mockStats.grades.filter(g => g === 4).length / mockStats.grades.length) * 20}%">
+                      <span>4: ${mockStats.grades.filter(g => g === 4).length}</span>
                     </div>
-                    <div class="grade-bar grade-5" style="width: ${mockStats.gradeDistribution[5] * 20}%">
-                      <span>5: ${mockStats.gradeDistribution[5]}</span>
+                    <div class="grade-bar grade-5" style="width: ${(mockStats.grades.filter(g => g === 5).length / mockStats.grades.length) * 20}%">
+                      <span>5: ${mockStats.grades.filter(g => g === 5).length}</span>
                     </div>
                   </div>
                 </div>
@@ -530,9 +530,7 @@ test.describe('Visual Regression Tests', () => {
         await page.waitForSelector('[data-testid="practice-page"]', { timeout: 10_000 });
         
         // Take full page screenshot
-        await expect(page.locator('body')).toHaveScreenshot(`practice-page-${viewport.name}.png`, {
-          fullPage: true
-        });
+        await expect(page.locator('body')).toHaveScreenshot(`practice-page-${viewport.name}.png`);
       });
     }
 
@@ -542,19 +540,19 @@ test.describe('Visual Regression Tests', () => {
       // Test loading state
       await page.goto('/practice');
       await page.waitForSelector('[data-testid="loading-spinner"]', { timeout: 5000 });
-      await expect(page.locator('body')).toHaveScreenshot('practice-page-loading.png', { fullPage: true });
+      await expect(page.locator('body')).toHaveScreenshot('practice-page-loading.png');
       
       // Test loaded state
       await page.waitForSelector('[data-testid="flashcard-container"]', { timeout: 5000 });
-      await expect(page.locator('body')).toHaveScreenshot('practice-page-loaded.png', { fullPage: true });
+      await expect(page.locator('body')).toHaveScreenshot('practice-page-loaded.png');
       
       // Test flipped card state
       await page.locator('[data-testid="flashcard-container"]').click();
-      await expect(page.locator('body')).toHaveScreenshot('practice-page-flipped.png', { fullPage: true });
+      await expect(page.locator('body')).toHaveScreenshot('practice-page-flipped.png');
       
       // Test stats visible
       await page.locator('[data-testid="session-stats-toggle"]').click();
-      await expect(page.locator('body')).toHaveScreenshot('practice-page-stats.png', { fullPage: true });
+      await expect(page.locator('body')).toHaveScreenshot('practice-page-stats.png');
     });
   });
 
@@ -574,9 +572,7 @@ test.describe('Visual Regression Tests', () => {
         
         await page.waitForSelector('[data-testid="flashcard-container"]', { timeout: 5000 });
         
-        await expect(page.locator('body')).toHaveScreenshot(`practice-page-${theme}-theme.png`, {
-          fullPage: true
-        });
+        await expect(page.locator('body')).toHaveScreenshot(`practice-page-${theme}-theme.png`);
       });
     }
   });
@@ -599,9 +595,7 @@ test.describe('Visual Regression Tests', () => {
         await page.goto('/practice');
         await page.waitForSelector('[data-testid="flashcard-container"]', { timeout: 10_000 });
         
-        await expect(page.locator('body')).toHaveScreenshot(`responsive-${viewport.name}.png`, {
-          fullPage: true
-        });
+        await expect(page.locator('body')).toHaveScreenshot(`responsive-${viewport.name}.png`);
       });
     }
   });
@@ -615,11 +609,11 @@ test.describe('Visual Regression Tests', () => {
       
       // Hover over flashcard
       await page.locator('[data-testid="flashcard-container"]').hover();
-      await expect(page.locator('body')).toHaveScreenshot('hover-flashcard.png', { fullPage: true });
+      await expect(page.locator('body')).toHaveScreenshot('hover-flashcard.png');
       
       // Hover over grade buttons
       await page.locator('[data-testid="grade-button-3"]').hover();
-      await expect(page.locator('body')).toHaveScreenshot('hover-grade-button.png', { fullPage: true });
+      await expect(page.locator('body')).toHaveScreenshot('hover-grade-button.png');
     });
 
     test('Focus states', async ({ page }) => {
@@ -630,11 +624,11 @@ test.describe('Visual Regression Tests', () => {
       
       // Focus flashcard
       await page.locator('[data-testid="flashcard-container"]').focus();
-      await expect(page.locator('body')).toHaveScreenshot('focus-flashcard.png', { fullPage: true });
+      await expect(page.locator('body')).toHaveScreenshot('focus-flashcard.png');
       
       // Focus grade button
       await page.locator('[data-testid="grade-button-3"]').focus();
-      await expect(page.locator('body')).toHaveScreenshot('focus-grade-button.png', { fullPage: true });
+      await expect(page.locator('body')).toHaveScreenshot('focus-grade-button.png');
     });
 
     test('Active states', async ({ page }) => {
@@ -645,7 +639,7 @@ test.describe('Visual Regression Tests', () => {
       
       // Press and hold grade button
       await page.locator('[data-testid="grade-button-3"]').dispatchEvent('mousedown');
-      await expect(page.locator('body')).toHaveScreenshot('active-grade-button.png', { fullPage: true });
+      await expect(page.locator('body')).toHaveScreenshot('active-grade-button.png');
       
       // Release
       await page.locator('[data-testid="grade-button-3"]').dispatchEvent('mouseup');

@@ -16,6 +16,9 @@ import {
   createMockVocabulary
 } from '../test-utils';
 
+// Helper function to wait for animations
+const waitForAnimation = () => waitFor(() => {}, { timeout: 100 });
+
 describe('Flashcard Component', () => {
   beforeEach(() => {
     vi.clearAllMocks();

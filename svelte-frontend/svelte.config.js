@@ -29,7 +29,7 @@ const config = {
 	
 	// Enable Svelte 5 runes mode for full Svelte 5 compatibility
 	compilerOptions: {
-	  runes: true,
+	  runes: true, // Enable Svelte 5 runes now that TypeScript errors are fixed
 	  enableSourcemap: true
 	},
 

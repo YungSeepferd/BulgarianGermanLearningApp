@@ -18,9 +18,9 @@ describe('LoadingSpinner Component', () => {
     expect(container).toBeTruthy();
     
     // Check that loading spinner elements are present
-    expect(container.querySelector('.loading-container')).toBeTruthy();
-    expect(container.querySelector('.loading-content')).toBeTruthy();
-    expect(container.querySelector('.spinner')).toBeTruthy();
+    expect(container!.querySelector('.loading-container')).toBeTruthy();
+    expect(container!.querySelector('.loading-content')).toBeTruthy();
+    expect(container!.querySelector('.spinner')).toBeTruthy();
     
     // Check accessibility
     await checkAccessibility(LoadingSpinner, {});
@@ -32,7 +32,7 @@ describe('LoadingSpinner Component', () => {
     });
     
     expect(container).toBeTruthy();
-    const loadingText = container.querySelector('.loading-text');
+    const loadingText = container!.querySelector('.loading-text');
     expect(loadingText).toBeTruthy();
     expect(loadingText?.textContent).toContain('Loading vocabulary...');
   });
@@ -44,7 +44,7 @@ describe('LoadingSpinner Component', () => {
     });
     
     expect(container).toBeTruthy();
-    const loadingText = container.querySelector('.loading-text');
+    const loadingText = container!.querySelector('.loading-text');
     expect(loadingText).toBeFalsy();
   });
 
@@ -57,7 +57,7 @@ describe('LoadingSpinner Component', () => {
       });
       
       expect(container).toBeTruthy();
-      const spinner = container.querySelector('.spinner');
+      const spinner = container!.querySelector('.spinner');
       expect(spinner).toBeTruthy();
       expect(spinner?.className).toContain(`w-${size === 'small' ? '4' : (size === 'medium' ? '8' : '12')}`);
       expect(spinner?.className).toContain(`h-${size === 'small' ? '4' : (size === 'medium' ? '8' : '12')}`);
@@ -76,22 +76,22 @@ describe('LoadingSpinner Component', () => {
       
       switch (variant) {
       case 'spinner': {
-        expect(container.querySelector('.spinner')).toBeTruthy();
+        expect(container!.querySelector('.spinner')).toBeTruthy();
         break;
       }
       case 'dots': {
-        expect(container.querySelector('.dots-container')).toBeTruthy();
-        expect(container.querySelectorAll('.dot').length).toBe(3);
+        expect(container!.querySelector('.dots-container')).toBeTruthy();
+        expect(container!.querySelectorAll('.dot').length).toBe(3);
         break;
       }
       case 'pulse': {
-        expect(container.querySelector('.pulse-container')).toBeTruthy();
-        expect(container.querySelector('.pulse-dot')).toBeTruthy();
+        expect(container!.querySelector('.pulse-container')).toBeTruthy();
+        expect(container!.querySelector('.pulse-dot')).toBeTruthy();
         break;
       }
       case 'bars': {
-        expect(container.querySelector('.bars-container')).toBeTruthy();
-        expect(container.querySelectorAll('.bar').length).toBe(4);
+        expect(container!.querySelector('.bars-container')).toBeTruthy();
+        expect(container!.querySelectorAll('.bar').length).toBe(4);
         break;
       }
       // No default
@@ -108,7 +108,7 @@ describe('LoadingSpinner Component', () => {
       });
       
       expect(container).toBeTruthy();
-      const spinner = container.querySelector('.spinner');
+      const spinner = container!.querySelector('.spinner');
       expect(spinner).toBeTruthy();
       
       // Check that appropriate color classes are applied
@@ -144,7 +144,7 @@ describe('LoadingSpinner Component', () => {
     });
     
     expect(container).toBeTruthy();
-    expect(container.querySelector('.loading-container.centered')).toBeTruthy();
+    expect(container!.querySelector('.loading-container.centered')).toBeTruthy();
   });
 
   it('shows overlay when overlay is true', async () => {
@@ -153,8 +153,8 @@ describe('LoadingSpinner Component', () => {
     });
     
     expect(container).toBeTruthy();
-    expect(container.querySelector('.loading-container.overlay')).toBeTruthy();
-    const loadingContainer = container.querySelector('.loading-container');
+    expect(container!.querySelector('.loading-container.overlay')).toBeTruthy();
+    const loadingContainer = container!.querySelector('.loading-container');
     expect(loadingContainer).toBeTruthy();
     expect(getComputedStyle(loadingContainer!).backgroundColor).toContain('rgba');
   });
@@ -165,10 +165,10 @@ describe('LoadingSpinner Component', () => {
     });
     
     expect(container).toBeTruthy();
-    expect(container.querySelector('.loading-container.fullscreen')).toBeTruthy();
+    expect(container!.querySelector('.loading-container.fullscreen')).toBeTruthy();
     
     // Should cover the entire viewport
-    const loadingContainer = container.querySelector('.loading-container');
+    const loadingContainer = container!.querySelector('.loading-container');
     expect(loadingContainer).toBeTruthy();
     expect(loadingContainer?.clientWidth).toBeGreaterThan(300);
     expect(loadingContainer?.clientHeight).toBeGreaterThan(300);
@@ -180,11 +180,11 @@ describe('LoadingSpinner Component', () => {
     });
     
     // Should not be visible immediately
-    expect(container.querySelector('.loading-container')).toBeFalsy();
+    expect(container!.querySelector('.loading-container')).toBeFalsy();
     
     // Should be visible after delay
     await new Promise(resolve => setTimeout(resolve, 1200));
-    expect(container.querySelector('.loading-container')).toBeTruthy();
+    expect(container!.querySelector('.loading-container')).toBeTruthy();
   });
 
   it('hides after timeout', async () => {
@@ -193,11 +193,11 @@ describe('LoadingSpinner Component', () => {
     });
     
     // Should be visible initially
-    expect(container.querySelector('.loading-container')).toBeTruthy();
+    expect(container!.querySelector('.loading-container')).toBeTruthy();
     
     // Should hide after timeout
     await new Promise(resolve => setTimeout(resolve, 1200));
-    expect(container.querySelector('.loading-container')).toBeFalsy();
+    expect(container!.querySelector('.loading-container')).toBeFalsy();
   });
 
   it('provides proper ARIA attributes', async () => {
@@ -206,7 +206,7 @@ describe('LoadingSpinner Component', () => {
     });
     
     expect(container).toBeTruthy();
-    const loadingContainer = container.querySelector('.loading-container');
+    const loadingContainer = container!.querySelector('.loading-container');
     expect(loadingContainer).toBeTruthy();
     
     // Check ARIA attributes
@@ -223,7 +223,7 @@ describe('LoadingSpinner Component', () => {
     expect(container).toBeTruthy();
     
     // Check for screen reader only content
-    const srOnly = container.querySelector('.sr-only');
+    const srOnly = container!.querySelector('.sr-only');
     expect(srOnly).toBeTruthy();
     expect(srOnly?.textContent).toContain('Loading vocabulary..., please wait');
   });

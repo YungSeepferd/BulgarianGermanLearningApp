@@ -51,7 +51,7 @@ describe('Flashcard Debug Test - Direct Import', () => {
       
     } catch (error) {
       console.error('Error in direct import render test:', error);
-      console.error('Error stack:', error.stack);
+      console.error('Error stack:', (error as any).stack);
       throw error;
     }
   });

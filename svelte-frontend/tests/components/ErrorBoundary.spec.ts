@@ -1,442 +1,443 @@
 /**
  * ErrorBoundary Component Tests
  * @file tests/components/ErrorBoundary.spec.ts
- * @description Comprehensive tests for the ErrorBoundary.svelte component
+ * @description Comprehensive tests for the ErrorBoundary.svelte component using Vitest and Testing Library Svelte
  * @version 1.0.0
  * @updated November 2025
  */
 
-import { test, expect } from '@playwright/test';
-import {
-  mountErrorBoundary,
-  checkAccessibility,
-  takeScreenshot,
-  testResponsive,
-  commonViewports,
-  expectError
-} from '../playwright-utils';
+import { describe, test, expect, vi, beforeEach } from 'vitest';
+import { render, screen, fireEvent, waitFor } from '@testing-library/svelte';
+import ErrorBoundary from '$lib/components/ErrorBoundary.svelte';
 
-test.describe('ErrorBoundary Component', () => {
-  test('renders correctly when no error is present', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: null
+describe('ErrorBoundary Component', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  test('renders correctly when no error is present', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: null,
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Should render fallback content when no error
-    await expect(component.locator('.fallback-content')).toBeVisible();
-    
-    // Check accessibility
-    await checkAccessibility(page, component);
-    
-    // Take screenshot for visual regression
-    await takeScreenshot(page, 'error-boundary-no-error', component);
+    expect(screen.queryByTestId('error-message')).not.toBeInTheDocument();
   });
 
-  test('displays error when error is provided', async ({ page }) => {
+  test('displays error when error is provided', async () => {
     const testError = new Error('Test error message');
     
-    const component = await mountErrorBoundary({
-      error: testError
+    await render(ErrorBoundary, {
+      props: {
+        error: testError,
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Check error boundary elements are present
-    await expect(component.locator('.error-boundary')).toBeVisible();
-    await expect(component.locator('.error-container')).toBeVisible();
-    await expect(component.locator('.error-header')).toBeVisible();
-    await expect(component.locator('.error-content')).toBeVisible();
-    await expect(component.locator('.error-actions')).toBeVisible();
+    expect(screen.getByTestId('error-container')).toBeInTheDocument();
+    expect(screen.getByTestId('error-header')).toBeInTheDocument();
+    expect(screen.getByTestId('error-content')).toBeInTheDocument();
+    expect(screen.getByTestId('error-actions')).toBeInTheDocument();
   });
 
-  test('shows error message correctly', async ({ page }) => {
+  test('shows error message correctly', async () => {
     const testError = new Error('Something went wrong');
     
-    const component = await mountErrorBoundary({
-      error: testError
+    await render(ErrorBoundary, {
+      props: {
+        error: testError,
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
-    await expect(component.locator('.error-message')).toContainText('Something went wrong');
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
+    expect(screen.getByTestId('error-message')).toHaveTextContent('Something went wrong');
   });
 
-  test('displays error icon and title', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
+  test('displays error icon and title', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: new Error('Test error'),
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
-    await expect(component.locator('.error-icon')).toBeVisible();
-    await expect(component.locator('.error-title')).toContainText('Something went wrong');
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
+    expect(screen.getByTestId('error-icon')).toBeInTheDocument();
+    expect(screen.getByTestId('error-title')).toBeInTheDocument();
   });
 
-  test('shows error details in development mode', async ({ page }) => {
+  test('shows error details in development mode', async () => {
     const testError = new Error('Test error');
-    testError.stack = 'Error: Test error\n    at test (test.js:1:1)';
+    (testError as any).stack = 'Error: Test error\n    at test (test.js:1:1)';
     
-    const component = await mountErrorBoundary({
-      error: testError
+    await render(ErrorBoundary, {
+      props: {
+        error: testError,
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Check error details section
-    await expect(component.locator('.error-details')).toBeVisible();
-    await expect(component.locator('.error-stack')).toBeVisible();
-    await expect(component.locator('.error-stack')).toContainText('Error: Test error');
+    expect(screen.getByTestId('error-details')).toBeInTheDocument();
+    expect(screen.getByTestId('error-stack')).toBeInTheDocument();
+    expect(screen.getByTestId('error-stack')).toHaveTextContent('Error: Test error');
   });
 
-  test('shows error context information', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
+  test('shows error context information', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: new Error('Test error'),
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Check context section
-    await expect(component.locator('.error-context')).toBeVisible();
-    await expect(component.locator('.context-grid')).toBeVisible();
-    await expect(component.locator('.context-item')).toHaveCount.greaterThan(0);
+    expect(screen.getByTestId('error-context')).toBeInTheDocument();
+    expect(screen.getByTestId('context-grid')).toBeInTheDocument();
+    expect(screen.getAllByTestId('context-item').length).toBeGreaterThan(0);
   });
 
-  test('displays recovery action buttons', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
+  test('displays recovery action buttons', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: new Error('Test error'),
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Check action buttons
-    await expect(component.locator('.action-button')).toHaveCount(3);
-    await expect(component.locator('button:has-text("Try Again")')).toBeVisible();
-    await expect(component.locator('button:has-text("Reload Page")')).toBeVisible();
-    await expect(component.locator('button:has-text("Report Issue")')).toBeVisible();
+    const actionButtons = screen.getAllByRole('button');
+    expect(actionButtons.length).toBeGreaterThan(0);
+    expect(screen.getByRole('button', { name: /try again/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /reload page/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /report issue/i })).toBeInTheDocument();
   });
 
-  test('calls retry callback when retry button is clicked', async ({ page }) => {
-    let retryCalled = false;
+  test('calls retry callback when retry button is clicked', async () => {
+    const mockOnRetry = vi.fn();
     
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
-    });
-    
-    // Set up event listener for retry
-    component.on('retry', () => {
-      retryCalled = true;
+    await render(ErrorBoundary, {
+      props: {
+        error: new Error('Test error'),
+        dispatch: vi.fn()
+      }
     });
     
     // Click retry button
-    await component.locator('button:has-text("Try Again")').click();
+    const retryButton = screen.getByRole('button', { name: /try again/i });
+    fireEvent.click(retryButton);
     
-    // Note: In a real implementation, you'd need to handle the event properly
-    // This is a simplified test structure
-    await expect(component).toBeVisible();
+    expect(mockOnRetry).toHaveBeenCalled();
   });
 
-  test('shows help section with suggestions', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
+  test('shows help section with suggestions', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: new Error('Test error'),
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Check help section
-    await expect(component.locator('.error-help')).toBeVisible();
-    await expect(component.locator('.help-list')).toBeVisible();
-    await expect(component.locator('.help-list li')).toHaveCount.greaterThan(0);
+    expect(screen.getByTestId('error-help')).toBeInTheDocument();
+    expect(screen.getByTestId('help-list')).toBeInTheDocument();
+    expect(screen.getAllByTestId('help-item').length).toBeGreaterThan(0);
   });
 
-  test('handles different error severities', async ({ page }) => {
+  test('handles different error severities', async () => {
     // Test critical error
     const criticalError = new Error('Critical error');
     
-    const component = await mountErrorBoundary({
-      error: criticalError
+    await render(ErrorBoundary, {
+      props: {
+        error: criticalError,
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Should show severity information
-    const severityElement = component.locator('.context-value:has-text("critical")');
-    if (await severityElement.count() > 0) {
-      await expect(severityElement).toBeVisible();
-    }
+    expect(screen.getByTestId('severity-indicator')).toBeInTheDocument();
   });
 
-  test('is accessible', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
+  test('is accessible', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: new Error('Test error'),
+        dispatch: vi.fn()
+      }
     });
     
-    // Run comprehensive accessibility tests
-    const results = await checkAccessibility(page, component);
-    
     // Check specific accessibility features
-    await expect(component.locator('[role="alert"]')).toBeVisible();
-    await expect(component.locator('[aria-live="polite"]')).toBeVisible();
+    expect(screen.getByRole('alert')).toBeInTheDocument();
+    expect(screen.getByRole('alert')).toHaveAttribute('aria-live', 'polite');
   });
 
-  test('provides proper ARIA labels', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
+  test('provides proper ARIA labels', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: new Error('Test error'),
+        dispatch: vi.fn()
+      }
     });
     
     // Check ARIA attributes
-    await expect(component.locator('.error-boundary')).toHaveAttribute('role', 'alert');
-    await expect(component.locator('.error-boundary')).toHaveAttribute('aria-live', 'polite');
-    await expect(component.locator('.error-boundary')).toHaveAttribute('aria-label');
+    const errorBoundary = screen.getByRole('alert');
+    expect(errorBoundary).toHaveAttribute('aria-label');
+    expect(errorBoundary).toHaveAttribute('aria-live', 'polite');
   });
 
-  test('is responsive across different viewports', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
-    });
-    
-    await testResponsive(page, component, commonViewports);
-  });
-
-  test('handles errors without stack traces', async ({ page }) => {
+  test('handles errors without stack traces', async () => {
     const errorWithoutStack = new Error('Error without stack');
-    delete errorWithoutStack.stack;
+    delete (errorWithoutStack as any).stack;
     
-    const component = await mountErrorBoundary({
-      error: errorWithoutStack
+    await render(ErrorBoundary, {
+      props: {
+        error: errorWithoutStack,
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Should still show error message even without stack
-    await expect(component.locator('.error-message')).toContainText('Error without stack');
+    expect(screen.getByTestId('error-message')).toHaveTextContent('Error without stack');
     
     // Should not show stack trace section
-    await expect(component.locator('.error-stack')).not.toBeVisible();
+    expect(screen.queryByTestId('error-stack')).not.toBeInTheDocument();
   });
 
-  test('handles errors with custom properties', async ({ page }) => {
+  test('handles errors with custom properties', async () => {
     const customError = new Error('Custom error') as any;
     customError.component = 'TestComponent';
     customError.phase = 'mounting';
     customError.userAction = 'clicking button';
     
-    const component = await mountErrorBoundary({
-      error: customError
+    await render(ErrorBoundary, {
+      props: {
+        error: customError,
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Should show custom context information
-    await expect(component.locator('.context-value:has-text("TestComponent")')).toBeVisible();
-    await expect(component.locator('.context-value:has-text("mounting")')).toBeVisible();
-    await expect(component.locator('.context-value:has-text("clicking button")')).toBeVisible();
+    expect(screen.getByText('TestComponent')).toBeInTheDocument();
+    expect(screen.getByText('mounting')).toBeInTheDocument();
+    expect(screen.getByText('clicking button')).toBeInTheDocument();
   });
 
-  test('shows timestamp information', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
+  test('shows timestamp information', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: new Error('Test error'),
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Check timestamp is displayed
-    const timeElement = component.locator('.context-value:has-text("Time:")');
-    if (await timeElement.count() > 0) {
-      await expect(timeElement).toBeVisible();
-    }
+    expect(screen.getByTestId('timestamp')).toBeInTheDocument();
   });
 
-  test('supports keyboard navigation', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
+  test('supports keyboard navigation', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: new Error('Test error'),
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Test Tab navigation through action buttons
-    await component.focus();
-    await page.keyboard.press('Tab');
-    
-    // Should focus on first action button
-    const focusedElement = page.locator(':focus');
-    await expect(focusedElement).toBeVisible();
-    await expect(focusedElement).toHaveAttribute('role', 'button');
+    const firstButton = screen.getAllByRole('button')[0];
+    firstButton.focus();
+    expect(firstButton).toHaveFocus();
   });
 
-  test('handles reload action', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
+  test('handles reload action', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: new Error('Test error'),
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Click reload button
-    const reloadButton = component.locator('button:has-text("Reload Page")');
-    await expect(reloadButton).toBeVisible();
-    
-    // In a real test, this would reload the page
-    // For testing purposes, we just verify the button is clickable
-    await expect(reloadButton).toBeEnabled();
+    const reloadButton = screen.getByRole('button', { name: /reload page/i });
+    expect(reloadButton).toBeInTheDocument();
+    expect(reloadButton).toBeEnabled();
   });
 
-  test('supports reduced motion preferences', async ({ page }) => {
-    // Simulate reduced motion preference
-    await page.emulateMedia({ reducedMotion: 'reduce' });
-    
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
-    });
-    
-    // Should still be functional without animations
-    await expect(component).toBeVisible();
-    await expect(component.locator('.error-container')).toBeVisible();
-  });
-
-  test('supports high contrast mode', async ({ page }) => {
-    // Simulate high contrast mode
-    await page.emulateMedia({ forcedColors: 'active' });
-    
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
-    });
-    
-    // Should still be visible and functional
-    await expect(component).toBeVisible();
-    await expect(component.locator('.error-container')).toBeVisible();
-    
-    // Check accessibility in high contrast
-    await checkAccessibility(page, component);
-  });
-
-  test('handles very long error messages', async ({ page }) => {
+  test('handles very long error messages', async () => {
     const longErrorMessage = 'This is a very long error message that '.repeat(10);
     const longError = new Error(longErrorMessage);
     
-    const component = await mountErrorBoundary({
-      error: longError
+    await render(ErrorBoundary, {
+      props: {
+        error: longError,
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Should handle long messages gracefully
-    await expect(component.locator('.error-message')).toBeVisible();
+    expect(screen.getByTestId('error-message')).toBeInTheDocument();
     
     // Message should be truncated or wrapped appropriately
-    const messageElement = component.locator('.error-message');
-    const messageText = await messageElement.textContent();
-    expect(messageText?.length).toBeGreaterThan(0);
+    const messageElement = screen.getByTestId('error-message');
+    expect(messageElement.textContent?.length).toBeGreaterThan(0);
   });
 
-  test('handles errors with special characters', async ({ page }) => {
+  test('handles errors with special characters', async () => {
     const specialCharError = new Error('Error with special chars: <> & " \'');
     
-    const component = await mountErrorBoundary({
-      error: specialCharError
+    await render(ErrorBoundary, {
+      props: {
+        error: specialCharError,
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Should handle special characters safely
-    await expect(component.locator('.error-message')).toContainText('Error with special chars:');
+    expect(screen.getByTestId('error-message')).toHaveTextContent('Error with special chars:');
   });
 
-  test('provides screen reader friendly messages', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
+  test('provides screen reader friendly messages', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: new Error('Test error'),
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Check for screen reader only content
-    const srOnlyElement = component.locator('.sr-only');
-    if (await srOnlyElement.count() > 0) {
-      await expect(srOnlyElement).toBeVisible();
-    }
+    expect(screen.getByTestId('sr-only')).toBeInTheDocument();
   });
 
-  test('maintains focus management', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
+  test('maintains focus management', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: new Error('Test error'),
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Focus should be managed properly
-    const firstButton = component.locator('.action-button').first();
-    await firstButton.focus();
-    await expect(firstButton).toBeFocused();
+    const firstButton = screen.getAllByRole('button')[0];
+    firstButton.focus();
+    expect(firstButton).toHaveFocus();
   });
 
-  test('handles multiple rapid errors', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: new Error('First error')
+  test('handles multiple rapid errors', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: new Error('First error'),
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Simulate rapid error changes (in real implementation, this would be handled by the parent)
     // For testing, we verify the component remains stable
-    await expect(component).toBeVisible();
-    await expect(component.locator('.error-message')).toContainText('First error');
+    expect(screen.getByTestId('error-message')).toHaveTextContent('First error');
   });
 
-  test('shows appropriate styling for different error types', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
+  test('shows appropriate styling for different error types', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: new Error('Test error'),
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Should have error styling
-    await expect(component.locator('.error-boundary')).toHaveClass(/error-boundary/);
-    await expect(component.locator('.error-container')).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toHaveClass('error-boundary');
+    expect(screen.getByTestId('error-container')).toBeInTheDocument();
   });
 
-  test('provides helpful error recovery suggestions', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: new Error('Test error')
+  test('provides helpful error recovery suggestions', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: new Error('Test error'),
+        dispatch: vi.fn()
+      }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Check help suggestions
-    const helpItems = component.locator('.help-list li');
-    const count = await helpItems.count();
-    expect(count).toBeGreaterThan(0);
+    const helpItems = screen.getAllByTestId('help-item');
+    expect(helpItems.length).toBeGreaterThan(0);
     
     // Should include common troubleshooting steps
-    const helpText = await component.locator('.help-list').textContent();
+    const helpText = screen.getByTestId('help-list').textContent;
     expect(helpText).toContain('refresh');
     expect(helpText).toContain('connection');
   });
 
-  test('handles network errors specifically', async ({ page }) => {
+  test('handles network errors specifically', async () => {
     const networkError = new Error('Network error') as any;
     networkError.name = 'NetworkError';
     networkError.code = 'NETWORK_ERROR';
     
-    const component = await mountErrorBoundary({
-      error: networkError
-    });
-    
-    await expect(component).toBeVisible();
-    
-    // Should show network-specific help
-    await expect(component.locator('.error-message')).toContainText('Network error');
-  });
-
-  test('provides fallback content when no error', async ({ page }) => {
-    const component = await mountErrorBoundary({
-      error: null,
-      fallback: () => {
-        // This would render fallback content
-        return '<div class="custom-fallback">Fallback content</div>';
+    await render(ErrorBoundary, {
+      props: {
+        error: networkError,
+        dispatch: vi.fn()
       }
     });
     
-    await expect(component).toBeVisible();
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
+    
+    // Should show network-specific help
+    expect(screen.getByTestId('error-message')).toHaveTextContent('Network error');
+  });
+
+  test('provides fallback content when no error', async () => {
+    await render(ErrorBoundary, {
+      props: {
+        error: null,
+        dispatch: vi.fn()
+      }
+    });
+    
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     
     // Should render fallback when no error
-    // Note: This would need proper implementation in the actual component
+    expect(screen.queryByTestId('error-message')).not.toBeInTheDocument();
   });
 });

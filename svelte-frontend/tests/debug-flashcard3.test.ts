@@ -61,11 +61,11 @@ describe('Flashcard Debug Test - Browser Environment', () => {
       
     } catch (error) {
       console.error('Error in browser environment render test:', error);
-      console.error('Error stack:', error.stack);
-      
+      console.error('Error stack:', (error as any).stack);
+
       // Check if it's the server-side rendering error
-      if (error.message.includes('lifecycle_function_unavailable') || 
-          error.message.includes('mount(...) is not available on the server')) {
+      if ((error as any).message.includes('lifecycle_function_unavailable') ||
+          (error as any).message.includes('mount(...) is not available on the server')) {
         console.error('SERVER-SIDE RENDERING ERROR DETECTED');
         console.error('The component is being loaded in server mode instead of client mode');
         console.error('This is likely a SvelteKit testing configuration issue');

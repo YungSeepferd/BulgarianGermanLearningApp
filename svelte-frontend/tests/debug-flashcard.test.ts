@@ -44,7 +44,7 @@ describe('Flashcard Debug Test', () => {
       
     } catch (error) {
       console.error('Error in direct render test:', error);
-      console.error('Error stack:', error.stack);
+      console.error('Error stack:', (error as any).stack);
       throw error;
     }
   });
