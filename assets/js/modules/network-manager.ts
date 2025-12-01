@@ -314,7 +314,7 @@ export class NetworkManager {
   async checkConnectivity(): Promise<ConnectivityStatus> {
     try {
       // Try a simple HEAD request to a reliable endpoint
-      const response = await fetch('/data/vocab/index.json', {
+      await fetch('/data/vocab/index.json', {
         method: 'HEAD',
         cache: 'no-cache',
         signal: AbortSignal.timeout(5000)

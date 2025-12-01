@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-11-27T15:13:50.757Z",
+  "overallSuccess": false,
+  "totalDuration": 1210603,
+  "successfulSteps": 4,
+  "failedSteps": 1,
+  "steps": [
+    {
+      "step": "Dependency Validation",
+      "status": "SUCCESS",
+      "duration": 47,
+      "output": "🔍 Validating dependency consistency...\n\n📁 Validating root (package-lock.json)\n📁 Validating svelte-frontend (svelte-frontend/package-lock.json)\n📁 Validating relearn-tools (themes/relearn/tools/package-lock.json)\n\n📊 VALIDATION REPORT\n==================================================\n\n📈 Summary:\n   Files checked: 3\n   Errors: 0\n   Warnings: 6\n\n⚠️  Warnings:\n   package-lock.json: cookie not found in dependencies\n   package-lock.json: tar-fs not found in dependencies\n   svelte-frontend/package-lock.json: cookie not found in dependencies\n   svelte-frontend/package-lock.json: tar-fs not found in dependencies\n   themes/relearn/tools/package-lock.json: cookie not found in dependencies\n   themes/relearn/tools/package-lock.json: tar-fs not found in dependencies\n\n🎯 Expected Versions:\n   cookie: 0.6.0\n   tar-fs: 2.1.1\n\n✅ Validation Result: PASS\n\n✅ Dependency validation passed!\n"
+    },
+    {
+      "step": "Root Dependencies Installation",
+      "status": "SUCCESS",
+      "duration": 9052,
+      "output": "Root dependencies installed successfully"
+    },
+    {
+      "step": "Svelte Frontend Installation",
+      "status": "SUCCESS",
+      "duration": 5656,
+      "output": "Svelte frontend dependencies installed successfully"
+    },
+    {
+      "step": "Project Build",
+      "status": "SUCCESS",
+      "duration": 2973,
+      "output": "Project built successfully"
+    },
+    {
+      "step": "Test Execution",
+      "status": "FAILED",
+      "error": "Tests failed: Command failed: npm test\n⚠️  No review state found in localStorage\n⚠️  No review state found in localStorage\n⚠️  No review state found in localStorage\n⚠️  No review state found in localStorage\n⚠️  No review state found in localStorage\n",
+      "duration": 1192875
+    }
+  ]
+}

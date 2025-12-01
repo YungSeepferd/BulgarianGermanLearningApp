@@ -6,12 +6,12 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     
-    // Strict type checking (temporarily relaxed for migration)
-    "strict": false,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": false,
-    "noUncheckedIndexedAccess": false,
+    // Strict type checking (enabled for better ESLint integration)
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
     
     // Module resolution
     "allowSyntheticDefaultImports": true,
@@ -25,14 +25,14 @@
     "declarationMap": true,
     "sourceMap": true,
     
-    // Code quality (temporarily relaxed for migration)
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "exactOptionalPropertyTypes": false,
-    "strictNullChecks": false,
-    "strictFunctionTypes": false,
-    "strictBindCallApply": false,
-    "noPropertyAccessFromIndexSignature": false,
+    // Code quality (enabled for better type safety)
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "noPropertyAccessFromIndexSignature": true,
     
     // Skip library checks to avoid DOM library compatibility issues
     "skipLibCheck": true,

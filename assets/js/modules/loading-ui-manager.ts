@@ -631,7 +631,7 @@ export class LoadingUIManager {
 
       // Play sound effects if enabled
       if (this.soundEnabled) {
-        this.playEventSound(event.type);
+        this.playEventSound();
       }
 
     } catch (error) {
@@ -904,9 +904,8 @@ export class LoadingUIManager {
 
   /**
    * Play sound effect for event
-   * @param eventType - Event type
    */
-  private playEventSound(eventType: string): void {
+  private playEventSound(): void {
     // TODO: Implement sound effects
     // This would use Web Audio API or HTML5 audio elements
   }
@@ -955,7 +954,7 @@ export class LoadingUIManager {
     const styleId = 'loading-ui-global-styles';
     
     // Check if styles already exist
-    if (document.getElementById(styleId)) {
+    if (document.querySelector(`#${styleId}`)) {
       return;
     }
     

@@ -1,6 +1,8 @@
 // API Client for optimized data loading
 // Handles vocabulary, grammar, and practice data with caching and pagination
 
+import type { VocabularyItem, GrammarItem, PracticeItem } from '../types/vocabulary-types.js';
+
 /**
  * API response interface for paginated data
  * @interface PaginatedResponse
@@ -197,7 +199,7 @@ interface SearchOptions {
  */
 class APIClient {
   // private baseURL: string; // Not used
-  private cache: Map<string, CacheEntry<any>>;
+  private cache: Map<string, CacheEntry<unknown>>;
   private cacheTimeout: number;
   private requestQueue: Map<string, Promise<Response>>;
   private metrics: APIMetrics;

@@ -16,8 +16,8 @@ import {
 import { memoryManager } from './memory-manager.js';
 import { connectivityManager } from './connectivity-manager.js';
 import { errorLogger } from './error-logger.js';
-
-// import type { CustomVocabularyEntry } from '../types.js'; // Not used
+// Types are used in the getDetailedStatistics method
+import type { MemoryStatistics, ConnectivityStatus } from '../types/vocabulary-types.js';
 
 /**
  * Vocabulary entry interface for manager operations
@@ -486,11 +486,11 @@ export class VocabularyManager {
       const value = data[field as keyof VocabularyEntry] as string;
       if (value) {
         // Remove potentially harmful characters and normalize whitespace
-        // eslint-disable-next-line no-control-regex, unicorn/no-hex-escape
+        // Use Unicode property escapes for control characters
         sanitized[field as keyof VocabularyEntry] = value
           .trim()
           .replaceAll(/\s+/g, ' ')
-          .replaceAll(/[\x00-\x1F\x7F]/g, '') as any;
+          .replaceAll(/[\p{C}]/gu, '') as string;
       }
     }
 

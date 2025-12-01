@@ -28,6 +28,17 @@
  * @since 1.0.0
  */
 
+import type {
+  VocabularyAdapter,
+  SpacedRepetitionSystem,
+  VocabularyItem,
+  ReviewState,
+  ReviewUpdateOptions,
+  AudioManager,
+  LanguageToggle,
+  ExtendedWindow
+} from '../types/vocabulary-types.js';
+
 /**
  * Learning direction type for practice sessions
  *
@@ -42,8 +53,8 @@ type LearningDirection = 'bg-de' | 'de-bg';
  * Configuration options for the Practice Page Module
  *
  * @interface PracticePageModuleOptions
- * @property {any} [adapter] - Vocabulary adapter instance for data access
- * @property {any} [spacedRepetition] - Spaced repetition system instance
+ * @property {VocabularyAdapter} [adapter] - Vocabulary adapter instance for data access
+ * @property {SpacedRepetitionSystem} [spacedRepetition] - Spaced repetition system instance
  * @property {string[]} [selectedItems] - Array of selected vocabulary item IDs or words
  * @property {string} [learningDirection] - Initial learning direction ('bg-de' or 'de-bg')
  * @property {boolean} [enableAudio=false] - Whether to enable audio playback
@@ -62,8 +73,8 @@ type LearningDirection = 'bg-de' | 'de-bg';
  * ```
  */
 interface PracticePageModuleOptions {
-  adapter?: any;
-  spacedRepetition?: any;
+  adapter?: VocabularyAdapter;
+  spacedRepetition?: SpacedRepetitionSystem;
   selectedItems?: string[];
   learningDirection?: string;
   enableAudio?: boolean;
@@ -96,7 +107,7 @@ interface SessionStats {
   total: number;
   startTime: number | null;
   mistakes: Array<{
-    item: any;
+    item: VocabularyItem;
     timestamp: number;
   }>;
   sessionId?: string;

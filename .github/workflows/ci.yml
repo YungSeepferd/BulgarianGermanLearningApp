@@ -65,59 +65,63 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - name: Run unit tests
-        run: npm run test:unit
+      - name: Run Svelte frontend unit tests
+        run: cd svelte-frontend && npm run test:unit
 
-      - name: Generate coverage report
-        run: npm run test:coverage
+      - name: Generate Svelte frontend coverage report
+        run: cd svelte-frontend && npm run test:coverage
 
-      - name: Upload coverage to Codecov
+      - name: Upload Svelte frontend coverage to Codecov
         uses: codecov/codecov-action@v5
         with:
-          files: ./coverage/coverage-final.json
-          flags: unittests
-          name: codecov-umbrella
+          files: svelte-frontend/coverage/coverage-final.json
+          flags: svelte-unittests
+          name: codecov-svelte
           fail_ci_if_error: false
 
-      - name: Enforce Coverage Threshold
+      - name: Enforce Svelte Coverage Threshold
         run: |
+          cd svelte-frontend
           COVERAGE=$(node -e "console.log(require('./coverage/coverage-summary.json').total.lines.pct)")
-          echo "Current coverage: ${COVERAGE}%"
+          echo "Current Svelte coverage: ${COVERAGE}%"
           if (( $(echo "$COVERAGE < 80" | node -e "process.exit(Math.floor(parseFloat(process.argv[1]) < 80) ? 1 : 0)") )); then
-            echo "❌ Coverage ${COVERAGE}% is below 80% threshold"
+            echo "❌ Svelte coverage ${COVERAGE}% is below 80% threshold"
             echo "Please add more tests to improve coverage before merging."
             exit 1
           else
-            echo "✅ Coverage ${COVERAGE}% meets 80% minimum threshold"
+            echo "✅ Svelte coverage ${COVERAGE}% meets 80% minimum threshold"
           fi
 
-      - name: Coverage Diff Check
+      - name: Svelte Coverage Diff Check
         run: |
           if [ "${{ github.event_name }}" == "pull_request" ]; then
-            echo "Running coverage diff check for PR #${{ github.event.number }}"
-            node svelte-frontend/scripts/coverage-diff.js
-            echo "✅ Coverage diff check completed"
+            echo "Running Svelte coverage diff check for PR #${{ github.event.number }}"
+            cd svelte-frontend && node scripts/coverage-diff.js
+            echo "✅ Svelte coverage diff check completed"
           else
-            echo "Skipping coverage diff check (not a pull request)"
+            echo "Skipping Svelte coverage diff check (not a pull request)"
           fi
 
       - name: Install Playwright
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests
-        env:
-          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
-        run: npm test
+      - name: Build Svelte frontend
+        run: cd svelte-frontend && npm run build
 
-      - name: Run Accessibility Tests
+      - name: Run Svelte frontend tests
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
-        run: npm run test:a11y
+        run: cd svelte-frontend && npm run test:ci
 
-      - name: Run Keyboard Navigation Tests
+      - name: Run Svelte frontend accessibility tests
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
-        run: npm run test:keyboard
+        run: cd svelte-frontend && npm run test:accessibility
+
+      - name: Run Svelte frontend integration tests
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+        run: cd svelte-frontend && npm run test:integration
 
       - name: Run Lighthouse CI
         run: |

@@ -193,7 +193,7 @@ export class ConnectivityManager {
     
     try {
       // Use fetch with timeout to check connectivity
-      const response = await fetch(this.options.checkUrl, {
+      await fetch(this.options.checkUrl, {
         method: 'HEAD',
         cache: 'no-cache',
         signal: AbortSignal.timeout(this.options.checkTimeout)
@@ -414,7 +414,7 @@ export class ConnectivityManager {
       name: 'indexedDB',
       priority: 60,
       available: 'indexedDB' in self,
-      execute: async (context: FallbackContext) => {
+      execute: async () => {
         // Implementation would depend on your IndexedDB setup
         throw ErrorFactory.fromError(new Error('IndexedDB fallback not implemented'), { component: 'connectivity-manager' });
       }
@@ -425,7 +425,7 @@ export class ConnectivityManager {
       name: 'minimal',
       priority: 40,
       available: true,
-      execute: async (context: FallbackContext) => {
+      execute: async () => {
         // Return a minimal dataset for offline functionality
         const minimalData = {
           entries: [],

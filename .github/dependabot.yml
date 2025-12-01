@@ -1,40 +1,120 @@
+# Dependabot configuration for BulgarianApp-Fresh
+# Updated to prevent dependency conflicts identified in PR #35
+
 version: 2
 updates:
-  # Enable version updates for npm
+  # Root package dependencies
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
       day: "monday"
-    open-pull-requests-limit: 5
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    ignore:
+      # Critical dependencies with version conflicts
+      - dependency-name: "cookie"
+        versions: ["> 0.4.1"]
+      - dependency-name: "tar-fs"
+        versions: ["> 2.1.1"]
+      # Additional dependencies to monitor carefully
+      - dependency-name: "@sentry/*"
+        versions: ["> 6.19.7"]
     labels:
       - "dependencies"
       - "npm"
     commit-message:
-      prefix: "chore(deps)"  
-    
-  # Enable version updates for Go modules
-  - package-ecosystem: "gomod"
-    directory: "/tools"
+      prefix: "chore"
+      include: "scope"
+    reviewers:
+      - "YungSeepferd"
+    assignees:
+      - "YungSeepferd"
+
+  # Svelte frontend dependencies
+  - package-ecosystem: "npm"
+    directory: "/svelte-frontend"
     schedule:
       interval: "weekly"
-      day: "monday"
-    open-pull-requests-limit: 5
+      day: "tuesday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    ignore:
+      # Cookie version specific to Svelte frontend
+      - dependency-name: "cookie"
+        versions: ["> 0.6.0"]
+      # Svelte-specific dependencies to monitor
+      - dependency-name: "svelte"
+        versions: ["> 4.0.0"]
+      - dependency-name: "@sveltejs/*"
+        versions: ["> 1.0.0"]
     labels:
       - "dependencies"
-      - "go"
+      - "svelte"
+      - "frontend"
     commit-message:
-      prefix: "chore(deps)"
-    
-  # Enable version updates for GitHub Actions
+      prefix: "chore"
+      include: "scope"
+    reviewers:
+      - "YungSeepferd"
+    assignees:
+      - "YungSeepferd"
+
+  # Relearn theme tools dependencies
+  - package-ecosystem: "npm"
+    directory: "/themes/relearn/tools"
+    schedule:
+      interval: "monthly"
+      day: "first monday"
+      time: "10:00"
+      timezone: "Europe/Berlin"
+    ignore:
+      # Tar-fs version specific to relearn tools
+      - dependency-name: "tar-fs"
+        versions: ["> 2.1.1"]
+      # Hugo theme tools dependencies
+      - dependency-name: "hugo"
+        versions: ["> 0.100.0"]
+    labels:
+      - "dependencies"
+      - "hugo"
+      - "theme"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    reviewers:
+      - "YungSeepferd"
+    assignees:
+      - "YungSeepferd"
+
+  # GitHub Actions workflows
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
-      day: "monday"
-    open-pull-requests-limit: 5
+      interval: "monthly"
+      day: "first wednesday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    ignore:
+      # Action versions with breaking changes
+      - dependency-name: "actions/checkout"
+        versions: ["> 3.0.0"]
+      - dependency-name: "actions/setup-node"
+        versions: ["> 3.0.0"]
     labels:
       - "dependencies"
       - "github-actions"
+      - "ci-cd"
     commit-message:
-      prefix: "chore(deps)"
+      prefix: "ci"
+      include: "scope"
+    reviewers:
+      - "YungSeepferd"
+    assignees:
+      - "YungSeepferd"
+
+# Security updates (always enabled, separate from version updates)
+security-updates:
+  enabled: true
+  # Security updates are applied immediately when available
+  # No scheduling for security updates
