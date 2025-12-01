@@ -1,8 +1,4 @@
 import { vi, beforeEach, afterEach, expect } from 'vitest';
-import * as matchers from '@testing-library/jest-dom/matchers';
-
-// Extend expect with jest-dom matchers
-expect.extend(matchers);
 
 // Mock console methods to reduce noise in tests
 const originalConsole = global.console;
@@ -24,36 +20,56 @@ afterEach(() => {
   global.console = originalConsole;
 });
 
-// Mock browser APIs that might not be available in test environment
+// Force browser environment for Svelte 5
+Object.defineProperty(global, 'window', {
+  writable: true,
+  value: global.window || {}
+});
+
+Object.defineProperty(global, 'document', {
+  writable: true,
+  value: global.document || {
+    createElement: vi.fn(),
+    querySelector: vi.fn(),
+    querySelectorAll: vi.fn(),
+    getElementById: vi.fn(),
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+    body: {
+      appendChild: vi.fn(),
+      removeChild: vi.fn()
+    }
+  }
+});
+
+// Minimal browser APIs needed for Svelte 5 testing
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: vi.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,
-    addListener: vi.fn(), // deprecated
-    removeListener: vi.fn(), // deprecated
     addEventListener: vi.fn(),
     removeEventListener: vi.fn(),
     dispatchEvent: vi.fn(),
   })),
 });
 
-// Mock ResizeObserver
+// Mock ResizeObserver for Svelte 5 compatibility
 global.ResizeObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
   unobserve: vi.fn(),
   disconnect: vi.fn(),
 }));
 
-// Mock IntersectionObserver
+// Mock IntersectionObserver for Svelte 5 compatibility
 global.IntersectionObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
   unobserve: vi.fn(),
   disconnect: vi.fn(),
 }));
 
-// Mock localStorage
+// Mock localStorage for Svelte 5
 const localStorageMock = {
   getItem: vi.fn(),
   setItem: vi.fn(),
@@ -62,7 +78,7 @@ const localStorageMock = {
 };
 vi.stubGlobal('localStorage', localStorageMock);
 
-// Mock sessionStorage
+// Mock sessionStorage for Svelte 5
 const sessionStorageMock = {
   getItem: vi.fn(),
   setItem: vi.fn(),
@@ -71,29 +87,17 @@ const sessionStorageMock = {
 };
 vi.stubGlobal('sessionStorage', sessionStorageMock);
 
-// Mock fetch
+// Mock fetch for Svelte 5
 global.fetch = vi.fn();
 
-// Mock performance API
-Object.defineProperty(window, 'performance', {
-  writable: true,
-  value: {
-    now: vi.fn(() => Date.now()),
-    mark: vi.fn(),
-    measure: vi.fn(),
-    getEntriesByName: vi.fn(() => []),
-    getEntriesByType: vi.fn(() => []),
-  },
-});
-
-// Mock requestAnimationFrame
+// Mock requestAnimationFrame for Svelte 5
 global.requestAnimationFrame = vi.fn((cb) => {
   const id = setTimeout(cb, 16);
   return id as unknown as number;
 });
 global.cancelAnimationFrame = vi.fn((id) => clearTimeout(id as unknown as NodeJS.Timeout));
 
-// Mock crypto
+// Mock crypto for Svelte 5
 Object.defineProperty(window, 'crypto', {
   writable: true,
   value: {
@@ -107,7 +111,7 @@ Object.defineProperty(window, 'crypto', {
   },
 });
 
-// Mock navigator
+// Mock navigator for Svelte 5
 Object.defineProperty(window, 'navigator', {
   writable: true,
   value: {
@@ -122,7 +126,7 @@ Object.defineProperty(window, 'navigator', {
   },
 });
 
-// Mock location
+// Mock location for Svelte 5
 Object.defineProperty(window, 'location', {
   writable: true,
   value: {
@@ -138,7 +142,7 @@ Object.defineProperty(window, 'location', {
   },
 });
 
-// Mock history
+// Mock history for Svelte 5
 Object.defineProperty(window, 'history', {
   writable: true,
   value: {
@@ -152,7 +156,7 @@ Object.defineProperty(window, 'history', {
   },
 });
 
-// Mock document methods
+// Mock document methods for Svelte 5
 Object.defineProperty(document, 'hidden', {
   writable: true,
   value: false,
@@ -163,16 +167,13 @@ Object.defineProperty(document, 'visibilityState', {
   value: 'visible',
 });
 
-// Mock setTimeout and setInterval with proper implementation
+// Mock setTimeout and setInterval for Svelte 5
 const setTimeoutMock = vi.fn().mockImplementation((fn, delay) => {
-  // Use a simple counter for timeout IDs to avoid stack overflow
   const timeoutId = `timeout-${Date.now()}-${Math.random()}`;
   
-  // Execute the function asynchronously without using real setTimeout
   if (delay === 0) {
     Promise.resolve().then(fn);
   } else {
-    // For non-zero delays, use a simple approach
     Promise.resolve().then(fn);
   }
   
@@ -181,7 +182,6 @@ const setTimeoutMock = vi.fn().mockImplementation((fn, delay) => {
 
 const setIntervalMock = vi.fn().mockImplementation((fn, interval) => {
   const intervalId = `interval-${Date.now()}-${Math.random()}`;
-  // Don't actually set up repeating intervals in tests
   return intervalId;
 });
 
@@ -193,18 +193,18 @@ global.setInterval = setIntervalMock as unknown as typeof setInterval;
 global.clearTimeout = clearTimeoutMock;
 global.clearInterval = clearIntervalMock;
 
-// Mock alert, confirm, prompt
+// Mock alert, confirm, prompt for Svelte 5
 global.alert = vi.fn();
 global.confirm = vi.fn(() => true);
 global.prompt = vi.fn(() => 'test-input');
 
-// Mock HTMLElement methods
+// Mock HTMLElement methods for Svelte 5
 HTMLElement.prototype.scrollIntoView = vi.fn();
 HTMLElement.prototype.focus = vi.fn();
 HTMLElement.prototype.blur = vi.fn();
 HTMLElement.prototype.click = vi.fn();
 
-// Mock Selection
+// Mock Selection for Svelte 5
 global.Selection = vi.fn().mockImplementation(() => ({
   removeAllRanges: vi.fn(),
   addRange: vi.fn(),
@@ -213,7 +213,7 @@ global.Selection = vi.fn().mockImplementation(() => ({
 
 global.getSelection = vi.fn(() => null);
 
-// Mock DOMRect
+// Mock DOMRect for Svelte 5
 global.DOMRect = vi.fn().mockImplementation(() => ({
   x: 0,
   y: 0,
@@ -225,7 +225,7 @@ global.DOMRect = vi.fn().mockImplementation(() => ({
   left: 0,
 })) as any;
 
-// Mock getBoundingClientRect
+// Mock getBoundingClientRect for Svelte 5
 Element.prototype.getBoundingClientRect = vi.fn(() => ({
   x: 0,
   y: 0,
@@ -247,7 +247,7 @@ Element.prototype.getBoundingClientRect = vi.fn(() => ({
   }))
 }));
 
-// Mock getComputedStyle - return a minimal CSSStyleDeclaration
+// Mock getComputedStyle for Svelte 5
 global.getComputedStyle = vi.fn(() => {
   const style = {
     getPropertyValue: vi.fn(() => ''),
@@ -255,27 +255,22 @@ global.getComputedStyle = vi.fn(() => {
     removeProperty: vi.fn()
   } as any;
   
-  // Add required CSSStyleDeclaration properties
-  Object.defineProperty(style, 'accentColor', { value: '', writable: true });
-  Object.defineProperty(style, 'alignContent', { value: '', writable: true });
-  // Add other required properties as needed...
-  
   return style;
 });
 
-// Mock MutationObserver
+// Mock MutationObserver for Svelte 5
 global.MutationObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
   disconnect: vi.fn(),
   takeRecords: vi.fn(() => []),
 }));
 
-// Mock EventTarget
+// Mock EventTarget for Svelte 5
 EventTarget.prototype.addEventListener = vi.fn();
 EventTarget.prototype.removeEventListener = vi.fn();
 EventTarget.prototype.dispatchEvent = vi.fn();
 
-// Mock Event
+// Mock Event for Svelte 5
 global.Event = vi.fn().mockImplementation((type, options) => ({
   type,
   bubbles: options?.bubbles || false,

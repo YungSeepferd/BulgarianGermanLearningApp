@@ -52,7 +52,7 @@ describe('Flashcard Logic Tests', () => {
 
   test('card text generation for de-bg direction', () => {
     // Test the logic that generates card text
-    const direction = 'bg-de' as const;
+    const direction = 'de-bg' as const;
     const isBgToDe = direction === 'bg-de';
     
     const cardText = {

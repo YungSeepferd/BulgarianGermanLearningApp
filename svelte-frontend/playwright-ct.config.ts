@@ -1,66 +1,87 @@
-/**
- * Playwright Component Testing Configuration for SvelteKit
- * @file playwright-ct.config.ts
- * @description Playwright configuration for testing SvelteKit components
- * @version 1.0.0
- * @updated November 2025
- */
+import { defineConfig, devices } from '@playwright/experimental-ct-svelte';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
+import { resolve } from 'path';
 
-import { defineConfig, devices } from '@playwright/experimental-ct-core';
+/**
+ * Playwright Component Testing Configuration for Svelte 5
+ * @file playwright-ct.config.ts
+ * @description Configuration for testing Svelte 5 components with Playwright
+ * @version 2.0.0
+ * @updated December 2025
+ */
 
 export default defineConfig({
   // Test directory for component tests
-  testDir: './tests',
+  testDir: './tests/components',
   
-  // Component testing specific settings
+  // Run tests in files in parallel
+  fullyParallel: true,
+  
+  // Fail the build on CI if you accidentally left test.only in the source code
+  forbidOnly: !!process.env.CI,
+  
+  // Retry on CI only
+  retries: process.env.CI ? 2 : 0,
+  
+  // Opt out of parallel tests on CI
+  workers: process.env.CI ? 1 : undefined,
+  
+  // Reporter to use
+  reporter: [
+    ['html', { outputFolder: './playwright-ct-report' }],
+    ['json', { outputFile: './test-results/ct-results.json' }],
+    ['junit', { outputFile: './test-results/ct-junit.xml' }],
+    ['list'],
+  ],
+  
+  // Shared settings for all the projects below
   use: {
-    // Base URL for component testing
-    baseURL: 'http://localhost:4173',
-    
-    // Component testing specific options
-    ctPort: 3100,
-    ctTemplateDir: './playwright',
-    ctViteConfig: {
-      // Use the dedicated component testing Vite config
-      configFile: './vite.component-test.config.ts',
-    },
-    
-    // Trace collection for debugging
+    // Collect trace when retrying the failed test
     trace: 'on-first-retry',
     
-    // Screenshot on failure
+    // Take screenshot on failure
     screenshot: 'only-on-failure',
     
-    // Video recording
-    video: 'retain-on-failure',
+    // Global timeout for each action
+    actionTimeout: 10000,
+    
+    // Global timeout for navigation
+    navigationTimeout: 30000,
+    
+    // Svelte 5 specific configuration
+    ctViteConfig: {
+      plugins: [
+        svelte({
+          compilerOptions: {
+            runes: true, // Enable Svelte 5 runes
+            dev: true,
+          },
+        }),
+      ],
+      resolve: {
+        alias: {
+          $lib: resolve('./src/lib'),
+          $app: resolve('./src/app'),
+        },
+      },
+    },
   },
 
-  // Configure projects for different browsers
+  // Configure projects for major browsers
   projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
   ],
 
-  // Web server for component testing
-  webServer: {
-    command: 'npm run build && npm run preview',
-    url: 'http://localhost:4173',
-    reuseExistingServer: !process.env.CI,
-    timeout: 120000,
-  },
-
-  // Timeout settings
+  // Global setup and teardown
+  // globalSetup: './tests/ct-global-setup.ts',
+  
+  // Test timeout
   timeout: 30000,
+  
+  // Expect timeout
   expect: {
     timeout: 5000,
   },

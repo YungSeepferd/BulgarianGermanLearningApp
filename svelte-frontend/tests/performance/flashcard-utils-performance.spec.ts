@@ -220,21 +220,31 @@ describe('Flashcard Utils Performance Tests', () => {
     const monitor = new PerformanceMonitor();
     const results = [];
     
-    // Simulate realistic flashcard operations
+    // Simulate realistic flashcard operations with minimum duration
     const operations = [
       async () => {
         monitor.startTimer('load');
-        await new Promise(resolve => setTimeout(resolve, 10));
+        // Ensure minimum duration by doing some work
+        const start = Date.now();
+        while (Date.now() - start < 5) {
+          // Wait 5ms
+        }
         return monitor.endTimer('load');
       },
       async () => {
         monitor.startTimer('render');
-        await new Promise(resolve => setTimeout(resolve, 20));
+        const start = Date.now();
+        while (Date.now() - start < 10) {
+          // Wait 10ms
+        }
         return monitor.endTimer('render');
       },
       async () => {
         monitor.startTimer('interact');
-        await new Promise(resolve => setTimeout(resolve, 5));
+        const start = Date.now();
+        while (Date.now() - start < 3) {
+          // Wait 3ms
+        }
         return monitor.endTimer('interact');
       }
     ];
