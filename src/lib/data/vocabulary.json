@@ -1,0 +1,51 @@
+[
+  {
+    "id": "v001-apfel",
+    "german": "der Apfel",
+    "bulgarian": "ябълката",
+    "category": "Food",
+    "tags": ["Noun", "A1", "Food"],
+    "type": "word",
+    "difficulty": "A1",
+    "pronunciation": "German: [ˈap͡fl̩], Bulgarian: [ˈjabɐɫkɐtɐ]",
+    "example": "German: 'Ich esse einen Apfel.', Bulgarian: 'Аз ям ябълка.'"
+  },
+  {
+    "id": "v002-haus",
+    "german": "das Haus",
+    "bulgarian": "къщата",
+    "category": "Household",
+    "tags": ["Noun", "A1"],
+    "type": "word",
+    "difficulty": "A1",
+    "example": "German: 'Das Haus ist groß.', Bulgarian: 'Къщата е голяма.'"
+  },
+  {
+    "id": "v003-laufen",
+    "german": "laufen",
+    "bulgarian": "бягам",
+    "category": "Verbs",
+    "tags": ["Verb", "Action", "A1"],
+    "type": "word",
+    "difficulty": "A1"
+  },
+  {
+    "id": "v004-gut",
+    "german": "gut",
+    "bulgarian": "добър",
+    "category": "Adjectives",
+    "tags": ["Adjective", "Basic"],
+    "type": "word",
+    "difficulty": "A1"
+  },
+  {
+    "id": "v005-danke",
+    "german": "Danke",
+    "bulgarian": "Благодаря",
+    "category": "Greetings",
+    "tags": ["Phrase", "Social"],
+    "type": "word",
+    "difficulty": "A1",
+    "example": "German: 'Danke schön!', Bulgarian: 'Благодаря много!'"
+  }
+]

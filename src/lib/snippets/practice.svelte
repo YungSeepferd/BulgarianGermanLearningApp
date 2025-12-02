@@ -1,6 +1,6 @@
 // Practice snippet for Svelte 5
 <script lang="ts">
-  import { appState } from '$lib/state/app.svelte.ts';
+  import { appState } from '$lib/state/app.svelte';
   import type { VocabularyItem } from '$lib/types/vocabulary';
 
   // Reactive state
@@ -8,12 +8,6 @@
   let showAnswer = $state(false);
 
   // Practice functions
-  function startPractice(item: VocabularyItem) {
-    currentItem = item;
-    showAnswer = false;
-    appState.setCurrentItem(item);
-  }
-
   function revealAnswer() {
     showAnswer = true;
     appState.toggleShowAnswer();
@@ -29,21 +23,21 @@
 {#if currentItem}
   <div class="practice-card">
     <div class="question">
-      {appState.currentDirection === 'DE->BG' ? currentItem.german : currentItem.bulgarian}
+      {appState.languageMode === 'DE_BG' ? currentItem.german : currentItem.bulgarian}
     </div>
 
     {#if showAnswer}
       <div class="answer">
-        {appState.currentDirection === 'DE->BG' ? currentItem.bulgarian : currentItem.german}
+        {appState.languageMode === 'DE_BG' ? currentItem.bulgarian : currentItem.german}
       </div>
     {:else}
-      <button on:click={revealAnswer} class="reveal-btn">
+      <button onclick={revealAnswer} class="reveal-btn">
         Show Answer
       </button>
     {/if}
 
     <div class="actions">
-      <button on:click={nextItem} class="next-btn">
+      <button onclick={nextItem} class="next-btn">
         Next
       </button>
     </div>

@@ -1,4 +1,14 @@
-import type { VocabularyItem, LearningStats } from '$lib/types/vocabulary.js';
+import type { VocabularyItem } from '$lib/types/vocabulary.js';
+
+interface LearningStats {
+  correct_count: number;
+  incorrect_count: number;
+  last_practiced: string | null;
+  difficulty_rating: number | string;
+  mastery_level: number;
+  average_response_time: number | null;
+  streak_count: number;
+}
 
 /**
  * Data loader utility for the Tandem Learning System
@@ -35,25 +45,21 @@ export class DataLoader {
     for (let attempt = 0; attempt <= maxRetries; attempt++) {
       try {
         // Load from our unified data format
-        const response = await fetch('/data/vocabulary-unified.json');
+        // In a real app, this would be imported or fetched from an API
+        // For now we use the dynamic import of the JSON file we created
+        const module = await import('./vocabulary.json');
+        const data = (module.default || module) as VocabularyItem[];
+        
+        this.vocabularyCache = data;
+        return this.vocabularyCache;
+        /*
+        const response = await fetch('/data/vocabulary.json');
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const data: unknown = await response.json();
-
-        // Validate the data structure
-        if (!Array.isArray(data)) {
-          throw new Error('Invalid data format: expected an array');
-        }
-
-        // Type assertion after validation
-        const validatedData = data as VocabularyItem[];
-
-        // Cache the data
-        this.vocabularyCache = validatedData;
-        return this.vocabularyCache;
+        */
       } catch (error) {
         lastError = error;
         console.error(`Attempt ${attempt + 1} failed to load vocabulary data:`, error);
@@ -80,14 +86,6 @@ export class DataLoader {
   }
 
   /**
-   * Get vocabulary items by level
-   */
-  public async getByLevel(level: string): Promise<VocabularyItem[]> {
-    const allItems = await this.loadVocabulary();
-    return allItems.filter(item => item.level === level);
-  }
-
-  /**
    * Search vocabulary items
    */
   public async search(query: string, direction: 'DE->BG' | 'BG->DE' = 'DE->BG'): Promise<VocabularyItem[]> {
@@ -107,23 +105,21 @@ export class DataLoader {
    */
   public async getRandomItems(count: number, filters?: {
     category?: string;
-    level?: string;
-    difficulty?: number;
+    difficulty?: string;
   }): Promise<VocabularyItem[]> {
     const allItems = await this.loadVocabulary();
 
     // Apply filters using a single filter operation for better performance
     const filteredItems = allItems.filter(item => {
       return (!filters?.category || item.category === filters.category) &&
-             (!filters?.level || item.level === filters.level) &&
-             (!filters?.difficulty || item.difficulty <= filters.difficulty);
+             (!filters?.difficulty || item.difficulty === filters.difficulty);
     });
 
     // Use Fisher-Yates shuffle algorithm for better randomness
     const shuffled = [...filteredItems];
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      [shuffled[i], shuffled[j]] = [shuffled[j] as VocabularyItem, shuffled[i] as VocabularyItem];
     }
 
     return shuffled.slice(0, Math.min(count, shuffled.length));
@@ -146,7 +142,7 @@ export class DataLoader {
         correct_count: 0,
         incorrect_count: 0,
         last_practiced: null,
-        difficulty_rating: item.difficulty || 1, // Default to 1 if not specified
+        difficulty_rating: item.difficulty || 'A1',
         mastery_level: 0,
         average_response_time: null,
         streak_count: 0

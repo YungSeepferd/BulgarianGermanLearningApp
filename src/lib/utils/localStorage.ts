@@ -1,5 +1,5 @@
 // LocalStorage utilities for the Bulgarian-German Learning App
-import type { VocabularyItem, PracticeSession } from '$lib/types/vocabulary';
+import type { PracticeSession } from '$lib/types/vocabulary';
 
 /**
  * LocalStorage utility class for managing user progress

@@ -1,7 +1,7 @@
 {
-	"name": "svelte-frontend",
+	"name": "bulgarian-german-learning-app",
 	"private": true,
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
@@ -31,7 +31,7 @@
 		"test:report": "playwright show-report",
 		"test:install": "playwright install",
 		"test:all": "npm run test:unit && npm run test:components && npm run test:accessibility && npm run test:visual && npm run test:integration",
-		"test:ci": "npm run test:unit && npm run test:components && npm run test:accessibility && npm run test:coverage:threshold",
+		"test:ci": "pnpm run test:unit && pnpm run test:components && pnpm run test:accessibility && pnpm run test:coverage:threshold",
 		"coverage:serve": "npx http-server coverage -p 8080",
 		"coverage:clean": "rm -rf coverage .nyc_output",
 		"coverage:merge": "node scripts/merge-coverage-reports.js"

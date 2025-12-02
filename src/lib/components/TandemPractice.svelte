@@ -5,7 +5,7 @@
   import type { VocabularyItem } from '$lib/types/vocabulary.js';
   import { fade, fly } from 'svelte/transition';
 
-  let dataLoader = new DataLoader();
+  let dataLoader = DataLoader.getInstance();
   let currentItem = $state<VocabularyItem | null>(null);
   let userAnswer = $state('');
   let isAnswered = $state(false);
@@ -24,13 +24,11 @@
     lastResponseTime: 0,
     averageResponseTime: 0
   });
-  let showFeedbackAnimation = $state(false);
-
   // Animation functions
   function feedbackAnimation(node: HTMLElement) {
     return fly(node, {
       y: -20,
-      opacity: [0, 1],
+      opacity: 1, // Fix: Opacity should be a number or an object with duration
       duration: 300,
       easing: t => t
     });
@@ -48,8 +46,8 @@
     try {
       isLoading = true;
       error = null;
-      const item = await dataLoader.getRandomItem();
-      currentItem = item;
+      const items = await dataLoader.getRandomItems(1);
+      currentItem = items[0] || null;
       resetAnswer();
     } catch (err) {
       error = 'Failed to load vocabulary. Please try again.';
@@ -100,8 +98,6 @@
     dataLoader.updateStats(currentItem.id, isCorrect, responseTime);
   
     // Trigger feedback animation
-    showFeedbackAnimation = true;
-    setTimeout(() => showFeedbackAnimation = false, 500);
   }
   
   function nextItem() {
@@ -112,10 +108,10 @@
     showExamples = !showExamples;
   }
   
-  function handleSearch(query: string) {
+  async function handleSearch(query: string) {
     searchQuery = query;
     if (query.trim()) {
-      searchResults = dataLoader.searchItems(query);
+      searchResults = await dataLoader.search(query, direction);
     } else {
       searchResults = [];
     }
@@ -150,24 +146,7 @@
     return direction === 'DE->BG' ? currentItem.bulgarian : currentItem.german;
   }
   
-  function getAnswerOptions(): string[] {
-    if (!currentItem) return [];
-    
-    const correct = getCorrectAnswer();
-    const allItems = dataLoader.getAllItems();
-    const otherItems = allItems
-      .filter(item => item.id !== currentItem.id)
-      .map(item => direction === 'DE->BG' ? item.bulgarian : item.german);
-    
-    // Get 3 random wrong answers
-    const wrongAnswers = otherItems
-      .sort(() => Math.random() - 0.5)
-      .slice(0, 3);
-    
-    // Combine and shuffle
-    const options = [correct, ...wrongAnswers];
-    return options.sort(() => Math.random() - 0.5);
-  }
+  // Removed getAnswerOptions as it was unused and causing errors
   
   // Load initial item on mount
   loadNewItem();
@@ -231,8 +210,9 @@
           <h3 class="question-text">{getQuestionText()}</h3>
           <div class="item-meta">
             <span class="category">{currentItem.category}</span>
-            <span class="level">{currentItem.level}</span>
-            <span class="difficulty">Difficulty: {currentItem.difficulty}/5</span>
+            {#if currentItem.difficulty}
+              <span class="difficulty">Difficulty: {currentItem.difficulty}</span>
+            {/if}
           </div>
         </div>
         
@@ -270,9 +250,6 @@
                     <span class="response-time"> (Response time: {stats.lastResponseTime}ms)</span>
                   {/if}
                 </p>
-                {#if currentItem.notes}
-                  <p class="notes">{currentItem.notes}</p>
-                {/if}
               </div>
             </div>
             
@@ -287,15 +264,12 @@
           {/if}
         </div>
         
-        {#if showExamples && currentItem.examples && currentItem.examples.length > 0}
+        {#if showExamples && currentItem.example}
           <div class="examples-section">
-            <h4>Examples:</h4>
-            {#each currentItem.examples as example}
-              <div class="example">
-                <p class="example-sentence">{example.sentence}</p>
-                <p class="example-translation">{example.translation}</p>
-              </div>
-            {/each}
+            <h4>Example:</h4>
+            <div class="example">
+              <p class="example-sentence">{currentItem.example}</p>
+            </div>
           </div>
         {/if}
       </div>
@@ -310,11 +284,11 @@
       </div>
       
       <div class="search-input-group">
-        <input 
+        <input
           type="text"
           bind:value={searchQuery}
           placeholder="Search for words..."
-          oninput={(e) => handleSearch(e.target.value)}
+          oninput={(e) => handleSearch((e.target as HTMLInputElement).value)}
           class="search-input"
         />
         <div class="search-direction">
@@ -371,39 +345,6 @@
     position: relative;
   }
 
-  .stat:hover .stat-tooltip {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .stat-tooltip {
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #2c3e50;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease;
-    margin-bottom: 0.5rem;
-    z-index: 100;
-  }
-
-  .stat-tooltip::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 5px;
-    border-style: solid;
-    border-color: #2c3e50 transparent transparent transparent;
-  }
   
   .header {
     display: flex;
@@ -505,7 +446,7 @@
     color: #6c757d;
   }
   
-  .category, .level, .difficulty {
+  .category, .difficulty {
     background: #e9ecef;
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
@@ -565,11 +506,6 @@
   .feedback-message {
     font-weight: 600;
     margin-bottom: 0.5rem;
-  }
-  
-  .notes {
-    font-style: italic;
-    color: #6c757d;
   }
   
   .action-buttons {
@@ -641,11 +577,6 @@
   .example-sentence {
     font-weight: 500;
     margin-bottom: 0.5rem;
-  }
-  
-  .example-translation {
-    color: #6c757d;
-    font-style: italic;
   }
   
   .search-section {

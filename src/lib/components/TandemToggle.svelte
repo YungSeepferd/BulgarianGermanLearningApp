@@ -1,40 +1,31 @@
 <script lang="ts">
-  import { fly } from 'svelte/animate';
   import { fade } from 'svelte/transition';
-  import PracticeSnippet from '$lib/snippets/practice.svelte';
 
-  let direction = $state<'DE->BG' | 'BG->DE'>('DE->BG');
-  let mode = $state<'practice' | 'search'>('practice');
+  let { direction = 'DE->BG', mode = 'practice', onDirectionChange, onModeChange } = $props<{
+    direction?: 'DE->BG' | 'BG->DE';
+    mode?: 'practice' | 'search';
+    onDirectionChange?: (direction: 'DE->BG' | 'BG->DE') => void;
+    onModeChange?: (mode: 'practice' | 'search') => void;
+  }>();
+
   let showTooltip = $state(false);
-  let onDirectionChange = $props<(direction: 'DE->BG' | 'BG->DE') => void>(() => {});
-  let onModeChange = $props<(mode: 'practice' | 'search') => void>(() => {});
-
-  // Animation functions
-  function directionAnimation(node: HTMLElement) {
-    return fly(node, {
-      y: direction === 'DE->BG' ? -20 : 20,
-      duration: 300,
-      easing: t => t
-    });
-  }
-
-  function modeAnimation(node: HTMLElement) {
-    return fly(node, {
-      x: mode === 'practice' ? -20 : 20,
-      duration: 300,
-      easing: t => t
-    });
-  }
 
   // Toggle functions with animations
   function toggleDirection() {
-    direction = direction === 'DE->BG' ? 'BG->DE' : 'DE->BG';
-    onDirectionChange(direction);
+    const newDirection = direction === 'DE->BG' ? 'BG->DE' : 'DE->BG';
+    // Since we're using props, we should call the callback.
+    // In Svelte 5, if 'direction' is a bound prop, it would update,
+    // but here we treat it as controlled or uncontrolled.
+    // Ideally, the parent updates the prop, but for local toggle feel we might want local state if not controlled.
+    // However, the original code had local state AND props.
+    // Assuming this component is controlled by parent state (based on app.svelte.ts),
+    // we should just emit the change. But to maintain the 'toggle' feel locally if not updated immediately:
+    if (onDirectionChange) onDirectionChange(newDirection);
   }
 
   function toggleMode() {
-    mode = mode === 'practice' ? 'search' : 'practice';
-    onModeChange(mode);
+    const newMode = mode === 'practice' ? 'search' : 'practice';
+    if (onModeChange) onModeChange(newMode);
   }
 
   // Tooltip functions
@@ -58,16 +49,6 @@
       ? 'Practice mode. Click to switch to search mode.'
       : 'Search mode. Click to switch to practice mode.';
   }
-  
-  function toggleDirection() {
-    const newDirection = direction === 'DE->BG' ? 'BG->DE' : 'DE->BG';
-    onDirectionChange(newDirection);
-  }
-  
-  function toggleMode() {
-    const newMode = mode === 'practice' ? 'search' : 'practice';
-    onModeChange(newMode);
-  }
 </script>
 
 <div class="tandem-toggle">
@@ -75,9 +56,9 @@
     <div class="direction-toggle">
       <button
         class="toggle-btn"
-        on:click={toggleDirection}
-        on:mouseenter={handleMouseEnter}
-        on:mouseleave={handleMouseLeave}
+        onclick={toggleDirection}
+        onmouseenter={handleMouseEnter}
+        onmouseleave={handleMouseLeave}
         aria-label={getDirectionAriaLabel()}
         aria-live="polite"
       >
@@ -96,9 +77,9 @@
       <button
         class="mode-btn"
         class:active={mode === 'practice'}
-        on:click={() => toggleMode()}
-        on:mouseenter={handleMouseEnter}
-        on:mouseleave={handleMouseLeave}
+        onclick={toggleMode}
+        onmouseenter={handleMouseEnter}
+        onmouseleave={handleMouseLeave}
         aria-label={getModeAriaLabel('practice')}
         aria-live="polite"
       >
@@ -109,9 +90,9 @@
       <button
         class="mode-btn"
         class:active={mode === 'search'}
-        on:click={() => toggleMode()}
-        on:mouseenter={handleMouseEnter}
-        on:mouseleave={handleMouseLeave}
+        onclick={toggleMode}
+        onmouseenter={handleMouseEnter}
+        onmouseleave={handleMouseLeave}
         aria-label={getModeAriaLabel('search')}
         aria-live="polite"
       >
