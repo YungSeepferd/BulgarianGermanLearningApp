@@ -62,6 +62,7 @@ export class DataLoader {
         */
       } catch (error) {
         lastError = error;
+        // eslint-disable-next-line no-console
         console.error(`Attempt ${attempt + 1} failed to load vocabulary data:`, error);
 
         // Wait before retrying
@@ -71,6 +72,7 @@ export class DataLoader {
       }
     }
 
+    // eslint-disable-next-line no-console
     console.error('All attempts to load vocabulary data failed');
     throw lastError || new Error('Unknown error occurred while loading vocabulary data');
   }

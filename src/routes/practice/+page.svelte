@@ -113,6 +113,7 @@
             class:correct={isSubmitted && option === correctAnswer}
             class:incorrect={isSubmitted && selectedAnswer === option && option !== correctAnswer}
             onclick={() => { if (!isSubmitted) { selectedAnswer = option } }}
+            onkeydown={(e) => { if (!isSubmitted && (e.key === 'Enter' || e.key === ' ')) { selectedAnswer = option } }}
             role="button"
             tabindex="0"
           >

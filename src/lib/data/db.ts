@@ -1,5 +1,4 @@
 import { browser } from '$app/environment';
-import { $state } from 'svelte';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 
 export class VocabularyDB {
@@ -35,7 +34,7 @@ export class VocabularyDB {
     }
 
     update(id: string, updates: Partial<VocabularyItem>) {
-        const index = this.items.findIndex(i => i.id === id);
+        const index = this.items.findIndex((i: VocabularyItem) => i.id === id);
         if (index !== -1) {
             const current = this.items[index];
             this.items[index] = { ...current, ...updates } as VocabularyItem;
@@ -43,7 +42,7 @@ export class VocabularyDB {
     }
 
     get(id: string): VocabularyItem | undefined {
-        return this.items.find(i => i.id === id);
+        return this.items.find((i: VocabularyItem) => i.id === id);
     }
 }
 

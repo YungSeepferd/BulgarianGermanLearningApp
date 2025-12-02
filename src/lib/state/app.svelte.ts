@@ -1,5 +1,4 @@
 import { browser } from '$app/environment';
-import { $state, $derived } from 'svelte';
 import { db } from '$lib/data/db';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 
@@ -21,8 +20,8 @@ export class AppState {
     filteredItems = $derived.by(() => {
         if (!this.searchQuery) return db.items;
         const q = this.searchQuery.toLowerCase();
-        return db.items.filter(item => 
-            item.german.toLowerCase().includes(q) || 
+        return db.items.filter((item: VocabularyItem) =>
+            item.german.toLowerCase().includes(q) ||
             item.bulgarian.toLowerCase().includes(q)
         );
     });

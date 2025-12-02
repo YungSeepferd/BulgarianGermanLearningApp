@@ -58,6 +58,7 @@ export class LocalStorageManager {
     
         // Convert stats array back to Map
         const statsMap = new Map<string, { correct: number; incorrect: number; lastPracticed: string }>();
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         parsedData.stats.forEach((item: any) => {
             statsMap.set(item.id, {
                 correct: item.correct,
