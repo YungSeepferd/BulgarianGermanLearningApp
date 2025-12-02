@@ -51,6 +51,7 @@
       resetAnswer();
     } catch (err) {
       error = 'Failed to load vocabulary. Please try again.';
+      // eslint-disable-next-line no-console
       console.error('Error loading vocabulary:', err);
     } finally {
       isLoading = false;

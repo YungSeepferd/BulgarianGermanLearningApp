@@ -1,5 +1,5 @@
 import { browser } from '$app/environment';
-import { db } from '$lib/data/db';
+import { db } from '$lib/data/db.svelte';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 
 export type LanguageMode = 'DE_BG' | 'BG_DE';

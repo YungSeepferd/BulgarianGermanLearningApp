@@ -23,8 +23,10 @@
 
   // Create effects using $effect
   $effect(() => {
+    // eslint-disable-next-line no-console
     console.log(`Count changed to: ${count}`);
     return () => {
+      // eslint-disable-next-line no-console
       console.log(`Count effect cleanup`);
     };
   });

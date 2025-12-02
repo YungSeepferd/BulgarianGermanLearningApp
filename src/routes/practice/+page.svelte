@@ -18,6 +18,7 @@
   // Exercise result information
   let resultMessage = $state("");
   let showResultMessage = $state(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let currentScore = $state(0);
 
   // Exercise content using $derived
