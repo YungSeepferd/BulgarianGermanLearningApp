@@ -36,7 +36,7 @@ export class LocalStorageManager {
         JSON.stringify(dataToSave)
       );
     } catch (error) {
-      console.error('Failed to save user progress:', error);
+      // console.error('Failed to save user progress:', error);
     }
   }
 
@@ -73,7 +73,7 @@ export class LocalStorageManager {
         lastUpdated: parsedData.lastUpdated
       };
     } catch (error) {
-      console.error('Failed to load user progress:', error);
+      // console.error('Failed to load user progress:', error);
       return null;
     }
   }
@@ -89,7 +89,7 @@ export class LocalStorageManager {
         JSON.stringify(session)
       );
     } catch (error) {
-      console.error('Failed to save practice session:', error);
+      // console.error('Failed to save practice session:', error);
     }
   }
 
@@ -104,7 +104,7 @@ export class LocalStorageManager {
 
       return JSON.parse(data) as PracticeSession;
     } catch (error) {
-      console.error('Failed to load practice session:', error);
+      // console.error('Failed to load practice session:', error);
       return null;
     }
   }
@@ -116,7 +116,7 @@ export class LocalStorageManager {
     try {
       localStorage.removeItem(LocalStorageManager.SESSION_KEY);
     } catch (error) {
-      console.error('Failed to clear practice session:', error);
+      // console.error('Failed to clear practice session:', error);
     }
   }
 
@@ -135,7 +135,7 @@ export class LocalStorageManager {
         exportedAt: new Date().toISOString()
       }, null, 2);
     } catch (error) {
-      console.error('Failed to export user data:', error);
+      // console.error('Failed to export user data:', error);
       throw new Error('Failed to export user data');
     }
   }
@@ -160,7 +160,7 @@ export class LocalStorageManager {
         this.savePracticeSession(data.session);
       }
     } catch (error) {
-      console.error('Failed to import user data:', error);
+      // console.error('Failed to import user data:', error);
       throw new Error('Failed to import user data');
     }
   }
@@ -174,7 +174,7 @@ export class LocalStorageManager {
         .filter(key => key.startsWith(LocalStorageManager.PREFIX))
         .forEach(key => localStorage.removeItem(key));
     } catch (error) {
-      console.error('Failed to clear all data:', error);
+      // console.error('Failed to clear all data:', error);
     }
   }
 }

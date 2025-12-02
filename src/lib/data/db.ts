@@ -1,4 +1,5 @@
 import { browser } from '$app/environment';
+import { $state } from 'svelte';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 
 export class VocabularyDB {
@@ -23,9 +24,9 @@ export class VocabularyDB {
             
             this.items = data;
             this.initialized = true;
-            console.log('📚 VocabularyDB initialized with', this.items.length, 'items');
+            // console.log('📚 VocabularyDB initialized with', this.items.length, 'items');
         } catch (e) {
-            console.error('Failed to load vocabulary:', e);
+            // console.error('Failed to load vocabulary:', e);
         }
     }
 

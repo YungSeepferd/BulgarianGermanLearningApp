@@ -1,4 +1,5 @@
 import { browser } from '$app/environment';
+import { $state, $derived } from 'svelte';
 import { db } from '$lib/data/db';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 
@@ -36,7 +37,7 @@ export class AppState {
             try {
                 localStorage.setItem('app-language-mode', this.languageMode);
             } catch (error) {
-                console.error('Failed to save language mode:', error);
+                // console.error('Failed to save language mode:', error);
             }
         }
     }
@@ -85,7 +86,7 @@ export class AppState {
                     this.languageMode = 'BG_DE';
                 }
             } catch (error) {
-                console.error('Failed to initialize state:', error);
+                // console.error('Failed to initialize state:', error);
             }
         }
     }
