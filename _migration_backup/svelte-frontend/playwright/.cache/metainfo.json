@@ -1,0 +1,12 @@
+{
+  "version": "1.57.0",
+  "viteVersion": "6.4.1",
+  "registerSourceHash": "759a8358ffb61b2d436732b8cc43960bb9f916b4",
+  "components": [],
+  "sources": {
+    "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/svelte-frontend/playwright/index.html": {
+      "timestamp": 1764180974285.9517
+    }
+  },
+  "deps": {}
+}

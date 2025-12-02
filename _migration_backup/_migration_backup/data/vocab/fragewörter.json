@@ -1,0 +1,548 @@
+[
+  {
+    "id": "a1_question_001",
+    "word": "Кой",
+    "translation": "wer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Essential question word: who - has gender forms",
+    "notes_bg_to_de": "В немски 'wer' [veːɐ̯] е единствена форма. В български има родови форми: кой (м.), коя (ж.), кое (ср.), кои (мн.).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Кой' hat Geschlechtsformen: кой (m), коя (f), кое (n), кои (pl). Deutsch 'wer' ist geschlechtsneutral.",
+    "etymology": "From Proto-Slavic '*kъjь'. Cognate with Latin 'quis', English 'who' through PIE *kʷis.",
+    "cultural_note": "Very common in greetings: 'Кой е там?' (Wer ist da?). Politeness: add 'моля' (bitte) to soften questions.",
+    "difficulty": 1,
+    "frequency": 98,
+    "examples": [
+      {
+        "sentence": "Кой е той?",
+        "translation": "Wer ist er?",
+        "context": "asking identity"
+      },
+      {
+        "sentence": "Коя е тази жена?",
+        "translation": "Wer ist diese Frau?",
+        "context": "feminine form"
+      },
+      {
+        "sentence": "Кои са те?",
+        "translation": "Wer sind sie?",
+        "context": "plural form"
+      }
+    ],
+    "linguistic_note": "Declension: кой/коя/кое/кои. Stress on single syllable: кой [kɔj].",
+    "linguistic_note_bg_to_de": "Кой [kɔj], коя [kɔˈja], кое [kɔˈɛ], кои [kɔˈi]. В немски 'wer' няма родови форми.",
+    "linguistic_note_de_to_bg": "Geschlechtsformen: кой (maskulin), коя (feminin), кое (neutral), кои (Plural). Deklination nach Geschlecht des Bezugswortes."
+  },
+  {
+    "id": "a1_question_002",
+    "word": "Какво",
+    "translation": "was",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Most common question word: what",
+    "notes_bg_to_de": "В немски 'was' [vas] е най-честата въпросителна дума. Използва се за предмети и понятия (не за хора).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Какво' = was. Sehr häufig in Alltagsfragen. Umgangssprachlich oft verkürzt zu 'какво' → 'що'.",
+    "etymology": "From Proto-Slavic '*kakъ' + '*vo'. Related to Russian 'что' and Polish 'co'.",
+    "cultural_note": "Universal greeting question: 'Какво правиш?' (Was machst du? / Wie geht's?). Can be shortened to 'Ало?' on phone.",
+    "difficulty": 1,
+    "frequency": 99,
+    "examples": [
+      {
+        "sentence": "Какво е това?",
+        "translation": "Was ist das?",
+        "context": "asking about object"
+      },
+      {
+        "sentence": "Какво правиш?",
+        "translation": "Was machst du?",
+        "context": "casual greeting"
+      },
+      {
+        "sentence": "Какво искаш?",
+        "translation": "Was willst du?",
+        "context": "asking desire"
+      }
+    ],
+    "linguistic_note": "Stress on какво́ [kɐkˈvɔ]. Colloquial form: 'що' [ʃtɔ] (very informal).",
+    "linguistic_note_bg_to_de": "Какво [kɐkˈvɔ]. Разговорна форма 'що' [ʃtɔ]. В немски 'was' [vas] - къса форма.",
+    "linguistic_note_de_to_bg": "Betonung какво́. In schneller Rede oft 'що' statt 'какво'. Ähnlich deutsch 'was' vs 'wat'."
+  },
+  {
+    "id": "a1_question_003",
+    "word": "Кога",
+    "translation": "wann",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Essential question word for asking about time. Unlike English 'when', Bulgarian 'кога' is used for both specific times and general time periods.",
+    "notes_bg_to_de": "В немски 'wann' се използва за въпроси за време, докато 'wenn' се използва за условни изречения ('ако') или повторени действия.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Кога' entspricht nur 'wann' (Fragewort), nicht 'wenn' (Konjunktion). Für 'wenn' gibt es andere bulgarische Wörter (ако, когато).",
+    "etymology": "From Proto-Slavic '*kъgda' (when), related to Russian 'когда' and Serbian 'када'. The question particle 'къ-' is related to 'кой' (who/which).",
+    "cultural_note": "In Bulgarian conversations, 'кога' questions are very direct. Unlike in German where you might soften with 'vielleicht' or 'eventuell', Bulgarians typically ask directly 'Кога идваш?' (When are you coming?).",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Asking about lesson time",
+        "sentence": "Кога е урокът?",
+        "translation": "Wann ist die Unterrichtsstunde?"
+      },
+      {
+        "context": "Asking when someone is coming",
+        "sentence": "Кога идваш?",
+        "translation": "Wann kommst du?"
+      },
+      {
+        "context": "Asking about duration from past",
+        "sentence": "От кога работиш тук?",
+        "translation": "Seit wann arbeitest du hier?"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: ко́га [ˈkɔɡɐ]. The 'о' is pronounced clearly, not reduced.",
+    "linguistic_note_bg_to_de": "Кога се произнася [ˈkɔɡɐ] с ударение на първата сричка. Не редуцирайте 'о' до 'ъ' като в 'когато'.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: ко́га [ˈkɔɡɐ]. Das 'о' wird klar ausgesprochen, nicht reduziert wie in manchen längeren Wörtern."
+  },
+  {
+    "id": "a1_question_004",
+    "word": "Къде",
+    "translation": "wo",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Essential question word for location. Can be combined with prepositions for directional questions: 'откъде' (from where), 'накъде' (to where).",
+    "notes_bg_to_de": "В немски 'wo' пита за местоположение, докато 'wohin' (накъде) пита за посока и 'woher' (откъде) пита за произход.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Къде' = 'wo' (statisch). Für Richtung gibt es separate Wörter: 'накъде' (wohin) und 'откъде' (woher).",
+    "etymology": "From Proto-Slavic '*kъde' (where), with the question particle 'къ-' and locative element '-де'. Related to Russian 'где' (but note Bulgarian retains the 'къ').",
+    "cultural_note": "When giving directions in Bulgaria, people often use landmarks rather than street names. A common response to 'Къде е...?' might be 'До [landmark]' (next to [landmark]).",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Asking about residence",
+        "sentence": "Къде живееш?",
+        "translation": "Wo wohnst du?"
+      },
+      {
+        "context": "Essential practical question",
+        "sentence": "Къде е тоалетната?",
+        "translation": "Wo ist die Toilette?"
+      },
+      {
+        "context": "Asking about workplace",
+        "sentence": "Къде работиш?",
+        "translation": "Wo arbeitest du?"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: къ́де [ˈkɤdɛ]. The 'ъ' is the schwa sound [ɤ], similar to the 'a' in English 'about'.",
+    "linguistic_note_bg_to_de": "Къде се произнася [ˈkɤdɛ] с ударение на 'къ'. Гласната 'ъ' е централна [ɤ], уникална за български.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: къ́де [ˈkɤdɛ]. Das 'ъ' ist ein Schwa-Laut [ɤ], ähnlich wie das 'a' in englisch 'about', kommt im Deutschen nicht vor."
+  },
+  {
+    "id": "a1_question_005",
+    "word": "Защо",
+    "translation": "warum",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question word for reason or cause. Common in everyday conversation. Can also be used in statements as 'because' when followed by a comma.",
+    "notes_bg_to_de": "В немски има три думи за 'защо': 'warum' (най-често), 'wieso', 'weshalb'. Всички се превеждат като 'защо' на български.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Защо' deckt alle Varianten ab: 'warum', 'wieso', 'weshalb'. Bulgaren unterscheiden nicht zwischen diesen Nuancen.",
+    "etymology": "Compound word from 'за' (for) + 'що' (what, archaic). Literally 'for what'. The form 'що' is archaic Bulgarian for 'какво' (what).",
+    "cultural_note": "Bulgarians tend to be direct with 'защо' questions, even in formal settings. Unlike German business culture where asking 'warum' might seem confrontational, Bulgarian workplace culture accepts direct 'защо' questions.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Asking reason for absence",
+        "sentence": "Защо не идваш?",
+        "translation": "Warum kommst du nicht?"
+      },
+      {
+        "context": "Asking about motivation",
+        "sentence": "Защо учиш български?",
+        "translation": "Warum lernst du Bulgarisch?"
+      },
+      {
+        "context": "Expressing confusion about reason",
+        "sentence": "Не разбирам защо.",
+        "translation": "Ich verstehe nicht, warum."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: защо́ [zɐˈʃtɔ]. The 'щ' is a single consonant sound [ʃt], not two separate sounds.",
+    "linguistic_note_bg_to_de": "Защо се произнася [zɐˈʃtɔ] с ударение на 'о'. Буквата 'щ' е един звук [ʃt], не 'ш' + 'т'.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: защо́ [zɐˈʃtɔ]. Das 'щ' ist ein einzelner Konsonant [ʃt], ähnlich wie 'scht' in 'Deutsch', aber als ein Laut."
+  },
+  {
+    "id": "a1_question_006",
+    "word": "Как",
+    "translation": "wie",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question word for manner or method. Also used in greetings: 'Как си?' (How are you?). Can mean 'how' (manner) or 'what' in certain fixed expressions.",
+    "notes_bg_to_de": "В немски 'wie' се използва за начин ('как'), количество ('wie viel' = 'колко') и в сравнения ('wie du' = 'като теб').",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Как' = 'wie' für Fragen nach Art und Weise. Für Mengenangaben ('wie viel') nutzt man 'колко', nicht 'как'.",
+    "etymology": "From Proto-Slavic '*kako' (how), related to Russian 'как' and Serbian 'како'. The 'к' root relates to questions and manner.",
+    "cultural_note": "The greeting 'Как си?' (How are you?) is universal in Bulgaria. Unlike in Germany where 'Wie geht's?' might get a detailed answer, Bulgarians typically respond briefly: 'Добре' (Good) or 'Нормално' (Okay).",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Standard greeting",
+        "sentence": "Как си?",
+        "translation": "Wie geht es dir?"
+      },
+      {
+        "context": "Asking for instructions",
+        "sentence": "Как се прави това?",
+        "translation": "Wie macht man das?"
+      },
+      {
+        "context": "Asking for name",
+        "sentence": "Как се казваш?",
+        "translation": "Wie heißt du?"
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: ка́к [kak]. The 'к' sounds are both hard [k], pronounced distinctly at beginning and end.",
+    "linguistic_note_bg_to_de": "Как се произнася [kak] с ударение на единствената сричка. И двете 'к' се произнасят твърдо и ясно.",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: ка́к [kak]. Beide 'к' werden hart ausgesprochen, wie deutsches 'k' in 'Kaffee'."
+  },
+  {
+    "id": "a1_question_007",
+    "word": "Колко",
+    "translation": "wie viel, wie viele",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question word for quantity or number. Unlike German which distinguishes 'wie viel' (uncountable) and 'wie viele' (countable), Bulgarian uses 'колко' for both.",
+    "notes_bg_to_de": "В немски разграничаваме 'wie viel' (за нещо неизброимо: wie viel Milch) и 'wie viele' (за броими: wie viele Äpfel). И двете са 'колко' на български.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Колко' entspricht sowohl 'wie viel' (für nicht zählbare Dinge) als auch 'wie viele' (für zählbare Dinge). Kein Unterschied im Bulgarischen.",
+    "etymology": "From Proto-Slavic '*koľko' (how much/many), related to Russian 'сколько'. The root '*kol-' relates to quantity and totality.",
+    "cultural_note": "When asking prices in Bulgaria, 'Колко струва?' (How much does it cost?) is the standard phrase. In markets, haggling is less common than in other Balkan countries - prices are usually fixed.",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Asking about price",
+        "sentence": "Колко струва?",
+        "translation": "Wie viel kostet das?"
+      },
+      {
+        "context": "Asking about age",
+        "sentence": "Колко години си?",
+        "translation": "Wie alt bist du? (literally: how many years are you?)"
+      },
+      {
+        "context": "Asking about number of people",
+        "sentence": "Колко хора има?",
+        "translation": "Wie viele Leute gibt es?"
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: ко́лко [ˈkɔlkɔ]. Both 'о' sounds are pronounced clearly, not reduced.",
+    "linguistic_note_bg_to_de": "Колко се произнася [ˈkɔlkɔ] с ударение на 'ко'. И двете 'о' се произнасят ясно, без редукция.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: ко́лко [ˈkɔlkɔ]. Beide 'о' werden klar ausgesprochen, ähnlich wie deutsches 'o' in 'Konto'."
+  },
+  {
+    "id": "a1_question_008",
+    "word": "Чий",
+    "translation": "wessen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question word for possession. Declines by gender and number: чий (m), чия (f), чие (n), чии (pl). Used to ask who owns something.",
+    "notes_bg_to_de": "В немски 'wessen' е формата за всички родове. В български 'чий' се променя: чий (м.р.), чия (ж.р.), чие (ср.р.), чии (мн.ч.).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Чий' ändert sich nach Genus und Numerus des besessenen Objects: чий телефон (welches Telefon - m), чия книга (welches Buch - f), чие дете (welches Kind - n), чии обувки (welche Schuhe - pl).",
+    "etymology": "From Proto-Slavic '*čьjь' (whose), related to Russian 'чей' and the base question word 'what/who'. The root is related to 'че' (that).",
+    "cultural_note": "In Bulgarian culture, asking 'Чий е?' about an object is common and direct. Unlike in some cultures where claiming ownership immediately is expected, Bulgarians might respond 'Не знам' (I don't know) neutrally without implying they're avoiding responsibility.",
+    "difficulty": 2,
+    "frequency": 70,
+    "examples": [
+      {
+        "context": "Asking about phone ownership (masculine)",
+        "sentence": "Чий е този телефон?",
+        "translation": "Wessen Telefon ist das?"
+      },
+      {
+        "context": "Asking about bag ownership (feminine)",
+        "sentence": "Чия е тази чанта?",
+        "translation": "Wessen Tasche ist das?"
+      },
+      {
+        "context": "Asking about child (neuter)",
+        "sentence": "Чие е детето?",
+        "translation": "Wessen Kind ist das?"
+      },
+      {
+        "context": "Asking about books (plural)",
+        "sentence": "Чии са тези книги?",
+        "translation": "Wessen Bücher sind das?"
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: чи́й [t͡ʃij]. The 'й' at the end is a clear [j] sound, like English 'y' in 'yes'.",
+    "linguistic_note_bg_to_de": "Чий се произнася [t͡ʃij] с ударение на единствената сричка. Краят 'й' е ясен [j] звук.",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: чи́й [t͡ʃij]. Das 'ч' ist wie deutsches 'tsch', das 'й' am Ende ist ein klares [j] wie in 'ja'."
+  },
+  {
+    "id": "a1_question_009",
+    "word": "Какъв",
+    "translation": "was für ein, welcher Art",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question word asking about type, kind, or quality. Declines by gender and number: какъв (m), каква (f), какво (n), какви (pl). Related to 'какво' (what) but asks about characteristics.",
+    "notes_bg_to_de": "В немски 'was für ein' пита за вид или качество, докато 'welcher' избира от известна група. 'Какъв' е по-близо до 'was für ein'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Какъв' = 'was für ein' (fragt nach Art/Qualität). Nicht zu verwechseln mit 'какво' (was) oder 'кой' (welcher - für Auswahl aus bekannter Gruppe).",
+    "etymology": "From Proto-Slavic '*kakovъ' (what kind of), compound of '*kako' (how) + adjectival ending. Related to Russian 'каков' (archaic) and Serbian 'какав'.",
+    "cultural_note": "When Bulgarians ask 'Какъв е?' about a person, they're usually asking about character/personality, not physical appearance. For appearance, they'd ask 'Как изглежда?' (How does he/she look?).",
+    "difficulty": 2,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Asking about film quality/type (masculine)",
+        "sentence": "Какъв е филмът?",
+        "translation": "Was für ein Film ist das? / Wie ist der Film?"
+      },
+      {
+        "context": "Asking about food quality (feminine)",
+        "sentence": "Каква е храната?",
+        "translation": "Wie ist das Essen?"
+      },
+      {
+        "context": "Asking about weather (neuter)",
+        "sentence": "Какво е времето?",
+        "translation": "Wie ist das Wetter?"
+      },
+      {
+        "context": "Asking about people's character (plural)",
+        "sentence": "Какви са хората?",
+        "translation": "Was für Leute sind das? / Wie sind die Leute?"
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: какъ́в [kɐˈkɤf]. The 'ъ' is schwa [ɤ], the final 'в' is devoiced to [f] in this position.",
+    "linguistic_note_bg_to_de": "Какъв се произнася [kɐˈkɤf] с ударение на 'къ'. Финалното 'в' се оглушава на [f].",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: какъ́в [kɐˈkɤf]. Das finale 'в' wird als [f] ausgesprochen (Auslautverhärtung), ähnlich wie im Deutschen."
+  },
+  {
+    "id": "a1_question_010",
+    "word": "Откъде",
+    "translation": "woher",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question word for origin or source. Compound of 'от' (from) + 'къде' (where). Used to ask where someone/something comes from.",
+    "notes_bg_to_de": "В немски 'woher' пита за произход. Българското 'откъде' е по-директен превод (от + къде = from + where), докато в немски е едно слово.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Откъде' = 'woher'. Wörtlich bedeutet es 'von wo' (от къде), wird aber als ein Wort geschrieben und behandelt.",
+    "etymology": "Compound word: 'от' (from, Proto-Slavic '*otъ') + 'къде' (where, Proto-Slavic '*kъde'). The combination is standard across South Slavic languages.",
+    "cultural_note": "'Откъде си?' (Where are you from?) is one of the first questions Bulgarians ask when meeting foreigners. Regional identity is strong in Bulgaria, and people often specify not just city but neighborhood or district.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Asking about origin/hometown",
+        "sentence": "Откъде си?",
+        "translation": "Woher kommst du?"
+      },
+      {
+        "context": "Asking where someone is coming from now",
+        "sentence": "Откъде идваш?",
+        "translation": "Woher kommst du? (right now)"
+      },
+      {
+        "context": "Asking about source of knowledge",
+        "sentence": "Откъде знаеш?",
+        "translation": "Woher weißt du das?"
+      }
+    ],
+    "linguistic_note": "Stress on middle syllable: откъ́де [ɔtˈkɤdɛ]. The 'ъ' is schwa [ɤ], and the compound is pronounced as one word without pause.",
+    "linguistic_note_bg_to_de": "Откъде се произнася [ɔtˈkɤdɛ] с ударение на 'къ'. Произнася се като една дума, без пауза между 'от' и 'къде'.",
+    "linguistic_note_de_to_bg": "Betonung auf der mittleren Silbe: откъ́де [ɔtˈkɤdɛ]. Wird als ein Wort ausgesprochen, ohne Pause zwischen 'от' und 'къде'."
+  },
+  {
+    "id": "a1_question_011",
+    "word": "Накъде",
+    "translation": "wohin",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question word for direction or destination. Compound of 'на' (to/toward) + 'къде' (where). Used to ask where someone is going.",
+    "notes_bg_to_de": "В немски 'wohin' пита за посока/направление. Българското 'накъде' е съставено от 'на' (към) + 'къде' (къде), но се пише и произнася като едно слово.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Накъде' = 'wohin'. Unterschied zu 'къде' (wo - statisch): 'къде си?' (wo bist du?) vs. 'накъде отиваш?' (wohin gehst du?).",
+    "etymology": "Compound word: 'на' (to/toward, Proto-Slavic '*na') + 'къде' (where). The preposition 'на' indicates direction toward a location.",
+    "cultural_note": "When asked 'Накъде?' on the street, Bulgarians typically give the destination directly without pleasantries. In contrast to German culture where you might explain your route, Bulgarians usually just state the endpoint: 'До центъра' (To the center).",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Asking about destination",
+        "sentence": "Накъде отиваш?",
+        "translation": "Wohin gehst du?"
+      },
+      {
+        "context": "Polite form, asking direction",
+        "sentence": "Накъде сте?",
+        "translation": "Wohin fahren Sie? / Wo sind Sie unterwegs?"
+      },
+      {
+        "context": "Asking bus destination",
+        "sentence": "Накъде е автобусът?",
+        "translation": "Wohin fährt der Bus?"
+      }
+    ],
+    "linguistic_note": "Stress on middle syllable: накъ́де [nɐˈkɤdɛ]. The 'ъ' is schwa [ɤ], and like 'откъде', it's pronounced as one word.",
+    "linguistic_note_bg_to_de": "Накъде се произнася [nɐˈkɤdɛ] с ударение на 'къ'. Произнася се като една дума без пауза.",
+    "linguistic_note_de_to_bg": "Betonung auf der mittleren Silbe: накъ́де [nɐˈkɤdɛ]. Wird als ein Wort ausgesprochen, ohne Pause zwischen 'на' und 'къде'."
+  },
+  {
+    "id": "a1_question_012",
+    "word": "Дали",
+    "translation": "ob",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Question particle introducing yes/no questions in indirect speech. Equivalent to German 'ob'. Can also be used to form polite questions or express uncertainty.",
+    "notes_bg_to_de": "В немски 'ob' въвежда непреки въпроси (Ich frage, ob...). В български 'дали' има същата функция, но може и да започва директни учтиви въпроси: 'Дали искаш кафе?' = 'Möchtest du vielleicht Kaffee?'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Дали' = 'ob' für indirekte Fragen. Aber Achtung: 'дали' kann auch am Anfang direkter Fragen stehen um Höflichkeit auszudrücken, was mit 'ob' im Deutschen nicht geht.",
+    "etymology": "From Proto-Slavic '*da li' (if, whether), compound of '*da' (yes/if) + question particle '*li'. Related to Russian 'ли' (question particle used alone).",
+    "cultural_note": "Using 'дали' at the start of a question adds politeness and tentativeness, similar to 'perhaps' or 'maybe' in English. It's common in service situations: 'Дали имате маса?' (Might you have a table?) is more polite than just 'Имате ли маса?'.",
+    "difficulty": 2,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Indirect question expressing uncertainty",
+        "sentence": "Не знам дали ще дойда.",
+        "translation": "Ich weiß nicht, ob ich komme."
+      },
+      {
+        "context": "Polite direct question",
+        "sentence": "Дали искаш да идеш?",
+        "translation": "Möchtest du vielleicht gehen?"
+      },
+      {
+        "context": "Indirect question",
+        "sentence": "Питам дали има време.",
+        "translation": "Ich frage, ob es Zeit gibt."
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: да́ли [ˈdɐli]. The 'а' is clear, the 'и' at the end is unstressed and slightly reduced.",
+    "linguistic_note_bg_to_de": "Дали се произнася [ˈdɐli] с ударение на 'да'. Крайното 'и' е неударено и леко редуцирано.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: да́ли [ˈdɐli]. Das 'и' am Ende ist unbetont, ähnlich wie deutsches '-e' in 'Liebe'."
+  },
+  {
+    "id": "a1_question_002_dup1",
+    "word": "Какво",
+    "translation": "was",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Most common question word: what | What (interrogative pronoun). Essential pronoun.",
+    "notes_bg_to_de": "В немски 'was' [vas] е най-честата въпросителна дума. Използва се за предмети и понятия (не за хора). | В български 'какво' се използва като what (interrogative pronoun).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Какво' = was. Sehr häufig in Alltagsfragen. Umgangssprachlich oft verkürzt zu 'какво' → 'що'. | Für Deutschsprachige: 'Какво' = 'was'.",
+    "etymology": "From Proto-Slavic '*kakъ' + '*vo'. Related to Russian 'что' and Polish 'co'. | From Proto-Slavic *kako",
+    "cultural_note": "Universal greeting question: 'Какво правиш?' (Was machst du? / Wie geht's?). Can be shortened to 'Ало?' on phone. | Already covered as question word - essential pronoun",
+    "difficulty": 1,
+    "frequency": 99,
+    "examples": [
+      {
+        "sentence": "Какво е това?",
+        "translation": "Was ist das?",
+        "context": "asking about object"
+      },
+      {
+        "sentence": "Какво правиш?",
+        "translation": "Was machst du?",
+        "context": "casual greeting"
+      },
+      {
+        "sentence": "Какво искаш?",
+        "translation": "Was willst du?",
+        "context": "asking desire"
+      },
+      {
+        "context": "Location",
+        "sentence": "Какво съм тук.",
+        "translation": "Was bin/ist hier."
+      },
+      {
+        "context": "Action",
+        "sentence": "Какво работя/работи.",
+        "translation": "Was arbeite/arbeitet."
+      },
+      {
+        "context": "Object",
+        "sentence": "Виждам какво.",
+        "translation": "Ich sehe was."
+      }
+    ],
+    "linguistic_note": "Stress on какво́ [kɐkˈvɔ]. Colloquial form: 'що' [ʃtɔ] (very informal). | Местоимение. Какво.",
+    "linguistic_note_bg_to_de": "Какво [kɐkˈvɔ]. Разговорна форма 'що' [ʃtɔ]. В немски 'was' [vas] - къса форма. | Какво - What (interrogative pronoun).",
+    "linguistic_note_de_to_bg": "Betonung какво́. In schneller Rede oft 'що' statt 'какво'. Ähnlich deutsch 'was' vs 'wat'. | Какво = was.",
+    "originalIndex": 205
+  },
+  {
+    "id": "a1_question_004_dup1",
+    "word": "Къде",
+    "translation": "wo",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Fragewörter",
+    "level": "A1",
+    "notes": "Essential question word for location. Can be combined with prepositions for directional questions: 'откъде' (from where), 'накъде' (to where). | Where - adverb form. Essential adverb.",
+    "notes_bg_to_de": "В немски 'wo' пита за местоположение, докато 'wohin' (накъде) пита за посока и 'woher' (откъде) пита за произход. | 'Къде' е наречие. Where - adverb form",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Къде' = 'wo' (statisch). Für Richtung gibt es separate Wörter: 'накъде' (wohin) und 'откъде' (woher). | Für Deutschsprachige: 'Къде' = 'wo'. Adverb.",
+    "etymology": "From Proto-Slavic '*kъde' (where), with the question particle 'къ-' and locative element '-де'. Related to Russian 'где' (but note Bulgarian retains the 'къ'). | Proto-Slavic or derived from adjectives.",
+    "cultural_note": "When giving directions in Bulgaria, people often use landmarks rather than street names. A common response to 'Къде е...?' might be 'До [landmark]' (next to [landmark]). | Common adverb in Bulgarian.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Asking about residence",
+        "sentence": "Къде живееш?",
+        "translation": "Wo wohnst du?"
+      },
+      {
+        "context": "Essential practical question",
+        "sentence": "Къде е тоалетната?",
+        "translation": "Wo ist die Toilette?"
+      },
+      {
+        "context": "Asking about workplace",
+        "sentence": "Къде работиш?",
+        "translation": "Wo arbeitest du?"
+      },
+      {
+        "context": "Usage",
+        "sentence": "Къде говоря.",
+        "translation": "Ich bin wo/arbeite wo/spreche wo."
+      },
+      {
+        "context": "Description",
+        "sentence": "Той е къде.",
+        "translation": "Er ist/macht wo."
+      },
+      {
+        "context": "State",
+        "sentence": "Къде е добре.",
+        "translation": "Wo ist gut."
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: къ́де [ˈkɤdɛ]. The 'ъ' is the schwa sound [ɤ], similar to the 'a' in English 'about'. | Adverb. Where - adverb form",
+    "linguistic_note_bg_to_de": "Къде се произнася [ˈkɤdɛ] с ударение на 'къ'. Гласната 'ъ' е централна [ɤ], уникална за български. | Наречие.",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: къ́де [ˈkɤdɛ]. Das 'ъ' ist ein Schwa-Laut [ɤ], ähnlich wie das 'a' in englisch 'about', kommt im Deutschen nicht vor. | Adverb.",
+    "originalIndex": 234
+  }
+]

@@ -1,0 +1,2258 @@
+[
+  {
+    "id": "a1_adj_004",
+    "word": "Добър",
+    "translation": "gut",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Most common positive adjective: good",
+    "notes_bg_to_de": "В немски 'gut' [ɡuːt] не се променя по род в номинатив (само падеж). В български: добър (м.), добра (ж.), добро (ср.).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Добър' hat Geschlechtsformen: добър/добра/добро. Auch Steigerung: по-добър (besser), най-добър (am besten).",
+    "etymology": "From Proto-Slavic '*dobrъ'. Cognate with Russian 'добрый'. From PIE root meaning 'fitting, proper'.",
+    "cultural_note": "Very common in greetings: Добро утро (Guten Morgen), Добър ден (Guten Tag). Also in toasts: Добре дошъл! (Willkommen!).",
+    "difficulty": 1,
+    "frequency": 98,
+    "examples": [
+      {
+        "sentence": "Добър ден!",
+        "translation": "Guten Tag!",
+        "context": "greeting"
+      },
+      {
+        "sentence": "Това е много добра книга.",
+        "translation": "Das ist ein sehr gutes Buch.",
+        "context": "description - feminine"
+      },
+      {
+        "sentence": "Имаш добро сърце.",
+        "translation": "Du hast ein gutes Herz.",
+        "context": "compliment - neuter"
+      }
+    ],
+    "linguistic_note": "Adjective with full declension. Forms: добър/добра/добро/добри. Comparative: по-добър.",
+    "linguistic_note_bg_to_de": "Добър [ˈdɔbɤr] - прилагателно с пълна промяна. М: добър, ж: добра, ср: добро, мн: добри.",
+    "linguistic_note_de_to_bg": "Geschlechtsformen: добър (m), добра (f), добро (n), добри (pl). Komparativ: по-добър."
+  },
+  {
+    "id": "a1_adj_005",
+    "word": "Лош",
+    "translation": "schlecht",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Common negative adjective: bad",
+    "notes_bg_to_de": "В немски 'schlecht' [ʃlɛçt] не се променя по род. В български: лош (м.), лоша (ж.), лошо (ср.). Антоним на 'добър'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Лош' = schlecht. Geschlechtsformen: лош/лоша/лошо. Gegenteil von 'добър'. Steigerung: по-лош, най-лош.",
+    "etymology": "From Proto-Slavic '*loxъ' (bad, evil). Related to Russian 'плохой'. Possibly connected to 'лукав' (cunning, evil).",
+    "cultural_note": "Used for quality, health, weather. 'Лош човек' (bad person - strong). 'Лошо време' (bad weather). Less harsh: 'не много добър'.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "sentence": "Лошо време днес.",
+        "translation": "Schlechtes Wetter heute.",
+        "context": "weather - neuter"
+      },
+      {
+        "sentence": "Това е лоша идея.",
+        "translation": "Das ist eine schlechte Idee.",
+        "context": "opinion - feminine"
+      },
+      {
+        "sentence": "Чувствам се лошо.",
+        "translation": "Ich fühle mich schlecht.",
+        "context": "health - adverb form"
+      }
+    ],
+    "linguistic_note": "Adjective with full declension. Forms: лош/лоша/лошо/лоши. Comparative: по-лош.",
+    "linguistic_note_bg_to_de": "Лош [lɔʃ] - променливо прилагателно. М: лош, ж: лоша, ср: лошо, мн: лоши.",
+    "linguistic_note_de_to_bg": "Geschlechtsformen: лош (m), лоша (f), лошо (n), лоши (pl). Antoným zu добър."
+  },
+  {
+    "id": "a1_adj_006",
+    "word": "Нов",
+    "translation": "neu",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Common descriptor adjective: new",
+    "notes_bg_to_de": "В немски 'neu' [nɔʏ̯] не се променя по род в номинатив. В български: нов (м.), нова (ж.), ново (ср.).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Нов' hat Geschlechtsformen: нов/нова/ново. Antoným: 'стар'. Sehr häufig für Gegenstände und Erfahrungen.",
+    "etymology": "From Proto-Slavic '*novъ'. Cognate with Latin 'novus', German 'neu', English 'new' through PIE *néwos.",
+    "cultural_note": "Common phrases: Нова година (Neujahr), нов живот (neues Leben). Also for news: новини (Nachrichten) shares same root.",
+    "difficulty": 1,
+    "frequency": 91,
+    "examples": [
+      {
+        "sentence": "Купих нова кола.",
+        "translation": "Ich habe ein neues Auto gekauft.",
+        "context": "purchase - feminine"
+      },
+      {
+        "sentence": "Честита Нова година!",
+        "translation": "Frohes Neues Jahr!",
+        "context": "celebration"
+      },
+      {
+        "sentence": "Имам ново télefon.",
+        "translation": "Ich habe ein neues Telefon.",
+        "context": "possession - neuter"
+      }
+    ],
+    "linguistic_note": "Adjective with full declension. Forms: нов/нова/ново/нови. Comparative: по-нов.",
+    "linguistic_note_bg_to_de": "Нов [nɔf] - променливо. М: нов, ж: нова, ср: ново, мн: нови.",
+    "linguistic_note_de_to_bg": "Geschlechtsformen: нов (m), нова (f), ново (n), нови (pl). Komparativ: по-нов."
+  },
+  {
+    "id": "a1_adj_007",
+    "word": "Стар",
+    "translation": "alt",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Common descriptor adjective: old (for things and age)",
+    "notes_bg_to_de": "В немски 'alt' [alt] не се променя по род. В български: стар (м.), стара (ж.), старо (ср.). За хора И за предмети.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Стар' = alt (für Personen UND Dinge). Geschlechtsformen: стар/стара/старо. Antoným: 'нов'. Auch für Alter: 'на 10 години' = 'стар 10 години'.",
+    "etymology": "From Proto-Slavic '*starъ'. Cognate with Latin 'stabilis' (firm, standing), English 'stare'. Originally 'standing long, established'.",
+    "cultural_note": "Respect for elderly: 'стар човек' (elderly person). Historic cities: Стария град (Altstadt). Age question: 'Колко си стар?' (Wie alt bist du?).",
+    "difficulty": 1,
+    "frequency": 89,
+    "examples": [
+      {
+        "sentence": "Колко си стар?",
+        "translation": "Wie alt bist du?",
+        "context": "asking age"
+      },
+      {
+        "sentence": "Живея в стара къща.",
+        "translation": "Ich wohne in einem alten Haus.",
+        "context": "description - feminine"
+      },
+      {
+        "sentence": "Старите традиции са важни.",
+        "translation": "Die alten Traditionen sind wichtig.",
+        "context": "cultural - plural definite"
+      }
+    ],
+    "linguistic_note": "Adjective with full declension. Forms: стар/стара/старо/стари. Comparative: по-стар.",
+    "linguistic_note_bg_to_de": "Стар [star] - променливо. М: стар, ж: стара, ср: старо, мн: стари. За възраст И за предмети.",
+    "linguistic_note_de_to_bg": "Geschlechtsformen: стар (m), стара (f), старо (n), стари (pl). Komparativ: по-стар. Antoným: нов."
+  },
+  {
+    "id": "a1_adj_008",
+    "word": "Голям",
+    "translation": "groß",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Big, large, great. Basic size adjective. Forms: голям (m), голяма (f), голямо (n), големи (pl). Very common in everyday descriptions.",
+    "notes_bg_to_de": "В немски 'groß' остава непроменен в предикатна позиция. В български 'голям' се променя: голям град (m), голяма къща (f), голямо дърво (n), големи хора (pl - важни хора, не само по размер).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Голям' dekliniert: голям (m), голяма (f), голямо (n), големи (pl - Achtung: nicht *'големи' sondern 'големи'!). Kann 'groß' (Größe) oder 'groß' (bedeutend) bedeuten.",
+    "etymology": "From Proto-Slavic '*golěmъ' (large, naked, bare), related to the root for 'bare/exposed'. The size meaning developed from 'exposed/prominent'. Unique to South Slavic languages - compare Russian 'большой' (different root).",
+    "cultural_note": "'Голям' can mean physically large or figuratively great/important. 'Голям човек' (great person) means someone important or admirable. 'Голяма сряда' and 'Голям петък' are religious holidays (Great Wednesday, Good Friday).",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Describing size",
+        "sentence": "София е голям град.",
+        "translation": "Sofia ist eine große Stadt."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам голяма къща.",
+        "translation": "Ich habe ein großes Haus."
+      },
+      {
+        "context": "Description",
+        "sentence": "Това е голямо дърво.",
+        "translation": "Das ist ein großer Baum."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: голя́м [ɡɔˈljam]. Plural form 'големи' [ɡɔˈlɛmi] changes the vowel pattern - note the 'е' instead of 'я'.",
+    "linguistic_note_bg_to_de": "Голям се произнася [ɡɔˈljam] с ударение на 'лям'. Множественото число е 'големи' [ɡɔˈlɛmi] с промяна на гласната от 'я' на 'е'.",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: голя́м [ɡɔˈljam]. Wichtig: Plural ist 'големи' [ɡɔˈlɛmi] mit Vokalwechsel von 'я' zu 'е'."
+  },
+  {
+    "id": "a1_adj_009",
+    "word": "Малък",
+    "translation": "klein",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Small, little. Basic size adjective. Forms: малък (m), малка (f), малко (n), малки (pl). Opposite of 'голям'. Very frequent in everyday speech.",
+    "notes_bg_to_de": "В немски 'klein' остава непроменен в предикатна позиция. В български 'малък' се променя: малък град (m), малка къща (f), малко дете (n), малки хора (pl). 'Малко' (н.р.) също означава 'малко' (a little, few) като наречие.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Малък' dekliniert: малък (m), малка (f), малко (n), малки (pl). Achtung: 'малко' (neuter) ist auch ein Adverb für 'ein wenig/wenige'.",
+    "etymology": "From Proto-Slavic '*malъ' (small), related to Russian 'малый' and Latin 'malus' (bad - possibly related). The root '*mal-' means small, little, young.",
+    "cultural_note": "'Малък' is used affectionately for children and young animals. 'Малки деца' (small children) is very common. The diminutive suffix '-че' can be added to nouns to express smallness: 'котенце' (little cat from 'котка').",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Pet description",
+        "sentence": "Имам малко куче.",
+        "translation": "Ich habe einen kleinen Hund."
+      },
+      {
+        "context": "Location description",
+        "sentence": "Това е малък град.",
+        "translation": "Das ist eine kleine Stadt."
+      },
+      {
+        "context": "Age/size description",
+        "sentence": "Детето е много малко.",
+        "translation": "Das Kind ist sehr klein."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: малъ́к [mɐˈlɤk]. The 'ъ' is schwa [ɤ]. Forms: малък/малка/малко/малки. Note 'малко' is both adjective (neuter) and adverb.",
+    "linguistic_note_bg_to_de": "Малък се произнася [mɐˈlɤk] с ударение на 'лък'. Буквата 'ъ' е [ɤ]. Форми: малък (м.р.), малка (ж.р.), малко (ср.р./наречие), малки (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: малъ́к [mɐˈlɤk]. Das 'ъ' ist Schwa [ɤ]. Formen: малък (m), малка (f), малко (n/Adverb), малки (pl)."
+  },
+  {
+    "id": "a1_adj_010",
+    "word": "Висок",
+    "translation": "hoch, groß (von Personen)",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Tall, high. Used for height of people, buildings, mountains. Forms: висок (m), висока (f), високо (n), високи (pl). Opposite of 'нисък'.",
+    "notes_bg_to_de": "В немски 'hoch' за височина на сгради/планини, 'groß' за хора. В български 'висок' се използва и за двете: висок човек (großer Mensch), висока планина (hoher Berg).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Висок' entspricht sowohl 'hoch' (für Objekte) als auch 'groß' (für Personen bezüglich Körpergröße). Keine Unterscheidung wie im Deutschen.",
+    "etymology": "From Proto-Slavic '*vysokъ' (high), related to Russian 'высокий' and the root '*vysъ' (height). Related to 'up' and 'elevated'.",
+    "cultural_note": "Height is often commented on in Bulgarian culture. 'Висок човек' (tall person) is a common neutral description. Mountain heights are frequently mentioned - Bulgaria has many high mountains (високи планини).",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Person description",
+        "sentence": "Той е много висок.",
+        "translation": "Er ist sehr groß (von der Körpergröße)."
+      },
+      {
+        "context": "Building description",
+        "sentence": "Това е висока сграда.",
+        "translation": "Das ist ein hohes Gebäude."
+      },
+      {
+        "context": "Geography",
+        "sentence": "Рила е висока планина.",
+        "translation": "Rila ist ein hohes Gebirge."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: висо́к [viˈsɔk]. Forms: висок/висока/високо/високи.",
+    "linguistic_note_bg_to_de": "Висок се произнася [viˈsɔk] с ударение на 'со'. Форми: висок (м.р.), висока (ж.р.), високо (ср.р.), високи (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: висо́к [viˈsɔk]. Formen: висок (m), висока (f), високо (n), високи (pl)."
+  },
+  {
+    "id": "a1_adj_011",
+    "word": "Нисък",
+    "translation": "niedrig, klein (von Personen)",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Low, short (height). Used for low height of people, buildings, etc. Forms: нисък (m), ниска (f), ниско (n), ниски (pl). Opposite of 'висок'.",
+    "notes_bg_to_de": "В немски 'niedrig' за ниски обекти, 'klein' за хора. В български 'нисък' се използва за хора (низък човек) и обекти (ниска сграда). За къси вещи (дължина) се използва 'къс', не 'нисък'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Нисък' = 'niedrig' (Höhe) oder 'klein' (für Personen). Nicht verwechseln mit 'къс' (kurz - für Länge).",
+    "etymology": "From Proto-Slavic '*niskъ' (low), related to Russian 'низкий' and the root '*nizъ' (down, lower). Related to 'below' and 'under'.",
+    "cultural_note": "Commenting on someone being 'нисък' (short) can be sensitive in Bulgarian culture, just as in many cultures. It's more polite to use indirect descriptions or avoid mentioning height unless relevant.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Person description",
+        "sentence": "Тя е ниска.",
+        "translation": "Sie ist klein (von der Körpergröße)."
+      },
+      {
+        "context": "Furniture description",
+        "sentence": "Масата е много ниска.",
+        "translation": "Der Tisch ist sehr niedrig."
+      },
+      {
+        "context": "Building description",
+        "sentence": "Това е ниска сграда.",
+        "translation": "Das ist ein niedriges Gebäude."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: нисъ́к [niˈsɤk]. The 'ъ' is schwa [ɤ]. Forms: нисък/ниска/ниско/ниски.",
+    "linguistic_note_bg_to_de": "Нисък се произнася [niˈsɤk] с ударение на 'сък'. Буквата 'ъ' е [ɤ]. Форми: нисък (м.р.), ниска (ж.р.), ниско (ср.р.), ниски (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: нисъ́к [niˈsɤk]. Das 'ъ' ist Schwa [ɤ]. Formen: нисък (m), ниска (f), ниско (n), ниски (pl)."
+  },
+  {
+    "id": "a1_adj_012",
+    "word": "Дълъг",
+    "translation": "lang",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Long (length, duration). Forms: дълъг (m), дълга (f), дълго (n), дълги (pl). Used for physical length and time duration. Opposite of 'къс'.",
+    "notes_bg_to_de": "В немски 'lang' се използва за дължина и продължителност. Също в български 'дълъг': дълъг път (langer Weg), дълго време (lange Zeit), дълга коса (langes Haar).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Дълъг' = 'lang' (sowohl räumlich als auch zeitlich). Beachten Sie die beiden 'ъ' im Wort - typisch bulgarisches Merkmal.",
+    "etymology": "From Proto-Slavic '*dьlgъ' (long), related to Russian 'долгий' and the root meaning 'long, stretched'. Also related to 'debt' (дълг) which is 'something long-lasting'.",
+    "cultural_note": "'Дълга коса' (long hair) is traditionally associated with femininity in Bulgarian culture. 'Дълъг път' (long road) appears often in Bulgarian songs and idioms about life's journey.",
+    "difficulty": 2,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Physical description",
+        "sentence": "Тя има дълга коса.",
+        "translation": "Sie hat lange Haare."
+      },
+      {
+        "context": "Distance",
+        "sentence": "Това е дълъг път.",
+        "translation": "Das ist ein langer Weg."
+      },
+      {
+        "context": "Duration",
+        "sentence": "Филмът е много дълъг.",
+        "translation": "Der Film ist sehr lang."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: дълъ́г [dɤˈlɤk]. Both 'ъ' are schwa [ɤ]. Forms: дълъг/дълга/дълго/дълги.",
+    "linguistic_note_bg_to_de": "Дълъг се произнася [dɤˈlɤk] с ударение на втората сричка. И двете 'ъ' са [ɤ]. Форми: дълъг (м.р.), дълга (ж.р.), дълго (ср.р.), дълги (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: дълъ́г [dɤˈlɤk]. Beide 'ъ' sind Schwa [ɤ]. Formen: дълъг (m), дълга (f), дълго (n), дълги (pl)."
+  },
+  {
+    "id": "a1_adj_013",
+    "word": "Къс",
+    "translation": "kurz",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Short (length, duration). Forms: къс (m), къса (f), късо (n), къси (pl). Used for physical shortness and brief time. Opposite of 'дълъг'.",
+    "notes_bg_to_de": "В немски 'kurz' се използва за дължина и продължителност. Също в български 'къс': къс панталон (kurze Hose), къса коса (kurzes Haar), късо време (kurze Zeit).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Къс' = 'kurz' (räumlich und zeitlich). Nicht verwechseln mit 'нисък' (niedrig - für Höhe). 'Къс' ist nur für Länge.",
+    "etymology": "From Proto-Slavic '*kъsъ' (short, cut), related to Bulgarian 'късам' (to cut/break). The root relates to cutting and shortness.",
+    "cultural_note": "'Къса коса' (short hair) was traditionally associated with masculinity, but modern Bulgaria has no strict gender associations. 'Да направим една къса пауза' (let's take a short break) is a common workplace phrase.",
+    "difficulty": 2,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Physical description",
+        "sentence": "Той има къса коса.",
+        "translation": "Er hat kurze Haare."
+      },
+      {
+        "context": "Duration",
+        "sentence": "Това е къс филм.",
+        "translation": "Das ist ein kurzer Film."
+      },
+      {
+        "context": "Clothing",
+        "sentence": "Нося къси панталони.",
+        "translation": "Ich trage kurze Hosen."
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: къ́с [kɤs]. The 'ъ' is schwa [ɤ]. Forms: къс/къса/късо/къси.",
+    "linguistic_note_bg_to_de": "Къс се произнася [kɤs] с ударение на единствената сричка. Буквата 'ъ' е [ɤ]. Форми: къс (м.р.), къса (ж.р.), късо (ср.р.), къси (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: къ́с [kɤs]. Das 'ъ' ist Schwa [ɤ]. Formen: къс (m), къса (f), късо (n), къси (pl)."
+  },
+  {
+    "id": "a1_adj_014",
+    "word": "Дебел",
+    "translation": "dick, fett",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Thick, fat. Used for thickness of objects and body weight. Forms: дебел (m), дебела (f), дебело (n), дебели (pl). Can be sensitive when describing people.",
+    "notes_bg_to_de": "В немски 'dick' може да е за дебелина на обекти или телесно тегло, 'fett' по-директно за наднормено тегло. В български 'дебел' се използва и за двете, но за хора може да звучи груб о.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Дебел' = 'dick' (für Objekte und Menschen). Wie 'dick' im Deutschen kann es bei Personenbeschreibungen unhöflich sein. Neutralere Alternative: 'едър' (korpulent).",
+    "etymology": "From Proto-Slavic '*debelъ' (thick, fat), related to Russian 'дебелый' (archaic) and the root meaning 'thick, stout'. Common in South Slavic languages.",
+    "cultural_note": "Calling someone 'дебел' can be offensive, especially in direct address. More polite alternatives include 'едър' (big/stout) or euphemisms. 'Дебела книга' (thick book) is neutral for objects.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "context": "Object description",
+        "sentence": "Това е дебела книга.",
+        "translation": "Das ist ein dickes Buch."
+      },
+      {
+        "context": "Architecture",
+        "sentence": "Дебелите стени са топли.",
+        "translation": "Die dicken Wände sind warm."
+      },
+      {
+        "context": "Animal description - less sensitive",
+        "sentence": "Котката е станала дебела.",
+        "translation": "Die Katze ist dick geworden."
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: де́бел [ˈdɛbɛl]. Forms: дебел/дебела/дебело/дебели.",
+    "linguistic_note_bg_to_de": "Дебел се произнася [ˈdɛbɛl] с ударение на 'де'. Форми: дебел (м.р.), дебела (ж.р.), дебело (ср.р.), дебели (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: де́бел [ˈdɛbɛl]. Formen: дебел (m), дебела (f), дебело (n), дебели (pl)."
+  },
+  {
+    "id": "a1_adj_015",
+    "word": "Тънък",
+    "translation": "dünn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Thin, slim. Used for thinness of objects and slimness of people/animals. Forms: тънък (m), тънка (f), тънко (n), тънки (pl). Opposite of 'дебел'.",
+    "notes_bg_to_de": "В немски 'dünn' за тънки обекти и слаби хора. В български 'тънък' също покрива и двете. За хора 'слаб' (schlank) е по-неутрална алтернатива.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Тънък' = 'dünn' (für Objekte und Personen). Für Menschen ist 'слаб' (schlank/dünn) oft eine neutralere Alternative. 'Тънък' kann negativ klingen (zu dünn).",
+    "etymology": "From Proto-Slavic '*tьnъkъ' (thin), related to Russian 'тонкий' and the root meaning 'stretched, thin, fine'. Related to delicacy and fineness.",
+    "cultural_note": "In Bulgarian culture, being 'too thin' (много тънък) can be seen as unhealthy. 'Тънка талия' (thin waist) is traditionally desirable. 'Тънка работа' (thin/delicate matter) is an idiom for a sensitive situation.",
+    "difficulty": 2,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Object description",
+        "sentence": "Това е тънка книга.",
+        "translation": "Das ist ein dünnes Buch."
+      },
+      {
+        "context": "Physical description",
+        "sentence": "Тя има тънка талия.",
+        "translation": "Sie hat eine schmale Taille."
+      },
+      {
+        "context": "Architecture problem",
+        "sentence": "Тънките стени не са топли.",
+        "translation": "Die dünnen Wände sind nicht warm."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: тънъ́к [tɤˈnɤk]. The 'ъ' is schwa [ɤ]. Forms: тънък/тънка/тънко/тънки.",
+    "linguistic_note_bg_to_de": "Тънък се произнася [tɤˈnɤk] с ударение на втората сричка. Буквата 'ъ' е [ɤ]. Форми: тънък (м.р.), тънка (ж.р.), тънко (ср.р.), тънки (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: тънъ́к [tɤˈnɤk]. Das 'ъ' ist Schwa [ɤ]. Formen: тънък (m), тънка (f), тънко (n), тънки (pl)."
+  },
+  {
+    "id": "a1_adj_016",
+    "word": "Хубав",
+    "translation": "schön, hübsch, nett",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Beautiful, nice, pretty, good. Very common positive adjective for appearance, weather, experiences. Forms: хубав (m), хубава (f), хубаво (n), хубави (pl). One of the most frequent positive adjectives.",
+    "notes_bg_to_de": "В немски има 'schön' (красив), 'hübsch' (хубав за хора), 'nett' (мил). Българското 'хубав' покрива всичките тези значения: хубав човек (netter Mensch), хубава къща (schönes Haus), хубаво време (schönes Wetter).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Хубав' ist sehr vielseitig: 'schön' (Aussehen), 'nett' (Persönlichkeit), 'gut' (Qualität). Eines der häufigsten positiven Adjektive im Bulgarischen.",
+    "etymology": "Possibly from Proto-Slavic '*xubavъ' or from Turkic influence during Ottoman period. Etymology debated. Some connect to 'hub-' root meaning 'good, beautiful'. Unique to Bulgarian among Slavic languages.",
+    "cultural_note": "'Хубаво!' (Nice!/Good!) is a very common exclamation. 'Хубав човек' (nice person) is high praise for character. 'Хубаво време' (nice weather) is a frequent conversation topic. Bulgarians use 'хубав' very liberally for positive descriptions.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Weather",
+        "sentence": "Времето е хубаво днес.",
+        "translation": "Das Wetter ist schön heute."
+      },
+      {
+        "context": "Appearance",
+        "sentence": "Тя е много хубава.",
+        "translation": "Sie ist sehr hübsch/schön."
+      },
+      {
+        "context": "Place description",
+        "sentence": "Това е хубаво място.",
+        "translation": "Das ist ein schöner Ort."
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: ху́бав [ˈxubɐf]. The 'х' is [x] (like German 'ch' in 'Bach'). Final 'в' devoices to [f]. Forms: хубав/хубава/хубаво/хубави.",
+    "linguistic_note_bg_to_de": "Хубав се произнася [ˈxubɐf] с ударение на 'ху'. Буквата 'х' е [x]. Крайното 'в' се оглушава на [f]. Форми: хубав (м.р.), хубава (ж.р.), хубаво (ср.р.), хубави (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: ху́бав [ˈxubɐf]. Das 'х' ist wie deutsches 'ch' in 'Bach'. Finales 'в' wird [f]. Formen: хубав (m), хубава (f), хубаво (n), хубави (pl)."
+  },
+  {
+    "id": "a1_adj_017",
+    "word": "Грозен",
+    "translation": "hässlich",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Ugly, hideous. Negative adjective for appearance. Forms: грозен (m), грозна (f), грозно (n), грозни (pl). Less commonly used than 'хубав' - Bulgarians prefer positive descriptions or avoid comment.",
+    "notes_bg_to_de": "В немски 'hässlich' е пряк термин за грозно. В български 'грозен' се използва, но често хората предпочитат индиректни изрази: 'не е много хубав' (nicht sehr schön) вместо директно 'грозен'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Грозен' = 'hässlich'. Wie im Deutschen ist es unhöflich, dies direkt über Menschen zu sagen. Bulgaren verwenden oft indirekte Ausdrücke oder Vermeidungsstrategien.",
+    "etymology": "From Proto-Slavic '*groznъ' originally meaning 'terrible, frightening', related to 'гроза' (thunder, terror). The meaning shifted from 'frightening' to 'ugly' in Bulgarian. Related to Russian 'грозный' (terrible, formidable).",
+    "cultural_note": "Calling someone 'грозен' is very offensive. Even for objects, Bulgarians often prefer softer expressions. 'Грозно време' (ugly weather) is acceptable. The name 'Иван Грозни' (Ivan the Terrible) uses the archaic 'terrible' meaning.",
+    "difficulty": 1,
+    "frequency": 60,
+    "examples": [
+      {
+        "context": "Weather (neutral usage)",
+        "sentence": "Времето е грозно днес.",
+        "translation": "Das Wetter ist hässlich/schlecht heute."
+      },
+      {
+        "context": "Architecture criticism",
+        "sentence": "Това е грозна сграда.",
+        "translation": "Das ist ein hässliches Gebäude."
+      },
+      {
+        "context": "Metaphorical usage",
+        "sentence": "Грозните думи боли.",
+        "translation": "Hässliche Worte tun weh."
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: гро́зен [ˈɡrɔzɛn]. Forms: грозен/грозна/грозно/грозни.",
+    "linguistic_note_bg_to_de": "Грозен се произнася [ˈɡrɔzɛn] с ударение на 'гро'. Форми: грозен (м.р.), грозна (ж.р.), грозно (ср.р.), грозни (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: гро́зен [ˈɡrɔzɛn]. Formen: грозен (m), грозна (f), грозно (n), грозни (pl)."
+  },
+  {
+    "id": "a1_adj_018",
+    "word": "Млад",
+    "translation": "jung",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Young. Forms: млад/млада/младо/млади. Young. Forms: млад/млада/младо/млади",
+    "notes_bg_to_de": "'Млад' се променя по род и число: Young. Forms: млад/млада/младо/млади",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Млад' = 'jung'. Dekliniert: Young. Forms: млад/млада/младо/млади",
+    "etymology": "Proto-Slavic *moldъ",
+    "cultural_note": "Common descriptive adjective in Bulgarian. Young. Forms: млад/млада/младо/млади",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е млад.",
+        "translation": "Er ist jung."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е млада.",
+        "translation": "Sie ist jung."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е младо.",
+        "translation": "Das Wetter ist jung."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Млад. Женски: млада. Среден: младо. Множествено: млади.",
+    "linguistic_note_bg_to_de": "Young. Forms: млад/млада/младо/млади",
+    "linguistic_note_de_to_bg": "Forms: Young. Forms: млад/млада/младо/млади"
+  },
+  {
+    "id": "a1_adj_020",
+    "word": "Горещ",
+    "translation": "heiß",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Hot (temperature). Forms: горещ/гореща/горещо/горещи. Hot (temperature). Forms: горещ/гореща/горещо/горещи",
+    "notes_bg_to_de": "'Горещ' се променя по род и число: Hot (temperature). Forms: горещ/гореща/горещо/горещи",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Горещ' = 'heiß'. Dekliniert: Hot (temperature). Forms: горещ/гореща/горещо/горещи",
+    "etymology": "From 'горя' (to burn)",
+    "cultural_note": "Common descriptive adjective in Bulgarian. Hot (temperature). Forms: горещ/гореща/горещо/горещи",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е горещ.",
+        "translation": "Er ist heiß."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е гореща.",
+        "translation": "Sie ist heiß."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е горещо.",
+        "translation": "Das Wetter ist heiß."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Горещ. Женски: гореща. Среден: горещо. Множествено: горещи.",
+    "linguistic_note_bg_to_de": "Hot (temperature). Forms: горещ/гореща/горещо/горещи",
+    "linguistic_note_de_to_bg": "Forms: Hot (temperature). Forms: горещ/гореща/горещо/горещи"
+  },
+  {
+    "id": "a1_adj_021",
+    "word": "Студен",
+    "translation": "kalt",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Cold. Forms: студен/студена/студено/студени. Cold. Forms: студен/студена/студено/студени",
+    "notes_bg_to_de": "'Студен' се променя по род и число: Cold. Forms: студен/студена/студено/студени",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Студен' = 'kalt'. Dekliniert: Cold. Forms: студен/студена/студено/студени",
+    "etymology": "Proto-Slavic *studъ",
+    "cultural_note": "Common descriptive adjective in Bulgarian. Cold. Forms: студен/студена/студено/студени",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е студен.",
+        "translation": "Er ist kalt."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е студена.",
+        "translation": "Sie ist kalt."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е студено.",
+        "translation": "Das Wetter ist kalt."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Студен. Женски: студена. Среден: студено. Множествено: студени.",
+    "linguistic_note_bg_to_de": "Cold. Forms: студен/студена/студено/студени",
+    "linguistic_note_de_to_bg": "Forms: Cold. Forms: студен/студена/студено/студени"
+  },
+  {
+    "id": "a1_adj_022",
+    "word": "Топъл",
+    "translation": "warm",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Warm. Forms: топъл/топла/топло/топли. Warm. Forms: топъл/топла/топло/топли",
+    "notes_bg_to_de": "'Топъл' се променя по род и число: Warm. Forms: топъл/топла/топло/топли",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Топъл' = 'warm'. Dekliniert: Warm. Forms: топъл/топла/топло/топли",
+    "etymology": "Proto-Slavic *teplъ",
+    "cultural_note": "Common descriptive adjective in Bulgarian. Warm. Forms: топъл/топла/топло/топли",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е топъл.",
+        "translation": "Er ist warm."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е топла.",
+        "translation": "Sie ist warm."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е топло.",
+        "translation": "Das Wetter ist warm."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Топъл. Женски: топла. Среден: топло. Множествено: топли.",
+    "linguistic_note_bg_to_de": "Warm. Forms: топъл/топла/топло/топли",
+    "linguistic_note_de_to_bg": "Forms: Warm. Forms: топъл/топла/топло/топли"
+  },
+  {
+    "id": "a1_adj_023",
+    "word": "Скъп",
+    "translation": "teuer, lieb",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Expensive, dear. Forms: скъп/скъпа/скъпо/скъпи. Dual meaning!. Expensive, dear. Forms: скъп/скъпа/скъпо/скъпи. Dual meaning!",
+    "notes_bg_to_de": "'Скъп' се променя по род и число: Expensive, dear. Forms: скъп/скъпа/скъпо/скъпи. Dual meaning!",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Скъп' = 'teuer, lieb'. Dekliniert: Expensive, dear. Forms: скъп/скъпа/скъпо/скъпи. Dual meaning!",
+    "etymology": "Proto-Slavic *sъkъpъ",
+    "cultural_note": "Common descriptive adjective in Bulgarian. Expensive, dear. Forms: скъп/скъпа/скъпо/скъпи. Dual meaning!",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е скъп.",
+        "translation": "Er ist teuer."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е скъпа.",
+        "translation": "Sie ist teuer."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е скъпо.",
+        "translation": "Das Wetter ist teuer."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Скъп. Женски: скъпа. Среден: скъпо. Множествено: скъпи. Dual meaning!.",
+    "linguistic_note_bg_to_de": "Expensive, dear. Forms: скъп/скъпа/скъпо/скъпи. Dual meaning!",
+    "linguistic_note_de_to_bg": "Forms: Expensive, dear. Forms: скъп/скъпа/скъпо/скъпи. Dual meaning!"
+  },
+  {
+    "id": "a1_adj_024",
+    "word": "Евтин",
+    "translation": "billig, günstig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Cheap, inexpensive. Forms: евтин/евтина/евтино/евтини. Cheap, inexpensive. Forms: евтин/евтина/евтино/евтини",
+    "notes_bg_to_de": "'Евтин' се променя по род и число: Cheap, inexpensive. Forms: евтин/евтина/евтино/евтини",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Евтин' = 'billig, günstig'. Dekliniert: Cheap, inexpensive. Forms: евтин/евтина/евтино/евтини",
+    "etymology": "Turkish 'ucuz' influence",
+    "cultural_note": "Common descriptive adjective in Bulgarian. Cheap, inexpensive. Forms: евтин/евтина/евтино/евтини",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е евтин.",
+        "translation": "Er ist billig."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е евтина.",
+        "translation": "Sie ist billig."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е евтино.",
+        "translation": "Das Wetter ist billig."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Евтин. Женски: евтина. Среден: евтино. Множествено: евтини.",
+    "linguistic_note_bg_to_de": "Cheap, inexpensive. Forms: евтин/евтина/евтино/евтини",
+    "linguistic_note_de_to_bg": "Forms: Cheap, inexpensive. Forms: евтин/евтина/евтино/евтини"
+  },
+  {
+    "id": "a1_adj_025",
+    "word": "Богат",
+    "translation": "reich",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Rich, wealthy. Forms: богат/богата/богато/богати. Rich, wealthy. Forms: богат/богата/богато/богати",
+    "notes_bg_to_de": "'Богат' се променя по род и число: Rich, wealthy. Forms: богат/богата/богато/богати",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Богат' = 'reich'. Dekliniert: Rich, wealthy. Forms: богат/богата/богато/богати",
+    "etymology": "Proto-Slavic *bogatъ",
+    "cultural_note": "Common descriptive adjective in Bulgarian. Rich, wealthy. Forms: богат/богата/богато/богати",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е богат.",
+        "translation": "Er ist reich."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е богата.",
+        "translation": "Sie ist reich."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е богато.",
+        "translation": "Das Wetter ist reich."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Богат. Женски: богата. Среден: богато. Множествено: богати.",
+    "linguistic_note_bg_to_de": "Rich, wealthy. Forms: богат/богата/богато/богати",
+    "linguistic_note_de_to_bg": "Forms: Rich, wealthy. Forms: богат/богата/богато/богати"
+  },
+  {
+    "id": "a1_adj_026",
+    "word": "Беден",
+    "translation": "arm",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Poor. Forms: беден/бедна/бедно/бедни. Poor. Forms: беден/бедна/бедно/бедни",
+    "notes_bg_to_de": "'Беден' се променя по род и число: Poor. Forms: беден/бедна/бедно/бедни",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Беден' = 'arm'. Dekliniert: Poor. Forms: беден/бедна/бедно/бедни",
+    "etymology": "Proto-Slavic *bědъ",
+    "cultural_note": "Common descriptive adjective in Bulgarian. Poor. Forms: беден/бедна/бедно/бедни",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е беден.",
+        "translation": "Er ist arm."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е бедна.",
+        "translation": "Sie ist arm."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е бедно.",
+        "translation": "Das Wetter ist arm."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Беден. Женски: бедна. Среден: бедно. Множествено: бедни.",
+    "linguistic_note_bg_to_de": "Poor. Forms: беден/бедна/бедно/бедни",
+    "linguistic_note_de_to_bg": "Forms: Poor. Forms: беден/бедна/бедно/бедни"
+  },
+  {
+    "id": "a1_adj_027",
+    "word": "Силен",
+    "translation": "stark",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Strong. Forms: силен/силна/силно/силни. Strong. Forms: силен/силна/силно/силни",
+    "notes_bg_to_de": "'Силен' се променя по род и число: Strong. Forms: силен/силна/силно/силни",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Силен' = 'stark'. Dekliniert: Strong. Forms: силен/силна/силно/силни",
+    "etymology": "Proto-Slavic *silьnъ",
+    "cultural_note": "Common descriptive adjective in Bulgarian. Strong. Forms: силен/силна/силно/силни",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е силен.",
+        "translation": "Er ist stark."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е силна.",
+        "translation": "Sie ist stark."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е силно.",
+        "translation": "Das Wetter ist stark."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Силен. Женски: силна. Среден: силно. Множествено: силни.",
+    "linguistic_note_bg_to_de": "Strong. Forms: силен/силна/силно/силни",
+    "linguistic_note_de_to_bg": "Forms: Strong. Forms: силен/силна/силно/силни"
+  },
+  {
+    "id": "a1_adj_028",
+    "word": "Слаб",
+    "translation": "schwach",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Weak. Forms: слаб/слаба/слабо/слаби. Weak. Forms: слаб/слаба/слабо/слаби",
+    "notes_bg_to_de": "'Слаб' се променя по род и число: Weak. Forms: слаб/слаба/слабо/слаби",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Слаб' = 'schwach'. Dekliniert: Weak. Forms: слаб/слаба/слабо/слаби",
+    "etymology": "Proto-Slavic *slabъ",
+    "cultural_note": "Common descriptive adjective in Bulgarian. Weak. Forms: слаб/слаба/слабо/слаби",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е слаб.",
+        "translation": "Er ist schwach."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е слаба.",
+        "translation": "Sie ist schwach."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е слабо.",
+        "translation": "Das Wetter ist schwach."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Слаб. Женски: слаба. Среден: слабо. Множествено: слаби.",
+    "linguistic_note_bg_to_de": "Weak. Forms: слаб/слаба/слабо/слаби",
+    "linguistic_note_de_to_bg": "Forms: Weak. Forms: слаб/слаба/слабо/слаби"
+  },
+  {
+    "id": "a1_adj_029",
+    "word": "Бърз",
+    "translation": "schnell",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Fast, quick. Forms: бърз/бърза/бързо/бързи. Fast, quick. Forms: бърз/бърза/бързо/бързи",
+    "notes_bg_to_de": "'Бърз' се променя по род и число: Fast, quick. Forms: бърз/бърза/бързо/бързи",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Бърз' = 'schnell'. Dekliniert: Fast, quick. Forms: бърз/бърза/бързо/бързи",
+    "etymology": "Proto-Slavic *bъrzъ",
+    "cultural_note": "Common descriptive adjective in Bulgarian. Fast, quick. Forms: бърз/бърза/бързо/бързи",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е бърз.",
+        "translation": "Er ist schnell."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е бърза.",
+        "translation": "Sie ist schnell."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е бързо.",
+        "translation": "Das Wetter ist schnell."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Бърз. Женски: бърза. Среден: бързо. Множествено: бързи.",
+    "linguistic_note_bg_to_de": "Fast, quick. Forms: бърз/бърза/бързо/бързи",
+    "linguistic_note_de_to_bg": "Forms: Fast, quick. Forms: бърз/бърза/бързо/бързи"
+  },
+  {
+    "id": "a1_adj_030",
+    "word": "Бавен",
+    "translation": "langsam",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Slow. Forms: бавен/бавна/бавно/бавни. Slow. Forms: бавен/бавна/бавно/бавни",
+    "notes_bg_to_de": "'Бавен' се променя по род и число: Slow. Forms: бавен/бавна/бавно/бавни",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Бавен' = 'langsam'. Dekliniert: Slow. Forms: бавен/бавна/бавно/бавни",
+    "etymology": "Proto-Slavic *bavъ",
+    "cultural_note": "Common descriptive adjective in Bulgarian. Slow. Forms: бавен/бавна/бавно/бавни",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е бавен.",
+        "translation": "Er ist langsam."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е бавна.",
+        "translation": "Sie ist langsam."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е бавно.",
+        "translation": "Das Wetter ist langsam."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Бавен. Женски: бавна. Среден: бавно. Множествено: бавни.",
+    "linguistic_note_bg_to_de": "Slow. Forms: бавен/бавна/бавно/бавни",
+    "linguistic_note_de_to_bg": "Forms: Slow. Forms: бавен/бавна/бавно/бавни"
+  },
+  {
+    "id": "a1_adj_031",
+    "word": "Лесен",
+    "translation": "leicht, einfach",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Easy. Forms: лесен/лесна/лесно/лесни. Easy. Forms: лесен/лесна/лесно/лесни",
+    "notes_bg_to_de": "'Лесен' се променя по род и число: Easy. Forms: лесен/лесна/лесно/лесни",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Лесен' = 'leicht, einfach'. Dekliniert: Easy. Forms: лесен/лесна/лесно/лесни",
+    "etymology": "Proto-Slavic *lьgъkъ",
+    "cultural_note": "Common descriptive adjective in Bulgarian. Easy. Forms: лесен/лесна/лесно/лесни",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е лесен.",
+        "translation": "Er ist leicht."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е лесна.",
+        "translation": "Sie ist leicht."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е лесно.",
+        "translation": "Das Wetter ist leicht."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Лесен. Женски: лесна. Среден: лесно. Множествено: лесни.",
+    "linguistic_note_bg_to_de": "Easy. Forms: лесен/лесна/лесно/лесни",
+    "linguistic_note_de_to_bg": "Forms: Easy. Forms: лесен/лесна/лесно/лесни"
+  },
+  {
+    "id": "a1_adj_032",
+    "word": "Труден",
+    "translation": "schwer, schwierig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Difficult, hard. Forms: труден/трудна/трудно/трудни. Difficult, hard. Forms: труден/трудна/трудно/трудни",
+    "notes_bg_to_de": "'Труден' се променя по род и число: Difficult, hard. Forms: труден/трудна/трудно/трудни",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Труден' = 'schwer, schwierig'. Dekliniert: Difficult, hard. Forms: труден/трудна/трудно/трудни",
+    "etymology": "From 'труд' (labor)",
+    "cultural_note": "Common descriptive adjective in Bulgarian. Difficult, hard. Forms: труден/трудна/трудно/трудни",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е труден.",
+        "translation": "Er ist schwer."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е трудна.",
+        "translation": "Sie ist schwer."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е трудно.",
+        "translation": "Das Wetter ist schwer."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Труден. Женски: трудна. Среден: трудно. Множествено: трудни.",
+    "linguistic_note_bg_to_de": "Difficult, hard. Forms: труден/трудна/трудно/трудни",
+    "linguistic_note_de_to_bg": "Forms: Difficult, hard. Forms: труден/трудна/трудно/трудни"
+  },
+  {
+    "id": "a1_adj_033",
+    "word": "Щастлив",
+    "translation": "glücklich",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Happy, fortunate. Forms: щастлив/щастлива/щастливо/щастливи",
+    "notes_bg_to_de": "'Щастлив' описва емоция/състояние. Форми: щастлив/щастлива/щастливо/щастливи",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Щастлив' = 'glücklich'. Dekliniert: щастлив/щастлива/щастливо/щастливи",
+    "etymology": "From 'щастие' (happiness, luck)",
+    "cultural_note": "Common emotion/state adjective. Happy, fortunate. Forms: щастлив/щастлива/щастливо/щастливи",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Self-description (m)",
+        "sentence": "Аз съм happy, fortunate. forms: щастлив.",
+        "translation": "Ich bin glücklich."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е щастлива.",
+        "translation": "Sie ist glücklich."
+      },
+      {
+        "context": "Description (pl)",
+        "sentence": "Те са щастливи.",
+        "translation": "Sie sind glücklich."
+      }
+    ],
+    "linguistic_note": "Adjective forms: Happy, fortunate. Forms: щастлив/щастлива/щастливо/щастливи",
+    "linguistic_note_bg_to_de": "Happy, fortunate. Forms: щастлив/щастлива/щастливо/щастливи",
+    "linguistic_note_de_to_bg": "Forms: Happy, fortunate. Forms: щастлив/щастлива/щастливо/щастливи"
+  },
+  {
+    "id": "a1_adj_034",
+    "word": "Тъжен",
+    "translation": "traurig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Sad. Forms: тъжен/тъжна/тъжно/тъжни",
+    "notes_bg_to_de": "'Тъжен' описва емоция/състояние. Форми: тъжен/тъжна/тъжно/тъжни",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Тъжен' = 'traurig'. Dekliniert: тъжен/тъжна/тъжно/тъжни",
+    "etymology": "Proto-Slavic *tǫgъ (grief)",
+    "cultural_note": "Common emotion/state adjective. Sad. Forms: тъжен/тъжна/тъжно/тъжни",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Self-description (m)",
+        "sentence": "Аз съм sad. forms: тъжен.",
+        "translation": "Ich bin traurig."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е тъжна.",
+        "translation": "Sie ist traurig."
+      },
+      {
+        "context": "Description (pl)",
+        "sentence": "Те са тъжни.",
+        "translation": "Sie sind traurig."
+      }
+    ],
+    "linguistic_note": "Adjective forms: Sad. Forms: тъжен/тъжна/тъжно/тъжни",
+    "linguistic_note_bg_to_de": "Sad. Forms: тъжен/тъжна/тъжно/тъжни",
+    "linguistic_note_de_to_bg": "Forms: Sad. Forms: тъжен/тъжна/тъжно/тъжни"
+  },
+  {
+    "id": "a1_adj_035",
+    "word": "Весел",
+    "translation": "fröhlich, lustig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Cheerful, merry. Forms: весел/весела/весело/весели",
+    "notes_bg_to_de": "'Весел' описва емоция/състояние. Форми: весел/весела/весело/весели",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Весел' = 'fröhlich, lustig'. Dekliniert: весел/весела/весело/весели",
+    "etymology": "Proto-Slavic *veselъ (merry)",
+    "cultural_note": "Common emotion/state adjective. Cheerful, merry. Forms: весел/весела/весело/весели",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Self-description (m)",
+        "sentence": "Аз съм cheerful, merry. forms: весел.",
+        "translation": "Ich bin fröhlich."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е весела.",
+        "translation": "Sie ist fröhlich."
+      },
+      {
+        "context": "Description (pl)",
+        "sentence": "Те са весели.",
+        "translation": "Sie sind fröhlich."
+      }
+    ],
+    "linguistic_note": "Adjective forms: Cheerful, merry. Forms: весел/весела/весело/весели",
+    "linguistic_note_bg_to_de": "Cheerful, merry. Forms: весел/весела/весело/весели",
+    "linguistic_note_de_to_bg": "Forms: Cheerful, merry. Forms: весел/весела/весело/весели"
+  },
+  {
+    "id": "a1_adj_036",
+    "word": "Сърдит",
+    "translation": "wütend, böse",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Angry. Forms: сърдит/сърдита/сърдито/сърдити",
+    "notes_bg_to_de": "'Сърдит' описва емоция/състояние. Форми: сърдит/сърдита/сърдито/сърдити",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сърдит' = 'wütend, böse'. Dekliniert: сърдит/сърдита/сърдито/сърдити",
+    "etymology": "From 'сърдя се' (to be angry)",
+    "cultural_note": "Common emotion/state adjective. Angry. Forms: сърдит/сърдита/сърдито/сърдити",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Self-description (m)",
+        "sentence": "Аз съм angry. forms: сърдит.",
+        "translation": "Ich bin wütend."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е сърдита.",
+        "translation": "Sie ist wütend."
+      },
+      {
+        "context": "Description (pl)",
+        "sentence": "Те са сърдити.",
+        "translation": "Sie sind wütend."
+      }
+    ],
+    "linguistic_note": "Adjective forms: Angry. Forms: сърдит/сърдита/сърдито/сърдити",
+    "linguistic_note_bg_to_de": "Angry. Forms: сърдит/сърдита/сърдито/сърдити",
+    "linguistic_note_de_to_bg": "Forms: Angry. Forms: сърдит/сърдита/сърдито/сърдити"
+  },
+  {
+    "id": "a1_adj_037",
+    "word": "Уморен",
+    "translation": "müde",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Tired. Forms: уморен/уморена/уморено/уморени",
+    "notes_bg_to_de": "'Уморен' описва емоция/състояние. Форми: уморен/уморена/уморено/уморени",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Уморен' = 'müde'. Dekliniert: уморен/уморена/уморено/уморени",
+    "etymology": "From 'умора' (fatigue)",
+    "cultural_note": "Common emotion/state adjective. Tired. Forms: уморен/уморена/уморено/уморени",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Self-description (m)",
+        "sentence": "Аз съм tired. forms: уморен.",
+        "translation": "Ich bin müde."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е уморена.",
+        "translation": "Sie ist müde."
+      },
+      {
+        "context": "Description (pl)",
+        "sentence": "Те са уморени.",
+        "translation": "Sie sind müde."
+      }
+    ],
+    "linguistic_note": "Adjective forms: Tired. Forms: уморен/уморена/уморено/уморени",
+    "linguistic_note_bg_to_de": "Tired. Forms: уморен/уморена/уморено/уморени",
+    "linguistic_note_de_to_bg": "Forms: Tired. Forms: уморен/уморена/уморено/уморени"
+  },
+  {
+    "id": "a1_adj_038",
+    "word": "Гладен",
+    "translation": "hungrig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Hungry. Forms: гладен/гладна/гладно/гладни",
+    "notes_bg_to_de": "'Гладен' описва емоция/състояние. Форми: гладен/гладна/гладно/гладни",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Гладен' = 'hungrig'. Dekliniert: гладен/гладна/гладно/гладни",
+    "etymology": "Proto-Slavic *gladъnъ (hungry)",
+    "cultural_note": "Common emotion/state adjective. Hungry. Forms: гладен/гладна/гладно/гладни",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Self-description (m)",
+        "sentence": "Аз съм hungry. forms: гладен.",
+        "translation": "Ich bin hungrig."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е гладна.",
+        "translation": "Sie ist hungrig."
+      },
+      {
+        "context": "Description (pl)",
+        "sentence": "Те са гладни.",
+        "translation": "Sie sind hungrig."
+      }
+    ],
+    "linguistic_note": "Adjective forms: Hungry. Forms: гладен/гладна/гладно/гладни",
+    "linguistic_note_bg_to_de": "Hungry. Forms: гладен/гладна/гладно/гладни",
+    "linguistic_note_de_to_bg": "Forms: Hungry. Forms: гладен/гладна/гладно/гладни"
+  },
+  {
+    "id": "a1_adj_039",
+    "word": "Жаден",
+    "translation": "durstig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Thirsty. Forms: жаден/жадна/жадно/жадни",
+    "notes_bg_to_de": "'Жаден' описва емоция/състояние. Форми: жаден/жадна/жадно/жадни",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Жаден' = 'durstig'. Dekliniert: жаден/жадна/жадно/жадни",
+    "etymology": "Proto-Slavic *žaždьnъ (thirsty)",
+    "cultural_note": "Common emotion/state adjective. Thirsty. Forms: жаден/жадна/жадно/жадни",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Self-description (m)",
+        "sentence": "Аз съм thirsty. forms: жаден.",
+        "translation": "Ich bin durstig."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е жадна.",
+        "translation": "Sie ist durstig."
+      },
+      {
+        "context": "Description (pl)",
+        "sentence": "Те са жадни.",
+        "translation": "Sie sind durstig."
+      }
+    ],
+    "linguistic_note": "Adjective forms: Thirsty. Forms: жаден/жадна/жадно/жадни",
+    "linguistic_note_bg_to_de": "Thirsty. Forms: жаден/жадна/жадно/жадни",
+    "linguistic_note_de_to_bg": "Forms: Thirsty. Forms: жаден/жадна/жадно/жадни"
+  },
+  {
+    "id": "a1_adj_040",
+    "word": "Болен",
+    "translation": "krank",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Sick, ill. Forms: болен/болна/болно/болни",
+    "notes_bg_to_de": "'Болен' описва емоция/състояние. Форми: болен/болна/болно/болни",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Болен' = 'krank'. Dekliniert: болен/болна/болно/болни",
+    "etymology": "From 'боля' (to hurt, ache)",
+    "cultural_note": "Common emotion/state adjective. Sick, ill. Forms: болен/болна/болно/болни",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Self-description (m)",
+        "sentence": "Аз съм sick, ill. forms: болен.",
+        "translation": "Ich bin krank."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е болна.",
+        "translation": "Sie ist krank."
+      },
+      {
+        "context": "Description (pl)",
+        "sentence": "Те са болни.",
+        "translation": "Sie sind krank."
+      }
+    ],
+    "linguistic_note": "Adjective forms: Sick, ill. Forms: болен/болна/болно/болни",
+    "linguistic_note_bg_to_de": "Sick, ill. Forms: болен/болна/болно/болни",
+    "linguistic_note_de_to_bg": "Forms: Sick, ill. Forms: болен/болна/болно/болни"
+  },
+  {
+    "id": "a1_adj_041",
+    "word": "Здрав",
+    "translation": "gesund",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Healthy. Forms: здрав/здрава/здраво/здрави. Also used as greeting!",
+    "notes_bg_to_de": "'Здрав' описва емоция/състояние. Форми: здрав/здрава/здраво/здрави. Also used as greeting!",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Здрав' = 'gesund'. Dekliniert: здрав/здрава/здраво/здрави. Also used as greeting!",
+    "etymology": "Proto-Slavic *sъdorvъ (healthy)",
+    "cultural_note": "Common emotion/state adjective. Healthy. Forms: здрав/здрава/здраво/здрави. Also used as greeting!",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Self-description (m)",
+        "sentence": "Аз съм healthy. forms: здрав.",
+        "translation": "Ich bin gesund."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е здрава.",
+        "translation": "Sie ist gesund."
+      },
+      {
+        "context": "Description (pl)",
+        "sentence": "Те са здрави. Also used as greeting!.",
+        "translation": "Sie sind gesund."
+      }
+    ],
+    "linguistic_note": "Adjective forms: Healthy. Forms: здрав/здрава/здраво/здрави. Also used as greeting!",
+    "linguistic_note_bg_to_de": "Healthy. Forms: здрав/здрава/здраво/здрави. Also used as greeting!",
+    "linguistic_note_de_to_bg": "Forms: Healthy. Forms: здрав/здрава/здраво/здрави. Also used as greeting!"
+  },
+  {
+    "id": "a1_adj_042",
+    "word": "Готов",
+    "translation": "bereit, fertig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Ready, prepared. Forms: готов/готова/готово/готови",
+    "notes_bg_to_de": "'Готов' описва емоция/състояние. Форми: готов/готова/готово/готови",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Готов' = 'bereit, fertig'. Dekliniert: готов/готова/готово/готови",
+    "etymology": "Proto-Slavic *gotovъ (ready)",
+    "cultural_note": "Common emotion/state adjective. Ready, prepared. Forms: готов/готова/готово/готови",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Self-description (m)",
+        "sentence": "Аз съм ready, prepared. forms: готов.",
+        "translation": "Ich bin bereit."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е готова.",
+        "translation": "Sie ist bereit."
+      },
+      {
+        "context": "Description (pl)",
+        "sentence": "Те са готови.",
+        "translation": "Sie sind bereit."
+      }
+    ],
+    "linguistic_note": "Adjective forms: Ready, prepared. Forms: готов/готова/готово/готови",
+    "linguistic_note_bg_to_de": "Ready, prepared. Forms: готов/готова/готово/готови",
+    "linguistic_note_de_to_bg": "Forms: Ready, prepared. Forms: готов/готова/готово/готови"
+  },
+  {
+    "id": "a1_adj_043",
+    "word": "Важен",
+    "translation": "wichtig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Important. Forms: важен/важна/важно/важни",
+    "notes_bg_to_de": "'Важен' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Важен' = 'wichtig'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "State",
+        "sentence": "Това е важен.",
+        "translation": "Das ist wichtig."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам важен книга.",
+        "translation": "Ich habe einen/eine wichtig Stuhl/Buch."
+      },
+      {
+        "context": "Definite",
+        "sentence": "Важеното нещо е там.",
+        "translation": "Die wichtige Sache ist dort."
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_044",
+    "word": "Интересен",
+    "translation": "interessant",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Interesting. Forms: интересен/интересна/интересно/интересни",
+    "notes_bg_to_de": "'Интересен' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Интересен' = 'interessant'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "State",
+        "sentence": "Това е интересен.",
+        "translation": "Das ist interessant."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам интересен стол.",
+        "translation": "Ich habe einen/eine interessant Stuhl/Buch."
+      },
+      {
+        "context": "Definite",
+        "sentence": "Интересеното нещо е там.",
+        "translation": "Die interessante Sache ist dort."
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_045",
+    "word": "Красив",
+    "translation": "schön, hübsch",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Beautiful. Forms: красив/Красива/Красиво/Красиви",
+    "notes_bg_to_de": "'Красив' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Красив' = 'schön, hübsch'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "State",
+        "sentence": "Това е красив.",
+        "translation": "Das ist schön."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам красив книга.",
+        "translation": "Ich habe einen/eine schön Stuhl/Buch."
+      },
+      {
+        "context": "Definite",
+        "sentence": "Красивото нещо е там.",
+        "translation": "Die schöne Sache ist dort."
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_046",
+    "word": "Чист",
+    "translation": "sauber, rein",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Clean. Forms: чист/Чиста/Чисто/Чисти",
+    "notes_bg_to_de": "'Чист' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Чист' = 'sauber, rein'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "State",
+        "sentence": "Това е чист.",
+        "translation": "Das ist sauber."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам чист стол.",
+        "translation": "Ich habe einen/eine sauber Stuhl/Buch."
+      },
+      {
+        "context": "Definite",
+        "sentence": "Чистото нещо е там.",
+        "translation": "Die saubere Sache ist dort."
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_047",
+    "word": "Мръсен",
+    "translation": "schmutzig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Dirty. Forms: мръсен/мръсна/мръсно/мръсни",
+    "notes_bg_to_de": "'Мръсен' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Мръсен' = 'schmutzig'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "State",
+        "sentence": "Това е мръсен.",
+        "translation": "Das ist schmutzig."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам мръсен книга.",
+        "translation": "Ich habe einen/eine schmutzig Stuhl/Buch."
+      },
+      {
+        "context": "Definite",
+        "sentence": "Мръсеното нещо е там.",
+        "translation": "Die schmutzige Sache ist dort."
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_048",
+    "word": "Пълен",
+    "translation": "voll",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Full. Forms: пълен/пълна/пълно/пълни",
+    "notes_bg_to_de": "'Пълен' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Пълен' = 'voll'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "State",
+        "sentence": "Това е пълен.",
+        "translation": "Das ist voll."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам пълен стол.",
+        "translation": "Ich habe einen/eine voll Stuhl/Buch."
+      },
+      {
+        "context": "Definite",
+        "sentence": "Пъленото нещо е там.",
+        "translation": "Die volle Sache ist dort."
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_049",
+    "word": "Празен",
+    "translation": "leer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Empty. Forms: празен/празна/празно/празни",
+    "notes_bg_to_de": "'Празен' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Празен' = 'leer'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "State",
+        "sentence": "Това е празен.",
+        "translation": "Das ist leer."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам празен книга.",
+        "translation": "Ich habe einen/eine leer Stuhl/Buch."
+      },
+      {
+        "context": "Definite",
+        "sentence": "Празеното нещо е там.",
+        "translation": "Die leere Sache ist dort."
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_050",
+    "word": "Отворен",
+    "translation": "offen, geöffnet",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Open. Forms: отворен/отворна/отворно/отворни",
+    "notes_bg_to_de": "'Отворен' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Отворен' = 'offen, geöffnet'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "State",
+        "sentence": "Това е отворен.",
+        "translation": "Das ist offen."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам отворен стол.",
+        "translation": "Ich habe einen/eine offen Stuhl/Buch."
+      },
+      {
+        "context": "Definite",
+        "sentence": "Отвореното нещо е там.",
+        "translation": "Die offene Sache ist dort."
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_051",
+    "word": "Затворен",
+    "translation": "geschlossen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Closed. Forms: затворен/затворна/затворно/затворни",
+    "notes_bg_to_de": "'Затворен' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Затворен' = 'geschlossen'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "State",
+        "sentence": "Това е затворен.",
+        "translation": "Das ist geschlossen."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам затворен книга.",
+        "translation": "Ich habe einen/eine geschlossen Stuhl/Buch."
+      },
+      {
+        "context": "Definite",
+        "sentence": "Затвореното нещо е там.",
+        "translation": "Die geschlossene Sache ist dort."
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_052",
+    "word": "Прав",
+    "translation": "gerade, richtig",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Straight, right. Forms: прав/Права/Право/Прави",
+    "notes_bg_to_de": "'Прав' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Прав' = 'gerade, richtig'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "State",
+        "sentence": "Това е прав.",
+        "translation": "Das ist gerade."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам прав стол.",
+        "translation": "Ich habe einen/eine gerade Stuhl/Buch."
+      },
+      {
+        "context": "Definite",
+        "sentence": "Правото нещо е там.",
+        "translation": "Die geradee Sache ist dort."
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_053",
+    "word": "Криви",
+    "translation": "krumm, schief",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Crooked. Forms: криви/Кривиа/Кривио/Кривии",
+    "notes_bg_to_de": "'Криви' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Криви' = 'krumm, schief'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "State",
+        "sentence": "Това е криви.",
+        "translation": "Das ist krumm."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам криви книга.",
+        "translation": "Ich habe einen/eine krumm Stuhl/Buch."
+      },
+      {
+        "context": "Definite",
+        "sentence": "Кривиото нещо е там.",
+        "translation": "Die krumme Sache ist dort."
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_054",
+    "word": "Мек",
+    "translation": "weich",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Soft. Forms: мек/Мека/Меко/Меки",
+    "notes_bg_to_de": "'Мек' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Мек' = 'weich'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "State",
+        "sentence": "Това е мек.",
+        "translation": "Das ist weich."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам мек стол.",
+        "translation": "Ich habe einen/eine weich Stuhl/Buch."
+      },
+      {
+        "context": "Definite",
+        "sentence": "Мекото нещо е там.",
+        "translation": "Die weiche Sache ist dort."
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_055",
+    "word": "Твърд",
+    "translation": "hart",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Hard. Forms: твърд/Твърда/Твърдо/Твърди",
+    "notes_bg_to_de": "'Твърд' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Твърд' = 'hart'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "State",
+        "sentence": "Това е твърд.",
+        "translation": "Das ist hart."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам твърд книга.",
+        "translation": "Ich habe einen/eine hart Stuhl/Buch."
+      },
+      {
+        "context": "Definite",
+        "sentence": "Твърдото нещо е там.",
+        "translation": "Die harte Sache ist dort."
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_056",
+    "word": "Гладък",
+    "translation": "glatt",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Smooth. Forms: гладък/Гладъка/Гладъко/Гладъки",
+    "notes_bg_to_de": "'Гладък' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Гладък' = 'glatt'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "State",
+        "sentence": "Това е гладък.",
+        "translation": "Das ist glatt."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам гладък стол.",
+        "translation": "Ich habe einen/eine glatt Stuhl/Buch."
+      },
+      {
+        "context": "Definite",
+        "sentence": "Гладъкото нещо е там.",
+        "translation": "Die glatte Sache ist dort."
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_057",
+    "word": "Груб",
+    "translation": "rau, grob",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Rough, coarse. Forms: груб/Груба/Грубо/Груби",
+    "notes_bg_to_de": "'Груб' е прилагателно име, мъжки род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Груб' = 'rau, grob'. Adjektiv, maskulin.",
+    "etymology": "Proto-Slavic origin.",
+    "cultural_note": "Common descriptive adjective.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "State",
+        "sentence": "Това е груб.",
+        "translation": "Das ist rau."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам груб книга.",
+        "translation": "Ich habe einen/eine rau Stuhl/Buch."
+      },
+      {
+        "context": "Definite",
+        "sentence": "Грубото нещо е там.",
+        "translation": "Die raue Sache ist dort."
+      }
+    ],
+    "linguistic_note": "Прилагателно име.",
+    "linguistic_note_bg_to_de": "Прилагателно.",
+    "linguistic_note_de_to_bg": "Adjektiv."
+  },
+  {
+    "id": "a1_adj_004_dup1",
+    "word": "Добър",
+    "translation": "gut",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Most common positive adjective: good",
+    "notes_bg_to_de": "Прилагателното 'gut' се степенува неправилно: 'besser', 'am besten'. Използва се и като наречие: 'gut schmecken'. | В немски 'gut' [ɡuːt] не се променя по род в номинатив (само падеж). В български: добър (м.), добра (ж.), добро (ср.).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Добър' ≈ 'gut'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet. | Für Deutschsprachige: 'Добър' hat Geschlechtsformen: добър/добра/добро. Auch Steigerung: по-добър (besser), най-добър (am besten).",
+    "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о | From Proto-Slavic '*dobrъ'. Cognate with Russian 'добрый'. From PIE root meaning 'fitting, proper'.",
+    "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender | Very common in greetings: Добро утро (Guten Morgen), Добър ден (Guten Tag). Also in toasts: Добре дошъл! (Willkommen!).",
+    "difficulty": 1,
+    "frequency": 98,
+    "examples": [
+      {
+        "sentence": "Добър ден!",
+        "translation": "Guten Tag!",
+        "context": "greeting"
+      },
+      {
+        "sentence": "Това е много добра книга.",
+        "translation": "Das ist ein sehr gutes Buch.",
+        "context": "description - feminine"
+      },
+      {
+        "sentence": "Имаш добро сърце.",
+        "translation": "Du hast ein gutes Herz.",
+        "context": "compliment - neuter"
+      }
+    ],
+    "linguistic_note": "Adjective with full declension. Forms: добър/добра/добро/добри. Comparative: по-добър.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Добър [ˈdɔbɤr] - прилагателно с пълна промяна. М: добър, ж: добра, ср: добро, мн: добри.",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Geschlechtsformen: добър (m), добра (f), добро (n), добри (pl). Komparativ: по-добър.",
+    "originalIndex": 229
+  },
+  {
+    "id": "a1_adj_005_dup1",
+    "word": "Лош",
+    "translation": "schlecht",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Common negative adjective: bad",
+    "notes_bg_to_de": "'Schlecht' означава 'лош/зле'. За оценка на самочувствие се казва 'Es geht mir schlecht'. Степенуване: 'schlechter', 'am schlechtesten'. | В немски 'schlecht' [ʃlɛçt] не се променя по род. В български: лош (м.), лоша (ж.), лошо (ср.). Антоним на 'добър'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Лош' ≈ 'schlecht'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet. | Für Deutschsprachige: 'Лош' = schlecht. Geschlechtsformen: лош/лоша/лошо. Gegenteil von 'добър'. Steigerung: по-лош, най-лош.",
+    "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о | From Proto-Slavic '*loxъ' (bad, evil). Related to Russian 'плохой'. Possibly connected to 'лукав' (cunning, evil).",
+    "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender | Used for quality, health, weather. 'Лош човек' (bad person - strong). 'Лошо време' (bad weather). Less harsh: 'не много добър'.",
+    "difficulty": 1,
+    "frequency": 99,
+    "examples": [
+      {
+        "sentence": "Лошо време днес.",
+        "translation": "Schlechtes Wetter heute.",
+        "context": "weather - neuter"
+      },
+      {
+        "sentence": "Това е лоша идея.",
+        "translation": "Das ist eine schlechte Idee.",
+        "context": "opinion - feminine"
+      },
+      {
+        "sentence": "Чувствам се лошо.",
+        "translation": "Ich fühle mich schlecht.",
+        "context": "health - adverb form"
+      }
+    ],
+    "linguistic_note": "Adjective with full declension. Forms: лош/лоша/лошо/лоши. Comparative: по-лош.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Лош [lɔʃ] - променливо прилагателно. М: лош, ж: лоша, ср: лошо, мн: лоши.",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Geschlechtsformen: лош (m), лоша (f), лошо (n), лоши (pl). Antoným zu добър.",
+    "originalIndex": 230
+  },
+  {
+    "id": "a1_adj_008_dup1",
+    "word": "Голям",
+    "translation": "groß",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Big, large, great. Basic size adjective. Forms: голям (m), голяма (f), голямо (n), големи (pl). Very common in everyday descriptions.",
+    "notes_bg_to_de": "'Groß' означава 'голям' или 'висок на ръст'. Степенуване: 'größer', 'am größten'. Умалително: 'großartig' (великолепен). | В немски 'groß' остава непроменен в предикатна позиция. В български 'голям' се променя: голям град (m), голяма къща (f), голямо дърво (n), големи хора (pl - важни хора, не само по размер).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Голям' ≈ 'groß'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet. | Für Deutschsprachige: 'Голям' dekliniert: голям (m), голяма (f), голямо (n), големи (pl - Achtung: nicht *'големи' sondern 'големи'!). Kann 'groß' (Größe) oder 'groß' (bedeutend) bedeuten.",
+    "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о | From Proto-Slavic '*golěmъ' (large, naked, bare), related to the root for 'bare/exposed'. The size meaning developed from 'exposed/prominent'. Unique to South Slavic languages - compare Russian 'большой' (different root).",
+    "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender | 'Голям' can mean physically large or figuratively great/important. 'Голям човек' (great person) means someone important or admirable. 'Голяма сряда' and 'Голям петък' are religious holidays (Great Wednesday, Good Friday).",
+    "difficulty": 1,
+    "frequency": 93,
+    "examples": [
+      {
+        "context": "Describing size",
+        "sentence": "София е голям град.",
+        "translation": "Sofia ist eine große Stadt."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам голяма къща.",
+        "translation": "Ich habe ein großes Haus."
+      },
+      {
+        "context": "Description",
+        "sentence": "Това е голямо дърво.",
+        "translation": "Das ist ein großer Baum."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: голя́м [ɡɔˈljam]. Plural form 'големи' [ɡɔˈlɛmi] changes the vowel pattern - note the 'е' instead of 'я'.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Голям се произнася [ɡɔˈljam] с ударение на 'лям'. Множественото число е 'големи' [ɡɔˈlɛmi] с промяна на гласната от 'я' на 'е'.",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Betonung auf der zweiten Silbe: голя́м [ɡɔˈljam]. Wichtig: Plural ist 'големи' [ɡɔˈlɛmi] mit Vokalwechsel von 'я' zu 'е'.",
+    "originalIndex": 263
+  },
+  {
+    "id": "a1_adj_009_dup1",
+    "word": "Малък",
+    "translation": "klein",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Small, little. Basic size adjective. Forms: малък (m), малка (f), малко (n), малки (pl). Opposite of 'голям'. Very frequent in everyday speech.",
+    "notes_bg_to_de": "'Klein' описва размер или ръст. Често се използва във фрази: 'Kleine Kinder' (малки деца). Степенуване: 'kleiner', 'am kleinsten'. | В немски 'klein' остава непроменен в предикатна позиция. В български 'малък' се променя: малък град (m), малка къща (f), малко дете (n), малки хора (pl). 'Малко' (н.р.) също означава 'малко' (a little, few) като наречие.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Малък' ≈ 'klein'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet. | Für Deutschsprachige: 'Малък' dekliniert: малък (m), малка (f), малко (n), малки (pl). Achtung: 'малко' (neuter) ist auch ein Adverb für 'ein wenig/wenige'.",
+    "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о | From Proto-Slavic '*malъ' (small), related to Russian 'малый' and Latin 'malus' (bad - possibly related). The root '*mal-' means small, little, young.",
+    "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender | 'Малък' is used affectionately for children and young animals. 'Малки деца' (small children) is very common. The diminutive suffix '-че' can be added to nouns to express smallness: 'котенце' (little cat from 'котка').",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Pet description",
+        "sentence": "Имам малко куче.",
+        "translation": "Ich habe einen kleinen Hund."
+      },
+      {
+        "context": "Location description",
+        "sentence": "Това е малък град.",
+        "translation": "Das ist eine kleine Stadt."
+      },
+      {
+        "context": "Age/size description",
+        "sentence": "Детето е много малко.",
+        "translation": "Das Kind ist sehr klein."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: малъ́к [mɐˈlɤk]. The 'ъ' is schwa [ɤ]. Forms: малък/малка/малко/малки. Note 'малко' is both adjective (neuter) and adverb.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Малък се произнася [mɐˈlɤk] с ударение на 'лък'. Буквата 'ъ' е [ɤ]. Форми: малък (м.р.), малка (ж.р.), малко (ср.р./наречие), малки (мн.ч.).",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Betonung auf der zweiten Silbe: малъ́к [mɐˈlɤk]. Das 'ъ' ist Schwa [ɤ]. Formen: малък (m), малка (f), малко (n/Adverb), малки (pl).",
+    "originalIndex": 264
+  },
+  {
+    "id": "a1_adj_006_dup1",
+    "word": "Нов",
+    "translation": "neu",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Common descriptor adjective: new",
+    "notes_bg_to_de": "'Neu' означава 'нов/ново'. Типичен израз: 'neue Wohnung', 'neu anfangen'. Степенуване: 'neuer', 'am neuesten'. | В немски 'neu' [nɔʏ̯] не се променя по род в номинатив. В български: нов (м.), нова (ж.), ново (ср.).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Нов' ≈ 'neu'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet. | Für Deutschsprachige: 'Нов' hat Geschlechtsformen: нов/нова/ново. Antoným: 'стар'. Sehr häufig für Gegenstände und Erfahrungen.",
+    "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о | From Proto-Slavic '*novъ'. Cognate with Latin 'novus', German 'neu', English 'new' through PIE *néwos.",
+    "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender | Common phrases: Нова година (Neujahr), нов живот (neues Leben). Also for news: новини (Nachrichten) shares same root.",
+    "difficulty": 1,
+    "frequency": 93,
+    "examples": [
+      {
+        "sentence": "Купих нова кола.",
+        "translation": "Ich habe ein neues Auto gekauft.",
+        "context": "purchase - feminine"
+      },
+      {
+        "sentence": "Честита Нова година!",
+        "translation": "Frohes Neues Jahr!",
+        "context": "celebration"
+      },
+      {
+        "sentence": "Имам ново télefon.",
+        "translation": "Ich habe ein neues Telefon.",
+        "context": "possession - neuter"
+      }
+    ],
+    "linguistic_note": "Adjective with full declension. Forms: нов/нова/ново/нови. Comparative: по-нов.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Нов [nɔf] - променливо. М: нов, ж: нова, ср: ново, мн: нови.",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Geschlechtsformen: нов (m), нова (f), ново (n), нови (pl). Komparativ: по-нов.",
+    "originalIndex": 231
+  },
+  {
+    "id": "a1_adj_007_dup1",
+    "word": "Стар",
+    "translation": "alt",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Common descriptor adjective: old (for things and age) | Old (already covered but with full forms). Forms: стар/стара/старо/стари. Old (already covered but with full forms). Forms: стар/стара/старо/стари",
+    "notes_bg_to_de": "'Alt' описва възраст или състояние: 'alt werden' (остарявам). Степенуване: 'älter', 'am ältesten'. | В немски 'alt' [alt] не се променя по род. В български: стар (м.), стара (ж.), старо (ср.). За хора И за предмети. | 'Стар' се променя по род и число: Old (already covered but with full forms). Forms: стар/стара/старо/стари",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Стар' ≈ 'alt'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet. | Für Deutschsprachige: 'Стар' = alt (für Personen UND Dinge). Geschlechtsformen: стар/стара/старо. Antoným: 'нов'. Auch für Alter: 'на 10 години' = 'стар 10 години'. | Für Deutschsprachige: 'Стар' = 'alt'. Dekliniert: Old (already covered but with full forms). Forms: стар/стара/старо/стари",
+    "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о | From Proto-Slavic '*starъ'. Cognate with Latin 'stabilis' (firm, standing), English 'stare'. Originally 'standing long, established'. | Proto-Slavic *starъ",
+    "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender | Respect for elderly: 'стар човек' (elderly person). Historic cities: Стария град (Altstadt). Age question: 'Колко си стар?' (Wie alt bist du?). | Common descriptive adjective in Bulgarian. Old (already covered but with full forms). Forms: стар/стара/старо/стари",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "sentence": "Колко си стар?",
+        "translation": "Wie alt bist du?",
+        "context": "asking age"
+      },
+      {
+        "sentence": "Живея в стара къща.",
+        "translation": "Ich wohne in einem alten Haus.",
+        "context": "description - feminine"
+      },
+      {
+        "sentence": "Старите традиции са важни.",
+        "translation": "Die alten Traditionen sind wichtig.",
+        "context": "cultural - plural definite"
+      },
+      {
+        "context": "Description (m)",
+        "sentence": "Той е стар.",
+        "translation": "Er ist alt."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е стара.",
+        "translation": "Sie ist alt."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е старо.",
+        "translation": "Das Wetter ist alt."
+      }
+    ],
+    "linguistic_note": "Adjective with full declension. Forms: стар/стара/старо/стари. Comparative: по-стар. | Мъжки род: Стар. Женски: стара. Среден: старо. Множествено: стари.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Стар [star] - променливо. М: стар, ж: стара, ср: старо, мн: стари. За възраст И за предмети. | Old (already covered but with full forms). Forms: стар/стара/старо/стари",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Geschlechtsformen: стар (m), стара (f), старо (n), стари (pl). Komparativ: по-стар. Antoným: нов. | Forms: Old (already covered but with full forms). Forms: стар/стара/старо/стари",
+    "originalIndex": 232
+  },
+  {
+    "id": "a1_adj_017_dup1",
+    "word": "Грозен",
+    "translation": "hässlich",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Ugly, hideous. Negative adjective for appearance. Forms: грозен (m), грозна (f), грозно (n), грозни (pl). Less commonly used than 'хубав' - Bulgarians prefer positive descriptions or avoid comment.",
+    "notes_bg_to_de": "'Hässlich' означава 'гръмен/неприятен'. Използвайте внимателно, защото е силна оценка. Степенуване: 'hässlicher', 'am hässlichsten'. | В немски 'hässlich' е пряк термин за грозно. В български 'грозен' се използва, но често хората предпочитат индиректни изрази: 'не е много хубав' (nicht sehr schön) вместо директно 'грозен'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Грозен' ≈ 'hässlich'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet. | Für Deutschsprachige: 'Грозен' = 'hässlich'. Wie im Deutschen ist es unhöflich, dies direkt über Menschen zu sagen. Bulgaren verwenden oft indirekte Ausdrücke oder Vermeidungsstrategien.",
+    "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о | From Proto-Slavic '*groznъ' originally meaning 'terrible, frightening', related to 'гроза' (thunder, terror). The meaning shifted from 'frightening' to 'ugly' in Bulgarian. Related to Russian 'грозный' (terrible, formidable).",
+    "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender | Calling someone 'грозен' is very offensive. Even for objects, Bulgarians often prefer softer expressions. 'Грозно време' (ugly weather) is acceptable. The name 'Иван Грозни' (Ivan the Terrible) uses the archaic 'terrible' meaning.",
+    "difficulty": 1,
+    "frequency": 94,
+    "examples": [
+      {
+        "context": "Weather (neutral usage)",
+        "sentence": "Времето е грозно днес.",
+        "translation": "Das Wetter ist hässlich/schlecht heute."
+      },
+      {
+        "context": "Architecture criticism",
+        "sentence": "Това е грозна сграда.",
+        "translation": "Das ist ein hässliches Gebäude."
+      },
+      {
+        "context": "Metaphorical usage",
+        "sentence": "Грозните думи боли.",
+        "translation": "Hässliche Worte tun weh."
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: гро́зен [ˈɡrɔzɛn]. Forms: грозен/грозна/грозно/грозни.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Грозен се произнася [ˈɡrɔzɛn] с ударение на 'гро'. Форми: грозен (м.р.), грозна (ж.р.), грозно (ср.р.), грозни (мн.ч.).",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Betonung auf der ersten Silbe: гро́зен [ˈɡrɔzɛn]. Formen: грозен (m), грозна (f), грозно (n), грозни (pl).",
+    "originalIndex": 272
+  },
+  {
+    "id": "a1_adj_022_dup1",
+    "word": "Топъл",
+    "translation": "warm",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Warm. Forms: топъл/топла/топло/топли. Warm. Forms: топъл/топла/топло/топли",
+    "notes_bg_to_de": "'Warm' описва температура или атмосфера ('eine warme Atmosphäre'). Степенуване: 'wärmer', 'am wärmsten'. | 'Топъл' се променя по род и число: Warm. Forms: топъл/топла/топло/топли",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Топъл' ≈ 'warm'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet. | Für Deutschsprachige: 'Топъл' = 'warm'. Dekliniert: Warm. Forms: топъл/топла/топло/топли",
+    "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о | Proto-Slavic *teplъ",
+    "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender | Common descriptive adjective in Bulgarian. Warm. Forms: топъл/топла/топло/топли",
+    "difficulty": 1,
+    "frequency": 98,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е топъл.",
+        "translation": "Er ist warm."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е топла.",
+        "translation": "Sie ist warm."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е топло.",
+        "translation": "Das Wetter ist warm."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Топъл. Женски: топла. Среден: топло. Множествено: топли.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Warm. Forms: топъл/топла/топло/топли",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Forms: Warm. Forms: топъл/топла/топло/топли",
+    "originalIndex": 367
+  },
+  {
+    "id": "a1_adj_021_dup1",
+    "word": "Студен",
+    "translation": "kalt",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Adjektive",
+    "level": "A1",
+    "notes": "Cold. Forms: студен/студена/студено/студени. Cold. Forms: студен/студена/студено/студени",
+    "notes_bg_to_de": "'Kalt' обозначава ниска температура. Израз: 'Mir ist kalt' (Студено ми е). Степенуване: 'kälter', 'am kältesten'. | 'Студен' се променя по род и число: Cold. Forms: студен/студена/студено/студени",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Студен' ≈ 'kalt'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet. | Für Deutschsprachige: 'Студен' = 'kalt'. Dekliniert: Cold. Forms: студен/студена/студено/студени",
+    "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о | Proto-Slavic *studъ",
+    "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender | Common descriptive adjective in Bulgarian. Cold. Forms: студен/студена/студено/студени",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Description (m)",
+        "sentence": "Той е студен.",
+        "translation": "Er ist kalt."
+      },
+      {
+        "context": "Description (f)",
+        "sentence": "Тя е студена.",
+        "translation": "Sie ist kalt."
+      },
+      {
+        "context": "Description (n)",
+        "sentence": "Времето е студено.",
+        "translation": "Das Wetter ist kalt."
+      }
+    ],
+    "linguistic_note": "Мъжки род: Студен. Женски: студена. Среден: студено. Множествено: студени.",
+    "linguistic_note_bg_to_de": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Cold. Forms: студен/студена/студено/студени",
+    "linguistic_note_de_to_bg": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и) | Forms: Cold. Forms: студен/студена/студено/студени",
+    "originalIndex": 366
+  }
+]

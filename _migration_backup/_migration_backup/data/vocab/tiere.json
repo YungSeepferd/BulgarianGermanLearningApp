@@ -1,0 +1,553 @@
+[
+  {
+    "id": "a1_animal_001",
+    "word": "Куче",
+    "translation": "der Hund",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Tiere",
+    "level": "A1",
+    "notes": "Dog. среден род.",
+    "notes_bg_to_de": "'Куче' е среден род. Dog",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Куче' = 'der Hund'. Neutrum.",
+    "etymology": "Proto-Slavic *kъtę",
+    "cultural_note": "Common animal in Bulgarian culture/agriculture. Dog",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Seeing",
+        "sentence": "Виждам куче.",
+        "translation": "Ich sehe Hund."
+      },
+      {
+        "context": "Size",
+        "sentence": "Кучето/та е голямо.",
+        "translation": "der Hund ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам куче.",
+        "translation": "Ich habe Hund."
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "Куче е среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_animal_002",
+    "word": "Котка",
+    "translation": "die Katze",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Tiere",
+    "level": "A1",
+    "notes": "Cat. женски род.",
+    "notes_bg_to_de": "'Котка' е женски род. Cat",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Котка' = 'die Katze'. Femininum.",
+    "etymology": "Proto-Slavic *kъtъka",
+    "cultural_note": "Common animal in Bulgarian culture/agriculture. Cat",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Seeing",
+        "sentence": "Виждам котка.",
+        "translation": "Ich sehe Katze."
+      },
+      {
+        "context": "Size",
+        "sentence": "Коткато/та е голяма.",
+        "translation": "die Katze ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам котка.",
+        "translation": "Ich habe Katze."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "Котка е женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_animal_003",
+    "word": "Птица",
+    "translation": "der Vogel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Tiere",
+    "level": "A1",
+    "notes": "Bird. женски род.",
+    "notes_bg_to_de": "'Птица' е женски род. Bird",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Птица' = 'der Vogel'. Femininum.",
+    "etymology": "Proto-Slavic *pъtica",
+    "cultural_note": "Common animal in Bulgarian culture/agriculture. Bird",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Seeing",
+        "sentence": "Виждам птица.",
+        "translation": "Ich sehe Vogel."
+      },
+      {
+        "context": "Size",
+        "sentence": "Птицато/та е голяма.",
+        "translation": "der Vogel ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам птица.",
+        "translation": "Ich habe Vogel."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "Птица е женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_animal_005",
+    "word": "Кон",
+    "translation": "das Pferd",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Tiere",
+    "level": "A1",
+    "notes": "Horse. мъжки род.",
+    "notes_bg_to_de": "'Кон' е мъжки род. Horse",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Кон' = 'das Pferd'. Maskulinum.",
+    "etymology": "Proto-Slavic *konь",
+    "cultural_note": "Common animal in Bulgarian culture/agriculture. Horse",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Seeing",
+        "sentence": "Виждам кон.",
+        "translation": "Ich sehe Pferd."
+      },
+      {
+        "context": "Size",
+        "sentence": "Конто/та е голям.",
+        "translation": "das Pferd ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам кон.",
+        "translation": "Ich habe Pferd."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "Кон е мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_animal_006",
+    "word": "Крава",
+    "translation": "die Kuh",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Tiere",
+    "level": "A1",
+    "notes": "Cow. женски род.",
+    "notes_bg_to_de": "'Крава' е женски род. Cow",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Крава' = 'die Kuh'. Femininum.",
+    "etymology": "Proto-Slavic *korva",
+    "cultural_note": "Common animal in Bulgarian culture/agriculture. Cow",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Seeing",
+        "sentence": "Виждам крава.",
+        "translation": "Ich sehe Kuh."
+      },
+      {
+        "context": "Size",
+        "sentence": "Кравато/та е голяма.",
+        "translation": "die Kuh ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам крава.",
+        "translation": "Ich habe Kuh."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "Крава е женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_animal_007",
+    "word": "Свиня",
+    "translation": "das Schwein",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Tiere",
+    "level": "A1",
+    "notes": "Pig. женски род.",
+    "notes_bg_to_de": "'Свиня' е женски род. Pig",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Свиня' = 'das Schwein'. Femininum.",
+    "etymology": "Proto-Slavic *svinьja",
+    "cultural_note": "Common animal in Bulgarian culture/agriculture. Pig",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "context": "Seeing",
+        "sentence": "Виждам свиня.",
+        "translation": "Ich sehe Schwein."
+      },
+      {
+        "context": "Size",
+        "sentence": "Свинято/та е голяма.",
+        "translation": "das Schwein ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам свиня.",
+        "translation": "Ich habe Schwein."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "Свиня е женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_animal_008",
+    "word": "Овца",
+    "translation": "das Schaf",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Tiere",
+    "level": "A1",
+    "notes": "Sheep. женски род.",
+    "notes_bg_to_de": "'Овца' е женски род. Sheep",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Овца' = 'das Schaf'. Femininum.",
+    "etymology": "Proto-Slavic *ovьca",
+    "cultural_note": "Common animal in Bulgarian culture/agriculture. Sheep",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "context": "Seeing",
+        "sentence": "Виждам овца.",
+        "translation": "Ich sehe Schaf."
+      },
+      {
+        "context": "Size",
+        "sentence": "Овцато/та е голяма.",
+        "translation": "das Schaf ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам овца.",
+        "translation": "Ich habe Schaf."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "Овца е женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_animal_009",
+    "word": "Пиле",
+    "translation": "das Huhn, das Küken",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Tiere",
+    "level": "A1",
+    "notes": "Chicken, chick. среден род.",
+    "notes_bg_to_de": "'Пиле' е среден род. Chicken, chick",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Пиле' = 'das Huhn, das Küken'. Neutrum.",
+    "etymology": "Proto-Slavic *pьtę",
+    "cultural_note": "Common animal in Bulgarian culture/agriculture. Chicken, chick",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Seeing",
+        "sentence": "Виждам пиле.",
+        "translation": "Ich sehe Huhn."
+      },
+      {
+        "context": "Size",
+        "sentence": "Пилето/та е голямо.",
+        "translation": "das Huhn ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам пиле.",
+        "translation": "Ich habe Huhn."
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "Пиле е среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_animal_010",
+    "word": "Мишка",
+    "translation": "die Maus",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Tiere",
+    "level": "A1",
+    "notes": "Mouse. женски род.",
+    "notes_bg_to_de": "'Мишка' е женски род. Mouse",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Мишка' = 'die Maus'. Femininum.",
+    "etymology": "Proto-Slavic *myšь",
+    "cultural_note": "Common animal in Bulgarian culture/agriculture. Mouse",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Seeing",
+        "sentence": "Виждам мишка.",
+        "translation": "Ich sehe Maus."
+      },
+      {
+        "context": "Size",
+        "sentence": "Мишкато/та е голяма.",
+        "translation": "die Maus ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам мишка.",
+        "translation": "Ich habe Maus."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "Мишка е женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_animal_011",
+    "word": "Мечка",
+    "translation": "der Bär",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Tiere",
+    "level": "A1",
+    "notes": "Bear. Symbol of Bulgaria. женски род.",
+    "notes_bg_to_de": "'Мечка' е женски род. Bear. Symbol of Bulgaria",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Мечка' = 'der Bär'. Femininum.",
+    "etymology": "Proto-Slavic *medvědь",
+    "cultural_note": "Common animal in Bulgarian culture/agriculture. Bear. Symbol of Bulgaria",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "context": "Seeing",
+        "sentence": "Виждам мечка.",
+        "translation": "Ich sehe Bär."
+      },
+      {
+        "context": "Size",
+        "sentence": "Мечкато/та е голяма.",
+        "translation": "der Bär ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам мечка.",
+        "translation": "Ich habe Bär."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "Мечка е женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_animal_012",
+    "word": "Вълк",
+    "translation": "der Wolf",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Tiere",
+    "level": "A1",
+    "notes": "Wolf. мъжки род.",
+    "notes_bg_to_de": "'Вълк' е мъжки род. Wolf",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Вълк' = 'der Wolf'. Maskulinum.",
+    "etymology": "Proto-Slavic *vьlkъ",
+    "cultural_note": "Common animal in Bulgarian culture/agriculture. Wolf",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "context": "Seeing",
+        "sentence": "Виждам вълк.",
+        "translation": "Ich sehe Wolf."
+      },
+      {
+        "context": "Size",
+        "sentence": "Вълкто/та е голям.",
+        "translation": "der Wolf ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам вълк.",
+        "translation": "Ich habe Wolf."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "Вълк е мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_animal_013",
+    "word": "Лисица",
+    "translation": "der Fuchs",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Tiere",
+    "level": "A1",
+    "notes": "Fox. женски род.",
+    "notes_bg_to_de": "'Лисица' е женски род. Fox",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Лисица' = 'der Fuchs'. Femininum.",
+    "etymology": "Proto-Slavic *lisica",
+    "cultural_note": "Common animal in Bulgarian culture/agriculture. Fox",
+    "difficulty": 1,
+    "frequency": 65,
+    "examples": [
+      {
+        "context": "Seeing",
+        "sentence": "Виждам лисица.",
+        "translation": "Ich sehe Fuchs."
+      },
+      {
+        "context": "Size",
+        "sentence": "Лисицато/та е голяма.",
+        "translation": "der Fuchs ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам лисица.",
+        "translation": "Ich habe Fuchs."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "Лисица е женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_animal_014",
+    "word": "Заек",
+    "translation": "der Hase",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Tiere",
+    "level": "A1",
+    "notes": "Hare, rabbit. мъжки род.",
+    "notes_bg_to_de": "'Заек' е мъжки род. Hare, rabbit",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Заек' = 'der Hase'. Maskulinum.",
+    "etymology": "Proto-Slavic *zajьcь",
+    "cultural_note": "Common animal in Bulgarian culture/agriculture. Hare, rabbit",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "context": "Seeing",
+        "sentence": "Виждам заек.",
+        "translation": "Ich sehe Hase."
+      },
+      {
+        "context": "Size",
+        "sentence": "Заекто/та е голям.",
+        "translation": "der Hase ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам заек.",
+        "translation": "Ich habe Hase."
+      }
+    ],
+    "linguistic_note": "мъжки род.",
+    "linguistic_note_bg_to_de": "Заек е мъжки род.",
+    "linguistic_note_de_to_bg": "Maskulinum."
+  },
+  {
+    "id": "a1_animal_015",
+    "word": "Змия",
+    "translation": "die Schlange",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Tiere",
+    "level": "A1",
+    "notes": "Snake. женски род.",
+    "notes_bg_to_de": "'Змия' е женски род. Snake",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Змия' = 'die Schlange'. Femininum.",
+    "etymology": "Proto-Slavic *zmьja",
+    "cultural_note": "Common animal in Bulgarian culture/agriculture. Snake",
+    "difficulty": 1,
+    "frequency": 65,
+    "examples": [
+      {
+        "context": "Seeing",
+        "sentence": "Виждам змия.",
+        "translation": "Ich sehe Schlange."
+      },
+      {
+        "context": "Size",
+        "sentence": "Змиято/та е голяма.",
+        "translation": "die Schlange ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам змия.",
+        "translation": "Ich habe Schlange."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "Змия е женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_animal_010_dup1",
+    "word": "Мишка",
+    "translation": "die Maus",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Tiere",
+    "level": "A1",
+    "notes": "Mouse. женски род.",
+    "notes_bg_to_de": "'Мишка' е женски род. Mouse | Словото 'Мишка' е женски род.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Мишка' = 'die Maus'. Femininum. | Das Wort 'Мишка' = 'die Maus'. Femininum.",
+    "etymology": "Proto-Slavic *myšь | Proto-Slavic or international origin.",
+    "cultural_note": "Common animal in Bulgarian culture/agriculture. Mouse | Essential technology vocabulary.",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Seeing",
+        "sentence": "Виждам мишка.",
+        "translation": "Ich sehe Maus."
+      },
+      {
+        "context": "Size",
+        "sentence": "Мишкато/та е голяма.",
+        "translation": "die Maus ist groß."
+      },
+      {
+        "context": "Possession",
+        "sentence": "Имам мишка.",
+        "translation": "Ich habe Maus."
+      },
+      {
+        "context": "Searching",
+        "sentence": "Търся мишка.",
+        "translation": "Ich suche Maus."
+      },
+      {
+        "context": "Liking",
+        "sentence": "Харесвам мишка.",
+        "translation": "Ich mag Maus."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "Мишка е женски род. | женски род.",
+    "linguistic_note_de_to_bg": "Femininum.",
+    "originalIndex": 452
+  }
+]

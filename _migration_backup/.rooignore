@@ -1,0 +1,114 @@
+# Hugo build outputs and generated files
+/public/
+/resources/_gen/
+/.hugo_build.lock
+/hugo_stats.json
+/search-index.json
+/sitemap.xml
+/manifest.webmanifest
+/index.html
+/index.json
+/index.xml
+
+# Generated content directories (Hugo)
+/vocabulary/
+/grammar/
+/practice/
+/categories/
+/tags/
+/levels/
+/difficulties/
+/source_langs/
+/target_langs/
+/offline/
+/bg/
+/de/
+/en/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build artifacts
+/hugo-bg-de
+/tools/hugo-bg-de
+dist/
+build/
+*.tgz
+*.tar.gz
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment and local settings
+.env*
+.claude/settings.local.json
+.mcp.local.json
+
+# Test artifacts and reports
+playwright-report/
+test-results/
+.playwright/
+
+# Archive directories
+/archive/
+/data/archive/
+/data/archive-data-cleanup/
+/docs/archive/
+/docs/archive-docs-cleanup/
+
+# Backups
+/*.backup*.json
+/vocabulary*.backup*.json
+/data/*.backup*.json
+/data/vocabulary*.backup*.json
+*.json.backup
+
+# Legacy artifacts
+target/
+Cargo.lock
+Cargo.toml
+*.wasm
+*.js.map
+*.d.ts
+*_bg.wasm
+*_bg.wasm.d.ts
+web/pkg/
+web/dist/
+
+# Static web assets (generated)
+/webfonts/
+/css/
+/js/
+/fonts/
+/images/
+/mermaid/
+
+# Include important source code and configuration
+!/.github/
+!/assets/js/
+!/assets/scss/
+!/content/
+!/data/*.json
+!/docs/*.md
+!/layouts/
+!/pseudocode/
+!/scripts/
+!/static/
+!/tests/
+!/themes/relearn/
+!/tools/
+
+# Always ignore node_modules even if in included directories
+**/node_modules/

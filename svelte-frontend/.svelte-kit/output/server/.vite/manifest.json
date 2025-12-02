@@ -1,0 +1,255 @@
+{
+  ".svelte-kit/generated/server/internal.js": {
+    "file": "internal.js",
+    "name": "internal",
+    "src": ".svelte-kit/generated/server/internal.js",
+    "isEntry": true,
+    "imports": [
+      "_internal.js",
+      "_environment.js"
+    ]
+  },
+  "_context.js": {
+    "file": "chunks/context.js",
+    "name": "context"
+  },
+  "_environment.js": {
+    "file": "chunks/environment.js",
+    "name": "environment"
+  },
+  "_exports.js": {
+    "file": "chunks/exports.js",
+    "name": "exports"
+  },
+  "_false.js": {
+    "file": "chunks/false.js",
+    "name": "false"
+  },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "name": "index",
+    "imports": [
+      "_context.js"
+    ]
+  },
+  "_index2.js": {
+    "file": "chunks/index2.js",
+    "name": "index",
+    "imports": [
+      "_context.js",
+      "_false.js"
+    ]
+  },
+  "_internal.js": {
+    "file": "chunks/internal.js",
+    "name": "internal",
+    "imports": [
+      "_index2.js",
+      "_context.js",
+      "_environment.js"
+    ]
+  },
+  "_posts.js": {
+    "file": "chunks/posts.js",
+    "name": "posts"
+  },
+  "_shared.js": {
+    "file": "chunks/shared.js",
+    "name": "shared",
+    "imports": [
+      "_utils.js"
+    ]
+  },
+  "_state.svelte.js": {
+    "file": "chunks/state.svelte.js",
+    "name": "state.svelte",
+    "imports": [
+      "_context.js"
+    ]
+  },
+  "_utils.js": {
+    "file": "chunks/utils.js",
+    "name": "utils"
+  },
+  "_vocabulary.js": {
+    "file": "chunks/vocabulary.js",
+    "name": "vocabulary"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/app/server/remote/index.js": {
+    "file": "remote-entry.js",
+    "name": "remote-entry",
+    "src": "node_modules/@sveltejs/kit/src/runtime/app/server/remote/index.js",
+    "isEntry": true,
+    "imports": [
+      "_shared.js",
+      "_false.js",
+      "_environment.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "name": "entries/fallbacks/error.svelte",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_context.js",
+      "_state.svelte.js",
+      "_exports.js",
+      "_utils.js",
+      "_index.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
+    "file": "index.js",
+    "name": "index",
+    "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js",
+    "isEntry": true,
+    "imports": [
+      "_false.js",
+      "_environment.js",
+      "_shared.js",
+      "_exports.js",
+      "_utils.js",
+      "_index.js",
+      "_internal.js"
+    ]
+  },
+  "src/routes/+layout.js": {
+    "file": "entries/pages/_layout.js",
+    "name": "entries/pages/_layout",
+    "src": "src/routes/+layout.js",
+    "isEntry": true
+  },
+  "src/routes/+layout.svelte": {
+    "file": "entries/pages/_layout.svelte.js",
+    "name": "entries/pages/_layout.svelte",
+    "src": "src/routes/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js"
+    ]
+  },
+  "src/routes/+page.svelte": {
+    "file": "entries/pages/_page.svelte.js",
+    "name": "entries/pages/_page.svelte",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true
+  },
+  "src/routes/api/vocabulary/+server.ts": {
+    "file": "entries/endpoints/api/vocabulary/_server.ts.js",
+    "name": "entries/endpoints/api/vocabulary/_server.ts",
+    "src": "src/routes/api/vocabulary/+server.ts",
+    "isEntry": true
+  },
+  "src/routes/api/vocabulary/chunk/[chunkName]/+server.ts": {
+    "file": "entries/endpoints/api/vocabulary/chunk/_chunkName_/_server.ts.js",
+    "name": "entries/endpoints/api/vocabulary/chunk/_chunkName_/_server.ts",
+    "src": "src/routes/api/vocabulary/chunk/[chunkName]/+server.ts",
+    "isEntry": true,
+    "imports": [
+      "_vocabulary.js"
+    ]
+  },
+  "src/routes/api/vocabulary/due/+server.ts": {
+    "file": "entries/endpoints/api/vocabulary/due/_server.ts.js",
+    "name": "entries/endpoints/api/vocabulary/due/_server.ts",
+    "src": "src/routes/api/vocabulary/due/+server.ts",
+    "isEntry": true,
+    "imports": [
+      "_vocabulary.js"
+    ]
+  },
+  "src/routes/api/vocabulary/filtered/+server.ts": {
+    "file": "entries/endpoints/api/vocabulary/filtered/_server.ts.js",
+    "name": "entries/endpoints/api/vocabulary/filtered/_server.ts",
+    "src": "src/routes/api/vocabulary/filtered/+server.ts",
+    "isEntry": true,
+    "imports": [
+      "_vocabulary.js"
+    ]
+  },
+  "src/routes/api/vocabulary/metadata/+server.ts": {
+    "file": "entries/endpoints/api/vocabulary/metadata/_server.ts.js",
+    "name": "entries/endpoints/api/vocabulary/metadata/_server.ts",
+    "src": "src/routes/api/vocabulary/metadata/+server.ts",
+    "isEntry": true,
+    "imports": [
+      "_vocabulary.js"
+    ]
+  },
+  "src/routes/api/vocabulary/search/+server.ts": {
+    "file": "entries/endpoints/api/vocabulary/search/_server.ts.js",
+    "name": "entries/endpoints/api/vocabulary/search/_server.ts",
+    "src": "src/routes/api/vocabulary/search/+server.ts",
+    "isEntry": true,
+    "imports": [
+      "_vocabulary.js"
+    ]
+  },
+  "src/routes/lessons/+page.svelte": {
+    "file": "entries/pages/lessons/_page.svelte.js",
+    "name": "entries/pages/lessons/_page.svelte",
+    "src": "src/routes/lessons/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_posts.js",
+      "_context.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.XaBW5d0d.css"
+    ]
+  },
+  "src/routes/lessons/+page.ts": {
+    "file": "entries/pages/lessons/_page.ts.js",
+    "name": "entries/pages/lessons/_page.ts",
+    "src": "src/routes/lessons/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "_posts.js"
+    ]
+  },
+  "src/routes/lessons/[slug]/+page.svelte": {
+    "file": "entries/pages/lessons/_slug_/_page.svelte.js",
+    "name": "entries/pages/lessons/_slug_/_page.svelte",
+    "src": "src/routes/lessons/[slug]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_context.js",
+      "_exports.js",
+      "_utils.js",
+      "_state.svelte.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.BLI_FDYp.css"
+    ]
+  },
+  "src/routes/lessons/[slug]/+page.ts": {
+    "file": "entries/pages/lessons/_slug_/_page.ts.js",
+    "name": "entries/pages/lessons/_slug_/_page.ts",
+    "src": "src/routes/lessons/[slug]/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "_posts.js"
+    ]
+  },
+  "src/routes/practice/+page.svelte": {
+    "file": "entries/pages/practice/_page.svelte.js",
+    "name": "entries/pages/practice/_page.svelte",
+    "src": "src/routes/practice/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.EmQ-C8C5.css"
+    ]
+  },
+  "src/routes/practice/+page.ts": {
+    "file": "entries/pages/practice/_page.ts.js",
+    "name": "entries/pages/practice/_page.ts",
+    "src": "src/routes/practice/+page.ts",
+    "isEntry": true
+  }
+}

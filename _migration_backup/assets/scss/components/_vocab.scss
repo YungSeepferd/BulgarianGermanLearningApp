@@ -1,0 +1,105 @@
+/**
+ * Vocabulary Components Styling
+ * Base styles for vocabulary cards and related components
+ */
+
+.vocab-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .vocab-word {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+
+  .vocab-translation {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+  }
+
+  .vocab-meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+
+    .level-badge, .category-badge {
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .level-badge {
+      background: #d1e9ff;
+      color: #0d47a1;
+    }
+
+    .category-badge {
+      background: #f3e5f5;
+      color: #7b1fa2;
+    }
+  }
+
+  .vocab-notes {
+    font-size: 0.875rem;
+    color: #555;
+    font-style: italic;
+  }
+}
+
+.vocab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.vocab-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #333;
+    }
+
+    select, input {
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .vocab-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vocab-filters {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

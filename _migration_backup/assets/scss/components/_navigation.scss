@@ -1,0 +1,281 @@
+/**
+ * Navigation Components Styling
+ * Styles for main navigation, breadcrumbs, and navigation elements
+ */
+
+.main-navigation {
+  background: #fff;
+  border-bottom: 1px solid #e9ecef;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+
+    &:hover {
+      color: #007bff;
+    }
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+
+    .nav-item {
+      .nav-link {
+        color: #666;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #007bff;
+        }
+
+        &.active {
+          color: #007bff;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+  }
+}
+
+.breadcrumb {
+  background: #f8f9fa;
+  padding: 0.75rem 0;
+  margin-bottom: 2rem;
+
+  .breadcrumb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .breadcrumb-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+    align-items: center;
+
+    .breadcrumb-item {
+      font-size: 0.875rem;
+
+      &:not(:last-child)::after {
+        content: '/';
+        margin-left: 0.5rem;
+        color: #666;
+      }
+
+      .breadcrumb-link {
+        color: #007bff;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &.active {
+        color: #666;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+
+  .pagination-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+
+    .pagination-item {
+      .pagination-link {
+        display: block;
+        padding: 0.5rem 0.75rem;
+        color: #007bff;
+        text-decoration: none;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #e9ecef;
+        }
+
+        &.active {
+          background: #007bff;
+          color: white;
+          border-color: #007bff;
+        }
+
+        &.disabled {
+          color: #6c757d;
+          pointer-events: none;
+          background: #fff;
+          border-color: #dee2e6;
+        }
+      }
+    }
+  }
+}
+
+.sidebar-nav {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+
+  .sidebar-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .sidebar-item {
+      margin-bottom: 0.5rem;
+
+      .sidebar-link {
+        display: block;
+        padding: 0.5rem 0.75rem;
+        color: #666;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #e9ecef;
+          color: #333;
+        }
+
+        &.active {
+          background: #007bff;
+          color: white;
+        }
+      }
+
+      &.has-children {
+        .sidebar-submenu {
+          list-style: none;
+          margin: 0.5rem 0 0 1rem;
+          padding: 0;
+
+          .sidebar-subitem {
+            margin-bottom: 0.25rem;
+
+            .sidebar-sublink {
+              display: block;
+              padding: 0.25rem 0.5rem;
+              color: #666;
+              text-decoration: none;
+              font-size: 0.875rem;
+              border-radius: 4px;
+              transition: all 0.3s ease;
+
+              &:hover {
+                background: #e9ecef;
+                color: #333;
+              }
+
+              &.active {
+                background: #007bff;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main-navigation {
+    .nav-toggle {
+      display: block;
+    }
+
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: 1px solid #e9ecef;
+      flex-direction: column;
+      gap: 0;
+      padding: 1rem;
+
+      &.active {
+        display: flex;
+      }
+
+      .nav-item {
+        .nav-link {
+          display: block;
+          padding: 0.75rem 0;
+          border-bottom: 1px solid #e9ecef;
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+  .breadcrumb .breadcrumb-list {
+    flex-wrap: wrap;
+  }
+
+  .pagination .pagination-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidebar-nav {
+    margin-bottom: 1rem;
+  }
+}

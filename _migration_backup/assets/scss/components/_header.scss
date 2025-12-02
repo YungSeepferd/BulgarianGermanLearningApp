@@ -1,0 +1,439 @@
+// Header component styles
+.site-header {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-primary);
+  box-shadow: $shadow-sm;
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
+}
+
+.main-nav {
+  @include flex-between;
+
+  padding: $spacing-4 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: $spacing-4;
+  padding-right: $spacing-4;
+
+  @include sm {
+    padding-left: $spacing-6;
+    padding-right: $spacing-6;
+  }
+
+  @include lg {
+    padding-left: $spacing-8;
+    padding-right: $spacing-8;
+  }
+}
+
+.nav-brand {
+  .brand-link {
+    @include flex-center;
+
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: var(--color-primary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-primary-dark);
+      text-decoration: none;
+    }
+  }
+}
+
+.nav-menu {
+  display: none;
+  gap: $spacing-6;
+
+  @include md {
+    @include flex-center;
+
+    display: flex; // Ensure it shows on desktop
+  }
+
+  .nav-link {
+    padding: $spacing-2 $spacing-3;
+    color: var(--text-secondary);
+    font-weight: $font-weight-medium;
+    border-radius: $radius-base;
+    transition: all $transition-base;
+
+    &:hover {
+      color: var(--text-primary);
+      background-color: var(--bg-secondary);
+      text-decoration: none;
+    }
+
+    &.active {
+      color: var(--color-primary);
+      background-color: rgba(37, 99, 235, 0.1);
+    }
+  }
+}
+
+.nav-actions {
+  @include flex-center;
+
+  gap: $spacing-2;
+}
+
+.theme-toggle,
+.search-toggle {
+  @include flex-center;
+
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid var(--border-primary);
+  border-radius: $radius-base;
+  color: var(--text-secondary);
+  transition: all $transition-base;
+
+  &:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+  }
+}
+
+// Search overlay
+.search-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-primary);
+  box-shadow: $shadow-lg;
+  padding: $spacing-6;
+  z-index: $z-dropdown;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+// Mobile menu toggle button
+.mobile-menu-toggle {
+  display: flex;
+
+  @include flex-center;
+
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid var(--border-primary);
+  border-radius: $radius-base;
+  color: var(--text-secondary);
+  transition: all $transition-base;
+  padding: 0;
+
+  @include md {
+    display: none; // Hide on desktop
+  }
+
+  &:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+  }
+
+  &[aria-expanded="true"] {
+    .hamburger-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-line:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 20px;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: currentcolor;
+  transition: all 0.3s ease;
+}
+
+// Profile Switcher Component
+.profile-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-toggle {
+  @include flex-center;
+
+  gap: $spacing-2;
+  height: 40px;
+  padding: 0 $spacing-3;
+  background: transparent;
+  border: 1px solid var(--border-primary);
+  border-radius: $radius-base;
+  color: var(--text-secondary);
+  font-weight: $font-weight-medium;
+  transition: all $transition-base;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-secondary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+  }
+
+  &[aria-expanded="true"] {
+    background-color: var(--bg-secondary);
+    border-color: var(--color-primary);
+  }
+
+  .profile-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .profile-label {
+    font-size: $font-size-sm;
+    white-space: nowrap;
+
+    @media (max-width: 480px) {
+      display: none; // Hide label on very small screens
+    }
+  }
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + $spacing-2);
+  right: 0;
+  min-width: 280px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: $radius-lg;
+  box-shadow: $shadow-xl;
+  padding: $spacing-4;
+  z-index: $z-dropdown;
+  animation: slideDown 0.2s ease-out;
+
+  &.hidden {
+    display: none;
+  }
+
+  @media (max-width: 480px) {
+    left: 0;
+    right: auto;
+    min-width: 260px;
+  }
+}
+
+.profile-dropdown-header {
+  padding-bottom: $spacing-3;
+  margin-bottom: $spacing-3;
+  border-bottom: 1px solid var(--border-primary);
+
+  h3 {
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    color: var(--text-primary);
+    margin: 0;
+  }
+}
+
+.profile-options {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2;
+}
+
+.profile-option {
+  display: flex;
+  align-items: center;
+  gap: $spacing-3;
+  width: 100%;
+  padding: $spacing-3;
+  background: transparent;
+  border: 1px solid var(--border-primary);
+  border-radius: $radius-base;
+  text-align: left;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-secondary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+  }
+
+  &.active {
+    background-color: rgba(37, 99, 235, 0.1);
+    border-color: var(--color-primary);
+
+    .profile-option-name {
+      color: var(--color-primary);
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  .profile-option-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .profile-option-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .profile-option-name {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: var(--text-primary);
+    margin-bottom: $spacing-1;
+  }
+
+  .profile-option-meta {
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+    font-size: $font-size-xs;
+    color: var(--text-tertiary);
+  }
+
+  .profile-direction {
+    font-family: monospace;
+  }
+
+  .profile-option-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    background-color: var(--color-success);
+    color: white;
+    border-radius: $radius-sm;
+    font-size: 10px;
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .profile-option-check {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    flex-shrink: 0;
+  }
+}
+
+// Profile switch toast notification
+.profile-switch-toast {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: $spacing-3;
+  padding: $spacing-3 $spacing-4;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: $radius-lg;
+  box-shadow: $shadow-xl;
+  z-index: $z-modal;
+  transition: bottom 0.3s ease-out;
+
+  &.show {
+    bottom: $spacing-6;
+  }
+
+  .toast-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .toast-message {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: var(--text-primary);
+  }
+}
+
+// Slide down animation for dropdown
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Profile selector fallback (no JS)
+.profile-selector-fallback {
+  padding: $spacing-2 $spacing-3;
+  font-size: $font-size-xs;
+  color: var(--text-tertiary);
+}
+
+// Mobile menu
+@media (max-width: 767px) {
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-primary);
+    box-shadow: $shadow-lg;
+    flex-direction: column;
+    padding: $spacing-4;
+    gap: $spacing-2;
+    display: none;
+
+    &.mobile-menu-open {
+      display: flex;
+    }
+
+    .nav-link {
+      width: 100%;
+      text-align: center;
+      padding: $spacing-3;
+    }
+  }
+
+  .nav-actions {
+    gap: $spacing-4;
+  }
+}

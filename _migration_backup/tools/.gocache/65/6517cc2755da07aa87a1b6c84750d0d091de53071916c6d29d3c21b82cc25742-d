@@ -1,0 +1,10 @@
+# test log
+getenv TMPDIR
+open /var/folders/3l/ngsrkzn52t76w_5898n1ww4h0000gn/T/TestLoadJSONData3402266616/001/valid.json
+open /var/folders/3l/ngsrkzn52t76w_5898n1ww4h0000gn/T/TestLoadJSONData3402266616/001/valid.json
+open /var/folders/3l/ngsrkzn52t76w_5898n1ww4h0000gn/T/TestLoadJSONData3402266616/001/invalid.json
+open /var/folders/3l/ngsrkzn52t76w_5898n1ww4h0000gn/T/TestLoadJSONData3402266616/001/invalid.json
+open /var/folders/3l/ngsrkzn52t76w_5898n1ww4h0000gn/T/TestLoadJSONData3402266616/001/empty.json
+open /var/folders/3l/ngsrkzn52t76w_5898n1ww4h0000gn/T/TestLoadJSONData3402266616/001/empty.json
+open /var/folders/3l/ngsrkzn52t76w_5898n1ww4h0000gn/T/TestLoadJSONData3402266616/001/nonexistent.json
+open /var/folders/3l/ngsrkzn52t76w_5898n1ww4h0000gn/T

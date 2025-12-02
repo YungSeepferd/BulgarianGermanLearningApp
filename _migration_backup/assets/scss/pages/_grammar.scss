@@ -1,0 +1,145 @@
+// Grammar page styles
+.grammar-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+
+  @include md {
+    padding: 0 $spacing-6;
+  }
+
+  @include lg {
+    padding: 0 $spacing-8;
+  }
+}
+
+// Grammar list
+.grammar-list {
+  @include flex-column;
+
+  gap: $spacing-6;
+  margin-bottom: $spacing-8;
+}
+
+// Grammar item specific styles
+.grammar-item {
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  .grammar-header {
+    margin-bottom: $spacing-4;
+
+    h2 {
+      font-size: $font-size-2xl;
+      line-height: $line-height-tight;
+
+      @include md {
+        font-size: $font-size-3xl;
+      }
+    }
+  }
+
+  .grammar-description {
+    font-size: $font-size-base;
+    line-height: $line-height-relaxed;
+    margin-bottom: $spacing-6;
+
+    strong {
+      color: var(--text-primary);
+    }
+
+    em {
+      color: var(--color-primary);
+    }
+
+    code {
+      background-color: var(--bg-tertiary);
+      padding: $spacing-1 $spacing-2;
+      border-radius: $radius-sm;
+      font-size: 0.9em;
+    }
+  }
+
+  .grammar-examples {
+    .examples-list {
+      margin-bottom: $spacing-4;
+
+      .example-item {
+        position: relative;
+        padding-left: $spacing-6;
+
+        &::before {
+          content: '→';
+          position: absolute;
+          left: $spacing-3;
+          color: var(--color-primary);
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+  }
+}
+
+// No results state
+.grammar-no-results {
+  @extend .no-results;
+}
+
+// Responsive adjustments
+@media (max-width: var(--breakpoint-md)) {
+  .grammar-container {
+    padding: 0 $spacing-3;
+  }
+
+  .grammar-filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: $spacing-3;
+
+    select,
+    input {
+      min-width: auto;
+      max-width: none;
+    }
+  }
+
+  .grammar-item {
+    padding: $spacing-4;
+
+    .grammar-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $spacing-3;
+
+      h2 {
+        font-size: $font-size-xl;
+      }
+    }
+
+    .grammar-examples {
+      .examples-list {
+        .example-item {
+          padding: $spacing-3;
+          font-size: $font-size-sm;
+        }
+      }
+    }
+
+    .grammar-actions {
+      flex-direction: column;
+      align-items: stretch;
+      gap: $spacing-3;
+
+      .start-exercise-btn {
+        width: 100%;
+      }
+
+      .bookmark-btn {
+        align-self: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "definite_articles_comparison",
+    "title": "Definite Articles: Bulgarian vs German",
+    "bulgarian_concept": "Определителни членове",
+    "german_concept": "Bestimmte Artikel",
+    "difficulty": "A2",
+    "cultural_context": {
+      "bulgarian_perspective": "Bulgarian attaches definite articles as suffixes to nouns (-ът, -та, -то), making them invisible to German speakers initially. This reflects Bulgarian's synthetic nature - information is packed into word endings.",
+      "german_perspective": "German places articles before nouns (der, die, das), which feels more familiar to Bulgarian speakers learning German. However, German articles change based on case, which Bulgarian lacks."
+    },
+    "cross_linguistic_explanation": {
+      "bg_to_de": "Als Bulgare kennst du bereits das Konzept der Bestimmtheit durch -ът/-та/-то. Im Deutschen steht der Artikel VOR dem Substantiv: 'човекът' → 'der Mann'. Aber Achtung: Deutsche Artikel ändern sich je nach Fall (Nominativ/Akkusativ/Dativ/Genitiv).",
+      "de_to_bg": "As a German speaker, you're used to 'der/die/das' before nouns. Bulgarian attaches these AFTER the noun as endings: 'der Mann' → 'мъжът'. Think of it as the article 'melting' into the word itself."
+    },
+    "examples": [
+      {
+        "bulgarian": "мъжът чете книгата",
+        "german": "der Mann liest das Buch",
+        "explanation_bg_to_de": "Beachte: -ът wird zu 'der', -та wird zu 'das' (nicht 'die', weil 'Buch' neutral ist)",
+        "explanation_de_to_bg": "Notice: 'der' becomes -ът, 'das' becomes -та (книга is feminine in Bulgarian)"
+      }
+    ],
+    "common_mistakes": {
+      "bg_to_de": ["Using 'die Buch' instead of 'das Buch' - German noun gender differs from Bulgarian"],
+      "de_to_bg": ["Forgetting that Bulgarian articles are suffixes: saying 'the човек' instead of 'човекът'"]
+    },
+    "cultural_insight": "This difference reflects deeper cultural patterns: Bulgarian's suffix system shows how information can be 'hidden' within words (like how Bulgarian culture values subtlety), while German's prefix system reflects directness and clarity valued in German culture."
+  },
+  {
+    "id": "verb_aspects_comparison", 
+    "title": "Verb Aspects: Bulgarian Perfective/Imperfective vs German",
+    "bulgarian_concept": "Глаголни видове (свършен/несвършен)",
+    "german_concept": "Verbaspekte und Zeitformen",
+    "difficulty": "B1",
+    "cultural_context": {
+      "bulgarian_perspective": "Bulgarian speakers think in terms of completed vs ongoing actions (свършен/несвършен вид). This aspectual thinking is deeply rooted in Slavic worldview - actions are either 'finished business' or 'ongoing process'.",
+      "german_perspective": "German speakers rely more on tense (Präsens, Präteritum, Perfekt) rather than aspect. German precision culture prefers exact time specification over action completion status."
+    },
+    "cross_linguistic_explanation": {
+      "bg_to_de": "Dein bulgarisches 'свършен вид' (perfektiv) entspricht oft dem deutschen Perfekt: 'прочетох' → 'ich habe gelesen'. Aber Vorsicht: Deutsches Präsens kann beide bulgarische Aspekte ausdrücken! 'чета' und 'прочета' können beide 'ich lese' sein.",
+      "de_to_bg": "Your German tenses don't map directly to Bulgarian aspects. 'Ich lese' could be 'чета' (ongoing) or 'прочета' (will complete). Bulgarian forces you to decide: is this action ongoing or will it be completed?"
+    },
+    "examples": [
+      {
+        "bulgarian": "Четох книга (несвършен) vs Прочетох книга (свършен)",
+        "german": "Ich las ein Buch vs Ich habe ein Buch gelesen",
+        "explanation_bg_to_de": "Beide bulgarische Aspekte können deutsches Präteritum oder Perfekt werden - der Kontext entscheidet",
+        "explanation_de_to_bg": "German past tenses don't specify completion - you must choose the Bulgarian aspect based on meaning"
+      }
+    ],
+    "common_mistakes": {
+      "bg_to_de": ["Overusing Perfekt when Präsens would be natural: 'Ich habe jeden Tag gelesen' instead of 'Ich lese jeden Tag'"],
+      "de_to_bg": ["Using imperfective when perfective is needed: 'четях' instead of 'прочетох' for completed actions"]
+    },
+    "cultural_insight": "This reflects different cultural approaches to time and completion: Bulgarian culture emphasizes whether something is 'done' or 'in process' (Orthodox concept of spiritual completion), while German culture emphasizes precise temporal placement (Protestant work ethic's time management)."
+  },
+  {
+    "id": "politeness_levels_comparison",
+    "title": "Politeness and Formality: Ви vs Sie",
+    "bulgarian_concept": "Учтивост и обръщения",
+    "german_concept": "Höflichkeit und Anrede",
+    "difficulty": "A1",
+    "cultural_context": {
+      "bulgarian_perspective": "Bulgarian 'Ви' (formal you) is used more selectively - primarily for elderly, authority figures, or very formal situations. Bulgarian culture values warmth and quick transition to informal 'ти'.",
+      "german_perspective": "German 'Sie' is used much more broadly and maintained longer in relationships. German culture values professional distance and formal respect even among colleagues."
+    },
+    "cross_linguistic_explanation": {
+      "bg_to_de": "Dein bulgarisches 'Ви' entspricht deutschem 'Sie', aber Deutsche benutzen 'Sie' viel länger! Auch Kollegen siezen sich oft jahrelang. Warte auf das Angebot zum 'Du'.",
+      "de_to_bg": "Your German 'Sie' maps to Bulgarian 'Ви', but Bulgarians switch to 'ти' much faster. Don't be surprised if someone offers 'ти' after just a few meetings - it's friendliness, not disrespect."
+    },
+    "examples": [
+      {
+        "bulgarian": "Как сте? (formal) → Как си? (informal, often after 1-2 meetings)",
+        "german": "Wie geht es Ihnen? (formal, might continue for months/years)",
+        "explanation_bg_to_de": "Deutsche Formalität dauert länger - sei geduldig mit 'Sie'",
+        "explanation_de_to_bg": "Bulgarian informality comes faster - 'ти' is offered as friendship"
+      }
+    ],
+    "common_mistakes": {
+      "bg_to_de": ["Switching to 'Du' too quickly - wait for the German person to suggest it"],
+      "de_to_bg": ["Being offended when offered 'ти' quickly - it's Bulgarian warmth, not presumption"]
+    },
+    "cultural_insight": "Reflects cultural values: Bulgarian Orthodox tradition of spiritual equality leads to faster informal address, while German Protestant tradition of social order maintains formal distance longer."
+  },
+  {
+    "id": "word_order_flexibility",
+    "title": "Word Order: Bulgarian Flexibility vs German Structure", 
+    "bulgarian_concept": "Словоред и акцент",
+    "german_concept": "Wortstellung und Satzstruktur",
+    "difficulty": "B1",
+    "cultural_context": {
+      "bulgarian_perspective": "Bulgarian allows flexible word order for emphasis and emotion - you can move words around to highlight what's important. This reflects Bulgarian storytelling tradition and emotional expressiveness.",
+      "german_perspective": "German has stricter word order rules (V2 in main clauses, verb-final in subordinate clauses). This reflects German cultural values of order, predictability, and systematic thinking."
+    },
+    "cross_linguistic_explanation": {
+      "bg_to_de": "Deine bulgarische Wortstellungsfreiheit gibt es im Deutschen nicht! Deutsche Sätze folgen festen Regeln: Verb an Position 2 im Hauptsatz, am Ende im Nebensatz. 'Тази книга я четох вчера' muss werden 'Dieses Buch habe ich gestern gelesen' (nicht 'Dieses Buch gestern ich gelesen habe').",
+      "de_to_bg": "German's strict word order doesn't exist in Bulgarian! You can move words around for emphasis: 'Ich las gestern das Buch' can become 'Книгата я четох вчера' (book-focused) or 'Вчера четох книгата' (time-focused)."
+    },
+    "examples": [
+      {
+        "bulgarian": "Книгата я четох вчера / Вчера четох книгата / Четох вчера книгата (all correct, different emphasis)",
+        "german": "Das Buch habe ich gestern gelesen (only this order is correct)",
+        "explanation_bg_to_de": "Deutsche Wortstellung ist fest - lerne die Regeln auswendig",
+        "explanation_de_to_bg": "Bulgarian word order is free - use it to emphasize different parts"
+      }
+    ],
+    "common_mistakes": {
+      "bg_to_de": ["Putting verbs in wrong positions: 'Ich gestern das Buch gelesen habe' instead of 'Ich habe gestern das Buch gelesen'"],
+      "de_to_bg": ["Using only one word order pattern - missing opportunities for emphasis through word order variation"]
+    },
+    "cultural_insight": "Word order reflects cultural communication styles: Bulgarian flexibility mirrors the culture's adaptability and emotional expressiveness, while German structure reflects systematic thinking and preference for clear, predictable communication."
+  }
+]

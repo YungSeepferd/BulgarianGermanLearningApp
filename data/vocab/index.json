@@ -1,0 +1,395 @@
+{
+  "generated": "2025-11-24T20:07:55.119Z",
+  "totalEntries": 745,
+  "splitFiles": [
+    {
+      "file": "A1-A1.json",
+      "entryCount": 745,
+      "sizeKB": 1016,
+      "categories": [
+        "Begrüßung",
+        "Ausdruck",
+        "Substantiv",
+        "Verb",
+        "Adjektiv",
+        "Adverb",
+        "Zahl",
+        "Quantor",
+        "Tag",
+        "Zeit",
+        "Lebensmittel",
+        "Transport",
+        "Gesundheit",
+        "Natur",
+        "Familie",
+        "Einkauf",
+        "Wohnen",
+        "Arbeit",
+        "Bildung",
+        "Zahlen",
+        "Verben",
+        "Fragewörter",
+        "Essen",
+        "Getränke",
+        "Adjektive",
+        "Farben",
+        "Haus",
+        "Körper",
+        "Pronomen",
+        "Substantive",
+        "Grammatik",
+        "Kleidung",
+        "Tiere",
+        "Gegenstände",
+        "Berufe",
+        "Orte",
+        "Wetter",
+        "Aktivitäten",
+        "Adverbien",
+        "Technologie",
+        "Unterhaltung"
+      ]
+    },
+    {
+      "file": "begrüßung.json",
+      "entryCount": 7,
+      "sizeKB": 10,
+      "categories": [
+        "Begrüßung"
+      ]
+    },
+    {
+      "file": "ausdruck.json",
+      "entryCount": 8,
+      "sizeKB": 9,
+      "categories": [
+        "Ausdruck"
+      ]
+    },
+    {
+      "file": "substantiv.json",
+      "entryCount": 15,
+      "sizeKB": 17,
+      "categories": [
+        "Substantiv"
+      ]
+    },
+    {
+      "file": "verb.json",
+      "entryCount": 8,
+      "sizeKB": 8,
+      "categories": [
+        "Verb"
+      ]
+    },
+    {
+      "file": "zahl.json",
+      "entryCount": 14,
+      "sizeKB": 13,
+      "categories": [
+        "Zahl"
+      ]
+    },
+    {
+      "file": "quantor.json",
+      "entryCount": 5,
+      "sizeKB": 4,
+      "categories": [
+        "Quantor"
+      ]
+    },
+    {
+      "file": "zeit-A1.json",
+      "entryCount": 35,
+      "sizeKB": 57,
+      "categories": [
+        "Zeit"
+      ]
+    },
+    {
+      "file": "lebensmittel.json",
+      "entryCount": 9,
+      "sizeKB": 7,
+      "categories": [
+        "Lebensmittel"
+      ]
+    },
+    {
+      "file": "transport.json",
+      "entryCount": 19,
+      "sizeKB": 19,
+      "categories": [
+        "Transport"
+      ]
+    },
+    {
+      "file": "gesundheit.json",
+      "entryCount": 20,
+      "sizeKB": 19,
+      "categories": [
+        "Gesundheit"
+      ]
+    },
+    {
+      "file": "natur.json",
+      "entryCount": 20,
+      "sizeKB": 20,
+      "categories": [
+        "Natur"
+      ]
+    },
+    {
+      "file": "familie.json",
+      "entryCount": 19,
+      "sizeKB": 20,
+      "categories": [
+        "Familie"
+      ]
+    },
+    {
+      "file": "einkauf.json",
+      "entryCount": 7,
+      "sizeKB": 6,
+      "categories": [
+        "Einkauf"
+      ]
+    },
+    {
+      "file": "bildung.json",
+      "entryCount": 17,
+      "sizeKB": 20,
+      "categories": [
+        "Bildung"
+      ]
+    },
+    {
+      "file": "zahlen-A1.json",
+      "entryCount": 31,
+      "sizeKB": 62,
+      "categories": [
+        "Zahlen"
+      ]
+    },
+    {
+      "file": "verben-A1.json",
+      "entryCount": 91,
+      "sizeKB": 162,
+      "categories": [
+        "Verben"
+      ]
+    },
+    {
+      "file": "fragewörter.json",
+      "entryCount": 14,
+      "sizeKB": 32,
+      "categories": [
+        "Fragewörter"
+      ]
+    },
+    {
+      "file": "essen.json",
+      "entryCount": 16,
+      "sizeKB": 35,
+      "categories": [
+        "Essen"
+      ]
+    },
+    {
+      "file": "adjektive-A1.json",
+      "entryCount": 62,
+      "sizeKB": 115,
+      "categories": [
+        "Adjektive"
+      ]
+    },
+    {
+      "file": "farben.json",
+      "entryCount": 10,
+      "sizeKB": 25,
+      "categories": [
+        "Farben"
+      ]
+    },
+    {
+      "file": "haus.json",
+      "entryCount": 9,
+      "sizeKB": 13,
+      "categories": [
+        "Haus"
+      ]
+    },
+    {
+      "file": "körper.json",
+      "entryCount": 10,
+      "sizeKB": 12,
+      "categories": [
+        "Körper"
+      ]
+    },
+    {
+      "file": "pronomen.json",
+      "entryCount": 9,
+      "sizeKB": 10,
+      "categories": [
+        "Pronomen"
+      ]
+    },
+    {
+      "file": "substantive-A1.json",
+      "entryCount": 67,
+      "sizeKB": 70,
+      "categories": [
+        "Substantive"
+      ]
+    },
+    {
+      "file": "grammatik.json",
+      "entryCount": 20,
+      "sizeKB": 22,
+      "categories": [
+        "Grammatik"
+      ]
+    },
+    {
+      "file": "kleidung.json",
+      "entryCount": 15,
+      "sizeKB": 19,
+      "categories": [
+        "Kleidung"
+      ]
+    },
+    {
+      "file": "tiere.json",
+      "entryCount": 15,
+      "sizeKB": 17,
+      "categories": [
+        "Tiere"
+      ]
+    },
+    {
+      "file": "gegenstände-A1.json",
+      "entryCount": 63,
+      "sizeKB": 67,
+      "categories": [
+        "Gegenstände"
+      ]
+    },
+    {
+      "file": "berufe.json",
+      "entryCount": 15,
+      "sizeKB": 17,
+      "categories": [
+        "Berufe"
+      ]
+    },
+    {
+      "file": "orte.json",
+      "entryCount": 15,
+      "sizeKB": 17,
+      "categories": [
+        "Orte"
+      ]
+    },
+    {
+      "file": "wetter.json",
+      "entryCount": 10,
+      "sizeKB": 11,
+      "categories": [
+        "Wetter"
+      ]
+    },
+    {
+      "file": "aktivitäten.json",
+      "entryCount": 10,
+      "sizeKB": 11,
+      "categories": [
+        "Aktivitäten"
+      ]
+    },
+    {
+      "file": "adverbien.json",
+      "entryCount": 26,
+      "sizeKB": 32,
+      "categories": [
+        "Adverbien"
+      ]
+    },
+    {
+      "file": "technologie.json",
+      "entryCount": 9,
+      "sizeKB": 10,
+      "categories": [
+        "Technologie"
+      ]
+    },
+    {
+      "file": "unterhaltung.json",
+      "entryCount": 15,
+      "sizeKB": 17,
+      "categories": [
+        "Unterhaltung"
+      ]
+    }
+  ],
+  "summary": {
+    "totalFiles": 36,
+    "totalSizeKB": 2021,
+    "averageSizeKB": 56,
+    "largestFile": {
+      "file": "A1-A1.json",
+      "entryCount": 745,
+      "sizeKB": 1016,
+      "categories": [
+        "Begrüßung",
+        "Ausdruck",
+        "Substantiv",
+        "Verb",
+        "Adjektiv",
+        "Adverb",
+        "Zahl",
+        "Quantor",
+        "Tag",
+        "Zeit",
+        "Lebensmittel",
+        "Transport",
+        "Gesundheit",
+        "Natur",
+        "Familie",
+        "Einkauf",
+        "Wohnen",
+        "Arbeit",
+        "Bildung",
+        "Zahlen",
+        "Verben",
+        "Fragewörter",
+        "Essen",
+        "Getränke",
+        "Adjektive",
+        "Farben",
+        "Haus",
+        "Körper",
+        "Pronomen",
+        "Substantive",
+        "Grammatik",
+        "Kleidung",
+        "Tiere",
+        "Gegenstände",
+        "Berufe",
+        "Orte",
+        "Wetter",
+        "Aktivitäten",
+        "Adverbien",
+        "Technologie",
+        "Unterhaltung"
+      ]
+    },
+    "smallestFile": {
+      "file": "quantor.json",
+      "entryCount": 5,
+      "sizeKB": 4,
+      "categories": [
+        "Quantor"
+      ]
+    }
+  }
+}

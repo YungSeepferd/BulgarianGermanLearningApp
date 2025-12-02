@@ -1,0 +1,542 @@
+[
+  {
+    "word": "Слънце",
+    "translation": "Sonne",
+    "category": "Natur",
+    "level": "A1",
+    "notes": null,
+    "id": "sonne",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
+    "difficulty": 2,
+    "frequency": 70,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Слънце' ≈ 'Sonne'. Bulgarisches Wort. Häufig verwendet.",
+    "notes_bg_to_de": "'Die Sonne' е женски род. Фраза: 'Die Sonne scheint' (слънцето грее).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
+  },
+  {
+    "word": "Дъжд",
+    "translation": "Regen",
+    "category": "Natur",
+    "level": "A1",
+    "notes": null,
+    "id": "regen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
+    "difficulty": 2,
+    "frequency": 72,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Дъжд' ≈ 'Regen'. Bulgarisches Wort. Häufig verwendet.",
+    "notes_bg_to_de": "'Der Regen' е мъжки род; често се използва 'Es regnet' (вали).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
+  },
+  {
+    "word": "Сняг",
+    "translation": "Schnee",
+    "category": "Natur",
+    "level": "A1",
+    "notes": null,
+    "id": "schnee",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
+    "difficulty": 2,
+    "frequency": 79,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сняг' ≈ 'Schnee'. Bulgarisches Wort. Häufig verwendet.",
+    "notes_bg_to_de": "'Der Schnee' е мъжки род. Израз: 'Es schneit' (вали сняг).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
+  },
+  {
+    "word": "Вятър",
+    "translation": "Wind",
+    "category": "Natur",
+    "level": "A1",
+    "notes": null,
+    "id": "wind",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
+    "difficulty": 2,
+    "frequency": 72,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Вятър' ≈ 'Wind'. Bulgarisches Wort. Häufig verwendet.",
+    "notes_bg_to_de": "'Der Wind' е мъжки род. Използва се в 'starker Wind' или 'es weht ein Wind'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
+  },
+  {
+    "word": "Температура",
+    "translation": "Temperatur",
+    "category": "Natur",
+    "level": "A1",
+    "notes": null,
+    "id": "temperatur",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
+    "difficulty": 3,
+    "frequency": 78,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Температура' ≈ 'Temperatur'. Bulgarisches Wort. Häufig verwendet.",
+    "notes_bg_to_de": "'Die Temperatur' е женски род. Израз: 'die Temperatur messen' (меря температура).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
+  },
+  {
+    "word": "Облаци",
+    "translation": "Wolken",
+    "category": "Natur",
+    "level": "A1",
+    "notes": null,
+    "id": "wolken",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
+    "difficulty": 2,
+    "frequency": 76,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Облаци' ≈ 'Wolken'. Bulgarisches Wort. Häufig verwendet.",
+    "notes_bg_to_de": "'Die Wolken' е множествено число; 'eine Wolke' е единичен облак. Фраза: 'am Himmel sind Wolken'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
+  },
+  {
+    "word": "Гора",
+    "translation": "Wald",
+    "category": "Natur",
+    "level": "A1",
+    "notes": null,
+    "id": "wald",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
+    "difficulty": 2,
+    "frequency": 74,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Гора' ≈ 'Wald'. Bulgarisches Wort. Häufig verwendet.",
+    "notes_bg_to_de": "'Der Wald' е мъжки род. Типично: 'im Wald spazieren gehen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
+  },
+  {
+    "word": "Река",
+    "translation": "Fluss",
+    "category": "Natur",
+    "level": "A1",
+    "notes": null,
+    "id": "fluss",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
+    "difficulty": 2,
+    "frequency": 79,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Река' ≈ 'Fluss'. Bulgarisches Wort. Häufig verwendet.",
+    "notes_bg_to_de": "'Der Fluss' е мъжки род; множествено 'die Flüsse'. Израз: 'am Fluss wohnen'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
+  },
+  {
+    "word": "Планина",
+    "translation": "Berg",
+    "category": "Natur",
+    "level": "A1",
+    "notes": null,
+    "id": "berg",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
+    "difficulty": 2,
+    "frequency": 78,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Планина' ≈ 'Berg'. Bulgarisches Wort. Häufig verwendet.",
+    "notes_bg_to_de": "'Der Berg' е мъжки род; множествено 'die Berge'. Фраза: 'in den Bergen wandern'.",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
+  },
+  {
+    "word": "Море",
+    "translation": "Meer",
+    "category": "Natur",
+    "level": "A1",
+    "notes": "'Море' bedeutet Meer und ist mit dem russischen 'more' verwandt; es geht auf eine urslawische Wurzel zurück.",
+    "id": "meer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "cultural_note": "Bulgaria has diverse nature: Black Sea coast, mountains, rose valleys",
+    "difficulty": 2,
+    "frequency": 70,
+    "notes_de_to_bg": "Für Deutschsprachige: 'Море' ≈ 'Meer'. Bulgarisches Wort. Häufig verwendet.",
+    "notes_bg_to_de": "'Das Meer' е неутрално. Израз: 'ans Meer fahren' (отивам на море).",
+    "linguistic_note_bg_to_de": "",
+    "linguistic_note_de_to_bg": "Bulgarian word at word level. Pay attention to stress and pronunciation"
+  },
+  {
+    "id": "a1_nature_001",
+    "word": "Слънце",
+    "translation": "die Sonne",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Natur",
+    "level": "A1",
+    "notes": "Sun. среден род.",
+    "notes_bg_to_de": "'Слънце' е среден род. Sun",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Слънце' = 'die Sonne'. Neutrum.",
+    "etymology": "Proto-Slavic *sъlnьce",
+    "cultural_note": "Nature vocabulary essential for describing Bulgarian landscape. Sun",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Size",
+        "sentence": "Слънцето/та е голямо.",
+        "translation": "die Sonne ist groß."
+      },
+      {
+        "context": "Seeing",
+        "sentence": "Виждам слънцето/та.",
+        "translation": "Ich sehe die Sonne."
+      },
+      {
+        "context": "Beauty",
+        "sentence": "Слънцето/та е красиво.",
+        "translation": "die Sonne ist schön."
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "Слънце е среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_nature_002",
+    "word": "Луна",
+    "translation": "der Mond",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Natur",
+    "level": "A1",
+    "notes": "Moon. женски род.",
+    "notes_bg_to_de": "'Луна' е женски род. Moon",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Луна' = 'der Mond'. Femininum.",
+    "etymology": "Proto-Slavic *luna",
+    "cultural_note": "Nature vocabulary essential for describing Bulgarian landscape. Moon",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Size",
+        "sentence": "Лунато/та е голяма.",
+        "translation": "der Mond ist groß."
+      },
+      {
+        "context": "Seeing",
+        "sentence": "Виждам лунато/та.",
+        "translation": "Ich sehe der Mond."
+      },
+      {
+        "context": "Beauty",
+        "sentence": "Лунато/та е красива.",
+        "translation": "der Mond ist schön."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "Луна е женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_nature_003",
+    "word": "Звезда",
+    "translation": "der Stern",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Natur",
+    "level": "A1",
+    "notes": "Star. женски род.",
+    "notes_bg_to_de": "'Звезда' е женски род. Star",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Звезда' = 'der Stern'. Femininum.",
+    "etymology": "Proto-Slavic *gvězda",
+    "cultural_note": "Nature vocabulary essential for describing Bulgarian landscape. Star",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Size",
+        "sentence": "Звездато/та е голяма.",
+        "translation": "der Stern ist groß."
+      },
+      {
+        "context": "Seeing",
+        "sentence": "Виждам звездато/та.",
+        "translation": "Ich sehe der Stern."
+      },
+      {
+        "context": "Beauty",
+        "sentence": "Звездато/та е красива.",
+        "translation": "der Stern ist schön."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "Звезда е женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_nature_004",
+    "word": "Дърво",
+    "translation": "der Baum",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Natur",
+    "level": "A1",
+    "notes": "Tree. среден род.",
+    "notes_bg_to_de": "'Дърво' е среден род. Tree",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Дърво' = 'der Baum'. Neutrum.",
+    "etymology": "Proto-Slavic *dьrvo",
+    "cultural_note": "Nature vocabulary essential for describing Bulgarian landscape. Tree",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Size",
+        "sentence": "Дървото/та е голямо.",
+        "translation": "der Baum ist groß."
+      },
+      {
+        "context": "Seeing",
+        "sentence": "Виждам дървото/та.",
+        "translation": "Ich sehe der Baum."
+      },
+      {
+        "context": "Beauty",
+        "sentence": "Дървото/та е красиво.",
+        "translation": "der Baum ist schön."
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "Дърво е среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_nature_005",
+    "word": "Цвете",
+    "translation": "die Blume",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Natur",
+    "level": "A1",
+    "notes": "Flower. среден род.",
+    "notes_bg_to_de": "'Цвете' е среден род. Flower",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Цвете' = 'die Blume'. Neutrum.",
+    "etymology": "Proto-Slavic *květъ",
+    "cultural_note": "Nature vocabulary essential for describing Bulgarian landscape. Flower",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Size",
+        "sentence": "Цветето/та е голямо.",
+        "translation": "die Blume ist groß."
+      },
+      {
+        "context": "Seeing",
+        "sentence": "Виждам цветето/та.",
+        "translation": "Ich sehe die Blume."
+      },
+      {
+        "context": "Beauty",
+        "sentence": "Цветето/та е красиво.",
+        "translation": "die Blume ist schön."
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "Цвете е среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_nature_006",
+    "word": "Трева",
+    "translation": "das Gras",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Natur",
+    "level": "A1",
+    "notes": "Grass. женски род.",
+    "notes_bg_to_de": "'Трева' е женски род. Grass",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Трева' = 'das Gras'. Femininum.",
+    "etymology": "Proto-Slavic *trava",
+    "cultural_note": "Nature vocabulary essential for describing Bulgarian landscape. Grass",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Size",
+        "sentence": "Тревато/та е голяма.",
+        "translation": "das Gras ist groß."
+      },
+      {
+        "context": "Seeing",
+        "sentence": "Виждам тревато/та.",
+        "translation": "Ich sehe das Gras."
+      },
+      {
+        "context": "Beauty",
+        "sentence": "Тревато/та е красива.",
+        "translation": "das Gras ist schön."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "Трева е женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_nature_007",
+    "word": "Планина",
+    "translation": "der Berg",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Natur",
+    "level": "A1",
+    "notes": "Mountain. женски род.",
+    "notes_bg_to_de": "'Планина' е женски род. Mountain",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Планина' = 'der Berg'. Femininum.",
+    "etymology": "Proto-Slavic *planina",
+    "cultural_note": "Nature vocabulary essential for describing Bulgarian landscape. Mountain",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Size",
+        "sentence": "Планинато/та е голяма.",
+        "translation": "der Berg ist groß."
+      },
+      {
+        "context": "Seeing",
+        "sentence": "Виждам планинато/та.",
+        "translation": "Ich sehe der Berg."
+      },
+      {
+        "context": "Beauty",
+        "sentence": "Планинато/та е красива.",
+        "translation": "der Berg ist schön."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "Планина е женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_nature_008",
+    "word": "Река",
+    "translation": "der Fluss",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Natur",
+    "level": "A1",
+    "notes": "River. женски род.",
+    "notes_bg_to_de": "'Река' е женски род. River",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Река' = 'der Fluss'. Femininum.",
+    "etymology": "Proto-Slavic *rěka",
+    "cultural_note": "Nature vocabulary essential for describing Bulgarian landscape. River",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Size",
+        "sentence": "Рекато/та е голяма.",
+        "translation": "der Fluss ist groß."
+      },
+      {
+        "context": "Seeing",
+        "sentence": "Виждам рекато/та.",
+        "translation": "Ich sehe der Fluss."
+      },
+      {
+        "context": "Beauty",
+        "sentence": "Рекато/та е красива.",
+        "translation": "der Fluss ist schön."
+      }
+    ],
+    "linguistic_note": "женски род.",
+    "linguistic_note_bg_to_de": "Река е женски род.",
+    "linguistic_note_de_to_bg": "Femininum."
+  },
+  {
+    "id": "a1_nature_009",
+    "word": "Море",
+    "translation": "das Meer",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Natur",
+    "level": "A1",
+    "notes": "Sea. 'Черно море' (Black Sea) borders Bulgaria. среден род.",
+    "notes_bg_to_de": "'Море' е среден род. Sea. 'Черно море' (Black Sea) borders Bulgaria",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Море' = 'das Meer'. Neutrum.",
+    "etymology": "Proto-Slavic *morje",
+    "cultural_note": "Nature vocabulary essential for describing Bulgarian landscape. Sea. 'Черно море' (Black Sea) borders Bulgaria",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Size",
+        "sentence": "Морето/та е голямо.",
+        "translation": "das Meer ist groß."
+      },
+      {
+        "context": "Seeing",
+        "sentence": "Виждам морето/та.",
+        "translation": "Ich sehe das Meer."
+      },
+      {
+        "context": "Beauty",
+        "sentence": "Морето/та е красиво.",
+        "translation": "das Meer ist schön."
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "Море е среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  },
+  {
+    "id": "a1_nature_010",
+    "word": "Небе",
+    "translation": "der Himmel",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Natur",
+    "level": "A1",
+    "notes": "Sky, heaven. среден род.",
+    "notes_bg_to_de": "'Небе' е среден род. Sky, heaven",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Небе' = 'der Himmel'. Neutrum.",
+    "etymology": "Proto-Slavic *nebo",
+    "cultural_note": "Nature vocabulary essential for describing Bulgarian landscape. Sky, heaven",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Size",
+        "sentence": "Небето/та е голямо.",
+        "translation": "der Himmel ist groß."
+      },
+      {
+        "context": "Seeing",
+        "sentence": "Виждам небето/та.",
+        "translation": "Ich sehe der Himmel."
+      },
+      {
+        "context": "Beauty",
+        "sentence": "Небето/та е красиво.",
+        "translation": "der Himmel ist schön."
+      }
+    ],
+    "linguistic_note": "среден род.",
+    "linguistic_note_bg_to_de": "Небе е среден род.",
+    "linguistic_note_de_to_bg": "Neutrum."
+  }
+]

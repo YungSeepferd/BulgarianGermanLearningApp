@@ -1,0 +1,164 @@
+// Button component styles
+.btn-primary {
+  @include button-primary;
+}
+
+.btn-secondary {
+  @include button-secondary;
+}
+
+.btn-correct {
+  @include button-base;
+
+  background-color: var(--color-success);
+  color: var(--text-inverse);
+
+  &:hover:not(:disabled) {
+    background-color: #059669;
+  }
+
+  .shortcut {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: $spacing-1 $spacing-2;
+    border-radius: $radius-sm;
+    font-size: $font-size-xs;
+    margin-left: $spacing-2;
+  }
+}
+
+.btn-incorrect {
+  @include button-base;
+
+  background-color: var(--color-error);
+  color: var(--text-inverse);
+
+  &:hover:not(:disabled) {
+    background-color: #dc2626;
+  }
+
+  .shortcut {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: $spacing-1 $spacing-2;
+    border-radius: $radius-sm;
+    font-size: $font-size-xs;
+    margin-left: $spacing-2;
+  }
+}
+
+.btn-hint {
+  @include button-base;
+
+  background-color: var(--color-warning);
+  color: var(--text-inverse);
+  font-size: $font-size-sm;
+
+  &:hover:not(:disabled) {
+    background-color: #d97706;
+  }
+}
+
+.btn-large {
+  padding: $spacing-4 $spacing-6;
+  font-size: $font-size-base;
+}
+
+.btn-small {
+  padding: $spacing-2 $spacing-3;
+  font-size: $font-size-sm;
+}
+
+// Audio button
+.audio-btn {
+  @include flex-center;
+
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid var(--border-primary);
+  border-radius: $radius-full;
+  color: var(--text-secondary);
+  transition: all $transition-base;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--bg-secondary);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+  }
+
+  .audio-icon {
+    font-size: $font-size-base;
+  }
+}
+
+// Practice button
+.practice-single-btn,
+.start-exercise-btn {
+  @include button-base;
+
+  background-color: var(--color-primary);
+  color: var(--text-inverse);
+  font-size: $font-size-sm;
+  padding: $spacing-2 $spacing-3;
+
+  &:hover:not(:disabled) {
+    background-color: var(--color-primary-dark);
+  }
+}
+
+// Bookmark button
+.bookmark-btn {
+  @include flex-center;
+
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: $font-size-lg;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover {
+    color: var(--color-warning);
+    transform: scale(1.1);
+  }
+
+  &.bookmarked {
+    color: var(--color-warning);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+    border-radius: $radius-sm;
+  }
+}
+
+// Show more/less buttons
+.show-more-examples,
+.show-answer-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-size: $font-size-sm;
+  cursor: pointer;
+  padding: $spacing-2 0;
+  transition: color $transition-base;
+
+  &:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+    border-radius: $radius-sm;
+  }
+}

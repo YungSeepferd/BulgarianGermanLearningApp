@@ -1,7 +1,18 @@
 {
-  "timestamp": "2025-11-27T14:53:26.759Z",
-  "isValid": true,
-  "errors": [],
+  "timestamp": "2025-12-02T15:38:41.232Z",
+  "isValid": false,
+  "errors": [
+    {
+      "file": "svelte-frontend/package-lock.json",
+      "message": "File not found",
+      "type": "MISSING_FILE"
+    },
+    {
+      "file": "themes/relearn/tools/package-lock.json",
+      "message": "File not found",
+      "type": "MISSING_FILE"
+    }
+  ],
   "warnings": [
     {
       "file": "package-lock.json",
@@ -11,30 +22,6 @@
     },
     {
       "file": "package-lock.json",
-      "message": "tar-fs not found in dependencies",
-      "type": "MISSING_DEPENDENCY",
-      "package": "tar-fs"
-    },
-    {
-      "file": "svelte-frontend/package-lock.json",
-      "message": "cookie not found in dependencies",
-      "type": "MISSING_DEPENDENCY",
-      "package": "cookie"
-    },
-    {
-      "file": "svelte-frontend/package-lock.json",
-      "message": "tar-fs not found in dependencies",
-      "type": "MISSING_DEPENDENCY",
-      "package": "tar-fs"
-    },
-    {
-      "file": "themes/relearn/tools/package-lock.json",
-      "message": "cookie not found in dependencies",
-      "type": "MISSING_DEPENDENCY",
-      "package": "cookie"
-    },
-    {
-      "file": "themes/relearn/tools/package-lock.json",
       "message": "tar-fs not found in dependencies",
       "type": "MISSING_DEPENDENCY",
       "package": "tar-fs"

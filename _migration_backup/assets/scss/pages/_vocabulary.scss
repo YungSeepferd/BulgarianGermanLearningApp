@@ -1,0 +1,177 @@
+// Vocabulary page styles
+.vocabulary-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+
+  @include md {
+    padding: 0 $spacing-6;
+  }
+
+  @include lg {
+    padding: 0 $spacing-8;
+  }
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: $spacing-8;
+
+  h1 {
+    font-size: $font-size-4xl;
+    color: var(--text-primary);
+    margin-bottom: $spacing-4;
+
+    @include md {
+      font-size: 3.5rem;
+    }
+  }
+
+  p {
+    font-size: $font-size-lg;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// Vocabulary grid
+.vocabulary-grid {
+  @include grid-responsive(320px);
+
+  margin-bottom: $spacing-8;
+
+  @include lg {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+}
+
+// No results state
+.no-results {
+  @include flex-column;
+
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-6;
+  padding: $spacing-16;
+  text-align: center;
+  background-color: var(--bg-secondary);
+  border-radius: $radius-xl;
+  margin: $spacing-8 0;
+
+  &.hidden {
+    display: none;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    color: var(--text-secondary);
+    margin-bottom: $spacing-4;
+  }
+
+  // Enhanced search input styling with feedback
+  .search-container {
+    position: relative;
+    
+    &.searching .search-input {
+      padding-right: 3rem;
+      border-color: var(--color-primary);
+    }
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition-fast);
+    
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
+    }
+    
+    &::placeholder {
+      color: var(--color-text-secondary);
+    }
+  }
+
+  .search-spinner {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    .spinner {
+      width: 1.25rem;
+      height: 1.25rem;
+      border: 2px solid var(--color-border);
+      border-top: 2px solid var(--color-primary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: var(--breakpoint-md)) {
+  .vocabulary-container {
+    padding: 0 $spacing-3;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: $spacing-3;
+
+    select,
+    input {
+      min-width: auto;
+      max-width: none;
+    }
+  }
+
+  .vocabulary-grid {
+    grid-template-columns: 1fr;
+    gap: $spacing-4;
+  }
+
+  .vocab-card {
+    padding: $spacing-4;
+
+    .vocab-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $spacing-2;
+
+      .vocab-select {
+        align-self: flex-end;
+      }
+    }
+
+    .vocab-meta {
+      flex-wrap: wrap;
+    }
+
+    .vocab-actions {
+      flex-direction: column;
+      align-items: stretch;
+      gap: $spacing-2;
+
+      .practice-single-btn {
+        width: 100%;
+      }
+
+      .review-info {
+        text-align: center;
+      }
+    }
+  }
+}

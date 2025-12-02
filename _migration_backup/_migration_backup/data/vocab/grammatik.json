@@ -1,0 +1,722 @@
+[
+  {
+    "id": "a1_grammar_001",
+    "word": "И",
+    "translation": "und",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "And (conjunction). Съюз.",
+    "notes_bg_to_de": "'И' е съюз. And (conjunction)",
+    "notes_de_to_bg": "Für Deutschsprachige: 'И' = 'und'. Konjunktion.",
+    "etymology": "Proto-Slavic *i",
+    "cultural_note": "Most basic conjunction. 'Аз и ти' (you and I).",
+    "difficulty": 1,
+    "frequency": 100,
+    "examples": [
+      {
+        "context": "Basic usage",
+        "sentence": "Аз И ти.",
+        "translation": "Ich und du."
+      },
+      {
+        "context": "Choice/connection",
+        "sentence": "И кафе И чай.",
+        "translation": "Und Kaffee und Tee."
+      },
+      {
+        "context": "Prepositional",
+        "sentence": "Това е И теб.",
+        "translation": "Das ist und dich."
+      }
+    ],
+    "linguistic_note": "Съюз. And (conjunction)",
+    "linguistic_note_bg_to_de": "И - Съюз.",
+    "linguistic_note_de_to_bg": "И = Konjunktion."
+  },
+  {
+    "id": "a1_grammar_002",
+    "word": "Но",
+    "translation": "aber",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "But (conjunction). Съюз.",
+    "notes_bg_to_de": "'Но' е съюз. But (conjunction)",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Но' = 'aber'. Konjunktion.",
+    "etymology": "Proto-Slavic *no",
+    "cultural_note": "Contrast conjunction. 'Обичам, но...' (I love, but...).",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic usage",
+        "sentence": "Аз Но ти.",
+        "translation": "Ich aber du."
+      },
+      {
+        "context": "Choice/connection",
+        "sentence": "Но кафе Но чай.",
+        "translation": "Aber Kaffee aber Tee."
+      },
+      {
+        "context": "Prepositional",
+        "sentence": "Това е Но теб.",
+        "translation": "Das ist aber dich."
+      }
+    ],
+    "linguistic_note": "Съюз. But (conjunction)",
+    "linguistic_note_bg_to_de": "Но - Съюз.",
+    "linguistic_note_de_to_bg": "Но = Konjunktion."
+  },
+  {
+    "id": "a1_grammar_003",
+    "word": "Или",
+    "translation": "oder",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "Or (conjunction). Съюз.",
+    "notes_bg_to_de": "'Или' е съюз. Or (conjunction)",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Или' = 'oder'. Konjunktion.",
+    "etymology": "Proto-Slavic *ili",
+    "cultural_note": "Choice conjunction. 'Кафе или чай?' (Coffee or tea?).",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "context": "Basic usage",
+        "sentence": "Аз Или ти.",
+        "translation": "Ich oder du."
+      },
+      {
+        "context": "Choice/connection",
+        "sentence": "Или кафе Или чай.",
+        "translation": "Oder Kaffee oder Tee."
+      },
+      {
+        "context": "Prepositional",
+        "sentence": "Това е Или теб.",
+        "translation": "Das ist oder dich."
+      }
+    ],
+    "linguistic_note": "Съюз. Or (conjunction)",
+    "linguistic_note_bg_to_de": "Или - Съюз.",
+    "linguistic_note_de_to_bg": "Или = Konjunktion."
+  },
+  {
+    "id": "a1_grammar_004",
+    "word": "За",
+    "translation": "für, über",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "For, about (preposition + accusative). Предлог.",
+    "notes_bg_to_de": "'За' е предлог. For, about (preposition + accusative)",
+    "notes_de_to_bg": "Für Deutschsprachige: 'За' = 'für, über'. Präposition.",
+    "etymology": "Proto-Slavic *za",
+    "cultural_note": "Multi-purpose: 'за теб' (for you), 'говоря за' (talk about).",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic usage",
+        "sentence": "Аз За ти.",
+        "translation": "Ich für du."
+      },
+      {
+        "context": "Choice/connection",
+        "sentence": "За кафе За чай.",
+        "translation": "Für Kaffee für Tee."
+      },
+      {
+        "context": "Prepositional",
+        "sentence": "Това е За теб.",
+        "translation": "Das ist für dich."
+      }
+    ],
+    "linguistic_note": "Предлог. For, about (preposition + accusative)",
+    "linguistic_note_bg_to_de": "За - Предлог.",
+    "linguistic_note_de_to_bg": "За = Präposition."
+  },
+  {
+    "id": "a1_grammar_005",
+    "word": "От",
+    "translation": "von, aus",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "From, of (preposition + accusative). Предлог.",
+    "notes_bg_to_de": "'От' е предлог. From, of (preposition + accusative)",
+    "notes_de_to_bg": "Für Deutschsprachige: 'От' = 'von, aus'. Präposition.",
+    "etymology": "Proto-Slavic *otъ",
+    "cultural_note": "Source/origin: 'от София' (from Sofia), 'от мен' (from me).",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic usage",
+        "sentence": "Аз От ти.",
+        "translation": "Ich von du."
+      },
+      {
+        "context": "Choice/connection",
+        "sentence": "От кафе От чай.",
+        "translation": "Von Kaffee von Tee."
+      },
+      {
+        "context": "Prepositional",
+        "sentence": "Това е От теб.",
+        "translation": "Das ist von dich."
+      }
+    ],
+    "linguistic_note": "Предлог. From, of (preposition + accusative)",
+    "linguistic_note_bg_to_de": "От - Предлог.",
+    "linguistic_note_de_to_bg": "От = Präposition."
+  },
+  {
+    "id": "a1_grammar_006",
+    "word": "В",
+    "translation": "in",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "In, at. Предлог.",
+    "notes_bg_to_de": "'В' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'В' = 'in'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Аз съм В София.",
+        "translation": "Ich bin in Sofia/hier."
+      },
+      {
+        "context": "Use",
+        "sentence": "В къщата.",
+        "translation": "In dem Haus."
+      },
+      {
+        "context": "Belief",
+        "sentence": "Вярвам В теб.",
+        "translation": "Ich glaube in dich."
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_007",
+    "word": "На",
+    "translation": "auf, zu",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "On, to, at. Предлог.",
+    "notes_bg_to_de": "'На' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'На' = 'auf, zu'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Аз съм На София.",
+        "translation": "Ich bin auf, zu Sofia/hier."
+      },
+      {
+        "context": "Use",
+        "sentence": "На къщата.",
+        "translation": "Auf, zu dem Haus."
+      },
+      {
+        "context": "Belief",
+        "sentence": "Вярвам На теб.",
+        "translation": "Ich glaube auf, zu dich."
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_008",
+    "word": "С",
+    "translation": "mit",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "With. Предлог.",
+    "notes_bg_to_de": "'С' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'С' = 'mit'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Аз съм С София.",
+        "translation": "Ich bin mit Sofia/hier."
+      },
+      {
+        "context": "Use",
+        "sentence": "С къщата.",
+        "translation": "Mit dem Haus."
+      },
+      {
+        "context": "Belief",
+        "sentence": "Вярвам С теб.",
+        "translation": "Ich glaube mit dich."
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_009",
+    "word": "Без",
+    "translation": "ohne",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "Without. Предлог.",
+    "notes_bg_to_de": "'Без' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Без' = 'ohne'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Аз съм Без София.",
+        "translation": "Ich bin ohne Sofia/hier."
+      },
+      {
+        "context": "Use",
+        "sentence": "Без къщата.",
+        "translation": "Ohne dem Haus."
+      },
+      {
+        "context": "Belief",
+        "sentence": "Вярвам Без теб.",
+        "translation": "Ich glaube ohne dich."
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_010",
+    "word": "До",
+    "translation": "bis, neben",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "Until, next to. Предлог.",
+    "notes_bg_to_de": "'До' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'До' = 'bis, neben'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Аз съм До София.",
+        "translation": "Ich bin bis, neben Sofia/hier."
+      },
+      {
+        "context": "Use",
+        "sentence": "До къщата.",
+        "translation": "Bis, neben dem Haus."
+      },
+      {
+        "context": "Belief",
+        "sentence": "Вярвам До теб.",
+        "translation": "Ich glaube bis, neben dich."
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_011",
+    "word": "Към",
+    "translation": "zu, nach",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "Toward. Предлог.",
+    "notes_bg_to_de": "'Към' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Към' = 'zu, nach'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Аз съм Към София.",
+        "translation": "Ich bin zu, nach Sofia/hier."
+      },
+      {
+        "context": "Use",
+        "sentence": "Към къщата.",
+        "translation": "Zu, nach dem Haus."
+      },
+      {
+        "context": "Belief",
+        "sentence": "Вярвам Към теб.",
+        "translation": "Ich glaube zu, nach dich."
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_012",
+    "word": "Пред",
+    "translation": "vor",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "Before, in front of. Предлог.",
+    "notes_bg_to_de": "'Пред' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Пред' = 'vor'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Аз съм Пред София.",
+        "translation": "Ich bin vor Sofia/hier."
+      },
+      {
+        "context": "Use",
+        "sentence": "Пред къщата.",
+        "translation": "Vor dem Haus."
+      },
+      {
+        "context": "Belief",
+        "sentence": "Вярвам Пред теб.",
+        "translation": "Ich glaube vor dich."
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_013",
+    "word": "След",
+    "translation": "nach",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "After. Предлог.",
+    "notes_bg_to_de": "'След' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'След' = 'nach'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Аз съм След София.",
+        "translation": "Ich bin nach Sofia/hier."
+      },
+      {
+        "context": "Use",
+        "sentence": "След къщата.",
+        "translation": "Nach dem Haus."
+      },
+      {
+        "context": "Belief",
+        "sentence": "Вярвам След теб.",
+        "translation": "Ich glaube nach dich."
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_014",
+    "word": "Над",
+    "translation": "über",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "Above, over. Предлог.",
+    "notes_bg_to_de": "'Над' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Над' = 'über'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Аз съм Над София.",
+        "translation": "Ich bin über Sofia/hier."
+      },
+      {
+        "context": "Use",
+        "sentence": "Над къщата.",
+        "translation": "Über dem Haus."
+      },
+      {
+        "context": "Belief",
+        "sentence": "Вярвам Над теб.",
+        "translation": "Ich glaube über dich."
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_015",
+    "word": "Под",
+    "translation": "unter",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "Under, below. Предлог.",
+    "notes_bg_to_de": "'Под' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Под' = 'unter'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Аз съм Под София.",
+        "translation": "Ich bin unter Sofia/hier."
+      },
+      {
+        "context": "Use",
+        "sentence": "Под къщата.",
+        "translation": "Unter dem Haus."
+      },
+      {
+        "context": "Belief",
+        "sentence": "Вярвам Под теб.",
+        "translation": "Ich glaube unter dich."
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_016",
+    "word": "Между",
+    "translation": "zwischen",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "Between. Предлог.",
+    "notes_bg_to_de": "'Между' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Между' = 'zwischen'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Аз съм Между София.",
+        "translation": "Ich bin zwischen Sofia/hier."
+      },
+      {
+        "context": "Use",
+        "sentence": "Между къщата.",
+        "translation": "Zwischen dem Haus."
+      },
+      {
+        "context": "Belief",
+        "sentence": "Вярвам Между теб.",
+        "translation": "Ich glaube zwischen dich."
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_017",
+    "word": "При",
+    "translation": "bei",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "At, by, with. Предлог.",
+    "notes_bg_to_de": "'При' е предлог.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'При' = 'bei'. Präposition.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Аз съм При София.",
+        "translation": "Ich bin bei Sofia/hier."
+      },
+      {
+        "context": "Use",
+        "sentence": "При къщата.",
+        "translation": "Bei dem Haus."
+      },
+      {
+        "context": "Belief",
+        "sentence": "Вярвам При теб.",
+        "translation": "Ich glaube bei dich."
+      }
+    ],
+    "linguistic_note": "Предлог.",
+    "linguistic_note_bg_to_de": "Предлог.",
+    "linguistic_note_de_to_bg": "Präposition."
+  },
+  {
+    "id": "a1_grammar_018",
+    "word": "Че",
+    "translation": "dass",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "That (conjunction). Съюз.",
+    "notes_bg_to_de": "'Че' е съюз.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Че' = 'dass'. Konjunktion.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Аз съм Че тук.",
+        "translation": "Ich bin dass Sofia/hier."
+      },
+      {
+        "context": "Use",
+        "sentence": "Че идвам.",
+        "translation": "Dass ich komme."
+      },
+      {
+        "context": "Belief",
+        "sentence": "Вярвам Че е добре.",
+        "translation": "Ich glaube dass es ist gut."
+      }
+    ],
+    "linguistic_note": "Съюз.",
+    "linguistic_note_bg_to_de": "Съюз.",
+    "linguistic_note_de_to_bg": "Konjunktion."
+  },
+  {
+    "id": "a1_grammar_019",
+    "word": "Ако",
+    "translation": "wenn, falls",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "If. Съюз.",
+    "notes_bg_to_de": "'Ако' е съюз.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ако' = 'wenn, falls'. Konjunktion.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Аз съм Ако тук.",
+        "translation": "Ich bin wenn, falls Sofia/hier."
+      },
+      {
+        "context": "Use",
+        "sentence": "Ако идвам.",
+        "translation": "Wenn, falls ich komme."
+      },
+      {
+        "context": "Belief",
+        "sentence": "Вярвам Ако е добре.",
+        "translation": "Ich glaube wenn, falls es ist gut."
+      }
+    ],
+    "linguistic_note": "Съюз.",
+    "linguistic_note_bg_to_de": "Съюз.",
+    "linguistic_note_de_to_bg": "Konjunktion."
+  },
+  {
+    "id": "a1_grammar_020",
+    "word": "Когато",
+    "translation": "wenn, als",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Grammatik",
+    "level": "A1",
+    "notes": "When. Съюз.",
+    "notes_bg_to_de": "'Когато' е съюз.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Когато' = 'wenn, als'. Konjunktion.",
+    "etymology": "Proto-Slavic grammatical particle.",
+    "cultural_note": "Essential grammar word.",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "context": "Basic",
+        "sentence": "Аз съм Когато тук.",
+        "translation": "Ich bin wenn, als Sofia/hier."
+      },
+      {
+        "context": "Use",
+        "sentence": "Когато идвам.",
+        "translation": "Wenn, als ich komme."
+      },
+      {
+        "context": "Belief",
+        "sentence": "Вярвам Когато е добре.",
+        "translation": "Ich glaube wenn, als es ist gut."
+      }
+    ],
+    "linguistic_note": "Съюз.",
+    "linguistic_note_bg_to_de": "Съюз.",
+    "linguistic_note_de_to_bg": "Konjunktion."
+  }
+]

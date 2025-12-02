@@ -1,0 +1,98 @@
+// Footer component styles
+.site-footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-primary);
+  margin-top: auto;
+  padding: $spacing-12 0 $spacing-8 0;
+
+  @include md {
+    padding: $spacing-16 0 $spacing-12 0;
+  }
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-8;
+
+  @include sm {
+    padding: 0 $spacing-6;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include lg {
+    padding: 0 $spacing-8;
+  }
+}
+
+.footer-section {
+  h3 {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    color: var(--text-primary);
+    margin-bottom: $spacing-4;
+  }
+
+  h4 {
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    color: var(--text-primary);
+    margin-bottom: $spacing-3;
+  }
+
+  p {
+    color: var(--text-secondary);
+    margin-bottom: $spacing-4;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: $spacing-2;
+
+      a {
+        color: var(--text-secondary);
+        transition: color $transition-base;
+
+        &:hover {
+          color: var(--color-primary);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-8 $spacing-4 0 $spacing-4;
+  border-top: 1px solid var(--border-primary);
+  text-align: center;
+
+  @include sm {
+    padding-left: $spacing-6;
+    padding-right: $spacing-6;
+  }
+
+  @include lg {
+    padding-left: $spacing-8;
+    padding-right: $spacing-8;
+  }
+
+  p {
+    color: var(--text-muted);
+    font-size: $font-size-sm;
+    margin: 0;
+  }
+}

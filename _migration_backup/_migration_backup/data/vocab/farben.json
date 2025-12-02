@@ -1,0 +1,362 @@
+[
+  {
+    "id": "a1_color_001",
+    "word": "Черен",
+    "translation": "schwarz",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color black. Basic color adjective that declines by gender: черен (m), черна (f), черно (n), черни (pl). Very common in everyday descriptions.",
+    "notes_bg_to_de": "В немски 'schwarz' не се променя по род като прилагателно в предикатна позиция. В български 'черен' се променя: черен чай (m), черна котка (f), черно куче (n), черни обувки (pl).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Черен' ändert sich nach Genus und Numerus: черен (m), черна (f), черно (n), черни (pl). Ähnlich wie deutsche Adjektivdeklination, aber einfacher.",
+    "etymology": "From Proto-Slavic '*čьrnъ' (black), related to Russian 'чёрный' and Polish 'czarny'. The root may relate to darkness or charcoal.",
+    "cultural_note": "Black has traditional significance in Bulgarian culture. 'Черно море' (Black Sea) is Bulgaria's eastern border. Wearing black is standard for mourning. 'Черен хумор' (black humor) is a common expression.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Describing possession",
+        "sentence": "Имам черна кола.",
+        "translation": "Ich habe ein schwarzes Auto."
+      },
+      {
+        "context": "Food preference",
+        "sentence": "Пия черно кафе.",
+        "translation": "Ich trinke schwarzen Kaffee."
+      },
+      {
+        "context": "Description with definite article",
+        "sentence": "Черното котенце е сладко.",
+        "translation": "Das schwarze Kätzchen ist süß."
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: че́рен [ˈt͡ʃɛrɛn]. The 'ч' is [t͡ʃ] like 'ch' in 'church'. Forms: черен/черна/черно/черни.",
+    "linguistic_note_bg_to_de": "Черен се произнася [ˈt͡ʃɛrɛn] с ударение на 'че'. Форми: черен (м.р.), черна (ж.р.), черно (ср.р.), черни (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: че́рен [ˈt͡ʃɛrɛn]. Das 'ч' ist wie deutsches 'tsch'. Formen: черен (m), черна (f), черно (n), черни (pl)."
+  },
+  {
+    "id": "a1_color_002",
+    "word": "Бял",
+    "translation": "weiß",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color white. Basic color adjective with gender forms: бял (m), бяла (f), бяло (n), бели (pl). Used in many common expressions.",
+    "notes_bg_to_de": "В немски 'weiß' не се променя по род в предикатна позиция. В български 'бял' се променя: бял хляб (m), бяла риза (f), бяло вино (n), бели зъби (pl).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Бял' dekliniert nach Genus: бял (m), бяла (f), бяло (n), бели (pl). Wichtig: 'бяло вино' (Weißwein) ist sehr gebräuchlich.",
+    "etymology": "From Proto-Slavic '*bělъ' (white), related to Russian 'белый' and Serbian 'бео/бели'. The root relates to brightness and light.",
+    "cultural_note": "'Бяло вино' (white wine) is popular in Bulgaria. 'Бяло сирене' (white cheese/feta) is a staple food. White is associated with purity and cleanliness. 'Бяла мечка' (polar bear) literally means 'white bear'.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Preference",
+        "sentence": "Харесвам бялото вино.",
+        "translation": "Ich mag Weißwein."
+      },
+      {
+        "context": "Describing clothing",
+        "sentence": "Имам бяла риза.",
+        "translation": "Ich habe ein weißes Hemd."
+      },
+      {
+        "context": "Natural description",
+        "sentence": "Снегът е бял.",
+        "translation": "Der Schnee ist weiß."
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: бя́л [bjal]. The 'я' is [ja]. Forms: бял/бяла/бяло/бели (note plural is 'бели' not *'бяли').",
+    "linguistic_note_bg_to_de": "Бял се произнася [bjal] с ударение на единствената сричка. Форми: бял (м.р.), бяла (ж.р.), бяло (ср.р.), бели (мн.ч.) - внимание: не 'бяли'!",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: бя́л [bjal]. Formen: бял (m), бяла (f), бяло (n), бели (pl) - Achtung: Plural ist 'бели', nicht *'бяли'!"
+  },
+  {
+    "id": "a1_color_003",
+    "word": "Червен",
+    "translation": "rot",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color red. Basic color adjective: червен (m), червена (f), червено (n), червени (pl). Very common in descriptions and expressions.",
+    "notes_bg_to_de": "В немски 'rot' остава непроменен в предикатна позиция. В български 'червен' се променя: червен домат (m), червена роза (f), червено вино (n), червени ябълки (pl).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Червен' dekliniert: червен (m), червена (f), червено (n), червени (pl). 'Червено вино' (Rotwein) ist sehr gebräuchlich.",
+    "etymology": "From Proto-Slavic '*čьrvenъ' (red), related to Russian 'червонный' (archaic, crimson) and 'червь' (worm) - red dye was historically made from insects. Also related to 'червен' meaning 'made red'.",
+    "cultural_note": "'Червен пипер' (red pepper) is essential in Bulgarian cuisine. 'Червено вино' (red wine) is popular. The 'Червена армия' (Red Army) has historical significance. Red is associated with passion, celebration, and in folklore, with protection against evil.",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "context": "Preference",
+        "sentence": "Обичам червено вино.",
+        "translation": "Ich mag Rotwein."
+      },
+      {
+        "context": "Description",
+        "sentence": "Червената роза е красива.",
+        "translation": "Die rote Rose ist schön."
+      },
+      {
+        "context": "Shopping instruction",
+        "sentence": "Купи червени домати.",
+        "translation": "Kauf rote Tomaten."
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: че́рвен [ˈt͡ʃɛrvɛn]. Forms: червен/червена/червено/червени.",
+    "linguistic_note_bg_to_de": "Червен се произнася [ˈt͡ʃɛrvɛn] с ударение на 'че'. Форми: червен (м.р.), червена (ж.р.), червено (ср.р.), червени (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: че́рвен [ˈt͡ʃɛrvɛn]. Formen: червен (m), червена (f), червено (n), червени (pl)."
+  },
+  {
+    "id": "a1_color_004",
+    "word": "Син",
+    "translation": "blau",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color blue. Also means 'son' in Bulgarian, but context makes meaning clear. Forms: син (m), синя (f), синьо (n), сини (pl).",
+    "notes_bg_to_de": "В немски 'blau' не се променя в предикатна позиция. В български 'син' се променя: син панталон (m), синя рокля (f), синьо небе (n), сини очи (pl). Внимание: 'син' също означава 'син' (son), но контекстът прави ясно значението.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Син' = 'blau' UND 'Sohn'. Der Kontext macht die Bedeutung klar. Als Farbe: син (m), синя (f), синьо (n), сини (pl).",
+    "etymology": "For color: from Proto-Slavic '*sinь' (blue, grey-blue), related to Russian 'синий'. For son: from Proto-Slavic '*synъ' (son). Different etymologies, same modern form.",
+    "cultural_note": "'Синьо небе' (blue sky) is in Bulgarian poetry and songs. The sea is sometimes described as 'синьо' (blue). 'Сини очи' (blue eyes) are less common in Bulgaria than in Northern Europe, making them notable. 'Син като небето' (blue as the sky) is a common comparison.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Natural description",
+        "sentence": "Небето е синьо.",
+        "translation": "Der Himmel ist blau."
+      },
+      {
+        "context": "Describing clothing",
+        "sentence": "Имам синя рокля.",
+        "translation": "Ich habe ein blaues Kleid."
+      },
+      {
+        "context": "Physical description",
+        "sentence": "Той има сини очи.",
+        "translation": "Er hat blaue Augen."
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: си́н [sin]. Forms: син/синя/синьо/сини. Note neuter is 'синьо' with 'ь' (soft sign).",
+    "linguistic_note_bg_to_de": "Син се произнася [sin] с ударение на единствената сричка. Форми: син (м.р.), синя (ж.р.), синьо (ср.р.), сини (мн.ч.). Внимание: средният род е 'синьо' с 'ь'.",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: си́н [sin]. Formen: син (m), синя (f), синьо (n - mit ь!), сини (pl)."
+  },
+  {
+    "id": "a1_color_005",
+    "word": "Зелен",
+    "translation": "grün",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color green. Basic color adjective: зелен (m), зелена (f), зелено (n), зелени (pl). Related to vegetables ('зеленчук' = green things).",
+    "notes_bg_to_de": "В немски 'grün' остава непроменен в предикатна позиция. В български 'зелен' се променя: зелен чай (m), зелена салата (f), зелено поле (n), зелени зеленчуци (pl). От 'зелен' идва 'зеленчук' (зеленчуци).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Зелен' dekliniert: зелен (m), зелена (f), зелено (n), зелени (pl). Von diesem Wort kommt 'зеленчук' (Gemüse - wörtlich 'grüne Dinge').",
+    "etymology": "From Proto-Slavic '*zelenъ' (green), related to Russian 'зелёный' and the root '*zel-' (green, to grow). Connected to spring, growth, and fresh plants.",
+    "cultural_note": "Green is associated with nature and freshness in Bulgarian culture. 'Зелен чай' (green tea) has become popular. 'Зелена салата' (lettuce, literally 'green salad') is a staple. The expression 'зелен като краставица' (green as a cucumber) means inexperienced or naive.",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "context": "Preference",
+        "sentence": "Обичам зелен чай.",
+        "translation": "Ich mag grünen Tee."
+      },
+      {
+        "context": "Natural description",
+        "sentence": "Полето е зелено.",
+        "translation": "Das Feld ist grün."
+      },
+      {
+        "context": "Shopping",
+        "sentence": "Купи зелена салата.",
+        "translation": "Kauf grünen Salat (Kopfsalat)."
+      }
+    ],
+    "linguistic_note": "Stress on first syllable: зе́лен [ˈzɛlɛn]. Forms: зелен/зелена/зелено/зелени.",
+    "linguistic_note_bg_to_de": "Зелен се произнася [ˈzɛlɛn] с ударение на 'зе'. Форми: зелен (м.р.), зелена (ж.р.), зелено (ср.р.), зелени (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: зе́лен [ˈzɛlɛn]. Formen: зелен (m), зелена (f), зелено (n), зелени (pl)."
+  },
+  {
+    "id": "a1_color_006",
+    "word": "Жълт",
+    "translation": "gelb",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color yellow. Forms: жълт (m), жълта (f), жълто (n), жълти (pl). Common in describing objects and natural elements.",
+    "notes_bg_to_de": "В немски 'gelb' остава непроменен в предикатна позиция. В български 'жълт' се променя: жълт лимон (m), жълта банан (f - в диалектите може да е ж.р.), жълто слънце (n), жълти цветя (pl).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Жълт' dekliniert: жълт (m), жълта (f), жълто (n), жълти (pl). Beachten Sie die spezielle Aussprache von 'жълт' mit 'ъ' als Schwa.",
+    "etymology": "From Proto-Slavic '*žьltъ' (yellow), related to Russian 'жёлтый' and Polish 'żółty'. The root may relate to gold and bile (both yellow).",
+    "cultural_note": "'Жълти павета' (yellow cobblestones/bricks) refers to Sofia's famous yellow paving stones - 'жълт павета' is iconic in Bulgarian cities. Yellow is associated with sunshine and warmth. 'Жълт като лимон' (yellow as a lemon) is a common comparison.",
+    "difficulty": 2,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Natural description",
+        "sentence": "Слънцето е жълто.",
+        "translation": "Die Sonne ist gelb."
+      },
+      {
+        "context": "Clothing",
+        "sentence": "Имам жълта риза.",
+        "translation": "Ich habe ein gelbes Hemd."
+      },
+      {
+        "context": "Description",
+        "sentence": "Жълтите цветя са красиви.",
+        "translation": "Die gelben Blumen sind schön."
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: жъ́лт [ʒɤlt]. The 'ъ' is schwa [ɤ], the 'ж' is [ʒ] like 's' in 'measure'. Forms: жълт/жълта/жълто/жълти.",
+    "linguistic_note_bg_to_de": "Жълт се произнася [ʒɤlt] с ударение на единствената сричка. Буквата 'ъ' е [ɤ]. Форми: жълт (м.р.), жълта (ж.р.), жълто (ср.р.), жълти (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: жъ́лт [ʒɤlt]. Das 'ж' ist wie 's' in 'Genie', das 'ъ' ist Schwa [ɤ]. Formen: жълт (m), жълта (f), жълто (n), жълти (pl)."
+  },
+  {
+    "id": "a1_color_007",
+    "word": "Оранжев",
+    "translation": "orange",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color orange. Loanword from French 'orange'. Forms: оранжев (m), оранжева (f), оранжево (n), оранжеви (pl).",
+    "notes_bg_to_de": "В немски 'orange' е неизменяемо прилагателно. В български 'оранжев' се променя: оранжев портокал (m), оранжева тиква (f), оранжево светло (n), оранжеви плодове (pl).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Оранжев' dekliniert: оранжев (m), оранжева (f), оранжево (n), оранжеви (pl). Im Deutschen ist 'orange' unveränderlich.",
+    "etymology": "From French 'orange' (the fruit and color), ultimately from Sanskrit 'naranga' via Persian and Arabic. Entered Bulgarian as a modern international loanword.",
+    "cultural_note": "Orange as a color term is relatively modern in Bulgarian. Traditionally, orange shades were described as 'червено-жълт' (red-yellow). The fruit 'портокал' (orange) can colloquially refer to the color as well.",
+    "difficulty": 2,
+    "frequency": 65,
+    "examples": [
+      {
+        "context": "Description",
+        "sentence": "Оранжевият портокал е сочен.",
+        "translation": "Die orange Orange ist saftig."
+      },
+      {
+        "context": "Clothing",
+        "sentence": "Тя носи оранжева рокля.",
+        "translation": "Sie trägt ein oranges Kleid."
+      },
+      {
+        "context": "Natural phenomenon",
+        "sentence": "Залезът е оранжев.",
+        "translation": "Der Sonnenuntergang ist orange."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: оран́жев [ɔˈranʒɛf]. The final 'в' is devoiced to [f]. Forms: оранжев/оранжева/оранжево/оранжеви.",
+    "linguistic_note_bg_to_de": "Оранжев се произнася [ɔˈranʒɛf] с ударение на 'ран'. Крайното 'в' се оглушава на [f]. Форми: оранжев (м.р.), оранжева (ж.р.), оранжево (ср.р.), оранжеви (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: оран́жев [ɔˈranʒɛf]. Das finale 'в' wird als [f] ausgesprochen. Formen: оранжев (m), оранжева (f), оранжево (n), оранжеви (pl)."
+  },
+  {
+    "id": "a1_color_008",
+    "word": "Кафяв",
+    "translation": "braun",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color brown. Derived from 'кафе' (coffee). Forms: кафяв (m), кафява (f), кафяво (n), кафяви (pl). Common for describing hair, eyes, and objects.",
+    "notes_bg_to_de": "В немски 'braun' остава непроменен в предикатна позиция. В български 'кафяв' идва от 'кафе' (кафе) и се променя: кафяв панталон (m), кафява коса (f), кафяво куче (n), кафяви очи (pl).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Кафяв' kommt von 'кафе' (Kaffee). Dekliniert: кафяв (m), кафява (f), кафяво (n), кафяви (pl). Sehr gebräuchlich für Haare und Augen.",
+    "etymology": "From Bulgarian 'кафе' (coffee) + adjectival suffix '-яв'. 'Кафе' itself comes from Turkish 'kahve', ultimately from Arabic 'qahwa'. The color term arose from coffee's brown color.",
+    "cultural_note": "Brown is commonly used to describe eye and hair color in Bulgaria, where most people have 'кафяви очи' (brown eyes) and 'кафява коса' (brown hair). 'Кафяв захар' (brown sugar) is also a culinary term.",
+    "difficulty": 2,
+    "frequency": 75,
+    "examples": [
+      {
+        "context": "Physical description",
+        "sentence": "Имам кафяви очи.",
+        "translation": "Ich habe braune Augen."
+      },
+      {
+        "context": "Physical description",
+        "sentence": "Тя има кафява коса.",
+        "translation": "Sie hat braune Haare."
+      },
+      {
+        "context": "Shopping",
+        "sentence": "Купи кафяв панталон.",
+        "translation": "Kauf eine braune Hose."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: кафя́в [kɐˈfjaf]. The final 'в' is devoiced to [f]. Forms: кафяв/кафява/кафяво/кафяви.",
+    "linguistic_note_bg_to_de": "Кафяв се произнася [kɐˈfjaf] с ударение на 'фя'. Крайното 'в' се оглушава на [f]. Форми: кафяв (м.р.), кафява (ж.р.), кафяво (ср.р.), кафяви (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der zweiten Silbe: кафя́в [kɐˈfjaf]. Das finale 'в' wird als [f] ausgesprochen. Formen: кафяв (m), кафява (f), кафяво (n), кафяви (pl)."
+  },
+  {
+    "id": "a1_color_009",
+    "word": "Сив",
+    "translation": "grau",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color grey/gray. Forms: сив (m), сива (f), сиво (n), сиви (pl). Common for describing weather, objects, and hair.",
+    "notes_bg_to_de": "В немски 'grau' остава непроменен в предикатна позиция. В български 'сив' се променя: сив облак (m), сива мишка (f), сиво небе (n), сиви коси (pl - grey hairs).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сив' dekliniert: сив (m), сива (f), сиво (n), сиви (pl). 'Сиви коси' (graue Haare) ist sehr gebräuchlich.",
+    "etymology": "From Proto-Slavic '*sivъ' (grey, grey-blue), related to Russian 'сивый' (grey, especially of horses) and Ukrainian 'сивий'. May relate to the root for 'blue-grey' colors.",
+    "cultural_note": "'Сиво небе' (grey sky) is associated with melancholy in Bulgarian poetry. 'Сива зона' (grey zone/area) means ambiguous or unclear situation. 'Сив като мишка' (grey as a mouse) describes something dull or unremarkable.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "context": "Weather description",
+        "sentence": "Небето е сиво днес.",
+        "translation": "Der Himmel ist heute grau."
+      },
+      {
+        "context": "Clothing",
+        "sentence": "Имам сив костюм.",
+        "translation": "Ich habe einen grauen Anzug."
+      },
+      {
+        "context": "Physical description",
+        "sentence": "Баща ми има сиви коси.",
+        "translation": "Mein Vater hat graue Haare."
+      }
+    ],
+    "linguistic_note": "Single syllable with stress: си́в [sif]. The final 'в' is devoiced to [f]. Forms: сив/сива/сиво/сиви.",
+    "linguistic_note_bg_to_de": "Сив се произнася [sif] с ударение на единствената сричка. Крайното 'в' се оглушава на [f]. Форми: сив (м.р.), сива (ж.р.), сиво (ср.р.), сиви (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der einzigen Silbe: си́в [sif]. Das finale 'в' wird als [f] ausgesprochen. Formen: сив (m), сива (f), сиво (n), сиви (pl)."
+  },
+  {
+    "id": "a1_color_010",
+    "word": "Розов",
+    "translation": "rosa, pink",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Farben",
+    "level": "A1",
+    "notes": "The color pink/rose. Derived from 'роза' (rose). Forms: розов (m), розова (f), розово (n), розови (pl). Associated with femininity and flowers.",
+    "notes_bg_to_de": "В немски има 'rosa' (неизменяемо) и 'pink'. В български 'розов' идва от 'роза' (роза) и се променя: розов панталон (m), розова рокля (f), розово цвете (n), розови устни (pl).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Розов' kommt von 'роза' (Rose). Dekliniert: розов (m), розова (f), розово (n), розови (pl). Entspricht 'rosa' und 'pink' im Deutschen.",
+    "etymology": "From Bulgarian 'роза' (rose) + adjectival suffix '-ов'. 'Роза' comes from Latin 'rosa' via Old Church Slavonic. The color term developed from the flower's color.",
+    "cultural_note": "'Розовото масло' (rose oil) and 'Розовата долина' (Rose Valley) are famous in Bulgaria - the country is a major rose oil producer. Pink/rose is associated with the famous Bulgarian roses and femininity. 'Розов като роза' (pink as a rose) is a common expression.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "context": "Clothing",
+        "sentence": "Тя носи розова рокля.",
+        "translation": "Sie trägt ein rosa Kleid."
+      },
+      {
+        "context": "Description",
+        "sentence": "Розовите цветя са хубави.",
+        "translation": "Die rosa Blumen sind schön."
+      },
+      {
+        "context": "Natural phenomenon",
+        "sentence": "Небето е розово на залез.",
+        "translation": "Der Himmel ist rosa bei Sonnenuntergang."
+      }
+    ],
+    "linguistic_note": "Stress on second syllable: ро́зов [ˈrɔzɔf]. The final 'в' is devoiced to [f]. Forms: розов/розова/розово/розови.",
+    "linguistic_note_bg_to_de": "Розов се произнася [ˈrɔzɔf] с ударение на 'ро'. Крайното 'в' се оглушава на [f]. Форми: розов (м.р.), розова (ж.р.), розово (ср.р.), розови (мн.ч.).",
+    "linguistic_note_de_to_bg": "Betonung auf der ersten Silbe: ро́зов [ˈrɔzɔf]. Das finale 'в' wird als [f] ausgesprochen. Formen: розов (m), розова (f), розово (n), розови (pl)."
+  }
+]
