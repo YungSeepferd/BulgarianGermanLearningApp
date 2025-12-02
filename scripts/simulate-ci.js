@@ -1,7 +1,7 @@
 // CI Simulation Script for Bulgarian-German Learning App
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
 console.log('🚀 Starting CI Simulation...');
 
@@ -48,7 +48,7 @@ const results = {
   ]
 };
 
-const resultsPath = path.join(__dirname, '../ci-simulation-results.json');
+const resultsPath = new URL('../ci-simulation-results.json', import.meta.url).pathname;
 fs.writeFileSync(resultsPath, JSON.stringify(results, null, 2));
 
 console.log('\n✅ CI Simulation completed successfully!');
