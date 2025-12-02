@@ -102,9 +102,9 @@
   };
 
   // Get CSS classes
-  let spinnerSize = $derived(sizeClasses[size as keyof typeof sizeClasses][variant as keyof typeof sizeClasses.small]);
-  let spinnerColor = $derived(colorClasses[color as keyof typeof colorClasses][variant as keyof typeof colorClasses.primary]);
-  let textSize = $derived(textSizeClasses[size as keyof typeof textSizeClasses]);
+  let spinnerSize = $derived(sizeClasses[size][variant]);
+  let spinnerColor = $derived(colorClasses[color][variant]);
+  let textSize = $derived(textSizeClasses[size]);
 
   // Show loading with delay
   function showLoading(): void {
