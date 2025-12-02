@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Run CI simulation before pushing
+echo "🚀 Running pre-push CI simulation..."
+node scripts/simulate-ci.js
+
+# If CI simulation fails, exit with error
+if [ $? -ne 0 ]; then
+  echo "❌ CI simulation failed. Push aborted."
+  exit 1
+fi
+
+echo "✅ CI simulation passed. Proceeding with push..."
