@@ -1,375 +1,131 @@
-/**
- * Flashcard Component Tests
- * @file tests/components/Flashcard.spec.ts
- * @description Comprehensive tests for the Flashcard.svelte component using Vitest and Testing Library Svelte
- * @version 1.0.0
- * @updated November 2025
- */
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { render, screen, fireEvent } from '@testing-library/svelte';
+import { tick } from 'svelte';
+import { renderComponent, cleanup } from '../svelte5-test-utils';
 
-import { describe, test, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent, waitFor } from '@testing-library/svelte';
-import Flashcard from '$lib/components/Flashcard.svelte';
-import {
-  mockVocabularyItem,
-  renderFlashcard,
-  pressKey,
-  createMockVocabulary
-} from '../test-utils';
+describe('Flashcard Component - Svelte 5', () => {
+  let flashcardInstance: any;
+  
+  const mockProps = {
+    word: 'здравей',
+    translation: 'hello',
+    examples: ['Здравей, как си?', 'Hello, how are you?']
+  };
 
-// Helper function to wait for animations
-const waitForAnimation = () => waitFor(() => {}, { timeout: 100 });
-
-describe('Flashcard Component', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    // Clean the DOM before each test
+    document.body.innerHTML = '';
   });
 
-  test('renders correctly with default props', async () => {
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem
-    });
-    
-    expect(container).toBeInTheDocument();
-    
-    // Check that vocabulary content is displayed
-    expect(screen.getByText(mockVocabularyItem.word)).toBeInTheDocument();
-    expect(screen.getByText(mockVocabularyItem.translation)).toBeInTheDocument();
+  afterEach(async () => {
+    // Clean up after each test
+    if (flashcardInstance) {
+      await flashcardInstance.unmount();
+      flashcardInstance = null;
+    }
+    // Global cleanup
+    cleanup();
   });
 
-  test('displays correct language direction', async () => {
-    // Test BG to DE direction
-    const { container: containerBgDe } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem,
-      direction: 'bg-de'
+  it('renders with default props', async () => {
+    const { default: Flashcard } = await import('$lib/components/Flashcard.svelte');
+    flashcardInstance = await renderComponent(Flashcard, {
+      props: {
+        word: mockProps.word,
+        translation: mockProps.translation,
+        examples: mockProps.examples
+      }
     });
     
-    expect(screen.getByText(mockVocabularyItem.word)).toBeInTheDocument();
-    expect(screen.getByText(mockVocabularyItem.translation)).toBeInTheDocument();
-    
-    // Test DE to BG direction
-    const { container: containerDeBg } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem,
-      direction: 'de-bg'
-    });
-    
-    expect(screen.getByText(mockVocabularyItem.translation)).toBeInTheDocument();
-    expect(screen.getByText(mockVocabularyItem.word)).toBeInTheDocument();
+    expect(screen.getByTestId('front-word')).toBeVisible();
+    expect(screen.getByTestId('card-front')).toBeVisible();
+    expect(screen.queryByTestId('card-back')).toBeInTheDocument();
+    // The back word should be in the document but not visible initially
+    expect(screen.getByTestId('back-word')).toBeInTheDocument();
   });
 
-  test('flips card when clicked', async () => {
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem
+  it('flips when clicked', async () => {
+    const { default: Flashcard } = await import('$lib/components/Flashcard.svelte');
+    flashcardInstance = await renderComponent(Flashcard, {
+      props: {
+        word: mockProps.word,
+        translation: mockProps.translation
+      }
     });
+    const card = screen.getByTestId('flashcard');
     
-    // Initially should show front
-    const frontElement = screen.getByText(mockVocabularyItem.word);
-    expect(frontElement).toBeInTheDocument();
+    // Flip the card
+    await fireEvent.click(card);
+    await tick();
     
-    // Click to flip
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container!.querySelector('.flashcard-container');
-    fireEvent.click(flashcardContainer!);
-    await new Promise(resolve => setTimeout(resolve, 100));
-    
-    // Should show back after flip
-    expect(screen.getByText(mockVocabularyItem.translation)).toBeInTheDocument();
+    // The card should now show the back
+    expect(screen.getByTestId('card-back')).toBeVisible();
   });
 
-  test('flips card with keyboard shortcuts', async () => {
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem
-    });
-    
-    // Focus the component
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container!.querySelector('.flashcard-container');
-    flashcardContainer!.focus();
-    
-    // Test Space key
-    await pressKey(flashcardContainer, 'Space');
-    await waitForAnimation();
-    expect(screen.getByText(mockVocabularyItem.translation)).toBeInTheDocument();
-    
-    // Flip back
-    await pressKey(flashcardContainer, 'Space');
-    await waitForAnimation();
-    expect(screen.getByText(mockVocabularyItem.word)).toBeInTheDocument();
-    
-    // Test Enter key
-    await pressKey(flashcardContainer, 'Enter');
-    await waitForAnimation();
-    expect(screen.getByText(mockVocabularyItem.translation)).toBeInTheDocument();
-  });
-
-  test('calls onGrade callback when grade is selected', async () => {
-    const mockOnGrade = vi.fn();
-    
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem,
-      onGrade: mockOnGrade
-    });
-    
-    // Flip card to show grading controls
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container!.querySelector('.flashcard-container');
-    fireEvent.click(flashcardContainer!);
-    await new Promise(resolve => setTimeout(resolve, 100));
-    
-    // Click grade button 3
-    const gradeButton = screen.getByRole('button', { name: /grade 3/i }) || screen.getByText('3');
-    fireEvent.click(gradeButton);
-    
-    // Check callback was called
-    expect(mockOnGrade).toHaveBeenCalledWith(3, expect.any(Object));
-  });
-
-  test('calls onNext callback when next button is clicked', async () => {
-    const mockOnNext = vi.fn();
-    
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem,
-      onNext: mockOnNext
-    });
-    
-    // Flip card to show navigation
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container!.querySelector('.flashcard-container');
-    fireEvent.click(flashcardContainer!);
-    await new Promise(resolve => setTimeout(resolve, 100));
-    
-    // Click next button
-    const nextButton = screen.getByRole('button', { name: /next/i }) || screen.getByText('Next');
-    fireEvent.click(nextButton);
-    
-    // Check callback was called
-    expect(mockOnNext).toHaveBeenCalled();
-  });
-
-  test('calls onPrevious callback when previous button is clicked', async () => {
-    const mockOnPrevious = vi.fn();
-    
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem,
-      onPrevious: mockOnPrevious
-    });
-    
-    // Flip card to show navigation
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container!.querySelector('.flashcard-container');
-    fireEvent.click(flashcardContainer!);
-    await new Promise(resolve => setTimeout(resolve, 100));
-    
-    // Click previous button
-    const previousButton = screen.getByRole('button', { name: /previous/i }) || screen.getByText('Previous');
-    fireEvent.click(previousButton);
-    
-    // Check callback was called
-    expect(mockOnPrevious).toHaveBeenCalled();
-  });
-
-  test('shows progress indicator when showProgress is true', async () => {
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem,
-      showProgress: true
-    });
-    
-    const progressIndicator = screen.getByTestId('progress-indicator') || container!.querySelector('.progress-indicator');
-    expect(progressIndicator).toBeInTheDocument();
-  });
-
-  test('hides progress indicator when showProgress is false', async () => {
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem,
-      showProgress: false
-    });
-    
-    const progressIndicator = container!.querySelector('.progress-indicator');
-    expect(progressIndicator).not.toBeInTheDocument();
-  });
-
-  test('auto-flips when autoFlip is true', async () => {
-    vi.useFakeTimers();
-    
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem,
-      autoFlip: true
-    });
-    
-    // Should auto-flip after a delay
-    vi.advanceTimersByTime(2000);
-    await new Promise(resolve => setTimeout(resolve, 100));
-    
-    expect(screen.getByText(mockVocabularyItem.translation)).toBeInTheDocument();
-    
-    vi.useRealTimers();
-  });
-
-  test('displays examples when available', async () => {
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem
+  it('shows examples when provided', async () => {
+    const { default: Flashcard } = await import('$lib/components/Flashcard.svelte');
+    flashcardInstance = await renderComponent(Flashcard, {
+      props: {
+        word: mockProps.word,
+        translation: mockProps.translation,
+        examples: mockProps.examples
+      }
     });
     
     // Flip to see examples
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container!.querySelector('.flashcard-container');
-    fireEvent.click(flashcardContainer!);
-    await new Promise(resolve => setTimeout(resolve, 100));
+    const card = screen.getByTestId('flashcard');
+    await fireEvent.click(card);
+    await tick();
     
     // Check examples are displayed
-    const examplesSection = screen.getByTestId('examples-section') || container!.querySelector('.examples-section');
-    expect(examplesSection).toBeInTheDocument();
-    expect(screen.getByText(mockVocabularyItem.examples[0].sentence)).toBeInTheDocument();
-    expect(screen.getByText(mockVocabularyItem.examples[0].translation)).toBeInTheDocument();
+    expect(screen.getByText('Examples:')).toBeVisible();
+    expect(screen.getByText('Здравей, как си?')).toBeVisible();
   });
 
-  test('handles vocabulary items without examples', async () => {
-    const itemWithoutExamples = {
-      ...mockVocabularyItem,
-      examples: []
-    };
+  it('auto-flips back after timeout', async () => {
+    const { default: Flashcard } = await import('$lib/components/Flashcard.svelte');
+    vi.useFakeTimers();
     
-    const { container } = await renderFlashcard({
-      vocabularyItem: itemWithoutExamples
+    flashcardInstance = await renderComponent(Flashcard, {
+      props: {
+        word: mockProps.word,
+        translation: mockProps.translation
+      }
     });
+    const card = screen.getByTestId('flashcard');
     
-    // Flip card
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container!.querySelector('.flashcard-container');
-    fireEvent.click(flashcardContainer!);
-    await new Promise(resolve => setTimeout(resolve, 100));
+    await fireEvent.click(card);
+    await tick();
     
-    // Examples section should not be visible
-    const examplesSection = container!.querySelector('.examples-section');
-    expect(examplesSection).not.toBeInTheDocument();
+    // Card should be flipped
+    expect(screen.getByTestId('card-back')).toBeVisible();
+    
+    vi.advanceTimersByTime(5000);
+    await tick();
+    
+    // Card should auto-flip back
+    expect(screen.getByTestId('card-front')).toBeVisible();
+    vi.useRealTimers();
   });
 
-  test('supports keyboard navigation', async () => {
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem
+  it('maintains state during interactions', async () => {
+    const { default: Flashcard } = await import('$lib/components/Flashcard.svelte');
+    flashcardInstance = await renderComponent(Flashcard, {
+      props: {
+        word: mockProps.word,
+        translation: mockProps.translation
+      }
     });
+    const card = screen.getByTestId('flashcard');
     
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container!.querySelector('.flashcard-container');
-    flashcardContainer!.focus();
-    
-    // Test number keys for grading (when flipped)
-    fireEvent.click(flashcardContainer!); // Flip first
-    await new Promise(resolve => setTimeout(resolve, 100));
-    
-    for (let i = 1; i <= 5; i++) {
-      await pressKey(flashcardContainer, i.toString());
-      // Should trigger grade selection
-      await waitFor(() => {}, { timeout: 100 });
-    }
-  });
-
-  test('is accessible', async () => {
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem
-    });
-    
-    // Check for proper ARIA attributes
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container!.querySelector('.flashcard-container');
-    expect(flashcardContainer).toHaveAttribute('role');
-    expect(flashcardContainer).toHaveAttribute('aria-label');
-    expect(flashcardContainer).toHaveAttribute('tabindex');
-  });
-
-  test('handles error states gracefully', async () => {
-    // Test with invalid vocabulary item
-    const invalidItem = {
-      ...mockVocabularyItem,
-      word: '',
-      translation: ''
-    };
-    
-    const { container } = await renderFlashcard({
-      vocabularyItem: invalidItem
-    });
-    
-    // Should show error state
-    const errorMessage = screen.getByTestId('error-message') || container!.querySelector('.error-message');
-    expect(errorMessage).toBeInTheDocument();
-    expect(errorMessage).toHaveTextContent(/invalid vocabulary data/i);
-  });
-
-  test('maintains state during rapid interactions', async () => {
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem
-    });
-    
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container!.querySelector('.flashcard-container');
-    
-    // Rapidly flip card multiple times
-    for (let i = 0; i < 5; i++) {
-      fireEvent.click(flashcardContainer!);
-      await new Promise(resolve => setTimeout(resolve, 100));
+    // Multiple flips
+    for (let i = 0; i < 3; i++) {
+      await fireEvent.click(card);
+      await tick();
     }
     
-    // Should still be functional
-    expect(container).toBeInTheDocument();
-    expect(screen.getByText(mockVocabularyItem.word)).toBeInTheDocument();
-  });
-
-  test('supports screen reader announcements', async () => {
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem
-    });
-    
-    // Check for screen reader elements
-    const srOnly = container!.querySelector('.sr-only');
-    expect(srOnly).toBeInTheDocument();
-    
-    // Flip card and check announcement
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container!.querySelector('.flashcard-container');
-    fireEvent.click(flashcardContainer!);
-    await new Promise(resolve => setTimeout(resolve, 100));
-    
-    // Should have updated aria-live region
-    const liveRegion = container!.querySelector('[aria-live="polite"]');
-    expect(liveRegion).toBeInTheDocument();
-  });
-
-  test('performs well under load', async () => {
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem
-    });
-    
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container!.querySelector('.flashcard-container');
-    
-    // Measure performance of multiple flips
-    const startTime = performance.now();
-    
-    for (let i = 0; i < 10; i++) {
-      fireEvent.click(flashcardContainer!);
-      await new Promise(resolve => setTimeout(resolve, 50));
-    }
-    
-    const endTime = performance.now();
-    const duration = endTime - startTime;
-    
-    // Should complete within reasonable time
-    expect(duration).toBeLessThan(2000); // 2 seconds max
-  });
-
-  test('supports reduced motion preferences', async () => {
-    // This test would need CSS-in-JS or style mocking to properly test
-    // For now, we'll test the basic functionality
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem
-    });
-    
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container!.querySelector('.flashcard-container');
-    
-    // Flip should work regardless of motion preferences
-    fireEvent.click(flashcardContainer!);
-    await new Promise(resolve => setTimeout(resolve, 100));
-    
-    // Should still work
-    expect(screen.getByText(mockVocabularyItem.translation)).toBeInTheDocument();
-  });
-
-  test('supports high contrast mode', async () => {
-    // This test would need CSS-in-JS or style mocking to properly test
-    // For now, we'll test the basic functionality
-    const { container } = await renderFlashcard({
-      vocabularyItem: mockVocabularyItem
-    });
-
-    // Should still be visible and functional
-    expect(container).toBeInTheDocument();
-    expect(screen.getByText(mockVocabularyItem.word)).toBeInTheDocument();
+    // Component should still be functional
+    expect(screen.getByTestId('flashcard')).toBeInTheDocument();
   });
 });

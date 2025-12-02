@@ -1,4 +1,5 @@
 import { vi, beforeEach, afterEach, expect } from 'vitest';
+import '@testing-library/jest-dom/vitest';
 
 // Mock console methods to reduce noise in tests
 const originalConsole = global.console;
@@ -258,12 +259,12 @@ global.getComputedStyle = vi.fn(() => {
   return style;
 });
 
-// Mock MutationObserver for Svelte 5
-global.MutationObserver = vi.fn().mockImplementation(() => ({
-  observe: vi.fn(),
-  disconnect: vi.fn(),
-  takeRecords: vi.fn(() => []),
-}));
+// Mock MutationObserver for Svelte 5 and Testing Library compatibility
+global.MutationObserver = class {
+  observe = vi.fn();
+  disconnect = vi.fn();
+  takeRecords = vi.fn(() => []);
+};
 
 // Mock EventTarget for Svelte 5
 EventTarget.prototype.addEventListener = vi.fn();

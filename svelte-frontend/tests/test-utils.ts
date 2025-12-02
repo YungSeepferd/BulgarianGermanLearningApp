@@ -63,15 +63,10 @@ export const defaultFlashcardProps = {
 export const defaultGradeControlsProps = {
   onGrade: vi.fn(),
   disabled: false,
-  selectedGrade: null as number | null,
-  showLabels: true,
+  showFeedback: true,
   compact: false,
-  grades: [
-    { id: 0, label: 'Again', description: 'Show card again soon', color: '#ef4444' },
-    { id: 1, label: 'Hard', description: 'Difficult to recall', color: '#f59e0b' },
-    { id: 2, label: 'Good', description: 'Recalled with some effort', color: '#10b981' },
-    { id: 3, label: 'Easy', description: 'Recalled easily', color: '#3b82f6' }
-  ]
+  reviewState: null,
+  dispatch: createMockEventDispatcher()
 };
 
 // Default props for ProgressIndicator component
@@ -639,13 +634,9 @@ export const commonViewports = [
 ];
 
 // Re-export commonly used testing utilities
-export { vi } from 'vitest';
-export { expect } from 'vitest';
+export { vi, expect } from 'vitest';
 export type { RenderResult } from '@testing-library/svelte';
 export { fireEvent, render } from '@testing-library/svelte';
-
-// Import jest-dom matchers - they are automatically added to expect
-import '@testing-library/jest-dom';
 
 // Export testing library query functions
 export const queries = {
@@ -710,26 +701,5 @@ export function waitForElementToBeRemoved(selector: string, timeout = 1000) {
   });
 }
 
-// Jest-style matchers for compatibility - these are now handled by @testing-library/jest-dom
-export const toBeInTheDocument = (element: HTMLElement | null) => {
-  expect(element).toBeTruthy();
-};
-
-export const toHaveAttribute = (element: HTMLElement, attribute: string, value?: string) => {
-  if (value) {
-    expect(element.getAttribute(attribute)).toBe(value);
-  } else {
-    expect(element.hasAttribute(attribute)).toBeTruthy();
-  }
-};
-
-export const toHaveClass = (element: HTMLElement, className: string) => {
-  expect(element.classList.contains(className)).toBeTruthy();
-};
-
-export const toBeDisabled = (element: HTMLElement) => {
-  expect(element.hasAttribute('disabled')).toBeTruthy();
-};
-
 // Jest-style matchers are now handled by @testing-library/jest-dom
-// No need to re-export them manually
+// No need for manual implementations

@@ -6,11 +6,12 @@
  * @updated December 2025
  */
 
-import { render, screen } from '@testing-library/svelte';
+import { render, screen, fireEvent } from '@testing-library/svelte';
 import userEvent from '@testing-library/user-event';
 import { mount, unmount, flushSync } from 'svelte';
-import { expect, vi, beforeEach } from 'vitest';
+import { expect, vi, beforeEach, afterEach } from 'vitest';
 import type { ComponentType } from 'svelte';
+import '@testing-library/jest-dom/vitest';
 import type { VocabularyItem } from '$lib/types/index.js';
 
 // Mock vocabulary item for testing
@@ -48,14 +49,33 @@ export async function renderComponent<T extends ComponentType>(
     target?: HTMLElement;
   } = {}
 ) {
-  const { props = {}, target = document.body } = options;
+  const { props = {} } = options;
+  
+  // Create a new container for each test to ensure isolation
+  const container = document.createElement('div');
+  container.id = 'test-container-' + Math.random().toString(36).substr(2, 9);
+  document.body.appendChild(container);
   
   const result = render(component, {
     props,
-    target
+    target: container
   });
   
-  return result;
+  // Wait for Svelte's reactivity to settle
+  await flushSync();
+  
+  return {
+    ...result,
+    container,
+    unmount: () => {
+      // Clean up the container and its contents
+      if (container.parentNode === document.body) {
+        document.body.removeChild(container);
+      }
+      // Ensure any pending effects are cleaned up
+      container.innerHTML = '';
+    }
+  };
 }
 
 /**
@@ -86,21 +106,27 @@ export function mountSvelteComponent<T extends ComponentType>(
  * Mount Flashcard component with default props
  */
 export async function mountFlashcard(options: {
-  vocabularyItem?: VocabularyItem;
-  direction?: 'bg-de' | 'de-bg';
-  showProgress?: boolean;
-  onGrade?: (grade: number, state: any) => void;
-  onNext?: () => void;
+  word?: string;
+  translation?: string;
+  examples?: string[];
+  difficulty?: 'easy' | 'medium' | 'hard';
 } = {}) {
-  const { vocabularyItem = mockVocabularyItem, ...props } = options;
+  const {
+    word = mockVocabularyItem.word,
+    translation = mockVocabularyItem.translation,
+    examples = mockVocabularyItem.examples?.map(e => e.sentence) || [],
+    difficulty = 'easy'
+  } = options;
   
   // Dynamic import to avoid SSR issues
   const { default: Flashcard } = await import('$lib/components/Flashcard.svelte');
   
   return await renderComponent(Flashcard, {
     props: {
-      vocabularyItem,
-      ...props
+      word,
+      translation,
+      examples,
+      difficulty
     }
   });
 }
@@ -132,7 +158,12 @@ export async function simulateKeyPress(element: HTMLElement, key: string) {
  * Flush Svelte reactivity
  */
 export function flushAndWait(fn?: () => void) {
-  flushSync(fn);
+  return new Promise<void>((resolve) => {
+    flushSync(() => {
+      if (fn) fn();
+      resolve();
+    });
+  });
 }
 
 /**
@@ -144,6 +175,9 @@ export function cleanup() {
   
   // Clear all mocks
   vi.clearAllMocks();
+  
+  // Reset user event
+  userEvent.setup();
 }
 
 /**
@@ -201,8 +235,18 @@ export async function waitForTestId(
 }
 
 // Re-export Testing Library utilities
-export { screen, fireEvent } from '@testing-library/svelte';
-export { userEvent };
+export { screen } from '@testing-library/svelte';
+export { userEvent, fireEvent };
 
 // Re-export Vitest utilities
-export { expect, vi, beforeEach, afterEach, describe, test } from 'vitest';
+export {
+  expect,
+  vi,
+  beforeEach,
+  afterEach,
+  describe,
+  test,
+  it,
+  beforeAll,
+  afterAll
+} from 'vitest';

@@ -178,20 +178,15 @@ class LocalCISimulator {
     const start = Date.now();
     
     try {
-      // Check available build scripts
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      const buildScript = packageJson.scripts && packageJson.scripts.build 
-        ? 'npm run build' 
-        : 'npm run build:prod || npm run build:dev || echo "No build script found"';
-      
-      const output = execSync(buildScript, { 
+      // Build Svelte frontend
+      const output = execSync('cd svelte-frontend && npm run build', {
         encoding: 'utf8',
         stdio: ['pipe', 'pipe', 'pipe']
       });
       
       return {
         duration: Date.now() - start,
-        output: 'Project built successfully'
+        output: 'Svelte frontend built successfully'
       };
     } catch (error) {
       throw {
@@ -208,20 +203,15 @@ class LocalCISimulator {
     const start = Date.now();
     
     try {
-      // Check available test scripts
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      const testScript = packageJson.scripts && packageJson.scripts.test 
-        ? 'npm test' 
-        : 'npm run test:unit || npm run test:integration || echo "No test script found"';
-      
-      const output = execSync(testScript, { 
+      // Use Svelte 5-specific test commands
+      const output = execSync('cd svelte-frontend && npm run test:ci', {
         encoding: 'utf8',
         stdio: ['pipe', 'pipe', 'pipe']
       });
       
       return {
         duration: Date.now() - start,
-        output: 'Tests executed successfully'
+        output: 'Svelte frontend tests executed successfully'
       };
     } catch (error) {
       throw {
