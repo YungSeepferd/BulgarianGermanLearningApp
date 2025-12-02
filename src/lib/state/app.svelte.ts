@@ -36,8 +36,8 @@ export class AppState {
         if (browser) {
             try {
                 localStorage.setItem('app-language-mode', this.languageMode);
-            } catch (error) {
-                // console.error('Failed to save language mode:', error);
+            } catch (_error) {
+                // Silently fail if saving language mode fails
             }
         }
     }
@@ -77,7 +77,7 @@ export class AppState {
                 const saved = localStorage.getItem('app-language-mode');
                 // Check for new key first, then fallback to old key 'tandem-direction'
                 const oldSaved = localStorage.getItem('tandem-direction');
-                
+    
                 if (saved === 'DE_BG' || saved === 'BG_DE') {
                     this.languageMode = saved as LanguageMode;
                 } else if (oldSaved === 'DE->BG') {
@@ -85,8 +85,8 @@ export class AppState {
                 } else if (oldSaved === 'BG->DE') {
                     this.languageMode = 'BG_DE';
                 }
-            } catch (error) {
-                // console.error('Failed to initialize state:', error);
+            } catch (_error) {
+                // Silently fail if initializing state fails
             }
         }
     }

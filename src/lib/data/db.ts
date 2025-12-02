@@ -21,12 +21,12 @@ export class VocabularyDB {
             // Check if the module has a default export (typical for JSON imports)
             // or if it returns the array directly
             const data = (module.default || module) as VocabularyItem[];
-            
+    
             this.items = data;
             this.initialized = true;
             // console.log('📚 VocabularyDB initialized with', this.items.length, 'items');
-        } catch (e) {
-            // console.error('Failed to load vocabulary:', e);
+        } catch (_e) {
+            // Silently fail if loading vocabulary fails
         }
     }
 
