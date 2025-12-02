@@ -49,7 +49,10 @@ export const mockSessionStats: SessionStats = {
 
 // Default props for Flashcard component
 export const defaultFlashcardProps = {
-  vocabularyItem: mockVocabularyItem,
+  word: mockVocabularyItem.word,
+  translation: mockVocabularyItem.translation,
+  examples: mockVocabularyItem.examples?.map(ex => ex.sentence) || [],
+  difficulty: 'easy' as const,
   direction: 'bg-de' as const,
   showProgress: true,
   autoFlip: false,
@@ -103,11 +106,15 @@ export const defaultErrorBoundaryProps = {
 // Default props for LoadingSpinner component
 export const defaultLoadingSpinnerProps = {
   size: 'medium' as const,
-  color: '#3b82f6',
-  message: 'Loading...',
-  showMessage: true,
+  variant: 'spinner' as const,
+  color: 'primary' as const,
+  text: 'Loading...',
+  showText: true,
+  centered: true,
   overlay: false,
-  centered: true
+  fullscreen: false,
+  delay: 0,
+  timeout: 30000
 };
 
 /**

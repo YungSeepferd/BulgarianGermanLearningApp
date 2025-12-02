@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Build script for Bulgarian-German Learning App
+# Build script for Bulgarian-German Learning App (SvelteKit SSG)
 set -e
 
-echo "🚀 Building Bulgarian-German Learning App..."
+echo "🚀 Building Bulgarian-German Learning App (SvelteKit)..."
 
 # Colors for output
 RED='\033[0;31m'
@@ -15,16 +15,6 @@ NC='\033[0m' # No Color
 # Check if required tools are installed
 check_dependencies() {
     echo -e "${BLUE}📋 Checking dependencies...${NC}"
-    
-    if ! command -v hugo &> /dev/null; then
-        echo -e "${RED}❌ Hugo not found. Please install Hugo Extended.${NC}"
-        exit 1
-    fi
-    
-    if ! command -v go &> /dev/null; then
-        echo -e "${RED}❌ Go not found. Please install Go 1.21+.${NC}"
-        exit 1
-    fi
     
     if ! command -v npm &> /dev/null; then
         echo -e "${RED}❌ npm not found. Please install Node.js 18+.${NC}"
@@ -41,60 +31,32 @@ install_node_deps() {
     echo -e "${GREEN}✅ Node.js dependencies installed${NC}"
 }
 
-# Build Go tools
-build_go_tools() {
-    echo -e "${BLUE}🔧 Building Go tools...${NC}"
-    cd tools
-    go mod download
-    go build -o ../bin/hugo-bg-de ./cmd/hugo-bg-de
-    cd ..
-    echo -e "${GREEN}✅ Go tools built${NC}"
-}
-
-# Process data
-process_data() {
-    echo -e "${BLUE}📊 Processing data...${NC}"
-    ./bin/hugo-bg-de process-data
-    ./bin/hugo-bg-de validate
-    echo -e "${GREEN}✅ Data processed${NC}"
-}
-
-# Build Hugo site
-build_hugo() {
-    echo -e "${BLUE}🏗️  Building Hugo site...${NC}"
+# Build SvelteKit site
+build_sveltekit() {
+    echo -e "${BLUE}🏗️  Building SvelteKit site...${NC}"
     
     if [ "$1" = "production" ]; then
         echo -e "${YELLOW}Building for production...${NC}"
-        HUGO_ENVIRONMENT=production hugo --gc --minify
+        cd svelte-frontend && npm run build
     else
         echo -e "${YELLOW}Building for development...${NC}"
-        hugo --buildDrafts --buildFuture
+        cd svelte-frontend && npm run build
     fi
     
-    echo -e "${GREEN}✅ Hugo site built${NC}"
-}
-
-# Generate PWA assets
-generate_pwa() {
-    echo -e "${BLUE}📱 Generating PWA assets...${NC}"
-    ./bin/hugo-bg-de generate-sw
-    ./bin/hugo-bg-de generate-manifest
-    echo -e "${GREEN}✅ PWA assets generated${NC}"
+    echo -e "${GREEN}✅ SvelteKit site built${NC}"
 }
 
 # Start development server
 dev_server() {
     echo -e "${BLUE}🚀 Starting development server...${NC}"
-    echo -e "${YELLOW}Server will be available at: http://localhost:1313${NC}"
-    hugo server --buildDrafts --buildFuture --watch
+    echo -e "${YELLOW}Server will be available at: http://localhost:5173${NC}"
+    cd svelte-frontend && npm run dev
 }
 
 # Clean build artifacts
 clean() {
     echo -e "${BLUE}🧹 Cleaning build artifacts...${NC}"
-    rm -rf public/
-    rm -rf resources/
-    rm -rf bin/
+    rm -rf svelte-frontend/build/
     echo -e "${GREEN}✅ Clean complete${NC}"
 }
 
@@ -106,20 +68,14 @@ build() {
     
     check_dependencies
     install_node_deps
-    build_go_tools
-    process_data
-    build_hugo $mode
-    
-    if [ "$mode" = "production" ]; then
-        generate_pwa
-    fi
+    build_sveltekit $mode
     
     echo -e "${GREEN}🎉 Build complete!${NC}"
 }
 
 # Show help
 show_help() {
-    echo "Bulgarian-German Learning App Build Script"
+    echo "Bulgarian-German Learning App Build Script (SvelteKit)"
     echo ""
     echo "Usage: $0 [command]"
     echo ""
@@ -149,8 +105,6 @@ case "${1:-build}" in
     "dev"|"serve")
         check_dependencies
         install_node_deps
-        build_go_tools
-        process_data
         dev_server
         ;;
     "clean")

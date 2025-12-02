@@ -12,29 +12,21 @@ import { validatePracticeSettings } from '$lib/utils/validation.js';
 
 export const load: PageLoad = async ({ url }) => {
   try {
-    // Extract and validate practice settings from URL parameters
-    const rawSettings: Record<string, string> = {};
+    // For static/prerendered sites, URL parameters are not available during build
+    // We'll handle parameter validation on the client side instead
     
-    // Get all URL parameters
-    for (const [key, value] of url.searchParams) {
-      rawSettings[key] = value;
-    }
-
-    // Validate and parse settings
-    const settings: PracticeSettings = validatePracticeSettings(rawSettings);
-
-    // Validate that we have the required settings
-    if (!settings.direction || !settings.level) {
-      throw error(400, 'Invalid practice settings: direction and level are required');
-    }
-
-    // Return validated settings for the client
+    // Return minimal data for static generation
     return {
-      settings,
-      // Pass any additional server-side data needed
+      // Provide default settings that can be overridden by client-side logic
+      settings: {
+        direction: 'bg-de', // Default direction
+        level: 'A1', // Default level
+        category: 'all', // Default category
+        limit: 10 // Default limit
+      },
+      // Indicate that this is a static build
+      isStaticBuild: true,
       serverTimestamp: new Date().toISOString()
-      // You could pre-load some vocabulary here if needed
-      // vocabulary: await loadVocabularyChunk(settings)
     };
 
   } catch (error_) {

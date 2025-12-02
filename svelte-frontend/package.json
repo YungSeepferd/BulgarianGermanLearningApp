@@ -66,6 +66,7 @@
 	"dependencies": {
 		"@sveltejs/adapter-static": "^3.0.10",
 		"axe-playwright": "^2.2.2",
+		"marked": "^17.0.1",
 		"mdsvex": "^0.12.6"
 	}
 }

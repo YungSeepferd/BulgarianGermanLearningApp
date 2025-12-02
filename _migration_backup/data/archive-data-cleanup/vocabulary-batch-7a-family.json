@@ -1,0 +1,362 @@
+[
+  {
+    "id": "a1_family_001",
+    "word": "Майка",
+    "translation": "die Mutter",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Familie",
+    "level": "A1",
+    "notes": "Mother. женски род.",
+    "notes_bg_to_de": "В български 'майка' е женски род. Mother",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Майка' = 'die Mutter'. Femininum.",
+    "etymology": "Proto-Slavic *mati. Common across Slavic languages.",
+    "cultural_note": "Most important family word. 'Ден на майката' (Mother's Day)",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Това е моята майка.",
+        "de": "Das ist meine/mein Mutter.",
+        "context": "Introduction"
+      },
+      {
+        "bg": "Майката/ът е добър/а.",
+        "de": "Die/Der Mutter ist gut.",
+        "context": "Description"
+      },
+      {
+        "bg": "Обичам майката/а си.",
+        "de": "Ich liebe meine/n Mutter.",
+        "context": "Emotion"
+      }
+    ],
+    "linguistic_note": "женски род. Майка.",
+    "linguistic_note_bg_to_de": "Майка е женски род.",
+    "linguistic_note_de_to_bg": "Майка = Femininum."
+  },
+  {
+    "id": "a1_family_002",
+    "word": "Баща",
+    "translation": "der Vater",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Familie",
+    "level": "A1",
+    "notes": "Father. мъжки род.",
+    "notes_bg_to_de": "В български 'баща' е мъжки род. Father",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Баща' = 'der Vater'. Maskulinum.",
+    "etymology": "Proto-Slavic *batja. Common across Slavic languages.",
+    "cultural_note": "'Ден на бащата' (Father's Day). Formal: 'татко' (dad)",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Това е моята мой баща.",
+        "de": "Das ist meine/mein Vater.",
+        "context": "Introduction"
+      },
+      {
+        "bg": "Бащата/ът е добър/а.",
+        "de": "Die/Der Vater ist gut.",
+        "context": "Description"
+      },
+      {
+        "bg": "Обичам бащата/а си.",
+        "de": "Ich liebe meine/n Vater.",
+        "context": "Emotion"
+      }
+    ],
+    "linguistic_note": "мъжки род. Баща.",
+    "linguistic_note_bg_to_de": "Баща е мъжки род.",
+    "linguistic_note_de_to_bg": "Баща = Maskulinum."
+  },
+  {
+    "id": "a1_family_003",
+    "word": "Син",
+    "translation": "der Sohn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Familie",
+    "level": "A1",
+    "notes": "Son. Also means 'blue' (context clarifies). мъжки род.",
+    "notes_bg_to_de": "В български 'син' е мъжки род. Son. Also means 'blue' (context clarifies)",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Син' = 'der Sohn'. Maskulinum.",
+    "etymology": "Proto-Slavic *synъ. Common across Slavic languages.",
+    "cultural_note": "Also the color blue - context makes meaning clear",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Това е моята мой син.",
+        "de": "Das ist meine/mein Sohn.",
+        "context": "Introduction"
+      },
+      {
+        "bg": "Синта/ът е добър/а.",
+        "de": "Die/Der Sohn ist gut.",
+        "context": "Description"
+      },
+      {
+        "bg": "Обичам синта/а си.",
+        "de": "Ich liebe meine/n Sohn.",
+        "context": "Emotion"
+      }
+    ],
+    "linguistic_note": "мъжки род. Син.",
+    "linguistic_note_bg_to_de": "Син е мъжки род.",
+    "linguistic_note_de_to_bg": "Син = Maskulinum."
+  },
+  {
+    "id": "a1_family_004",
+    "word": "Дъщеря",
+    "translation": "die Tochter",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Familie",
+    "level": "A1",
+    "notes": "Daughter. женски род.",
+    "notes_bg_to_de": "В български 'дъщеря' е женски род. Daughter",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Дъщеря' = 'die Tochter'. Femininum.",
+    "etymology": "Proto-Slavic *dъťi. Common across Slavic languages.",
+    "cultural_note": "Note the special 'щ' sound",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Това е моята дъщеря.",
+        "de": "Das ist meine/mein Tochter.",
+        "context": "Introduction"
+      },
+      {
+        "bg": "Дъщерята/ът е добър/а.",
+        "de": "Die/Der Tochter ist gut.",
+        "context": "Description"
+      },
+      {
+        "bg": "Обичам дъщерята/а си.",
+        "de": "Ich liebe meine/n Tochter.",
+        "context": "Emotion"
+      }
+    ],
+    "linguistic_note": "женски род. Дъщеря.",
+    "linguistic_note_bg_to_de": "Дъщеря е женски род.",
+    "linguistic_note_de_to_bg": "Дъщеря = Femininum."
+  },
+  {
+    "id": "a1_family_005",
+    "word": "Брат",
+    "translation": "der Bruder",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Familie",
+    "level": "A1",
+    "notes": "Brother. мъжки род.",
+    "notes_bg_to_de": "В български 'брат' е мъжки род. Brother",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Брат' = 'der Bruder'. Maskulinum.",
+    "etymology": "Proto-Slavic *bratrъ. Common across Slavic languages.",
+    "cultural_note": "Very common. Plural: братя",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Това е моята мой брат.",
+        "de": "Das ist meine/mein Bruder.",
+        "context": "Introduction"
+      },
+      {
+        "bg": "Братта/ът е добър/а.",
+        "de": "Die/Der Bruder ist gut.",
+        "context": "Description"
+      },
+      {
+        "bg": "Обичам братта/а си.",
+        "de": "Ich liebe meine/n Bruder.",
+        "context": "Emotion"
+      }
+    ],
+    "linguistic_note": "мъжки род. Брат.",
+    "linguistic_note_bg_to_de": "Брат е мъжки род.",
+    "linguistic_note_de_to_bg": "Брат = Maskulinum."
+  },
+  {
+    "id": "a1_family_006",
+    "word": "Сестра",
+    "translation": "die Schwester",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Familie",
+    "level": "A1",
+    "notes": "Sister. женски род.",
+    "notes_bg_to_de": "В български 'сестра' е женски род. Sister",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Сестра' = 'die Schwester'. Femininum.",
+    "etymology": "Proto-Slavic *sestra. Common across Slavic languages.",
+    "cultural_note": "Very common. Similar across Slavic languages",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Това е моята сестра.",
+        "de": "Das ist meine/mein Schwester.",
+        "context": "Introduction"
+      },
+      {
+        "bg": "Сестрата/ът е добър/а.",
+        "de": "Die/Der Schwester ist gut.",
+        "context": "Description"
+      },
+      {
+        "bg": "Обичам сестрата/а си.",
+        "de": "Ich liebe meine/n Schwester.",
+        "context": "Emotion"
+      }
+    ],
+    "linguistic_note": "женски род. Сестра.",
+    "linguistic_note_bg_to_de": "Сестра е женски род.",
+    "linguistic_note_de_to_bg": "Сестра = Femininum."
+  },
+  {
+    "id": "a1_family_007",
+    "word": "Баба",
+    "translation": "die Großmutter, die Oma",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Familie",
+    "level": "A1",
+    "notes": "Grandmother. женски род.",
+    "notes_bg_to_de": "В български 'баба' е женски род. Grandmother",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Баба' = 'die Großmutter, die Oma'. Femininum.",
+    "etymology": "Proto-Slavic *baba. Common across Slavic languages.",
+    "cultural_note": "'Баба Марта' (Grandma March) - March 1st tradition",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Това е моята баба.",
+        "de": "Das ist meine/mein Großmutter.",
+        "context": "Introduction"
+      },
+      {
+        "bg": "Бабата/ът е добър/а.",
+        "de": "Die/Der Großmutter ist gut.",
+        "context": "Description"
+      },
+      {
+        "bg": "Обичам бабата/а си.",
+        "de": "Ich liebe meine/n Großmutter.",
+        "context": "Emotion"
+      }
+    ],
+    "linguistic_note": "женски род. Баба.",
+    "linguistic_note_bg_to_de": "Баба е женски род.",
+    "linguistic_note_de_to_bg": "Баба = Femininum."
+  },
+  {
+    "id": "a1_family_008",
+    "word": "Дядо",
+    "translation": "der Großvater, der Opa",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Familie",
+    "level": "A1",
+    "notes": "Grandfather. мъжки род.",
+    "notes_bg_to_de": "В български 'дядо' е мъжки род. Grandfather",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Дядо' = 'der Großvater, der Opa'. Maskulinum.",
+    "etymology": "Proto-Slavic *dědъ. Common across Slavic languages.",
+    "cultural_note": "'Дядо Коледа' (Grandfather Christmas) - Bulgarian Santa",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "bg": "Това е моята мой дядо.",
+        "de": "Das ist meine/mein Großvater.",
+        "context": "Introduction"
+      },
+      {
+        "bg": "Дядота/ът е добър/а.",
+        "de": "Die/Der Großvater ist gut.",
+        "context": "Description"
+      },
+      {
+        "bg": "Обичам дядота/а си.",
+        "de": "Ich liebe meine/n Großvater.",
+        "context": "Emotion"
+      }
+    ],
+    "linguistic_note": "мъжки род. Дядо.",
+    "linguistic_note_bg_to_de": "Дядо е мъжки род.",
+    "linguistic_note_de_to_bg": "Дядо = Maskulinum."
+  },
+  {
+    "id": "a1_family_009",
+    "word": "Съпруг",
+    "translation": "der Ehemann",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Familie",
+    "level": "A1",
+    "notes": "Husband (formal). мъжки род.",
+    "notes_bg_to_de": "В български 'съпруг' е мъжки род. Husband (formal)",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Съпруг' = 'der Ehemann'. Maskulinum.",
+    "etymology": "From 'съ-' (with) + 'пряг' (yoke). Common across Slavic languages.",
+    "cultural_note": "Formal term. Informal: 'мъж' (man/husband)",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е моята мой съпруг.",
+        "de": "Das ist meine/mein Ehemann.",
+        "context": "Introduction"
+      },
+      {
+        "bg": "Съпругта/ът е добър/а.",
+        "de": "Die/Der Ehemann ist gut.",
+        "context": "Description"
+      },
+      {
+        "bg": "Обичам съпругта/а си.",
+        "de": "Ich liebe meine/n Ehemann.",
+        "context": "Emotion"
+      }
+    ],
+    "linguistic_note": "мъжки род. Съпруг.",
+    "linguistic_note_bg_to_de": "Съпруг е мъжки род.",
+    "linguistic_note_de_to_bg": "Съпруг = Maskulinum."
+  },
+  {
+    "id": "a1_family_010",
+    "word": "Съпруга",
+    "translation": "die Ehefrau",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Familie",
+    "level": "A1",
+    "notes": "Wife (formal). женски род.",
+    "notes_bg_to_de": "В български 'съпруга' е женски род. Wife (formal)",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Съпруга' = 'die Ehefrau'. Femininum.",
+    "etymology": "Feminine form of съпруг. Common across Slavic languages.",
+    "cultural_note": "Formal term. Informal: 'жена' (woman/wife)",
+    "difficulty": 1,
+    "frequency": 75,
+    "examples": [
+      {
+        "bg": "Това е моята съпруга.",
+        "de": "Das ist meine/mein Ehefrau.",
+        "context": "Introduction"
+      },
+      {
+        "bg": "Съпругата/ът е добър/а.",
+        "de": "Die/Der Ehefrau ist gut.",
+        "context": "Description"
+      },
+      {
+        "bg": "Обичам съпругата/а си.",
+        "de": "Ich liebe meine/n Ehefrau.",
+        "context": "Emotion"
+      }
+    ],
+    "linguistic_note": "женски род. Съпруга.",
+    "linguistic_note_bg_to_de": "Съпруга е женски род.",
+    "linguistic_note_de_to_bg": "Съпруга = Femininum."
+  }
+]

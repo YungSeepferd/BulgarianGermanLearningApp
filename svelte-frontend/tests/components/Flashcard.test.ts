@@ -46,7 +46,7 @@ describe('Flashcard Component - Svelte 5', () => {
     expect(screen.getByTestId('back-word')).toBeInTheDocument();
     
     // Check that the flashcard exists
-    expect(screen.getByTestId('flashcard')).toBeInTheDocument();
+    expect(screen.getByTestId('flashcard-container')).toBeInTheDocument();
   });
 
   test('displays correct content', async () => {
@@ -67,7 +67,7 @@ describe('Flashcard Component - Svelte 5', () => {
     expect(screen.getByTestId('card-back')).toBeInTheDocument();
     
     // Click to flip - use the flashcard element
-    const card = screen.getByTestId('flashcard');
+    const card = screen.getByTestId('flashcard-container');
     await fireEvent.click(card);
     
     // Should show back after flip - use simple assertion
@@ -80,7 +80,7 @@ describe('Flashcard Component - Svelte 5', () => {
     });
     
     // Flip to see examples
-    const card = screen.getByTestId('flashcard');
+    const card = screen.getByTestId('flashcard-container');
     await fireEvent.click(card);
     
     // Check examples are displayed - use simple assertion
@@ -96,7 +96,7 @@ describe('Flashcard Component - Svelte 5', () => {
     });
     
     // Flip card
-    const card = screen.getByTestId('flashcard');
+    const card = screen.getByTestId('flashcard-container');
     await fireEvent.click(card);
     
     // Examples section should not be visible - use simple assertion
@@ -107,7 +107,7 @@ describe('Flashcard Component - Svelte 5', () => {
     flashcardInstance = await mountFlashcard();
     
     // Check accessibility features
-    const card = screen.getByTestId('flashcard');
+    const card = screen.getByTestId('flashcard-container');
     expect(card).toHaveAttribute('aria-label');
     expect(card).toHaveAttribute('role', 'button');
   });
@@ -115,7 +115,7 @@ describe('Flashcard Component - Svelte 5', () => {
   test('handles keyboard navigation', async () => {
     flashcardInstance = await mountFlashcard();
     
-    const card = screen.getByTestId('flashcard');
+    const card = screen.getByTestId('flashcard-container');
     
     // Test space key for flip
     await fireEvent.keyDown(card, { key: ' ' });
@@ -136,13 +136,13 @@ describe('Flashcard Component - Svelte 5', () => {
     });
     
     // Should still render the component
-    expect(screen.getByTestId('flashcard')).toBeInTheDocument();
+    expect(screen.getByTestId('flashcard-container')).toBeInTheDocument();
   });
 
   test('maintains state during rapid interactions', async () => {
     flashcardInstance = await mountFlashcard();
     
-    const card = screen.getByTestId('flashcard');
+    const card = screen.getByTestId('flashcard-container');
     
     // Rapidly flip card multiple times
     for (let i = 0; i < 3; i++) {
@@ -151,7 +151,7 @@ describe('Flashcard Component - Svelte 5', () => {
     }
     
     // Should still be functional
-    expect(screen.getByTestId('flashcard')).toBeInTheDocument();
+    expect(screen.getByTestId('flashcard-container')).toBeInTheDocument();
   });
 
   test('supports screen reader announcements', async () => {
@@ -163,7 +163,7 @@ describe('Flashcard Component - Svelte 5', () => {
     expect(frontWord).toHaveTextContent('здравей');
     
     // Flip card
-    const card = screen.getByTestId('flashcard');
+    const card = screen.getByTestId('flashcard-container');
     await fireEvent.click(card);
     
     // Should have updated content for screen readers

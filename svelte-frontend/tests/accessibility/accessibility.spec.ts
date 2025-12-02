@@ -24,13 +24,17 @@ describe('Flashcard Accessibility', () => {
   test('should have proper ARIA attributes', async () => {
     const result = await render(Flashcard, {
       props: {
-        vocabularyItem: mockVocabularyItem
+        word: mockVocabularyItem.word,
+        translation: mockVocabularyItem.translation,
+        examples: mockVocabularyItem.examples?.map(ex => ex.sentence) || [],
+        difficulty: 'easy'
       }
     });
     const { container } = result;
 
-    // Check for proper ARIA attributes
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container.querySelector('.flashcard-container');
+    // Check for proper ARIA attributes - use container.querySelector to avoid multiple element conflicts
+    const flashcardContainer = container.querySelector('[data-testid="flashcard-container"]');
+    expect(flashcardContainer).toBeInTheDocument();
     expect(flashcardContainer).toHaveAttribute('role');
     expect(flashcardContainer).toHaveAttribute('aria-label');
     expect(flashcardContainer).toHaveAttribute('tabindex');
@@ -43,12 +47,16 @@ describe('Flashcard Accessibility', () => {
   test('should support keyboard navigation', async () => {
     const result = await render(Flashcard, {
       props: {
-        vocabularyItem: mockVocabularyItem
+        word: mockVocabularyItem.word,
+        translation: mockVocabularyItem.translation,
+        examples: mockVocabularyItem.examples?.map(ex => ex.sentence) || [],
+        difficulty: 'easy'
       }
     });
     const { container } = result;
 
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container.querySelector('.flashcard-container');
+    const flashcardContainer = container.querySelector('[data-testid="flashcard-container"]');
+    expect(flashcardContainer).toBeInTheDocument();
 
     // Test keyboard interaction
     await fireEvent.keyDown(flashcardContainer, { key: 'Space' });
@@ -60,7 +68,10 @@ describe('Flashcard Accessibility', () => {
   test('should have sufficient color contrast', async () => {
     const result = await render(Flashcard, {
       props: {
-        vocabularyItem: mockVocabularyItem
+        word: mockVocabularyItem.word,
+        translation: mockVocabularyItem.translation,
+        examples: mockVocabularyItem.examples?.map(ex => ex.sentence) || [],
+        difficulty: 'easy'
       }
     });
     const { container } = result;
@@ -70,7 +81,8 @@ describe('Flashcard Accessibility', () => {
     expect(frontSide).toBeInTheDocument();
 
     // Flip card and check back side
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container.querySelector('.flashcard-container');
+    const flashcardContainer = container.querySelector('[data-testid="flashcard-container"]');
+    expect(flashcardContainer).toBeInTheDocument();
     fireEvent.click(flashcardContainer);
     
     const backSide = container.querySelector('.card-back');
@@ -80,7 +92,10 @@ describe('Flashcard Accessibility', () => {
   test('should support screen readers', async () => {
     const result = await render(Flashcard, {
       props: {
-        vocabularyItem: mockVocabularyItem
+        word: mockVocabularyItem.word,
+        translation: mockVocabularyItem.translation,
+        examples: mockVocabularyItem.examples?.map(ex => ex.sentence) || [],
+        difficulty: 'easy'
       }
     });
     const { container } = result;
@@ -304,14 +319,18 @@ describe('Interactive Flashcard Accessibility', () => {
     const mockOnGrade = vi.fn();
     const result = await render(Flashcard, {
       props: {
-        vocabularyItem: mockVocabularyItem,
+        word: mockVocabularyItem.word,
+        translation: mockVocabularyItem.translation,
+        examples: mockVocabularyItem.examples?.map(ex => ex.sentence) || [],
+        difficulty: 'easy',
         onGrade: mockOnGrade
       }
     });
     const { container, rerender } = result;
 
     // Test multiple interactions
-    const flashcardContainer = screen.getByTestId('flashcard-container') || container.querySelector('.flashcard-container');
+    const flashcardContainer = container.querySelector('[data-testid="flashcard-container"]');
+    expect(flashcardContainer).toBeInTheDocument();
     
     // Flip card
     fireEvent.click(flashcardContainer);

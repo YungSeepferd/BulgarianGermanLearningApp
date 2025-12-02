@@ -83,13 +83,13 @@
   class:flipped={flipped}
   onclick={flip}
   onkeydown={(e) => e.key === 'Enter' || e.key === ' ' ? flip() : null}
-  data-testid="flashcard"
+  data-testid="flashcard-container"
   role="button"
   tabindex="0"
   aria-label={flipped ? `Back: ${translation}` : `Front: ${word}`}
   aria-pressed={flipped}
 >
-  <div class="front" aria-hidden={flipped} data-testid="card-front">
+  <div class="front card-front" aria-hidden={flipped} data-testid="card-front">
     <h2 data-testid="front-word">{word}</h2>
     {#if isNew}
       <p class="hint" data-testid="hint-text">New card - click to reveal</p>
@@ -98,7 +98,7 @@
     {/if}
   </div>
   
-  <div class="back" aria-hidden={!flipped} data-testid="card-back">
+  <div class="back card-back" aria-hidden={!flipped} data-testid="card-back">
     <h2 data-testid="back-word">{translation}</h2>
     
     {#if examples.length > 0}
@@ -119,6 +119,11 @@
         <p>Last reviewed: {lastReviewed.toLocaleDateString()}</p>
       {/if}
     </div>
+  </div>
+  
+  <!-- Screen reader announcements -->
+  <div class="sr-only" aria-live="polite" aria-atomic="true">
+    {flipped ? `Showing translation: ${translation}` : `Showing word: ${word}`}
   </div>
 </div>
 
@@ -169,5 +174,18 @@
     margin-top: 20px;
     font-size: 0.9em;
     color: #555;
+  }
+  
+  /* Screen reader only content */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 </style>

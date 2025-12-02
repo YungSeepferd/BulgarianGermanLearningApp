@@ -1,0 +1,362 @@
+[
+  {
+    "id": "a1_pronoun_001",
+    "word": "Аз",
+    "translation": "ich",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Pronomen",
+    "level": "A1",
+    "notes": "I, first person singular. Essential pronoun.",
+    "notes_bg_to_de": "В български 'аз' се използва като i, first person singular.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Аз' = 'ich'.",
+    "etymology": "Proto-Slavic *azъ",
+    "cultural_note": "Always written with lowercase except at sentence start",
+    "difficulty": 1,
+    "frequency": 100,
+    "examples": [
+      {
+        "bg": "Аз съм тук.",
+        "de": "Ich bin/ist hier.",
+        "context": "Location"
+      },
+      {
+        "bg": "Аз работя/работи.",
+        "de": "Ich arbeite/arbeitet.",
+        "context": "Action"
+      },
+      {
+        "bg": "Виждам аз.",
+        "de": "Ich sehe ich.",
+        "context": "Object"
+      }
+    ],
+    "linguistic_note": "Местоимение. Аз.",
+    "linguistic_note_bg_to_de": "Аз - I, first person singular.",
+    "linguistic_note_de_to_bg": "Аз = ich."
+  },
+  {
+    "id": "a1_pronoun_002",
+    "word": "Ти",
+    "translation": "du",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Pronomen",
+    "level": "A1",
+    "notes": "You (singular informal). Essential pronoun.",
+    "notes_bg_to_de": "В български 'ти' се използва като you (singular informal).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ти' = 'du'.",
+    "etymology": "Proto-Slavic *ty",
+    "cultural_note": "Informal singular. Formal is 'Вие'",
+    "difficulty": 1,
+    "frequency": 100,
+    "examples": [
+      {
+        "bg": "Ти съм тук.",
+        "de": "Du bin/ist hier.",
+        "context": "Location"
+      },
+      {
+        "bg": "Ти работя/работи.",
+        "de": "Du arbeite/arbeitet.",
+        "context": "Action"
+      },
+      {
+        "bg": "Виждам ти.",
+        "de": "Ich sehe du.",
+        "context": "Object"
+      }
+    ],
+    "linguistic_note": "Местоимение. Ти.",
+    "linguistic_note_bg_to_de": "Ти - You (singular informal).",
+    "linguistic_note_de_to_bg": "Ти = du."
+  },
+  {
+    "id": "a1_pronoun_003",
+    "word": "Той",
+    "translation": "er",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Pronomen",
+    "level": "A1",
+    "notes": "He, masculine third person. Essential pronoun.",
+    "notes_bg_to_de": "В български 'той' се използва като he, masculine third person.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Той' = 'er'.",
+    "etymology": "Proto-Slavic *tъjь",
+    "cultural_note": "Used for masculine nouns",
+    "difficulty": 1,
+    "frequency": 100,
+    "examples": [
+      {
+        "bg": "Той съм тук.",
+        "de": "Er bin/ist hier.",
+        "context": "Location"
+      },
+      {
+        "bg": "Той работя/работи.",
+        "de": "Er arbeite/arbeitet.",
+        "context": "Action"
+      },
+      {
+        "bg": "Виждам той.",
+        "de": "Ich sehe er.",
+        "context": "Object"
+      }
+    ],
+    "linguistic_note": "Местоимение. Той.",
+    "linguistic_note_bg_to_de": "Той - He, masculine third person.",
+    "linguistic_note_de_to_bg": "Той = er."
+  },
+  {
+    "id": "a1_pronoun_004",
+    "word": "Тя",
+    "translation": "sie",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Pronomen",
+    "level": "A1",
+    "notes": "She, feminine third person. Essential pronoun.",
+    "notes_bg_to_de": "В български 'тя' се използва като she, feminine third person.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Тя' = 'sie'.",
+    "etymology": "Proto-Slavic *ta",
+    "cultural_note": "Used for feminine nouns",
+    "difficulty": 1,
+    "frequency": 100,
+    "examples": [
+      {
+        "bg": "Тя съм тук.",
+        "de": "Sie bin/ist hier.",
+        "context": "Location"
+      },
+      {
+        "bg": "Тя работя/работи.",
+        "de": "Sie arbeite/arbeitet.",
+        "context": "Action"
+      },
+      {
+        "bg": "Виждам тя.",
+        "de": "Ich sehe sie.",
+        "context": "Object"
+      }
+    ],
+    "linguistic_note": "Местоимение. Тя.",
+    "linguistic_note_bg_to_de": "Тя - She, feminine third person.",
+    "linguistic_note_de_to_bg": "Тя = sie."
+  },
+  {
+    "id": "a1_pronoun_005",
+    "word": "То",
+    "translation": "es",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Pronomen",
+    "level": "A1",
+    "notes": "It, neuter third person. Essential pronoun.",
+    "notes_bg_to_de": "В български 'то' се използва като it, neuter third person.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'То' = 'es'.",
+    "etymology": "Proto-Slavic *to",
+    "cultural_note": "Used for neuter nouns and things",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "То съм тук.",
+        "de": "Es bin/ist hier.",
+        "context": "Location"
+      },
+      {
+        "bg": "То работя/работи.",
+        "de": "Es arbeite/arbeitet.",
+        "context": "Action"
+      },
+      {
+        "bg": "Виждам то.",
+        "de": "Ich sehe es.",
+        "context": "Object"
+      }
+    ],
+    "linguistic_note": "Местоимение. То.",
+    "linguistic_note_bg_to_de": "То - It, neuter third person.",
+    "linguistic_note_de_to_bg": "То = es."
+  },
+  {
+    "id": "a1_pronoun_006",
+    "word": "Ние",
+    "translation": "wir",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Pronomen",
+    "level": "A1",
+    "notes": "We, first person plural. Essential pronoun.",
+    "notes_bg_to_de": "В български 'ние' се използва като we, first person plural.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Ние' = 'wir'.",
+    "etymology": "Proto-Slavic *my",
+    "cultural_note": "Collective first person",
+    "difficulty": 1,
+    "frequency": 100,
+    "examples": [
+      {
+        "bg": "Ние съм тук.",
+        "de": "Wir bin/ist hier.",
+        "context": "Location"
+      },
+      {
+        "bg": "Ние работя/работи.",
+        "de": "Wir arbeite/arbeitet.",
+        "context": "Action"
+      },
+      {
+        "bg": "Виждам ние.",
+        "de": "Ich sehe wir.",
+        "context": "Object"
+      }
+    ],
+    "linguistic_note": "Местоимение. Ние.",
+    "linguistic_note_bg_to_de": "Ние - We, first person plural.",
+    "linguistic_note_de_to_bg": "Ние = wir."
+  },
+  {
+    "id": "a1_pronoun_007",
+    "word": "Вие",
+    "translation": "ihr, Sie",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Pronomen",
+    "level": "A1",
+    "notes": "You (plural/formal). Essential pronoun.",
+    "notes_bg_to_de": "В български 'вие' се използва като you (plural/formal).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Вие' = 'ihr, Sie'.",
+    "etymology": "Proto-Slavic *vy",
+    "cultural_note": "Both plural informal and formal singular/plural",
+    "difficulty": 1,
+    "frequency": 100,
+    "examples": [
+      {
+        "bg": "Вие съм тук.",
+        "de": "Ihr bin/ist hier.",
+        "context": "Location"
+      },
+      {
+        "bg": "Вие работя/работи.",
+        "de": "Ihr arbeite/arbeitet.",
+        "context": "Action"
+      },
+      {
+        "bg": "Виждам вие.",
+        "de": "Ich sehe ihr.",
+        "context": "Object"
+      }
+    ],
+    "linguistic_note": "Местоимение. Вие.",
+    "linguistic_note_bg_to_de": "Вие - You (plural/formal).",
+    "linguistic_note_de_to_bg": "Вие = ihr, Sie."
+  },
+  {
+    "id": "a1_pronoun_008",
+    "word": "Те",
+    "translation": "sie (plural)",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Pronomen",
+    "level": "A1",
+    "notes": "They, third person plural. Essential pronoun.",
+    "notes_bg_to_de": "В български 'те' се използва като they, third person plural.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Те' = 'sie (plural)'.",
+    "etymology": "Proto-Slavic *tě",
+    "cultural_note": "Used for all genders in plural",
+    "difficulty": 1,
+    "frequency": 100,
+    "examples": [
+      {
+        "bg": "Те съм тук.",
+        "de": "Sie (plural) bin/ist hier.",
+        "context": "Location"
+      },
+      {
+        "bg": "Те работя/работи.",
+        "de": "Sie (plural) arbeite/arbeitet.",
+        "context": "Action"
+      },
+      {
+        "bg": "Виждам те.",
+        "de": "Ich sehe sie (plural).",
+        "context": "Object"
+      }
+    ],
+    "linguistic_note": "Местоимение. Те.",
+    "linguistic_note_bg_to_de": "Те - They, third person plural.",
+    "linguistic_note_de_to_bg": "Те = sie (plural)."
+  },
+  {
+    "id": "a1_pronoun_009",
+    "word": "Този",
+    "translation": "dieser (m)",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Pronomen",
+    "level": "A1",
+    "notes": "This (masculine demonstrative). Essential pronoun.",
+    "notes_bg_to_de": "В български 'този' се използва като this (masculine demonstrative).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Този' = 'dieser (m)'.",
+    "etymology": "From Proto-Slavic demonstrative",
+    "cultural_note": "Forms: този/тази/това/тези",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "bg": "Този съм тук.",
+        "de": "Dieser (m) bin/ist hier.",
+        "context": "Location"
+      },
+      {
+        "bg": "Този работя/работи.",
+        "de": "Dieser (m) arbeite/arbeitet.",
+        "context": "Action"
+      },
+      {
+        "bg": "Виждам този.",
+        "de": "Ich sehe dieser (m).",
+        "context": "Object"
+      }
+    ],
+    "linguistic_note": "Местоимение. Този.",
+    "linguistic_note_bg_to_de": "Този - This (masculine demonstrative).",
+    "linguistic_note_de_to_bg": "Този = dieser (m)."
+  },
+  {
+    "id": "a1_pronoun_010",
+    "word": "Какво",
+    "translation": "was",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Pronomen",
+    "level": "A1",
+    "notes": "What (interrogative pronoun). Essential pronoun.",
+    "notes_bg_to_de": "В български 'какво' се използва като what (interrogative pronoun).",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Какво' = 'was'.",
+    "etymology": "From Proto-Slavic *kako",
+    "cultural_note": "Already covered as question word - essential pronoun",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "bg": "Какво съм тук.",
+        "de": "Was bin/ist hier.",
+        "context": "Location"
+      },
+      {
+        "bg": "Какво работя/работи.",
+        "de": "Was arbeite/arbeitet.",
+        "context": "Action"
+      },
+      {
+        "bg": "Виждам какво.",
+        "de": "Ich sehe was.",
+        "context": "Object"
+      }
+    ],
+    "linguistic_note": "Местоимение. Какво.",
+    "linguistic_note_bg_to_de": "Какво - What (interrogative pronoun).",
+    "linguistic_note_de_to_bg": "Какво = was."
+  }
+]

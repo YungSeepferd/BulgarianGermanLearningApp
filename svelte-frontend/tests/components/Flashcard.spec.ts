@@ -53,7 +53,7 @@ describe('Flashcard Component - Svelte 5', () => {
         translation: mockProps.translation
       }
     });
-    const card = screen.getByTestId('flashcard');
+    const card = screen.getByTestId('flashcard-container');
     
     // Flip the card
     await fireEvent.click(card);
@@ -74,7 +74,7 @@ describe('Flashcard Component - Svelte 5', () => {
     });
     
     // Flip to see examples
-    const card = screen.getByTestId('flashcard');
+    const card = screen.getByTestId('flashcard-container');
     await fireEvent.click(card);
     await tick();
     
@@ -93,7 +93,7 @@ describe('Flashcard Component - Svelte 5', () => {
         translation: mockProps.translation
       }
     });
-    const card = screen.getByTestId('flashcard');
+    const card = screen.getByTestId('flashcard-container');
     
     await fireEvent.click(card);
     await tick();
@@ -117,7 +117,7 @@ describe('Flashcard Component - Svelte 5', () => {
         translation: mockProps.translation
       }
     });
-    const card = screen.getByTestId('flashcard');
+    const card = screen.getByTestId('flashcard-container');
     
     // Multiple flips
     for (let i = 0; i < 3; i++) {
@@ -126,6 +126,6 @@ describe('Flashcard Component - Svelte 5', () => {
     }
     
     // Component should still be functional
-    expect(screen.getByTestId('flashcard')).toBeInTheDocument();
+    expect(screen.getByTestId('flashcard-container')).toBeInTheDocument();
   });
 });

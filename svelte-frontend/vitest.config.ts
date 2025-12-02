@@ -22,7 +22,9 @@ export default defineConfig({
 		// Exclude Playwright test files
 		exclude: [
 			'**/*.playwright.{test,spec}.{js,ts}',
-			'**/e2e/**/*.{test,spec}.{js,ts}'
+			'**/e2e/**/*.{test,spec}.{js,ts}',
+			'tests/integration/**',
+			'tests/visual/**'
 		],
 		// Browser testing configuration for Svelte 5 - disabled for unit tests with coverage
 		browser: {

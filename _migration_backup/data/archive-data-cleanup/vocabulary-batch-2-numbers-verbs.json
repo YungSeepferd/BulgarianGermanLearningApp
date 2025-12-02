@@ -1,0 +1,188 @@
+[
+  {
+    "id": "a1_number_014",
+    "word": "Четиринадесет",
+    "translation": "vierzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 14 formed from 'четири' (four) + 'надесет' (over ten)",
+    "notes_bg_to_de": "В немски 'vierzehn' се образува от 'vier' + 'zehn'. Произнася се [ˈfiːɐ̯ˌtseːn]. Използва се при броене и възраст.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Четиринадесет' folgt dem Muster 'vier' + 'надесет'. Betonung: четиринаде́сет.",
+    "etymology": "From Proto-Slavic 'četyri' (four) + 'nadъ desętь' (over ten). The pattern mirrors German 'vierzehn'.",
+    "cultural_note": "Bulgarian teens (11-19) all use the suffix '-надесет'. In German, teens are written as one word ('vierzehn').",
+    "difficulty": 1,
+    "frequency": 65,
+    "examples": [
+      {
+        "sentence": "Тя е на четиринадесет години.",
+        "translation": "Sie ist vierzehn Jahre alt.",
+        "context": "stating age"
+      },
+      {
+        "sentence": "Купих четиринадесет яйца.",
+        "translation": "Ich habe vierzehn Eier gekauft.",
+        "context": "counting items"
+      }
+    ],
+    "linguistic_note": "Stress on the third-to-last syllable: четиринаде́сет [tʃɛtirināˈdɛsɛt]",
+    "linguistic_note_bg_to_de": "Четиринадесет се произнася [tʃɛtirināˈdɛsɛt]. В немски 'vierzehn' [ˈfiːɐ̯ˌtseːn] – 'r' не се произнася силно.",
+    "linguistic_note_de_to_bg": "Betonung auf четиринаде́сет. Alle bulgarischen Teens (11-19) tragen Betonung auf derselben Silbe '-де́-'."
+  },
+  {
+    "id": "a1_number_015",
+    "word": "Петнадесет",
+    "translation": "fünfzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 15 formed from 'пет' (five) + 'надесет' (over ten)",
+    "notes_bg_to_de": "В немски 'fünfzehn' се образува от 'fünf' + 'zehn'. Обърнете внимание на умлаута 'ü' [yː].",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Петнадесет' = 'fünfzehn'. Einfacher als Deutsch: kein Umlaut, direkte Kombination 'пет' + 'надесет'.",
+    "etymology": "From Proto-Slavic 'pętь' (five) + 'nadъ desętь' (over ten). Related to Latin 'quīnque' through Indo-European roots.",
+    "cultural_note": "Used for age, counting, and telling time. In Bulgaria, 15 minutes is often 'четвърт' (quarter) in time expressions.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "sentence": "Имам петнадесет лева.",
+        "translation": "Ich habe fünfzehn Lewa.",
+        "context": "money"
+      },
+      {
+        "sentence": "Урокът започва в петнадесет часа.",
+        "translation": "Der Unterricht beginnt um fünfzehn Uhr.",
+        "context": "24-hour time"
+      }
+    ],
+    "linguistic_note": "Stress on петнаде́сет [pɛtnāˈdɛsɛt]. Often shortened colloquially to 'петна́йсе'.",
+    "linguistic_note_bg_to_de": "Петнадесет [pɛtnāˈdɛsɛt]. В немски 'fünfzehn' [ˈfʏnfˌtseːn] – 'ü' се произнася с rounded lips.",
+    "linguistic_note_de_to_bg": "Betonung петнаде́сет. In Umgangssprache oft verkürzt zu 'петна́йсе' [pɛtnˈajsɛ]."
+  },
+  {
+    "id": "a1_number_016",
+    "word": "Шестнадесет",
+    "translation": "sechzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 16 formed from 'шест' (six) + 'надесет' (over ten)",
+    "notes_bg_to_de": "В немски 'sechzehn' произхожда от 'sechs' + 'zehn'. Обърнете внимание: 'sechs' губи 's' при образуване на 'sechzehn'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Шестнадесет' ist regelmäßig gebildet. Anders als Deutsch ('sechs' → 'sechzehn') bleibt im Bulgarischen 'шест' unverändert.",
+    "etymology": "From Proto-Slavic 'šestь' (six) + 'nadъ desętь'. The 'š' sound [ʃ] is preserved from ancient times.",
+    "cultural_note": "Age of consent and driving age in Bulgaria. Often used in sports scores and measurements.",
+    "difficulty": 1,
+    "frequency": 65,
+    "examples": [
+      {
+        "sentence": "Тя навърши шестнадесет години.",
+        "translation": "Sie ist sechzehn geworden.",
+        "context": "birthday/age milestone"
+      },
+      {
+        "sentence": "Автобусът тръгва в шестнадесет и тридесет.",
+        "translation": "Der Bus fährt um sechzehn Uhr dreißig ab.",
+        "context": "schedule"
+      }
+    ],
+    "linguistic_note": "Stress on шестнаде́сет [ʃɛstnāˈdɛsɛt]. The 'шест' part pronounced clearly.",
+    "linguistic_note_bg_to_de": "Шестнадесет [ʃɛstnāˈdɛsɛt]. В немски 'sechzehn' [ˈzɛçˌtseːn] – 'ch' е палатално [ç].",
+    "linguistic_note_de_to_bg": "Betonung шестнаде́сет. 'Шест' [ʃɛst] mit stimmlosem 'š' wie deutsches 'sch'."
+  },
+  {
+    "id": "a1_number_017",
+    "word": "Седемнадесет",
+    "translation": "siebzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 17 formed from 'седем' (seven) + 'надесет' (over ten)",
+    "notes_bg_to_de": "В немски 'siebzehn' произхожда от 'sieben' + 'zehn'. Забележете: 'sieben' губи '-en' и става 'sieb-'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Седемнадесет' behält 'седем' vollständig. Im Deutschen wird 'sieben' zu 'sieb-' verkürzt.",
+    "etymology": "From Proto-Slavic 'sedmь' (seven) + 'nadъ desętь'. Cognate with Latin 'septem' and Greek 'hepta'.",
+    "cultural_note": "In Bulgarian culture, no special significance. In German-speaking countries, 17 is just a regular number.",
+    "difficulty": 1,
+    "frequency": 60,
+    "examples": [
+      {
+        "sentence": "В групата има седемнадесет студенти.",
+        "translation": "In der Gruppe sind siebzehn Studenten.",
+        "context": "counting people"
+      },
+      {
+        "sentence": "Роденият ми ден е на седемнадесети май.",
+        "translation": "Mein Geburtstag ist am siebzehnten Mai.",
+        "context": "ordinal form/date"
+      }
+    ],
+    "linguistic_note": "Stress on седемнаде́сет [sɛdɛmnāˈdɛsɛt]. Longer word with clear syllable boundaries.",
+    "linguistic_note_bg_to_de": "Седемнадесет [sɛdɛmnāˈdɛsɛt]. В немски 'siebzehn' [ˈziːpˌtseːn] – забележете shortening 'sieb-'.",
+    "linguistic_note_de_to_bg": "Betonung седемнаде́сет. Alle fünf Silben werden deutlich ausgesprochen: се-дем-на-де-сет."
+  },
+  {
+    "id": "a1_number_018",
+    "word": "Осемнадесет",
+    "translation": "achtzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 18 formed from 'осем' (eight) + 'надесет' (over ten)",
+    "notes_bg_to_de": "В немски 'achtzehn' от 'acht' + 'zehn'. Забележете 'cht' [χt] – рязък гърлен звук.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Осемнадесет' regelmäßig gebildet aus 'осем' + 'надесет'. Betonung wie bei allen Teens auf '-де́-'.",
+    "etymology": "From Proto-Slavic 'osmь' (eight) + 'nadъ desętь'. The root 'os-' relates to Indo-European *oḱtṓ.",
+    "cultural_note": "Age of legal adulthood in Bulgaria (18 years). Important milestone for voting rights and legal responsibilities.",
+    "difficulty": 1,
+    "frequency": 70,
+    "examples": [
+      {
+        "sentence": "На осемнадесет години можеш да гласуваш.",
+        "translation": "Mit achtzehn Jahren darfst du wählen.",
+        "context": "legal age"
+      },
+      {
+        "sentence": "Температурата е осемнадесет градуса.",
+        "translation": "Die Temperatur ist achtzehn Grad.",
+        "context": "temperature"
+      }
+    ],
+    "linguistic_note": "Stress on осемнаде́сет [ɔsɛmnāˈdɛsɛt]. Clear pronunciation of all syllables.",
+    "linguistic_note_bg_to_de": "Осемнадесет [ɔsɛmnāˈdɛsɛt]. В немски 'achtzehn' [ˈaχtˌtseːn] – 'ch' е velares [χ].",
+    "linguistic_note_de_to_bg": "Betonung осемнаде́сет. Das 'о' wird als offenes [ɔ] ausgesprochen, nicht wie deutsches [o:]."
+  },
+  {
+    "id": "a1_number_019",
+    "word": "Деветнадесет",
+    "translation": "neunzehn",
+    "source_lang": "bg",
+    "target_lang": "de",
+    "category": "Zahlen",
+    "level": "A1",
+    "notes": "The number 19 formed from 'девет' (nine) + 'надесет' (over ten)",
+    "notes_bg_to_de": "В немски 'neunzehn' от 'neun' + 'zehn'. Забележете дифтонга 'eu' [ɔʏ] и носовото 'n'.",
+    "notes_de_to_bg": "Für Deutschsprachige: 'Деветнадесет' einfach aus 'девет' + 'надесет'. Letztes Teen-Zahl vor Sprung zu 20.",
+    "etymology": "From Proto-Slavic 'devętь' (nine) + 'nadъ desętь'. Related to Latin 'novem' through PIE *h₁néwn̥.",
+    "cultural_note": "Last of the teen numbers. The transition from 19 to 20 marks entry into adulthood age range in many contexts.",
+    "difficulty": 1,
+    "frequency": 60,
+    "examples": [
+      {
+        "sentence": "Работя до деветнадесет часа.",
+        "translation": "Ich arbeite bis neunzehn Uhr.",
+        "context": "work schedule"
+      },
+      {
+        "sentence": "Стаята е на деветнадесети етаж.",
+        "translation": "Das Zimmer ist im neunzehnten Stock.",
+        "context": "ordinal/floor number"
+      }
+    ],
+    "linguistic_note": "Stress on деветнаде́сет [dɛvɛtnāˈdɛsɛt]. The longest single-syllable number name.",
+    "linguistic_note_bg_to_de": "Деветнадесет [dɛvɛtnāˈdɛsɛt]. В немски 'neunzehn' [ˈnɔʏnˌtseːn] – 'eu' [ɔʏ] дифтонг.",
+    "linguistic_note_de_to_bg": "Betonung деветнаде́сет. Fünf Silben: де-вет-на-де-сет, alle klar artikuliert."
+  }
+]
