@@ -1,0 +1,177 @@
+[
+  {
+    "id": "zdravej_001",
+    "type": "word",
+    "bulgarian": "Здравей",
+    "german": "Hallo",
+    "category": "Begrüßung",
+    "level": "A1",
+    "difficulty": 1,
+    "frequency": 95,
+    "examples": [
+      {
+        "sentence": "Здравей, как си?",
+        "translation": "Hallo, wie geht's?",
+        "context": "informal"
+      },
+      {
+        "sentence": "Здравей, мило!",
+        "translation": "Hallo, Schatz!",
+        "context": "intimate"
+      }
+    ],
+    "notes": "Das Wort 'Здравей' leitet sich vom bulgarischen Wort 'здрав' (gesund) ab und ist wie ein Wunsch nach Gesundheit.",
+    "etymology": "From Proto-Slavic 'zdravъ' (healthy) - literally a wish for good health",
+    "cultural_note": "Standard informal greeting used throughout the day in Bulgaria. More casual than 'Добър ден'",
+    "pronunciation": {
+      "bulgarian": "Betonung auf der zweiten Silbe: здраве́й. Kürzere Form 'Здрасти' nur in vertrauten Situationen.",
+      "german": "Betonung auf der zweiten Silbe: здраве́й. Kürzere Form 'Здрасти' nur in vertrauten Situationen."
+    },
+    "grammar": {
+      "part_of_speech": "interjection",
+      "gender": null,
+      "declension": null
+    },
+    "tags": ["a1", "begrüßung", "easy", "very_common"],
+    "created_at": "2025-12-02T18:00:00.000Z",
+    "updated_at": "2025-12-02T18:00:00.000Z"
+  },
+  {
+    "id": "dobro_utro_002",
+    "type": "word",
+    "bulgarian": "Добро утро",
+    "german": "Guten Morgen",
+    "category": "Begrüßung",
+    "level": "A1",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "sentence": "Добро утро! Как спахте?",
+        "translation": "Guten Morgen! Wie haben Sie geschlafen?",
+        "context": "formal"
+      }
+    ],
+    "notes": null,
+    "etymology": "Произход: 'добро' + 'утро' (сложна форма).\nHerkunft: Zusammensetzung aus 'добро' (gut) und 'утро' (Morgen).",
+    "cultural_note": "Използва се до около 10–11 ч. за учтиво сутрешно приветствие.\nKultureller Kontext: Höfliche Morgenbegrüßung bis ca. 11 Uhr.",
+    "pronunciation": {
+      "bulgarian": "Bedeutet 'Guten Morgen'; in Bulgarien endet er oft früher (~10 Uhr).",
+      "german": "Entspricht 'Guten Morgen'; in Bulgarien endet er oft früher (~10 Uhr)."
+    },
+    "grammar": {
+      "part_of_speech": "phrase",
+      "gender": null,
+      "declension": null
+    },
+    "tags": ["a1", "begrüßung", "easy", "very_common"],
+    "created_at": "2025-12-02T18:00:00.000Z",
+    "updated_at": "2025-12-02T18:00:00.000Z"
+  },
+  {
+    "id": "chovek_003",
+    "type": "word",
+    "bulgarian": "Човек",
+    "german": "Mensch",
+    "category": "Substantiv",
+    "level": "A1",
+    "difficulty": 1,
+    "frequency": 98,
+    "examples": [
+      {
+        "sentence": "Той е добър човек.",
+        "translation": "Er ist ein guter Mensch.",
+        "context": "description"
+      }
+    ],
+    "notes": "'Село' bedeutet Dorf und ist mit anderen slawischen Wörtern für Siedlung verwandt.",
+    "etymology": "Произход: праслав. *человекъ; сродно на староцърковнославското 'чловѣкъ'.\nHerkunft: Proto-slawisch *čelověkъ, verwandt mit Altkirchenslawisch 'чловѣкъ'.",
+    "cultural_note": "Основна дума за човек; използва се и безлично като 'man'.\nKultureller Kontext: Grundwort für Menschen, auch unpersönlich wie das deutsche 'man'.",
+    "pronunciation": {
+      "bulgarian": "Irregular plural: 'хора' (people). Gender: masculine. Stress: чо́век",
+      "german": "Irregular plural: 'хора' (people). Gender: masculine. Stress: чо́век"
+    },
+    "grammar": {
+      "part_of_speech": "noun",
+      "gender": "masculine",
+      "declension": "irregular"
+    },
+    "tags": ["a1", "substantiv", "easy", "very_common"],
+    "created_at": "2025-12-02T18:00:00.000Z",
+    "updated_at": "2025-12-02T18:00:00.000Z"
+  },
+  {
+    "id": "sum_004",
+    "type": "word",
+    "bulgarian": "Съм",
+    "german": "sein",
+    "category": "Verb",
+    "level": "A1",
+    "difficulty": 2,
+    "frequency": 100,
+    "examples": [
+      {
+        "sentence": "Аз съм студент.",
+        "translation": "Ich bin Student.",
+        "context": "identification"
+      },
+      {
+        "sentence": "Тя е добра.",
+        "translation": "Sie ist gut.",
+        "context": "description"
+      }
+    ],
+    "notes": "Das Verb 'съм' entspricht dem deutschen 'sein' und ist unregelmäßig.",
+    "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
+    "cultural_note": "Essential action word. Bulgarian verbs conjugate for person and number",
+    "pronunciation": {
+      "bulgarian": "",
+      "german": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
+    },
+    "grammar": {
+      "part_of_speech": "verb",
+      "gender": null,
+      "declension": "irregular"
+    },
+    "tags": ["a1", "verb", "medium", "very_common"],
+    "created_at": "2025-12-02T18:00:00.000Z",
+    "updated_at": "2025-12-02T18:00:00.000Z"
+  },
+  {
+    "id": "krasiv_005",
+    "type": "word",
+    "bulgarian": "Красив",
+    "german": "schön",
+    "category": "Adjektiv",
+    "level": "A1",
+    "difficulty": 1,
+    "frequency": 98,
+    "examples": [
+      {
+        "sentence": "Това е красива къща.",
+        "translation": "Das ist ein schönes Haus.",
+        "context": "description"
+      },
+      {
+        "sentence": "Тя е красива жена.",
+        "translation": "Sie ist eine schöne Frau.",
+        "context": "compliment"
+      }
+    ],
+    "notes": null,
+    "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о",
+    "cultural_note": "Descriptive word in Bulgarian. Adjectives agree with noun gender",
+    "pronunciation": {
+      "bulgarian": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
+      "german": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)"
+    },
+    "grammar": {
+      "part_of_speech": "adjective",
+      "gender": "variable",
+      "declension": "full"
+    },
+    "tags": ["a1", "adjektiv", "easy", "very_common"],
+    "created_at": "2025-12-02T18:00:00.000Z",
+    "updated_at": "2025-12-02T18:00:00.000Z"
+  }
+]

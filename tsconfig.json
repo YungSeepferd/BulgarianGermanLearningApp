@@ -1,30 +1,31 @@
 {
+  "extends": "./.svelte-kit/tsconfig.json",
   "compilerOptions": {
     // Target ES2021 to match existing JavaScript configuration
     "target": "ES2021",
     "lib": ["ES2021", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "moduleResolution": "bundler",
-    
+
     // Strict type checking (enabled for better ESLint integration)
     "strict": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
-    
+
     // Module resolution
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "allowJs": true,
     "checkJs": false, // Initially disable to focus on .ts files
-    
+
     // Output configuration
     "outDir": "./dist",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    
+
     // Code quality (enabled for better type safety)
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -33,16 +34,17 @@
     "strictFunctionTypes": true,
     "strictBindCallApply": true,
     "noPropertyAccessFromIndexSignature": true,
-    
+
     // Skip library checks to avoid DOM library compatibility issues
     "skipLibCheck": true,
-    
+
     // Hugo integration
     "noEmit": false,
     "incremental": true,
     "tsBuildInfoFile": "./.tsbuildinfo"
   },
   "include": [
+    "src/**/*",
     "assets/js/**/*",
     "scripts/**/*.ts"
   ],
