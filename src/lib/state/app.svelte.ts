@@ -3,7 +3,6 @@ import { db } from '$lib/data/db.svelte';
 import { dataLoader } from '$lib/data/loader';
 import { localStorageManager } from '$lib/utils/localStorage';
 import type { VocabularyItem } from '$lib/types/vocabulary';
-import type { VocabularyItem } from '$lib/types/vocabulary';
 
 export type LanguageMode = 'DE_BG' | 'BG_DE';
 
