@@ -52,7 +52,6 @@ onmouseup={handlePressEnd}
 onmouseleave={handlePressEnd}
 aria-label={"Card: " + (gameState.currentCard ? gameState.currentCard.bulgarian_text : "language card")}
 tabindex="0"
-role="button"
 >
 <!-- X-Ray Mode -->
 {#if xRay && gameState.currentCard}

@@ -15,7 +15,7 @@
 	class="{cn(buttonVariants({ variant: 'outline' }), className)}"
 	{...rest}
 >
-	{#snippet child(props)}
-		<slot {...props} />
+	{#snippet child(props: any)}
+		{@render children(props)}
 	{/snippet}
 </DialogPrimitive.Trigger>

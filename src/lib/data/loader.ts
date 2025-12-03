@@ -138,7 +138,7 @@ export class DataLoader {
           // Validate the normalized array
           const normalizedValidation = safeValidateVocabularyArray(normalizedData);
           if (!normalizedValidation.success) {
-            throw new Error(`Normalized data still invalid: ${normalizedValidation.error.errors.map(e => e.message).join(', ')}`);
+            throw new Error(`Normalized data still invalid: ${normalizedValidation.error.issues.map((e: { message: any; }) => e.message).join(', ')}`);
           }
           
           // Use the validated normalized data

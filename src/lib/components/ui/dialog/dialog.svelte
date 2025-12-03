@@ -21,16 +21,16 @@
 
 <DialogPrimitive.Root
 	bind:open
-	onOpenChange="{onOpenChange}"
-	closeOnOutsideClick="{closeOnOutsideClick}"
-	closeOnEscape="{closeOnEscape}"
-	preventScroll="{preventScroll}"
-	onOutsideClick="{onOutsideClick}"
-	onEscapeKeyDown="{onEscapeKeyDown}"
-	onClose="{onClose}"
-	portal="{portal}"
-	openFocus="{openFocus}"
-	closeFocus="{closeFocus}"
+	onOpenChange={onOpenChange}
+	closeOnOutsideClick={closeOnOutsideClick}
+	closeOnEscape={closeOnEscape}
+	preventScroll={preventScroll}
+	onOutsideClick={onOutsideClick}
+	onEscapeKeyDown={onEscapeKeyDown}
+	onClose={onClose}
+	portal={portal}
+	openFocus={openFocus}
+	closeFocus={closeFocus}
 	{...rest}
 >
 	{@render children()}

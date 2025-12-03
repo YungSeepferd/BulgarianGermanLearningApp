@@ -14,5 +14,5 @@
 	class="{cn('text-lg font-semibold leading-none tracking-tight', className)}"
 	{...rest}
 >
-	<slot />
+	{@render children()}
 </DialogPrimitive.Title>

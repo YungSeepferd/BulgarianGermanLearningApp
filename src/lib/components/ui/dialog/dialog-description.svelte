@@ -14,5 +14,5 @@
 	class="{cn('text-sm text-muted-foreground', className)}"
 	{...rest}
 >
-	<slot />
+	{@render children()}
 </DialogPrimitive.Description>

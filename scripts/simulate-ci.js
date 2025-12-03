@@ -26,42 +26,49 @@ function runStep(name, command, options = { stdio: 'inherit' }) {
   }
 }
 
-// 1. Install dependencies
-if (!runStep('dependencies', 'pnpm install --frozen-lockfile')) {
+// 1. Update dependencies to latest
+if (!runStep('update-dependencies', 'pnpm update --latest')) {
   results.status = 'failed';
   saveResults();
   process.exit(1);
 }
 
-// 2. Run linter
+// 2. Install dependencies
+if (!runStep('dependencies', 'pnpm install')) {
+  results.status = 'failed';
+  saveResults();
+  process.exit(1);
+}
+
+// 3. Run linter
 if (!runStep('lint', 'pnpm run lint')) {
   results.status = 'failed';
   saveResults();
   process.exit(1);
 }
 
-// 3. Run type checking
+// 4. Run type checking
 if (!runStep('type-check', 'pnpm run check')) {
   results.status = 'failed';
   saveResults();
   process.exit(1);
 }
 
-// 4. Run unit tests
+// 5. Run unit tests
 if (!runStep('unit-tests', 'pnpm run test:unit')) {
   results.status = 'failed';
   saveResults();
   process.exit(1);
 }
 
-// 5. Build application
+// 6. Build application
 if (!runStep('build', 'pnpm run build')) {
   results.status = 'failed';
   saveResults();
   process.exit(1);
 }
 
-// 6. Run Vitest tests with server management
+// 7. Run Vitest tests with server management
 if (!runStep('vitest-tests', 'pnpm run test:unit')) {
   results.status = 'failed';
   saveResults();

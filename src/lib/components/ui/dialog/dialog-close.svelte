@@ -19,7 +19,7 @@
 	)}"
 	{...rest}
 >
-	{#snippet child(props)}
-		<slot {...props} />
+	{#snippet child(props: any)}
+		{@render children(props)}
 	{/snippet}
 </DialogPrimitive.Close>
