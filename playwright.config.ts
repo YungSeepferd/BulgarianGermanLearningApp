@@ -116,7 +116,8 @@ export default defineConfig<ExtendedTestOptions>({
   // Run your local dev server before starting the tests
   webServer: {
     command: 'npm run build && npm run preview -- --port 4173',
-    url: 'http://localhost:4173',
+    // Check the actual path where the app is served to ensure readiness
+    url: process.env.NODE_ENV === 'production' ? 'http://localhost:4173/BulgarianApp-Fresh' : 'http://localhost:4173',
     reuseExistingServer: !process.env.CI,
     timeout: 120000,
     stdout: 'pipe',

@@ -62,32 +62,9 @@ if (!runStep('build', 'pnpm run build')) {
 }
 
 // 6. Run Playwright tests with server management
-console.log('\n🎭 Running Playwright tests...');
-try {
-  // Start the dev server in the background
-  const server = spawn('pnpm', ['run', 'dev'], {
-    stdio: 'pipe',
-    detached: true
-  });
-
-  // Wait for server to start
-  await new Promise(resolve => setTimeout(resolve, 5000));
-
-  // Run Playwright tests with environment variable to disable animations
-  const env = { ...process.env, PLAYWRIGHT_TEST_MODE: 'ci' };
-  execSync('pnpm run test:e2e', { stdio: 'inherit', env });
-  results.steps.push({ name: 'e2e-tests', status: 'passed' });
-  console.log('✅ E2E tests completed successfully');
-
-  // Kill the server
-  process.kill(-server.pid);
-} catch (error) {
-  results.steps.push({ name: 'e2e-tests', status: 'failed', error: error.message });
-  console.error('❌ E2E tests failed:', error.message);
-  results.status = 'failed';
-  saveResults();
-  process.exit(1);
-}
+// Disabled for local pre-push to improve velocity. Runs on CI.
+console.log('\n⏩ Skipping local E2E tests (Running on GitHub Actions)...');
+results.steps.push({ name: 'e2e-tests', status: 'skipped' });
 
 // 7. Run accessibility tests
 if (!runStep('accessibility-tests', 'pnpm run test:accessibility')) {

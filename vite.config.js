@@ -28,7 +28,10 @@ export default defineConfig({
   },
 
   test: {
-    include: ['tests/unit/**/*.{test,spec}.{js,ts}'],
+    include: [
+      'tests/unit/**/*.{test,spec}.{js,ts}',
+      'tests/components/**/*.{test,spec}.{js,ts}'
+    ],
     // Use jsdom for component testing compatibility
     environment: 'jsdom',
     environmentOptions: {
@@ -67,6 +70,10 @@ export default defineConfig({
       deps: {
         inline: ['@sveltejs/kit']
       }
+    },
+    // Ensure browser conditions are used for svelte
+    resolve: {
+      conditions: ['browser']
     }
   },
   
