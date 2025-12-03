@@ -2,8 +2,7 @@
 import type { VocabularyItem } from '$lib/types/vocabulary.js';
 import {
   safeValidateVocabularyArray,
-  normalizeVocabularyItem,
-  validateVocabularyArray
+  normalizeVocabularyItem
 } from '$lib/schemas/vocabulary.js';
 import { LocalStorageManager } from '$lib/utils/localStorage.js';
 
@@ -40,6 +39,7 @@ export class DataLoader {
   private readonly STATS_CACHE_KEY = 'tandem_stats_cache';
   private readonly CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
   private readonly DATA_URL = '/data/vocabulary.json';
+  private fetchFunction: typeof fetch = fetch;
 
   private constructor() {}
 
@@ -48,6 +48,13 @@ export class DataLoader {
       DataLoader.instance = new DataLoader();
     }
     return DataLoader.instance;
+  }
+
+  /**
+   * Set custom fetch function for SvelteKit compatibility
+   */
+  public setFetchFunction(fetchFn: typeof fetch): void {
+    this.fetchFunction = fetchFn;
   }
 
   /**
@@ -86,7 +93,7 @@ export class DataLoader {
 
     for (let attempt = 0; attempt <= maxRetries; attempt++) {
       try {
-        const response = await fetch(this.DATA_URL);
+        const response = await this.fetchFunction(this.DATA_URL);
         
         if (!response.ok) {
           throw new Error(`Failed to fetch vocabulary data: ${response.status} ${response.statusText}`);
@@ -188,7 +195,7 @@ export class DataLoader {
    */
   private async revalidateCache(): Promise<void> {
       try {
-          const response = await fetch(this.DATA_URL, {
+          const response = await this.fetchFunction(this.DATA_URL, {
               method: 'HEAD'
           });
           
@@ -252,8 +259,6 @@ export class DataLoader {
    * Check if cache is valid
    */
   private isCacheValid(metadata?: CacheMetadata): boolean {
-    if (!metadata) return false;
-    
     // Check if we have an in-memory cache but no metadata passed (internal check)
     let currentMetadata = metadata;
     if (!currentMetadata && this.cacheMetadata) {
@@ -307,7 +312,7 @@ export class DataLoader {
     // Apply filters using a single filter operation for better performance
     const filteredItems = allItems.filter(item => {
       return (!filters?.category || item.category === filters.category) &&
-             (!filters?.difficulty || item.difficulty === filters.difficulty);
+             (!filters?.difficulty || item.level === filters.difficulty);
     });
 
     // Use Fisher-Yates shuffle algorithm for better randomness

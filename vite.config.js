@@ -29,9 +29,12 @@ export default defineConfig({
 
   test: {
     include: ['tests/unit/**/*.{test,spec}.{js,ts}'],
+    // Use jsdom for component testing compatibility
     environment: 'jsdom',
     globals: true,
-    // setupFiles: ['tests/setup.js'], // Removed until setup file is created
+    // Ensure the testing environment is correctly set up
+    setupFiles: ['tests/unit/setup.ts'],
+    // Coverage configuration
     coverage: {
         provider: 'v8',
         reporter: ['text', 'json', 'html'],
@@ -53,6 +56,12 @@ export default defineConfig({
             '**/vitest.{workspace,projects}.[jt]s?(on)',
             '**/.{eslint,mocha,prettier}rc.{?(c|m)js,yml}'
         ]
+    },
+    // Server-side rendering compatibility for Svelte 5
+    server: {
+      deps: {
+        inline: ['@sveltejs/kit']
+      }
     }
   },
   

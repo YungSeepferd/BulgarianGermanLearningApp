@@ -31,6 +31,28 @@ export default defineConfig<ExtendedTestOptions>({
   
   // Opt out of parallel tests on CI
   workers: process.env.CI ? 1 : undefined,
+
+  // Use a fixed viewport for consistent visual tests
+  use: {
+    viewport: { width: 1280, height: 720 },
+    // Base URL to use in actions like `await page.goto('/')`
+    baseURL: 'http://localhost:4173',
+    
+    // Collect trace when retrying the failed test
+    trace: 'on-first-retry',
+    
+    // Take screenshot on failure
+    screenshot: 'only-on-failure',
+    
+    // Record video on failure
+    video: 'retain-on-failure',
+    
+    // Global timeout for each action
+    actionTimeout: 10000,
+    
+    // Global timeout for navigation
+    navigationTimeout: 30000,
+  },
   
   // Reporter to use
   reporter: [
@@ -92,10 +114,12 @@ export default defineConfig<ExtendedTestOptions>({
 
   // Run your local dev server before starting the tests
   webServer: {
-    command: 'npm run dev -- --port 4173',
+    command: 'npm run build && npm run preview -- --port 4173',
     url: 'http://localhost:4173',
     reuseExistingServer: !process.env.CI,
-    timeout: process.env.CI ? 60000 : 120000, // Reduced timeout for CI
+    timeout: 120000,
+    stdout: 'pipe',
+    stderr: 'pipe',
   },
 
   // Global setup and teardown

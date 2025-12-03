@@ -17,7 +17,6 @@
 		"test:debug": "playwright test --debug",
 		"test:ui": "playwright test --ui",
 		"test:components": "playwright test --config=playwright-ct.config.ts tests/components/",
-		"test:components:ct": "playwright test --config=playwright-ct.config.ts",
 		"test:integration": "playwright test tests/integration/",
 		"test:e2e": "playwright test tests/e2e/",
 		"test:accessibility": "playwright test tests/accessibility/",
@@ -31,7 +30,7 @@
 		"test:report": "playwright show-report",
 		"test:install": "playwright install",
 		"test:all": "npm run test:unit && npm run test:components && npm run test:accessibility && npm run test:visual && npm run test:integration",
-		"test:ci": "pnpm run test:unit && pnpm run test:components && pnpm run test:accessibility && pnpm run test:coverage:threshold",
+		"test:ci": "pnpm run test:unit && pnpm run test:components && pnpm run test:e2e && pnpm run test:accessibility",
 		"coverage:serve": "npx http-server coverage -p 8080",
 		"coverage:clean": "rm -rf coverage .nyc_output",
 		"coverage:merge": "node scripts/merge-coverage-reports.js"

@@ -52,6 +52,7 @@
     return '#dc3545'; // red
   }
 
+
   // Interaction functions
   function handleItemClick(item: VocabularyItem) {
     onSelectItem(item);
@@ -136,13 +137,13 @@
 
           <div class="item-meta">
             <div class="meta-tags">
-              {#if item.difficulty}
+              {#if item.level}
                 <span
                   class="difficulty-tag"
-                  style="background-color: {getDifficultyColor(item.difficulty)}20; color: {getDifficultyColor(item.difficulty)}"
+                  style="background-color: {getDifficultyColor(item.level)}20; color: {getDifficultyColor(item.level)}"
                   in:tagAnimation
                 >
-                  {item.difficulty}
+                  {item.level}
                 </span>
               {/if}
 
@@ -156,7 +157,7 @@
 
               {#if showTooltips}
                 <div class="meta-tooltip">
-                  <p><strong>Difficulty:</strong> {item.difficulty || 'N/A'}</p>
+                  <p><strong>Difficulty:</strong> {item.level || 'N/A'}</p>
                   <p><strong>Category:</strong> {item.category}</p>
                   <p><strong>Type:</strong> {item.type === 'word' ? 'Word' : 'Rule'}</p>
                 </div>
@@ -183,11 +184,11 @@
             </div>
           </div>
 
-          {#if item.example}
+          {#if item.examples && item.examples.length > 0 && item.examples[0]}
             <div class="examples-preview">
               <div class="example-item">
                 <span class="example-text">
-                  {item.example}
+                  {item.examples[0].sentence} - {item.examples[0].translation}
                 </span>
               </div>
             </div>

@@ -182,15 +182,15 @@ export function normalizeVocabularyItem(data: unknown): VocabularyItem {
   if (typeof data === 'object' && data !== null) {
     const legacyData = data as Record<string, unknown>;
     
-    // Map legacy fields to new schema
+    // Map legacy fields to new schema (using bracket notation for index signature)
     const normalized: Partial<VocabularyItem> = {
-      id: String(legacyData.id || ''),
-      type: legacyData.type === 'rule' ? 'rule' : 'word',
-      bulgarian: String(legacyData.bulgarian || ''),
-      german: String(legacyData.german || ''),
-      category: String(legacyData.category || 'Uncategorized'),
-      tags: Array.isArray(legacyData.tags) ? legacyData.tags.map(String) : [],
-      level: legacyData.difficulty as any || 'A1'
+      id: String(legacyData['id'] || ''),
+      type: legacyData['type'] === 'rule' ? 'rule' : 'word',
+      bulgarian: String(legacyData['bulgarian'] || ''),
+      german: String(legacyData['german'] || ''),
+      category: String(legacyData['category'] || 'Uncategorized'),
+      tags: Array.isArray(legacyData['tags']) ? legacyData['tags'].map(String) : [],
+      level: legacyData['difficulty'] as any || 'A1'
     };
     
     // Try validation again with normalized data

@@ -1,25 +1,26 @@
 import { browser } from '$app/environment';
 import type { VocabularyItem } from '$lib/types/vocabulary';
+import { dataLoader } from '$lib/data/loader.js';
 
 export class VocabularyDB {
     items = $state<VocabularyItem[]>([]);
     initialized = $state(false);
 
     constructor() {
-        if (browser) {
-            this.loadInitialData();
+        // Don't load data in constructor to prevent SSR fetch calls
+        // Data loading will be triggered explicitly when needed
+    }
+
+    async initialize() {
+        if (browser && !this.initialized) {
+            await this.loadInitialData();
         }
     }
 
     async loadInitialData() {
         try {
-            // In a real application, this would fetch from an API or database
-            // For now, we rely on the static JSON file we created
-            // We use a dynamic import to load the JSON data
-            const module = await import('./vocabulary.json');
-            // Check if the module has a default export (typical for JSON imports)
-            // or if it returns the array directly
-            const data = (module.default || module) as VocabularyItem[];
+            // Use the DataLoader which now includes Zod validation
+            const data = await dataLoader.loadVocabulary();
     
             this.items = data;
             this.initialized = true;

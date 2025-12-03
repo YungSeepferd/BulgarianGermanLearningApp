@@ -5,8 +5,19 @@
   import { appState } from '$lib/state/app.svelte.js';
   import type { VocabularyItem } from '$lib/types/vocabulary.js';
   import { fade, fly, slide, scale } from 'svelte/transition';
+  import { browser } from '$app/environment';
 
   let dataLoader = DataLoader.getInstance();
+  
+  // Set the appropriate fetch function based on environment
+  if (!browser) {
+    // In server/SSR context, we need to use a compatible fetch
+    // For E2E tests, we'll use global fetch which should work in test environment
+    dataLoader.setFetchFunction(fetch);
+  }
+  
+  // Track if component is mounted to prevent SSR fetch calls
+  let isMounted = $state(false);
   let currentItem = $state<VocabularyItem | null>(null);
   let userAnswer = $state('');
   let isAnswered = $state(false);
@@ -158,7 +169,7 @@
     resetAnswer();
   }
 
-  function getDifficultyColor(difficulty?: string): string {
+  function getDifficultyColor(difficulty?: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'): string {
     switch (difficulty) {
       case 'A1': return '#28a745';
       case 'A2': return '#20c997';
@@ -200,9 +211,13 @@
   }
   
   function handleSelectItem(item: VocabularyItem) {
+    // Set the item first, then change mode to ensure proper rendering
     currentItem = item;
-    mode = 'practice';
-    resetAnswer();
+    // Use a small timeout to ensure the mode change triggers re-render
+    setTimeout(() => {
+      mode = 'practice';
+      resetAnswer();
+    }, 10);
   }
   
   function getQuestionText(): string {
@@ -217,8 +232,13 @@
   
   // Removed getAnswerOptions as it was unused and causing errors
   
-  // Load initial item on mount
-  loadNewItem();
+  // Load initial item only when component is mounted (client-side)
+  $effect(() => {
+    if (browser && !isMounted) {
+      isMounted = true;
+      loadNewItem();
+    }
+  });
 </script>
 
 <div class="tandem-practice" class:ci-mode={typeof process !== 'undefined' && process.env['PLAYWRIGHT_TEST_MODE'] === 'ci'}>
@@ -290,9 +310,9 @@
           <h3 class="question-text" in:scale>{getQuestionText()}</h3>
           <div class="item-meta">
             <span class="category">{currentItem.category}</span>
-            {#if currentItem.difficulty}
-              <span class="difficulty" style="color: {getDifficultyColor(currentItem.difficulty)}">
-                {currentItem.difficulty}
+            {#if currentItem.level}
+              <span class="difficulty" style="color: {getDifficultyColor(currentItem.level)}">
+                {currentItem.level}
               </span>
             {/if}
             <button
@@ -370,11 +390,12 @@
           {/if}
         </div>
 
-        {#if showExamples && currentItem.example}
+        {#if showExamples && currentItem.examples && currentItem.examples.length > 0 && currentItem.examples[0]}
           <div class="examples-section" in:slide>
             <h4>Example:</h4>
             <div class="example">
-              <p class="example-sentence">{currentItem.example}</p>
+              <p class="example-sentence">{currentItem.examples[0].sentence}</p>
+              <p class="example-translation">{currentItem.examples[0].translation}</p>
             </div>
           </div>
         {/if}
