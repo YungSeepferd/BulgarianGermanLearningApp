@@ -41,6 +41,7 @@
     <div
       class="modal-content"
       onclick={(e) => e.stopPropagation()}
+      onkeydown={(e) => { if (e.key === 'Escape') handleClose(); }}
       role="document"
     >
       <div class="modal-header">
