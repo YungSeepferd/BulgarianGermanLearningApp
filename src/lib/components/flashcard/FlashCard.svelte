@@ -53,7 +53,7 @@
       {#if item.audio_url}
         <button
           class="audio-button"
-          onclick|stopPropagation={playAudio}
+          onclick={(e) => { e.stopPropagation(); playAudio(); }}
           aria-label="Play pronunciation"
         >
           🔊
@@ -80,7 +80,7 @@
       {#if item.audio_url}
         <button
           class="audio-button"
-          onclick|stopPropagation={playAudio}
+          onclick={(e) => { e.stopPropagation(); playAudio(); }}
           aria-label="Play pronunciation"
         >
           🔊

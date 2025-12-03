@@ -40,7 +40,7 @@
   >
     <div
       class="modal-content"
-      onclick|stopPropagation
+      onclick={(e) => e.stopPropagation()}
       role="document"
     >
       <div class="modal-header">
