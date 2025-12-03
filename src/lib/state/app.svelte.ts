@@ -102,7 +102,7 @@ export class AppState {
         this.searchQuery = '';
         
         // Track session start for analytics
-        console.log(`Practice session started for item: ${item.id} (${item.german} → ${item.bulgarian})`);
+        // Analytics tracking is now handled by the gamification system
         
         // Optionally, you could add session tracking here
         // this.trackSessionStart(item);

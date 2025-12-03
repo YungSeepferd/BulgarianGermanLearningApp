@@ -21,7 +21,9 @@
   function playAudio() {
     if (audioPlayer) {
       audioPlayer.currentTime = 0;
-      audioPlayer.play().catch(e => console.error('Audio playback failed:', e));
+      audioPlayer.play().catch(() => {
+        // Silently fail on audio playback errors
+      });
     }
   }
 

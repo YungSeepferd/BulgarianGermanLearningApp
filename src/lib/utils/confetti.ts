@@ -28,5 +28,7 @@ export function fireConfetti() {
         requestAnimationFrame(frame);
       }
     })();
-  }).catch(err => console.error('Failed to load confetti:', err));
+  }).catch(() => {
+    // Silently fail on confetti load errors
+  });
 }

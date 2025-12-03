@@ -204,7 +204,7 @@ export function normalizeVocabularyItem(data: unknown): VocabularyItem {
       german: String(legacyData['german'] || ''),
       category: String(legacyData['category'] || 'Uncategorized'),
       tags: Array.isArray(legacyData['tags']) ? legacyData['tags'].map(String) : [],
-      level: legacyData['difficulty'] as any || 'A1'
+      level: legacyData['difficulty'] as 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2' || 'A1'
     };
     
     // Try validation again with normalized data

@@ -16,7 +16,6 @@
   let sessionComplete = $state(false);
   let isLoading = $state(true);
   let error = $state<string | null>(null);
-  let showLevelUpModal = $state(false);
 
   const progressBar = tweened(0, {
     duration: 400,
@@ -80,7 +79,7 @@
   }
 
   function handleLevelUpClose() {
-    showLevelUpModal = false;
+    // Level up modal is now handled by the gamification system
   }
 
   function finishSession() {

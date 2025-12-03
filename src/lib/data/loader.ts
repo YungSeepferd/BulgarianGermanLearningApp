@@ -75,7 +75,9 @@ export class DataLoader {
       
       // Revalidate in background if online
       if (typeof navigator !== 'undefined' && navigator.onLine) {
-        this.revalidateCache().catch(err => console.error('Background revalidation failed:', err));
+        this.revalidateCache().catch(() => {
+          // Silently fail on revalidation errors
+        });
       }
       
       return this.vocabularyCache;
@@ -113,7 +115,7 @@ export class DataLoader {
         const validationResult = safeValidateVocabularyArray(data);
         
         if (!validationResult.success) {
-          console.warn('Data validation failed, attempting normalization:', validationResult.error.errors);
+          // Silently fail on validation errors
           
           // Try to normalize and validate each item individually
           const normalizedData: VocabularyItem[] = [];
@@ -125,7 +127,7 @@ export class DataLoader {
               normalizedData.push(normalizedItem);
             } catch (normalizationError) {
               validationErrors.push(`Failed to normalize item: ${normalizationError}`);
-              console.warn('Skipping invalid item:', item);
+              // Silently fail on normalization errors
             }
           }
           
@@ -177,7 +179,7 @@ export class DataLoader {
         }
       } catch (error) {
         lastError = error;
-        console.error(`Attempt ${attempt + 1} failed to load vocabulary data:`, error);
+        // Silently fail on load errors
 
         // Wait before retrying
         if (attempt < maxRetries) {
@@ -186,7 +188,7 @@ export class DataLoader {
       }
     }
 
-    console.error('All attempts to load vocabulary data failed');
+    // Silently fail on all attempts
     throw lastError || new Error('Unknown error occurred while loading vocabulary data');
   }
 
@@ -339,7 +341,7 @@ export class DataLoader {
 
     if (savedProgress && savedProgress.stats) {
       // Load saved stats
-      savedProgress.stats.forEach((stat: any, id: string) => {
+      savedProgress.stats.forEach((stat: { correct: number; incorrect: number; lastPracticed: string }, id: string) => {
         this.statsCache!.set(id, {
           correct_count: stat.correct,
           incorrect_count: stat.incorrect,

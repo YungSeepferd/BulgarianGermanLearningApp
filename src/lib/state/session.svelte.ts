@@ -199,7 +199,7 @@ export class LearningSession {
                 }
             }
         } catch (e) {
-            console.error('Failed to load session state', e);
+            // Silently fail on load errors
         }
     }
 
@@ -213,7 +213,7 @@ export class LearningSession {
                 totalXP: this.totalXP // Save total XP
             }));
         } catch (e) {
-            console.error('Failed to save session state', e);
+            // Silently fail on save errors
         }
     }
 }
