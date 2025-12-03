@@ -248,8 +248,8 @@
       Tandem Learning
     </h2>
     <TandemToggle
-      {direction}
-      {mode}
+      direction={direction}
+      mode={mode}
       onDirectionChange={handleDirectionChange}
       onModeChange={handleModeChange}
     />
@@ -296,7 +296,7 @@
           <button class="btn-primary" onclick={loadNewItem} aria-label="Retry loading vocabulary">
             Retry
           </button>
-          <button class="btn-secondary" onclick={() => mode = 'search'} aria-label="Switch to search mode">
+          <button class="btn-secondary" onclick={() => (mode = 'search')} aria-label="Switch to search mode">
             Search Vocabulary
           </button>
         </div>
@@ -452,8 +452,8 @@
 
       <SearchList
         items={searchResults}
-        {direction}
-        onSelectItem={handleSelectItem}
+        direction={direction}
+        onselectitem={handleSelectItem}
       />
     </div>
   {/if}
