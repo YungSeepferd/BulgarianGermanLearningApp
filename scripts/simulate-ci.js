@@ -67,11 +67,9 @@ console.log('\n⏩ Skipping local E2E tests (Running on GitHub Actions)...');
 results.steps.push({ name: 'e2e-tests', status: 'skipped' });
 
 // 7. Run accessibility tests
-if (!runStep('accessibility-tests', 'pnpm run test:accessibility')) {
-  results.status = 'failed';
-  saveResults();
-  process.exit(1);
-}
+// Disabled for local pre-push to improve velocity. Runs on CI.
+console.log('\n⏩ Skipping local accessibility tests (Running on GitHub Actions)...');
+results.steps.push({ name: 'accessibility-tests', status: 'skipped' });
 
 function saveResults() {
   // Fix path encoding issue - decode URI component and use process.cwd()
