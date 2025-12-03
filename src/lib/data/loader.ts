@@ -1,5 +1,5 @@
 import type { VocabularyItem } from '$lib/types/vocabulary.js';
-import { localStorageManager } from '$lib/utils/localStorage.js';
+import { LocalStorageManager } from '$lib/utils/localStorage.js';
 
 interface LearningStats {
   correct_count: number;
@@ -217,12 +217,12 @@ export class DataLoader {
     }
 
     // Try to load stats from localStorage first
-    const savedProgress = localStorageManager.loadUserProgress();
+    const savedProgress = LocalStorageManager.loadUserProgress();
     this.statsCache = new Map();
 
     if (savedProgress && savedProgress.stats) {
       // Load saved stats
-      savedProgress.stats.forEach((stat, id) => {
+      savedProgress.stats.forEach((stat: any, id: string) => {
         this.statsCache!.set(id, {
           correct_count: stat.correct,
           incorrect_count: stat.incorrect,
@@ -312,7 +312,7 @@ export class DataLoader {
       });
     });
 
-    localStorageManager.saveUserProgress({
+    LocalStorageManager.saveUserProgress({
       stats: statsForStorage,
       favorites: [], // Will be enhanced later
       recentSearches: [] // Will be enhanced later

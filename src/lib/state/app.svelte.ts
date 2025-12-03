@@ -1,7 +1,7 @@
 import { browser } from '$app/environment';
 import { db } from '$lib/data/db.svelte';
 import { dataLoader } from '$lib/data/loader';
-import { localStorageManager } from '$lib/utils/localStorage';
+import { LocalStorageManager } from '$lib/utils/localStorage';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 
 export type LanguageMode = 'DE_BG' | 'BG_DE';
@@ -138,7 +138,7 @@ export class AppState {
         if (!browser) return;
         
         try {
-            localStorageManager.saveUserProgress({
+            LocalStorageManager.saveUserProgress({
                 stats: this.practiceStats,
                 favorites: this.favorites,
                 recentSearches: this.recentSearches
@@ -152,7 +152,7 @@ export class AppState {
         if (!browser) return;
         
         try {
-            const progress = localStorageManager.loadUserProgress();
+            const progress = LocalStorageManager.loadUserProgress();
             if (progress) {
                 this.practiceStats = progress.stats;
                 this.favorites = progress.favorites;
@@ -213,12 +213,12 @@ export class AppState {
     }
 
     exportData(): string {
-        return localStorageManager.exportUserData();
+        return LocalStorageManager.exportUserData();
     }
 
     importData(jsonData: string) {
         try {
-            localStorageManager.importUserData(jsonData);
+            LocalStorageManager.importUserData(jsonData);
             this.loadProgress();
         } catch (_error) {
             throw new Error('Failed to import data');

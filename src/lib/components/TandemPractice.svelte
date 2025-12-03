@@ -26,7 +26,6 @@
     averageResponseTime: 0
   });
   let startTime = $state(0);
-  let _isAnimating = $state(false);
   // Enhanced animation functions
   function feedbackAnimation(node: HTMLElement) {
     return fly(node, {
@@ -78,7 +77,6 @@
   // Enhanced load with animation
   async function loadNewItem() {
     try {
-      _isAnimating = true;
       isLoading = true;
       error = null;
       
@@ -94,7 +92,6 @@
       console.error('Error loading vocabulary:', err);
     } finally {
       isLoading = false;
-      _isAnimating = false;
     }
   }
   
@@ -322,8 +319,6 @@
                   }
                 }}
                 class="answer-input"
-                onfocus={() => _isAnimating = true}
-                onblur={() => _isAnimating = false}
               />
               <button
                 class="btn-primary"
