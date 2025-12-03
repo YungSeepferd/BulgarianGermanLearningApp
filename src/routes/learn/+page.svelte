@@ -47,7 +47,7 @@
         } else {
           error = "No vocabulary items found. Please add some data.";
         }
-    } catch (e) {
+    } catch (_e) {
         error = "Failed to load session. Please try again.";
     } finally {
         isLoading = false;

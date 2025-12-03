@@ -95,13 +95,13 @@ export class LearningSession {
         if (level === 1) return 0;
         
         let l = 1;
-        let threshold = 200;
+        let _threshold = 200;
         let gap = 300;
         
         // Calculate end of previous level
         while (l < level) {
             l++;
-            threshold += gap;
+            _threshold += gap;
             gap += 100;
         }
         
@@ -115,10 +115,10 @@ export class LearningSession {
         // So for level 2, the threshold calculated in prev loop step (when l=1) was 200.
         
         // Let's redo simply:
-        let currentGap = 200; // Gap for level 1
+        let _currentGap = 200; // Gap for level 1
         
         for (let i = 1; i < level; i++) {
-            currentGap += 100; // Increment gap for next level
+            _currentGap += 100; // Increment gap for next level
         }
         
         // Correction: My manual calculation above for calculateLevel used:
@@ -193,8 +193,8 @@ export class LearningSession {
                     this.dailyXP = 0;
                 }
             }
-        } catch (e) {
-            console.error('Failed to load session state:', e);
+        } catch (_e) {
+            // Silently fail on load errors
         }
     }
 
@@ -207,8 +207,8 @@ export class LearningSession {
                 lastPracticeDate: this.lastPracticeDate,
                 totalXP: this.totalXP // Save total XP
             }));
-        } catch (e) {
-            console.error('Failed to save session state:', e);
+        } catch (_e) {
+            // Silently fail on save errors
         }
     }
 }
