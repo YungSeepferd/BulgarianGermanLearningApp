@@ -1,4 +1,5 @@
 import type { VocabularyItem } from '$lib/types/vocabulary.js';
+import { localStorageManager } from '$lib/utils/localStorage.js';
 
 interface LearningStats {
   correct_count: number;
@@ -10,15 +11,26 @@ interface LearningStats {
   streak_count: number;
 }
 
+interface CacheMetadata {
+  version: string;
+  timestamp: number;
+  itemCount: number;
+}
+
 /**
- * Data loader utility for the Tandem Learning System
- * Handles loading, filtering, and processing of vocabulary data
+ * Enhanced data loader utility for the Tandem Learning System
+ * Handles loading, filtering, and processing of vocabulary data with optimized caching
  */
 
 export class DataLoader {
   private static instance: DataLoader;
   private vocabularyCache: VocabularyItem[] | null = null;
   private statsCache: Map<string, LearningStats> | null = null;
+  private cacheMetadata: CacheMetadata | null = null;
+  private readonly CACHE_VERSION = '1.0.0';
+  private readonly CACHE_KEY = 'tandem_vocabulary_cache';
+  private readonly STATS_CACHE_KEY = 'tandem_stats_cache';
+  private readonly CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
 
   private constructor() {}
 
@@ -33,10 +45,19 @@ export class DataLoader {
    * Load all vocabulary items from the unified data source
    */
   /**
-   * Load all vocabulary items with enhanced error handling and retries
+   * Load all vocabulary items with enhanced caching and error handling
    */
   public async loadVocabulary(maxRetries: number = 2): Promise<VocabularyItem[]> {
-    if (this.vocabularyCache) {
+    // Check memory cache first
+    if (this.vocabularyCache && this.isCacheValid()) {
+      return this.vocabularyCache;
+    }
+
+    // Try to load from localStorage cache
+    const cachedData = this.loadFromCache();
+    if (cachedData && this.isCacheValid(cachedData.metadata)) {
+      this.vocabularyCache = cachedData.items;
+      this.cacheMetadata = cachedData.metadata;
       return this.vocabularyCache;
     }
 
@@ -45,21 +66,34 @@ export class DataLoader {
     for (let attempt = 0; attempt <= maxRetries; attempt++) {
       try {
         // Load from our unified data format
-        // In a real app, this would be imported or fetched from an API
-        // For now we use the dynamic import of the JSON file we created
         const module = await import('./vocabulary.json');
         const data = (module.default || module) as VocabularyItem[];
-        
-        this.vocabularyCache = data;
-        return this.vocabularyCache;
-        /*
-        const response = await fetch('/data/vocabulary.json');
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+        if (!Array.isArray(data)) {
+          throw new Error('Loaded data is not an array');
         }
 
-        */
+        if (data.length === 0) {
+          throw new Error('Loaded data array is empty');
+        }
+
+        // Validate each item in the array
+        for (const item of data) {
+          if (!item.id || !item.german || !item.bulgarian) {
+            throw new Error('Invalid vocabulary item: missing required fields');
+          }
+        }
+
+        // Cache the data
+        this.vocabularyCache = data;
+        this.cacheMetadata = {
+          version: this.CACHE_VERSION,
+          timestamp: Date.now(),
+          itemCount: data.length
+        };
+        this.saveToCache(data, this.cacheMetadata);
+
+        return this.vocabularyCache;
       } catch (error) {
         lastError = error;
         // eslint-disable-next-line no-console
@@ -75,6 +109,53 @@ export class DataLoader {
     // eslint-disable-next-line no-console
     console.error('All attempts to load vocabulary data failed');
     throw lastError || new Error('Unknown error occurred while loading vocabulary data');
+  }
+
+  /**
+   * Load vocabulary data from localStorage cache
+   */
+  private loadFromCache(): { items: VocabularyItem[]; metadata: CacheMetadata } | null {
+    try {
+      const cached = localStorage.getItem(this.CACHE_KEY);
+      if (!cached) return null;
+
+      const parsed = JSON.parse(cached);
+      if (!parsed.items || !parsed.metadata) return null;
+
+      return {
+        items: parsed.items,
+        metadata: parsed.metadata
+      };
+    } catch (_error) {
+      return null;
+    }
+  }
+
+  /**
+   * Save vocabulary data to localStorage cache
+   */
+  private saveToCache(items: VocabularyItem[], metadata: CacheMetadata): void {
+    try {
+      const cacheData = {
+        items,
+        metadata
+      };
+      localStorage.setItem(this.CACHE_KEY, JSON.stringify(cacheData));
+    } catch (_error) {
+      // Silently fail if caching fails
+    }
+  }
+
+  /**
+   * Check if cache is valid
+   */
+  private isCacheValid(metadata?: CacheMetadata): boolean {
+    if (!metadata) return false;
+    
+    const now = Date.now();
+    const cacheAge = now - metadata.timestamp;
+    
+    return cacheAge < this.CACHE_DURATION && metadata.version === this.CACHE_VERSION;
   }
 
   /**
@@ -95,10 +176,10 @@ export class DataLoader {
     const searchField = direction === 'DE->BG' ? 'german' : 'bulgarian';
     const lowerQuery = query.toLowerCase();
     
-    return allItems.filter(item => 
+    return allItems.filter(item =>
       item[searchField].toLowerCase().includes(lowerQuery) ||
       item.category.toLowerCase().includes(lowerQuery) ||
-      item.tags.some(tag => tag.includes(lowerQuery))
+      item.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
     );
   }
 
@@ -128,27 +209,46 @@ export class DataLoader {
   }
 
   /**
-   * Get learning statistics for all items with enhanced initialization
+   * Get learning statistics for all items with localStorage integration
    */
   public async getStats(): Promise<Map<string, LearningStats>> {
     if (this.statsCache) {
       return this.statsCache;
     }
 
-    const allItems = await this.loadVocabulary();
+    // Try to load stats from localStorage first
+    const savedProgress = localStorageManager.loadUserProgress();
     this.statsCache = new Map();
 
-    // Initialize stats for all items with more complete defaults
-    allItems.forEach(item => {
-      this.statsCache!.set(item.id, {
-        correct_count: 0,
-        incorrect_count: 0,
-        last_practiced: null,
-        difficulty_rating: item.difficulty || 'A1',
-        mastery_level: 0,
-        average_response_time: null,
-        streak_count: 0
+    if (savedProgress && savedProgress.stats) {
+      // Load saved stats
+      savedProgress.stats.forEach((stat, id) => {
+        this.statsCache!.set(id, {
+          correct_count: stat.correct,
+          incorrect_count: stat.incorrect,
+          last_practiced: stat.lastPracticed,
+          difficulty_rating: 'A1', // Default, will be updated when item is loaded
+          mastery_level: 0,
+          average_response_time: null,
+          streak_count: 0
+        });
       });
+    }
+
+    // Initialize stats for any items that don't have saved stats
+    const allItems = await this.loadVocabulary();
+    allItems.forEach(item => {
+      if (!this.statsCache!.has(item.id)) {
+        this.statsCache!.set(item.id, {
+          correct_count: 0,
+          incorrect_count: 0,
+          last_practiced: null,
+          difficulty_rating: item.difficulty || 'A1',
+          mastery_level: 0,
+          average_response_time: null,
+          streak_count: 0
+        });
+      }
     });
 
     return this.statsCache;
@@ -158,7 +258,7 @@ export class DataLoader {
    * Update learning statistics for an item
    */
   /**
-   * Update learning statistics with enhanced tracking
+   * Update learning statistics with localStorage persistence
    */
   public async updateStats(
     itemId: string,
@@ -190,15 +290,66 @@ export class DataLoader {
       // Update last practiced time
       itemStats.last_practiced = new Date().toISOString();
       stats.set(itemId, itemStats);
+
+      // Save to localStorage
+      this.saveStatsToStorage();
     }
   }
 
   /**
-   * Clear all caches
+   * Save statistics to localStorage
+   */
+  private saveStatsToStorage(): void {
+    if (!this.statsCache) return;
+
+    const statsForStorage = new Map<string, { correct: number; incorrect: number; lastPracticed: string }>();
+    
+    this.statsCache.forEach((stats, id) => {
+      statsForStorage.set(id, {
+        correct: stats.correct_count,
+        incorrect: stats.incorrect_count,
+        lastPracticed: stats.last_practiced || ''
+      });
+    });
+
+    localStorageManager.saveUserProgress({
+      stats: statsForStorage,
+      favorites: [], // Will be enhanced later
+      recentSearches: [] // Will be enhanced later
+    });
+  }
+
+  /**
+   * Clear all caches including localStorage
    */
   public clearCache(): void {
     this.vocabularyCache = null;
     this.statsCache = null;
+    this.cacheMetadata = null;
+    
+    try {
+      localStorage.removeItem(this.CACHE_KEY);
+      localStorage.removeItem(this.STATS_CACHE_KEY);
+    } catch (_error) {
+      // Silently fail if clearing cache fails
+    }
+  }
+
+  /**
+   * Get cache statistics for debugging
+   */
+  public getCacheStats(): {
+    vocabularyCached: boolean;
+    statsCached: boolean;
+    cacheAge: number | null;
+    itemCount: number | null;
+  } {
+    return {
+      vocabularyCached: !!this.vocabularyCache,
+      statsCached: !!this.statsCache,
+      cacheAge: this.cacheMetadata ? Date.now() - this.cacheMetadata.timestamp : null,
+      itemCount: this.cacheMetadata?.itemCount || null
+    };
   }
 }
 

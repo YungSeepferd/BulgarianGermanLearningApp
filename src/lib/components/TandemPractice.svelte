@@ -2,8 +2,9 @@
   import TandemToggle from './TandemToggle.svelte';
   import SearchList from './SearchList.svelte';
   import { DataLoader } from '$lib/data/loader.js';
+  import { appState } from '$lib/state/app.svelte.js';
   import type { VocabularyItem } from '$lib/types/vocabulary.js';
-  import { fade, fly } from 'svelte/transition';
+  import { fade, fly, slide, scale } from 'svelte/transition';
 
   let dataLoader = DataLoader.getInstance();
   let currentItem = $state<VocabularyItem | null>(null);
@@ -24,28 +25,66 @@
     lastResponseTime: 0,
     averageResponseTime: 0
   });
-  // Animation functions
+  let startTime = $state(0);
+  let isAnimating = $state(false);
+  // Enhanced animation functions
   function feedbackAnimation(node: HTMLElement) {
     return fly(node, {
       y: -20,
-      opacity: 1, // Fix: Opacity should be a number or an object with duration
-      duration: 300,
-      easing: t => t
+      opacity: 1,
+      duration: 400,
+      easing: t => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1
     });
   }
 
   function statAnimation(node: HTMLElement) {
-    return fade(node, {
-      duration: 200,
-      easing: t => t
+    return scale(node, {
+      duration: 300,
+      easing: t => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1,
+      start: 0.8,
+      opacity: 1
     });
   }
+
+  function cardSlideAnimation(node: HTMLElement) {
+    return slide(node, {
+      duration: 500,
+      easing: t => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1,
+      axis: 'y'
+    });
+  }
+
+  function pulseAnimation(node: HTMLElement) {
+    return scale(node, {
+      duration: 200,
+      easing: t => 1 - Math.pow(1 - t, 3),
+      start: 1,
+      opacity: 1
+    });
+  }
+
+  function shakeAnimation(node: HTMLElement) {
+    const duration = 500;
+    return {
+      duration,
+      tick: (t: number, u: number) => {
+        const shake = Math.sin(t * 10) * (1 - t) * 2;
+        node.style.transform = `translateX(${shake}px)`;
+        node.style.opacity = `${u}`;
+      }
+    };
+  }
   
-  // Load initial item
+  // Enhanced load with animation
   async function loadNewItem() {
     try {
+      isAnimating = true;
       isLoading = true;
       error = null;
+      
+      // Simulate loading delay for better UX
+      await new Promise(resolve => setTimeout(resolve, 300));
+      
       const items = await dataLoader.getRandomItems(1);
       currentItem = items[0] || null;
       resetAnswer();
@@ -55,6 +94,7 @@
       console.error('Error loading vocabulary:', err);
     } finally {
       isLoading = false;
+      isAnimating = false;
     }
   }
   
@@ -63,12 +103,12 @@
     isAnswered = false;
     isCorrect = false;
     showExamples = false;
+    startTime = performance.now();
   }
   
-  function checkAnswer() {
+  async function checkAnswer() {
     if (!currentItem || !userAnswer.trim()) return;
   
-    const startTime = performance.now();
     isAnswered = true;
     const correctAnswer = direction === 'DE->BG' ? currentItem.bulgarian : currentItem.german;
     isCorrect = userAnswer.trim().toLowerCase() === correctAnswer.toLowerCase();
@@ -95,18 +135,49 @@
       stats.streak = 0;
     }
   
-    // Update global stats (placeholder for future Supabase integration)
-    dataLoader.updateStats(currentItem.id, isCorrect, responseTime);
-  
-    // Trigger feedback animation
+    // Update global stats and app state
+    await dataLoader.updateStats(currentItem.id, isCorrect, responseTime);
+    await appState.recordPracticeResult(currentItem.id, isCorrect, responseTime);
   }
   
-  function nextItem() {
-    loadNewItem();
+  async function nextItem() {
+    await loadNewItem();
   }
   
   function toggleExamples() {
     showExamples = !showExamples;
+  }
+
+  // Enhanced practice features
+  function toggleFavorite() {
+    if (currentItem) {
+      appState.toggleFavorite(currentItem.id);
+    }
+  }
+
+  function practiceThisItem(item: VocabularyItem) {
+    currentItem = item;
+    mode = 'practice';
+    resetAnswer();
+  }
+
+  function getDifficultyColor(difficulty?: string): string {
+    switch (difficulty) {
+      case 'A1': return '#28a745';
+      case 'A2': return '#20c997';
+      case 'B1': return '#ffc107';
+      case 'B2': return '#fd7e14';
+      case 'C1': return '#dc3545';
+      case 'C2': return '#6f42c1';
+      default: return '#6c757d';
+    }
+  }
+
+  function getStreakEmoji(streak: number): string {
+    if (streak >= 10) return '🔥';
+    if (streak >= 5) return '⭐';
+    if (streak >= 3) return '✨';
+    return '';
   }
   
   async function handleSearch(query: string) {
@@ -155,33 +226,44 @@
 
 <div class="tandem-practice">
   <div class="header">
-    <h2>Tandem Learning</h2>
-    <TandemToggle 
-      {direction} 
+    <h2 class="app-title">
+      <span class="title-icon">🔄</span>
+      Tandem Learning
+    </h2>
+    <TandemToggle
+      {direction}
       {mode}
       onDirectionChange={handleDirectionChange}
       onModeChange={handleModeChange}
     />
   </div>
-  
-  <div class="stats-bar">
-    <div class="stat">
+
+  <div class="stats-bar" in:cardSlideAnimation>
+    <div class="stat" in:statAnimation>
       <span class="stat-label">Correct:</span>
-      <span class="stat-value" in:statAnimation>{stats.correct}/{stats.total}</span>
+      <span class="stat-value">{stats.correct}/{stats.total}</span>
     </div>
-    <div class="stat">
+    <div class="stat" in:statAnimation>
       <span class="stat-label">Streak:</span>
-      <span class="stat-value" in:statAnimation>{stats.streak}</span>
+      <span class="stat-value">
+        {stats.streak} {getStreakEmoji(stats.streak)}
+      </span>
     </div>
-    <div class="stat">
+    <div class="stat" in:statAnimation>
       <span class="stat-label">Accuracy:</span>
-      <span class="stat-value" in:statAnimation>{stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0}%</span>
+      <span class="stat-value">{stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0}%</span>
     </div>
+    {#if stats.averageResponseTime > 0}
+      <div class="stat" in:statAnimation>
+        <span class="stat-label">Avg Time:</span>
+        <span class="stat-value">{stats.averageResponseTime}ms</span>
+      </div>
+    {/if}
   </div>
-  
+
   {#if mode === 'practice'}
     {#if isLoading}
-      <div class="loading" role="status" aria-live="polite">
+      <div class="loading" role="status" aria-live="polite" in:cardSlideAnimation>
         <div class="spinner" aria-hidden="true"></div>
         <p class="loading-text">Loading vocabulary...</p>
         <div class="progress-container">
@@ -189,7 +271,7 @@
         </div>
       </div>
     {:else if error}
-      <div class="error" role="alert">
+      <div class="error" role="alert" in:shakeAnimation>
         <div class="error-icon">⚠️</div>
         <h3 class="error-title">Loading Failed</h3>
         <p class="error-message">{error}</p>
@@ -203,24 +285,34 @@
         </div>
       </div>
     {:else if currentItem}
-      <div class="practice-card">
+      <div class="practice-card" in:cardSlideAnimation>
         <div class="question-section">
-          <div class="direction-indicator">
+          <div class="direction-indicator" in:fade>
             {direction === 'DE->BG' ? '🇩🇪 German → 🇧🇬 Bulgarian' : '🇧🇬 Bulgarian → 🇩🇪 German'}
           </div>
-          <h3 class="question-text">{getQuestionText()}</h3>
+          <h3 class="question-text" in:scale>{getQuestionText()}</h3>
           <div class="item-meta">
             <span class="category">{currentItem.category}</span>
             {#if currentItem.difficulty}
-              <span class="difficulty">Difficulty: {currentItem.difficulty}</span>
+              <span class="difficulty" style="color: {getDifficultyColor(currentItem.difficulty)}">
+                {currentItem.difficulty}
+              </span>
             {/if}
+            <button
+              class="favorite-btn"
+              onclick={toggleFavorite}
+              class:favorited={appState.isFavorite(currentItem.id)}
+              aria-label="Toggle favorite"
+            >
+              {appState.isFavorite(currentItem.id) ? '❤️' : '🤍'}
+            </button>
           </div>
         </div>
-        
+
         <div class="answer-section">
           {#if !isAnswered}
-            <div class="input-group">
-              <input 
+            <div class="input-group" in:fade>
+              <input
                 type="text"
                 bind:value={userAnswer}
                 placeholder="Type your answer here..."
@@ -230,17 +322,25 @@
                   }
                 }}
                 class="answer-input"
+                onfocus={() => isAnimating = true}
+                onblur={() => isAnimating = false}
               />
-              <button 
-                class="btn-primary" 
+              <button
+                class="btn-primary"
                 onclick={checkAnswer}
                 disabled={!userAnswer.trim()}
+                in:pulseAnimation
               >
                 Check Answer
               </button>
             </div>
           {:else}
-            <div class="feedback-section" class:correct={isCorrect} class:incorrect={!isCorrect} in:feedbackAnimation>
+            <div
+              class="feedback-section"
+              class:correct={isCorrect}
+              class:incorrect={!isCorrect}
+              in:feedbackAnimation
+            >
               <div class="feedback-icon">
                 {isCorrect ? '✅' : '❌'}
               </div>
@@ -251,25 +351,62 @@
                     <span class="response-time"> (Response time: {stats.lastResponseTime}ms)</span>
                   {/if}
                 </p>
+                {#if !isCorrect}
+                  <p class="hint-text">Your answer: "{userAnswer}"</p>
+                {/if}
               </div>
             </div>
-            
-            <div class="action-buttons">
-              <button class="btn-secondary" onclick={nextItem}>
+
+            <div class="action-buttons" in:fade>
+              <button class="btn-secondary" onclick={nextItem} in:pulseAnimation>
                 Next Word
               </button>
               <button class="btn-tertiary" onclick={toggleExamples}>
                 {showExamples ? 'Hide' : 'Show'} Examples
               </button>
+              <button
+                class="btn-favorite"
+                onclick={toggleFavorite}
+                class:favorited={appState.isFavorite(currentItem.id)}
+              >
+                {appState.isFavorite(currentItem.id) ? '❤️ Favorited' : '🤍 Favorite'}
+              </button>
             </div>
           {/if}
         </div>
-        
+
         {#if showExamples && currentItem.example}
-          <div class="examples-section">
+          <div class="examples-section" in:slide>
             <h4>Example:</h4>
             <div class="example">
               <p class="example-sentence">{currentItem.example}</p>
+            </div>
+          </div>
+        {/if}
+
+        <!-- Practice recommendations -->
+        {#if appState.practiceRecommendations.length > 0}
+          <div class="recommendations-section" in:fade>
+            <h4>Recommended for Practice:</h4>
+            <div class="recommendation-list">
+              {#each appState.practiceRecommendations.slice(0, 3) as item}
+                <div
+                  class="recommendation-item"
+                  onclick={() => practiceThisItem(item)}
+                  role="button"
+                  tabindex="0"
+                  onkeydown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      practiceThisItem(item);
+                    }
+                  }}
+                >
+                  <span class="rec-text">
+                    {direction === 'DE->BG' ? item.german : item.bulgarian}
+                  </span>
+                  <span class="rec-meta">{item.category}</span>
+                </div>
+              {/each}
             </div>
           </div>
         {/if}
@@ -283,7 +420,7 @@
           {direction === 'DE->BG' ? '🇩🇪 German → 🇧🇬 Bulgarian' : '🇧🇬 Bulgarian → 🇩🇪 German'}
         </div>
       </div>
-      
+
       <div class="search-input-group">
         <input
           type="text"
@@ -296,14 +433,15 @@
           {direction === 'DE->BG' ? 'German' : 'Bulgarian'} → {direction === 'DE->BG' ? 'Bulgarian' : 'German'}
         </div>
       </div>
-      
-      <SearchList 
+
+      <SearchList
         items={searchResults}
         {direction}
         onSelectItem={handleSelectItem}
       />
     </div>
   {/if}
+
 </div>
 
 <style>
@@ -656,6 +794,151 @@
       flex-direction: column;
       gap: 0.5rem;
       text-align: center;
+    }
+  }
+
+  /* Recommendations section */
+  .recommendations-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #dee2e6;
+  }
+
+  .recommendations-section h4 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .recommendation-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .recommendation-item {
+    flex: 1;
+    min-width: 200px;
+    padding: 1rem;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+  }
+
+  .recommendation-item:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .recommendation-item:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+  }
+
+  .rec-text {
+    display: block;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+
+  .rec-meta {
+    display: block;
+    font-size: 0.8rem;
+    color: #6c757d;
+  }
+
+  /* Enhanced mobile responsiveness */
+  @media (max-width: 768px) {
+    .app-title {
+      font-size: 1.5rem;
+    }
+    
+    .stats-bar {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    
+    .stat {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .stat-value {
+      font-size: 1.1rem;
+    }
+    
+    .question-text {
+      font-size: 2.2rem;
+    }
+
+    .practice-card {
+      padding: 1.5rem;
+    }
+    
+    .input-group {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .answer-input {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+    
+    .action-buttons {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .btn-primary, .btn-secondary, .btn-tertiary, .btn-favorite {
+      width: 100%;
+      padding: 1rem;
+    }
+    
+    .search-header {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+
+    .recommendation-list {
+      flex-direction: column;
+    }
+
+    .recommendation-item {
+      min-width: auto;
+    }
+
+    .item-meta {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .tandem-practice {
+      padding: 0.25rem;
+    }
+
+    .question-text {
+      font-size: 1.8rem;
+    }
+
+    .stats-bar {
+      padding: 0.75rem;
+    }
+
+    .practice-card {
+      padding: 1rem;
     }
   }
 </style>

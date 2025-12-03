@@ -83,12 +83,6 @@
         <div
           class="vocabulary-item"
           class:active={hoveredItemId === item.id}
-          onclick={() => handleItemClick(item)}
-          onkeydown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              handleItemClick(item);
-            }
-          }}
           onmouseenter={() => handleMouseEnter(item.id)}
           onmouseleave={handleMouseLeave}
           role="button"
@@ -101,12 +95,23 @@
               <span class="word">{getItemText(item)}</span>
               <span class="translation">{getItemTranslation(item)}</span>
             </div>
-            <div class="action-hint">
-              <span class="hint-text">Click to practice</span>
-              <span class="hint-icon">→</span>
+            <div class="action-buttons">
+              <button
+                class="practice-btn"
+                onclick={() => handleItemClick(item)}
+                onkeydown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    handleItemClick(item);
+                  }
+                }}
+                aria-label={`Practice ${getItemText(item)}`}
+              >
+                <span class="btn-icon">📝</span>
+                <span class="btn-text">Practice</span>
+              </button>
             </div>
           </div>
-          
+
           <div class="item-meta">
             <div class="meta-tags">
               {#if item.difficulty}
@@ -118,7 +123,7 @@
                   {item.difficulty}
                 </span>
               {/if}
-            
+
               <span class="category-tag" in:tagAnimation>
                 {item.category}
               </span>
@@ -126,7 +131,7 @@
               {#each item.tags || [] as tag}
                 <span class="category-tag">{tag}</span>
               {/each}
-            
+
               {#if showTooltips}
                 <div class="meta-tooltip">
                   <p><strong>Difficulty:</strong> {item.difficulty || 'N/A'}</p>
@@ -135,13 +140,13 @@
                 </div>
               {/if}
             </div>
-            
+
             <div class="stats">
               <span class="type">
                 <span class="stat-icon">{item.type === 'word' ? '📝' : '📋'}</span>
                 {item.type === 'word' ? 'Word' : 'Rule'}
               </span>
-            
+
               {#if showTooltips}
                 <div class="stats-tooltip">
                   <p><strong>Type:</strong> {item.type === 'word' ? 'Word' : 'Rule'}</p>
@@ -155,7 +160,7 @@
               {/if}
             </div>
           </div>
-          
+
           {#if item.example}
             <div class="examples-preview">
               <div class="example-item">

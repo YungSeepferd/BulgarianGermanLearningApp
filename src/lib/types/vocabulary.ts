@@ -92,6 +92,37 @@ export interface VocabularyItem {
    * Timestamp when the item was last updated
    */
   updated_at?: string;
+
+  // Enhanced fields for better performance and features
+  /**
+   * Search index for faster text searching (computed field)
+   */
+  searchIndex?: string;
+
+  /**
+   * Frequency ranking for practice prioritization
+   */
+  frequency?: number;
+
+  /**
+   * Related item IDs for contextual learning
+   */
+  relatedItems?: string[];
+
+  /**
+   * Audio pronunciation file path (optional)
+   */
+  audioPath?: string;
+
+  /**
+   * Image or visual aid path (optional)
+   */
+  imagePath?: string;
+
+  /**
+   * Learning context hints (optional)
+   */
+  contextHints?: string[];
 }
 
 // Type for filtered/searched vocabulary results
@@ -148,6 +179,111 @@ export interface PracticeSession {
    * Session ID for tracking
    */
   sessionId?: string;
+
+  // Enhanced session tracking
+  /**
+   * Session type for different practice modes
+   */
+  sessionType?: 'random' | 'category' | 'difficulty' | 'favorites' | 'recommended';
+
+  /**
+   * Filter criteria for the session
+   */
+  filters?: {
+    category?: string;
+    difficulty?: string;
+    tags?: string[];
+  };
+
+  /**
+   * Response times for each item (in milliseconds)
+   */
+  responseTimes?: number[];
+
+  /**
+   * Items that were marked as difficult during the session
+   */
+  difficultItems?: string[];
+
+  /**
+   * Session duration in milliseconds
+   */
+  duration?: number;
+}
+
+/**
+ * Enhanced user progress tracking
+ */
+export interface UserProgress {
+  /**
+   * Statistics for each vocabulary item
+   */
+  stats: Map<string, {
+    correct: number;
+    incorrect: number;
+    lastPracticed: string;
+    averageResponseTime?: number;
+    masteryLevel?: number;
+    streakCount?: number;
+  }>;
+
+  /**
+   * User's favorite vocabulary items
+   */
+  favorites: string[];
+
+  /**
+   * Recent search queries
+   */
+  recentSearches: string[];
+
+  /**
+   * Overall learning statistics
+   */
+  overallStats: {
+    totalPracticed: number;
+    totalCorrect: number;
+    averageAccuracy: number;
+    currentStreak: number;
+    longestStreak: number;
+    totalTimeSpent: number;
+    lastPracticeDate: string;
+  };
+
+  /**
+   * Learning goals and achievements
+   */
+  goals?: {
+    dailyTarget: number;
+    weeklyTarget: number;
+    currentStreak: number;
+    achievements: string[];
+  };
+}
+
+/**
+ * Practice recommendations based on user progress
+ */
+export interface PracticeRecommendation {
+  /**
+   * Recommended vocabulary items
+   */
+  items: VocabularyItem[];
+
+  /**
+   * Recommendation reason
+   */
+  reason: 'new' | 'struggling' | 'review' | 'streak' | 'balanced';
+
+  /**
+   * Priority score (higher = more important)
+   */
+  priority: number;
+
+  /**
+   * Estimated difficulty for this user
+   */
+  userDifficulty: 'easy' | 'medium' | 'hard';
 }
 
 // Type for global statistics from Supabase
