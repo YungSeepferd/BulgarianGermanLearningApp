@@ -69,6 +69,9 @@ describe('DataLoader', () => {
         dataLoader = DataLoader.getInstance();
         dataLoader.clearCache();
         
+        // Ensure the dataLoader uses our mocked fetch
+        dataLoader.setFetchFunction(fetch);
+        
         // Mock successful fetch by default
         vi.mocked(fetch).mockResolvedValue({
             ok: true,

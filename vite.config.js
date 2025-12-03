@@ -31,6 +31,11 @@ export default defineConfig({
     include: ['tests/unit/**/*.{test,spec}.{js,ts}'],
     // Use jsdom for component testing compatibility
     environment: 'jsdom',
+    environmentOptions: {
+        jsdom: {
+            url: 'http://localhost/'
+        }
+    },
     globals: true,
     // Ensure the testing environment is correctly set up
     setupFiles: ['tests/unit/setup.ts'],
