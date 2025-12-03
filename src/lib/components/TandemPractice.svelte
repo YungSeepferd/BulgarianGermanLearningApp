@@ -221,7 +221,7 @@
   loadNewItem();
 </script>
 
-<div class="tandem-practice" class:ci-mode={typeof process !== 'undefined' && process.env.PLAYWRIGHT_TEST_MODE === 'ci'}>
+<div class="tandem-practice" class:ci-mode={typeof process !== 'undefined' && process.env['PLAYWRIGHT_TEST_MODE'] === 'ci'}>
   <div class="header">
     <h2 class="app-title">
       <span class="title-icon">🔄</span>

@@ -51,7 +51,7 @@
   }
 </script>
 
-<div class="tandem-toggle" class:ci-mode={typeof process !== 'undefined' && process.env.PLAYWRIGHT_TEST_MODE === 'ci'}>
+<div class="tandem-toggle" class:ci-mode={typeof process !== 'undefined' && process.env['PLAYWRIGHT_TEST_MODE'] === 'ci'}>
   <div class="toggle-group">
     <div class="direction-toggle">
       <button
