@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { VocabularyItem } from '$lib/types/vocabulary.js';
-  import { fade } from 'svelte/transition';
 
   type Props = {
     item: VocabularyItem;

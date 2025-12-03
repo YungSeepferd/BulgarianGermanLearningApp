@@ -1,9 +1,7 @@
 import { browser } from '$app/environment';
-import { appState } from './app.svelte';
 
 const DAILY_XP_TARGET = 50;
 const XP_PER_WORD = 10;
-const XP_BONUS_STREAK = 5;
 
 export class LearningSession {
     // Session State

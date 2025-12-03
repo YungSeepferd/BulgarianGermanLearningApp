@@ -1,6 +1,4 @@
 <script lang="ts">
-  import TandemPractice from '$lib/components/TandemPractice.svelte';
-  
   // Using Svelte 5 features - reactive state
   let pageTitle = $state("Tandem Learning System");
   let pageDescription = $state("Learn Bulgarian and German together with instant direction switching");

@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { tweened } from 'svelte/motion';
   import { cubicOut } from 'svelte/easing';
-  import { fade, fly, scale } from 'svelte/transition';
+  import { fade, fly } from 'svelte/transition';
   import { DataLoader } from '$lib/data/loader.js';
   import { learningSession } from '$lib/state/session.svelte.js';
   import { fireConfetti } from '$lib/utils/confetti.js';
