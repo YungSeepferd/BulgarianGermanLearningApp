@@ -7,7 +7,7 @@
     onClose: () => void;
   };
 
-  let { currentLevel, onClose } = $props<Props>();
+  let { currentLevel, onClose } = $props();
   let isVisible = $state(true);
 
   function handleClose() {
@@ -35,8 +35,8 @@
 {#if isVisible}
   <div
     class="modal-overlay"
-    on:click={handleClose}
-    on:keydown={handleKeyDown}
+    onclick={handleClose}
+    onkeydown={handleKeyDown}
     tabindex="-1"
     aria-labelledby="level-up-title"
     aria-modal="true"
@@ -45,14 +45,14 @@
   >
     <div
       class="modal-content"
-      on:click|stopPropagation
+      onclick|stopPropagation
       role="document"
     >
       <div class="modal-header">
         <h2 id="level-up-title" class="modal-title">Level Up!</h2>
         <button
           class="close-button"
-          on:click={handleClose}
+          onclick={handleClose}
           aria-label="Close modal"
         >
           ✕
@@ -71,7 +71,7 @@
       <div class="modal-footer">
         <button
           class="continue-button"
-          on:click={handleClose}
+          onclick={handleClose}
         >
           Continue Learning
         </button>

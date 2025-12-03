@@ -964,10 +964,6 @@
     transition: none !important;
   }
 
-  .tandem-practice.ci-mode .direction-toggle,
-  .tandem-practice.ci-mode .mode-toggle {
-    animation: none !important;
-  }
 
   .tandem-practice.ci-mode .stat-value:hover {
     transform: none !important;
