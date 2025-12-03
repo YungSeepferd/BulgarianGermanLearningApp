@@ -1,245 +1,41 @@
-<testsuites id="" name="" tests="40" failures="26" skipped="0" errors="0" time="66.646053">
-<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:42:16.913Z" hostname="chromium" tests="8" failures="6" skipped="0" time="59.624" errors="0">
-<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="2.168">
+<testsuites id="" name="" tests="40" failures="10" skipped="0" errors="0" time="47.777562999999994">
+<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:46:47.119Z" hostname="chromium" tests="8" failures="2" skipped="0" time="36.277" errors="0">
+<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.155">
 </testcase>
-<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="2.196">
+<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.992">
 </testcase>
-<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="12.223">
-<failure message="practice.test.ts:33:3 should allow switching between practice and search modes" type="FAILURE">
-<![CDATA[  [chromium] › e2e/practice.test.ts:33:3 › Practice Interface › should allow switching between practice and search modes 
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.mode-btn:has-text("Search")')
-        - locator resolved to <button aria-live="polite" class="mode-btn s--Ia8dYDyB8bk" aria-label="Search mode. Click to switch to practice mode.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      38 |
-      39 |     // Switch to search mode with retry logic
-    > 40 |     await page.locator('.mode-btn:has-text("Search")').click({ timeout: 10000 });
-         |                                                        ^
-      41 |
-      42 |     // Verify search interface is displayed
-      43 |     await expect(page.locator('.search-section')).toBeVisible({ timeout: 10000 });
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:40:56
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-chromium/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-chromium/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-chromium/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-chromium/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-chromium/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-chromium/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="3.363">
 </testcase>
-<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="12.237">
-<failure message="practice.test.ts:52:3 should allow switching translation direction" type="FAILURE">
-<![CDATA[  [chromium] › e2e/practice.test.ts:52:3 › Practice Interface › should allow switching translation direction 
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.toggle-btn')
-        - locator resolved to <button aria-live="polite" class="toggle-btn s--Ia8dYDyB8bk" aria-label="Current direction: German to Bulgarian. Click to switch to Bulgarian to German.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      60 |
-      61 |     // Switch direction with retry logic
-    > 62 |     await page.locator('.toggle-btn').click({ timeout: 10000 });
-         |                                       ^
-      63 |
-      64 |     // Verify direction has changed
-      65 |     const newDirection = await page.locator('.direction-indicator').textContent();
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:62:39
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-41365-ching-translation-direction-chromium/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-41365-ching-translation-direction-chromium/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-41365-ching-translation-direction-chromium/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-41365-ching-translation-direction-chromium/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-41365-ching-translation-direction-chromium/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-41365-ching-translation-direction-chromium/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="2.683">
 </testcase>
-<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="10.248">
-<failure message="practice.test.ts:69:3 should display search results" type="FAILURE">
-<![CDATA[  [chromium] › e2e/practice.test.ts:69:3 › Practice Interface › should display search results ──────
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.mode-btn:has-text("Search")')
-        - locator resolved to <button aria-live="polite" class="mode-btn s--Ia8dYDyB8bk" aria-label="Search mode. Click to switch to practice mode.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      71 |
-      72 |     // Switch to search mode
-    > 73 |     await page.locator('.mode-btn:has-text("Search")').click({ timeout: 10000 });
-         |                                                        ^
-      74 |
-      75 |     // Type a search query
-      76 |     await page.locator('.search-input').fill('Hallo');
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:73:56
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-d4acd-ould-display-search-results-chromium/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-d4acd-ould-display-search-results-chromium/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-d4acd-ould-display-search-results-chromium/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-d4acd-ould-display-search-results-chromium/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-d4acd-ould-display-search-results-chromium/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-d4acd-ould-display-search-results-chromium/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="3.447">
 </testcase>
-<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="10.162">
-<failure message="practice.test.ts:88:3 should navigate to practice mode when selecting an item" type="FAILURE">
-<![CDATA[  [chromium] › e2e/practice.test.ts:88:3 › Practice Interface › should navigate to practice mode when selecting an item 
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.mode-btn:has-text("Search")')
-        - locator resolved to <button aria-live="polite" class="mode-btn s--Ia8dYDyB8bk" aria-label="Search mode. Click to switch to practice mode.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      90 |
-      91 |     // Switch to search mode
-    > 92 |     await page.locator('.mode-btn:has-text("Search")').click({ timeout: 10000 });
-         |                                                        ^
-      93 |
-      94 |     // Type a search query
-      95 |     await page.locator('.search-input').fill('Hallo');
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:92:56
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-chromium/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-chromium/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-chromium/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-chromium/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-chromium/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-chromium/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="3.277">
 </testcase>
-<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="5.18">
-<failure message="practice.test.ts:116:3 should show error message when loading fails" type="FAILURE">
-<![CDATA[  [chromium] › e2e/practice.test.ts:116:3 › Practice Interface › should show error message when loading fails 
+<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="10.187">
+<failure message="practice.test.ts:138:3 should show error message when loading fails" type="FAILURE">
+<![CDATA[  [chromium] › e2e/practice.test.ts:138:3 › Practice Interface › should show error message when loading fails 
 
     Error: expect(locator).toBeVisible() failed
 
     Locator: locator('.error')
     Expected: visible
-    Timeout: 5000ms
+    Timeout: 10000ms
     Error: element(s) not found
 
     Call log:
-      - Expect "toBeVisible" with timeout 5000ms
+      - Expect "toBeVisible" with timeout 10000ms
       - waiting for locator('.error')
 
 
-      127 |
-      128 |     // Verify error message is displayed
-    > 129 |     await expect(page.locator('.error')).toBeVisible();
+      149 |
+      150 |     // Wait for error to appear with longer timeout
+    > 151 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      130 |     await expect(page.locator('.error p')).toContainText('Failed to load vocabulary');
-      131 |   });
-      132 |
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:129:42
+      152 |     await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
+      153 |   });
+      154 |
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-d5336--message-when-loading-fails-chromium/test-failed-1.png
@@ -262,30 +58,30 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="5.21">
-<failure message="practice.test.ts:133:3 should allow retry when loading fails" type="FAILURE">
-<![CDATA[  [chromium] › e2e/practice.test.ts:133:3 › Practice Interface › should allow retry when loading fails 
+<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="10.173">
+<failure message="practice.test.ts:155:3 should allow retry when loading fails" type="FAILURE">
+<![CDATA[  [chromium] › e2e/practice.test.ts:155:3 › Practice Interface › should allow retry when loading fails 
 
     Error: expect(locator).toBeVisible() failed
 
     Locator: locator('.error')
     Expected: visible
-    Timeout: 5000ms
+    Timeout: 10000ms
     Error: element(s) not found
 
     Call log:
-      - Expect "toBeVisible" with timeout 5000ms
+      - Expect "toBeVisible" with timeout 10000ms
       - waiting for locator('.error')
 
 
-      149 |
-      150 |     // Verify error message is displayed
-    > 151 |     await expect(page.locator('.error')).toBeVisible();
+      171 |
+      172 |     // Wait for error to appear with longer timeout
+    > 173 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      152 |
-      153 |     // Click retry button
-      154 |     await page.locator('.btn-primary').click();
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42
+      174 |
+      175 |     // Click retry button with force option
+      176 |     await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-2618f-ow-retry-when-loading-fails-chromium/test-failed-1.png
@@ -309,43 +105,43 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:42:16.913Z" hostname="firefox" tests="8" failures="2" skipped="0" time="40.938" errors="0">
-<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.544">
+<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:46:47.119Z" hostname="firefox" tests="8" failures="2" skipped="0" time="38.454" errors="0">
+<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="2.272">
 </testcase>
-<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.773">
+<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.816">
 </testcase>
-<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="9.016">
+<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="3.605">
 </testcase>
-<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="11.971">
+<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="2.888">
 </testcase>
-<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="2.488">
+<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="3.651">
 </testcase>
-<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="2.841">
+<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="3.429">
 </testcase>
-<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="5.693">
-<failure message="practice.test.ts:116:3 should show error message when loading fails" type="FAILURE">
-<![CDATA[  [firefox] › e2e/practice.test.ts:116:3 › Practice Interface › should show error message when loading fails 
+<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="10.376">
+<failure message="practice.test.ts:138:3 should show error message when loading fails" type="FAILURE">
+<![CDATA[  [firefox] › e2e/practice.test.ts:138:3 › Practice Interface › should show error message when loading fails 
 
     Error: expect(locator).toBeVisible() failed
 
     Locator: locator('.error')
     Expected: visible
-    Timeout: 5000ms
+    Timeout: 10000ms
     Error: element(s) not found
 
     Call log:
-      - Expect "toBeVisible" with timeout 5000ms
+      - Expect "toBeVisible" with timeout 10000ms
       - waiting for locator('.error')
 
 
-      127 |
-      128 |     // Verify error message is displayed
-    > 129 |     await expect(page.locator('.error')).toBeVisible();
+      149 |
+      150 |     // Wait for error to appear with longer timeout
+    > 151 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      130 |     await expect(page.locator('.error p')).toContainText('Failed to load vocabulary');
-      131 |   });
-      132 |
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:129:42
+      152 |     await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
+      153 |   });
+      154 |
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-d5336--message-when-loading-fails-firefox/test-failed-1.png
@@ -368,30 +164,30 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="5.612">
-<failure message="practice.test.ts:133:3 should allow retry when loading fails" type="FAILURE">
-<![CDATA[  [firefox] › e2e/practice.test.ts:133:3 › Practice Interface › should allow retry when loading fails 
+<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="10.417">
+<failure message="practice.test.ts:155:3 should allow retry when loading fails" type="FAILURE">
+<![CDATA[  [firefox] › e2e/practice.test.ts:155:3 › Practice Interface › should allow retry when loading fails 
 
     Error: expect(locator).toBeVisible() failed
 
     Locator: locator('.error')
     Expected: visible
-    Timeout: 5000ms
+    Timeout: 10000ms
     Error: element(s) not found
 
     Call log:
-      - Expect "toBeVisible" with timeout 5000ms
+      - Expect "toBeVisible" with timeout 10000ms
       - waiting for locator('.error')
 
 
-      149 |
-      150 |     // Verify error message is displayed
-    > 151 |     await expect(page.locator('.error')).toBeVisible();
+      171 |
+      172 |     // Wait for error to appear with longer timeout
+    > 173 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      152 |
-      153 |     // Click retry button
-      154 |     await page.locator('.btn-primary').click();
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42
+      174 |
+      175 |     // Click retry button with force option
+      176 |     await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-2618f-ow-retry-when-loading-fails-firefox/test-failed-1.png
@@ -415,247 +211,43 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:42:16.913Z" hostname="webkit" tests="8" failures="6" skipped="0" time="58.423" errors="0">
-<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.815">
+<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:46:47.119Z" hostname="webkit" tests="8" failures="2" skipped="0" time="36.879" errors="0">
+<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.832">
 </testcase>
-<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.23">
+<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.577">
 </testcase>
-<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="11.175">
-<failure message="practice.test.ts:33:3 should allow switching between practice and search modes" type="FAILURE">
-<![CDATA[  [webkit] › e2e/practice.test.ts:33:3 › Practice Interface › should allow switching between practice and search modes 
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.mode-btn:has-text("Search")')
-        - locator resolved to <button aria-live="polite" class="mode-btn s--Ia8dYDyB8bk" aria-label="Search mode. Click to switch to practice mode.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      38 |
-      39 |     // Switch to search mode with retry logic
-    > 40 |     await page.locator('.mode-btn:has-text("Search")').click({ timeout: 10000 });
-         |                                                        ^
-      41 |
-      42 |     // Verify search interface is displayed
-      43 |     await expect(page.locator('.search-section')).toBeVisible({ timeout: 10000 });
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:40:56
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-webkit/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-webkit/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-webkit/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-webkit/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-webkit/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-webkit/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="3.564">
 </testcase>
-<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="11.66">
-<failure message="practice.test.ts:52:3 should allow switching translation direction" type="FAILURE">
-<![CDATA[  [webkit] › e2e/practice.test.ts:52:3 › Practice Interface › should allow switching translation direction 
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.toggle-btn')
-        - locator resolved to <button aria-live="polite" class="toggle-btn s--Ia8dYDyB8bk" aria-label="Current direction: German to Bulgarian. Click to switch to Bulgarian to German.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      60 |
-      61 |     // Switch direction with retry logic
-    > 62 |     await page.locator('.toggle-btn').click({ timeout: 10000 });
-         |                                       ^
-      63 |
-      64 |     // Verify direction has changed
-      65 |     const newDirection = await page.locator('.direction-indicator').textContent();
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:62:39
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-41365-ching-translation-direction-webkit/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-41365-ching-translation-direction-webkit/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-41365-ching-translation-direction-webkit/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-41365-ching-translation-direction-webkit/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-41365-ching-translation-direction-webkit/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-41365-ching-translation-direction-webkit/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="2.704">
 </testcase>
-<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="10.626">
-<failure message="practice.test.ts:69:3 should display search results" type="FAILURE">
-<![CDATA[  [webkit] › e2e/practice.test.ts:69:3 › Practice Interface › should display search results ────────
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.mode-btn:has-text("Search")')
-        - locator resolved to <button aria-live="polite" class="mode-btn s--Ia8dYDyB8bk" aria-label="Search mode. Click to switch to practice mode.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      71 |
-      72 |     // Switch to search mode
-    > 73 |     await page.locator('.mode-btn:has-text("Search")').click({ timeout: 10000 });
-         |                                                        ^
-      74 |
-      75 |     // Type a search query
-      76 |     await page.locator('.search-input').fill('Hallo');
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:73:56
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-d4acd-ould-display-search-results-webkit/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-d4acd-ould-display-search-results-webkit/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-d4acd-ould-display-search-results-webkit/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-d4acd-ould-display-search-results-webkit/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-d4acd-ould-display-search-results-webkit/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-d4acd-ould-display-search-results-webkit/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="3.282">
 </testcase>
-<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="10.589">
-<failure message="practice.test.ts:88:3 should navigate to practice mode when selecting an item" type="FAILURE">
-<![CDATA[  [webkit] › e2e/practice.test.ts:88:3 › Practice Interface › should navigate to practice mode when selecting an item 
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.mode-btn:has-text("Search")')
-        - locator resolved to <button aria-live="polite" class="mode-btn s--Ia8dYDyB8bk" aria-label="Search mode. Click to switch to practice mode.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      90 |
-      91 |     // Switch to search mode
-    > 92 |     await page.locator('.mode-btn:has-text("Search")').click({ timeout: 10000 });
-         |                                                        ^
-      93 |
-      94 |     // Type a search query
-      95 |     await page.locator('.search-input').fill('Hallo');
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:92:56
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-webkit/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-webkit/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-webkit/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-webkit/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-webkit/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-webkit/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="3.329">
 </testcase>
-<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="5.601">
-<failure message="practice.test.ts:116:3 should show error message when loading fails" type="FAILURE">
-<![CDATA[  [webkit] › e2e/practice.test.ts:116:3 › Practice Interface › should show error message when loading fails 
+<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="10.284">
+<failure message="practice.test.ts:138:3 should show error message when loading fails" type="FAILURE">
+<![CDATA[  [webkit] › e2e/practice.test.ts:138:3 › Practice Interface › should show error message when loading fails 
 
     Error: expect(locator).toBeVisible() failed
 
     Locator: locator('.error')
     Expected: visible
-    Timeout: 5000ms
+    Timeout: 10000ms
     Error: element(s) not found
 
     Call log:
-      - Expect "toBeVisible" with timeout 5000ms
+      - Expect "toBeVisible" with timeout 10000ms
       - waiting for locator('.error')
 
 
-      127 |
-      128 |     // Verify error message is displayed
-    > 129 |     await expect(page.locator('.error')).toBeVisible();
+      149 |
+      150 |     // Wait for error to appear with longer timeout
+    > 151 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      130 |     await expect(page.locator('.error p')).toContainText('Failed to load vocabulary');
-      131 |   });
-      132 |
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:129:42
+      152 |     await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
+      153 |   });
+      154 |
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-d5336--message-when-loading-fails-webkit/test-failed-1.png
@@ -678,30 +270,30 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="5.727">
-<failure message="practice.test.ts:133:3 should allow retry when loading fails" type="FAILURE">
-<![CDATA[  [webkit] › e2e/practice.test.ts:133:3 › Practice Interface › should allow retry when loading fails 
+<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="10.307">
+<failure message="practice.test.ts:155:3 should allow retry when loading fails" type="FAILURE">
+<![CDATA[  [webkit] › e2e/practice.test.ts:155:3 › Practice Interface › should allow retry when loading fails 
 
     Error: expect(locator).toBeVisible() failed
 
     Locator: locator('.error')
     Expected: visible
-    Timeout: 5000ms
+    Timeout: 10000ms
     Error: element(s) not found
 
     Call log:
-      - Expect "toBeVisible" with timeout 5000ms
+      - Expect "toBeVisible" with timeout 10000ms
       - waiting for locator('.error')
 
 
-      149 |
-      150 |     // Verify error message is displayed
-    > 151 |     await expect(page.locator('.error')).toBeVisible();
+      171 |
+      172 |     // Wait for error to appear with longer timeout
+    > 173 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      152 |
-      153 |     // Click retry button
-      154 |     await page.locator('.btn-primary').click();
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42
+      174 |
+      175 |     // Click retry button with force option
+      176 |     await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-2618f-ow-retry-when-loading-fails-webkit/test-failed-1.png
@@ -725,247 +317,43 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:42:16.913Z" hostname="Mobile Chrome" tests="8" failures="6" skipped="0" time="55.636" errors="0">
-<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.266">
+<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:46:47.119Z" hostname="Mobile Chrome" tests="8" failures="2" skipped="0" time="34.621" errors="0">
+<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.144">
 </testcase>
-<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.257">
+<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.225">
 </testcase>
-<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="11.155">
-<failure message="practice.test.ts:33:3 should allow switching between practice and search modes" type="FAILURE">
-<![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:33:3 › Practice Interface › should allow switching between practice and search modes 
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.mode-btn:has-text("Search")')
-        - locator resolved to <button aria-live="polite" class="mode-btn s--Ia8dYDyB8bk" aria-label="Search mode. Click to switch to practice mode.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      38 |
-      39 |     // Switch to search mode with retry logic
-    > 40 |     await page.locator('.mode-btn:has-text("Search")').click({ timeout: 10000 });
-         |                                                        ^
-      41 |
-      42 |     // Verify search interface is displayed
-      43 |     await expect(page.locator('.search-section')).toBeVisible({ timeout: 10000 });
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:40:56
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-Mobile-Chrome/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-Mobile-Chrome/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-Mobile-Chrome/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-Mobile-Chrome/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-Mobile-Chrome/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-Mobile-Chrome/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="2.667">
 </testcase>
-<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="11.085">
-<failure message="practice.test.ts:52:3 should allow switching translation direction" type="FAILURE">
-<![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:52:3 › Practice Interface › should allow switching translation direction 
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.toggle-btn')
-        - locator resolved to <button aria-live="polite" class="toggle-btn s--Ia8dYDyB8bk" aria-label="Current direction: German to Bulgarian. Click to switch to Bulgarian to German.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      60 |
-      61 |     // Switch direction with retry logic
-    > 62 |     await page.locator('.toggle-btn').click({ timeout: 10000 });
-         |                                       ^
-      63 |
-      64 |     // Verify direction has changed
-      65 |     const newDirection = await page.locator('.direction-indicator').textContent();
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:62:39
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-41365-ching-translation-direction-Mobile-Chrome/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-41365-ching-translation-direction-Mobile-Chrome/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-41365-ching-translation-direction-Mobile-Chrome/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-41365-ching-translation-direction-Mobile-Chrome/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-41365-ching-translation-direction-Mobile-Chrome/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-41365-ching-translation-direction-Mobile-Chrome/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="2.638">
 </testcase>
-<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="10.185">
-<failure message="practice.test.ts:69:3 should display search results" type="FAILURE">
-<![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:69:3 › Practice Interface › should display search results ─
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.mode-btn:has-text("Search")')
-        - locator resolved to <button aria-live="polite" class="mode-btn s--Ia8dYDyB8bk" aria-label="Search mode. Click to switch to practice mode.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      71 |
-      72 |     // Switch to search mode
-    > 73 |     await page.locator('.mode-btn:has-text("Search")').click({ timeout: 10000 });
-         |                                                        ^
-      74 |
-      75 |     // Type a search query
-      76 |     await page.locator('.search-input').fill('Hallo');
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:73:56
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-d4acd-ould-display-search-results-Mobile-Chrome/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-d4acd-ould-display-search-results-Mobile-Chrome/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-d4acd-ould-display-search-results-Mobile-Chrome/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-d4acd-ould-display-search-results-Mobile-Chrome/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-d4acd-ould-display-search-results-Mobile-Chrome/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-d4acd-ould-display-search-results-Mobile-Chrome/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="3.26">
 </testcase>
-<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="10.256">
-<failure message="practice.test.ts:88:3 should navigate to practice mode when selecting an item" type="FAILURE">
-<![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:88:3 › Practice Interface › should navigate to practice mode when selecting an item 
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.mode-btn:has-text("Search")')
-        - locator resolved to <button aria-live="polite" class="mode-btn s--Ia8dYDyB8bk" aria-label="Search mode. Click to switch to practice mode.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      90 |
-      91 |     // Switch to search mode
-    > 92 |     await page.locator('.mode-btn:has-text("Search")').click({ timeout: 10000 });
-         |                                                        ^
-      93 |
-      94 |     // Type a search query
-      95 |     await page.locator('.search-input').fill('Hallo');
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:92:56
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-Mobile-Chrome/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-Mobile-Chrome/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-Mobile-Chrome/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-Mobile-Chrome/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-Mobile-Chrome/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-Mobile-Chrome/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="3.293">
 </testcase>
-<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="5.219">
-<failure message="practice.test.ts:116:3 should show error message when loading fails" type="FAILURE">
-<![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:116:3 › Practice Interface › should show error message when loading fails 
+<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="10.185">
+<failure message="practice.test.ts:138:3 should show error message when loading fails" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:138:3 › Practice Interface › should show error message when loading fails 
 
     Error: expect(locator).toBeVisible() failed
 
     Locator: locator('.error')
     Expected: visible
-    Timeout: 5000ms
+    Timeout: 10000ms
     Error: element(s) not found
 
     Call log:
-      - Expect "toBeVisible" with timeout 5000ms
+      - Expect "toBeVisible" with timeout 10000ms
       - waiting for locator('.error')
 
 
-      127 |
-      128 |     // Verify error message is displayed
-    > 129 |     await expect(page.locator('.error')).toBeVisible();
+      149 |
+      150 |     // Wait for error to appear with longer timeout
+    > 151 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      130 |     await expect(page.locator('.error p')).toContainText('Failed to load vocabulary');
-      131 |   });
-      132 |
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:129:42
+      152 |     await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
+      153 |   });
+      154 |
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-d5336--message-when-loading-fails-Mobile-Chrome/test-failed-1.png
@@ -988,30 +376,30 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="5.213">
-<failure message="practice.test.ts:133:3 should allow retry when loading fails" type="FAILURE">
-<![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:133:3 › Practice Interface › should allow retry when loading fails 
+<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="10.209">
+<failure message="practice.test.ts:155:3 should allow retry when loading fails" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:155:3 › Practice Interface › should allow retry when loading fails 
 
     Error: expect(locator).toBeVisible() failed
 
     Locator: locator('.error')
     Expected: visible
-    Timeout: 5000ms
+    Timeout: 10000ms
     Error: element(s) not found
 
     Call log:
-      - Expect "toBeVisible" with timeout 5000ms
+      - Expect "toBeVisible" with timeout 10000ms
       - waiting for locator('.error')
 
 
-      149 |
-      150 |     // Verify error message is displayed
-    > 151 |     await expect(page.locator('.error')).toBeVisible();
+      171 |
+      172 |     // Wait for error to appear with longer timeout
+    > 173 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      152 |
-      153 |     // Click retry button
-      154 |     await page.locator('.btn-primary').click();
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42
+      174 |
+      175 |     // Click retry button with force option
+      176 |     await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-2618f-ow-retry-when-loading-fails-Mobile-Chrome/test-failed-1.png
@@ -1035,247 +423,43 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:42:16.913Z" hostname="Mobile Safari" tests="8" failures="6" skipped="0" time="57.954" errors="0">
-<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.517">
+<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:46:47.119Z" hostname="Mobile Safari" tests="8" failures="2" skipped="0" time="36.656" errors="0">
+<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.535">
 </testcase>
-<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.618">
+<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.611">
 </testcase>
-<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="11.538">
-<failure message="practice.test.ts:33:3 should allow switching between practice and search modes" type="FAILURE">
-<![CDATA[  [Mobile Safari] › e2e/practice.test.ts:33:3 › Practice Interface › should allow switching between practice and search modes 
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.mode-btn:has-text("Search")')
-        - locator resolved to <button aria-live="polite" class="mode-btn s--Ia8dYDyB8bk" aria-label="Search mode. Click to switch to practice mode.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      38 |
-      39 |     // Switch to search mode with retry logic
-    > 40 |     await page.locator('.mode-btn:has-text("Search")').click({ timeout: 10000 });
-         |                                                        ^
-      41 |
-      42 |     // Verify search interface is displayed
-      43 |     await expect(page.locator('.search-section')).toBeVisible({ timeout: 10000 });
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:40:56
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-Mobile-Safari/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-Mobile-Safari/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-Mobile-Safari/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-Mobile-Safari/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-Mobile-Safari/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-fff88-n-practice-and-search-modes-Mobile-Safari/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="3.59">
 </testcase>
-<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="11.524">
-<failure message="practice.test.ts:52:3 should allow switching translation direction" type="FAILURE">
-<![CDATA[  [Mobile Safari] › e2e/practice.test.ts:52:3 › Practice Interface › should allow switching translation direction 
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.toggle-btn')
-        - locator resolved to <button aria-live="polite" class="toggle-btn s--Ia8dYDyB8bk" aria-label="Current direction: German to Bulgarian. Click to switch to Bulgarian to German.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      60 |
-      61 |     // Switch direction with retry logic
-    > 62 |     await page.locator('.toggle-btn').click({ timeout: 10000 });
-         |                                       ^
-      63 |
-      64 |     // Verify direction has changed
-      65 |     const newDirection = await page.locator('.direction-indicator').textContent();
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:62:39
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-41365-ching-translation-direction-Mobile-Safari/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-41365-ching-translation-direction-Mobile-Safari/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-41365-ching-translation-direction-Mobile-Safari/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-41365-ching-translation-direction-Mobile-Safari/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-41365-ching-translation-direction-Mobile-Safari/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-41365-ching-translation-direction-Mobile-Safari/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="2.699">
 </testcase>
-<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="10.292">
-<failure message="practice.test.ts:69:3 should display search results" type="FAILURE">
-<![CDATA[  [Mobile Safari] › e2e/practice.test.ts:69:3 › Practice Interface › should display search results ─
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.mode-btn:has-text("Search")')
-        - locator resolved to <button aria-live="polite" class="mode-btn s--Ia8dYDyB8bk" aria-label="Search mode. Click to switch to practice mode.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      71 |
-      72 |     // Switch to search mode
-    > 73 |     await page.locator('.mode-btn:has-text("Search")').click({ timeout: 10000 });
-         |                                                        ^
-      74 |
-      75 |     // Type a search query
-      76 |     await page.locator('.search-input').fill('Hallo');
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:73:56
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-d4acd-ould-display-search-results-Mobile-Safari/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-d4acd-ould-display-search-results-Mobile-Safari/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-d4acd-ould-display-search-results-Mobile-Safari/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-d4acd-ould-display-search-results-Mobile-Safari/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-d4acd-ould-display-search-results-Mobile-Safari/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-d4acd-ould-display-search-results-Mobile-Safari/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="3.325">
 </testcase>
-<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="10.298">
-<failure message="practice.test.ts:88:3 should navigate to practice mode when selecting an item" type="FAILURE">
-<![CDATA[  [Mobile Safari] › e2e/practice.test.ts:88:3 › Practice Interface › should navigate to practice mode when selecting an item 
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.mode-btn:has-text("Search")')
-        - locator resolved to <button aria-live="polite" class="mode-btn s--Ia8dYDyB8bk" aria-label="Search mode. Click to switch to practice mode.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      90 |
-      91 |     // Switch to search mode
-    > 92 |     await page.locator('.mode-btn:has-text("Search")').click({ timeout: 10000 });
-         |                                                        ^
-      93 |
-      94 |     // Type a search query
-      95 |     await page.locator('.search-input').fill('Hallo');
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:92:56
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-Mobile-Safari/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-Mobile-Safari/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-Mobile-Safari/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-Mobile-Safari/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-Mobile-Safari/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-c3b63-mode-when-selecting-an-item-Mobile-Safari/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="3.299">
 </testcase>
-<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="5.569">
-<failure message="practice.test.ts:116:3 should show error message when loading fails" type="FAILURE">
-<![CDATA[  [Mobile Safari] › e2e/practice.test.ts:116:3 › Practice Interface › should show error message when loading fails 
+<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="10.292">
+<failure message="practice.test.ts:138:3 should show error message when loading fails" type="FAILURE">
+<![CDATA[  [Mobile Safari] › e2e/practice.test.ts:138:3 › Practice Interface › should show error message when loading fails 
 
     Error: expect(locator).toBeVisible() failed
 
     Locator: locator('.error')
     Expected: visible
-    Timeout: 5000ms
+    Timeout: 10000ms
     Error: element(s) not found
 
     Call log:
-      - Expect "toBeVisible" with timeout 5000ms
+      - Expect "toBeVisible" with timeout 10000ms
       - waiting for locator('.error')
 
 
-      127 |
-      128 |     // Verify error message is displayed
-    > 129 |     await expect(page.locator('.error')).toBeVisible();
+      149 |
+      150 |     // Wait for error to appear with longer timeout
+    > 151 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      130 |     await expect(page.locator('.error p')).toContainText('Failed to load vocabulary');
-      131 |   });
-      132 |
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:129:42
+      152 |     await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
+      153 |   });
+      154 |
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-d5336--message-when-loading-fails-Mobile-Safari/test-failed-1.png
@@ -1298,30 +482,30 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="5.598">
-<failure message="practice.test.ts:133:3 should allow retry when loading fails" type="FAILURE">
-<![CDATA[  [Mobile Safari] › e2e/practice.test.ts:133:3 › Practice Interface › should allow retry when loading fails 
+<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="10.305">
+<failure message="practice.test.ts:155:3 should allow retry when loading fails" type="FAILURE">
+<![CDATA[  [Mobile Safari] › e2e/practice.test.ts:155:3 › Practice Interface › should allow retry when loading fails 
 
     Error: expect(locator).toBeVisible() failed
 
     Locator: locator('.error')
     Expected: visible
-    Timeout: 5000ms
+    Timeout: 10000ms
     Error: element(s) not found
 
     Call log:
-      - Expect "toBeVisible" with timeout 5000ms
+      - Expect "toBeVisible" with timeout 10000ms
       - waiting for locator('.error')
 
 
-      149 |
-      150 |     // Verify error message is displayed
-    > 151 |     await expect(page.locator('.error')).toBeVisible();
+      171 |
+      172 |     // Wait for error to appear with longer timeout
+    > 173 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      152 |
-      153 |     // Click retry button
-      154 |     await page.locator('.btn-primary').click();
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42
+      174 |
+      175 |     // Click retry button with force option
+      176 |     await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-2618f-ow-retry-when-loading-fails-Mobile-Safari/test-failed-1.png
