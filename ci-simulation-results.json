@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-03T12:49:32.035Z",
+  "timestamp": "2025-12-03T12:50:39.688Z",
   "status": "failed",
   "steps": [
     {
@@ -12,8 +12,12 @@
     },
     {
       "name": "type-check",
+      "status": "passed"
+    },
+    {
+      "name": "unit-tests",
       "status": "failed",
-      "error": "Command failed: pnpm run check"
+      "error": "Command failed: pnpm run test:unit"
     }
   ]
 }

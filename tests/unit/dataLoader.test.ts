@@ -23,7 +23,8 @@ const mockVocabulary: VocabularyItem[] = [
         category: 'Greetings',
         tags: ['A1'],
         type: 'word',
-        level: 'A1'
+        level: 'A1',
+        xp_value: 10
     },
     {
         id: 'test_002',
@@ -32,7 +33,8 @@ const mockVocabulary: VocabularyItem[] = [
         category: 'Greetings',
         tags: ['A1'],
         type: 'word',
-        level: 'A1'
+        level: 'A1',
+        xp_value: 10
     }
 ];
 
