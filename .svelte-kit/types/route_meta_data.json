@@ -1,7 +1,18 @@
 {
-	"/": [],
-	"/grammar": [],
-	"/learn": [],
-	"/practice": [],
-	"/vocabulary": []
+	"/": [
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/grammar": [
+		"src/routes/+layout.ts"
+	],
+	"/learn": [
+		"src/routes/+layout.ts"
+	],
+	"/practice": [
+		"src/routes/+layout.ts"
+	],
+	"/vocabulary": [
+		"src/routes/+layout.ts"
+	]
 }

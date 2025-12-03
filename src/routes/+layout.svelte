@@ -1,12 +1,9 @@
-<script>
-  // Layout component for SvelteKit
-  // This provides the basic layout structure for all pages
-  
-  let { children } = $props();
+<script lang="ts">
+	 let { children } = $props();
 </script>
 
 <main>
-  {@render children()}
+	 {@render children()}
 </main>
 
 <style>
