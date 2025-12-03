@@ -1,55 +1,111 @@
 // CI Simulation Script for Bulgarian-German Learning App
-import { execSync } from 'child_process';
+import { execSync, spawn } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 
 console.log('🚀 Starting CI Simulation...');
 
-// 1. Install dependencies
-console.log('\n📦 Installing dependencies...');
-execSync('pnpm install --frozen-lockfile', { stdio: 'inherit' });
-
-// 2. Run linter
-console.log('\n🧹 Running linter...');
-execSync('pnpm run lint', { stdio: 'inherit' });
-
-// 3. Run type checking
-console.log('\n🔍 Running type checking...');
-execSync('pnpm run check', { stdio: 'inherit' });
-
-// 4. Run unit tests
-console.log('\n✅ Running unit tests...');
-execSync('pnpm run test:unit', { stdio: 'inherit' });
-
-// 5. Build application
-console.log('\n🏗️ Building application...');
-execSync('pnpm run build', { stdio: 'inherit' });
-
-// 6. Run Playwright tests
-console.log('\n🎭 Running Playwright tests...');
-execSync('pnpm run test:e2e', { stdio: 'inherit' });
-
-// 7. Run accessibility tests
-console.log('\n🦝 Running accessibility tests...');
-execSync('pnpm run test:accessibility', { stdio: 'inherit' });
-
-// 8. Save simulation results
+// Track results for each step
 const results = {
   timestamp: new Date().toISOString(),
   status: 'success',
-  steps: [
-    { name: 'dependencies', status: 'passed' },
-    { name: 'lint', status: 'passed' },
-    { name: 'type-check', status: 'passed' },
-    { name: 'unit-tests', status: 'passed' },
-    { name: 'build', status: 'passed' },
-    { name: 'e2e-tests', status: 'passed' },
-    { name: 'accessibility-tests', status: 'passed' }
-  ]
+  steps: []
 };
 
-const resultsPath = new URL('../ci-simulation-results.json', import.meta.url).pathname;
-fs.writeFileSync(resultsPath, JSON.stringify(results, null, 2));
+function runStep(name, command, options = { stdio: 'inherit' }) {
+  console.log(`\n📋 Running ${name}...`);
+  try {
+    execSync(command, options);
+    results.steps.push({ name, status: 'passed' });
+    console.log(`✅ ${name} completed successfully`);
+    return true;
+  } catch (error) {
+    results.steps.push({ name, status: 'failed', error: error.message });
+    console.error(`❌ ${name} failed:`, error.message);
+    return false;
+  }
+}
 
-console.log('\n✅ CI Simulation completed successfully!');
-console.log(`Results saved to ${resultsPath}`);
+// 1. Install dependencies
+if (!runStep('dependencies', 'pnpm install --frozen-lockfile')) {
+  results.status = 'failed';
+  saveResults();
+  process.exit(1);
+}
+
+// 2. Run linter
+if (!runStep('lint', 'pnpm run lint')) {
+  results.status = 'failed';
+  saveResults();
+  process.exit(1);
+}
+
+// 3. Run type checking
+if (!runStep('type-check', 'pnpm run check')) {
+  results.status = 'failed';
+  saveResults();
+  process.exit(1);
+}
+
+// 4. Run unit tests
+if (!runStep('unit-tests', 'pnpm run test:unit')) {
+  results.status = 'failed';
+  saveResults();
+  process.exit(1);
+}
+
+// 5. Build application
+if (!runStep('build', 'pnpm run build')) {
+  results.status = 'failed';
+  saveResults();
+  process.exit(1);
+}
+
+// 6. Run Playwright tests with server management
+console.log('\n🎭 Running Playwright tests...');
+try {
+  // Start the dev server in the background
+  const server = spawn('pnpm', ['run', 'dev'], {
+    stdio: 'pipe',
+    detached: true
+  });
+
+  // Wait for server to start
+  await new Promise(resolve => setTimeout(resolve, 5000));
+
+  // Run Playwright tests
+  execSync('pnpm run test:e2e', { stdio: 'inherit' });
+  results.steps.push({ name: 'e2e-tests', status: 'passed' });
+  console.log('✅ E2E tests completed successfully');
+
+  // Kill the server
+  process.kill(-server.pid);
+} catch (error) {
+  results.steps.push({ name: 'e2e-tests', status: 'failed', error: error.message });
+  console.error('❌ E2E tests failed:', error.message);
+  results.status = 'failed';
+  saveResults();
+  process.exit(1);
+}
+
+// 7. Run accessibility tests
+if (!runStep('accessibility-tests', 'pnpm run test:accessibility')) {
+  results.status = 'failed';
+  saveResults();
+  process.exit(1);
+}
+
+function saveResults() {
+  const resultsPath = new URL('../ci-simulation-results.json', import.meta.url).pathname;
+  fs.writeFileSync(resultsPath, JSON.stringify(results, null, 2));
+  console.log(`\n📊 Results saved to ${resultsPath}`);
+}
+
+saveResults();
+
+if (results.status === 'success') {
+  console.log('\n✅ CI Simulation completed successfully!');
+} else {
+  console.log('\n❌ CI Simulation failed!');
+  process.exit(1);
+}

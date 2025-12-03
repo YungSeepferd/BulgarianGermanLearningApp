@@ -57,6 +57,84 @@ This document outlines the strategic plan for the Bulgarian-German Learning App,
 - [ ] **Audio Support**: Pronunciation audio for vocabulary items.
 - [ ] **Grammar Exercises**: Expand beyond vocabulary to comprehensive grammar practice.
 - [ ] **Learning Analytics**: Detailed progress insights and learning patterns.
+## 🔄 CI/CD Implementation Plan (In Progress)
+
+### Issues Identified
+1. **Web Server Configuration**: Playwright tests require a running server but CI simulation doesn't start one
+2. **Port Configuration**: Tests expect server on port 4173 but CI doesn't ensure this
+3. **Missing GitHub Actions**: No remote CI workflow defined
+4. **Script Issues**: CI simulation doesn't properly handle server lifecycle
+
+### Solution Architecture
+
+```mermaid
+graph LR
+    A[Code Commit] --> B[Pre-push Hook\nsimulate-ci.js]
+    A --> C[Remote CI\nGitHub Actions]
+    B --> D[Lint]
+    B --> E[Type Check]
+    B --> F[Unit Tests]
+    B --> G[Build]
+    B --> H[Server Start\n npm run dev]
+    B --> I[Playwright E2E]
+    C --> D
+    C --> E
+    C --> F
+    C --> G
+    C --> H
+    C --> I
+```
+
+### Implementation Plan
+
+1. **Create GitHub Actions Workflow**:
+   - File location: .github/workflows/ci.yml
+   - Triggers on PRs and main branch pushes
+   - Steps: install, lint, type check, build, test
+
+2. **Fix CI Simulation Script**:
+   - Add server start before E2E tests
+   - Use concurrent processes for server + tests
+   - Reduce timeout for local testing
+
+3. **Playwright Configuration**:
+   - Ensure proper baseURL configuration
+   - Add server lifecycle management
+
+4. **Testing Configuration**:
+   - Fix port configuration
+   - Add error handling
+   - Create proper test environment
+
+### Configuration Details
+
+Playwright Configuration:
+```javascript
+webServer: {
+  command: 'npm run dev -- --port 4173',
+  url: 'http://localhost:4173',
+  reuseExistingServer: !process.env.CI,
+  timeout: 60000 // Reduced for CI environment
+}
+```
+
+GitHub Actions Jobs:
+- build-and-test: npm install, lint, build
+- component-tests: pnpm run test:unit
+- e2e-tests: npm run test:e2e
+- accessibility: npm run test:accessibility
+
+### Port Mapping
+- Local Dev: 4173 (default)
+- CI Server: 4173 (must be exposed)
+- Test Environment: 4173 (matching Playwright config)
+
+### Next Steps
+1. Create GitHub Actions workflow file
+2. Fix CI simulation script with server management
+3. Test local pre-push CI simulation
+4. Optimize port configuration
+5. Document complete setup
 
 ## 🌟 PHASE 8: Community & Social Features
 **Goal**: Build a learning community around the app.

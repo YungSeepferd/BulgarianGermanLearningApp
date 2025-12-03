@@ -92,10 +92,10 @@ export default defineConfig<ExtendedTestOptions>({
 
   // Run your local dev server before starting the tests
   webServer: {
-    command: 'npm run dev',
+    command: 'npm run dev -- --port 4173',
     url: 'http://localhost:4173',
     reuseExistingServer: !process.env.CI,
-    timeout: 120000,
+    timeout: process.env.CI ? 60000 : 120000, // Reduced timeout for CI
   },
 
   // Global setup and teardown
