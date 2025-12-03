@@ -55,14 +55,19 @@ vi.mock('$lib/data/loader', () => ({
     }
 }));
 
-vi.mock('$lib/utils/localStorage', () => ({
-    localStorageManager: {
-        saveUserProgress: vi.fn(),
-        loadUserProgress: vi.fn(),
-        exportUserData: vi.fn(),
-        importUserData: vi.fn()
-    }
-}));
+vi.mock('$lib/utils/localStorage', async (importOriginal) => {
+    const actual = await importOriginal();
+    return {
+        ...actual,
+        LocalStorageManager: {
+            saveUserProgress: vi.fn(),
+            loadUserProgress: vi.fn(),
+            exportUserData: vi.fn(),
+            importUserData: vi.fn(),
+            clearUserData: vi.fn()
+        }
+    };
+});
 
 describe('AppState', () => {
     let appState: AppState;
@@ -269,8 +274,8 @@ describe('AppState', () => {
     describe('Enhanced Features', () => {
         describe('Practice Statistics', () => {
             it('should record practice results', async () => {
-                const { localStorageManager } = await import('$lib/utils/localStorage');
-                const mockSaveUserProgress = vi.mocked(localStorageManager.saveUserProgress);
+                const { LocalStorageManager } = await import('$lib/utils/localStorage');
+                const mockSaveUserProgress = vi.mocked(LocalStorageManager.saveUserProgress);
                 
                 await appState.recordPracticeResult('test_001', true, 1000);
                 
@@ -284,8 +289,8 @@ describe('AppState', () => {
             });
 
             it('should record incorrect answers', async () => {
-                const { localStorageManager } = await import('$lib/utils/localStorage');
-                const mockSaveUserProgress = vi.mocked(localStorageManager.saveUserProgress);
+                const { LocalStorageManager } = await import('$lib/utils/localStorage');
+                const mockSaveUserProgress = vi.mocked(LocalStorageManager.saveUserProgress);
                 
                 await appState.recordPracticeResult('test_001', false, 1500);
                 
@@ -332,8 +337,8 @@ describe('AppState', () => {
 
         describe('Data Management', () => {
             it('should export user data', async () => {
-                const { localStorageManager } = await import('$lib/utils/localStorage');
-                const mockExportUserData = vi.mocked(localStorageManager.exportUserData);
+                const { LocalStorageManager } = await import('$lib/utils/localStorage');
+                const mockExportUserData = vi.mocked(LocalStorageManager.exportUserData);
                 mockExportUserData.mockReturnValue('{"test": "data"}');
                 
                 const exported = appState.exportData();
@@ -342,8 +347,8 @@ describe('AppState', () => {
             });
 
             it('should import user data', async () => {
-                const { localStorageManager } = await import('$lib/utils/localStorage');
-                const mockImportUserData = vi.mocked(localStorageManager.importUserData);
+                const { LocalStorageManager } = await import('$lib/utils/localStorage');
+                const mockImportUserData = vi.mocked(LocalStorageManager.importUserData);
                 
                 appState.importData('{"test": "data"}');
                 expect(mockImportUserData).toHaveBeenCalledWith('{"test": "data"}');

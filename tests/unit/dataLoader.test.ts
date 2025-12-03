@@ -48,13 +48,20 @@ vi.mock('$lib/data/vocabulary.json', () => ({
     default: mockVocabulary
 }));
 
-// Mock localStorageManager
-vi.mock('$lib/utils/localStorage', () => ({
-    localStorageManager: {
-        saveUserProgress: vi.fn(),
-        loadUserProgress: vi.fn()
-    }
-}));
+// Mock LocalStorageManager
+vi.mock('$lib/utils/localStorage', async (importOriginal) => {
+    const actual = await importOriginal();
+    return {
+        ...actual,
+        LocalStorageManager: {
+            saveUserProgress: vi.fn(),
+            loadUserProgress: vi.fn(),
+            exportUserData: vi.fn(),
+            importUserData: vi.fn(),
+            clearUserData: vi.fn()
+        }
+    };
+});
 
 describe('DataLoader', () => {
     let dataLoader: DataLoader;
@@ -289,8 +296,8 @@ describe('DataLoader', () => {
         });
 
         it('should save stats to localStorage', async () => {
-            const { localStorageManager } = await import('$lib/utils/localStorage');
-            const mockSaveUserProgress = vi.mocked(localStorageManager.saveUserProgress);
+            const { LocalStorageManager } = await import('$lib/utils/localStorage');
+            const mockSaveUserProgress = vi.mocked(LocalStorageManager.saveUserProgress);
             
             await dataLoader.updateStats('test_001', true, 1000);
             
