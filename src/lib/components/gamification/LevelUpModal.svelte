@@ -42,7 +42,8 @@
       class="modal-content"
       onclick={(e) => e.stopPropagation()}
       onkeydown={(e) => { if (e.key === 'Escape') handleClose(); }}
-      role="document"
+      role="button"
+      tabindex="0"
     >
       <div class="modal-header">
         <h2 id="level-up-title" class="modal-title">Level Up!</h2>
