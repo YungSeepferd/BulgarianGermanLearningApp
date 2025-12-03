@@ -36,7 +36,8 @@ export default defineConfig<ExtendedTestOptions>({
   use: {
     viewport: { width: 1280, height: 720 },
     // Base URL to use in actions like `await page.goto('/')`
-    baseURL: 'http://localhost:4173',
+    // Match the production base path if testing the built artifact
+    baseURL: process.env.NODE_ENV === 'production' ? 'http://localhost:4173/BulgarianApp-Fresh' : 'http://localhost:4173',
     
     // Collect trace when retrying the failed test
     trace: 'on-first-retry',
