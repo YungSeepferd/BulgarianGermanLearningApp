@@ -45,16 +45,16 @@ export class LearningSession {
     private checkStreak() {
         const today = new Date().toISOString().split('T')[0];
         
-        if (this.lastPracticeDate === today) return; // Already practiced today
+        if (today && this.lastPracticeDate === today) return; // Already practiced today
 
         const yesterday = new Date();
         yesterday.setDate(yesterday.getDate() - 1);
         const yesterdayStr = yesterday.toISOString().split('T')[0];
 
-        if (this.lastPracticeDate === yesterdayStr) {
+        if (yesterdayStr && this.lastPracticeDate === yesterdayStr) {
             // Continued streak
             this.currentStreak++;
-        } else if (this.lastPracticeDate && this.lastPracticeDate < yesterdayStr) {
+        } else if (this.lastPracticeDate && yesterdayStr && this.lastPracticeDate < yesterdayStr) {
             // Streak broken
             this.currentStreak = 1;
         } else {
@@ -62,7 +62,7 @@ export class LearningSession {
             if (this.currentStreak === 0) this.currentStreak = 1;
         }
 
-        this.lastPracticeDate = today;
+        this.lastPracticeDate = today || null;
         this.saveState();
     }
 

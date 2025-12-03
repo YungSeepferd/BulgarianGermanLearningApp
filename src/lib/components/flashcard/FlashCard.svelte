@@ -7,7 +7,7 @@
     onFlip: () => void;
   };
 
-  let { item, flipped, onFlip } = $props<Props>();
+  let { item, flipped, onFlip }: Props = $props();
 
   function handleKeydown(event: KeyboardEvent) {
     if (event.key === 'Enter' || event.key === ' ') {

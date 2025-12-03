@@ -8,11 +8,11 @@
     onNext: () => void;
   };
 
-  let { item, onNext } = $props<Props>();
+  let { item, onNext }: Props = $props();
 
   let userAnswer = $state('');
   let feedbackStatus = $state<'idle' | 'correct' | 'incorrect'>('idle');
-  let inputElement: HTMLInputElement;
+  let inputElement = $state<HTMLInputElement>();
 
   function checkAnswer() {
     if (!userAnswer.trim()) return;
@@ -34,7 +34,8 @@
     feedbackStatus = 'idle';
     onNext();
     // Refocus input on next (optional, maybe better to keep focus or not depending on mobile)
-    // inputElement?.focus(); 
+    // Refocus input on next
+    inputElement?.focus();
   }
 
   function handleKeydown(e: KeyboardEvent) {
