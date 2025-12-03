@@ -73,8 +73,9 @@ try {
   // Wait for server to start
   await new Promise(resolve => setTimeout(resolve, 5000));
 
-  // Run Playwright tests
-  execSync('pnpm run test:e2e', { stdio: 'inherit' });
+  // Run Playwright tests with environment variable to disable animations
+  const env = { ...process.env, PLAYWRIGHT_TEST_MODE: 'ci' };
+  execSync('pnpm run test:e2e', { stdio: 'inherit', env });
   results.steps.push({ name: 'e2e-tests', status: 'passed' });
   console.log('✅ E2E tests completed successfully');
 
@@ -96,7 +97,8 @@ if (!runStep('accessibility-tests', 'pnpm run test:accessibility')) {
 }
 
 function saveResults() {
-  const resultsPath = new URL('../ci-simulation-results.json', import.meta.url).pathname;
+  // Fix path encoding issue - decode URI component and use process.cwd()
+  const resultsPath = path.join(process.cwd(), 'ci-simulation-results.json');
   fs.writeFileSync(resultsPath, JSON.stringify(results, null, 2));
   console.log(`\n📊 Results saved to ${resultsPath}`);
 }

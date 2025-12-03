@@ -1,10 +1,10 @@
-<testsuites id="" name="" tests="40" failures="27" skipped="0" errors="0" time="72.43090199999999">
-<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:31:11.413Z" hostname="chromium" tests="8" failures="6" skipped="0" time="57.757" errors="0">
-<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.329">
+<testsuites id="" name="" tests="40" failures="26" skipped="0" errors="0" time="66.646053">
+<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:42:16.913Z" hostname="chromium" tests="8" failures="6" skipped="0" time="59.624" errors="0">
+<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="2.168">
 </testcase>
-<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="2.204">
+<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="2.196">
 </testcase>
-<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="11.222">
+<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="12.223">
 <failure message="practice.test.ts:33:3 should allow switching between practice and search modes" type="FAILURE">
 <![CDATA[  [chromium] › e2e/practice.test.ts:33:3 › Practice Interface › should allow switching between practice and search modes 
 
@@ -57,7 +57,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="12.186">
+<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="12.237">
 <failure message="practice.test.ts:52:3 should allow switching translation direction" type="FAILURE">
 <![CDATA[  [chromium] › e2e/practice.test.ts:52:3 › Practice Interface › should allow switching translation direction 
 
@@ -110,7 +110,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="10.229">
+<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="10.248">
 <failure message="practice.test.ts:69:3 should display search results" type="FAILURE">
 <![CDATA[  [chromium] › e2e/practice.test.ts:69:3 › Practice Interface › should display search results ──────
 
@@ -163,7 +163,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="10.197">
+<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="10.162">
 <failure message="practice.test.ts:88:3 should navigate to practice mode when selecting an item" type="FAILURE">
 <![CDATA[  [chromium] › e2e/practice.test.ts:88:3 › Practice Interface › should navigate to practice mode when selecting an item 
 
@@ -216,7 +216,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="5.193">
+<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="5.18">
 <failure message="practice.test.ts:116:3 should show error message when loading fails" type="FAILURE">
 <![CDATA[  [chromium] › e2e/practice.test.ts:116:3 › Practice Interface › should show error message when loading fails 
 
@@ -262,7 +262,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="5.197">
+<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="5.21">
 <failure message="practice.test.ts:133:3 should allow retry when loading fails" type="FAILURE">
 <![CDATA[  [chromium] › e2e/practice.test.ts:133:3 › Practice Interface › should allow retry when loading fails 
 
@@ -309,71 +309,20 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:31:11.413Z" hostname="firefox" tests="8" failures="3" skipped="0" time="38.511" errors="0">
-<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.602">
+<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:42:16.913Z" hostname="firefox" tests="8" failures="2" skipped="0" time="40.938" errors="0">
+<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.544">
 </testcase>
-<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="2.033">
+<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.773">
 </testcase>
-<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="4.138">
+<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="9.016">
 </testcase>
-<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="11.733">
-<failure message="practice.test.ts:52:3 should allow switching translation direction" type="FAILURE">
-<![CDATA[  [firefox] › e2e/practice.test.ts:52:3 › Practice Interface › should allow switching translation direction 
-
-    TimeoutError: locator.click: Timeout 10000ms exceeded.
-    Call log:
-      - waiting for locator('.toggle-btn')
-        - locator resolved to <button aria-live="polite" class="toggle-btn s--Ia8dYDyB8bk" aria-label="Current direction: German to Bulgarian. Click to switch to Bulgarian to German.">…</button>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not stable
-        - retrying click action
-          - waiting 100ms
-        19 × waiting for element to be visible, enabled and stable
-           - element is not stable
-         - retrying click action
-           - waiting 500ms
-
-
-      60 |
-      61 |     // Switch direction with retry logic
-    > 62 |     await page.locator('.toggle-btn').click({ timeout: 10000 });
-         |                                       ^
-      63 |
-      64 |     // Verify direction has changed
-      65 |     const newDirection = await page.locator('.direction-indicator').textContent();
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:62:39
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-41365-ching-translation-direction-firefox/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ../test-results/e2e-practice-Practice-Inte-41365-ching-translation-direction-firefox/video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/e2e-practice-Practice-Inte-41365-ching-translation-direction-firefox/error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|e2e-practice-Practice-Inte-41365-ching-translation-direction-firefox/test-failed-1.png]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-41365-ching-translation-direction-firefox/video.webm]]
-
-[[ATTACHMENT|e2e-practice-Practice-Inte-41365-ching-translation-direction-firefox/error-context.md]]
-]]>
-</system-out>
+<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="11.971">
 </testcase>
-<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="5.238">
+<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="2.488">
 </testcase>
-<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="2.847">
+<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="2.841">
 </testcase>
-<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="5.554">
+<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="5.693">
 <failure message="practice.test.ts:116:3 should show error message when loading fails" type="FAILURE">
 <![CDATA[  [firefox] › e2e/practice.test.ts:116:3 › Practice Interface › should show error message when loading fails 
 
@@ -419,7 +368,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="5.366">
+<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="5.612">
 <failure message="practice.test.ts:133:3 should allow retry when loading fails" type="FAILURE">
 <![CDATA[  [firefox] › e2e/practice.test.ts:133:3 › Practice Interface › should allow retry when loading fails 
 
@@ -466,12 +415,12 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:31:11.413Z" hostname="webkit" tests="8" failures="6" skipped="0" time="58.344" errors="0">
-<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.876">
+<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:42:16.913Z" hostname="webkit" tests="8" failures="6" skipped="0" time="58.423" errors="0">
+<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.815">
 </testcase>
-<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.589">
+<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.23">
 </testcase>
-<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="11.49">
+<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="11.175">
 <failure message="practice.test.ts:33:3 should allow switching between practice and search modes" type="FAILURE">
 <![CDATA[  [webkit] › e2e/practice.test.ts:33:3 › Practice Interface › should allow switching between practice and search modes 
 
@@ -524,7 +473,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="11.213">
+<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="11.66">
 <failure message="practice.test.ts:52:3 should allow switching translation direction" type="FAILURE">
 <![CDATA[  [webkit] › e2e/practice.test.ts:52:3 › Practice Interface › should allow switching translation direction 
 
@@ -577,7 +526,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="10.321">
+<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="10.626">
 <failure message="practice.test.ts:69:3 should display search results" type="FAILURE">
 <![CDATA[  [webkit] › e2e/practice.test.ts:69:3 › Practice Interface › should display search results ────────
 
@@ -630,7 +579,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="10.608">
+<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="10.589">
 <failure message="practice.test.ts:88:3 should navigate to practice mode when selecting an item" type="FAILURE">
 <![CDATA[  [webkit] › e2e/practice.test.ts:88:3 › Practice Interface › should navigate to practice mode when selecting an item 
 
@@ -683,7 +632,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="5.598">
+<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="5.601">
 <failure message="practice.test.ts:116:3 should show error message when loading fails" type="FAILURE">
 <![CDATA[  [webkit] › e2e/practice.test.ts:116:3 › Practice Interface › should show error message when loading fails 
 
@@ -729,7 +678,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="5.649">
+<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="5.727">
 <failure message="practice.test.ts:133:3 should allow retry when loading fails" type="FAILURE">
 <![CDATA[  [webkit] › e2e/practice.test.ts:133:3 › Practice Interface › should allow retry when loading fails 
 
@@ -776,12 +725,12 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:31:11.413Z" hostname="Mobile Chrome" tests="8" failures="6" skipped="0" time="55.51" errors="0">
-<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.165">
+<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:42:16.913Z" hostname="Mobile Chrome" tests="8" failures="6" skipped="0" time="55.636" errors="0">
+<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.266">
 </testcase>
-<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.258">
+<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.257">
 </testcase>
-<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="11.085">
+<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="11.155">
 <failure message="practice.test.ts:33:3 should allow switching between practice and search modes" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:33:3 › Practice Interface › should allow switching between practice and search modes 
 
@@ -834,7 +783,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="11.106">
+<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="11.085">
 <failure message="practice.test.ts:52:3 should allow switching translation direction" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:52:3 › Practice Interface › should allow switching translation direction 
 
@@ -887,7 +836,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="10.187">
+<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="10.185">
 <failure message="practice.test.ts:69:3 should display search results" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:69:3 › Practice Interface › should display search results ─
 
@@ -940,7 +889,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="10.249">
+<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="10.256">
 <failure message="practice.test.ts:88:3 should navigate to practice mode when selecting an item" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:88:3 › Practice Interface › should navigate to practice mode when selecting an item 
 
@@ -993,7 +942,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="5.251">
+<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="5.219">
 <failure message="practice.test.ts:116:3 should show error message when loading fails" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:116:3 › Practice Interface › should show error message when loading fails 
 
@@ -1039,7 +988,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="5.209">
+<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="5.213">
 <failure message="practice.test.ts:133:3 should allow retry when loading fails" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:133:3 › Practice Interface › should allow retry when loading fails 
 
@@ -1086,12 +1035,12 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:31:11.413Z" hostname="Mobile Safari" tests="8" failures="6" skipped="0" time="68.948" errors="0">
-<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.487">
+<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:42:16.913Z" hostname="Mobile Safari" tests="8" failures="6" skipped="0" time="57.954" errors="0">
+<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.517">
 </testcase>
-<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.585">
+<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.618">
 </testcase>
-<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="11.554">
+<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="11.538">
 <failure message="practice.test.ts:33:3 should allow switching between practice and search modes" type="FAILURE">
 <![CDATA[  [Mobile Safari] › e2e/practice.test.ts:33:3 › Practice Interface › should allow switching between practice and search modes 
 
@@ -1144,7 +1093,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="22.586">
+<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="11.524">
 <failure message="practice.test.ts:52:3 should allow switching translation direction" type="FAILURE">
 <![CDATA[  [Mobile Safari] › e2e/practice.test.ts:52:3 › Practice Interface › should allow switching translation direction 
 
@@ -1197,7 +1146,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="10.321">
+<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="10.292">
 <failure message="practice.test.ts:69:3 should display search results" type="FAILURE">
 <![CDATA[  [Mobile Safari] › e2e/practice.test.ts:69:3 › Practice Interface › should display search results ─
 
@@ -1250,7 +1199,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="10.279">
+<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="10.298">
 <failure message="practice.test.ts:88:3 should navigate to practice mode when selecting an item" type="FAILURE">
 <![CDATA[  [Mobile Safari] › e2e/practice.test.ts:88:3 › Practice Interface › should navigate to practice mode when selecting an item 
 
@@ -1303,7 +1252,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="5.565">
+<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="5.569">
 <failure message="practice.test.ts:116:3 should show error message when loading fails" type="FAILURE">
 <![CDATA[  [Mobile Safari] › e2e/practice.test.ts:116:3 › Practice Interface › should show error message when loading fails 
 
@@ -1349,7 +1298,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="5.571">
+<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="5.598">
 <failure message="practice.test.ts:133:3 should allow retry when loading fails" type="FAILURE">
 <![CDATA[  [Mobile Safari] › e2e/practice.test.ts:133:3 › Practice Interface › should allow retry when loading fails 
 

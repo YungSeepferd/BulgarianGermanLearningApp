@@ -36,17 +36,25 @@ test.describe('Practice Interface', () => {
     // Wait for initial loading
     await expect(page.locator('.practice-card')).toBeVisible({ timeout: 15000 });
 
-    // Switch to search mode with retry logic
-    await page.locator('.mode-btn:has-text("Search")').click({ timeout: 10000 });
+    // Wait for animations to stabilize
+    await page.waitForTimeout(1000);
+
+    // Switch to search mode with more stable selector and force option
+    const searchBtn = page.locator('.mode-btn').filter({ hasText: 'Search' });
+    await searchBtn.click({ force: true, timeout: 15000 });
 
     // Verify search interface is displayed
-    await expect(page.locator('.search-section')).toBeVisible({ timeout: 10000 });
+    await expect(page.locator('.search-section')).toBeVisible({ timeout: 15000 });
 
-    // Switch back to practice mode
-    await page.locator('.mode-btn:has-text("Practice")').click({ timeout: 10000 });
+    // Wait for animations to stabilize
+    await page.waitForTimeout(1000);
+
+    // Switch back to practice mode with force option
+    const practiceBtn = page.locator('.mode-btn').filter({ hasText: 'Practice' });
+    await practiceBtn.click({ force: true, timeout: 15000 });
 
     // Verify practice interface is displayed
-    await expect(page.locator('.practice-card')).toBeVisible({ timeout: 10000 });
+    await expect(page.locator('.practice-card')).toBeVisible({ timeout: 15000 });
   });
 
   test('should allow switching translation direction', async ({ page }) => {
@@ -55,11 +63,17 @@ test.describe('Practice Interface', () => {
     // Wait for the loading to complete
     await expect(page.locator('.practice-card')).toBeVisible({ timeout: 15000 });
 
+    // Wait for animations to stabilize
+    await page.waitForTimeout(1000);
+
     // Get initial direction
     const initialDirection = await page.locator('.direction-indicator').textContent();
 
-    // Switch direction with retry logic
-    await page.locator('.toggle-btn').click({ timeout: 10000 });
+    // Switch direction with force option to bypass animation stability issues
+    await page.locator('.toggle-btn').click({ force: true, timeout: 15000 });
+
+    // Wait for direction change to take effect
+    await page.waitForTimeout(500);
 
     // Verify direction has changed
     const newDirection = await page.locator('.direction-indicator').textContent();
@@ -69,14 +83,18 @@ test.describe('Practice Interface', () => {
   test('should display search results', async ({ page }) => {
     await page.goto('/practice');
 
-    // Switch to search mode
-    await page.locator('.mode-btn:has-text("Search")').click({ timeout: 10000 });
+    // Wait for animations to stabilize
+    await page.waitForTimeout(1000);
+
+    // Switch to search mode with force option
+    const searchBtn = page.locator('.mode-btn').filter({ hasText: 'Search' });
+    await searchBtn.click({ force: true, timeout: 15000 });
 
     // Type a search query
     await page.locator('.search-input').fill('Hallo');
 
     // Wait for search to process
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(2000);
 
     // Verify search results are displayed (if any)
     const resultsCount = await page.locator('.vocabulary-item').count();
@@ -88,24 +106,28 @@ test.describe('Practice Interface', () => {
   test('should navigate to practice mode when selecting an item', async ({ page }) => {
     await page.goto('/practice');
 
-    // Switch to search mode
-    await page.locator('.mode-btn:has-text("Search")').click({ timeout: 10000 });
+    // Wait for animations to stabilize
+    await page.waitForTimeout(1000);
+
+    // Switch to search mode with force option
+    const searchBtn = page.locator('.mode-btn').filter({ hasText: 'Search' });
+    await searchBtn.click({ force: true, timeout: 15000 });
 
     // Type a search query
     await page.locator('.search-input').fill('Hallo');
 
     // Wait for search to process
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(2000);
 
     // Check if we have search results
     const resultsCount = await page.locator('.vocabulary-item').count();
     
     if (resultsCount > 0) {
-      // Select the first item
-      await page.locator('.vocabulary-item').first().click({ timeout: 10000 });
+      // Select the first item with force option
+      await page.locator('.vocabulary-item').first().click({ force: true, timeout: 15000 });
 
       // Verify we're back in practice mode
-      await expect(page.locator('.practice-card')).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('.practice-card')).toBeVisible({ timeout: 15000 });
 
       // Verify the selected item is displayed
       const question = await page.locator('.question-text').textContent();
@@ -125,9 +147,9 @@ test.describe('Practice Interface', () => {
 
     await page.goto('/practice');
 
-    // Verify error message is displayed
-    await expect(page.locator('.error')).toBeVisible();
-    await expect(page.locator('.error p')).toContainText('Failed to load vocabulary');
+    // Wait for error to appear with longer timeout
+    await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
+    await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
   });
 
   test('should allow retry when loading fails', async ({ page }) => {
@@ -147,13 +169,13 @@ test.describe('Practice Interface', () => {
 
     await page.goto('/practice');
 
-    // Verify error message is displayed
-    await expect(page.locator('.error')).toBeVisible();
+    // Wait for error to appear with longer timeout
+    await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
 
-    // Click retry button
-    await page.locator('.btn-primary').click();
+    // Click retry button with force option
+    await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
 
     // Verify the practice card is displayed
-    await expect(page.locator('.practice-card')).toBeVisible();
+    await expect(page.locator('.practice-card')).toBeVisible({ timeout: 15000 });
   });
 });

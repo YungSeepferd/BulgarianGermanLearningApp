@@ -51,7 +51,7 @@
   }
 </script>
 
-<div class="tandem-toggle">
+<div class="tandem-toggle" class:ci-mode={typeof process !== 'undefined' && process.env.PLAYWRIGHT_TEST_MODE === 'ci'}>
   <div class="toggle-group">
     <div class="direction-toggle">
       <button
@@ -372,5 +372,22 @@
       left: 50%;
       transform: translateX(-50%);
     }
+  }
+
+  /* CI mode - disable animations for stable E2E testing */
+  .tandem-toggle.ci-mode * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .tandem-toggle.ci-mode .direction-toggle,
+  .tandem-toggle.ci-mode .mode-toggle {
+    animation: none !important;
+  }
+
+  .tandem-toggle.ci-mode .toggle-btn:hover,
+  .tandem-toggle.ci-mode .mode-btn:hover {
+    transform: none !important;
+    box-shadow: none !important;
   }
 </style>
