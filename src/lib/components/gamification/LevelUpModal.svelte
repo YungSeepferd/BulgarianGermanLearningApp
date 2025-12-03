@@ -2,11 +2,6 @@
   import { fade } from 'svelte/transition';
   import { fireConfetti } from '$lib/utils/confetti.js';
 
-  type Props = {
-    currentLevel: number;
-    onClose: () => void;
-  };
-
   let { currentLevel, onClose } = $props();
   let isVisible = $state(true);
 
