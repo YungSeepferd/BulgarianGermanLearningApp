@@ -1,10 +1,11 @@
 <script lang="ts">
- let { children } = $props();
+let { children } = $props();
 </script>
 
 <main>
- {#render children()}
+{children}
 </main>
+
 
 <style>
   :global(html) {
