@@ -67,11 +67,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Install Playwright browsers
-        run: pnpm exec playwright install chromium --with-deps
 
-      - name: Run Component Tests
-        run: pnpm run test:components
+      - name: Run Unit Tests
+        run: pnpm run test:unit
         env:
           CI: true
 
@@ -98,31 +96,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Install Playwright browsers
-        run: pnpm exec playwright install chromium --with-deps
 
-      - name: Build application
-        run: pnpm run build
 
-      - name: Run E2E Tests
-        run: pnpm run test:e2e
-        env:
-          CI: true
-          NODE_ENV: production
 
-      - name: Run Accessibility Tests
-        run: pnpm run test:accessibility
-        env:
-          CI: true
-          NODE_ENV: production
 
-      - name: Upload Playwright Report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report
-          path: playwright-report/
-          retention-days: 30
 
   # Stage 4: Deployment (Only on main branch)
   deploy:

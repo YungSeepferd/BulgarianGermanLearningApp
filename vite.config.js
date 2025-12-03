@@ -1,7 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [sveltekit()],
   
   // Enable Svelte 5 runes support
@@ -9,6 +9,10 @@ export default defineConfig({
     compilerOptions: {
       runes: true
     }
+  },
+  
+  resolve: {
+    conditions: mode === 'test' ? ['browser'] : undefined,
   },
   
   // Development server configuration
@@ -70,10 +74,6 @@ export default defineConfig({
       deps: {
         inline: ['@sveltejs/kit']
       }
-    },
-    // Ensure browser conditions are used for svelte
-    resolve: {
-      conditions: ['browser']
     }
   },
   
@@ -81,4 +81,4 @@ export default defineConfig({
   optimizeDeps: {
     include: ['svelte', '@sveltejs/kit']
   }
-});
+}));

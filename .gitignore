@@ -1,70 +1,57 @@
-node_modules
+# Package Manager
+node_modules/
+package-lock.json
+yarn.lock
 
-# Output
-.output
-.vercel
-.netlify
-.wrangler
-/.svelte-kit
-/build
+# SvelteKit & Vite
+.svelte-kit/
+build/
+dist/
+.output/
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+.tsbuildinfo
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Env
+# Environment Variables
 .env
 .env.*
 !.env.example
 !.env.test
 
-# Vite
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
-
-# SvelteKit
-.svelte-kit/
-build/
-
-# Playwright
-playwright-report/
-
-# Coverage
+# Testing & Coverage
 coverage/
-
-# IDE
-.vscode/
-.idea/
-
-# Environment
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+playwright-report/
+test-results/
+.nyc_output/
 
 # Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Documentation
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Deployments
+.vercel
+.netlify
+.wrangler
+
+# Project Specific
 docs/archive/
-
-# Data
 src/lib/data/_raw_backup/
-
-# Tests
-test-results/
+.github/instructions/codacy.instructions.md
 
 # Cache
 .cache/
-
-# Misc
-*.log
-*.tmp
-*.bak
-*.swp
-
-
-#Ignore vscode AI rules
-.github/instructions/codacy.instructions.md

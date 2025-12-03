@@ -22,8 +22,14 @@ export const PronunciationSchema = z.object({
 // Schema for grammar information
 export const GrammarSchema = z.object({
   part_of_speech: z.string(),
-  gender: z.string().nullable(),
-  declension: z.string().nullable()
+  gender: z.enum(['masculine', 'feminine', 'neuter', 'variable']).nullable().or(z.string().nullable()),
+  declension: z.string().nullable(),
+  
+  // Rich context extensions
+  verb_aspect: z.enum(['perfective', 'imperfective']).optional(),
+  verb_partner_id: z.string().optional(), // ID of the aspectual pair
+  plural_form: z.string().optional(),
+  conjugation_class: z.string().optional()
 });
 
 // Schema for global statistics
@@ -56,11 +62,19 @@ export const VocabularyItemSchema = z.object({
   created_at: z.string().datetime().optional(),
   updated_at: z.string().datetime().optional(),
   
-  // Fields that might be present in some data sources
+  // Rich Context Fields
+  contextual_nuance: z.string().optional(), // e.g., "za edno" -> "together" vs "for one"
+  mnemonics: z.string().optional(), // e.g., "Think of 'Sonne' for 'Slantse'"
+  emoji: z.string().optional(), // ⚡️ Visual anchor
+  image_url: z.string().optional(), // URL for immersion
+  audio_url: z.string().optional(), // /audio/bg/word_id.mp3
+  xp_value: z.number().int().min(1).default(10), // Gamification value
+  
+  // Legacy/Helper fields
   searchIndex: z.string().optional(),
   relatedItems: z.array(z.string()).optional(),
-  audioPath: z.string().optional(),
-  imagePath: z.string().optional(),
+  audioPath: z.string().optional(), // @deprecated: use audio_url
+  imagePath: z.string().optional(), // @deprecated: use image_url
   contextHints: z.array(z.string()).optional(),
   
   // Global statistics (if present)

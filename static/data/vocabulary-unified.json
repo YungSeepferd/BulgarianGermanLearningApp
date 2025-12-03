@@ -16,17 +16,21 @@
       }
     ],
     "pronunciation": {
-      "bulgarian": "Betonung auf der zweiten Silbe: здраве́й. Kürzere Form 'Здрасти' nur in vertrauten Situationen.",
-      "german": "Betonung auf der zweiten Silbe: здраве́й. Kürzere Form 'Здрасти' nur in vertrauten Situationen."
+      "bulgarian": "zdrа-VEY",
+      "german": "Betonung auf der zweiten Silbe"
     },
     "grammar": {
       "part_of_speech": "interjection",
       "gender": null,
       "declension": null
     },
+    "contextual_nuance": "Used for friends, family, and children. For formal situations, use 'Здравейте' (Zdraveite).",
+    "mnemonics": "Derived from 'здраве' (health) - wishing health to the person.",
+    "emoji": "👋",
     "tags": ["a1", "begrüßung", "easy", "very_common"],
     "created_at": "2025-12-02T18:00:00.000Z",
-    "updated_at": "2025-12-02T18:00:00.000Z"
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 10
   },
   {
     "id": "dobro_utro_002",
@@ -45,17 +49,20 @@
       }
     ],
     "pronunciation": {
-      "bulgarian": "Bedeutet 'Guten Morgen'; in Bulgarien endet er oft früher (~10 Uhr).",
-      "german": "Entspricht 'Guten Morgen'; in Bulgarien endet er oft früher (~10 Uhr)."
+      "bulgarian": "do-BRO U-tro",
+      "german": "Betonung auf der ersten Silbe von 'Utro'"
     },
     "grammar": {
       "part_of_speech": "phrase",
       "gender": null,
       "declension": null
     },
+    "contextual_nuance": "Typically used until about 10:00 AM. Afterward, switch to 'Добър ден' (Dobar den).",
+    "emoji": "🌅",
     "tags": ["a1", "begrüßung", "easy", "very_common"],
     "created_at": "2025-12-02T18:00:00.000Z",
-    "updated_at": "2025-12-02T18:00:00.000Z"
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 10
   },
   {
     "id": "chovek_003",
@@ -71,20 +78,29 @@
         "sentence": "Той е добър човек.",
         "translation": "Er ist ein guter Mensch.",
         "context": "description"
+      },
+      {
+        "sentence": "Колко хора има там?",
+        "translation": "Wie viele Leute sind dort?",
+        "context": "plural usage"
       }
     ],
     "pronunciation": {
-      "bulgarian": "Irregular plural: 'хора' (people). Gender: masculine. Stress: чо́век",
-      "german": "Irregular plural: 'хора' (people). Gender: masculine. Stress: чо́век"
+      "bulgarian": "cho-VEK",
+      "german": "Betonung auf der zweiten Silbe"
     },
     "grammar": {
       "part_of_speech": "noun",
       "gender": "masculine",
-      "declension": "irregular"
+      "declension": "irregular",
+      "plural_form": "хора (hora)"
     },
-    "tags": ["a1", "substantiv", "easy", "very_common"],
+    "contextual_nuance": "Has an irregular plural 'хора' (people). 'Души' is used with numbers (e.g., 'двама души' - two people).",
+    "emoji": "👤",
+    "tags": ["a1", "substantiv", "easy", "very_common", "irregular_plural"],
     "created_at": "2025-12-02T18:00:00.000Z",
-    "updated_at": "2025-12-02T18:00:00.000Z"
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 15
   },
   {
     "id": "sum_004",
@@ -100,20 +116,397 @@
         "sentence": "Аз съм студент.",
         "translation": "Ich bin Student.",
         "context": "identification"
+      },
+      {
+        "sentence": "Тя е у дома.",
+        "translation": "Sie ist zu Hause.",
+        "context": "location"
       }
     ],
     "pronunciation": {
-      "bulgarian": "",
-      "german": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important"
+      "bulgarian": "sam",
+      "german": "Kurzes 'a', fast wie 'u' in 'but'"
     },
     "grammar": {
       "part_of_speech": "verb",
       "gender": null,
-      "declension": "irregular"
+      "declension": "irregular",
+      "verb_aspect": "imperfective",
+      "conjugation_class": "irregular"
     },
-    "tags": ["a1", "verb", "medium", "very_common"],
+    "contextual_nuance": "The core verb of existence. Forms: съм, си, е, сме, сте, са.",
+    "mnemonics": "Think of 'sum' as the 'sum' of who you are.",
+    "emoji": "🟰",
+    "tags": ["a1", "verb", "essential", "very_common", "irregular_verb"],
     "created_at": "2025-12-02T18:00:00.000Z",
-    "updated_at": "2025-12-02T18:00:00.000Z"
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 10
+  },
+  {
+    "id": "blagodarya_006",
+    "type": "word",
+    "bulgarian": "Благодаря",
+    "german": "Danke",
+    "category": "Höflichkeit",
+    "level": "A1",
+    "difficulty": 1,
+    "frequency": 99,
+    "examples": [
+      {
+        "sentence": "Благодаря за помощта!",
+        "translation": "Danke für die Hilfe!",
+        "context": "gratitude"
+      }
+    ],
+    "pronunciation": {
+      "bulgarian": "bla-go-da-RYA",
+      "german": "Betonung auf der letzten Silbe"
+    },
+    "grammar": {
+      "part_of_speech": "verb",
+      "gender": null,
+      "declension": null
+    },
+    "contextual_nuance": "Formal and standard. 'Мерси' (Merci) is very common in informal speech.",
+    "mnemonics": "Composed of 'благо' (good/blessing) + 'даря' (to gift) -> Gifting goodness.",
+    "emoji": "🙏",
+    "tags": ["a1", "höflichkeit", "easy", "essential"],
+    "created_at": "2025-12-03T12:00:00.000Z",
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 10
+  },
+  {
+    "id": "voda_007",
+    "type": "word",
+    "bulgarian": "Вода",
+    "german": "Wasser",
+    "category": "Essen & Trinken",
+    "level": "A1",
+    "difficulty": 1,
+    "frequency": 90,
+    "examples": [
+      {
+        "sentence": "Искам една чаша вода, моля.",
+        "translation": "Ich möchte ein Glas Wasser, bitte.",
+        "context": "ordering"
+      }
+    ],
+    "pronunciation": {
+      "bulgarian": "vo-DA",
+      "german": "Betonung auf der letzten Silbe"
+    },
+    "grammar": {
+      "part_of_speech": "noun",
+      "gender": "feminine",
+      "declension": "standard",
+      "plural_form": "води (vodi)"
+    },
+    "emoji": "💧",
+    "tags": ["a1", "noun", "food", "essential"],
+    "created_at": "2025-12-03T12:00:00.000Z",
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 10
+  },
+  {
+    "id": "hlyab_008",
+    "type": "word",
+    "bulgarian": "Хляб",
+    "german": "Brot",
+    "category": "Essen & Trinken",
+    "level": "A1",
+    "difficulty": 1,
+    "frequency": 88,
+    "examples": [
+      {
+        "sentence": "Топъл хляб",
+        "translation": "Warmes Brot",
+        "context": "description"
+      }
+    ],
+    "pronunciation": {
+      "bulgarian": "hlyab",
+      "german": "Einsilbig, weiches 'l'"
+    },
+    "grammar": {
+      "part_of_speech": "noun",
+      "gender": "masculine",
+      "declension": "standard",
+      "plural_form": "хлябове (hlyabove)"
+    },
+    "contextual_nuance": "Bulgarians eat bread with almost everything. It's a staple.",
+    "emoji": "🍞",
+    "tags": ["a1", "noun", "food"],
+    "created_at": "2025-12-03T12:00:00.000Z",
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 10
+  },
+  {
+    "id": "kashta_009",
+    "type": "word",
+    "bulgarian": "Къща",
+    "german": "Haus",
+    "category": "Wohnen",
+    "level": "A1",
+    "difficulty": 1,
+    "frequency": 80,
+    "examples": [
+      {
+        "sentence": "Голяма къща",
+        "translation": "Ein großes Haus",
+        "context": "description"
+      }
+    ],
+    "pronunciation": {
+      "bulgarian": "KAH-shta",
+      "german": "Betonung auf der ersten Silbe, 'sht' wie in 'Matsch'"
+    },
+    "grammar": {
+      "part_of_speech": "noun",
+      "gender": "feminine",
+      "declension": "standard",
+      "plural_form": "къщи (kashti)"
+    },
+    "mnemonics": "Sounds a bit like 'castle' -> kashta.",
+    "emoji": "🏠",
+    "tags": ["a1", "noun", "household"],
+    "created_at": "2025-12-03T12:00:00.000Z",
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 10
+  },
+  {
+    "id": "razbiram_010",
+    "type": "word",
+    "bulgarian": "Разбирам",
+    "german": "verstehen",
+    "category": "Verb",
+    "level": "A1",
+    "difficulty": 2,
+    "frequency": 92,
+    "examples": [
+      {
+        "sentence": "Не разбирам.",
+        "translation": "Ich verstehe nicht.",
+        "context": "common phrase"
+      },
+      {
+        "sentence": "Разбираш ли?",
+        "translation": "Verstehst du?",
+        "context": "question"
+      }
+    ],
+    "pronunciation": {
+      "bulgarian": "raz-BI-ram",
+      "german": "Betonung auf 'bi'"
+    },
+    "grammar": {
+      "part_of_speech": "verb",
+      "verb_aspect": "imperfective",
+      "verb_partner_id": "razbera_010b",
+      "conjugation_class": "3rd (am/ash)"
+    },
+    "contextual_nuance": "Imperfective aspect. Perfective is 'разбера' (razbera).",
+    "emoji": "💡",
+    "tags": ["a1", "verb", "communication"],
+    "created_at": "2025-12-03T12:00:00.000Z",
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 15
+  },
+  {
+    "id": "iskam_011",
+    "type": "word",
+    "bulgarian": "Искам",
+    "german": "wollen / möchten",
+    "category": "Verb",
+    "level": "A1",
+    "difficulty": 1,
+    "frequency": 96,
+    "examples": [
+      {
+        "sentence": "Искам кафе.",
+        "translation": "Ich möchte Kaffee.",
+        "context": "ordering"
+      }
+    ],
+    "pronunciation": {
+      "bulgarian": "IS-kam",
+      "german": "Betonung auf 'Is'"
+    },
+    "grammar": {
+      "part_of_speech": "verb",
+      "verb_aspect": "imperfective",
+      "conjugation_class": "3rd (am/ash)"
+    },
+    "contextual_nuance": "Used for both 'want' and 'would like'. To be more polite, use conditional 'бих искал'.",
+    "emoji": "🤲",
+    "tags": ["a1", "verb", "essential"],
+    "created_at": "2025-12-03T12:00:00.000Z",
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 10
+  },
+  {
+    "id": "vreme_012",
+    "type": "word",
+    "bulgarian": "Време",
+    "german": "Zeit / Wetter",
+    "category": "Abstrakt",
+    "level": "A2",
+    "difficulty": 2,
+    "frequency": 90,
+    "examples": [
+      {
+        "sentence": "Нямам време.",
+        "translation": "Ich habe keine Zeit.",
+        "context": "time"
+      },
+      {
+        "sentence": "Времето е хубаво.",
+        "translation": "Das Wetter ist schön.",
+        "context": "weather"
+      }
+    ],
+    "pronunciation": {
+      "bulgarian": "VRE-me",
+      "german": "Betonung auf der ersten Silbe"
+    },
+    "grammar": {
+      "part_of_speech": "noun",
+      "gender": "neuter",
+      "plural_form": "времена (vremena)"
+    },
+    "contextual_nuance": "Context is key! 'Време' means both chronological 'time' and meteorological 'weather'.",
+    "emoji": "⏳/🌤️",
+    "tags": ["a2", "noun", "double_meaning"],
+    "created_at": "2025-12-03T12:00:00.000Z",
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 20
+  },
+  {
+    "id": "pravya_013",
+    "type": "word",
+    "bulgarian": "Правя",
+    "german": "machen / tun",
+    "category": "Verb",
+    "level": "A1",
+    "difficulty": 1,
+    "frequency": 94,
+    "examples": [
+      {
+        "sentence": "Какво правиш?",
+        "translation": "Was machst du?",
+        "context": "question"
+      }
+    ],
+    "pronunciation": {
+      "bulgarian": "PRA-vya",
+      "german": "Betonung auf 'Pra'"
+    },
+    "grammar": {
+      "part_of_speech": "verb",
+      "verb_aspect": "imperfective",
+      "conjugation_class": "2nd (ya/ish)"
+    },
+    "contextual_nuance": "Very general verb for doing or making things.",
+    "emoji": "🔨",
+    "tags": ["a1", "verb", "action"],
+    "created_at": "2025-12-03T12:00:00.000Z",
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 10
+  },
+  {
+    "id": "golyam_014",
+    "type": "word",
+    "bulgarian": "Голям",
+    "german": "groß",
+    "category": "Adjektiv",
+    "level": "A1",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "sentence": "Голям град",
+        "translation": "Eine große Stadt",
+        "context": "description"
+      }
+    ],
+    "pronunciation": {
+      "bulgarian": "go-LYAM",
+      "german": "Betonung auf der zweiten Silbe"
+    },
+    "grammar": {
+      "part_of_speech": "adjective",
+      "gender": "variable",
+      "declension": "full"
+    },
+    "contextual_nuance": "Forms: Голям (masc), Голяма (fem), Голямо (neut), Големи (pl). Note the vowel change 'я' -> 'е' in plural.",
+    "emoji": "🐘",
+    "tags": ["a1", "adjective", "size"],
+    "created_at": "2025-12-03T12:00:00.000Z",
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 15
+  },
+  {
+    "id": "malak_015",
+    "type": "word",
+    "bulgarian": "Малък",
+    "german": "klein",
+    "category": "Adjektiv",
+    "level": "A1",
+    "difficulty": 1,
+    "frequency": 85,
+    "examples": [
+      {
+        "sentence": "Малко куче",
+        "translation": "Ein kleiner Hund",
+        "context": "description"
+      }
+    ],
+    "pronunciation": {
+      "bulgarian": "MA-lak",
+      "german": "Betonung auf der ersten Silbe"
+    },
+    "grammar": {
+      "part_of_speech": "adjective",
+      "gender": "variable",
+      "declension": "full"
+    },
+    "contextual_nuance": "Forms: Малък (masc), Малка (fem), Малко (neut), Малки (pl).",
+    "emoji": "mouse",
+    "tags": ["a1", "adjective", "size"],
+    "created_at": "2025-12-03T12:00:00.000Z",
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 10
+  },
+  {
+    "id": "nadyavam_se_016",
+    "type": "word",
+    "bulgarian": "Надявам се",
+    "german": "hoffen",
+    "category": "Verb",
+    "level": "B1",
+    "difficulty": 3,
+    "frequency": 60,
+    "examples": [
+      {
+        "sentence": "Надявам се, че си добре.",
+        "translation": "Ich hoffe, dass es dir gut geht.",
+        "context": "wishing well"
+      }
+    ],
+    "pronunciation": {
+      "bulgarian": "na-DYA-vam se",
+      "german": "Reflexives Verb, Betonung auf 'Dya'"
+    },
+    "grammar": {
+      "part_of_speech": "verb",
+      "verb_aspect": "imperfective",
+      "conjugation_class": "3rd (am/ash)"
+    },
+    "contextual_nuance": "Reflexive verb (uses 'се'). Expresses hope or expectation.",
+    "emoji": "🤞",
+    "tags": ["b1", "verb", "reflexive"],
+    "created_at": "2025-12-03T12:00:00.000Z",
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 20
   },
   {
     "id": "krasiv_005",
@@ -132,16 +525,19 @@
       }
     ],
     "pronunciation": {
-      "bulgarian": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
-      "german": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)"
+      "bulgarian": "kra-SIV",
+      "german": "Betonung auf der zweiten Silbe"
     },
     "grammar": {
       "part_of_speech": "adjective",
       "gender": "variable",
       "declension": "full"
     },
+    "contextual_nuance": "Used for people, objects, and nature. For food/taste, use 'вкусен' (vkusen).",
+    "emoji": "🌹",
     "tags": ["a1", "adjektiv", "easy", "very_common"],
     "created_at": "2025-12-02T18:00:00.000Z",
-    "updated_at": "2025-12-02T18:00:00.000Z"
+    "updated_at": "2025-12-03T12:00:00.000Z",
+    "xp_value": 10
   }
 ]

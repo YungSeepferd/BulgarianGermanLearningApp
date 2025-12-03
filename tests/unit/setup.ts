@@ -58,3 +58,18 @@ const localStorageMock = (function() {
 Object.defineProperty(window, 'localStorage', {
   value: localStorageMock
 });
+// Mock Web Animations API
+if (typeof Element !== 'undefined' && !Element.prototype.animate) {
+  Element.prototype.animate = vi.fn().mockImplementation(() => {
+    return {
+      onfinish: null,
+      cancel: vi.fn(),
+      play: vi.fn(),
+      pause: vi.fn(),
+      reverse: vi.fn(),
+      finish: vi.fn(),
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn()
+    };
+  });
+}

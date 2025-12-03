@@ -61,15 +61,12 @@ if (!runStep('build', 'pnpm run build')) {
   process.exit(1);
 }
 
-// 6. Run Playwright tests with server management
-// Disabled for local pre-push to improve velocity. Runs on CI.
-console.log('\n⏩ Skipping local E2E tests (Running on GitHub Actions)...');
-results.steps.push({ name: 'e2e-tests', status: 'skipped' });
-
-// 7. Run accessibility tests
-// Disabled for local pre-push to improve velocity. Runs on CI.
-console.log('\n⏩ Skipping local accessibility tests (Running on GitHub Actions)...');
-results.steps.push({ name: 'accessibility-tests', status: 'skipped' });
+// 6. Run Vitest tests with server management
+if (!runStep('vitest-tests', 'pnpm run test:unit')) {
+  results.status = 'failed';
+  saveResults();
+  process.exit(1);
+}
 
 function saveResults() {
   // Fix path encoding issue - decode URI component and use process.cwd()

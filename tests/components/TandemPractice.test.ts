@@ -28,7 +28,7 @@ const mockItems = [
     }
 ];
 
-describe.skip('TandemPractice Component', () => {
+describe('TandemPractice Component', () => {
     let mockDataLoader;
 
     beforeEach(() => {
@@ -45,7 +45,7 @@ describe.skip('TandemPractice Component', () => {
     });
 
     it('should render and load initial item', async () => {
-        render(TandemPractice);
+        render(TandemPractice, { global: { ssr: false } });
 
         // Should show loading initially
         expect(screen.getByText('Loading vocabulary...')).toBeInTheDocument();
@@ -57,7 +57,7 @@ describe.skip('TandemPractice Component', () => {
     });
 
     it('should handle answer submission', async () => {
-        render(TandemPractice);
+        render(TandemPractice, { global: { ssr: false } });
 
         await waitFor(() => {
             expect(screen.getByText('Haus')).toBeInTheDocument();
@@ -65,7 +65,7 @@ describe.skip('TandemPractice Component', () => {
 
         const input = screen.getByPlaceholderText('Type your answer here...');
         await fireEvent.input(input, { target: { value: 'Къща' } });
-        
+
         const checkBtn = screen.getByText('Check Answer');
         await fireEvent.click(checkBtn);
 
@@ -75,15 +75,13 @@ describe.skip('TandemPractice Component', () => {
     });
 
     it('should switch directions', async () => {
-        render(TandemPractice);
+        render(TandemPractice, { global: { ssr: false } });
 
         await waitFor(() => {
             expect(screen.getByText('Haus')).toBeInTheDocument();
         });
 
-        // Find direction toggle (might need a better selector or role)
-        // Assuming the toggle button has a specific class or text
-        const toggle = screen.getByRole('button', { name: /switch direction/i }); 
-        // Note: The actual button text/aria-label in component needs to match
+        // Find direction toggle
+        const toggle = screen.getByRole('button', { name: /current direction/i });
     });
 });

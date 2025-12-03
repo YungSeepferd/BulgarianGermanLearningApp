@@ -9,7 +9,7 @@ The **Bulgarian-German Learning App** is a modern Single Page Application (SPA) 
 - **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Package Manager**: `pnpm`
-- **Testing**: [Playwright](https://playwright.dev/) (E2E & Component Testing), [Vitest](https://vitest.dev/) (Unit Testing)
+- **Testing**: [Vitest](https://vitest.dev/) (Unit Testing)
 - **Deployment**: GitHub Pages
 
 ## 3. Application State Management

@@ -19,7 +19,7 @@ This phase automates the delivery pipeline, ensuring that every commit is verifi
     *   Stage 3: E2E & A11y (Critical Flows).
     *   Stage 4: Deploy (Only on Main).
 *   **Task 6.1.2**: **Caching Strategy**.
-    *   Cache `node_modules` and `ms-playwright` binaries to speed up runs.
+    *   Cache `node_modules` to speed up runs.
     *   Use `actions/cache` with keys based on `pnpm-lock.yaml`.
 
 ### 6.2. Deployment Configuration

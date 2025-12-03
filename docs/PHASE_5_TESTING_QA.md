@@ -5,7 +5,7 @@ This phase restructures the testing strategy to align with the "Pyramid of Testi
 
 ## Objectives
 1.  **Unit Test Expansion**: Cover 100% of State and Data logic.
-2.  **E2E Stabilization**: Make E2E tests deterministic and flake-free.
+2.  **Component Testing**: Verify UI logic in isolation.
 3.  **Accessibility Automation**: Catch a11y regressions in CI.
 
 ## Detailed Plan
