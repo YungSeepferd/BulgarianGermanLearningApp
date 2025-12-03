@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-03T15:36:20.430Z",
+  "timestamp": "2025-12-03T15:37:42.849Z",
   "status": "failed",
   "steps": [
     {
@@ -8,12 +8,8 @@
     },
     {
       "name": "lint",
-      "status": "passed"
-    },
-    {
-      "name": "type-check",
       "status": "failed",
-      "error": "Command failed: pnpm run check"
+      "error": "Command failed: pnpm run lint"
     }
   ]
 }

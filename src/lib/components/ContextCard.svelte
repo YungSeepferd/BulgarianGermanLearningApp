@@ -50,7 +50,7 @@ onclick={flip}
 onmousedown={handlePressStart}
 onmouseup={handlePressEnd}
 onmouseleave={handlePressEnd}
-aria-label="Card: {#if gameState.currentCard}{gameState.currentCard.bulgarian_text}{/if}"
+aria-label={"Card: " + (gameState.currentCard ? gameState.currentCard.bulgarian_text : "language card")}
 tabindex="0"
 role="button"
 >
