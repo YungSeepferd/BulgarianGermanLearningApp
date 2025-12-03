@@ -8,6 +8,7 @@
   import { fireConfetti } from '$lib/utils/confetti.js';
   import FlashCard from '$lib/components/flashcard/FlashCard.svelte';
   import QuizController from '$lib/components/flashcard/QuizController.svelte';
+  import LevelUp from '$lib/components/gamification/LevelUp.svelte';
   import type { VocabularyItem } from '$lib/types/vocabulary.js';
 
   let items = $state<VocabularyItem[]>([]);
@@ -24,17 +25,9 @@
 
   // Derived current item
   let currentItem = $derived(items[currentIndex]);
-  let previousLevel = $state(learningSession.level);
 
   onMount(async () => {
     await startNewSession();
-    // Track level changes
-    $effect(() => {
-      if (learningSession.level > previousLevel) {
-        showLevelUpModal = true;
-        previousLevel = learningSession.level;
-      }
-    });
   });
 
   async function startNewSession() {
@@ -44,7 +37,6 @@
     currentIndex = 0;
     progressBar.set(0);
     learningSession.startSession();
-    previousLevel = learningSession.level; // Reset level tracking
 
     try {
         // Fetch 10 random items for the session
@@ -56,7 +48,6 @@
           error = "No vocabulary items found. Please add some data.";
         }
     } catch (e) {
-        console.error("Failed to load items", e);
         error = "Failed to load session. Please try again.";
     } finally {
         isLoading = false;
@@ -78,10 +69,6 @@
     }
   }
 
-  function handleLevelUpClose() {
-    // Level up modal is now handled by the gamification system
-  }
-
   function finishSession() {
     sessionComplete = true;
     progressBar.set(100);
@@ -91,6 +78,7 @@
 </script>
 
 <div class="learn-page">
+    <LevelUp />
     <!-- Header -->
     <header class="header">
         <a href="/" class="back-link" aria-label="Back to Dashboard">←</a>
