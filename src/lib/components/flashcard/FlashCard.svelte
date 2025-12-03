@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { VocabularyItem } from '$lib/types/vocabulary.js';
+  import { onMount } from 'svelte';
 
   type Props = {
     item: VocabularyItem;
@@ -8,6 +9,7 @@
   };
 
   let { item, flipped, onFlip }: Props = $props();
+  let audioPlayer: HTMLAudioElement;
 
   function handleKeydown(event: KeyboardEvent) {
     if (event.key === 'Enter' || event.key === ' ') {
@@ -15,6 +17,19 @@
       onFlip();
     }
   }
+
+  function playAudio() {
+    if (audioPlayer) {
+      audioPlayer.currentTime = 0;
+      audioPlayer.play().catch(e => console.error('Audio playback failed:', e));
+    }
+  }
+
+  onMount(() => {
+    if (item.audio_url) {
+      audioPlayer = new Audio(item.audio_url);
+    }
+  });
 </script>
 
 <div 
@@ -33,6 +48,15 @@
       {#if item.pronunciation?.german}
         <p class="pronunciation">{item.pronunciation.german}</p>
       {/if}
+      {#if item.audio_url}
+        <button
+          class="audio-button"
+          on:click|stopPropagation={playAudio}
+          aria-label="Play pronunciation"
+        >
+          🔊
+        </button>
+      {/if}
       <p class="hint">Tap to flip</p>
     </div>
 
@@ -49,6 +73,16 @@
       
       {#if item.pronunciation?.bulgarian}
         <p class="pronunciation">{item.pronunciation.bulgarian}</p>
+      {/if}
+
+      {#if item.audio_url}
+        <button
+          class="audio-button"
+          on:click|stopPropagation={playAudio}
+          aria-label="Play pronunciation"
+        >
+          🔊
+        </button>
       {/if}
 
       {#if item.contextual_nuance}

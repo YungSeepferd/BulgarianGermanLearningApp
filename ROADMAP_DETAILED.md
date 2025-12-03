@@ -14,50 +14,48 @@ This roadmap outlines the step-by-step transformation of the application into a 
 - [x] **Task 1.4: High-Fidelity Data Population**
     - Populated A1-B1 words with rich context (mnemonics, nuances, grammar).
 
-## 🎨 Epic 2: The Learning Interface (UI/UX)
+## ✅ Epic 2: The Learning Interface (UI/UX)
 **Goal**: Replace the current list-based practice with an immersive "Card-First" experience.
 
-- [ ] **Task 2.1: FlashCard Component (`src/lib/components/flashcard/FlashCard.svelte`)**
-    - **Props**: `item: VocabularyItem`, `flipped: boolean`.
-    - **Front**: Large German word + Emoji/Image.
-    - **Back**: Bulgarian word + Contextual Nuance + Grammar Details (Pills) + Audio Button.
-    - **Animation**: CSS `transform-style: preserve-3d` with a smooth 0.6s transition.
-    - **Accessibility**: Ensure keyboard focus and screen reader announcements for card flip.
-
-- [ ] **Task 2.2: Quiz Controller (`src/lib/components/flashcard/QuizController.svelte`)**
-    - **State**: Manage `userAnswer` and `feedbackStatus` ('idle', 'correct', 'incorrect') locally.
-    - **Logic**: 
-        - Normalize input (trim, lowercase).
-        - Compare with `item.bulgarian`.
-        - Emit events: `success`, `failure`, `next`.
-    - **Integration**: Call `learningSession.awardXP(item.xp_value)` on success.
-
-- [ ] **Task 2.3: Study Session Layout (`src/routes/learn/+page.svelte`)**
-    - **Data Loading**: Fetch random set of 10 items via `DataLoader`.
-    - **Session Logic**: 
-        - Call `learningSession.startSession()` on mount.
-        - Track `currentIndex` and `sessionComplete` state.
-    - **Layout**:
-        - **Header**: Tweened Progress Bar (`learningSession.progressPercentage`) + Fire Streak Counter (`learningSession.currentStreak`).
-        - **Main**: Centered `FlashCard` container.
-        - **Footer**: Sticky `QuizController` area.
-
-- [ ] **Task 2.4: Visual Feedback System**
-    - **Animations**: 
-        - Shake effect for errors (`svelte/motion`).
-        - Scale/Pop effect for success.
-        - Floating XP indicators ("+10 XP").
-    - **Confetti**: Trigger simple particle burst on session completion.
+- [x] **Task 2.1: FlashCard Component**
+    - Created `src/lib/components/flashcard/FlashCard.svelte` with 3D flip animation and rich content display.
+- [x] **Task 2.2: Quiz Controller**
+    - Created `src/lib/components/flashcard/QuizController.svelte` for input handling and validation.
+- [x] **Task 2.3: Study Session Layout**
+    - Implemented `src/routes/learn/+page.svelte` integrating session logic, progress bar, and streak display.
+- [x] **Task 2.4: Visual Feedback System**
+    - Integrated confetti animation and smooth transitions.
 
 ## 🏆 Epic 3: Engagement & Gamification
-**Goal**: Make learning addictive through immediate positive reinforcement.
+**Goal**: Make learning addictive through immediate positive reinforcement and long-term progression.
 
-- [ ] **Task 3.1: Streak System UI**
-    - Visual indicator in `Header`: Fire emoji 🔥 with animating counter.
-- [ ] **Task 3.2: Leveling Notifications**
-    - Toast/Modal when leveling up based on total XP.
+### Technical Design & Architecture
+-   **State Management**: Expand `LearningSession` (`src/lib/state/session.svelte.ts`) to manage:
+    -   `totalXP`: Accumulated over time (persisted).
+    -   `level`: Derived from `totalXP` (e.g., Level 1 = 0-100 XP, Level 2 = 101-300 XP).
+    -   `levelProgress`: Percentage to next level.
+-   **Components**:
+    -   `LevelUpModal.svelte`: A celebratory modal triggered when `level` changes.
+    -   `StreakWidget.svelte`: A reusable component for displaying streak status (for Dashboard).
+-   **Integration**:
+    -   `Dashboard (+page.svelte)`: Subscribe to `learningSession` to show "Total Words Learned" and "Current Level".
+    -   `QuizController`: Trigger level-up check after awarding XP.
+
+### Implementation Tasks
+- [ ] **Task 3.1: Enhance Session State**
+    - Update `src/lib/state/session.svelte.ts`:
+        - Add `totalXP` persistence.
+        - Add `calculateLevel(xp)` helper.
+        - Add `checkLevelUp()` method to be called after XP gain.
+- [ ] **Task 3.2: Create LevelUpModal Component**
+    - Create `src/lib/components/gamification/LevelUpModal.svelte`.
+    - Use `dialog` element or overlay.
+    - Animation: Scale up + Confetti burst.
 - [ ] **Task 3.3: Dashboard Refinement**
-    - Update home page to show "Words Learned" vs "Words to Review".
+    - Refactor `src/routes/+page.svelte` to replace static content with dynamic user stats:
+        - Current Level & Progress Bar.
+        - Total Words Learned (from `DataLoader.getStats()`).
+        - Quick "Continue Learning" button.
 
 ## 📚 Epic 4: Content Enrichment
 **Goal**: Fill the app with high-quality, contextual data.
@@ -68,4 +66,4 @@ This roadmap outlines the step-by-step transformation of the application into a 
     - Add Audio player helper in `FlashCard`.
 
 ---
-**Status**: In Progress (Epic 2)
+**Status**: In Progress (Epic 3)

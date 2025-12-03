@@ -16,6 +16,7 @@
   let sessionComplete = $state(false);
   let isLoading = $state(true);
   let error = $state<string | null>(null);
+  let showLevelUpModal = $state(false);
 
   const progressBar = tweened(0, {
     duration: 400,
@@ -24,9 +25,17 @@
 
   // Derived current item
   let currentItem = $derived(items[currentIndex]);
+  let previousLevel = $state(learningSession.level);
 
   onMount(async () => {
     await startNewSession();
+    // Track level changes
+    $effect(() => {
+      if (learningSession.level > previousLevel) {
+        showLevelUpModal = true;
+        previousLevel = learningSession.level;
+      }
+    });
   });
 
   async function startNewSession() {
@@ -36,6 +45,7 @@
     currentIndex = 0;
     progressBar.set(0);
     learningSession.startSession();
+    previousLevel = learningSession.level; // Reset level tracking
 
     try {
         // Fetch 10 random items for the session
@@ -67,6 +77,10 @@
     } else {
       finishSession();
     }
+  }
+
+  function handleLevelUpClose() {
+    showLevelUpModal = false;
   }
 
   function finishSession() {
