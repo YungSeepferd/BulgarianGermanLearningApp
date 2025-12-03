@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-12-03T13:41:42.293Z",
-  "status": "success",
+  "timestamp": "2025-12-03T15:26:06.885Z",
+  "status": "failed",
   "steps": [
     {
       "name": "dependencies",
@@ -8,23 +8,8 @@
     },
     {
       "name": "lint",
-      "status": "passed"
-    },
-    {
-      "name": "type-check",
-      "status": "passed"
-    },
-    {
-      "name": "unit-tests",
-      "status": "passed"
-    },
-    {
-      "name": "build",
-      "status": "passed"
-    },
-    {
-      "name": "vitest-tests",
-      "status": "passed"
+      "status": "failed",
+      "error": "Command failed: pnpm run lint"
     }
   ]
 }
