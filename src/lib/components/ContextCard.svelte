@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { spring } from 'svelte/motion';
-	import { cubicOut } from 'svelte/easing';
+import { spring } from 'svelte/motion';
 	import { getGameState } from '$lib/game.svelte';
 	const gameState = getGameState();
 
@@ -56,7 +55,7 @@
 		<div
 			class="absolute inset-0 z-20 flex flex-col items-center justify-center rounded-2xl bg-black/50 p-4 backdrop-blur-2xl"
 		>
-			{#each gameState.currentCard.literal_breakdown as segment, i}
+			{#each gameState.currentCard.literal_breakdown as segment}
 				<div class="my-2 text-center">
 					<p class="text-xl font-bold text-white">{segment.segment}</p>
 					<p class="text-md text-white/80">{segment.literal} ({segment.grammar_tag})</p>
