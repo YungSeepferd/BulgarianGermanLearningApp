@@ -87,6 +87,26 @@ export class AppState {
             this.setCurrentItem(null);
         }
     }
+
+    /**
+     * Enhanced practice session management for "Practice This" quick actions
+     * This method provides a seamless way to start practicing a specific item
+     */
+    startPracticeSession(item: VocabularyItem) {
+        // Set up the practice session
+        this.practiceMode = true;
+        this.setCurrentItem(item);
+        this.showAnswer = false;
+        
+        // Clear any existing search query to focus on practice
+        this.searchQuery = '';
+        
+        // Track session start for analytics
+        console.log(`Practice session started for item: ${item.id} (${item.german} → ${item.bulgarian})`);
+        
+        // Optionally, you could add session tracking here
+        // this.trackSessionStart(item);
+    }
     
     toggleShowAnswer() {
         this.showAnswer = !this.showAnswer;

@@ -2,15 +2,18 @@
   import type { VocabularyItem } from '$lib/types/vocabulary.js';
   import { fade, fly } from 'svelte/transition';
   import { flip } from 'svelte/animate';
+  import { appState } from '$lib/state/app.svelte.js';
 
   let {
     items = [],
     direction = 'DE->BG',
-    onSelectItem = () => {}
+    onSelectItem = () => {},
+    showQuickPractice = true // New prop for "Practice This" feature
   }: {
     items: VocabularyItem[];
     direction: 'DE->BG' | 'BG->DE';
     onSelectItem: (item: VocabularyItem) => void;
+    showQuickPractice?: boolean;
   } = $props();
 
   let hoveredItemId = $state<string | null>(null);
@@ -52,6 +55,10 @@
   // Interaction functions
   function handleItemClick(item: VocabularyItem) {
     onSelectItem(item);
+  }
+
+  function handleQuickPractice(item: VocabularyItem) {
+    appState.startPracticeSession(item);
   }
 
   function handleMouseEnter(itemId: string) {
@@ -96,6 +103,21 @@
               <span class="translation">{getItemTranslation(item)}</span>
             </div>
             <div class="action-buttons">
+              {#if showQuickPractice}
+                <button
+                  class="practice-btn quick-practice"
+                  onclick={() => handleQuickPractice(item)}
+                  onkeydown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      handleQuickPractice(item);
+                    }
+                  }}
+                  aria-label={`Quick practice ${getItemText(item)}`}
+                >
+                  <span class="btn-icon">⚡</span>
+                  <span class="btn-text">Practice This</span>
+                </button>
+              {/if}
               <button
                 class="practice-btn"
                 onclick={() => handleItemClick(item)}
@@ -289,6 +311,26 @@
     color: #495057;
   }
   
+  /* Quick practice button styles */
+  .practice-btn.quick-practice {
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    border: none;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(247, 147, 30, 0.3);
+  }
+
+  .practice-btn.quick-practice:hover {
+    background: linear-gradient(135deg, #e55a2b, #e5821a);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(247, 147, 30, 0.4);
+  }
+
+  .practice-btn.quick-practice:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(247, 147, 30, 0.3);
+  }
+
   @media (max-width: 768px) {
     .results-header {
       flex-direction: column;
@@ -301,8 +343,15 @@
       gap: 0.75rem;
     }
     
-    .action-hint {
+    .action-buttons {
+      display: flex;
+      gap: 0.5rem;
       justify-content: center;
+    }
+    
+    .practice-btn {
+      flex: 1;
+      min-width: 120px;
     }
     
     .stats {

@@ -1,4 +1,10 @@
+/* eslint-disable no-console */
 import type { VocabularyItem } from '$lib/types/vocabulary.js';
+import {
+  safeValidateVocabularyArray,
+  normalizeVocabularyItem,
+  validateVocabularyArray
+} from '$lib/schemas/vocabulary.js';
 import { LocalStorageManager } from '$lib/utils/localStorage.js';
 
 interface LearningStats {
@@ -15,11 +21,13 @@ interface CacheMetadata {
   version: string;
   timestamp: number;
   itemCount: number;
+  etag?: string | undefined;
 }
 
 /**
  * Enhanced data loader utility for the Tandem Learning System
  * Handles loading, filtering, and processing of vocabulary data with optimized caching
+ * Now uses fetch() instead of dynamic imports for better testability and decoupling
  */
 
 export class DataLoader {
@@ -27,10 +35,11 @@ export class DataLoader {
   private vocabularyCache: VocabularyItem[] | null = null;
   private statsCache: Map<string, LearningStats> | null = null;
   private cacheMetadata: CacheMetadata | null = null;
-  private readonly CACHE_VERSION = '1.0.0';
+  private readonly CACHE_VERSION = '2.0.0';
   private readonly CACHE_KEY = 'tandem_vocabulary_cache';
   private readonly STATS_CACHE_KEY = 'tandem_stats_cache';
   private readonly CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
+  private readonly DATA_URL = '/data/vocabulary.json';
 
   private constructor() {}
 
@@ -42,10 +51,8 @@ export class DataLoader {
   }
 
   /**
-   * Load all vocabulary items from the unified data source
-   */
-  /**
    * Load all vocabulary items with enhanced caching and error handling
+   * Uses fetch() to load data from static assets
    */
   public async loadVocabulary(maxRetries: number = 2): Promise<VocabularyItem[]> {
     // Check memory cache first
@@ -58,17 +65,35 @@ export class DataLoader {
     if (cachedData && this.isCacheValid(cachedData.metadata)) {
       this.vocabularyCache = cachedData.items;
       this.cacheMetadata = cachedData.metadata;
+      
+      // Revalidate in background if online
+      if (typeof navigator !== 'undefined' && navigator.onLine) {
+        this.revalidateCache().catch(err => console.error('Background revalidation failed:', err));
+      }
+      
       return this.vocabularyCache;
     }
 
+    // Fetch from network
+    return this.fetchFromNetwork(maxRetries);
+  }
+
+  /**
+   * Fetch vocabulary data from the network
+   */
+  private async fetchFromNetwork(maxRetries: number): Promise<VocabularyItem[]> {
     let lastError: unknown;
 
     for (let attempt = 0; attempt <= maxRetries; attempt++) {
       try {
-        // Load from our unified data format
-        const module = await import('./vocabulary.json');
-        const data = (module.default || module) as VocabularyItem[];
-
+        const response = await fetch(this.DATA_URL);
+        
+        if (!response.ok) {
+          throw new Error(`Failed to fetch vocabulary data: ${response.status} ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        
         if (!Array.isArray(data)) {
           throw new Error('Loaded data is not an array');
         }
@@ -77,26 +102,74 @@ export class DataLoader {
           throw new Error('Loaded data array is empty');
         }
 
-        // Validate each item in the array
-        for (const item of data) {
-          if (!item.id || !item.german || !item.bulgarian) {
-            throw new Error('Invalid vocabulary item: missing required fields');
+        // Use Zod for robust validation - challenging the "any JSON is fine" assumption
+        const validationResult = safeValidateVocabularyArray(data);
+        
+        if (!validationResult.success) {
+          console.warn('Data validation failed, attempting normalization:', validationResult.error.errors);
+          
+          // Try to normalize and validate each item individually
+          const normalizedData: VocabularyItem[] = [];
+          const validationErrors: string[] = [];
+          
+          for (const item of data) {
+            try {
+              const normalizedItem = normalizeVocabularyItem(item);
+              normalizedData.push(normalizedItem);
+            } catch (normalizationError) {
+              validationErrors.push(`Failed to normalize item: ${normalizationError}`);
+              console.warn('Skipping invalid item:', item);
+            }
           }
+          
+          if (normalizedData.length === 0) {
+            throw new Error(`No valid vocabulary items found after normalization. Errors: ${validationErrors.join(', ')}`);
+          }
+          
+          // Validate the normalized array
+          const normalizedValidation = safeValidateVocabularyArray(normalizedData);
+          if (!normalizedValidation.success) {
+            throw new Error(`Normalized data still invalid: ${normalizedValidation.error.errors.map(e => e.message).join(', ')}`);
+          }
+          
+          // Use the validated normalized data
+          const validatedData = normalizedValidation.data;
+          
+          // Cache the data
+          const metadata: CacheMetadata = {
+            version: this.CACHE_VERSION,
+            timestamp: Date.now(),
+            itemCount: validatedData.length,
+            etag: response.headers.get('ETag') || undefined
+          };
+
+          this.vocabularyCache = validatedData;
+          this.cacheMetadata = metadata;
+          
+          this.saveToCache(validatedData, metadata);
+
+          return this.vocabularyCache;
+        } else {
+          // Data is valid according to schema
+          const validatedData = validationResult.data;
+          
+          // Cache the data
+          const metadata: CacheMetadata = {
+            version: this.CACHE_VERSION,
+            timestamp: Date.now(),
+            itemCount: validatedData.length,
+            etag: response.headers.get('ETag') || undefined
+          };
+
+          this.vocabularyCache = validatedData;
+          this.cacheMetadata = metadata;
+          
+          this.saveToCache(validatedData, metadata);
+
+          return this.vocabularyCache;
         }
-
-        // Cache the data
-        this.vocabularyCache = data;
-        this.cacheMetadata = {
-          version: this.CACHE_VERSION,
-          timestamp: Date.now(),
-          itemCount: data.length
-        };
-        this.saveToCache(data, this.cacheMetadata);
-
-        return this.vocabularyCache;
       } catch (error) {
         lastError = error;
-        // eslint-disable-next-line no-console
         console.error(`Attempt ${attempt + 1} failed to load vocabulary data:`, error);
 
         // Wait before retrying
@@ -106,9 +179,34 @@ export class DataLoader {
       }
     }
 
-    // eslint-disable-next-line no-console
     console.error('All attempts to load vocabulary data failed');
     throw lastError || new Error('Unknown error occurred while loading vocabulary data');
+  }
+
+  /**
+   * Background revalidation of cache
+   */
+  private async revalidateCache(): Promise<void> {
+      try {
+          const response = await fetch(this.DATA_URL, {
+              method: 'HEAD'
+          });
+          
+          if (!response.ok) return;
+          
+          const etag = response.headers.get('ETag');
+          
+          // If ETag matches, our cache is fresh
+          if (etag && this.cacheMetadata?.etag === etag) {
+              return;
+          }
+          
+          // Data changed, fetch update
+          await this.fetchFromNetwork(1);
+          
+      } catch (_error) {
+          // Ignore validation errors
+      }
   }
 
   /**
@@ -116,6 +214,8 @@ export class DataLoader {
    */
   private loadFromCache(): { items: VocabularyItem[]; metadata: CacheMetadata } | null {
     try {
+      if (typeof localStorage === 'undefined') return null;
+      
       const cached = localStorage.getItem(this.CACHE_KEY);
       if (!cached) return null;
 
@@ -136,13 +236,15 @@ export class DataLoader {
    */
   private saveToCache(items: VocabularyItem[], metadata: CacheMetadata): void {
     try {
+      if (typeof localStorage === 'undefined') return;
+      
       const cacheData = {
         items,
         metadata
       };
       localStorage.setItem(this.CACHE_KEY, JSON.stringify(cacheData));
     } catch (_error) {
-      // Silently fail if caching fails
+      // Silently fail if caching fails (e.g. storage full)
     }
   }
 
@@ -152,10 +254,20 @@ export class DataLoader {
   private isCacheValid(metadata?: CacheMetadata): boolean {
     if (!metadata) return false;
     
-    const now = Date.now();
-    const cacheAge = now - metadata.timestamp;
+    // Check if we have an in-memory cache but no metadata passed (internal check)
+    let currentMetadata = metadata;
+    if (!currentMetadata && this.cacheMetadata) {
+        currentMetadata = this.cacheMetadata;
+    }
     
-    return cacheAge < this.CACHE_DURATION && metadata.version === this.CACHE_VERSION;
+    if (!currentMetadata) {
+        return false;
+    }
+    
+    const now = Date.now();
+    const cacheAge = now - currentMetadata.timestamp;
+    
+    return cacheAge < this.CACHE_DURATION && currentMetadata.version === this.CACHE_VERSION;
   }
 
   /**
@@ -255,9 +367,6 @@ export class DataLoader {
   }
 
   /**
-   * Update learning statistics for an item
-   */
-  /**
    * Update learning statistics with localStorage persistence
    */
   public async updateStats(
@@ -328,8 +437,10 @@ export class DataLoader {
     this.cacheMetadata = null;
     
     try {
-      localStorage.removeItem(this.CACHE_KEY);
-      localStorage.removeItem(this.STATS_CACHE_KEY);
+      if (typeof localStorage !== 'undefined') {
+        localStorage.removeItem(this.CACHE_KEY);
+        localStorage.removeItem(this.STATS_CACHE_KEY);
+      }
     } catch (_error) {
       // Silently fail if clearing cache fails
     }

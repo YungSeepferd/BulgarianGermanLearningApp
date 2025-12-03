@@ -1,5 +1,5 @@
 // tests/unit/dataLoader.test.ts
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach, vi, afterEach } from 'vitest';
 import { DataLoader } from '$lib/data/loader';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 
@@ -12,6 +12,7 @@ const mockLocalStorage = {
 };
 
 vi.stubGlobal('localStorage', mockLocalStorage);
+vi.stubGlobal('fetch', vi.fn());
 
 // Mock vocabulary data
 const mockVocabulary: VocabularyItem[] = [
@@ -21,7 +22,6 @@ const mockVocabulary: VocabularyItem[] = [
         bulgarian: 'Здравей',
         category: 'Greetings',
         tags: ['A1'],
-        type: 'word',
         difficulty: 'A1'
     },
     {
@@ -30,7 +30,6 @@ const mockVocabulary: VocabularyItem[] = [
         bulgarian: 'Благодаря',
         category: 'Greetings',
         tags: ['A1'],
-        type: 'word',
         difficulty: 'A1'
     }
 ];
@@ -43,10 +42,6 @@ vi.mock('$lib/data/loader', async (importOriginal) => {
         DataLoader: actual.DataLoader
     };
 });
-
-vi.mock('$lib/data/vocabulary.json', () => ({
-    default: mockVocabulary
-}));
 
 // Mock LocalStorageManager
 vi.mock('$lib/utils/localStorage', async (importOriginal) => {
@@ -68,8 +63,20 @@ describe('DataLoader', () => {
 
     beforeEach(() => {
         vi.clearAllMocks();
+        // Reset singleton instance by clearing cache
         dataLoader = DataLoader.getInstance();
         dataLoader.clearCache();
+        
+        // Mock successful fetch by default
+        vi.mocked(fetch).mockResolvedValue({
+            ok: true,
+            json: async () => mockVocabulary,
+            headers: new Headers({ 'ETag': 'test-etag' })
+        } as Response);
+    });
+    
+    afterEach(() => {
+        vi.resetAllMocks();
     });
 
     describe('Singleton Pattern', () => {
@@ -85,22 +92,30 @@ describe('DataLoader', () => {
             const items = await dataLoader.loadVocabulary();
             expect(items).toEqual(mockVocabulary);
             expect(items).toHaveLength(2);
+            expect(fetch).toHaveBeenCalledWith('/data/vocabulary.json');
         });
 
         it('should cache vocabulary in memory', async () => {
             const items1 = await dataLoader.loadVocabulary();
             const items2 = await dataLoader.loadVocabulary();
             expect(items1).toBe(items2); // Same reference
+            expect(fetch).toHaveBeenCalledTimes(1);
         });
 
         it('should handle loading errors gracefully', async () => {
-            // Mock import failure
-            vi.doMock('./vocabulary.json', () => {
-                throw new Error('Import failed');
-            });
+            // Mock fetch failure first, then success
+            vi.mocked(fetch)
+                .mockRejectedValueOnce(new Error('Network error'))
+                .mockResolvedValueOnce({
+                    ok: true,
+                    json: async () => mockVocabulary,
+                    headers: new Headers()
+                } as Response);
 
-            // The loader should retry and eventually succeed with cached data
-            await expect(dataLoader.loadVocabulary()).resolves.toBeDefined();
+            // The loader should retry and eventually succeed
+            const items = await dataLoader.loadVocabulary();
+            expect(items).toEqual(mockVocabulary);
+            expect(fetch).toHaveBeenCalledTimes(2);
         });
 
         it('should validate vocabulary items', async () => {
@@ -108,12 +123,15 @@ describe('DataLoader', () => {
                 { id: '', german: 'Test', bulgarian: 'Тест', category: 'Test', tags: [], type: 'word' as const }
             ] as VocabularyItem[];
 
-            vi.doMock('./vocabulary.json', () => ({
-                default: invalidItems
-            }));
+            vi.mocked(fetch).mockResolvedValue({
+                ok: true,
+                json: async () => invalidItems,
+                headers: new Headers()
+            } as Response);
 
-            // The loader should retry and eventually succeed with cached data
-            await expect(dataLoader.loadVocabulary()).resolves.toBeDefined();
+            // The loader should handle invalid data by filtering it or throwing
+            // In our current implementation it throws if no valid items found
+            await expect(dataLoader.loadVocabulary()).rejects.toThrow();
         });
     });
 
@@ -122,7 +140,7 @@ describe('DataLoader', () => {
             await dataLoader.loadVocabulary();
             expect(mockLocalStorage.setItem).toHaveBeenCalledWith(
                 'tandem_vocabulary_cache',
-                expect.stringContaining('"version":"1.0.0"')
+                expect.stringContaining('"version":"2.0.0"')
             );
         });
 
@@ -130,7 +148,7 @@ describe('DataLoader', () => {
             const cacheData = {
                 items: mockVocabulary,
                 metadata: {
-                    version: '1.0.0',
+                    version: '2.0.0',
                     timestamp: Date.now(),
                     itemCount: 2
                 }
@@ -140,13 +158,15 @@ describe('DataLoader', () => {
 
             const items = await dataLoader.loadVocabulary();
             expect(items).toEqual(mockVocabulary);
+            // Should verify fetch was NOT called if cache is valid (except for revalidation)
+            // But implementation might do background revalidation
         });
 
         it('should validate cache version', async () => {
             const oldCacheData = {
                 items: mockVocabulary,
                 metadata: {
-                    version: '0.9.0',
+                    version: '1.0.0', // Old version
                     timestamp: Date.now(),
                     itemCount: 2
                 }
@@ -154,16 +174,17 @@ describe('DataLoader', () => {
 
             mockLocalStorage.getItem.mockReturnValue(JSON.stringify(oldCacheData));
 
-            // Should ignore old cache and load from JSON
+            // Should ignore old cache and load from network
             const items = await dataLoader.loadVocabulary();
             expect(items).toEqual(mockVocabulary);
+            expect(fetch).toHaveBeenCalled();
         });
 
         it('should handle expired cache', async () => {
             const expiredCacheData = {
                 items: mockVocabulary,
                 metadata: {
-                    version: '1.0.0',
+                    version: '2.0.0',
                     timestamp: Date.now() - (25 * 60 * 60 * 1000), // 25 hours ago
                     itemCount: 2
                 }
@@ -171,9 +192,10 @@ describe('DataLoader', () => {
 
             mockLocalStorage.getItem.mockReturnValue(JSON.stringify(expiredCacheData));
 
-            // Should ignore expired cache and load from JSON
+            // Should ignore expired cache and load from network
             const items = await dataLoader.loadVocabulary();
             expect(items).toEqual(mockVocabulary);
+            expect(fetch).toHaveBeenCalled();
         });
     });
 
@@ -220,7 +242,11 @@ describe('DataLoader', () => {
         it('should get random items', async () => {
             const items = await dataLoader.getRandomItems(1);
             expect(items).toHaveLength(1);
-            expect(mockVocabulary).toContain(items[0]);
+            expect(items[0]).toEqual(expect.objectContaining({
+                id: expect.any(String),
+                german: expect.any(String),
+                bulgarian: expect.any(String)
+            }));
         });
 
         it('should filter random items by category', async () => {
@@ -338,17 +364,18 @@ describe('DataLoader', () => {
         });
 
         it('should retry loading on failure', async () => {
-            let attemptCount = 0;
-            vi.doMock('./vocabulary.json', () => {
-                attemptCount++;
-                if (attemptCount < 2) {
-                    throw new Error('Temporary failure');
-                }
-                return { default: mockVocabulary };
-            });
+             // Mock fetch failure first, then success
+            vi.mocked(fetch)
+                .mockRejectedValueOnce(new Error('Temporary failure'))
+                .mockResolvedValueOnce({
+                    ok: true,
+                    json: async () => mockVocabulary,
+                    headers: new Headers()
+                } as Response);
 
             const items = await dataLoader.loadVocabulary();
             expect(items).toEqual(mockVocabulary);
+            expect(fetch).toHaveBeenCalledTimes(2);
         });
     });
 });

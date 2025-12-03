@@ -168,12 +168,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1155,
+                      "duration": 2239,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:47.534Z",
+                      "startTime": "2025-12-03T01:03:18.320Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -202,12 +202,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1992,
+                      "duration": 3448,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:47.535Z",
+                      "startTime": "2025-12-03T01:03:18.326Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -236,12 +236,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3363,
+                      "duration": 5410,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:47.536Z",
+                      "startTime": "2025-12-03T01:03:18.323Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -270,12 +270,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2683,
+                      "duration": 4900,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:47.534Z",
+                      "startTime": "2025-12-03T01:03:18.330Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -304,12 +304,12 @@
                       "workerIndex": 4,
                       "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 3447,
+                      "duration": 3407,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:47.536Z",
+                      "startTime": "2025-12-03T01:03:18.326Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -338,12 +338,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3277,
+                      "duration": 3267,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:48.933Z",
+                      "startTime": "2025-12-03T01:03:20.811Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -369,34 +369,34 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "failed",
-                      "duration": 10187,
+                      "duration": 10190,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:152:42",
                         "location": {
                           "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                           "column": 42,
-                          "line": 151
+                          "line": 152
                         },
-                        "snippet": "\u001b[0m \u001b[90m 149 |\u001b[39m\n \u001b[90m 150 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 151 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 153 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 150 |\u001b[39m\n \u001b[90m 151 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 153 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 155 |\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                             "column": 42,
-                            "line": 151
+                            "line": 152
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 149 |\u001b[39m\n \u001b[90m 150 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 151 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 153 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 150 |\u001b[39m\n \u001b[90m 151 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 153 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 155 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:152:42\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:49.764Z",
+                      "startTime": "2025-12-03T01:03:21.974Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -418,7 +418,7 @@
                       "errorLocation": {
                         "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                         "column": 42,
-                        "line": 151
+                        "line": 152
                       }
                     }
                   ],
@@ -443,34 +443,34 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 10173,
+                      "duration": 10197,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:174:42",
                         "location": {
                           "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                           "column": 42,
-                          "line": 173
+                          "line": 174
                         },
-                        "snippet": "\u001b[0m \u001b[90m 171 |\u001b[39m\n \u001b[90m 172 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 173 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 174 |\u001b[39m\n \u001b[90m 175 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 172 |\u001b[39m\n \u001b[90m 173 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 177 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                             "column": 42,
-                            "line": 173
+                            "line": 174
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 171 |\u001b[39m\n \u001b[90m 172 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 173 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 174 |\u001b[39m\n \u001b[90m 175 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 172 |\u001b[39m\n \u001b[90m 173 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 177 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:174:42\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:50.454Z",
+                      "startTime": "2025-12-03T01:03:22.016Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -492,7 +492,7 @@
                       "errorLocation": {
                         "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                         "column": 42,
-                        "line": 173
+                        "line": 174
                       }
                     }
                   ],
@@ -501,7 +501,7 @@
               ],
               "id": "4499e347c4bf50239532-a51b5a654c8775e26a3b",
               "file": "e2e/practice.test.ts",
-              "line": 155,
+              "line": 156,
               "column": 3
             },
             {
@@ -518,14 +518,14 @@
                   "results": [
                     {
                       "workerIndex": 5,
-                      "parallelIndex": 2,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2272,
+                      "duration": 2116,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:51.598Z",
+                      "startTime": "2025-12-03T01:03:23.930Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -552,14 +552,14 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 4,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1816,
+                      "duration": 2089,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:51.670Z",
+                      "startTime": "2025-12-03T01:03:24.416Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -588,12 +588,12 @@
                       "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3605,
+                      "duration": 4532,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:52.692Z",
+                      "startTime": "2025-12-03T01:03:24.529Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -620,14 +620,14 @@
                   "results": [
                     {
                       "workerIndex": 5,
-                      "parallelIndex": 2,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2888,
+                      "duration": 2566,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:54.564Z",
+                      "startTime": "2025-12-03T01:03:26.769Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -654,14 +654,14 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 4,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3651,
+                      "duration": 3486,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:54.576Z",
+                      "startTime": "2025-12-03T01:03:27.194Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -687,15 +687,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 0,
+                      "workerIndex": 5,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3429,
+                      "duration": 3417,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:57.017Z",
+                      "startTime": "2025-12-03T01:03:29.343Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -721,34 +721,34 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 2,
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 10376,
+                      "duration": 10417,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:152:42",
                         "location": {
                           "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                           "column": 42,
-                          "line": 151
+                          "line": 152
                         },
-                        "snippet": "\u001b[0m \u001b[90m 149 |\u001b[39m\n \u001b[90m 150 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 151 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 153 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 150 |\u001b[39m\n \u001b[90m 151 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 153 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 155 |\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                             "column": 42,
-                            "line": 151
+                            "line": 152
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 149 |\u001b[39m\n \u001b[90m 150 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 151 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 153 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 150 |\u001b[39m\n \u001b[90m 151 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 153 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 155 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:152:42\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:57.462Z",
+                      "startTime": "2025-12-03T01:03:30.054Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -770,7 +770,7 @@
                       "errorLocation": {
                         "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                         "column": 42,
-                        "line": 151
+                        "line": 152
                       }
                     }
                   ],
@@ -796,33 +796,33 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 4,
+                      "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 10417,
+                      "duration": 10457,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:174:42",
                         "location": {
                           "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                           "column": 42,
-                          "line": 173
+                          "line": 174
                         },
-                        "snippet": "\u001b[0m \u001b[90m 171 |\u001b[39m\n \u001b[90m 172 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 173 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 174 |\u001b[39m\n \u001b[90m 175 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 172 |\u001b[39m\n \u001b[90m 173 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 177 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                             "column": 42,
-                            "line": 173
+                            "line": 174
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 171 |\u001b[39m\n \u001b[90m 172 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 173 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 174 |\u001b[39m\n \u001b[90m 175 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 172 |\u001b[39m\n \u001b[90m 173 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 177 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:174:42\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:46:58.236Z",
+                      "startTime": "2025-12-03T01:03:30.689Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -844,7 +844,7 @@
                       "errorLocation": {
                         "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                         "column": 42,
-                        "line": 173
+                        "line": 174
                       }
                     }
                   ],
@@ -853,7 +853,7 @@
               ],
               "id": "4499e347c4bf50239532-23025b76106b8ce5101d",
               "file": "e2e/practice.test.ts",
-              "line": 155,
+              "line": 156,
               "column": 3
             },
             {
@@ -870,14 +870,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 1,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1832,
+                      "duration": 2842,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:00.375Z",
+                      "startTime": "2025-12-03T01:03:32.587Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -903,15 +903,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 0,
+                      "workerIndex": 9,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1577,
+                      "duration": 2895,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:01.342Z",
+                      "startTime": "2025-12-03T01:03:32.623Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -937,15 +937,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 9,
+                      "workerIndex": 10,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3564,
+                      "duration": 3580,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:01.171Z",
+                      "startTime": "2025-12-03T01:03:33.680Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -972,14 +972,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 1,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 2704,
+                      "duration": 2712,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:02.454Z",
+                      "startTime": "2025-12-03T01:03:35.680Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1005,15 +1005,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 0,
+                      "workerIndex": 9,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3282,
+                      "duration": 3338,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:03.173Z",
+                      "startTime": "2025-12-03T01:03:35.731Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1039,15 +1039,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 9,
+                      "workerIndex": 10,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3329,
+                      "duration": 3354,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:04.957Z",
+                      "startTime": "2025-12-03T01:03:37.522Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1074,33 +1074,33 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 1,
+                      "parallelIndex": 4,
                       "status": "failed",
-                      "duration": 10284,
+                      "duration": 10289,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:152:42",
                         "location": {
                           "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                           "column": 42,
-                          "line": 151
+                          "line": 152
                         },
-                        "snippet": "\u001b[0m \u001b[90m 149 |\u001b[39m\n \u001b[90m 150 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 151 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 153 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 150 |\u001b[39m\n \u001b[90m 151 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 153 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 155 |\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                             "column": 42,
-                            "line": 151
+                            "line": 152
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 149 |\u001b[39m\n \u001b[90m 150 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 151 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 153 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 150 |\u001b[39m\n \u001b[90m 151 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 153 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 155 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:152:42\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:05.167Z",
+                      "startTime": "2025-12-03T01:03:38.399Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1122,7 +1122,7 @@
                       "errorLocation": {
                         "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                         "column": 42,
-                        "line": 151
+                        "line": 152
                       }
                     }
                   ],
@@ -1147,34 +1147,34 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 0,
+                      "workerIndex": 9,
+                      "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 10307,
+                      "duration": 10312,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:174:42",
                         "location": {
                           "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                           "column": 42,
-                          "line": 173
+                          "line": 174
                         },
-                        "snippet": "\u001b[0m \u001b[90m 171 |\u001b[39m\n \u001b[90m 172 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 173 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 174 |\u001b[39m\n \u001b[90m 175 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 172 |\u001b[39m\n \u001b[90m 173 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 177 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                             "column": 42,
-                            "line": 173
+                            "line": 174
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 171 |\u001b[39m\n \u001b[90m 172 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 173 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 174 |\u001b[39m\n \u001b[90m 175 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 172 |\u001b[39m\n \u001b[90m 173 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 177 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:174:42\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:06.462Z",
+                      "startTime": "2025-12-03T01:03:39.078Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1196,7 +1196,7 @@
                       "errorLocation": {
                         "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                         "column": 42,
-                        "line": 173
+                        "line": 174
                       }
                     }
                   ],
@@ -1205,7 +1205,7 @@
               ],
               "id": "4499e347c4bf50239532-b710dca676531c9405fe",
               "file": "e2e/practice.test.ts",
-              "line": 155,
+              "line": 156,
               "column": 3
             },
             {
@@ -1222,14 +1222,14 @@
                   "results": [
                     {
                       "workerIndex": 11,
-                      "parallelIndex": 2,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1144,
+                      "duration": 1134,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:08.592Z",
+                      "startTime": "2025-12-03T01:03:41.356Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1258,12 +1258,12 @@
                       "workerIndex": 12,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1225,
+                      "duration": 1223,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:08.698Z",
+                      "startTime": "2025-12-03T01:03:41.378Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1290,14 +1290,14 @@
                   "results": [
                     {
                       "workerIndex": 13,
-                      "parallelIndex": 4,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 2667,
+                      "duration": 3201,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:09.477Z",
+                      "startTime": "2025-12-03T01:03:42.071Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1324,14 +1324,14 @@
                   "results": [
                     {
                       "workerIndex": 11,
-                      "parallelIndex": 2,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2638,
+                      "duration": 2619,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:09.942Z",
+                      "startTime": "2025-12-03T01:03:42.778Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1360,12 +1360,12 @@
                       "workerIndex": 12,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3260,
+                      "duration": 3308,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:10.078Z",
+                      "startTime": "2025-12-03T01:03:42.868Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1391,15 +1391,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 4,
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3293,
+                      "duration": 3268,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:12.291Z",
+                      "startTime": "2025-12-03T01:03:45.405Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1425,34 +1425,34 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 11,
+                      "workerIndex": 13,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 10185,
+                      "duration": 10184,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:152:42",
                         "location": {
                           "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                           "column": 42,
-                          "line": 151
+                          "line": 152
                         },
-                        "snippet": "\u001b[0m \u001b[90m 149 |\u001b[39m\n \u001b[90m 150 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 151 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 153 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 150 |\u001b[39m\n \u001b[90m 151 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 153 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 155 |\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                             "column": 42,
-                            "line": 151
+                            "line": 152
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 149 |\u001b[39m\n \u001b[90m 150 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 151 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 153 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 150 |\u001b[39m\n \u001b[90m 151 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 153 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 155 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:152:42\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:12.591Z",
+                      "startTime": "2025-12-03T01:03:45.422Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1474,7 +1474,7 @@
                       "errorLocation": {
                         "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                         "column": 42,
-                        "line": 151
+                        "line": 152
                       }
                     }
                   ],
@@ -1502,31 +1502,31 @@
                       "workerIndex": 12,
                       "parallelIndex": 3,
                       "status": "failed",
-                      "duration": 10209,
+                      "duration": 10208,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:174:42",
                         "location": {
                           "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                           "column": 42,
-                          "line": 173
+                          "line": 174
                         },
-                        "snippet": "\u001b[0m \u001b[90m 171 |\u001b[39m\n \u001b[90m 172 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 173 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 174 |\u001b[39m\n \u001b[90m 175 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 172 |\u001b[39m\n \u001b[90m 173 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 177 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                             "column": 42,
-                            "line": 173
+                            "line": 174
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 171 |\u001b[39m\n \u001b[90m 172 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 173 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 174 |\u001b[39m\n \u001b[90m 175 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 172 |\u001b[39m\n \u001b[90m 173 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 177 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:174:42\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:13.348Z",
+                      "startTime": "2025-12-03T01:03:46.184Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1548,7 +1548,7 @@
                       "errorLocation": {
                         "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                         "column": 42,
-                        "line": 173
+                        "line": 174
                       }
                     }
                   ],
@@ -1557,7 +1557,7 @@
               ],
               "id": "4499e347c4bf50239532-9ba54becd678bc26f08d",
               "file": "e2e/practice.test.ts",
-              "line": 155,
+              "line": 156,
               "column": 3
             },
             {
@@ -1574,14 +1574,14 @@
                   "results": [
                     {
                       "workerIndex": 14,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1535,
+                      "duration": 1621,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:15.883Z",
+                      "startTime": "2025-12-03T01:03:49.104Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1610,12 +1610,12 @@
                       "workerIndex": 15,
                       "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1611,
+                      "duration": 1735,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:16.000Z",
+                      "startTime": "2025-12-03T01:03:49.108Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1642,14 +1642,14 @@
                   "results": [
                     {
                       "workerIndex": 16,
-                      "parallelIndex": 0,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3590,
+                      "duration": 3561,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:17.222Z",
+                      "startTime": "2025-12-03T01:03:50.093Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1676,14 +1676,14 @@
                   "results": [
                     {
                       "workerIndex": 14,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2699,
+                      "duration": 2672,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:17.626Z",
+                      "startTime": "2025-12-03T01:03:50.955Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1712,12 +1712,12 @@
                       "workerIndex": 15,
                       "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 3325,
+                      "duration": 3314,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:17.841Z",
+                      "startTime": "2025-12-03T01:03:51.068Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1744,14 +1744,14 @@
                   "results": [
                     {
                       "workerIndex": 14,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3299,
+                      "duration": 3289,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:20.335Z",
+                      "startTime": "2025-12-03T01:03:53.635Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1778,33 +1778,33 @@
                   "results": [
                     {
                       "workerIndex": 16,
-                      "parallelIndex": 0,
+                      "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 10292,
+                      "duration": 10295,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:152:42",
                         "location": {
                           "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                           "column": 42,
-                          "line": 151
+                          "line": 152
                         },
-                        "snippet": "\u001b[0m \u001b[90m 149 |\u001b[39m\n \u001b[90m 150 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 151 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 153 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 150 |\u001b[39m\n \u001b[90m 151 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 153 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 155 |\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                             "column": 42,
-                            "line": 151
+                            "line": 152
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 149 |\u001b[39m\n \u001b[90m 150 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 151 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 153 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 150 |\u001b[39m\n \u001b[90m 151 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 152 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 153 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Failed to load vocabulary'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 154 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 155 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:152:42\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:21.019Z",
+                      "startTime": "2025-12-03T01:03:53.852Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1826,7 +1826,7 @@
                       "errorLocation": {
                         "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                         "column": 42,
-                        "line": 151
+                        "line": 152
                       }
                     }
                   ],
@@ -1854,31 +1854,31 @@
                       "workerIndex": 15,
                       "parallelIndex": 4,
                       "status": "failed",
-                      "duration": 10305,
+                      "duration": 10271,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:174:42",
                         "location": {
                           "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                           "column": 42,
-                          "line": 173
+                          "line": 174
                         },
-                        "snippet": "\u001b[0m \u001b[90m 171 |\u001b[39m\n \u001b[90m 172 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 173 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 174 |\u001b[39m\n \u001b[90m 175 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 172 |\u001b[39m\n \u001b[90m 173 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 177 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                             "column": 42,
-                            "line": 173
+                            "line": 174
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 171 |\u001b[39m\n \u001b[90m 172 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 173 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 174 |\u001b[39m\n \u001b[90m 175 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.error')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error')\u001b[22m\n\n\n\u001b[0m \u001b[90m 172 |\u001b[39m\n \u001b[90m 173 |\u001b[39m     \u001b[90m// Wait for error to appear with longer timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m\n \u001b[90m 176 |\u001b[39m     \u001b[90m// Click retry button with force option\u001b[39m\n \u001b[90m 177 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.btn-primary'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:174:42\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:47:21.175Z",
+                      "startTime": "2025-12-03T01:03:54.389Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1900,7 +1900,7 @@
                       "errorLocation": {
                         "file": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts",
                         "column": 42,
-                        "line": 173
+                        "line": 174
                       }
                     }
                   ],
@@ -1909,7 +1909,7 @@
               ],
               "id": "4499e347c4bf50239532-d54919a28a2b41f12567",
               "file": "e2e/practice.test.ts",
-              "line": 155,
+              "line": 156,
               "column": 3
             }
           ]
@@ -1919,8 +1919,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-12-03T00:46:43.746Z",
-    "duration": 47777.562999999995,
+    "startTime": "2025-12-03T01:03:14.464Z",
+    "duration": 50237.62,
     "expected": 30,
     "skipped": 0,
     "unexpected": 10,

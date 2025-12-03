@@ -1,18 +1,18 @@
-<testsuites id="" name="" tests="40" failures="10" skipped="0" errors="0" time="47.777562999999994">
-<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:46:47.119Z" hostname="chromium" tests="8" failures="2" skipped="0" time="36.277" errors="0">
-<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.155">
+<testsuites id="" name="" tests="40" failures="10" skipped="0" errors="0" time="50.23762">
+<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T01:03:17.855Z" hostname="chromium" tests="8" failures="2" skipped="0" time="43.058" errors="0">
+<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="2.239">
 </testcase>
-<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.992">
+<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="3.448">
 </testcase>
-<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="3.363">
+<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="5.41">
 </testcase>
-<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="2.683">
+<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="4.9">
 </testcase>
-<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="3.447">
+<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="3.407">
 </testcase>
-<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="3.277">
+<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="3.267">
 </testcase>
-<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="10.187">
+<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="10.19">
 <failure message="practice.test.ts:138:3 should show error message when loading fails" type="FAILURE">
 <![CDATA[  [chromium] › e2e/practice.test.ts:138:3 › Practice Interface › should show error message when loading fails 
 
@@ -28,14 +28,14 @@
       - waiting for locator('.error')
 
 
-      149 |
-      150 |     // Wait for error to appear with longer timeout
-    > 151 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
+      150 |
+      151 |     // Wait for error to appear with longer timeout
+    > 152 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      152 |     await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
-      153 |   });
-      154 |
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42
+      153 |     await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
+      154 |   });
+      155 |
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:152:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-d5336--message-when-loading-fails-chromium/test-failed-1.png
@@ -58,9 +58,9 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="10.173">
-<failure message="practice.test.ts:155:3 should allow retry when loading fails" type="FAILURE">
-<![CDATA[  [chromium] › e2e/practice.test.ts:155:3 › Practice Interface › should allow retry when loading fails 
+<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="10.197">
+<failure message="practice.test.ts:156:3 should allow retry when loading fails" type="FAILURE">
+<![CDATA[  [chromium] › e2e/practice.test.ts:156:3 › Practice Interface › should allow retry when loading fails 
 
     Error: expect(locator).toBeVisible() failed
 
@@ -74,14 +74,14 @@
       - waiting for locator('.error')
 
 
-      171 |
-      172 |     // Wait for error to appear with longer timeout
-    > 173 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
+      172 |
+      173 |     // Wait for error to appear with longer timeout
+    > 174 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      174 |
-      175 |     // Click retry button with force option
-      176 |     await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42
+      175 |
+      176 |     // Click retry button with force option
+      177 |     await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:174:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-2618f-ow-retry-when-loading-fails-chromium/test-failed-1.png
@@ -105,20 +105,20 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:46:47.119Z" hostname="firefox" tests="8" failures="2" skipped="0" time="38.454" errors="0">
-<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="2.272">
+<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T01:03:17.855Z" hostname="firefox" tests="8" failures="2" skipped="0" time="39.08" errors="0">
+<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="2.116">
 </testcase>
-<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.816">
+<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="2.089">
 </testcase>
-<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="3.605">
+<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="4.532">
 </testcase>
-<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="2.888">
+<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="2.566">
 </testcase>
-<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="3.651">
+<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="3.486">
 </testcase>
-<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="3.429">
+<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="3.417">
 </testcase>
-<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="10.376">
+<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="10.417">
 <failure message="practice.test.ts:138:3 should show error message when loading fails" type="FAILURE">
 <![CDATA[  [firefox] › e2e/practice.test.ts:138:3 › Practice Interface › should show error message when loading fails 
 
@@ -134,14 +134,14 @@
       - waiting for locator('.error')
 
 
-      149 |
-      150 |     // Wait for error to appear with longer timeout
-    > 151 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
+      150 |
+      151 |     // Wait for error to appear with longer timeout
+    > 152 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      152 |     await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
-      153 |   });
-      154 |
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42
+      153 |     await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
+      154 |   });
+      155 |
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:152:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-d5336--message-when-loading-fails-firefox/test-failed-1.png
@@ -164,9 +164,9 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="10.417">
-<failure message="practice.test.ts:155:3 should allow retry when loading fails" type="FAILURE">
-<![CDATA[  [firefox] › e2e/practice.test.ts:155:3 › Practice Interface › should allow retry when loading fails 
+<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="10.457">
+<failure message="practice.test.ts:156:3 should allow retry when loading fails" type="FAILURE">
+<![CDATA[  [firefox] › e2e/practice.test.ts:156:3 › Practice Interface › should allow retry when loading fails 
 
     Error: expect(locator).toBeVisible() failed
 
@@ -180,14 +180,14 @@
       - waiting for locator('.error')
 
 
-      171 |
-      172 |     // Wait for error to appear with longer timeout
-    > 173 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
+      172 |
+      173 |     // Wait for error to appear with longer timeout
+    > 174 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      174 |
-      175 |     // Click retry button with force option
-      176 |     await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42
+      175 |
+      176 |     // Click retry button with force option
+      177 |     await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:174:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-2618f-ow-retry-when-loading-fails-firefox/test-failed-1.png
@@ -211,20 +211,20 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:46:47.119Z" hostname="webkit" tests="8" failures="2" skipped="0" time="36.879" errors="0">
-<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.832">
+<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T01:03:17.855Z" hostname="webkit" tests="8" failures="2" skipped="0" time="39.322" errors="0">
+<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="2.842">
 </testcase>
-<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.577">
+<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="2.895">
 </testcase>
-<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="3.564">
+<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="3.58">
 </testcase>
-<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="2.704">
+<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="2.712">
 </testcase>
-<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="3.282">
+<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="3.338">
 </testcase>
-<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="3.329">
+<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="3.354">
 </testcase>
-<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="10.284">
+<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="10.289">
 <failure message="practice.test.ts:138:3 should show error message when loading fails" type="FAILURE">
 <![CDATA[  [webkit] › e2e/practice.test.ts:138:3 › Practice Interface › should show error message when loading fails 
 
@@ -240,14 +240,14 @@
       - waiting for locator('.error')
 
 
-      149 |
-      150 |     // Wait for error to appear with longer timeout
-    > 151 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
+      150 |
+      151 |     // Wait for error to appear with longer timeout
+    > 152 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      152 |     await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
-      153 |   });
-      154 |
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42
+      153 |     await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
+      154 |   });
+      155 |
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:152:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-d5336--message-when-loading-fails-webkit/test-failed-1.png
@@ -270,9 +270,9 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="10.307">
-<failure message="practice.test.ts:155:3 should allow retry when loading fails" type="FAILURE">
-<![CDATA[  [webkit] › e2e/practice.test.ts:155:3 › Practice Interface › should allow retry when loading fails 
+<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="10.312">
+<failure message="practice.test.ts:156:3 should allow retry when loading fails" type="FAILURE">
+<![CDATA[  [webkit] › e2e/practice.test.ts:156:3 › Practice Interface › should allow retry when loading fails 
 
     Error: expect(locator).toBeVisible() failed
 
@@ -286,14 +286,14 @@
       - waiting for locator('.error')
 
 
-      171 |
-      172 |     // Wait for error to appear with longer timeout
-    > 173 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
+      172 |
+      173 |     // Wait for error to appear with longer timeout
+    > 174 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      174 |
-      175 |     // Click retry button with force option
-      176 |     await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42
+      175 |
+      176 |     // Click retry button with force option
+      177 |     await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:174:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-2618f-ow-retry-when-loading-fails-webkit/test-failed-1.png
@@ -317,20 +317,20 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:46:47.119Z" hostname="Mobile Chrome" tests="8" failures="2" skipped="0" time="34.621" errors="0">
-<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.144">
+<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T01:03:17.855Z" hostname="Mobile Chrome" tests="8" failures="2" skipped="0" time="35.145" errors="0">
+<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.134">
 </testcase>
-<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.225">
+<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.223">
 </testcase>
-<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="2.667">
+<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="3.201">
 </testcase>
-<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="2.638">
+<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="2.619">
 </testcase>
-<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="3.26">
+<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="3.308">
 </testcase>
-<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="3.293">
+<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="3.268">
 </testcase>
-<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="10.185">
+<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="10.184">
 <failure message="practice.test.ts:138:3 should show error message when loading fails" type="FAILURE">
 <![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:138:3 › Practice Interface › should show error message when loading fails 
 
@@ -346,14 +346,14 @@
       - waiting for locator('.error')
 
 
-      149 |
-      150 |     // Wait for error to appear with longer timeout
-    > 151 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
+      150 |
+      151 |     // Wait for error to appear with longer timeout
+    > 152 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      152 |     await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
-      153 |   });
-      154 |
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42
+      153 |     await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
+      154 |   });
+      155 |
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:152:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-d5336--message-when-loading-fails-Mobile-Chrome/test-failed-1.png
@@ -376,9 +376,9 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="10.209">
-<failure message="practice.test.ts:155:3 should allow retry when loading fails" type="FAILURE">
-<![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:155:3 › Practice Interface › should allow retry when loading fails 
+<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="10.208">
+<failure message="practice.test.ts:156:3 should allow retry when loading fails" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › e2e/practice.test.ts:156:3 › Practice Interface › should allow retry when loading fails 
 
     Error: expect(locator).toBeVisible() failed
 
@@ -392,14 +392,14 @@
       - waiting for locator('.error')
 
 
-      171 |
-      172 |     // Wait for error to appear with longer timeout
-    > 173 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
+      172 |
+      173 |     // Wait for error to appear with longer timeout
+    > 174 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      174 |
-      175 |     // Click retry button with force option
-      176 |     await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42
+      175 |
+      176 |     // Click retry button with force option
+      177 |     await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:174:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-2618f-ow-retry-when-loading-fails-Mobile-Chrome/test-failed-1.png
@@ -423,20 +423,20 @@
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T00:46:47.119Z" hostname="Mobile Safari" tests="8" failures="2" skipped="0" time="36.656" errors="0">
-<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.535">
+<testsuite name="e2e/practice.test.ts" timestamp="2025-12-03T01:03:17.855Z" hostname="Mobile Safari" tests="8" failures="2" skipped="0" time="36.758" errors="0">
+<testcase name="Practice Interface › should load and display a vocabulary item" classname="e2e/practice.test.ts" time="1.621">
 </testcase>
-<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.611">
+<testcase name="Practice Interface › should show answer when requested" classname="e2e/practice.test.ts" time="1.735">
 </testcase>
-<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="3.59">
+<testcase name="Practice Interface › should allow switching between practice and search modes" classname="e2e/practice.test.ts" time="3.561">
 </testcase>
-<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="2.699">
+<testcase name="Practice Interface › should allow switching translation direction" classname="e2e/practice.test.ts" time="2.672">
 </testcase>
-<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="3.325">
+<testcase name="Practice Interface › should display search results" classname="e2e/practice.test.ts" time="3.314">
 </testcase>
-<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="3.299">
+<testcase name="Practice Interface › should navigate to practice mode when selecting an item" classname="e2e/practice.test.ts" time="3.289">
 </testcase>
-<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="10.292">
+<testcase name="Practice Interface › should show error message when loading fails" classname="e2e/practice.test.ts" time="10.295">
 <failure message="practice.test.ts:138:3 should show error message when loading fails" type="FAILURE">
 <![CDATA[  [Mobile Safari] › e2e/practice.test.ts:138:3 › Practice Interface › should show error message when loading fails 
 
@@ -452,14 +452,14 @@
       - waiting for locator('.error')
 
 
-      149 |
-      150 |     // Wait for error to appear with longer timeout
-    > 151 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
+      150 |
+      151 |     // Wait for error to appear with longer timeout
+    > 152 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      152 |     await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
-      153 |   });
-      154 |
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:151:42
+      153 |     await expect(page.locator('.error-message')).toContainText('Failed to load vocabulary');
+      154 |   });
+      155 |
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:152:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-d5336--message-when-loading-fails-Mobile-Safari/test-failed-1.png
@@ -482,9 +482,9 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="10.305">
-<failure message="practice.test.ts:155:3 should allow retry when loading fails" type="FAILURE">
-<![CDATA[  [Mobile Safari] › e2e/practice.test.ts:155:3 › Practice Interface › should allow retry when loading fails 
+<testcase name="Practice Interface › should allow retry when loading fails" classname="e2e/practice.test.ts" time="10.271">
+<failure message="practice.test.ts:156:3 should allow retry when loading fails" type="FAILURE">
+<![CDATA[  [Mobile Safari] › e2e/practice.test.ts:156:3 › Practice Interface › should allow retry when loading fails 
 
     Error: expect(locator).toBeVisible() failed
 
@@ -498,14 +498,14 @@
       - waiting for locator('.error')
 
 
-      171 |
-      172 |     // Wait for error to appear with longer timeout
-    > 173 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
+      172 |
+      173 |     // Wait for error to appear with longer timeout
+    > 174 |     await expect(page.locator('.error')).toBeVisible({ timeout: 10000 });
           |                                          ^
-      174 |
-      175 |     // Click retry button with force option
-      176 |     await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
-        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:173:42
+      175 |
+      176 |     // Click retry button with force option
+      177 |     await page.locator('.btn-primary').click({ force: true, timeout: 15000 });
+        at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/tests/e2e/practice.test.ts:174:42
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ../test-results/e2e-practice-Practice-Inte-2618f-ow-retry-when-loading-fails-Mobile-Safari/test-failed-1.png

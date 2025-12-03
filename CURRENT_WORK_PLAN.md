@@ -61,8 +61,9 @@ This document serves as the single source of truth for the stabilization and mig
 - **Lint/Type Check**: ✅ Successful with minor warnings
 
 **Remaining Issues:**
-- ⚠️ **Error Handling Tests**: 10/40 E2E tests failing due to error display issues
+- ⚠️ **Error Handling Tests**: 10/40 E2E tests failing due to architecture mismatch (DataLoader uses dynamic imports, not network requests)
 - ⚠️ **GitHub Actions**: Needs verification on next push
+- ⚠️ **Data Architecture**: DataLoader uses dynamic imports which can't be mocked in E2E tests
 
 ## 🎯 NEXT STEPS: Enhancement Opportunities
 *Focus: Value-added features for future releases*
@@ -83,7 +84,7 @@ This document serves as the single source of truth for the stabilization and mig
 - **State Management**: Svelte 5 Runes ✅
 - **Data Persistence**: localStorage ✅
 - **Code Quality**: All unit tests passing ✅ (56/56)
-- **E2E Tests**: Most tests passing ✅ (30/40), error handling tests need improvement
+- **E2E Tests**: Most tests passing ✅ (30/40), error handling tests need architectural reconsideration
 - **Production Ready**: Build verified ✅
 - **CI/CD Pipeline**: GitHub Actions implemented ✅
 - **CI Simulation**: Server lifecycle management working ✅
@@ -100,4 +101,5 @@ This document serves as the single source of truth for the stabilization and mig
 - [ ] Configure custom domain (if needed)
 - [ ] Set up monitoring and error tracking
 - [ ] Performance audit and optimization
-- [ ] Optimize E2E tests for CI stability
+- [ ] Reconsider error handling test architecture
+- [ ] Investigate DataLoader architecture for better testability
