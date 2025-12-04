@@ -47,9 +47,20 @@ The interface will shift from a "List View" to a "Card-First" experience.
     -   **Daily Goals**: Visual ring chart for daily word targets.
 
 ### Accessibility & Styling
--   **Palette**: High contrast text on off-white backgrounds (e.g., `bg-slate-50`).
--   **Typography**: Large, readable fonts (Inter/Roboto) with distinct weights for Bulgarian vs German text.
--   **Touch**: Minimum 44x44px touch targets for mobile.
+-   **Palette**: High contrast text on off-white backgrounds (e.g., `bg-slate-50`) with WCAG 2.1 AA compliance
+-   **Typography**: Large, readable fonts (Inter/Roboto) with distinct weights for Bulgarian vs German text
+-   **Touch**: Minimum 44x44px touch targets for mobile
+-   **Keyboard Navigation**: Full keyboard support for all interactive elements
+-   **ARIA Attributes**: Comprehensive ARIA attributes for screen reader support
+-   **Focus Management**: Proper focus management for dynamic content
+-   **Live Regions**: `aria-live` regions for dynamic feedback and loading states
+
+### Type Safety Architecture
+-   **Zod Schemas**: All runtime data validated with Zod schemas
+-   **TypeScript Strict Mode**: No `any` types in critical paths
+-   **LocalStorage Validation**: Runtime validation for all LocalStorage operations
+-   **Type Guards**: Comprehensive type guards for JSON parsing
+-   **Union Types**: Standardized to single types where possible
 
 ## 4. Technical Strategy
 ### Libraries & Tools

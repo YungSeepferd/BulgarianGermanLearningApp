@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { Dialog as DialogPrimitive } from "bits-ui";
-	type $$Props = DialogPrimitive.Props;
+import type { Snippet } from "svelte";
+
+	type $$Props = DialogPrimitive.RootProps;
 
 	let {
 		children,
@@ -21,16 +23,16 @@
 
 <DialogPrimitive.Root
 	bind:open
-	onOpenChange="{onOpenChange}"
-	closeOnOutsideClick="{closeOnOutsideClick}"
-	closeOnEscape="{closeOnEscape}"
-	preventScroll="{preventScroll}"
-	onOutsideClick="{onOutsideClick}"
-	onEscapeKeyDown="{onEscapeKeyDown}"
-	onClose="{onClose}"
-	portal="{portal}"
-	openFocus="{openFocus}"
-	closeFocus="{closeFocus}"
+	onOpenChange={onOpenChange}
+	closeOnOutsideClick={closeOnOutsideClick}
+	closeOnEscape={closeOnEscape}
+	preventScroll={preventScroll}
+	onOutsideClick={onOutsideClick}
+	onEscapeKeyDown={onEscapeKeyDown}
+	onClose={onClose}
+	portal={portal}
+	openFocus={openFocus}
+	closeFocus={closeFocus}
 	{...rest}
 >
 	{@render children()}

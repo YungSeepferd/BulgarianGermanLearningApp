@@ -9,7 +9,16 @@
 	"/learn": [
 		"src/routes/+layout.ts"
 	],
+	"/lessons": [
+		"src/routes/+layout.ts"
+	],
 	"/practice": [
+		"src/routes/+layout.ts"
+	],
+	"/progress": [
+		"src/routes/+layout.ts"
+	],
+	"/quiz": [
 		"src/routes/+layout.ts"
 	],
 	"/vocabulary": [

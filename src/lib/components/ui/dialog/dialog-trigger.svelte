@@ -6,16 +6,15 @@
 	type $$Props = DialogPrimitive.TriggerProps;
 
 	let {
+		children,
 		class: className = undefined,
 		...rest
 	}: $$Props = $props();
 </script>
 
 <DialogPrimitive.Trigger
-	class="{cn(buttonVariants({ variant: 'outline' }), className)}"
+	class={cn(buttonVariants({ variant: 'outline' }), className)}
 	{...rest}
 >
-	{#snippet child(props)}
-		<slot {...props} />
-	{/snippet}
+	{@render children()}
 </DialogPrimitive.Trigger>

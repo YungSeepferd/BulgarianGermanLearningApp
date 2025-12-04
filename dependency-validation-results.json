@@ -1,35 +1,32 @@
 {
-  "timestamp": "2025-12-02T15:38:41.232Z",
+  "timestamp": "2025-12-03T17:32:57.323Z",
   "isValid": false,
-  "errors": [
-    {
-      "file": "svelte-frontend/package-lock.json",
-      "message": "File not found",
-      "type": "MISSING_FILE"
-    },
-    {
-      "file": "themes/relearn/tools/package-lock.json",
-      "message": "File not found",
-      "type": "MISSING_FILE"
-    }
-  ],
+  "errors": [],
   "warnings": [
     {
-      "file": "package-lock.json",
-      "message": "cookie not found in dependencies",
-      "type": "MISSING_DEPENDENCY",
-      "package": "cookie"
-    },
-    {
-      "file": "package-lock.json",
-      "message": "tar-fs not found in dependencies",
-      "type": "MISSING_DEPENDENCY",
-      "package": "tar-fs"
+      "file": "package.json",
+      "message": "Low-severity vulnerability in cookie package (CVE-2022-25881)",
+      "type": "DEPENDENCY_VULNERABILITY",
+      "package": "cookie",
+      "severity": "low",
+      "vulnerableVersions": "<0.7.0",
+      "patchedVersions": ">=0.7.0",
+      "path": "@sveltejs/kit>cookie",
+      "advisory": "https://github.com/advisories/GHSA-pxg6-pf52-xh8x",
+      "resolution": "Update @sveltejs/kit to latest version (2.49.1) did not resolve the issue. This is a transitive dependency that needs to be addressed by the @sveltejs/kit maintainers."
     }
   ],
-  "filesChecked": 3,
-  "expectedVersions": {
-    "cookie": "0.6.0",
-    "tar-fs": "2.1.1"
+  "filesChecked": 1,
+  "dependencyAudit": {
+    "status": "completed",
+    "vulnerabilitiesFound": 1,
+    "vulnerabilitiesResolved": 0,
+    "transitiveDependencies": [
+      {
+        "package": "cookie",
+        "version": "<0.7.0",
+        "parent": "@sveltejs/kit"
+      }
+    ]
   }
 }

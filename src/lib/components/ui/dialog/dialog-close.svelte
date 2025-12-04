@@ -6,20 +6,19 @@
 	type $$Props = DialogPrimitive.CloseProps;
 
 	let {
+		children,
 		class: className = undefined,
 		...rest
 	}: $$Props = $props();
 </script>
 
 <DialogPrimitive.Close
-	class="{cn(
+	class={cn(
 		buttonVariants({ variant: 'outline' }),
 		'mt-2 sm:mt-0',
 		className
-	)}"
+	)}
 	{...rest}
 >
-	{#snippet child(props)}
-		<slot {...props} />
-	{/snippet}
+	{@render children()}
 </DialogPrimitive.Close>

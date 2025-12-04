@@ -10,7 +10,7 @@
 </script>
 
 <DialogPrimitive.Portal
-	class="{className}"
+	class={className}
 	{...rest}
 >
 	{@render children()}

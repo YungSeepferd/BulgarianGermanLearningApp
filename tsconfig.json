@@ -35,6 +35,11 @@
     "strictBindCallApply": true,
     "noPropertyAccessFromIndexSignature": true,
 
+    // Additional strictness flags for maximum safety
+    "forceConsistentCasingInFileNames": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+
     // Skip library checks to avoid DOM library compatibility issues
     "skipLibCheck": true,
 

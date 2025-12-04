@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-12-03T21:44:31.985Z",
+  "summary": {
+    "originalCount": 541,
+    "cleanedCount": 541,
+    "validationPassed": true
+  },
+  "schemaValidation": {
+    "valid": true,
+    "errors": []
+  },
+  "rulesApplied": [
+    "Standardize Categories",
+    "Normalize Difficulty",
+    "Initialize Metadata",
+    "Clean Metadata",
+    "Add Timestamps",
+    "Initialize Boolean Fields",
+    "Standardize Boolean Fields",
+    "Initialize partOfSpeech",
+    "Normalize partOfSpeech"
+  ]
+}

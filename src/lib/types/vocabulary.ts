@@ -14,6 +14,11 @@ export type {
   Grammar,
   GlobalStats
 } from '$lib/schemas/vocabulary.js';
+export type {
+  PracticeStat,
+  UserProgressStorage,
+  ExportedUserData
+} from '$lib/schemas/localStorage.js';
 
 // Re-export validation functions for convenience
 export {

@@ -5,14 +5,15 @@
 	type $$Props = DialogPrimitive.DescriptionProps;
 
 	let {
+		children,
 		class: className = undefined,
 		...rest
 	}: $$Props = $props();
 </script>
 
 <DialogPrimitive.Description
-	class="{cn('text-sm text-muted-foreground', className)}"
+	class={cn('text-sm text-muted-foreground', className)}
 	{...rest}
 >
-	<slot />
+	{@render children()}
 </DialogPrimitive.Description>

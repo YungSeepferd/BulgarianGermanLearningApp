@@ -99,7 +99,7 @@
       resetAnswer();
     } catch (err) {
       error = 'Failed to load vocabulary. Please try again.';
-      // eslint-disable-next-line no-console
+       
       console.error('Error loading vocabulary:', err);
     } finally {
       isLoading = false;
@@ -280,7 +280,7 @@
 
   {#if mode === 'practice'}
     {#if isLoading}
-      <div class="loading" role="status" aria-live="polite" in:cardSlideAnimation>
+      <div class="loading" role="status" aria-live="polite" aria-label="Loading vocabulary data" in:cardSlideAnimation>
         <div class="spinner" aria-hidden="true"></div>
         <p class="loading-text">Loading vocabulary...</p>
         <div class="progress-container">
@@ -288,7 +288,7 @@
         </div>
       </div>
     {:else if error}
-      <div class="error" role="alert" in:shakeAnimation>
+      <div class="error" role="alert" aria-live="assertive" in:shakeAnimation>
         <div class="error-icon">⚠️</div>
         <h3 class="error-title">Loading Failed</h3>
         <p class="error-message">{error}</p>
@@ -355,6 +355,7 @@
               class:correct={isCorrect}
               class:incorrect={!isCorrect}
               in:feedbackAnimation
+              aria-live="polite"
             >
               <div class="feedback-icon">
                 {isCorrect ? '✅' : '❌'}
@@ -413,9 +414,11 @@
                   tabindex="0"
                   onkeydown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
                       practiceThisItem(item);
                     }
                   }}
+                  aria-label={`Practice ${direction === 'DE->BG' ? 'German' : 'Bulgarian'} word: ${direction === 'DE->BG' ? item.german : item.bulgarian}. Category: ${item.category}`}
                 >
                   <span class="rec-text">
                     {direction === 'DE->BG' ? item.german : item.bulgarian}
@@ -453,7 +456,7 @@
       <SearchList
         items={searchResults}
         direction={direction}
-        onselectitem={handleSelectItem}
+        onSelectItem={handleSelectItem}
       />
     </div>
   {/if}

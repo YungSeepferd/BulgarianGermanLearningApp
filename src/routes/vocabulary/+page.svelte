@@ -23,7 +23,7 @@
 
   // Add effects using $effect
   $effect(() => {
-    // eslint-disable-next-line no-console
+     
     console.log(`Searching for: ${searchTerm}`);
   });
 

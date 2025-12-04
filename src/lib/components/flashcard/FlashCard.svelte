@@ -34,13 +34,14 @@
   });
 </script>
 
-<div 
+<div
   class="scene"
   role="button"
   tabindex="0"
   onclick={onFlip}
   onkeydown={handleKeydown}
   aria-label="Flashcard: {item.german}. Click or press Enter to flip."
+  aria-expanded={flipped}
 >
   <div class="card" class:is-flipped={flipped}>
     <!-- Front Face -->

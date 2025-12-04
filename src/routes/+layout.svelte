@@ -1,10 +1,14 @@
 <script lang="ts">
-let { children } = $props();
+  import Navigation from '$lib/components/Navigation.svelte';
+  let { children } = $props();
 </script>
 
-<main>
-{children}
-</main>
+<div class="app-layout">
+  <Navigation />
+  <main>
+    {children}
+  </main>
+</div>
 
 
 <style>
@@ -21,12 +25,23 @@ let { children } = $props();
     background-color: #f5f5f5;
   }
 
+  .app-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
   main {
-    max-width: 1200px;
-    margin: 0 auto;
+    flex: 1;
     padding: 2rem;
     background-color: white;
-    min-height: 100vh;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: 769px) {
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
   }
 </style>
