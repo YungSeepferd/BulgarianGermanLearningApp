@@ -265,7 +265,7 @@ async function migrateVocabulary() {
 
           } catch (error) {
             if (error instanceof z.ZodError) {
-              validationErrors.push({file, item, error});
+              validationErrors.push({ file, item, error });
               const errorDetails = error.errors.map(err => ({
                 code: err.code,
                 message: err.message,
@@ -288,7 +288,7 @@ async function migrateVocabulary() {
     log(`Encountered ${validationErrors.length} validation errors`, 'warn');
 
     if (verbose && validationErrors.length > 0) {
-      validationErrors.forEach(({file, item, error}) => {
+      validationErrors.forEach(({ file, item, error }) => {
         log(`Validation error in ${file}: ${JSON.stringify(item)} - ${error.message}`, 'warn');
       });
     }

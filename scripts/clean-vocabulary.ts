@@ -101,7 +101,7 @@ class VocabularyCleaner {
        ...item,
        partOfSpeech: item.partOfSpeech.toLowerCase().trim()
      })
-   },
+   }
   ];
 
   async clean(filePath: string): Promise<void> {

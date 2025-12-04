@@ -31,7 +31,7 @@ export const LessonMetadataSchema = z.object({
   tags: z.array(z.string()).default([]),
   prerequisites: z.array(LegacyIdSchema).default([]),
   relatedLessons: z.array(LegacyIdSchema).default([]),
-  isPremium: z.boolean().default(false),
+  isPremium: z.boolean().default(false)
 }).default({});
 
 // Main Lesson Schema

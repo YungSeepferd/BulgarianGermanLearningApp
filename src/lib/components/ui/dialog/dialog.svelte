@@ -31,8 +31,6 @@ import type { Snippet } from "svelte";
 	onEscapeKeyDown={onEscapeKeyDown}
 	onClose={onClose}
 	portal={portal}
-	openFocus={openFocus}
-	closeFocus={closeFocus}
 	{...rest}
 >
 	{@render children()}

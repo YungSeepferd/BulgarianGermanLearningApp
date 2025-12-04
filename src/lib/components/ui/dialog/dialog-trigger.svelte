@@ -14,6 +14,7 @@
 
 <DialogPrimitive.Trigger
 	class={cn(buttonVariants({ variant: 'outline' }), className)}
+	aria-haspopup="dialog"
 	{...rest}
 >
 	{@render children()}
