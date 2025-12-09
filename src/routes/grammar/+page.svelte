@@ -61,6 +61,8 @@
         placeholder="Search grammar rules..."
         bind:value={searchTerm}
         class="search-input"
+        role="searchbox"
+        aria-label="Search grammar rules"
       />
     </div>
 
@@ -70,6 +72,8 @@
           type="checkbox"
           checked={showExamples}
           onchange={toggleExamples}
+          role="switch"
+          aria-label="Show examples"
         />
         Show examples
       </label>
@@ -77,17 +81,20 @@
   </div>
 
   <!-- Grammar rules table -->
-  <div class="grammar-container">
+  <div class="grammar-container" role="region" aria-label="Grammar rules">
     {#if filteredRules.length > 0}
-      <table class="grammar-table">
+      <table class="grammar-table" aria-label="Grammar rules table">
         <thead>
           <tr>
-            <th>Rule</th>
+            <th scope="col">Rule</th>
             {#if showExamples}
-              <th>Example</th>
+              <th scope="col">Example</th>
             {/if}
-            <th>Description</th>
+            <th scope="col">Description</th>
           </tr>
+        </thead>
+        <thead>
+          <!-- Table headers moved above -->
         </thead>
         <tbody>
           {#each filteredRules as { rule, example, description }}
@@ -107,7 +114,11 @@
   </div>
 
   <!-- Load more button with event replaced by attribute -->
-  <button onclick={loadMoreExamples} disabled={loading}>
+  <button
+    onclick={loadMoreExamples}
+    disabled={loading}
+    aria-label={loading ? 'Loading more examples' : 'Show more examples'}
+  >
     {loading ? 'Loading...' : 'Show More Examples'}
   </button>
 </div>

@@ -9,7 +9,9 @@
   import { z } from 'zod';
   import { page } from '$app/stores';
   import LessonCard from '$lib/components/LessonCard.svelte';
-  import { lessonService } from '$lib/services/lesson';
+  import GeneratedLesson from '$lib/components/GeneratedLesson.svelte';
+  import LessonGenerator from '$lib/components/LessonGenerator.svelte';
+  import { enhancedLessonService } from '$lib/services/enhanced-lesson';
   import { db } from '$lib/data/db.svelte';
   import { LessonSchema, type Lesson, type LessonDifficulty, type LessonType } from '$lib/schemas/lesson';
   import type { VocabularyCategory, PartOfSpeech } from '$lib/schemas/vocabulary';
@@ -22,6 +24,7 @@
   let selectedDifficulty = $state<LessonDifficulty | 'all'>('all');
   let selectedType = $state<string>('all');
   let showLessonGenerationModal = $state(false);
+  let showGeneratedLesson = $state<Lesson | null>(null);
   let newLessonCriteria = $state<{
     difficulty?: LessonDifficulty;
     type?: LessonType;
@@ -56,8 +59,8 @@
       isLoading = true;
       error = null;
 
-      // Initialize lesson service
-      await lessonService.initialize();
+      // Initialize enhanced lesson service
+      await enhancedLessonService.initialize();
 
       // Generate comprehensive lessons using the enhanced service
       const generatedLessons = await generateComprehensiveLessons();
@@ -213,28 +216,19 @@
   }
 
   /**
-   * Generate a new custom lesson based on user criteria
+   * Handle generated lesson
    */
-  async function generateCustomLesson() {
-    try {
-      const lesson = await lessonService.generateLessonFromCriteria({
-        difficulty: newLessonCriteria.difficulty,
-        type: newLessonCriteria.type,
-        categories: newLessonCriteria.category ? [newLessonCriteria.category] : undefined,
-        partOfSpeech: newLessonCriteria.partOfSpeech,
-        limit: newLessonCriteria.limit,
-        title: newLessonCriteria.title,
-        description: newLessonCriteria.description
-      });
+  function handleLessonGenerated(lesson: Lesson) {
+    lessons.push(lesson);
+    showGeneratedLesson = lesson;
+    showLessonGenerationModal = false;
+  }
 
-      lessons.push(lesson);
-      showLessonGenerationModal = false;
-      newLessonCriteria = { limit: 10 };
-
-    } catch (error) {
-      console.error('Failed to generate custom lesson:', error);
-      alert('Failed to generate lesson. Please try again.');
-    }
+  /**
+   * Close generated lesson view
+   */
+  function closeGeneratedLesson() {
+    showGeneratedLesson = null;
   }
 
   /**
@@ -345,7 +339,7 @@
     <h1>Lessons</h1>
     <p class="subtitle">Structured learning experiences for Bulgarian and German</p>
     <button class="create-lesson-button" on:click={() => showLessonGenerationModal = true}>
-      ✨ Create Custom Lesson
+      ✨ Create Dynamic Lesson
     </button>
   </header>
 
@@ -395,13 +389,22 @@
       </button>
     </div>
 
-    <div class="lessons-grid">
-      {#each filteredLessons as lesson (lesson.id)}
-        <div class="lesson-card-wrapper">
-          <LessonCard {lesson} />
-        </div>
-      {/each}
-    </div>
+    {#if showGeneratedLesson}
+      <GeneratedLesson lesson={showGeneratedLesson} />
+      <div class="back-to-lessons">
+        <button class="back-button" on:click={closeGeneratedLesson}>
+          ← Back to All Lessons
+        </button>
+      </div>
+    {:else}
+      <div class="lessons-grid">
+        {#each filteredLessons as lesson (lesson.id)}
+          <div class="lesson-card-wrapper">
+            <LessonCard {lesson} />
+          </div>
+        {/each}
+      </div>
+    {/if}
 
     <div class="lessons-summary">
       <p>
@@ -413,10 +416,12 @@
     </div>
   {/if}
 
-  <!-- Lesson Generation Modal -->
-  {#if showLessonGenerationModal}
-    <div class="modal-overlay" on:click={() => showLessonGenerationModal = false}>
-      <div class="modal-content" on:click|stopPropagation>
+  <!-- Lesson Generator Component -->
+  <LessonGenerator
+    isOpen={showLessonGenerationModal}
+    onClose={() => showLessonGenerationModal = false}
+    onLessonGenerated={handleLessonGenerated}
+  />
         <div class="modal-header">
           <h2>Create Custom Lesson</h2>
           <button class="close-button" on:click={() => showLessonGenerationModal = false}>
@@ -799,6 +804,21 @@
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+
+  .back-to-lessons {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .back-button {
+    padding: 0.5rem 1rem;
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem;
   }
 
   @media (max-width: 768px) {

@@ -5,12 +5,18 @@ const XP_PER_WORD = 10;
 
 export class LearningSession {
     // Session State
-    isActive = $state(false);
-    currentStreak = $state(0);
-    sessionXP = $state(0);
-    dailyXP = $state(0);
-    totalXP = $state(0); // New: Persisted total XP
-    lastPracticeDate = $state<string | null>(null);
+    // isActive = $state(false);
+    // currentStreak = $state(0);
+    // sessionXP = $state(0);
+    // dailyXP = $state(0);
+    // totalXP = $state(0); // New: Persisted total XP
+    // lastPracticeDate = $state<string | null>(null);
+    isActive = false;
+    currentStreak = 0;
+    sessionXP = 0;
+    dailyXP = 0;
+    totalXP = 0;
+    lastPracticeDate: string | null = null;
     
     // Gamification
     dailyTarget = DAILY_XP_TARGET;
@@ -22,18 +28,24 @@ export class LearningSession {
     // Formula: Level = Math.floor(Math.sqrt(totalXP / 100)) + 1
     // or simplified buckets for now
     
-    level = $derived(this.calculateLevel(this.totalXP));
-    nextLevelXP = $derived(this.calculateNextLevelXP(this.level));
-    currentLevelStartXP = $derived(this.calculateLevelStartXP(this.level));
+    // level = $derived(this.calculateLevel(this.totalXP));
+    // nextLevelXP = $derived(this.calculateNextLevelXP(this.level));
+    // currentLevelStartXP = $derived(this.calculateLevelStartXP(this.level));
+    level = 0;
+    nextLevelXP = 0;
+    currentLevelStartXP = 0;
     
-    levelProgress = $derived.by(() => {
-        const xpInLevel = this.totalXP - this.currentLevelStartXP;
-        const levelSpan = this.nextLevelXP - this.currentLevelStartXP;
-        return Math.min(100, Math.max(0, (xpInLevel / levelSpan) * 100));
-    });
-
-    progressPercentage = $derived(Math.min(100, (this.dailyXP / this.dailyTarget) * 100));
-    isDailyGoalReached = $derived(this.dailyXP >= this.dailyTarget);
+    // levelProgress = $derived.by(() => {
+    //     const xpInLevel = this.totalXP - this.currentLevelStartXP;
+    //     const levelSpan = this.nextLevelXP - this.currentLevelStartXP;
+    //     return Math.min(100, Math.max(0, (xpInLevel / levelSpan) * 100));
+    // });
+    //
+    // progressPercentage = $derived(Math.min(100, (this.dailyXP / this.dailyTarget) * 100));
+    // isDailyGoalReached = $derived(this.dailyXP >= this.dailyTarget);
+    levelProgress = 0;
+    progressPercentage = 0;
+    isDailyGoalReached = false;
 
     constructor() {
         if (browser) {

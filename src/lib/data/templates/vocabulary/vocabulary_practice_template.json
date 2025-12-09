@@ -1,0 +1,30 @@
+{
+  "id": "vocabulary-practice",
+  "name": "Vocabulary Practice",
+  "description": "Practice exercises for reinforcing vocabulary retention",
+  "type": "vocabulary",
+  "difficultyRange": ["A1", "C1"],
+  "variables": [
+    {
+      "name": "sectionTitle",
+      "type": "string",
+      "description": "Title of the practice section",
+      "required": true,
+      "defaultValue": "Vocabulary Practice"
+    },
+    {
+      "name": "instructions",
+      "type": "string",
+      "description": "Instructions for the practice exercises",
+      "required": true,
+      "defaultValue": "Complete the following exercises to practice the new words."
+    },
+    {
+      "name": "vocabulary",
+      "type": "array",
+      "description": "List of vocabulary items to practice",
+      "required": true
+    }
+  ],
+  "template": "# {{sectionTitle}}\n\n{{instructions}}\n\n## Exercise 1: Flashcards\n\nReview the following words. Can you recall the meaning?\n\n{{#each vocabulary}}\n- **{{bulgarian}}**\n  <details>\n  <summary>Reveal Meaning</summary>\n  {{german}}\n  </details>\n{{/each}}\n\n## Exercise 2: Sentence Completion\n\nUse the words above to complete these sentences (mental practice):\n\n{{#each vocabulary}}\n{{#if example}}\n1. {{example.bulgarian}} (Hint: {{german}})\n{{/if}}\n{{/each}}\n\n## Exercise 3: Matching\n\nMatch the Bulgarian word to its German translation:\n\n| Bulgarian | German |\n|-----------|--------|\n{{#each vocabulary}}\n| {{bulgarian}} | ??? |\n{{/each}}\n\n<details>\n<summary>Show Answers</summary>\n\n| Bulgarian | German |\n|-----------|--------|\n{{#each vocabulary}}\n| {{bulgarian}} | {{german}} |\n{{/each}}\n</details>"
+}

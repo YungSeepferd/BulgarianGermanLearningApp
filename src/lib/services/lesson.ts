@@ -6,8 +6,10 @@
  */
 
 import { z } from 'zod';
-import { LessonSchema, LessonDifficulty, LessonType, Lesson, LearningObjective } from '../schemas/lesson';
-import { VocabularyItemSchema, VocabularyItem, VocabularyCategory, PartOfSpeech } from '../schemas/vocabulary';
+import { LessonSchema, LessonDifficulty, LessonType } from '../schemas/lesson';
+import type { Lesson, LearningObjective } from '../schemas/lesson';
+import { VocabularyItemSchema } from '../schemas/vocabulary';
+import type { VocabularyItem, VocabularyCategory, PartOfSpeech } from '../schemas/vocabulary';
 import { db } from '../data/db.svelte';
 
 /**

@@ -1,0 +1,109 @@
+/**
+ * DataLoader Class - Singleton wrapper for the function-based vocabulary loader
+ *
+ * This class provides a singleton interface for the vocabulary data loading system,
+ * maintaining backward compatibility with existing code while using the new function-based loader.
+ */
+import { loadVocabulary, getRandomVocabulary } from './loader.js';
+import type { UnifiedVocabularyItem } from '../schemas/unified-vocabulary.js';
+
+export class DataLoader {
+    private static instance: DataLoader;
+
+    private constructor() {
+        // Private constructor to enforce singleton pattern
+    }
+
+    /**
+     * Get the singleton instance of DataLoader
+     */
+    public static getInstance(): DataLoader {
+        if (!DataLoader.instance) {
+            DataLoader.instance = new DataLoader();
+        }
+        return DataLoader.instance;
+    }
+
+    /**
+     * Get random vocabulary items
+     * @param count Number of items to return
+     * @returns Array of random vocabulary items
+     */
+    public async getRandomItems(count: number = 5): Promise<UnifiedVocabularyItem[]> {
+        try {
+            const vocabulary = await loadVocabulary();
+            // Use the getRandomVocabulary function from loader
+            const items = await getRandomVocabulary(count);
+            return items;
+        } catch (error) {
+            console.error('Failed to get random vocabulary items:', error);
+            return [];
+        }
+    }
+
+    /**
+     * Get vocabulary by search parameters
+     * @param params Search parameters
+     * @returns Search results
+     */
+    public async getVocabularyBySearch(params: {
+        query?: string;
+        partOfSpeech?: string;
+        difficulty?: number;
+        categories?: string[];
+        limit?: number;
+        offset?: number;
+    }): Promise<{
+        items: UnifiedVocabularyItem[];
+        total: number;
+        hasMore: boolean;
+    }> {
+        // Use the new search service
+        const { searchVocabulary } = await import('./search.js');
+        return searchVocabulary({
+            query: params.query,
+            partOfSpeech: params.partOfSpeech,
+            difficulty: params.difficulty,
+            categories: params.categories,
+            limit: params.limit || 20,
+            offset: params.offset || 0,
+            sortBy: 'german',
+            sortOrder: 'asc'
+        });
+    }
+
+    /**
+     * Get vocabulary by ID
+     * @param id Vocabulary item ID
+     * @returns Vocabulary item or null if not found
+     */
+    public async getVocabularyById(id: string): Promise<UnifiedVocabularyItem | null> {
+        // Import the function here to avoid circular dependencies
+        const { loadVocabularyById } = await import('./loader.js');
+        return loadVocabularyById(id);
+    }
+
+    /**
+     * Get vocabulary by category
+     * @param category Category name
+     * @param options Options
+     * @returns Array of vocabulary items
+     */
+    public async getVocabularyByCategory(category: string, options: { limit?: number; difficulty?: number } = {}): Promise<UnifiedVocabularyItem[]> {
+        // Import the function here to avoid circular dependencies
+        const { loadVocabularyByCategory } = await import('./loader.js');
+        return loadVocabularyByCategory(category, options);
+    }
+
+    /**
+     * Get vocabulary by difficulty level
+     * @param difficulty Difficulty level
+     * @param options Options
+     * @returns Array of vocabulary items
+     */
+    public async getVocabularyByDifficulty(difficulty: number, options: { limit?: number; category?: string } = {}): Promise<UnifiedVocabularyItem[]> {
+        // Import the function here to avoid circular dependencies
+        const { loadVocabularyByDifficulty } = await import('./loader.js');
+        return loadVocabularyByDifficulty(difficulty, options);
+    }
+}

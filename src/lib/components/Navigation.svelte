@@ -8,18 +8,16 @@
   import { page } from '$app/stores';
 
   // Navigation items
-  const navItems = [
+  let { navItems = [
     { name: 'Dashboard', path: '/', icon: '🏠' },
     { name: 'Vocabulary', path: '/vocabulary', icon: '📚' },
-    { name: 'Lessons', path: '/lessons', icon: '📖' },
+    { name: 'Grammar', path: '/grammar', icon: '📖' },
     { name: 'Practice', path: '/practice', icon: '🎯' },
-    { name: 'Learn', path: '/learn', icon: '🧠' },
-    { name: 'Quiz', path: '/quiz', icon: '❓' },
-    { name: 'Progress', path: '/progress', icon: '📊' }
-  ];
+    { name: 'Learn', path: '/learn', icon: '🧠' }
+  ] } = $props();
 
   // Current route
-  $: currentPath = $derived($page.url.pathname);
+  let currentPath = $derived.by(() => $page.url.pathname);
 </script>
 
 <nav class="navigation" aria-label="Main navigation">

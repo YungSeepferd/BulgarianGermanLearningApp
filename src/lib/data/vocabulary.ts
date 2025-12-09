@@ -5,7 +5,8 @@
  */
 
 import { VocabularyItemSchema, VocabularyCollectionSchema, VocabularySearchParamsSchema } from '../schemas/vocabulary';
-import { loadVocabulary, loadVocabularyBySearch, loadVocabularyById, loadVocabularyByCategory, loadVocabularyByDifficulty, getRandomVocabulary, cacheVocabulary } from './loader';
+import { loadVocabulary, loadVocabularyById, loadVocabularyByCategory, loadVocabularyByDifficulty, getRandomVocabulary, cacheVocabulary } from './loader';
+import { searchVocabulary, clearVocabularyCache, getVocabularyStats } from './search';
 import { z } from 'zod';
 
 export class VocabularyService {
@@ -69,7 +70,7 @@ export class VocabularyService {
     total: number;
     hasMore: boolean;
   }> {
-    return loadVocabularyBySearch(params);
+    return searchVocabulary(params);
   }
 
   /**
@@ -125,9 +126,21 @@ export class VocabularyService {
   }
 
   /**
-   * Get vocabulary statistics
+   * Get vocabulary statistics for search filters
    */
   public async getVocabularyStats(): Promise<{
+    partOfSpeech: Record<string, number>;
+    difficulty: Record<string, number>;
+    categories: Record<string, number>;
+    learningPhase: Record<string, number>;
+  }> {
+    return getVocabularyStats();
+  }
+
+  /**
+   * Get vocabulary collection statistics
+   */
+  public async getCollectionStats(): Promise<{
     totalItems: number;
     byPartOfSpeech: Record<string, number>;
     byDifficulty: Record<string, number>;
@@ -171,6 +184,7 @@ export class VocabularyService {
     try {
       this.vocabularyCollection = await loadVocabulary();
       cacheVocabulary(this.vocabularyCollection);
+      clearVocabularyCache(); // Clear the search cache when data is refreshed
       this.isInitialized = true;
     } catch (error) {
       console.error('Failed to refresh vocabulary data:', error);

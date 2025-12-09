@@ -1,0 +1,113 @@
+{
+  "id": "e1c0dfcf-bcd9-4e29-98be-ccaa9317f660",
+  "name": "German-Bulgarian Vocabulary",
+  "description": "Comprehensive German-Bulgarian vocabulary collection with unified schema",
+  "languagePair": "de-bg",
+  "difficultyRange": [
+    null,
+    null
+  ],
+  "categories": [
+    "uncategorized",
+    "numbers",
+    "colors",
+    "family",
+    "greetings",
+    "food"
+  ],
+  "itemCount": 1,
+  "createdAt": "2025-12-08T16:44:23.712Z",
+  "updatedAt": "2025-12-08T16:44:23.712Z",
+  "version": 1,
+  "items": [
+    {
+      "id": "merged-v001-apfel-a1_number_014-a1_color_001-a1_family_001-zdravej_001-duplicate-1-duplicate-2-duplicate-3-test-item-1-test-item-2",
+      "categories": [
+        "uncategorized",
+        "numbers",
+        "colors",
+        "family",
+        "greetings",
+        "food"
+      ],
+      "metadata": {
+        "mergeSources": [
+          "v001-apfel",
+          "a1_number_014",
+          "a1_color_001",
+          "a1_family_001",
+          "zdravej_001",
+          "duplicate-1",
+          "duplicate-2",
+          "duplicate-3",
+          "test-item-1",
+          "test-item-2"
+        ],
+        "sourceFiles": []
+      },
+      "updatedAt": "2025-12-08T16:44:23.711Z",
+      "examples": [],
+      "notes": {
+        "source": "generated"
+      },
+      "culturalNotes": [],
+      "mnemonics": [],
+      "synonyms": [],
+      "antonyms": [],
+      "relatedWords": [],
+      "difficulty": null
+    }
+  ],
+  "statistics": {
+    "byPartOfSpeech": {
+      "noun": 0,
+      "verb": 0,
+      "adjective": 0,
+      "adverb": 0,
+      "pronoun": 0,
+      "preposition": 0,
+      "conjunction": 0,
+      "interjection": 0,
+      "article": 0,
+      "number": 0,
+      "phrase": 0,
+      "expression": 0,
+      "undefined": 1
+    },
+    "byDifficulty": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "NaN": 1
+    },
+    "byCategory": {
+      "uncategorized": 1,
+      "numbers": 1,
+      "colors": 1,
+      "family": 1,
+      "greetings": 1,
+      "food": 1
+    },
+    "byLevel": {
+      "A1": 0,
+      "A2": 0,
+      "B1": 0,
+      "B2": 0,
+      "C1": 0
+    },
+    "difficultyRange": [
+      null,
+      null
+    ],
+    "categories": [
+      "uncategorized",
+      "numbers",
+      "colors",
+      "family",
+      "greetings",
+      "food"
+    ]
+  }
+}

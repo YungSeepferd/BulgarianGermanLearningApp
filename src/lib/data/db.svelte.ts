@@ -1,11 +1,13 @@
 import { browser } from '$app/environment';
-import type { VocabularyItem, VocabularyCategory, PartOfSpeech } from '$lib/types/vocabulary';
+import type { VocabularyItem } from '$lib/types/vocabulary';
 import { LessonDifficulty } from '$lib/schemas/lesson';
-import { dataLoader } from '$lib/data/loader.js';
+import { loadVocabulary } from '$lib/data/loader.js';
 
 export class VocabularyDB {
-    items = $state<VocabularyItem[]>([]);
-    initialized = $state(false);
+    // items = $state<VocabularyItem[]>([]);
+    // initialized = $state(false);
+    items: VocabularyItem[] = [];
+    initialized = false;
 
     constructor() {
         // Don't load data in constructor to prevent SSR fetch calls

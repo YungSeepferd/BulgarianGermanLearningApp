@@ -1,12 +1,14 @@
 <script lang="ts">
   import Navigation from '$lib/components/Navigation.svelte';
+  import { page } from '$app/stores';
+
   let { children } = $props();
 </script>
 
 <div class="app-layout">
   <Navigation />
   <main>
-    {children}
+    {@render children()}
   </main>
 </div>
 

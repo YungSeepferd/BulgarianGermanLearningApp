@@ -1,6 +1,6 @@
 import { z } from 'zod';
-import { VocabularyItem } from '$lib/schemas/vocabulary';
-import { vocabularyDb } from '$lib/data/db.svelte';
+import type { VocabularyItem } from '$lib/schemas/vocabulary';
+import { db as vocabularyDb } from '$lib/data/db.svelte';
 
 // Store generated questions in memory for the current session
 const generatedQuestions = new Map<string, QuizQuestion>();

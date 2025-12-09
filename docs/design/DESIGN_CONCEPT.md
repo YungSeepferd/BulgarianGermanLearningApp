@@ -77,5 +77,93 @@ The interface will shift from a "List View" to a "Card-First" experience.
     -   `ProgressBar.svelte` (Visual)
     -   `SessionManager.svelte.ts` (Logic/State)
 
-## 5. Next Steps
-Once approved, we will proceed to **Phase 3: The Implementation Roadmap**, starting with the Data Refactoring Epic.
+## 5. Dynamic Lesson Generation System
+
+### Contextual Intelligence in Lesson Generation
+The dynamic lesson generation system extends the "Rich Context" philosophy by creating personalized learning experiences that adapt to user needs, proficiency levels, and learning patterns.
+
+### System Architecture Overview
+```mermaid
+classDiagram
+    class LessonGenerationEngine {
+        +generateLesson(params: LessonGenerationParams): Lesson
+        +generateThematicLesson(params: LessonGenerationParams): Lesson
+        +generateGrammarLesson(params: LessonGenerationParams): Lesson
+    }
+
+    class TemplateRenderer {
+        +render(templateId: string, data: object): string
+    }
+
+    class CulturalGrammarService {
+        +query(criteria: GrammarQueryCriteria): CulturalGrammarConcept[]
+    }
+
+    class LessonTemplateRepository {
+        +getTemplate(type: LessonType, difficulty: LessonDifficulty): LessonTemplate
+    }
+
+    LessonGenerationEngine --> TemplateRenderer
+    LessonGenerationEngine --> CulturalGrammarService
+    LessonGenerationEngine --> LessonTemplateRepository
+```
+
+### Key Design Principles
+
+1. **Personalization Algorithm**
+   - Adapts lesson difficulty based on user proficiency
+   - Integrates spaced repetition for optimal learning
+   - Prioritizes vocabulary items needing review
+
+2. **Contextual Content Generation**
+   - Creates lessons around themes and categories
+   - Incorporates cultural-grammar comparisons
+   - Generates learning objectives dynamically
+
+3. **Template-Based Rendering**
+   - Uses flexible template system for lesson content
+   - Supports multiple lesson types (vocabulary, grammar, mixed)
+   - Enables easy customization and extension
+
+### Template System Design
+The template system uses a declarative approach with support for:
+- **Variables**: Dynamic content placeholders
+- **Conditionals**: Context-aware content inclusion
+- **Loops**: Iteration over vocabulary items and examples
+- **Partials**: Reusable content blocks
+
+Example template structure:
+```json
+{
+  "id": "vocabulary_intro_template",
+  "type": "vocabulary",
+  "difficultyRange": ["A1", "C1"],
+  "template": "
+## {{sectionTitle}}
+
+This section introduces {{count}} {{theme}} vocabulary items.
+
+{{#each vocabulary}}
+### {{german}} / {{bulgarian}}
+- **Part of Speech**: {{partOfSpeech}}
+{{#if metadata.gender}}
+- **Gender**: {{metadata.gender}}
+{{/if}}
+{{/each}}
+  ",
+  "variables": [
+    {"name": "sectionTitle", "type": "string", "required": true},
+    {"name": "vocabulary", "type": "array", "required": true}
+  ]
+}
+```
+
+### Adaptive Learning Algorithm
+The system implements a spaced repetition algorithm that:
+- Calculates priority scores for vocabulary items
+- Adjusts review frequency based on learning phase
+- Considers user proficiency and review history
+- Prioritizes items not reviewed recently
+
+## 6. Next Steps
+Once approved, we will proceed to **Phase 3: The Implementation Roadmap**, starting with the Dynamic Lesson Generation Epic.

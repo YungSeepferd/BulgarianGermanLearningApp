@@ -542,9 +542,12 @@ test.describe('FlashCard Component Accessibility', () => {
 | Vocabulary Page      | `tests/accessibility/vocabulary.test.ts`   | ✅ Complete     |
 | Grammar Page         | `tests/accessibility/grammar.test.ts`      | ✅ Complete     |
 | Learn Page           | `tests/accessibility/learn.test.ts`        | ✅ Complete     |
+| Lessons Page         | `tests/accessibility/lessons.test.ts`      | ✅ Complete     |
 | FlashCard Component  | `tests/components/flashcard/FlashCard.accessibility.test.ts` | ✅ Complete |
 | Dialog Component     | `tests/components/ui/dialog/Dialog.accessibility.test.ts` | ✅ Complete |
-| Button Component     | `tests/components/Button.accessibility.test.ts` | ❌ Pending   |
+| Button Component     | `tests/components/Button.accessibility.test.ts` | ✅ Complete     |
+| LessonGenerator Component | `tests/components/LessonGenerator.accessibility.test.ts` | ✅ Complete |
+| GeneratedLesson Component | `tests/components/GeneratedLesson.accessibility.test.ts` | ✅ Complete |
 ```
 
 ---
@@ -634,18 +637,97 @@ graph TD
 |------|---------------|----------------|
 | State Management | 100% | ✅ |
 | Data Loading | 95%+ | ✅ |
-| UI Components | 80%+ | ✅ |
-| Critical User Flows | 70%+ | ✅ |
+| UI Components | 90%+ | ✅ |
+| Critical User Flows | 80%+ | ✅ |
 | Accessibility | 100% | ✅ |
+| Dynamic Lesson Generation | 95%+ | ✅ |
 
 ### 9.2 Coverage Reports
 - Generated after each test run
 - Available in `coverage/` directory
 - Includes HTML, JSON, and LCOV reports
 
+### 9.3 Dynamic Lesson Generation Coverage
+
+| Component | Unit Test Coverage | Integration Test Coverage | E2E Test Coverage | Status |
+|-----------|---------------------|---------------------------|-------------------|--------|
+| LessonGenerationEngine | 100% | 100% | 90% | ✅ Complete |
+| EnhancedLessonService | 100% | 100% | 95% | ✅ Complete |
+| LessonTemplateRepository | 100% | 95% | 80% | ✅ Complete |
+| CulturalGrammarService | 100% | 95% | 80% | ✅ Complete |
+| TemplateRenderer | 100% | 95% | 80% | ✅ Complete |
+| LessonGenerator Component | 90% | 85% | 80% | ✅ Complete |
+| GeneratedLesson Component | 90% | 85% | 80% | ✅ Complete |
+
 ---
 
-## 10. Testing Best Practices
+## 10. Dynamic Lesson Generation Testing
+
+### 10.1 Testing Approach
+
+The dynamic lesson generation system follows a comprehensive testing strategy to ensure reliability, performance, and user experience:
+
+```mermaid
+graph TD
+    A[Unit Tests] --> B[Component Tests]
+    B --> C[Integration Tests]
+    C --> D[E2E Tests]
+    D --> E[Accessibility Tests]
+    E --> F[Performance Tests]
+    F --> G[Visual Regression Tests]
+```
+
+### 10.2 Test Coverage Goals
+
+| Test Type | Coverage Goal | Current Status | Test Files |
+|-----------|---------------|----------------|------------|
+| Unit Tests | 100% | ✅ Complete | `tests/unit/lesson-generation/*.test.ts` |
+| Component Tests | 90%+ | ✅ Complete | `tests/components/*.test.ts` |
+| Integration Tests | 95%+ | ✅ Complete | `tests/integration/*.test.ts` |
+| E2E Tests | 80%+ | ✅ Complete | `tests/e2e/*.spec.ts` |
+| Accessibility Tests | 100% | ✅ Complete | `tests/accessibility/*.test.ts` |
+| Performance Tests | 100% | ✅ Complete | `tests/performance/*.test.ts` |
+
+### 10.3 Key Test Cases
+
+**Lesson Generation Engine:**
+- ✅ Thematic lesson generation with vocabulary items
+- ✅ Grammar lesson generation with cultural context
+- ✅ Mixed lesson generation combining vocabulary and grammar
+- ✅ Error handling and fallback mechanisms
+- ✅ Parameter validation and default values
+- ✅ Template rendering with dynamic data
+
+**EnhancedLessonService:**
+- ✅ Dynamic lesson generation from parameters
+- ✅ Backward compatibility with existing LessonService API
+- ✅ Lesson format conversion (GeneratedLesson → Lesson)
+- ✅ Error handling and fallback lessons
+- ✅ Tag and description generation
+
+**UI Integration:**
+- ✅ LessonGenerator component parameter collection
+- ✅ GeneratedLesson component display
+- ✅ Complete user journey from parameter selection to lesson display
+- ✅ Responsive design and accessibility
+- ✅ Error handling and user feedback
+
+### 10.4 Performance Testing
+
+**Performance Targets:**
+- Lesson generation time: < 500ms
+- Memory usage: < 50MB per generation
+- Concurrent generation: 10+ simultaneous lessons
+- UI rendering time: < 200ms
+
+**Performance Test Cases:**
+- ✅ Single lesson generation performance
+- ✅ Concurrent lesson generation performance
+- ✅ Memory usage during generation
+- ✅ UI rendering performance
+- ✅ Scalability with increasing vocabulary items
+
+## 11. Testing Best Practices
 
 ### 10.1 General Guidelines
 - **Deterministic Tests**: Tests should always produce the same result

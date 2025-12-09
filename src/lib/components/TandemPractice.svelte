@@ -1,20 +1,11 @@
 <script lang="ts">
   import TandemToggle from './TandemToggle.svelte';
   import SearchList from './SearchList.svelte';
-  import { DataLoader } from '$lib/data/loader.js';
+  import * as dataLoader from '$lib/data/loader.js';
   import { appState } from '$lib/state/app.svelte.js';
   import type { VocabularyItem } from '$lib/types/vocabulary.js';
   import { fade, fly, slide, scale } from 'svelte/transition';
   import { browser } from '$app/environment';
-
-  let dataLoader = DataLoader.getInstance();
-  
-  // Set the appropriate fetch function based on environment
-  if (!browser) {
-    // In server/SSR context, we need to use a compatible fetch
-    // For E2E tests, we'll use global fetch which should work in test environment
-    dataLoader.setFetchFunction(fetch);
-  }
   
   // Track if component is mounted to prevent SSR fetch calls
   let isMounted = $state(false);
@@ -93,8 +84,8 @@
       
       // Simulate loading delay for better UX
       await new Promise(resolve => setTimeout(resolve, 300));
-      
-      const items = await dataLoader.getRandomItems(1);
+
+      const items = await dataLoader.getRandomVocabulary(1);
       currentItem = items[0] || null;
       resetAnswer();
     } catch (err) {
@@ -144,7 +135,6 @@
     }
   
     // Update global stats and app state
-    await dataLoader.updateStats(currentItem.id, isCorrect, responseTime);
     await appState.recordPracticeResult(currentItem.id, isCorrect, responseTime);
   }
   
@@ -191,7 +181,8 @@
   async function handleSearch(query: string) {
     searchQuery = query;
     if (query.trim()) {
-      searchResults = await dataLoader.search(query, direction);
+      const results = await dataLoader.loadVocabularyBySearch(query);
+      searchResults = results.items;
     } else {
       searchResults = [];
     }

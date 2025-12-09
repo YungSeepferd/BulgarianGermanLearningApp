@@ -47,13 +47,15 @@ vi.mock('$lib/data/db.svelte', () => {
     };
 });
 
-// Mock dataLoader and localStorageManager
-vi.mock('$lib/data/loader', () => ({
-    dataLoader: {
+// Mock dataLoader functions
+vi.mock('$lib/data/loader', async (importOriginal) => {
+    const actual = await importOriginal();
+    return {
+        ...actual,
         updateStats: vi.fn().mockResolvedValue(undefined),
         clearCache: vi.fn()
-    }
-}));
+    };
+});
 
 vi.mock('$lib/utils/localStorage', async (importOriginal) => {
     const actual = await importOriginal();
@@ -61,7 +63,11 @@ vi.mock('$lib/utils/localStorage', async (importOriginal) => {
         ...actual,
         LocalStorageManager: {
             saveUserProgress: vi.fn(),
-            loadUserProgress: vi.fn(),
+            loadUserProgress: vi.fn().mockReturnValue({
+                stats: new Map(),
+                favorites: [],
+                recentSearches: []
+            }),
             exportUserData: vi.fn(),
             importUserData: vi.fn(),
             clearUserData: vi.fn()
@@ -276,12 +282,13 @@ describe('AppState', () => {
             it('should record practice results', async () => {
                 const { LocalStorageManager } = await import('$lib/utils/localStorage');
                 const mockSaveUserProgress = vi.mocked(LocalStorageManager.saveUserProgress);
-                
+
+                // Wait for the async operation to complete
                 await appState.recordPracticeResult('test_001', true, 1000);
-                
+
                 expect(mockSaveUserProgress).toHaveBeenCalled();
                 expect(appState.practiceStats.has('test_001')).toBe(true);
-                
+
                 const stats = appState.practiceStats.get('test_001')!;
                 expect(stats.correct).toBe(1);
                 expect(stats.incorrect).toBe(0);
@@ -291,14 +298,17 @@ describe('AppState', () => {
             it('should record incorrect answers', async () => {
                 const { LocalStorageManager } = await import('$lib/utils/localStorage');
                 const mockSaveUserProgress = vi.mocked(LocalStorageManager.saveUserProgress);
-                
+
+                // Wait for the async operation to complete
                 await appState.recordPracticeResult('test_001', false, 1500);
-                
+
                 expect(mockSaveUserProgress).toHaveBeenCalled();
-                
+                expect(appState.practiceStats.has('test_001')).toBe(true);
+
                 const stats = appState.practiceStats.get('test_001')!;
                 expect(stats.correct).toBe(0);
                 expect(stats.incorrect).toBe(1);
+                expect(stats.lastPracticed).toBeTruthy();
             });
         });
 
@@ -358,12 +368,13 @@ describe('AppState', () => {
                 appState.practiceStats.set('test_001', { correct: 1, incorrect: 0, lastPracticed: new Date().toISOString() });
                 appState.favorites = ['test_001'];
                 appState.recentSearches = ['test'];
-                
+
                 appState.clearAllData();
-                
+
                 expect(appState.practiceStats.size).toBe(0);
                 expect(appState.favorites).toEqual([]);
                 expect(appState.recentSearches).toEqual([]);
+                expect(localStorage.removeItem).toHaveBeenCalledWith('vocabulary-cache');
             });
         });
     });

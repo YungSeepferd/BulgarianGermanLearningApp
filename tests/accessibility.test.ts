@@ -1,203 +1,133 @@
-// Accessibility tests for the application
 import { test, expect } from '@playwright/test';
+import { injectAxe, checkA11y } from 'axe-playwright';
 import {
-  runAccessibilityScan,
-  expectNoAccessibilityViolations,
-  testKeyboardNavigation,
   testAriaAttributes,
   testColorContrast,
-  testFocusManagement,
-  testResponsiveAccessibility,
-  testDarkModeAccessibility
-} from './accessibility-utils';
+  testKeyboardNavigation,
+  testFocusManagement
+} from './accessibility/helpers';
 
-test.describe('Accessibility', () => {
-  test.describe('Practice Page', () => {
-    test('should have no accessibility violations on the practice page', async ({ page }) => {
-      await page.goto('/practice');
-
-      // Wait for the page to load
-      await page.waitForSelector('.practice-card');
-
-      // Run comprehensive accessibility scan
-      await expectNoAccessibilityViolations(page);
-    });
-
-    test('should have no accessibility violations in responsive viewports', async ({ page }) => {
-      await testResponsiveAccessibility(page, async (page) => {
-        await page.goto('/practice');
-        await page.waitForSelector('.practice-card');
-        await expectNoAccessibilityViolations(page);
-      });
-    });
-
-    test('should have no accessibility violations in dark mode', async ({ page }) => {
-      await testDarkModeAccessibility(page, async (page) => {
-        await page.goto('/practice');
-        await page.waitForSelector('.practice-card');
-        await expectNoAccessibilityViolations(page);
-      });
-    });
-
-    test('should have proper ARIA attributes on interactive elements', async ({ page }) => {
-      await page.goto('/practice');
-
-      // Check toggle direction button
-      await testAriaAttributes(page.locator('.toggle-btn'), {
-        'aria-label': /Toggle translation direction/,
-        'role': 'button'
-      });
-
-      // Check mode buttons
-      await testAriaAttributes(page.locator('.mode-btn:has-text("Practice")'), {
-        'aria-label': /Switch to practice mode/,
-        'role': 'button'
-      });
-
-      await testAriaAttributes(page.locator('.mode-btn:has-text("Search")'), {
-        'aria-label': /Switch to search mode/,
-        'role': 'button'
-      });
-
-      // Check answer input
-      await testAriaAttributes(page.locator('.answer-input'), {
-        'aria-label': 'Type your answer here...',
-        'role': 'textbox'
-      });
-
-      // Check check answer button
-      await testAriaAttributes(page.locator('.btn-primary:has-text("Check Answer")'), {
-        'aria-disabled': 'false',
-        'role': 'button'
-      });
-    });
-
-    test('should have proper keyboard navigation', async ({ page }) => {
-      await page.goto('/practice');
-
-      // Test tab order of interactive elements
-      await testKeyboardNavigation(page, [
-        '.toggle-btn',                          // Toggle direction button
-        '.mode-btn:has-text("Practice")',       // Practice mode button
-        '.mode-btn:has-text("Search")',         // Search mode button
-        '.answer-input',                        // Answer input
-        '.btn-primary:has-text("Check Answer")' // Check answer button
-      ], { startWithFocus: true });
-    });
-
-    test('should have proper focus management for dynamic content', async ({ page }) => {
-      await page.goto('/practice');
-
-      // Test focus management when flipping a flashcard
-      await testFocusManagement(
-        page,
-        '.flashcard',           // Trigger: click on flashcard
-        '.flashcard'            // Target: same flashcard should receive focus
-      );
-
-      // Test focus management when showing feedback
-      await page.click('.btn-primary:has-text("Check Answer")');
-      await page.waitForSelector('.feedback-section.visible');
-
-      // Feedback section should be focusable or have aria-live
-      const feedbackSection = page.locator('.feedback-section.visible');
-      await expect(feedbackSection).toHaveAttribute('aria-live', 'polite');
-    });
-
-    test('should have proper color contrast', async ({ page }) => {
-      await page.goto('/practice');
-
-      // Check text contrast on various elements
-      await testColorContrast(page.locator('.question-text'));
-      await testColorContrast(page.locator('.answer'));
-      await testColorContrast(page.locator('.direction-text'));
-
-      // Check interactive elements
-      await testColorContrast(page.locator('.toggle-btn'));
-      await testColorContrast(page.locator('.mode-btn:has-text("Practice")'));
-      await testColorContrast(page.locator('.btn-primary:has-text("Check Answer")'));
-    });
-
-    test('should have proper heading structure', async ({ page }) => {
-      await page.goto('/practice');
-
-      // Check for h1 heading
-      const h1Headings = await page.$$('h1');
-      expect(h1Headings.length).toBeGreaterThan(0);
-
-      // Check heading hierarchy
-      const headings = await page.$$eval('h1, h2, h3, h4, h5, h6', elements => {
-        return elements.map(el => ({
-          tag: el.tagName,
-          text: el.textContent?.trim() || ''
-        }));
-      });
-
-      // Should have at least one heading
-      expect(headings.length).toBeGreaterThan(0);
-    });
+test.describe('Accessibility Tests', () => {
+  test.beforeEach(async ({ page }) => {
+    await injectAxe(page);
   });
 
-  test.describe('Search Mode', () => {
-    test('should have no accessibility violations on the search page', async ({ page }) => {
-      await page.goto('/practice');
+  test('should have no accessibility violations on the home page', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForSelector('.dashboard');
+    await checkA11y(page);
+  });
 
-      // Switch to search mode
-      await page.locator('.mode-btn:has-text("Search")').click();
+  test('should have no accessibility violations on the vocabulary page', async ({ page }) => {
+    await page.goto('/vocabulary');
+    await page.waitForSelector('.page-grid');
+    await checkA11y(page);
+  });
 
-      // Wait for the search interface to load
-      await page.waitForSelector('.search-section');
+  test('should have no accessibility violations on the grammar page', async ({ page }) => {
+    await page.goto('/grammar');
+    await page.waitForSelector('.grammar-container');
+    await checkA11y(page);
+  });
 
-      // Run comprehensive accessibility scan
-      await expectNoAccessibilityViolations(page);
+  test('should have no accessibility violations on the practice page', async ({ page }) => {
+    await page.goto('/practice');
+    await page.waitForSelector('.tandem-practice');
+    await checkA11y(page);
+  });
+
+  test('should have no accessibility violations on the learn page', async ({ page }) => {
+    await page.goto('/learn');
+    await page.waitForSelector('.learn-page');
+    await checkA11y(page);
+  });
+
+  test('should have no accessibility violations in responsive viewports', async ({ page }) => {
+    const viewports = [
+      { width: 320, height: 480 },  // Mobile
+      { width: 768, height: 1024 }, // Tablet
+      { width: 1280, height: 800 }  // Desktop
+    ];
+
+    for (const viewport of viewports) {
+      await page.setViewportSize(viewport);
+      await page.goto('/');
+      await page.waitForSelector('.dashboard');
+      await checkA11y(page);
+    }
+  });
+
+  test('should have no accessibility violations in dark mode', async ({ page }) => {
+    await page.emulateMedia({ colorScheme: 'dark' });
+    await page.goto('/');
+    await page.waitForSelector('.dashboard');
+    await checkA11y(page);
+  });
+
+  test('should have proper ARIA attributes on navigation elements', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForSelector('.dashboard');
+
+    await testAriaAttributes(page.locator('nav'), {
+      'role': 'navigation',
+      'aria-label': /Main navigation/
     });
 
-    test('should have proper ARIA attributes in search mode', async ({ page }) => {
-      await page.goto('/practice');
-      await page.locator('.mode-btn:has-text("Search")').click();
-      await page.waitForSelector('.search-section');
+    const navLinks = page.locator('nav a');
+    const linkCount = await navLinks.count();
 
-      // Check search input
-      await testAriaAttributes(page.locator('.search-input'), {
-        'aria-label': /Search vocabulary/,
-        'role': 'searchbox',
-        'placeholder': /Search.../
+    for (let i = 0; i < linkCount; i++) {
+      await testAriaAttributes(navLinks.nth(i), {
+        'role': 'link'
       });
+    }
+  });
 
-      // Check search results
-      await page.fill('.search-input', 'test');
-      await page.waitForSelector('.search-result-item');
+  test('should have proper keyboard navigation for the application', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForSelector('.dashboard');
 
-      const firstResult = page.locator('.search-result-item').first();
-      await testAriaAttributes(firstResult, {
-        'role': 'option',
-        'aria-selected': 'false'
-      });
-    });
+    const navLinks = [
+      'nav a[href="/"]',
+      'nav a[href="/vocabulary"]',
+      'nav a[href="/grammar"]',
+      'nav a[href="/practice"]',
+      'nav a[href="/learn"]'
+    ];
 
-    test('should have proper keyboard navigation in search mode', async ({ page }) => {
-      await page.goto('/practice');
-      await page.locator('.mode-btn:has-text("Search")').click();
-      await page.waitForSelector('.search-section');
+    await testKeyboardNavigation(page, navLinks);
+  });
 
-      // Test tab order in search mode
-      await testKeyboardNavigation(page, [
-        '.search-input',                        // Search input
-        '.search-filter-btn',                   // Filter button (if exists)
-        '.search-result-item'                   // First search result
-      ], { startWithFocus: false });
+  test('should have proper focus management', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForSelector('.dashboard');
 
-      // Focus search input
-      await page.focus('.search-input');
-      await expect(page.locator('.search-input')).toBeFocused();
+    await testFocusManagement(
+      page,
+      'nav a[href="/vocabulary"]',
+      '.vocabulary-page'
+    );
+  });
 
-      // Test arrow key navigation between search results
-      await page.fill('.search-input', 'test');
-      await page.waitForSelector('.search-result-item');
+  test('should have proper color contrast for all elements', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForSelector('.dashboard');
 
-      await page.keyboard.press('ArrowDown');
-      const firstResult = page.locator('.search-result-item').first();
-      await expect(firstResult).toHaveAttribute('aria-selected', 'true');
-    });
+    await testColorContrast(page.locator('nav'));
+    await testColorContrast(page.locator('nav a'));
+    await testColorContrast(page.locator('.btn-primary'));
+    await testColorContrast(page.locator('.btn-secondary'));
+    await testColorContrast(page.locator('.card'));
+  });
+
+  test('should have proper heading structure and landmarks', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForSelector('.dashboard');
+
+    const mainLandmark = await page.$('main, [role="main"]');
+    expect(mainLandmark).not.toBeNull();
+
+    const navLandmark = await page.$('nav, [role="navigation"]');
+    expect(navLandmark).not.toBeNull();
   });
 });

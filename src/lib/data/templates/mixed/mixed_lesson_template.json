@@ -1,0 +1,41 @@
+{
+  "id": "mixed-lesson",
+  "name": "Mixed Content Lesson",
+  "description": "A comprehensive lesson template combining vocabulary, grammar, and cultural context",
+  "type": "mixed",
+  "difficultyRange": ["A1", "C1"],
+  "variables": [
+    {
+      "name": "sectionTitle",
+      "type": "string",
+      "description": "Title of the lesson",
+      "required": true,
+      "defaultValue": "Comprehensive Lesson"
+    },
+    {
+      "name": "theme",
+      "type": "string",
+      "description": "Theme of the lesson",
+      "required": false
+    },
+    {
+      "name": "vocabulary",
+      "type": "array",
+      "description": "Vocabulary items to cover",
+      "required": true
+    },
+    {
+      "name": "grammarConcept",
+      "type": "object",
+      "description": "Primary grammar concept for the lesson",
+      "required": false
+    },
+    {
+      "name": "culturalNote",
+      "type": "string",
+      "description": "Cultural context or tip",
+      "required": false
+    }
+  ],
+  "template": "# {{sectionTitle}}\n\n{{#if theme}}\n## Theme: {{theme}}\n{{/if}}\n\nWelcome to this comprehensive lesson! We will cover new vocabulary, grammar, and cultural insights.\n\n## 1. Vocabulary\n\nLet's start with some key words:\n\n{{#each vocabulary}}\n### {{bulgarian}} ({{german}})\n*{{partOfSpeech}}*\n{{#if definition}}\n> {{definition}}\n{{/if}}\n\n{{/each}}\n\n{{#if grammarConcept}}\n## 2. Grammar Focus: {{grammarConcept.name.bulgarian}}\n\n{{grammarConcept.description.bulgarian}}\n\n### Explanation\n{{grammarConcept.culturalContext.crossLinguisticExplanation.bgToDe}}\n\n### Examples\n{{#each grammarConcept.examples}}\n- **BG**: {{bulgarian}}\n- **DE**: {{german}}\n{{/each}}\n{{/if}}\n\n{{#if culturalNote}}\n## 3. Cultural Insight\n\n{{culturalNote}}\n{{/if}}\n\n## 4. Practice\n\nTry to form a sentence using one of the new words and the grammar concept we discussed!"
+}

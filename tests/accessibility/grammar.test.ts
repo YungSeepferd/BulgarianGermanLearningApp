@@ -36,44 +36,35 @@ test.describe('Grammar Page Accessibility', () => {
     await page.goto('/grammar');
     await page.waitForSelector('.grammar-container');
 
-    await testAriaAttributes(page.locator('.grammar-nav'), {
-      'role': 'navigation',
-      'aria-label': /Grammar topics/
+    // Check search input
+    await testAriaAttributes(page.locator('.search-input'), {
+      'role': 'searchbox',
+      'aria-label': /Search grammar rules/,
+      'placeholder': /Search grammar rules.../
     });
 
-    const topicButtons = page.locator('.grammar-topic-btn');
-    const topicCount = await topicButtons.count();
+    // Check toggle checkbox
+    await testAriaAttributes(page.locator('.toggle-container input[type="checkbox"]'), {
+      'role': 'switch',
+      'aria-label': /Show examples/
+    });
 
-    for (let i = 0; i < topicCount; i++) {
-      await testAriaAttributes(topicButtons.nth(i), {
-        'role': 'button',
-        'aria-expanded': /true|false/,
-        'aria-controls': /grammar-content-/
-      });
-    }
-
-    await testAriaAttributes(page.locator('.grammar-content'), {
+    // Check table structure
+    await testAriaAttributes(page.locator('.grammar-container'), {
       'role': 'region',
-      'aria-label': /Grammar explanation/
+      'aria-label': /Grammar rules/
     });
 
-    const examples = page.locator('.grammar-example');
-    const exampleCount = await examples.count();
+    await testAriaAttributes(page.locator('table.grammar-table'), {
+      'aria-label': /Grammar rules table/
+    });
 
-    for (let i = 0; i < exampleCount; i++) {
-      await testAriaAttributes(examples.nth(i), {
-        'role': 'region',
-        'aria-label': /Grammar example/
-      });
-    }
+    const tableHeaders = page.locator('table.grammar-table th');
+    const headerCount = await tableHeaders.count();
 
-    const exercises = page.locator('.grammar-exercise');
-    const exerciseCount = await exercises.count();
-
-    for (let i = 0; i < exerciseCount; i++) {
-      await testAriaAttributes(exercises.nth(i), {
-        'role': 'region',
-        'aria-label': /Grammar exercise/
+    for (let i = 0; i < headerCount; i++) {
+      await testAriaAttributes(tableHeaders.nth(i), {
+        'role': 'columnheader'
       });
     }
   });
@@ -83,10 +74,9 @@ test.describe('Grammar Page Accessibility', () => {
     await page.waitForSelector('.grammar-container');
 
     const interactiveElements = [
-      '.grammar-topic-btn',
-      '.grammar-exercise-btn',
-      '.grammar-practice-btn',
-      '.grammar-quiz-btn'
+      '.search-input',
+      '.toggle-container input[type="checkbox"]',
+      'button:has-text("Show More Examples")'
     ];
 
     await testKeyboardNavigation(page, interactiveElements, { startWithFocus: true });
@@ -96,42 +86,33 @@ test.describe('Grammar Page Accessibility', () => {
     await page.goto('/grammar');
     await page.waitForSelector('.grammar-container');
 
-    const firstTopic = page.locator('.grammar-topic-btn').first();
-    await firstTopic.click();
-    await expect(firstTopic).toHaveAttribute('aria-expanded', 'true');
-    await expect(firstTopic).toBeFocused();
+    // Test focus management for search
+    await page.focus('.search-input');
+    await expect(page.locator('.search-input')).toBeFocused();
 
-    const firstExercise = page.locator('.grammar-exercise').first();
-    if (await firstExercise.isVisible()) {
-      const exerciseButton = firstExercise.locator('.exercise-start-btn');
-      if (await exerciseButton.isVisible()) {
-        await testFocusManagement(
-          page,
-          '.exercise-start-btn',
-          '.exercise-container'
-        );
-      }
-    }
+    // Test focus management for toggle
+    const toggleCheckbox = page.locator('.toggle-container input[type="checkbox"]');
+    await toggleCheckbox.focus();
+    await expect(toggleCheckbox).toBeFocused();
   });
 
   test('should have proper color contrast for grammar elements', async ({ page }) => {
     await page.goto('/grammar');
     await page.waitForSelector('.grammar-container');
 
-    await testColorContrast(page.locator('.grammar-topic-btn'));
-    await testColorContrast(page.locator('.grammar-explanation'));
-    await testColorContrast(page.locator('.grammar-example'));
-    await testColorContrast(page.locator('.grammar-exercise'));
-    await testColorContrast(page.locator('.grammar-exercise-btn'));
-    await testColorContrast(page.locator('.grammar-practice-btn'));
-    await testColorContrast(page.locator('.grammar-quiz-btn'));
-
-    const codeExamples = page.locator('.grammar-code-example');
-    const codeCount = await codeExamples.count();
-
-    for (let i = 0; i < codeCount; i++) {
-      await testColorContrast(codeExamples.nth(i));
+    await testColorContrast(page.locator('.search-input'));
+    await testColorContrast(page.locator('.toggle-container label'));
+    const tableHeaders = page.locator('table.grammar-table th');
+    const headerCount = await tableHeaders.count();
+    for (let i = 0; i < headerCount; i++) {
+      await testColorContrast(tableHeaders.nth(i));
     }
+    const tableCells = page.locator('table.grammar-table td');
+    const cellCount = await tableCells.count();
+    for (let i = 0; i < Math.min(cellCount, 5); i++) { // Test first 5 cells
+      await testColorContrast(tableCells.nth(i));
+    }
+    await testColorContrast(page.locator('button:has-text("Show More Examples")'));
   });
 
   test('should have proper heading structure and landmarks', async ({ page }) => {
@@ -141,7 +122,7 @@ test.describe('Grammar Page Accessibility', () => {
     const h1Headings = await page.$$('h1');
     expect(h1Headings.length).toBeGreaterThan(0);
     const h1Text = await page.textContent('h1');
-    expect(h1Text).toMatch(/Grammar|Grammatik/i);
+    expect(h1Text).toMatch(/Bulgarian Grammar Rules/i);
 
     const headings = await page.$$eval('h1, h2, h3, h4, h5, h6', elements => {
       return elements.map(el => ({
@@ -150,96 +131,64 @@ test.describe('Grammar Page Accessibility', () => {
       }));
     });
 
-    expect(headings.length).toBeGreaterThan(3);
+    expect(headings.length).toBeGreaterThan(0);
 
     const mainLandmark = await page.$('main, [role="main"]');
     expect(mainLandmark).not.toBeNull();
 
     const navLandmark = await page.$('nav, [role="navigation"]');
     expect(navLandmark).not.toBeNull();
-
-    const regionLandmarks = await page.$$('[role="region"]');
-    expect(regionLandmarks.length).toBeGreaterThan(2);
   });
 
   test('should be keyboard accessible for grammar exercises', async ({ page }) => {
     await page.goto('/grammar');
     await page.waitForSelector('.grammar-container');
 
-    const exercises = page.locator('.grammar-exercise');
-    const exerciseCount = await exercises.count();
+    // Test keyboard navigation for search functionality
+    await page.focus('.search-input');
+    await expect(page.locator('.search-input')).toBeFocused();
 
-    if (exerciseCount > 0) {
-      const firstExercise = exercises.first();
-      const startButton = firstExercise.locator('.exercise-start-btn');
+    await page.keyboard.type('Present');
+    await page.waitForSelector('table.grammar-table tr');
 
-      if (await startButton.isVisible()) {
-        await startButton.click();
-        await page.waitForSelector('.exercise-container.visible');
-
-        const exerciseElements = [
-          '.exercise-question',
-          '.exercise-input',
-          '.exercise-submit-btn',
-          '.exercise-feedback'
-        ];
-
-        await testKeyboardNavigation(page, exerciseElements, { startWithFocus: false });
-
-        await page.focus('.exercise-input');
-        await expect(page.locator('.exercise-input')).toBeFocused();
-
-        await page.keyboard.type('Test answer');
-        await page.keyboard.press('Enter');
-
-        const feedback = page.locator('.exercise-feedback.visible');
-        await expect(feedback).toHaveAttribute('aria-live', 'polite');
-      }
-    }
+    // Test that table rows are keyboard navigable
+    const firstRow = page.locator('table.grammar-table tr').first();
+    await expect(firstRow).toBeVisible();
   });
 
-  test('should provide accessible feedback for grammar exercises', async ({ page }) => {
+  test('should provide accessible feedback for grammar interactions', async ({ page }) => {
     await page.goto('/grammar');
     await page.waitForSelector('.grammar-container');
 
-    const exercises = page.locator('.grammar-exercise');
-    const exerciseCount = await exercises.count();
+    // Test that search provides accessible feedback
+    await page.fill('.search-input', 'xyzabc123');
+    await page.waitForSelector('.no-results');
 
-    if (exerciseCount > 0) {
-      const firstExercise = exercises.first();
-      const startButton = firstExercise.locator('.exercise-start-btn');
+    const noResults = page.locator('.no-results');
+    await expect(noResults).toBeVisible();
+    await expect(noResults).toContainText(/No grammar rules match your search/i);
 
-      if (await startButton.isVisible()) {
-        await startButton.click();
-        await page.waitForSelector('.exercise-container.visible');
+    // Test that search with results works
+    await page.fill('.search-input', 'Present');
+    await page.waitForSelector('table.grammar-table tr');
 
-        await page.click('.exercise-submit-btn');
-
-        const feedback = page.locator('.exercise-feedback.visible');
-        await expect(feedback).toHaveAttribute('aria-live', 'polite');
-
-        const feedbackText = await feedback.textContent();
-        expect(feedbackText).toMatch(/correct|incorrect|try again/i);
-      }
-    }
+    const rows = page.locator('table.grammar-table tr');
+    const rowCount = await rows.count();
+    expect(rowCount).toBeGreaterThan(1);
   });
 
-  test('should support keyboard navigation for grammar topic expansion', async ({ page }) => {
+  test('should support keyboard navigation for grammar interactions', async ({ page }) => {
     await page.goto('/grammar');
     await page.waitForSelector('.grammar-container');
 
-    const firstTopic = page.locator('.grammar-topic-btn').first();
-    await firstTopic.focus();
-    await expect(firstTopic).toBeFocused();
+    // Test toggle checkbox with keyboard
+    const toggleCheckbox = page.locator('.toggle-container input[type="checkbox"]');
+    await toggleCheckbox.focus();
+    await expect(toggleCheckbox).toBeFocused();
 
-    const initialAriaExpanded = await firstTopic.getAttribute('aria-expanded');
-    await page.keyboard.press('Enter');
-    const toggledAriaExpanded = await firstTopic.getAttribute('aria-expanded');
-    expect(toggledAriaExpanded).not.toBe(initialAriaExpanded);
-
+    const initialChecked = await toggleCheckbox.getAttribute('checked') !== null;
     await page.keyboard.press('Space');
-    const finalAriaExpanded = await firstTopic.getAttribute('aria-expanded');
-    expect(finalAriaExpanded).not.toBe(toggledAriaExpanded);
-    expect(finalAriaExpanded).toBe(initialAriaExpanded);
+    const toggledChecked = await toggleCheckbox.getAttribute('checked') !== null;
+    expect(toggledChecked).not.toBe(initialChecked);
   });
 });

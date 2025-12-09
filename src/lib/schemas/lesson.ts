@@ -1,11 +1,38 @@
 // Lesson Schema for Bulgarian-German Language Learning Application
 import { z } from 'zod';
-import { VocabularyItemSchema } from './vocabulary';
-import { LegacyIdSchema } from './voccard';
+import {
+  VocabularyItemSchema,
+  PartOfSpeechSchema,
+  VocabularyCategorySchemaWithFallback,
+  VocabularyMetadataSchema,
+  createFallbackItem,
+  LegacyIdSchema
+} from './vocabulary';
+
+// Create a base schema without catch for omit operations
+const VocabularyItemBaseSchema = z.object({
+  id: LegacyIdSchema,
+  german: z.string().min(1).max(100),
+  bulgarian: z.string().min(1).max(100),
+  partOfSpeech: PartOfSpeechSchema.default('noun'),
+  difficulty: z.number().min(1).max(5).default(1).describe('1-5 scale where 1 is easiest'),
+  categories: z.array(VocabularyCategorySchemaWithFallback).min(1).default(['uncategorized']),
+  metadata: VocabularyMetadataSchema.optional(),
+  createdAt: z.union([
+    z.date(),
+    z.string().datetime().transform(str => new Date(str))
+  ]).default(new Date()).transform(val => val instanceof Date ? val : new Date(val)),
+  updatedAt: z.union([
+    z.date(),
+    z.string().datetime().transform(str => new Date(str))
+  ]).default(new Date()).transform(val => val instanceof Date ? val : new Date(val)),
+  isCommon: z.boolean().default(false),
+  isVerified: z.boolean().default(false)
+});
 
 // Vocabulary reference schema
 export const VocabularyReferenceSchema = z.union([
-  VocabularyItemSchema.omit({ id: true }),  // Use omit instead of partial for Svelte 5 compatibility
+  VocabularyItemBaseSchema.omit({ id: true }),  // Use base schema for omit()
   LegacyIdSchema,
   z.string().uuid()
 ]);

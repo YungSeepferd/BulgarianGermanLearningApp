@@ -1,0 +1,29 @@
+{
+  "id": "grammar-practice",
+  "name": "Grammar Practice",
+  "description": "Exercises to practice specific grammar concepts",
+  "type": "grammar",
+  "difficultyRange": ["A1", "C1"],
+  "variables": [
+    {
+      "name": "sectionTitle",
+      "type": "string",
+      "description": "Title of the practice section",
+      "required": true,
+      "defaultValue": "Grammar Practice"
+    },
+    {
+      "name": "grammarConcept",
+      "type": "object",
+      "description": "The grammar concept to practice",
+      "required": true
+    },
+    {
+      "name": "vocabulary",
+      "type": "array",
+      "description": "Vocabulary items to use in exercises",
+      "required": true
+    }
+  ],
+  "template": "# {{sectionTitle}}\n\nNow let's practice **{{grammarConcept.name.german}}**!\n\n## Exercise 1: Analysis\n\nLook at these examples and identify how **{{grammarConcept.name.german}}** is used:\n\n{{#each vocabulary}}\n{{#if example}}\n- **DE**: {{example.german}}\n- **BG**: {{example.bulgarian}}\n  <details>\n  <summary>Show Analysis</summary>\n  Does this match the rule: \"{{../grammarConcept.description.german}}\"?\n  </details>\n{{/if}}\n{{/each}}\n\n## Exercise 2: Translation Challenge\n\nTranslate the following into German, paying attention to **{{grammarConcept.name.german}}**:\n\n{{#each vocabulary}}\n1. {{bulgarian}} -> ____________________\n   <details>\n   <summary>Check Answer</summary>\n   {{german}}\n   </details>\n{{/each}}\n\n## Exercise 3: Self-Correction\n\nRemember the common mistake for Bulgarian speakers:\n{{#each grammarConcept.commonMistakes.bgToDe}}\n> ⚠️ {{this}}\n{{/each}}\n\nCreate three sentences using the new words and check if you made this mistake."
+}

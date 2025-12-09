@@ -1,0 +1,29 @@
+{
+  "id": "vocabulary-review",
+  "name": "Vocabulary Review",
+  "description": "Template for reviewing previously learned vocabulary items",
+  "type": "vocabulary",
+  "difficultyRange": ["A1", "C1"],
+  "variables": [
+    {
+      "name": "sectionTitle",
+      "type": "string",
+      "description": "Title of the review section",
+      "required": true,
+      "defaultValue": "Vocabulary Review"
+    },
+    {
+      "name": "context",
+      "type": "string",
+      "description": "Context of the review (e.g., 'Last Session', 'Travel Basics')",
+      "required": false
+    },
+    {
+      "name": "vocabulary",
+      "type": "array",
+      "description": "List of vocabulary items to review",
+      "required": true
+    }
+  ],
+  "template": "# {{sectionTitle}}\n\n{{#if context}}\nWelcome back! It's time to review what you learned about **{{context}}**.\n{{else}}\nWelcome back! Let's review some recent vocabulary.\n{{/if}}\n\n## Self-Assessment\n\nLook at the Bulgarian word and try to say the German translation out loud before revealing it.\n\n{{#each vocabulary}}\n---\n### {{bulgarian}}\n\n<details>\n<summary>Reveal Translation</summary>\n\n**{{german}}**\n\n*{{partOfSpeech}}*\n\n{{#if example}}\nExample: {{example.bulgarian}} -> {{example.german}}\n{{/if}}\n</details>\n{{/each}}\n\n## Next Steps\n\nIf you struggled with any of these words, mark them for further practice!"
+}

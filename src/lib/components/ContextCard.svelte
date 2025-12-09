@@ -50,7 +50,7 @@ onclick={flip}
 onmousedown={handlePressStart}
 onmouseup={handlePressEnd}
 onmouseleave={handlePressEnd}
-aria-label={"Card: " + (gameState.currentCard ? gameState.currentCard.bulgarian_text : "language card")}
+aria-label={"Card: " + (gameState.currentCard ? gameState.currentCard.bulgarian : "language card")}
 tabindex="0"
 >
 <!-- X-Ray Mode -->
@@ -58,12 +58,14 @@ tabindex="0"
 	<div
 		class="absolute inset-0 z-20 flex flex-col items-center justify-center rounded-2xl bg-black/50 p-4 backdrop-blur-2xl"
 	>
-		{#each gameState.currentCard.literal_breakdown as segment}
+		{#if gameState.currentCard.literalBreakdown}
+		{#each gameState.currentCard.literalBreakdown as segment}
 			<div class="my-2 text-center">
 				<p class="text-xl font-bold text-white">{segment.segment}</p>
 				<p class="text-md text-white/80">{segment.literal} ({segment.grammar_tag})</p>
 			</div>
 		{/each}
+		{/if}
 	</div>
 {/if}
 
@@ -73,8 +75,8 @@ tabindex="0"
 	class="absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-white/10 p-6 text-center"
 	style="backface-visibility: hidden; transform: rotateY({$rotation}deg);"
 >
-	<div class="text-6xl">{gameState.currentCard.emoji_anchor}</div>
-	<h2 class="mt-4 text-3xl font-bold text-white">{gameState.currentCard.bulgarian_text}</h2>
+	<div class="text-6xl">{gameState.currentCard.emoji || '❓'}</div>
+	<h2 class="mt-4 text-3xl font-bold text-white">{gameState.currentCard.bulgarian}</h2>
 	<p class="mt-2 text-lg text-white/70">{gameState.currentCard.transliteration}</p>
 </div>
 
@@ -83,8 +85,8 @@ tabindex="0"
 	class="absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-white/10 p-6 text-center"
 	style="backface-visibility: hidden; transform: rotateY({$rotation + 180}deg);"
 >
-	<h3 class="text-2xl font-bold text-white">{gameState.currentCard.german_meaning}</h3>
-	<p class="mt-4 text-base text-white/80">{gameState.currentCard.context_note}</p>
+	<h3 class="text-2xl font-bold text-white">{gameState.currentCard.german}</h3>
+	<p class="mt-4 text-base text-white/80">{gameState.currentCard.metadata?.notes}</p>
 </div>
 {/if}
 </button>

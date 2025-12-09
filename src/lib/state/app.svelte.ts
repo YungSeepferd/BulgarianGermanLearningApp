@@ -1,6 +1,6 @@
 import { browser } from '$app/environment';
 import { db } from '$lib/data/db.svelte';
-import { dataLoader } from '$lib/data/loader';
+import * as dataLoader from '$lib/data/loader';
 import { LocalStorageManager } from '$lib/utils/localStorage';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 
@@ -8,20 +8,30 @@ export type LanguageMode = 'DE_BG' | 'BG_DE';
 
 export class AppState {
     // Replaces currentDirection with languageMode
-    languageMode = $state<LanguageMode>('DE_BG');
+    // languageMode = $state<LanguageMode>('DE_BG');
+    languageMode: LanguageMode = 'DE_BG';
     
     // UI State
-    searchQuery = $state('');
-    currentItem = $state<VocabularyItem | null>(null);
-    showAnswer = $state(false);
-    practiceMode = $state(false);
-    isLoading = $state(false);
-    error = $state<string | null>(null);
+    // searchQuery = $state('');
+    // currentItem = $state<VocabularyItem | null>(null);
+    // showAnswer = $state(false);
+    // practiceMode = $state(false);
+    // isLoading = $state(false);
+    // error = $state<string | null>(null);
+    searchQuery = '';
+    currentItem: VocabularyItem | null = null;
+    showAnswer = false;
+    practiceMode = false;
+    isLoading = false;
+    error: string | null = null;
 
     // Enhanced state for progress tracking
-    practiceStats = $state<Map<string, { correct: number; incorrect: number; lastPracticed: string }>>(new Map());
-    recentSearches = $state<string[]>([]);
-    favorites = $state<string[]>([]);
+    // practiceStats = $state<Map<string, { correct: number; incorrect: number; lastPracticed: string }>>(new Map());
+    // recentSearches = $state<string[]>([]);
+    // favorites = $state<string[]>([]);
+    practiceStats: Map<string, { correct: number; incorrect: number; lastPracticed: string }> = new Map();
+    recentSearches: string[] = [];
+    favorites: string[] = [];
 
     // Derived state
     filteredItems = $derived.by(() => {
@@ -120,22 +130,27 @@ export class AppState {
     async recordPracticeResult(itemId: string, correct: boolean, responseTime?: number) {
         try {
             await dataLoader.updateStats(itemId, correct, responseTime);
-            
+
             // Update local stats
             const current = this.practiceStats.get(itemId) || { correct: 0, incorrect: 0, lastPracticed: '' };
-            
+
             if (correct) {
                 current.correct++;
             } else {
                 current.incorrect++;
             }
-            
+
             current.lastPracticed = new Date().toISOString();
-            this.practiceStats.set(itemId, current);
-            
+
+            // Create a new Map to trigger reactivity with Svelte 5 Runes
+            const newStats = new Map(this.practiceStats);
+            newStats.set(itemId, current);
+            this.practiceStats = newStats;
+
             this.saveProgress();
         } catch (_error) {
             // Silently fail if recording practice result fails
+            console.error('Error recording practice result:', _error);
         }
     }
 
@@ -229,7 +244,10 @@ export class AppState {
         this.favorites = [];
         this.recentSearches = [];
         this.saveProgress();
-        dataLoader.clearCache();
+        // Clear vocabulary cache
+        if (typeof localStorage !== 'undefined') {
+            localStorage.removeItem('vocabulary-cache');
+        }
     }
 
     exportData(): string {

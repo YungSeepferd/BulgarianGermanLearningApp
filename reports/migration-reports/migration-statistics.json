@@ -1,0 +1,13 @@
+{
+  "originalItemCount": 750,
+  "unifiedItemCount": 750,
+  "afterDeduplication": 639,
+  "finalItemCount": 639,
+  "duplicateGroups": 105,
+  "categories": 15,
+  "difficultyRange": [
+    1,
+    3
+  ],
+  "timestamp": "2025-12-08T18:57:33.088Z"
+}

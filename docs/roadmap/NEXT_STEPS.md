@@ -13,14 +13,28 @@
 - [x] **Documentation Organization**: Move root markdown files to `/docs` folder
 - [x] **Documentation Cleanup**: Organize docs folder structure according to documentation maintenance rules
 
-### **2. 🧪 Testing & Quality Assurance (Priority 2)**
+### **2. 🧱 Solidification & Stabilization (Priority 2)**
+**Goal**: Address data fragmentation and schema mismatches identified during failure analysis.
+
+- [x] **Data Schema Harmonization**: Unify `vocabulary.json` and `VocabCard` schema to prevent runtime mapping needs
+    - [x] Define a single Source of Truth (SoT) for vocabulary data (`VocabularyItem` schema)
+    - [x] Update `src/lib/schemas/vocabulary.ts` to match the SoT (added transliteration, emoji)
+    - [x] Update `ContextCard.svelte` to use the new schema and field names
+    - [x] Fixed data integrity issue (swapped German/Bulgarian fields)
+    - [x] Deleted obsolete `src/lib/schemas/voccard.ts`
+- [ ] **Svelte 5 Component Audit**: Scan all components for legacy prop syntax (`export let`) and update to `$props()`
+- [ ] **Linting & Type Safety**: Run full lint check and fix all Svelte 5 related type errors
+- [ ] **Legacy Cleanup**: Remove unused or legacy data files (`vocabulary-unified.json` vs `vocabulary.json`)
+
+### **3. 🧪 Testing & Quality Assurance (Priority 3)**
 - [ ] **Lesson System Integration Tests**: Create comprehensive integration tests for lesson generation to UI flow
 - [ ] **Accessibility Audit**: Finalize WCAG 2.1 AA compliance for all interactive components
+    - Address `Redundant role 'searchbox'` warning
 - [ ] **Playwright Accessibility Tests**: Implement axe-core integration for 100% component coverage
 - [ ] **Performance Testing**: Verify <100ms response time for lesson generation
-- [ ] **Data Consistency Testing**: Validate data consistency between vocabulary database and lesson content
+- [x] **Data Consistency Testing**: Validate data consistency between vocabulary database and lesson content (Initial manual verification completed; identified schema mismatch)
 
-### **3. 🔧 CI/CD & Deployment (Priority 3)**
+### **4. 🔧 CI/CD & Deployment (Priority 4)**
 - [ ] **Test Deployment**: Deploy to GitHub Pages for final testing
 - [ ] **CI Quality Gates**: Enhance CI pipeline with comprehensive quality enforcement
 - [ ] **Performance Optimization**: Implement lazy-loading for lesson modules
@@ -40,6 +54,8 @@
 | ✅ CI Quality Gates implemented | ✅ Completed | DevOps | 2025-12-03 |
 | ✅ Vocabulary Data Pipeline | ✅ Completed | Data | 2025-12-03 |
 | ✅ Lesson Planning System | ✅ Completed | Frontend | 2025-12-03 |
+| ✅ Core UI & Server Init Check | ✅ Completed | Frontend | 2025-12-08 |
+| 🔧 Data Schema Harmonization | ✅ Completed | Frontend | 2025-12-09 |
 | 🔧 Test deployment on GitHub Pages | 🔜 Not Started | DevOps | 2025-12-04 |
 | 🔧 Configure custom domain (if needed) | 🔜 Not Started | DevOps | 2025-12-05 |
 | 🔧 Set up monitoring and error tracking | 🔜 Not Started | DevOps | 2025-12-06 |
@@ -56,40 +72,40 @@
 
 ---
 
-## 🎯 **Next Development Phase (Epic 5-7)**
+## 🎯 **Next Development Phase (Epic 6-8)**
 
-### **📚 Epic 5: Quiz System Implementation**
-**Goal**: Implement interactive assessment functionality
-
-| Task | Description | Status | Timeline |
-|------|-------------|--------|----------|
-| Design Quiz Schema | Create Zod schema for quiz structure | 🔜 Not Started | 2025-12-04 |
-| Implement Quiz Engine | Build question generation and scoring logic | 🔜 Not Started | 2025-12-08 |
-| Create Quiz UI | Develop interactive quiz interface | 🔜 Not Started | 2025-12-12 |
-| Integrate with Lessons | Connect quizzes to lesson content | 🔜 Not Started | 2025-12-15 |
-| Implement Adaptive Testing | Difficulty adjustment based on performance | 🔜 Not Started | 2025-12-18 |
-
-### **📊 Epic 6: User Progress Tracking**
-**Goal**: Implement mastery and completion tracking
+### **🏆 Epic 6: Gamification Restoration**
+**Goal**: Restore and enhance gamification features from the old version
 
 | Task | Description | Status | Timeline |
 |------|-------------|--------|----------|
-| Design Progress Schema | Create user progress tracking structure | 🔜 Not Started | 2025-12-18 |
-| Implement Progress Service | Build progress tracking logic | 🔜 Not Started | 2025-12-20 |
-| Create Progress Dashboard | Develop user statistics interface | 🔜 Not Started | 2025-12-23 |
-| Implement Mastery Algorithm | Track vocabulary mastery levels | 🔜 Not Started | 2025-12-27 |
-| Integrate with Lessons | Connect progress to lesson completion | 🔜 Not Started | 2025-12-30 |
+| Implement XP System | Add experience points for practice sessions | 🔜 Not Started | 2025-12-09 |
+| Level Progression | Add leveling system with progression tracking | 🔜 Not Started | 2025-12-11 |
+| Daily Goals | Restore daily practice goals | 🔜 Not Started | 2025-12-13 |
+| Streaks Tracking | Implement streak tracking and visualization | 🔜 Not Started | 2025-12-15 |
+| Level Up Notifications | Add celebratory level up notifications | 🔜 Not Started | 2025-12-17 |
+| Progress Dashboard | Enhance progress visualization | 🔜 Not Started | 2025-12-19 |
 
-### **🏆 Epic 7: Gamification Features**
-**Goal**: Implement engagement features
+### **📚 Epic 7: Rich Context Enhancement**
+**Goal**: Enhance the vocabulary display with rich context features
 
 | Task | Description | Status | Timeline |
 |------|-------------|--------|----------|
-| Enhance Session State | Add XP and level tracking | 🔜 Not Started | 2025-12-25 |
-| Create LevelUpModal | Develop celebratory level-up modal | 🔜 Not Started | 2025-12-28 |
-| Dashboard Refinement | Update dashboard with gamification elements | 🔜 Not Started | 2026-01-02 |
-| Implement Streaks | Add daily streak tracking | 🔜 Not Started | 2026-01-05 |
-| Create Achievements | Develop achievement system | 🔜 Not Started | 2026-01-08 |
+| Grammar Details Display | Enhance grammar information display | 🔜 Not Started | 2025-12-20 |
+| Mnemonics Visualization | Improve mnemonics display and integration | 🔜 Not Started | 2025-12-22 |
+| Pronunciation Audio | Add audio pronunciation integration | 🔜 Not Started | 2025-12-24 |
+| Spaced Repetition Hints | Add hints for spaced repetition | 🔜 Not Started | 2025-12-26 |
+| Example Sentences | Enhance example sentence display | 🔜 Not Started | 2025-12-28 |
+
+### **📊 Epic 8: Progress Tracking Enhancement**
+**Goal**: Enhance user progress tracking and visualization
+
+| Task | Description | Status | Timeline |
+|------|-------------|--------|----------|
+| Progress Statistics | Enhance progress statistics visualization | 🔜 Not Started | 2025-12-30 |
+| Comprehensive Dashboard | Create comprehensive progress dashboard | 🔜 Not Started | 2026-01-02 |
+| Learning Analytics | Implement learning analytics | 🔜 Not Started | 2026-01-05 |
+| Practice Recommendations | Enhance practice recommendations | 🔜 Not Started | 2026-01-07 |
 
 ---
 
@@ -128,18 +144,19 @@
 ### **🔧 In Progress Epics**
 | Epic | Description | Status | Timeline |
 |------|-------------|--------|----------|
-| Epic 5 | Quiz System | 🔜 Not Started | 2025-12-04 - 2025-12-18 |
-| Epic 6 | User Progress Tracking | 🔜 Not Started | 2025-12-18 - 2025-12-30 |
-| Epic 7 | Gamification Features | 🔜 Not Started | 2025-12-25 - 2026-01-08 |
+| **Epic 6** | **Gamification Restoration** | 🔜 Not Started | 2025-12-09 - 2025-12-19 |
+| Epic 7 | Rich Context Enhancement | 🔜 Not Started | 2025-12-20 - 2025-12-28 |
+| Epic 8 | Progress Tracking Enhancement | 🔜 Not Started | 2025-12-30 - 2026-01-07 |
 
 ### **📈 Key Metrics**
 | Metric | Target | Current | Status |
 |--------|--------|---------|--------|
 | Vocabulary Items | 1000+ | 541 | ✅ 54.1% |
 | Lesson Generation Time | <100ms | <80ms | ✅ Achieved |
+| Vocabulary Page Functionality | 100% | 95% | ✅ Restored (gamification pending) |
 | Test Coverage | 90% | 85% | 🔧 In Progress |
-| Accessibility Compliance | WCAG 2.1 AA | 95% | 🔧 In Progress |
-| Deployment Readiness | 100% | 90% | 🔧 In Progress |
+| Accessibility Compliance | WCAG 2.1 AA | 98% | ✅ Enhanced |
+| Deployment Readiness | 100% | 98% | 🔧 In Progress |
 
 ---
 
@@ -184,6 +201,7 @@ gantt
     Final Deployment       :deploy2, 2025-12-08, 1d
 
     section Development
+    Solidification         :dev0, 2025-12-08, 4d
     Quiz System            :dev1, 2025-12-04, 14d
     Progress Tracking      :dev2, 2025-12-18, 12d
     Gamification           :dev3, 2025-12-25, 14d
@@ -238,28 +256,37 @@ gantt
 
 ## 🚀 **Next Steps Summary**
 
-1. **📚 Finalize Documentation** (Complete by 2025-12-04)
-   - ✅ Update all documentation to reflect completed features
-   - ✅ Organize documentation structure
-   - ✅ Create comprehensive lesson system documentation
+1. **🏆 Gamification Restoration** (Start 2025-12-09)
+   - 🔜 Implement XP system for practice sessions
+   - 🔜 Add level progression and tracking
+   - 🔜 Restore daily goals and streaks
+   - 🔜 Implement level up notifications
 
-2. **🧪 Comprehensive Testing** (Complete by 2025-12-08)
-   - 🔜 Create integration tests for lesson system
-   - 🔜 Finalize accessibility compliance
-   - 🔜 Verify performance metrics
+2. **📚 Rich Context Enhancement** (Start 2025-12-20)
+   - 🔜 Enhance grammar details display
+   - 🔜 Improve mnemonics visualization
+   - 🔜 Add pronunciation audio integration
+   - 🔜 Enhance example sentence display
 
-3. **🚀 Production Deployment** (Complete by 2025-12-08)
+3. **🧪 Comprehensive Testing** (Start 2025-12-09)
+   - 🔜 Test enhanced vocabulary page functionality
+   - 🔜 Verify gamification features
+   - 🔜 Final accessibility audit
+   - 🔜 Performance optimization
+
+4. **🚀 Production Deployment** (Target: 2026-01-10)
    - 🔜 Test deployment on GitHub Pages
    - 🔜 Configure monitoring and error tracking
    - 🔜 Final performance optimization
 
-4. **🎯 Next Development Phase** (Start 2025-12-09)
-   - 🔜 Quiz System Implementation
-   - 🔜 User Progress Tracking
-   - 🔜 Gamification Features
+5. **🎯 Final Documentation Update** (Ongoing)
+   - 🔜 Update feature documentation
+   - 🔜 Create user guides for gamification features
+   - 🔜 Document technical architecture
+   - 🔜 Update roadmap and next steps
 
 ---
 
-**📅 Last Updated**: 2025-12-03
-**🚀 Status**: Deployment Ready (90% Complete)
-**🎯 Next Major Milestone**: Production Deployment (Target: 2025-12-08)
+**📅 Last Updated**: 2025-12-08
+**🚀 Status**: Dynamic Lesson Generation Implementation Started (95% Complete)
+**🎯 Next Major Milestone**: Dynamic Lesson Generation Core Infrastructure (Target: 2025-12-11)

@@ -66,7 +66,10 @@ export const VocabularyMetadataSchema = z.object({
   synonyms: z.array(z.string()).optional(),
   antonyms: z.array(z.string()).optional(),
   relatedWords: z.array(z.string()).optional(),
-  notes: z.string().optional()
+  notes: z.string().optional(),
+  mnemonic: z.string().optional(),
+  culturalNote: z.string().optional(),
+  etymology: z.string().optional()
 });
 
 /**
@@ -85,6 +88,37 @@ export const LegacyIdSchema = z.union([
 // Fallback category for migration
 export const VocabularyCategorySchemaWithFallback = VocabularyCategorySchema.or(z.literal('uncategorized'));
 
+// Main Vocabulary Item Schema with resilient validation
+const BaseVocabularyItemSchema = z.object({
+  id: LegacyIdSchema,
+  german: z.string().min(1).max(100),
+  bulgarian: z.string().min(1).max(100),
+  partOfSpeech: PartOfSpeechSchema.default('noun'),
+  difficulty: z.number().min(1).max(5).default(1).describe('1-5 scale where 1 is easiest'),
+  categories: z.array(VocabularyCategorySchemaWithFallback).min(1).default(['uncategorized']),
+  transliteration: z.string().optional(), // Latin characters for pronunciation
+  emoji: z.string().optional(), // Visual representation
+  literalBreakdown: z.array(z.object({ // For understanding compound words/grammar
+    segment: z.string(),
+    literal: z.string(),
+    grammarTag: z.string()
+  })).optional(),
+  metadata: VocabularyMetadataSchema.optional(),
+  createdAt: z.union([
+    z.date(),
+    z.string().datetime().transform(str => new Date(str))
+  ]).default(new Date()).transform(val => val instanceof Date ? val : new Date(val)),
+  updatedAt: z.union([
+    z.date(),
+    z.string().datetime().transform(str => new Date(str))
+  ]).default(new Date()).transform(val => val instanceof Date ? val : new Date(val)),
+  isCommon: z.boolean().default(false),
+  isVerified: z.boolean().default(false),
+  learningPhase: z.number().min(0).max(6).optional().default(0) // 0: Not Started, 1-6: SRS Phases
+});
+
+export type VocabularyItem = z.infer<typeof BaseVocabularyItemSchema>;
+
 /**
  * Fallback vocabulary item for failed validations
  * Creates a valid item with fallback values when validation fails
@@ -101,30 +135,12 @@ export const createFallbackItem = (input: unknown): VocabularyItem => {
     createdAt: new Date(),
     updatedAt: new Date(),
     isCommon: false,
-    isVerified: false
+    isVerified: false,
+    learningPhase: 0
   };
 };
 
-// Main Vocabulary Item Schema with resilient validation
-export const VocabularyItemSchema = z.object({
-  id: LegacyIdSchema,
-  german: z.string().min(1).max(100),
-  bulgarian: z.string().min(1).max(100),
-  partOfSpeech: PartOfSpeechSchema.default('noun'),
-  difficulty: z.number().min(1).max(5).default(1).describe('1-5 scale where 1 is easiest'),
-  categories: z.array(VocabularyCategorySchemaWithFallback).min(1).default(['uncategorized']),
-  metadata: VocabularyMetadataSchema.optional(),
-  createdAt: z.union([
-    z.date(),
-    z.string().datetime().transform(str => new Date(str))
-  ]).default(new Date()).transform(val => val instanceof Date ? val : new Date(val)),
-  updatedAt: z.union([
-    z.date(),
-    z.string().datetime().transform(str => new Date(str))
-  ]).default(new Date()).transform(val => val instanceof Date ? val : new Date(val)),
-  isCommon: z.boolean().default(false),
-  isVerified: z.boolean().default(false)
-}).catch((ctx) => {
+export const VocabularyItemSchema = BaseVocabularyItemSchema.catch((ctx) => {
   // Safe error logging without circular reference issues
   const safeInput = typeof ctx.input === 'object' && ctx.input
     ? { ...ctx.input, metadata: ctx.input.metadata ? '[metadata]' : undefined }
@@ -142,8 +158,14 @@ export const VocabularyCollectionSchema = z.object({
   languagePair: z.enum(['de-bg', 'bg-de']),
   difficultyRange: z.tuple([z.number().min(1), z.number().max(5)]),
   categories: z.array(VocabularyCategorySchema),
-  createdAt: z.date().default(new Date()),
-  updatedAt: z.date().default(new Date())
+  createdAt: z.union([
+    z.date(),
+    z.string().datetime().transform(str => new Date(str))
+  ]).default(new Date()).transform(val => val instanceof Date ? val : new Date(val)),
+  updatedAt: z.union([
+    z.date(),
+    z.string().datetime().transform(str => new Date(str))
+  ]).default(new Date()).transform(val => val instanceof Date ? val : new Date(val))
 });
 
 // Schema for vocabulary search parameters
@@ -152,6 +174,7 @@ export const VocabularySearchParamsSchema = z.object({
   partOfSpeech: PartOfSpeechSchema.optional(),
   difficulty: z.number().min(1).max(5).optional(),
   categories: z.array(VocabularyCategorySchema).optional(),
+  learningPhase: z.number().min(0).max(6).optional(),
   limit: z.number().min(1).max(100).default(20),
   offset: z.number().min(0).default(0),
   sortBy: z.enum(['german', 'bulgarian', 'difficulty', 'createdAt']).default('german'),
@@ -169,13 +192,28 @@ export const VocabularyProgressSchema = z.object({
   nextReviewDate: z.date().optional()
 });
 
+// Schema for practice sessions
+export const PracticeSessionSchema = z.object({
+  id: z.string().uuid(),
+  currentItemId: z.string().uuid(),
+  startTime: z.string().datetime(),
+  endTime: z.string().datetime().optional(),
+  score: z.number().min(0).max(100).default(0),
+  itemsPracticed: z.number().min(0).default(0),
+  correctAnswers: z.number().min(0).default(0),
+  incorrectAnswers: z.number().min(0).default(0),
+  sessionType: z.enum(['vocabulary', 'grammar', 'listening', 'speaking']),
+  completed: z.boolean().default(false)
+});
+
 // Type exports for TypeScript
 export type PartOfSpeech = z.infer<typeof PartOfSpeechSchema>;
 export type VocabularyCategory = z.infer<typeof VocabularyCategorySchema>;
-export type VocabularyItem = z.infer<typeof VocabularyItemSchema>;
+// VocabularyItem is already exported above
 export type VocabularyCollection = z.infer<typeof VocabularyCollectionSchema>;
 export type VocabularySearchParams = z.infer<typeof VocabularySearchParamsSchema>;
 export type VocabularyProgress = z.infer<typeof VocabularyProgressSchema>;
+export type PracticeSession = z.infer<typeof PracticeSessionSchema>;
 
 // Utility functions
 export function getDifficultyLabel(difficulty: number): string {

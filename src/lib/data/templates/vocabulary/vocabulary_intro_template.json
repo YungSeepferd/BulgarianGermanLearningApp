@@ -1,0 +1,35 @@
+{
+  "id": "vocabulary-intro",
+  "name": "Vocabulary Introduction",
+  "description": "Template for introducing new vocabulary items with examples and context",
+  "type": "vocabulary",
+  "difficultyRange": ["A1", "C1"],
+  "variables": [
+    {
+      "name": "sectionTitle",
+      "type": "string",
+      "description": "Title of the lesson section",
+      "required": true,
+      "defaultValue": "Vocabulary Introduction"
+    },
+    {
+      "name": "theme",
+      "type": "string",
+      "description": "Theme of the vocabulary lesson",
+      "required": false
+    },
+    {
+      "name": "vocabulary",
+      "type": "array",
+      "description": "List of vocabulary items to introduce",
+      "required": true
+    },
+    {
+      "name": "learningTip",
+      "type": "string",
+      "description": "A helpful tip for learning this vocabulary",
+      "required": false
+    }
+  ],
+  "template": "# {{sectionTitle}}\n\n{{#if theme}}\n## Theme: {{theme}}\n{{/if}}\n\nHere are some new words for you to learn:\n\n{{#each vocabulary}}\n### {{bulgarian}}\n**German**: {{german}}\n**Part of Speech**: {{partOfSpeech}}\n\n{{#if definition}}\n**Definition**: {{definition}}\n{{/if}}\n\n{{#if example}}\n**Example**:\n- BG: {{example.bulgarian}}\n- DE: {{example.german}}\n{{/if}}\n\n{{#if culturalNote}}\n> **Cultural Note**: {{culturalNote}}\n{{/if}}\n\n---\n{{/each}}\n\n{{#if learningTip}}\n### 💡 Learning Tip\n{{learningTip}}\n{{/if}}"
+}

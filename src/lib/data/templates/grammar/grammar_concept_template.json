@@ -1,0 +1,29 @@
+{
+  "id": "grammar-concept",
+  "name": "Grammar Concept Explanation",
+  "description": "Template for explaining a grammar concept with cultural context and cross-linguistic comparison",
+  "type": "grammar",
+  "difficultyRange": ["A1", "C1"],
+  "variables": [
+    {
+      "name": "sectionTitle",
+      "type": "string",
+      "description": "Title of the grammar section",
+      "required": true,
+      "defaultValue": "Grammar Concept"
+    },
+    {
+      "name": "grammarConcept",
+      "type": "object",
+      "description": "The grammar concept data object",
+      "required": true
+    },
+    {
+      "name": "learningTip",
+      "type": "string",
+      "description": "A helpful tip for mastering this concept",
+      "required": false
+    }
+  ],
+  "template": "# {{sectionTitle}}\n\n## {{grammarConcept.name.german}} ({{grammarConcept.name.bulgarian}})\n\n{{grammarConcept.description.german}}\n\n> **In Bulgarian**: {{grammarConcept.description.bulgarian}}\n\n### 🇧🇬 vs 🇩🇪 Cross-Cultural Insight\n\n**Bulgarian Perspective**:\n{{grammarConcept.culturalContext.bulgarianPerspective}}\n\n**German Perspective**:\n{{grammarConcept.culturalContext.germanPerspective}}\n\n**Comparison**:\n{{grammarConcept.culturalContext.crossLinguisticExplanation.bgToDe}}\n\n### 📝 Examples\n\nLet's see how this works in practice:\n\n{{#each grammarConcept.examples}}\n- **DE**: {{german}}\n- **BG**: {{bulgarian}}\n  - *Insight*: {{explanationBgToDe}}\n\n{{/each}}\n\n### ⚠️ Common Mistakes to Avoid\n\n{{#each grammarConcept.commonMistakes.bgToDe}}\n- {{this}}\n{{/each}}\n\n{{#if learningTip}}\n### 💡 Pro Tip\n{{learningTip}}\n{{/if}}"
+}

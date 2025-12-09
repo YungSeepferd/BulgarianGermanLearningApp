@@ -5,26 +5,10 @@
 
 export type {
   VocabularyItem,
-  VocabularySearchResult,
   PracticeSession,
-  UserProgress,
-  PracticeRecommendation,
-  Example,
-  Pronunciation,
-  Grammar,
-  GlobalStats
 } from '$lib/schemas/vocabulary.js';
 export type {
   PracticeStat,
   UserProgressStorage,
   ExportedUserData
 } from '$lib/schemas/localStorage.js';
-
-// Re-export validation functions for convenience
-export {
-  validateVocabularyItem,
-  validateVocabularyArray,
-  safeValidateVocabularyItem,
-  safeValidateVocabularyArray,
-  normalizeVocabularyItem
-} from '$lib/schemas/vocabulary.js';

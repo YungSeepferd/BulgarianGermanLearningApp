@@ -69,6 +69,21 @@ The `cookie` package (v0.4.1) vulnerability was introduced as a transitive depen
 
 ---
 
+### 1.4 Data Schema Mismatch and Runtime Failure
+
+**Problem:**
+A critical mismatch between the vocabulary data structure (`vocabulary.json`, `vocabulary-unified.json`) and the application's expected TypeScript interface (`VocabCard`) caused a runtime failure on the home page. The application state manager (`game.svelte.ts`) attempted to initialize with incompatible data, leading to a 500 Internal Server Error (during SSR or hydration).
+
+**Symptoms:**
+- White screen on the home page (`/`)
+- "500 Internal Error" displayed in the UI
+- `ReferenceError` or `undefined` access errors when `ContextCard.svelte` tried to access missing properties like `bulgarian_text` (source data used `bulgarian`) or `literal_breakdown` (missing in source).
+
+**Root Cause:**
+The `ContextCard.svelte` component and `VocabCard` schema were designed for a different (possibly legacy or future) data structure than what was currently available in `vocabulary.json`. The application state logic directly imported the JSON without transformation or validation against the component's expectations.
+
+---
+
 ## 2. Resolution Strategy
 
 ### 2.1 Phase 1: Stabilization
@@ -165,6 +180,26 @@ export default [
   ],
   "resolvedIssues": []
 }
+```
+
+#### 2.1.4 Data Schema Harmonization
+**Solution:** Implemented a data mapping layer in `src/lib/game.svelte.ts` to transform the available `vocabulary.json` data into the expected `VocabCard` structure at runtime.
+
+**Key Implementation:**
+- Changed import to import JSON data directly.
+- Added a mapping function in the `GameState` constructor to populate `bulgarian_text` from `bulgarian`, `german_meaning` from `german`, etc.
+- Provided default values for missing fields like `literal_breakdown` (empty array) and `difficulty_level`.
+
+[`src/lib/game.svelte.ts`](src/lib/game.svelte.ts):
+```typescript
+import vocabularyData from '$lib/data/vocabulary.json';
+
+// ... in constructor ...
+this.cards = vocabularyData.map((item: any) => ({
+    id: item.id,
+    bulgarian_text: item.bulgarian,
+    // ... mapping logic ...
+}));
 ```
 
 ---
@@ -317,6 +352,7 @@ jobs:
 | ESLint v8 Configuration | Legacy `.eslintrc.json` format | Migrated to `eslint.config.js` |
 | Svelte 4 Prop Syntax | `export let` usage | Updated to `$props()` syntax |
 | Test Component Syntax | Legacy test components | Updated to Svelte 5 syntax |
+| Data Loading Schema | Direct JSON import with mismatch | Implemented runtime mapping adapter |
 
 ### 4.2 Remaining Debt
 | Item | Description | Severity | Mitigation Plan |
@@ -324,6 +360,7 @@ jobs:
 | Transitive Dependency Vulnerability | `cookie@0.4.1` CVE-2022-25881 | Low | Monitor `@supabase/ssr` updates |
 | Test Coverage Gaps | Incomplete component test coverage | Medium | Expand unit test suite |
 | E2E Test Coverage | Limited end-to-end testing | High | Implement Playwright tests |
+| Data Schema Fragmentation | Multiple vocabulary file formats | High | Unify data source and update TypeScript schemas |
 
 ---
 
@@ -357,5 +394,6 @@ The codebase is now stabilized with:
 - ✅ Documented dependency vulnerabilities
 - ✅ CI quality gates implemented
 - ✅ End-to-end test infrastructure in place
+- ✅ Runtime data adaptation for legacy components
 
-Future work should focus on expanding test coverage, implementing visual regression testing, and maintaining robust migration protocols to prevent similar failures.
+Future work should focus on expanding test coverage, implementing visual regression testing, harmonizing data schemas, and maintaining robust migration protocols to prevent similar failures.

@@ -8,11 +8,15 @@
     items = [],
     direction = 'DE->BG',
     onSelectItem = () => {},
+    onToggleSelectItem = () => {},
+    selectedItems = new Set<string>(),
     showQuickPractice = true // New prop for "Practice This" feature
   }: {
     items: VocabularyItem[];
     direction: 'DE->BG' | 'BG->DE';
     onSelectItem: (item: VocabularyItem) => void;
+    onToggleSelectItem: (itemId: string) => void;
+    selectedItems: Set<string>;
     showQuickPractice?: boolean;
   } = $props();
 
@@ -96,10 +100,17 @@
           role="button"
           tabindex="0"
           in:itemAnimation
-          animate:flip
         >
+          <div animate:flip>
           <div class="item-header">
             <div class="main-text">
+               <input
+                type="checkbox"
+                class="item-checkbox"
+                checked={selectedItems.has(item.id)}
+                onchange={() => onToggleSelectItem(item.id)}
+                aria-label={`Select ${getItemText(item)} for practice`}
+              />
               <span class="word">{getItemText(item)}</span>
               <span class="translation">{getItemTranslation(item)}</span>
             </div>
@@ -193,7 +204,24 @@
               </div>
             </div>
           {/if}
+          </div>
+          {#if hoveredItemId === item.id}
+          <div class="rich-context-details" transition:fade>
+            <h4>Rich Context</h4>
+            {#if item.metadata?.notes}
+              <p><strong>Note:</strong> {item.metadata.notes}</p>
+            {/if}
+            {#if item.metadata?.mnemonic}
+              <p><strong>Mnemonic:</strong> {item.metadata.mnemonic}</p>
+            {/if}
+            {#if item.metadata?.culturalNote}
+              <p><strong>Cultural Note:</strong> {item.metadata.culturalNote}</p>
+            {/if}
+            {#if item.metadata?.etymology}
+              <p><strong>Etymology:</strong> {item.metadata.etymology}</p>
+            {/if}
         </div>
+        {/if}
       {/each}
     </div>
   {/if}
@@ -330,6 +358,23 @@
   .practice-btn.quick-practice:active {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(247, 147, 30, 0.3);
+  }
+
+  .rich-context-details {
+    background-color: #f0f4f8;
+    padding: 1rem;
+    border-radius: 0 0 12px 12px;
+    margin-top: -1rem; /* Overlap with the item above */
+    border-top: 1px solid #e0e6ed;
+  }
+  .rich-context-details h4 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+  .rich-context-details p {
+    font-size: 0.9rem;
+    color: #495057;
+    margin: 0.5rem 0;
   }
 
   @media (max-width: 768px) {

@@ -1,14 +1,35 @@
-import { vocabulary } from '$lib/data/vocabulary';
-import type { VocabCard } from '$lib/schemas/voccard';
+import { loadVocabulary } from '$lib/data/loader';
+import type { VocabularyItem } from '$lib/schemas/vocabulary';
 
 export class GameState {
-	cards = $state<VocabCard[]>([]);
-	currentCardIndex = $state(0);
-	streak = $state(0);
-	correctCount = $state(0);
+	// cards = $state<VocabularyItem[]>([]);
+	// currentCardIndex = $state(0);
+	// streak = $state(0);
+	// correctCount = $state(0);
+	// loading = $state(true);
+	// error = $state<string | null>(null);
+	cards: VocabularyItem[] = [];
+	currentCardIndex = 0;
+	streak = 0;
+	correctCount = 0;
+	loading = true;
+	error: string | null = null;
 
 	constructor() {
-		this.cards = vocabulary;
+		this.init();
+	}
+
+	async init() {
+		try {
+			this.loading = true;
+			const collection = await loadVocabulary();
+			this.cards = collection.items;
+			this.loading = false;
+		} catch (e) {
+			console.error("Failed to load vocabulary:", e);
+			this.error = "Failed to load vocabulary data.";
+			this.loading = false;
+		}
 	}
 
 	currentCard = $derived(this.cards[this.currentCardIndex]);

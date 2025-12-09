@@ -4,8 +4,8 @@
     // Target ES2021 to match existing JavaScript configuration
     "target": "ES2021",
     "lib": ["ES2021", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "moduleResolution": "bundler",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
 
     // Strict type checking (enabled for better ESLint integration)
     "strict": true,
@@ -21,7 +21,7 @@
     "checkJs": false, // Initially disable to focus on .ts files
 
     // Output configuration
-    "outDir": "./dist",
+    // "outDir": "./dist",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
@@ -57,6 +57,7 @@
     "node_modules",
     "dist",
     "**/*.test.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "src/paraglide/**/*.js"
   ]
 }

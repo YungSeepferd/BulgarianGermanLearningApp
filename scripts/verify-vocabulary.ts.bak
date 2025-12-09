@@ -1,27 +1,20 @@
 import { readFile, writeFile } from 'node:fs/promises';
-import { glob } from 'glob';
 import { VocabularyItemSchema } from '../src/lib/schemas/vocabulary.js';
-import { z } from 'zod';
+import { ProcessingVocabularyItem, VocabularyVerificationCheck, VocabularyIssue, VocabularyVerificationReport } from './types/vocabulary-types';
 
 /**
  * Comprehensive vocabulary data verification system
  * with detailed error reporting and automatic fixes
  */
 class VocabularyVerifier {
-  private issues: Array<{
-    id: string;
-    type: string;
-    message: string;
-    severity: 'critical' | 'high' | 'medium' | 'low';
-    data?: any;
-  }> = [];
+  private issues: VocabularyIssue[] = [];
 
   // Verification checks with automatic correction capabilities
-  private checks = [
+  private checks: VocabularyVerificationCheck[] = [
     {
       name: 'ID Uniqueness',
-      test: (items: any[]) => {
-        const idMap = new Map();
+      test: (items: ProcessingVocabularyItem[]) => {
+        const idMap = new Map<string, ProcessingVocabularyItem>();
         return items.filter(item => {
           if (idMap.has(item.id)) {
             this.issues.push({
@@ -37,8 +30,8 @@ class VocabularyVerifier {
           return true;
         });
       },
-      fix: (items: any[]) => {
-        const idMap = new Map();
+      fix: (items: ProcessingVocabularyItem[]) => {
+        const idMap = new Map<string, ProcessingVocabularyItem>();
         return items.map(item => {
           if (idMap.has(item.id)) {
             const newId = `${item.id}-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
@@ -58,7 +51,7 @@ class VocabularyVerifier {
     },
     {
       name: 'partOfSpeech Consistency',
-      test: (items: any[]) => {
+      test: (items: ProcessingVocabularyItem[]) => {
         const posMap = new Map<string, Set<string>>();
         items.forEach(item => {
           const baseId = item.id.replace(/_\d+$/, '');
@@ -82,7 +75,7 @@ class VocabularyVerifier {
           return true;
         });
       },
-      fix: (items: any[]) => {
+      fix: (items: ProcessingVocabularyItem[]) => {
         const posRules: Record<string, string[]> = {
           'бърз': ['adjective'],
           'болен': ['adjective'],
@@ -110,7 +103,7 @@ class VocabularyVerifier {
     },
     {
       name: 'Example Completeness',
-      test: (items: any[]) => {
+      test: (items: ProcessingVocabularyItem[]) => {
         return items.filter(item => {
           if (!item.metadata?.examples || item.metadata.examples.length === 0) {
             this.issues.push({
@@ -124,7 +117,7 @@ class VocabularyVerifier {
           return true;
         });
       },
-      fix: (items: any[]) => {
+      fix: (items: ProcessingVocabularyItem[]) => {
         const exampleTemplates = {
           adjective: [
             { german: 'Er ist {german}.', bulgarian: 'Той е {bulgarian}.' },
@@ -175,7 +168,7 @@ class VocabularyVerifier {
     },
     {
       name: 'German Translation Quality',
-      test: (items: any[]) => {
+      test: (items: ProcessingVocabularyItem[]) => {
         const badPatterns = [
           /wenn,\s*falls/i,
           /Sofia\/hier/i,
@@ -208,7 +201,7 @@ class VocabularyVerifier {
           return true;
         });
       },
-      fix: (items: any[]) => {
+      fix: (items: ProcessingVocabularyItem[]) => {
         // This would be enhanced with proper translation logic
         // For now, we'll just flag these for manual review
         return items;
@@ -225,7 +218,7 @@ class VocabularyVerifier {
   }
 
   async verify(filePath: string, fix = false): Promise<void> {
-    const data = JSON.parse(await readFile(filePath, 'utf-8'));
+    const data = JSON.parse(await readFile(filePath, 'utf-8')) as { items: ProcessingVocabularyItem[] };
     let items = data.items;
 
     console.log(`🔍 Verifying ${items.length} vocabulary items...`);
@@ -236,7 +229,7 @@ class VocabularyVerifier {
     });
 
     // Generate report
-    const report = {
+    const report: VocabularyVerificationReport = {
       timestamp: new Date().toISOString(),
       totalItems: data.items.length,
       verifiedItems: items.length,
@@ -275,5 +268,8 @@ class VocabularyVerifier {
 // CLI Usage
 const verifier = new VocabularyVerifier();
 const [,, filePath, fixFlag] = process.argv;
-verifier.verify(filePath, fixFlag === '--fix')
-  .catch(console.error);
+verifier.verify(filePath as string, fixFlag === '--fix')
+  .catch((error: unknown) => {
+    console.error('❌ Verification failed:', error instanceof Error ? error.message : String(error));
+    process.exit(1);
+  });

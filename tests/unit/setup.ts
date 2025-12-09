@@ -73,3 +73,96 @@ if (typeof Element !== 'undefined' && !Element.prototype.animate) {
     };
   });
 }
+
+// Mock vocabulary data for tests
+const mockVocabularyData = [
+  {
+    id: 'test_001',
+    german: 'Hallo',
+    bulgarian: 'Здравей',
+    partOfSpeech: 'noun',
+    difficulty: 1,
+    categories: ['Greetings'],
+    metadata: {
+      examples: [
+        { german: 'Hallo, wie geht es dir?', bulgarian: 'Здравей, как си?' }
+      ]
+    }
+  },
+  {
+    id: 'test_002',
+    german: 'Danke',
+    bulgarian: 'Благодаря',
+    partOfSpeech: 'noun',
+    difficulty: 1,
+    categories: ['Greetings'],
+    metadata: {
+      examples: [
+        { german: 'Danke schön!', bulgarian: 'Много благодаря!' }
+      ]
+    }
+  }
+];
+
+// Mock the data loader module
+vi.mock('$lib/data/loader', async (importOriginal) => {
+  const actual = await importOriginal();
+  return {
+    ...actual,
+    loadVocabulary: vi.fn().mockResolvedValue({
+      id: 'mock-collection',
+      name: 'Mock Vocabulary Collection',
+      description: 'Mock vocabulary data for testing',
+      items: mockVocabularyData,
+      languagePair: 'de-bg',
+      difficultyRange: [1, 5],
+      categories: ['Greetings'],
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }),
+    loadVocabularyById: vi.fn().mockImplementation((id) => {
+      return Promise.resolve(mockVocabularyData.find(item => item.id === id) || null);
+    }),
+    loadVocabularyBySearch: vi.fn().mockImplementation((params) => {
+      let items = [...mockVocabularyData];
+
+      if (params.query) {
+        const query = params.query.toLowerCase();
+        items = items.filter(item =>
+          item.german.toLowerCase().includes(query) ||
+          item.bulgarian.toLowerCase().includes(query)
+        );
+      }
+
+      if (params.partOfSpeech) {
+        items = items.filter(item => item.partOfSpeech === params.partOfSpeech);
+      }
+
+      if (params.difficulty) {
+        items = items.filter(item => item.difficulty === params.difficulty);
+      }
+
+      if (params.categories && params.categories.length > 0) {
+        items = items.filter(item =>
+          item.categories.some(category => params.categories.includes(category))
+        );
+      }
+
+      return Promise.resolve({
+        items,
+        total: items.length,
+        hasMore: false
+      });
+    }),
+    loadVocabularyByCategory: vi.fn().mockImplementation((category) => {
+      return Promise.resolve(mockVocabularyData.filter(item => item.categories.includes(category)));
+    }),
+    loadVocabularyByDifficulty: vi.fn().mockImplementation((difficulty) => {
+      return Promise.resolve(mockVocabularyData.filter(item => item.difficulty === difficulty));
+    }),
+    getRandomVocabulary: vi.fn().mockImplementation((count = 5) => {
+      const shuffled = [...mockVocabularyData].sort(() => 0.5 - Math.random());
+      return Promise.resolve(shuffled.slice(0, Math.min(count, shuffled.length)));
+    })
+  };
+});

@@ -1,15 +1,17 @@
 import { readFile, writeFile } from 'node:fs/promises';
+import { VocabularyItemSchema } from '../src/lib/schemas/vocabulary.js';
+import { ProcessingVocabularyItem, VocabularyCleaningRule, VocabularyCleaningReport } from './types/vocabulary-types';
 
 /**
  * Vocabulary data cleaning pipeline
  * with comprehensive data normalization
  */
 class VocabularyCleaner {
-  private cleaningRules = [
+  private cleaningRules: VocabularyCleaningRule[] = [
     {
       name: 'Standardize Categories',
-      test: (item: any) => item.categories && Array.isArray(item.categories),
-      fix: (item: any) => ({
+      test: (item: ProcessingVocabularyItem) => item.categories && Array.isArray(item.categories),
+      fix: (item: ProcessingVocabularyItem) => ({
         ...item,
         categories: item.categories ? item.categories.map((category: string) =>
           category.toLowerCase().trim().replace(/\s+/g, '_')
@@ -18,43 +20,48 @@ class VocabularyCleaner {
     },
     {
       name: 'Normalize Difficulty',
-      test: (item: any) => typeof item.difficulty === 'number',
-      fix: (item: any) => ({
+      test: (item: ProcessingVocabularyItem) => typeof item.difficulty === 'number',
+      fix: (item: ProcessingVocabularyItem) => ({
         ...item,
         difficulty: Math.min(5, Math.max(1, Math.round(item.difficulty)))
       })
     },
-   {
-     name: 'Initialize Metadata',
-     test: (item: any) => item.metadata !== undefined,
-     fix: (item: any) => ({
-       ...item,
-       metadata: item.metadata || {}
-     })
-   },
-   {
-     name: 'Clean Metadata',
-     test: (item: any) => item.metadata,
-     fix: (item: any) => ({
-       ...item,
-       metadata: {
-         ...item.metadata,
-         examples: item.metadata.examples && Array.isArray(item.metadata.examples)
-           ? item.metadata.examples.map((example: any) => ({
-               ...example,
-               german: example.german?.trim(),
-               bulgarian: example.bulgarian?.trim(),
-               context: example.context?.trim() || 'general'
-             }))
-           : item.metadata.examples || [],
-         notes: item.metadata.notes?.trim()
-       }
-     })
-   },
+    {
+      name: 'Initialize Metadata',
+      test: (item: ProcessingVocabularyItem) => item.metadata !== undefined,
+      fix: (item: ProcessingVocabularyItem) => ({
+        ...item,
+        metadata: item.metadata || {}
+      })
+    },
+    {
+      name: 'Clean Metadata',
+      test: (item: ProcessingVocabularyItem) => item.metadata,
+      fix: (item: ProcessingVocabularyItem) => {
+        const metadata = item.metadata || {};
+        const examples = metadata.examples && Array.isArray(metadata.examples)
+          ? metadata.examples.map((example: any) => ({
+              ...example,
+              german: example.german?.trim(),
+              bulgarian: example.bulgarian?.trim(),
+              context: example.context?.trim() || 'general'
+            }))
+          : metadata.examples || [];
+
+        return {
+          ...item,
+          metadata: {
+            ...metadata,
+            examples,
+            notes: metadata.notes?.trim()
+          }
+        };
+      }
+    },
     {
       name: 'Add Timestamps',
-      test: (item: any) => item.createdAt !== undefined && item.updatedAt !== undefined,
-      fix: (item: any) => {
+      test: (item: ProcessingVocabularyItem) => item.createdAt !== undefined && item.updatedAt !== undefined,
+      fix: (item: ProcessingVocabularyItem) => {
         // Convert ISO strings to Date objects
         const createdAt = typeof item.createdAt === 'string'
           ? new Date(item.createdAt)
@@ -70,8 +77,8 @@ class VocabularyCleaner {
     },
     {
       name: 'Initialize Boolean Fields',
-      test: (item: any) => item.isCommon !== undefined && item.isVerified !== undefined,
-      fix: (item: any) => ({
+      test: (item: ProcessingVocabularyItem) => item.isCommon !== undefined && item.isVerified !== undefined,
+      fix: (item: ProcessingVocabularyItem) => ({
         ...item,
         isCommon: item.isCommon !== undefined ? Boolean(item.isCommon) : false,
         isVerified: item.isVerified !== undefined ? Boolean(item.isVerified) : false
@@ -79,39 +86,39 @@ class VocabularyCleaner {
     },
     {
       name: 'Standardize Boolean Fields',
-      test: (item: any) => typeof item.isCommon === 'boolean' && typeof item.isVerified === 'boolean',
-      fix: (item: any) => ({
+      test: (item: ProcessingVocabularyItem) => typeof item.isCommon === 'boolean' && typeof item.isVerified === 'boolean',
+      fix: (item: ProcessingVocabularyItem) => ({
         ...item,
         isCommon: Boolean(item.isCommon),
         isVerified: Boolean(item.isVerified)
       })
     },
-   {
-     name: 'Initialize partOfSpeech',
-     test: (item: any) => item.partOfSpeech !== undefined,
-     fix: (item: any) => ({
-       ...item,
-       partOfSpeech: item.partOfSpeech || 'noun'
-     })
-   },
-   {
-     name: 'Normalize partOfSpeech',
-     test: (item: any) => item.partOfSpeech && typeof item.partOfSpeech === 'string',
-     fix: (item: any) => ({
-       ...item,
-       partOfSpeech: item.partOfSpeech.toLowerCase().trim()
-     })
-   }
+    {
+      name: 'Initialize partOfSpeech',
+      test: (item: ProcessingVocabularyItem) => item.partOfSpeech !== undefined,
+      fix: (item: ProcessingVocabularyItem) => ({
+        ...item,
+        partOfSpeech: item.partOfSpeech || 'noun'
+      })
+    },
+    {
+      name: 'Normalize partOfSpeech',
+      test: (item: ProcessingVocabularyItem) => item.partOfSpeech && typeof item.partOfSpeech === 'string',
+      fix: (item: ProcessingVocabularyItem) => ({
+        ...item,
+        partOfSpeech: item.partOfSpeech.toLowerCase().trim()
+      })
+    }
   ];
 
   async clean(filePath: string): Promise<void> {
-    const data = JSON.parse(await readFile(filePath, 'utf-8'));
+    const data = JSON.parse(await readFile(filePath, 'utf-8')) as { items: ProcessingVocabularyItem[] };
     const originalCount = data.items.length;
 
     // Apply cleaning rules
-    const cleanedItems = data.items.map((item: any) => {
+    const cleanedItems = data.items.map((item: ProcessingVocabularyItem) => {
       // Create a safe copy with proper initialization
-      let cleanedItem = {
+      let cleanedItem: ProcessingVocabularyItem = {
         id: 'temp-' + Math.random().toString(36).substring(2, 9),
         german: 'unknown',
         bulgarian: 'unknown',
@@ -174,7 +181,7 @@ class VocabularyCleaner {
         },
         schemaValidation: validationResult,
         rulesApplied: this.cleaningRules.map(rule => rule.name)
-      }, null, 2)
+      } as VocabularyCleaningReport, null, 2)
     );
 
     console.log(`✅ Cleaning complete`);
@@ -182,13 +189,12 @@ class VocabularyCleaner {
     console.log(`📋 Report saved to data/vocabulary-cleaning-report.json`);
   }
 
-  private async validateAgainstSchema(items: any[]) {
+  private async validateAgainstSchema(items: ProcessingVocabularyItem[]) {
     // Dynamic import to avoid circular dependencies
     try {
-      const { VocabularyItemSchema } = await import('../src/lib/schemas/vocabulary.js');
-      const result = {
+      const result: VocabularyProcessingResult = {
         valid: true,
-        errors: [] as Array<{ id: string; errors: string; details?: any }>
+        errors: []
       };
 
       for (const item of items) {
@@ -198,7 +204,7 @@ class VocabularyCleaner {
             result.valid = false;
             result.errors.push({
               id: item.id || 'unknown',
-              errors: validation.error.errors.map((e: any) =>
+              errors: validation.error.errors.map((e) =>
                 `${e.path.join('.')}: ${e.message}`
               ).join(', '),
               details: validation.error.flatten()
@@ -223,5 +229,8 @@ class VocabularyCleaner {
 
 // CLI Usage
 const cleaner = new VocabularyCleaner();
-cleaner.clean(process.argv[2])
-  .catch(console.error);
+cleaner.clean(process.argv[2] as string)
+  .catch((error: unknown) => {
+    console.error('❌ Cleaning failed:', error instanceof Error ? error.message : String(error));
+    process.exit(1);
+  });
