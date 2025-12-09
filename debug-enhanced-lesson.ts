@@ -3,7 +3,6 @@
  */
 
 import { enhancedLessonService } from './src/lib/services/enhanced-lesson';
-import { lessonGenerationEngine } from './src/lib/services/lesson-generation/lesson-generator';
 
 async function debugEnhancedLesson() {
   console.log('Starting debug...');

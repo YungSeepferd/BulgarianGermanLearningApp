@@ -6,7 +6,7 @@
  */
 
 import type { UnifiedVocabularyItem, VocabularyCategory } from '../../src/lib/schemas/unified-vocabulary.js';
-import { UnifiedVocabularyItemSchema, VocabularyCategorySchema } from '../../src/lib/schemas/unified-vocabulary.js';
+
 import type { ProcessingVocabularyItem } from '../types/vocabulary-types.js';
 import { levenshteinDistance, normalizeText } from './text-utils';
 import { standardizeCategory } from './category-utils.js';
@@ -192,7 +192,7 @@ export function findDuplicateGroups(
     itemMap.set(id, {
       item,
       quality: assessItemQuality(item),
-      source: 'source' in item ? (item as any).source : 'unknown'
+      source: 'source' in item ? (item as { source: string }).source : 'unknown'
     });
   });
 
@@ -250,7 +250,7 @@ export function findDuplicateGroups(
  */
 export function mergeDuplicateGroup(
   group: DuplicateGroup,
-  config: DeduplicationConfig = DEFAULT_DEDUPLICATION_CONFIG
+  _config: DeduplicationConfig = DEFAULT_DEDUPLICATION_CONFIG
 ): UnifiedVocabularyItem {
   if (group.items.length === 0) {
     throw new Error('Cannot merge empty group');
@@ -314,7 +314,7 @@ export function mergeDuplicateGroup(
   mergedItem.examples = mergeExamples(allExamples);
 
   // 4. Merge notes
-  const allNotes = group.items.map(item => item.item.notes).filter(Boolean) as any[];
+  const allNotes = group.items.map(item => item.item.notes).filter(Boolean) as UnifiedVocabularyItem['notes'][];
   mergedItem.notes = mergeNotes(allNotes);
 
   // 5. Merge cultural notes
@@ -334,10 +334,10 @@ export function mergeDuplicateGroup(
   mergedItem.etymology = selectBestEtymology(group.items.map(item => item.item.etymology).filter(Boolean) as string[]);
 
   // 9. Select best audio
-  mergedItem.audio = selectBestAudio(group.items.map(item => item.item.audio).filter(Boolean) as any[]);
+  mergedItem.audio = selectBestAudio(group.items.map(item => item.item.audio).filter(Boolean) as Partial<UnifiedVocabularyItem['audio']>[]);
 
   // 10. Select best grammar info
-  mergedItem.grammar = selectBestGrammar(group.items.map(item => item.item.grammar).filter(Boolean) as any[]);
+  mergedItem.grammar = selectBestGrammar(group.items.map(item => item.item.grammar).filter(Boolean) as Partial<UnifiedVocabularyItem['grammar']>[]);
 
   // 11. Update categories
   mergedItem.categories = mergeCategories(group.items.map(item => item.item.categories));
@@ -737,7 +737,7 @@ function mergeNotes(notes: Array<{
   }
 
   // Merge notes by type
-  const mergedNotes: any = { source: 'merged' };
+  const mergedNotes: Partial<UnifiedVocabularyItem['notes']> = { source: 'merged' };
 
   // Merge general notes
   const generalNotes = notes.map(n => n.general).filter(Boolean) as string[];

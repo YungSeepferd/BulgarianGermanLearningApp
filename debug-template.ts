@@ -1,6 +1,4 @@
-import { TemplateRenderer } from './src/lib/services/lesson-generation/template-renderer';
-
-const renderer = new TemplateRenderer();
+import { _TemplateRenderer } from './src/lib/services/lesson-generation/template-renderer';
 
 // Test the unless block specifically
 const unlessTest = '{{#unless @last}}, {{/unless}}';

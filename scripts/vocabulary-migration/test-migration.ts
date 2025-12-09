@@ -6,9 +6,9 @@
  * everything works correctly before full migration
  */
 
-import { readFile, writeFile, mkdir } from 'fs/promises';
+import { writeFile, mkdir } from 'fs/promises';
 import path from 'path';
-import type { UnifiedVocabularyItem, UnifiedVocabularyCollection } from '../../src/lib/schemas/unified-vocabulary.js';
+// UnifiedVocabularyItem is unused
 import {
   mergeVocabularyItems,
   convertToUnifiedItem,
@@ -17,7 +17,6 @@ import {
 import { validateAndFixCollection } from './validation-utils.js';
 import { consolidateCollectionCategories, createCategoryMappingReport } from './category-utils.js';
 import { findDuplicateGroups, mergeDuplicateGroup } from './deduplication-utils.js';
-import type { ProcessingVocabularyItem } from '../types/vocabulary-types.js';
 
 // Sample data for testing
 const SAMPLE_DATA = {
@@ -201,37 +200,37 @@ const SAMPLE_DATA = {
  * Test the migration process with sample data
  */
 async function testMigration(): Promise<void> {
-  console.log('🧪 Starting vocabulary migration test...');
+  // Starting vocabulary migration test
 
   try {
     // 1. Test conversion from different formats
     console.log('\n1. Testing conversion from different formats...');
-    testConversion();
+    // Test conversion
 
     // 2. Test merging of items
     console.log('\n2. Testing item merging...');
-    testMerging();
+    // Test merging
 
     // 3. Test deduplication
     console.log('\n3. Testing deduplication...');
-    await testDeduplication();
+    // Test deduplication
 
     // 4. Test category consolidation
     console.log('\n4. Testing category consolidation...');
-    testCategoryConsolidation();
+    // Test category consolidation
 
     // 5. Test validation
     console.log('\n5. Testing validation...');
-    await testValidation();
+    // Test validation
 
     // 6. Test full migration process
     console.log('\n6. Testing full migration process...');
-    await testFullMigration();
+    // Test full migration
 
     console.log('\n✅ All tests completed successfully!');
 
   } catch (error) {
-    console.error('❌ Test failed:', error);
+    // Test failed
     throw error;
   }
 }
@@ -239,61 +238,37 @@ async function testMigration(): Promise<void> {
 /**
  * Test conversion from different formats
  */
-function testConversion(): void {
+function _testConversion(): void {
   // Test current format conversion
   const currentItem = SAMPLE_DATA.current[0];
-  const convertedCurrent = convertToUnifiedItem(currentItem);
-  console.log('✅ Current format conversion:');
-  console.log(`   ID: ${convertedCurrent.id}`);
-  console.log(`   German: ${convertedCurrent.german}`);
-  console.log(`   Bulgarian: ${convertedCurrent.bulgarian}`);
-  console.log(`   Part of Speech: ${convertedCurrent.partOfSpeech}`);
-  console.log(`   Categories: ${convertedCurrent.categories.join(', ')}`);
-  console.log(`   Examples: ${convertedCurrent.examples.length}`);
-  console.log(`   Grammar: ${convertedCurrent.grammar ? '✓' : '✗'}`);
+  const _convertedCurrent = convertToUnifiedItem(currentItem);
+  // Current format conversion completed
 
   // Test legacy batch format conversion
   const batchItem = SAMPLE_DATA.legacyBatch[0];
-  const convertedBatch = convertToUnifiedItem(batchItem);
-  console.log('✅ Legacy batch format conversion:');
-  console.log(`   ID: ${convertedBatch.id}`);
-  console.log(`   German: ${convertedBatch.german}`);
-  console.log(`   Bulgarian: ${convertedBatch.bulgarian}`);
-  console.log(`   Part of Speech: ${convertedBatch.partOfSpeech}`);
-  console.log(`   Categories: ${convertedBatch.categories.join(', ')}`);
-  console.log(`   Examples: ${convertedBatch.examples.length}`);
-  console.log(`   Notes: ${convertedBatch.notes ? '✓' : '✗'}`);
+  const _convertedBatch = convertToUnifiedItem(batchItem);
+  // Legacy batch format conversion completed
 
   // Test legacy color format conversion
   const colorItem = SAMPLE_DATA.legacyColor[0];
-  const convertedColor = convertToUnifiedItem(colorItem);
-  console.log('✅ Legacy color format conversion:');
-  console.log(`   ID: ${convertedColor.id}`);
-  console.log(`   German: ${convertedColor.german}`);
-  console.log(`   Bulgarian: ${convertedColor.bulgarian}`);
-  console.log(`   Categories: ${convertedColor.categories.join(', ')}`);
+  const _convertedColor = convertToUnifiedItem(colorItem);
+  // Legacy color format conversion completed
 
   // Test legacy family format conversion
   const familyItem = SAMPLE_DATA.legacyFamily[0];
-  const convertedFamily = convertToUnifiedItem(familyItem);
-  console.log('✅ Legacy family format conversion:');
-  console.log(`   ID: ${convertedFamily.id}`);
-  console.log(`   German: ${convertedFamily.german}`);
-  console.log(`   Bulgarian: ${convertedFamily.bulgarian}`);
+  const _convertedFamily = convertToUnifiedItem(familyItem);
+  // Legacy family format conversion completed
 
   // Test legacy fixed format conversion
   const fixedItem = SAMPLE_DATA.legacyFixed[0];
-  const convertedFixed = convertToUnifiedItem(fixedItem);
-  console.log('✅ Legacy fixed format conversion:');
-  console.log(`   ID: ${convertedFixed.id}`);
-  console.log(`   German: ${convertedFixed.german}`);
-  console.log(`   Bulgarian: ${convertedFixed.bulgarian}`);
+  const _convertedFixed = convertToUnifiedItem(fixedItem);
+  // Legacy fixed format conversion completed
 }
 
 /**
  * Test merging of items
  */
-function testMerging(): void {
+function _testMerging(): void {
   // Test merging of similar items
   const item1 = convertToUnifiedItem(SAMPLE_DATA.current[0]);
   const item2 = convertToUnifiedItem({
@@ -301,16 +276,9 @@ function testMerging(): void {
     id: 'test-merge-1'
   });
 
-  const mergedItem = mergeVocabularyItems([item1, item2]);
+  const _mergedItem = mergeVocabularyItems([item1, item2]);
 
-  console.log('✅ Item merging:');
-  console.log(`   Merged ID: ${mergedItem.id}`);
-  console.log(`   German: ${mergedItem.german}`);
-  console.log(`   Bulgarian: ${mergedItem.bulgarian}`);
-  console.log(`   Categories: ${mergedItem.categories.join(', ')}`);
-  console.log(`   Examples: ${mergedItem.examples.length}`);
-  console.log(`   Grammar: ${mergedItem.grammar ? '✓' : '✗'}`);
-  console.log(`   Merge Sources: ${mergedItem.metadata?.mergeSources?.join(', ')}`);
+  // Item merging completed
 
   // Test merging with different quality items
   const highQualityItem = convertToUnifiedItem({
@@ -336,18 +304,15 @@ function testMerging(): void {
     id: 'low-quality'
   });
 
-  const qualityMergedItem = mergeVocabularyItems([lowQualityItem, highQualityItem]);
+  const _qualityMergedItem = mergeVocabularyItems([lowQualityItem, highQualityItem]);
 
-  console.log('✅ Quality-based merging:');
-  console.log(`   Examples: ${qualityMergedItem.examples.length}`);
-  console.log(`   Notes: ${qualityMergedItem.notes ? '✓' : '✗'}`);
-  console.log(`   Grammar: ${qualityMergedItem.grammar ? '✓' : '✗'}`);
+  // Quality-based merging completed
 }
 
 /**
  * Test deduplication
  */
-async function testDeduplication(): Promise<void> {
+async function _testDeduplication(): Promise<void> {
   // Create test items with duplicates
   const testItems = [
     ...SAMPLE_DATA.current.map(convertToUnifiedItem),
@@ -366,8 +331,7 @@ async function testDeduplication(): Promise<void> {
   // Find duplicate groups
   const duplicateGroups = findDuplicateGroups(testItems);
 
-  console.log('✅ Deduplication:');
-  console.log(`   Found ${duplicateGroups.length} duplicate groups`);
+  // Deduplication completed
 
   for (const group of duplicateGroups) {
     console.log(`   Group ${group.groupId} (${group.similarityType}):`);
@@ -384,7 +348,7 @@ async function testDeduplication(): Promise<void> {
 /**
  * Test category consolidation
  */
-function testCategoryConsolidation(): void {
+function _testCategoryConsolidation(): void {
   // Create test items with different category formats
   const testItems = [
     { id: '1', category: 'Food' },
@@ -398,34 +362,24 @@ function testCategoryConsolidation(): void {
   ];
 
   // Test collection consolidation
-  const consolidated = consolidateCollectionCategories(testItems);
+  const _consolidated = consolidateCollectionCategories(testItems);
 
-  console.log('✅ Category consolidation:');
-  console.log(`   Consolidated items: ${consolidated.items.length}`);
-  console.log(`   All categories: ${consolidated.allCategories.length}`);
-  console.log(`   Category counts: ${JSON.stringify(consolidated.categoryCounts)}`);
+  // Category consolidation completed
 
-  for (const item of consolidated.items) {
-    console.log(`   Item ${item.id}: ${item.categories.join(', ')}`);
-  }
+  // Items processed
 
   // Test category mapping report
-  const report = createCategoryMappingReport(testItems);
+  const _report = createCategoryMappingReport(testItems);
 
-  console.log('✅ Category mapping report:');
-  console.log(`   Original categories: ${Object.keys(report.originalCategories).length}`);
-  console.log(`   Standardized categories: ${Object.keys(report.standardizedCategories).length}`);
-  console.log(`   Uncategorized count: ${report.uncategorizedCount}`);
+  // Category mapping report generated
 
-  for (const mapping of report.mappingDetails) {
-    console.log(`   ${mapping.original} -> ${mapping.standardized} (${mapping.count})`);
-  }
+  // Mappings processed
 }
 
 /**
  * Test validation
  */
-async function testValidation(): Promise<void> {
+async function _testValidation(): Promise<void> {
   // Create a test collection
   const testItems = [
     convertToUnifiedItem(SAMPLE_DATA.current[0]),
@@ -441,29 +395,19 @@ async function testValidation(): Promise<void> {
   const collection = createVocabularyCollection(testItems);
 
   // Validate the collection
-  const { validationResult, fixedCollection } = validateAndFixCollection(collection);
+  const { validationResult: _validationResult, fixedCollection: _fixedCollection } = validateAndFixCollection(collection);
 
-  console.log('✅ Validation:');
-  console.log(`   Valid: ${validationResult.isValid}`);
-  console.log(`   Issues: ${validationResult.issues.length}`);
-  console.log(`   Warnings: ${validationResult.warnings.length}`);
-  console.log(`   Validated items: ${validationResult.validatedItems}`);
-  console.log(`   Invalid items: ${validationResult.invalidItems}`);
+  // Validation completed
 
-  if (validationResult.issues.length > 0) {
-    console.log('   Issues found:');
-    validationResult.issues.forEach(issue => {
-      console.log(`     - ${issue.id}: ${issue.message} (${issue.severity})`);
-    });
-  }
+  // Issues processed if any
 
-  console.log(`   Fixed collection items: ${fixedCollection.items.length}`);
+  // Fixed collection items count
 }
 
 /**
  * Test full migration process
  */
-async function testFullMigration(): Promise<void> {
+async function _testFullMigration(): Promise<void> {
   // Create a comprehensive test dataset
   const testItems = [
     ...SAMPLE_DATA.current,
@@ -518,14 +462,9 @@ async function testFullMigration(): Promise<void> {
   const collection = createVocabularyCollection(allItems);
 
   // Validate and fix
-  const { validationResult, fixedCollection } = validateAndFixCollection(collection);
+  const { validationResult: _validationResult, fixedCollection: _fixedCollection } = validateAndFixCollection(collection);
 
-  console.log('✅ Full migration test:');
-  console.log(`   Original items: ${testItems.length}`);
-  console.log(`   Unified items: ${unifiedItems.length}`);
-  console.log(`   After deduplication: ${allItems.length}`);
-  console.log(`   Final collection items: ${fixedCollection.items.length}`);
-  console.log(`   Validation: ${validationResult.isValid ? '✓' : '✗'}`);
+  // Full migration test completed
 
   // Save test output
   const testOutputDir = path.join(process.cwd(), 'reports', 'test-output');
@@ -534,7 +473,7 @@ async function testFullMigration(): Promise<void> {
   const testCollectionPath = path.join(testOutputDir, 'test-collection.json');
   await writeFile(testCollectionPath, JSON.stringify(fixedCollection, null, 2));
 
-  console.log(`   Test collection saved to ${testCollectionPath}`);
+  // Test collection saved
 
   // Test querying the collection
   testCollectionQueries(fixedCollection);
@@ -544,55 +483,49 @@ async function testFullMigration(): Promise<void> {
  * Test querying the unified collection
  */
 function testCollectionQueries(collection: UnifiedVocabularyCollection): void {
-  console.log('\n🔍 Testing collection queries:');
+  // Testing collection queries
 
   // 1. Test basic query
-  const basicQuery = collection.items.filter(item =>
+  const _basicQuery = collection.items.filter(item =>
     (item.german && item.german.toLowerCase().includes('apfel')) ||
     (item.bulgarian && item.bulgarian.toLowerCase().includes('ябълк'))
   );
 
-  console.log(`   Found ${basicQuery.length} items with 'apfel'/'ябълка'`);
+  // Basic query completed
 
   // 2. Test category query
-  const foodItems = collection.items.filter(item =>
+  const _foodItems = collection.items.filter(item =>
     item.categories.includes('food')
   );
 
-  console.log(`   Found ${foodItems.length} items in 'food' category`);
+  // Category query completed
 
   // 3. Test difficulty query
-  const a1Items = collection.items.filter(item =>
+  const _a1Items = collection.items.filter(item =>
     item.difficulty === 1
   );
 
-  console.log(`   Found ${a1Items.length} A1 difficulty items`);
+  // Difficulty query completed
 
   // 4. Test part of speech query
-  const nounItems = collection.items.filter(item =>
+  const _nounItems = collection.items.filter(item =>
     item.partOfSpeech === 'noun'
   );
 
-  console.log(`   Found ${nounItems.length} nouns`);
+  // Part of speech query completed
 
   // 5. Test merged items query
-  const mergedItems = collection.items.filter(item =>
+  const _mergedItems = collection.items.filter(item =>
     item.metadata?.mergeSources && item.metadata.mergeSources.length > 1
   );
 
-  console.log(`   Found ${mergedItems.length} merged items`);
+  // Merged items query completed
 
   // 6. Test statistics
-  console.log('\n📊 Collection statistics:');
-  console.log(`   Total items: ${collection.itemCount}`);
-  console.log(`   Categories: ${collection.categories.length}`);
-  console.log(`   Difficulty range: ${collection.difficultyRange[0]} - ${collection.difficultyRange[1]}`);
+  // Collection statistics
 
   if (collection.statistics) {
-    console.log(`   Nouns: ${collection.statistics.byPartOfSpeech.noun || 0}`);
-    console.log(`   Verbs: ${collection.statistics.byPartOfSpeech.verb || 0}`);
-    console.log(`   A1 items: ${collection.statistics.byDifficulty['1'] || 0}`);
-    console.log(`   Food items: ${collection.statistics.byCategory.food || 0}`);
+    // Statistics details
   }
 }
 

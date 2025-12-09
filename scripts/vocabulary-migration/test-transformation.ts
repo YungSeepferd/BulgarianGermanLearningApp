@@ -2,7 +2,6 @@
  * Test script to verify vocabulary item transformation functions
  */
 import { convertToUnifiedItem } from './merging-utils.js';
-import type { UnifiedVocabularyItem } from '../../src/lib/schemas/unified-vocabulary.js';
 
 // Test data
 const testItems = [

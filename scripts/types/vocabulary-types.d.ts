@@ -8,7 +8,7 @@ import type { VocabularyItem } from '../../src/lib/schemas/vocabulary';
  * Includes additional fields that might be present during processing
  */
 export interface ProcessingVocabularyItem extends VocabularyItem {
-    [key: string]: any;
+    [key: string]: unknown;
     category?: string;
     level?: number;
     gender?: string;
@@ -47,7 +47,7 @@ export interface VocabularyIssue {
     type: string;
     message: string;
     severity: 'critical' | 'high' | 'medium' | 'low';
-    data?: any;
+    data?: unknown;
 }
 /**
  * Verification report structure
@@ -74,7 +74,7 @@ export interface VocabularyCleaningReport {
         errors: Array<{
             id: string;
             errors: string;
-            details?: any;
+            details?: unknown;
         }>;
     };
     rulesApplied: string[];
@@ -87,7 +87,7 @@ export type VocabularyProcessingResult = {
     errors: Array<{
         id: string;
         errors: string;
-        details?: any;
+        details?: unknown;
     }>;
 };
 //# sourceMappingURL=vocabulary-types.d.ts.map

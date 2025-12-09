@@ -79,12 +79,13 @@ describe('AppState', () => {
     let appState: AppState;
 
     beforeEach(() => {
-        vi.stubGlobal('localStorage', {
+        const localStorageMock = {
             getItem: vi.fn(),
             setItem: vi.fn(),
             clear: vi.fn(),
             removeItem: vi.fn()
-        });
+        };
+        vi.stubGlobal('localStorage', localStorageMock);
         appState = new AppState();
         appState.init();
     });
@@ -119,15 +120,32 @@ describe('AppState', () => {
             expect(appState.displayDirection).toBe('German → Bulgarian');
         });
 
-        it('should persist direction in localStorage', () => {
-            appState.toggleDirection();
-            expect(localStorage.setItem).toHaveBeenCalledWith('app-language-mode', 'DE_BG');
 
-            // Simulate re-initialization
-            vi.mocked(localStorage.getItem).mockReturnValue('DE_BG');
+        it('should handle legacy direction values from localStorage', () => {
+            vi.mocked(localStorage.getItem).mockReturnValue('DE->BG');
             const newState = new AppState();
             newState.init();
             expect(newState.languageMode).toBe('DE_BG');
+
+            vi.mocked(localStorage.getItem).mockReturnValue('BG->DE');
+            const newState2 = new AppState();
+            newState2.init();
+            expect(newState2.languageMode).toBe('BG_DE');
+        });
+
+        it('should persist direction in localStorage', () => {
+            // Clear any previous calls to localStorage.setItem
+            vi.mocked(localStorage.setItem).mockClear();
+
+            appState.toggleDirection();
+            expect(localStorage.setItem).toHaveBeenCalledWith('app-language-mode', 'BG_DE');
+
+            // Simulate re-initialization
+            vi.mocked(localStorage.getItem).mockReturnValue('BG_DE');
+            const newState = new AppState();
+            newState.init();
+            expect(newState.languageMode).toBe('BG_DE');
+            expect(newState.displayDirection).toBe('Bulgarian → German');
         });
     });
 

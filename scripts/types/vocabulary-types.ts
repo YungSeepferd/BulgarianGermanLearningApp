@@ -3,7 +3,7 @@
  * Provides proper typing for vocabulary items and related data structures
  */
 
-import type { VocabularyItem, VocabularyCategory, PartOfSpeech } from '../../src/lib/schemas/vocabulary';
+import type { VocabularyItem } from '../../src/lib/schemas/vocabulary';
 
 /**
  * Extended vocabulary item type for data processing
@@ -11,7 +11,7 @@ import type { VocabularyItem, VocabularyCategory, PartOfSpeech } from '../../src
  */
 export interface ProcessingVocabularyItem extends VocabularyItem {
   // Allow additional fields during processing
-  [key: string]: any;
+  [key: string]: unknown;
 
   // Legacy fields that might exist in source data
   category?: string;
@@ -55,7 +55,7 @@ export interface VocabularyIssue {
   type: string;
   message: string;
   severity: 'critical' | 'high' | 'medium' | 'low';
-  data?: any;
+  data?: unknown;
 }
 
 /**
@@ -81,7 +81,7 @@ export interface VocabularyCleaningReport {
   };
   schemaValidation: {
     valid: boolean;
-    errors: Array<{ id: string; errors: string; details?: any }>;
+    errors: Array<{ id: string; errors: string; details?: unknown }>;
   };
   rulesApplied: string[];
 }
@@ -91,5 +91,5 @@ export interface VocabularyCleaningReport {
  */
 export type VocabularyProcessingResult = {
   valid: boolean;
-  errors: Array<{ id: string; errors: string; details?: any }>;
+  errors: Array<{ id: string; errors: string; details?: unknown }>;
 };

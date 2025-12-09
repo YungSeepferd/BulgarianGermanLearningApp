@@ -7,7 +7,6 @@
 
 import type { UnifiedVocabularyItem, UnifiedVocabularyCollection } from '../../src/lib/schemas/unified-vocabulary.js';
 import { UnifiedVocabularyItemSchema, UnifiedVocabularyCollectionSchema } from '../../src/lib/schemas/unified-vocabulary.js';
-import { z } from 'zod';
 import type { ProcessingVocabularyItem, VocabularyIssue, VocabularyVerificationReport } from '../types/vocabulary-types.js';
 
 /**
@@ -125,7 +124,7 @@ export function validateVocabularyItem(
  * Validate a vocabulary collection
  */
 export function validateVocabularyCollection(
-  collection: UnifiedVocabularyCollection | any,
+  collection: UnifiedVocabularyCollection | unknown,
   config: ValidationConfig = DEFAULT_VALIDATION_CONFIG
 ): ValidationResult {
   const issues: VocabularyIssue[] = [];
@@ -863,7 +862,7 @@ export function validateAndFixCollection(
 /**
  * Calculate collection statistics
  */
-function calculateCollectionStatistics(collection: UnifiedVocabularyCollection): any {
+function calculateCollectionStatistics(collection: UnifiedVocabularyCollection): CollectionStatistics {
   const byPartOfSpeech: Record<string, number> = {};
   const byDifficulty: Record<string, number> = {};
   const byCategory: Record<string, number> = {};

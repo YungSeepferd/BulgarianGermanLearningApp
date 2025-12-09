@@ -282,7 +282,7 @@ export function consolidateCollectionCategories(
   categoryCounts: Record<VocabularyCategory, number>;
 } {
   const consolidatedItems: Array<{ id: string; categories: VocabularyCategory[] }> = [];
-  const categoryCounts: Record<VocabularyCategory, number> = {} as any;
+  const categoryCounts: Record<VocabularyCategory, number> = {} as Record<VocabularyCategory, number>;
   const allCategories = new Set<VocabularyCategory>();
 
   // Initialize category counts
@@ -317,7 +317,7 @@ export function consolidateCollectionCategories(
 export function createCategoryHierarchy(
   config: CategoryMappingConfig = DEFAULT_CATEGORY_CONFIG
 ): Record<VocabularyCategory, { children: VocabularyCategory[]; parents: VocabularyCategory[] }> {
-  const hierarchy: Record<VocabularyCategory, { children: VocabularyCategory[]; parents: VocabularyCategory[] }> = {} as any;
+  const hierarchy: Record<VocabularyCategory, { children: VocabularyCategory[]; parents: VocabularyCategory[] }> = {} as Record<VocabularyCategory, { children: VocabularyCategory[]; parents: VocabularyCategory[] }>;
 
   // Initialize hierarchy
   Object.values(VocabularyCategorySchema.Values).forEach(category => {
@@ -438,7 +438,7 @@ export function createCategoryMappingReport(
   uncategorizedCount: number;
 } {
   const originalCounts: Record<string, number> = {};
-  const standardizedCounts: Record<VocabularyCategory, number> = {} as any;
+  const standardizedCounts: Record<VocabularyCategory, number> = {} as Record<VocabularyCategory, number>;
   const mappingDetails: Array<{ original: string; standardized: VocabularyCategory; count: number }> = [];
 
   // Initialize standardized counts
@@ -556,18 +556,24 @@ export function suggestCategoryMappings(
 /**
  * Create a category tree structure
  */
+export interface CategoryNode {
+	name: VocabularyCategory;
+	value: VocabularyCategory;
+	children: CategoryNode[];
+}
+
 export function createCategoryTree(
-  config: CategoryMappingConfig = DEFAULT_CATEGORY_CONFIG
-): any {
-  const hierarchy = createCategoryHierarchy(config);
-  const rootCategories = Object.entries(hierarchy)
-    .filter(([_, { parents }]) => parents.length === 0)
-    .map(([category]) => category as VocabularyCategory);
+	config: CategoryMappingConfig = DEFAULT_CATEGORY_CONFIG
+): CategoryNode[] {
+	const hierarchy = createCategoryHierarchy(config);
+	const rootCategories = Object.entries(hierarchy)
+		.filter(([_, { parents }]) => parents.length === 0)
+		.map(([category]) => category as VocabularyCategory);
 
-  function buildTree(category: VocabularyCategory): any {
-    const { children } = hierarchy[category];
+	function buildTree(category: VocabularyCategory): CategoryNode {
+		const { children } = hierarchy[category];
 
-    if (children.length === 0) {
+		if (children.length === 0) {
       return {
         name: category,
         value: category,

@@ -20,7 +20,6 @@ import { UnifiedVocabularyItemSchema, UnifiedVocabularyCollectionSchema } from '
 
 const DATA_DIR = path.resolve(process.cwd(), 'data');
 const VOCAB_DIR = path.resolve(DATA_DIR, 'vocab');
-const OUTPUT_FILE = path.resolve(DATA_DIR, 'vocabulary-unified.json');
 
 type UnifiedVocabularyItem = z.infer<typeof UnifiedVocabularyItemSchema>;
 
@@ -30,12 +29,12 @@ async function loadMainVocabulary(): Promise<UnifiedVocabularyItem[]> {
   const data = JSON.parse(fileContent);
 
   // Correct swapped german/bulgarian fields
-  return data.items.map((item: any) => ({
-    ...item,
-    german: item.bulgarian,
-    bulgarian: item.german
+  return data.items.map((item: UnifiedVocabularyItem) => ({
+  	...item,
+  	german: item.bulgarian,
+  	bulgarian: item.german
   }));
-}
+ }
 
 async function loadSpecializedVocabulary(): Promise<UnifiedVocabularyItem[]> {
   const files = await fs.readdir(VOCAB_DIR);

@@ -3,11 +3,10 @@
  *
  * Tests various query types to ensure the unified vocabulary works correctly
  */
-import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
 import path from 'node:path';
-import type { UnifiedVocabularyCollection, UnifiedVocabularyItem } from '../../src/lib/schemas/unified-vocabulary.js';
+import type { UnifiedVocabularyCollection } from '../../src/lib/schemas/unified-vocabulary.js';
 
 /**
  * Test unified vocabulary with various queries

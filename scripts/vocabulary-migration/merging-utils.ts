@@ -6,7 +6,7 @@
  */
 
 import type { UnifiedVocabularyItem, VocabularyCategory } from '../../src/lib/schemas/unified-vocabulary.js';
-import { UnifiedVocabularyItemSchema, VocabularyCategorySchema, convertLegacyDifficulty, convertLegacyCategory, normalizeExample } from '../../src/lib/schemas/unified-vocabulary.js';
+import { convertLegacyDifficulty, convertLegacyCategory, normalizeExample } from '../../src/lib/schemas/unified-vocabulary.js';
 import type { ProcessingVocabularyItem } from '../types/vocabulary-types.js';
 import type { DeduplicationConfig } from './deduplication-utils.js';
 import { findDuplicateGroups, mergeDuplicateGroup, DEFAULT_DEDUPLICATION_CONFIG } from './deduplication-utils.js';
@@ -172,14 +172,14 @@ function createMergedItemFromAll(
         mergedItem[field as keyof UnifiedVocabularyItem] = selectBestQualityField(
           field as keyof UnifiedVocabularyItem,
           sortedItems.map(item => convertToUnifiedItem(item))
-        ) as any;
+        ) as unknown;
         break;
 
       case 'merge_all':
         mergedItem[field as keyof UnifiedVocabularyItem] = mergeFieldAll(
           field as keyof UnifiedVocabularyItem,
           sortedItems.map(item => convertToUnifiedItem(item))
-        ) as any;
+        ) as unknown;
         break;
 
       case 'priority_source':
@@ -187,21 +187,21 @@ function createMergedItemFromAll(
           field as keyof UnifiedVocabularyItem,
           sortedItems.map(item => convertToUnifiedItem(item)),
           config.sourcePriority
-        ) as any;
+        ) as unknown;
         break;
 
       case 'longest':
         mergedItem[field as keyof UnifiedVocabularyItem] = selectLongestField(
           field as keyof UnifiedVocabularyItem,
           sortedItems.map(item => convertToUnifiedItem(item))
-        ) as any;
+        ) as unknown;
         break;
 
       case 'most_recent':
         mergedItem[field as keyof UnifiedVocabularyItem] = selectMostRecentField(
           field as keyof UnifiedVocabularyItem,
           sortedItems.map(item => convertToUnifiedItem(item))
-        ) as any;
+        ) as unknown;
         break;
     }
   }
@@ -212,7 +212,7 @@ function createMergedItemFromAll(
 /**
  * Convert any vocabulary item to unified format
  */
-export function convertToUnifiedItem(item: any): UnifiedVocabularyItem {
+export function convertToUnifiedItem(item: unknown): UnifiedVocabularyItem {
   // If already in unified format, return as is
   if (item.version === 1) {
     return item as UnifiedVocabularyItem;
@@ -254,7 +254,7 @@ export function convertToUnifiedItem(item: any): UnifiedVocabularyItem {
 /**
  * Convert legacy item to unified format
  */
-function convertLegacyItem(legacyItem: any): UnifiedVocabularyItem {
+function convertLegacyItem(legacyItem: Record<string, unknown>): UnifiedVocabularyItem {
   const now = new Date();
 
   // Handle language direction
@@ -283,7 +283,7 @@ function convertLegacyItem(legacyItem: any): UnifiedVocabularyItem {
   }
 
   // Determine part of speech from category or tags
-  let partOfSpeech: any = 'noun';
+  let partOfSpeech: UnifiedVocabularyItem['partOfSpeech'] = 'noun';
   if (legacyItem.category) {
     const category = legacyItem.category.toLowerCase();
     if (category.includes('verb')) {
@@ -318,7 +318,7 @@ function convertLegacyItem(legacyItem: any): UnifiedVocabularyItem {
     : [];
 
   // Convert notes
-  const notes: any = {};
+  const notes: Partial<UnifiedVocabularyItem['notes']> = {};
   if (legacyItem.notes) notes.general = legacyItem.notes;
   if (legacyItem.notes_bg_to_de) notes.forBulgarianSpeakers = legacyItem.notes_bg_to_de;
   if (legacyItem.notes_de_to_bg) notes.forGermanSpeakers = legacyItem.notes_de_to_bg;
@@ -327,7 +327,7 @@ function convertLegacyItem(legacyItem: any): UnifiedVocabularyItem {
   if (legacyItem.linguistic_note_de_to_bg) notes.linguisticForGermans = legacyItem.linguistic_note_de_to_bg;
 
   // Convert grammar
-  const grammar: any = {};
+  const grammar: Partial<UnifiedVocabularyItem['grammar']> = {};
   if (legacyItem.gender) grammar.gender = legacyItem.gender;
   if (legacyItem.plural) grammar.pluralForm = legacyItem.plural;
   if (legacyItem.verb_aspect) grammar.verbAspect = legacyItem.verb_aspect;
@@ -375,7 +375,7 @@ function convertLegacyItem(legacyItem: any): UnifiedVocabularyItem {
 /**
  * Convert current item to unified format
  */
-function convertCurrentItem(currentItem: any): UnifiedVocabularyItem {
+function convertCurrentItem(currentItem: Record<string, unknown>): UnifiedVocabularyItem {
   const now = new Date();
 
   // Extract german and bulgarian - the current format uses these fields directly
@@ -397,13 +397,13 @@ function convertCurrentItem(currentItem: any): UnifiedVocabularyItem {
         bulgarian: bulgarianPart,
         source: 'current'
       });
-    } catch (error) {
+    } catch (_error) {
       // If parsing fails, just skip the example
     }
   }
 
   // Map current grammar_details to unified grammar
-  const grammar: any = {};
+  const grammar: Partial<UnifiedVocabularyItem['grammar']> = {};
   if (currentItem.grammar_details) {
     if (currentItem.grammar_details.noun_gender) {
       grammar.gender = currentItem.grammar_details.noun_gender;
@@ -424,7 +424,7 @@ function convertCurrentItem(currentItem: any): UnifiedVocabularyItem {
   if (currentItem.verb_aspect) grammar.verbAspect = currentItem.verb_aspect;
 
   // Convert notes
-  const notes: any = {};
+  const notes: Partial<UnifiedVocabularyItem['notes']> = {};
   if (currentItem.contextual_nuance) notes.general = currentItem.contextual_nuance;
   if (currentItem.mnemonics) {
     notes.general = notes.general
@@ -507,7 +507,7 @@ function convertCurrentItem(currentItem: any): UnifiedVocabularyItem {
 /**
  * Create a basic unified item from any input
  */
-function createBasicUnifiedItem(item: any): UnifiedVocabularyItem {
+function createBasicUnifiedItem(item: Record<string, unknown>): UnifiedVocabularyItem {
   const now = new Date();
 
   // Extract german and bulgarian from various possible field names
@@ -548,7 +548,7 @@ function createBasicUnifiedItem(item: any): UnifiedVocabularyItem {
   bulgarian = bulgarian || 'unknown';
 
   // Determine part of speech from available data
-  let partOfSpeech: any = 'noun';
+  let partOfSpeech: UnifiedVocabularyItem['partOfSpeech'] = 'noun';
   if (item.partOfSpeech) {
     partOfSpeech = item.partOfSpeech;
     // Fix common part of speech values
@@ -578,7 +578,7 @@ function createBasicUnifiedItem(item: any): UnifiedVocabularyItem {
   }
 
   // Extract examples if available
-  const examples = [];
+  const examples: { german: string; bulgarian: string; context?: string }[] = [];
   if (item.examples) {
     if (Array.isArray(item.examples)) {
       examples.push(...item.examples.map(normalizeExample));
@@ -594,7 +594,7 @@ function createBasicUnifiedItem(item: any): UnifiedVocabularyItem {
   }
 
   // Extract notes if available
-  const notes: any = {};
+  const notes: Partial<UnifiedVocabularyItem['notes']> = {};
   if (item.notes) notes.general = item.notes;
   if (item.contextual_nuance) notes.general = item.contextual_nuance;
   if (item.mnemonics) {
@@ -610,7 +610,7 @@ function createBasicUnifiedItem(item: any): UnifiedVocabularyItem {
   if (item.linguistic_note_de_to_bg) notes.linguisticForGermans = item.linguistic_note_de_to_bg;
 
   // Extract grammar if available
-  const grammar: any = {};
+  const grammar: Partial<UnifiedVocabularyItem['grammar']> = {};
   if (item.grammar) {
     Object.assign(grammar, item.grammar);
   }
@@ -728,7 +728,7 @@ function getItemSource(
 function selectBestQualityField(
   field: keyof UnifiedVocabularyItem,
   items: UnifiedVocabularyItem[]
-): any {
+): unknown {
   // Filter out items that don't have the field
   const itemsWithField = items.filter(item => item[field] !== undefined);
 
@@ -850,7 +850,7 @@ function selectBestQualityField(
 function mergeFieldAll(
   field: keyof UnifiedVocabularyItem,
   items: UnifiedVocabularyItem[]
-): any {
+): unknown {
   // Filter out items that don't have the field
   const itemsWithField = items.filter(item => item[field] !== undefined);
 
@@ -873,7 +873,7 @@ function mergeFieldAll(
     case 'examples':
       // Merge and deduplicate examples
       const allExamples = itemsWithField.flatMap(item => item.examples || []);
-      const uniqueExamples = new Map<string, any>();
+      const uniqueExamples = new Map<string, unknown>();
 
       allExamples.forEach(example => {
         const key = `${example.german}|${example.bulgarian}|${example.context || ''}`;
@@ -886,8 +886,8 @@ function mergeFieldAll(
 
     case 'notes':
       // Merge notes
-      const allNotes = itemsWithField.map(item => item.notes).filter(Boolean) as any[];
-      const mergedNotes: any = {};
+      const allNotes = itemsWithField.map(item => item.notes).filter(Boolean) as Partial<UnifiedVocabularyItem['notes']>[];
+      const mergedNotes: Partial<UnifiedVocabularyItem['notes']> = {};
 
       allNotes.forEach(notes => {
         for (const [key, value] of Object.entries(notes)) {
@@ -919,14 +919,14 @@ function mergeFieldAll(
     case 'antonyms':
     case 'relatedWords':
       // Merge and deduplicate string arrays
-      const allItems = itemsWithField.flatMap(item => item[field] as any[] || []);
+      const allItems = itemsWithField.flatMap(item => (item[field] as string[]) || []);
       const uniqueItems = new Set<string>(allItems);
       return Array.from(uniqueItems);
 
     case 'transliteration':
       // Merge transliterations
-      const allTransliterations = itemsWithField.map(item => item.transliteration).filter(Boolean) as any[];
-      const mergedTransliteration: any = {};
+      const allTransliterations = itemsWithField.map(item => item.transliteration).filter(Boolean) as Partial<UnifiedVocabularyItem['transliteration']>[];
+      const mergedTransliteration: Partial<UnifiedVocabularyItem['transliteration']> = {};
 
       allTransliterations.forEach(trans => {
         if (trans.german) mergedTransliteration.german = trans.german;
@@ -937,8 +937,8 @@ function mergeFieldAll(
 
     case 'metadata':
       // Merge metadata
-      const allMetadata = itemsWithField.map(item => item.metadata).filter(Boolean) as any[];
-      const mergedMetadata: any = {};
+      const allMetadata = itemsWithField.map(item => item.metadata).filter(Boolean) as Partial<UnifiedVocabularyItem['metadata']>[];
+      const mergedMetadata: Partial<UnifiedVocabularyItem['metadata']> = {};
 
       allMetadata.forEach(metadata => {
         for (const [key, value] of Object.entries(metadata)) {
@@ -948,10 +948,10 @@ function mergeFieldAll(
               if (mergedMetadata[key]) {
                 mergedMetadata[key] = Array.from(new Set([
                   ...mergedMetadata[key],
-                  ...(value as any[])
+                  ...(value as string[])
                 ]));
               } else {
-                mergedMetadata[key] = Array.from(new Set(value as any[]));
+                mergedMetadata[key] = Array.from(new Set(value as string[]));
               }
             } else if (key === 'frequency' || key === 'difficulty' || key === 'xpValue') {
               // Take the highest value
@@ -991,7 +991,7 @@ function selectPrioritySourceField(
   field: keyof UnifiedVocabularyItem,
   items: UnifiedVocabularyItem[],
   sourcePriority: string[]
-): any {
+): unknown {
   // Sort items by source priority
   const sortedItems = sortItemsByPriority(items, sourcePriority);
 
@@ -1011,7 +1011,7 @@ function selectPrioritySourceField(
 function selectLongestField(
   field: keyof UnifiedVocabularyItem,
   items: UnifiedVocabularyItem[]
-): any {
+): unknown {
   // Filter out items that don't have the field
   const itemsWithField = items.filter(item => item[field] !== undefined);
 
@@ -1046,7 +1046,7 @@ function selectLongestField(
 function selectMostRecentField(
   field: keyof UnifiedVocabularyItem,
   items: UnifiedVocabularyItem[]
-): any {
+): unknown {
   // Filter out items that don't have the field
   const itemsWithField = items.filter(item => item[field] !== undefined);
 
@@ -1071,7 +1071,7 @@ export function createVocabularyCollection(
   items: Array<UnifiedVocabularyItem | ProcessingVocabularyItem>,
   name: string = 'German-Bulgarian Vocabulary',
   description: string = 'Comprehensive German-Bulgarian vocabulary collection with unified schema'
-): any {
+): Partial<UnifiedVocabularyItem> {
   // Convert all items to unified format
   const unifiedItems = items.map(item => convertToUnifiedItem(item));
 
@@ -1097,7 +1097,16 @@ export function createVocabularyCollection(
 /**
  * Calculate collection statistics
  */
-function calculateCollectionStatistics(items: UnifiedVocabularyItem[]): any {
+interface CollectionStatistics {
+	byPartOfSpeech: Record<string, number>;
+	byDifficulty: Record<string, number>;
+	byCategory: Record<string, number>;
+	byLevel: Record<string, number>;
+	difficultyRange: [number, number];
+	categories: VocabularyCategory[];
+}
+
+function calculateCollectionStatistics(items: UnifiedVocabularyItem[]): CollectionStatistics {
   const byPartOfSpeech: Record<string, number> = {};
   const byDifficulty: Record<string, number> = {};
   const byCategory: Record<string, number> = {};

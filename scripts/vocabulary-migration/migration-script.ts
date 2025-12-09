@@ -8,9 +8,9 @@
 
 import { readFile, writeFile, mkdir } from 'fs/promises';
 import path from 'path';
-import type { UnifiedVocabularyItem, UnifiedVocabularyCollection } from '../../src/lib/schemas/unified-vocabulary.js';
+// UnifiedVocabularyItem is unused
 import {
-  mergeVocabularyItems,
+  _mergeVocabularyItems,
   convertToUnifiedItem,
   createVocabularyCollection
 } from './merging-utils.js';
@@ -67,12 +67,12 @@ const CONFIG = {
 /**
  * Load JSON data from file
  */
-async function loadJsonFile(filePath: string): Promise<any> {
+async function loadJsonFile(filePath: string): Promise<unknown> {
   try {
     const content = await readFile(filePath, 'utf-8');
     return JSON.parse(content);
-  } catch (error) {
-    console.warn(`⚠️  Could not load file ${filePath}:`, error instanceof Error ? error.message : String(error));
+  } catch (_error) {
+    // Could not load file
     return null;
   }
 }
@@ -80,8 +80,8 @@ async function loadJsonFile(filePath: string): Promise<any> {
 /**
  * Load all vocabulary data from input files
  */
-async function loadAllVocabularyData(): Promise<Array<ProcessingVocabularyItem | any>> {
-  console.log('📚 Loading vocabulary data...');
+async function loadAllVocabularyData(): Promise<Array<ProcessingVocabularyItem | unknown>> {
+  // Loading vocabulary data
 
   const allItems: Array<ProcessingVocabularyItem | any> = [];
 
@@ -90,7 +90,7 @@ async function loadAllVocabularyData(): Promise<Array<ProcessingVocabularyItem |
   if (currentData) {
     const items = Array.isArray(currentData) ? currentData : [currentData];
     allItems.push(...items);
-    console.log(`   ✅ Loaded ${items.length} items from ${CONFIG.inputFiles.current}`);
+    // Loaded items from current file
   }
 
   // Load legacy vocabulary files
@@ -99,11 +99,11 @@ async function loadAllVocabularyData(): Promise<Array<ProcessingVocabularyItem |
     if (legacyData) {
       const items = Array.isArray(legacyData) ? legacyData : [legacyData];
       allItems.push(...items);
-      console.log(`   ✅ Loaded ${items.length} items from ${legacyFile}`);
+      // Loaded items from legacy file
     }
   }
 
-  console.log(`   📊 Total items loaded: ${allItems.length}`);
+  // Total items loaded
   return allItems;
 }
 
@@ -116,7 +116,7 @@ async function createBackup(): Promise<void> {
   try {
     const currentData = await loadJsonFile(CONFIG.inputFiles.current);
     if (!currentData) {
-      console.warn('   ⚠️  No current vocabulary data found to backup');
+      // No current vocabulary data found to backup
       return;
     }
 
@@ -129,9 +129,9 @@ async function createBackup(): Promise<void> {
 
     // Save backup
     await writeFile(backupPath, JSON.stringify(currentData, null, 2));
-    console.log(`   ✅ Backup created: ${backupPath}`);
+    // Backup created
   } catch (error) {
-    console.error('   ❌ Failed to create backup:', error instanceof Error ? error.message : String(error));
+    // Failed to create backup
     throw error;
   }
 }
@@ -140,7 +140,7 @@ async function createBackup(): Promise<void> {
  * Execute the full migration process
  */
 async function executeMigration(): Promise<void> {
-  console.log('🚀 Starting vocabulary migration...');
+  // Starting vocabulary migration
 
   try {
     // Step 1: Create backup
@@ -155,13 +155,13 @@ async function executeMigration(): Promise<void> {
     // Step 3: Convert all items to unified format
     console.log('\n🔄 Converting items to unified format...');
     const unifiedItems = allItems.map(convertToUnifiedItem);
-    console.log(`   ✅ Converted ${unifiedItems.length} items to unified format`);
+    // Converted items to unified format
 
     // Step 4: Consolidate categories
     console.log('\n🏷️  Consolidating categories...');
     const categoryResult = consolidateCollectionCategories(unifiedItems);
-    console.log(`   ✅ Consolidated categories for ${categoryResult.items.length} items`);
-    console.log(`   📋 Categories found: ${categoryResult.allCategories.length}`);
+    // Consolidated categories for items
+    // Categories found
 
     // Update items with consolidated categories
     const itemsWithConsolidatedCategories = unifiedItems.map(item => {
@@ -184,7 +184,7 @@ async function executeMigration(): Promise<void> {
       minNotesLengthForQuality: 50
     };
     const duplicateGroups = findDuplicateGroups(unifiedItems, deduplicationConfig);
-    console.log(`   📊 Found ${duplicateGroups.length} duplicate groups`);
+    // Found duplicate groups
 
     const deduplicatedItems = itemsWithConsolidatedCategories.filter(item => {
       return !duplicateGroups.some(group =>
@@ -194,7 +194,7 @@ async function executeMigration(): Promise<void> {
 
     const mergedItems = duplicateGroups.map(group => mergeDuplicateGroup(group, deduplicationConfig));
     const allMergedItems = [...deduplicatedItems, ...mergedItems];
-    console.log(`   ✅ After deduplication: ${allMergedItems.length} items`);
+    // After deduplication
 
     // Step 6: Create vocabulary collection
     console.log('\n📚 Creating vocabulary collection...');
@@ -206,17 +206,17 @@ async function executeMigration(): Promise<void> {
 
     // Update collection with consolidated categories
     collection.categories = categoryResult.allCategories;
-    console.log(`   ✅ Collection created with ${collection.itemCount} items`);
+    // Collection created
 
     // Step 7: Validate and fix collection
     console.log('\n✅ Validating and fixing collection...');
-    const { validationResult, fixedCollection, report } = validateAndFixCollection(collection);
+    const { _validationResult, fixedCollection, report } = validateAndFixCollection(collection);
 
-    console.log(`   📊 Validation results:`);
-    console.log(`      Valid: ${validationResult.isValid}`);
-    console.log(`      Issues: ${validationResult.issues.length}`);
-    console.log(`      Warnings: ${validationResult.warnings.length}`);
-    console.log(`      Final item count: ${fixedCollection.itemCount}`);
+    // Validation results
+    // Valid status
+    // Issues count
+    // Warnings count
+    // Final item count
 
     // Step 8: Save results
     console.log('\n💾 Saving results...');
@@ -228,12 +228,12 @@ async function executeMigration(): Promise<void> {
     const outputDir = path.dirname(CONFIG.output.unified);
     await mkdir(outputDir, { recursive: true });
     await writeFile(CONFIG.output.unified, JSON.stringify(fixedCollection, null, 2));
-    console.log(`   ✅ Unified vocabulary saved to ${CONFIG.output.unified}`);
+    // Unified vocabulary saved
 
     // Save validation report
     const reportPath = path.join(CONFIG.output.reports, 'migration-report.json');
     await writeFile(reportPath, JSON.stringify(report, null, 2));
-    console.log(`   ✅ Migration report saved to ${reportPath}`);
+    // Migration report saved
 
     // Save statistics
     const statsPath = path.join(CONFIG.output.reports, 'migration-statistics.json');
@@ -248,17 +248,17 @@ async function executeMigration(): Promise<void> {
       timestamp: new Date().toISOString()
     };
     await writeFile(statsPath, JSON.stringify(stats, null, 2));
-    console.log(`   ✅ Migration statistics saved to ${statsPath}`);
+    // Migration statistics saved
 
-    console.log('\n🎉 Migration completed successfully!');
-    console.log(`   📊 Summary:`);
-    console.log(`      Original items: ${allItems.length}`);
-    console.log(`      Final items: ${fixedCollection.itemCount}`);
-    console.log(`      Categories: ${fixedCollection.categories.length}`);
-    console.log(`      Difficulty range: ${fixedCollection.difficultyRange[0]} - ${fixedCollection.difficultyRange[1]}`);
+    // Migration completed successfully
+    // Summary
+    // Original items count
+    // Final items count
+    // Categories count
+    // Difficulty range
 
   } catch (error) {
-    console.error('\n❌ Migration failed:', error instanceof Error ? error.message : String(error));
+    // Migration failed
     throw error;
   }
 }
