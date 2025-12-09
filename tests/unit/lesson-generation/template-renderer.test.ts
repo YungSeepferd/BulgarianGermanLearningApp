@@ -255,7 +255,7 @@ describe('TemplateRenderer', () => {
     it('should throw error for invalid variable types', () => {
       const data: TemplateRenderingContext = {
         title: 'Test Title',
-        content: 123, // Should be string
+        content: 123 // Should be string
       };
 
       expect(() => renderer.render(mockTemplate, data)).toThrow(DataValidationError);

@@ -34,8 +34,8 @@ export const UnifiedVocabularyItemSchema = VocabularyItemSchema.extend({
         translation: z.string().optional(),
         context: z.string().optional(),
         german: z.string().optional(),
-        bulgarian: z.string().optional(),
-    })).optional(),
+        bulgarian: z.string().optional()
+    })).optional()
 });
 // Create a new collection schema for the unified vocabulary
 export const UnifiedVocabularyCollectionSchema = z.object({
@@ -45,6 +45,6 @@ export const UnifiedVocabularyCollectionSchema = z.object({
     items: z.array(UnifiedVocabularyItemSchema),
     languagePair: z.enum(['de-bg', 'bg-de']),
     createdAt: z.date(),
-    updatedAt: z.date(),
+    updatedAt: z.date()
 });
 //# sourceMappingURL=unified-vocabulary.js.map

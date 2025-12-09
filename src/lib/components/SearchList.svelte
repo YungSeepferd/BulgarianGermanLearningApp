@@ -220,8 +220,9 @@
             {#if item.metadata?.etymology}
               <p><strong>Etymology:</strong> {item.metadata.etymology}</p>
             {/if}
+          </div>
+          {/if}
         </div>
-        {/if}
       {/each}
     </div>
   {/if}

@@ -33,7 +33,7 @@ async function loadMainVocabulary(): Promise<UnifiedVocabularyItem[]> {
   return data.items.map((item: any) => ({
     ...item,
     german: item.bulgarian,
-    bulgarian: item.german,
+    bulgarian: item.german
   }));
 }
 
@@ -69,8 +69,8 @@ function deduplicateAndMerge(items: UnifiedVocabularyItem[]): UnifiedVocabularyI
         ...normalizedItem.metadata,
         examples: [
           ...(existingItem.metadata?.examples || []),
-          ...(normalizedItem.metadata?.examples || []),
-        ],
+          ...(normalizedItem.metadata?.examples || [])
+        ]
       };
 
       // Merge categories
@@ -125,7 +125,7 @@ async function migrate() {
     items: deduplicatedItems,
     languagePair: 'de-bg' as const,
     createdAt: new Date(),
-    updatedAt: new Date(),
+    updatedAt: new Date()
   };
 
   const validatedCollection = UnifiedVocabularyCollectionSchema.parse(unifiedCollection);

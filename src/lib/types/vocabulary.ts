@@ -5,7 +5,7 @@
 
 export type {
   VocabularyItem,
-  PracticeSession,
+  PracticeSession
 } from '$lib/schemas/vocabulary.js';
 export type {
   PracticeStat,

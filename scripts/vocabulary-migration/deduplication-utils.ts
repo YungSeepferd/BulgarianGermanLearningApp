@@ -464,7 +464,7 @@ function areGrammaticalForms(str1: string, str2: string): boolean {
 
     // Verb conjugations (only for longer words)
     { pattern: /^(.{4,})(e|st|t|en|et)$/, replacement: '$1' }, // German verb endings
-    { pattern: /^(.{4,})(ам|аш|а|аме|ате|ат)$/, replacement: '$1' }, // Bulgarian verb endings
+    { pattern: /^(.{4,})(ам|аш|а|аме|ате|ат)$/, replacement: '$1' } // Bulgarian verb endings
   ];
 
   // Apply variations and check for match
