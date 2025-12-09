@@ -1,0 +1,59 @@
+# CODEOWNERS
+# This file defines individuals or teams responsible for code in specific directories.
+# See https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for all files
+* @dinz @bulgarianapp-team
+
+# Core application code
+/src/ @dinz @bulgarianapp-core-team
+/src/lib/components/ @ui-team
+/src/lib/services/ @backend-team
+/src/lib/data/ @data-team
+/src/lib/state/ @state-team
+/src/lib/utils/ @utils-team
+/src/lib/types/ @typescript-team
+/src/routes/ @routing-team
+
+# Configuration files
+*.config.js @devops-team
+*.config.ts @devops-team
+vite.config.ts @devops-team
+svelte.config.js @devops-team
+playwright.config.ts @qa-team
+eslint.config.js @linting-team
+postcss.config.js @ui-team
+tailwind.config.js @ui-team
+
+# CI/CD infrastructure
+.github/ @devops-team
+.github/workflows/ @ci-team
+
+# Documentation
+/docs/ @docs-team
+/docs/ci-cd/ @devops-team
+/docs/architecture/ @architecture-team
+/docs/development/ @development-team
+
+# Tests
+/tests/ @qa-team
+/tests/unit/ @unit-test-team
+/tests/e2e/ @e2e-test-team
+/tests/accessibility/ @a11y-team
+/tests/visual/ @visual-test-team
+
+# Data files
+/data/ @data-team
+/scripts/ @data-team
+
+# Root configuration
+package.json @devops-team
+pnpm-lock.yaml @devops-team
+README.md @docs-team
+CHANGELOG.md @release-team
+
+# Special files
+CODEOWNERS @devops-team
+.gitignore @devops-team
+.husky/ @devops-team
+.roo/ @devops-team
