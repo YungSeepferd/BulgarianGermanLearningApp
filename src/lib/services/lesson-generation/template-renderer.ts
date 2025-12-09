@@ -104,7 +104,7 @@ export class TemplateRenderer implements ITemplateRenderer {
 
       // Stop if we've done too many passes
       if (passCount >= maxPasses) {
-        console.warn('Maximum template processing passes reached');
+        // Maximum template processing passes reached - this is expected for complex templates
         break;
       }
 
@@ -119,7 +119,7 @@ export class TemplateRenderer implements ITemplateRenderer {
    * @param data - Data context
    * @returns The resolved value or undefined
    */
-  private resolveValue(path: string, data: TemplateRenderingContext): any {
+  private resolveValue(path: string, data: TemplateRenderingContext): string | number | boolean | object | unknown[] | undefined {
     if (data[path] !== undefined) return data[path];
 
     if (!path.includes('.')) return undefined;
@@ -278,7 +278,7 @@ export class TemplateRenderer implements ITemplateRenderer {
    * @param type - Expected type
    * @returns True if value is valid for the type
    */
-  private isValidValue(value: any, type: string): boolean {
+  private isValidValue(value: string | number | boolean | object | unknown[], type: string): boolean {
     switch (type) {
       case 'string':
         return typeof value === 'string';

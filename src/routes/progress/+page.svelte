@@ -6,7 +6,6 @@
    * including level, XP, vocabulary mastery, lesson completion, and more.
    */
 
-  import { $state } from 'svelte';
   import ProgressDashboard from '$lib/components/ProgressDashboard.svelte';
   import { page } from '$app/stores';
 

@@ -1,7 +1,8 @@
 import { browser } from '$app/environment';
 import type { VocabularyItem } from '$lib/types/vocabulary';
-import { LessonDifficulty } from '$lib/schemas/lesson';
-import { loadVocabulary } from '$lib/data/loader.js';
+import type { LessonDifficulty } from '$lib/schemas/lesson';
+import type { VocabularyCategory, PartOfSpeech } from '$lib/schemas/vocabulary';
+import { loadVocabulary } from '$lib/data/loader';
 
 export class VocabularyDB {
     // items = $state<VocabularyItem[]>([]);
@@ -23,11 +24,11 @@ export class VocabularyDB {
     async loadInitialData() {
         try {
             // Use the DataLoader which now includes Zod validation
-            const data = await dataLoader.loadVocabulary();
+            const data = await loadVocabulary();
 
             this.items = data;
             this.initialized = true;
-            // console.log('📚 VocabularyDB initialized with', this.items.length, 'items');
+            // VocabularyDB initialized
         } catch (_e) {
             // Silently fail if loading vocabulary fails
             this.items = [];
@@ -208,3 +209,4 @@ export class VocabularyDB {
 }
 
 export const db = new VocabularyDB();
+export const vocabularyDb = db;

@@ -1,11 +1,8 @@
 // LocalStorage utilities for the Bulgarian-German Learning App
 import type { PracticeSession } from '$lib/types/vocabulary';
 import {
-  PracticeStatSchema,
   UserProgressStorageSchema,
-  ExportedUserDataSchema,
   safeValidateUserProgressStorage,
-  safeValidateExportedUserData,
   isPracticeStat
 } from '$lib/schemas/localStorage';
 
@@ -44,7 +41,7 @@ export class LocalStorageManager {
         // Validate before saving
         const validationResult = UserProgressStorageSchema.safeParse(dataToSave);
         if (!validationResult.success) {
-            console.error('Validation failed for user progress data:', validationResult.error);
+            // Validation failed for user progress data
             throw new Error('Invalid user progress data');
         }
 
@@ -52,8 +49,8 @@ export class LocalStorageManager {
             LocalStorageManager.USER_PROGRESS_KEY,
             JSON.stringify(dataToSave)
         );
-    } catch (error) {
-        console.error('Failed to save user progress:', error);
+    } catch (_error) {
+        // Failed to save user progress
         // Silently fail if saving user progress fails
     }
   }
@@ -77,7 +74,7 @@ export class LocalStorageManager {
         // Validate parsed data with Zod
         const validationResult = safeValidateUserProgressStorage(parsedData);
         if (!validationResult.success) {
-            console.error('Invalid user progress data:', validationResult.error);
+            // Invalid user progress data
             return null;
         }
 
@@ -99,8 +96,8 @@ export class LocalStorageManager {
             recentSearches: validationResult.data.recentSearches || [],
             lastUpdated: validationResult.data.lastUpdated
         };
-    } catch (error) {
-        console.error('Failed to load user progress:', error);
+    } catch (_error) {
+        // Failed to load user progress
         // Silently fail if loading user progress fails
         return null;
     }
@@ -115,7 +112,7 @@ export class LocalStorageManager {
         // Validate practice session before saving
         const result = PracticeSessionSchema.safeParse(session);
         if (!result.success) {
-            console.error('Invalid practice session data:', result.error);
+            // Invalid practice session data
             throw new Error('Invalid practice session data');
         }
 
@@ -123,8 +120,8 @@ export class LocalStorageManager {
             LocalStorageManager.SESSION_KEY,
             JSON.stringify(session)
         );
-    } catch (error) {
-        console.error('Failed to save practice session:', error);
+    } catch (_error) {
+        // Failed to save practice session
         // Silently fail if saving practice session fails
     }
   }
@@ -141,13 +138,13 @@ export class LocalStorageManager {
         const parsedData = JSON.parse(data);
         const result = PracticeSessionSchema.safeParse(parsedData);
         if (!result.success) {
-            console.error('Invalid practice session data:', result.error);
+            // Invalid practice session data
             return null;
         }
 
         return result.data;
-    } catch (error) {
-        console.error('Failed to load practice session:', error);
+    } catch (_error) {
+        // Failed to load practice session
         // Silently fail if loading practice session fails
         return null;
     }

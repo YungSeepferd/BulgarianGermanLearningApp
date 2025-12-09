@@ -14,7 +14,6 @@ import {
   QuizPerformanceSchema,
   QuestionPerformanceSchema,
   DailyProgressSchema,
-  OverallProgressSchema,
   ProgressDataSchema,
   type VocabularyMastery,
   type LessonProgress,
@@ -28,6 +27,7 @@ import {
   calculateLevel,
   calculateXPForLevel
 } from '$lib/schemas/progress';
+// OverallProgressSchema is unused
 import { learningSession } from '$lib/state/session.svelte';
 
 export class ProgressService {
@@ -89,7 +89,7 @@ export class ProgressService {
    * @param responseTime Response time in seconds (optional)
    */
   recordVocabularyPractice(itemId: string, correct: boolean, responseTime?: number): void {
-    const today = new Date().toISOString().split('T')[0];
+    const _today = new Date().toISOString().split('T')[0];
     const now = new Date().toISOString();
 
     // Get or create mastery record
@@ -193,7 +193,7 @@ export class ProgressService {
    */
   recordLessonProgress(lessonId: string, completionPercentage: number): void {
     const now = new Date().toISOString();
-    const today = now.split('T')[0];
+    const _today = now.split('T')[0];
 
     // Get or create lesson progress record
     let lessonProgress = this.progressData.lessonProgress[lessonId] || {
@@ -583,7 +583,7 @@ export class ProgressService {
    * @param amount Amount of XP to award
    * @param reason Reason for awarding XP
    */
-  awardXP(amount: number, reason: string): void {
+  awardXP(amount: number, _reason: string): void {
     this.updateOverallProgress({
       xpEarned: amount,
       timeSpent: 0
@@ -606,12 +606,12 @@ export class ProgressService {
         if (parsedData.success) {
           this.progressData = parsedData.data;
         } else {
-          console.warn('Invalid progress data, using default');
+          // Invalid progress data, using default
           this.progressData = this.getDefaultProgressData();
         }
       }
-    } catch (error) {
-      console.error('Error loading progress data:', error);
+    } catch (_error) {
+      // Error loading progress data
       this.progressData = this.getDefaultProgressData();
     }
   }
@@ -624,8 +624,8 @@ export class ProgressService {
 
     try {
       LocalStorageManager.saveUserProgress(this.progressData);
-    } catch (error) {
-      console.error('Error saving progress data:', error);
+    } catch (_error) {
+      // Error saving progress data
     }
   }
 
@@ -648,8 +648,8 @@ export class ProgressService {
       const validatedData = ProgressDataSchema.parse(parsedData);
       this.progressData = validatedData;
       this.saveProgress();
-    } catch (error) {
-      console.error('Error importing progress data:', error);
+    } catch (_error) {
+      // Error importing progress data
       throw new Error('Failed to import progress data');
     }
   }

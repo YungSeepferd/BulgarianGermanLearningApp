@@ -3,7 +3,7 @@
   import { tweened } from 'svelte/motion';
   import { cubicOut } from 'svelte/easing';
   import { fade, fly } from 'svelte/transition';
-  import { DataLoader } from '$lib/data/loader.js';
+  import { getRandomVocabulary } from '$lib/data/loader.js';
   import { learningSession } from '$lib/state/session.svelte.js';
   import { fireConfetti } from '$lib/utils/confetti.js';
   import FlashCard from '$lib/components/flashcard/FlashCard.svelte';
@@ -41,7 +41,7 @@
     try {
         // Fetch 10 random items for the session
         // Note: In a real app, we'd use a smarter algorithm (SRS)
-        const newItems = await DataLoader.getInstance().getRandomItems(10);
+        const newItems = await getRandomVocabulary(10);
         if (newItems && newItems.length > 0) {
           items = newItems;
         } else {

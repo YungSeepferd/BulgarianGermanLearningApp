@@ -5,11 +5,10 @@
  * cross-linguistic explanations between Bulgarian and German.
  */
 
-import { $state } from 'svelte';
 import type {
   CulturalGrammarConcept,
   GrammarQueryCriteria,
-  LessonDifficulty,
+  // LessonDifficulty is unused
   PartOfSpeech,
   ICulturalGrammarService
 } from './types';
@@ -41,8 +40,8 @@ export class CulturalGrammarService implements ICulturalGrammarService {
     try {
       this.grammarConcepts = await this.loadGrammarData();
       this._initialized = true;
-    } catch (error) {
-      console.error('Failed to initialize CulturalGrammarService:', error);
+    } catch (_error) {
+      // Failed to initialize CulturalGrammarService
       throw new LessonGenerationError('Failed to initialize grammar service');
     }
   }
@@ -108,7 +107,7 @@ export class CulturalGrammarService implements ICulturalGrammarService {
       const concepts = data.default.concepts || data.default;
 
       if (!Array.isArray(concepts)) {
-        console.warn('Grammar data is not an array. Using fallback data.');
+        // Grammar data is not an array. Using fallback data.
         return this.getFallbackGrammarData();
       }
 
@@ -116,13 +115,13 @@ export class CulturalGrammarService implements ICulturalGrammarService {
       const validConcepts = concepts.filter(concept => this.validateConcept(concept));
 
       if (validConcepts.length === 0) {
-        console.warn('No valid grammar concepts found. Using fallback data.');
+        // No valid grammar concepts found. Using fallback data.
         return this.getFallbackGrammarData();
       }
 
       return validConcepts;
-    } catch (error) {
-      console.error('Error loading grammar data:', error);
+    } catch (_error) {
+      // Error loading grammar data
       return this.getFallbackGrammarData();
     }
   }

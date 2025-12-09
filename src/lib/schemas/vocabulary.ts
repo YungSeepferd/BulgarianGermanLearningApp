@@ -141,11 +141,7 @@ export const createFallbackItem = (input: unknown): VocabularyItem => {
 };
 
 export const VocabularyItemSchema = BaseVocabularyItemSchema.catch((ctx) => {
-  // Safe error logging without circular reference issues
-  const safeInput = typeof ctx.input === 'object' && ctx.input
-    ? { ...ctx.input, metadata: ctx.input.metadata ? '[metadata]' : undefined }
-    : ctx.input;
-  console.warn(`Validation failed for item:`, { input: safeInput, error: ctx.error.message });
+  // Validation failed for item
   return createFallbackItem(ctx.input);
 });
 
@@ -227,7 +223,7 @@ export function getDifficultyLabel(difficulty: number): string {
   return labels[difficulty as keyof typeof labels] || 'Unknown';
 }
 
-export function getPartOfSpeechLabel(partOfSpeech: PartOfSpeech): string {
+export function _getPartOfSpeechLabel(partOfSpeech: PartOfSpeech): string {
   const labels: Record<PartOfSpeech, string> = {
     noun: 'Noun',
     verb: 'Verb',

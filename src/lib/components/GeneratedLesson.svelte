@@ -10,7 +10,6 @@
   import { z } from 'zod';
   import { LessonSchema, type Lesson, type LessonSection, type LearningObjective } from '$lib/schemas/lesson';
   import { Button } from '$lib/components/ui/button';
-  import { Progress } from '$lib/components/ui/progress';
 
   // Props
   let { lesson } = $props<{ lesson: Lesson }>();
@@ -22,15 +21,15 @@
   let showSectionDetails = $state<Record<string, boolean>>({});
 
   // Computed
-  $: currentSection = $derived(lesson.sections[currentSectionIndex] || null);
-  $: completionPercentage = $derived(
+  let currentSection = $derived(lesson.sections[currentSectionIndex] || null);
+  let completionPercentage = $derived(
     Math.round((lesson.objectives.filter(obj => obj.isCompleted).length / lesson.objectives.length) * 100)
   );
-  $: vocabularyItems = $derived(lesson.vocabulary || []);
-  $: hasVocabulary = $derived(vocabularyItems.length > 0);
-  $: hasObjectives = $derived(lesson.objectives.length > 0);
-  $: hasSections = $derived(lesson.sections.length > 0);
-  $: isFallbackLesson = $derived(lesson.metadata?.fallback === true);
+  let vocabularyItems = $derived(lesson.vocabulary || []);
+  let hasVocabulary = $derived(vocabularyItems.length > 0);
+  let hasObjectives = $derived(lesson.objectives.length > 0);
+  let hasSections = $derived(lesson.sections.length > 0);
+  let isFallbackLesson = $derived(lesson.metadata?.fallback === true);
 
   // Methods
   function toggleObjective(objectiveId: string) {
@@ -172,7 +171,16 @@
     </div>
 
     <div class="lesson-progress-container">
-      <Progress value={completionPercentage} />
+      <div class="progress-bar-container">
+        <div
+          class="progress-bar"
+          style={`width: ${completionPercentage}%`}
+          role="progressbar"
+          aria-valuenow={completionPercentage}
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
       <span class="progress-text">{completionPercentage}% complete</span>
     </div>
 
@@ -182,7 +190,7 @@
           <h3>Learning Objectives</h3>
           <button
             class="toggle-objectives"
-            on:click={() => showAllObjectives = !showAllObjectives}
+            onclick={() => showAllObjectives = !showAllObjectives}
           >
             {showAllObjectives ? 'Show Less' : 'Show All'}
           </button>
@@ -195,7 +203,7 @@
                 <input
                   type="checkbox"
                   checked={objective.isCompleted}
-                  on:change={() => toggleObjective(objective.id)}
+                  onchange={() => toggleObjective(objective.id)}
                 />
                 <span class:completed={objective.isCompleted}>
                   {objective.description}
@@ -205,7 +213,7 @@
           {/each}
           {#if lesson.objectives.length > 3 && !showAllObjectives}
             <li class="objective-item more-objectives">
-              <button on:click={() => showAllObjectives = true}>
+              <button onclick={() => showAllObjectives = true}>
                 +{lesson.objectives.length - 3} more objectives
               </button>
             </li>
@@ -220,7 +228,7 @@
           <h3>Vocabulary ({vocabularyItems.length})</h3>
           <button
             class="toggle-vocabulary"
-            on:click={() => showAllVocabulary = !showAllVocabulary}
+            onclick={() => showAllVocabulary = !showAllVocabulary}
           >
             {showAllVocabulary ? 'Show Less' : 'Show All'}
           </button>
@@ -260,7 +268,7 @@
       <div class="lesson-sections">
         <div class="sections-navigation">
           <button
-            on:click={prevSection}
+            onclick={prevSection}
             disabled={currentSectionIndex === 0}
             aria-label="Previous section"
           >
@@ -272,7 +280,7 @@
           </div>
 
           <button
-            on:click={nextSection}
+            onclick={nextSection}
             disabled={currentSectionIndex === lesson.sections.length - 1}
             aria-label="Next section"
           >
@@ -294,7 +302,7 @@
           </div>
 
           <div class="section-body">
-            <div class="section-content-text" innerHTML={renderSectionContent(currentSection.content)} />
+            <div class="section-content-text" innerHTML={renderSectionContent(currentSection.content)}></div>
 
             {#if currentSection.metadata?.templateId}
               <div class="section-meta">
@@ -312,7 +320,10 @@
             {#each lesson.sections as section, index (section.id)}
               <div
                 class="section-overview-item {index === currentSectionIndex ? 'active' : ''}"
-                on:click={() => currentSectionIndex = index}
+                onclick={() => currentSectionIndex = index}
+                role="button"
+                tabindex="0"
+                onkeydown={e => e.key === 'Enter' || e.key === ' ' ? currentSectionIndex = index : null}
               >
                 <div class="section-overview-icon">
                   {getSectionIcon(section.type)}
@@ -335,10 +346,10 @@
     {/if}
 
     <div class="lesson-actions">
-      <Button variant="secondary" on:click={() => window.history.back()}>
+      <Button variant="secondary" onclick={() => window.history.back()}>
         Back to Lessons
       </Button>
-      <Button variant="default" on:click={() => alert('Lesson started!')}>
+      <Button variant="default" onclick={() => alert('Lesson started!')}>
         Start Lesson
       </Button>
     </div>

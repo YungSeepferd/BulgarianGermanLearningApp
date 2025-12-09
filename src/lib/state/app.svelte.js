@@ -123,7 +123,7 @@ export class AppState {
         }
         catch (_error) {
             // Silently fail if recording practice result fails
-            console.error('Error recording practice result:', _error);
+            // Error recording practice result
         }
     }
     toggleFavorite(itemId) {

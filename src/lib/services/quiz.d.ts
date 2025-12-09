@@ -1,5 +1,5 @@
 import { z } from 'zod';
-declare const QuizSchema: z.ZodObject<{
+declare const _QuizSchema: z.ZodObject<{
     id: z.ZodString;
     title: z.ZodString;
     description: z.ZodString;
@@ -24,7 +24,7 @@ declare const QuizSchema: z.ZodObject<{
     questions: string[];
     estimatedTime: number;
 }>;
-declare const QuizSessionSchema: z.ZodObject<{
+declare const _QuizSessionSchema: z.ZodObject<{
     id: z.ZodString;
     quizId: z.ZodString;
     questions: z.ZodArray<z.ZodObject<{
@@ -63,8 +63,8 @@ declare const QuizSessionSchema: z.ZodObject<{
     }[];
     score?: number | undefined;
 }>;
-type Quiz = z.infer<typeof QuizSchema>;
-type QuizSession = z.infer<typeof QuizSessionSchema>;
+type Quiz = z.infer<typeof _QuizSchema>;
+type QuizSession = z.infer<typeof _QuizSessionSchema>;
 type QuizCriteria = {
     difficulty?: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'Mixed';
     limit?: number;

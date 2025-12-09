@@ -7,7 +7,7 @@
 import { browser } from '$app/environment';
 import { v4 as uuidv4 } from 'uuid';
 import { LocalStorageManager } from '$lib/utils/localStorage';
-import { VocabularyMasterySchema, LessonProgressSchema, QuizPerformanceSchema, QuestionPerformanceSchema, DailyProgressSchema, OverallProgressSchema, ProgressDataSchema, calculateMasteryLevel, isItemMastered, calculateLevel, calculateXPForLevel } from '$lib/schemas/progress';
+import { VocabularyMasterySchema, LessonProgressSchema, QuizPerformanceSchema, QuestionPerformanceSchema, DailyProgressSchema, ProgressDataSchema, calculateMasteryLevel, isItemMastered, calculateLevel, calculateXPForLevel } from '$lib/schemas/progress';
 import { learningSession } from '$lib/state/session.svelte';
 export class ProgressService {
     constructor() {
@@ -52,8 +52,7 @@ export class ProgressService {
      * @param correct Whether the answer was correct
      * @param responseTime Response time in seconds (optional)
      */
-    recordVocabularyPractice(itemId, correct, responseTime) {
-        const today = new Date().toISOString().split('T')[0];
+    recordVocabularyPractice(itemId, correct, _responseTime) {
         const now = new Date().toISOString();
         // Get or create mastery record
         let mastery = this.progressData.vocabularyMastery[itemId] || {
@@ -144,7 +143,7 @@ export class ProgressService {
      */
     recordLessonProgress(lessonId, completionPercentage) {
         const now = new Date().toISOString();
-        const today = now.split('T')[0];
+        const _today = now.split('T')[0];
         // Get or create lesson progress record
         let lessonProgress = this.progressData.lessonProgress[lessonId] || {
             id: uuidv4(),
@@ -449,7 +448,7 @@ export class ProgressService {
      * @param amount Amount of XP to award
      * @param reason Reason for awarding XP
      */
-    awardXP(amount, reason) {
+    awardXP(amount, _reason) {
         this.updateOverallProgress({
             xpEarned: amount,
             timeSpent: 0
@@ -470,13 +469,13 @@ export class ProgressService {
                     this.progressData = parsedData.data;
                 }
                 else {
-                    console.warn('Invalid progress data, using default');
+                    // Invalid progress data, using default
                     this.progressData = this.getDefaultProgressData();
                 }
             }
         }
-        catch (error) {
-            console.error('Error loading progress data:', error);
+        catch (_error) {
+            // Error loading progress data
             this.progressData = this.getDefaultProgressData();
         }
     }
@@ -489,8 +488,8 @@ export class ProgressService {
         try {
             LocalStorageManager.saveUserProgress(this.progressData);
         }
-        catch (error) {
-            console.error('Error saving progress data:', error);
+        catch (_error) {
+            // Error saving progress data
         }
     }
     /**
@@ -512,8 +511,8 @@ export class ProgressService {
             this.progressData = validatedData;
             this.saveProgress();
         }
-        catch (error) {
-            console.error('Error importing progress data:', error);
+        catch (_error) {
+            // Error importing progress data
             throw new Error('Failed to import progress data');
         }
     }

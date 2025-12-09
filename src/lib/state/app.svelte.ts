@@ -1,6 +1,7 @@
 import { browser } from '$app/environment';
 import { db } from '$lib/data/db.svelte';
 import * as dataLoader from '$lib/data/loader';
+import type { LessonDifficulty, LessonType } from '$lib/types/lesson.js';
 import { LocalStorageManager } from '$lib/utils/localStorage';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 
@@ -8,30 +9,20 @@ export type LanguageMode = 'DE_BG' | 'BG_DE';
 
 export class AppState {
     // Replaces currentDirection with languageMode
-    // languageMode = $state<LanguageMode>('DE_BG');
-    languageMode: LanguageMode = 'DE_BG';
-    
+    languageMode = $state<LanguageMode>('DE_BG');
+
     // UI State
-    // searchQuery = $state('');
-    // currentItem = $state<VocabularyItem | null>(null);
-    // showAnswer = $state(false);
-    // practiceMode = $state(false);
-    // isLoading = $state(false);
-    // error = $state<string | null>(null);
-    searchQuery = '';
-    currentItem: VocabularyItem | null = null;
-    showAnswer = false;
-    practiceMode = false;
-    isLoading = false;
-    error: string | null = null;
+    searchQuery = $state('');
+    currentItem = $state<VocabularyItem | null>(null);
+    showAnswer = $state(false);
+    practiceMode = $state(false);
+    isLoading = $state(false);
+    error = $state<string | null>(null);
 
     // Enhanced state for progress tracking
-    // practiceStats = $state<Map<string, { correct: number; incorrect: number; lastPracticed: string }>>(new Map());
-    // recentSearches = $state<string[]>([]);
-    // favorites = $state<string[]>([]);
-    practiceStats: Map<string, { correct: number; incorrect: number; lastPracticed: string }> = new Map();
-    recentSearches: string[] = [];
-    favorites: string[] = [];
+    practiceStats = $state<Map<string, { correct: number; incorrect: number; lastPracticed: string }>>(new Map());
+    recentSearches = $state<string[]>([]);
+    favorites = $state<string[]>([]);
 
     // Derived state
     filteredItems = $derived.by(() => {
@@ -68,9 +59,9 @@ export class AppState {
 
     toggleLanguageMode() {
         this.languageMode = this.languageMode === 'DE_BG' ? 'BG_DE' : 'DE_BG';
-        // Automatic syncing is now handled by $effect
+        this.triggerLanguageModePersistence();
     }
-    
+
     // Legacy support alias for compatibility
     toggleDirection() {
         this.toggleLanguageMode();
@@ -78,11 +69,25 @@ export class AppState {
 
     setSearchQuery(query: string) {
         this.searchQuery = query;
-        
+
         // Add to recent searches if not empty and not already in list
         if (query.trim() && !this.recentSearches.includes(query)) {
             this.recentSearches = [query, ...this.recentSearches.slice(0, 9)]; // Keep last 10
             this.saveProgress();
+        }
+    }
+
+    /**
+     * Explicit method to trigger language mode persistence
+     * This is needed for test environments where $effect may not auto-run
+     */
+    private triggerLanguageModePersistence() {
+        if (browser) {
+            try {
+                localStorage.setItem('app-language-mode', this.languageMode);
+            } catch (_error) {
+                // Silently fail if saving language mode fails
+            }
         }
     }
 
@@ -142,15 +147,13 @@ export class AppState {
 
             current.lastPracticed = new Date().toISOString();
 
-            // Create a new Map to trigger reactivity with Svelte 5 Runes
-            const newStats = new Map(this.practiceStats);
-            newStats.set(itemId, current);
-            this.practiceStats = newStats;
+            // Update the Map directly with Svelte 5 Runes
+            this.practiceStats.set(itemId, current);
 
             this.saveProgress();
         } catch (_error) {
             // Silently fail if recording practice result fails
-            console.error('Error recording practice result:', _error);
+            // Error recording practice result
         }
     }
 
@@ -159,7 +162,7 @@ export class AppState {
         if (index > -1) {
             this.favorites.splice(index, 1);
         } else {
-            this.favorites.push(itemId);
+            this.favorites = [...this.favorites, itemId];
         }
         this.saveProgress();
     }
@@ -189,7 +192,7 @@ export class AppState {
         try {
             const progress = LocalStorageManager.loadUserProgress();
             if (progress) {
-                this.practiceStats = progress.stats;
+                this.practiceStats = new Map(progress.stats);
                 this.favorites = progress.favorites;
                 this.recentSearches = progress.recentSearches;
             }
@@ -217,14 +220,8 @@ export class AppState {
                 this.loadProgress();
 
                 // Set up automatic syncing with $effect
-                $effect.root(() => {
-                    if (browser) {
-                        try {
-                            localStorage.setItem('app-language-mode', this.languageMode);
-                        } catch (_error) {
-                            // Silently fail if saving language mode fails
-                        }
-                    }
+                $effect(() => {
+                    this.triggerLanguageModePersistence();
                 });
 
                 // Set up progress auto-save

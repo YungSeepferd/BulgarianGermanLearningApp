@@ -22,13 +22,16 @@ export class GameState {
 	async init() {
 		try {
 			this.loading = true;
+			console.log('Loading vocabulary...');
 			const collection = await loadVocabulary();
+			console.log('Vocabulary loaded:', collection);
 			this.cards = collection.items;
+			console.log(`Loaded ${this.cards.length} vocabulary items`);
 			this.loading = false;
-		} catch (e) {
-			console.error("Failed to load vocabulary:", e);
-			this.error = "Failed to load vocabulary data.";
-			this.loading = false;
+		} catch (error) {
+		    console.error('Error loading vocabulary:', error);
+		    this.error = "Failed to load vocabulary data.";
+		    this.loading = false;
 		}
 	}
 

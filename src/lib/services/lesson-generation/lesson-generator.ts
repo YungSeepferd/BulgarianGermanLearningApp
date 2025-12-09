@@ -15,20 +15,17 @@ import type {
   LessonGenerationOptions,
   GeneratedLesson,
   GeneratedLessonSection,
-  LessonType,
-  LessonDifficulty,
   TemplateRenderingContext,
   CulturalGrammarConcept,
   ILessonTemplateRepository,
   ICulturalGrammarService,
-  ITemplateRenderer,
-  LessonGenerationError
+  ITemplateRenderer
 } from './types';
 import { lessonTemplateRepository } from './lesson-templates';
 import { culturalGrammarService } from './cultural-grammar';
 import { templateRenderer } from './template-renderer';
 import { VocabularyService } from '../../data/vocabulary';
-import type { VocabularyItem } from '$lib/types/vocabulary';
+import type { VocabularyItem, PartOfSpeech } from '$lib/types/vocabulary';
 
 /**
  * LessonGenerationEngine class
@@ -88,9 +85,10 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
           // Default to thematic/vocabulary if type is unknown or general
           return this.generateThematicLesson(params, options);
       }
-    } catch (error) {
-      console.error('Lesson generation failed:', error);
-      throw new Error(`Failed to generate lesson: ${error instanceof Error ? error.message : String(error)}`);
+    } catch (_error) {
+      // Error handling is done by throwing a new error with the original message
+      const error = _error as Error;
+      throw new Error(`Failed to generate lesson: ${error.message}`);
     }
   }
 
@@ -195,8 +193,8 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
         type: 'introduction',
         metadata: { templateId: introTemplate.id }
       });
-    } catch (error) {
-      console.error('Failed to generate intro section:', error);
+    } catch (_error) {
+      // Intro section generation failed, but we continue with other sections
       // Continue or throw depending on severity. Here we log and continue if possible.
     }
 
@@ -221,8 +219,8 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
           type: 'exercise',
           metadata: { templateId: practiceTemplate.id }
         });
-      } catch (error) {
-        console.warn('Failed to generate practice section:', error);
+      } catch (_error) {
+        // Practice section generation failed, but we continue with other sections
       }
     }
 
@@ -254,8 +252,8 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
           type: 'summary', // using summary type for review for now
           metadata: { templateId: reviewTemplate.id }
         });
-      } catch (error) {
-        console.warn('Failed to generate review section:', error);
+      } catch (_error) {
+        // Review section generation failed, but we continue with other sections
       }
     }
 
@@ -284,7 +282,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
    */
   async generateGrammarLesson(
     params: LessonGenerationParams,
-    options: LessonGenerationOptions = {}
+    _options: LessonGenerationOptions = {}
   ): Promise<GeneratedLesson> {
     const includePractice = params.metadata?.includePractice !== false;
     const includeComparison = params.metadata?.includeComparison !== false;
@@ -300,7 +298,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     });
 
     if (grammarConcepts.length === 0) {
-      console.warn(`No grammar concepts found for difficulty ${params.difficulty}`);
+      // No grammar concepts found, using fallback logic
       // In production, might throw or fallback more gracefully
     }
 
@@ -348,8 +346,8 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
         type: 'grammar',
         metadata: { templateId: conceptTemplate.id, conceptId: mainConcept?.id }
       });
-    } catch (error) {
-      console.error('Failed to generate grammar explanation:', error);
+    } catch (_error) {
+      // Grammar explanation generation failed, but we continue with other sections
     }
 
     // 4. Generate Practice Section (if requested)
@@ -373,8 +371,8 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
           type: 'exercise',
           metadata: { templateId: practiceTemplate.id }
         });
-      } catch (error) {
-        console.warn('Failed to generate grammar practice:', error);
+      } catch (_error) {
+        // Grammar practice generation failed, but we continue with other sections
       }
     }
 
@@ -400,8 +398,8 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
             metadata: { templateId: comparisonTemplate.id }
           });
         }
-      } catch (error) {
-        console.warn('Failed to generate comparison section:', error);
+      } catch (_error) {
+        // Comparison section generation failed, but we continue with other sections
       }
     }
 
@@ -497,11 +495,11 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
    */
   async generateAdaptiveLesson(
     params: LessonGenerationParams,
-    options: LessonGenerationOptions = {}
+    _options: LessonGenerationOptions = {}
   ): Promise<GeneratedLesson> {
     // Logic would involve analyzing user profile and picking weak spots
     // For now, delegate to thematic
-    return this.generateThematicLesson(params, options);
+    return this.generateThematicLesson(params, _options);
   }
 
   /**

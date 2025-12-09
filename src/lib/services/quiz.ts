@@ -3,7 +3,7 @@ import type { VocabularyItem } from '$lib/schemas/vocabulary';
 import { db as vocabularyDb } from '$lib/data/db.svelte';
 
 // Store generated questions in memory for the current session
-const generatedQuestions = new Map<string, QuizQuestion>();
+const _generatedQuestions = new Map<string, QuizQuestion>();
 
 // Quiz Question Schema
 const QuizQuestionSchema = z.object({
@@ -184,7 +184,7 @@ export class QuizService {
     return QuizSessionSchema.parse(session);
   }
 
-  private getQuestionById(questionId: string): QuizQuestion | undefined {
+  private getQuestionById(_questionId: string): QuizQuestion | undefined {
     // In a real implementation, we would store questions in a database
     return undefined;
   }

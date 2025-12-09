@@ -31,7 +31,7 @@ export interface TemplateVariable {
   type: TemplateVariableType;
   description: string;
   required: boolean;
-  defaultValue?: any;
+  defaultValue?: string | number | boolean | object | unknown[];
 }
 
 /**
@@ -45,7 +45,7 @@ export interface LessonTemplate {
   difficultyRange: [LessonDifficulty, LessonDifficulty];
   template: string;
   variables: TemplateVariable[];
-  exampleData?: Record<string, any>;
+  exampleData?: Record<string, string | number | boolean | object | unknown[]>;
 }
 
 /**
@@ -92,7 +92,7 @@ export interface CulturalGrammarConcept {
     deToBg: string[];
   };
   relatedConcepts: string[];
-  metadata: Record<string, any>;
+  metadata: Record<string, string | number | boolean | object | unknown[]>;
 }
 
 /**
@@ -109,7 +109,7 @@ export interface LessonGenerationParams {
     conceptType?: string;
   };
   userId: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, string | number | boolean | object | unknown[]>;
 }
 
 /**
@@ -120,7 +120,7 @@ export interface GeneratedLessonSection {
   title: string;
   content: string;
   type: 'introduction' | 'vocabulary' | 'grammar' | 'exercise' | 'summary' | 'cultural';
-  metadata?: Record<string, any>;
+  metadata?: Record<string, string | number | boolean | object | unknown[]>;
 }
 
 /**
@@ -135,7 +135,7 @@ export interface GeneratedLesson {
   vocabulary: VocabularyItem[];
   grammarConcepts: CulturalGrammarConcept[];
   learningObjectives: string[];
-  metadata: Record<string, any>;
+  metadata: Record<string, string | number | boolean | object | unknown[]>;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -157,14 +157,14 @@ export interface UserLearningProfile {
     difficultyPreferences: Record<LessonType, LessonDifficulty>;
     learningGoals: string[];
   };
-  metadata: Record<string, any>;
+  metadata: Record<string, string | number | boolean | object | unknown[]>;
 }
 
 /**
  * Template rendering context
  */
 export interface TemplateRenderingContext {
-  [key: string]: any;
+  [key: string]: string | number | boolean | object | unknown[] | undefined;
   sectionTitle?: string;
   count?: number;
   theme?: string;
@@ -197,7 +197,7 @@ export interface EnhancedLessonCriteria {
   partOfSpeech?: PartOfSpeech;
   limit?: number;
   conceptType?: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, string | number | boolean | object | unknown[]>;
 }
 
 /**
@@ -242,7 +242,7 @@ export interface ILessonGenerationEngine {
 /**
  * Utility type for template variable validation
  */
-export type TemplateVariableValidator = (value: any, variable: TemplateVariable) => boolean;
+export type TemplateVariableValidator = (value: string | number | boolean | object | unknown[], variable: TemplateVariable) => boolean;
 
 /**
  * Error types for lesson generation

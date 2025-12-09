@@ -12,13 +12,14 @@
   import GeneratedLesson from '$lib/components/GeneratedLesson.svelte';
   import LessonGenerator from '$lib/components/LessonGenerator.svelte';
   import { enhancedLessonService } from '$lib/services/enhanced-lesson';
+  import { lessonService } from '$lib/services/lesson';
   import { db } from '$lib/data/db.svelte';
   import { LessonSchema, type Lesson, type LessonDifficulty, type LessonType } from '$lib/schemas/lesson';
   import type { VocabularyCategory, PartOfSpeech } from '$lib/schemas/vocabulary';
+  import type { VocabularyItem } from '$lib/types/vocabulary';
 
   // State
   let lessons = $state<Lesson[]>([]);
-  let filteredLessons = $state<Lesson[]>([]);
   let isLoading = $state(true);
   let error = $state<string | null>(null);
   let selectedDifficulty = $state<LessonDifficulty | 'all'>('all');
@@ -38,7 +39,7 @@
   });
 
   // Computed
-  $: filteredLessons = $derived(
+  let filteredLessons = $derived(
     lessons.filter(lesson => {
       const difficultyMatch = selectedDifficulty === 'all' || lesson.difficulty === selectedDifficulty;
       const typeMatch = selectedType === 'all' || lesson.type === selectedType;
@@ -47,9 +48,9 @@
   );
 
   // Initialize lessons
-  $: {
+  $effect(() => {
     loadLessons();
-  }
+  });
 
   /**
    * Load lessons from service
@@ -338,7 +339,7 @@
   <header class="lessons-header">
     <h1>Lessons</h1>
     <p class="subtitle">Structured learning experiences for Bulgarian and German</p>
-    <button class="create-lesson-button" on:click={() => showLessonGenerationModal = true}>
+    <button class="create-lesson-button" onclick={() => showLessonGenerationModal = true}>
       ✨ Create Dynamic Lesson
     </button>
   </header>
@@ -352,13 +353,13 @@
     <div class="error-state">
       <div class="error-icon">⚠️</div>
       <p>{error}</p>
-      <button class="retry-button" on:click={loadLessons}>Retry</button>
+      <button class="retry-button" onclick={loadLessons}>Retry</button>
     </div>
   {:else if lessons.length === 0}
     <div class="empty-state">
       <div class="empty-icon">📚</div>
       <p>No lessons available. Create your first custom lesson!</p>
-      <button class="create-lesson-button" on:click={() => showLessonGenerationModal = true}>
+      <button class="create-lesson-button" onclick={() => showLessonGenerationModal = true}>
         Create Your First Lesson
       </button>
     </div>
@@ -384,7 +385,7 @@
         </select>
       </div>
 
-      <button class="create-lesson-button mobile" on:click={() => showLessonGenerationModal = true}>
+      <button class="create-lesson-button mobile" onclick={() => showLessonGenerationModal = true}>
         ✨ Create Lesson
       </button>
     </div>
@@ -392,7 +393,7 @@
     {#if showGeneratedLesson}
       <GeneratedLesson lesson={showGeneratedLesson} />
       <div class="back-to-lessons">
-        <button class="back-button" on:click={closeGeneratedLesson}>
+        <button class="back-button" onclick={closeGeneratedLesson}>
           ← Back to All Lessons
         </button>
       </div>
@@ -410,7 +411,7 @@
       <p>
         Showing {filteredLessons.length} of {lessons.length} lessons
         {#if selectedDifficulty !== 'all' || selectedType !== 'all'}
-          • <button class="reset-filters" on:click={() => { selectedDifficulty = 'all'; selectedType = 'all'; }}>Reset filters</button>
+          • <button class="reset-filters" onclick={() => { selectedDifficulty = 'all'; selectedType = 'all'; }}>Reset filters</button>
         {/if}
       </p>
     </div>
@@ -422,106 +423,6 @@
     onClose={() => showLessonGenerationModal = false}
     onLessonGenerated={handleLessonGenerated}
   />
-        <div class="modal-header">
-          <h2>Create Custom Lesson</h2>
-          <button class="close-button" on:click={() => showLessonGenerationModal = false}>
-            ×
-          </button>
-        </div>
-
-        <div class="modal-body">
-          <div class="form-group">
-            <label for="lesson-title">Lesson Title</label>
-            <input
-              id="lesson-title"
-              type="text"
-              bind:value={newLessonCriteria.title}
-              placeholder="e.g., 'Daily Conversations'"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="lesson-description">Description (Optional)</label>
-            <textarea
-              id="lesson-description"
-              bind:value={newLessonCriteria.description}
-              placeholder="Describe what this lesson will cover..."
-              rows="3"
-            ></textarea>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="lesson-difficulty">Difficulty Level</label>
-              <select id="lesson-difficulty" bind:value={newLessonCriteria.difficulty}>
-                <option value="">Any Difficulty</option>
-                {#each getDifficultyLevels() as level}
-                  <option value={level}>{level}</option>
-                {/each}
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="lesson-type">Lesson Type</label>
-              <select id="lesson-type" bind:value={newLessonCriteria.type}>
-                <option value="">Any Type</option>
-                <option value="vocabulary">Vocabulary</option>
-                <option value="grammar">Grammar</option>
-                <option value="conversation">Conversation</option>
-                <option value="reading">Reading</option>
-                <option value="listening">Listening</option>
-                <option value="writing">Writing</option>
-                <option value="culture">Culture</option>
-                <option value="mixed">Mixed</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="lesson-category">Category</label>
-              <select id="lesson-category" bind:value={newLessonCriteria.category}>
-                <option value="">Any Category</option>
-                {#each getVocabularyCategories() as category}
-                  <option value={category}>{getCategoryDisplayName(category)}</option>
-                {/each}
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="lesson-part-of-speech">Part of Speech</label>
-              <select id="lesson-part-of-speech" bind:value={newLessonCriteria.partOfSpeech}>
-                <option value="">Any Part of Speech</option>
-                {#each getPartsOfSpeech() as partOfSpeech}
-                  <option value={partOfSpeech}>{getPartOfSpeechDisplayName(partOfSpeech)}</option>
-                {/each}
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="lesson-limit">Number of Vocabulary Items</label>
-            <select id="lesson-limit" bind:value={newLessonCriteria.limit}>
-              <option value="5">5 items</option>
-              <option value="8">8 items</option>
-              <option value="10" selected>10 items</option>
-              <option value="15">15 items</option>
-              <option value="20">20 items</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <button class="cancel-button" on:click={() => showLessonGenerationModal = false}>
-            Cancel
-          </button>
-          <button class="generate-button" on:click={generateCustomLesson}>
-            Generate Lesson
-          </button>
-        </div>
-      </div>
-    </div>
-  {/if}
 </div>
 
 <style>
@@ -674,132 +575,6 @@
     display: none;
   }
 
-  /* Modal Styles */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    padding: 1rem;
-  }
-
-  .modal-content {
-    background: white;
-    border-radius: 12px;
-    max-width: 600px;
-    width: 100%;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  }
-
-  .modal-header {
-    padding: 1.5rem;
-    border-bottom: 1px solid #e2e8f0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .modal-header h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #1e293b;
-  }
-
-  .close-button {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #64748b;
-    padding: 0.5rem;
-  }
-
-  .close-button:hover {
-    color: #1e293b;
-  }
-
-  .modal-body {
-    padding: 1.5rem;
-  }
-
-  .form-group {
-    margin-bottom: 1rem;
-  }
-
-  .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #475569;
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  input, textarea, select {
-    width: 100%;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-    background: white;
-    font-size: 0.875rem;
-  }
-
-  textarea {
-    resize: vertical;
-    min-height: 80px;
-  }
-
-  .modal-footer {
-    padding: 1rem 1.5rem;
-    border-top: 1px solid #e2e8f0;
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.5rem;
-  }
-
-  .cancel-button {
-    padding: 0.5rem 1rem;
-    background: #e5e7eb;
-    color: #374151;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.875rem;
-    transition: background 0.2s ease;
-  }
-
-  .cancel-button:hover {
-    background: #d1d5db;
-  }
-
-  .generate-button {
-    padding: 0.5rem 1rem;
-    background: #10b981;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.875rem;
-    transition: background 0.2s ease;
-  }
-
-  .generate-button:hover {
-    background: #059669;
-  }
 
   @keyframes spin {
     0% { transform: rotate(0deg); }

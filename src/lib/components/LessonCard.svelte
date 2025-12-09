@@ -17,14 +17,14 @@
   let showAllVocabulary = $state(false);
 
   // Computed
-  $: vocabularyItems = $derived(
+  let vocabularyItems = $derived(
     lesson.vocabulary.map(vocab =>
       typeof vocab === 'string' ? { id: vocab, german: '', bulgarian: '' } : vocab
     )
   );
 
-  $: currentVocabulary = $derived(vocabularyItems[currentVocabularyIndex]);
-  $: completionPercentage = $derived(
+  let currentVocabulary = $derived(vocabularyItems[currentVocabularyIndex]);
+  let completionPercentage = $derived(
     Math.round((lesson.objectives.filter(obj => obj.isCompleted).length / lesson.objectives.length) * 100)
   );
 
@@ -84,8 +84,9 @@
   <div
     class="lesson-card {isFlipped ? 'flipped' : ''}"
     tabindex="0"
-    on:keydown={e => e.key === 'Enter' || e.key === ' ' ? toggleFlip() : null}
+    onkeydown={e => e.key === 'Enter' || e.key === ' ' ? toggleFlip() : null}
     aria-label={`Lesson: ${lesson.title}`}
+    role="button"
   >
     <!-- Front Side -->
     <div class="lesson-card-front">
@@ -138,7 +139,7 @@
             {#if vocabularyItems.length > 3}
               <button
                 class="show-more-button"
-                on:click={() => showAllVocabulary = true}
+                onclick={() => showAllVocabulary = true}
                 aria-label={`Show all ${vocabularyItems.length} vocabulary items`}
               >
                 +{vocabularyItems.length - 3}
@@ -151,14 +152,14 @@
       <div class="lesson-actions">
         <button
           class="action-button primary"
-          on:click={toggleFlip}
+          onclick={toggleFlip}
           aria-label="View lesson details"
         >
           Start Lesson
         </button>
         <button
           class="action-button secondary"
-          on:click={() => alert(`Lesson ${lesson.title} started!`)}
+          onclick={() => alert(`Lesson ${lesson.title} started!`)}
           aria-label="Start this lesson"
         >
           ▶️
@@ -171,7 +172,7 @@
       <div class="lesson-header">
         <button
           class="back-button"
-          on:click={toggleFlip}
+          onclick={toggleFlip}
           aria-label="Back to lesson overview"
         >
           ← Back
@@ -192,7 +193,7 @@
                 <input
                   type="checkbox"
                   checked={objective.isCompleted}
-                  on:change={() => toggleObjective(objective.id)}
+                  onchange={() => toggleObjective(objective.id)}
                 />
                 <span class:completed={objective.isCompleted}>
                   {objective.description}
@@ -208,7 +209,7 @@
 
         <div class="vocabulary-navigation">
           <button
-            on:click={prevVocabulary}
+            onclick={prevVocabulary}
             disabled={currentVocabularyIndex === 0}
             aria-label="Previous vocabulary item"
           >
@@ -218,7 +219,7 @@
             {currentVocabularyIndex + 1} / {vocabularyItems.length}
           </span>
           <button
-            on:click={nextVocabulary}
+            onclick={nextVocabulary}
             disabled={currentVocabularyIndex === vocabularyItems.length - 1}
             aria-label="Next vocabulary item"
           >
@@ -251,9 +252,10 @@
           {#each vocabularyItems as vocab, index}
             <div
               class="vocabulary-list-item {index === currentVocabularyIndex ? 'active' : ''}"
-              on:click={() => currentVocabularyIndex = index}
+              onclick={() => currentVocabularyIndex = index}
+              role="button"
               tabindex="0"
-              on:keydown={e => e.key === 'Enter' ? currentVocabularyIndex = index : null}
+              onkeydown={e => e.key === 'Enter' ? currentVocabularyIndex = index : null}
             >
               <span class="vocab-german">{vocab.german}</span>
               <span class="vocab-bulgarian">{vocab.bulgarian}</span>
@@ -265,7 +267,7 @@
       <div class="lesson-actions">
         <button
           class="action-button primary"
-          on:click={() => alert(`Lesson ${lesson.title} started!`)}
+          onclick={() => alert(`Lesson ${lesson.title} started!`)}
           aria-label="Start this lesson"
         >
           Start Lesson

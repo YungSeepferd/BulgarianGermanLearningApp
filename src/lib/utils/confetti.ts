@@ -32,3 +32,6 @@ export function fireConfetti() {
     // Silently fail on confetti load errors
   });
 }
+
+// Export alias for backward compatibility
+export { fireConfetti as confetti };

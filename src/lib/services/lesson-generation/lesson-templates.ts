@@ -41,8 +41,7 @@ export class LessonTemplateRepository implements ILessonTemplateRepository {
       this.templates = await this.loadTemplates();
       this._initialized = true;
       this.cacheTemplates();
-    } catch (error) {
-      console.error('Failed to initialize LessonTemplateRepository:', error);
+    } catch (_error) {
       throw new LessonGenerationError('Failed to initialize template repository');
     }
   }
@@ -183,8 +182,8 @@ export class LessonTemplateRepository implements ILessonTemplateRepository {
       // so we'll use a fallback approach
       if (import.meta.env?.MODE === 'test') {
         // For testing, we'll check if we have any mock templates
-        if ((this as any)._testTemplates) {
-          return (this as any)._testTemplates;
+        if ((this as LessonTemplateRepository)._testTemplates) {
+          return (this as LessonTemplateRepository)._testTemplates as LessonTemplate[];
         }
         return [this.createFallbackTemplate()];
       }
@@ -194,7 +193,7 @@ export class LessonTemplateRepository implements ILessonTemplateRepository {
 
       const templates: LessonTemplate[] = [];
 
-      for (const [path, importFn] of Object.entries(templateModules)) {
+      for (const [_path, importFn] of Object.entries(templateModules)) {
         try {
           const module = await importFn();
           const template = module.default;
@@ -202,21 +201,19 @@ export class LessonTemplateRepository implements ILessonTemplateRepository {
           if (this.validateTemplate(template)) {
             templates.push(template);
           } else {
-            console.warn(`Skipping invalid template from ${path}`);
+            // Skipping invalid template from ${path}
           }
-        } catch (error) {
-          console.error(`Error loading template from ${path}:`, error);
+        } catch (_error) {
         }
       }
 
       if (templates.length === 0) {
-        console.warn('No valid templates found. Using fallback template.');
+        // No valid templates found. Using fallback template.
         return [this.createFallbackTemplate()];
       }
 
       return templates;
-    } catch (error) {
-      console.error('Error loading templates:', error);
+    } catch (_error) {
       return [this.createFallbackTemplate()];
     }
   }
@@ -270,7 +267,7 @@ export class LessonTemplateRepository implements ILessonTemplateRepository {
    * @param type - Expected type
    * @returns True if value matches type
    */
-  private isValidDefaultValue(value: any, type: string): boolean {
+  private isValidDefaultValue(value: string | number | boolean | object | unknown[], type: string): boolean {
     switch (type) {
       case 'string':
         return typeof value === 'string';

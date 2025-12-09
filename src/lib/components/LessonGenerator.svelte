@@ -53,9 +53,9 @@
   });
 
   // Computed
-  $: isVocabularyLesson = $derived(lessonParams.type === 'vocabulary');
-  $: isGrammarLesson = $derived(lessonParams.type === 'grammar');
-  $: isMixedLesson = $derived(lessonParams.type === 'mixed');
+  let isVocabularyLesson = $derived(lessonParams.type === 'vocabulary');
+  let isGrammarLesson = $derived(lessonParams.type === 'grammar');
+  let isMixedLesson = $derived(lessonParams.type === 'mixed');
 
   // Methods
   function resetForm() {
@@ -433,11 +433,6 @@
 </Dialog>
 
 <style>
-  .lesson-generator-modal {
-    max-width: 700px;
-    max-height: 90vh;
-    overflow-y: auto;
-  }
 
   .lesson-generator-form {
     padding: 1rem 0;
@@ -526,8 +521,5 @@
       grid-template-columns: 1fr;
     }
 
-    .lesson-generator-modal {
-      max-width: 95vw;
-    }
   }
 </style>

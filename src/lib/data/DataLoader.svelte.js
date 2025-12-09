@@ -25,13 +25,13 @@ export class DataLoader {
      */
     async getRandomItems(count = 5) {
         try {
-            const vocabulary = await loadVocabulary();
+            const _vocabulary = await loadVocabulary();
             // Use the getRandomVocabulary function from loader
             const items = await getRandomVocabulary(count);
             return items;
         }
-        catch (error) {
-            console.error('Failed to get random vocabulary items:', error);
+        catch (_error) {
+            // Failed to get random vocabulary items
             return [];
         }
     }

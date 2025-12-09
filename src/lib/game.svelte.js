@@ -23,8 +23,8 @@ export class GameState {
             this.cards = collection.items;
             this.loading = false;
         }
-        catch (e) {
-            console.error("Failed to load vocabulary:", e);
+        catch (_e) {
+            // Failed to load vocabulary
             this.error = "Failed to load vocabulary data.";
             this.loading = false;
         }

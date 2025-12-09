@@ -69,7 +69,7 @@ export declare const VocabularyMetadataSchema: z.ZodObject<{
  */
 export declare const LegacyIdSchema: z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodString, z.ZodNumber]>, string, string | number>;
 export declare const VocabularyCategorySchemaWithFallback: z.ZodUnion<[z.ZodEnum<["greetings", "numbers", "family", "food", "colors", "animals", "body", "clothing", "house", "nature", "transport", "technology", "time", "weather", "professions", "places", "grammar", "culture", "common_phrases", "uncategorized"]>, z.ZodLiteral<"uncategorized">]>;
-declare const BaseVocabularyItemSchema: z.ZodObject<{
+declare const _BaseVocabularyItemSchema: z.ZodObject<{
     id: z.ZodEffects<z.ZodUnion<[z.ZodString, z.ZodString, z.ZodNumber]>, string, string | number>;
     german: z.ZodString;
     bulgarian: z.ZodString;
@@ -226,7 +226,7 @@ declare const BaseVocabularyItemSchema: z.ZodObject<{
     isVerified?: boolean | undefined;
     learningPhase?: number | undefined;
 }>;
-export type VocabularyItem = z.infer<typeof BaseVocabularyItemSchema>;
+export type VocabularyItem = z.infer<typeof _BaseVocabularyItemSchema>;
 /**
  * Fallback vocabulary item for failed validations
  * Creates a valid item with fallback values when validation fails

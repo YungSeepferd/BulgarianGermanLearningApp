@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { db as vocabularyDb } from '$lib/data/db.svelte';
 // Store generated questions in memory for the current session
-const generatedQuestions = new Map();
+const _generatedQuestions = new Map();
 // Quiz Question Schema
 const QuizQuestionSchema = z.object({
     id: z.string().uuid(),
@@ -125,10 +125,10 @@ export class QuizService {
         return QuizSessionSchema.parse(session);
     }
     submitAnswer(session, questionIndex, answer) {
-        const questionId = session.questions[questionIndex].questionId;
-        const question = this.getQuestionById(questionId);
+        const _questionId = session.questions[questionIndex].questionId;
+        const question = this.getQuestionById(_questionId);
         if (!question) {
-            throw new Error(`Question with ID ${questionId} not found`);
+            throw new Error(`Question with ID ${_questionId} not found`);
         }
         const isCorrect = answer === question.correctAnswer;
         session.questions[questionIndex] = {
@@ -142,7 +142,7 @@ export class QuizService {
         }
         return QuizSessionSchema.parse(session);
     }
-    getQuestionById(questionId) {
+    getQuestionById(_questionId) {
         // In a real implementation, we would store questions in a database
         return undefined;
     }

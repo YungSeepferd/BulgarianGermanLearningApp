@@ -92,16 +92,16 @@
     
     <div class="items-grid">
       {#each items as item (item.id)}
-        <div
-          class="vocabulary-item"
-          class:active={hoveredItemId === item.id}
-          onmouseenter={() => handleMouseEnter(item.id)}
-          onmouseleave={handleMouseLeave}
-          role="button"
-          tabindex="0"
-          in:itemAnimation
-        >
-          <div animate:flip>
+        <div animate:flip>
+          <div
+            class="vocabulary-item"
+            class:active={hoveredItemId === item.id}
+            onmouseenter={() => handleMouseEnter(item.id)}
+            onmouseleave={handleMouseLeave}
+            role="button"
+            tabindex="0"
+            in:itemAnimation
+          >
           <div class="item-header">
             <div class="main-text">
                <input

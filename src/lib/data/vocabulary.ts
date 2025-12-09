@@ -4,10 +4,9 @@
  * Provides centralized access to vocabulary data with caching and search capabilities
  */
 
-import { VocabularyItemSchema, VocabularyCollectionSchema, VocabularySearchParamsSchema } from '../schemas/vocabulary';
+import { z, VocabularyItemSchema, VocabularyCollectionSchema, VocabularySearchParamsSchema } from '../schemas/vocabulary';
 import { loadVocabulary, loadVocabularyById, loadVocabularyByCategory, loadVocabularyByDifficulty, getRandomVocabulary, cacheVocabulary } from './loader';
 import { searchVocabulary, clearVocabularyCache, getVocabularyStats } from './search';
-import { z } from 'zod';
 
 export class VocabularyService {
   private static instance: VocabularyService;
@@ -39,9 +38,9 @@ export class VocabularyService {
     try {
       this.vocabularyCollection = await loadVocabulary();
       this.isInitialized = true;
-    } catch (error) {
-      console.error('Failed to initialize VocabularyService:', error);
-      throw error;
+    } catch (_error) {
+      // Failed to initialize VocabularyService
+      throw _error;
     }
   }
 
@@ -186,9 +185,9 @@ export class VocabularyService {
       cacheVocabulary(this.vocabularyCollection);
       clearVocabularyCache(); // Clear the search cache when data is refreshed
       this.isInitialized = true;
-    } catch (error) {
-      console.error('Failed to refresh vocabulary data:', error);
-      throw error;
+    } catch (_error) {
+      // Failed to refresh vocabulary data
+      throw _error;
     }
   }
 

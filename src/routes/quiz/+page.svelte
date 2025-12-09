@@ -1,14 +1,16 @@
 <script lang="ts">
-  import { $state } from 'svelte';
   import { quizService } from '$lib/services/quiz';
   import { vocabularyDb } from '$lib/data/db.svelte';
-  import QuizCard from '$lib/components/QuizCard.svelte';
+  import FlashCard from '$lib/components/flashcard/FlashCard.svelte';
+  import QuizController from '$lib/components/flashcard/QuizController.svelte';
 
   // State
   let quiz = $state(null);
   let session = $state(null);
   let isLoading = $state(false);
   let error = $state(null);
+  let currentQuestionIndex = $state(0);
+  let currentItem = $state(null);
 
   // Generate quiz
   async function generateQuiz() {
@@ -24,11 +26,38 @@
 
       // Start quiz session
       session = quizService.startQuizSession(quiz);
+
+      // Set first question
+      if (quiz && quiz.questions.length > 0) {
+        currentQuestionIndex = 0;
+        // Note: In a real implementation, we would fetch the actual question data
+        // For now, we'll use a placeholder
+        currentItem = {
+          german: "Example word",
+          bulgarian: "Пример",
+          category: ["vocabulary"],
+          difficulty: "A1"
+        };
+      }
     } catch (err) {
       error = err.message;
       console.error('Error generating quiz:', err);
     } finally {
       isLoading = false;
+    }
+  }
+
+  function handleNext() {
+    if (quiz && currentQuestionIndex < quiz.questions.length - 1) {
+      currentQuestionIndex += 1;
+      // Update current item for the new question
+      // Note: In a real implementation, we would fetch the actual question data
+      currentItem = {
+        german: `Example word ${currentQuestionIndex + 1}`,
+        bulgarian: `Пример ${currentQuestionIndex + 1}`,
+        category: ["vocabulary"],
+        difficulty: "A1"
+      };
     }
   }
 </script>
@@ -44,7 +73,7 @@
       </p>
 
       <button
-        on:click={generateQuiz}
+        onclick={generateQuiz}
         disabled={isLoading}
         class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
@@ -62,6 +91,27 @@
       {/if}
     </div>
   {:else}
-    <QuizCard {quiz} {session} />
+    <div class="quiz-container">
+      {#if currentItem}
+        <FlashCard
+          item={currentItem}
+          flipped={false}
+          onFlip={() => {}}
+        />
+        <QuizController
+          item={currentItem}
+          onNext={handleNext}
+        />
+      {/if}
+    </div>
   {/if}
 </div>
+
+<style>
+  .quiz-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-height: 600px;
+  }
+</style>

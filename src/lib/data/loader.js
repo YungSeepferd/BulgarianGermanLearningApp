@@ -4,7 +4,6 @@
  * Handles loading, caching, and validation of vocabulary data
  * Supports both server-side and client-side loading patterns
  */
-import { DataLoader } from './DataLoader.svelte';
 import { VocabularyItemSchema, VocabularyCollectionSchema } from '../schemas/vocabulary';
 import { z } from 'zod';
 // Cache configuration
@@ -18,20 +17,20 @@ export async function loadVocabulary() {
         // Try to load from static endpoint first (fastest)
         return await loadFromStaticEndpoint();
     }
-    catch (error) {
-        console.warn('Failed to load from static endpoint, trying cache:', error);
+    catch (_error) {
+        // Failed to load from static endpoint, trying cache
         try {
             // Fallback to cache
             return await loadFromCache();
         }
-        catch (cacheError) {
-            console.warn('Failed to load from cache, trying bundled data:', cacheError);
+        catch (_cacheError) {
+            // Failed to load from cache, trying bundled data
             try {
                 // Final fallback to bundled data
                 return await loadBundledData();
             }
-            catch (bundledError) {
-                console.error('All loading methods failed:', bundledError);
+            catch (_bundledError) {
+                // All loading methods failed
                 throw new Error('Failed to load vocabulary data from all sources');
             }
         }
@@ -86,8 +85,8 @@ async function loadBundledData() {
         }
         data = await response.json();
     }
-    catch (fetchError) {
-        console.error('Failed to fetch vocabulary data:', fetchError);
+    catch (_fetchError) {
+        // Failed to fetch vocabulary data
         // Final fallback to empty array
         data = [];
     }
@@ -212,10 +211,10 @@ export async function initializeVocabulary() {
         // Load and cache vocabulary data
         const vocabulary = await loadVocabulary();
         cacheVocabulary(vocabulary);
-        console.log('Vocabulary data initialized successfully');
+        // Vocabulary data initialized successfully
     }
-    catch (error) {
-        console.error('Failed to initialize vocabulary data:', error);
+    catch (_error) {
+        // Failed to initialize vocabulary data
         throw error;
     }
 }

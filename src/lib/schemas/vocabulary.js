@@ -131,10 +131,10 @@ export const createFallbackItem = (input) => {
 };
 export const VocabularyItemSchema = BaseVocabularyItemSchema.catch((ctx) => {
     // Safe error logging without circular reference issues
-    const safeInput = typeof ctx.input === 'object' && ctx.input
+    const _safeInput = typeof ctx.input === 'object' && ctx.input
         ? { ...ctx.input, metadata: ctx.input.metadata ? '[metadata]' : undefined }
         : ctx.input;
-    console.warn(`Validation failed for item:`, { input: safeInput, error: ctx.error.message });
+    // Validation failed for item
     return createFallbackItem(ctx.input);
 });
 // Schema for vocabulary collections

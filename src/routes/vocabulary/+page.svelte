@@ -5,7 +5,7 @@
   import { vocabularyService } from '$lib/data/vocabulary';
   import { appState } from '$lib/state/app.svelte';
   import type { VocabularyItem } from '$lib/types/vocabulary';
-  import { VocabularyCategory } from '$lib/schemas/vocabulary';
+  import type { VocabularyCategory } from '$lib/schemas/vocabulary';
 
   // State management with Svelte 5 Runes
   let vocabularyItems = $state<VocabularyItem[]>([]);
@@ -63,7 +63,8 @@
         offset: currentPage * ITEMS_PER_PAGE
       };
 
-      const result = await vocabularyService.searchVocabulary(params);
+      const service = await vocabularyService;
+      const result = await service.searchVocabulary(params);
       vocabularyItems = result.items;
       hasMore = result.hasMore;
     } catch (err) {
@@ -132,7 +133,8 @@
         offset: currentPage * ITEMS_PER_PAGE
       };
 
-      const result = await vocabularyService.searchVocabulary(params);
+      const service = await vocabularyService;
+      const result = await service.searchVocabulary(params);
       vocabularyItems = [...vocabularyItems, ...result.items];
       hasMore = result.hasMore;
     } catch (err) {

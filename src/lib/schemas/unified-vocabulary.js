@@ -9,7 +9,7 @@
  * valuable metadata during the unification and migration process.
  */
 import { z } from 'zod';
-import { VocabularyItemSchema, PartOfSpeechSchema, DifficultyLevelSchema, VocabularyCategorySchema } from './vocabulary';
+import { VocabularyItemSchema, DifficultyLevelSchema } from './vocabulary';
 // Extend the base schema to include all fields from the data/vocab files
 export const UnifiedVocabularyItemSchema = VocabularyItemSchema.extend({
     // Add new fields to preserve all metadata

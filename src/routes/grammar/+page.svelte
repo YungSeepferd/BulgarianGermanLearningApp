@@ -61,7 +61,6 @@
         placeholder="Search grammar rules..."
         bind:value={searchTerm}
         class="search-input"
-        role="searchbox"
         aria-label="Search grammar rules"
       />
     </div>

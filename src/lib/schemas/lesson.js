@@ -1,6 +1,6 @@
 // Lesson Schema for Bulgarian-German Language Learning Application
 import { z } from 'zod';
-import { VocabularyItemSchema, PartOfSpeechSchema, VocabularyCategorySchemaWithFallback, VocabularyMetadataSchema, createFallbackItem, LegacyIdSchema } from './vocabulary';
+import { VocabularyCategorySchemaWithFallback, VocabularyMetadataSchema, LegacyIdSchema, PartOfSpeechSchema } from './vocabulary';
 // Create a base schema without catch for omit operations
 const VocabularyItemBaseSchema = z.object({
     id: LegacyIdSchema,
@@ -63,12 +63,8 @@ export const LessonSchema = z.object({
     createdAt: z.union([z.date(), z.string().datetime().transform(str => new Date(str))]).default(new Date()),
     updatedAt: z.union([z.date(), z.string().datetime().transform(str => new Date(str))]).default(new Date()),
     metadata: LessonMetadataSchema
-}).catch((ctx) => {
-    const safeInput = typeof ctx.input === 'object' && ctx.input
-        ? { ...ctx.input, vocabulary: '[vocabulary array]', objectives: '[objectives array]' }
-        : ctx.input;
-    console.warn(`Lesson validation failed:`, { input: safeInput, error: ctx.error.message });
-    return {
+}).catch((_ctx) => {
+  return {
         id: `fallback-${Date.now()}`,
         title: 'Invalid Lesson',
         description: 'This lesson failed validation',

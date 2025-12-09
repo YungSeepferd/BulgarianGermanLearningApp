@@ -7,7 +7,8 @@
  */
 import { lessonService } from './lesson';
 import { lessonGenerationEngine } from './lesson-generation/lesson-generator';
-import type { LessonGenerationParams, GeneratedLesson, GeneratedLessonSection } from './lesson-generation/types';
+import type { LessonGenerationParams, GeneratedLesson, EnhancedLessonCriteria, VocabularyItem } from './lesson-generation/types';
+import { isLessonDifficulty, isLessonType } from './lesson-generation/types';
 import type { Lesson, LessonSection, LearningObjective } from '../schemas/lesson';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -44,8 +45,8 @@ class EnhancedLessonService {
 
       // Convert the generated lesson to the standard Lesson format
       return this.convertGeneratedLessonToLesson(generatedLesson);
-    } catch (error) {
-      console.error('Failed to generate dynamic lesson:', error);
+    } catch (_error) {
+      // Error handling is done by returning a fallback lesson
       return this.createFallbackLesson(params.type || 'vocabulary', params.difficulty || 'A1');
     }
   }
@@ -58,9 +59,10 @@ class EnhancedLessonService {
    * @returns Generated lesson in standard Lesson format
    */
   async generateThematicLesson(categories: string[], difficulty: string, options?: { includePractice?: boolean; includeReview?: boolean }): Promise<Lesson> {
+    const validatedDifficulty = isLessonDifficulty(difficulty) ? difficulty : 'A1';
     const params: LessonGenerationParams = {
       type: 'vocabulary',
-      difficulty: difficulty as any,
+      difficulty: validatedDifficulty,
       criteria: { categories },
       metadata: {
         includePractice: options?.includePractice ?? true,
@@ -79,9 +81,10 @@ class EnhancedLessonService {
    * @returns Generated lesson in standard Lesson format
    */
   async generateGrammarLesson(conceptType: string, difficulty: string, options?: { includePractice?: boolean; includeComparison?: boolean }): Promise<Lesson> {
+    const validatedDifficulty = isLessonDifficulty(difficulty) ? difficulty : 'A1';
     const params: LessonGenerationParams = {
       type: 'grammar',
-      difficulty: difficulty as any,
+      difficulty: validatedDifficulty,
       criteria: { conceptType },
       metadata: {
         includePractice: options?.includePractice ?? true,
@@ -100,9 +103,10 @@ class EnhancedLessonService {
    * @returns Generated lesson in standard Lesson format
    */
   async generateMixedLesson(category: string, difficulty: string, options?: { includePractice?: boolean; includeReview?: boolean }): Promise<Lesson> {
+    const validatedDifficulty = isLessonDifficulty(difficulty) ? difficulty : 'A1';
     const params: LessonGenerationParams = {
       type: 'mixed',
-      difficulty: difficulty as any,
+      difficulty: validatedDifficulty,
       criteria: { categories: [category] },
       metadata: {
         includePractice: options?.includePractice ?? true,
@@ -144,20 +148,13 @@ class EnhancedLessonService {
    * @returns Lesson in standard format
    */
   private convertGeneratedLessonToLesson(generatedLesson: GeneratedLesson): Lesson {
-    console.log('Converting generated lesson:', generatedLesson);
+    // Converting generated lesson to standard format
 
     // Convert sections
     const sections: LessonSection[] = generatedLesson.sections.map(section => {
       // Use the section's original type if available, otherwise fall back to lesson type
       const sectionType = section.type || generatedLesson.type;
-      console.log('Converted section:', {
-        ...section,
-        type: sectionType,
-        isCompleted: false,
-        completionPercentage: 0,
-        createdAt: new Date(),
-        updatedAt: new Date()
-      });
+      // Section converted to standard format
       return {
         ...section,
         type: sectionType,
@@ -207,7 +204,7 @@ class EnhancedLessonService {
       }
     };
 
-    console.log('Created lesson object:', lesson);
+    // Lesson object created successfully
     return lesson;
   }
 
@@ -301,8 +298,8 @@ class EnhancedLessonService {
       id: `fallback-lesson-${uuidv4()}`,
       title: 'Lesson Unavailable',
       description: 'Dynamic lesson generation failed. Please try again or select a different lesson.',
-      difficulty: difficulty as any,
-      type: type as any,
+      difficulty: isLessonDifficulty(difficulty) ? difficulty : 'A1',
+      type: isLessonType(type) ? type : 'vocabulary',
       duration: 10,
       vocabulary: [],
       objectives: [],
@@ -330,11 +327,11 @@ class EnhancedLessonService {
     return lessonService.getLessonById(id);
   }
 
-  generateLessonFromVocabulary(vocabularyItems: any[]) {
+  generateLessonFromVocabulary(vocabularyItems: VocabularyItem[]) {
     return lessonService.generateLessonFromVocabulary(vocabularyItems);
   }
 
-  async generateLessonFromCriteria(criteria: any) {
+  async generateLessonFromCriteria(criteria: EnhancedLessonCriteria) {
     const result = await lessonService.generateLessonFromCriteria(criteria);
     return result || this.createFallbackLesson('vocabulary', 'A1');
   }

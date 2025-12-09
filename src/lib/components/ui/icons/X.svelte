@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { type SVGAttributes } from 'svelte/elements';
-
   // Define props using Svelte 5 Runes syntax
   let {
     size = 24,

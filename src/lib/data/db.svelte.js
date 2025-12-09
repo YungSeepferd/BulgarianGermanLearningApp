@@ -1,5 +1,4 @@
 import { browser } from '$app/environment';
-import { LessonDifficulty } from '$lib/schemas/lesson';
 import { loadVocabulary } from '$lib/data/loader.js';
 export class VocabularyDB {
     constructor() {

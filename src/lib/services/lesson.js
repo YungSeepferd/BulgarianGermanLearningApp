@@ -4,9 +4,7 @@
  * This service provides comprehensive business logic for creating, managing, and delivering
  * curriculum-based lessons with robust vocabulary integration, error handling, and performance optimization.
  */
-import { z } from 'zod';
-import { LessonSchema, LessonDifficulty, LessonType } from '../schemas/lesson';
-import { VocabularyItemSchema } from '../schemas/vocabulary';
+import { LessonSchema } from '../schemas/lesson';
 import { db } from '../data/db.svelte';
 /**
  * Lesson Service Class
@@ -31,7 +29,7 @@ export class LessonService {
             this.initialized = true;
         }
         catch (error) {
-            console.error('Failed to initialize LessonService:', error);
+            // Failed to initialize LessonService
             this.vocabularyData = [];
             this.initialized = false;
             throw error;
@@ -111,8 +109,8 @@ export class LessonService {
                 description: criteria.description
             });
         }
-        catch (error) {
-            console.error('Failed to generate lesson from criteria:', error);
+        catch (_error) {
+            // Failed to generate lesson from criteria
             return this.createFallbackLesson('Failed to generate lesson from criteria');
         }
     }
@@ -121,7 +119,7 @@ export class LessonService {
      */
     queryVocabulary(criteria) {
         if (this.vocabularyData.length === 0) {
-            console.warn('No vocabulary data available');
+            // No vocabulary data available
             return [];
         }
         // Convert difficulty level to numeric range if provided
@@ -372,19 +370,15 @@ export class LessonService {
             return result.data;
         }
         else {
-            console.warn('Lesson validation failed:', {
-                error: result.error.message,
-                lessonId: lesson.id,
-                lessonTitle: lesson.title
-            });
+            // Lesson validation failed
             return this.createFallbackLesson('Lesson validation failed');
         }
     }
     /**
      * Create a fallback lesson when validation or generation fails
      */
-    createFallbackLesson(errorMessage) {
-        console.warn(`Creating fallback lesson: ${errorMessage}`);
+    createFallbackLesson(_errorMessage) {
+        // Creating fallback lesson: ${errorMessage}
         return {
             id: `fallback-${Date.now()}-${crypto.randomUUID()}`,
             title: 'Lesson Unavailable',

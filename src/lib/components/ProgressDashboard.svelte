@@ -11,32 +11,30 @@
    * - Recent activity
    */
 
-  import { $state, $derived } from 'svelte';
   import { progressService } from '$lib/services/progress';
-  import { learningSession } from '$lib/state/session.svelte';
-  import { LevelUpModal } from './gamification/LevelUpModal.svelte';
-  import { confetti } from '$lib/utils/confetti';
+  import LevelUpModal from './gamification/LevelUpModal.svelte';
+  import { fireConfetti as confetti } from '$lib/utils/confetti';
 
   // State
   let showLevelUpModal = $state(false);
   let levelUpMessage = $state('');
 
   // Derived state
-  $: progressSummary = progressService.getProgressSummary();
-  $: levelInfo = progressService.getLevelInfo();
-  $: vocabularyStats = progressService.getVocabularyMasteryStats();
-  $: lessonStats = progressService.getLessonCompletionStats();
-  $: recentProgress = progressService.getRecentDailyProgress(7);
+  let progressSummary = $derived(progressService.getProgressSummary());
+  let levelInfo = $derived(progressService.getLevelInfo());
+  let vocabularyStats = $derived(progressService.getVocabularyMasteryStats());
+  let lessonStats = $derived(progressService.getLessonCompletionStats());
+  let recentProgress = $derived(progressService.getRecentDailyProgress(7));
 
   // Check for level up
-  $: {
+  $effect(() => {
     const newLevel = levelInfo.level;
     if (newLevel > (progressSummary.currentLevel || 1)) {
       levelUpMessage = `Level Up! You've reached level ${newLevel}!`;
       showLevelUpModal = true;
       confetti();
     }
-  }
+  });
 
   // Format time spent
   const formatTimeSpent = (seconds: number): string => {

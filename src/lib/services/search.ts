@@ -29,8 +29,8 @@ async function getVocabularyData(): Promise<VocabularyItem[]> {
     const collection = await loadVocabulary();
     vocabularyCache = collection.items;
     return vocabularyCache;
-  } catch (error) {
-    console.error('Failed to load vocabulary data:', error);
+  } catch (_error) {
+    // Failed to load vocabulary data
     return [];
   }
 }

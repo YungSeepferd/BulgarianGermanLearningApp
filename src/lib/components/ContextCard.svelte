@@ -1,7 +1,12 @@
- <script lang="ts">
+<script lang="ts">
 import { spring } from 'svelte/motion';
 import { getGameState } from '$lib/game.svelte';
 const gameState = getGameState();
+
+// Expose for debugging
+if (typeof window !== 'undefined') {
+  window.gameState = gameState;
+}
 
 let flipped = $state(false);
 let xRay = $state(false);

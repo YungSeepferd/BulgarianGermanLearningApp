@@ -243,7 +243,7 @@ export const UnifiedVocabularyCollectionSchema = z.object({
 /**
  * Create a fallback unified vocabulary item when validation fails
  */
-export const createFallbackUnifiedItem = (input: unknown): z.infer<typeof UnifiedVocabularyItemSchema> => {
+export const _createFallbackUnifiedItem = (input: unknown): z.infer<typeof UnifiedVocabularyItemSchema> => {
   const now = new Date();
 
   return {
@@ -268,17 +268,8 @@ export const createFallbackUnifiedItem = (input: unknown): z.infer<typeof Unifie
  * Resilient schema with fallback for failed validations
  */
 export const ResilientUnifiedVocabularyItemSchema = UnifiedVocabularyItemSchema.catch((ctx) => {
-  // Safe error logging without circular reference issues
-  const safeInput = typeof ctx.input === 'object' && ctx.input
-    ? { ...ctx.input, examples: ctx.input.examples ? '[examples]' : undefined }
-    : ctx.input;
-
-  console.warn(`Validation failed for unified vocabulary item:`, {
-    input: safeInput,
-    error: ctx.error.message
-  });
-
-  return createFallbackUnifiedItem(ctx.input);
+  // Validation failed for unified vocabulary item
+  return _createFallbackUnifiedItem(ctx.input);
 });
 
 /**
@@ -322,7 +313,7 @@ export function getDifficultyLabel(difficulty: number): string {
 /**
  * Get part of speech label
  */
-export function getPartOfSpeechLabel(partOfSpeech: PartOfSpeech): string {
+export function _getPartOfSpeechLabel(partOfSpeech: PartOfSpeech): string {
   const labels: Record<PartOfSpeech, string> = {
     noun: 'Noun',
     verb: 'Verb',
@@ -343,7 +334,7 @@ export function getPartOfSpeechLabel(partOfSpeech: PartOfSpeech): string {
 /**
  * Get category label
  */
-export function getCategoryLabel(category: VocabularyCategory): string {
+export function _getCategoryLabel(category: VocabularyCategory): string {
   const labels: Record<VocabularyCategory, string> = {
     greetings: 'Greetings',
     numbers: 'Numbers',
@@ -437,7 +428,7 @@ export function convertLegacyCategory(legacyCategory: string): VocabularyCategor
 /**
  * Normalize example format from legacy to unified
  */
-export function normalizeExample(example: any): Example {
+export function normalizeExample(example: unknown): Example {
   if (typeof example === 'object' && example) {
     // Legacy format 1: { sentence: string, translation: string, context?: string }
     if ('sentence' in example && 'translation' in example) {

@@ -5,10 +5,8 @@
  * curriculum-based lessons with robust vocabulary integration, error handling, and performance optimization.
  */
 
-import { z } from 'zod';
-import { LessonSchema, LessonDifficulty, LessonType } from '../schemas/lesson';
-import type { Lesson, LearningObjective } from '../schemas/lesson';
-import { VocabularyItemSchema } from '../schemas/vocabulary';
+import { LessonSchema } from '../schemas/lesson';
+import type { Lesson, LearningObjective, LessonDifficulty, LessonType } from '../schemas/lesson';
 import type { VocabularyItem, VocabularyCategory, PartOfSpeech } from '../schemas/vocabulary';
 import { db } from '../data/db.svelte';
 
@@ -18,7 +16,7 @@ import { db } from '../data/db.svelte';
 export class LessonService {
   private lessons: Lesson[] = [];
   private vocabularyData: VocabularyItem[] = [];
-  private initialized = $state(false);
+  private initialized = false;
 
   constructor() {
     // Initialize will be called explicitly to prevent SSR issues
@@ -35,11 +33,11 @@ export class LessonService {
       const vocabData = await db.getVocabulary();
       this.vocabularyData = vocabData;
       this.initialized = true;
-    } catch (error) {
-      console.error('Failed to initialize LessonService:', error);
+    } catch (_error) {
+      // Failed to initialize LessonService
       this.vocabularyData = [];
       this.initialized = false;
-      throw error;
+      throw _error;
     }
   }
 
@@ -146,8 +144,8 @@ export class LessonService {
         description: criteria.description
       });
 
-    } catch (error) {
-      console.error('Failed to generate lesson from criteria:', error);
+    } catch (_error) {
+      // Failed to generate lesson from criteria
       return this.createFallbackLesson('Failed to generate lesson from criteria');
     }
   }
@@ -162,7 +160,7 @@ export class LessonService {
     limit?: number;
   }): VocabularyItem[] {
     if (this.vocabularyData.length === 0) {
-      console.warn('No vocabulary data available');
+      // No vocabulary data available
       return [];
     }
 
@@ -450,11 +448,7 @@ export class LessonService {
     if (result.success) {
       return result.data;
     } else {
-      console.warn('Lesson validation failed:', {
-        error: result.error.message,
-        lessonId: lesson.id,
-        lessonTitle: lesson.title
-      });
+      // Lesson validation failed
       return this.createFallbackLesson('Lesson validation failed');
     }
   }
@@ -462,8 +456,8 @@ export class LessonService {
   /**
    * Create a fallback lesson when validation or generation fails
    */
-  private createFallbackLesson(errorMessage: string): Lesson {
-    console.warn(`Creating fallback lesson: ${errorMessage}`);
+  private createFallbackLesson(_errorMessage: string): Lesson {
+    // Creating fallback lesson
 
     return {
       id: `fallback-${Date.now()}-${crypto.randomUUID()}`,
