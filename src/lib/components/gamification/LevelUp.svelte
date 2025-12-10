@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { learningSession } from '$lib/state/session.svelte.js';
+  import { learningSession } from '$lib/state/session.svelte';
   import LevelUpModal from './LevelUpModal.svelte';
 
   let previousLevel = $state(learningSession.level);

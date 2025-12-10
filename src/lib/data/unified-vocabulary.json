@@ -95,7 +95,7 @@
       "id": "zdravej_001",
       "german": "Hallo",
       "bulgarian": "Здравей",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "interjection",
       "difficulty": 1,
       "categories": [
         "greetings"
@@ -131,7 +131,7 @@
       "id": "dobro_utro_002",
       "german": "Guten Morgen",
       "bulgarian": "Добро утро",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
         "greetings"
@@ -166,7 +166,7 @@
       "id": "guten_tag",
       "german": "Guten Tag",
       "bulgarian": "Добър ден",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
         "greetings"
@@ -194,7 +194,7 @@
       "id": "guten_abend",
       "german": "Guten Abend",
       "bulgarian": "Добър вечер",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
         "greetings"
@@ -222,7 +222,7 @@
       "id": "gute_nacht",
       "german": "Gute Nacht",
       "bulgarian": "Лека нощ",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
         "greetings"
@@ -250,7 +250,7 @@
       "id": "auf_wiedersehen",
       "german": "Auf Wiedersehen",
       "bulgarian": "Довиждане",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
         "greetings"
@@ -278,7 +278,7 @@
       "id": "bitte",
       "german": "Bitte",
       "bulgarian": "Моля",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "interjection",
       "difficulty": 1,
       "categories": [
         "common_phrases"
@@ -306,7 +306,7 @@
       "id": "entschuldigung",
       "german": "Entschuldigung",
       "bulgarian": "Извинете",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "interjection",
       "difficulty": 1,
       "categories": [
         "common_phrases"
@@ -334,7 +334,7 @@
       "id": "es_tut_mir_leid",
       "german": "Es tut mir leid",
       "bulgarian": "Съжалявам",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
         "common_phrases"
@@ -610,7 +610,7 @@
       "id": "schon",
       "german": "schön",
       "bulgarian": "Красив",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "adjective",
       "difficulty": 1,
       "categories": [
         "uncategorized"
@@ -638,7 +638,7 @@
       "id": "dann",
       "german": "dann",
       "bulgarian": "Тогава",
-      "partOfSpeech": "verb",
+      "partOfSpeech": "adverb",
       "difficulty": 1,
       "categories": [
         "uncategorized"
@@ -665,7 +665,7 @@
       "id": "schlecht_01",
       "german": "schlecht",
       "bulgarian": "Зле",
-      "partOfSpeech": "verb",
+      "partOfSpeech": "adverb",
       "difficulty": 1,
       "categories": [
         "uncategorized"
@@ -886,7 +886,7 @@
       "id": "eins",
       "german": "eins",
       "bulgarian": "Едно",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "numeral",
       "difficulty": 2,
       "categories": [
         "uncategorized"
@@ -913,7 +913,7 @@
       "id": "zwei",
       "german": "zwei",
       "bulgarian": "Две",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "numeral",
       "difficulty": 2,
       "categories": [
         "uncategorized"
@@ -940,7 +940,7 @@
       "id": "drei",
       "german": "drei",
       "bulgarian": "Три",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "numeral",
       "difficulty": 2,
       "categories": [
         "uncategorized"
@@ -967,7 +967,7 @@
       "id": "vier",
       "german": "vier",
       "bulgarian": "Четири",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "numeral",
       "difficulty": 2,
       "categories": [
         "uncategorized"
@@ -994,7 +994,7 @@
       "id": "funf",
       "german": "fünf",
       "bulgarian": "Пет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "numeral",
       "difficulty": 2,
       "categories": [
         "uncategorized"
@@ -1021,7 +1021,7 @@
       "id": "sechs",
       "german": "sechs",
       "bulgarian": "Шест",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "numeral",
       "difficulty": 2,
       "categories": [
         "uncategorized"
@@ -1048,7 +1048,7 @@
       "id": "sieben",
       "german": "sieben",
       "bulgarian": "Седем",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "numeral",
       "difficulty": 2,
       "categories": [
         "uncategorized"
@@ -1075,7 +1075,7 @@
       "id": "acht",
       "german": "acht",
       "bulgarian": "Осем",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "numeral",
       "difficulty": 2,
       "categories": [
         "uncategorized"
@@ -1102,7 +1102,7 @@
       "id": "neun",
       "german": "neun",
       "bulgarian": "Девет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "numeral",
       "difficulty": 2,
       "categories": [
         "uncategorized"
@@ -1129,7 +1129,7 @@
       "id": "zehn",
       "german": "zehn",
       "bulgarian": "Десет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "numeral",
       "difficulty": 2,
       "categories": [
         "uncategorized"
@@ -1156,7 +1156,7 @@
       "id": "elf",
       "german": "elf",
       "bulgarian": "Единадесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "numeral",
       "difficulty": 1,
       "categories": [
         "uncategorized"
@@ -1191,7 +1191,7 @@
       "id": "zwoelf",
       "german": "zwölf",
       "bulgarian": "Дванадесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "numeral",
       "difficulty": 1,
       "categories": [
         "uncategorized"
@@ -1226,7 +1226,7 @@
       "id": "dreizehn",
       "german": "dreizehn",
       "bulgarian": "Тринадесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "numeral",
       "difficulty": 1,
       "categories": [
         "uncategorized"
@@ -1261,7 +1261,7 @@
       "id": "zwanzig",
       "german": "zwanzig",
       "bulgarian": "Двадесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "numeral",
       "difficulty": 1,
       "categories": [
         "uncategorized"
@@ -1296,7 +1296,7 @@
       "id": "viele",
       "german": "viele",
       "bulgarian": "Много",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "pronoun",
       "difficulty": 2,
       "categories": [
         "uncategorized"
@@ -1323,7 +1323,7 @@
       "id": "wenig",
       "german": "wenig",
       "bulgarian": "Малко",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "pronoun",
       "difficulty": 2,
       "categories": [
         "uncategorized"
@@ -1350,7 +1350,7 @@
       "id": "alle",
       "german": "alle",
       "bulgarian": "Всички",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "pronoun",
       "difficulty": 2,
       "categories": [
         "uncategorized"
@@ -1377,7 +1377,7 @@
       "id": "einige",
       "german": "einige",
       "bulgarian": "Няколко",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "pronoun",
       "difficulty": 2,
       "categories": [
         "uncategorized"
@@ -1404,7 +1404,7 @@
       "id": "keiner",
       "german": "keiner",
       "bulgarian": "Никой",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "pronoun",
       "difficulty": 2,
       "categories": [
         "uncategorized"
@@ -2393,7 +2393,7 @@
       "id": "a1_number_200",
       "german": "zweihundert",
       "bulgarian": "Двеста",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "numeral",
       "difficulty": 1,
       "categories": [
         "numbers"
@@ -2565,7 +2565,7 @@
       "id": "a1_question_001",
       "german": "wer",
       "bulgarian": "Кой",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "pronoun",
       "difficulty": 1,
       "categories": [
         "uncategorized"
@@ -3508,7 +3508,7 @@
       "id": "a1_question_010",
       "german": "woher",
       "bulgarian": "Откъде",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "adverb",
       "difficulty": 1,
       "categories": [
         "uncategorized"
@@ -3557,7 +3557,7 @@
       "id": "a1_question_011",
       "german": "wohin",
       "bulgarian": "Накъде",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "adverb",
       "difficulty": 1,
       "categories": [
         "uncategorized"
@@ -3606,7 +3606,7 @@
       "id": "a1_question_012",
       "german": "ob",
       "bulgarian": "Дали",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "conjunction",
       "difficulty": 2,
       "categories": [
         "uncategorized"

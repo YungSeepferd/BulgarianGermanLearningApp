@@ -1,0 +1,290 @@
+
+> bulgarian-german-learning-app@1.0.0 lint:check /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh
+> eslint . src/lib/ src/routes/ src/lib/components/
+
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/debug-enhanced-lesson.ts
+   8:3  warning  Unexpected console statement  no-console
+  12:3  warning  Unexpected console statement  no-console
+  24:5  warning  Unexpected console statement  no-console
+  28:5  warning  Unexpected console statement  no-console
+  29:5  warning  Unexpected console statement  no-console
+  30:5  warning  Unexpected console statement  no-console
+  33:7  warning  Unexpected console statement  no-console
+  34:7  warning  Unexpected console statement  no-console
+  38:5  warning  Unexpected console statement  no-console
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/debug-template.ts
+   6:1  warning  Unexpected console statement  no-console
+   7:1  warning  Unexpected console statement  no-console
+  13:3  warning  Unexpected console statement  no-console
+  14:3  warning  Unexpected console statement  no-console
+  15:3  warning  Unexpected console statement  no-console
+  18:3  warning  Unexpected console statement  no-console
+  22:1  warning  Unexpected console statement  no-console
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/scripts/migrate-vocabulary.ts
+  100:3  warning  Unexpected console statement  no-console
+  107:3  warning  Unexpected console statement  no-console
+  108:3  warning  Unexpected console statement  no-console
+  109:3  warning  Unexpected console statement  no-console
+  113:3  warning  Unexpected console statement  no-console
+  118:3  warning  Unexpected console statement  no-console
+  135:3  warning  Unexpected console statement  no-console
+  139:3  warning  Unexpected console statement  no-console
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/scripts/simple-test.ts
+  11:5  warning  Unexpected console statement  no-console
+  20:5  warning  Unexpected console statement  no-console
+  21:5  warning  Unexpected console statement  no-console
+  22:5  warning  Unexpected console statement  no-console
+  23:5  warning  Unexpected console statement  no-console
+  24:5  warning  Unexpected console statement  no-console
+  27:5  warning  Unexpected console statement  no-console
+  30:7  warning  Unexpected console statement  no-console
+  31:7  warning  Unexpected console statement  no-console
+  35:5  warning  Unexpected console statement  no-console
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/scripts/test-unified-loader.ts
+  10:5  warning  Unexpected console statement  no-console
+  15:5  warning  Unexpected console statement  no-console
+  17:5  warning  Unexpected console statement  no-console
+  19:7  warning  Unexpected console statement  no-console
+  20:7  warning  Unexpected console statement  no-console
+  21:7  warning  Unexpected console statement  no-console
+  25:5  warning  Unexpected console statement  no-console
+  27:5  warning  Unexpected console statement  no-console
+  29:7  warning  Unexpected console statement  no-console
+  33:5  warning  Unexpected console statement  no-console
+  35:5  warning  Unexpected console statement  no-console
+  37:7  warning  Unexpected console statement  no-console
+  41:5  warning  Unexpected console statement  no-console
+  43:5  warning  Unexpected console statement  no-console
+  45:7  warning  Unexpected console statement  no-console
+  49:5  warning  Unexpected console statement  no-console
+  53:9  warning  Unexpected console statement  no-console
+  55:9  warning  Unexpected console statement  no-console
+  60:5  warning  Unexpected console statement  no-console
+  63:7  warning  Unexpected console statement  no-console
+  64:7  warning  Unexpected console statement  no-console
+  65:7  warning  Unexpected console statement  no-console
+  66:7  warning  Unexpected console statement  no-console
+  67:7  warning  Unexpected console statement  no-console
+  69:9  warning  Unexpected console statement  no-console
+  72:9  warning  Unexpected console statement  no-console
+  75:9  warning  Unexpected console statement  no-console
+  79:5  warning  Unexpected console statement  no-console
+  80:5  warning  Unexpected console statement  no-console
+  83:5  warning  Unexpected console statement  no-console
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/scripts/vocabulary-migration/debug-conversion.ts
+  10:3  warning  Unexpected console statement  no-console
+  19:3  warning  Unexpected console statement  no-console
+  21:3  warning  Unexpected console statement  no-console
+  22:3  warning  Unexpected console statement  no-console
+  34:3  warning  Unexpected console statement  no-console
+  36:3  warning  Unexpected console statement  no-console
+  37:3  warning  Unexpected console statement  no-console
+  49:3  warning  Unexpected console statement  no-console
+  51:3  warning  Unexpected console statement  no-console
+  60:3  warning  Unexpected console statement  no-console
+  62:3  warning  Unexpected console statement  no-console
+  71:3  warning  Unexpected console statement  no-console
+  75:5  warning  Unexpected console statement  no-console
+  84:3  warning  Unexpected console statement  no-console
+  88:5  warning  Unexpected console statement  no-console
+  99:3  warning  Unexpected console statement  no-console
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/scripts/vocabulary-migration/migration-script.ts
+   86:52  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  114:3   warning  Unexpected console statement              no-console
+  156:5   warning  Unexpected console statement              no-console
+  161:5   warning  Unexpected console statement              no-console
+  176:5   warning  Unexpected console statement              no-console
+  200:5   warning  Unexpected console statement              no-console
+  212:5   warning  Unexpected console statement              no-console
+  222:5   warning  Unexpected console statement              no-console
+  268:3   warning  Unexpected console statement              no-console
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/scripts/vocabulary-migration/test-migration.ts
+  207:5  warning  Unexpected console statement  no-console
+  211:5  warning  Unexpected console statement  no-console
+  215:5  warning  Unexpected console statement  no-console
+  219:5  warning  Unexpected console statement  no-console
+  223:5  warning  Unexpected console statement  no-console
+  227:5  warning  Unexpected console statement  no-console
+  230:5  warning  Unexpected console statement  no-console
+  337:5  warning  Unexpected console statement  no-console
+  338:5  warning  Unexpected console statement  no-console
+  339:5  warning  Unexpected console statement  no-console
+  343:5  warning  Unexpected console statement  no-console
+  344:5  warning  Unexpected console statement  no-console
+  534:3  warning  Unexpected console statement  no-console
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/scripts/vocabulary-migration/test-transformation.ts
+  51:1  warning  Unexpected console statement  no-console
+  52:1  warning  Unexpected console statement  no-console
+  55:3  warning  Unexpected console statement  no-console
+  56:3  warning  Unexpected console statement  no-console
+  60:5  warning  Unexpected console statement  no-console
+  64:7  warning  Unexpected console statement  no-console
+  65:7  warning  Unexpected console statement  no-console
+  67:7  warning  Unexpected console statement  no-console
+  68:7  warning  Unexpected console statement  no-console
+  71:5  warning  Unexpected console statement  no-console
+  75:1  warning  Unexpected console statement  no-console
+  76:1  warning  Unexpected console statement  no-console
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/scripts/vocabulary-migration/test-unified-vocabulary.ts
+   23:5  warning  Unexpected console statement  no-console
+   24:5  warning  Unexpected console statement  no-console
+   25:5  warning  Unexpected console statement  no-console
+   26:5  warning  Unexpected console statement  no-console
+   27:5  warning  Unexpected console statement  no-console
+   28:5  warning  Unexpected console statement  no-console
+   31:5  warning  Unexpected console statement  no-console
+   33:5  warning  Unexpected console statement  no-console
+   35:7  warning  Unexpected console statement  no-console
+   36:7  warning  Unexpected console statement  no-console
+   37:7  warning  Unexpected console statement  no-console
+   39:5  warning  Unexpected console statement  no-console
+   42:5  warning  Unexpected console statement  no-console
+   44:5  warning  Unexpected console statement  no-console
+   46:7  warning  Unexpected console statement  no-console
+   47:7  warning  Unexpected console statement  no-console
+   49:5  warning  Unexpected console statement  no-console
+   52:5  warning  Unexpected console statement  no-console
+   54:5  warning  Unexpected console statement  no-console
+   56:7  warning  Unexpected console statement  no-console
+   58:5  warning  Unexpected console statement  no-console
+   61:5  warning  Unexpected console statement  no-console
+   63:5  warning  Unexpected console statement  no-console
+   65:7  warning  Unexpected console statement  no-console
+   67:5  warning  Unexpected console statement  no-console
+   70:5  warning  Unexpected console statement  no-console
+   74:5  warning  Unexpected console statement  no-console
+   75:5  warning  Unexpected console statement  no-console
+   76:5  warning  Unexpected console statement  no-console
+   77:5  warning  Unexpected console statement  no-console
+   80:5  warning  Unexpected console statement  no-console
+   83:5  warning  Unexpected console statement  no-console
+   84:5  warning  Unexpected console statement  no-console
+   86:7  warning  Unexpected console statement  no-console
+   88:5  warning  Unexpected console statement  no-console
+   91:5  warning  Unexpected console statement  no-console
+   93:5  warning  Unexpected console statement  no-console
+   98:7  warning  Unexpected console statement  no-console
+  100:5  warning  Unexpected console statement  no-console
+  103:5  warning  Unexpected console statement  no-console
+  106:7  warning  Unexpected console statement  no-console
+  107:7  warning  Unexpected console statement  no-console
+  108:7  warning  Unexpected console statement  no-console
+  109:7  warning  Unexpected console statement  no-console
+  110:7  warning  Unexpected console statement  no-console
+  112:9  warning  Unexpected console statement  no-console
+  115:9  warning  Unexpected console statement  no-console
+  118:9  warning  Unexpected console statement  no-console
+  121:5  warning  Unexpected console statement  no-console
+  124:5  warning  Unexpected console statement  no-console
+  127:5  warning  Unexpected console statement  no-console
+  128:5  warning  Unexpected console statement  no-console
+  129:5  warning  Unexpected console statement  no-console
+  130:5  warning  Unexpected console statement  no-console
+  133:5  warning  Unexpected console statement  no-console
+  137:5  warning  Unexpected console statement  no-console
+  138:5  warning  Unexpected console statement  no-console
+  139:5  warning  Unexpected console statement  no-console
+  140:5  warning  Unexpected console statement  no-console
+  142:5  warning  Unexpected console statement  no-console
+  143:5  warning  Unexpected console statement  no-console
+  146:5  warning  Unexpected console statement  no-console
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/lib/data/db.svelte.js
+  2:10  error  'loadVocabulary' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/lib/data/loader.ts
+  30:5   warning  Unexpected console statement                                                             no-console
+  36:7   warning  Unexpected console statement                                                             no-console
+  41:9   warning  Unexpected console statement                                                             no-console
+  43:16  error    'bundledError' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/lib/game.svelte.d.ts
+  11:18  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/lib/game.svelte.ts
+  25:4   warning  Unexpected console statement                                                      no-console
+  27:4   warning  Unexpected console statement                                                      no-console
+  29:4   warning  Unexpected console statement                                                      no-console
+  31:12  error    'error' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/lib/schemas/lesson.d.ts
+    3:9   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+    6:19  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+    8:41  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+    9:15  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   15:18  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   27:18  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   38:5   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   59:44  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   60:45  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   64:20  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   65:21  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   69:21  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   70:22  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   74:9   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   81:13  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   84:23  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   86:45  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   87:19  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   93:22  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  105:22  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  116:9   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  140:48  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  141:49  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  145:24  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  146:25  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  150:25  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  151:26  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  155:18  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  171:18  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/lib/schemas/localStorage.d.ts
+  110:14  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  113:18  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  118:18  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/lib/schemas/unified-vocabulary.d.ts
+  12:51  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  17:23  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  22:12  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  30:12  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/lib/state/app.svelte.d.ts
+  18:20  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  19:23  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  20:30  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/lib/utils.d.ts
+  4:13  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  7:16  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/paraglide/runtime.d.ts
+   25:34  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   33:39  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  135:40  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  305:44  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  314:54  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  323:54  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  385:24  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  564:12  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  564:20  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/test-simple-renderer.ts
+  30:3  warning  Unexpected console statement  no-console
+  31:3  warning  Unexpected console statement  no-console
+  32:3  warning  Unexpected console statement  no-console
+  34:3  warning  Unexpected console statement  no-console
+
+✖ 240 problems (3 errors, 237 warnings)
+
+ ELIFECYCLE  Command failed with exit code 1.

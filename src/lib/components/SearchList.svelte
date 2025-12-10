@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { VocabularyItem } from '$lib/types/vocabulary.js';
+  import type { VocabularyItem } from '$lib/types/vocabulary';
   import { fade, fly } from 'svelte/transition';
   import { flip } from 'svelte/animate';
-  import { appState } from '$lib/state/app.svelte.js';
+  import { appState } from '$lib/state/app-state';
 
   let {
     items = [],

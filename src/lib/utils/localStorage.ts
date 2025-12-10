@@ -5,6 +5,9 @@ import {
   safeValidateUserProgressStorage,
   isPracticeStat
 } from '$lib/schemas/localStorage';
+import { PracticeSessionSchema } from '$lib/schemas/vocabulary';
+import { StorageError, ErrorHandler } from '../services/errors';
+import { EventBus } from '../services/event-bus';
 
 /**
  * LocalStorage utility class for managing user progress
@@ -17,12 +20,14 @@ export class LocalStorageManager {
   /**
    * Save user progress to localStorage
    * @param progress Object containing user progress data
+   * @param eventBus Optional event bus for error handling
+   * @throws StorageError if saving fails
    */
   public static saveUserProgress(progress: {
     stats: Map<string, { correct: number; incorrect: number; lastPracticed: string }>;
     favorites: string[];
     recentSearches: string[];
-  }): void {
+  }, eventBus?: EventBus): void {
     try {
         const serializedStats = Array.from(progress.stats.entries()).map(([id, data]) => ({
             id,
@@ -41,25 +46,26 @@ export class LocalStorageManager {
         // Validate before saving
         const validationResult = UserProgressStorageSchema.safeParse(dataToSave);
         if (!validationResult.success) {
-            // Validation failed for user progress data
-            throw new Error('Invalid user progress data');
+            throw new StorageError('Invalid user progress data', { validationResult });
         }
 
         localStorage.setItem(
             LocalStorageManager.USER_PROGRESS_KEY,
             JSON.stringify(dataToSave)
         );
-    } catch (_error) {
-        // Failed to save user progress
-        // Silently fail if saving user progress fails
+    } catch (error) {
+        ErrorHandler.handleError(error, 'Failed to save user progress', eventBus);
+        throw new StorageError('Failed to save user progress', { error });
     }
   }
 
   /**
    * Load user progress from localStorage
+   * @param eventBus Optional event bus for error handling
    * @returns Object containing user progress data or null if not found
+   * @throws StorageError if loading fails
    */
-  public static loadUserProgress(): {
+  public static loadUserProgress(eventBus?: EventBus): {
     stats: Map<string, { correct: number; incorrect: number; lastPracticed: string }>;
     favorites: string[];
     recentSearches: string[];
@@ -74,8 +80,7 @@ export class LocalStorageManager {
         // Validate parsed data with Zod
         const validationResult = safeValidateUserProgressStorage(parsedData);
         if (!validationResult.success) {
-            // Invalid user progress data
-            return null;
+            throw new StorageError('Invalid user progress data format', { validationResult });
         }
 
         // Convert stats array back to Map with type safety
@@ -96,41 +101,43 @@ export class LocalStorageManager {
             recentSearches: validationResult.data.recentSearches || [],
             lastUpdated: validationResult.data.lastUpdated
         };
-    } catch (_error) {
-        // Failed to load user progress
-        // Silently fail if loading user progress fails
-        return null;
+    } catch (error) {
+        ErrorHandler.handleError(error, 'Failed to load user progress', eventBus);
+        throw new StorageError('Failed to load user progress', { error });
     }
   }
 
   /**
    * Save active practice session to localStorage
    * @param session Practice session data to save
+   * @param eventBus Optional event bus for error handling
+   * @throws StorageError if saving fails
    */
-  public static savePracticeSession(session: PracticeSession): void {
+  public static savePracticeSession(session: PracticeSession, eventBus?: EventBus): void {
     try {
         // Validate practice session before saving
         const result = PracticeSessionSchema.safeParse(session);
         if (!result.success) {
-            // Invalid practice session data
-            throw new Error('Invalid practice session data');
+            throw new StorageError('Invalid practice session data', { result });
         }
 
         localStorage.setItem(
             LocalStorageManager.SESSION_KEY,
             JSON.stringify(session)
         );
-    } catch (_error) {
-        // Failed to save practice session
-        // Silently fail if saving practice session fails
+    } catch (error) {
+        ErrorHandler.handleError(error, 'Failed to save practice session', eventBus);
+        throw new StorageError('Failed to save practice session', { error });
     }
   }
 
   /**
    * Load active practice session from localStorage
+   * @param eventBus Optional event bus for error handling
    * @returns Practice session data or null if not found
+   * @throws StorageError if loading fails
    */
-  public static loadPracticeSession(): PracticeSession | null {
+  public static loadPracticeSession(eventBus?: EventBus): PracticeSession | null {
     try {
         const data = localStorage.getItem(LocalStorageManager.SESSION_KEY);
         if (!data) return null;
@@ -138,84 +145,92 @@ export class LocalStorageManager {
         const parsedData = JSON.parse(data);
         const result = PracticeSessionSchema.safeParse(parsedData);
         if (!result.success) {
-            // Invalid practice session data
-            return null;
+            throw new StorageError('Invalid practice session data format', { result });
         }
 
         return result.data;
-    } catch (_error) {
-        // Failed to load practice session
-        // Silently fail if loading practice session fails
-        return null;
+    } catch (error) {
+        ErrorHandler.handleError(error, 'Failed to load practice session', eventBus);
+        throw new StorageError('Failed to load practice session', { error });
     }
   }
 
   /**
    * Clear active practice session from localStorage
+   * @param eventBus Optional event bus for error handling
+   * @throws StorageError if clearing fails
    */
-  public static clearPracticeSession(): void {
+  public static clearPracticeSession(eventBus?: EventBus): void {
     try {
         localStorage.removeItem(LocalStorageManager.SESSION_KEY);
-    } catch (_error) {
-        // Silently fail if clearing practice session fails
+    } catch (error) {
+        ErrorHandler.handleError(error, 'Failed to clear practice session', eventBus);
+        throw new StorageError('Failed to clear practice session', { error });
     }
   }
 
   /**
    * Export user data as JSON string
+   * @param eventBus Optional event bus for error handling
    * @returns JSON string containing all user data
+   * @throws StorageError if exporting fails
    */
-  public static exportUserData(): string {
+  public static exportUserData(eventBus?: EventBus): string {
     try {
-        const progress = this.loadUserProgress();
-        const session = this.loadPracticeSession();
-    
+        const progress = this.loadUserProgress(eventBus);
+        const session = this.loadPracticeSession(eventBus);
+
         return JSON.stringify({
             progress,
             session,
             exportedAt: new Date().toISOString()
         }, null, 2);
-    } catch (_error) {
-        // Silently fail if exporting user data fails
-        throw new Error('Failed to export user data');
+    } catch (error) {
+        ErrorHandler.handleError(error, 'Failed to export user data', eventBus);
+        throw new StorageError('Failed to export user data', { error });
     }
   }
 
   /**
    * Import user data from JSON string
    * @param jsonData JSON string containing user data
+   * @param eventBus Optional event bus for error handling
+   * @throws StorageError if importing fails
    */
-  public static importUserData(jsonData: string): void {
+  public static importUserData(jsonData: string, eventBus?: EventBus): void {
     try {
         const data = JSON.parse(jsonData);
-    
+
         if (data.progress) {
             this.saveUserProgress({
                 stats: data.progress.stats,
                 favorites: data.progress.favorites,
                 recentSearches: data.progress.recentSearches
-            });
+            }, eventBus);
         }
-    
+
         if (data.session) {
-            this.savePracticeSession(data.session);
+            this.savePracticeSession(data.session, eventBus);
         }
-    } catch (_error) {
-        // Silently fail if importing user data fails
-        throw new Error('Failed to import user data');
+    } catch (error) {
+        ErrorHandler.handleError(error, 'Failed to import user data', eventBus);
+        throw new StorageError('Failed to import user data', { error });
     }
   }
 
   /**
    * Clear all tandem-related data from localStorage
+   * @param eventBus Optional event bus for error handling
+   * @throws StorageError if clearing fails
    */
-  public static clearAllData(): void {
+  public static clearAllData(eventBus?: EventBus): void {
     try {
         Object.keys(localStorage)
             .filter(key => key.startsWith(LocalStorageManager.PREFIX))
             .forEach(key => localStorage.removeItem(key));
-    } catch (_error) {
-        // Silently fail if clearing all data fails
+    } catch (error) {
+        ErrorHandler.handleError(error, 'Failed to clear all user data', eventBus);
+        throw new StorageError('Failed to clear all user data', { error });
     }
   }
 }

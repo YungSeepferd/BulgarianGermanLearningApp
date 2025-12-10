@@ -1,56 +1,76 @@
 import { browser } from '$app/environment';
+import { Debug } from '$lib/utils';
+import { diContainer } from '../services/di-container';
+import { EventBus, EventTypes } from '../services/event-bus';
+import { StateError, StorageError, ErrorHandler } from '../services/errors';
+import { calculateLevel, calculateXPForLevel } from '../schemas/progress';
 
 const DAILY_XP_TARGET = 50;
 const XP_PER_WORD = 10;
 
 export class LearningSession {
-    // Session State
-    // isActive = $state(false);
-    // currentStreak = $state(0);
-    // sessionXP = $state(0);
-    // dailyXP = $state(0);
-    // totalXP = $state(0); // New: Persisted total XP
-    // lastPracticeDate = $state<string | null>(null);
-    isActive = false;
-    currentStreak = 0;
-    sessionXP = 0;
-    dailyXP = 0;
-    totalXP = 0;
-    lastPracticeDate: string | null = null;
-    
+    // Session State with proper typing
+    isActive = $state<boolean>(false);
+    currentStreak = $state<number>(0);
+    sessionXP = $state<number>(0);
+    dailyXP = $state<number>(0);
+    lastPracticeDate = $state<string | null>(null);
+
     // Gamification
     dailyTarget = DAILY_XP_TARGET;
-    
-    // Level System (Derived)
-    // Level 1: 0-100 XP
-    // Level 2: 101-300 XP (200 XP gap)
-    // Level 3: 301-600 XP (300 XP gap)
-    // Formula: Level = Math.floor(Math.sqrt(totalXP / 100)) + 1
-    // or simplified buckets for now
-    
-    // level = $derived(this.calculateLevel(this.totalXP));
-    // nextLevelXP = $derived(this.calculateNextLevelXP(this.level));
-    // currentLevelStartXP = $derived(this.calculateLevelStartXP(this.level));
-    level = 0;
-    nextLevelXP = 0;
-    currentLevelStartXP = 0;
-    
-    // levelProgress = $derived.by(() => {
-    //     const xpInLevel = this.totalXP - this.currentLevelStartXP;
-    //     const levelSpan = this.nextLevelXP - this.currentLevelStartXP;
-    //     return Math.min(100, Math.max(0, (xpInLevel / levelSpan) * 100));
-    // });
-    //
-    // progressPercentage = $derived(Math.min(100, (this.dailyXP / this.dailyTarget) * 100));
-    // isDailyGoalReached = $derived(this.dailyXP >= this.dailyTarget);
-    levelProgress = 0;
-    progressPercentage = 0;
-    isDailyGoalReached = false;
+
+    // Reference to ProgressService for total XP
+    private progressService = diContainer.getService('progressService');
+    private xpEventUnsubscribe: (() => void) | null = null;
+
+    // Level System (Derived) with memoization
+    level = $derived.by(() => calculateLevel(this.getTotalXP()));
+    nextLevelXP = $derived.by(() => calculateXPForLevel(this.level + 1));
+    currentLevelStartXP = $derived.by(() => calculateXPForLevel(this.level));
+
+    levelProgress = $derived.by(() => {
+        const totalXP = this.getTotalXP();
+        const xpInLevel = totalXP - this.currentLevelStartXP;
+        const levelSpan = this.nextLevelXP - this.currentLevelStartXP;
+
+        // Ensure we don't divide by zero and return a valid percentage
+        if (levelSpan <= 0) return 0;
+        return Math.min(100, Math.max(0, (xpInLevel / levelSpan) * 100));
+    });
+
+    progressPercentage = $derived.by(() => {
+        // Ensure we don't divide by zero
+        if (this.dailyTarget <= 0) return 0;
+        return Math.min(100, (this.dailyXP / this.dailyTarget) * 100);
+    });
+    isDailyGoalReached = $derived(this.dailyXP >= this.dailyTarget);
 
     constructor() {
         if (browser) {
             this.loadState();
         }
+
+        // Subscribe to XP events with proper typing
+        const eventBus = diContainer.getService<EventBus>('eventBus');
+        this.xpEventUnsubscribe = eventBus.subscribe(EventTypes.XP_EARNED, (event: { amount: number }) => {
+            this.handleXPEarned(event.amount);
+        });
+
+        // Initialize derived values with cleanup
+        $effect(() => {
+            // This effect ensures derived values are calculated on initialization
+            this.level;
+            this.nextLevelXP;
+            this.currentLevelStartXP;
+            this.levelProgress;
+            this.progressPercentage;
+            this.isDailyGoalReached;
+
+            // Return cleanup function
+            return () => {
+                // Cleanup any resources if needed
+            };
+        });
     }
 
     startSession() {
@@ -64,165 +84,177 @@ export class LearningSession {
         this.saveState();
     }
 
-    awardXP(amount: number = XP_PER_WORD) {
+    /**
+     * Award XP for the current session
+     * @param amount Amount of XP to award (default: XP_PER_WORD)
+     * @returns boolean indicating if a level up occurred
+     * @throws StateError if the amount is invalid
+     */
+    awardXP(amount: number = XP_PER_WORD): boolean {
+        // Validate input
+        if (typeof amount !== 'number' || amount <= 0 || !Number.isFinite(amount)) {
+            throw new StateError('Invalid XP amount', { amount });
+        }
+
         this.sessionXP += amount;
         this.dailyXP += amount;
-        this.totalXP += amount;
         this.saveState();
-        return this.checkLevelUp(); // Return true if level up occurred
+        return false; // Level up is now handled by event listeners
     }
 
-    // Helper: Simple linear-ish progression
-    // Level 1: 0 - 200
-    // Level 2: 200 - 500 (+300)
-    // Level 3: 500 - 900 (+400)
-    // ...
+    /**
+     * Calculate the current level based on total XP
+     * @param xp Total XP
+     * @returns Current level
+     */
     private calculateLevel(xp: number): number {
-        let level = 1;
-        let threshold = 200;
-        let gap = 300;
-        
-        while (xp >= threshold) {
-            level++;
-            threshold += gap;
-            gap += 100; // Increase gap by 100 each level
-        }
-        return level;
+        return calculateLevel(xp);
     }
 
-    private calculateNextLevelXP(level: number): number {
-        let l = 1;
-        let threshold = 200;
-        let gap = 300;
-        
-        while (l < level) {
-            l++;
-            threshold += gap;
-            gap += 100;
-        }
-        return threshold;
+    /**
+     * Handle XP earned event from ProgressService
+     * @param amount Amount of XP earned
+     */
+    private handleXPEarned(amount: number) {
+        // Reset daily XP if it's a new day
+        this.checkStreak();
+
+        // The actual XP tracking is handled by ProgressService
+        // We just need to update our derived state
     }
 
-    private calculateLevelStartXP(level: number): number {
-        if (level === 1) return 0;
-        
-        let l = 1;
-        let _threshold = 200;
-        let gap = 300;
-        
-        // Calculate end of previous level
-        while (l < level) {
-            l++;
-            _threshold += gap;
-            gap += 100;
+    /**
+     * Get the total XP from ProgressService
+     * @returns Total XP
+     */
+    getTotalXP(): number {
+        try {
+            const progressData = this.progressService.getProgressData();
+            return progressData.overallProgress.totalXP;
+        } catch (error) {
+            console.error('Failed to get total XP from ProgressService:', error);
+            return 0;
         }
-        
-        // Start of current level is end of previous level?
-        // Re-calculating to be safe:
-        // Level 1 starts at 0
-        // Level 2 starts at 200
-        // Level 3 starts at 500
-        
-        // The loop above actually calculates the threshold to REACH the next level.
-        // So for level 2, the threshold calculated in prev loop step (when l=1) was 200.
-        
-        // Let's redo simply:
-        let _currentGap = 200; // Gap for level 1
-        
-        for (let i = 1; i < level; i++) {
-            _currentGap += 100; // Increment gap for next level
-        }
-        
-        // Correction: My manual calculation above for calculateLevel used:
-        // L1: 0-200 (gap 200? wait code said threshold 200, gap 300 for NEXT)
-        // Let's stick to the code logic in calculateLevel:
-        // Start: level=1, threshold=200.
-        // If xp < 200 -> Level 1.
-        // If xp >= 200 -> Level 2. Next threshold = 200 + 300 = 500.
-        // If xp >= 500 -> Level 3. Next threshold = 500 + 400 = 900.
-        
-        // So start of Level 1 = 0.
-        // Start of Level 2 = 200.
-        // Start of Level 3 = 500.
-        
-        if (level === 1) return 0;
-        
-        let xp = 200;
-        let g = 300;
-        for (let i = 2; i < level; i++) {
-            xp += g;
-            g += 100;
-        }
-        return xp;
     }
 
-    private checkLevelUp(): boolean {
-        // This is purely for side-effects if needed, or the UI can react to $derived level change
-        // We might want to return true to trigger an animation
-        return false; // Logic handled reactively in UI
-    }
+    /**
+     * Check and update streak information
+     * @throws StateError if date operations fail
+     */
+    private checkStreak(): void {
+        try {
+            const today = new Date().toISOString().split('T')[0];
 
-    // Streak Logic
-    private checkStreak() {
-        const today = new Date().toISOString().split('T')[0];
-        
-        if (today && this.lastPracticeDate === today) return; // Already practiced today
+            if (!today) {
+                throw new Error('Failed to get current date');
+            }
 
-        const yesterday = new Date();
-        yesterday.setDate(yesterday.getDate() - 1);
-        const yesterdayStr = yesterday.toISOString().split('T')[0];
+            if (this.lastPracticeDate === today) return; // Already practiced today
 
-        if (yesterdayStr && this.lastPracticeDate === yesterdayStr) {
-            // Continued streak
-            this.currentStreak++;
-        } else if (this.lastPracticeDate && yesterdayStr && this.lastPracticeDate < yesterdayStr) {
-            // Streak broken
-            this.currentStreak = 1;
-        } else {
-            // First time or fresh start
-            if (this.currentStreak === 0) this.currentStreak = 1;
+            const yesterday = new Date();
+            yesterday.setDate(yesterday.getDate() - 1);
+            const yesterdayStr = yesterday.toISOString().split('T')[0];
+
+            if (!yesterdayStr) {
+                throw new Error('Failed to get yesterday date');
+            }
+
+            if (this.lastPracticeDate === yesterdayStr) {
+                // Continued streak
+                this.currentStreak++;
+            } else if (this.lastPracticeDate && this.lastPracticeDate < yesterdayStr) {
+                // Streak broken
+                this.currentStreak = 1;
+            } else {
+                // First time or fresh start
+                if (this.currentStreak === 0) this.currentStreak = 1;
+            }
+
+            this.lastPracticeDate = today;
+            this.saveState();
+        } catch (error) {
+            ErrorHandler.handleError(error, 'Failed to check streak');
+            throw new StateError('Failed to check streak', { error });
         }
-
-        this.lastPracticeDate = today || null;
-        this.saveState();
     }
 
     // Persistence
-    private loadState() {
+    /**
+     * Load the session state from localStorage
+     * @throws StorageError if loading fails
+     */
+    private loadState(): void {
+        if (!browser) return;
+
         try {
             const saved = localStorage.getItem('learning-session');
             if (saved) {
                 const parsed = JSON.parse(saved);
-                this.currentStreak = parsed.currentStreak || 0;
-                this.lastPracticeDate = parsed.lastPracticeDate || null;
-                this.totalXP = parsed.totalXP || 0; // Load total XP
-                
+
+                // Validate and set state with proper typing
+                this.currentStreak = typeof parsed.currentStreak === 'number' ? parsed.currentStreak : 0;
+                this.lastPracticeDate = typeof parsed.lastPracticeDate === 'string' ? parsed.lastPracticeDate : null;
+                this.dailyXP = typeof parsed.dailyXP === 'number' ? parsed.dailyXP : 0;
+
                 // Reset daily XP if it's a new day
                 const today = new Date().toISOString().split('T')[0];
-                if (parsed.lastPracticeDate === today) {
-                    this.dailyXP = parsed.dailyXP || 0;
-                } else {
+                if (parsed.lastPracticeDate !== today) {
                     this.dailyXP = 0;
                 }
             }
-        } catch (_e) {
-            // Silently fail on load errors
+        } catch (error) {
+            ErrorHandler.handleError(error, 'Failed to load learning session state');
+            // Re-throw to allow application to handle initialization failure
+            throw new StorageError('Failed to load learning session state', {
+                error,
+                hasSavedData: saved !== null
+            });
         }
     }
 
-    private saveState() {
+    /**
+     * Save the current session state to localStorage
+     * @throws StorageError if saving fails
+     */
+    private saveState(): void {
         if (!browser) return;
         try {
+            // Validate state before saving
+            if (typeof this.currentStreak !== 'number' || typeof this.dailyXP !== 'number') {
+                throw new Error('Invalid session state: numbers expected');
+            }
+
             localStorage.setItem('learning-session', JSON.stringify({
                 currentStreak: this.currentStreak,
                 dailyXP: this.dailyXP,
-                lastPracticeDate: this.lastPracticeDate,
-                totalXP: this.totalXP // Save total XP
+                lastPracticeDate: this.lastPracticeDate
             }));
-        } catch (_e) {
-            // Silently fail on save errors
+        } catch (error) {
+            ErrorHandler.handleError(error, 'Failed to save learning session state');
+            throw new StorageError('Failed to save learning session state', {
+                error,
+                currentStreakType: typeof this.currentStreak,
+                dailyXPType: typeof this.dailyXP,
+                lastPracticeDateType: typeof this.lastPracticeDate
+            });
         }
     }
 }
 
+    destroy(): void {
+        Debug.log('LearningSession', 'Destroying LearningSession, cleaning up resources');
+        if (this.xpEventUnsubscribe) {
+            this.xpEventUnsubscribe();
+            this.xpEventUnsubscribe = null;
+        }
+    }
+
+// Create singleton instance
 export const learningSession = new LearningSession();
+
+// Add cleanup for application shutdown
+if (browser) {
+    window.addEventListener('beforeunload', () => {
+        learningSession.destroy();
+    });
+}

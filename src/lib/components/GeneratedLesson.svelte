@@ -1,62 +1,229 @@
-<script lang="ts">
+<script>
   /**
    * GeneratedLesson Component
    *
    * Displays a dynamically generated lesson with all its sections and content.
    * Supports different section types (introduction, vocabulary, grammar, exercise, cultural, summary)
-   * and provides a rich, interactive learning experience.
+   * and provides a rich, interactive learning experience with bilingual support.
    */
 
-  import { z } from 'zod';
-  import { LessonSchema, type Lesson, type LessonSection, type LearningObjective } from '$lib/schemas/lesson';
-  import { Button } from '$lib/components/ui/button';
+  import { t } from '$lib/services/localization';
+  import { appState } from '$lib/state/app-state';
+
+  // Language adapter functions
+  function getSourceText(item) {
+    return appState.languageMode === 'DE_BG' ? item.german : item.bulgarian;
+  }
+
+  function getTargetText(item) {
+    return appState.languageMode === 'DE_BG' ? item.bulgarian : item.german;
+  }
+
+  function correctPartOfSpeech(pos) {
+    const parts = {
+      'noun': 'Noun', 'verb': 'Verb', 'adjective': 'Adjective',
+      'adverb': 'Adverb', 'preposition': 'Preposition', 'conjunction': 'Conjunction'
+    };
+    return parts[pos] || pos;
+  }
 
   // Props
-  let { lesson } = $props<{ lesson: Lesson }>();
+  let { lesson } = $props();
+
+  // Error state
+  let hasError = $state(false);
+  let errorMessage = $state(null);
+
+  // Simple error handler
+  function handleError(error, context) {
+    console.error(`[${context}]`, error);
+  }
 
   // State
   let currentSectionIndex = $state(0);
   let showAllVocabulary = $state(false);
   let showAllObjectives = $state(false);
-  let showSectionDetails = $state<Record<string, boolean>>({});
+  let showSectionDetails = $state({});
+
+  // Initialize with error handling
+  $effect(() => {
+    try {
+      // Validate lesson data on initialization
+      if (!lesson) {
+        throw new Error('Lesson data is required');
+      }
+    } catch (err) {
+      handleError(err, 'Failed to initialize GeneratedLesson component');
+      hasError = true;
+      errorMessage = err instanceof Error ? err.message : 'Invalid lesson data';
+    }
+  });
 
   // Computed
-  let currentSection = $derived(lesson.sections[currentSectionIndex] || null);
-  let completionPercentage = $derived(
-    Math.round((lesson.objectives.filter(obj => obj.isCompleted).length / lesson.objectives.length) * 100)
-  );
-  let vocabularyItems = $derived(lesson.vocabulary || []);
-  let hasVocabulary = $derived(vocabularyItems.length > 0);
-  let hasObjectives = $derived(lesson.objectives.length > 0);
-  let hasSections = $derived(lesson.sections.length > 0);
-  let isFallbackLesson = $derived(lesson.metadata?.fallback === true);
+  // Derived state with error handling
+  let sections = $derived.by(() => {
+    try {
+      if (!lesson.sections || lesson.sections.length === 0) {
+        return [{
+          id: 'default-section',
+          title: 'Lesson Content',
+          content: lesson.content || 'No content available',
+          type: 'summary',
+          metadata: {}
+        }];
+      }
+      return lesson.sections;
+    } catch (err) {
+      handleError(err, 'Failed to derive lesson sections');
+      hasError = true;
+      errorMessage = 'Failed to load lesson sections';
+      return [{
+        id: 'error-section',
+        title: 'Error',
+        content: 'Failed to load lesson content',
+        type: 'summary',
+        metadata: {}
+      }];
+    }
+  });
+
+  // Current section with error handling
+  let currentSection = $derived.by(() => {
+    try {
+      return sections[currentSectionIndex] || null;
+    } catch (err) {
+      handleError(err, 'Failed to get current section');
+      hasError = true;
+      errorMessage = 'Failed to load section content';
+      return null;
+    }
+  });
+  // Completion percentage with error handling
+  let completionPercentage = $derived.by(() => {
+    try {
+      if (!lesson.objectives || lesson.objectives.length === 0) return 0;
+      return Math.round((lesson.objectives.filter((obj) => obj.isCompleted).length / lesson.objectives.length) * 100);
+    } catch (err) {
+      handleError(err, 'Failed to calculate completion percentage');
+      hasError = true;
+      errorMessage = 'Failed to calculate progress';
+      return 0;
+    }
+  });
+  // Vocabulary items with error handling
+  let vocabularyItems = $derived.by(() => {
+    try {
+      return lesson.vocabulary || [];
+    } catch (err) {
+      handleError(err, 'Failed to load vocabulary items');
+      hasError = true;
+      errorMessage = 'Failed to load vocabulary';
+      return [];
+    }
+  });
+  // Derived boolean states with error handling
+  let hasVocabulary = $derived.by(() => {
+    try {
+      return vocabularyItems.length > 0;
+    } catch (err) {
+      handleError(err, 'Failed to check vocabulary availability');
+      return false;
+    }
+  });
+
+  let hasObjectives = $derived.by(() => {
+    try {
+      return lesson.objectives && lesson.objectives.length > 0;
+    } catch (err) {
+      handleError(err, 'Failed to check objectives availability');
+      return false;
+    }
+  });
+
+  let hasSections = $derived.by(() => {
+    try {
+      return sections.length > 0;
+    } catch (err) {
+      handleError(err, 'Failed to check sections availability');
+      return false;
+    }
+  });
+
+  let isFallbackLesson = $derived.by(() => {
+    try {
+      return lesson.metadata?.fallback === true;
+    } catch (err) {
+      handleError(err, 'Failed to check fallback status');
+      return false;
+    }
+  });
 
   // Methods
-  function toggleObjective(objectiveId: string) {
-    lesson.objectives = lesson.objectives.map(obj =>
-      obj.id === objectiveId ? { ...obj, isCompleted: !obj.isCompleted } : obj
-    );
-    lesson.updatedAt = new Date();
+  /**
+   * Toggle objective completion status with error handling
+   */
+  function toggleObjective(objectiveId) {
+    try {
+      if (!lesson.objectives) {
+        throw new Error('Lesson objectives are not available');
+      }
+
+      lesson.objectives = lesson.objectives.map((obj) =>
+        obj.id === objectiveId ? { ...obj, isCompleted: !obj.isCompleted } : obj
+      );
+      lesson.updatedAt = new Date();
+    } catch (err) {
+      handleError(err, 'Failed to toggle objective');
+      hasError = true;
+      errorMessage = 'Failed to update objective status';
+    }
   }
 
+  /**
+   * Navigate to next section with error handling
+   */
   function nextSection() {
-    if (currentSectionIndex < lesson.sections.length - 1) {
-      currentSectionIndex++;
+    try {
+      if (currentSectionIndex < sections.length - 1) {
+        currentSectionIndex++;
+      }
+    } catch (err) {
+      handleError(err, 'Failed to navigate to next section');
+      hasError = true;
+      errorMessage = 'Failed to navigate sections';
     }
   }
 
+  /**
+   * Navigate to previous section with error handling
+   */
   function prevSection() {
-    if (currentSectionIndex > 0) {
-      currentSectionIndex--;
+    try {
+      if (currentSectionIndex > 0) {
+        currentSectionIndex--;
+      }
+    } catch (err) {
+      handleError(err, 'Failed to navigate to previous section');
+      hasError = true;
+      errorMessage = 'Failed to navigate sections';
     }
   }
 
-  function toggleSectionDetails(sectionId: string) {
-    showSectionDetails[sectionId] = !showSectionDetails[sectionId];
+  /**
+   * Toggle section details visibility with error handling
+   */
+  function toggleSectionDetails(sectionId) {
+    try {
+      showSectionDetails[sectionId] = !showSectionDetails[sectionId];
+    } catch (err) {
+      handleError(err, 'Failed to toggle section details');
+      hasError = true;
+      errorMessage = 'Failed to toggle section details';
+    }
   }
 
-  function getSectionIcon(type: string): string {
-    const icons: Record<string, string> = {
+  function getSectionIcon(type) {
+    const icons = {
       'introduction': '📘',
       'vocabulary': '📚',
       'grammar': '📖',
@@ -71,8 +238,8 @@
     return icons[type] || '📖';
   }
 
-  function getDifficultyColor(difficulty: string): string {
-    const colors: Record<string, string> = {
+  function getDifficultyColor(difficulty) {
+    const colors = {
       'A1': 'bg-green-100 text-green-800 border-green-300',
       'A2': 'bg-green-200 text-green-900 border-green-400',
       'B1': 'bg-blue-100 text-blue-800 border-blue-300',
@@ -82,8 +249,8 @@
     return colors[difficulty] || 'bg-gray-100 text-gray-800 border-gray-300';
   }
 
-  function getLessonTypeIcon(type: string): string {
-    const icons: Record<string, string> = {
+  function getLessonTypeIcon(type) {
+    const icons = {
       'vocabulary': '📚',
       'grammar': '📖',
       'conversation': '💬',
@@ -97,23 +264,23 @@
     return icons[type] || '📚';
   }
 
-  function getSectionTypeName(type: string): string {
-    const names: Record<string, string> = {
-      'introduction': 'Introduction',
-      'vocabulary': 'Vocabulary',
-      'grammar': 'Grammar',
-      'exercise': 'Exercise',
-      'cultural': 'Cultural Note',
-      'summary': 'Summary',
-      'conversation': 'Conversation',
-      'reading': 'Reading',
-      'listening': 'Listening',
-      'writing': 'Writing'
+  function getSectionTypeName(type) {
+    const names = {
+      'introduction': t('sections.introduction'),
+      'vocabulary': t('sections.vocabulary'),
+      'grammar': t('sections.grammar'),
+      'exercise': t('sections.exercise'),
+      'cultural': t('sections.cultural_note'),
+      'summary': t('sections.summary'),
+      'conversation': t('sections.conversation'),
+      'reading': t('sections.reading'),
+      'listening': t('sections.listening'),
+      'writing': t('sections.writing')
     };
     return names[type] || type;
   }
 
-  function renderSectionContent(content: string): string {
+  function renderSectionContent(content) {
     // Simple markdown-like rendering for basic formatting
     return content
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
@@ -122,23 +289,33 @@
       .replace(/\n/g, '<br>');
   }
 
-  function getVocabularyPreview(count: number): string {
+  function getVocabularyPreview(count) {
     if (vocabularyItems.length === 0) return '';
 
     const previewItems = vocabularyItems.slice(0, count);
-    return previewItems.map(item => item.german).join(', ');
+    // Show only the source language based on current direction
+    return previewItems.map((item) => getSourceText(item)).join(', ');
   }
 </script>
 
 <div class="generated-lesson-container">
-  {#if isFallbackLesson}
+  {#if hasError}
+    <div class="error-message">
+      <div class="error-icon">⚠️</div>
+      <h3>{t('errors.lesson_load_error')}</h3>
+      <p>{errorMessage || t('errors.unknown_error')}</p>
+      <button class="btn btn-secondary" onclick={() => window.location.reload()}>
+        {t('common.reload_page')}
+      </button>
+    </div>
+  {:else if isFallbackLesson}
     <div class="fallback-lesson-message">
       <div class="fallback-icon">⚠️</div>
-      <h3>Lesson Unavailable</h3>
+      <h3>{t('lesson.unavailable')}</h3>
       <p>{lesson.description}</p>
-      <Button variant="secondary" on:click={() => window.location.reload()}>
-        Try Again
-      </Button>
+      <button class="btn btn-secondary" onclick={() => window.location.reload()}>
+        {t('common.try_again')}
+      </button>
     </div>
   {:else}
     <div class="lesson-header">
@@ -151,7 +328,7 @@
 
       <div class="lesson-meta">
         <div class="lesson-badge {getDifficultyColor(lesson.difficulty)}">
-          {lesson.difficulty} • {lesson.duration} min
+          {lesson.difficulty} • {lesson.duration} {t('common.minutes')}
         </div>
         {#if lesson.metadata?.tags && lesson.metadata.tags.length > 0}
           <div class="lesson-tags">
@@ -187,12 +364,12 @@
     {#if hasObjectives}
       <div class="lesson-objectives">
         <div class="objectives-header">
-          <h3>Learning Objectives</h3>
+          <h3>{t('sections.learning_objectives')}</h3>
           <button
             class="toggle-objectives"
             onclick={() => showAllObjectives = !showAllObjectives}
           >
-            {showAllObjectives ? 'Show Less' : 'Show All'}
+            {showAllObjectives ? t('common.show_less') : t('common.show_all')}
           </button>
         </div>
 
@@ -214,7 +391,7 @@
           {#if lesson.objectives.length > 3 && !showAllObjectives}
             <li class="objective-item more-objectives">
               <button onclick={() => showAllObjectives = true}>
-                +{lesson.objectives.length - 3} more objectives
+                +{lesson.objectives.length - 3} {t('common.more_objectives')}
               </button>
             </li>
           {/if}
@@ -225,31 +402,37 @@
     {#if hasVocabulary}
       <div class="lesson-vocabulary">
         <div class="vocabulary-header">
-          <h3>Vocabulary ({vocabularyItems.length})</h3>
+          <h3>{t('sections.vocabulary')} ({vocabularyItems.length})</h3>
           <button
             class="toggle-vocabulary"
             onclick={() => showAllVocabulary = !showAllVocabulary}
           >
-            {showAllVocabulary ? 'Show Less' : 'Show All'}
+            {showAllVocabulary ? t('common.show_less') : t('common.show_all')}
           </button>
         </div>
 
         <div class="vocabulary-preview">
           {getVocabularyPreview(showAllVocabulary ? vocabularyItems.length : 5)}
           {#if vocabularyItems.length > 5 && !showAllVocabulary}
-            <span class="more-vocabulary">+{vocabularyItems.length - 5} more</span>
+            <span class="more-vocabulary">+{vocabularyItems.length - 5} {t('common.more_words')}</span>
           {/if}
         </div>
 
         {#if showAllVocabulary}
           <div class="vocabulary-list">
-            {#each vocabularyItems as vocab}
+            {#each vocabularyItems as vocab (vocab.german)}
               <div class="vocabulary-item">
-                <div class="vocabulary-german">{vocab.german}</div>
-                <div class="vocabulary-bulgarian">{vocab.bulgarian}</div>
+                <!-- Show source language prominently -->
+                <div class="vocabulary-source">
+                  {getSourceText(vocab)}
+                </div>
+                <!-- Show target language on hover/click or as secondary info -->
+                <div class="vocabulary-target">
+                  {getTargetText(vocab)}
+                </div>
                 {#if vocab.partOfSpeech}
                   <div class="vocabulary-part-of-speech">
-                    {vocab.partOfSpeech}
+                    {correctPartOfSpeech(vocab.partOfSpeech)}
                   </div>
                 {/if}
                 {#if vocab.difficulty}
@@ -270,21 +453,21 @@
           <button
             onclick={prevSection}
             disabled={currentSectionIndex === 0}
-            aria-label="Previous section"
+            aria-label={t('common.previous_section')}
           >
-            ◀️ Previous
+            ◀️ {t('common.previous')}
           </button>
 
           <div class="section-indicator">
-            Section {currentSectionIndex + 1} of {lesson.sections.length}
+            {t('common.section')} {currentSectionIndex + 1} {t('common.of')} {sections.length}
           </div>
 
           <button
             onclick={nextSection}
-            disabled={currentSectionIndex === lesson.sections.length - 1}
-            aria-label="Next section"
+            disabled={currentSectionIndex === sections.length - 1}
+            aria-label={t('common.next_section')}
           >
-            Next ▶️
+            {t('common.next')} ▶️
           </button>
         </div>
 
@@ -317,7 +500,7 @@
         <div class="sections-overview">
           <h3>Lesson Sections</h3>
           <div class="sections-list">
-            {#each lesson.sections as section, index (section.id)}
+            {#each sections as section, index (section.id)}
               <div
                 class="section-overview-item {index === currentSectionIndex ? 'active' : ''}"
                 onclick={() => currentSectionIndex = index}
@@ -341,17 +524,17 @@
       </div>
     {:else}
       <div class="no-sections-message">
-        This lesson doesn't have any sections yet.
+        {t('lesson.no_sections')}
       </div>
     {/if}
 
     <div class="lesson-actions">
-      <Button variant="secondary" onclick={() => window.history.back()}>
-        Back to Lessons
-      </Button>
-      <Button variant="default" onclick={() => alert('Lesson started!')}>
-        Start Lesson
-      </Button>
+      <button class="btn btn-secondary" onclick={() => window.history.back()}>
+        {t('common.back_to_lessons')}
+      </button>
+      <button class="btn btn-primary" onclick={() => alert(t('lesson.start_alert'))}>
+        {t('common.start_lesson')}
+      </button>
     </div>
   {/if}
 </div>
@@ -597,15 +780,18 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
 
-  .vocabulary-german {
+  .vocabulary-source {
     font-weight: 600;
     color: #1e293b;
     margin-bottom: 0.5rem;
+    font-size: 1.1rem;
   }
 
-  .vocabulary-bulgarian {
+  .vocabulary-target {
     color: #3b82f6;
     margin-bottom: 0.5rem;
+    opacity: 0.8;
+    font-size: 0.95rem;
   }
 
   .vocabulary-part-of-speech {

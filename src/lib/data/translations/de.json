@@ -1,0 +1,65 @@
+{
+  "navigation": {
+    "dashboard": "Dashboard",
+    "vocabulary": "Vokabular",
+    "grammar": "Grammatik",
+    "practice": "Üben",
+    "learn": "Lernen"
+  },
+  "common": {
+    "check_answer": "Antwort prüfen",
+    "next_word": "Nächstes Wort",
+    "show_examples": "Beispiele anzeigen",
+    "hide_examples": "Beispiele ausblenden",
+    "retry": "Wiederholen",
+    "cancel": "Abbrechen",
+    "generate_lesson": "Lektion generieren",
+    "correct": "Richtig",
+    "streak": "Streak",
+    "accuracy": "Genauigkeit",
+    "avg_time": "Durchschnittszeit",
+    "favorite": "Favorit",
+    "favorited": "Favorisiert",
+    "practice_this": "Üben",
+    "search": "Suche",
+    "loading": "Lädt...",
+    "error_loading": "Fehler beim Laden",
+    "try_again": "Erneut versuchen",
+    "reload_page": "Seite neu laden"
+  },
+  "feedback": {
+    "correct": "Richtig!",
+    "incorrect": "Falsch. Die richtige Antwort ist:",
+    "your_answer": "Deine Antwort:"
+  },
+  "sections": {
+    "learning_objectives": "Lernziele",
+    "vocabulary": "Vokabular",
+    "practice_exercises": "Übungen",
+    "recommended_for_practice": "Empfohlen zum Üben"
+  },
+  "directions": {
+    "de_to_bg": "Deutsch → Bulgarisch",
+    "bg_to_de": "Bulgarisch → Deutsch"
+  },
+  "search": {
+    "no_results": "Kein Vokabular gefunden",
+    "no_results_hint": "Versuchen Sie mit anderen Suchbegriffen oder überprüfen Sie Ihre Rechtschreibung",
+    "found_words": "Gefundene Wörter",
+    "found_word": "Gefundenes Wort",
+    "search_placeholder": "Suche nach Wörtern...",
+    "search_vocabulary": "Vokabular durchsuchen"
+  },
+  "practice": {
+    "tandem_learning": "Tandem-Lernen",
+    "practice_mode": "Übungsmodus",
+    "search_mode": "Suchmodus",
+    "quick_practice": "Schnell üben",
+    "type_answer": "Geben Sie Ihre Antwort ein...",
+    "response_time": "Antwortzeit"
+  },
+  "lesson": {
+    "example": "Beispiel",
+    "examples": "Beispiele"
+  }
+}

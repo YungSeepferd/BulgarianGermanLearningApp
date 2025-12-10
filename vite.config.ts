@@ -1,8 +1,9 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import { translationPlugin } from './src/lib/utils/translation-plugin';
 
 export default defineConfig(({ mode }) => ({
-  plugins: [sveltekit()],
+  plugins: [sveltekit(), translationPlugin()],
   
   // Enable Svelte 5 runes support
   svelte: {
@@ -13,6 +14,11 @@ export default defineConfig(({ mode }) => ({
   
   resolve: {
     conditions: mode === 'test' ? ['browser'] : undefined,
+    alias: {
+      // Add alias to handle TypeScript files without extensions
+      '$lib': '/src/lib',
+    },
+    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.svelte'],
   },
   
   // Development server configuration
@@ -28,7 +34,10 @@ export default defineConfig(({ mode }) => ({
     outDir: 'build',
     assetsDir: 'assets',
     sourcemap: true,
-    minify: 'terser'
+    minify: 'terser',
+    // Set empty base for GitHub Pages compatibility
+    // This will be overridden in the build:gh-pages script
+    emptyOutDir: true
   },
 
   test: {

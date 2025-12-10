@@ -5,6 +5,9 @@ A modern tandem learning platform for mastering Bulgarian and German, built with
 ## ✨ Features
 
 - **🔄 Bidirectional Learning**: Instantly switch between German→Bulgarian and Bulgarian→German
+- **🌐 Bilingual UI**: Full user interface in both German and Bulgarian
+- **🔀 Language Switching**: One-click language switching for entire application
+- **📚 Direction-Aware Content**: Lessons and vocabulary adapt to language direction
 - **🎯 Smart Practice**: Flashcard system with progress tracking and statistics
 - **🔍 Advanced Search**: Real-time filtering by text, category, and tags
 - **📚 Lesson Planning System**: ✅ Dynamic lesson generation with curriculum-based learning
@@ -51,9 +54,12 @@ A modern tandem learning platform for mastering Bulgarian and German, built with
 | `pnpm run dev` | Start local dev server |
 | `pnpm run build` | Build for production (Static) |
 | `pnpm run preview` | Preview production build |
-| `pnpm run test` | Run Playwright E2E tests |
+| `pnpm run test` | Run all tests (E2E, unit, accessibility) |
 | `pnpm run test:unit` | Run Vitest unit tests |
+| `pnpm run test:components` | Run component tests |
+| `pnpm run test:e2e` | Run Playwright E2E tests |
 | `pnpm run test:accessibility` | Run accessibility tests |
+| `pnpm run test:bilingual` | Run bilingual functionality tests |
 | `pnpm run test:all` | Run all tests |
 | `pnpm run check` | Run Svelte/TypeScript checks |
 | `pnpm run lint` | Run ESLint |
@@ -93,7 +99,10 @@ src/
 - [**Data Migration**](docs/development/DATA_MIGRATION.md) - Vocabulary data pipeline and quality assurance
 - [**Developer Onboarding**](docs/development/DEVELOPER_ONBOARDING.md) - Getting started guide for developers
 - [**Lesson Planning System**](docs/development/LESSON_SYSTEM.md) - Comprehensive lesson system documentation
-- [**Next Steps**](docs/roadmap/NEXT_STEPS.md) - Immediate action items and deployment checklist
+- [**Bilingual Support**](docs/BILINGUAL_SUPPORT.md) - Localization architecture and implementation details
+- [**Next Steps**](docs/NEXT_STEPS_PLAN.md) - Immediate action items and deployment checklist
+- [**Testing Guide**](docs/development/TESTING.md) - Comprehensive testing strategy including bilingual tests
+- [**Bilingual Migration**](docs/migration/BILINGUAL_MIGRATION.md) - Guide for migrating to bilingual architecture
 
 ## 🧪 Testing
 
@@ -266,6 +275,27 @@ pnpm run preview
 ### Deployment
 The application is configured for deployment to GitHub Pages. The build process creates a static site that can be deployed to any static hosting service.
 
+## 🌐 Bilingual Support Features
+
+### Language Switching
+- One-click language toggle between German and Bulgarian
+- Persistent language preference across sessions
+- Language state managed with Svelte 5 Runes
+- Event-based language change notifications
+
+### Localization System
+- Comprehensive translation files for both languages
+- Dynamic translation loading with fallback mechanism
+- Direction-aware content rendering
+- Template language adapter for lesson content
+
+### Testing
+- Comprehensive bilingual test suite
+- Language switching tests
+- Translation coverage tests
+- Accessibility tests for both languages
+- Performance tests for localization
+
 ## 🤝 Contributing
 
 We welcome contributions! Please refer to the [Roadmap](docs/ROADMAP.md) for current priorities.
@@ -274,14 +304,17 @@ We welcome contributions! Please refer to the [Roadmap](docs/ROADMAP.md) for cur
 1. Use `pnpm` for package management
 2. Follow Svelte 5 patterns (Runes over Stores)
 3. Ensure strict type safety with TypeScript
-4. Write tests for new features
+4. Write tests for new features, including bilingual tests
 5. Follow the existing code style and structure
+6. Use the `t()` function for all UI text
+7. Implement direction-aware content for bilingual components
 
 ### Code Quality
 - ESLint configuration for code quality
 - Prettier for code formatting
 - Strict TypeScript mode enabled
-- Comprehensive test coverage required
+- Comprehensive test coverage required (including bilingual tests)
+- Localization best practices for all components
 
 ## 📊 Current Status
 
@@ -294,6 +327,7 @@ We welcome contributions! Please refer to the [Roadmap](docs/ROADMAP.md) for cur
 - Performance optimization
 - **Vocabulary Data Pipeline**: 4-stage quality assurance with 100% validation
 - **Production-Ready Dataset**: 541 validated vocabulary items
+- **Bilingual Support**: ✅ Full UI localization with German and Bulgarian languages
 
 ### ✅ Completed
 - **Lesson Planning System**: ✅ Dynamic lesson generation with curriculum-based learning (Epic 4)
@@ -305,6 +339,7 @@ We welcome contributions! Please refer to the [Roadmap](docs/ROADMAP.md) for cur
 - Quiz System: Interactive assessment functionality
 - User Progress Tracking: Mastery and completion tracking
 - Lesson Integration: Enhance lesson system with advanced features
+- **Localization Enhancement**: Add English and additional language support
 
 ## 🎯 Future Enhancements
 

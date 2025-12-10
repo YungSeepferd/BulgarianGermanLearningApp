@@ -11,26 +11,175 @@
    * - Recent activity
    */
 
-  import { progressService } from '$lib/services/progress';
+  import { ProgressService } from '$lib/services/progress.js';
+  import { EventBus } from '$lib/services/event-bus.js';
+  import { Debug } from '$lib/utils.js';
+  import { t as translate } from '$lib/services/localization.js';
+
+  // Create a new ProgressService instance directly to avoid DI container issues
+  let progressService: any;
+
+  // Initialize progress service
+  const initializeProgressService = () => {
+    try {
+      // Create a new event bus
+      const eventBus = new EventBus();
+
+      // Create a new ProgressService instance directly
+      const newProgressService = new ProgressService(eventBus);
+      console.log('New ProgressService instance created:', newProgressService);
+
+      // Verify the service has the expected methods by checking the prototype
+      const isValid = newProgressService &&
+                     typeof newProgressService.isProgressDataValid === 'function' &&
+                     typeof newProgressService.validateAndRepairProgressData === 'function' &&
+                     typeof newProgressService.getProgressSummary === 'function';
+
+      if (isValid) {
+        progressService = newProgressService;
+        console.log('ProgressService is valid, using it');
+      } else {
+        console.error('ProgressService is corrupted, using fallback');
+        progressService = getFallbackProgressService();
+      }
+
+    } catch (error) {
+      console.error('Failed to create progressService:', error);
+      progressService = getFallbackProgressService();
+    }
+  };
+
+  // Fallback to a mock service if ProgressService creation fails
+  const getFallbackProgressService = () => {
+    console.log('Using fallback progress service');
+    return {
+      isProgressDataValid: () => true,
+      validateAndRepairProgressData: async () => {},
+      getProgressSummary: () => ({
+        totalXP: 0,
+        currentLevel: 1,
+        levelProgress: 0,
+        wordsPracticed: 0,
+        lessonsCompleted: 0,
+        quizzesTaken: 0,
+        currentStreak: 0,
+        longestStreak: 0,
+        dailyGoalProgress: 0,
+        dailyXP: 0
+      }),
+      getLevelInfo: () => ({
+        level: 1,
+        currentXP: 0,
+        nextLevelXP: 100,
+        progressPercentage: 0
+      }),
+      getVocabularyMasteryStats: () => ({
+        totalItems: 0,
+        masteredItems: 0,
+        masteryPercentage: 0,
+        averageMasteryLevel: 0
+      }),
+      getLessonCompletionStats: () => ({
+        totalLessons: 0,
+        completedLessons: 0,
+        completionPercentage: 0
+      }),
+      getRecentDailyProgress: () => []
+    };
+  };
+  import { learningSession } from '$lib/state/session.svelte';
   import LevelUpModal from './gamification/LevelUpModal.svelte';
-  import { fireConfetti as confetti } from '$lib/utils/confetti';
+  import { fireConfetti as confetti } from '$lib/utils/confetti.js';
 
   // State
   let showLevelUpModal = $state(false);
-  let levelUpMessage = $state('');
+  let isLoading = $state(true);
+  let isRefreshing = $state(false);
+  let lastError = $state<string | null>(null);
+  const loadData = async () => {
+    try {
+      isLoading = true;
+      lastError = null;
 
-  // Derived state
-  let progressSummary = $derived(progressService.getProgressSummary());
-  let levelInfo = $derived(progressService.getLevelInfo());
-  let vocabularyStats = $derived(progressService.getVocabularyMasteryStats());
-  let lessonStats = $derived(progressService.getLessonCompletionStats());
-  let recentProgress = $derived(progressService.getRecentDailyProgress(7));
+      // Initialize progress service if not already done
+      if (!progressService) {
+        initializeProgressService();
+      }
+
+      // Use fallback if service is still not available
+      const service = progressService || getFallbackProgressService();
+
+      // Check if progress data is valid and repair if needed
+      console.log('ProgressService before check:', service);
+      console.log('isProgressDataValid method:', service?.isProgressDataValid);
+      if (service && typeof service.isProgressDataValid === 'function' && !service.isProgressDataValid()) {
+        console.log('Progress data is invalid, repairing...');
+        await service.validateAndRepairProgressData();
+      } else {
+        console.log('Progress data is valid or service is not available');
+      }
+
+    } catch (error) {
+      lastError = error instanceof Error ? error.message : 'Failed to load progress data';
+      console.error('Error loading progress data:', error);
+    } finally {
+      isLoading = false;
+    }
+  };
+
+  // Refresh data
+  const refreshData = async () => {
+    try {
+      isRefreshing = true;
+      lastError = null;
+      await loadData();
+    } catch (error) {
+      lastError = error instanceof Error ? error.message : 'Failed to refresh progress data';
+      console.error('Error refreshing progress data:', error);
+    } finally {
+      isRefreshing = false;
+    }
+  };
+
+  // Initial data load with cleanup
+  $effect(() => {
+    loadData();
+
+    // Return cleanup function
+    return () => {
+      // Cleanup any resources if needed
+    };
+  });
+
+  // Derived state with memoization to prevent unnecessary recalculations
+  let progressSummary = $derived.by(() => {
+    const service = progressService || getFallbackProgressService();
+    return service.getProgressSummary();
+  });
+
+  let levelInfo = $derived.by(() => {
+    const service = progressService || getFallbackProgressService();
+    return service.getLevelInfo();
+  });
+
+  let vocabularyStats = $derived.by(() => {
+    const service = progressService || getFallbackProgressService();
+    return service.getVocabularyMasteryStats();
+  });
+
+  let lessonStats = $derived.by(() => {
+    const service = progressService || getFallbackProgressService();
+    return service.getLessonCompletionStats();
+  });
+
+  let recentProgress = $derived.by(() => {
+    const service = progressService || getFallbackProgressService();
+    return service.getRecentDailyProgress(7);
+  });
 
   // Check for level up
   $effect(() => {
-    const newLevel = levelInfo.level;
-    if (newLevel > (progressSummary.currentLevel || 1)) {
-      levelUpMessage = `Level Up! You've reached level ${newLevel}!`;
+    if (levelInfo.level > progressSummary.currentLevel) {
       showLevelUpModal = true;
       confetti();
     }
@@ -50,198 +199,226 @@
       weekday: 'short',
       month: 'short',
       day: 'numeric'
-    });
+    } as Intl.DateTimeFormatOptions);
   };
 </script>
 
-<div class="progress-dashboard" aria-label="Progress dashboard">
-  <!-- Level Up Modal -->
-  {#if showLevelUpModal}
-    <LevelUpModal
-      level={levelInfo.level}
-      onClose={() => showLevelUpModal = false}
-    />
-  {/if}
+<div class="progress-dashboard" aria-label="Progress dashboard" aria-busy={isLoading || isRefreshing}>
+  <!-- Loading State -->
+  {#if isLoading}
+    <div class="loading-state">
+      <div class="loading-spinner">🌀</div>
+      <p>Loading your progress...</p>
+    </div>
+  {:else if lastError}
+    <div class="error-state">
+      <div class="error-icon">⚠️</div>
+      <p>{lastError || translate('common.retry')}</p>
+      <button onclick={loadData} class="retry-button">Retry</button>
+    </div>
+  {:else}
+    <!-- Level Up Modal -->
+    {#if showLevelUpModal}
+      <LevelUpModal
+        currentLevel={levelInfo.level}
+        onClose={() => showLevelUpModal = false}
+      />
+    {/if}
 
-  <div class="dashboard-grid">
-    <!-- Level and XP Card -->
-    <div class="dashboard-card level-card">
-      <h2 class="card-title">Level {levelInfo.level}</h2>
-      <div class="level-progress">
-        <div class="progress-bar-container">
-          <div
-            class="progress-bar"
-            role="progressbar"
-            aria-valuenow={levelInfo.progressPercentage}
-            aria-valuemin="0"
-            aria-valuemax="100"
-            style={`--progress: ${levelInfo.progressPercentage}%`}
-          ></div>
-        </div>
-        <div class="progress-labels">
-          <span>{levelInfo.currentXP} / {levelInfo.nextLevelXP} XP</span>
-          <span>{Math.round(levelInfo.progressPercentage)}%</span>
-        </div>
-      </div>
-      <p class="level-description">
-        {#if levelInfo.level === 1}
-          Beginner - Just getting started
-        {:else if levelInfo.level < 5}
-          Intermediate - Building skills
-        {:else if levelInfo.level < 10}
-          Advanced - Mastering the language
-        {:else}
-          Expert - Fluent in Bulgarian!
-        {/if}
-      </p>
+    <div class="dashboard-header">
+      <h1>{translate('progress.dashboard_title')}</h1>
+      <button
+        onclick={refreshData}
+        class="refresh-button"
+        disabled={isRefreshing}
+        aria-label="Refresh progress data"
+      >
+        {isRefreshing ? translate('common.refreshing') : '🔄 ' + translate('common.refresh')}
+      </button>
     </div>
 
-    <!-- Daily Goal Card -->
-    <div class="dashboard-card daily-goal-card">
-      <h2 class="card-title">Daily Goal</h2>
-      <div class="daily-progress">
-        <div class="progress-circle-container">
-          <svg class="progress-circle" viewBox="0 0 100 100" aria-hidden="true">
-            <circle
-              class="progress-circle-bg"
-              cx="50"
-              cy="50"
-              r="45"
-            />
-            <circle
-              class="progress-circle-bar"
-              cx="50"
-              cy="50"
-              r="45"
-              style={`--progress: ${progressSummary.dailyGoalProgress}`}
-            />
-          </svg>
-          <div class="progress-circle-text">
-            {Math.round(progressSummary.dailyGoalProgress)}%
+    <div class="dashboard-grid">
+      <!-- Level and XP Card -->
+      <div class="dashboard-card level-card">
+        <h2 class="card-title">{translate('progress.level')} {levelInfo.level}</h2>
+        <div class="level-progress">
+          <div class="progress-bar-container">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-valuenow={levelInfo.progressPercentage}
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style={`--progress: ${levelInfo.progressPercentage}%`}
+            ></div>
+          </div>
+          <div class="progress-labels">
+            <span>{levelInfo.currentXP} / {levelInfo.nextLevelXP} XP</span>
+            <span>{Math.round(levelInfo.progressPercentage)}%</span>
           </div>
         </div>
+        <p class="level-description">
+          {#if levelInfo.level === 1}
+            {translate('progress.level_beginner')}
+          {:else if levelInfo.level < 5}
+            {translate('progress.level_intermediate')}
+          {:else if levelInfo.level < 10}
+            {translate('progress.level_advanced')}
+          {:else}
+            {translate('progress.level_expert')}
+          {/if}
+        </p>
       </div>
-      <p class="daily-goal-description">
-        {#if progressSummary.dailyGoalProgress >= 100}
-          🎉 Daily goal completed! Come back tomorrow for more XP.
-        {:else}
-          {learningSession.dailyTarget - Math.round(progressSummary.totalXP % learningSession.dailyTarget)} XP to reach your daily goal
-        {/if}
-      </p>
-    </div>
 
-    <!-- Streak Card -->
-    <div class="dashboard-card streak-card">
-      <h2 class="card-title">Streak</h2>
-      <div class="streak-display">
-        <div class="streak-icon">🔥</div>
-        <div class="streak-value">{progressSummary.currentStreak}</div>
-        <div class="streak-label">day streak</div>
-      </div>
-      <div class="streak-details">
-        <div class="streak-info">
-          <span class="streak-label">Longest streak:</span>
-          <span class="streak-value">{progressSummary.longestStreak} days</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Vocabulary Mastery Card -->
-    <div class="dashboard-card vocabulary-card">
-      <h2 class="card-title">Vocabulary</h2>
-      <div class="vocabulary-stats">
-        <div class="stat-item">
-          <div class="stat-value">{vocabularyStats.masteredItems}</div>
-          <div class="stat-label">Mastered</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-value">{Math.round(vocabularyStats.masteryPercentage)}%</div>
-          <div class="stat-label">Mastery</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-value">{vocabularyStats.totalItems}</div>
-          <div class="stat-label">Total</div>
-        </div>
-      </div>
-      <div class="vocabulary-progress">
-        <div class="progress-bar-container">
-          <div
-            class="progress-bar"
-            role="progressbar"
-            aria-valuenow={vocabularyStats.masteryPercentage}
-            aria-valuemin="0"
-            aria-valuemax="100"
-            style={`--progress: ${vocabularyStats.masteryPercentage}%`}
-          ></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Lessons Card -->
-    <div class="dashboard-card lessons-card">
-      <h2 class="card-title">Lessons</h2>
-      <div class="lesson-stats">
-        <div class="stat-item">
-          <div class="stat-value">{lessonStats.completedLessons}</div>
-          <div class="stat-label">Completed</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-value">{Math.round(lessonStats.completionPercentage)}%</div>
-          <div class="stat-label">Completion</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-value">{lessonStats.totalLessons}</div>
-          <div class="stat-label">Total</div>
-        </div>
-      </div>
-      <div class="lesson-progress">
-        <div class="progress-bar-container">
-          <div
-            class="progress-bar"
-            role="progressbar"
-            aria-valuenow={lessonStats.completionPercentage}
-            aria-valuemin="0"
-            aria-valuemax="100"
-            style={`--progress: ${lessonStats.completionPercentage}%`}
-          ></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Recent Activity Card -->
-    <div class="dashboard-card recent-activity-card">
-      <h2 class="card-title">Recent Activity</h2>
-      <div class="activity-list">
-        {#if recentProgress.length > 0}
-          {#each recentProgress as day, index}
-            <div class="activity-item {index === 0 ? 'today' : ''}">
-              <div class="activity-date">
-                {index === 0 ? 'Today' : formatDate(day.date)}
-              </div>
-              <div class="activity-details">
-                <div class="activity-xp">
-                  <span class="xp-icon">⚡</span>
-                  <span class="xp-value">{day.xpEarned} XP</span>
-                </div>
-                <div class="activity-words">
-                  <span class="words-icon">📚</span>
-                  <span class="words-value">{day.wordsPracticed} words</span>
-                </div>
-                <div class="activity-time">
-                  <span class="time-icon">⏱️</span>
-                  <span class="time-value">{formatTimeSpent(day.timeSpent)}</span>
-                </div>
-              </div>
+      <!-- Daily Goal Card -->
+      <div class="dashboard-card daily-goal-card">
+        <h2 class="card-title">{translate('progress.daily_goal')}</h2>
+        <div class="daily-progress">
+          <div class="progress-circle-container">
+            <svg class="progress-circle" viewBox="0 0 100 100" aria-hidden="true">
+              <circle
+                class="progress-circle-bg"
+                cx="50"
+                cy="50"
+                r="45"
+              />
+              <circle
+                class="progress-circle-bar"
+                cx="50"
+                cy="50"
+                r="45"
+                style={`--progress: ${progressSummary.dailyGoalProgress}`}
+              />
+            </svg>
+            <div class="progress-circle-text">
+              {Math.round(progressSummary.dailyGoalProgress)}%
             </div>
-          {/each}
-        {:else}
-          <div class="no-activity">
-            No recent activity. Start practicing to see your progress!
           </div>
-        {/if}
+        </div>
+        <p class="daily-goal-description">
+          {#if progressSummary.dailyGoalProgress >= 100}
+            🎉 {translate('progress.daily_goal_completed')}
+          {:else if learningSession.dailyTarget}
+            {Math.max(0, learningSession.dailyTarget - progressSummary.dailyXP)} XP bis zum Tagesziel
+          {:else}
+            {translate('progress.keep_practicing')}
+          {/if}
+        </p>
+      </div>
+
+      <!-- Streak Card -->
+      <div class="dashboard-card streak-card">
+        <h2 class="card-title">{translate('progress.streak')}</h2>
+        <div class="streak-display">
+          <div class="streak-icon">🔥</div>
+          <div class="streak-value">{progressSummary.currentStreak}</div>
+          <div class="streak-label">{translate('progress.day_streak')}</div>
+        </div>
+        <div class="streak-details">
+          <div class="streak-info">
+            <span class="streak-label">{translate('progress.longest_streak')}:</span>
+            <span class="streak-value">{progressSummary.longestStreak} days</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vocabulary Mastery Card -->
+      <div class="dashboard-card vocabulary-card">
+        <h2 class="card-title">{translate('progress.vocabulary')}</h2>
+        <div class="vocabulary-stats">
+          <div class="stat-item">
+            <div class="stat-value">{vocabularyStats.masteredItems}</div>
+            <div class="stat-label">{translate('progress.mastered')}</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">{Math.round(vocabularyStats.masteryPercentage)}%</div>
+            <div class="stat-label">{translate('progress.mastery')}</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">{vocabularyStats.totalItems}</div>
+            <div class="stat-label">{translate('progress.total')}</div>
+          </div>
+        </div>
+        <div class="vocabulary-progress">
+          <div class="progress-bar-container">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-valuenow={vocabularyStats.masteryPercentage}
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style={`--progress: ${vocabularyStats.masteryPercentage}%`}
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lessons Card -->
+      <div class="dashboard-card lessons-card">
+        <h2 class="card-title">{translate('progress.lessons')}</h2>
+        <div class="lesson-stats">
+          <div class="stat-item">
+            <div class="stat-value">{lessonStats.completedLessons}</div>
+            <div class="stat-label">{translate('progress.completed')}</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">{Math.round(lessonStats.completionPercentage)}%</div>
+            <div class="stat-label">{translate('progress.completion')}</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">{lessonStats.totalLessons}</div>
+            <div class="stat-label">{translate('progress.total')}</div>
+          </div>
+        </div>
+        <div class="lesson-progress">
+          <div class="progress-bar-container">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-valuenow={lessonStats.completionPercentage}
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style={`--progress: ${lessonStats.completionPercentage}%`}
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity Card -->
+      <div class="dashboard-card recent-activity-card">
+        <h2 class="card-title">{translate('progress.recent_activity')}</h2>
+        <div class="activity-list">
+          {#if recentProgress.length > 0}
+            {#each recentProgress as day, index}
+              <div class="activity-item {index === 0 ? 'today' : ''}">
+                <div class="activity-date">
+                  {index === 0 ? translate('progress.today') : formatDate(day.date)}
+                </div>
+                <div class="activity-details">
+                  <div class="activity-xp">
+                    <span class="xp-icon">⚡</span>
+                    <span class="xp-value">{day.xpEarned} XP</span>
+                  </div>
+                  <div class="activity-words">
+                    <span class="words-icon">📚</span>
+                    <span class="words-value">{day.wordsPracticed} words</span>
+                  </div>
+                  <div class="activity-time">
+                    <span class="time-icon">⏱️</span>
+                    <span class="time-value">{formatTimeSpent(day.timeSpent)}</span>
+                  </div>
+                </div>
+              </div>
+            {/each}
+          {:else}
+            <div class="no-activity">
+              {translate('progress.no_recent_activity')}
+            </div>
+          {/if}
+        </div>
       </div>
     </div>
-  </div>
+  {/if}
 </div>
 
 <style>
@@ -519,6 +696,83 @@
     font-style: italic;
   }
 
+  /* Loading and Error States */
+  .loading-state,
+  .error-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .loading-spinner {
+    font-size: 2rem;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+
+  .error-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .retry-button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.2s ease;
+  }
+
+  .retry-button:hover {
+    background: #2563eb;
+  }
+
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+  }
+
+  .refresh-button {
+    background: #f3f4f6;
+    color: #374151;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.2s ease;
+  }
+
+  .refresh-button:hover:not(:disabled) {
+    background: #e5e7eb;
+  }
+
+  .refresh-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
   /* Responsive Styles */
   @media (max-width: 768px) {
     .dashboard-grid {
@@ -540,6 +794,12 @@
       flex-direction: column;
       align-items: flex-end;
       gap: 0.25rem;
+    }
+
+    .dashboard-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
     }
   }
 

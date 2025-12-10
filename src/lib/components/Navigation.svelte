@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   /**
    * Navigation Component
    *
@@ -6,14 +6,15 @@
    */
 
   import { page } from '$app/stores';
+  import { t } from '$lib/services/localization';
 
   // Navigation items
   let { navItems = [
-    { name: 'Dashboard', path: '/', icon: '🏠' },
-    { name: 'Vocabulary', path: '/vocabulary', icon: '📚' },
-    { name: 'Grammar', path: '/grammar', icon: '📖' },
-    { name: 'Practice', path: '/practice', icon: '🎯' },
-    { name: 'Learn', path: '/learn', icon: '🧠' }
+    { name: t('navigation.dashboard'), path: '/', icon: '🏠' },
+    { name: t('navigation.vocabulary'), path: '/vocabulary', icon: '📚' },
+    { name: t('navigation.grammar'), path: '/grammar', icon: '📖' },
+    { name: t('navigation.practice'), path: '/practice', icon: '🎯' },
+    { name: t('navigation.learn'), path: '/learn', icon: '🧠' }
   ] } = $props();
 
   // Current route
@@ -23,9 +24,9 @@
 <nav class="navigation" aria-label="Main navigation">
   <div class="navigation-container">
     <div class="logo">
-      <a href="/" aria-label="Home">
+      <a href="/" aria-label={t('navigation.home')}>
         <span class="logo-icon">🇧🇬🇩🇪</span>
-        <span class="logo-text">Bulgarian-German</span>
+        <span class="logo-text">{t('navigation.app_name')}</span>
       </a>
     </div>
 
@@ -45,7 +46,7 @@
     </ul>
 
     <div class="nav-actions">
-      <button class="nav-action" aria-label="User settings">
+      <button class="nav-action" aria-label={t('navigation.user_settings')}>
         👤
       </button>
     </div>
@@ -159,6 +160,16 @@
     color: #3b82f6;
   }
 
+  @media (max-width: 1024px) {
+    .nav-list {
+      gap: 0.5rem;
+    }
+
+    .nav-link {
+      padding: 0 0.75rem;
+    }
+  }
+
   @media (max-width: 768px) {
     .navigation-container {
       height: 50px;
@@ -174,6 +185,10 @@
 
     .nav-text {
       display: none;
+    }
+
+    .nav-icon {
+      margin-bottom: 0;
     }
   }
 </style>

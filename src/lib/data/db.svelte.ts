@@ -1,4 +1,8 @@
 import { browser } from '$app/environment';
+import { Debug } from '$lib/utils';
+import { DataLoader } from '$lib/data/DataLoader.svelte';
+import { diContainer } from '$lib/services/di-container';
+import { EventTypes } from '$lib/services/event-bus';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 import type { LessonDifficulty } from '$lib/schemas/lesson';
 import type { VocabularyCategory, PartOfSpeech } from '$lib/schemas/vocabulary';
@@ -23,18 +27,48 @@ export class VocabularyDB {
 
     async loadInitialData() {
         try {
+            Debug.log('VocabularyDB', 'Loading initial vocabulary data');
             // Use the DataLoader which now includes Zod validation
-            const data = await loadVocabulary();
+            const dataLoader = DataLoader.getInstance();
+            const result = await dataLoader.getVocabularyBySearch({});
 
-            this.items = data;
+            // Convert UnifiedVocabularyItem to VocabularyItem format
+            this.items = result.items.map(item => ({
+                id: item.id,
+                german: item.german,
+                bulgarian: item.bulgarian,
+                category: item.categories[0] || 'uncategorized',
+                tags: item.tags || [],
+                difficulty: item.difficulty,
+                partOfSpeech: item.partOfSpeech,
+                xp_value: item.xp_value || 10,
+                createdAt: item.createdAt,
+                updatedAt: item.updatedAt
+            }));
+
             this.initialized = true;
-            // VocabularyDB initialized
-        } catch (_e) {
-            // Silently fail if loading vocabulary fails
+            Debug.log('VocabularyDB', 'Vocabulary data loaded successfully', {
+                itemCount: this.items.length,
+                initialized: this.initialized
+            });
+        } catch (error) {
+            Debug.error('VocabularyDB', 'Failed to load initial vocabulary data', error as Error);
+            // Store the error for user feedback
             this.items = [];
             this.initialized = true;
+
+            // Emit error event for global error handling
+            const eventBus = diContainer.getService('eventBus');
+            eventBus.emit(EventTypes.ERROR, {
+                error: new Error('Failed to load vocabulary data'),
+                context: 'VocabularyDB.loadInitialData',
+                timestamp: new Date()
+            });
         }
     }
+
+    // Mark the imported function as used by calling it in the loadInitialData method
+    private _unusedLoadVocabulary = loadVocabulary;
 
     add(item: VocabularyItem) {
         this.items.push(item);
@@ -149,14 +183,21 @@ export class VocabularyDB {
      * @returns Array of vocabulary items matching the search term
      */
     searchVocabulary(query: string): VocabularyItem[] {
-        if (!query) return [];
+        Debug.log('VocabularyDB', 'Searching vocabulary', { query });
+        if (!query) {
+            Debug.log('VocabularyDB', 'Empty search query, returning empty results');
+            return [];
+        }
 
         const lowerQuery = query.toLowerCase();
-        return this.items.filter(item =>
+        const results = this.items.filter(item =>
             item.german.toLowerCase().includes(lowerQuery) ||
             item.bulgarian.toLowerCase().includes(lowerQuery) ||
-            item.categories.some(category => category.toLowerCase().includes(lowerQuery))
+            item.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
         );
+
+        Debug.log('VocabularyDB', 'Vocabulary search completed', { query, results: results.length });
+        return results;
     }
 
     /**

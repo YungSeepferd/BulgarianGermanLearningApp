@@ -12,7 +12,7 @@
   import GeneratedLesson from '$lib/components/GeneratedLesson.svelte';
   import LessonGenerator from '$lib/components/LessonGenerator.svelte';
   import { enhancedLessonService } from '$lib/services/enhanced-lesson';
-  import { lessonService } from '$lib/services/lesson';
+  import { lessonService } from '$lib/services/lesson.svelte';
   import { db } from '$lib/data/db.svelte';
   import { LessonSchema, type Lesson, type LessonDifficulty, type LessonType } from '$lib/schemas/lesson';
   import type { VocabularyCategory, PartOfSpeech } from '$lib/schemas/vocabulary';

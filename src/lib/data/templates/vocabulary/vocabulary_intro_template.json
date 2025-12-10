@@ -31,5 +31,5 @@
       "required": false
     }
   ],
-  "template": "# {{sectionTitle}}\n\n{{#if theme}}\n## Theme: {{theme}}\n{{/if}}\n\nHere are some new words for you to learn:\n\n{{#each vocabulary}}\n### {{bulgarian}}\n**German**: {{german}}\n**Part of Speech**: {{partOfSpeech}}\n\n{{#if definition}}\n**Definition**: {{definition}}\n{{/if}}\n\n{{#if example}}\n**Example**:\n- BG: {{example.bulgarian}}\n- DE: {{example.german}}\n{{/if}}\n\n{{#if culturalNote}}\n> **Cultural Note**: {{culturalNote}}\n{{/if}}\n\n---\n{{/each}}\n\n{{#if learningTip}}\n### 💡 Learning Tip\n{{learningTip}}\n{{/if}}"
+  "template": "# {{sectionTitle}}\n\n{{#if theme}}\n## Theme: {{theme}}\n{{/if}}\n\nHere are some new words for you to learn:\n\n{{#each vocabulary}}\n### {{getTargetText this}}\n**{{getSourceLanguageName}}**: {{getSourceText this}}\n**Part of Speech**: {{correctedPartOfSpeech}}\n\n{{#if grammarInfo}}\n**Grammar Info**: {{grammarInfo}}\n{{/if}}\n\n{{#if definition}}\n**Definition**: {{definition}}\n{{/if}}\n\n{{#if example}}\n**Example**:\n{{formatBilingualExample example}}\n{{/if}}\n\n{{#if culturalNote}}\n> **Cultural Note**: {{culturalNote}}\n{{/if}}\n\n---\n{{/each}}\n\n{{#if learningTip}}\n### 💡 Learning Tip\n{{learningTip}}\n{{/if}}"
 }

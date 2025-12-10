@@ -25,7 +25,7 @@ import { lessonTemplateRepository } from './lesson-templates';
 import { culturalGrammarService } from './cultural-grammar';
 import { templateRenderer } from './template-renderer';
 import { VocabularyService } from '../../data/vocabulary';
-import type { VocabularyItem, PartOfSpeech } from '$lib/types/vocabulary';
+import type { VocabularyItem, PartOfSpeech as _PartOfSpeech } from '$lib/types/vocabulary';
 
 /**
  * LessonGenerationEngine class
@@ -134,22 +134,25 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
           limit: Math.ceil(limit / params.criteria.categories.length)
         });
         
-        // Filter by POS if requested
+        // Filter by POS if requested, using validation method
         const filteredItems = params.criteria.partOfSpeech
-          ? items.filter(i => i.partOfSpeech === params.criteria.partOfSpeech)
+          ? items.filter(i => this.validatePartOfSpeech(i.partOfSpeech, i.id) === params.criteria.partOfSpeech)
           : items;
           
         vocabularyItems = [...vocabularyItems, ...filteredItems];
       }
     } else {
-      // Fallback: Random but respect POS
+      // Fallback: Random but respect POS, using validation method
       if (params.criteria.partOfSpeech) {
         const result = await vocabularyService.searchVocabulary({
           difficulty: numericDifficulty,
           partOfSpeech: params.criteria.partOfSpeech,
           limit: limit
         });
-        vocabularyItems = result.items;
+        // Apply validation to ensure correct POS filtering
+        vocabularyItems = result.items.filter(i =>
+          this.validatePartOfSpeech(i.partOfSpeech, i.id) === params.criteria.partOfSpeech
+        );
       } else {
         vocabularyItems = await vocabularyService.getRandomVocabulary(limit, {
           difficulty: numericDifficulty
@@ -169,12 +172,19 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
       
       const themeName = params.criteria.categories?.map(c => c.charAt(0).toUpperCase() + c.slice(1)).join(', ') || 'General';
       
+      // Enhance vocabulary items with corrected part-of-speech and grammar info
+      const enhancedVocabularyItems = vocabularyItems.map(item => ({
+        ...item,
+        correctedPartOfSpeech: this.correctPartOfSpeech(this.validatePartOfSpeech(item.partOfSpeech, item.id)),
+        grammarInfo: this.getFallbackGrammarInfo(this.validatePartOfSpeech(item.partOfSpeech, item.id))
+      }));
+
       const introContext: TemplateRenderingContext = {
         sectionTitle: `Vocabulary: ${themeName}`,
         count: vocabularyItems.length,
         theme: themeName,
         difficulty: params.difficulty,
-        vocabulary: vocabularyItems,
+        vocabulary: enhancedVocabularyItems,
         learningTip: 'Focus on the gender of nouns (der, die, das) as you learn them.',
         learningObjectives: [
           `Learn ${vocabularyItems.length} new words related to ${themeName}`,
@@ -204,10 +214,17 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
         const practiceTemplate = await this.templateRepository.getTemplateById('vocabulary-practice')
           || await this.templateRepository.getTemplate('vocabulary', params.difficulty);
 
+        // Enhance vocabulary items with corrected part-of-speech and grammar info
+        const enhancedVocabularyItems = vocabularyItems.map(item => ({
+          ...item,
+          correctedPartOfSpeech: this.correctPartOfSpeech(this.validatePartOfSpeech(item.partOfSpeech, item.id)),
+          grammarInfo: this.getFallbackGrammarInfo(this.validatePartOfSpeech(item.partOfSpeech, item.id))
+        }));
+
         const practiceContext: TemplateRenderingContext = {
           sectionTitle: 'Practice Exercises',
           instructions: 'Test your knowledge of the new words.',
-          vocabulary: vocabularyItems
+          vocabulary: enhancedVocabularyItems
         };
 
         const practiceContent = this.renderer.render(practiceTemplate, practiceContext);
@@ -237,10 +254,17 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
           difficulty: numericDifficulty
         });
 
+        // Enhance review items with corrected part-of-speech and grammar info
+        const enhancedReviewItems = reviewItems.map(item => ({
+          ...item,
+          correctedPartOfSpeech: this.correctPartOfSpeech(this.validatePartOfSpeech(item.partOfSpeech, item.id)),
+          grammarInfo: this.getFallbackGrammarInfo(this.validatePartOfSpeech(item.partOfSpeech, item.id))
+        }));
+
         const reviewContext: TemplateRenderingContext = {
           sectionTitle: 'Review',
           context: 'Previous Lessons',
-          vocabulary: reviewItems
+          vocabulary: enhancedReviewItems
         };
 
         const reviewContent = this.renderer.render(reviewTemplate, reviewContext);
@@ -455,10 +479,18 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     // Pick a category if none provided
     const category = params.criteria.categories?.[0] || 'travel'; // Default to travel for context
     
+    // Get vocabulary items and enhance them with corrected part-of-speech info
     const vocabularyItems = await vocabularyService.getVocabularyByCategory(category, {
       difficulty: numericDifficulty,
       limit: limit
     });
+
+    // Enhance vocabulary items with corrected part-of-speech and grammar info
+    const enhancedVocabularyItems = vocabularyItems.map(item => ({
+      ...item,
+      correctedPartOfSpeech: this.correctPartOfSpeech(this.validatePartOfSpeech(item.partOfSpeech, item.id)),
+      grammarInfo: this.getFallbackGrammarInfo(this.validatePartOfSpeech(item.partOfSpeech, item.id))
+    }));
 
     // 3. Prepare Context
     const context: TemplateRenderingContext = {
@@ -466,7 +498,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
       theme: category,
       difficulty: params.difficulty,
       grammarConcept: mainConcept,
-      vocabulary: vocabularyItems,
+      vocabulary: enhancedVocabularyItems,
       learningTip: 'Try to narrate a short story using these words.',
       learningObjectives: [
         `Master vocabulary related to ${category}`,
@@ -514,6 +546,119 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
       'C1': 5
     };
     return map[difficulty] || 1;
+  }
+
+  /**
+   * Validate and correct part-of-speech classifications
+   *
+   * This method handles common misclassifications in the vocabulary data
+   * and provides fallback logic to ensure correct part-of-speech usage.
+   *
+   * @param pos - The original part-of-speech classification
+   * @param word - The vocabulary word or ID for context-specific corrections
+   * @returns The corrected part-of-speech classification
+   */
+  private validatePartOfSpeech(pos: string, word: string): string {
+    // Common misclassifications based on validation report
+    const commonMisclassifications: Record<string, string> = {
+      // Greetings and common phrases
+      'zdravej_001': 'interjection', // Hallo
+      'dobro_utro_002': 'phrase',    // Guten Morgen
+      'guten_tag': 'phrase',         // Guten Tag
+      'guten_abend': 'phrase',       // Guten Abend
+      'gute_nacht': 'phrase',        // Gute Nacht
+      'auf_wiedersehen': 'phrase',    // Auf Wiedersehen
+      'bitte': 'interjection',       // Bitte
+      'entschuldigung': 'interjection', // Entschuldigung
+      'es_tut_mir_leid': 'phrase',   // Es tut mir leid
+
+      // Question words
+      'a1_question_001': 'pronoun',  // wer
+      'a1_question_003': 'adverb',   // wann
+      'a1_question_004': 'adverb',   // wo
+      'a1_question_005': 'adverb',   // warum
+      'a1_question_006': 'adverb',   // wie
+      'a1_question_007': 'adverb',   // wie viel, wie viele
+      'a1_question_008': 'pronoun',  // wessen
+      'a1_question_009': 'pronoun',  // was für ein, welcher Art
+      'a1_question_010': 'adverb',   // woher
+      'a1_question_011': 'adverb',   // wohin
+      'a1_question_012': 'conjunction', // ob
+
+      // Numbers
+      'eins': 'numeral',
+      'zwei': 'numeral',
+      'drei': 'numeral',
+      'vier': 'numeral',
+      'funf': 'numeral',
+      'sechs': 'numeral',
+      'sieben': 'numeral',
+      'acht': 'numeral',
+      'neun': 'numeral',
+      'zehn': 'numeral',
+      'elf': 'numeral',
+      'zwoelf': 'numeral',
+      'dreizehn': 'numeral',
+      'zwanzig': 'numeral',
+      'a1_number_200': 'numeral'
+    };
+
+    // Check for specific word misclassifications
+    if (commonMisclassifications[word]) {
+      return commonMisclassifications[word];
+    }
+
+    // Default fallback: return the original POS if no correction is needed
+    return pos;
+  }
+
+  /**
+   * Get fallback grammar information for a part-of-speech
+   *
+   * This method provides appropriate grammar information based on
+   * the corrected part-of-speech classification.
+   *
+   * @param pos - The part-of-speech classification
+   * @returns Grammar information string
+   */
+  private getFallbackGrammarInfo(pos: string): string {
+    const grammarInfoMap: Record<string, string> = {
+      'interjection': 'Interjections are words or phrases used to express emotion or greeting. They are often used at the beginning of sentences.',
+      'pronoun': 'Pronouns replace nouns to avoid repetition. They must agree with the noun they replace in gender, number, and case.',
+      'adverb': 'Adverbs describe verbs, adjectives, or other adverbs. They often answer questions like "how?", "when?", "where?", or "to what extent?".',
+      'numeral': 'Numerals represent numbers and can be cardinal (one, two) or ordinal (first, second). They are used for counting and ordering.',
+      'phrase': 'Phrases are groups of words that function as a single unit in the syntax of a sentence. They often express greetings, farewells, or common expressions.',
+      'conjunction': 'Conjunctions connect words, phrases, or clauses. They can be coordinating (and, but, or) or subordinating (because, although, if).'
+    };
+
+    return grammarInfoMap[pos] || 'No additional grammar information available.';
+  }
+
+  /**
+   * Correct part-of-speech label for display
+   *
+   * This utility function standardizes part-of-speech labels for
+   * consistent display in the UI.
+   *
+   * @param pos - The part-of-speech classification
+   * @returns Display-friendly part-of-speech label
+   */
+  correctPartOfSpeech(pos: string): string {
+    const displayNames: Record<string, string> = {
+      'noun': 'Noun',
+      'verb': 'Verb',
+      'adjective': 'Adjective',
+      'adverb': 'Adverb',
+      'pronoun': 'Pronoun',
+      'preposition': 'Preposition',
+      'conjunction': 'Conjunction',
+      'interjection': 'Interjection',
+      'numeral': 'Numeral',
+      'article': 'Article',
+      'phrase': 'Phrase'
+    };
+
+    return displayNames[pos] || pos;
   }
 
   /**

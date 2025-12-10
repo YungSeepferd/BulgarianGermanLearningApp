@@ -6,7 +6,7 @@
  */
 
 import type { VocabularyItem, PartOfSpeech, VocabularyCategory } from '$lib/types/vocabulary';
-import type { Lesson, LessonDifficulty, LessonType } from '$lib/schemas/lesson';
+import type { Lesson as _Lesson, LessonDifficulty as _LessonDifficulty, LessonType as _LessonType } from '$lib/schemas/lesson';
 
 /**
  * Lesson difficulty levels

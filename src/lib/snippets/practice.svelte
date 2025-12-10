@@ -1,6 +1,6 @@
 // Practice snippet for Svelte 5
 <script lang="ts">
-  import { appState } from '$lib/state/app.svelte';
+  import { appState } from '$lib/state/app-state';
   import type { VocabularyItem } from '$lib/types/vocabulary';
 
   // Reactive state

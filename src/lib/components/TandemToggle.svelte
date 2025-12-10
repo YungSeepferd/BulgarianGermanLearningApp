@@ -1,10 +1,11 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
+  import { appState } from '$lib/state/app-state';
 
-  let { direction = 'DE->BG', mode = 'practice', onDirectionChange, onModeChange } = $props<{
-    direction?: 'DE->BG' | 'BG->DE';
+  let { mode = 'practice', onDirectionChange, onModeChange } = $props<{
+    direction?: never; // Removed legacy direction prop
     mode?: 'practice' | 'search';
-    onDirectionChange?: (direction: 'DE->BG' | 'BG->DE') => void;
+    onDirectionChange?: (direction: 'DE_BG' | 'BG_DE') => void;
     onModeChange?: (mode: 'practice' | 'search') => void;
   }>();
 
@@ -12,15 +13,11 @@
 
   // Toggle functions with animations
   function toggleDirection() {
-    const newDirection = direction === 'DE->BG' ? 'BG->DE' : 'DE->BG';
-    // Since we're using props, we should call the callback.
-    // In Svelte 5, if 'direction' is a bound prop, it would update,
-    // but here we treat it as controlled or uncontrolled.
-    // Ideally, the parent updates the prop, but for local toggle feel we might want local state if not controlled.
-    // However, the original code had local state AND props.
-    // Assuming this component is controlled by parent state (based on app.svelte.ts),
-    // we should just emit the change. But to maintain the 'toggle' feel locally if not updated immediately:
-    if (onDirectionChange) onDirectionChange(newDirection);
+    // Update global state
+    appState.toggleDirection();
+
+    // Call the callback with the new language mode
+    if (onDirectionChange) onDirectionChange(appState.languageMode);
   }
 
   function toggleMode() {
@@ -39,9 +36,9 @@
 
   // Accessibility functions
   function getDirectionAriaLabel() {
-    return direction === 'DE->BG'
-      ? 'Current direction: German to Bulgarian. Click to switch to Bulgarian to German.'
-      : 'Current direction: Bulgarian to German. Click to switch to German to Bulgarian.';
+    return appState.languageMode === 'DE_BG'
+      ? 'Current language direction: German to Bulgarian. Click to switch to Bulgarian to German.'
+      : 'Current language direction: Bulgarian to German. Click to switch to German to Bulgarian.';
   }
 
   function getModeAriaLabel(currentMode: 'practice' | 'search') {
@@ -63,12 +60,12 @@
         aria-live="polite"
       >
         <div class="direction-display">
-          <span class="flag">{direction === 'DE->BG' ? '🇩🇪' : '🇧🇬'}</span>
+          <span class="flag">{appState.languageMode === 'DE_BG' ? '🇩🇪' : '🇧🇬'}</span>
           <span class="arrow">↔️</span>
-          <span class="flag">{direction === 'DE->BG' ? '🇧🇬' : '🇩🇪'}</span>
+          <span class="flag">{appState.languageMode === 'DE_BG' ? '🇧🇬' : '🇩🇪'}</span>
         </div>
         <span class="direction-text">
-          {direction === 'DE->BG' ? 'German → Bulgarian' : 'Bulgarian → German'}
+          {appState.languageMode === 'DE_BG' ? 'German → Bulgarian' : 'Bulgarian → German'}
         </span>
       </button>
     </div>

@@ -2,7 +2,7 @@
  * TemplateRenderer - Service for rendering lesson templates with data
  *
  * This service provides template rendering functionality with support for variables,
- * conditionals, and loops for dynamic lesson generation.
+ * conditionals, loops, and language-specific rendering for dynamic lesson generation.
  */
 
 import type {
@@ -11,6 +11,21 @@ import type {
   ITemplateRenderer
 } from './types';
 import { TemplateRenderingError, DataValidationError } from './types';
+import {
+  getSourceText,
+  getTargetText,
+  getSourceLanguage,
+  getTargetLanguage,
+  getSourceLanguageName,
+  getTargetLanguageName,
+  getDirectionArrow,
+  getDirectionText,
+  getOppositeDirectionText,
+  getLanguageProperty,
+  getOppositeLanguageProperty,
+  formatBilingualExample,
+  getDirectionalTemplate
+} from './template-language-adapter';
 
 /**
  * TemplateRenderer class
@@ -136,6 +151,24 @@ export class TemplateRenderer implements ITemplateRenderer {
    * @returns Content with variables replaced
    */
   private processVariables(content: string, data: TemplateRenderingContext): string {
+    // Add language adapter functions to the data context
+    const extendedData = {
+      ...data,
+      getSourceText,
+      getTargetText,
+      getSourceLanguage,
+      getTargetLanguage,
+      getSourceLanguageName,
+      getTargetLanguageName,
+      getDirectionArrow,
+      getDirectionText,
+      getOppositeDirectionText,
+      getLanguageProperty,
+      getOppositeLanguageProperty,
+      formatBilingualExample,
+      getDirectionalTemplate
+    };
+
     // Updated regex to support dotted paths
     return content.replace(/\{\{\s*([a-zA-Z_][a-zA-Z0-9_.]*)\s*\}\}/g, (match, variableName) => {
       // Skip special template variables
@@ -143,7 +176,7 @@ export class TemplateRenderer implements ITemplateRenderer {
         return match;
       }
 
-      const value = this.resolveValue(variableName, data);
+      const value = this.resolveValue(variableName, extendedData);
 
       if (value === undefined) {
         // If it's a dotted path that failed, it might be optional, but strict mode says throw.
@@ -152,8 +185,17 @@ export class TemplateRenderer implements ITemplateRenderer {
         throw new TemplateRenderingError(`Variable '${variableName}' is not defined`);
       }
 
-      if (typeof value === 'object' && value !== null) {
+      if (typeof value === 'object' && value !== null && typeof value !== 'function') {
         throw new TemplateRenderingError(`Variable '${variableName}' is an object and cannot be rendered directly`);
+      }
+
+      // Handle function calls
+      if (typeof value === 'function') {
+        try {
+          return String(value());
+        } catch (error) {
+          throw new TemplateRenderingError(`Function '${variableName}' failed: ${error instanceof Error ? error.message : String(error)}`);
+        }
       }
 
       return String(value);

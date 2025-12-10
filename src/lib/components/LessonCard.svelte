@@ -9,7 +9,7 @@
   import { LessonSchema, type Lesson } from '../schemas/lesson';
 
   // Props
-  let { lesson } = $props<{ lesson: Lesson }>();
+  let { lesson, onStart } = $props<{ lesson: Lesson; onStart?: () => void }>();
 
   // State
   let isFlipped = $state(false);
@@ -18,12 +18,45 @@
 
   // Computed
   let vocabularyItems = $derived(
-    lesson.vocabulary.map(vocab =>
-      typeof vocab === 'string' ? { id: vocab, german: '', bulgarian: '' } : vocab
-    )
+    lesson.vocabulary.map(vocab => {
+      if (typeof vocab === 'string') {
+        return {
+          id: vocab,
+          german: vocab.split('-')[0] || vocab,
+          bulgarian: vocab.split('-')[1] || vocab,
+          partOfSpeech: 'noun',
+          difficulty: 1
+        };
+      } else if (vocab && typeof vocab === 'object') {
+        return {
+          id: vocab.id || `vocab-${Date.now()}`,
+          german: vocab.german || vocab.bulgarian || 'Unknown',
+          bulgarian: vocab.bulgarian || vocab.german || 'Unknown',
+          partOfSpeech: vocab.partOfSpeech || 'noun',
+          difficulty: vocab.difficulty || 1
+        };
+      } else {
+        return {
+          id: `vocab-${Date.now()}`,
+          german: 'Unknown',
+          bulgarian: 'Unknown',
+          partOfSpeech: 'noun',
+          difficulty: 1
+        };
+      }
+    })
   );
 
-  let currentVocabulary = $derived(vocabularyItems[currentVocabularyIndex]);
+  // Ensure vocabularyItems is never empty and currentVocabulary is always valid
+  let safeVocabularyItems = $derived(vocabularyItems.length > 0 ? vocabularyItems : [{
+    id: 'fallback-vocab',
+    german: 'Example',
+    bulgarian: 'Пример',
+    partOfSpeech: 'noun',
+    difficulty: 1
+  }]);
+
+  let currentVocabulary = $derived(safeVocabularyItems[currentVocabularyIndex] || safeVocabularyItems[0]);
   let completionPercentage = $derived(
     Math.round((lesson.objectives.filter(obj => obj.isCompleted).length / lesson.objectives.length) * 100)
   );
@@ -155,14 +188,14 @@
           onclick={toggleFlip}
           aria-label="View lesson details"
         >
-          Start Lesson
+          View Details
         </button>
         <button
           class="action-button secondary"
-          onclick={() => alert(`Lesson ${lesson.title} started!`)}
+          onclick={() => onStart?.()}
           aria-label="Start this lesson"
         >
-          ▶️
+          ▶️ Start
         </button>
       </div>
     </div>
@@ -235,12 +268,12 @@
             {currentVocabulary.bulgarian}
           </div>
           <div class="vocabulary-meta">
-            {#if currentVocabulary.partOfSpeech}
+            {#if currentVocabulary?.partOfSpeech}
               <span class="part-of-speech">
                 {currentVocabulary.partOfSpeech}
               </span>
             {/if}
-            {#if currentVocabulary.difficulty}
+            {#if currentVocabulary?.difficulty}
               <span class="difficulty-indicator">
                 {'⭐'.repeat(currentVocabulary.difficulty)}
               </span>
@@ -257,8 +290,8 @@
               tabindex="0"
               onkeydown={e => e.key === 'Enter' ? currentVocabularyIndex = index : null}
             >
-              <span class="vocab-german">{vocab.german}</span>
-              <span class="vocab-bulgarian">{vocab.bulgarian}</span>
+              <span class="vocab-german">{vocab?.german || 'Unknown'}</span>
+              <span class="vocab-bulgarian">{vocab?.bulgarian || 'Unknown'}</span>
             </div>
           {/each}
         </div>
@@ -267,7 +300,7 @@
       <div class="lesson-actions">
         <button
           class="action-button primary"
-          onclick={() => alert(`Lesson ${lesson.title} started!`)}
+          onclick={() => onStart?.()}
           aria-label="Start this lesson"
         >
           Start Lesson

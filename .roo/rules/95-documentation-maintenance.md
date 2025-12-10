@@ -294,6 +294,7 @@ docs/
 ## 🔗 Related Documents
 - [Coding Standards](/.roo/rules/20-tech-stack.md)
 - [Workflow Rules](/.roo/rules/30-workflow.md)
+- [Development Process Rules](/.roo/rules/40-development-process.md)
 - [Package Manager Rules](/.roo/rules/10-package-manager.md)
 
 ---

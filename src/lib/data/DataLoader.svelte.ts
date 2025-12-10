@@ -5,6 +5,7 @@
  * maintaining backward compatibility with existing code while using the new function-based loader.
  */
 import { loadVocabulary, getRandomVocabulary } from './loader.js';
+import { Debug } from '../utils';
 import type { UnifiedVocabularyItem } from '../schemas/unified-vocabulary.js';
 
 export class DataLoader {
@@ -102,8 +103,16 @@ export class DataLoader {
      * @returns Array of vocabulary items
      */
     public async getVocabularyByDifficulty(difficulty: number, options: { limit?: number; category?: string } = {}): Promise<UnifiedVocabularyItem[]> {
-        // Import the function here to avoid circular dependencies
-        const { loadVocabularyByDifficulty } = await import('./loader.js');
-        return loadVocabularyByDifficulty(difficulty, options);
+        try {
+            Debug.log('DataLoader', 'Getting vocabulary by difficulty', { difficulty, options });
+            // Import the function here to avoid circular dependencies
+            const { loadVocabularyByDifficulty } = await import('./loader.js');
+            const items = await loadVocabularyByDifficulty(difficulty, options);
+            Debug.log('DataLoader', 'Retrieved vocabulary by difficulty', { difficulty, count: items.length });
+            return items;
+        } catch (error) {
+            Debug.error('DataLoader', 'Failed to get vocabulary by difficulty', error as Error);
+            return [];
+        }
     }
 }

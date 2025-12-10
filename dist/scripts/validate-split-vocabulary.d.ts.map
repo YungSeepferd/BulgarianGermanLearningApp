@@ -1,1 +1,0 @@
-{"version":3,"file":"validate-split-vocabulary.d.ts","sourceRoot":"","sources":["../../scripts/validate-split-vocabulary.ts"],"names":[],"mappings":";AAEA;;;GAGG;AAuCH,cAAM,mBAAmB;IACvB,OAAO,CAAC,QAAQ,CAAS;IACzB,OAAO,CAAC,OAAO,CAA0B;;IAOnC,GAAG;YAoBK,gBAAgB;YAehB,YAAY;IAyD1B,OAAO,CAAC,mBAAmB;IA0B3B,OAAO,CAAC,YAAY;CAwCrB;AAOD,OAAO,EAAE,mBAAmB,EAAE,CAAC"}

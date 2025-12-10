@@ -3,7 +3,7 @@
   import SearchList from '$lib/components/SearchList.svelte';
   import TestCard from '$lib/components/TestCard.svelte';
   import { vocabularyService } from '$lib/data/vocabulary';
-  import { appState } from '$lib/state/app.svelte';
+  import { appState } from '$lib/state/app-state';
   import type { VocabularyItem } from '$lib/types/vocabulary';
   import type { VocabularyCategory } from '$lib/schemas/vocabulary';
 

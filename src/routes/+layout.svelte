@@ -1,6 +1,27 @@
 <script lang="ts">
   import Navigation from '$lib/components/Navigation.svelte';
+  import LevelUp from '$lib/components/gamification/LevelUp.svelte';
   import { page } from '$app/stores';
+  import { appUIState } from '$lib/state/app-state';
+  import { onMount } from 'svelte';
+
+  // Import the forceMigration function for the test button
+  import { getProgressService } from '$lib/services/di-container';
+
+  /**
+   * Force migration of old progress data (for testing purposes)
+   */
+  async function forceMigration() {
+    try {
+      const progressService = await getProgressService();
+      await progressService.forceMigration();
+      appUIState.setError(null);
+      appUIState.setSuccessMessage('Migration completed successfully!');
+    } catch (error) {
+      appUIState.setError(`Migration failed: ${error.message}`);
+      console.error('Migration error:', error);
+    }
+  }
 
   let { children } = $props();
 </script>
@@ -10,6 +31,7 @@
   <main>
     {@render children()}
   </main>
+  <LevelUp />
 </div>
 
 

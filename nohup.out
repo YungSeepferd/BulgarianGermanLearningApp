@@ -1,0 +1,332 @@
+
+> bulgarian-german-learning-app@1.0.0 dev /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh
+> vite dev
+
+[32m✔[0m [33mConsole Ninja[0m extension is connected to [33mVite[0m, see [36mhttps://tinyurl.com/2vt8jxzw[0m
+
+  VITE v7.2.7  ready in 1096 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.178.104:5173/
+  ➜  press h + enter to show help
+
+Google Chrome is requesting /.well-known/appspecific/com.chrome.devtools.json to automatically configure devtools project settings. To learn why, and how to prevent this message, see https://svelte.dev/docs/cli/devtools-json
+
+3:23:32 PM [vite] (client) Pre-transform error: /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/lib/components/ProgressDashboard.svelte:338:0 `</div>` attempted to close an element that was not open
+https://svelte.dev/e/element_invalid_closing_tag
+  Plugin: vite-plugin-svelte:compile
+  File: /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/lib/components/ProgressDashboard.svelte:338:0
+   336 |      </div>
+   337 |    </div>
+   338 |  </div>
+          ^
+   339 |  
+   340 |  <style>
+3:23:32 PM [vite] Internal server error: /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/lib/components/ProgressDashboard.svelte:338:0 `</div>` attempted to close an element that was not open
+https://svelte.dev/e/element_invalid_closing_tag
+  Plugin: vite-plugin-svelte:compile
+  File: /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/lib/components/ProgressDashboard.svelte:338:0
+   336 |      </div>
+   337 |    </div>
+   338 |  </div>
+          ^
+   339 |  
+   340 |  <style>
+
+> bulgarian-german-learning-app@1.0.0 dev /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh
+> vite dev
+
+[32m✔[0m [33mConsole Ninja[0m extension is connected to [33mVite[0m, see [36mhttps://tinyurl.com/2vt8jxzw[0m
+▲ [WARNING] Cannot find base config file "./.svelte-kit/tsconfig.json" [tsconfig.json]
+
+    tsconfig.json:2:13:
+      2 │   "extends": "./.svelte-kit/tsconfig.json",
+        ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+3:24:45 PM [vite] (client) Forced re-optimization of dependencies
+Port 5173 is in use, trying another one...
+
+  VITE v7.2.7  ready in 1158 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: http://192.168.178.104:5174/
+  ➜  press h + enter to show help
+(!) Failed to run dependency scan. Skipping dependency pre-bundling. Error:   Failed to scan for dependencies from entries:
+  /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/+layout.d.ts
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/+layout.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/+layout.ts
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/grammar/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/learn/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/lessons/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/practice/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/progress/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/quiz/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/vocabulary/+page.svelte
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "src/lib/schemas/localStorage.js" for import "PracticeSessionSchema"[0m
+
+    src/lib/utils/localStorage.ts:5:2:
+[37m      5 │   [32mPracticeSessionSchema[37m,
+        ╵   [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+    at failureErrorWithLog (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:1467:15)
+    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:926:25
+    at runOnEndCallbacks (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:1307:45)
+    at buildResponseToResult (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:924:7)
+    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:936:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:935:54)
+    at handleRequest (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:628:17)
+    at handleIncomingPacket (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:653:7)
+    at Socket.readFromStdout (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:581:7)
+
+> bulgarian-german-learning-app@1.0.0 dev /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh
+> vite dev
+
+[32m✔[0m [33mConsole Ninja[0m extension is connected to [33mVite[0m, see [36mhttps://tinyurl.com/2vt8jxzw[0m
+▲ [WARNING] Cannot find base config file "./.svelte-kit/tsconfig.json" [tsconfig.json]
+
+    tsconfig.json:2:13:
+      2 │   "extends": "./.svelte-kit/tsconfig.json",
+        ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+3:27:04 PM [vite] (client) Forced re-optimization of dependencies
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+
+  VITE v7.2.7  ready in 1164 ms
+
+  ➜  Local:   http://localhost:5175/
+  ➜  Network: http://192.168.178.104:5175/
+  ➜  press h + enter to show help
+(!) Failed to run dependency scan. Skipping dependency pre-bundling. Error:   Failed to scan for dependencies from entries:
+  /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/+layout.d.ts
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/+layout.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/+layout.ts
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/grammar/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/lessons/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/learn/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/vocabulary/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/quiz/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/progress/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/practice/+page.svelte
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "src/lib/schemas/localStorage.js" for import "PracticeSessionSchema"[0m
+
+    src/lib/utils/localStorage.ts:5:2:
+[37m      5 │   [32mPracticeSessionSchema[37m,
+        ╵   [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+    at failureErrorWithLog (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:1467:15)
+    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:926:25
+    at runOnEndCallbacks (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:1307:45)
+    at buildResponseToResult (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:924:7)
+    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:936:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:935:54)
+    at handleRequest (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:628:17)
+    at handleIncomingPacket (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:653:7)
+    at Socket.readFromStdout (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:581:7)
+
+> bulgarian-german-learning-app@1.0.0 dev /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh
+> vite dev
+
+[32m✔[0m [33mConsole Ninja[0m extension is connected to [33mVite[0m, see [36mhttps://tinyurl.com/2vt8jxzw[0m
+▲ [WARNING] Cannot find base config file "./.svelte-kit/tsconfig.json" [tsconfig.json]
+
+    tsconfig.json:2:13:
+      2 │   "extends": "./.svelte-kit/tsconfig.json",
+        ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+3:29:31 PM [vite] (client) Forced re-optimization of dependencies
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+Port 5175 is in use, trying another one...
+
+  VITE v7.2.7  ready in 1363 ms
+
+  ➜  Local:   http://localhost:5176/
+  ➜  Network: http://192.168.178.104:5176/
+  ➜  press h + enter to show help
+
+> bulgarian-german-learning-app@1.0.0 dev /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh
+> vite dev
+
+[32m✔[0m [33mConsole Ninja[0m extension is connected to [33mVite[0m, see [36mhttps://tinyurl.com/2vt8jxzw[0m
+▲ [WARNING] Cannot find base config file "./.svelte-kit/tsconfig.json" [tsconfig.json]
+
+    tsconfig.json:2:13:
+      2 │   "extends": "./.svelte-kit/tsconfig.json",
+        ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+3:32:11 PM [vite] (client) Forced re-optimization of dependencies
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+Port 5175 is in use, trying another one...
+Port 5176 is in use, trying another one...
+
+  VITE v7.2.7  ready in 1340 ms
+
+  ➜  Local:   http://localhost:5177/
+  ➜  Network: http://192.168.178.104:5177/
+  ➜  press h + enter to show help
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read EIO
+    at TTY.onStreamRead (node:internal/stream_base_commons:216:20)
+Emitted 'error' event on Interface instance at:
+    at ReadStream.onerror (node:internal/readline/interface:259:10)
+    at ReadStream.emit (node:events:508:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  errno: -5,
+  code: 'EIO',
+  syscall: 'read'
+}
+
+Node.js v25.1.0
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read EIO
+    at TTY.onStreamRead (node:internal/stream_base_commons:216:20)
+Emitted 'error' event on Interface instance at:
+    at ReadStream.onerror (node:internal/readline/interface:259:10)
+    at ReadStream.emit (node:events:508:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  errno: -5,
+  code: 'EIO',
+  syscall: 'read'
+}
+
+Node.js v25.1.0
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read EIO
+    at TTY.onStreamRead (node:internal/stream_base_commons:216:20)
+Emitted 'error' event on Interface instance at:
+    at ReadStream.onerror (node:internal/readline/interface:259:10)
+    at ReadStream.emit (node:events:508:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  errno: -5,
+  code: 'EIO',
+  syscall: 'read'
+}
+
+Node.js v25.1.0
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read EIO
+    at TTY.onStreamRead (node:internal/stream_base_commons:216:20)
+Emitted 'error' event on Interface instance at:
+    at ReadStream.onerror (node:internal/readline/interface:259:10)
+    at ReadStream.emit (node:events:508:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  errno: -5,
+  code: 'EIO',
+  syscall: 'read'
+}
+
+Node.js v25.1.0
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read EIO
+    at TTY.onStreamRead (node:internal/stream_base_commons:216:20)
+Emitted 'error' event on Interface instance at:
+    at ReadStream.onerror (node:internal/readline/interface:259:10)
+    at ReadStream.emit (node:events:508:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  errno: -5,
+  code: 'EIO',
+  syscall: 'read'
+}
+
+Node.js v25.1.0
+
+> bulgarian-german-learning-app@1.0.0 dev /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh
+> vite dev
+
+[32m✔[0m [33mConsole Ninja[0m extension is connected to [33mVite[0m, see [36mhttps://tinyurl.com/2vt8jxzw[0m
+▲ [WARNING] Cannot find base config file "./.svelte-kit/tsconfig.json" [tsconfig.json]
+
+    tsconfig.json:2:13:
+      2 │   "extends": "./.svelte-kit/tsconfig.json",
+        ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+3:39:01 PM [vite] (client) Forced re-optimization of dependencies
+
+  VITE v7.2.7  ready in 1264 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.178.104:5173/
+  ➜  press h + enter to show help
+(!) Failed to run dependency scan. Skipping dependency pre-bundling. Error:   Failed to scan for dependencies from entries:
+  /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/+layout.d.ts
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/+layout.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/+layout.ts
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/grammar/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/learn/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/practice/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/vocabulary/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/lessons/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/progress/+page.svelte
+/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/src/routes/quiz/+page.svelte
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "src/lib/schemas/localStorage.js" for import "PracticeSessionSchema"[0m
+
+    src/lib/utils/localStorage.ts:5:2:
+[37m      5 │   [32mPracticeSessionSchema[37m,
+        ╵   [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+    at failureErrorWithLog (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:1467:15)
+    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:926:25
+    at runOnEndCallbacks (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:1307:45)
+    at buildResponseToResult (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:924:7)
+    at /Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:936:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:935:54)
+    at handleRequest (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:628:17)
+    at handleIncomingPacket (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:653:7)
+    at Socket.readFromStdout (/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:581:7)
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read EIO
+    at TTY.onStreamRead (node:internal/stream_base_commons:216:20)
+Emitted 'error' event on Interface instance at:
+    at ReadStream.onerror (node:internal/readline/interface:259:10)
+    at ReadStream.emit (node:events:508:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  errno: -5,
+  code: 'EIO',
+  syscall: 'read'
+}
+
+Node.js v25.1.0

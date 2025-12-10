@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { PracticeSessionSchema } from './vocabulary';
+import { PracticeSessionSchema, type PracticeSession } from './vocabulary';
 
 /**
  * Schema for individual practice stat entry

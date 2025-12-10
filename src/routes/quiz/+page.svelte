@@ -1,8 +1,8 @@
 <script lang="ts">
   import { quizService } from '$lib/services/quiz';
   import { vocabularyDb } from '$lib/data/db.svelte';
-  import FlashCard from '$lib/components/flashcard/FlashCard.svelte';
-  import QuizController from '$lib/components/flashcard/QuizController.svelte';
+  import FlashCard from '$lib/components/flashcard/flash-card.svelte';
+  import QuizController from '$lib/components/flashcard/quiz-controller.svelte';
 
   // State
   let quiz = $state(null);
@@ -41,7 +41,7 @@
       }
     } catch (err) {
       error = err.message;
-      console.error('Error generating quiz:', err);
+      // Error generating quiz
     } finally {
       isLoading = false;
     }
@@ -75,7 +75,7 @@
       <button
         onclick={generateQuiz}
         disabled={isLoading}
-        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        class="button button-primary px-6 py-3"
       >
         {#if isLoading}
           <span>Generating Quiz...</span>
