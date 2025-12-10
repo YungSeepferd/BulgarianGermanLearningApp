@@ -1,11 +1,11 @@
 // LocalStorage utilities for the Bulgarian-German Learning App
 import type { PracticeSession } from '$lib/types/vocabulary';
+import { PracticeSessionSchema } from '$lib/schemas/vocabulary';
 import {
   UserProgressStorageSchema,
   safeValidateUserProgressStorage,
   isPracticeStat
 } from '$lib/schemas/localStorage';
-import { PracticeSessionSchema } from '$lib/schemas/vocabulary';
 import { StorageError, ErrorHandler } from '../services/errors';
 import { EventBus } from '../services/event-bus';
 
