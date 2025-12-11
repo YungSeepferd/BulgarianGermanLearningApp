@@ -6,15 +6,12 @@
    * Uses the enhanced LessonService for comprehensive lesson generation and management.
    */
 
-  import { z } from 'zod';
-  import { page } from '$app/stores';
   import LessonCard from '$lib/components/LessonCard.svelte';
   import GeneratedLesson from '$lib/components/GeneratedLesson.svelte';
   import LessonGenerator from '$lib/components/LessonGenerator.svelte';
   import { enhancedLessonService } from '$lib/services/enhanced-lesson';
-  import { lessonService } from '$lib/services/lesson.ts';
-  import { vocabularyDb as db } from '$lib/data/db.svelte.ts';
-  import { LessonSchema, type Lesson, type LessonDifficulty, type LessonType } from '$lib/schemas/lesson';
+  import { lessonService } from '$lib/services/lesson';  import LessonCard from '$lib/components/LessonCard.svelte';  import { vocabularyDb as db } from '$lib/data/db.svelte';
+  import { vocabularyDb as db } from '$lib/data/db.svelte';
   import type { VocabularyCategory, PartOfSpeech } from '$lib/schemas/vocabulary';
   import type { VocabularyItem } from '$lib/types/vocabulary';
 

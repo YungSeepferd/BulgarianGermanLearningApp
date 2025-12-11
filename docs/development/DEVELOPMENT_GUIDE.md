@@ -80,7 +80,7 @@ tests/
 1. **Node.js**: v20.x or higher
 2. **pnpm**: v8.x or higher
 3. **TypeScript**: v5.x or higher
-4. **Svelte**: v5.x with Runes enabled
+4. **Svelte**: v5.x using latest syntax (components, runes, and APIs)
 
 ### Installation
 
@@ -116,7 +116,14 @@ cp .env.example .env
 ### 1. Coding Standards
 
 1. **TypeScript**: Use strict mode with no `any` types
-2. **Svelte 5**: Use Runes syntax (`$state`, `$derived`, `$effect`)
+2. **Svelte 5**: Use latest syntax across components and runes (`$state`, `$derived`, `$effect`, `$props`) and prefer current SvelteKit APIs
+### 2a. Documentation & MCP Tools
+
+To stay up-to-date with Svelte 5 syntax and SvelteKit APIs, use the Svelte MCP server:
+- `list-sections` → discover relevant Svelte docs
+- `get-documentation` → fetch full sections
+- `svelte-autofixer` → validate Svelte components before merge
+- Offer a `playground-link` only after user confirmation (do not use if code was written to project files)
 3. **Naming Conventions**:
    - **Classes**: PascalCase (e.g., `LessonGenerationEngine`)
    - **Methods**: camelCase (e.g., `generateLesson`)

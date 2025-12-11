@@ -87,10 +87,10 @@ Stack: ${error.stack || 'No stack trace available'}`;
         ⚠️ {currentError}
       </div>
       <div class="error-actions">
-        <button on:click={toggleDetails} class="details-btn">
+        <button onclick={toggleDetails} class="details-btn">
           {showDetails ? 'Hide Details' : 'Show Details'}
         </button>
-        <button on:click={dismissError} class="dismiss-btn" aria-label="Dismiss error">
+        <button onclick={dismissError} class="dismiss-btn" aria-label="Dismiss error">
           ✕
         </button>
       </div>

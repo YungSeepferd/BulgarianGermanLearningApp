@@ -17,7 +17,8 @@ export const PartOfSpeechSchema = z.enum([
   'interjection', // Interjection (e.g., "ah", "ах")
   'article',     // Article (e.g., "der", "the")
   'number',      // Number (e.g., "eins", "едно")
-  'phrase'       // Common phrase (e.g., "Wie geht's?", "Как си?")
+  'phrase',      // Common phrase (e.g., "Wie geht's?", "Как си?")
+  'expression'   // Expression or idiom
 ]);
 
 // Schema for vocabulary categories (used for grouping)
@@ -41,6 +42,7 @@ export const VocabularyCategorySchema = z.enum([
   'grammar',
   'culture',
   'common_phrases',
+  'verbs',        // Verb-specific category
   'uncategorized' // Fallback for migration
 ]);
 
@@ -223,7 +225,8 @@ export function _getPartOfSpeechLabel(partOfSpeech: PartOfSpeech): string {
     interjection: 'Interjection',
     article: 'Article',
     number: 'Number',
-    phrase: 'Phrase'
+    phrase: 'Phrase',
+    expression: 'Expression'
   };
   return labels[partOfSpeech];
 }

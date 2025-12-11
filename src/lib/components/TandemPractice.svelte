@@ -1,44 +1,36 @@
 <script lang="ts">
   import TandemToggle from './TandemToggle.svelte';
   import SearchList from './SearchList.svelte';
-  import * as dataLoader from '$lib/data/loader';
   import { appState } from '$lib/state/app-state';
   import { t } from '$lib/services/localization';
   import { fade, fly, slide, scale } from 'svelte/transition';
   import { browser } from '$app/environment';
+  import type { VocabularyItem } from '$lib/types/vocabulary';
+  import { vocabularyDb } from '$lib/data/db.svelte';
 
   // Track if component is mounted to prevent SSR fetch calls
   let isMounted = $state(false);
-  let currentItem = $state(null);
+  let currentItem = $state<VocabularyItem | null>(null);
   let userAnswer = $state('');
   let isAnswered = $state(false);
   let isCorrect = $state(false);
   let showExamples = $state(false);
   let searchQuery = $state('');
-  let searchResults = $state([]);
+  let searchResults = $state<VocabularyItem[]>([]);
   let isLoading = $state(true);
-  let error = $state(null);
+  let error = $state<string | null>(null);
   // Error state
   let hasError = $state(false);
-  let errorMessage = $state(null);
+  let errorMessage = $state<string | null>(null);
 
   // Simple error handler
-  function handleError(error, context) {
+  function handleError(error: unknown, context: string) {
     console.error(`[${context}]`, error);
   }
 
-  // Derived state from global appState with error handling
-  // Note: We keep this for backward compatibility with SearchList component
-  let direction = $derived.by(() => {
-    try {
-      return appState.languageMode === 'DE_BG' ? 'DE->BG' : 'BG->DE';
-    } catch (err) {
-      handleError(err, 'Failed to get language direction');
-      hasError = true;
-      errorMessage = t('errors.load_direction_failed');
-      return 'DE->BG';
-    }
-  });
+  // No separate direction state; compute inline when needed
+  let sourceLanguageName = $derived(getSourceLanguageName());
+  let targetLanguageName = $derived(getTargetLanguageName());
 
   let mode = $state<'practice' | 'search'>('practice');
   let stats = $state<{
@@ -117,8 +109,9 @@
       // Simulate loading delay for better UX
       await new Promise(resolve => setTimeout(resolve, 300));
 
-      const items = await dataLoader.getRandomVocabulary(1);
-      currentItem = items[0] || null;
+      await vocabularyDb.initialize();
+      const items = vocabularyDb.getRandomVocabulary(1);
+      currentItem = items && items[0] ? items[0] : null;
       resetAnswer();
     } catch (err) {
       handleError(err, 'Failed to load vocabulary item');
@@ -255,6 +248,15 @@
     }
   }
 
+  function mapNumericDifficultyToCEFR(d: number | undefined): 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | undefined {
+    if (d === undefined || d === null) return undefined;
+    if (d <= 1.5) return 'A1';
+    if (d <= 2.5) return 'A2';
+    if (d <= 3.5) return 'B1';
+    if (d <= 4.5) return 'B2';
+    return 'C1';
+  }
+
   function getStreakEmoji(streak: number): string {
     if (streak >= 10) return '🔥';
     if (streak >= 5) return '⭐';
@@ -270,8 +272,9 @@
     try {
       searchQuery = query;
       if (query.trim()) {
-        const results = await dataLoader.loadVocabularyBySearch(query);
-        searchResults = results.items;
+        await vocabularyDb.initialize();
+        const results = vocabularyDb.searchVocabulary(query);
+        searchResults = results;
       } else {
         searchResults = [];
       }
@@ -368,7 +371,7 @@
    * @param languageMode The language mode to convert
    * @returns Direction string in format 'DE->BG' or 'BG->DE'
    */
-  function convertLanguageModeToDirection(languageMode: 'DE_BG' | 'BG_DE'): string {
+  function convertLanguageModeToDirection(languageMode: 'DE_BG' | 'BG_DE'): 'DE->BG' | 'BG->DE' {
     return languageMode === 'DE_BG' ? 'DE->BG' : 'BG->DE';
   }
 
@@ -493,9 +496,9 @@
           <h3 class="question-text" in:scale>{getQuestionText()}</h3>
           <div class="item-meta">
             <span class="category">{currentItem.category}</span>
-            {#if currentItem.level}
-              <span class="difficulty" style="color: {getDifficultyColor(currentItem.level)}">
-                {currentItem.level}
+            {#if mapNumericDifficultyToCEFR(currentItem.difficulty)}
+              <span class="difficulty" style="color: {getDifficultyColor(mapNumericDifficultyToCEFR(currentItem.difficulty))}">
+                {mapNumericDifficultyToCEFR(currentItem.difficulty)}
               </span>
             {/if}
             <button
@@ -628,11 +631,11 @@
           type="text"
           bind:value={searchQuery}
           placeholder={t('practice.search_placeholder')}
-          oninput={(e) => handleSearch(e.target.value)}
+          oninput={(e: Event) => handleSearch((e.currentTarget as HTMLInputElement).value)}
           class="search-input"
         />
         <div class="search-direction">
-          {getSourceLanguageName()} → {getTargetLanguageName()}
+          {sourceLanguageName} → {targetLanguageName}
         </div>
       </div>
 
@@ -640,6 +643,8 @@
         items={searchResults}
         direction={convertLanguageModeToDirection(appState.languageMode)}
         onSelectItem={handleSelectItem}
+        onToggleSelectItem={() => {}}
+        selectedItems={new Set()}
       />
     </div>
   {/if}

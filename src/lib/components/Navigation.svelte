@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   /**
    * Navigation Component
    *
@@ -6,32 +6,101 @@
    */
 
   import { page } from '$app/stores';
-  import { t } from '$lib/services/localization';
+  import { appState } from '$lib/state/app-state';
+  import { t, getCurrentLanguage, isTranslationsLoading, onTranslationsChange, offTranslationsChange } from '$lib/services/localization';
+  import { onMount } from 'svelte';
 
-  // Navigation items
-  let { navItems = [
-    { name: t('navigation.dashboard'), path: '/', icon: '🏠' },
-    { name: t('navigation.vocabulary'), path: '/vocabulary', icon: '📚' },
-    { name: t('navigation.grammar'), path: '/grammar', icon: '📖' },
-    { name: t('navigation.practice'), path: '/practice', icon: '🎯' },
-    { name: t('navigation.learn'), path: '/learn', icon: '🧠' }
-  ] } = $props();
+  // Default navigation items
+  const defaultNavItems = [
+    { translationKey: 'navigation.dashboard', path: '/', icon: '🏠' },
+    { translationKey: 'navigation.vocabulary', path: '/vocabulary', icon: '📚' },
+    { translationKey: 'navigation.grammar', path: '/grammar', icon: '📖' },
+    { translationKey: 'navigation.practice', path: '/practice', icon: '🎯' },
+    { translationKey: 'navigation.learn', path: '/learn', icon: '🧠' }
+  ];
 
-  // Current route
+  // Navigation items with reactive translations
+  let { navItems = [] } = $props();
+
+  // Reactive variables
   let currentPath = $derived.by(() => $page.url.pathname);
+  let userSettingsLabel = $state('');
+  let homeLabel = $state('');
+  let appNameLabel = $state('');
+  let translatedNavItems = $state([]);
+  let directionLabel = $state('');
+  let languageCode = $state<'de' | 'bg'>(getCurrentLanguage());
+  let languageToggleAria = $state('Switch language direction');
+
+  function getDirectionFallback(): string {
+    return appState.languageMode === 'DE_BG' ? 'German → Bulgarian' : 'Bulgarian → German';
+  }
+
+  function buildDirectionLabel(isLoading: boolean): string {
+    if (isLoading) return getDirectionFallback();
+    return appState.languageMode === 'DE_BG'
+      ? t('directions.de_to_bg') || 'German → Bulgarian'
+      : t('directions.bg_to_de') || 'Bulgarian → German';
+  }
+
+  function buildLanguageToggleAria(isLoading: boolean): string {
+    if (isLoading) return 'Switch language direction';
+    return appState.languageMode === 'DE_BG'
+      ? 'Current language direction: German to Bulgarian. Click to switch to Bulgarian to German.'
+      : 'Current language direction: Bulgarian to German. Click to switch to German to Bulgarian.';
+  }
+
+  // Update translations reactively
+  function updateTranslations() {
+    const loading = isTranslationsLoading();
+
+    userSettingsLabel = loading ? 'Loading…' : (t('navigation.user_settings') || 'User Settings');
+    homeLabel = loading ? 'Loading…' : (t('navigation.home') || 'Home');
+    appNameLabel = loading ? 'BulgarianApp' : (t('navigation.app_name') || 'BulgarianApp');
+    directionLabel = buildDirectionLabel(loading);
+    languageCode = getCurrentLanguage();
+    languageToggleAria = buildLanguageToggleAria(loading);
+
+    translatedNavItems = navItems.length > 0
+      ? navItems
+      : defaultNavItems.map(item => ({
+          ...item,
+          name: loading
+            ? 'Loading…'
+            : (t(item.translationKey) || item.translationKey.split('.').pop())
+        }));
+  }
+
+  // Set up reactive translation updates
+  onMount(() => {
+    updateTranslations(); // Initial update
+    onTranslationsChange(updateTranslations);
+
+    return () => {
+      offTranslationsChange(updateTranslations);
+    };
+  });
+
+  function handleToggleLanguage() {
+    appState.toggleDirection();
+    // Immediate optimistic UI update while translations reload
+    directionLabel = buildDirectionLabel(isTranslationsLoading());
+    languageCode = getCurrentLanguage();
+    languageToggleAria = buildLanguageToggleAria(isTranslationsLoading());
+  }
 </script>
 
 <nav class="navigation" aria-label="Main navigation">
   <div class="navigation-container">
     <div class="logo">
-      <a href="/" aria-label={t('navigation.home')}>
+      <a href="/" aria-label={homeLabel}>
         <span class="logo-icon">🇧🇬🇩🇪</span>
-        <span class="logo-text">{t('navigation.app_name')}</span>
+        <span class="logo-text">{appNameLabel}</span>
       </a>
     </div>
 
     <ul class="nav-list">
-      {#each navItems as item}
+      {#each translatedNavItems as item}
         <li class="nav-item">
           <a
             href={item.path}
@@ -46,7 +115,16 @@
     </ul>
 
     <div class="nav-actions">
-      <button class="nav-action" aria-label={t('navigation.user_settings')}>
+      <button
+        class="language-toggle"
+        onclick={handleToggleLanguage}
+        aria-label={languageToggleAria}
+        aria-live="polite"
+      >
+        <span class="lang-code">{languageCode.toUpperCase()}</span>
+        <span class="lang-direction">{directionLabel}</span>
+      </button>
+      <button class="nav-action" aria-label={userSettingsLabel}>
         👤
       </button>
     </div>
@@ -139,6 +217,43 @@
   .nav-actions {
     display: flex;
     gap: 0.5rem;
+    align-items: center;
+  }
+
+  .language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    background: #f8fafc;
+    color: #0f172a;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+
+  .language-toggle:hover {
+    background: #e2e8f0;
+    border-color: #cbd5e1;
+  }
+
+  .language-toggle:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+
+  .lang-code {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .lang-direction {
+    color: #475569;
+    font-size: 0.8rem;
+    white-space: nowrap;
   }
 
   .nav-action {

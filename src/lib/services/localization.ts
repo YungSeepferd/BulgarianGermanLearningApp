@@ -5,6 +5,7 @@
  * supporting both German and Bulgarian languages.
  */
 
+import { base } from '$app/paths';
 import { appState } from '../state/app-state';
 import { browser } from '$app/environment';
 
@@ -19,11 +20,14 @@ interface _TranslationDictionary {
 // Define the structure for our translations
 interface Translations {
     navigation: {
-        dashboard: string;
-        vocabulary: string;
-        grammar: string;
-        practice: string;
-        learn: string;
+      dashboard: string;
+      vocabulary: string;
+      grammar: string;
+      practice: string;
+      learn: string;
+      home: string;
+      app_name: string;
+      user_settings: string;
     };
     common: {
         check_answer: string;
@@ -81,11 +85,25 @@ interface Translations {
         example: string;
         examples: string;
     };
+    dashboard: {
+        title: string;
+        total_vocabulary: string;
+        favorited: string;
+        recent_searches: string;
+    };
+    languages: {
+        german: string;
+        bulgarian: string;
+    }
 }
 
 // Current language state
 let _currentLanguage: 'de' | 'bg' = 'de';
 let translations: Translations = {} as Translations;
+let _isLoading = true;
+
+// Create a reactive store for translation changes
+const translationChangeListeners: (() => void)[] = [];
 
 // Event system for language changes
 type LanguageChangeListener = (language: 'de' | 'bg') => void;
@@ -95,6 +113,25 @@ const languageChangeListeners: LanguageChangeListener[] = [];
  * LocalizationService class for handling translations and language changes
  */
 export class LocalizationService {
+    /**
+     * Check if translations are currently loading
+     */
+    static isLoading(): boolean {
+        return _isLoading;
+    }
+
+    /**
+     * Notify all listeners that translations have changed
+     */
+    private static notifyTranslationChange(): void {
+        for (const listener of translationChangeListeners) {
+            try {
+                listener();
+            } catch (error) {
+                console.error('Error in translation change listener:', error);
+            }
+        }
+    }
     /**
      * Initialize the localization service
      */
@@ -129,25 +166,33 @@ export class LocalizationService {
      * Load translations for the current language
      */
     private static async loadTranslations(): Promise<void> {
+        _isLoading = true;
         try {
             const lang = _currentLanguage;
-            const response = await fetch(`/translations/${lang}.json`);
+            const response = await fetch(`${base}/translations/${lang}.json`);
             if (!response.ok) {
                 throw new Error(`Failed to load translations for ${lang}`);
             }
-            translations = await response.json();
+            const loadedTranslations = await response.json();
+            console.log('Loaded translations:', JSON.stringify(loadedTranslations, null, 2));
+            translations = loadedTranslations;
+            this.notifyTranslationChange(); // Notify that translations have changed
         } catch (error) {
             console.error('Failed to load translations:', error);
             // Fallback to German if loading fails
             _currentLanguage = 'de';
             try {
-                const response = await fetch('/translations/de.json');
+                const response = await fetch(`${base}/translations/de.json`);
                 if (response.ok) {
                     translations = await response.json();
+                    this.notifyTranslationChange(); // Notify that translations have changed
                 }
             } catch (fallbackError) {
                 console.error('Failed to load fallback translations:', fallbackError);
             }
+        } finally {
+            _isLoading = false;
+            this.notifyTranslationChange(); // Notify that loading state has changed
         }
     }
 
@@ -165,6 +210,17 @@ export class LocalizationService {
      */
     static t(key: string, params?: Record<string, string>): string {
         try {
+            // If translations are still loading, return the key with loading indicator
+            if (_isLoading) {
+                return ''; // Return empty string during loading
+            }
+
+            // If no translations are loaded, return the key as fallback
+            if (!translations || Object.keys(translations).length === 0) {
+                console.warn(`Translation key '${key}' not available - no translations loaded`);
+                return key;
+            }
+
             // Split the key by dots to navigate the nested structure
             const keys = key.split('.');
             let value: TranslationValue = translations;
@@ -246,6 +302,7 @@ export class LocalizationService {
                 console.error('Error in language change listener:', error);
             }
         }
+        this.notifyTranslationChange(); // Also notify about translation changes
     }
 
     /**
@@ -264,6 +321,30 @@ if (browser) {
 // Export a reactive version of the translation function
 export function t(key: string, params?: Record<string, string>): string {
     return LocalizationService.t(key, params);
+}
+
+// Export a function to check loading state
+export function isTranslationsLoading(): boolean {
+    return _isLoading;
+}
+
+/**
+ * Register a listener for translation changes
+ * @param listener The function to call when translations change
+ */
+export function onTranslationsChange(listener: () => void): void {
+    translationChangeListeners.push(listener);
+}
+
+/**
+ * Remove a translation change listener
+ * @param listener The function to remove
+ */
+export function offTranslationsChange(listener: () => void): void {
+    const index = translationChangeListeners.indexOf(listener);
+    if (index !== -1) {
+        translationChangeListeners.splice(index, 1);
+    }
 }
 
 // Export a reactive version of the current language

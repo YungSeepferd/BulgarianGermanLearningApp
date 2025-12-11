@@ -57,6 +57,11 @@ export class AppState {
     setError(error: string | null): void { return appUIState.setError(error); }
 
     /**
+     * Return all vocabulary items currently loaded
+     */
+    getAllVocabularyItems(): VocabularyItem[] { return appDataState.allItems; }
+
+    /**
      * Record a practice result with proper typing
      * @param itemId The ID of the vocabulary item
      * @param correct Whether the answer was correct

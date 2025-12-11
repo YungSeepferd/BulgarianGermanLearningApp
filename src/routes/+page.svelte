@@ -1,9 +1,26 @@
 <script lang="ts">
   import SimpleProgressCounter from '$lib/components/SimpleProgressCounter.svelte';
-  import { diContainer } from '$lib/services/di-container';
   import { onMount } from 'svelte';
   import { initializeApp } from '$lib/state/app.svelte';
-  import { t } from '$lib/services/localization';
+  import { t, onTranslationsChange, offTranslationsChange } from '$lib/services/localization';
+
+  // Reactive translation for dashboard title
+  let dashboardTitle = $state('');
+
+  // Update translations reactively
+  function updateTranslations() {
+    dashboardTitle = t('dashboard.title') || 'Dashboard';
+  }
+
+  // Set up reactive translation updates
+  onMount(() => {
+    updateTranslations(); // Initial update
+    onTranslationsChange(updateTranslations);
+
+    return () => {
+      offTranslationsChange(updateTranslations);
+    };
+  });
 
   // Initialize application
   onMount(async () => {
@@ -17,7 +34,7 @@
 </script>
 
 <div class="dashboard-container">
-  <h1>{t('dashboard.title')}</h1>
+  <h1>{dashboardTitle}</h1>
   <SimpleProgressCounter />
 </div>
 

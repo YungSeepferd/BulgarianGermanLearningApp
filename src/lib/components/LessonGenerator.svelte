@@ -10,9 +10,11 @@
   import { t } from '$lib/services/localization';
   import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '$lib/components/ui/dialog';
   import { Button } from '$lib/components/ui/button';
+  import type { LessonType, LessonDifficulty } from '$lib/schemas/lesson';
+  import type { VocabularyCategory, PartOfSpeech } from '$lib/schemas/vocabulary';
 
   // Simple error handler
-  function handleError(error, context) {
+  function handleError(error: unknown, context: string) {
     console.error(`[${context}]`, error);
   }
 
@@ -21,8 +23,8 @@
 
   // State
   let isGenerating = $state(false);
-  let error = $state(null);
-  let successMessage = $state(null);
+  let error = $state<string | null>(null);
+  let successMessage = $state<string | null>(null);
   let hasError = $state(false);
 
   // Lesson generation parameters
@@ -192,8 +194,8 @@
     }
   }
 
-  function getLessonTypeName(type) {
-    const typeNames = {
+  function getLessonTypeName(type: string) {
+    const typeNames: Record<string, string> = {
       'vocabulary': t('lesson.types.vocabulary'),
       'grammar': t('lesson.types.grammar'),
       'mixed': t('lesson.types.mixed'),
@@ -207,8 +209,8 @@
     return typeNames[type] || type;
   }
 
-  function getCategoryDisplayName(category) {
-    const displayNames = {
+  function getCategoryDisplayName(category: string) {
+    const displayNames: Record<string, string> = {
       'greetings': t('vocabulary.categories.greetings'),
       'numbers': t('vocabulary.categories.numbers'),
       'family': t('vocabulary.categories.family'),
@@ -234,8 +236,8 @@
     return displayNames[category] || category;
   }
 
-  function getPartOfSpeechDisplayName(partOfSpeech) {
-    const displayNames = {
+  function getPartOfSpeechDisplayName(partOfSpeech: string) {
+    const displayNames: Record<string, string> = {
       'noun': t('vocabulary.parts_of_speech.nouns'),
       'verb': t('vocabulary.parts_of_speech.verbs'),
       'adjective': t('vocabulary.parts_of_speech.adjectives'),
@@ -273,9 +275,9 @@
   }
 </script>
 
-<Dialog open={isOpen} onclick={(e) => {
+<Dialog open={isOpen} onOpenChange={(open) => {
   try {
-    if (!e.detail) closeModal();
+    if (!open) closeModal();
   } catch (err) {
     handleError(err, 'Failed to close lesson generator modal');
     hasError = true;
@@ -447,6 +449,8 @@
     <DialogFooter>
       <Button
         variant="secondary"
+        size="default"
+        class=""
         onclick={() => {
           try {
             closeModal();
@@ -461,6 +465,8 @@
       </Button>
       <Button
         variant="default"
+        size="default"
+        class=""
         onclick={() => {
           try {
             generateLesson();
@@ -470,7 +476,7 @@
         }}
         disabled={isGenerating}
       >
-        {isGenerating ? t('lesson.generator.generating') : t('lesson.generator.generate_lesson')}
+        {isGenerating ? $derived(t('lesson.generator.generating') || 'Generating...') : $derived(t('lesson.generator.generate_lesson') || 'Generate Lesson')}
       </Button>
     </DialogFooter>
   </DialogContent>

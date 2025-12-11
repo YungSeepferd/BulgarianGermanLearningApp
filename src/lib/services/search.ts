@@ -64,6 +64,11 @@ export async function searchVocabulary(params: VocabularySearchParams): Promise<
   // Load vocabulary data
   const vocabularyItems = await getVocabularyData();
 
+  const safeOffset = Number.isFinite(params.offset) ? Number(params.offset) : 0;
+  const safeLimit = Number.isFinite(params.limit) && params.limit && params.limit > 0
+    ? Number(params.limit)
+    : 20;
+
   // Apply filters first to reduce the dataset for fuzzy search
   let filteredItems: z.infer<typeof UnifiedVocabularyItemSchema>[] = applyFilters(vocabularyItems, params);
 
@@ -79,12 +84,12 @@ export async function searchVocabulary(params: VocabularySearchParams): Promise<
   const total = filteredItems.length;
 
   // Apply pagination
-  const paginatedItems = applyPagination(filteredItems, params) as z.infer<typeof UnifiedVocabularyItemSchema>[];
+  const paginatedItems = applyPagination(filteredItems, safeOffset, safeLimit) as z.infer<typeof UnifiedVocabularyItemSchema>[];
 
   return {
     items: paginatedItems,
     total,
-    hasMore: params.offset + params.limit < total
+    hasMore: safeOffset + safeLimit < total
   };
 }
 
@@ -179,9 +184,9 @@ function applySorting(items: UnifiedVocabularyItem[], params: VocabularySearchPa
 /**
  * Apply pagination to the filtered and sorted items
  */
-function applyPagination(items: UnifiedVocabularyItem[], params: VocabularySearchParams): UnifiedVocabularyItem[] {
-  const startIndex = params.offset;
-  const endIndex = params.offset + params.limit;
+function applyPagination(items: UnifiedVocabularyItem[], offset: number, limit: number): UnifiedVocabularyItem[] {
+  const startIndex = offset;
+  const endIndex = offset + limit;
   return items.slice(startIndex, endIndex);
 }
 
@@ -211,19 +216,17 @@ export async function getSearchSuggestions(query: string, limit: number = 5): Pr
     if (item.bulgarian.toLowerCase().startsWith(lowerQuery)) {
       suggestions.add(item.bulgarian);
     }
-    if (item.transliteration) {
-      if (typeof item.transliteration === 'string') {
-        if (item.transliteration.toLowerCase().startsWith(lowerQuery)) {
-          suggestions.add(item.transliteration);
-        }
-      } else if (item.transliteration && typeof item.transliteration === 'object' && item.transliteration !== null) {
-        const translit = item.transliteration as { german?: string; bulgarian?: string };
-        if (translit.german && typeof translit.german === 'string' && translit.german.toLowerCase().startsWith(lowerQuery)) {
-          suggestions.add(translit.german);
-        }
-        if (translit.bulgarian && typeof translit.bulgarian === 'string' && translit.bulgarian.toLowerCase().startsWith(lowerQuery)) {
-          suggestions.add(translit.bulgarian);
-        }
+    if (item.transliteration && typeof item.transliteration === 'string') {
+      if (item.transliteration.toLowerCase().startsWith(lowerQuery)) {
+        suggestions.add(item.transliteration);
+      }
+    } else if (item.transliteration && typeof item.transliteration === 'object' && item.transliteration !== null) {
+      const translit = item.transliteration as { german?: string; bulgarian?: string };
+      if (translit.german && typeof translit.german === 'string' && translit.german.toLowerCase().startsWith(lowerQuery)) {
+        suggestions.add(translit.german);
+      }
+      if (translit.bulgarian && typeof translit.bulgarian === 'string' && translit.bulgarian.toLowerCase().startsWith(lowerQuery)) {
+        suggestions.add(translit.bulgarian);
       }
     }
   });

@@ -99,6 +99,16 @@ src/lib/components/
 </script>
 ```
 
+### 3.3 Svelte 5 Syntax Checklist
+
+Before merging component code, verify:
+- [ ] Uses `$props()` for component props (not `export let`)
+- [ ] Uses `$state()` for reactive state (not plain `let` with `$:`)
+- [ ] Uses `$derived()` for computed values (not `$:` reactive statements)
+- [ ] Uses latest SvelteKit APIs per upstream documentation
+- [ ] Component validated with `svelte-autofixer` (via Svelte MCP)
+- [ ] No legacy reactivity patterns (`$:`, `export let` for props)
+
 **Type props with TypeScript:**
 ```svelte
 <script lang="ts">

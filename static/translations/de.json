@@ -4,7 +4,10 @@
     "vocabulary": "Vokabular",
     "grammar": "Grammatik",
     "practice": "Üben",
-    "learn": "Lernen"
+    "learn": "Lernen",
+    "home": "Startseite",
+    "app_name": "Bulgarisch-Deutsch Lernen",
+    "user_settings": "Einstellungen"
   },
   "common": {
     "check_answer": "Antwort prüfen",
@@ -25,7 +28,18 @@
     "loading": "Lädt...",
     "error_loading": "Fehler beim Laden",
     "try_again": "Erneut versuchen",
-    "reload_page": "Seite neu laden"
+    "reload_page": "Seite neu laden",
+    "milliseconds": "ms"
+  },
+  "dashboard": {
+    "title": "Übersicht",
+    "total_vocabulary": "Gesamter Wortschatz",
+    "favorited": "Favorisiert",
+    "recent_searches": "Letzte Suchen"
+  },
+  "languages": {
+    "german": "Deutsch",
+    "bulgarian": "Bulgarisch"
   },
   "feedback": {
     "correct": "Richtig!",
@@ -56,7 +70,30 @@
     "search_mode": "Suchmodus",
     "quick_practice": "Schnell üben",
     "type_answer": "Geben Sie Ihre Antwort ein...",
-    "response_time": "Antwortzeit"
+    "type_answer_placeholder": "Gib deine Antwort ein...",
+    "check_answer": "Antwort prüfen",
+    "correct_answer": "Richtige Antwort!",
+    "incorrect_answer": "Falsche Antwort:",
+    "your_answer": "Deine Antwort",
+    "correct": "Richtig",
+    "streak": "Serie",
+    "accuracy": "Genauigkeit",
+    "avg_time": "Durchschnittszeit",
+    "next_word": "Nächstes Wort",
+    "loading_vocabulary": "Vokabular wird geladen...",
+    "load_vocabulary_failed": "Vokabular konnte nicht geladen werden",
+    "loading_failed": "Vokabular konnte nicht geladen werden",
+    "retry_loading": "Erneut laden",
+    "switch_to_search": "Zum Suchmodus wechseln",
+    "response_time": "Antwortzeit",
+    "search_vocabulary": "Vokabular durchsuchen",
+    "practice_word": "Übe das Wort",
+    "category": "Kategorie",
+    "favorite": "Favorit",
+    "favorited": "Favorisiert",
+    "example": "Beispiel",
+    "examples": "Beispiele",
+    "recommended_for_practice": "Empfohlen zum Üben"
   },
   "lesson": {
     "example": "Beispiel",

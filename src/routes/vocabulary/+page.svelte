@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import SearchList from '$lib/components/SearchList.svelte';
   import TestCard from '$lib/components/TestCard.svelte';
-  import { vocabularyService } from '$lib/data/vocabulary';
+  import { vocabularyDb } from '$lib/data/db.svelte';
   import { appState } from '$lib/state/app-state';
   import type { VocabularyItem } from '$lib/types/vocabulary';
   import type { VocabularyCategory } from '$lib/schemas/vocabulary';
@@ -47,26 +47,37 @@
     { value: 6, label: 'Phase 6: Expert' }
   ];
  
+  // Helper to filter all items based on current UI state
+  function filterItems(all: VocabularyItem[]) {
+    return all.filter((item) => {
+      const q = (searchTerm || '').toLowerCase();
+      const queryMatch = q
+        ? item.german.toLowerCase().includes(q) ||
+          item.bulgarian.toLowerCase().includes(q) ||
+          (item.tags || []).some(tag => tag.toLowerCase().includes(q))
+        : true;
+      const posMatch = selectedPartOfSpeech ? item.partOfSpeech === selectedPartOfSpeech : true;
+      const diffMatch = selectedDifficulty != null ? Math.round(item.difficulty) === selectedDifficulty : true;
+        const catMatch = selectedCategory !== 'all' ? item.categories.includes(selectedCategory as VocabularyCategory) : true;
+      // learningPhase not present in app type; ignore for now
+      return queryMatch && posMatch && diffMatch && catMatch;
+    });
+  }
+
   // Fetch vocabulary data with filters
   async function loadVocabulary() {
     try {
       loading = true;
       error = null;
 
-      const params = {
-        query: searchTerm || undefined,
-        partOfSpeech: selectedPartOfSpeech || undefined,
-        difficulty: selectedDifficulty || undefined,
-        categories: selectedCategory !== 'all' ? [selectedCategory] : undefined,
-        learningPhase: selectedLearningPhase ?? undefined,
-        limit: ITEMS_PER_PAGE,
-        offset: currentPage * ITEMS_PER_PAGE
-      };
+      await vocabularyDb.initialize();
+      const all = vocabularyDb.getVocabulary();
+      const offset = currentPage * ITEMS_PER_PAGE;
 
-      const service = await vocabularyService;
-      const result = await service.searchVocabulary(params);
-      vocabularyItems = result.items;
-      hasMore = result.hasMore;
+      const filtered = filterItems(all);
+
+      hasMore = offset + ITEMS_PER_PAGE < filtered.length;
+      vocabularyItems = filtered.slice(offset, offset + ITEMS_PER_PAGE);
     } catch (err) {
       console.error('Failed to load vocabulary:', err);
       error = 'Failed to load vocabulary data. Please try again.';
@@ -90,8 +101,10 @@
 
   function startPracticeWithSelected() {
     const itemsToPractice = vocabularyItems.filter(item => selectedItems.has(item.id));
-    if (itemsToPractice.length > 0) {
-      appState.startPracticeSession(itemsToPractice);
+    const firstItem = itemsToPractice[0];
+    if (firstItem) {
+      // Start practice with the first selected item
+      appState.startPracticeSession(firstItem);
       selectedItems.clear();
     }
   }
@@ -123,20 +136,13 @@
     currentPage++;
     try {
       loading = true;
-      const params = {
-        query: searchTerm || undefined,
-        partOfSpeech: selectedPartOfSpeech || undefined,
-        difficulty: selectedDifficulty || undefined,
-        categories: selectedCategory !== 'all' ? [selectedCategory] : undefined,
-        learningPhase: selectedLearningPhase ?? undefined,
-        limit: ITEMS_PER_PAGE,
-        offset: currentPage * ITEMS_PER_PAGE
-      };
-
-      const service = await vocabularyService;
-      const result = await service.searchVocabulary(params);
-      vocabularyItems = [...vocabularyItems, ...result.items];
-      hasMore = result.hasMore;
+      await vocabularyDb.initialize();
+      const all = vocabularyDb.getVocabulary();
+      const offset = currentPage * ITEMS_PER_PAGE;
+      const filtered = filterItems(all);
+      hasMore = offset + ITEMS_PER_PAGE < filtered.length;
+      const nextSlice = filtered.slice(offset, offset + ITEMS_PER_PAGE);
+      vocabularyItems = [...vocabularyItems, ...nextSlice];
     } catch (err) {
       console.error('Failed to load more vocabulary:', err);
     } finally {
@@ -154,7 +160,7 @@
   }
 
   // Get direction for SearchList component
-  let direction = $derived(
+  let direction = $derived<'DE->BG' | 'BG->DE'>(
     appState.languageMode === 'DE_BG' ? 'DE->BG' : 'BG->DE'
   );
 </script>

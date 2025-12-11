@@ -30,7 +30,10 @@ class VocabularyDB {
             Debug.log('VocabularyDB', 'Loading initial vocabulary data');
             // Use the DataLoader which now includes Zod validation
             const dataLoader = DataLoader.getInstance();
-            const result = await dataLoader.getVocabularyBySearch({});
+            const result = await dataLoader.getVocabularyBySearch({
+                limit: Number.MAX_SAFE_INTEGER,
+                offset: 0
+            });
 
             // Convert UnifiedVocabularyItem to VocabularyItem format
             this.items = result.items.map(item => ({

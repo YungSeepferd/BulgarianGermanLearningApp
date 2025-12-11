@@ -4,14 +4,9 @@
 The **Bulgarian-German Learning App** is a modern Single Page Application (SPA) designed to facilitate vocabulary and grammar acquisition through tandem learning (German <-> Bulgarian). It is built for performance, offline capability, and ease of deployment via static hosting (GitHub Pages).
 
 ## 2. Technology Stack
-- **Framework**: [SvelteKit](https://kit.svelte.dev/) (Static Adapter)
-- **UI Library**: [Svelte 5](https://svelte.dev/) (Runes mode enabled)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Validation**: [Zod](https://zod.dev/)
-- **Package Manager**: `pnpm`
-- **Testing**: [Vitest](https://vitest.dev/) (Unit Testing), [Playwright](https://playwright.dev/) (Component & E2E Testing)
-- **Deployment**: GitHub Pages
+## Framework & Syntax
+
+- SvelteKit 2 + Svelte 5 (latest syntax across components, runes, and APIs)
 
 ## 3. Application State Management
 We utilize **Svelte 5 Runes** (`$state`, `$derived`, `$effect`) for all reactive state management with a focus on **separation of concerns** and **modular architecture**.
@@ -26,7 +21,10 @@ The application state follows a **clean architecture pattern** with clear separa
 5. **Event Bus** - Decoupled communication between components and services
 
 ### State Responsibility Separation
+## Tooling & Documentation Access
 
+- Svelte MCP server enabled (local via `@sveltejs/mcp`): use `list-sections` → `get-documentation` for latest Svelte 5/SvelteKit docs, and `svelte-autofixer` to validate components before merge.
+- Context7 MCP is configured for broader library docs when needed.
 #### 3.1 UI State (`src/lib/state/app-ui.svelte.ts`)
 The `AppUIState` class manages **ephemeral, UI-specific state** that doesn't need persistence:
 

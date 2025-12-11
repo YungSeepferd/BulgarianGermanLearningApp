@@ -20,5 +20,7 @@
 	)}
 	{...rest}
 >
-	{@render children()}
+	{#if children}
+		{@render children()}
+	{/if}
 </DialogPrimitive.Close>

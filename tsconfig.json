@@ -50,14 +50,14 @@
   },
   "include": [
     "src/**/*",
-    "assets/js/**/*",
-    "scripts/**/*.ts"
+    "assets/js/**/*"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "**/*.test.ts",
     "**/*.spec.ts",
-    "src/paraglide/**/*.js"
+    "src/paraglide/**/*.js",
+    "scripts/**"
   ]
 }

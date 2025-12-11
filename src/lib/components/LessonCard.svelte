@@ -18,7 +18,7 @@
 
   // Computed
   let vocabularyItems = $derived(
-    lesson.vocabulary.map(vocab => {
+    lesson.vocabulary.map((vocab: any) => {
       if (typeof vocab === 'string') {
         return {
           id: vocab,
@@ -58,7 +58,7 @@
 
   let currentVocabulary = $derived(safeVocabularyItems[currentVocabularyIndex] || safeVocabularyItems[0]);
   let completionPercentage = $derived(
-    Math.round((lesson.objectives.filter(obj => obj.isCompleted).length / lesson.objectives.length) * 100)
+    Math.round((lesson.objectives.filter((obj: any) => obj.isCompleted).length / lesson.objectives.length) * 100)
   );
 
   // Methods
@@ -79,7 +79,7 @@
   }
 
   function toggleObjective(objectiveId: string) {
-    lesson.objectives = lesson.objectives.map(obj =>
+    lesson.objectives = lesson.objectives.map((obj: any) =>
       obj.id === objectiveId ? { ...obj, isCompleted: !obj.isCompleted } : obj
     );
     lesson.updatedAt = new Date();

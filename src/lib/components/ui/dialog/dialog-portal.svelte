@@ -1,17 +1,17 @@
 <script lang="ts">
 	import { Dialog as DialogPrimitive } from "bits-ui";
-	type $$Props = DialogPrimitive.PortalProps;
+	type $$Props = DialogPrimitive.PortalProps & { children?: any };
 
 	let {
 		children,
-		class: className = undefined,
 		...rest
 	}: $$Props = $props();
 </script>
 
 <DialogPrimitive.Portal
-	class={className}
 	{...rest}
 >
-	{@render children()}
+	{#if children}
+		{@render children()}
+	{/if}
 </DialogPrimitive.Portal>

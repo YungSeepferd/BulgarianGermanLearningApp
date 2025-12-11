@@ -16,7 +16,7 @@ export type LessonDifficulty = 'A1' | 'A2' | 'B1' | 'B2' | 'C1';
 /**
  * Lesson types
  */
-export type LessonType = 'vocabulary' | 'grammar' | 'mixed' | 'cultural' | 'contextual';
+export type LessonType = 'vocabulary' | 'grammar' | 'mixed' | 'culture' | 'contextual';
 
 /**
  * Template variable types

@@ -6,7 +6,7 @@
  */
 
 // Import the actual implementation from db.svelte.ts
-import { vocabularyDb } from './db.svelte.ts';
+import { vocabularyDb } from './db.svelte';
 
 // Export the vocabulary database
 export { vocabularyDb };

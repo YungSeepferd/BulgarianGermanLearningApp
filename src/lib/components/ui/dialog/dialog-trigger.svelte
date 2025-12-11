@@ -17,5 +17,7 @@
 	aria-haspopup="dialog"
 	{...rest}
 >
-	{@render children()}
+	{#if children}
+		{@render children()}
+	{/if}
 </DialogPrimitive.Trigger>

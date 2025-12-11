@@ -5,13 +5,14 @@
  * Supports both server-side and client-side loading patterns
  */
 
+import { base } from '$app/paths';
 import { Debug } from '../utils';
 import { DataError, ErrorHandler } from '../services/errors';
 import { EventBus } from '../services/event-bus';
 
 // DataLoader is unused
 
-import { UnifiedVocabularyItemSchema, UnifiedVocabularyCollectionSchema, VocabularyCategorySchema } from '../schemas/unified-vocabulary';
+import { UnifiedVocabularyItemSchema, UnifiedVocabularyCollectionSchema, ResilientUnifiedVocabularyCollectionSchema, VocabularyCategorySchema } from '../schemas/unified-vocabulary';
 import { z } from 'zod';
 
 /**
@@ -122,17 +123,17 @@ async function loadFromStaticEndpoint(eventBus?: EventBus): Promise<z.infer<type
 
       const data = await fs.readFile(filePath, 'utf-8');
       const jsonData = JSON.parse(data);
-      return UnifiedVocabularyCollectionSchema.parse(jsonData);
+      return ResilientUnifiedVocabularyCollectionSchema.parse(jsonData);
     } else {
       // Browser environment - fetch from static endpoint
-      const response = await fetch('/data/unified-vocabulary.json');
+      const response = await fetch(`${base}/data/unified-vocabulary.json`);
 
       if (!response.ok) {
         throw new DataError(`HTTP error! status: ${response.status}`, { status: response.status });
       }
 
       const data = await response.json();
-      return UnifiedVocabularyCollectionSchema.parse(data);
+      return ResilientUnifiedVocabularyCollectionSchema.parse(data);
     }
   } catch (error: unknown) {
     const typedError = error instanceof Error ? error : new Error(String(error));
@@ -173,7 +174,7 @@ async function loadFromCache(eventBus?: EventBus): Promise<z.infer<typeof Unifie
       throw new DataError('Cache expired', { hoursDiff, cacheExpiryHours: CACHE_EXPIRY_HOURS });
     }
 
-    return UnifiedVocabularyCollectionSchema.parse(data);
+    return ResilientUnifiedVocabularyCollectionSchema.parse(data);
   } catch (error: unknown) {
     const typedError = error instanceof Error ? error : new Error(String(error));
     ErrorHandler.handleError(typedError, 'Failed to load vocabulary from cache', eventBus);
@@ -202,37 +203,45 @@ async function loadBundledData(eventBus?: EventBus): Promise<z.infer<typeof Unif
 
       const data = await fs.readFile(filePath, 'utf-8');
       const jsonData = JSON.parse(data);
-      return UnifiedVocabularyCollectionSchema.parse(jsonData);
+      return ResilientUnifiedVocabularyCollectionSchema.parse(jsonData);
     }
 
     // Browser environment - use fetch API
-    let data: z.infer<typeof UnifiedVocabularyItemSchema>[] = [];
+    let jsonData: unknown = null;
     try {
-      const response = await fetch('/data/unified-vocabulary.json');
+      const response = await fetch(`${base}/data/unified-vocabulary.json`);
       if (!response.ok) {
         throw new DataError(`HTTP error! status: ${response.status}`, { status: response.status });
       }
-      data = await response.json();
+      jsonData = await response.json();
     } catch (_fetchError) {
-      // Failed to fetch vocabulary data
-      // Final fallback to empty array
-      data = [];
+      jsonData = null;
     }
 
-    // Create a collection from the bundled items
-    const collection = {
+    if (jsonData) {
+      try {
+        return ResilientUnifiedVocabularyCollectionSchema.parse(jsonData);
+      } catch (_parseError) {
+        // Continue to fallback collection below
+      }
+    }
+
+    // Final fallback to an empty but well-formed collection
+    const fallbackCollection = {
       id: crypto.randomUUID(),
-      name: 'German-Bulgarian Vocabulary Collection (Bundled)',
-      description: 'Fallback vocabulary collection from bundled data',
-      items: data, // The data is already an array of vocabulary items
+      name: 'German-Bulgarian Vocabulary Collection (Fallback)',
+      description: 'Fallback vocabulary collection when bundled data is unavailable',
+      items: [],
       languagePair: 'de-bg' as const,
       difficultyRange: [1, 5] as [number, number],
-      categories: Array.from(new Set(data.flatMap((item: z.infer<typeof UnifiedVocabularyItemSchema>) => item.categories || []))),
+      categories: [],
+      itemCount: 0,
       createdAt: new Date(),
-      updatedAt: new Date()
+      updatedAt: new Date(),
+      version: 1
     };
 
-    return UnifiedVocabularyCollectionSchema.parse(collection);
+    return ResilientUnifiedVocabularyCollectionSchema.parse(fallbackCollection);
   } catch (error: unknown) {
     const typedError = error instanceof Error ? error : new Error(String(error));
     ErrorHandler.handleError(typedError, 'Failed to load bundled vocabulary data', eventBus);

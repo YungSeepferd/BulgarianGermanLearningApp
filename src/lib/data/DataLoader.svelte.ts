@@ -4,7 +4,7 @@
  * This class provides a singleton interface for the vocabulary data loading system,
  * maintaining backward compatibility with existing code while using the new function-based loader.
  */
-import { getRandomVocabulary } from './loader.js';
+import { getRandomVocabulary } from './loader';
 import { Debug } from '../utils';
 import type { UnifiedVocabularyItem, VocabularyCategory } from '../schemas/unified-vocabulary';
 
@@ -59,12 +59,12 @@ export class DataLoader {
         hasMore: boolean;
     }> {
         // Use the new search service
-        const { searchVocabulary } = await import('../services/search.js');
+        const { searchVocabulary } = await import('../services/search');
         return searchVocabulary({
             query: params.query,
-            partOfSpeech: params.partOfSpeech as "number" | "noun" | "verb" | "adjective" | "adverb" | "pronoun" | "preposition" | "conjunction" | "interjection" | "article" | "phrase" | "expression" | undefined,
+            partOfSpeech: params.partOfSpeech,
             difficulty: params.difficulty,
-            categories: params.categories as VocabularyCategory[] | undefined,
+            categories: params.categories,
             limit: params.limit || 20,
             offset: params.offset || 0,
             sortBy: 'german',
@@ -79,7 +79,7 @@ export class DataLoader {
      */
     public async getVocabularyById(id: string): Promise<UnifiedVocabularyItem | null> {
         // Import the function here to avoid circular dependencies
-        const { loadVocabularyById } = await import('./loader.js');
+        const { loadVocabularyById } = await import('./loader');
         return loadVocabularyById(id);
     }
 
@@ -91,7 +91,7 @@ export class DataLoader {
      */
     public async getVocabularyByCategory(category: string, options: { limit?: number; difficulty?: number } = {}): Promise<UnifiedVocabularyItem[]> {
         // Import the function here to avoid circular dependencies
-        const { loadVocabularyByCategory } = await import('./loader.js');
+        const { loadVocabularyByCategory } = await import('./loader');
         return loadVocabularyByCategory(category as VocabularyCategory, options);
     }
 
@@ -105,7 +105,7 @@ export class DataLoader {
         try {
             Debug.log('DataLoader', 'Getting vocabulary by difficulty', { difficulty, options });
             // Import the function here to avoid circular dependencies
-            const { loadVocabularyByDifficulty } = await import('./loader.js');
+            const { loadVocabularyByDifficulty } = await import('./loader');
             const items = await loadVocabularyByDifficulty(difficulty, options);
             Debug.log('DataLoader', 'Retrieved vocabulary by difficulty', { difficulty, count: items.length });
             return items;

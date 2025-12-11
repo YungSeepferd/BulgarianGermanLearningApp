@@ -100,7 +100,8 @@ export class LessonService {
       metadata: {
         tags: this.generateLessonTags(vocabularyItems, lessonDifficulty, type),
         prerequisites: [],
-        relatedLessons: []
+        relatedLessons: [],
+        isPremium: false
       }
     };
 
@@ -397,6 +398,7 @@ export class LessonService {
       'grammar': 'Grammar',
       'culture': 'Culture',
       'common_phrases': 'Common Phrases',
+      'verbs': 'Verbs',
       'uncategorized': 'Uncategorized'
     };
 
@@ -418,7 +420,8 @@ export class LessonService {
       'interjection': 'Interjections',
       'article': 'Articles',
       'number': 'Numbers',
-      'phrase': 'Phrases'
+      'phrase': 'Phrases',
+      'expression': 'Expressions'
     };
 
     return displayNames[partOfSpeech] || partOfSpeech;
@@ -482,7 +485,8 @@ export class LessonService {
       metadata: {
         tags: ['error'],
         prerequisites: [],
-        relatedLessons: []
+        relatedLessons: [],
+        isPremium: false
       }
     };
   }

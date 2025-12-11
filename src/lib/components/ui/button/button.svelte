@@ -4,12 +4,10 @@
 	import { cn } from "$lib/utils";
 	import { buttonVariants } from ".";
 
-	type $$Props = ButtonPrimitive.RootProps & VariantProps<typeof buttonVariants> & {
+	let { variant, size, class: className, children, disabled, ...rest }: ButtonPrimitive.RootProps & VariantProps<typeof buttonVariants> & {
 		[key: `aria-${string}`]: any;
 		class?: string;
-	};
-
-	let { variant, size, class: className, children, disabled, ...rest } = $props();
+	} = $props();
 
 	// Ensure proper ARIA attributes and HTML disabled state
 	$effect(() => {

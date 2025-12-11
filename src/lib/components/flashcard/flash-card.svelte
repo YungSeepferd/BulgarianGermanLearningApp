@@ -1,13 +1,11 @@
 <script lang="ts">
   import type { VocabularyItem } from '$lib/types/vocabulary';
 
-  type Props = {
+  let { item, flipped, onFlip }: {
     item: VocabularyItem;
     flipped: boolean;
     onFlip: () => void;
-  };
-
-  let { item, flipped, onFlip } = $props();
+  } = $props();
   let audioPlayer: HTMLAudioElement | null = $state(null);
 
   function handleKeydown(event: KeyboardEvent) {
@@ -26,11 +24,7 @@
     }
   }
 
-  $effect(() => {
-    if (item.audio_url) {
-      audioPlayer = new Audio(item.audio_url);
-    }
-  });
+  // Audio playback removed - property not in VocabularyItem type
 </script>
 
 <div
@@ -45,13 +39,9 @@
   <div class="card" class:is-flipped={flipped}>
     <!-- Front Face -->
     <div class="card-face card-face-front">
-      <div class="emoji">{item.emoji || '📝'}</div>
+      <div class="emoji">📝</div>
       <h2 class="word">{item.german}</h2>
-      {#if item.pronunciation?.german}
-        <p class="pronunciation">{item.pronunciation.german}</p>
-      {/if}
-      {#if item.audio_url}
-        <button
+      <p class="part-of-speech">{item.partOfSpeech}</p>
           class="audio-button"
           onclick={(e) => { e.stopPropagation(); playAudio(); }}
           aria-label="Play pronunciation"

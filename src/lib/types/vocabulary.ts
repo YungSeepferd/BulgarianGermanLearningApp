@@ -1,57 +1,51 @@
 /**
- * Type definitions derived from Zod schemas for runtime validation
- * This ensures type safety by deriving TypeScript types from runtime schemas
+ * App-wide vocabulary types normalized for UI components and services.
+ * These types align with items produced by vocabularyDb and validated data loaders.
  */
+import type { PartOfSpeech as SchemaPartOfSpeech, VocabularyCategory as SchemaVocabularyCategory } from '$lib/schemas/vocabulary';
 
-/**
- * Represents a breakdown part of a vocabulary phrase with its meaning
- * @property {string} part - The individual part/segment of the phrase
- * @property {string} meaning - The meaning/translation of this part
- */
-export interface PhraseBreakdown {
-  part: string;
-  meaning: string;
+// Re-export for convenience
+export type PartOfSpeech = SchemaPartOfSpeech;
+export type VocabularyCategory = SchemaVocabularyCategory;
+
+export interface VocabularyExamplePreview {
+  sentence: string;
+  translation: string;
+  context?: string;
 }
 
-/**
- * Represents media information for a vocabulary item
- * @property {string} emoji - Emoji representation of the vocabulary item
- * @property {string} [audio_url] - Optional URL to audio pronunciation
- */
-export interface VocabularyMedia {
-  emoji: string;
-  audio_url?: string;
+export interface VocabularyMetadataLite {
+  notes?: string;
+  mnemonic?: string;
+  culturalNote?: string;
+  etymology?: string;
 }
 
-/**
- * Standard interface for vocabulary items with rich context
- * @property {string} id - Unique identifier for the vocabulary item
- * @property {string} term_bulgarian - Bulgarian term (e.g., 'за едно')
- * @property {string} term_german - German term (e.g., 'zusammen (getrennte Rechnungen)')
- * @property {PhraseBreakdown[]} breakdown - Array of objects for phrase deconstruction
- * @property {string} context_clue - Specific usage note (e.g., 'Used only in restaurants when paying')
- * @property {VocabularyMedia} media - Object containing emoji and optional audio URL
- * @property {string} category - Category of the vocabulary item (e.g., 'restaurant', 'food', 'grammar')
- * @property {number} difficulty - Difficulty level on a 1-5 scale
- * @property {string} part_of_speech - Part of speech (e.g., 'phrase', 'noun', 'verb', 'adjective')
- */
 export interface VocabularyItem {
   id: string;
-  term_bulgarian: string;
-  term_german: string;
-  breakdown: PhraseBreakdown[];
-  context_clue: string;
-  media: VocabularyMedia;
-  category: string;
+  german: string;
+  bulgarian: string;
+  // Primary category (first of categories) kept for UI convenience
+  category: VocabularyCategory | string;
+  // All categories per schema
+  categories: VocabularyCategory[];
+  // Optional tag list for search filters and badges
+  tags?: string[];
+  // 1..5 numeric difficulty (maps to CEFR for display)
   difficulty: number;
-  part_of_speech: string;
+  partOfSpeech: PartOfSpeech;
+  // UX fields that may exist from data import
+  xp_value?: number;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+  // Optional data used by some components
+  level?: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
+  type?: 'word' | 'rule';
+  global_stats?: { correct_count: number; incorrect_count: number; success_rate: number };
+  // Legacy examples preview (SearchList/TandemPractice may check presence)
+  examples?: VocabularyExamplePreview[];
+  metadata?: VocabularyMetadataLite;
 }
 
-export type {
-  PracticeSession
-} from '$lib/schemas/practiceSession';
-export type {
-  PracticeStat,
-  UserProgressStorage,
-  ExportedUserData
-} from '$lib/schemas/localStorage';
+export type { PracticeSession } from '$lib/schemas/practiceSession';
+export type { PracticeStat, UserProgressStorage, ExportedUserData } from '$lib/schemas/localStorage';

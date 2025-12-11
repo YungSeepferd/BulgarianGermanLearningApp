@@ -1,13 +1,19 @@
 <script lang="ts">
   import { appState } from '$lib/state/app-state';
-  import { t } from '$lib/services/localization';
+  import { t, onTranslationsChange, offTranslationsChange } from '$lib/services/localization';
+  import { onMount } from 'svelte';
+
+  // Reactive translations
+  let totalVocabLabel = $state('');
+  let favoritedLabel = $state('');
+  let recentSearchesLabel = $state('');
 
   let stats = $derived.by(() => {
     try {
       const vocabularyItems = appState.getAllVocabularyItems?.() ?? [];
       const favorites = appState.favorites ?? [];
       const recentSearches = appState.recentSearches ?? [];
-      
+
       return {
         totalItems: vocabularyItems.length,
         favorites: favorites.length,
@@ -17,24 +23,41 @@
       return { totalItems: 0, favorites: 0, recentSearches: 0 };
     }
   });
+
+  // Update translations reactively
+  function updateTranslations() {
+    totalVocabLabel = t('dashboard.total_vocabulary') || 'Total Vocabulary';
+    favoritedLabel = t('dashboard.favorited') || 'Favorited';
+    recentSearchesLabel = t('dashboard.recent_searches') || 'Recent Searches';
+  }
+
+  // Set up reactive translation updates
+  onMount(() => {
+    updateTranslations(); // Initial update
+    onTranslationsChange(updateTranslations);
+
+    return () => {
+      offTranslationsChange(updateTranslations);
+    };
+  });
 </script>
 
 <div class="stats-container">
   <div class="stat-card">
     <div class="stat-icon">📚</div>
-    <div class="stat-label">{$t('dashboard.total_vocabulary')}</div>
+    <div class="stat-label">{totalVocabLabel}</div>
     <div class="stat-value">{stats.totalItems}</div>
   </div>
-  
+
   <div class="stat-card">
     <div class="stat-icon">❤️</div>
-    <div class="stat-label">{$t('dashboard.favorited')}</div>
+    <div class="stat-label">{favoritedLabel}</div>
     <div class="stat-value">{stats.favorites}</div>
   </div>
-  
+
   <div class="stat-card">
     <div class="stat-icon">🔍</div>
-    <div class="stat-label">{$t('dashboard.recent_searches')}</div>
+    <div class="stat-label">{recentSearchesLabel}</div>
     <div class="stat-value">{stats.recentSearches}</div>
   </div>
 </div>

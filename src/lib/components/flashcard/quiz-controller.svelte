@@ -23,7 +23,9 @@
     // Simple strict comparison for now, could be enhanced with Levenshtein later
     if (normalizedUser === normalizedCorrect) {
       feedbackStatus = 'correct';
-      learningSession.awardXP(item.xp_value || 10);
+      if (learningSession) {
+        learningSession.awardXP(item.xp_value || 10);
+      }
     } else {
       feedbackStatus = 'incorrect';
     }

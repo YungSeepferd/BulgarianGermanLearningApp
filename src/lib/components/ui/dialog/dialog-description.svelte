@@ -15,5 +15,7 @@
 	class={cn('text-sm text-muted-foreground', className)}
 	{...rest}
 >
-	{@render children()}
+	{#if children}
+		{@render children()}
+	{/if}
 </DialogPrimitive.Description>

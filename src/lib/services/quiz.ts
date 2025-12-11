@@ -1,9 +1,13 @@
 import { z } from 'zod';
-import type { VocabularyItem } from '$lib/schemas/vocabulary';
-import { vocabularyDb } from '$lib/data/db.svelte.ts';
+import { vocabularyDb } from '$lib/data/db.svelte';
 
-// Store generated questions in memory for the current session
-const _generatedQuestions = new Map<string, QuizQuestion>();
+type VocabItem = {
+  id: string;
+  german: string;
+  bulgarian: string;
+  difficulty: number;
+  category: string;
+};
 
 // Quiz Question Schema
 const QuizQuestionSchema = z.object({
@@ -61,10 +65,10 @@ export class QuizService {
     const limit = criteria.limit || 10;
     const difficulty = criteria.difficulty || 'Mixed';
 
-    const vocabulary = this.vocabularyDb.query({
-      difficulty: difficulty !== 'Mixed' ? difficulty : undefined,
-      limit
-    });
+    const vocabulary: VocabItem[] =
+      difficulty !== 'Mixed'
+        ? this.vocabularyDb.getVocabularyByDifficulty(difficulty).slice(0, limit)
+        : this.vocabularyDb.getRandomVocabulary(limit);
 
     if (vocabulary.length === 0) {
       throw new Error('No vocabulary items match the specified criteria');
@@ -85,7 +89,7 @@ export class QuizService {
     return QuizSchema.parse(quiz);
   }
 
-  private generateVocabularyQuestions(vocabulary: VocabularyItem[]): QuizQuestion[] {
+  private generateVocabularyQuestions(vocabulary: VocabItem[]): QuizQuestion[] {
     const questions: QuizQuestion[] = [];
 
     for (const item of vocabulary) {
@@ -98,10 +102,10 @@ export class QuizService {
         questionType: 'multiple_choice',
         options,
         correctAnswer: item.bulgarian,
-        difficulty: item.difficulty,
-        category: item.category,
+        difficulty: this.mapNumericDifficultyToCEFR(item.difficulty),
+        category: [item.category],
         vocabularyIds: [item.id],
-        explanation: item.example ? `Example: ${item.example[0].german} = ${item.example[0].bulgarian}` : undefined
+        explanation: undefined
       };
 
       questions.push(QuizQuestionSchema.parse(question));
@@ -110,7 +114,7 @@ export class QuizService {
     return questions;
   }
 
-  private getIncorrectOptions(correctItem: VocabularyItem, vocabulary: VocabularyItem[]): string[] {
+  private getIncorrectOptions(correctItem: VocabItem, vocabulary: VocabItem[]): string[] {
     const otherItems = vocabulary.filter(item => item.id !== correctItem.id);
     return this.shuffleArray(otherItems)
       .slice(0, 3)
@@ -121,20 +125,20 @@ export class QuizService {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+      [newArray[i], newArray[j]] = [newArray[j]!, newArray[i]!];
     }
     return newArray;
   }
 
-  private generateQuizTitle(vocabulary: VocabularyItem[], criteria: QuizCriteria): string {
-    const difficulty = criteria.difficulty || vocabulary[0].difficulty;
-    const category = vocabulary[0].category[0];
+  private generateQuizTitle(vocabulary: VocabItem[], criteria: QuizCriteria): string {
+    const difficulty = criteria.difficulty || (vocabulary[0] ? this.mapNumericDifficultyToCEFR(vocabulary[0].difficulty) : 'A1');
+    const category = vocabulary[0]?.category || 'general';
     return `Vocabulary Quiz: ${difficulty} ${category}`;
   }
 
-  private generateQuizDescription(vocabulary: VocabularyItem[], criteria: QuizCriteria): string {
-    const difficulty = criteria.difficulty || vocabulary[0].difficulty;
-    const category = vocabulary[0].category[0];
+  private generateQuizDescription(vocabulary: VocabItem[], criteria: QuizCriteria): string {
+    const difficulty = criteria.difficulty || (vocabulary[0] ? this.mapNumericDifficultyToCEFR(vocabulary[0].difficulty) : 'A1');
+    const category = vocabulary[0]?.category || 'general';
     const count = vocabulary.length;
     return `Test your knowledge of ${difficulty} level ${category} vocabulary. This quiz contains ${count} questions.`;
   }
@@ -160,7 +164,10 @@ export class QuizService {
   }
 
   submitAnswer(session: QuizSession, questionIndex: number, answer: string): QuizSession {
-    const questionId = session.questions[questionIndex].questionId;
+    const questionId = session.questions[questionIndex]?.questionId;
+    if (!questionId) {
+      throw new Error(`Question at index ${questionIndex} not found`);
+    }
     const question = this.getQuestionById(questionId);
 
     if (!question) {
@@ -170,7 +177,7 @@ export class QuizService {
     const isCorrect = answer === question.correctAnswer;
 
     session.questions[questionIndex] = {
-      ...session.questions[questionIndex],
+      questionId,
       userAnswer: answer,
       isCorrect
     };
@@ -187,6 +194,14 @@ export class QuizService {
   private getQuestionById(_questionId: string): QuizQuestion | undefined {
     // In a real implementation, we would store questions in a database
     return undefined;
+  }
+
+  private mapNumericDifficultyToCEFR(value: number): 'A1' | 'A2' | 'B1' | 'B2' | 'C1' {
+    if (value <= 1.5) return 'A1';
+    if (value <= 2.5) return 'A2';
+    if (value <= 3.5) return 'B1';
+    if (value <= 4.5) return 'B2';
+    return 'C1';
   }
 }
 

@@ -265,17 +265,18 @@
   }
 
   function getSectionTypeName(type) {
-    const names = {
-      'introduction': t('sections.introduction'),
-      'vocabulary': t('sections.vocabulary'),
-      'grammar': t('sections.grammar'),
-      'exercise': t('sections.exercise'),
-      'cultural': t('sections.cultural_note'),
-      'summary': t('sections.summary'),
-      'conversation': t('sections.conversation'),
-      'reading': t('sections.reading'),
-      'listening': t('sections.listening'),
-      'writing': t('sections.writing')
+    // Reactive section names
+    $: names = {
+      'introduction': t('sections.introduction') || 'Introduction',
+      'vocabulary': t('sections.vocabulary') || 'Vocabulary',
+      'grammar': t('sections.grammar') || 'Grammar',
+      'exercise': t('sections.exercise') || 'Exercise',
+      'cultural': t('sections.cultural_note') || 'Cultural Note',
+      'summary': t('sections.summary') || 'Summary',
+      'conversation': t('sections.conversation') || 'Conversation',
+      'reading': t('sections.reading') || 'Reading',
+      'listening': t('sections.listening') || 'Listening',
+      'writing': t('sections.writing') || 'Writing'
     };
     return names[type] || type;
   }

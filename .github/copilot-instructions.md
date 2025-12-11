@@ -1,30 +1,35 @@
 # AI Coding Agent Instructions for Bulgarian-German Learning App
 
+## Project Status & Recent Changes
+**Last Updated**: 11 December 2025 | **Status**: MVP (v2 - Streamlined)
+
+The app was recently transformed from a commercial platform to a focused personal learning MVP. **3500+ lines of non-essential code removed** (gamification, user accounts, social features). This is the **clean, maintained codebase**—not legacy code with features to preserve.
+
 ## Project Overview
-A **SvelteKit + Svelte 5 Runes** tandem learning platform for Bulgarian ↔ German vocabulary and lessons, with bilingual UI, offline capability, and accessibility features. Deployed on GitHub Pages as a static site.
+A **SvelteKit + Svelte 5 Runes** tandem learning platform for Bulgarian ↔ German vocabulary and lessons, with bilingual UI, offline capability, and accessibility features. Deployed on GitHub Pages as a static site. **No user accounts, no gamification, no cloud sync—pure focused learning.**
 
 ## Architecture & Key Decisions
 
 ### Why This Structure Matters
 - **SvelteKit** provides file-based routing and automatic SSR optimization
-- **Svelte 5 Runes** (`$state`, `$derived`) replace old stores for fine-grained reactivity—this is the new standard, not legacy code
-- **Bilingual UI** requires careful language state management (see `LanguageMode: 'DE_BG' | 'BG_DE'`)
-- **Static deployment** (GitHub Pages) means no server-side APIs—all data loads client-side from JSON files
+- **Svelte 5 Runes** (`$state`, `$derived`) are the standard—no legacy stores here
+- **Bilingual UI** requires careful language state management (`LanguageMode: 'DE_BG' | 'BG_DE'`)
+- **Static-first**: No server-side APIs; all data bundles in the build as JSON files
+- **Minimal scope**: No user infrastructure (auth, profiles, cloud) or gamification—intentional simplification for maintainability
 
-### Critical State Management Pattern
-**File**: [src/lib/state/app.svelte.ts](src/lib/state/app.svelte.ts)
+### Core State Pattern
+**Files**: [src/lib/state/app-ui.svelte.ts](src/lib/state/app-ui.svelte.ts), [src/lib/state/app-data.svelte.ts](src/lib/state/app-data.svelte.ts)
 
-Three-layer state architecture (accessed via singleton `appState`):
-1. **AppUIState** ([src/lib/state/app-ui.svelte.ts](src/lib/state/app-ui.svelte.ts)): Language mode, search queries, practice UI, display direction
-2. **AppDataState** ([src/lib/state/app-data.svelte.ts](src/lib/state/app-data.svelte.ts)): Practice stats, favorites, recent searches (localStorage-persisted)
-3. **AppStateFacade** ([src/lib/state/app.svelte.ts](src/lib/state/app.svelte.ts)): Unified interface for backward compatibility
+Two-layer state (simplified after MVP transformation):
+1. **AppUIState**: Language mode, search query, current item, display direction
+2. **AppDataState**: Practice stats, favorites, recent searches (all localStorage-persisted)
 
-**Always use**: `appState.method()` or import individual state objects. Never create new state instances.
+Access via `appState` singleton from `src/lib/state/app-state.ts`. This is the only state instance you'll need. No creation of new state classes—maintain the singleton pattern.
 
 ### Data Flow
-1. **Load**: [src/lib/data/loader.ts](src/lib/data/loader.ts) + [src/lib/data/db.svelte.ts](src/lib/data/db.svelte.ts) load `unified-vocabulary.json` and cache in-memory
-2. **Filter**: [src/lib/state/app-ui.svelte.ts](src/lib/state/app-ui.svelte.ts#L133) applies search + language mode filters via `filteredItems` derived state
-3. **Persist**: [src/lib/state/app-data.svelte.ts](src/lib/state/app-data.svelte.ts) stores user progress in localStorage (practice stats, favorites)
+1. **Load**: [src/lib/data/loader.ts](src/lib/data/loader.ts) loads `unified-vocabulary.json` from build output and caches in-memory
+2. **Filter**: [src/lib/state/app-ui.svelte.ts](src/lib/state/app-ui.svelte.ts) applies search + language mode filters via `filteredItems` derived state
+3. **Persist**: [src/lib/state/app-data.svelte.ts](src/lib/state/app-data.svelte.ts) automatically persists stats, favorites, searches to localStorage
 
 ### Vocabulary Schema
 **File**: [src/lib/schemas/vocabulary.ts](src/lib/schemas/vocabulary.ts) (Zod-validated)
@@ -43,12 +48,6 @@ Always validate new data with `UnifiedVocabularyItemSchema.parse(data)`.
 pnpm install              # One-time setup (NEVER use npm or yarn)
 pnpm run dev              # Starts http://localhost:5173
 pnpm run check            # TypeScript + Svelte check (catches errors early)
-pnpm run lint             # ESLint --fix (run before commits)
-pnpm run simulate-ci      # Run CI checks locally BEFORE pushing
-```
-
-### Critical Pre-Push Checklist
-1. Run `pnpm run check && pnpm run lint` — catch errors early
 2. Run `pnpm run simulate-ci` — replaces pre-push hook (manually invoked to avoid hangs)
 3. Run relevant tests: `pnpm run test:unit` and/or `pnpm run test:e2e`
 4. Verify no unused imports/variables (strict mode enforces this)
@@ -105,11 +104,12 @@ await eventBus.emit('practice-result', { itemId, correct, time });
 - **UI Primitives**: [src/lib/components/ui/](src/lib/components/ui/) for reusable Tailwind-based components
 - **Page Routes**: [src/routes/](src/routes/) with `+page.svelte`, `+layout.svelte`, `+page.ts` (loader functions)
 
-### Svelte 5 Runes Best Practices
-- Use `let variable = $state(initial)` for reactive state (not reactive declarations)
-- Use `let derived = $derived(computation)` for computed values (replaces `$:`-based reactivity)
-- Use `export let prop = $props()` for component props
-- Import state directly: `import { appState } from '$lib/state/app'`
+### Svelte 5 Syntax Best Practices
+- Prefer Svelte 5 syntax across components and runes:
+- Use `let variable = $state(initial)` for reactive state (avoid legacy `$:`)
+- Use `let derived = $derived(computation)` for computed values
+- Use `$props()` for component props (avoid `export let`)
+- Use latest SvelteKit APIs per upstream docs
 
 ### TypeScript Strictness
 All `tsconfig.json` strict flags enabled (`strict: true`, `noImplicitAny`, `noUnusedLocals`). TypeScript errors must be resolved before merging. No `@ts-ignore` without strong justification.
@@ -119,7 +119,7 @@ All `tsconfig.json` strict flags enabled (`strict: true`, `noImplicitAny`, `noUn
 - `.svelte.ts` - Reusable reactive logic using Svelte 5 runes (state, services)
 - `.ts` - Pure TypeScript utilities and functions (no reactivity)
 
-### Runes-Based Reactivity Pattern (Svelte 5)
+### Reactivity Pattern (Svelte 5 Syntax)
 Replace all legacy patterns with Svelte 5 runes:
 ```typescript
 // ✅ State (new pattern)
@@ -132,9 +132,6 @@ $effect(() => {
   window.addEventListener('resize', handler);
   return () => window.removeEventListener('resize', handler);
 });
-
-// ❌ Do NOT use
-let count = 0;      // Missing $state
 $: doubled = count * 2;  // Legacy reactive statement
 export let prop = 'value';  // Wrong pattern for props
 ```
@@ -175,10 +172,6 @@ The unified vocabulary is cached in memory on first load. Modifications (favorit
 - **@inlang/paraglide**: I18n (managed in [src/paraglide/](src/paraglide/))
 
 ### Accessibility Requirements
-- WCAG 2.1 AA compliance mandatory
-- Use axe-core in tests (already integrated)  
-3. **Language Mode Persistence**: Always trigger `localStorage.setItem('app-language-mode', mode)` when changing modes
-4. **Vocabulary Not Loading**: Check that `unified-vocabulary.json` exists in `build/data/` after build
 5. **Tests Failing on New Features**: Ensure vocabulary JSON in test fixtures matches schema validation
 6. **File Deletion**: If deleting a file, verify all imports/exports are removed to prevent broken builds
 7. **Legacy Reactivity**: Do NOT use `$:` reactive statements or `svelte/store` in new code (legacy)
@@ -198,12 +191,7 @@ All data is static JSON files. To add server features later:
 4. **Vocabulary Not Loading**: Check that `unified-vocabulary.json` exists in `build/data/` after build
 5. **Tests Failing on New Features**: Ensure vocabulary JSON in test fixtures matches schema validation
 
-## Quick Reference: Key Files
-
-| File | Purpose |
-|------|---------|
 ## Code Discovery Workflow
-
 When exploring unfamiliar code:
 1. **Always start with codebase search** (semantic search) before file inspection
 2. **Read files entirely** before editing—check 20+ lines before/after any target section

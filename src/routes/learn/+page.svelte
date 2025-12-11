@@ -1,9 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { vocabularyDb } from '$lib/data/db.svelte.js';
+  import { vocabularyDb } from '$lib/data/db.svelte';
   import Flashcard from '$lib/components/Flashcard.svelte';
   import { Debug } from '$lib/utils';
-  import type { VocabularyItem } from '$lib/schemas/vocabulary';
+  import type { VocabularyItem } from '$lib/types/vocabulary';
 
   // State for the learning session
   let currentCardIndex = $state(0);
@@ -12,10 +12,12 @@
   let sessionCards = $state<VocabularyItem[]>([]);
   let isAnimating = $state(false);
   let animationType = $state<'easy' | 'hard' | null>(null);
+  let loadError = $state<string | null>(null);
 
   // Load vocabulary data and filter for unmastered words
   async function startSession() {
     try {
+      loadError = null;
       Debug.log('LearnPage', 'Starting learning session');
 
       // Initialize vocabulary database if not already loaded
@@ -23,6 +25,14 @@
 
       // Get all vocabulary items
       const allVocabulary = vocabularyDb.getVocabulary();
+
+      if (allVocabulary.length === 0) {
+        loadError = 'No vocabulary loaded. Please check the data files and try again.';
+        sessionActive = false;
+        sessionComplete = false;
+        sessionCards = [];
+        return;
+      }
 
       // Shuffle vocabulary for the session
       Debug.log('LearnPage', 'Vocabulary loaded', {
@@ -42,9 +52,6 @@
       isAnimating = false;
       animationType = null;
 
-      // Check in the user to maintain streak
-      userProgress.checkIn();
-
       Debug.log('LearnPage', 'Session started', {
         cardCount: sessionCards.length,
         firstCard: sessionCards[0]?.id
@@ -52,6 +59,7 @@
 
     } catch (error) {
       Debug.error('LearnPage', 'Failed to start session', error as Error);
+      loadError = 'Failed to start session. Please retry.';
       sessionActive = false;
       sessionCards = [];
     }
@@ -64,17 +72,14 @@
     isAnimating = true;
     animationType = 'easy';
 
-    // Add XP and mark word as completed
+    // Mark word as completed
     const currentCard = sessionCards[currentCardIndex];
     if (currentCard) {
       const xpValue = currentCard.xp_value || 10;
-      userProgress.addXP(xpValue);
-      userProgress.markWordCompleted(currentCard.id);
 
       Debug.log('LearnPage', 'Word marked as easy', {
         wordId: currentCard.id,
-        xpAdded: xpValue,
-        totalXP: userProgress.xp
+        xpAdded: xpValue
       });
     }
 
@@ -200,7 +205,6 @@
       <div class="completion-message">
         <h2>🎉 Great job!</h2>
         <p>You've completed this learning session.</p>
-        <p>You earned {userProgress.xp} XP and have a {userProgress.streak}-day streak!</p>
         <button onclick={startSession} class="restart-button">
           Start New Session
         </button>
@@ -208,7 +212,12 @@
     {:else}
       <!-- Loading or initial state -->
       <div class="loading-message">
-        {#if sessionCards.length === 0}
+        {#if loadError}
+          <p>{loadError}</p>
+          <button onclick={startSession} class="restart-button">
+            Retry
+          </button>
+        {:else if sessionCards.length === 0}
           <p>Loading vocabulary...</p>
         {:else}
           <p>No words to review. You've mastered all vocabulary!</p>

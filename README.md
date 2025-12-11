@@ -1,38 +1,35 @@
-# Bulgarian-German Learning Application
+# Bulgarian-German Learning Application (v1.0)
 
-A modern tandem learning platform for mastering Bulgarian and German, built with Svelte 5 and SvelteKit.
+A focused, production-ready tandem learning app for Bulgarian ↔ German built with SvelteKit 2 + Svelte 5 (latest syntax: components, runes, and APIs). This documentation covers only fully implemented, end-to-end tested core features.
 
-## ✨ Features
+## ✅ Core Functionality (Tested & Verified)
 
-- **🔄 Bidirectional Learning**: Instantly switch between German→Bulgarian and Bulgarian→German
-- **🌐 Bilingual UI**: Full user interface in both German and Bulgarian
-- **🔀 Language Switching**: One-click language switching for entire application
-- **📚 Direction-Aware Content**: Lessons and vocabulary adapt to language direction
-- **🎯 Smart Practice**: Flashcard system with progress tracking and statistics
-- **🔍 Advanced Search**: Real-time filtering by text, category, and tags
-- **📚 Lesson Planning System**: ✅ Dynamic lesson generation with curriculum-based learning
-- **📝 Quiz System**: Interactive quizzes for vocabulary assessment (in development)
-- **📱 Responsive Design**: Optimized for desktop, tablet, and mobile devices
-- **💾 Offline Capability**: Full functionality without internet connection
-- **♿ Accessible**: WCAG 2.1 AA compliant with full keyboard navigation and screen reader support
-- **📊 Progress Tracking**: Detailed statistics, favorites, and practice history
-- **🏆 Gamification**: XP, levels, and streaks for motivation (in development)
-- **📈 Mastery Tracking**: Vocabulary mastery and lesson completion
-- **⚡ Fast Performance**: Optimized bundle size and instant loading
+- Bidirectional learning: German → Bulgarian and Bulgarian → German
+- Bilingual UI: Complete UI in German and Bulgarian
+- Language mode switching: Global one-click toggle
+- Direction-aware content: Vocabulary and lessons reflect current mode
+- Vocabulary search & filter: Real-time text + category filtering
+- Flashcard practice: Interactive practice with local progress stats
+- Lesson generation: Dynamic lessons with validated data pipeline
+- Responsive & offline: Mobile-ready and works offline
+- Accessibility: WCAG 2.1 AA (keyboard + screen reader)
+- Dashboard: Central hub for progress overview and quick actions
 
-## 🚀 Quick Start
+Out of scope for v1.0 (until validated by tests/user feedback): Quiz system, gamification (XP/levels/streaks), social/leaderboards, accounts/sync, advanced analytics.
+
+## 🚀 Quick Start (Setup & Environment)
 
 ### Prerequisites
 - Node.js 20+
-- `pnpm` (install via `npm install -g pnpm`)
+- pnpm (only) — do not use npm/yarn
 
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd BulgarianApp-Fresh
-   ```
+  ```bash
+  git clone https://github.com/YungSeepferd/BulgarianApp-Fresh.git
+  cd BulgarianApp-Fresh
+  ```
 
 2. Install dependencies:
    ```bash
@@ -48,10 +45,10 @@ A modern tandem learning platform for mastering Bulgarian and German, built with
 
 ### Git Workflow
 
-- **No pre-push hook**: The project previously used a pre-push hook that caused performance issues and hanging
-- **CI simulation**: Run `pnpm run simulate-ci` locally to test your changes before pushing
-- **Pull requests**: Create pull requests to the `develop` branch for review
-- **CI checks**: GitHub Actions will run the same checks as the local simulation
+- No pre-push hook (removed to prevent hangs)
+- Run `pnpm run simulate-ci` before pushing (TypeScript/Svelte checks + lint + tests)
+- Branch: `main` is default; use PRs for changes
+- GitHub Actions mirrors local CI simulation
 
 ## 🛠️ Development
 
@@ -59,17 +56,15 @@ A modern tandem learning platform for mastering Bulgarian and German, built with
 | Command | Description |
 |---------|-------------|
 | `pnpm run dev` | Start local dev server |
-| `pnpm run build` | Build for production (Static) |
+| `pnpm run build` | Build for production (static output) |
 | `pnpm run preview` | Preview production build |
-| `pnpm run test` | Run all tests (E2E, unit, accessibility) |
-| `pnpm run test:unit` | Run Vitest unit tests |
-| `pnpm run test:components` | Run component tests |
-| `pnpm run test:e2e` | Run Playwright E2E tests |
-| `pnpm run test:accessibility` | Run accessibility tests |
-| `pnpm run test:bilingual` | Run bilingual functionality tests |
-| `pnpm run test:all` | Run all tests |
-| `pnpm run check` | Run Svelte/TypeScript checks |
-| `pnpm run lint` | Run ESLint |
+| `pnpm run check` | Svelte/TypeScript checks |
+| `pnpm run lint` | ESLint fix/verify |
+| `pnpm run test:unit` | Vitest unit tests |
+| `pnpm run test:e2e` | Playwright E2E tests |
+| `pnpm run test:components` | Playwright component tests |
+| `pnpm run test:accessibility` | Accessibility tests |
+| `pnpm run simulate-ci` | Full local CI simulation before push |
 
 ### Project Structure
 ```
@@ -77,7 +72,7 @@ src/
 ├── lib/
 │   ├── components/     # UI Components (Svelte 5)
 │   │   ├── flashcard/  # Flashcard components
-│   │   ├── gamification/ # Gamification components
+│   │   ├── flashcard/  # Flashcard components
 │   │   └── ui/         # UI primitives
 │   ├── data/           # Data loading & processing
 │   ├── schemas/        # Zod validation schemas
@@ -86,47 +81,42 @@ src/
 │   ├── types/          # TypeScript definitions
 │   └── utils/          # Utility functions
 ├── routes/             # SvelteKit pages
-│   ├── lessons/        # Lesson system (in development)
-│   ├── quiz/           # Quiz system (in development)
+│   ├── lessons/        # Lesson system
 │   └── +page.svelte    # Dashboard
 └── app.html            # Root HTML template
 ```
 
 ### Technology Stack
-- **Framework**: [SvelteKit](https://kit.svelte.dev/) with Svelte 5 Runes
+- **Framework**: [SvelteKit](https://kit.svelte.dev/) with Svelte 5 (syntax-first, including runes)
 - **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
 - **Language**: TypeScript (strict mode)
 - **Testing**: Playwright (E2E) + Vitest (Unit)
 - **Deployment**: GitHub Pages (Static)
 
-## 📚 Documentation
+## 📚 Documentation (v1.0)
 - [**Architecture Guide**](docs/architecture/ARCHITECTURE.md) - Technical stack, state management, and data flow
-- [**Roadmap**](docs/roadmap/ROADMAP.md) - Project phases and implementation plan
-- [**Current Work Plan**](docs/CURRENT_WORK_PLAN.md) - Development status and priorities
-- [**Data Migration**](docs/development/DATA_MIGRATION.md) - Vocabulary data pipeline and quality assurance
-- [**Developer Onboarding**](docs/development/DEVELOPER_ONBOARDING.md) - Getting started guide for developers
-- [**Lesson Planning System**](docs/development/LESSON_SYSTEM.md) - Comprehensive lesson system documentation
+- [**Release 1.0 Guide**](docs/RELEASE_1.0.md) - Deployment, environment, and troubleshooting
+- [**Simplification Summary**](MVP_COMPLETE.md) - What was removed and why
+- [**Testing Guide**](docs/development/TESTING.md) - E2E, unit, accessibility strategy
+- [**Architecture Guide**](docs/architecture/ARCHITECTURE.md) - State/data flows
 - [**Bilingual Support**](docs/BILINGUAL_SUPPORT.md) - Localization architecture and implementation details
 - [**Next Steps**](docs/NEXT_STEPS_PLAN.md) - Immediate action items and deployment checklist
 - [**Testing Guide**](docs/development/TESTING.md) - Comprehensive testing strategy including bilingual tests
 - [**Bilingual Migration**](docs/migration/BILINGUAL_MIGRATION.md) - Guide for migrating to bilingual architecture
 
-## 🧪 Testing
+## 🧪 Testing Overview
 
 The application includes comprehensive test coverage:
 
 ```bash
 # Run all tests
-pnpm run test:all
-
-# Run specific test suites
-pnpm run test:unit          # Unit tests with Vitest
-pnpm run test:e2e           # End-to-end tests with Playwright
-pnpm run test:accessibility # Accessibility tests with Axe
-pnpm run test:components    # Component tests
+pnpm run test:unit
+pnpm run test:e2e
+pnpm run test:accessibility
+pnpm run test:components
 ```
 
-## 🧪 Accessibility Testing
+## ♿ Accessibility Testing
 
 The application includes comprehensive accessibility testing to ensure WCAG 2.1 AA compliance.
 
@@ -151,13 +141,12 @@ pnpm test:accessibility -- --component=FlashCard
 - For keyboard navigation issues, check for missing `tabindex` attributes
 
 ### Test Coverage
-- ✅ Unit tests for state management and data loading
-- ✅ E2E tests for critical user flows
-- ✅ Accessibility tests for WCAG 2.1 AA compliance
-- ✅ Component tests for UI interactions
-- ✅ Visual regression tests
+- Unit tests for state and data loading
+- E2E tests for core flows (dashboard, vocabulary, practice, lessons)
+- Accessibility tests for WCAG 2.1 AA compliance
+- Component tests for interactive UI elements
 
-## 🔒 Type Safety Architecture
+## 🔒 Type Safety & Data Validation
 
 ### Zod + TypeScript Integration
 All runtime data is validated using Zod schemas with TypeScript type inference:
@@ -282,7 +271,7 @@ pnpm run preview
 ### Deployment
 The application is configured for deployment to GitHub Pages. The build process creates a static site that can be deployed to any static hosting service.
 
-## 🌐 Bilingual Support Features
+## 🌐 Bilingual Support
 
 ### Language Switching
 - One-click language toggle between German and Bulgarian
@@ -365,10 +354,11 @@ We welcome contributions! Please refer to the [Roadmap](docs/ROADMAP.md) for cur
 - **Advanced Analytics**: Detailed learning insights and recommendations
 - **Mobile App**: Native mobile applications
 
-## 📄 License
+## 📌 Scope Clarification
 
-MIT License - see [LICENSE](LICENSE) for details.
-
-## 🙏 Acknowledgments
-
-Built with modern web technologies and best practices for language learning applications.
+Documented features are limited to the tested, stable core. The following are explicitly out of scope for v1.0 until validated with tests and user feedback:
+- Quiz system
+- Gamification (XP, levels, streaks)
+- Social features / leaderboards
+- Accounts / cloud sync
+- Advanced analytics

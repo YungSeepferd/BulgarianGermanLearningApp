@@ -35,6 +35,7 @@ graph TD
 | **Component Tests** | Playwright CT | Individual UI components | Every commit |
 | **Integration Tests** | Playwright | Component interactions, data flow | Every commit |
 | **E2E Tests** | Playwright | Complete user flows | Every PR |
+| **Interactive Elements** | Playwright | Buttons, links, and forms across pages | Every PR |
 | **Accessibility Tests** | Axe + Playwright | WCAG 2.1 AA compliance | Every PR |
 | **Visual Regression** | Playwright | UI consistency | Weekly |
 | **Performance Tests** | Lighthouse, Custom | Load times, responsiveness | Weekly |
@@ -54,6 +55,7 @@ The bilingual support system requires comprehensive testing across all layers of
 4. **Fallback Mechanism**: Test fallback behavior for missing translations
 5. **Performance**: Measure translation loading and language switching performance
 6. **Accessibility**: Ensure WCAG compliance in both languages
+7. **Interactive Elements**: Confirm buttons, links, and forms operate without errors or regressions
 
 ### Bilingual Test Cases
 

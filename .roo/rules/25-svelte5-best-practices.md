@@ -3,6 +3,16 @@
 ## 🎯 Purpose
 This document establishes comprehensive best practices for Svelte 5 development, focusing on leveraging the new runes reactivity system, TypeScript integration, component design principles, and project structure. These rules ensure clean, maintainable, and performant code across the project.
 
+## 📚 Staying Current with Svelte 5 Syntax
+
+To ensure you're using the latest Svelte 5 syntax and SvelteKit APIs:
+- Use the Svelte MCP server (local via `@sveltejs/mcp`):
+  - `list-sections` → discover relevant documentation sections
+  - `get-documentation` → fetch full documentation content
+  - `svelte-autofixer` → validate Svelte components before merge
+- Always prefer current Svelte 5 patterns (components, runes, and APIs) over legacy syntax
+- Consult the official Svelte docs when implementing new features
+
 ---
 
 ## 🧩 I. Runes and Reactivity

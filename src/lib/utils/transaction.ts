@@ -54,8 +54,9 @@ export class Transaction {
             for (let i = executedOperations.length - 1; i >= 0; i--) {
                 try {
                     const rollbackIndex = this.operations.indexOf(executedOperations[i]);
-                    if (rollbackIndex !== -1 && this.rollbackOperations[rollbackIndex]) {
-                        await this.rollbackOperations[rollbackIndex]();
+                    const rollbackOp = this.rollbackOperations[rollbackIndex];
+                    if (rollbackIndex !== -1 && rollbackOp) {
+                        await rollbackOp();
                     } else {
                         Debug.error('Transaction', 'No rollback operation found for operation', executedOperations[i]);
                         errors.push(new Error(`No rollback operation found for operation: ${executedOperations[i]}`));

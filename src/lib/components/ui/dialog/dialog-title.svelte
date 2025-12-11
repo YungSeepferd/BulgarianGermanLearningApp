@@ -15,5 +15,7 @@
 	class={cn('text-lg font-semibold leading-none tracking-tight', className)}
 	{...rest}
 >
-	{@render children()}
+	{#if children}
+		{@render children()}
+	{/if}
 </DialogPrimitive.Title>

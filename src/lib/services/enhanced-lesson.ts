@@ -61,6 +61,7 @@ class EnhancedLessonService {
   async generateThematicLesson(categories: string[], difficulty: string, options?: { includePractice?: boolean; includeReview?: boolean }): Promise<Lesson> {
     const validatedDifficulty = isLessonDifficulty(difficulty) ? difficulty : 'A1';
     const params: LessonGenerationParams = {
+      userId: 'default',
       type: 'vocabulary',
       difficulty: validatedDifficulty,
       criteria: { categories },
@@ -83,6 +84,7 @@ class EnhancedLessonService {
   async generateGrammarLesson(conceptType: string, difficulty: string, options?: { includePractice?: boolean; includeComparison?: boolean }): Promise<Lesson> {
     const validatedDifficulty = isLessonDifficulty(difficulty) ? difficulty : 'A1';
     const params: LessonGenerationParams = {
+      userId: 'default',
       type: 'grammar',
       difficulty: validatedDifficulty,
       criteria: { conceptType },
@@ -105,6 +107,7 @@ class EnhancedLessonService {
   async generateMixedLesson(category: string, difficulty: string, options?: { includePractice?: boolean; includeReview?: boolean }): Promise<Lesson> {
     const validatedDifficulty = isLessonDifficulty(difficulty) ? difficulty : 'A1';
     const params: LessonGenerationParams = {
+      userId: 'default',
       type: 'mixed',
       difficulty: validatedDifficulty,
       criteria: { categories: [category] },
@@ -125,16 +128,18 @@ class EnhancedLessonService {
   private validateLessonGenerationParams(params: LessonGenerationParams): LessonGenerationParams {
     // Default values
     const defaults = {
-      type: 'vocabulary',
-      difficulty: 'A1',
+      userId: 'default',
+      type: 'vocabulary' as const,
+      difficulty: 'A1' as const,
       criteria: {},
       metadata: {}
     };
 
     // Validate and apply defaults
     const validatedParams: LessonGenerationParams = {
-      type: ['vocabulary', 'grammar', 'mixed', 'contextual'].includes(params.type) ? params.type : defaults.type,
-      difficulty: ['A1', 'A2', 'B1', 'B2', 'C1'].includes(params.difficulty) ? params.difficulty : defaults.difficulty,
+      userId: params.userId || defaults.userId,
+      type: (['vocabulary', 'grammar', 'mixed', 'culture', 'contextual'] as const).includes(params.type as any) ? params.type : defaults.type,
+      difficulty: (['A1', 'A2', 'B1', 'B2', 'C1'] as const).includes(params.difficulty as any) ? params.difficulty : defaults.difficulty,
       criteria: params.criteria || defaults.criteria,
       metadata: params.metadata || defaults.metadata
     };
