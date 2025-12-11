@@ -1,5 +1,5 @@
 import { loadVocabulary } from '$lib/data/loader';
-import type { VocabularyItem } from '$lib/schemas/vocabulary';
+import type { UnifiedVocabularyItem } from '$lib/schemas/unified-vocabulary';
 
 export class GameState {
 	// cards = $state<VocabularyItem[]>([]);
@@ -8,7 +8,7 @@ export class GameState {
 	// correctCount = $state(0);
 	// loading = $state(true);
 	// error = $state<string | null>(null);
-	cards: VocabularyItem[] = [];
+	cards: UnifiedVocabularyItem[] = [];
 	currentCardIndex = 0;
 	streak = 0;
 	correctCount = 0;
@@ -25,6 +25,7 @@ export class GameState {
 			console.log('Loading vocabulary...');
 			const collection = await loadVocabulary();
 			console.log('Vocabulary loaded:', collection);
+			// The items are already of type UnifiedVocabularyItem
 			this.cards = collection.items;
 			console.log(`Loaded ${this.cards.length} vocabulary items`);
 			this.loading = false;
@@ -35,7 +36,7 @@ export class GameState {
 		}
 	}
 
-	currentCard = $derived(this.cards[this.currentCardIndex]);
+	currentCard = $derived(this.cards[this.currentCardIndex] as UnifiedVocabularyItem);
 
 	rateCard(isCorrect: boolean) {
 		if (isCorrect) {

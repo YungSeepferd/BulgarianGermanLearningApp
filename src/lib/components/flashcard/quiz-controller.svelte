@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { VocabularyItem } from '$lib/types/vocabulary';
-  import { learningSession } from '$lib/state/session.svelte';
+  import { learningSession } from '$lib/state/session.svelte.js';
   import { slide } from 'svelte/transition';
 
   type Props = {

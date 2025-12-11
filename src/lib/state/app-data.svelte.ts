@@ -1,6 +1,6 @@
 import { browser } from '$app/environment';
-import { db } from '$lib/data/db.svelte';
-import * as dataLoader from '$lib/data/loader';
+import { vocabularyDb } from '$lib/data/db.svelte';
+import { vocabularyService } from '$lib/data/vocabulary';
 import { LocalStorageManager } from '$lib/utils/localStorage';
 import { Debug } from '$lib/utils';
 import { TransactionManager } from '$lib/utils/transaction';
@@ -20,7 +20,7 @@ export class AppDataState {
 
     // Get all vocabulary items from the database
     get allItems(): VocabularyItem[] {
-        return db.items;
+        return vocabularyDb.items;
     }
 
     /**
@@ -107,7 +107,7 @@ export class AppDataState {
             // Add data loader update operation
             transaction.addOperation(
                 async () => {
-                    await dataLoader.updateStats(itemId, correct, responseTime, eventBus);
+                    await vocabularyService.updateStats(itemId, correct, responseTime);
                 },
                 async () => {
                     Debug.log('AppDataState', 'Rolling back data loader update', { itemId });
@@ -159,11 +159,11 @@ export class AppDataState {
             try {
                 await TransactionManager.rollbackTransaction(transactionId);
             } catch (rollbackError) {
-                Debug.error('AppDataState', 'Failed to rollback transaction', rollbackError);
+                Debug.error('AppDataState', 'Failed to rollback transaction', rollbackError as Error);
             }
 
             this.handleError(error, 'Failed to record practice result');
-            ErrorHandler.handleError(error, 'Failed to record practice result', eventBus);
+            ErrorHandler.handleError(error as Error, 'Failed to record practice result', eventBus);
             throw new StateError('Failed to record practice result', { itemId, error });
         }
     }
@@ -196,7 +196,7 @@ export class AppDataState {
             }, eventBus);
         } catch (error) {
             this.handleError(error, 'Failed to save progress data');
-            ErrorHandler.handleError(error, 'Failed to save app data state', eventBus);
+            ErrorHandler.handleError(error as Error, 'Failed to save app data state', eventBus);
             throw new StorageError('Failed to save app data state', {
                 error,
                 statsType: typeof this.practiceStats,
@@ -229,12 +229,13 @@ export class AppDataState {
             }
         } catch (error) {
             this.handleError(error, 'Failed to load progress data');
-            ErrorHandler.handleError(error, 'Failed to load app data state', eventBus);
+            ErrorHandler.handleError(error as Error, 'Failed to load app data state', eventBus);
+            // Provide basic error context without progress data
             throw new StorageError('Failed to load app data state', {
                 error,
-                hasStats: progress?.stats !== undefined,
-                hasFavorites: progress?.favorites !== undefined,
-                hasSearches: progress?.recentSearches !== undefined
+                hasStats: false,
+                hasFavorites: false,
+                hasSearches: false
             });
         }
     }
@@ -265,7 +266,7 @@ export class AppDataState {
             LocalStorageManager.clearAllData(eventBus);
         } catch (error) {
             this.handleError(error, 'Failed to clear all user data');
-            ErrorHandler.handleError(error, 'Failed to clear all app data', eventBus);
+            ErrorHandler.handleError(error as Error, 'Failed to clear all app data', eventBus);
             throw new StorageError('Failed to clear all app data', { error });
         }
     }
@@ -281,7 +282,7 @@ export class AppDataState {
             return LocalStorageManager.exportUserData(eventBus);
         } catch (error) {
             this.handleError(error, 'Failed to export user data');
-            ErrorHandler.handleError(error, 'Failed to export app data', eventBus);
+            ErrorHandler.handleError(error as Error, 'Failed to export app data', eventBus);
             throw new StorageError('Failed to export app data', { error });
         }
     }
@@ -309,7 +310,7 @@ export class AppDataState {
             this.loadProgress(eventBus);
         } catch (error) {
             this.handleError(error, 'Failed to import user data');
-            ErrorHandler.handleError(error, 'Failed to import app data', eventBus);
+            ErrorHandler.handleError(error as Error, 'Failed to import app data', eventBus);
             throw new StateError('Failed to import app data', {
                 error,
                 jsonDataType: typeof jsonData,
@@ -330,7 +331,7 @@ export class AppDataState {
                 this.loadProgress(eventBus);
             } catch (error) {
                 this.handleError(error, 'Failed to initialize application data');
-                ErrorHandler.handleError(error, 'Failed to initialize AppDataState', eventBus);
+                ErrorHandler.handleError(error as Error, 'Failed to initialize AppDataState', eventBus);
                 // Re-throw to allow application to handle initialization failure
                 throw new StateError('Failed to initialize AppDataState', { error });
             }

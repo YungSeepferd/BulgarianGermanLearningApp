@@ -45,8 +45,10 @@ export class Transaction {
             }
 
             this.isCommitted = true;
-        } catch (error) {
-            Debug.error('Transaction', 'Transaction failed, rolling back', error);
+        } catch (error: unknown) {
+            Debug.error('Transaction', 'Transaction failed, rolling back', error as Error);
+
+            const errors: Error[] = [];
 
             // Rollback in reverse order
             for (let i = executedOperations.length - 1; i >= 0; i--) {
@@ -54,14 +56,19 @@ export class Transaction {
                     const rollbackIndex = this.operations.indexOf(executedOperations[i]);
                     if (rollbackIndex !== -1 && this.rollbackOperations[rollbackIndex]) {
                         await this.rollbackOperations[rollbackIndex]();
+                    } else {
+                        Debug.error('Transaction', 'No rollback operation found for operation', executedOperations[i]);
+                        errors.push(new Error(`No rollback operation found for operation: ${executedOperations[i]}`));
                     }
-                } catch (rollbackError) {
-                    Debug.error('Transaction', 'Rollback failed for operation', rollbackError);
+                } catch (rollbackError: unknown) {
+                    const typedRollbackError = rollbackError instanceof Error ? rollbackError : new Error(String(rollbackError));
+                    Debug.error('Transaction', 'Rollback failed for operation', typedRollbackError);
+                    errors.push(typedRollbackError);
                     // Continue with other rollbacks even if one fails
                 }
             }
 
-            ErrorHandler.handleError(error, 'Transaction failed and rolled back');
+            ErrorHandler.handleError(error as Error, 'Transaction failed and rolled back');
             throw error;
         }
     }

@@ -1,7 +1,6 @@
 import { browser } from '$app/environment';
 import { Debug } from '$lib/utils';
-import { diContainer } from '../services/di-container';
-import { EventBus, EventTypes } from '../services/event-bus';
+import { EventBus, EventTypes, type XPEvent, type LevelUpEvent } from '../services/event-bus';
 import { StateError, StorageError, ErrorHandler } from '../services/errors';
 import { calculateLevel, calculateXPForLevel } from '../schemas/progress';
 
@@ -15,22 +14,23 @@ export class LearningSession {
     sessionXP = $state<number>(0);
     dailyXP = $state<number>(0);
     lastPracticeDate = $state<string | null>(null);
+    totalXP = $state<number>(0); // Track total XP from events
 
     // Gamification
     dailyTarget = DAILY_XP_TARGET;
 
-    // Reference to ProgressService for total XP
-    private progressService = diContainer.getService('progressService');
+    // Event handling
+    private eventBus: EventBus;
     private xpEventUnsubscribe: (() => void) | null = null;
+    private levelUpEventUnsubscribe: (() => void) | null = null;
 
     // Level System (Derived) with memoization
-    level = $derived.by(() => calculateLevel(this.getTotalXP()));
+    level = $derived.by(() => calculateLevel(this.totalXP));
     nextLevelXP = $derived.by(() => calculateXPForLevel(this.level + 1));
     currentLevelStartXP = $derived.by(() => calculateXPForLevel(this.level));
 
     levelProgress = $derived.by(() => {
-        const totalXP = this.getTotalXP();
-        const xpInLevel = totalXP - this.currentLevelStartXP;
+        const xpInLevel = this.totalXP - this.currentLevelStartXP;
         const levelSpan = this.nextLevelXP - this.currentLevelStartXP;
 
         // Ensure we don't divide by zero and return a valid percentage
@@ -45,32 +45,31 @@ export class LearningSession {
     });
     isDailyGoalReached = $derived(this.dailyXP >= this.dailyTarget);
 
-    constructor() {
+    constructor(eventBus: EventBus) {
+        this.eventBus = eventBus;
+
         if (browser) {
             this.loadState();
         }
 
         // Subscribe to XP events with proper typing
-        const eventBus = diContainer.getService<EventBus>('eventBus');
-        this.xpEventUnsubscribe = eventBus.subscribe(EventTypes.XP_EARNED, (event: { amount: number }) => {
-            this.handleXPEarned(event.amount);
+        this.xpEventUnsubscribe = eventBus.subscribe(EventTypes.XP_EARNED, (event: XPEvent) => {
+            this.handleXPEarned(event);
         });
 
-        // Initialize derived values with cleanup
-        $effect(() => {
-            // This effect ensures derived values are calculated on initialization
-            this.level;
-            this.nextLevelXP;
-            this.currentLevelStartXP;
-            this.levelProgress;
-            this.progressPercentage;
-            this.isDailyGoalReached;
-
-            // Return cleanup function
-            return () => {
-                // Cleanup any resources if needed
-            };
+        // Subscribe to level up events
+        this.levelUpEventUnsubscribe = eventBus.subscribe(EventTypes.LEVEL_UP, (event: LevelUpEvent) => {
+            this.handleLevelUp(event);
         });
+
+        // Initialize derived values - no effect needed for derived values
+        // Derived values are automatically calculated when accessed
+        this.level;
+        this.nextLevelXP;
+        this.currentLevelStartXP;
+        this.levelProgress;
+        this.progressPercentage;
+        this.isDailyGoalReached;
     }
 
     startSession() {
@@ -98,43 +97,48 @@ export class LearningSession {
 
         this.sessionXP += amount;
         this.dailyXP += amount;
-        this.saveState();
-        return false; // Level up is now handled by event listeners
-    }
 
-    /**
-     * Calculate the current level based on total XP
-     * @param xp Total XP
-     * @returns Current level
-     */
-    private calculateLevel(xp: number): number {
-        return calculateLevel(xp);
+        // Emit XP earned event
+        this.eventBus.emit(EventTypes.XP_EARNED, {
+            amount,
+            reason: 'Session activity',
+            timestamp: new Date()
+        } as XPEvent);
+
+        this.saveState();
+        return false;
     }
 
     /**
      * Handle XP earned event from ProgressService
-     * @param amount Amount of XP earned
+     * @param event XP event containing amount and metadata
      */
-    private handleXPEarned(amount: number) {
+    private handleXPEarned(event: XPEvent) {
+        // Update our total XP tracking
+        this.totalXP += event.amount;
+
         // Reset daily XP if it's a new day
         this.checkStreak();
 
-        // The actual XP tracking is handled by ProgressService
-        // We just need to update our derived state
+        this.saveState();
     }
 
     /**
-     * Get the total XP from ProgressService
+     * Handle level up event from ProgressService
+     * @param event Level up event containing level information
+     */
+    private handleLevelUp(event: LevelUpEvent) {
+        // Level up is handled by ProgressService, we just need to update our state
+        this.totalXP = event.totalXP;
+        Debug.log('LearningSession', `Level up detected: ${event.oldLevel} -> ${event.newLevel}`);
+    }
+
+    /**
+     * Get the current total XP
      * @returns Total XP
      */
     getTotalXP(): number {
-        try {
-            const progressData = this.progressService.getProgressData();
-            return progressData.overallProgress.totalXP;
-        } catch (error) {
-            console.error('Failed to get total XP from ProgressService:', error);
-            return 0;
-        }
+        return this.totalXP;
     }
 
     /**
@@ -170,6 +174,11 @@ export class LearningSession {
                 if (this.currentStreak === 0) this.currentStreak = 1;
             }
 
+            // Reset daily XP if it's a new day
+            if (this.lastPracticeDate !== today) {
+                this.dailyXP = 0;
+            }
+
             this.lastPracticeDate = today;
             this.saveState();
         } catch (error) {
@@ -195,6 +204,7 @@ export class LearningSession {
                 this.currentStreak = typeof parsed.currentStreak === 'number' ? parsed.currentStreak : 0;
                 this.lastPracticeDate = typeof parsed.lastPracticeDate === 'string' ? parsed.lastPracticeDate : null;
                 this.dailyXP = typeof parsed.dailyXP === 'number' ? parsed.dailyXP : 0;
+                this.totalXP = typeof parsed.totalXP === 'number' ? parsed.totalXP : 0;
 
                 // Reset daily XP if it's a new day
                 const today = new Date().toISOString().split('T')[0];
@@ -220,14 +230,15 @@ export class LearningSession {
         if (!browser) return;
         try {
             // Validate state before saving
-            if (typeof this.currentStreak !== 'number' || typeof this.dailyXP !== 'number') {
+            if (typeof this.currentStreak !== 'number' || typeof this.dailyXP !== 'number' || typeof this.totalXP !== 'number') {
                 throw new Error('Invalid session state: numbers expected');
             }
 
             localStorage.setItem('learning-session', JSON.stringify({
                 currentStreak: this.currentStreak,
                 dailyXP: this.dailyXP,
-                lastPracticeDate: this.lastPracticeDate
+                lastPracticeDate: this.lastPracticeDate,
+                totalXP: this.totalXP
             }));
         } catch (error) {
             ErrorHandler.handleError(error, 'Failed to save learning session state');
@@ -235,11 +246,11 @@ export class LearningSession {
                 error,
                 currentStreakType: typeof this.currentStreak,
                 dailyXPType: typeof this.dailyXP,
-                lastPracticeDateType: typeof this.lastPracticeDate
+                lastPracticeDateType: typeof this.lastPracticeDate,
+                totalXPType: typeof this.totalXP
             });
         }
     }
-}
 
     destroy(): void {
         Debug.log('LearningSession', 'Destroying LearningSession, cleaning up resources');
@@ -247,14 +258,37 @@ export class LearningSession {
             this.xpEventUnsubscribe();
             this.xpEventUnsubscribe = null;
         }
+        if (this.levelUpEventUnsubscribe) {
+            this.levelUpEventUnsubscribe();
+            this.levelUpEventUnsubscribe = null;
+        }
     }
+}
+// Create singleton instance - will be initialized by DI container
+let learningSessionInstance: LearningSession | null = null;
 
-// Create singleton instance
-export const learningSession = new LearningSession();
+// Export a getter and setter to avoid direct import reassignment issues
+export function getLearningSession(): LearningSession | null {
+    return learningSessionInstance;
+}
+
+export function setLearningSession(session: LearningSession): void {
+    learningSessionInstance = session;
+}
+
+export { learningSessionInstance as learningSession };
 
 // Add cleanup for application shutdown
-if (browser) {
-    window.addEventListener('beforeunload', () => {
-        learningSession.destroy();
-    });
+export function setupSessionCleanup() {
+    if (browser) {
+        window.addEventListener('beforeunload', () => {
+            const session = getLearningSession();
+            if (session) {
+                session.destroy();
+            }
+        });
+    }
 }
+
+// Initialize cleanup
+setupSessionCleanup();

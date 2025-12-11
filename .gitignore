@@ -55,3 +55,7 @@ src/lib/data/_raw_backup/
 
 # Cache
 .cache/
+
+# Backup files
+*.backup
+*.bak

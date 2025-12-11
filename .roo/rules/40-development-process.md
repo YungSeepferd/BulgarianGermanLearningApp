@@ -150,6 +150,9 @@ pkill -f "pnpm dev"
 
 ## 🔗 Related Documents
 - [Workflow Rules](/.roo/rules/30-workflow.md)
+- [Svelte 5 Best Practices](/.roo/rules/25-svelte5-best-practices.md)
+- [Svelte File Extension Rules](/.roo/rules/15-svelte-file-extensions.md)
+- [Tech Stack Rules](/.roo/rules/20-tech-stack.md)
 - [Documentation Maintenance Rules](/.roo/rules/95-documentation-maintenance.md)
 - [Behavior Rules](/.roo/rules/90-behavior.md)
 

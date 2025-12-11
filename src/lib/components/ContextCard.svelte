@@ -5,7 +5,7 @@ const gameState = getGameState();
 
 // Expose for debugging
 if (typeof window !== 'undefined') {
-  window.gameState = gameState;
+  (window as any).gameState = gameState;
 }
 
 let flipped = $state(false);
@@ -63,13 +63,11 @@ tabindex="0"
 	<div
 		class="absolute inset-0 z-20 flex flex-col items-center justify-center rounded-2xl bg-black/50 p-4 backdrop-blur-2xl"
 	>
-		{#if gameState.currentCard.literalBreakdown}
-		{#each gameState.currentCard.literalBreakdown as segment}
-			<div class="my-2 text-center">
-				<p class="text-xl font-bold text-white">{segment.segment}</p>
-				<p class="text-md text-white/80">{segment.literal} ({segment.grammar_tag})</p>
-			</div>
-		{/each}
+		{#if gameState.currentCard.grammar}
+		<div class="my-2 text-center">
+			<p class="text-xl font-bold text-white">{gameState.currentCard.bulgarian}</p>
+			<p class="text-md text-white/80">Grammar: {gameState.currentCard.partOfSpeech}</p>
+		</div>
 		{/if}
 	</div>
 {/if}
@@ -91,7 +89,7 @@ tabindex="0"
 	style="backface-visibility: hidden; transform: rotateY({$rotation + 180}deg);"
 >
 	<h3 class="text-2xl font-bold text-white">{gameState.currentCard.german}</h3>
-	<p class="mt-4 text-base text-white/80">{gameState.currentCard.metadata?.notes}</p>
+	<p class="mt-4 text-base text-white/80">{gameState.currentCard.notes?.general || gameState.currentCard.metadata?.sourceFiles?.join(', ') || 'No additional notes available'}</p>
 </div>
 {/if}
 </button>

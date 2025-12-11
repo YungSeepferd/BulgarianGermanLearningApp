@@ -107,7 +107,7 @@ export declare const ExportedUserDataSchema: z.ZodObject<{
         recentSearches: string[];
         lastUpdated: string;
     }>>;
-    session: any;
+    session: z.ZodUndefined;
     exportedAt: z.ZodString;
 }, "strip", z.ZodTypeAny, {
     [x: string]: any;

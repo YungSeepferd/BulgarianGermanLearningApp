@@ -10,24 +10,39 @@
  * Uses Fuse.js for fuzzy matching and implements custom filtering logic.
  */
 
-import { type VocabularySearchParams, type VocabularyItem } from '$lib/schemas/vocabulary';
+import { type VocabularySearchParams } from '$lib/schemas/vocabulary';
+import type { UnifiedVocabularyItem, VocabularyCategory, VocabularyMetadata } from '$lib/schemas/unified-vocabulary';
+import { UnifiedVocabularyItemSchema } from '$lib/schemas/unified-vocabulary';
 import { loadVocabulary } from '$lib/data/loader';
+import { z } from 'zod';
 import Fuse from 'fuse.js';
 
 // Cache for vocabulary data to avoid repeated loading
-let vocabularyCache: VocabularyItem[] | null = null;
+let vocabularyCache: UnifiedVocabularyItem[] | null = null;
 
 /**
  * Load vocabulary data with caching
  */
-async function getVocabularyData(): Promise<VocabularyItem[]> {
+async function getVocabularyData(): Promise<UnifiedVocabularyItem[]> {
   if (vocabularyCache) {
     return vocabularyCache;
   }
 
   try {
     const collection = await loadVocabulary();
-    vocabularyCache = collection.items;
+    // Ensure all items have required properties
+    vocabularyCache = collection.items.map(item => {
+      const metadata = item.metadata || {};
+      return {
+        ...item,
+        metadata: {
+          ...metadata,
+          isCommon: (metadata as VocabularyMetadata).isCommon ?? false,
+          isVerified: (metadata as VocabularyMetadata).isVerified ?? false,
+          learningPhase: (metadata as VocabularyMetadata).learningPhase ?? 0
+        }
+      };
+    });
     return vocabularyCache;
   } catch (_error) {
     // Failed to load vocabulary data
@@ -42,7 +57,7 @@ async function getVocabularyData(): Promise<VocabularyItem[]> {
  * @returns Search results with pagination metadata
  */
 export async function searchVocabulary(params: VocabularySearchParams): Promise<{
-  items: VocabularyItem[];
+  items: UnifiedVocabularyItem[];
   total: number;
   hasMore: boolean;
 }> {
@@ -50,11 +65,11 @@ export async function searchVocabulary(params: VocabularySearchParams): Promise<
   const vocabularyItems = await getVocabularyData();
 
   // Apply filters first to reduce the dataset for fuzzy search
-  let filteredItems = applyFilters(vocabularyItems, params);
+  let filteredItems: z.infer<typeof UnifiedVocabularyItemSchema>[] = applyFilters(vocabularyItems, params);
 
   // Apply fuzzy search if query is provided
   if (params.query) {
-    filteredItems = applyFuzzySearch(filteredItems, params.query);
+    filteredItems = applyFuzzySearch(filteredItems, params.query) as z.infer<typeof UnifiedVocabularyItemSchema>[];
   }
 
   // Apply sorting
@@ -64,7 +79,7 @@ export async function searchVocabulary(params: VocabularySearchParams): Promise<
   const total = filteredItems.length;
 
   // Apply pagination
-  const paginatedItems = applyPagination(filteredItems, params);
+  const paginatedItems = applyPagination(filteredItems, params) as z.infer<typeof UnifiedVocabularyItemSchema>[];
 
   return {
     items: paginatedItems,
@@ -76,7 +91,7 @@ export async function searchVocabulary(params: VocabularySearchParams): Promise<
 /**
  * Apply filters to vocabulary items based on search parameters
  */
-function applyFilters(items: VocabularyItem[], params: VocabularySearchParams): VocabularyItem[] {
+function applyFilters(items: UnifiedVocabularyItem[], params: VocabularySearchParams): UnifiedVocabularyItem[] {
   return items.filter(item => {
     // Filter by part of speech
     const partOfSpeechMatch = params.partOfSpeech
@@ -90,12 +105,12 @@ function applyFilters(items: VocabularyItem[], params: VocabularySearchParams): 
 
     // Filter by categories
     const categoryMatch = params.categories && params.categories.length > 0
-      ? item.categories.some(category => params.categories?.includes(category))
+      ? item.categories.some((category: VocabularyCategory) => params.categories?.includes(category))
       : true;
 
     // Filter by learning phase
     const learningPhaseMatch = params.learningPhase !== undefined
-      ? item.learningPhase === params.learningPhase
+      ? (item.metadata?.learningPhase ?? 0) === params.learningPhase
       : true;
 
     return partOfSpeechMatch && difficultyMatch && categoryMatch && learningPhaseMatch;
@@ -105,7 +120,7 @@ function applyFilters(items: VocabularyItem[], params: VocabularySearchParams): 
 /**
  * Apply fuzzy search using Fuse.js for relevance scoring
  */
-function applyFuzzySearch(items: VocabularyItem[], query: string): VocabularyItem[] {
+function applyFuzzySearch(items: UnifiedVocabularyItem[], query: string): UnifiedVocabularyItem[] {
   // Configure Fuse.js for optimal search results
   const fuse = new Fuse(items, {
     keys: [
@@ -135,7 +150,7 @@ function applyFuzzySearch(items: VocabularyItem[], query: string): VocabularyIte
 /**
  * Apply sorting to the filtered items
  */
-function applySorting(items: VocabularyItem[], params: VocabularySearchParams): VocabularyItem[] {
+function applySorting(items: UnifiedVocabularyItem[], params: VocabularySearchParams): UnifiedVocabularyItem[] {
   return [...items].sort((a, b) => {
     // Handle different sort fields
     switch (params.sortBy) {
@@ -164,7 +179,7 @@ function applySorting(items: VocabularyItem[], params: VocabularySearchParams): 
 /**
  * Apply pagination to the filtered and sorted items
  */
-function applyPagination(items: VocabularyItem[], params: VocabularySearchParams): VocabularyItem[] {
+function applyPagination(items: UnifiedVocabularyItem[], params: VocabularySearchParams): UnifiedVocabularyItem[] {
   const startIndex = params.offset;
   const endIndex = params.offset + params.limit;
   return items.slice(startIndex, endIndex);
@@ -196,8 +211,20 @@ export async function getSearchSuggestions(query: string, limit: number = 5): Pr
     if (item.bulgarian.toLowerCase().startsWith(lowerQuery)) {
       suggestions.add(item.bulgarian);
     }
-    if (item.transliteration && item.transliteration.toLowerCase().startsWith(lowerQuery)) {
-      suggestions.add(item.transliteration);
+    if (item.transliteration) {
+      if (typeof item.transliteration === 'string') {
+        if (item.transliteration.toLowerCase().startsWith(lowerQuery)) {
+          suggestions.add(item.transliteration);
+        }
+      } else if (item.transliteration && typeof item.transliteration === 'object' && item.transliteration !== null) {
+        const translit = item.transliteration as { german?: string; bulgarian?: string };
+        if (translit.german && typeof translit.german === 'string' && translit.german.toLowerCase().startsWith(lowerQuery)) {
+          suggestions.add(translit.german);
+        }
+        if (translit.bulgarian && typeof translit.bulgarian === 'string' && translit.bulgarian.toLowerCase().startsWith(lowerQuery)) {
+          suggestions.add(translit.bulgarian);
+        }
+      }
     }
   });
 
@@ -213,6 +240,8 @@ export async function getVocabularyStats(): Promise<{
   difficulty: Record<string, number>;
   categories: Record<string, number>;
   learningPhase: Record<string, number>;
+  isCommon: Record<string, number>;
+  isVerified: Record<string, number>;
 }> {
   const vocabularyItems = await getVocabularyData();
 
@@ -220,6 +249,8 @@ export async function getVocabularyStats(): Promise<{
   const difficulty: Record<string, number> = {};
   const categories: Record<string, number> = {};
   const learningPhase: Record<string, number> = {};
+  const isCommon: Record<string, number> = {};
+  const isVerified: Record<string, number> = {};
 
   vocabularyItems.forEach(item => {
     // Count by part of speech
@@ -234,13 +265,24 @@ export async function getVocabularyStats(): Promise<{
     });
 
     // Count by learning phase
-    learningPhase[item.learningPhase] = (learningPhase[item.learningPhase] || 0) + 1;
+    const phase = item.metadata?.learningPhase ?? 0;
+    learningPhase[phase] = (learningPhase[phase] || 0) + 1;
+
+    // Count by common status
+    const commonStatus = String(item.metadata?.isCommon ?? false);
+    isCommon[commonStatus] = (isCommon[commonStatus] || 0) + 1;
+
+    // Count by verified status
+    const verifiedStatus = String(item.metadata?.isVerified ?? false);
+    isVerified[verifiedStatus] = (isVerified[verifiedStatus] || 0) + 1;
   });
 
   return {
     partOfSpeech,
     difficulty,
     categories,
-    learningPhase
+    learningPhase,
+    isCommon,
+    isVerified
   };
 }

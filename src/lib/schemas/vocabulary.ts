@@ -188,19 +188,7 @@ export const VocabularyProgressSchema = z.object({
   nextReviewDate: z.date().optional()
 });
 
-// Schema for practice sessions
-export const PracticeSessionSchema = z.object({
-  id: z.string().uuid(),
-  currentItemId: z.string().uuid(),
-  startTime: z.string().datetime(),
-  endTime: z.string().datetime().optional(),
-  score: z.number().min(0).max(100).default(0),
-  itemsPracticed: z.number().min(0).default(0),
-  correctAnswers: z.number().min(0).default(0),
-  incorrectAnswers: z.number().min(0).default(0),
-  sessionType: z.enum(['vocabulary', 'grammar', 'listening', 'speaking']),
-  completed: z.boolean().default(false)
-});
+// PracticeSession type is defined in practiceSession.ts to avoid circular dependencies
 
 // Type exports for TypeScript
 export type PartOfSpeech = z.infer<typeof PartOfSpeechSchema>;
@@ -209,7 +197,7 @@ export type VocabularyCategory = z.infer<typeof VocabularyCategorySchema>;
 export type VocabularyCollection = z.infer<typeof VocabularyCollectionSchema>;
 export type VocabularySearchParams = z.infer<typeof VocabularySearchParamsSchema>;
 export type VocabularyProgress = z.infer<typeof VocabularyProgressSchema>;
-export type PracticeSession = z.infer<typeof PracticeSessionSchema>;
+// PracticeSession type is exported from practiceSession.ts
 
 // Utility functions
 export function getDifficultyLabel(difficulty: number): string {

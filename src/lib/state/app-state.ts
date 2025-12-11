@@ -1,23 +1,18 @@
 import { AppUIState } from './app-ui.svelte';
 import { AppDataState } from './app-data.svelte';
-import { diContainer } from '../services/di-container.js';
 
-// Create the data state instance
+// Export initialization function instead of direct instances
+// Initialize and export the state instances directly
 export const appDataState = new AppDataState();
-appDataState.init();
-
-// Create the UI state instance with reference to data state
 export const appUIState = new AppUIState(appDataState);
-appUIState.init();
 
 // Export async initialization function
 export async function initializeAppState() {
     try {
-        // Ensure DI container is initialized
-        await diContainer.initialize();
+        // Initialize the state instances
+        await appDataState.init();
+        await appUIState.init();
 
-        // Note: The DI container now handles proper initialization sequence
-        // The appDataState and appUIState instances are already properly initialized
         return {
             appDataState,
             appUIState

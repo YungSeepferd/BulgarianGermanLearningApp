@@ -2,16 +2,16 @@
  * Vocabulary Migration Script
  *
  * This script unifies and extends vocabulary data from all `data/vocab/*.json`
- * files into a single, comprehensive `vocabulary-unified.json` file.
+ * files into a single, comprehensive `unified-vocabulary.json` file.
  *
  * The script performs the following steps:
- * 1. Loads the main `vocabulary.json` file.
+ * 1. Loads the main `unified-vocabulary.json` file.
  * 2. Loads all specialized vocabulary files from `data/vocab/`.
  * 3. Maps all data to the `UnifiedVocabularyItemSchema`.
  * 4. Corrects any data inconsistencies (e.g., swapped fields).
  * 5. Deduplicates entries based on ID and content.
  * 6. Merges metadata to preserve the highest quality information.
- * 7. Saves the unified data to `data/vocabulary-unified.json`.
+ * 7. Saves the unified data to `src/lib/data/unified-vocabulary.json`.
  */
 import fs from 'fs/promises';
 import path from 'path';
@@ -20,21 +20,16 @@ import { UnifiedVocabularyItemSchema, UnifiedVocabularyCollectionSchema } from '
 
 const DATA_DIR = path.resolve(process.cwd(), 'data');
 const VOCAB_DIR = path.resolve(DATA_DIR, 'vocab');
+const OUTPUT_DIR = path.resolve(process.cwd(), 'src/lib/data');
 
 type UnifiedVocabularyItem = z.infer<typeof UnifiedVocabularyItemSchema>;
 
 async function loadMainVocabulary(): Promise<UnifiedVocabularyItem[]> {
-  const filePath = path.resolve(DATA_DIR, 'vocabulary.json');
+  const filePath = path.resolve(OUTPUT_DIR, 'unified-vocabulary.json');
   const fileContent = await fs.readFile(filePath, 'utf-8');
   const data = JSON.parse(fileContent);
-
-  // Correct swapped german/bulgarian fields
-  return data.items.map((item: UnifiedVocabularyItem) => ({
-  	...item,
-  	german: item.bulgarian,
-  	bulgarian: item.german
-  }));
- }
+  return data.items;
+}
 
 async function loadSpecializedVocabulary(): Promise<UnifiedVocabularyItem[]> {
   const files = await fs.readdir(VOCAB_DIR);
@@ -112,9 +107,9 @@ async function migrate() {
 
   console.log(`Total items after deduplication: ${deduplicatedItems.length}`);
 
-  // Create a backup of the current vocabulary.json file
-  const backupFile = path.resolve(DATA_DIR, `vocabulary-backup-${new Date().toISOString().split('T')[0]}.json`);
-  await fs.copyFile(path.resolve(DATA_DIR, 'vocabulary.json'), backupFile);
+  // Create a backup of the current unified-vocabulary.json file
+  const backupFile = path.resolve(OUTPUT_DIR, `unified-vocabulary-backup-${new Date().toISOString().split('T')[0]}.json`);
+  await fs.copyFile(path.resolve(OUTPUT_DIR, 'unified-vocabulary.json'), backupFile);
   console.log(`Backup created at ${backupFile}`);
 
   const unifiedCollection = {
@@ -129,10 +124,10 @@ async function migrate() {
 
   const validatedCollection = UnifiedVocabularyCollectionSchema.parse(unifiedCollection);
 
-  // Overwrite the original vocabulary.json file
-  await fs.writeFile(path.resolve(DATA_DIR, 'vocabulary.json'), JSON.stringify(validatedCollection, null, 2));
+  // Overwrite the original unified-vocabulary.json file
+  await fs.writeFile(path.resolve(OUTPUT_DIR, 'unified-vocabulary.json'), JSON.stringify(validatedCollection, null, 2));
 
-  console.log(`Successfully migrated and saved ${validatedCollection.items.length} items to vocabulary.json`);
+  console.log(`Successfully migrated and saved ${validatedCollection.items.length} items to unified-vocabulary.json`);
 }
 
 migrate().catch(error => {

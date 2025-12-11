@@ -46,6 +46,13 @@ A modern tandem learning platform for mastering Bulgarian and German, built with
 
 4. Open your browser and navigate to `http://localhost:5173`
 
+### Git Workflow
+
+- **No pre-push hook**: The project previously used a pre-push hook that caused performance issues and hanging
+- **CI simulation**: Run `pnpm run simulate-ci` locally to test your changes before pushing
+- **Pull requests**: Create pull requests to the `develop` branch for review
+- **CI checks**: GitHub Actions will run the same checks as the local simulation
+
 ## 🛠️ Development
 
 ### Key Commands
@@ -308,6 +315,7 @@ We welcome contributions! Please refer to the [Roadmap](docs/ROADMAP.md) for cur
 5. Follow the existing code style and structure
 6. Use the `t()` function for all UI text
 7. Implement direction-aware content for bilingual components
+8. Run `pnpm run simulate-ci` before pushing changes to ensure CI checks pass
 
 ### Code Quality
 - ESLint configuration for code quality
@@ -315,6 +323,7 @@ We welcome contributions! Please refer to the [Roadmap](docs/ROADMAP.md) for cur
 - Strict TypeScript mode enabled
 - Comprehensive test coverage required (including bilingual tests)
 - Localization best practices for all components
+- CI simulation script for local testing before pushing changes
 
 ## 📊 Current Status
 

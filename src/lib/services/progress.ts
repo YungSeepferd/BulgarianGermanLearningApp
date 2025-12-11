@@ -1250,44 +1250,44 @@ export class ProgressService {
   * Save progress data using atomic transaction
   * @throws StorageError if saving fails
   */
-    // Create a transaction to ensure atomic saving
-    const transactionId = `save-progress-${Date.now()}`;
-    const transaction = TransactionManager.startTransaction(transactionId);
+ async saveProgress(): Promise<void> {
+   // Create a transaction to ensure atomic saving
+   const transactionId = `save-progress-${Date.now()}`;
+   const transaction = TransactionManager.startTransaction(transactionId);
 
-    try {
-        // Use the same browser detection as loadProgress for consistency
-        const isBrowser = typeof window !== 'undefined' && typeof localStorage !== 'undefined';
-        if (!isBrowser) return;
+   try {
+       // Use the same browser detection as loadProgress for consistency
+       const isBrowser = typeof window !== 'undefined' && typeof localStorage !== 'undefined';
+       if (!isBrowser) return;
 
-        // Store original state for rollback
-        const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
+       // Store original state for rollback
+       const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
 
-        // Add save progress operation
-        transaction.addOperation(
-            async () => {
-                localStorage.setItem('tandem_progress_data', JSON.stringify(this.progressData));
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back save progress');
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
+       // Add save progress operation
+       transaction.addOperation(
+           async () => {
+               localStorage.setItem('tandem_progress_data', JSON.stringify(this.progressData));
+           },
+           async () => {
+               Debug.log('ProgressService', 'Rolling back save progress');
+               this.progressData = JSON.parse(JSON.stringify(originalProgressData));
+           }
+       );
 
-        // Commit the transaction
-        await TransactionManager.commitTransaction(transactionId);
+       // Commit the transaction
+       await TransactionManager.commitTransaction(transactionId);
 
-    } catch (error) {
-        // Attempt to rollback the transaction if it wasn't committed
-        try {
-            await TransactionManager.rollbackTransaction(transactionId);
-        } catch (rollbackError) {
-            Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError);
-        }
+   } catch (error) {
+       // Attempt to rollback the transaction if it wasn't committed
+       try {
+           await TransactionManager.rollbackTransaction(transactionId);
+       } catch (rollbackError) {
+           Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError);
+       }
 
-        ErrorHandler.handleError(error, 'Failed to save progress data', this.eventBus);
-        throw new StorageError('Failed to save progress data', { error });
-    }
-  }
+       ErrorHandler.handleError(error, 'Failed to save progress data', this.eventBus);
+       throw new StorageError('Failed to save progress data', { error });
+   }
 
   /**
    * Migrate old progress data to new format if needed using atomic transaction
@@ -1507,9 +1507,8 @@ export class ProgressService {
     const today = new Date().toISOString().split('T')[0];
     const dailyProgress = this.getDailyProgress(today) || { xpEarned: 0 };
 
-    // Get the daily target from learning session
-    const learningSession = diContainer.getService('learningSession');
-    const dailyTarget = learningSession.dailyTarget || 50; // Fallback to 50 if not available
+    // Get the daily target - use a reasonable default to avoid circular dependency
+    const dailyTarget = 50; // Default daily target
     const dailyXP = dailyProgress.xpEarned;
 
     return {

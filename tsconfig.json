@@ -4,8 +4,8 @@
     // Target ES2021 to match existing JavaScript configuration
     "target": "ES2021",
     "lib": ["ES2021", "DOM", "DOM.Iterable"],
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
 
     // Strict type checking (enabled for better ESLint integration)
     "strict": true,

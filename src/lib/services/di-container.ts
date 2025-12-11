@@ -6,7 +6,7 @@
  */
 
 import { ProgressService } from './progress';
-import { VocabularyService } from '../data/vocabulary';
+import { loadVocabulary, initializeVocabulary } from '../data/loader';
 import { LessonGenerationEngine } from './lesson-generation/lesson-generator';
 import { lessonTemplateRepository } from './lesson-generation/lesson-templates';
 import { culturalGrammarService } from './lesson-generation/cultural-grammar';
@@ -16,11 +16,12 @@ import { EventBus } from './event-bus';
 import { LearningSession } from '../state/session.svelte';
 
 // Define service types
+// Import VocabularyService type for type checking (but not for instantiation)
+import type { _VocabularyService } from '../data/vocabulary';
+
 type ServiceTypes = {
     progressService: ProgressService;
-    vocabularyService: VocabularyService;
     lessonGenerationEngine: LessonGenerationEngine;
-    appDataState: AppDataState;
     eventBus: EventBus;
     learningSession: LearningSession;
 };
@@ -59,25 +60,21 @@ class DIContainer {
                 // Initialize event bus first
                 this.services.eventBus = this.eventBus;
 
-                // Initialize ProgressService first since it's needed by AppDataState
+                // Initialize ProgressService - it's independent
                 this.services.progressService = new ProgressService(this.eventBus);
 
-                // Initialize LearningSession
-                this.services.learningSession = new LearningSession();
+                // Initialize LearningSession - now independent of ProgressService
+                this.services.learningSession = new LearningSession(this.eventBus);
 
-                // Initialize AppDataState with ProgressService dependency
-                this.services.appDataState = new AppDataState();
-                this.services.appDataState.init();
+                // Note: AppDataState is now initialized separately to avoid circular dependencies
 
-                // Initialize VocabularyService
-                this.services.vocabularyService = await VocabularyService.getInstance();
+                // VocabularyService has been removed - vocabulary data is loaded directly
 
                 // Initialize LessonGenerationEngine with dependencies
                 this.services.lessonGenerationEngine = new LessonGenerationEngine(
                     lessonTemplateRepository,
                     culturalGrammarService,
-                    templateRenderer,
-                    this.services.vocabularyService
+                    templateRenderer
                 );
 
                 this.isInitialized = true;
@@ -95,7 +92,7 @@ class DIContainer {
      * Get a service by type
      * @param serviceName The name of the service to get
      */
-    public getService(serviceName: keyof ServiceTypes): any {
+    public getService<T extends keyof ServiceTypes>(serviceName: T): ServiceTypes[T] {
         // Ensure initialization is complete before accessing services
         if (!this.isInitialized) {
             throw new Error(`Service ${serviceName} cannot be accessed: DI container not initialized. ` +
@@ -108,6 +105,14 @@ class DIContainer {
         }
 
         return this.services[serviceName];
+    }
+
+    /**
+     * Get the AppDataState instance (initialized separately to avoid circular dependencies)
+     */
+    public getAppDataState(): any {
+        // This will be replaced with proper AppDataState import after initialization
+        throw new Error('AppDataState should be accessed through app-state.ts to avoid circular dependencies');
     }
 
     /**
@@ -143,14 +148,22 @@ export function getProgressService(): ProgressService {
     return diContainer.getService('progressService');
 }
 
-export function getVocabularyService(): VocabularyService {
-    return diContainer.getService('vocabularyService');
+// VocabularyService has been removed - vocabulary data is loaded directly via loader functions
+
+/**
+ * Get vocabulary data
+ */
+export async function getVocabularyData() {
+    return await loadVocabulary();
+}
+
+// Export vocabulary initialization function
+export async function initializeVocabularyData() {
+    return await initializeVocabulary();
 }
 
 export function getLessonGenerationEngine(): LessonGenerationEngine {
     return diContainer.getService('lessonGenerationEngine');
 }
 
-export function getAppDataState(): AppDataState {
-    return diContainer.getService('appDataState');
-}
+// Note: AppDataState is initialized separately in app-state.ts to avoid circular dependencies

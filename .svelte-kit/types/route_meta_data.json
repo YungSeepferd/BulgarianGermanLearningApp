@@ -15,12 +15,6 @@
 	"/practice": [
 		"src/routes/+layout.ts"
 	],
-	"/progress": [
-		"src/routes/+layout.ts"
-	],
-	"/quiz": [
-		"src/routes/+layout.ts"
-	],
 	"/vocabulary": [
 		"src/routes/+layout.ts"
 	]

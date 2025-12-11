@@ -8,7 +8,7 @@
 import { LessonSchema } from '../schemas/lesson';
 import type { Lesson, LearningObjective, LessonDifficulty, LessonType } from '../schemas/lesson';
 import type { VocabularyItem, VocabularyCategory, PartOfSpeech } from '../schemas/vocabulary';
-import { db } from '../data/db.svelte';
+import { vocabularyDb as db } from '../data/db.svelte.js';
 
 /**
  * Lesson Service Class

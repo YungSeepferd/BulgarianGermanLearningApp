@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { db as vocabularyDb } from '$lib/data/db.svelte';
+import { vocabularyDb } from '$lib/data/db.svelte.js';
 // Store generated questions in memory for the current session
 const _generatedQuestions = new Map();
 // Quiz Question Schema

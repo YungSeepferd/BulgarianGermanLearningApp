@@ -1,305 +1,79 @@
 # GitHub Pages Deployment Guide
 
-This document provides comprehensive instructions for deploying the Bulgarian-German Learning App to GitHub Pages.
+This guide explains how the Bulgarian-German Learning App is deployed to GitHub Pages using GitHub Actions.
 
-## 📋 Table of Contents
+## 🚀 Deployment Overview
 
-- [Prerequisites](#prerequisites)
-- [Deployment Configuration](#deployment-configuration)
-- [Build Process](#build-process)
-- [Deployment Methods](#deployment-methods)
-  - [Manual Deployment](#manual-deployment)
-  - [GitHub Actions Deployment](#github-actions-deployment)
-- [Post-Deployment Verification](#post-deployment-verification)
-- [Troubleshooting](#troubleshooting)
-- [Best Practices](#best-practices)
+The application is deployed as a static site (SPA) to GitHub Pages.
+- **URL**: `https://<username>.github.io/BulgarianApp-Fresh/`
+- **Build Tool**: Vite + SvelteKit (`adapter-static`)
+- **CI/CD**: GitHub Actions
 
-## 🔧 Prerequisites
+## 🛠️ Configuration
 
-Before deploying to GitHub Pages, ensure you have:
-
-1. **GitHub Account**: A GitHub account with access to the repository
-2. **Repository**: The project repository hosted on GitHub
-3. **Node.js**: Node.js v18+ installed locally
-4. **PNPM**: PNPM package manager installed (`npm install -g pnpm`)
-5. **Build Tools**: All project dependencies installed (`pnpm install`)
-
-## ⚙️ Deployment Configuration
-
-### Vite Configuration
-
-The project uses Vite for building and bundling. The configuration is set up for GitHub Pages compatibility:
-
-```typescript
-// vite.config.ts
-export default defineConfig({
-  // Build configuration
-  build: {
-    target: 'es2020',
-    outDir: 'build',
-    assetsDir: 'assets',
-    sourcemap: true,
-    minify: 'terser',
-    emptyOutDir: true
-  }
-});
+### 1. SvelteKit Adapter (`svelte.config.js`)
+We use `@sveltejs/adapter-static` to generate a static site.
+```javascript
+adapter: adapter({
+  pages: 'build',
+  assets: 'build',
+  fallback: '404.html', // Required for SPA routing on GitHub Pages
+  strict: false
+})
 ```
 
-### Package.json Scripts
-
-The following scripts are configured for GitHub Pages deployment:
-
-```json
-{
-  "scripts": {
-    "build": "vite build",
-    "build:gh-pages": "vite build --base /BulgarianApp-Fresh/",
-    "preview": "vite preview"
-  }
+### 2. Base Path (`svelte.config.js`)
+The base path is configured for the repository subdirectory:
+```javascript
+paths: {
+  base: process.env.NODE_ENV === 'production' ? '/BulgarianApp-Fresh' : ''
 }
 ```
 
-## 🏗️ Build Process
-
-### Production Build
-
-To create a production build for GitHub Pages:
-
-```bash
-# Create production build with GitHub Pages base path
-pnpm build:gh-pages
+### 3. Asset Handling (`src/app.html`)
+Static assets in HTML must use the `%sveltekit.assets%` placeholder to respect the base path:
+```html
+<link rel="icon" href="%sveltekit.assets%/logo/logo-icon.svg" />
 ```
 
-This will:
-- Create optimized production assets
-- Set the correct base path for GitHub Pages (`/BulgarianApp-Fresh/`)
-- Output files to the `build` directory
-- Generate source maps for debugging
+## 📦 Deployment Workflow
 
-### Local Preview
+The deployment is automated via the `.github/workflows/deploy.yml` workflow.
 
-Before deploying, test the production build locally:
+### Trigger
+- Pushes to the `main` branch
 
-```bash
-# Preview the production build
-pnpm preview
-```
+### Steps
+1. **Checkout**: Checks out the code.
+2. **Setup**: Sets up Node.js and pnpm.
+3. **Install**: Installs dependencies.
+4. **Build**: Runs `pnpm build:gh-pages`.
+5. **Deploy**: Uploads the `build` directory to the `gh-pages` branch (or via GitHub Pages action).
 
-The preview server will be available at `http://localhost:4173`.
+## 💻 Manual Deployment (Local Test)
 
-## 🚀 Deployment Methods
+To test the deployment build locally:
 
-### Manual Deployment
-
-#### Step 1: Create Production Build
-
-```bash
-pnpm build:gh-pages
-```
-
-#### Step 2: Deploy to GitHub Pages
-
-1. **Using gh-pages package** (recommended):
-
-```bash
-# Install gh-pages if not already installed
-pnpm add -D gh-pages
-
-# Add deployment script to package.json
-"scripts": {
-  "deploy": "gh-pages -d build -b gh-pages"
-}
-
-# Run deployment
-pnpm deploy
-```
-
-2. **Manual Git Deployment**:
-
-```bash
-# Initialize git repository in build directory
-cd build
-git init
-git checkout -b gh-pages
-git add .
-git commit -m "GitHub Pages deployment"
-git remote add origin https://github.com/your-username/BulgarianApp-Fresh.git
-git push -f origin gh-pages
-```
-
-#### Step 3: Configure GitHub Pages
-
-1. Go to your repository on GitHub
-2. Navigate to **Settings** > **Pages**
-3. Under **Source**, select:
-   - Branch: `gh-pages`
-   - Folder: `/ (root)`
-4. Click **Save**
-
-### GitHub Actions Deployment
-
-Create a GitHub Actions workflow for automated deployment:
-
-1. Create the workflow file:
-
-```bash
-mkdir -p .github/workflows
-touch .github/workflows/deploy.yml
-```
-
-2. Add the following content to `.github/workflows/deploy.yml`:
-
-```yaml
-name: GitHub Pages Deployment
-
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 8
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build for GitHub Pages
-        run: pnpm build:gh-pages
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./build
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-```
-
-## ✅ Post-Deployment Verification
-
-After deployment, verify the application works correctly:
-
-1. **Access the deployed application**:
-   - URL: `https://your-username.github.io/BulgarianApp-Fresh/`
-
-2. **Test critical functionality**:
-   - Application loads without errors
-   - Navigation works correctly
-   - Language switching works
-   - Dashboard loads and displays progress
-   - Lessons and practice exercises work
-
-3. **Check console for errors**:
-   - Open browser developer tools
-   - Verify no 404 errors for assets
-   - Check for any JavaScript errors
-
-4. **Test on multiple devices**:
-   - Desktop browsers
-   - Mobile devices
-   - Tablets
-
-## 🛠️ Troubleshooting
-
-### Common Issues and Solutions
-
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| **404 errors for assets** | Incorrect base path | Ensure `--base /BulgarianApp-Fresh/` is used in build command |
-| **Blank page** | JavaScript errors | Check browser console for errors, verify build completed successfully |
-| **Routing issues** | GitHub Pages doesn't support SPA routing | Ensure 404.html is present in build directory |
-| **CSS not loading** | Incorrect asset paths | Verify base path configuration in vite.config.ts |
-| **API calls failing** | CORS or incorrect URLs | Ensure all API calls use relative paths or correct absolute URLs |
-| **Translation files missing** | Incorrect paths in production | Verify translation files are included in build output |
-
-### Debugging Tips
-
-1. **Check build output**:
+1. **Build**
    ```bash
-   ls -la build/
+   pnpm build:gh-pages
    ```
 
-2. **Test locally before deploying**:
+2. **Preview**
    ```bash
    pnpm preview
    ```
+   Note: The preview URL will effectively simulate the base path logic.
 
-3. **Verify base path**:
-   - Check `index.html` in build directory
-   - Ensure all asset paths start with `/BulgarianApp-Fresh/`
+## ⚠️ Troubleshooting
 
-4. **Check GitHub Pages settings**:
-   - Verify correct branch and folder are selected
-   - Ensure GitHub Pages is enabled
+- **404 on Refresh**: Ensure `fallback: '404.html'` is set in `svelte.config.js`.
+- **Broken Images/Styles**: Verify `base` path in `svelte.config.js` and use `%sveltekit.assets%` in HTML templates.
+- **Routing Issues**: GitHub Pages doesn't natively support SPA routing; the `404.html` fallback handles this by reloading the app, which then handles the route client-side.
 
-## 🏆 Best Practices
+## 📝 Post-Deployment Checklist
 
-1. **Test thoroughly before deployment**:
-   - Run all tests: `pnpm test:all`
-   - Test locally: `pnpm preview`
-
-2. **Use GitHub Actions for CI/CD**:
-   - Automate testing and deployment
-   - Ensure only tested code gets deployed
-
-3. **Monitor deployment status**:
-   - Check GitHub Actions workflow runs
-   - Monitor GitHub Pages build status
-
-4. **Keep dependencies updated**:
-   - Regularly update dependencies: `pnpm update`
-   - Test after updates
-
-5. **Maintain backup branches**:
-   - Keep a stable `main` branch
-   - Use feature branches for development
-
-6. **Document deployment process**:
-   - Keep this guide updated
-   - Document any custom configurations
-
-7. **Monitor application performance**:
-   - Use browser developer tools
-   - Check loading times and asset sizes
-
-## 📝 Deployment Checklist
-
-Before deploying, ensure:
-
-- [ ] All tests pass (`pnpm test:all`)
-- [ ] Local preview works without errors (`pnpm preview`)
-- [ ] Build completes successfully (`pnpm build:gh-pages`)
-- [ ] Base path is correctly set (`/BulgarianApp-Fresh/`)
-- [ ] GitHub Pages is configured (branch: `gh-pages`, folder: `/`)
-- [ ] All critical functionality works in local preview
-- [ ] No console errors in local preview
-- [ ] Translation files are included in build
-- [ ] 404.html is present in build directory
-- [ ] GitHub Actions workflow is set up (if using CI/CD)
+- [ ] Verify homepage loads at `/BulgarianApp-Fresh/`
+- [ ] Check console for 404 errors on assets
+- [ ] Test navigation (deep linking)
+- [ ] Verify language switching persistence

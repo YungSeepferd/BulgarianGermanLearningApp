@@ -1,0 +1,4590 @@
+{
+  "id": "365285b8-72c1-4494-8775-0ce6c7c412c5",
+  "name": "German-Bulgarian Vocabulary",
+  "description": "Comprehensive German-Bulgarian vocabulary collection with unified schema",
+  "languagePair": "de-bg",
+  "difficultyRange": [
+    1,
+    1
+  ],
+  "categories": [
+    "uncategorized",
+    "greetings",
+    "common_phrases",
+    "time",
+    "food",
+    "transport",
+    "body",
+    "nature",
+    "family",
+    "numbers",
+    "colors"
+  ],
+  "itemCount": 750,
+  "createdAt": "2025-12-08T18:03:33.088Z",
+  "updatedAt": "2025-12-08T18:03:33.099Z",
+  "version": 1,
+  "items": [
+    {
+      "id": "v001-apfel",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "v002-haus",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "v003-laufen",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "v004-gut",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "v005-danke",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "zdravej_001",
+      "categories": [
+        "greetings"
+      ]
+    },
+    {
+      "id": "dobro_utro_002",
+      "categories": [
+        "greetings"
+      ]
+    },
+    {
+      "id": "guten_tag",
+      "categories": [
+        "greetings"
+      ]
+    },
+    {
+      "id": "guten_abend",
+      "categories": [
+        "greetings"
+      ]
+    },
+    {
+      "id": "gute_nacht",
+      "categories": [
+        "greetings"
+      ]
+    },
+    {
+      "id": "auf_wiedersehen",
+      "categories": [
+        "greetings"
+      ]
+    },
+    {
+      "id": "bitte",
+      "categories": [
+        "common_phrases"
+      ]
+    },
+    {
+      "id": "danke",
+      "categories": [
+        "common_phrases"
+      ]
+    },
+    {
+      "id": "entschuldigung",
+      "categories": [
+        "common_phrases"
+      ]
+    },
+    {
+      "id": "es_tut_mir_leid",
+      "categories": [
+        "common_phrases"
+      ]
+    },
+    {
+      "id": "mensch",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "familie",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "haus",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "schule",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "arbeit",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "stadt",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "dorf",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "buch",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "essen",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "wasser",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "sein",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "haben",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "machen",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "konnen",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "gehen",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "essen_01",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "trinken",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "sprechen",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "sehen",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "horen",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "gut",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "schlecht",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "gro",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "klein",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "neu",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "alt",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "schon",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "hasslich",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "warm",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "kalt",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "hier",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "dort",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "jetzt",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "dann",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "schnell",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "langsam",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "oft",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "selten",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "gut_01",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "schlecht_01",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "tisch",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "stuhl",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "kuhlschrank",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "kuche",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "wohnung",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "auto",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "laden",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "garten",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "uhr",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "lesen",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "schreiben",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "fahren",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "leben",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "arbeiten",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "lernen",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "eins",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "zwei",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "drei",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "vier",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "funf",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "sechs",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "sieben",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "acht",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "neun",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "zehn",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "elf",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "zwoelf",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "dreizehn",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "vierzehn",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "fuenfzehn",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "sechzehn",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "siebzehn",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "achtzehn",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "neunzehn",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "zwanzig",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "dreissig",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "vierzig",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "fuenfzig",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "sechzig",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "siebzig",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "achtzig",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "neunzig",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "hundert",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "tausend",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "viele",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "wenig",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "alle",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "einige",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "keiner",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "montag",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "dienstag",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "mittwoch",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "donnerstag",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "freitag",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "samstag",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "sonntag",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "stunde",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "minute",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "morgen",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "mittag",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "nachmittag",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "abend",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "nacht",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "wie_geht_s",
+      "categories": [
+        "common_phrases"
+      ]
+    },
+    {
+      "id": "mir_geht_s_gut",
+      "categories": [
+        "common_phrases"
+      ]
+    },
+    {
+      "id": "entschuldige",
+      "categories": [
+        "common_phrases"
+      ]
+    },
+    {
+      "id": "darf_ich",
+      "categories": [
+        "common_phrases"
+      ]
+    },
+    {
+      "id": "brot",
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "id": "milch",
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "id": "kase",
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "id": "fleisch",
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "id": "fisch",
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "id": "gemuse",
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "id": "obst",
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "id": "saft",
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "id": "kaffee",
+      "categories": [
+        "food"
+      ]
+    },
+    {
+      "id": "bus",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "zug",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "flugzeug",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "taxi",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "bahnhof",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "flughafen",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "hotel",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "ticket",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "stra_e",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "karte",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "arzt",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "krankenhaus",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "apotheke",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "medikamente",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "notfall",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "schmerz",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "gesundheit",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "fieber",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "erkaltung",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "hilfe",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "sonne",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "regen",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "schnee",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "wind",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "temperatur",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "wolken",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "wald",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "fluss",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "berg",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "meer",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "mutter",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "vater",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "bruder",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "schwester",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "ehemann",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "ehefrau",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "kind",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "freund",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "freundin",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "geld",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "preis",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "euro",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "lew",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "rechnung",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "quittung",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "rabatt",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "kaufen",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "verkaufen",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "einkaufen",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "zaedno_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_number_014",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_number_015",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_number_016",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_number_017",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_number_018",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_number_019",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_number_030",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_number_040",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_number_050",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_number_060",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_number_070",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_number_080",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_number_090",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_number_100",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_number_200",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_number_1000",
+      "categories": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "a1_verb_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_question_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_question_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_011",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_012",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_013",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_014",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_015",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_016",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_017",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_018",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_019",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_020",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_021",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_022",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_023",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_024",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_012",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_013",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_014",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_015",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_016",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_017",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_question_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_question_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_question_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_question_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_question_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_question_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_question_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_question_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_question_011",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_question_012",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_018",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_019",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_020",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_021",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_022",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_023",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_024",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_025",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_026",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_food_027",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_color_001",
+      "categories": [
+        "colors"
+      ]
+    },
+    {
+      "id": "a1_color_002",
+      "categories": [
+        "colors"
+      ]
+    },
+    {
+      "id": "a1_color_003",
+      "categories": [
+        "colors"
+      ]
+    },
+    {
+      "id": "a1_color_004",
+      "categories": [
+        "colors"
+      ]
+    },
+    {
+      "id": "a1_color_005",
+      "categories": [
+        "colors"
+      ]
+    },
+    {
+      "id": "a1_color_006",
+      "categories": [
+        "colors"
+      ]
+    },
+    {
+      "id": "a1_color_007",
+      "categories": [
+        "colors"
+      ]
+    },
+    {
+      "id": "a1_color_008",
+      "categories": [
+        "colors"
+      ]
+    },
+    {
+      "id": "a1_color_009",
+      "categories": [
+        "colors"
+      ]
+    },
+    {
+      "id": "a1_color_010",
+      "categories": [
+        "colors"
+      ]
+    },
+    {
+      "id": "a1_adj_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_011",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_012",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_013",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_014",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_015",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_016",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_017",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_038",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_039",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_040",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_041",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_042",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_043",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_044",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_045",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_046",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_047",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_time_001",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_time_002",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_time_003",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_time_004",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_time_005",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_time_006",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_time_007",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_time_008",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_time_009",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_time_010",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_month_001",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_month_002",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_month_003",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_month_004",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_month_005",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_month_006",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_month_007",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_month_008",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_month_009",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_month_010",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_month_011",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_month_012",
+      "categories": [
+        "time"
+      ]
+    },
+    {
+      "id": "a1_house_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_house_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_house_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_house_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_house_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_house_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_house_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_house_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_family_001",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "a1_family_002",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "a1_family_003",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "a1_family_004",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "a1_family_005",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "a1_family_006",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "a1_family_007",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "a1_family_008",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "a1_family_009",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "a1_family_010",
+      "categories": [
+        "family"
+      ]
+    },
+    {
+      "id": "a1_body_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_body_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_body_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_body_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_body_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_body_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_body_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_body_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_body_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_body_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_pronoun_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_pronoun_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_pronoun_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_pronoun_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_pronoun_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_pronoun_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_pronoun_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_pronoun_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_pronoun_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_pronoun_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_048",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_049",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_050",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_051",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_052",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_053",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_054",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_055",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_056",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_057",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_058",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_059",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_060",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_061",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_062",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_063",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_064",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_065",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_066",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_067",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_018",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_019",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_020",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_021",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_022",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_023",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_024",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_025",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_026",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_027",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_028",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_029",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_030",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_031",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_032",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_noun_028",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_noun_029",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_noun_030",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_noun_031",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_noun_032",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_noun_033",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_noun_034",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_noun_035",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_noun_036",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_noun_037",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_068",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_069",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_070",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_071",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_072",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_073",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_074",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_075",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_076",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_077",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_078",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_079",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_080",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_081",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_082",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_033",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_034",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_035",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_036",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_037",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_038",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_039",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_040",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_041",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_042",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_clothing_038",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_clothing_039",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_clothing_040",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_clothing_041",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_clothing_042",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_clothing_043",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_clothing_044",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_clothing_045",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_clothing_046",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_clothing_047",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_clothing_048",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_clothing_049",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_clothing_050",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_clothing_051",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_clothing_052",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_nature_001",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "a1_nature_002",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "a1_nature_003",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "a1_nature_004",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "a1_nature_005",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "a1_nature_006",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "a1_nature_007",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "a1_nature_008",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "a1_nature_009",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "a1_nature_010",
+      "categories": [
+        "nature"
+      ]
+    },
+    {
+      "id": "a1_animal_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_animal_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_animal_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_animal_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_animal_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_animal_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_animal_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_animal_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_animal_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_animal_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_animal_011",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_animal_012",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_animal_013",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_animal_014",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_animal_015",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_transport_001",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "a1_transport_002",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "a1_transport_003",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "a1_transport_004",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "a1_transport_005",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "a1_transport_006",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "a1_transport_007",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "a1_transport_008",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "a1_transport_009",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "a1_transport_010",
+      "categories": [
+        "transport"
+      ]
+    },
+    {
+      "id": "a1_verb_083",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_084",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_085",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_086",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_087",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_088",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_089",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_090",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_091",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_092",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_093",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_094",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_095",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_096",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_verb_097",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_object_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_object_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_object_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_object_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_object_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_object_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_object_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_object_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_object_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_object_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_profession_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_profession_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_profession_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_profession_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_profession_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_profession_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_profession_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_profession_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_profession_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_profession_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_profession_011",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_profession_012",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_profession_013",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_profession_014",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_profession_015",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_place_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_place_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_place_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_place_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_place_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_place_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_place_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_place_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_place_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_place_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_place_011",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_place_012",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_place_013",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_place_014",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_place_015",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_weather_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_weather_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_weather_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_weather_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_weather_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_weather_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_weather_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_weather_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_weather_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_weather_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_activity_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_activity_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_activity_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_activity_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_activity_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_activity_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_activity_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_activity_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_activity_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_activity_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_011",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_012",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_013",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_014",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_015",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_016",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_017",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_018",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_019",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adverb_020",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_043",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_044",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_045",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_046",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_047",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_048",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_049",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_050",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_051",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_052",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_053",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_054",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_055",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_056",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_adj_057",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_011",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_012",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_013",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_014",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_015",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_016",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_017",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_018",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_019",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_grammar_020",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_health_001",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "a1_health_002",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "a1_health_003",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "a1_health_004",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "a1_health_005",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "a1_health_006",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "a1_health_007",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "a1_health_008",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "a1_health_009",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "a1_health_010",
+      "categories": [
+        "body"
+      ]
+    },
+    {
+      "id": "a1_tech_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_tech_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_tech_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_tech_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_tech_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_tech_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_tech_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_tech_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_tech_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_tech_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_education_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_education_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_education_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_education_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_education_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_education_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_education_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_education_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_education_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_education_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_education_011",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_education_012",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_education_013",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_education_014",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_education_015",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_entertainment_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_entertainment_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_entertainment_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_entertainment_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_entertainment_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_entertainment_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_entertainment_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_entertainment_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_entertainment_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_entertainment_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_entertainment_011",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_entertainment_012",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_entertainment_013",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_entertainment_014",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_entertainment_015",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_011",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_012",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_013",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_014",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_015",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_016",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_017",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_018",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_019",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_020",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_021",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_022",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_023",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_024",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_025",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_026",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_027",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_028",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_029",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_030",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_031",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_032",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_033",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_034",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_035",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_036",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_037",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_038",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_039",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_040",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_041",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_042",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_043",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_044",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_045",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_046",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_047",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_048",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_049",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final14_050",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_001",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_002",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_003",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_004",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_005",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_006",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_007",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_008",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_009",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_010",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_011",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_012",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_013",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_014",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_015",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_016",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_017",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_018",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_019",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_020",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_021",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_022",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_023",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_024",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_025",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_026",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_027",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_028",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_029",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_030",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_031",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_032",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_033",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_034",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_035",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_036",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_037",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_038",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_039",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_040",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_041",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_042",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_043",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_044",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_045",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_046",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_047",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_048",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_049",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_050",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_051",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_052",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_053",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_054",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_055",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_056",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "id": "a1_final_057",
+      "categories": [
+        "uncategorized"
+      ]
+    }
+  ],
+  "statistics": {
+    "byPartOfSpeech": {
+      "noun": 0,
+      "verb": 0,
+      "adjective": 0,
+      "adverb": 0,
+      "pronoun": 0,
+      "preposition": 0,
+      "conjunction": 0,
+      "interjection": 0,
+      "article": 0,
+      "number": 0,
+      "phrase": 0,
+      "expression": 0,
+      "undefined": 750
+    },
+    "byDifficulty": {
+      "1": 750,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    "byCategory": {
+      "uncategorized": 586,
+      "greetings": 6,
+      "common_phrases": 8,
+      "time": 36,
+      "food": 9,
+      "transport": 20,
+      "body": 20,
+      "nature": 20,
+      "family": 19,
+      "numbers": 16,
+      "colors": 10
+    },
+    "byLevel": {
+      "A1": 0,
+      "A2": 0,
+      "B1": 0,
+      "B2": 0,
+      "C1": 0
+    },
+    "difficultyRange": [
+      1,
+      1
+    ],
+    "categories": [
+      "uncategorized",
+      "greetings",
+      "common_phrases",
+      "time",
+      "food",
+      "transport",
+      "body",
+      "nature",
+      "family",
+      "numbers",
+      "colors"
+    ]
+  }
+}

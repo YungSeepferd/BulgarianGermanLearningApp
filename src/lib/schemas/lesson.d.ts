@@ -1,12 +1,12 @@
 import { z } from 'zod';
 export declare const VocabularyReferenceSchema: z.ZodUnion<[z.ZodObject<Omit<{
-    id: any;
+    id: z.ZodString;
     german: z.ZodString;
     bulgarian: z.ZodString;
-    partOfSpeech: any;
+    partOfSpeech: z.ZodEnum<["noun", "verb", "adjective", "adverb", "pronoun", "preposition", "conjunction", "interjection"]>;
     difficulty: z.ZodDefault<z.ZodNumber>;
-    categories: z.ZodDefault<z.ZodArray<any, "many">>;
-    metadata: any;
+    categories: z.ZodDefault<z.ZodArray<z.ZodString, "many">>;
+    metadata: z.ZodRecord<z.ZodString, z.ZodUnknown>;
     createdAt: z.ZodEffects<z.ZodDefault<z.ZodUnion<[z.ZodDate, z.ZodEffects<z.ZodString, Date, string>]>>, Date, string | Date | undefined>;
     updatedAt: z.ZodEffects<z.ZodDefault<z.ZodUnion<[z.ZodDate, z.ZodEffects<z.ZodString, Date, string>]>>, Date, string | Date | undefined>;
     isCommon: z.ZodDefault<z.ZodBoolean>;

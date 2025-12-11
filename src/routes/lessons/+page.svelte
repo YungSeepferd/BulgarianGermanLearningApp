@@ -12,8 +12,8 @@
   import GeneratedLesson from '$lib/components/GeneratedLesson.svelte';
   import LessonGenerator from '$lib/components/LessonGenerator.svelte';
   import { enhancedLessonService } from '$lib/services/enhanced-lesson';
-  import { lessonService } from '$lib/services/lesson.svelte';
-  import { db } from '$lib/data/db.svelte';
+  import { lessonService } from '$lib/services/lesson.ts';
+  import { vocabularyDb as db } from '$lib/data/db.svelte.ts';
   import { LessonSchema, type Lesson, type LessonDifficulty, type LessonType } from '$lib/schemas/lesson';
   import type { VocabularyCategory, PartOfSpeech } from '$lib/schemas/vocabulary';
   import type { VocabularyItem } from '$lib/types/vocabulary';

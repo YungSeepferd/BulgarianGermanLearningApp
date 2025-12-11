@@ -80,10 +80,3 @@ export class ErrorHandler {
         }
     }
 }
-
-// Type import for ErrorEvent (used in JSDoc)
-type ErrorEvent = {
-    error: Error;
-    context?: string;
-    timestamp: Date;
-};

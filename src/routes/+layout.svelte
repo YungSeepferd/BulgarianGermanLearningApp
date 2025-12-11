@@ -1,6 +1,5 @@
 <script lang="ts">
   import Navigation from '$lib/components/Navigation.svelte';
-  import LevelUp from '$lib/components/gamification/LevelUp.svelte';
   import { page } from '$app/stores';
   import { appUIState } from '$lib/state/app-state';
   import { onMount } from 'svelte';
@@ -31,7 +30,6 @@
   <main>
     {@render children()}
   </main>
-  <LevelUp />
 </div>
 
 

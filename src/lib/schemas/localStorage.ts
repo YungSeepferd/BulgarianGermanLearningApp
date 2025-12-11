@@ -1,5 +1,4 @@
 import { z } from 'zod';
-import { PracticeSessionSchema, type PracticeSession } from './vocabulary';
 
 /**
  * Schema for individual practice stat entry
@@ -26,7 +25,18 @@ export const UserProgressStorageSchema = z.object({
  */
 export const ExportedUserDataSchema = z.object({
   progress: UserProgressStorageSchema.optional(),
-  session: PracticeSessionSchema.optional(),
+  session: z.object({
+    id: z.string().uuid(),
+    currentItemId: z.string().uuid(),
+    startTime: z.string().datetime(),
+    endTime: z.string().datetime().optional(),
+    score: z.number().min(0).max(100).default(0),
+    itemsPracticed: z.number().min(0).default(0),
+    correctAnswers: z.number().min(0).default(0),
+    incorrectAnswers: z.number().min(0).default(0),
+    sessionType: z.enum(['vocabulary', 'grammar', 'listening', 'speaking']),
+    completed: z.boolean().default(false)
+  }).optional(),
   exportedAt: z.string().datetime()
 });
 
@@ -60,10 +70,7 @@ export function validateExportedUserData(data: unknown): ExportedUserData {
 }
 
 export function safeValidateExportedUserData(data: unknown): { success: true; data: ExportedUserData } | { success: false; error: z.ZodError } {
-  const result = ExportedUserDataSchema.safeParse(data);
-  return result.success
-    ? { success: true, data: result.data }
-    : { success: false, error: result.error };
+  return ExportedUserDataSchema.safeParse(data);
 }
 
 /**

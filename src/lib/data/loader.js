@@ -4,7 +4,7 @@
  * Handles loading, caching, and validation of vocabulary data
  * Supports both server-side and client-side loading patterns
  */
-import { VocabularyItemSchema, VocabularyCollectionSchema } from '../schemas/vocabulary';
+import { UnifiedVocabularyItemSchema, UnifiedVocabularyCollectionSchema } from '../schemas/unified-vocabulary.js';
 import { z } from 'zod';
 // Cache configuration
 const CACHE_KEY = 'vocabulary-cache';
@@ -40,12 +40,12 @@ export async function loadVocabulary() {
  * Load vocabulary from static endpoint
  */
 async function loadFromStaticEndpoint() {
-    const response = await fetch('/data/vocabulary.json');
+    const response = await fetch('/data/unified-vocabulary.json');
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
-    return VocabularyCollectionSchema.parse(data);
+    return UnifiedVocabularyCollectionSchema.parse(data);
 }
 /**
  * Load vocabulary from localStorage cache
@@ -66,7 +66,7 @@ async function loadFromCache() {
     if (hoursDiff > CACHE_EXPIRY_HOURS) {
         throw new Error('Cache expired');
     }
-    return VocabularyCollectionSchema.parse(data);
+    return UnifiedVocabularyCollectionSchema.parse(data);
 }
 /**
  * Load bundled vocabulary data (fallback)
@@ -74,35 +74,48 @@ async function loadFromCache() {
  */
 async function loadBundledData() {
     let data = [];
-    // In Node.js environment (Vitest, Node.js), we'll mock this function for tests
-    // The actual implementation will only be used in browser environment
-    // where we expect the data to be available at '/data/vocabulary-unified.json'
-    try {
-        // Browser environment - use fetch API
-        const response = await fetch('/data/vocabulary-unified.json');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+    
+    // Check if we're in Node.js environment
+    if (typeof process !== 'undefined' && process.versions?.node) {
+        // Node.js environment - use file system
+        try {
+            const fs = await import('fs/promises');
+            const path = await import('path');
+            const filePath = path.join(process.cwd(), 'src/lib/data/unified-vocabulary.json');
+            const fileContent = await fs.readFile(filePath, 'utf-8');
+            data = JSON.parse(fileContent);
+        } catch (fsError) {
+            console.error('Failed to load vocabulary from file system:', fsError);
+            data = [];
         }
-        data = await response.json();
+    } else {
+        // Browser environment - use fetch API
+        try {
+            const response = await fetch('/data/unified-vocabulary.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            data = await response.json();
+        } catch (_fetchError) {
+            // Failed to fetch vocabulary data
+            // Final fallback to empty array
+            data = [];
+        }
     }
-    catch (_fetchError) {
-        // Failed to fetch vocabulary data
-        // Final fallback to empty array
-        data = [];
-    }
+    
     // Create a collection from the bundled items
     const collection = {
         id: crypto.randomUUID(),
         name: 'German-Bulgarian Vocabulary Collection (Bundled)',
         description: 'Fallback vocabulary collection from bundled data',
-        items: z.array(VocabularyItemSchema).parse(data),
+        items: z.array(UnifiedVocabularyItemSchema).parse(data),
         languagePair: 'de-bg',
         difficultyRange: [1, 5],
         categories: Array.from(new Set(data.flatMap((item) => item.categories || []))),
         createdAt: new Date(),
         updatedAt: new Date()
     };
-    return VocabularyCollectionSchema.parse(collection);
+    return UnifiedVocabularyCollectionSchema.parse(collection);
 }
 /**
  * Cache vocabulary data in localStorage

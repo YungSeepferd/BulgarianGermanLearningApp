@@ -6,13 +6,13 @@ import { EventTypes } from '$lib/services/event-bus';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 import type { LessonDifficulty } from '$lib/schemas/lesson';
 import type { VocabularyCategory, PartOfSpeech } from '$lib/schemas/vocabulary';
-import { loadVocabulary } from '$lib/data/loader';
 
-export class VocabularyDB {
-    // items = $state<VocabularyItem[]>([]);
-    // initialized = $state(false);
-    items: VocabularyItem[] = [];
-    initialized = false;
+class VocabularyDB {
+    // Reactive state using Svelte 5 Runes
+    /** @type {VocabularyItem[]} */
+    items = $state<VocabularyItem[]>([]);
+    /** @type {boolean} */
+    initialized = $state<boolean>(false);
 
     constructor() {
         // Don't load data in constructor to prevent SSR fetch calls
@@ -38,6 +38,7 @@ export class VocabularyDB {
                 german: item.german,
                 bulgarian: item.bulgarian,
                 category: item.categories[0] || 'uncategorized',
+                categories: item.categories || ['uncategorized'],
                 tags: item.tags || [],
                 difficulty: item.difficulty,
                 partOfSpeech: item.partOfSpeech,
@@ -67,23 +68,25 @@ export class VocabularyDB {
         }
     }
 
-    // Mark the imported function as used by calling it in the loadInitialData method
-    private _unusedLoadVocabulary = loadVocabulary;
+    // Remove the unused import workaround since we're using DataLoader instead
 
-    add(item: VocabularyItem) {
+    /** @param {VocabularyItem} item */
+    add(item) {
         this.items.push(item);
     }
 
-    update(id: string, updates: Partial<VocabularyItem>) {
-        const index = this.items.findIndex((i: VocabularyItem) => i.id === id);
+    /** @param {string} id @param {Partial<VocabularyItem>} updates */
+    update(id, updates) {
+        const index = this.items.findIndex((i) => i.id === id);
         if (index !== -1) {
             const current = this.items[index];
-            this.items[index] = { ...current, ...updates } as VocabularyItem;
+            this.items[index] = { ...current, ...updates };
         }
     }
 
-    get(id: string): VocabularyItem | undefined {
-        return this.items.find((i: VocabularyItem) => i.id === id);
+    /** @param {string} id @returns {VocabularyItem | undefined} */
+    get(id) {
+        return this.items.find((i) => i.id === id);
     }
 
     /**
@@ -249,5 +252,13 @@ export class VocabularyDB {
     }
 }
 
-export const db = new VocabularyDB();
-export const vocabularyDb = db;
+// Initialize the database instance
+const vocabularyDb = new VocabularyDB();
+
+// Automatic initialization is now handled by the DataLoader
+// No automatic initialization here to avoid SSR issues
+
+/**
+ * Singleton instance of VocabularyDB for global state management
+ */
+export { vocabularyDb };

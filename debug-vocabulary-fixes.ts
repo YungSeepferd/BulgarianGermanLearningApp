@@ -8,7 +8,7 @@
 import { VocabularyService } from './src/lib/data/vocabulary';
 import { lessonGenerationEngine } from './src/lib/services/lesson-generation/lesson-generator';
 import { correctPartOfSpeech } from './src/lib/utils/part-of-speech';
-import type { VocabularyItem } from './src/lib/types/vocabulary';
+import type { _VocabularyItem } from './src/lib/types/vocabulary';
 
 // Test the corrected vocabulary items
 async function testVocabularyCorrections() {

@@ -24,7 +24,12 @@ import type {
 import { lessonTemplateRepository } from './lesson-templates';
 import { culturalGrammarService } from './cultural-grammar';
 import { templateRenderer } from './template-renderer';
-import { VocabularyService } from '../../data/vocabulary';
+import {
+  loadVocabulary,
+  loadVocabularyByCategory,
+  loadVocabularyBySearch,
+  getRandomVocabulary
+} from '../../data/loader';
 import type { VocabularyItem, PartOfSpeech as _PartOfSpeech } from '$lib/types/vocabulary';
 
 /**
@@ -36,7 +41,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
   private templateRepository: ILessonTemplateRepository;
   private grammarService: ICulturalGrammarService;
   private renderer: ITemplateRenderer;
-  private vocabularyServicePromise: Promise<VocabularyService>;
+  private vocabularyCache: VocabularyItem[] | null = null;
 
   /**
    * Initialize with dependencies
@@ -50,7 +55,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     templateRepository: ILessonTemplateRepository = lessonTemplateRepository,
     grammarService: ICulturalGrammarService = culturalGrammarService,
     renderer: ITemplateRenderer = templateRenderer,
-    vocabularyServicePromise: Promise<VocabularyService> = VocabularyService.getInstance()
+    vocabularyServicePromise?: Promise<any>
   ) {
     this.templateRepository = templateRepository;
     this.grammarService = grammarService;
@@ -113,7 +118,10 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     let learningObjectives: string[] = [];
 
     // 2. Fetch Vocabulary
-    const vocabularyService = await this.vocabularyServicePromise;
+    // Load vocabulary data if not already cached
+    if (!this.vocabularyCache) {
+      this.vocabularyCache = await loadVocabulary;
+    }
     const limit = params.criteria.limit || options.maxItems || 10;
     const numericDifficulty = this.mapDifficultyToNumber(params.difficulty);
     
@@ -129,7 +137,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
       for (const category of params.criteria.categories) {
         // We'll use searchVocabulary for more granular control if needed,
         // but getVocabularyByCategory is optimized for this
-        const items = await vocabularyService.getVocabularyByCategory(category, {
+        const items = await loadVocabularyByCategory(category, {
           difficulty: numericDifficulty,
           limit: Math.ceil(limit / params.criteria.categories.length)
         });
@@ -144,17 +152,17 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     } else {
       // Fallback: Random but respect POS, using validation method
       if (params.criteria.partOfSpeech) {
-        const result = await vocabularyService.searchVocabulary({
-          difficulty: numericDifficulty,
-          partOfSpeech: params.criteria.partOfSpeech,
-          limit: limit
-        });
+        const result = await loadVocabularyBySearch({
+           difficulty: numericDifficulty,
+           partOfSpeech: params.criteria.partOfSpeech,
+           limit: limit
+         });
         // Apply validation to ensure correct POS filtering
         vocabularyItems = result.items.filter(i =>
           this.validatePartOfSpeech(i.partOfSpeech, i.id) === params.criteria.partOfSpeech
         );
       } else {
-        vocabularyItems = await vocabularyService.getRandomVocabulary(limit, {
+        vocabularyItems = await getRandomVocabulary(limit, {
           difficulty: numericDifficulty
         });
       }
@@ -250,7 +258,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
         // Fetch some older vocabulary for review (mocking this logic for now)
         // In a real app, this would come from the user's learning history (UserLearningProfile)
         // For now, we'll just grab some random words different from the main vocabulary
-        const reviewItems = await vocabularyService.getRandomVocabulary(5, {
+        const reviewItems = await getRandomVocabulary(5, {
           difficulty: numericDifficulty
         });
 
@@ -329,20 +337,23 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     const mainConcept = grammarConcepts[0]; // Primary focus
     
     // 2. Fetch Supporting Vocabulary
-    const vocabularyService = await this.vocabularyServicePromise;
+    // Load vocabulary data if not already cached
+    if (!this.vocabularyCache) {
+      this.vocabularyCache = await loadVocabulary;
+    }
     const numericDifficulty = this.mapDifficultyToNumber(params.difficulty);
     let exampleVocabulary: VocabularyItem[] = [];
 
     // Find vocabulary relevant to the grammar concept (e.g. nouns for gender rules)
     if (mainConcept && mainConcept.partOfSpeech && mainConcept.partOfSpeech.length > 0) {
-      const searchResult = await vocabularyService.searchVocabulary({
+      const searchResult = await loadVocabularyBySearch({
         difficulty: numericDifficulty,
         partOfSpeech: mainConcept.partOfSpeech[0], // Prioritize primary POS
         limit: 8
       });
       exampleVocabulary = searchResult.items;
     } else {
-      exampleVocabulary = await vocabularyService.getRandomVocabulary(8, { difficulty: numericDifficulty });
+      exampleVocabulary = await getRandomVocabulary(8, { difficulty: numericDifficulty });
     }
 
     // 3. Generate Concept Explanation Section
@@ -472,7 +483,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     const mainConcept = grammarConcepts[0];
 
     // Get vocabulary related to a theme
-    const vocabularyService = await this.vocabularyServicePromise;
+    // Remove unused variable
     const numericDifficulty = this.mapDifficultyToNumber(params.difficulty);
     const limit = options.maxItems || 8;
     
@@ -480,7 +491,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     const category = params.criteria.categories?.[0] || 'travel'; // Default to travel for context
     
     // Get vocabulary items and enhance them with corrected part-of-speech info
-    const vocabularyItems = await vocabularyService.getVocabularyByCategory(category, {
+    const vocabularyItems = await loadVocabularyByCategory(category, {
       difficulty: numericDifficulty,
       limit: limit
     });

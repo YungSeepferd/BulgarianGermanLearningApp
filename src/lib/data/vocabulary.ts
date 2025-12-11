@@ -1,231 +1,214 @@
 /**
  * Vocabulary Service
  *
- * Provides centralized access to vocabulary data with caching and search capabilities
+ * Provides a unified interface for accessing vocabulary data throughout the application.
+ * This service acts as a facade that abstracts the underlying data loading and search functionality.
  */
 
-import { z, VocabularyItemSchema, VocabularyCollectionSchema, VocabularySearchParamsSchema } from '../schemas/vocabulary';
-import { loadVocabulary, loadVocabularyById, loadVocabularyByCategory, loadVocabularyByDifficulty, getRandomVocabulary, cacheVocabulary } from './loader';
-import { searchVocabulary, clearVocabularyCache, getVocabularyStats } from './search';
+import { searchVocabulary, getVocabularyStats, getSearchSuggestions, clearVocabularyCache } from '../services/search';
+import { loadVocabularyById, loadVocabularyByCategory, loadVocabularyByDifficulty, getRandomVocabulary, loadVocabularyBySearch } from './loader';
+import { vocabularyDb } from './db.svelte';
+import { type VocabularyItem, type VocabularyCategory } from '../schemas/vocabulary';
+import { Debug } from '../utils';
 
-export class VocabularyService {
-  private static instance: VocabularyService;
-  private vocabularyCollection: z.infer<typeof VocabularyCollectionSchema> | null = null;
-  private isInitialized = false;
+/**
+ * Vocabulary Service Interface
+ *
+ * Provides comprehensive access to vocabulary data with search, filtering, and retrieval capabilities.
+ */
+const vocabularyService = {
+    /**
+     * Search vocabulary with advanced filtering and pagination
+     * @param params Search parameters including query, filters, and pagination
+     * @returns Promise resolving to search results with pagination metadata
+     */
+    searchVocabulary: async (params: {
+        query?: string;
+        partOfSpeech?: string;
+        difficulty?: number;
+        categories?: string[];
+        learningPhase?: number;
+        limit?: number;
+        offset?: number;
+    }) => {
+        try {
+            Debug.log('vocabularyService', 'Searching vocabulary with params', params);
+            const result = await searchVocabulary({
+                query: params.query,
+                partOfSpeech: params.partOfSpeech,
+                difficulty: params.difficulty,
+                categories: params.categories,
+                learningPhase: params.learningPhase,
+                limit: params.limit || 20,
+                offset: params.offset || 0,
+                sortBy: 'german',
+                sortOrder: 'asc'
+            });
+            Debug.log('vocabularyService', 'Search completed', { count: result.items.length });
+            return result;
+        } catch (error) {
+            Debug.error('vocabularyService', 'Failed to search vocabulary', error as Error);
+            return { items: [], total: 0, hasMore: false };
+        }
+    },
 
-  // Private constructor to prevent direct instantiation
-  private constructor() {
-    // Private constructor for singleton pattern
-  }
+    /**
+     * Get vocabulary item by ID
+     * @param id The ID of the vocabulary item
+     * @returns Promise resolving to the vocabulary item or null if not found
+     */
+    getVocabularyById: async (id: string): Promise<VocabularyItem | null> => {
+        try {
+            Debug.log('vocabularyService', 'Getting vocabulary by ID', { id });
+            return await loadVocabularyById(id);
+        } catch (error) {
+            Debug.error('vocabularyService', 'Failed to get vocabulary by ID', error as Error);
+            return null;
+        }
+    },
 
-  /**
-   * Get the singleton instance of VocabularyService
-   */
-  public static async getInstance(): Promise<VocabularyService> {
-    if (!VocabularyService.instance) {
-      VocabularyService.instance = new VocabularyService();
-      await VocabularyService.instance.initialize();
+    /**
+     * Get vocabulary items by category
+     * @param category The category to filter by
+     * @param options Additional filtering options
+     * @returns Promise resolving to an array of vocabulary items
+     */
+    getVocabularyByCategory: async (category: VocabularyCategory, options: { limit?: number; difficulty?: number } = {}) => {
+        try {
+            Debug.log('vocabularyService', 'Getting vocabulary by category', { category, options });
+            return await loadVocabularyByCategory(category, options);
+        } catch (error) {
+            Debug.error('vocabularyService', 'Failed to get vocabulary by category', error as Error);
+            return [];
+        }
+    },
+
+    /**
+     * Get vocabulary items by difficulty level
+     * @param difficulty The difficulty level to filter by
+     * @param options Additional filtering options
+     * @returns Promise resolving to an array of vocabulary items
+     */
+    getVocabularyByDifficulty: async (difficulty: number, options: { limit?: number; category?: string } = {}) => {
+        try {
+            Debug.log('vocabularyService', 'Getting vocabulary by difficulty', { difficulty, options });
+            return await loadVocabularyByDifficulty(difficulty, options);
+        } catch (error) {
+            Debug.error('vocabularyService', 'Failed to get vocabulary by difficulty', error as Error);
+            return [];
+        }
+    },
+
+    /**
+     * Get random vocabulary items for practice
+     * @param count Number of items to return
+     * @param options Filtering options
+     * @returns Promise resolving to an array of random vocabulary items
+     */
+    getRandomVocabulary: async (count: number = 5, options: { difficulty?: number; category?: string } = {}) => {
+        try {
+            Debug.log('vocabularyService', 'Getting random vocabulary', { count, options });
+            return await getRandomVocabulary(count, options);
+        } catch (error) {
+            Debug.error('vocabularyService', 'Failed to get random vocabulary', error as Error);
+            return [];
+        }
+    },
+
+    /**
+     * Get vocabulary statistics for filters
+     * @returns Promise resolving to statistics for part of speech, difficulty, categories, and learning phases
+     */
+    getVocabularyStats: async () => {
+        try {
+            Debug.log('vocabularyService', 'Getting vocabulary statistics');
+            return await getVocabularyStats();
+        } catch (error) {
+            Debug.error('vocabularyService', 'Failed to get vocabulary statistics', error as Error);
+            return {
+                partOfSpeech: {},
+                difficulty: {},
+                categories: {},
+                learningPhase: {}
+            };
+        }
+    },
+
+    /**
+     * Get search suggestions for autocomplete
+     * @param query The search query
+     * @param limit Maximum number of suggestions to return
+     * @returns Promise resolving to an array of search suggestions
+     */
+    getSearchSuggestions: async (query: string, limit: number = 5) => {
+        try {
+            Debug.log('vocabularyService', 'Getting search suggestions', { query, limit });
+            return await getSearchSuggestions(query, limit);
+        } catch (error) {
+            Debug.error('vocabularyService', 'Failed to get search suggestions', error as Error);
+            return [];
+        }
+    },
+
+    /**
+     * Update practice statistics for a vocabulary item
+     * @param itemId The ID of the vocabulary item
+     * @param correct Whether the answer was correct
+     * @param responseTime Response time in seconds (optional)
+     * @returns Promise that resolves when the update is complete
+     */
+    updateStats: async (itemId: string, correct: boolean, responseTime?: number) => {
+        try {
+            Debug.log('vocabularyService', 'Updating stats', { itemId, correct, responseTime });
+
+            // Get the current item from the database
+            const item = vocabularyDb.get(itemId);
+            if (!item) {
+                throw new Error(`Item with ID ${itemId} not found`);
+            }
+
+            // Update the item's practice statistics
+            const now = new Date();
+            const stats = item.stats || {
+                correctCount: 0,
+                incorrectCount: 0,
+                lastPracticed: null,
+                lastCorrect: null,
+                streak: 0
+            };
+
+            if (correct) {
+                stats.correctCount++;
+                stats.lastCorrect = now;
+                stats.streak++;
+            } else {
+                stats.incorrectCount++;
+                stats.streak = 0;
+            }
+
+            stats.lastPracticed = now;
+
+            // Update the item in the database
+            vocabularyDb.update(itemId, {
+                stats,
+                updatedAt: now
+            });
+
+            // Clear cache to ensure fresh data
+            clearVocabularyCache();
+        } catch (error) {
+            Debug.error('vocabularyService', 'Failed to update stats', error as Error);
+        }
+    },
+
+    /**
+     * Clear the vocabulary cache to force fresh data loading
+     */
+    clearCache: () => {
+        Debug.log('vocabularyService', 'Clearing vocabulary cache');
+        clearVocabularyCache();
     }
-    return VocabularyService.instance;
-  }
+};
 
-  /**
-   * Initialize the service by loading vocabulary data
-   */
-  private async initialize(): Promise<void> {
-    if (this.isInitialized) return;
-
-    try {
-      this.vocabularyCollection = await loadVocabulary();
-      this.isInitialized = true;
-    } catch (_error) {
-      // Failed to initialize VocabularyService
-      throw _error;
-    }
-  }
-
-  /**
-   * Get all vocabulary items
-   */
-  public async getAllVocabulary(): Promise<z.infer<typeof VocabularyItemSchema>[]> {
-    if (!this.vocabularyCollection) {
-      await this.initialize();
-    }
-    return this.vocabularyCollection?.items || [];
-  }
-
-  /**
-   * Get vocabulary item by ID
-   */
-  public async getVocabularyById(id: string): Promise<z.infer<typeof VocabularyItemSchema> | null> {
-    return loadVocabularyById(id);
-  }
-
-  /**
-   * Search vocabulary with various filters
-   */
-  public async searchVocabulary(params: z.infer<typeof VocabularySearchParamsSchema>): Promise<{
-    items: z.infer<typeof VocabularyItemSchema>[];
-    total: number;
-    hasMore: boolean;
-  }> {
-    return searchVocabulary(params);
-  }
-
-  /**
-   * Get vocabulary by category
-   */
-  public async getVocabularyByCategory(
-    category: string,
-    options: { limit?: number; difficulty?: number } = {}
-  ): Promise<z.infer<typeof VocabularyItemSchema>[]> {
-    return loadVocabularyByCategory(category, options);
-  }
-
-  /**
-   * Get vocabulary by difficulty level
-   */
-  public async getVocabularyByDifficulty(
-    difficulty: number,
-    options: { limit?: number; category?: string } = {}
-  ): Promise<z.infer<typeof VocabularyItemSchema>[]> {
-    return loadVocabularyByDifficulty(difficulty, options);
-  }
-
-  /**
-   * Get random vocabulary items
-   */
-  public async getRandomVocabulary(
-    count: number = 5,
-    options: { difficulty?: number; category?: string } = {}
-  ): Promise<z.infer<typeof VocabularyItemSchema>[]> {
-    return getRandomVocabulary(count, options);
-  }
-
-  /**
-   * Get vocabulary items by multiple IDs
-   */
-  public async getVocabularyByIds(ids: string[]): Promise<z.infer<typeof VocabularyItemSchema>[]> {
-    if (!this.vocabularyCollection) {
-      await this.initialize();
-    }
-
-    return this.vocabularyCollection?.items.filter(item => ids.includes(item.id)) || [];
-  }
-
-  /**
-   * Get all categories
-   */
-  public async getAllCategories(): Promise<string[]> {
-    if (!this.vocabularyCollection) {
-      await this.initialize();
-    }
-
-    return this.vocabularyCollection?.categories || [];
-  }
-
-  /**
-   * Get vocabulary statistics for search filters
-   */
-  public async getVocabularyStats(): Promise<{
-    partOfSpeech: Record<string, number>;
-    difficulty: Record<string, number>;
-    categories: Record<string, number>;
-    learningPhase: Record<string, number>;
-  }> {
-    return getVocabularyStats();
-  }
-
-  /**
-   * Get vocabulary collection statistics
-   */
-  public async getCollectionStats(): Promise<{
-    totalItems: number;
-    byPartOfSpeech: Record<string, number>;
-    byDifficulty: Record<string, number>;
-    byCategory: Record<string, number>;
-  }> {
-    if (!this.vocabularyCollection) {
-      await this.initialize();
-    }
-
-    const items = this.vocabularyCollection?.items || [];
-
-    const byPartOfSpeech: Record<string, number> = {};
-    const byDifficulty: Record<string, number> = {};
-    const byCategory: Record<string, number> = {};
-
-    items.forEach(item => {
-      // Count by part of speech
-      byPartOfSpeech[item.partOfSpeech] = (byPartOfSpeech[item.partOfSpeech] || 0) + 1;
-
-      // Count by difficulty
-      byDifficulty[item.difficulty] = (byDifficulty[item.difficulty] || 0) + 1;
-
-      // Count by category
-      item.categories.forEach(category => {
-        byCategory[category] = (byCategory[category] || 0) + 1;
-      });
-    });
-
-    return {
-      totalItems: items.length,
-      byPartOfSpeech,
-      byDifficulty,
-      byCategory
-    };
-  }
-
-  /**
-   * Refresh vocabulary data from source
-   */
-  public async refreshVocabulary(): Promise<void> {
-    try {
-      this.vocabularyCollection = await loadVocabulary();
-      cacheVocabulary(this.vocabularyCollection);
-      clearVocabularyCache(); // Clear the search cache when data is refreshed
-      this.isInitialized = true;
-    } catch (_error) {
-      // Failed to refresh vocabulary data
-      throw _error;
-    }
-  }
-
-  /**
-   * Get vocabulary collection metadata
-   */
-  public async getCollectionMetadata(): Promise<{
-    id: string;
-    name: string;
-    description: string;
-    languagePair: string;
-    difficultyRange: [number, number];
-    categories: string[];
-    itemCount: number;
-    createdAt: Date;
-    updatedAt: Date;
-  }> {
-    if (!this.vocabularyCollection) {
-      await this.initialize();
-    }
-
-    if (!this.vocabularyCollection) {
-      throw new Error('Vocabulary collection not available');
-    }
-
-    return {
-      id: this.vocabularyCollection.id,
-      name: this.vocabularyCollection.name,
-      description: this.vocabularyCollection.description,
-      languagePair: this.vocabularyCollection.languagePair,
-      difficultyRange: this.vocabularyCollection.difficultyRange,
-      categories: this.vocabularyCollection.categories,
-      itemCount: this.vocabularyCollection.items.length,
-      createdAt: this.vocabularyCollection.createdAt,
-      updatedAt: this.vocabularyCollection.updatedAt
-    };
-  }
-}
-
-// Export a singleton instance for convenience
-export const vocabularyService = VocabularyService.getInstance();
+// Export the service directly
+export { vocabularyService };

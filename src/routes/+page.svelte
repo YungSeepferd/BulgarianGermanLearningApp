@@ -1,14 +1,24 @@
 <script lang="ts">
-  import ProgressDashboard from '$lib/components/ProgressDashboard.svelte';
-  import { progressService } from '$lib/services/progress';
-  import { learningSession } from '$lib/state/session.svelte';
+  import SimpleProgressCounter from '$lib/components/SimpleProgressCounter.svelte';
+  import { diContainer } from '$lib/services/di-container';
+  import { onMount } from 'svelte';
+  import { initializeApp } from '$lib/state/app.svelte';
+  import { t } from '$lib/services/localization';
 
-  // Initialize progress service
-  progressService.getProgressSummary();
+  // Initialize application
+  onMount(async () => {
+    try {
+      // Initialize app state
+      await initializeApp();
+    } catch (error) {
+      console.error('Failed to initialize application:', error);
+    }
+  });
 </script>
 
 <div class="dashboard-container">
-  <ProgressDashboard />
+  <h1>{t('dashboard.title')}</h1>
+  <SimpleProgressCounter />
 </div>
 
 <style>

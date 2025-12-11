@@ -7,7 +7,7 @@
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { enhancedLessonService } from '../../src/lib/services/enhanced-lesson';
-import { db } from '../../src/lib/data/db.svelte';
+import { vocabularyDb as db } from '../../src/lib/data/db.svelte.ts';
 import type { Lesson, LessonDifficulty, LessonType } from '../../src/lib/schemas/lesson';
 import type { VocabularyCategory, PartOfSpeech } from '../../src/lib/schemas/vocabulary';
 

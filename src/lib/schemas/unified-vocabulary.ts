@@ -80,10 +80,10 @@ export type LanguageLevel = z.infer<typeof LanguageLevelSchema>;
 /**
  * Verb aspects
  */
-export const VerbAspectSchema = z.enum([
-  'perfective',    // Completed action
-  'imperfective',  // Ongoing or habitual action
-  null             // Not applicable
+export const VerbAspectSchema = z.union([
+  z.literal('perfective'),    // Completed action
+  z.literal('imperfective'),  // Ongoing or habitual action
+  z.literal(null)             // Not applicable
 ]);
 
 export type VerbAspect = z.infer<typeof VerbAspectSchema>;
@@ -426,42 +426,49 @@ export function convertLegacyCategory(legacyCategory: string): VocabularyCategor
 }
 
 /**
+ * Type guards for different example formats
+ */
+function isLegacyExampleFormat1(example: object): example is { sentence: unknown, translation: unknown, context?: unknown } {
+  return 'sentence' in example && 'translation' in example;
+}
+
+function isLegacyExampleFormat2(example: object): example is { bg: unknown, de: unknown, context?: unknown } {
+  return 'bg' in example && 'de' in example;
+}
+
+function isCurrentExampleFormat(example: object): example is { german: unknown, bulgarian: unknown, context?: unknown } {
+  return 'german' in example && 'bulgarian' in example;
+}
+
+/**
  * Normalize example format from legacy to unified
  */
 export function normalizeExample(example: unknown): Example {
   if (typeof example === 'object' && example) {
     // Legacy format 1: { sentence: string, translation: string, context?: string }
-    if ('sentence' in example && 'translation' in example) {
+    if (isLegacyExampleFormat1(example)) {
       return {
-        german: example.translation,
-        bulgarian: example.sentence,
-        context: example.context,
+        german: typeof example.translation === 'string' ? example.translation : 'Beispiel',
+        bulgarian: typeof example.sentence === 'string' ? example.sentence : 'пример',
+        context: typeof example.context === 'string' ? example.context : undefined,
         source: 'legacy'
       };
     }
     // Legacy format 2: { bg: string, de: string, context?: string }
-    else if ('bg' in example && 'de' in example) {
+    else if (isLegacyExampleFormat2(example)) {
       return {
-        german: example.de,
-        bulgarian: example.bg,
-        context: example.context,
-        source: 'legacy'
-      };
-    }
-    // Legacy format 3: { bg: string, de: string }
-    else if ('bg' in example && 'de' in example) {
-      return {
-        german: example.de,
-        bulgarian: example.bg,
+        german: typeof example.de === 'string' ? example.de : 'Beispiel',
+        bulgarian: typeof example.bg === 'string' ? example.bg : 'пример',
+        context: typeof example.context === 'string' ? example.context : undefined,
         source: 'legacy'
       };
     }
     // Current format: { german: string, bulgarian: string, context?: string }
-    else if ('german' in example && 'bulgarian' in example) {
+    else if (isCurrentExampleFormat(example)) {
       return {
-        german: example.german,
-        bulgarian: example.bulgarian,
-        context: example.context,
+        german: typeof example.german === 'string' ? example.german : 'Beispiel',
+        bulgarian: typeof example.bulgarian === 'string' ? example.bulgarian : 'пример',
+        context: typeof example.context === 'string' ? example.context : undefined,
         source: 'current'
       };
     }
@@ -497,7 +504,8 @@ export function mergeExamples(exampleArrays: Example[][]): Example[] {
  * Create a merged ID from multiple source IDs
  */
 export function createMergedId(ids: string[]): string {
-  if (ids.length === 1) return ids[0];
+  if (ids.length === 0) return `fallback-${crypto.randomUUID()}`;
+  if (ids.length === 1) return ids[0] ?? `fallback-${crypto.randomUUID()}`;
 
   // For multiple IDs, create a composite ID
   return `merged-${ids.join('-')}`;

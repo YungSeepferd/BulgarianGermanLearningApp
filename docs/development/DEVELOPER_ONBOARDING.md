@@ -125,6 +125,7 @@ Welcome to the Bulgarian-German Learning App! This guide will help you set up th
 | `pnpm run test:accessibility` | Run accessibility tests | Accessibility testing |
 | `pnpm run lint` | Run ESLint | Code quality |
 | `pnpm run check` | Run Svelte/TypeScript checks | Type checking |
+| `pnpm run simulate-ci` | Run CI simulation locally | Local CI testing |
 
 ### Branching Strategy
 - **`main`**: Production-ready code (protected)
@@ -139,7 +140,7 @@ Welcome to the Bulgarian-German Learning App! This guide will help you set up th
 2. Implement changes and commit with descriptive messages
 3. Push changes to remote repository
 4. Create a pull request to `develop`
-5. Ensure all checks pass (tests, linting, type checking)
+5. Ensure all CI checks pass (tests, linting, type checking)
 6. Request review from at least one team member
 7. Address feedback and update PR
 8. Merge after approval
@@ -1094,11 +1095,12 @@ pnpm run test:e2e --grep '@translation-coverage'
 
 1. **Set up the project** using the instructions above
 2. **Run the tests** to ensure everything works, including bilingual tests
-3. **Check the roadmap** for current priorities
-4. **Pick an issue** from GitHub or create a new one
-5. **Create a branch** and start coding!
-6. **Submit a PR** and request a review
-7. **Update documentation** if you add new features or translations
-8. **Test bilingual functionality** in your components
+3. **Run `pnpm run simulate-ci`** to test your changes locally before pushing
+4. **Check the roadmap** for current priorities
+5. **Pick an issue** from GitHub or create a new one
+6. **Create a branch** and start coding!
+7. **Submit a PR** and request a review
+8. **Update documentation** if you add new features or translations
+9. **Test bilingual functionality** in your components
 
 Welcome to the team! 🚀

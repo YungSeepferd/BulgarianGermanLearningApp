@@ -9,10 +9,10 @@ import { appState } from '../state/app-state';
 import { browser } from '$app/environment';
 
 // Define the structure of our translation files
-type TranslationKey = string;
+type _TranslationKey = string;
 type TranslationValue = string | { [key: string]: TranslationValue };
 
-interface TranslationDictionary {
+interface _TranslationDictionary {
     [key: string]: TranslationValue;
 }
 
