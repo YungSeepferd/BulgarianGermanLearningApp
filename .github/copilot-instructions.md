@@ -1,9 +1,20 @@
 # AI Coding Agent Instructions for Bulgarian-German Learning App
 
 ## Project Status & Recent Changes
-**Last Updated**: 11 December 2025 | **Status**: MVP (v2 - Streamlined)
+**Last Updated**: 11 December 2025 | **Status**: MVP (v2 - Streamlined) - **Critical Issues Identified & Documented**
 
 The app was recently transformed from a commercial platform to a focused personal learning MVP. **3500+ lines of non-essential code removed** (gamification, user accounts, social features). This is the **clean, maintained codebase**—not legacy code with features to preserve.
+
+### ⚠️ Critical Issues Found (December 11, 2025)
+**Complete analysis in**: [docs/CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md)
+
+| Issue | Status | Impact | Fix Time | Docs |
+|-------|--------|--------|----------|------|
+| **#1: Vocabulary JSON incomplete** | 🔴 Blocking | Vocabulary, Practice, Learn broken | 15 min | [CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md) |
+| **#2: Practice/Learn routes blank** | 🔴 Cascading | Cascade from Issue #1 | 0 min (auto) | [CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md) |
+| **#3: Grammar text in Latin** | 🟡 Cosmetic | 6 lines need replacement | 5 min | [CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md) |
+
+**Action**: See [IMMEDIATE_ACTION_PLAN.md](../IMMEDIATE_ACTION_PLAN.md) for step-by-step fixes (30 min total).
 
 ## Project Overview
 A **SvelteKit + Svelte 5 Runes** tandem learning platform for Bulgarian ↔ German vocabulary and lessons, with bilingual UI, offline capability, and accessibility features. Deployed on GitHub Pages as a static site. **No user accounts, no gamification, no cloud sync—pure focused learning.**
@@ -185,11 +196,30 @@ All data is static JSON files. To add server features later:
 
 ## Common Gotchas & Warnings
 
+### Critical Issues (December 11, 2025)
+1. **Vocabulary Data Incomplete** 🔴
+   - `data/unified-vocabulary.json` has incomplete items (missing fields)
+   - **Fix**: Run `pnpm run rebuild:vocabulary` (15 min)
+   - **Details**: [CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md)
+
+2. **Practice/Learn Routes Blank** 🔴
+   - Cascade failure from incomplete vocabulary data
+   - **Fix**: Automatic once vocabulary is rebuilt
+   - **Details**: [CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md)
+
+3. **Grammar Examples in Latin** 🟡
+   - `src/routes/grammar/+page.svelte` has 6 hardcoded Latin examples (should be Cyrillic)
+   - **Fix**: Find & replace Latin text → Cyrillic (5 min)
+   - **Details**: [CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md)
+
+### General Gotchas
 1. **Circular Dependencies**: Use EventBus for cross-service communication instead of direct imports
 2. **SSR Issues**: Wrap browser-only code in `if (browser) { ... }` checks
 3. **Language Mode Persistence**: Always trigger `localStorage.setItem('app-language-mode', mode)` when changing modes
 4. **Vocabulary Not Loading**: Check that `unified-vocabulary.json` exists in `build/data/` after build
 5. **Tests Failing on New Features**: Ensure vocabulary JSON in test fixtures matches schema validation
+6. **Silent Error Handling**: Validation errors are caught silently (not logged). Check browser console in dev mode
+7. **Cascade Failures**: One data issue can cascade to multiple features (see Issue #2)
 
 ## Code Discovery Workflow
 When exploring unfamiliar code:
@@ -199,6 +229,19 @@ When exploring unfamiliar code:
 4. **Use grep for patterns** across files when searching for specific strings
 
 ## Documentation & Maintenance
+
+### Comprehensive Documentation Available
+Complete repository analysis and documentation completed December 11, 2025:
+- **[docs/GETTING_STARTED.md](../docs/GETTING_STARTED.md)** — 5-minute setup guide
+- **[docs/PROJECT_OVERVIEW.md](../docs/PROJECT_OVERVIEW.md)** — What does the app do?
+- **[docs/ARCHITECTURE.md](../docs/architecture/ARCHITECTURE.md)** — System design & data flows
+- **[docs/DEVELOPMENT.md](../docs/development/DEVELOPMENT.md)** — Coding patterns & conventions
+- **[docs/DEBUGGING_GUIDE.md](../docs/DEBUGGING_GUIDE.md)** — Troubleshooting common issues
+- **[docs/TESTING.md](../docs/development/TESTING.md)** — Test strategy & how to run tests
+- **[docs/DEPLOYMENT.md](../docs/deployment/DEPLOYMENT.md)** — Deploy to GitHub Pages
+- **[docs/CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md)** — 3 critical bugs found & fixes
+- **[docs/README.md](../docs/README.md)** — Documentation hub (index of all docs)
+- **[INDEX.md](../INDEX.md)** — Root-level documentation index
 
 ### Single Source of Truth
 Keep these docs in `/docs/` synchronized:
