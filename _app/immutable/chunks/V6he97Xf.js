@@ -1,0 +1,2 @@
+function e(e){return e?e.charAt(0).toUpperCase()+e.slice(1):e}function n(n){const t=(n.german||"").trim();if(!t)return"";if(/^(der|die|das|ein|eine|einen|einem|einer|eines)\s/i.test(t)){const[r,...i]=t.split(/\s+/),a=i.join(" ");return[r,"noun"===n.partOfSpeech?e(a):a].filter(Boolean).join(" ").trim()}const r="noun"===n.partOfSpeech?e(t):t,i=(a=n.metadata?.gender,o=n.metadata?.article,o||a&&{masculine:"der",feminine:"die",neuter:"das"}[a]||null||("noun"===n.partOfSpeech?"der":null));var a,o;return i?`${i} ${r}`:r}export{n as f};
+//# sourceMappingURL=V6he97Xf.js.map

@@ -1,0 +1,103 @@
+{
+  "navigation": {
+    "dashboard": "Табло",
+    "vocabulary": "Речник",
+    "grammar": "Граматика",
+    "practice": "Упражнения",
+    "learn": "Учене",
+    "home": "Начало",
+    "app_name": "Учебно приложение Немски-Български",
+    "user_settings": "Настройки"
+  },
+  "common": {
+    "check_answer": "Провери отговор",
+    "next_word": "Следваща дума",
+    "show": "Покажи",
+    "show_examples": "Покажи примери",
+    "hide_examples": "Скрий примери",
+    "retry": "Опитай отново",
+    "cancel": "Откажи",
+    "generate_lesson": "Генерирай урок",
+    "correct": "Правилно",
+    "streak": "Поредица",
+    "accuracy": "Точност",
+    "avg_time": "Средно време",
+    "favorite": "Любимо",
+    "favorited": "Добавено в любими",
+    "practice_this": "Упражнявай",
+    "search": "Търсене",
+    "loading": "Зареждане...",
+    "error_loading": "Грешка при зареждане",
+    "try_again": "Опитай отново",
+    "reload_page": "Презареди страницата",
+    "milliseconds": "мс"
+  },
+  "dashboard": {
+    "title": "Преглед",
+    "total_vocabulary": "Общ речник",
+    "favorited": "Любими",
+    "recent_searches": "Последни търсения"
+  },
+  "languages": {
+    "german": "Немски",
+    "bulgarian": "Български"
+  },
+  "feedback": {
+    "correct": "Правилно!",
+    "incorrect": "Грешно. Правилният отговор е:",
+    "your_answer": "Вашият отговор:"
+  },
+  "sections": {
+    "learning_objectives": "Цели на урока",
+    "vocabulary": "Речник",
+    "practice_exercises": "Упражнения",
+    "recommended_for_practice": "Препоръчани за упражнение"
+  },
+  "directions": {
+    "de_to_bg": "Немски → Български",
+    "bg_to_de": "Български → Немски"
+  },
+  "search": {
+    "no_results": "Не са намерени думи",
+    "no_results_hint": "Опитайте с различни ключови думи или проверете правописа си",
+    "found_words": "Намерени думи",
+    "found_word": "Намерена дума",
+    "search_placeholder": "Търсене на думи...",
+    "search_vocabulary": "Търсене в речника"
+  },
+  "practice": {
+    "tandem_learning": "Тандем учене",
+    "practice_mode": "Режим упражнение",
+    "search_mode": "Режим търсене",
+    "quick_practice": "Бързо упражнение",
+    "type_answer": "Въведете вашия отговор...",
+    "type_answer_placeholder": "Въведете вашия отговор...",
+    "check_answer": "Провери отговор",
+    "correct_answer": "Верен отговор!",
+    "incorrect_answer": "Грешен отговор:",
+    "your_answer": "Твоят отговор",
+    "correct": "Правилни",
+    "streak": "Поредица",
+    "accuracy": "Точност",
+    "avg_time": "Средно време",
+    "next_word": "Следваща дума",
+    "loading_vocabulary": "Зареждане на речника...",
+    "load_vocabulary_failed": "Неуспешно зареждане на речника",
+    "loading_failed": "Неуспешно зареждане на речника",
+    "retry_loading": "Опитай да заредиш отново",
+    "switch_to_search": "Превключи към търсене",
+    "response_time": "Време за отговор",
+    "search_vocabulary": "Търсене в речника",
+    "practice_word": "Упражнявай думата",
+    "category": "Категория",
+    "favorite": "Любимо",
+    "favorited": "Добавено в любими",
+    "example": "Пример",
+    "examples": "Примери",
+    "recommended_for_practice": "Препоръчани за упражнение"
+  },
+  "lesson": {
+    "example": "Пример",
+    "examples": "Примери"
+  }
+}
