@@ -225,6 +225,7 @@ links: z.array(z.object({
 - ✅ Backward compatible (new fields optional)
 
 **Known Limitations**:
+
 - Declension tables will only render when vocabulary items have `metadata.declension` defined
 - External links will only render when vocabulary items have `metadata.links` defined
 - Sample data seeded but requires build rebuild to appear in app

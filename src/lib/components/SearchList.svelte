@@ -337,7 +337,7 @@
             {#if item.metadata?.etymology}
               <p><strong>{ui.etymology}:</strong> {item.metadata.etymology}</p>
             {/if}
-            {#if item.metadata?.links && item.metadata.links.length > 0}
+            {#if item.metadata && 'links' in item.metadata && item.metadata.links && item.metadata.links.length > 0}
               <p><strong>{appState.languageMode === 'DE_BG' ? 'Wörterbuch' : 'Речници'}:</strong>
                 {#each item.metadata.links as link}
                   <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label || 'Link'}</a>

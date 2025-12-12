@@ -35,21 +35,7 @@
 
   const isBulgarianFront = $derived(appState.languageMode === 'DE_BG');
 
-  function capitalizeNoun(term: string): string {
-    if (!term) return term;
-    return term.charAt(0).toUpperCase() + term.slice(1);
-  }
 
-  function chooseArticle(gender?: string, fallback?: string): string | null {
-    if (fallback) return fallback;
-    if (!gender) return null;
-    const map: Record<string, string> = {
-      masculine: 'der',
-      feminine: 'die',
-      neuter: 'das'
-    };
-    return map[gender] || null;
-  }
 
   import { formatGermanTerm as formatGermanUtil } from '$lib/utils/formatGerman';
   function formatGermanTerm(item: VocabularyItem): string {
@@ -80,7 +66,7 @@
   const breakdown = $derived(normalizeBreakdown(vocabularyItem));
   const examples = $derived(
     vocabularyItem.metadata?.examples
-      ?? vocabularyItem.examples?.map((ex) => ({
+      ?? vocabularyItem.examples?.map((ex: any) => ({
         german: ex.sentence || ex.translation || '',
         bulgarian: ex.translation || ex.sentence || '',
         context: ex.context
