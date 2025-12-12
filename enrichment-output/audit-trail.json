@@ -1,0 +1,35 @@
+{
+  "startTime": "2025-12-12T11:53:49.521Z",
+  "endTime": "2025-12-12T11:53:49.522Z",
+  "batchProcessed": "vocabulary-batch-5a-colors.json",
+  "totalItemsProcessed": 10,
+  "successCount": 8,
+  "errorCount": 2,
+  "successRate": "80.00%",
+  "operations": [
+    {
+      "step": 1,
+      "action": "Load batch file",
+      "status": "success",
+      "itemsAffected": 10
+    },
+    {
+      "step": 2,
+      "action": "Enrich with Langenscheidt",
+      "status": "success",
+      "itemsAffected": 8
+    },
+    {
+      "step": 3,
+      "action": "Detect duplicates",
+      "status": "success",
+      "itemsAffected": 0
+    },
+    {
+      "step": 4,
+      "action": "Generate reports",
+      "status": "success",
+      "itemsAffected": 10
+    }
+  ]
+}

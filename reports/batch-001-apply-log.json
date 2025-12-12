@@ -1,0 +1,85 @@
+{
+  "timestamp": "2025-12-12T16:05:22.291Z",
+  "batchSize": 100,
+  "itemsUpdated": 100,
+  "validationResult": {
+    "totalValid": 100,
+    "totalInvalid": 646,
+    "totalItems": 746
+  },
+  "cefrDistribution": {
+    "A2": 34,
+    "unset": 646,
+    "A1": 63,
+    "B1": 3
+  },
+  "updates": [
+    {
+      "itemId": "zusammen_bg_zaedno_sample",
+      "german": "zusammen",
+      "oldCategories": [
+        "everyday-phrases"
+      ],
+      "newCategories": [
+        "everyday-phrases"
+      ],
+      "oldCEFR": "A2",
+      "newCEFR": "A2",
+      "rationale": "Assigned based on difficulty=2, POS=adverb, semantic matching"
+    },
+    {
+      "itemId": "mensch",
+      "german": "Mensch",
+      "oldCategories": [
+        "everyday-phrases"
+      ],
+      "newCategories": [
+        "everyday-phrases"
+      ],
+      "oldCEFR": "A1",
+      "newCEFR": "A1",
+      "rationale": "Assigned based on difficulty=1, POS=noun, semantic matching"
+    },
+    {
+      "itemId": "dorf",
+      "german": "Dorf",
+      "oldCategories": [
+        "nature",
+        "places"
+      ],
+      "newCategories": [
+        "nature",
+        "places"
+      ],
+      "oldCEFR": "A1",
+      "newCEFR": "A1",
+      "rationale": "Assigned based on difficulty=1, POS=noun, semantic matching"
+    },
+    {
+      "itemId": "sein",
+      "german": "sein",
+      "oldCategories": [
+        "everyday-phrases"
+      ],
+      "newCategories": [
+        "everyday-phrases"
+      ],
+      "oldCEFR": "A2",
+      "newCEFR": "A2",
+      "rationale": "Assigned based on difficulty=2, POS=verb, semantic matching"
+    },
+    {
+      "itemId": "machen",
+      "german": "machen",
+      "oldCategories": [
+        "everyday-phrases"
+      ],
+      "newCategories": [
+        "everyday-phrases"
+      ],
+      "oldCEFR": "A2",
+      "newCEFR": "A2",
+      "rationale": "Assigned based on difficulty=2, POS=verb, semantic matching"
+    }
+  ]
+}

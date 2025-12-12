@@ -1,272 +1,288 @@
 # AI Coding Agent Instructions for Bulgarian-German Learning App
 
-## Project Status & Recent Changes
-**Last Updated**: 11 December 2025 | **Status**: MVP (v2 - Streamlined) - **Critical Issues Identified & Documented**
+## Project Status
+**Last Updated**: 12 December 2025 | **Status**: MVP v2 - Clean, focused learning platform  
+A SvelteKit + Svelte 5 bilingual learning app (Bulgarian ↔ German) with no backend, offline-capable, static GitHub Pages deployment.
 
-The app was recently transformed from a commercial platform to a focused personal learning MVP. **3500+ lines of non-essential code removed** (gamification, user accounts, social features). This is the **clean, maintained codebase**—not legacy code with features to preserve.
+**Recent Updates**: Vocabulary enrichment system completed (Dec 12); all critical issues resolved.
 
-### ⚠️ Critical Issues Found (December 11, 2025)
-**Complete analysis in**: [docs/CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md)
+---
 
-| Issue | Status | Impact | Fix Time | Docs |
-|-------|--------|--------|----------|------|
-| **#1: Vocabulary JSON incomplete** | 🔴 Blocking | Vocabulary, Practice, Learn broken | 15 min | [CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md) |
-| **#2: Practice/Learn routes blank** | 🔴 Cascading | Cascade from Issue #1 | 0 min (auto) | [CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md) |
-| **#3: Grammar text in Latin** | 🟡 Cosmetic | 6 lines need replacement | 5 min | [CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md) |
+## The "Big Picture" Architecture
 
-**Action**: See [IMMEDIATE_ACTION_PLAN.md](../IMMEDIATE_ACTION_PLAN.md) for step-by-step fixes (30 min total).
+**Service Boundaries**:
+- **UI Layer**: SvelteKit file-based routing + Svelte 5 components (runes-based, no legacy stores)
+- **State**: Two-layer pattern - `AppUIState` (ephemeral: language mode, search) + `AppDataState` (persistent: stats, favorites)
+- **Data Flow**: JSON-in-build → loader.ts (cache) → schema validation (Zod) → state filters → components
+- **Static-First**: All data bundled at build time; no server APIs (can extend `/routes/api/+server.ts` later)
+- **Bilingual Core**: `languageMode: 'DE_BG' | 'BG_DE'` drives learning direction; UI language is separate
 
-## Project Overview
-A **SvelteKit + Svelte 5 Runes** tandem learning platform for Bulgarian ↔ German vocabulary and lessons, with bilingual UI, offline capability, and accessibility features. Deployed on GitHub Pages as a static site. **No user accounts, no gamification, no cloud sync—pure focused learning.**
+**Critical Pattern**: Use singleton `appState` from `src/lib/state/app-state.ts` everywhere. It facades both UI and Data state. **Never** instantiate new state classes.
 
-## Architecture & Key Decisions
+---
 
-### Why This Structure Matters
-- **SvelteKit** provides file-based routing and automatic SSR optimization
-- **Svelte 5 Runes** (`$state`, `$derived`) are the standard—no legacy stores here
-- **Bilingual UI** requires careful language state management (`LanguageMode: 'DE_BG' | 'BG_DE'`)
-- **Static-first**: No server-side APIs; all data bundles in the build as JSON files
-- **Minimal scope**: No user infrastructure (auth, profiles, cloud) or gamification—intentional simplification for maintainability
+## Developer Quick Start
 
-### Core State Pattern
-**Files**: [src/lib/state/app-ui.svelte.ts](src/lib/state/app-ui.svelte.ts), [src/lib/state/app-data.svelte.ts](src/lib/state/app-data.svelte.ts)
-
-Two-layer state (simplified after MVP transformation):
-1. **AppUIState**: Language mode, search query, current item, display direction
-2. **AppDataState**: Practice stats, favorites, recent searches (all localStorage-persisted)
-
-Access via `appState` singleton from `src/lib/state/app-state.ts`. This is the only state instance you'll need. No creation of new state classes—maintain the singleton pattern.
-
-### Data Flow
-1. **Load**: [src/lib/data/loader.ts](src/lib/data/loader.ts) loads `unified-vocabulary.json` from build output and caches in-memory
-2. **Filter**: [src/lib/state/app-ui.svelte.ts](src/lib/state/app-ui.svelte.ts) applies search + language mode filters via `filteredItems` derived state
-3. **Persist**: [src/lib/state/app-data.svelte.ts](src/lib/state/app-data.svelte.ts) automatically persists stats, favorites, searches to localStorage
-
-### Vocabulary Schema
-**File**: [src/lib/schemas/vocabulary.ts](src/lib/schemas/vocabulary.ts) (Zod-validated)
+```bash
+pnpm install              # ONLY pnpm (never npm/yarn)
+pnpm run dev              # Starts localhost:5173 with auto-reload
+pnpm run check            # TypeScript + Svelte check
+pnpm run simulate-ci      # Lint + type check + unit + E2E tests (before push)
 ```
-VocabularyItem: {
-  id, german, bulgarian, partOfSpeech, difficulty, category, 
-  grammaticalInfo?, alternativeTranslations?, exampleSentences?
+
+---
+
+## 🚨 CRITICAL: Dev Server Management
+
+**NEVER restart the dev server yourself.** It has HMR (Hot Module Replacement) and updates live.
+
+**Rules**:
+1. ❌ **DO NOT** run `pnpm run dev` if a server is already running
+2. ❌ **DO NOT** kill and restart the dev server after making changes
+3. ✅ **DO** check if server is running: `lsof -nP -iTCP:5173 | grep LISTEN`
+4. ✅ **DO** ask user if you need the server started/restarted
+5. ✅ **DO** use Playwright MCP tools to test the live application
+
+**Why**: Vite HMR updates instantly. Restarting wastes time and breaks iterative testing flow.
+
+**Testing with Playwright MCP**:
+- Use `mcp_playwright_browser_navigate` to load pages
+- Use `mcp_playwright_browser_click` to interact with elements
+- Use `console-ninja_runtimeErrors` to check for runtime errors
+- This is **critical** for reliable iterative testing and refinement
+
+**Port 5173 Rule**: If you absolutely must check port status, use `lsof -nP -iTCP:5173 | grep LISTEN`
+
+---
+
+## Vocabulary Enrichment System (NEW - Dec 12)
+
+**Status**: Production-ready, ~745 entries enriched with definitions/examples from Langenscheidt  
+**Orchestrator**: `scripts/enrichment/orchestrate-enrichment.ts`  
+**Output**: Reports in `enrichment-output/`
+
+Common workflows:
+```bash
+pnpm run enrich:vocabulary              # Full pipeline: scrape → validate → merge
+pnpm run enrich:vocabulary:validate     # Validation only (no scraping)
+pnpm run enrich:vocabulary:cache        # Use cached data only
+pnpm run enrich:vocabulary:dry          # Dry run preview
+pnpm run enrich:vocabulary:pilot        # Test on single batch
+```
+
+**How it works**: Scrapes definitions → validates duplicates → merges into unified vocabulary → produces JSON + markdown report.
+
+---
+
+## Essential Svelte 5 Patterns
+
+**ONLY use Svelte 5 runes syntax.** No legacy stores, no reactive statements (`$:`), no `export let`.
+
+```svelte
+<script lang="ts">
+  // ✅ State
+  let count = $state(0);
+  let doubled = $derived(count * 2);
+  
+  // ✅ Props (REQUIRED for components)
+  let { title = 'Default', items = [] } = $props();
+  
+  // ✅ Effects with cleanup
+  $effect(() => {
+    const handler = () => console.log('resize');
+    window.addEventListener('resize', handler);
+    return () => window.removeEventListener('resize', handler);
+  });
+</script>
+```
+
+**Never use**: `export let prop = 'value'` or `$: doubled = count * 2` in NEW code.
+
+---
+
+## State Management Principles
+
+**File Structure**:
+- `src/lib/state/app-state.ts` → singleton `appState` (**import everywhere**)
+- `src/lib/state/app-ui.svelte.ts` → UI state (search, language mode, filters)
+- `src/lib/state/app-data.svelte.ts` → Persistent data (practice stats, favorites)
+
+**Language Mode** (`DE_BG` vs `BG_DE`):
+- Determines: question language ← answer language
+- Example: `DE_BG` = show German, user answers in Bulgarian
+- **UI language is SEPARATE** (controlled by paraglide i18n in `src/paraglide/`)
+- Update mode: `appState.setLanguageMode('BG_DE'); localStorage.setItem('app-language-mode', 'BG_DE');`
+
+---
+
+## Data Architecture & Validation
+
+**Vocabulary Schema** (Zod-validated, `src/lib/schemas/vocabulary.ts`):
+```typescript
+VocabularyItem {
+  id: string                    // Required
+  german: string                // Required
+  bulgarian: string             // Required (Cyrillic)
+  partOfSpeech: string          // Required: "noun" | "verb" | "adjective" | ...
+  difficulty: 1-5               // Required
+  categories: string[]          // Required
+  exampleSentences?: object[]   // Optional (enrichment)
+  alternatives?: string[]       // Optional
 }
 ```
-Always validate new data with `UnifiedVocabularyItemSchema.parse(data)`.
 
-## Developer Workflows
+**Always validate**: `UnifiedVocabularyItemSchema.parse(data)` catches incomplete data early.
 
-### Quick Start
+**Maintenance scripts**:
 ```bash
-pnpm install              # One-time setup (NEVER use npm or yarn)
-pnpm run dev              # Starts http://localhost:5173
-pnpm run check            # TypeScript + Svelte check (catches errors early)
-2. Run `pnpm run simulate-ci` — replaces pre-push hook (manually invoked to avoid hangs)
-3. Run relevant tests: `pnpm run test:unit` and/or `pnpm run test:e2e`
-4. Verify no unused imports/variables (strict mode enforces this)
-
-**Package Manager Rule**: ONLY use `pnpm`. Never `npm` or `yarn`. Generate only `pnpm-lock.yaml`.
-
-### Testing Strategy
-- **Unit**: `pnpm run test:unit` → Vitest in jsdom environment
-- **Components**: `pnpm run test:components` → Playwright component tests
-- **E2E**: `pnpm run test:e2e` → Playwright full browser tests
-- **Server Management
-Before starting a dev server:
-1. Check if one is already running: `ps aux | grep pnpm`
-2. Kill existing: `pkill -f "pnpm dev"` if needed
-3. Start fresh: `pnpm run dev`
-
-**Never** run multiple dev servers on port 5173 simultaneously.
-### Build & Deploy
-- `pnpm run build` → Outputs to `build/` (uses `outDir` from [vite.config.ts](vite.config.ts))
-- `pnpm run build:gh-pages` → Adds `/BulgarianApp-Fresh/` base path for GitHub Pages
-- Static files served from `static/` and `public/` directories
-
-### Critical: No Pre-Push Hook
-The project deliberately removed pre-push hooks (they caused hangs). Instead:
-- Run `pnpm run check && pnpm run lint` locally before pushing
-- GitHub Actions runs same checks on PR (simulated via CI simulation)
-
-## Project-Specific Patterns
-
-### Language Mode & Direction
-- **Language Mode** (`DE_BG` / `BG_DE`): Which language is the question, which is the answer
-- **Display Direction** (derived): Human-readable label, e.g., "German → Bulgarian"
-- When implementing UI: Check `appState.languageMode` to determine which translation to show first
-- **Localization Service** ([src/lib/services/localization.ts](src/lib/services/localization.ts)): Handles UI language (separate from learning language)
-
-### Error Handling Pattern
-**File**: [src/lib/services/errors.ts](src/lib/services/errors.ts)
-
-Use `ErrorHandler.handleError(error, 'context')` for user-facing errors. Custom error classes: `StateError`, `DataError`, `ServiceError`. Always provide context objects for debugging.
-
-### Event Bus for Decoupled Communication
-**File**: [src/lib/services/event-bus.ts](src/lib/services/event-bus.ts)
-
-Use when services need to communicate without direct dependencies:
-```typescript
-const unsubscribe = eventBus.subscribe('practice-result', (data) => { ... });
-await eventBus.emit('practice-result', { itemId, correct, time });
+pnpm run verify:vocabulary          # Check structure
+pnpm run deduplicate:vocabulary     # Remove duplicates  
+pnpm run clean:vocabulary           # Format normalization
+pnpm run quality:pipeline           # Run all three sequentially
 ```
+
+---
 
 ## Component Conventions
 
-### File Organization
-- **Components**: [src/lib/components/](src/lib/components/) organized by feature (flashcard/, gamification/, ui/)
-- **UI Primitives**: [src/lib/components/ui/](src/lib/components/ui/) for reusable Tailwind-based components
-- **Page Routes**: [src/routes/](src/routes/) with `+page.svelte`, `+layout.svelte`, `+page.ts` (loader functions)
+**File organization**:
+```
+src/lib/components/
+├── ui/                    # Atomic: buttons, modals, forms
+├── flashcard/            # Feature: flashcard system
+├── practice/             # Feature: practice mode
+└── layout/               # Layout wrappers
+```
 
-### Svelte 5 Syntax Best Practices
-- Prefer Svelte 5 syntax across components and runes:
-- Use `let variable = $state(initial)` for reactive state (avoid legacy `$:`)
-- Use `let derived = $derived(computation)` for computed values
-- Use `$props()` for component props (avoid `export let`)
-- Use latest SvelteKit APIs per upstream docs
+**File extensions matter**:
+- `.svelte` = component with markup (use Svelte 5 runes)
+- `.svelte.ts` = reactive logic/state (use Svelte 5 runes, export classes/functions)
+- `.ts` = pure utilities (no reactivity)
 
-### TypeScript Strictness
-All `tsconfig.json` strict flags enabled (`strict: true`, `noImplicitAny`, `noUnusedLocals`). TypeScript errors must be resolved before merging. No `@ts-ignore` without strong justification.
+**TypeScript strictness**: `strict: true` in tsconfig. NO `any`, NO `@ts-ignore` (justify in comments if unavoidable).
 
-### File Extension Conventions
-- `.svelte` - Standard components with markup and interactivity
-- `.svelte.ts` - Reusable reactive logic using Svelte 5 runes (state, services)
-- `.ts` - Pure TypeScript utilities and functions (no reactivity)
+---
 
-### Reactivity Pattern (Svelte 5 Syntax)
-Replace all legacy patterns with Svelte 5 runes:
+## Testing Commands & Structure
+
+```bash
+pnpm run test:unit              # Vitest: business logic
+pnpm run test:components        # Playwright CT: isolated components
+pnpm run test:e2e               # Playwright: full user flows
+pnpm run test:accessibility     # a11y compliance
+pnpm run test:visual            # Visual regression
+pnpm run test:all               # All of the above
+```
+
+**Before pushing**: `pnpm run simulate-ci` (replaces pre-push hook—manually invoke to avoid hangs).
+
+**Test file structure**:
+```
+tests/
+├── unit/              # Vitest files (src/lib logic)
+├── components/        # Component tests (Playwright CT)
+├── e2e/               # User flows (Playwright)
+└── accessibility/     # a11y checks (Playwright + axe)
+```
+
+---
+
+## Error Handling Pattern
+
+**File**: `src/lib/services/errors.ts`
+
+Custom error classes: `StateError`, `DataError`, `ServiceError`. Use `ErrorHandler.handleError(error, 'context', { extra: 'details' })`.
+
 ```typescript
-// ✅ State (new pattern)
-let count = $state(0);
-let filtered = $derived(items.filter(x => x.active));
+import { StateError, ErrorHandler } from '$lib/services/errors';
 
-// ✅ Effects with cleanup
-$effect(() => {
-  const handler = () => { /* ... */ };
-  window.addEventListener('resize', handler);
-  return () => window.removeEventListener('resize', handler);
+try {
+  appState.setLanguageMode('INVALID');
+} catch (err) {
+  ErrorHandler.handleError(err, 'language-mode-change', { attempted: 'INVALID' });
+}
+```
+
+---
+
+## Cross-Service Communication
+
+**Avoid direct dependencies** → use EventBus (`src/lib/services/event-bus.ts`):
+
+```typescript
+import { eventBus } from '$lib/services/event-bus';
+
+// Subscribe in one service:
+const unsubscribe = eventBus.subscribe('practice-result', (data) => {
+  console.log(`Item ${data.itemId}: ${data.correct ? 'correct' : 'incorrect'}`);
 });
-$: doubled = count * 2;  // Legacy reactive statement
-export let prop = 'value';  // Wrong pattern for props
+
+// Emit from another:
+await eventBus.emit('practice-result', { itemId: '123', correct: true, time: 5000 });
+
+// Cleanup: unsubscribe();
 ```
 
-Component props MUST use `$props`:
-```typescript
-// ✅ Correct
-let { title = 'Default', items = [] } = $props();
+---
 
-// ❌ Incorrect
-export let title = 'Default';
-export let items = [];
+## Build & Deployment
+
+```bash
+pnpm run build                # Outputs to build/
+pnpm run build:gh-pages       # Adds /BulgarianApp-Fresh/ base path
 ```
 
-## Vocabulary & Data Management
+**Static assets**: Served from `static/` and `public/`; bundled at build time.
 
-### Vocabulary Loading
-The unified vocabulary is cached in memory on first load. Modifications (favorites, practice stats) are ephemeral unless explicitly persisted to localStorage.
+---
 
-**Scripts for data maintenance**:
-- `pnpm run verify:vocabulary` → Validate vocabulary structure
-- `pnpm run deduplicate:vocabulary` → Remove duplicates
-- `pnpm run clean:vocabulary` → Clean formatting
-- `pnpm run quality:pipeline` → Run all maintenance tasks sequentially
+## Common Gotchas & Solutions
 
-### Adding New Vocabulary Features
-- Extend [src/lib/schemas/vocabulary.ts](src/lib/schemas/vocabulary.ts) with new Zod schema
-- Update [src/lib/data/unified-vocabulary.json](src/lib/data/unified-vocabulary.json) format (requires re-export)
-- Add migration script in [scripts/vocabulary-migration/](scripts/vocabulary-migration/)
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| Circular dependencies | Service A imports B, B imports A | Use EventBus instead of direct imports |
+| Page not rendering | Browser-only code running during SSR | Wrap in `if (browser) { ... }` from `$app/environment` |
+| Vocabulary not loading | Missing `unified-vocabulary.json` in build | Run `pnpm run build` to create it |
+| Language not persisting | State updated but not localStorage | Update both: `appState.setLanguageMode('BG_DE'); localStorage.setItem('app-language-mode', 'BG_DE');` |
+| One feature breaks, others fail | Cascade failure from one data issue | Validate early! Check `pnpm run verify:vocabulary` |
+| Silent errors in console | Zod validation catches errors silently | Check browser console in dev mode |
+| Multiple dev servers | Running 2+ pnpm instances on 5173 | Kill existing: `pkill -f "pnpm dev"` |
+| Tests fail on new fields | Test fixtures out of sync with schema | Update test fixture vocabulary to match schema |
 
-## External Dependencies & Integrations
-
-### Key Libraries
-- **@sveltejs/kit**: Framework (SSR + routing)
-- **svelte**: v5 (Runes-based reactivity)
-- **@tailwindcss/postcss**: CSS framework (v4)
-- **zod**: Schema validation
-- **@inlang/paraglide**: I18n (managed in [src/paraglide/](src/paraglide/))
-
-### Accessibility Requirements
-5. **Tests Failing on New Features**: Ensure vocabulary JSON in test fixtures matches schema validation
-6. **File Deletion**: If deleting a file, verify all imports/exports are removed to prevent broken builds
-7. **Legacy Reactivity**: Do NOT use `$:` reactive statements or `svelte/store` in new code (legacy)
-8. **Prop Pattern**: Do NOT use `export let` for component props; use `let { prop } = $props()` instead
-9. **TSConfig Strictness**: No `any` types allowed—strict mode is enforced; use proper types always
-10. **One Issue at a Time**: Focus on fixing one major issue before moving to the next (avoid scope creep)
-### No Backend/API
-All data is static JSON files. To add server features later:
-- Extend `routes/api/` with SvelteKit server routes (`+server.ts`)
-- Never hardcode API endpoints—use environment variables
-
-## Common Gotchas & Warnings
-
-### Critical Issues (December 11, 2025)
-1. **Vocabulary Data Incomplete** 🔴
-   - `data/unified-vocabulary.json` has incomplete items (missing fields)
-   - **Fix**: Run `pnpm run rebuild:vocabulary` (15 min)
-   - **Details**: [CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md)
-
-2. **Practice/Learn Routes Blank** 🔴
-   - Cascade failure from incomplete vocabulary data
-   - **Fix**: Automatic once vocabulary is rebuilt
-   - **Details**: [CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md)
-
-3. **Grammar Examples in Latin** 🟡
-   - `src/routes/grammar/+page.svelte` has 6 hardcoded Latin examples (should be Cyrillic)
-   - **Fix**: Find & replace Latin text → Cyrillic (5 min)
-   - **Details**: [CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md)
-
-### General Gotchas
-1. **Circular Dependencies**: Use EventBus for cross-service communication instead of direct imports
-2. **SSR Issues**: Wrap browser-only code in `if (browser) { ... }` checks
-3. **Language Mode Persistence**: Always trigger `localStorage.setItem('app-language-mode', mode)` when changing modes
-4. **Vocabulary Not Loading**: Check that `unified-vocabulary.json` exists in `build/data/` after build
-5. **Tests Failing on New Features**: Ensure vocabulary JSON in test fixtures matches schema validation
-6. **Silent Error Handling**: Validation errors are caught silently (not logged). Check browser console in dev mode
-7. **Cascade Failures**: One data issue can cascade to multiple features (see Issue #2)
+---
 
 ## Code Discovery Workflow
+
 When exploring unfamiliar code:
-1. **Always start with codebase search** (semantic search) before file inspection
-2. **Read files entirely** before editing—check 20+ lines before/after any target section
-3. **Never assume** file structure without examination
-4. **Use grep for patterns** across files when searching for specific strings
-
-## Documentation & Maintenance
-
-### Comprehensive Documentation Available
-Complete repository analysis and documentation completed December 11, 2025:
-- **[docs/GETTING_STARTED.md](../docs/GETTING_STARTED.md)** — 5-minute setup guide
-- **[docs/PROJECT_OVERVIEW.md](../docs/PROJECT_OVERVIEW.md)** — What does the app do?
-- **[docs/ARCHITECTURE.md](../docs/architecture/ARCHITECTURE.md)** — System design & data flows
-- **[docs/DEVELOPMENT.md](../docs/development/DEVELOPMENT.md)** — Coding patterns & conventions
-- **[docs/DEBUGGING_GUIDE.md](../docs/DEBUGGING_GUIDE.md)** — Troubleshooting common issues
-- **[docs/TESTING.md](../docs/development/TESTING.md)** — Test strategy & how to run tests
-- **[docs/DEPLOYMENT.md](../docs/deployment/DEPLOYMENT.md)** — Deploy to GitHub Pages
-- **[docs/CRITICAL_ISSUES_ANALYSIS.md](../docs/CRITICAL_ISSUES_ANALYSIS.md)** — 3 critical bugs found & fixes
-- **[docs/README.md](../docs/README.md)** — Documentation hub (index of all docs)
-- **[INDEX.md](../INDEX.md)** — Root-level documentation index
-
-### Single Source of Truth
-Keep these docs in `/docs/` synchronized:
-- **architecture/** — System architecture, data flows, UI structure
-- **development/** — Component guidelines, testing strategy, best practices
-- **roadmap/** — Project roadmap, next steps, implementation phases
-- **design/** — Design concepts, style guide, accessibility
-
-Root `README.md` must link to all major `/docs/` entries and stay concise (<300 lines).
-
-### File Naming
-- `UPPERCASE.md` for primary docs (e.g., `ARCHITECTURE.md`)
-- `PHASE_*` for implementation phases
-- Subdirectories group related topics (no docs outside `/docs/`)
-
-### Documentation Ownership
-Documentation updates **must be atomic with code changes**—never leave docs outdated. PRs modifying functionality require corresponding documentation updates.
+1. **Semantic search first** (ask for patterns/features, not files)
+2. **Read context**: Always read 20+ lines before/after target code
+3. **Follow imports**: Trace through state/service layers to understand data flow
+4. **Check schemas**: Look in `src/lib/schemas/` to understand data contracts
+5. **Verify in browser**: Use console to inspect `appState` values during execution
 
 ---
-**Last Updated**: 11 December 2025 | **Framework**: SvelteKit 2.49.2 + Svelte 5 | **Target**: GitHub Pages Static Site | **Rules Source**: .roo/rules/
-| [src/lib/schemas/](src/lib/schemas/) | All Zod validation schemas |
-| [src/lib/services/](src/lib/services/) | Business logic (lesson, quiz, localization, etc.) |
-| [vite.config.ts](vite.config.ts) | Build & dev server config |
-| [playwright.config.ts](playwright.config.ts) | E2E test configuration |
-| [.github/workflows/](../../.github/workflows/) | CI/CD automation |
+
+## Key Documentation
+
+- **[docs/GETTING_STARTED.md](../docs/GETTING_STARTED.md)** — 5-min setup
+- **[docs/PROJECT_OVERVIEW.md](../docs/PROJECT_OVERVIEW.md)** — What the app does
+- **[docs/ARCHITECTURE.md](../docs/architecture/ARCHITECTURE.md)** — System design
+- **[docs/DEVELOPMENT.md](../docs/development/DEVELOPMENT.md)** — Coding patterns
+- **[docs/TESTING.md](../docs/development/TESTING.md)** — Test strategy
+- **[docs/DEBUGGING_GUIDE.md](../docs/DEBUGGING_GUIDE.md)** — Troubleshooting
+- **[docs/VOCABULARY_ENRICHMENT_GUIDE.md](../docs/VOCABULARY_ENRICHMENT_GUIDE.md)** — Enrichment system
+- **[INDEX.md](../INDEX.md)** — Full documentation index
 
 ---
-**Last Updated**: 11 December 2025 | **Framework**: SvelteKit 2.49.2 + Svelte 5 | **Target**: GitHub Pages Static Site
+
+## When You're Stuck
+
+1. Check [docs/DEBUGGING_GUIDE.md](../docs/DEBUGGING_GUIDE.md) for known issues
+2. Run `pnpm run check` to catch TypeScript errors
+3. Inspect **browser console** (errors logged there, not just terminal)
+4. Verify vocabulary: `pnpm run verify:vocabulary`
+5. Trace state: `console.log(appState.languageMode)`, `appState.searchQuery`, etc.
+
+---
+
+**Framework**: SvelteKit 2.49.2 + Svelte 5 | **Target**: GitHub Pages | **Last Updated**: Dec 12, 2025

@@ -131,6 +131,27 @@ export const GrammarSchema = z.object({
 });
 
 /**
+ * Enrichment metadata from external dictionary sources (e.g., Langenscheidt)
+ */
+export const EnrichmentSchema = z.object({
+  enriched: z.boolean().optional().describe('Indicates item has been enriched'),
+  confidence: z.number().min(0).max(1).optional().describe('Confidence score for enrichment match'),
+  sourceURL: z.string().url().optional().describe('Primary dictionary URL for the enrichment'),
+  enrichedAt: z.string().datetime().optional().describe('ISO timestamp of enrichment run'),
+  source: z.string().optional().describe('Source label for enrichment run')
+}).partial();
+
+/**
+ * External dictionary definition links (deduplicated by URL)
+ */
+export const DefinitionLinkSchema = z.object({
+  source: z.string().optional().describe('Dictionary source identifier (e.g., langenscheidt, duden)'),
+  url: z.string().url().describe('Absolute URL to external definition'),
+  confidence: z.number().min(0).max(1).optional().describe('Confidence score for this link'),
+  language: z.string().optional().describe('Language pair or locale for the definition')
+});
+
+/**
  * Example schema
  */
 export const ExampleSchema = z.object({
@@ -193,6 +214,7 @@ export const UnifiedVocabularyItemSchema = z.object({
   bulgarian: z.string().min(1).max(200).describe('Bulgarian word or phrase'),
   partOfSpeech: PartOfSpeechSchema.describe('Part of speech classification'),
   difficulty: z.number().min(1).max(5).describe('Difficulty level (1-5, 1=easiest)'),
+  cefrLevel: LanguageLevelSchema.optional().describe('CEFR proficiency level (A1/A2/B1/B2/C1)'),
   categories: z.array(VocabularyCategorySchema).min(1).describe('Categories the item belongs to'),
   transliteration: TransliterationSchema.optional().describe('Pronunciation guides in Latin script'),
   emoji: z.string().emoji().optional().describe('Emoji representation of the word'),
@@ -207,6 +229,8 @@ export const UnifiedVocabularyItemSchema = z.object({
   antonyms: z.array(z.string()).optional().describe('Antonyms for this word/phrase'),
   relatedWords: z.array(z.string()).optional().describe('Related words or phrases'),
   metadata: VocabularyMetadataSchema.optional().describe('Additional metadata'),
+  enrichment: EnrichmentSchema.optional().describe('External enrichment metadata'),
+  definitions: z.array(DefinitionLinkSchema).optional().describe('Links to external dictionary definitions'),
   createdAt: z.union([
     z.date(),
     z.string().datetime().transform(str => new Date(str))

@@ -1,0 +1,162 @@
+{
+  "timestamp": "2025-12-12T16:03:54.817Z",
+  "totalItems": 746,
+  "difficultyDistribution": {
+    "1": 625,
+    "2": 115,
+    "3": 6
+  },
+  "partOfSpeechDistribution": {
+    "adverb": 5,
+    "interjection": 7,
+    "phrase": 447,
+    "noun": 205,
+    "verb": 8,
+    "adjective": 6,
+    "number": 45,
+    "pronoun": 23
+  },
+  "cefrStrategy": {
+    "A1": {
+      "name": "Elementary",
+      "description": "Beginner level - most common words",
+      "difficultyRange": [
+        1,
+        1.5
+      ],
+      "categories": [
+        "greetings",
+        "numbers",
+        "family",
+        "everyday-phrases",
+        "colors"
+      ],
+      "examples": [
+        "Hallo",
+        "Mutter",
+        "eins",
+        "rot",
+        "danke"
+      ]
+    },
+    "A2": {
+      "name": "Elementary Plus",
+      "description": "Post-beginner - basic communicative competence",
+      "difficultyRange": [
+        1.5,
+        2.5
+      ],
+      "categories": [
+        "food",
+        "clothing",
+        "home",
+        "animals",
+        "time",
+        "weather",
+        "everyday-phrases"
+      ],
+      "examples": [
+        "Apfel",
+        "Hemd",
+        "Haus",
+        "Katze",
+        "Tag",
+        "Regen"
+      ]
+    },
+    "B1": {
+      "name": "Intermediate",
+      "description": "Independent user - can handle routine situations",
+      "difficultyRange": [
+        2.5,
+        3.5
+      ],
+      "categories": [
+        "professions",
+        "places",
+        "nature",
+        "transport",
+        "culture",
+        "technology",
+        "grammar"
+      ],
+      "examples": [
+        "Arzt",
+        "Stadt",
+        "Berg",
+        "Auto",
+        "Musik",
+        "Computer",
+        "Verb"
+      ]
+    },
+    "B2": {
+      "name": "Upper Intermediate",
+      "description": "Advanced independent user - wide range of vocabulary",
+      "difficultyRange": [
+        3.5,
+        5
+      ],
+      "categories": [
+        "culture",
+        "technology",
+        "grammar",
+        "places",
+        "nature",
+        "body-parts"
+      ],
+      "examples": [
+        "Kunstwerk",
+        "Nominativ",
+        "Ingenieur"
+      ]
+    }
+  },
+  "sampledItems": [
+    {
+      "german": "zusammen",
+      "bulgarian": "заедно",
+      "difficulty": 2,
+      "partOfSpeech": "adverb",
+      "categories": [
+        "uncategorized"
+      ]
+    },
+    {
+      "german": "Hallo",
+      "bulgarian": "Здравей",
+      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "categories": [
+        "greetings"
+      ]
+    },
+    {
+      "german": "Guten Morgen",
+      "bulgarian": "Добро утро",
+      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "categories": [
+        "greetings"
+      ]
+    },
+    {
+      "german": "Guten Abend",
+      "bulgarian": "Добър вечер",
+      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "categories": [
+        "greetings"
+      ]
+    },
+    {
+      "german": "Gute Nacht",
+      "bulgarian": "Лека нощ",
+      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "categories": [
+        "greetings"
+      ]
+    }
+  ]
+}

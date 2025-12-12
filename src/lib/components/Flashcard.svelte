@@ -1,6 +1,8 @@
 <script lang="ts">
   import type { VocabularyItem } from '$lib/types/vocabulary';
   import { appState } from '$lib/state/app-state';
+  import EnrichmentBadge from '$lib/components/vocabulary/EnrichmentBadge.svelte';
+  import DefinitionLink from '$lib/components/vocabulary/DefinitionLink.svelte';
 
   let { vocabularyItem } = $props<{ vocabularyItem: VocabularyItem }>();
 
@@ -197,6 +199,16 @@
           </div>
         {/if}
 
+        {#if vocabularyItem.enrichment?.sourceURL || (vocabularyItem.definitions && vocabularyItem.definitions.length > 0)}
+          <div class="enrichment-block">
+            <p class="section-title">{appState.languageMode === 'DE_BG' ? 'Wörterbuch' : 'Речник'}</p>
+            <div class="enrichment-content">
+              <EnrichmentBadge item={vocabularyItem} variant="inline" />
+              <DefinitionLink item={vocabularyItem} showIcon={true} showLabel={true} compact={true} />
+            </div>
+          </div>
+        {/if}
+
           {#if vocabularyItem.metadata?.declension}
             <div class="declension-block">
               <p class="section-title">{appState.languageMode === 'DE_BG' ? 'Deklination' : 'Склонение'}</p>
@@ -361,6 +373,20 @@
     border: 1px solid #e2e8f0;
     border-radius: 12px;
     padding: 1rem;
+  }
+
+  .enrichment-block {
+    background: #f0f7ff;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+
+  .enrichment-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-top: 0.75rem;
   }
 
   .nuance-box {

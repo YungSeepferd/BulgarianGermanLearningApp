@@ -12,6 +12,7 @@
 - **[GETTING_STARTED.md](GETTING_STARTED.md)** - 5-minute setup guide and first run
 - **[PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md)** - What the app does and why
 - **[CRITICAL_ISSUES_ANALYSIS.md](CRITICAL_ISSUES_ANALYSIS.md)** - 3 bugs found and fixed
+- **[VOCABULARY_ENRICHMENT_QUICKSTART.md](VOCABULARY_ENRICHMENT_QUICKSTART.md)** - Quick start for enrichment pipeline
 
 ### Reference Guides
 - **[DEVELOPMENT.md](development/DEVELOPMENT.md)** - Coding patterns and conventions
@@ -19,6 +20,9 @@
 - **[TESTING.md](development/TESTING.md)** - Test strategy and how to run tests
 - **[DEBUGGING_GUIDE.md](DEBUGGING_GUIDE.md)** - Troubleshooting common issues
 - **[DEPLOYMENT.md](deployment/DEPLOYMENT.md)** - How to deploy to GitHub Pages
+- **[VOCABULARY_ENRICHMENT_GUIDE.md](VOCABULARY_ENRICHMENT_GUIDE.md)** - Complete enrichment system guide
+- **[VOCABULARY_ENRICHMENT_TECHNICAL.md](VOCABULARY_ENRICHMENT_TECHNICAL.md)** - Technical architecture details
+- **[VOCABULARY_ENRICHMENT_IMPLEMENTATION_CHECKLIST.md](VOCABULARY_ENRICHMENT_IMPLEMENTATION_CHECKLIST.md)** - Implementation status and verification
 
 ### Reference
 - **[BILINGUAL_SUPPORT.md](BILINGUAL_SUPPORT.md)** - How the bilingual system works

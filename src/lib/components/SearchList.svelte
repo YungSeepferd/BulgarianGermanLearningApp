@@ -4,6 +4,9 @@
   import { flip } from 'svelte/animate';
   import { appState } from '$lib/state/app-state';
   import { formatGermanTerm } from '$lib/utils/formatGerman';
+  import EnrichmentBadge from '$lib/components/vocabulary/EnrichmentBadge.svelte';
+  import DefinitionLink from '$lib/components/vocabulary/DefinitionLink.svelte';
+  import WordDetailModal from '$lib/components/vocabulary/WordDetailModal.svelte';
 
   let {
     items = [],
@@ -23,6 +26,18 @@
 
   let hoveredItemId = $state<string | null>(null);
   let showTooltips = $state(false);
+  let selectedItemForDetail = $state<VocabularyItem | null>(null);
+  let showDetailModal = $state(false);
+
+  function openDetailModal(item: VocabularyItem) {
+    selectedItemForDetail = item;
+    showDetailModal = true;
+  }
+
+  function closeDetailModal() {
+    showDetailModal = false;
+    selectedItemForDetail = null;
+  }
 
   const categoryLabels = {
     de: {
@@ -74,12 +89,12 @@
         emptyTitle: 'Kein Vokabular gefunden',
         emptyHint: 'Versuche andere Suchbegriffe oder prüfe die Schreibweise.',
         found: (n: number) => `${n} ${n === 1 ? 'Treffer' : 'Treffer'}`,
-        showing: 'Zeige Deutsch → Bulgarisch',
-        showingReverse: 'Zeige Bulgarisch → Deutsch',
-        quickPractice: 'Schnell üben',
+        showing: 'Deutsch → Bulgarisch',
+        showingReverse: 'Bulgarisch → Deutsch',
+        quickPractice: 'Sofort üben',
         practice: 'Üben',
         selectForPractice: (text: string) => `${text} zum Üben auswählen`,
-        quickPracticeLabel: (text: string) => `${text} schnell üben`,
+        quickPracticeLabel: (text: string) => `${text} sofort üben`,
         typeWord: 'Wort',
         typeRule: 'Regel',
         difficulty: 'Schwierigkeit',
@@ -93,16 +108,21 @@
         note: 'Notiz',
         mnemonic: 'Eselsbrücke',
         culturalNote: 'Kulturelle Notiz',
-        etymology: 'Etymologie'
+        etymology: 'Etymologie',
+        sourceLang: 'Deutsch',
+        targetLang: 'Bulgarisch',
+        enrich: 'Wörterbuch',
+        context: 'Kontext',
+        examples: 'Beispiele'
       }
     : {
         emptyTitle: 'Няма намерени думи',
         emptyHint: 'Опитайте с други думи или проверете правописа.',
         found: (n: number) => `${n} ${n === 1 ? 'резултат' : 'резултата'}`,
-        showing: 'Показва Немски → Български',
-        showingReverse: 'Показва Български → Немски',
-        quickPractice: 'Бърза практика',
-        practice: 'Упражнение',
+        showing: 'Немски → Български',
+        showingReverse: 'Български → Немски',
+        quickPractice: 'Бързо упражнение',
+        practice: 'Упражнявай',
         selectForPractice: (text: string) => `Избери ${text} за упражнение`,
         quickPracticeLabel: (text: string) => `Бързо упражнявай ${text}`,
         typeWord: 'Дума',
@@ -118,7 +138,12 @@
         note: 'Бележка',
         mnemonic: 'Мнемоника',
         culturalNote: 'Културна бележка',
-        etymology: 'Етимология'
+        etymology: 'Етимология',
+        sourceLang: 'Немски',
+        targetLang: 'Български',
+        enrich: 'Речник',
+        context: 'Контекст',
+        examples: 'Примери'
       });
 
   function getCategoryLabel(category?: string) {
@@ -127,14 +152,9 @@
     return labels[category as keyof typeof labels] ?? category;
   }
 
-  // Animation functions
+  // Simple fade animation (no weird expand)
   function itemAnimation(node: HTMLElement) {
-    return fly(node, {
-      y: 20,
-      opacity: 1,
-      duration: 300,
-      easing: t => t
-    });
+    return fade(node, { duration: 200 });
   }
 
   function tagAnimation(node: HTMLElement) {
@@ -166,12 +186,22 @@
 
 
   // Interaction functions
-  function handleItemClick(item: VocabularyItem) {
-    onSelectItem(item);
+  function handleItemClick(item: VocabularyItem, event?: MouseEvent | KeyboardEvent) {
+    // Prevent opening modal if clicking checkbox or buttons
+    if (event && (event.target as HTMLElement).closest('input, button')) {
+      return;
+    }
+    openDetailModal(item);
   }
 
-  function handleQuickPractice(item: VocabularyItem) {
-    appState.startPracticeSession(item);
+  function handlePracticeClick(item: VocabularyItem, event: MouseEvent) {
+    event.stopPropagation(); // Prevent modal from opening
+    onSelectItem(item); // Start practice session
+  }
+
+  function handleQuickPractice(item: VocabularyItem, event: MouseEvent) {
+    event.stopPropagation(); // Prevent modal from opening
+    appState.startPracticeSession([item]);
   }
 
   function handleMouseEnter(itemId: string) {
@@ -206,51 +236,53 @@
             class:active={hoveredItemId === item.id}
             onmouseenter={() => handleMouseEnter(item.id)}
             onmouseleave={handleMouseLeave}
+            onclick={(e) => handleItemClick(item, e)}
+            onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleItemClick(item, e); } }}
             role="button"
             tabindex="0"
             in:itemAnimation
           >
           <div class="item-header">
-            <div class="main-text">
-               <input
-                type="checkbox"
-                class="item-checkbox"
-                checked={selectedItems.has(item.id)}
-                onchange={() => onToggleSelectItem(item.id)}
-                aria-label={ui.selectForPractice(getItemText(item))}
-              />
-              <span class="word">{getItemText(item)}</span>
-              <span class="translation">{getItemTranslation(item)}</span>
+            <div class="item-head-left">
+              <label class="item-select">
+                <input
+                  type="checkbox"
+                  class="item-checkbox"
+                  checked={selectedItems.has(item.id)}
+                  onchange={() => onToggleSelectItem(item.id)}
+                  aria-label={ui.selectForPractice(getItemText(item))}
+                />
+                <span class="direction-pill">
+                  {direction === 'DE->BG'
+                    ? `${ui.sourceLang} → ${ui.targetLang}`
+                    : `${ui.targetLang} → ${ui.sourceLang}`}
+                </span>
+              </label>
+              <div class="term-row">
+                <span class="word">{getItemText(item)}</span>
+                <span class="arrow">{direction === 'DE->BG' ? '→' : '←'}</span>
+                <span class="translation">{getItemTranslation(item)}</span>
+              </div>
             </div>
             <div class="action-buttons">
-              {#if showQuickPractice}
-                <button
-                  class="practice-btn quick-practice"
-                  onclick={() => handleQuickPractice(item)}
-                  onkeydown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      handleQuickPractice(item);
-                    }
-                  }}
-                  aria-label={ui.quickPracticeLabel(getItemText(item))}
-                >
-                  <span class="btn-icon">⚡</span>
-                  <span class="btn-text">{ui.quickPractice}</span>
-                </button>
-              {/if}
               <button
-                class="practice-btn"
-                onclick={() => handleItemClick(item)}
-                onkeydown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    handleItemClick(item);
-                  }
-                }}
+                class="practice-btn primary"
+                onclick={(e) => handlePracticeClick(item, e)}
                 aria-label={`${ui.practice}: ${getItemText(item)}`}
               >
                 <span class="btn-icon">📝</span>
                 <span class="btn-text">{ui.practice}</span>
               </button>
+              {#if showQuickPractice}
+                <button
+                  class="practice-btn ghost"
+                  onclick={(e) => handleQuickPractice(item, e)}
+                  aria-label={ui.quickPracticeLabel(getItemText(item))}
+                  title={ui.quickPracticeLabel(getItemText(item))}
+                >
+                  <span class="btn-icon">⚡</span>
+                </button>
+              {/if}
             </div>
           </div>
 
@@ -303,13 +335,26 @@
             </div>
           </div>
 
-          {#if item.examples && item.examples.length > 0 && item.examples[0]}
-            <div class="examples-preview">
-              <div class="example-item">
-                <span class="example-text">
-                  {item.examples[0].sentence} - {item.examples[0].translation}
-                </span>
-              </div>
+          {#if item.enrichment?.sourceURL || (item.definitions && item.definitions.length > 0)}
+            <div class="enrichment-section" aria-label="Dictionary enrichment">
+              <div class="section-label">{ui.enrich}</div>
+              <EnrichmentBadge {item} variant="inline" />
+              <DefinitionLink {item} showIcon={true} showLabel={true} compact={true} />
+            </div>
+          {/if}
+
+          {#if item.examples && item.examples.length > 0}
+            <div class="examples-preview" aria-label={ui.examples}>
+              <div class="examples-header">{ui.examples}</div>
+              {#each item.examples.slice(0, 2) as example}
+                <div class="example-item">
+                  <span class="example-text">{example.sentence}</span>
+                  <span class="example-translation">{example.translation}</span>
+                  {#if example.context}
+                    <span class="example-context">{example.context}</span>
+                  {/if}
+                </div>
+              {/each}
             </div>
           {/if}
           </div>
@@ -350,6 +395,15 @@
       {/each}
     </div>
   {/if}
+  
+  <!-- Word Detail Modal -->
+  {#if selectedItemForDetail}
+    <WordDetailModal 
+      item={selectedItemForDetail} 
+      open={showDetailModal} 
+      onClose={closeDetailModal} 
+    />
+  {/if}
 </div>
 
 <style>
@@ -362,7 +416,7 @@
 
   .items-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
     gap: 1.5rem;
     width: 100%;
   }
@@ -376,6 +430,111 @@
     transform: scale(1.02);
     box-shadow: 0 6px 15px rgba(0, 123, 255, 0.2);
     z-index: 10;
+  }
+
+  .item-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .item-head-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+  }
+
+  .item-select {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #6c757d;
+  }
+
+  .direction-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #4338ca;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+
+  .term-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .word {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1f2937;
+  }
+
+  .arrow {
+    color: #6b7280;
+    font-weight: 700;
+  }
+
+  .translation {
+    font-size: 1rem;
+    color: #374151;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .practice-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border-radius: 10px;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid #e5e7eb;
+    background: white;
+    color: #111827;
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .practice-btn.primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+    box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
+  }
+
+  .practice-btn.primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+  }
+
+  .practice-btn.ghost {
+    background: #f9fafb;
+    color: #111827;
+    border-color: #e5e7eb;
+    padding: 0.5rem 0.65rem;
+  }
+
+  .practice-btn.ghost:hover {
+    background: #eef2ff;
+    transform: translateY(-1px);
+  }
+
+  .btn-icon {
+    font-size: 0.95rem;
   }
 
   /* Tooltip styles */
@@ -457,8 +616,35 @@
   .examples-preview {
     background: #f8f9fa;
     border-radius: 8px;
-    padding: 0.75rem;
+    padding: 0.9rem;
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .examples-header {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #1f2937;
+    letter-spacing: 0.01em;
+  }
+
+  .enrichment-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.75rem;
+    margin: 0.5rem 0 0.75rem;
+    border-radius: 8px;
+    background: #f0f7ff;
+    border: 1px solid #dbeafe;
+  }
+
+  .section-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1d4ed8;
   }
   
   .example-item {
@@ -468,30 +654,20 @@
   }
   
   .example-text {
-    font-weight: 500;
-    color: #495057;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .example-translation {
+    color: #374151;
+    font-size: 0.95rem;
+  }
+
+  .example-context {
+    color: #6b7280;
+    font-size: 0.85rem;
   }
   
-  /* Quick practice button styles */
-  .practice-btn.quick-practice {
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
-    border: none;
-    color: white;
-    font-weight: 600;
-    box-shadow: 0 2px 8px rgba(247, 147, 30, 0.3);
-  }
-
-  .practice-btn.quick-practice:hover {
-    background: linear-gradient(135deg, #e55a2b, #e5821a);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(247, 147, 30, 0.4);
-  }
-
-  .practice-btn.quick-practice:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(247, 147, 30, 0.3);
-  }
-
   .rich-context-details {
     background-color: #f0f4f8;
     padding: 1rem;
@@ -524,12 +700,18 @@
     .item-header {
       flex-direction: column;
       gap: 0.75rem;
+      align-items: flex-start;
+    }
+
+    .item-head-left {
+      width: 100%;
     }
     
     .action-buttons {
       display: flex;
       gap: 0.5rem;
-      justify-content: center;
+      justify-content: flex-start;
+      width: 100%;
     }
     
     .practice-btn {

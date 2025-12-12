@@ -25,7 +25,13 @@ pnpm run dev
 # 3. Open browser to http://localhost:5173
 ```
 
+## 🌐 Live Deployment
+
+🎉 **Access the live application:** [https://yungseepferd.github.io/BulgarianGermanLearningApp/](https://yungseepferd.github.io/BulgarianGermanLearningApp/)
+
 ---
+
+**Note:** The live deployment is updated with each successful push to the `main` branch.
 
 ## 📚 Documentation Hub
 

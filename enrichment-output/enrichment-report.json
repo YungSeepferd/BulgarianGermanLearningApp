@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-12-12T11:53:49.521Z",
+  "successCount": 8,
+  "errorCount": 2,
+  "totalProcessed": 10,
+  "batchFile": "vocabulary-batch-5a-colors.json",
+  "statistics": {
+    "averageConfidence": 0.85,
+    "duplicatesDetected": 0,
+    "duplicatesIgnored": 0,
+    "recordsEnriched": 8
+  },
+  "results": [
+    {
+      "index": 0,
+      "german": "N/A",
+      "bulgarian": "N/A",
+      "enriched": true,
+      "confidence": 0.88,
+      "sourceURL": "https://en.langenscheidt.com/..."
+    },
+    {
+      "index": 1,
+      "german": "N/A",
+      "bulgarian": "N/A",
+      "enriched": true,
+      "confidence": 0.88,
+      "sourceURL": "https://en.langenscheidt.com/..."
+    },
+    {
+      "index": 2,
+      "german": "N/A",
+      "bulgarian": "N/A",
+      "enriched": true,
+      "confidence": 0.88,
+      "sourceURL": "https://en.langenscheidt.com/..."
+    }
+  ]
+}

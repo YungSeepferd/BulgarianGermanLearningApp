@@ -42,8 +42,22 @@ export const VocabularyCategorySchema = z.enum([
   'grammar',
   'culture',
   'common_phrases',
-  'verbs',        // Verb-specific category
-  'uncategorized' // Fallback for migration
+  'verbs',
+  'adjectives',
+  'adverbs',
+  'pronouns',
+  'prepositions',
+  'conjunctions',
+  'interjections',
+  'uncategorized'
+]);
+
+// Schema for CEFR language proficiency levels
+export const CEFRLevelSchema = z.enum([
+  'A1',  // Elementary (Beginner)
+  'A2',  // Elementary (Post-beginner)
+  'B1',  // Intermediate (Threshold)
+  'B2'   // Upper-Intermediate (Vantage)
 ]);
 
 // Schema for vocabulary difficulty levels
@@ -88,6 +102,23 @@ export const VocabularyMetadataSchema = z.object({
   })).optional().describe('External dictionary links')
 });
 
+// Enrichment metadata (Langenscheidt pipeline or other external sources)
+export const EnrichmentSchema = z.object({
+  enriched: z.boolean().optional(),
+  confidence: z.number().min(0).max(1).optional(),
+  sourceURL: z.string().url().optional(),
+  enrichedAt: z.string().datetime().optional(),
+  source: z.string().optional()
+}).partial();
+
+// External dictionary definition links
+export const DefinitionLinkSchema = z.object({
+  source: z.string().optional(),
+  url: z.string().url(),
+  confidence: z.number().min(0).max(1).optional(),
+  language: z.string().optional()
+});
+
 /**
  * Schema for legacy ID formats (numeric, string, UUID)
  * Supports: UUIDs, numeric IDs, string IDs, and auto-generation
@@ -111,6 +142,7 @@ const BaseVocabularyItemSchema = z.object({
   bulgarian: z.string().min(1).max(100),
   partOfSpeech: PartOfSpeechSchema.default('noun'),
   difficulty: z.number().min(1).max(5).default(1).describe('1-5 scale where 1 is easiest'),
+  cefrLevel: CEFRLevelSchema.describe('CEFR proficiency level (A1/A2/B1/B2)'),
   categories: z.array(VocabularyCategorySchemaWithFallback).min(1).default(['uncategorized']),
   transliteration: z.string().optional(), // Latin characters for pronunciation
   emoji: z.string().optional(), // Visual representation
@@ -121,6 +153,8 @@ const BaseVocabularyItemSchema = z.object({
   })).optional(),
   contextualNuance: z.string().optional(),
   metadata: VocabularyMetadataSchema.optional(),
+  enrichment: EnrichmentSchema.optional(),
+  definitions: z.array(DefinitionLinkSchema).optional(),
   createdAt: z.union([
     z.date(),
     z.string().datetime().transform(str => new Date(str))
@@ -147,6 +181,7 @@ export const createFallbackItem = (input: unknown): VocabularyItem => {
     bulgarian: typeof input === 'object' && input && 'bulgarian' in input && typeof input.bulgarian === 'string' ? input.bulgarian : 'unknown',
     partOfSpeech: 'noun',
     difficulty: 1,
+    cefrLevel: 'A1',
     categories: ['uncategorized'],
     metadata: {},
     createdAt: new Date(),

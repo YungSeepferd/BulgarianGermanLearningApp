@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "updated": "2025-12-12",
+  "categories": [
+    { "name": "greetings", "description": "Greeting words and conversational openers." },
+    { "name": "numbers", "description": "Numerals and number-related terms." },
+    { "name": "family", "description": "Family members and relationships." },
+    { "name": "food", "description": "Food, drink, and related items/actions." },
+    { "name": "colors", "description": "Color adjectives and related terms." },
+    { "name": "animals", "description": "Animals and animal-related terms." },
+    { "name": "body", "description": "Body parts and health-related terms." },
+    { "name": "clothing", "description": "Clothing items and accessories." },
+    { "name": "home", "description": "Home and household items." },
+    { "name": "nature", "description": "Nature and outdoor elements." },
+    { "name": "transport", "description": "Transportation and travel terms." },
+    { "name": "technology", "description": "Technology and devices." },
+    { "name": "time", "description": "Time concepts, days, months, timekeeping." },
+    { "name": "weather", "description": "Weather and climate terms." },
+    { "name": "professions", "description": "Jobs and occupations." },
+    { "name": "places", "description": "Places, buildings, and locations." },
+    { "name": "grammar", "description": "Function words and grammar particles." },
+    { "name": "culture", "description": "Cultural and regional concepts." },
+    { "name": "everyday-phrases", "description": "Common conversational phrases." }
+  ],
+  "constraints": {
+    "maxCategoriesPerItem": 2,
+    "allowAmbiguityFlag": true,
+    "disallow": ["uncategorized", "common_phrases", "house", "verbs", "adjectives", "adverbs", "pronouns"]
+  }
+}
+{
+  "categories": [
+    "greetings",
+    "common_phrases",
+    "uncategorized",
+    "verbs",
+    "adjectives",
+    "adverbs",
+    "time",
+    "food",
+    "transport",
+    "body",
+    "nature",
+    "family",
+    "numbers",
+    "pronouns",
+    "colors",
+    "house",
+    "grammar",
+    "clothing",
+    "animals",
+    "professions",
+    "places",
+    "weather",
+    "technology"
+  ],
+  "descriptions": {},
+  "createdAt": "2025-12-12T15:43:47.701Z",
+  "updatedAt": "2025-12-12T15:43:47.702Z"
+}

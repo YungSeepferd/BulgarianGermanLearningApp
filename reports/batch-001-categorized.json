@@ -1,0 +1,2017 @@
+{
+  "batchId": "batch-001",
+  "createdAt": "2025-12-12T15:51:54.356Z",
+  "totalInBatch": 100,
+  "totalFlagged": 441,
+  "instructions": "Manual review batch for categorization decisions.\n\nFor each item:\n1. Review the term and its context\n2. Suggest appropriate categories (max 2) in \"suggestedCategories\"\n3. Enter final decision in \"decidedCategories\"\n4. Add rationale for the decision\n5. Mark \"approved\" when reviewed\n\nCategories: greetings, numbers, family, food, colors, animals, body-parts, clothing, home, nature, transport, technology, time, weather, professions, places, grammar, culture, everyday-phrases",
+  "items": [
+    {
+      "batchIndex": 1,
+      "itemId": "zusammen_bg_zaedno_sample",
+      "german": "zusammen",
+      "bulgarian": "заедно",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=adverb, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 2,
+      "itemId": "mensch",
+      "german": "Mensch",
+      "bulgarian": "Човек",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=noun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 3,
+      "itemId": "dorf",
+      "german": "Dorf",
+      "bulgarian": "Село",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "nature",
+        "places"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=noun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 4,
+      "itemId": "sein",
+      "german": "sein",
+      "bulgarian": "Съм",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=verb, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 5,
+      "itemId": "machen",
+      "german": "machen",
+      "bulgarian": "Правя",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=verb, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 6,
+      "itemId": "sprechen",
+      "german": "sprechen",
+      "bulgarian": "Говоря",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=verb, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 7,
+      "itemId": "horen",
+      "german": "hören",
+      "bulgarian": "Чувам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=verb, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 8,
+      "itemId": "schon",
+      "german": "schön",
+      "bulgarian": "Красив",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=adjective, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 9,
+      "itemId": "dann",
+      "german": "dann",
+      "bulgarian": "Тогава",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=adverb, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 10,
+      "itemId": "selten",
+      "german": "selten",
+      "bulgarian": "Редко",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=adverb, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 11,
+      "itemId": "schlecht_01",
+      "german": "schlecht",
+      "bulgarian": "Зле",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=adverb, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 12,
+      "itemId": "leben",
+      "german": "leben",
+      "bulgarian": "Живея",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=3, POS=verb, semantic matching",
+      "approved": true,
+      "cefrLevel": "B1"
+    },
+    {
+      "batchIndex": 13,
+      "itemId": "lernen",
+      "german": "lernen",
+      "bulgarian": "Уча",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=3, POS=verb, semantic matching",
+      "approved": true,
+      "cefrLevel": "B1"
+    },
+    {
+      "batchIndex": 14,
+      "itemId": "zehn",
+      "german": "zehn",
+      "bulgarian": "Десет",
+      "currentCategories": [
+        "numbers",
+        "body"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "body"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "numbers"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=number, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 15,
+      "itemId": "dreizehn",
+      "german": "dreizehn",
+      "bulgarian": "Тринадесет",
+      "currentCategories": [
+        "numbers",
+        "body"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "body"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "numbers"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=number, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 16,
+      "itemId": "viele",
+      "german": "viele",
+      "bulgarian": "Много",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=adjective, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 17,
+      "itemId": "wenig",
+      "german": "wenig",
+      "bulgarian": "Малко",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=adjective, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 18,
+      "itemId": "alle",
+      "german": "alle",
+      "bulgarian": "Всички",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=adjective, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 19,
+      "itemId": "keiner",
+      "german": "keiner",
+      "bulgarian": "Никой",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=adjective, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 20,
+      "itemId": "entschuldige",
+      "german": "Entschuldige",
+      "bulgarian": "Извинявай",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 21,
+      "itemId": "arzt",
+      "german": "Arzt",
+      "bulgarian": "Лекар",
+      "currentCategories": [
+        "body"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "body"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "professions"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=noun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 22,
+      "itemId": "krankenhaus",
+      "german": "Krankenhaus",
+      "bulgarian": "Болница",
+      "currentCategories": [
+        "body"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "body"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "places"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=noun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 23,
+      "itemId": "apotheke",
+      "german": "Apotheke",
+      "bulgarian": "Аптека",
+      "currentCategories": [
+        "body"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "body"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=noun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 24,
+      "itemId": "medikamente",
+      "german": "Medikamente",
+      "bulgarian": "Лекарства",
+      "currentCategories": [
+        "body"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "body"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=noun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 25,
+      "itemId": "notfall",
+      "german": "Notfall",
+      "bulgarian": "Спешно",
+      "currentCategories": [
+        "body"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "body"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=noun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 26,
+      "itemId": "schmerz",
+      "german": "Schmerz",
+      "bulgarian": "Болка",
+      "currentCategories": [
+        "body"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "body"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=noun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 27,
+      "itemId": "gesundheit",
+      "german": "Gesundheit",
+      "bulgarian": "Здраве",
+      "currentCategories": [
+        "body"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "body"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=noun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 28,
+      "itemId": "fieber",
+      "german": "Fieber",
+      "bulgarian": "Треска",
+      "currentCategories": [
+        "body"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "body"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=noun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 29,
+      "itemId": "erkaltung",
+      "german": "Erkältung",
+      "bulgarian": "Настинка",
+      "currentCategories": [
+        "body"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "body"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=noun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 30,
+      "itemId": "hilfe",
+      "german": "Hilfe",
+      "bulgarian": "Помощ",
+      "currentCategories": [
+        "body"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "body"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "greetings"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=noun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 31,
+      "itemId": "geld",
+      "german": "Geld",
+      "bulgarian": "Пари",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 32,
+      "itemId": "preis",
+      "german": "Preis",
+      "bulgarian": "Цена",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 33,
+      "itemId": "euro",
+      "german": "Euro",
+      "bulgarian": "Евро",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 34,
+      "itemId": "lew",
+      "german": "Lew",
+      "bulgarian": "Лев",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 35,
+      "itemId": "rechnung",
+      "german": "Rechnung",
+      "bulgarian": "Сметка",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 36,
+      "itemId": "quittung",
+      "german": "Quittung",
+      "bulgarian": "Касова бележка",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=3, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "B1"
+    },
+    {
+      "batchIndex": 37,
+      "itemId": "rabatt",
+      "german": "Rabatt",
+      "bulgarian": "Отстъпка",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 38,
+      "itemId": "zaedno_001",
+      "german": "zusammen",
+      "bulgarian": "заедно",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=adverb, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 39,
+      "itemId": "kniga_006",
+      "german": "Buch",
+      "bulgarian": "книга",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "culture"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 40,
+      "itemId": "a1_verb_001",
+      "german": "wollen / möchten",
+      "bulgarian": "Искам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 41,
+      "itemId": "a1_verb_002",
+      "german": "schlafen",
+      "bulgarian": "Спя",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 42,
+      "itemId": "a1_verb_005",
+      "german": "sehen",
+      "bulgarian": "Видя",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 43,
+      "itemId": "a1_verb_006",
+      "german": "können",
+      "bulgarian": "Мога",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 44,
+      "itemId": "a1_verb_007",
+      "german": "machen / tun",
+      "bulgarian": "Правя",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 45,
+      "itemId": "a1_question_001",
+      "german": "wer",
+      "bulgarian": "Кой",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=pronoun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 46,
+      "itemId": "a1_question_002",
+      "german": "was",
+      "bulgarian": "Какво",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=pronoun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 47,
+      "itemId": "a1_verb_008",
+      "german": "sprechen / reden",
+      "bulgarian": "Говоря",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 48,
+      "itemId": "a1_verb_009",
+      "german": "hören / zuhören",
+      "bulgarian": "Слушам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 49,
+      "itemId": "a1_verb_010",
+      "german": "lesen",
+      "bulgarian": "Чета",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 50,
+      "itemId": "a1_verb_011",
+      "german": "schreiben",
+      "bulgarian": "Пиша",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 51,
+      "itemId": "a1_verb_012",
+      "german": "leben / wohnen",
+      "bulgarian": "Живея",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 52,
+      "itemId": "a1_verb_013",
+      "german": "anfangen / beginnen",
+      "bulgarian": "Започвам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 53,
+      "itemId": "a1_verb_014",
+      "german": "beenden / abschließen",
+      "bulgarian": "Завършвам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 54,
+      "itemId": "a1_verb_015",
+      "german": "warten",
+      "bulgarian": "Чакам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 55,
+      "itemId": "a1_verb_017",
+      "german": "finden",
+      "bulgarian": "Намирам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 56,
+      "itemId": "a1_verb_018",
+      "german": "helfen",
+      "bulgarian": "Помагам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 57,
+      "itemId": "a1_verb_019",
+      "german": "öffnen / aufmachen",
+      "bulgarian": "Отварям",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 58,
+      "itemId": "a1_verb_020",
+      "german": "schließen / zumachen",
+      "bulgarian": "Затварям",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 59,
+      "itemId": "a1_verb_021",
+      "german": "verkaufen",
+      "bulgarian": "Продавам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 60,
+      "itemId": "a1_verb_022",
+      "german": "bezahlen / zahlen",
+      "bulgarian": "Плащам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 61,
+      "itemId": "a1_verb_023",
+      "german": "sagen",
+      "bulgarian": "Казвам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "culture"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 62,
+      "itemId": "a1_verb_024",
+      "german": "denken / meinen",
+      "bulgarian": "Мисля",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 63,
+      "itemId": "a1_food_013",
+      "german": "die Milch",
+      "bulgarian": "Мляко",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 64,
+      "itemId": "a1_adj_004",
+      "german": "gut",
+      "bulgarian": "Добър",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 65,
+      "itemId": "a1_adj_005",
+      "german": "schlecht",
+      "bulgarian": "Лош",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 66,
+      "itemId": "a1_adj_006",
+      "german": "neu",
+      "bulgarian": "Нов",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 67,
+      "itemId": "a1_adj_007",
+      "german": "alt",
+      "bulgarian": "Стар",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 68,
+      "itemId": "a1_question_003",
+      "german": "wann",
+      "bulgarian": "Кога",
+      "currentCategories": [
+        "pronouns"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "pronouns"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=pronoun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 69,
+      "itemId": "a1_question_004",
+      "german": "wo",
+      "bulgarian": "Къде",
+      "currentCategories": [
+        "pronouns"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "pronouns"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=pronoun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 70,
+      "itemId": "a1_question_005",
+      "german": "warum",
+      "bulgarian": "Защо",
+      "currentCategories": [
+        "pronouns"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "pronouns"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=pronoun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 71,
+      "itemId": "a1_question_006",
+      "german": "wie",
+      "bulgarian": "Как",
+      "currentCategories": [
+        "pronouns"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "pronouns"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=pronoun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 72,
+      "itemId": "a1_question_007",
+      "german": "wie viel, wie viele",
+      "bulgarian": "Колко",
+      "currentCategories": [
+        "pronouns"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "pronouns"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=pronoun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 73,
+      "itemId": "a1_question_008",
+      "german": "wessen",
+      "bulgarian": "Чий",
+      "currentCategories": [
+        "pronouns"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "pronouns"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=pronoun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 74,
+      "itemId": "a1_question_009",
+      "german": "was für ein, welcher Art",
+      "bulgarian": "Какъв",
+      "currentCategories": [
+        "pronouns"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "pronouns"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=pronoun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 75,
+      "itemId": "a1_question_010",
+      "german": "woher",
+      "bulgarian": "Откъде",
+      "currentCategories": [
+        "pronouns"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "pronouns"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=pronoun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 76,
+      "itemId": "a1_question_011",
+      "german": "wohin",
+      "bulgarian": "Накъде",
+      "currentCategories": [
+        "pronouns"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "pronouns"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=pronoun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 77,
+      "itemId": "a1_question_012",
+      "german": "ob",
+      "bulgarian": "Дали",
+      "currentCategories": [
+        "pronouns"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "pronouns"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=pronoun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 78,
+      "itemId": "a1_adj_008",
+      "german": "groß",
+      "bulgarian": "Голям",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 79,
+      "itemId": "a1_adj_009",
+      "german": "klein",
+      "bulgarian": "Малък",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 80,
+      "itemId": "a1_adj_010",
+      "german": "hoch, groß (von Personen)",
+      "bulgarian": "Висок",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 81,
+      "itemId": "a1_adj_011",
+      "german": "niedrig, klein (von Personen)",
+      "bulgarian": "Нисък",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 82,
+      "itemId": "a1_adj_012",
+      "german": "lang",
+      "bulgarian": "Дълъг",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 83,
+      "itemId": "a1_adj_013",
+      "german": "kurz",
+      "bulgarian": "Къс",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 84,
+      "itemId": "a1_adj_014",
+      "german": "dick, fett",
+      "bulgarian": "Дебел",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 85,
+      "itemId": "a1_adj_015",
+      "german": "dünn",
+      "bulgarian": "Тънък",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 86,
+      "itemId": "a1_adj_016",
+      "german": "schön, hübsch, nett",
+      "bulgarian": "Хубав",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 87,
+      "itemId": "a1_adj_017",
+      "german": "hässlich",
+      "bulgarian": "Грозен",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 88,
+      "itemId": "a1_verb_038",
+      "german": "schauen, sehen, ansehen",
+      "bulgarian": "Гледам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 89,
+      "itemId": "a1_verb_039",
+      "german": "gehen, fahren (weggehen)",
+      "bulgarian": "Отивам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 90,
+      "itemId": "a1_verb_040",
+      "german": "kommen",
+      "bulgarian": "Идвам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 91,
+      "itemId": "a1_verb_041",
+      "german": "aufstehen, werden",
+      "bulgarian": "Ставам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 92,
+      "itemId": "a1_verb_042",
+      "german": "sich setzen, sich hinsetzen",
+      "bulgarian": "Сядам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 93,
+      "itemId": "a1_verb_043",
+      "german": "sich hinlegen, schlafen gehen",
+      "bulgarian": "Лягам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 94,
+      "itemId": "a1_verb_044",
+      "german": "tragen, anhaben",
+      "bulgarian": "Нося",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 95,
+      "itemId": "a1_verb_045",
+      "german": "kaufen",
+      "bulgarian": "Купувам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 96,
+      "itemId": "a1_verb_046",
+      "german": "nehmen, holen",
+      "bulgarian": "Взимам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=2, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A2"
+    },
+    {
+      "batchIndex": 97,
+      "itemId": "a1_verb_047",
+      "german": "geben",
+      "bulgarian": "Давам",
+      "currentCategories": [
+        "uncategorized"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "uncategorized"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=phrase, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 98,
+      "itemId": "a1_house_001",
+      "german": "das Haus",
+      "bulgarian": "Къща",
+      "currentCategories": [
+        "house"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "house"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=noun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 99,
+      "itemId": "a1_house_002",
+      "german": "das Heim, das Zuhause",
+      "bulgarian": "Дом",
+      "currentCategories": [
+        "house"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "house"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=noun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    },
+    {
+      "batchIndex": 100,
+      "itemId": "a1_house_003",
+      "german": "das Zimmer",
+      "bulgarian": "Стая",
+      "currentCategories": [
+        "house"
+      ],
+      "issue": "invalid-categories",
+      "invalidCategories": [
+        "house"
+      ],
+      "suggestedCategories": [],
+      "decidedCategories": [
+        "everyday-phrases"
+      ],
+      "rationale": "Assigned based on difficulty=1, POS=noun, semantic matching",
+      "approved": true,
+      "cefrLevel": "A1"
+    }
+  ],
+  "metadata": {
+    "categorizedAt": "2025-12-12T16:04:57.915Z",
+    "categorizedBy": "ai-agent-manual-review",
+    "version": 2
+  }
+}

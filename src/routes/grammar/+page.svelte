@@ -4,23 +4,24 @@
   type GrammarRule = {
     rule: string;
     example: string;
-    description: string;
+    description_de: string;
+    description_bg: string;
     area: 'Verb Forms' | 'Cases' | 'Particles' | 'Word Order';
   };
 
   const baseRules: GrammarRule[] = [
-    { rule: 'Сегашно време', example: 'Аз казвам', description: 'Сегашно време на свършени и несвършени глаголи', area: 'Verb Forms' },
-    { rule: 'Минало свършено', example: 'Аз казах', description: 'Завършено действие в миналото', area: 'Verb Forms' },
-    { rule: 'Минало несвършено', example: 'Аз казвах', description: 'Повтарящо се или продължително действие в миналото', area: 'Verb Forms' },
-    { rule: 'Бъдеще време', example: 'Ще кажа', description: "'Ще' + сегашно време", area: 'Verb Forms' },
-    { rule: 'Условно наклонение', example: 'Бих казал', description: 'Бих + причастие за хипотетични действия', area: 'Verb Forms' },
-    { rule: 'Повелително наклонение', example: 'Казвай!', description: 'Заповеди и инструкции', area: 'Verb Forms' },
-    { rule: 'Винителен падеж (местоимения)', example: 'Виждам го', description: 'Обектна форма на личните местоимения', area: 'Cases' },
-    { rule: 'Дателен падеж (местоимения)', example: 'Дадох му', description: 'Косвен обект с дателни местоимения', area: 'Cases' },
-    { rule: 'Частица „се“', example: 'Смея се', description: 'Възвратни глаголи и безлични конструкции', area: 'Particles' },
-    { rule: 'Неутрално утвърдително „че“', example: 'Знам, че идва', description: 'Подчинено изречение с „че“', area: 'Particles' },
-    { rule: 'Позиция на прилагателното', example: 'Синя къща', description: 'Прилагателното пред съществителното', area: 'Word Order' },
-    { rule: 'Място на отрицанието „не“', example: 'Не идвам', description: 'Отрицанието стои пред глагола', area: 'Word Order' }
+    { rule: 'Сегашно време / Präsens', example: 'Аз казвам / Ich sage', description_de: 'Präsens - ausgedrückt durch das Präsenspartikel „ще" + Präsensstamm', description_bg: 'Сегашно време на свършени и несвършени глаголи', area: 'Verb Forms' },
+    { rule: 'Минало свършено / Perfekt', example: 'Аз казах / Ich habe gesagt', description_de: 'Perfekt - abgeschlossene Handlung in der Vergangenheit', description_bg: 'Завършено действие в миналото', area: 'Verb Forms' },
+    { rule: 'Минало несвършено / Imperfekt', example: 'Аз казвах / Ich sagte', description_de: 'Imperfekt - wiederholte oder andauernde Handlung in der Vergangenheit', description_bg: 'Повтарящо се или продължително действие в миналото', area: 'Verb Forms' },
+    { rule: 'Бъдеще време / Futur', example: 'Ще кажа / Ich werde sagen', description_de: 'Futur - zukünftige Handlung, ausgedrückt durch „ще" + Präsens', description_bg: "'Ще' + сегашно време", area: 'Verb Forms' },
+    { rule: 'Условно наклонение / Konditional', example: 'Бих казал / Ich würde sagen', description_de: 'Konditional - hypothetische Handlungen, ausgedrückt durch „бих" + Partizip', description_bg: 'Бих + причастие за хипотетични действия', area: 'Verb Forms' },
+    { rule: 'Повелително наклонение / Imperativ', example: 'Казвай! / Sag!', description_de: 'Imperativ - Befehle und Anweisungen', description_bg: 'Заповеди и инструкции', area: 'Verb Forms' },
+    { rule: 'Винителен падеж / Akkusativ', example: 'Виждам го / Ich sehe ihn', description_de: 'Akkusativ - direktes Objekt; auch nach bestimmten Präpositionen', description_bg: 'Обектна форма на личните местоимения', area: 'Cases' },
+    { rule: 'Дателен падеж / Dativ', example: 'Дадох му / Ich gebe ihm', description_de: 'Dativ - indirektes Objekt; nach Präpositionen wie „zu", „mit"', description_bg: 'Косвен обект с дателни местоимения', area: 'Cases' },
+    { rule: 'Частица „се" / Reflexivpronomen „sich"', example: 'Смея се / Ich fürchte mich', description_de: 'Reflexive Verben - zeigen Handlung, die sich auf das Subjekt bezieht', description_bg: 'Възвратни глаголи и безлични конструкции', area: 'Particles' },
+    { rule: 'Подчинено с „че" / Konjunktion „dass"', example: 'Знам, че идва / Ich weiß, dass er kommt', description_de: 'Nebensätze mit „dass" - auch nach Verben wie „sagen", „denken", „wissen"', description_bg: 'Подчинено изречение с „че"', area: 'Particles' },
+    { rule: 'Позиция на прилагателното / Adjektivstellung', example: 'Синя къща / Blaues Haus', description_de: 'Adjektive vor dem Substantiv; Kongruenz mit Geschlecht und Kasus', description_bg: 'Прилагателното пред съществителното', area: 'Word Order' },
+    { rule: 'Отрицание „не" / Negation „nicht"', example: 'Не идвам / Ich komme nicht', description_de: 'Negation „nicht" vor dem Verb; oder am Ende des Satzes bei Hervorhebung', description_bg: 'Отрицанието стои пред глагола', area: 'Word Order' }
   ];
 
   let grammarRules = $state<GrammarRule[]>(baseRules);
@@ -55,7 +56,8 @@
       return (
         rule.rule.toLowerCase().includes(query) ||
         rule.example.toLowerCase().includes(query) ||
-        rule.description.toLowerCase().includes(query)
+        rule.description_de.toLowerCase().includes(query) ||
+        rule.description_bg.toLowerCase().includes(query)
       );
     })
   );
@@ -176,7 +178,7 @@
                     {#if showExamples}
                       <td>{rule.example}</td>
                     {/if}
-                    <td>{rule.description}</td>
+                    <td>{appState.languageMode === 'DE_BG' ? rule.description_de : rule.description_bg}</td>
                     <td>{getAreaLabel(rule.area)}</td>
                   </tr>
                 {/each}

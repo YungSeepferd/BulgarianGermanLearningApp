@@ -44,7 +44,7 @@
       "partOfSpeech": "adverb",
       "difficulty": 2,
       "categories": [
-        "common_phrases"
+        "everyday-phrases"
       ],
       "literalBreakdown": [
         {
@@ -82,8 +82,11 @@
             "label": "Duden",
             "url": "https://www.duden.de/rechtschreibung/zusammen"
           }
-        ]
-      }
+        ],
+        "categorizedAt": "2025-12-12T16:05:17.673Z",
+        "categorizedBy": "ai-agent-batch-001"
+      },
+      "cefrLevel": "A2"
     },
     {
       "id": "zdravej_001",
@@ -316,7 +319,8 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "common_phrases"
+        "greetings",
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -348,7 +352,8 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "common_phrases"
+        "greetings",
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -380,7 +385,8 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "common_phrases"
+        "greetings",
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -412,7 +418,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "common_phrases"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -444,7 +450,7 @@
       "partOfSpeech": "noun",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -463,11 +469,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "familie",
@@ -476,7 +485,7 @@
       "partOfSpeech": "noun",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "family"
       ],
       "examples": [],
       "notes": {
@@ -508,7 +517,7 @@
       "partOfSpeech": "noun",
       "difficulty": 1,
       "categories": [
-        "house"
+        "home"
       ],
       "examples": [],
       "notes": {
@@ -540,7 +549,7 @@
       "partOfSpeech": "noun",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "places"
       ],
       "examples": [],
       "notes": {
@@ -604,7 +613,8 @@
       "partOfSpeech": "noun",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "nature",
+        "places"
       ],
       "examples": [],
       "notes": {
@@ -624,11 +634,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "essen",
@@ -637,7 +650,7 @@
       "partOfSpeech": "noun",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "food"
       ],
       "examples": [],
       "notes": {
@@ -669,7 +682,7 @@
       "partOfSpeech": "verb",
       "difficulty": 2,
       "categories": [
-        "verbs"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -688,11 +701,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "machen",
@@ -701,7 +717,7 @@
       "partOfSpeech": "verb",
       "difficulty": 2,
       "categories": [
-        "verbs"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -719,11 +735,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "sprechen",
@@ -732,7 +751,7 @@
       "partOfSpeech": "verb",
       "difficulty": 2,
       "categories": [
-        "verbs"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -750,11 +769,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "horen",
@@ -763,7 +785,7 @@
       "partOfSpeech": "verb",
       "difficulty": 2,
       "categories": [
-        "verbs"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -781,11 +803,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "schon",
@@ -794,7 +819,7 @@
       "partOfSpeech": "adjective",
       "difficulty": 1,
       "categories": [
-        "adjectives"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -813,11 +838,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "dann",
@@ -826,7 +854,7 @@
       "partOfSpeech": "adverb",
       "difficulty": 1,
       "categories": [
-        "adverbs"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -844,11 +872,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "selten",
@@ -857,7 +888,7 @@
       "partOfSpeech": "adverb",
       "difficulty": 1,
       "categories": [
-        "adverbs"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -875,11 +906,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "schlecht_01",
@@ -888,7 +922,7 @@
       "partOfSpeech": "adverb",
       "difficulty": 1,
       "categories": [
-        "adverbs"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -906,11 +940,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "tisch",
@@ -919,7 +956,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "house"
+        "home"
       ],
       "examples": [],
       "notes": {
@@ -951,7 +988,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "house"
+        "home"
       ],
       "examples": [],
       "notes": {
@@ -983,7 +1020,8 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "house"
+        "food",
+        "home"
       ],
       "examples": [],
       "notes": {
@@ -1015,7 +1053,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "house"
+        "home"
       ],
       "examples": [],
       "notes": {
@@ -1080,7 +1118,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "uncategorized"
+        "places"
       ],
       "examples": [],
       "notes": {
@@ -1112,7 +1150,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "uncategorized"
+        "nature"
       ],
       "examples": [],
       "notes": {
@@ -1144,7 +1182,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "uncategorized"
+        "time"
       ],
       "examples": [],
       "notes": {
@@ -1176,7 +1214,7 @@
       "partOfSpeech": "verb",
       "difficulty": 3,
       "categories": [
-        "verbs"
+        "transport"
       ],
       "examples": [],
       "notes": {
@@ -1207,7 +1245,7 @@
       "partOfSpeech": "verb",
       "difficulty": 3,
       "categories": [
-        "verbs"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -1225,11 +1263,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "B1"
     },
     {
       "id": "lernen",
@@ -1238,7 +1279,7 @@
       "partOfSpeech": "verb",
       "difficulty": 3,
       "categories": [
-        "verbs"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -1256,11 +1297,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "B1"
     },
     {
       "id": "eins",
@@ -1566,11 +1610,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "elf",
@@ -1683,11 +1730,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "zwanzig",
@@ -1735,7 +1785,7 @@
       "partOfSpeech": "adjective",
       "difficulty": 2,
       "categories": [
-        "adjectives"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -1753,11 +1803,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "wenig",
@@ -1766,7 +1819,7 @@
       "partOfSpeech": "adjective",
       "difficulty": 2,
       "categories": [
-        "adjectives"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -1784,11 +1837,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "alle",
@@ -1797,7 +1853,7 @@
       "partOfSpeech": "adjective",
       "difficulty": 2,
       "categories": [
-        "adjectives"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -1815,11 +1871,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "einige",
@@ -1828,7 +1887,7 @@
       "partOfSpeech": "adjective",
       "difficulty": 2,
       "categories": [
-        "adjectives"
+        "numbers"
       ],
       "examples": [],
       "notes": {
@@ -1859,7 +1918,7 @@
       "partOfSpeech": "adjective",
       "difficulty": 2,
       "categories": [
-        "adjectives"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -1877,11 +1936,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "samstag",
@@ -2139,7 +2201,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 2,
       "categories": [
-        "common_phrases"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -2170,7 +2232,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 2,
       "categories": [
-        "common_phrases"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -2201,7 +2263,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 2,
       "categories": [
-        "common_phrases"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -2219,11 +2281,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "darf_ich",
@@ -2232,7 +2297,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 2,
       "categories": [
-        "common_phrases"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -2821,7 +2886,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "body"
+        "professions"
       ],
       "examples": [],
       "notes": {
@@ -2839,11 +2904,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "krankenhaus",
@@ -2852,7 +2920,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "body"
+        "places"
       ],
       "examples": [],
       "notes": {
@@ -2871,11 +2939,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "apotheke",
@@ -2884,7 +2955,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "body"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -2902,11 +2973,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "medikamente",
@@ -2915,7 +2989,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "body"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -2933,11 +3007,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "notfall",
@@ -2946,7 +3023,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "body"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -2964,11 +3041,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "schmerz",
@@ -2977,7 +3057,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "body"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -2995,11 +3075,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "gesundheit",
@@ -3008,7 +3091,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "body"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -3026,11 +3109,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "fieber",
@@ -3039,7 +3125,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "body"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -3057,11 +3143,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "erkaltung",
@@ -3070,7 +3159,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "body"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -3088,11 +3177,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "hilfe",
@@ -3101,7 +3193,7 @@
       "partOfSpeech": "noun",
       "difficulty": 2,
       "categories": [
-        "body"
+        "greetings"
       ],
       "examples": [],
       "notes": {
@@ -3119,11 +3211,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "sonne",
@@ -3724,7 +3819,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 2,
       "categories": [
-        "common_phrases"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -3742,11 +3837,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "preis",
@@ -3755,7 +3853,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 2,
       "categories": [
-        "common_phrases"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -3773,11 +3871,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "euro",
@@ -3786,7 +3887,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 2,
       "categories": [
-        "common_phrases"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -3804,11 +3905,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "lew",
@@ -3817,7 +3921,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 2,
       "categories": [
-        "common_phrases"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -3836,11 +3940,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "rechnung",
@@ -3849,7 +3956,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 2,
       "categories": [
-        "common_phrases"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -3867,11 +3974,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "quittung",
@@ -3880,7 +3990,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 3,
       "categories": [
-        "common_phrases"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -3898,11 +4008,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "B1"
     },
     {
       "id": "rabatt",
@@ -3911,7 +4024,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 2,
       "categories": [
-        "common_phrases"
+        "everyday-phrases"
       ],
       "examples": [],
       "notes": {
@@ -3929,11 +4042,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.674Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "einkaufen",
@@ -3942,7 +4058,7 @@
       "partOfSpeech": "verb",
       "difficulty": 3,
       "categories": [
-        "verbs"
+        "numbers"
       ],
       "examples": [],
       "notes": {
@@ -3973,7 +4089,7 @@
       "partOfSpeech": "adverb",
       "difficulty": 1,
       "categories": [
-        "adverbs"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -4006,11 +4122,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "dobur_den_002",
@@ -4056,7 +4175,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "house"
+        "home"
       ],
       "examples": [
         {
@@ -4142,7 +4261,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "common_phrases"
+        "culture"
       ],
       "examples": [
         {
@@ -4172,11 +4291,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_number_014",
@@ -4937,7 +5059,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -4971,11 +5093,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_002",
@@ -4984,7 +5109,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5018,11 +5143,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_003",
@@ -5031,7 +5159,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "food"
       ],
       "examples": [
         {
@@ -5078,7 +5206,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "food"
       ],
       "examples": [
         {
@@ -5125,7 +5253,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5159,11 +5287,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_006",
@@ -5172,7 +5303,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5206,11 +5337,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_007",
@@ -5219,7 +5353,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5253,11 +5387,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_question_001",
@@ -5266,7 +5403,7 @@
       "partOfSpeech": "pronoun",
       "difficulty": 1,
       "categories": [
-        "pronouns"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5306,11 +5443,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_question_002",
@@ -5319,7 +5459,7 @@
       "partOfSpeech": "pronoun",
       "difficulty": 1,
       "categories": [
-        "pronouns"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5359,11 +5499,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_008",
@@ -5372,7 +5515,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5412,11 +5555,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_009",
@@ -5425,7 +5571,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5465,11 +5611,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_010",
@@ -5478,7 +5627,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5518,11 +5667,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_011",
@@ -5531,7 +5683,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5571,11 +5723,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_012",
@@ -5584,7 +5739,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5624,11 +5779,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_013",
@@ -5637,7 +5795,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5677,11 +5835,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_014",
@@ -5690,7 +5851,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5730,11 +5891,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_015",
@@ -5743,7 +5907,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5783,11 +5947,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_017",
@@ -5796,7 +5963,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5836,11 +6003,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_018",
@@ -5849,7 +6019,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5889,11 +6059,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_019",
@@ -5902,7 +6075,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5942,11 +6115,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_020",
@@ -5955,7 +6131,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -5995,11 +6171,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_021",
@@ -6008,7 +6187,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -6048,11 +6227,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_022",
@@ -6061,7 +6243,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -6101,11 +6283,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_023",
@@ -6114,7 +6299,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "culture"
       ],
       "examples": [
         {
@@ -6154,11 +6339,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_024",
@@ -6167,7 +6355,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -6207,11 +6395,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_food_012",
@@ -6273,7 +6464,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -6313,11 +6504,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_food_014",
@@ -6538,7 +6732,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -6578,11 +6772,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_adj_005",
@@ -6591,7 +6788,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -6631,11 +6828,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_adj_006",
@@ -6644,7 +6844,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -6684,11 +6884,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_adj_007",
@@ -6697,7 +6900,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -6737,11 +6940,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_question_003",
@@ -6750,7 +6956,7 @@
       "partOfSpeech": "pronoun",
       "difficulty": 1,
       "categories": [
-        "pronouns"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -6790,11 +6996,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_question_004",
@@ -6803,7 +7012,7 @@
       "partOfSpeech": "pronoun",
       "difficulty": 1,
       "categories": [
-        "pronouns"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -6843,11 +7052,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_question_005",
@@ -6856,7 +7068,7 @@
       "partOfSpeech": "pronoun",
       "difficulty": 1,
       "categories": [
-        "pronouns"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -6896,11 +7108,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_question_006",
@@ -6909,7 +7124,7 @@
       "partOfSpeech": "pronoun",
       "difficulty": 1,
       "categories": [
-        "pronouns"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -6949,11 +7164,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_question_007",
@@ -6962,7 +7180,7 @@
       "partOfSpeech": "pronoun",
       "difficulty": 1,
       "categories": [
-        "pronouns"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -7002,11 +7220,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_question_008",
@@ -7015,7 +7236,7 @@
       "partOfSpeech": "pronoun",
       "difficulty": 2,
       "categories": [
-        "pronouns"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -7061,11 +7282,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "a1_question_009",
@@ -7074,7 +7298,7 @@
       "partOfSpeech": "pronoun",
       "difficulty": 2,
       "categories": [
-        "pronouns"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -7120,11 +7344,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "a1_question_010",
@@ -7133,7 +7360,7 @@
       "partOfSpeech": "pronoun",
       "difficulty": 1,
       "categories": [
-        "pronouns"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -7173,11 +7400,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_question_011",
@@ -7186,7 +7416,7 @@
       "partOfSpeech": "pronoun",
       "difficulty": 1,
       "categories": [
-        "pronouns"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -7226,11 +7456,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_question_012",
@@ -7239,7 +7472,7 @@
       "partOfSpeech": "pronoun",
       "difficulty": 2,
       "categories": [
-        "pronouns"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -7279,11 +7512,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "a1_food_018",
@@ -8352,7 +8588,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -8392,11 +8628,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_adj_009",
@@ -8405,7 +8644,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -8445,11 +8684,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_adj_010",
@@ -8458,7 +8700,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -8498,11 +8740,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_adj_011",
@@ -8511,7 +8756,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -8551,11 +8796,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_adj_012",
@@ -8564,7 +8812,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 2,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -8604,11 +8852,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "a1_adj_013",
@@ -8617,7 +8868,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 2,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -8657,11 +8908,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "a1_adj_014",
@@ -8670,7 +8924,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -8710,11 +8964,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_adj_015",
@@ -8723,7 +8980,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 2,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -8763,11 +9020,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "a1_adj_016",
@@ -8776,7 +9036,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -8816,11 +9076,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_adj_017",
@@ -8829,7 +9092,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -8869,11 +9132,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_038",
@@ -8882,7 +9148,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -8922,11 +9188,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_039",
@@ -8935,7 +9204,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -8975,11 +9244,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_040",
@@ -8988,7 +9260,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -9028,11 +9300,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_041",
@@ -9041,7 +9316,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -9081,11 +9356,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_042",
@@ -9094,7 +9372,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -9134,11 +9412,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_043",
@@ -9147,7 +9428,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -9187,11 +9468,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_044",
@@ -9200,7 +9484,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -9240,11 +9524,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_045",
@@ -9253,7 +9540,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -9293,11 +9580,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_verb_046",
@@ -9306,7 +9596,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 2,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -9346,11 +9636,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A2"
     },
     {
       "id": "a1_verb_047",
@@ -9359,7 +9652,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -9399,11 +9692,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_time_001",
@@ -10578,7 +10874,7 @@
       "partOfSpeech": "noun",
       "difficulty": 1,
       "categories": [
-        "house"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -10618,11 +10914,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_house_002",
@@ -10631,7 +10930,7 @@
       "partOfSpeech": "noun",
       "difficulty": 1,
       "categories": [
-        "house"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -10671,11 +10970,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_house_003",
@@ -10684,7 +10986,7 @@
       "partOfSpeech": "noun",
       "difficulty": 1,
       "categories": [
-        "house"
+        "everyday-phrases"
       ],
       "examples": [
         {
@@ -10724,11 +11026,14 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "categorizedAt": "2025-12-12T16:05:17.675Z",
+        "categorizedBy": "ai-agent-batch-001"
       },
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_house_004",
@@ -13970,7 +14275,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "body"
+        "uncategorized"
       ],
       "examples": [
         {
@@ -31354,7 +31659,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "food"
+        "uncategorized"
       ],
       "examples": [
         {
@@ -33674,7 +33979,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "professions"
+        "uncategorized"
       ],
       "examples": [
         {
@@ -33768,7 +34073,7 @@
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "categories": [
-        "food"
+        "uncategorized"
       ],
       "examples": [
         {
@@ -36985,5 +37290,10 @@
     "enrichmentDate": "2025-12-12T11:55:17.038Z",
     "itemsWithEnrichment": 0,
     "itemsWithLinks": 0
+  },
+  "metadata": {
+    "lastUpdated": "2025-12-12T16:05:17.675Z",
+    "updatedBy": "batch-001-categorization",
+    "batchApplied": "batch-001"
   }
 }

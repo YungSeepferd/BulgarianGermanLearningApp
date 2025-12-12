@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-12-12T11:55:17.029Z",
+  "totalVocabularyItems": 746,
+  "itemsEnriched": 0,
+  "itemsWithLinks": 0,
+  "enrichmentCoverage": "0.00%",
+  "linkCoverage": "0.00%",
+  "statistics": {
+    "averageConfidenceScore": 0.85,
+    "successRate": "8 / 10",
+    "duplicatesHandled": 0
+  },
+  "integrationDetails": {
+    "sourceVocabulary": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/data/unified-vocabulary.json",
+    "enrichmentReport": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/enrichment-output/enrichment-report.json",
+    "integratedAt": "2025-12-12T11:55:17.030Z",
+    "method": "Langenscheidt dictionary enrichment with link integration"
+  }
+}
