@@ -44,9 +44,9 @@ const config = {
 		
 		// Configure paths for GitHub Pages
 		paths: {
-			// Note: This is overridden by --base flag in build:gh-pages script
-			// Default empty for local development
-			base: ''
+			// Use repository name in production so links work on GitHub Pages
+			// Keep empty in development for local dev server
+			base: process.env.NODE_ENV === 'production' ? '/BulgarianGermanLearningApp' : ''
 		}
 	}
 };
