@@ -45,7 +45,7 @@ const config = {
 		// Configure paths for GitHub Pages
 		paths: {
 			// Use repository name only in production for GitHub Pages
-			base: process.env.NODE_ENV === 'production' ? '/BulgarianApp-Fresh' : ''
+			base: process.env.NODE_ENV === 'production' ? '/BulgarianGermanLearningApp' : ''
 		}
 	}
 };
