@@ -42,6 +42,8 @@
       <div class="emoji">📝</div>
       <h2 class="word">{item.german}</h2>
       <p class="part-of-speech">{item.partOfSpeech}</p>
+      {#if item.audio_url}
+        <button
           class="audio-button"
           onclick={(e) => { e.stopPropagation(); playAudio(); }}
           aria-label="Play pronunciation"

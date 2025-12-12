@@ -11,7 +11,6 @@ import { LessonGenerationEngine } from './lesson-generation/lesson-generator';
 import { lessonTemplateRepository } from './lesson-generation/lesson-templates';
 import { culturalGrammarService } from './lesson-generation/cultural-grammar';
 import { templateRenderer } from './lesson-generation/template-renderer';
-import { AppDataState } from '../state/app-data.svelte';
 import { EventBus } from './event-bus';
 import { LearningSession } from '../state/session.svelte';
 

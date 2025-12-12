@@ -6,7 +6,7 @@
  */
 
 import { searchVocabulary, getVocabularyStats, getSearchSuggestions, clearVocabularyCache } from '../services/search';
-import { loadVocabularyById, loadVocabularyByCategory, loadVocabularyByDifficulty, getRandomVocabulary, loadVocabularyBySearch } from './loader';
+import { loadVocabularyById, loadVocabularyByCategory, loadVocabularyByDifficulty, getRandomVocabulary } from './loader';
 import { vocabularyDb } from './db.svelte';
 import { type VocabularyItem, type VocabularyCategory } from '../schemas/vocabulary';
 import { Debug } from '../utils';
