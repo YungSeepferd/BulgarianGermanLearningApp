@@ -44,8 +44,9 @@ const config = {
 		
 		// Configure paths for GitHub Pages
 		paths: {
-			// Use repository name only in production for GitHub Pages
-			base: process.env.NODE_ENV === 'production' ? '/BulgarianGermanLearningApp' : ''
+			// Note: This is overridden by --base flag in build:gh-pages script
+			// Default empty for local development
+			base: ''
 		}
 	}
 };

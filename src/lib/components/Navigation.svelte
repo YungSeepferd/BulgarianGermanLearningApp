@@ -6,11 +6,12 @@
    */
 
   import { page } from '$app/stores';
+  import { base } from '$app/paths';
   import { appState } from '$lib/state/app-state';
   import { t, getCurrentLanguage, isTranslationsLoading, onTranslationsChange, offTranslationsChange } from '$lib/services/localization';
   import { onMount } from 'svelte';
 
-  // Default navigation items
+  // Default navigation items with base path support for GitHub Pages deployment
   const defaultNavItems = [
     { translationKey: 'navigation.dashboard', path: '/', icon: '🏠' },
     { translationKey: 'navigation.vocabulary', path: '/vocabulary', icon: '📚' },
@@ -18,6 +19,12 @@
     { translationKey: 'navigation.practice', path: '/practice', icon: '🎯' },
     { translationKey: 'navigation.learn', path: '/learn', icon: '🧠' }
   ];
+
+  // Helper function to apply base path to navigation paths
+  function getNavPath(path: string): string {
+    if (path === '/') return base || '/';
+    return `${base}${path}`;
+  }
 
   // Navigation items with reactive translations
   let { navItems = [] } = $props();
@@ -93,7 +100,7 @@
 <nav class="navigation" aria-label="Main navigation">
   <div class="navigation-container">
     <div class="logo">
-      <a href="/" aria-label={homeLabel}>
+      <a href={getNavPath('/')} aria-label={homeLabel}>
         <span class="logo-icon">🇧🇬🇩🇪</span>
         <span class="logo-text">{appNameLabel}</span>
       </a>
@@ -103,7 +110,7 @@
       {#each translatedNavItems as item}
         <li class="nav-item">
           <a
-            href={item.path}
+            href={getNavPath(item.path)}
             class="nav-link {currentPath === item.path ? 'active' : ''}"
             aria-current={currentPath === item.path ? 'page' : undefined}
           >
