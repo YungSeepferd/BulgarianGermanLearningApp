@@ -215,13 +215,15 @@
             <div class="declension-block">
               <p class="section-title">{appState.languageMode === 'DE_BG' ? 'Deklination' : 'Склонение'}</p>
               <table class="declension-table">
-                {#each Object.entries(vocabularyItem.metadata.declension) as [caseName, forms]}
-                  <tr>
-                    <th class="declension-case">{caseName}</th>
-                    <td class="declension-form">{(forms as any).singular ?? ''}</td>
-                    <td class="declension-form">{(forms as any).plural ?? ''}</td>
-                  </tr>
-                {/each}
+                <tbody>
+                  {#each Object.entries(vocabularyItem.metadata.declension) as [caseName, forms]}
+                    <tr>
+                      <th class="declension-case">{caseName}</th>
+                      <td class="declension-form">{(forms as any).singular ?? ''}</td>
+                      <td class="declension-form">{(forms as any).plural ?? ''}</td>
+                    </tr>
+                  {/each}
+                </tbody>
               </table>
             </div>
           {/if}
