@@ -65,12 +65,18 @@
 <style>
   .stats-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Force 3 columns on desktop */
     gap: 1.5rem;
     padding: 2rem;
     background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
     border-radius: 0.75rem;
     margin: 2rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .stats-container {
+      grid-template-columns: 1fr; /* Stack on mobile/tablet */
+    }
   }
 
   .stat-card {

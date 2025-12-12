@@ -58,6 +58,8 @@
   let isVocabularyLesson = $derived(lessonParams.type === 'vocabulary');
   let isGrammarLesson = $derived(lessonParams.type === 'grammar');
   let isMixedLesson = $derived(lessonParams.type === 'mixed');
+  let generateLabel = $derived(t('lesson.generator.generate_lesson') || 'Generate Lesson');
+  let generatingLabel = $derived(t('lesson.generator.generating') || 'Generating...');
 
   // Methods
   function resetForm() {
@@ -476,7 +478,7 @@
         }}
         disabled={isGenerating}
       >
-        {isGenerating ? $derived(t('lesson.generator.generating') || 'Generating...') : $derived(t('lesson.generator.generate_lesson') || 'Generate Lesson')}
+            {isGenerating ? generatingLabel : generateLabel}
       </Button>
     </DialogFooter>
   </DialogContent>

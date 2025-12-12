@@ -1,10 +1,102 @@
 <script lang="ts">
   import type { VocabularyItem } from '$lib/types/vocabulary';
+  import { appState } from '$lib/state/app-state';
 
   let { vocabularyItem } = $props<{ vocabularyItem: VocabularyItem }>();
 
   // State for card flip
   let flipped = $state(false);
+
+  const ui = $derived(appState.languageMode === 'DE_BG'
+    ? {
+        flipHint: 'Zum Umdrehen tippen',
+        showFront: 'Vorderseite anzeigen',
+        showBack: 'Rückseite anzeigen',
+        breakdown: 'Wortaufbau',
+        composition: 'Zusammensetzung',
+        context: 'Kontext',
+        examples: 'Beispiele',
+        cultural: 'Kulturelle oder sprachliche Notiz',
+        mnemonic: 'Merksatz',
+        usage: 'Nuance / Verwendung'
+      }
+    : {
+        flipHint: 'Натисни, за да обърнеш',
+        showFront: 'Покажи лицето',
+        showBack: 'Покажи гърба',
+        breakdown: 'Строеж на думата',
+        composition: 'Състав',
+        context: 'Контекст',
+        examples: 'Примери',
+        cultural: 'Културна или езикова бележка',
+        mnemonic: 'Запомняща фраза',
+        usage: 'Нюанс / Употреба'
+      });
+
+  const isBulgarianFront = $derived(appState.languageMode === 'DE_BG');
+
+  function capitalizeNoun(term: string): string {
+    if (!term) return term;
+    return term.charAt(0).toUpperCase() + term.slice(1);
+  }
+
+  function chooseArticle(gender?: string, fallback?: string): string | null {
+    if (fallback) return fallback;
+    if (!gender) return null;
+    const map: Record<string, string> = {
+      masculine: 'der',
+      feminine: 'die',
+      neuter: 'das'
+    };
+    return map[gender] || null;
+  }
+
+  import { formatGermanTerm as formatGermanUtil } from '$lib/utils/formatGerman';
+  function formatGermanTerm(item: VocabularyItem): string {
+    return formatGermanUtil(item);
+  }
+
+  const formattedGerman = $derived(formatGermanTerm(vocabularyItem));
+
+  const frontTerm = $derived(isBulgarianFront ? vocabularyItem.bulgarian : formattedGerman);
+  const backTerm = $derived(isBulgarianFront ? formattedGerman : vocabularyItem.bulgarian);
+
+  function normalizeBreakdown(item: VocabularyItem) {
+    const fromLiteral = item.literalBreakdown?.map((piece) => ({
+      part: piece.segment,
+      meaning: piece.literal,
+      note: piece.note || piece.grammarTag
+    })) ?? [];
+
+    const fromMetadata = item.metadata?.components?.map((piece) => ({
+      part: piece.part,
+      meaning: piece.meaning,
+      note: piece.note
+    })) ?? [];
+
+    return [...fromLiteral, ...fromMetadata];
+  }
+
+  const breakdown = $derived(normalizeBreakdown(vocabularyItem));
+  const examples = $derived(
+    vocabularyItem.metadata?.examples
+      ?? vocabularyItem.examples?.map((ex) => ({
+        german: ex.sentence || ex.translation || '',
+        bulgarian: ex.translation || ex.sentence || '',
+        context: ex.context
+      }))
+      ?? []
+  );
+
+  const culturalNote = $derived(vocabularyItem.metadata?.culturalNote || vocabularyItem.metadata?.notes);
+  const mnemonic = $derived(vocabularyItem.metadata?.mnemonic || vocabularyItem.mnemonics);
+  const nuance = $derived(vocabularyItem.contextualNuance || vocabularyItem.metadata?.notes);
+  const emoji = $derived(vocabularyItem.media?.emoji || vocabularyItem.emoji || '📝');
+  const compositionSummary = $derived(
+    breakdown.length > 1
+      ? `${breakdown.map((b) => b.part).join(' + ')} → ${frontTerm}`
+      : null
+  );
 
   // Toggle flip state
   function toggleFlip() {
@@ -16,7 +108,7 @@
   <button
     class="flashcard {flipped ? 'flipped' : ''}"
     onclick={toggleFlip}
-    aria-label={flipped ? 'Show front of card' : 'Show back of card'}
+    aria-label={flipped ? ui.showFront : ui.showBack}
     onkeydown={(e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -28,46 +120,122 @@
     <div class="flashcard-front">
       <div class="front-content">
         <div class="emoji-container">
-          {#if vocabularyItem.media?.emoji}
-            <span class="emoji">{vocabularyItem.media.emoji}</span>
-          {/if}
+          <span class="emoji">{emoji}</span>
         </div>
-        <h2 class="bulgarian-text">{vocabularyItem.term_bulgarian}</h2>
-        <div class="flip-hint">Click to flip</div>
+        <p class="part-of-speech">{vocabularyItem.partOfSpeech}</p>
+        <h2 class="front-term">{frontTerm}</h2>
+        {#if vocabularyItem.pronunciation?.bulgarian && isBulgarianFront}
+          <p class="pronunciation">{vocabularyItem.pronunciation.bulgarian}</p>
+        {:else if vocabularyItem.pronunciation?.german && !isBulgarianFront}
+          <p class="pronunciation">{vocabularyItem.pronunciation.german}</p>
+        {/if}
+        <div class="flip-hint">{ui.flipHint}</div>
       </div>
     </div>
 
     <!-- Back of the card -->
     <div class="flashcard-back">
       <div class="back-content">
-        <div class="german-translation">
-          <strong>{vocabularyItem.term_german}</strong>
+        <div class="translation-block">
+          <p class="translation-label">{isBulgarianFront ? 'Deutsch' : 'Български'}</p>
+          <h2 class="translation-text">{backTerm}</h2>
         </div>
 
-        <div class="phrase-breakdown">
-          <h3 class="breakdown-title">Phrase Breakdown</h3>
-          <div class="breakdown-container">
-            {#each vocabularyItem.breakdown as item, index}
-              <div class="breakdown-item">
-                <div class="breakdown-part">
-                  {item.part}
-                  {#if index < vocabularyItem.breakdown.length - 1}
-                    <span class="connector">→</span>
-                  {/if}
-                </div>
-                <div class="breakdown-meaning">
-                  {item.meaning}
-                </div>
-              </div>
-            {/each}
-          </div>
-        </div>
-
-        {#if vocabularyItem.context_clue}
-          <div class="context-clue">
-            <strong>Context:</strong> {vocabularyItem.context_clue}
+        {#if nuance}
+          <div class="nuance-box">
+            <span class="icon">💡</span>
+            <div>
+              <p class="section-title">{ui.usage}</p>
+              <p class="section-body">{nuance}</p>
+            </div>
           </div>
         {/if}
+
+        {#if breakdown.length > 0}
+          <div class="phrase-breakdown">
+            <h3 class="breakdown-title">{ui.breakdown}</h3>
+            <div class="breakdown-container">
+              {#each breakdown as item, index}
+                <div class="breakdown-item">
+                  <div class="breakdown-part">
+                    <span>{item.part}</span>
+                    {#if index < breakdown.length - 1}
+                      <span class="connector">+</span>
+                    {/if}
+                  </div>
+                  <div class="breakdown-meaning">{item.meaning}</div>
+                  {#if item.note}
+                    <div class="breakdown-note">{item.note}</div>
+                  {/if}
+                </div>
+              {/each}
+            </div>
+          </div>
+        {/if}
+
+        {#if compositionSummary}
+          <div class="composition-summary">
+            <p class="section-title">{ui.composition}</p>
+            <p class="section-body">{compositionSummary}</p>
+          </div>
+        {/if}
+
+        {#if examples.length > 0}
+          <div class="examples">
+            <p class="section-title">{ui.examples}</p>
+            <ul>
+              {#each examples as example}
+                <li>
+                  <div class="example-line">{example.german}</div>
+                  <div class="example-translation">{example.bulgarian}</div>
+                  {#if example.context}
+                    <div class="example-context">{example.context}</div>
+                  {/if}
+                </li>
+              {/each}
+            </ul>
+          </div>
+        {/if}
+
+        {#if culturalNote}
+          <div class="note-block">
+            <p class="section-title">{ui.cultural}</p>
+            <p class="section-body">{culturalNote}</p>
+          </div>
+        {/if}
+
+        {#if mnemonic}
+          <div class="note-block">
+            <p class="section-title">{ui.mnemonic}</p>
+            <p class="section-body">{mnemonic}</p>
+          </div>
+        {/if}
+
+          {#if vocabularyItem.metadata?.declension}
+            <div class="declension-block">
+              <p class="section-title">{appState.languageMode === 'DE_BG' ? 'Deklination' : 'Склонение'}</p>
+              <table class="declension-table">
+                {#each Object.entries(vocabularyItem.metadata.declension) as [caseName, forms]}
+                  <tr>
+                    <th class="declension-case">{caseName}</th>
+                    <td class="declension-form">{(forms as any).singular ?? ''}</td>
+                    <td class="declension-form">{(forms as any).plural ?? ''}</td>
+                  </tr>
+                {/each}
+              </table>
+            </div>
+          {/if}
+
+          {#if vocabularyItem.metadata?.links && vocabularyItem.metadata.links.length > 0}
+            <div class="external-links">
+              <p class="section-title">{appState.languageMode === 'DE_BG' ? 'Wörterbuch' : 'Речници'}</p>
+              <div class="links-list">
+                {#each vocabularyItem.metadata.links as link}
+                  <a href={link.url} target="_blank" rel="noopener noreferrer" class="ext-link">{link.label || 'Link'}</a>
+                {/each}
+              </div>
+            </div>
+          {/if}
       </div>
     </div>
   </button>
@@ -77,9 +245,10 @@
   .flashcard-container {
     perspective: 1000px;
     width: 100%;
-    max-width: 400px;
-    height: 500px;
+    max-width: 420px;
+    height: 520px;
     margin: 0 auto;
+    pointer-events: auto;
   }
 
   .flashcard {
@@ -89,9 +258,19 @@
     transform-style: preserve-3d;
     transition: transform 0.6s;
     cursor: pointer;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background: transparent;
+    border: none;
   }
+
+  .declension-block { margin-top: 0.75rem; }
+  .declension-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  .declension-case { text-align: left; padding: 0.25rem 0.5rem; color: #555; }
+  .declension-form { padding: 0.25rem 0.5rem; }
+  .external-links { margin-top: 0.75rem; }
+  .links-list { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .ext-link { color: #0a58ca; text-decoration: underline; }
 
   .flashcard.flipped {
     transform: rotateY(180deg);
@@ -103,135 +282,215 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: white;
+    border: 1px solid #e2e8f0;
   }
 
   .flashcard-back {
     transform: rotateY(180deg);
+    overflow-y: auto;
   }
 
   .front-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100%;
+    gap: 0.5rem;
     width: 100%;
+    height: 100%;
   }
 
   .emoji-container {
     font-size: 4rem;
-    margin-bottom: 2rem;
-    min-height: 64px;
+    margin-bottom: 1rem;
   }
 
-  .bulgarian-text {
-    font-size: 2.5rem;
-    font-weight: bold;
+  .part-of-speech {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+    text-transform: capitalize;
+  }
+
+  .front-term {
+    font-size: 2.6rem;
+    font-weight: 800;
     text-align: center;
-    color: #1f2937;
-    margin-bottom: 1.5rem;
+    color: #0f172a;
+    margin: 0.5rem 0;
+  }
+
+  .pronunciation {
+    font-family: monospace;
+    color: #475569;
+    margin: 0;
   }
 
   .flip-hint {
-    font-size: 0.9rem;
-    color: #6b7280;
+    font-size: 0.95rem;
+    color: #94a3b8;
     margin-top: auto;
   }
 
   .back-content {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    gap: 1rem;
     width: 100%;
-    padding: 8px 0;
+    color: #0f172a;
   }
 
-  .german-translation {
-    font-size: 1.5rem;
+  .translation-block {
     text-align: center;
-    margin-bottom: 1.5rem;
-    color: #1f2937;
+  }
+
+  .translation-label {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .translation-text {
+    margin: 0.35rem 0 0 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+  }
+
+  .nuance-box,
+  .note-block,
+  .composition-summary,
+  .examples,
+  .phrase-breakdown {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+
+  .nuance-box {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .icon {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .section-body {
+    margin: 0.35rem 0 0 0;
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.45;
   }
 
   .phrase-breakdown {
-    flex-grow: 1;
-    margin-bottom: 1rem;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
   .breakdown-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #374151;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
     text-align: center;
   }
 
   .breakdown-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   .breakdown-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    text-align: center;
   }
 
   .breakdown-part {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #1f2937;
+    font-size: 1.1rem;
+    font-weight: 600;
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
+    gap: 0.35rem;
+    color: #0f172a;
   }
 
   .breakdown-meaning {
     font-size: 0.95rem;
-    color: #6b7280;
-    text-align: center;
+    color: #475569;
+  }
+
+  .breakdown-note {
+    font-size: 0.85rem;
+    color: #94a3b8;
   }
 
   .connector {
-    color: #9ca3af;
-    font-size: 1.2rem;
+    color: #cbd5e1;
   }
 
-  .context-clue {
-    font-size: 0.9rem;
-    color: #4b5563;
-    text-align: center;
-    padding-top: 0.5rem;
-    border-top: 1px solid #e5e7eb;
-    margin-top: auto;
+  .composition-summary {
+    font-size: 0.95rem;
+    color: #334155;
   }
 
-  /* Responsive adjustments */
+  .examples ul {
+    margin: 0.5rem 0 0 0;
+    padding-left: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .examples li {
+    list-style: disc;
+    color: #334155;
+  }
+
+  .example-line {
+    font-weight: 600;
+  }
+
+  .example-translation {
+    font-size: 0.95rem;
+    color: #475569;
+  }
+
+  .example-context {
+    font-size: 0.85rem;
+    color: #94a3b8;
+  }
+
   @media (max-width: 640px) {
-    .bulgarian-text {
-      font-size: 2rem;
+    .front-term {
+      font-size: 2.2rem;
     }
 
-    .german-translation {
-      font-size: 1.2rem;
+    .translation-text {
+      font-size: 1.4rem;
     }
 
-    .breakdown-part {
-      font-size: 1rem;
-    }
-
-    .breakdown-meaning {
-      font-size: 0.85rem;
+    .flashcard-container {
+      height: 480px;
     }
   }
 </style>

@@ -74,15 +74,6 @@
     });
   }
 
-  function pulseAnimation(node: HTMLElement) {
-    return scale(node, {
-      duration: 200,
-      easing: t => 1 - Math.pow(1 - t, 3),
-      start: 1,
-      opacity: 1
-    });
-  }
-
   function shakeAnimation(node: HTMLElement) {
     const duration = 500;
     return {
@@ -348,14 +339,15 @@
     }
   }
 
+  import { formatGermanTerm } from '$lib/utils/formatGerman';
   function getQuestionText() {
     if (!currentItem) return '';
-    return appState.languageMode === 'DE_BG' ? currentItem.german : currentItem.bulgarian;
+    return appState.languageMode === 'DE_BG' ? formatGermanTerm(currentItem) : currentItem.bulgarian;
   }
 
   function getCorrectAnswer() {
     if (!currentItem) return '';
-    return appState.languageMode === 'DE_BG' ? currentItem.bulgarian : currentItem.german;
+    return appState.languageMode === 'DE_BG' ? currentItem.bulgarian : formatGermanTerm(currentItem);
   }
 
   function getSourceLanguageName() {
@@ -364,6 +356,57 @@
 
   function getTargetLanguageName() {
     return appState.languageMode === 'DE_BG' ? t('languages.bulgarian') : t('languages.german');
+  }
+
+  const categoryLabels = {
+    de: {
+      greetings: 'Begrüßungen',
+      numbers: 'Zahlen',
+      family: 'Familie',
+      food: 'Essen',
+      colors: 'Farben',
+      animals: 'Tiere',
+      body: 'Körper',
+      clothing: 'Kleidung',
+      house: 'Haus & Wohnen',
+      nature: 'Natur',
+      transport: 'Verkehr',
+      technology: 'Technologie',
+      time: 'Zeit',
+      weather: 'Wetter',
+      professions: 'Berufe',
+      places: 'Orte',
+      grammar: 'Grammatik',
+      culture: 'Kultur',
+      common_phrases: 'Alltagsphrasen'
+    },
+    bg: {
+      greetings: 'Поздрави',
+      numbers: 'Числа',
+      family: 'Семейство',
+      food: 'Храна',
+      colors: 'Цветове',
+      animals: 'Животни',
+      body: 'Тяло',
+      clothing: 'Облекло',
+      house: 'Дом',
+      nature: 'Природа',
+      transport: 'Транспорт',
+      technology: 'Технологии',
+      time: 'Време',
+      weather: 'Времето',
+      professions: 'Професии',
+      places: 'Места',
+      grammar: 'Граматика',
+      culture: 'Култура',
+      common_phrases: 'Често срещани изрази'
+    }
+  } as const;
+
+  function getCategoryLabel(category?: string) {
+    if (!category) return '';
+    const labels = appState.languageMode === 'DE_BG' ? categoryLabels.de : categoryLabels.bg;
+    return labels[category as keyof typeof labels] ?? category;
   }
 
   /**
@@ -495,7 +538,7 @@
           </div>
           <h3 class="question-text" in:scale>{getQuestionText()}</h3>
           <div class="item-meta">
-            <span class="category">{currentItem.category}</span>
+            <span class="category">{getCategoryLabel(currentItem.category)}</span>
             {#if mapNumericDifficultyToCEFR(currentItem.difficulty)}
               <span class="difficulty" style="color: {getDifficultyColor(mapNumericDifficultyToCEFR(currentItem.difficulty))}">
                 {mapNumericDifficultyToCEFR(currentItem.difficulty)}
@@ -530,7 +573,6 @@
                 class="btn-primary"
                 onclick={checkAnswer}
                 disabled={!userAnswer.trim()}
-                in:pulseAnimation
               >
                 {t('practice.check_answer')}
               </button>
@@ -560,7 +602,7 @@
             </div>
 
             <div class="action-buttons" in:fade>
-              <button class="btn-secondary" onclick={nextItem} in:pulseAnimation>
+              <button class="btn-secondary" onclick={nextItem}>
                 {t('practice.next_word')}
               </button>
               <button class="btn-tertiary" onclick={toggleExamples}>
@@ -604,12 +646,12 @@
                       practiceThisItem(item);
                     }
                   }}
-                  aria-label={`${t('practice.practice_word')}: ${appState.languageMode === 'DE_BG' ? item.german : item.bulgarian}. ${t('practice.category')}: ${item.category}`}
+                  aria-label={`${t('practice.practice_word')}: ${appState.languageMode === 'DE_BG' ? item.german : item.bulgarian}. ${t('practice.category')}: ${getCategoryLabel(item.category)}`}
                 >
                   <span class="rec-text">
-                    {appState.languageMode === 'DE_BG' ? item.german : item.bulgarian}
+                    {appState.languageMode === 'DE_BG' ? formatGermanTerm(item) : item.bulgarian}
                   </span>
-                  <span class="rec-meta">{item.category}</span>
+                  <span class="rec-meta">{getCategoryLabel(item.category)}</span>
                 </div>
               {/each}
             </div>
@@ -630,7 +672,7 @@
         <input
           type="text"
           bind:value={searchQuery}
-          placeholder={t('practice.search_placeholder')}
+          placeholder={t('search.search_placeholder')}
           oninput={(e: Event) => handleSearch((e.currentTarget as HTMLInputElement).value)}
           class="search-input"
         />
@@ -660,24 +702,9 @@
     position: relative;
   }
 
-  /* Feedback animation */
-  .feedback-section {
-    animation: pulse 0.5s;
-  }
-
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-  }
-
-  /* Stat animations */
+  /* Stat display */
   .stat-value {
-    transition: all 0.3s ease;
-  }
-
-  .stat-value:hover {
-    transform: scale(1.1);
-    color: #007bff;
+    transition: color 0.2s ease;
   }
 
   /* Response time styling */

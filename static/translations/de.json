@@ -12,6 +12,7 @@
   "common": {
     "check_answer": "Antwort prüfen",
     "next_word": "Nächstes Wort",
+    "show": "Anzeigen",
     "show_examples": "Beispiele anzeigen",
     "hide_examples": "Beispiele ausblenden",
     "retry": "Wiederholen",

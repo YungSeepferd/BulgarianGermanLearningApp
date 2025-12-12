@@ -40,7 +40,7 @@
 
 <style>
   .dashboard-container {
-    max-width: 1200px;
+    max-width: 1400px; /* Increased from 1200px for better space usage */
     margin: 0 auto;
     padding: 2rem;
     min-height: 100vh;

@@ -124,9 +124,6 @@
         <span class="lang-code">{languageCode.toUpperCase()}</span>
         <span class="lang-direction">{directionLabel}</span>
       </button>
-      <button class="nav-action" aria-label={userSettingsLabel}>
-        👤
-      </button>
     </div>
   </div>
 </nav>
@@ -254,25 +251,6 @@
     color: #475569;
     font-size: 0.8rem;
     white-space: nowrap;
-  }
-
-  .nav-action {
-    background: none;
-    border: none;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: #64748b;
-    transition: all 0.2s ease;
-  }
-
-  .nav-action:hover {
-    background: #f1f5f9;
-    color: #3b82f6;
   }
 
   @media (max-width: 1024px) {

@@ -19,6 +19,10 @@ export interface VocabularyMetadataLite {
   mnemonic?: string;
   culturalNote?: string;
   etymology?: string;
+  article?: 'der' | 'die' | 'das' | 'ein' | 'eine';
+  gender?: 'masculine' | 'feminine' | 'neuter';
+  examples?: Array<{ german: string; bulgarian: string; context?: string }>;
+  components?: Array<{ part: string; meaning: string; note?: string }>;
 }
 
 export interface VocabularyItem {
@@ -34,6 +38,10 @@ export interface VocabularyItem {
   // 1..5 numeric difficulty (maps to CEFR for display)
   difficulty: number;
   partOfSpeech: PartOfSpeech;
+  literalBreakdown?: Array<{ segment: string; literal: string; grammarTag?: string; note?: string }>;
+  emoji?: string;
+  audioUrl?: string;
+  contextualNuance?: string;
   // UX fields that may exist from data import
   xp_value?: number;
   createdAt?: Date | string;
@@ -45,6 +53,14 @@ export interface VocabularyItem {
   // Legacy examples preview (SearchList/TandemPractice may check presence)
   examples?: VocabularyExamplePreview[];
   metadata?: VocabularyMetadataLite;
+  media?: { emoji?: string };
+  grammar?: {
+    part_of_speech?: string;
+    gender?: 'masculine' | 'feminine' | 'neuter';
+    verb_aspect?: string;
+  };
+  mnemonics?: string;
+  pronunciation?: { bulgarian?: string; german?: string };
 }
 
 export type { PracticeSession } from '$lib/schemas/practiceSession';

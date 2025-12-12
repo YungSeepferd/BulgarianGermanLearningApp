@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import SearchList from '$lib/components/SearchList.svelte';
-  import TestCard from '$lib/components/TestCard.svelte';
+  import { t } from '$lib/services/localization';
   import { vocabularyDb } from '$lib/data/db.svelte';
   import { appState } from '$lib/state/app-state';
   import type { VocabularyItem } from '$lib/types/vocabulary';
@@ -19,6 +19,44 @@
   let currentPage = $state(0);
   const ITEMS_PER_PAGE = 20;
   let selectedItems = $state(new Set<string>());
+
+  const ui = $derived(appState.languageMode === 'DE_BG'
+    ? {
+        title: 'Vokabular',
+        introTitle: 'Wortschatz sicher aufbauen',
+        introLede: 'Filtern nach Kategorie, Schwierigkeit oder Wortart und direkt mit den ausgewählten Wörtern üben.',
+        searchPlaceholder: t('search.search_placeholder'),
+        searchAria: t('search.search_vocabulary'),
+        category: 'Kategorie',
+        difficulty: 'Schwierigkeit',
+        pos: 'Wortart',
+        learningPhase: 'Lernphase',
+        reset: 'Filter zurücksetzen',
+        practiceSelected: (n: number) => `Auswahl üben (${n})`,
+        loading: 'Vokabular wird geladen...',
+        error: 'Fehler beim Laden. Bitte erneut versuchen.',
+        emptyTitle: 'Keine Einträge gefunden',
+        emptyHint: 'Passe Suche oder Filter an.',
+        loadMore: 'Mehr laden'
+      }
+    : {
+        title: 'Речник',
+        introTitle: 'Надграждай уверено, дума по дума',
+        introLede: 'Филтрирай по категория, трудност или част на речта и започни практика с избраните думи.',
+        searchPlaceholder: t('search.search_placeholder'),
+        searchAria: t('search.search_vocabulary'),
+        category: 'Категория',
+        difficulty: 'Трудност',
+        pos: 'Част на речта',
+        learningPhase: 'Етап на учене',
+        reset: 'Нулирай филтрите',
+        practiceSelected: (n: number) => `Упражнявай избраните (${n})`,
+        loading: 'Зареждане на речника...',
+        error: 'Грешка при зареждане. Опитайте отново.',
+        emptyTitle: 'Няма намерени записи',
+        emptyHint: 'Променете търсенето или филтрите.',
+        loadMore: 'Зареди още'
+      });
  
   // Categories for filtering
   const categories: VocabularyCategory[] = [
@@ -27,6 +65,51 @@
     'time', 'weather', 'professions', 'places', 'grammar', 'culture',
     'common_phrases'
   ];
+
+  const categoryLabels = {
+    de: {
+      greetings: 'Begrüßungen',
+      numbers: 'Zahlen',
+      family: 'Familie',
+      food: 'Essen',
+      colors: 'Farben',
+      animals: 'Tiere',
+      body: 'Körper',
+      clothing: 'Kleidung',
+      house: 'Haus & Wohnen',
+      nature: 'Natur',
+      transport: 'Verkehr',
+      technology: 'Technologie',
+      time: 'Zeit',
+      weather: 'Wetter',
+      professions: 'Berufe',
+      places: 'Orte',
+      grammar: 'Grammatik',
+      culture: 'Kultur',
+      common_phrases: 'Alltagsphrasen'
+    },
+    bg: {
+      greetings: 'Поздрави',
+      numbers: 'Числа',
+      family: 'Семейство',
+      food: 'Храна',
+      colors: 'Цветове',
+      animals: 'Животни',
+      body: 'Тяло',
+      clothing: 'Облекло',
+      house: 'Дом',
+      nature: 'Природа',
+      transport: 'Транспорт',
+      technology: 'Технологии',
+      time: 'Време',
+      weather: 'Времето',
+      professions: 'Професии',
+      places: 'Места',
+      grammar: 'Граматика',
+      culture: 'Култура',
+      common_phrases: 'Често срещани изрази'
+    }
+  } as const;
 
   // Difficulty levels
   const difficultyLevels = [1, 2, 3, 4, 5];
@@ -37,15 +120,59 @@
     'preposition', 'conjunction', 'interjection', 'article', 'number', 'phrase'
   ];
   
+  const partOfSpeechLabels = {
+    de: {
+      noun: 'Substantiv',
+      verb: 'Verb',
+      adjective: 'Adjektiv',
+      adverb: 'Adverb',
+      pronoun: 'Pronomen',
+      preposition: 'Präposition',
+      conjunction: 'Konjunktion',
+      interjection: 'Interjektion',
+      article: 'Artikel',
+      number: 'Zahlwort',
+      phrase: 'Redewendung'
+    },
+    bg: {
+      noun: 'Съществително',
+      verb: 'Глагол',
+      adjective: 'Прилагателно',
+      adverb: 'Наречие',
+      pronoun: 'Местоимение',
+      preposition: 'Предлог',
+      conjunction: 'Съюз',
+      interjection: 'Междуметие',
+      article: 'Член',
+      number: 'Числително',
+      phrase: 'Израз'
+    }
+  } as const;
+
   const learningPhases = [
-    { value: 0, label: 'Not Started' },
-    { value: 1, label: 'Phase 1: New' },
-    { value: 2, label: 'Phase 2: Learning' },
-    { value: 3, label: 'Phase 3: Familiar' },
-    { value: 4, label: 'Phase 4: Known' },
-    { value: 5, label: 'Phase 5: Mastered' },
-    { value: 6, label: 'Phase 6: Expert' }
-  ];
+    { value: 0, de: 'Nicht gestartet', bg: 'Не е започната' },
+    { value: 1, de: 'Phase 1: Neu', bg: 'Фаза 1: Нова' },
+    { value: 2, de: 'Phase 2: Lernen', bg: 'Фаза 2: Учене' },
+    { value: 3, de: 'Phase 3: Vertraut', bg: 'Фаза 3: Позната' },
+    { value: 4, de: 'Phase 4: Bekannt', bg: 'Фаза 4: Позната добре' },
+    { value: 5, de: 'Phase 5: Beherrscht', bg: 'Фаза 5: Овладяна' },
+    { value: 6, de: 'Phase 6: Experte', bg: 'Фаза 6: Експерт' }
+  ] as const;
+
+  function getCategoryLabel(category: VocabularyCategory) {
+    return (appState.languageMode === 'DE_BG' ? categoryLabels.de[category] : categoryLabels.bg[category]) ?? category;
+  }
+
+  function getPartOfSpeechLabel(pos: string) {
+    const labels = appState.languageMode === 'DE_BG' ? partOfSpeechLabels.de : partOfSpeechLabels.bg;
+    return labels[pos as keyof typeof labels] ?? pos;
+  }
+
+  function getLearningPhaseLabel(value: number) {
+    const phase = learningPhases.find((p) => p.value === value);
+    if (!phase) return value;
+    return appState.languageMode === 'DE_BG' ? phase.de : phase.bg;
+  }
  
   // Helper to filter all items based on current UI state
   function filterItems(all: VocabularyItem[]) {
@@ -80,7 +207,7 @@
       vocabularyItems = filtered.slice(offset, offset + ITEMS_PER_PAGE);
     } catch (err) {
       console.error('Failed to load vocabulary:', err);
-      error = 'Failed to load vocabulary data. Please try again.';
+      error = ui.error;
     } finally {
       loading = false;
     }
@@ -165,16 +292,16 @@
   );
 </script>
 
-<h1 class="page-title">Bulgarian Vocabulary</h1>
+<h1 class="page-title">{ui.title}</h1>
 
 <div class="vocabulary-grid">
-  <!-- Header card -->
-  <TestCard
-    title="Vocabulary"
-    content="Learn essential Bulgarian words and phrases with rich context"
-    showShadow
-    link="#"
-  />
+  <section class="intro-card">
+    <div>
+      <p class="eyebrow">{appState.languageMode === 'DE_BG' ? 'Wortschatz • Vocabulary' : 'Речник • Vocabulary'}</p>
+      <h2>{ui.introTitle}</h2>
+      <p class="lede">{ui.introLede}</p>
+    </div>
+  </section>
 
   <!-- Search and filters -->
   <div class="search-filters-container">
@@ -182,10 +309,10 @@
     <div class="search-container">
       <input
         type="search"
-        placeholder="Search vocabulary..."
+        placeholder={ui.searchPlaceholder}
         bind:value={searchTerm}
         class="search-input"
-        aria-label="Search vocabulary"
+        aria-label={ui.searchAria}
       />
     </div>
 
@@ -193,20 +320,20 @@
     <div class="filters-container">
       <!-- Category filter -->
       <div class="filter-group">
-        <label for="category-filter" class="filter-label">Category</label>
+        <label for="category-filter" class="filter-label">{ui.category}</label>
         <select id="category-filter" bind:value={selectedCategory} class="filter-select">
-          <option value="all">All Categories</option>
+          <option value="all">{appState.languageMode === 'DE_BG' ? 'Alle Kategorien' : 'Всички категории'}</option>
           {#each categories as category}
-            <option value={category}>{category}</option>
+            <option value={category}>{getCategoryLabel(category)}</option>
           {/each}
         </select>
       </div>
 
       <!-- Difficulty filter -->
       <div class="filter-group">
-        <label for="difficulty-filter" class="filter-label">Difficulty</label>
+        <label for="difficulty-filter" class="filter-label">{ui.difficulty}</label>
         <select id="difficulty-filter" bind:value={selectedDifficulty} class="filter-select">
-          <option value={null}>All Difficulties</option>
+          <option value={null}>{appState.languageMode === 'DE_BG' ? 'Alle Schwierigkeitsgrade' : 'Всички трудности'}</option>
           {#each difficultyLevels as level}
             <option value={level}>{level}</option>
           {/each}
@@ -215,33 +342,33 @@
 
       <!-- Part of speech filter -->
       <div class="filter-group">
-        <label for="pos-filter" class="filter-label">Part of Speech</label>
+        <label for="pos-filter" class="filter-label">{ui.pos}</label>
         <select id="pos-filter" bind:value={selectedPartOfSpeech} class="filter-select">
-          <option value={null}>All Types</option>
+          <option value={null}>{appState.languageMode === 'DE_BG' ? 'Alle Wortarten' : 'Всички части на речта'}</option>
           {#each partsOfSpeech as pos}
-            <option value={pos}>{pos}</option>
+            <option value={pos}>{getPartOfSpeechLabel(pos)}</option>
           {/each}
         </select>
       </div>
 
       <!-- Learning Phase filter -->
       <div class="filter-group">
-        <label for="learning-phase-filter" class="filter-label">Learning Phase</label>
+        <label for="learning-phase-filter" class="filter-label">{ui.learningPhase}</label>
         <select id="learning-phase-filter" bind:value={selectedLearningPhase} class="filter-select">
-          <option value={null}>All Phases</option>
+          <option value={null}>{appState.languageMode === 'DE_BG' ? 'Alle Phasen' : 'Всички етапи'}</option>
           {#each learningPhases as phase}
-            <option value={phase.value}>{phase.label}</option>
+            <option value={phase.value}>{getLearningPhaseLabel(phase.value)}</option>
           {/each}
         </select>
       </div>
  
       <!-- Reset button -->
       <button class="reset-btn" onclick={resetFilters}>
-        Reset Filters
+        {ui.reset}
       </button>
 
       <button class="practice-selected-btn" onclick={startPracticeWithSelected} disabled={selectedItems.size === 0}>
-        Practice Selected ({selectedItems.size})
+        {ui.practiceSelected(selectedItems.size)}
       </button>
     </div>
   </div>
@@ -250,18 +377,18 @@
   {#if loading && vocabularyItems.length === 0}
     <div class="loading-state">
       <div class="spinner">🌀</div>
-      <p>Loading vocabulary...</p>
+      <p>{ui.loading}</p>
     </div>
   {:else if error}
     <div class="error-state" role="alert">
       <span class="error-icon">⚠️</span>
-      <p>{error}</p>
+      <p>{ui.error}</p>
     </div>
   {:else if vocabularyItems.length === 0}
     <div class="empty-state">
       <div class="empty-icon">🔍</div>
-      <h3>No vocabulary found</h3>
-      <p>Try adjusting your search or filters</p>
+      <h3>{ui.emptyTitle}</h3>
+      <p>{ui.emptyHint}</p>
     </div>
   {/if}
 
@@ -284,9 +411,9 @@
             onclick={loadMore}
             disabled={loading}
             class="load-more-btn"
-            aria-label={loading ? 'Loading more vocabulary' : 'Load more vocabulary'}
+            aria-label={loading ? ui.loading : ui.loadMore}
           >
-            {loading ? 'Loading...' : 'Load More Vocabulary'}
+            {loading ? ui.loading : ui.loadMore}
           </button>
         </div>
       {/if}
@@ -299,7 +426,7 @@
   .vocabulary-grid {
     display: grid;
     gap: 1.5rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 1rem;
   }
@@ -473,6 +600,33 @@
     background-color: #cccccc;
     cursor: not-allowed;
     transform: none;
+  }
+
+  .intro-card {
+    background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(14, 165, 233, 0.25);
+  }
+
+  .intro-card h2 {
+    margin: 0.25rem 0 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  .intro-card .lede {
+    margin: 0;
+    max-width: 720px;
+    line-height: 1.5;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    margin: 0;
+    opacity: 0.9;
   }
 
   @media (max-width: 768px) {

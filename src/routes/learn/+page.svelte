@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { vocabularyDb } from '$lib/data/db.svelte';
+  import { appState } from '$lib/state/app-state';
   import Flashcard from '$lib/components/Flashcard.svelte';
   import { Debug } from '$lib/utils';
   import type { VocabularyItem } from '$lib/types/vocabulary';
@@ -14,6 +15,57 @@
   let animationType = $state<'easy' | 'hard' | null>(null);
   let loadError = $state<string | null>(null);
 
+  function capitalizeNoun(term: string): string {
+    if (!term) return term;
+    return term.charAt(0).toUpperCase() + term.slice(1);
+  }
+
+  function chooseArticle(gender?: string, fallback?: string): string | null {
+    if (fallback) return fallback;
+    if (!gender) return null;
+    const map: Record<string, string> = { masculine: 'der', feminine: 'die', neuter: 'das' };
+    return map[gender] || null;
+  }
+
+  function formatGermanTerm(item: VocabularyItem): string {
+    const raw = (item.german || '').trim();
+    if (!raw) return raw;
+    const hasArticlePrefix = /^(der|die|das|ein|eine|einen|einem|einer|eines)\s/i.test(raw);
+    if (hasArticlePrefix) {
+      const [articlePart, ...rest] = raw.split(/\s+/);
+      const nounPart = rest.join(' ');
+      const normalizedNoun = item.partOfSpeech === 'noun' ? capitalizeNoun(nounPart) : nounPart;
+      return [articlePart, normalizedNoun].filter(Boolean).join(' ').trim();
+    }
+    const base = item.partOfSpeech === 'noun' ? capitalizeNoun(raw) : raw;
+    const article = chooseArticle(item.metadata?.gender, item.metadata?.article) || (item.partOfSpeech === 'noun' ? 'der' : null);
+    return article ? `${article} ${base}` : base;
+  }
+
+  const ui = $derived(appState.languageMode === 'DE_BG'
+    ? {
+        heading: 'Lernkarten',
+        hard: '🔴 Schwer',
+        easy: '🟢 Leicht',
+        completedTitle: '🎉 Großartige Arbeit!',
+        completedBody: 'Du hast diese Lerneinheit beendet.',
+        startNew: 'Neue Einheit starten',
+        loading: 'Vokabular wird geladen...',
+        retry: 'Erneut versuchen',
+        mastered: 'Keine Wörter zu üben. Alles gemeistert!'
+      }
+    : {
+        heading: 'Карти за учене',
+        hard: '🔴 Трудно',
+        easy: '🟢 Лесно',
+        completedTitle: '🎉 Страхотна работа!',
+        completedBody: 'Завърши тази сесия за учене.',
+        startNew: 'Започни нова сесия',
+        loading: 'Зареждане на речника...',
+        retry: 'Опитай отново',
+        mastered: 'Няма думи за упражнение. Всичко е усвоено!'
+      });
+
   // Load vocabulary data and filter for unmastered words
   async function startSession() {
     try {
@@ -24,7 +76,10 @@
       await vocabularyDb.initialize();
 
       // Get all vocabulary items
-      const allVocabulary = vocabularyDb.getVocabulary();
+      const allVocabulary = vocabularyDb.getVocabulary().map((item) => ({
+        ...item,
+        german: formatGermanTerm(item)
+      }));
 
       if (allVocabulary.length === 0) {
         loadError = 'No vocabulary loaded. Please check the data files and try again.';
@@ -143,16 +198,14 @@
     const card = sessionCards[currentCardIndex];
     if (!card) return null;
 
-    // Transform the vocabulary item to match Flashcard component expectations
     return {
-      id: card.id,
-      term_bulgarian: card.bulgarian,
-      term_german: card.german,
-      breakdown: card.literalBreakdown || [],
-      context_clue: card.metadata?.notes || '',
-      media: {
-        emoji: card.emoji || ''
-      }
+      ...card,
+      media: card.media ?? { emoji: card.emoji },
+      literalBreakdown: card.literalBreakdown ?? card.metadata?.components?.map((c) => ({
+        segment: c.part,
+        literal: c.meaning,
+        grammarTag: c.note
+      })) ?? []
     };
   }
 
@@ -190,23 +243,23 @@
           onclick={handleHard}
           disabled={isAnimating}
         >
-          🔴 Hard
+          {ui.hard}
         </button>
         <button
           class="easy-button"
           onclick={handleEasy}
           disabled={isAnimating}
         >
-          🟢 Easy
+          {ui.easy}
         </button>
       </div>
     {:else if sessionComplete}
       <!-- Session completion message -->
       <div class="completion-message">
-        <h2>🎉 Great job!</h2>
-        <p>You've completed this learning session.</p>
+        <h2>{ui.completedTitle}</h2>
+        <p>{ui.completedBody}</p>
         <button onclick={startSession} class="restart-button">
-          Start New Session
+          {ui.startNew}
         </button>
       </div>
     {:else}
@@ -215,14 +268,14 @@
         {#if loadError}
           <p>{loadError}</p>
           <button onclick={startSession} class="restart-button">
-            Retry
+            {ui.retry}
           </button>
         {:else if sessionCards.length === 0}
-          <p>Loading vocabulary...</p>
+          <p>{ui.loading}</p>
         {:else}
-          <p>No words to review. You've mastered all vocabulary!</p>
+          <p>{ui.mastered}</p>
           <button onclick={startSession} class="restart-button">
-            Start New Session
+            {ui.startNew}
           </button>
         {/if}
       </div>
@@ -273,16 +326,19 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
+    gap: 1rem;
   }
 
   .flashcard-wrapper {
     width: 100%;
     max-width: 400px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     transition: transform 0.6s ease;
+    position: relative;
+    z-index: 1; /* Lower z-index than buttons */
   }
 
   /* Animation for card completion */
@@ -310,6 +366,8 @@
     display: flex;
     gap: 1.5rem;
     margin-top: 1rem;
+    position: relative;
+    z-index: 10; /* Higher z-index to ensure buttons are on top */
   }
 
   .hard-button, .easy-button {

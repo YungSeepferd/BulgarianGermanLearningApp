@@ -58,6 +58,7 @@ export const DifficultyLevelSchema = z.enum([
 // Schema for vocabulary metadata
 export const VocabularyMetadataSchema = z.object({
   gender: z.enum(['masculine', 'feminine', 'neuter']).optional(), // For nouns
+  article: z.enum(['der', 'die', 'das', 'ein', 'eine']).optional(),
   pluralForm: z.string().optional(), // Plural form for nouns
   conjugation: z.record(z.string(), z.string()).optional(), // Verb conjugations
   examples: z.array(z.object({
@@ -71,7 +72,20 @@ export const VocabularyMetadataSchema = z.object({
   notes: z.string().optional(),
   mnemonic: z.string().optional(),
   culturalNote: z.string().optional(),
-  etymology: z.string().optional()
+  etymology: z.string().optional(),
+  components: z.array(z.object({ part: z.string(), meaning: z.string(), note: z.string().optional() })).optional(),
+  contextualNuance: z.string().optional(),
+  declension: z.record(
+    z.string(), // case name (e.g., 'Nominative', 'Accusative')
+    z.object({
+      singular: z.string().optional(),
+      plural: z.string().optional()
+    })
+  ).optional().describe('Declension table for nouns: case -> {singular, plural}'),
+  links: z.array(z.object({
+    label: z.string().describe('Link label (e.g., "DWDS", "Duden")'),
+    url: z.string().url().describe('Absolute URL to external dictionary')
+  })).optional().describe('External dictionary links')
 });
 
 /**
@@ -105,6 +119,7 @@ const BaseVocabularyItemSchema = z.object({
     literal: z.string(),
     grammarTag: z.string()
   })).optional(),
+  contextualNuance: z.string().optional(),
   metadata: VocabularyMetadataSchema.optional(),
   createdAt: z.union([
     z.date(),

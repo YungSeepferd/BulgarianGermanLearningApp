@@ -9,7 +9,17 @@
     onModeChange?: (mode: 'practice' | 'search') => void;
   }>();
 
-  let showTooltip = $state(false);
+  const ui = $derived(appState.languageMode === 'DE_BG'
+    ? {
+        directionLabel: 'Deutsch → Bulgarisch',
+        practice: 'Üben',
+        search: 'Suchen'
+      }
+    : {
+        directionLabel: 'Български → Немски',
+        practice: 'Упражнение',
+        search: 'Търсене'
+      });
 
   // Toggle functions with animations
   function toggleDirection() {
@@ -24,27 +34,22 @@
     const newMode = mode === 'practice' ? 'search' : 'practice';
     if (onModeChange) onModeChange(newMode);
   }
-
-  // Tooltip functions
-  function handleMouseEnter() {
-    showTooltip = true;
-  }
-
-  function handleMouseLeave() {
-    showTooltip = false;
-  }
-
   // Accessibility functions
   function getDirectionAriaLabel() {
     return appState.languageMode === 'DE_BG'
-      ? 'Current language direction: German to Bulgarian. Click to switch to Bulgarian to German.'
-      : 'Current language direction: Bulgarian to German. Click to switch to German to Bulgarian.';
+      ? 'Aktuelle Richtung: Deutsch zu Bulgarisch. Klicken, um zu Bulgarisch zu Deutsch zu wechseln.'
+      : 'Текуща посока: Български към Немски. Натиснете, за да смените на Немски към Български.';
   }
 
   function getModeAriaLabel(currentMode: 'practice' | 'search') {
-    return currentMode === 'practice'
-      ? 'Practice mode. Click to switch to search mode.'
-      : 'Search mode. Click to switch to practice mode.';
+    if (currentMode === 'practice') {
+      return appState.languageMode === 'DE_BG'
+        ? 'Übungsmodus. Klicken, um zum Suchmodus zu wechseln.'
+        : 'Режим упражнение. Натиснете, за да смените на търсене.';
+    }
+    return appState.languageMode === 'DE_BG'
+      ? 'Suchmodus. Klicken, um zum Übungsmodus zu wechseln.'
+      : 'Режим търсене. Натиснете, за да смените на упражнение.';
   }
 </script>
 
@@ -54,8 +59,6 @@
       <button
         class="toggle-btn"
         onclick={toggleDirection}
-        onmouseenter={handleMouseEnter}
-        onmouseleave={handleMouseLeave}
         aria-label={getDirectionAriaLabel()}
         aria-live="polite"
       >
@@ -65,7 +68,7 @@
           <span class="flag">{appState.languageMode === 'DE_BG' ? '🇧🇬' : '🇩🇪'}</span>
         </div>
         <span class="direction-text">
-          {appState.languageMode === 'DE_BG' ? 'German → Bulgarian' : 'Bulgarian → German'}
+          {ui.directionLabel}
         </span>
       </button>
     </div>
@@ -75,44 +78,25 @@
         class="mode-btn"
         class:active={mode === 'practice'}
         onclick={toggleMode}
-        onmouseenter={handleMouseEnter}
-        onmouseleave={handleMouseLeave}
         aria-label={getModeAriaLabel('practice')}
         aria-live="polite"
       >
         <span class="mode-icon">📝</span>
-        <span class="mode-text">Practice</span>
+        <span class="mode-text">{ui.practice}</span>
       </button>
       
       <button
         class="mode-btn"
         class:active={mode === 'search'}
         onclick={toggleMode}
-        onmouseenter={handleMouseEnter}
-        onmouseleave={handleMouseLeave}
         aria-label={getModeAriaLabel('search')}
         aria-live="polite"
       >
         <span class="mode-icon">🔍</span>
-        <span class="mode-text">Search</span>
+        <span class="mode-text">{ui.search}</span>
       </button>
     </div>
   </div>
-  
-  {#if showTooltip}
-    <div class="tooltip" transition:fade>
-      <div class="tooltip-content">
-        <p><strong>Tandem Learning:</strong> Instantly switch between translation directions</p>
-        <p><strong>Practice Mode:</strong> Learn vocabulary with instant feedback</p>
-        <p><strong>Search Mode:</strong> Find specific words and practice them</p>
-        {#if mode === 'practice'}
-          <p><strong>Tip:</strong> Use the practice mode to test your knowledge with flashcards</p>
-        {:else}
-          <p><strong>Tip:</strong> Use the search mode to find specific vocabulary items</p>
-        {/if}
-      </div>
-    </div>
-  {/if}
 </div>
 
 <style>
@@ -122,58 +106,6 @@
     gap: 1rem;
     align-items: flex-end;
     position: relative;
-  }
-
-  /* Animation classes */
-  .direction-toggle {
-    animation: direction-pulse 2s infinite;
-  }
-
-  .mode-toggle {
-    animation: mode-pulse 2s infinite;
-  }
-
-  @keyframes direction-pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-  }
-
-  @keyframes mode-pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-  }
-
-  /* Tooltip styles */
-  .tooltip {
-    position: absolute;
-    right: 0;
-    top: 100%;
-    margin-top: 0.5rem;
-    z-index: 1000;
-    width: max-content;
-  }
-
-  .tooltip-content {
-    background: #2c3e50;
-    color: white;
-    padding: 1rem;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    line-height: 1.4;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    max-width: 300px;
-  }
-
-  .tooltip-content::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    right: 1rem;
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 4px solid #2c3e50;
   }
 
   /* Accessibility focus styles */
@@ -277,55 +209,6 @@
     font-weight: 500;
   }
   
-  .tooltip {
-    position: relative;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    pointer-events: none;
-  }
-  
-  .tandem-toggle:hover .tooltip {
-    opacity: 1;
-  }
-  
-  .tooltip-content {
-    position: absolute;
-    right: 0;
-    top: 100%;
-    margin-top: 0.5rem;
-    background: #2c3e50;
-    color: white;
-    padding: 1rem;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    line-height: 1.4;
-    min-width: 250px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-  }
-  
-  .tooltip-content::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    right: 1rem;
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 4px solid #2c3e50;
-  }
-  
-  .tooltip-content p {
-    margin: 0.25rem 0;
-  }
-  
-  .tooltip-content p:first-child {
-    margin-bottom: 0.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
   @media (max-width: 768px) {
     .tandem-toggle {
       align-items: center;
@@ -357,18 +240,6 @@
       display: none;
     }
     
-    .tooltip-content {
-      right: auto;
-      left: 50%;
-      transform: translateX(-50%);
-      min-width: 200px;
-    }
-    
-    .tooltip-content::before {
-      right: auto;
-      left: 50%;
-      transform: translateX(-50%);
-    }
   }
 
   /* CI mode - disable animations for stable E2E testing */

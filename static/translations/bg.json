@@ -12,6 +12,7 @@
   "common": {
     "check_answer": "Провери отговор",
     "next_word": "Следваща дума",
+    "show": "Покажи",
     "show_examples": "Покажи примери",
     "hide_examples": "Скрий примери",
     "retry": "Опитай отново",

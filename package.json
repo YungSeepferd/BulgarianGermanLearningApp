@@ -30,10 +30,14 @@
 		"coverage:clean": "rm -rf coverage .nyc_output",
 		"coverage:merge": "node scripts/merge-coverage-reports.js",
 		"machine-translate": "inlang machine translate --project project.inlang",
+		"rebuild:vocabulary": "tsx scripts/rebuild-vocabulary.ts",
 		"migrate:vocabulary": "tsx scripts/migrate-vocabulary.ts",
 		"migrate:vocabulary:dry": "pnpm migrate:vocabulary -- --dry-run",
 		"migrate:vocabulary:verbose": "pnpm migrate:vocabulary -- --verbose",
-		"init:vocabulary": "tsx -e \"import { initializeVocabulary } from './src/lib/data/loader'; initializeVocabulary().catch(console.error);\""
+		"init:vocabulary": "tsx -e \"import { initializeVocabulary } from './src/lib/data/loader'; initializeVocabulary().catch(console.error);\"",
+		"db:setup": "tsx scripts/db-setup.ts",
+		"seed": "pnpm db:setup",
+		"simulate-ci": "node scripts/simulate-ci.js"
 	},
 	"devDependencies": {
 		"@axe-core/playwright": "^4.11.0",

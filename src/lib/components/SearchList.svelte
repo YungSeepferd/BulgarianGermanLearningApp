@@ -3,6 +3,7 @@
   import { fade, fly } from 'svelte/transition';
   import { flip } from 'svelte/animate';
   import { appState } from '$lib/state/app-state';
+  import { formatGermanTerm } from '$lib/utils/formatGerman';
 
   let {
     items = [],
@@ -23,6 +24,109 @@
   let hoveredItemId = $state<string | null>(null);
   let showTooltips = $state(false);
 
+  const categoryLabels = {
+    de: {
+      greetings: 'Begrüßungen',
+      numbers: 'Zahlen',
+      family: 'Familie',
+      food: 'Essen',
+      colors: 'Farben',
+      animals: 'Tiere',
+      body: 'Körper',
+      clothing: 'Kleidung',
+      house: 'Haus & Wohnen',
+      nature: 'Natur',
+      transport: 'Verkehr',
+      technology: 'Technologie',
+      time: 'Zeit',
+      weather: 'Wetter',
+      professions: 'Berufe',
+      places: 'Orte',
+      grammar: 'Grammatik',
+      culture: 'Kultur',
+      common_phrases: 'Alltagsphrasen'
+    },
+    bg: {
+      greetings: 'Поздрави',
+      numbers: 'Числа',
+      family: 'Семейство',
+      food: 'Храна',
+      colors: 'Цветове',
+      animals: 'Животни',
+      body: 'Тяло',
+      clothing: 'Облекло',
+      house: 'Дом',
+      nature: 'Природа',
+      transport: 'Транспорт',
+      technology: 'Технологии',
+      time: 'Време',
+      weather: 'Времето',
+      professions: 'Професии',
+      places: 'Места',
+      grammar: 'Граматика',
+      culture: 'Култура',
+      common_phrases: 'Често срещани изрази'
+    }
+  } as const;
+
+  const ui = $derived(appState.languageMode === 'DE_BG'
+    ? {
+        emptyTitle: 'Kein Vokabular gefunden',
+        emptyHint: 'Versuche andere Suchbegriffe oder prüfe die Schreibweise.',
+        found: (n: number) => `${n} ${n === 1 ? 'Treffer' : 'Treffer'}`,
+        showing: 'Zeige Deutsch → Bulgarisch',
+        showingReverse: 'Zeige Bulgarisch → Deutsch',
+        quickPractice: 'Schnell üben',
+        practice: 'Üben',
+        selectForPractice: (text: string) => `${text} zum Üben auswählen`,
+        quickPracticeLabel: (text: string) => `${text} schnell üben`,
+        typeWord: 'Wort',
+        typeRule: 'Regel',
+        difficulty: 'Schwierigkeit',
+        category: 'Kategorie',
+        type: 'Typ',
+        practiceStats: 'Übungsstatistik',
+        correct: 'Richtig',
+        incorrect: 'Falsch',
+        successRate: 'Erfolgsrate',
+        richContext: 'Kontext',
+        note: 'Notiz',
+        mnemonic: 'Eselsbrücke',
+        culturalNote: 'Kulturelle Notiz',
+        etymology: 'Etymologie'
+      }
+    : {
+        emptyTitle: 'Няма намерени думи',
+        emptyHint: 'Опитайте с други думи или проверете правописа.',
+        found: (n: number) => `${n} ${n === 1 ? 'резултат' : 'резултата'}`,
+        showing: 'Показва Немски → Български',
+        showingReverse: 'Показва Български → Немски',
+        quickPractice: 'Бърза практика',
+        practice: 'Упражнение',
+        selectForPractice: (text: string) => `Избери ${text} за упражнение`,
+        quickPracticeLabel: (text: string) => `Бързо упражнявай ${text}`,
+        typeWord: 'Дума',
+        typeRule: 'Правило',
+        difficulty: 'Трудност',
+        category: 'Категория',
+        type: 'Тип',
+        practiceStats: 'Статистика',
+        correct: 'Верни',
+        incorrect: 'Грешни',
+        successRate: 'Успеваемост',
+        richContext: 'Контекст',
+        note: 'Бележка',
+        mnemonic: 'Мнемоника',
+        culturalNote: 'Културна бележка',
+        etymology: 'Етимология'
+      });
+
+  function getCategoryLabel(category?: string) {
+    if (!category) return '';
+    const labels = appState.languageMode === 'DE_BG' ? categoryLabels.de : categoryLabels.bg;
+    return labels[category as keyof typeof labels] ?? category;
+  }
+
   // Animation functions
   function itemAnimation(node: HTMLElement) {
     return fly(node, {
@@ -42,11 +146,15 @@
 
   // Data functions
   function getItemText(item: VocabularyItem): string {
-    return direction === 'DE->BG' ? item.german : item.bulgarian;
+    if (direction === 'DE->BG') {
+      return formatGermanTerm(item);
+    }
+    return item.bulgarian;
   }
 
   function getItemTranslation(item: VocabularyItem): string {
-    return direction === 'DE->BG' ? item.bulgarian : item.german;
+    if (direction === 'DE->BG') return item.bulgarian;
+    return formatGermanTerm(item);
   }
 
   function getDifficultyColor(difficulty: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2' | undefined): string {
@@ -79,14 +187,14 @@
   {#if items.length === 0}
     <div class="empty-state">
       <div class="empty-icon">🔍</div>
-      <h3>No vocabulary found</h3>
-      <p>Try searching with different keywords or check your spelling</p>
+      <h3>{ui.emptyTitle}</h3>
+      <p>{ui.emptyHint}</p>
     </div>
   {:else}
     <div class="results-header">
-      <h3>Found {items.length} {items.length === 1 ? 'word' : 'words'}</h3>
+      <h3>{ui.found(items.length)}</h3>
       <div class="direction-info">
-        Showing {direction === 'DE->BG' ? 'German' : 'Bulgarian'} → {direction === 'DE->BG' ? 'Bulgarian' : 'German'}
+        {direction === 'DE->BG' ? ui.showing : ui.showingReverse}
       </div>
     </div>
     
@@ -109,7 +217,7 @@
                 class="item-checkbox"
                 checked={selectedItems.has(item.id)}
                 onchange={() => onToggleSelectItem(item.id)}
-                aria-label={`Select ${getItemText(item)} for practice`}
+                aria-label={ui.selectForPractice(getItemText(item))}
               />
               <span class="word">{getItemText(item)}</span>
               <span class="translation">{getItemTranslation(item)}</span>
@@ -124,10 +232,10 @@
                       handleQuickPractice(item);
                     }
                   }}
-                  aria-label={`Quick practice ${getItemText(item)}`}
+                  aria-label={ui.quickPracticeLabel(getItemText(item))}
                 >
                   <span class="btn-icon">⚡</span>
-                  <span class="btn-text">Practice This</span>
+                  <span class="btn-text">{ui.quickPractice}</span>
                 </button>
               {/if}
               <button
@@ -138,10 +246,10 @@
                     handleItemClick(item);
                   }
                 }}
-                aria-label={`Practice ${getItemText(item)}`}
+                aria-label={`${ui.practice}: ${getItemText(item)}`}
               >
                 <span class="btn-icon">📝</span>
-                <span class="btn-text">Practice</span>
+                <span class="btn-text">{ui.practice}</span>
               </button>
             </div>
           </div>
@@ -159,7 +267,7 @@
               {/if}
 
               <span class="category-tag" in:tagAnimation>
-                {item.category}
+                {getCategoryLabel(item.category)}
               </span>
 
               {#each item.tags || [] as tag}
@@ -168,9 +276,9 @@
 
               {#if showTooltips}
                 <div class="meta-tooltip">
-                  <p><strong>Difficulty:</strong> {item.level || 'N/A'}</p>
-                  <p><strong>Category:</strong> {item.category}</p>
-                  <p><strong>Type:</strong> {item.type === 'word' ? 'Word' : 'Rule'}</p>
+                  <p><strong>{ui.difficulty}:</strong> {item.level || 'N/A'}</p>
+                  <p><strong>{ui.category}:</strong> {getCategoryLabel(item.category)}</p>
+                  <p><strong>{ui.type}:</strong> {item.type === 'word' ? ui.typeWord : ui.typeRule}</p>
                 </div>
               {/if}
             </div>
@@ -178,17 +286,17 @@
             <div class="stats">
               <span class="type">
                 <span class="stat-icon">{item.type === 'word' ? '📝' : '📋'}</span>
-                {item.type === 'word' ? 'Word' : 'Rule'}
+                {item.type === 'word' ? ui.typeWord : ui.typeRule}
               </span>
 
               {#if showTooltips}
                 <div class="stats-tooltip">
-                  <p><strong>Type:</strong> {item.type === 'word' ? 'Word' : 'Rule'}</p>
+                  <p><strong>{ui.type}:</strong> {item.type === 'word' ? ui.typeWord : ui.typeRule}</p>
                   {#if item.global_stats}
-                    <p><strong>Practice Stats:</strong></p>
-                    <p>Correct: {item.global_stats.correct_count}</p>
-                    <p>Incorrect: {item.global_stats.incorrect_count}</p>
-                    <p>Success Rate: {Math.round(item.global_stats.success_rate)}%</p>
+                    <p><strong>{ui.practiceStats}:</strong></p>
+                    <p>{ui.correct}: {item.global_stats.correct_count}</p>
+                    <p>{ui.incorrect}: {item.global_stats.incorrect_count}</p>
+                    <p>{ui.successRate}: {Math.round(item.global_stats.success_rate)}%</p>
                   {/if}
                 </div>
               {/if}
@@ -207,18 +315,34 @@
           </div>
           {#if hoveredItemId === item.id}
           <div class="rich-context-details" transition:fade>
-            <h4>Rich Context</h4>
+            <h4>{ui.richContext}</h4>
+            {#if (item.literalBreakdown && item.literalBreakdown.length) || (item.metadata?.components && item.metadata.components.length)}
+              <p><strong>{ui.etymology}:</strong>
+                {#if item.literalBreakdown && item.literalBreakdown.length}
+                  {item.literalBreakdown.map((p) => `${p.segment} → ${p.literal}`).join(' + ')}
+                {:else}
+                  {item.metadata?.components?.map((p) => `${p.part} → ${p.meaning}`).join(' + ')}
+                {/if}
+              </p>
+            {/if}
             {#if item.metadata?.notes}
-              <p><strong>Note:</strong> {item.metadata.notes}</p>
+              <p><strong>{ui.note}:</strong> {item.metadata.notes}</p>
             {/if}
             {#if item.metadata?.mnemonic}
-              <p><strong>Mnemonic:</strong> {item.metadata.mnemonic}</p>
+              <p><strong>{ui.mnemonic}:</strong> {item.metadata.mnemonic}</p>
             {/if}
             {#if item.metadata?.culturalNote}
-              <p><strong>Cultural Note:</strong> {item.metadata.culturalNote}</p>
+              <p><strong>{ui.culturalNote}:</strong> {item.metadata.culturalNote}</p>
             {/if}
             {#if item.metadata?.etymology}
-              <p><strong>Etymology:</strong> {item.metadata.etymology}</p>
+              <p><strong>{ui.etymology}:</strong> {item.metadata.etymology}</p>
+            {/if}
+            {#if item.metadata?.links && item.metadata.links.length > 0}
+              <p><strong>{appState.languageMode === 'DE_BG' ? 'Wörterbuch' : 'Речници'}:</strong>
+                {#each item.metadata.links as link}
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label || 'Link'}</a>
+                {/each}
+              </p>
             {/if}
           </div>
           {/if}
@@ -234,6 +358,13 @@
     flex-direction: column;
     gap: 1.5rem;
     position: relative;
+  }
+
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
   }
 
   /* Animation styles */
@@ -379,6 +510,11 @@
   }
 
   @media (max-width: 768px) {
+    .items-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
     .results-header {
       flex-direction: column;
       gap: 0.5rem;

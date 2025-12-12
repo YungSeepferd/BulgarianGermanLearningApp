@@ -166,7 +166,18 @@ export const VocabularyMetadataSchema = z.object({
   sourceFiles: z.array(z.string()).optional().describe('Source files where this item appeared'),
   mergeSources: z.array(z.string()).optional().describe('IDs of items merged into this one'),
   createdBy: z.string().optional().describe('Creator of the item'),
-  lastUpdatedBy: z.string().optional().describe('Last person to update the item')
+  lastUpdatedBy: z.string().optional().describe('Last person to update the item'),
+  declension: z.record(
+    z.string(), // case name (e.g., 'Nominative', 'Accusative')
+    z.object({
+      singular: z.string().optional(),
+      plural: z.string().optional()
+    })
+  ).optional().describe('Declension table for nouns: case -> {singular, plural}'),
+  links: z.array(z.object({
+    label: z.string().describe('Link label (e.g., "DWDS", "Duden")'),
+    url: z.string().url().describe('Absolute URL to external dictionary')
+  })).optional().describe('External dictionary links')
 });
 
 // ======================

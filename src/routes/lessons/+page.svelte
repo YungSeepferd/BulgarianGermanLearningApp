@@ -10,10 +10,12 @@
   import GeneratedLesson from '$lib/components/GeneratedLesson.svelte';
   import LessonGenerator from '$lib/components/LessonGenerator.svelte';
   import { enhancedLessonService } from '$lib/services/enhanced-lesson';
-  import { lessonService } from '$lib/services/lesson';  import LessonCard from '$lib/components/LessonCard.svelte';  import { vocabularyDb as db } from '$lib/data/db.svelte';
+  import { lessonService } from '$lib/services/lesson';
   import { vocabularyDb as db } from '$lib/data/db.svelte';
+  import { appState } from '$lib/state/app-state';
   import type { VocabularyCategory, PartOfSpeech } from '$lib/schemas/vocabulary';
   import type { VocabularyItem } from '$lib/types/vocabulary';
+  import type { Lesson, LessonDifficulty, LessonType } from '$lib/schemas/lesson';
 
   // State
   let lessons = $state<Lesson[]>([]);
@@ -34,6 +36,153 @@
   }>({
     limit: 10
   });
+
+  const typeLabels = {
+    de: {
+      vocabulary: 'Vokabular',
+      grammar: 'Grammatik',
+      conversation: 'Konversation',
+      reading: 'Lesen',
+      listening: 'Hören',
+      writing: 'Schreiben',
+      culture: 'Kultur',
+      mixed: 'Gemischt'
+    },
+    bg: {
+      vocabulary: 'Речник',
+      grammar: 'Граматика',
+      conversation: 'Разговор',
+      reading: 'Четене',
+      listening: 'Слушане',
+      writing: 'Писане',
+      culture: 'Култура',
+      mixed: 'Смесено'
+    }
+  } as const;
+
+  const categoryLabels = {
+    de: {
+      greetings: 'Begrüßungen',
+      numbers: 'Zahlen',
+      family: 'Familie',
+      food: 'Essen',
+      colors: 'Farben',
+      animals: 'Tiere',
+      body: 'Körper',
+      clothing: 'Kleidung',
+      house: 'Haus & Wohnen',
+      nature: 'Natur',
+      transport: 'Verkehr',
+      technology: 'Technologie',
+      time: 'Zeit',
+      weather: 'Wetter',
+      professions: 'Berufe',
+      places: 'Orte',
+      grammar: 'Grammatik',
+      culture: 'Kultur',
+      common_phrases: 'Alltagsphrasen',
+      uncategorized: 'Unkategorisiert'
+    },
+    bg: {
+      greetings: 'Поздрави',
+      numbers: 'Числа',
+      family: 'Семейство',
+      food: 'Храна',
+      colors: 'Цветове',
+      animals: 'Животни',
+      body: 'Тяло',
+      clothing: 'Облекло',
+      house: 'Дом',
+      nature: 'Природа',
+      transport: 'Транспорт',
+      technology: 'Технологии',
+      time: 'Време',
+      weather: 'Времето',
+      professions: 'Професии',
+      places: 'Места',
+      grammar: 'Граматика',
+      culture: 'Култура',
+      common_phrases: 'Често срещани изрази',
+      uncategorized: 'Некатегоризирани'
+    }
+  } as const;
+
+  const partOfSpeechLabels = {
+    de: {
+      noun: 'Nomen',
+      verb: 'Verben',
+      adjective: 'Adjektive',
+      adverb: 'Adverbien',
+      pronoun: 'Pronomen',
+      preposition: 'Präpositionen',
+      conjunction: 'Konjunktionen',
+      interjection: 'Interjektionen',
+      article: 'Artikel',
+      number: 'Zahlwörter',
+      phrase: 'Redewendungen'
+    },
+    bg: {
+      noun: 'Съществителни',
+      verb: 'Глаголи',
+      adjective: 'Прилагателни',
+      adverb: 'Наречия',
+      pronoun: 'Местоимения',
+      preposition: 'Предлози',
+      conjunction: 'Съюзи',
+      interjection: 'Междуметия',
+      article: 'Членове',
+      number: 'Числителни',
+      phrase: 'Изрази'
+    }
+  } as const;
+
+  const ui = $derived(appState.languageMode === 'DE_BG'
+    ? {
+        title: 'Lektionen',
+        subtitle: 'Strukturierte Lernerlebnisse für Bulgarisch und Deutsch',
+        createDynamicLesson: '✨ Dynamische Lektion erstellen',
+        createLesson: '✨ Lektion erstellen',
+        createFirstLesson: 'Erstelle deine erste Lektion',
+        loading: 'Lektionen werden geladen...',
+        error: 'Fehler beim Laden. Bitte erneut versuchen.',
+        retry: 'Erneut versuchen',
+        emptyTitle: 'Keine Lektionen verfügbar',
+        emptyDescription: 'Erstelle deine erste individuelle Lektion!',
+        difficultyLabel: 'Niveau',
+        typeLabel: 'Typ',
+        allLevels: 'Alle Niveaus',
+        allTypes: 'Alle Typen',
+        backToLessons: '← Zurück zu allen Lektionen',
+        showingLessons: (shown: number, total: number) => `Zeige ${shown} von ${total} Lektionen`,
+        resetFilters: 'Filter zurücksetzen',
+        mixedEveryday: 'Gemischt: Alltägliche Gespräche',
+        basicVocabulary: 'Grundwortschatz',
+        categoryPrefix: 'Kategorie',
+        grammarPrefix: 'Grammatik'
+      }
+    : {
+        title: 'Уроци',
+        subtitle: 'Структурирани уроци по български и немски',
+        createDynamicLesson: '✨ Създай динамичен урок',
+        createLesson: '✨ Създай урок',
+        createFirstLesson: 'Създай първия си урок',
+        loading: 'Зареждаме уроците...',
+        error: 'Грешка при зареждане. Опитайте пак.',
+        retry: 'Опитай отново',
+        emptyTitle: 'Няма налични уроци',
+        emptyDescription: 'Създай първия си персонализиран урок!',
+        difficultyLabel: 'Ниво',
+        typeLabel: 'Тип',
+        allLevels: 'Всички нива',
+        allTypes: 'Всички типове',
+        backToLessons: '← Назад към всички уроци',
+        showingLessons: (shown: number, total: number) => `Показани ${shown} от общо ${total} урока`,
+        resetFilters: 'Нулирай филтрите',
+        mixedEveryday: 'Смесено: Ежедневни разговори',
+        basicVocabulary: 'Основна лексика',
+        categoryPrefix: 'Категория',
+        grammarPrefix: 'Граматика'
+      });
 
   // Computed
   let filteredLessons = $derived(
@@ -67,7 +216,7 @@
 
     } catch (err) {
       console.error('Failed to load lessons:', err);
-      error = err instanceof Error ? err.message : 'Failed to load lessons';
+      error = err instanceof Error ? err.message : ui.error;
     } finally {
       isLoading = false;
     }
@@ -116,7 +265,7 @@
             categories: [category],
             limit: 8,
             type: 'vocabulary',
-            title: `Category: ${category}`
+            title: `${ui.categoryPrefix}: ${getCategoryDisplayName(category)}`
           });
           lessons.push(lesson);
         }
@@ -136,7 +285,7 @@
             partOfSpeech,
             limit: 8,
             type: 'vocabulary',
-            title: `Grammar: ${partOfSpeech}s`
+            title: `${ui.grammarPrefix}: ${getPartOfSpeechDisplayName(partOfSpeech)}`
           });
           lessons.push(lesson);
         }
@@ -151,7 +300,7 @@
         const lesson = await lessonService.generateLessonFromCriteria({
           limit: 10,
           type: 'mixed',
-          title: 'Mixed: Everyday Conversations'
+          title: ui.mixedEveryday
         });
         lessons.push(lesson);
       } catch (error) {
@@ -200,7 +349,7 @@
           const lesson = lessonService.generateLessonFromVocabulary(
             items.slice(0, 8),
             {
-              title: `${difficulty}: Basic Vocabulary`,
+              title: `${difficulty}: ${ui.basicVocabulary}`,
               difficulty: difficulty as LessonDifficulty,
               type: 'vocabulary'
             }
@@ -267,105 +416,61 @@
    * Get lesson type display name
    */
   function getLessonTypeName(type: string): string {
-    const typeNames: Record<string, string> = {
-      'vocabulary': 'Vocabulary',
-      'grammar': 'Grammar',
-      'conversation': 'Conversation',
-      'reading': 'Reading',
-      'listening': 'Listening',
-      'writing': 'Writing',
-      'culture': 'Culture',
-      'mixed': 'Mixed'
-    };
-    return typeNames[type] || type;
+    const labels = appState.languageMode === 'DE_BG' ? typeLabels.de : typeLabels.bg;
+    return labels[type as keyof typeof labels] ?? type;
   }
 
   /**
    * Get category display name
    */
   function getCategoryDisplayName(category: VocabularyCategory): string {
-    const displayNames: Record<VocabularyCategory, string> = {
-      'greetings': 'Greetings',
-      'numbers': 'Numbers',
-      'family': 'Family',
-      'food': 'Food',
-      'colors': 'Colors',
-      'animals': 'Animals',
-      'body': 'Body Parts',
-      'clothing': 'Clothing',
-      'house': 'House & Home',
-      'nature': 'Nature',
-      'transport': 'Transportation',
-      'technology': 'Technology',
-      'time': 'Time & Date',
-      'weather': 'Weather',
-      'professions': 'Professions',
-      'places': 'Places',
-      'grammar': 'Grammar',
-      'culture': 'Culture',
-      'common_phrases': 'Common Phrases',
-      'uncategorized': 'Uncategorized'
-    };
-
-    return displayNames[category] || category;
+    const labels = appState.languageMode === 'DE_BG' ? categoryLabels.de : categoryLabels.bg;
+    return labels[category] ?? category;
   }
 
   /**
    * Get part of speech display name
    */
   function getPartOfSpeechDisplayName(partOfSpeech: PartOfSpeech): string {
-    const displayNames: Record<PartOfSpeech, string> = {
-      'noun': 'Nouns',
-      'verb': 'Verbs',
-      'adjective': 'Adjectives',
-      'adverb': 'Adverbs',
-      'pronoun': 'Pronouns',
-      'preposition': 'Prepositions',
-      'conjunction': 'Conjunctions',
-      'interjection': 'Interjections',
-      'article': 'Articles',
-      'number': 'Numbers',
-      'phrase': 'Phrases'
-    };
-
-    return displayNames[partOfSpeech] || partOfSpeech;
+    const labels = appState.languageMode === 'DE_BG' ? partOfSpeechLabels.de : partOfSpeechLabels.bg;
+    return labels[partOfSpeech] ?? partOfSpeech;
   }
 </script>
 
 <div class="lessons-page">
   <header class="lessons-header">
-    <h1>Lessons</h1>
-    <p class="subtitle">Structured learning experiences for Bulgarian and German</p>
+    <h1>{ui.title}</h1>
+    <p class="subtitle">{ui.subtitle}</p>
     <button class="create-lesson-button" onclick={() => showLessonGenerationModal = true}>
-      ✨ Create Dynamic Lesson
+      {ui.createDynamicLesson}
     </button>
   </header>
 
   {#if isLoading}
     <div class="loading-state">
       <div class="spinner"></div>
-      <p>Loading lessons...</p>
+      <p>{ui.loading}</p>
     </div>
   {:else if error}
     <div class="error-state">
       <div class="error-icon">⚠️</div>
       <p>{error}</p>
-      <button class="retry-button" onclick={loadLessons}>Retry</button>
+      <button class="retry-button" onclick={loadLessons}>{ui.retry}</button>
     </div>
   {:else if lessons.length === 0}
     <div class="empty-state">
       <div class="empty-icon">📚</div>
-      <p>No lessons available. Create your first custom lesson!</p>
+      <p>{ui.emptyDescription}</p>
       <button class="create-lesson-button" onclick={() => showLessonGenerationModal = true}>
-        Create Your First Lesson
+        {ui.createFirstLesson}
       </button>
     </div>
   {:else}
     <div class="lessons-filters">
       <div class="filter-group">
-        <label for="difficulty-filter">Difficulty</label>
+        <label for="difficulty-filter">{ui.difficultyLabel}</label>
         <select id="difficulty-filter" bind:value={selectedDifficulty}>
-          <option value="all">All Levels</option>
+          <option value="all">{ui.allLevels}</option>
           {#each getDifficultyLevels() as level}
             <option value={level}>{level}</option>
           {/each}
@@ -373,9 +478,9 @@
       </div>
 
       <div class="filter-group">
-        <label for="type-filter">Type</label>
+        <label for="type-filter">{ui.typeLabel}</label>
         <select id="type-filter" bind:value={selectedType}>
-          <option value="all">All Types</option>
+          <option value="all">{ui.allTypes}</option>
           {#each getLessonTypes() as type}
             <option value={type}>{getLessonTypeName(type)}</option>
           {/each}
@@ -383,7 +488,7 @@
       </div>
 
       <button class="create-lesson-button mobile" onclick={() => showLessonGenerationModal = true}>
-        ✨ Create Lesson
+        {ui.createLesson}
       </button>
     </div>
 
@@ -391,7 +496,7 @@
       <GeneratedLesson lesson={showGeneratedLesson} />
       <div class="back-to-lessons">
         <button class="back-button" onclick={closeGeneratedLesson}>
-          ← Back to All Lessons
+          {ui.backToLessons}
         </button>
       </div>
     {:else}
@@ -406,9 +511,9 @@
 
     <div class="lessons-summary">
       <p>
-        Showing {filteredLessons.length} of {lessons.length} lessons
+        {ui.showingLessons(filteredLessons.length, lessons.length)}
         {#if selectedDifficulty !== 'all' || selectedType !== 'all'}
-          • <button class="reset-filters" onclick={() => { selectedDifficulty = 'all'; selectedType = 'all'; }}>Reset filters</button>
+          • <button class="reset-filters" onclick={() => { selectedDifficulty = 'all'; selectedType = 'all'; }}>{ui.resetFilters}</button>
         {/if}
       </p>
     </div>
