@@ -6,7 +6,9 @@ type VocabItem = {
   german: string;
   bulgarian: string;
   difficulty: number;
-  category: string;
+  categories?: string[];
+  partOfSpeech?: string;
+  metadata?: any;
 };
 
 // Quiz Question Schema

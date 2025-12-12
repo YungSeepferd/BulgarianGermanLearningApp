@@ -25,7 +25,7 @@
   let selectedType = $state<string>('all');
   let showLessonGenerationModal = $state(false);
   let showGeneratedLesson = $state<Lesson | null>(null);
-  let newLessonCriteria = $state<{
+  let _newLessonCriteria = $state<{
     difficulty?: LessonDifficulty;
     type?: LessonType;
     category?: VocabularyCategory;
@@ -68,9 +68,9 @@
       food: 'Essen',
       colors: 'Farben',
       animals: 'Tiere',
-      body: 'Körper',
+      'body-parts': 'Körperteile',
       clothing: 'Kleidung',
-      house: 'Haus & Wohnen',
+      home: 'Zuhause',
       nature: 'Natur',
       transport: 'Verkehr',
       technology: 'Technologie',
@@ -80,8 +80,7 @@
       places: 'Orte',
       grammar: 'Grammatik',
       culture: 'Kultur',
-      common_phrases: 'Alltagsphrasen',
-      uncategorized: 'Unkategorisiert'
+      'everyday-phrases': 'Alltagsphrasen'
     },
     bg: {
       greetings: 'Поздрави',
@@ -90,9 +89,9 @@
       food: 'Храна',
       colors: 'Цветове',
       animals: 'Животни',
-      body: 'Тяло',
+      'body-parts': 'Части на тялото',
       clothing: 'Облекло',
-      house: 'Дом',
+      home: 'Дом',
       nature: 'Природа',
       transport: 'Транспорт',
       technology: 'Технологии',
@@ -102,8 +101,7 @@
       places: 'Места',
       grammar: 'Граматика',
       culture: 'Култура',
-      common_phrases: 'Често срещани изрази',
-      uncategorized: 'Некатегоризирани'
+      'everyday-phrases': 'Често срещани изрази'
     }
   } as const;
 
@@ -254,7 +252,7 @@
 
     // Generate lessons by category
     const categories: VocabularyCategory[] = [
-      'greetings', 'numbers', 'family', 'food', 'colors', 'animals', 'body', 'clothing'
+      'greetings', 'numbers', 'family', 'food', 'colors', 'animals', 'body-parts', 'clothing'
     ];
 
     for (const category of categories) {
@@ -347,7 +345,23 @@
       for (const [difficulty, items] of Object.entries(byDifficulty)) {
         if (items.length >= 5) {
           const lesson = lessonService.generateLessonFromVocabulary(
-            items.slice(0, 8),
+            items.slice(0, 8).map((item) => {
+              const transliteration = typeof item.transliteration === 'string'
+                ? item.transliteration
+                : (item.transliteration?.german ?? '');
+              return {
+                ...item,
+                // Adapt unified vocabulary item to legacy expectations of lesson service
+                isCommon: item.metadata?.isCommon ?? false,
+                isVerified: item.metadata?.isVerified ?? false,
+                learningPhase: item.metadata?.learningPhase ?? 0,
+                cefrLevel: (() => {
+                  const level = item.metadata?.level ?? item.level ?? 'A1';
+                  return (level === 'C1' ? 'B2' : level) as 'A1' | 'A2' | 'B1' | 'B2';
+                })(),
+                transliteration
+              };
+            }),
             {
               title: `${difficulty}: ${ui.basicVocabulary}`,
               difficulty: difficulty as LessonDifficulty,
@@ -397,20 +411,17 @@
   /**
    * Get vocabulary categories for lesson generation
    */
-  function getVocabularyCategories(): VocabularyCategory[] {
-    return [
-      'greetings', 'numbers', 'family', 'food', 'colors', 'animals', 'body',
-      'clothing', 'house', 'nature', 'transport', 'technology', 'time', 'weather',
-      'professions', 'places', 'grammar', 'culture', 'common_phrases'
-    ];
-  }
+  // Removed unused getVocabularyCategories to satisfy TS
+  // Use canonical category source from unified schema where needed
 
   /**
    * Get parts of speech for lesson generation
    */
-  function getPartsOfSpeech(): PartOfSpeech[] {
-    return ['noun', 'verb', 'adjective', 'adverb', 'pronoun', 'preposition', 'conjunction', 'phrase'];
-  }
+  // Removed unused helper to satisfy TS and keep file tidy
+  // If needed later, prefer importing from a shared constants module
+  // function getPartsOfSpeech(): PartOfSpeech[] {
+  //   return ['noun', 'verb', 'adjective', 'adverb', 'pronoun', 'preposition', 'conjunction', 'phrase'];
+  // }
 
   /**
    * Get lesson type display name
@@ -433,8 +444,13 @@
    */
   function getPartOfSpeechDisplayName(partOfSpeech: PartOfSpeech): string {
     const labels = appState.languageMode === 'DE_BG' ? partOfSpeechLabels.de : partOfSpeechLabels.bg;
-    return labels[partOfSpeech] ?? partOfSpeech;
+    // Guard against keys not present in labels (e.g., 'expression', 'article')
+    return (partOfSpeech in labels)
+      ? labels[partOfSpeech as keyof typeof labels]
+      : partOfSpeech;
   }
+
+  
 </script>
 
 <div class="lessons-page">

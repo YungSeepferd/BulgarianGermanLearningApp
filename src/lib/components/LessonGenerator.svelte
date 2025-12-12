@@ -262,9 +262,9 @@
 
   function getVocabularyCategories(): VocabularyCategory[] {
     return [
-      'greetings', 'numbers', 'family', 'food', 'colors', 'animals', 'body',
-      'clothing', 'house', 'nature', 'transport', 'technology', 'time', 'weather',
-      'professions', 'places', 'grammar', 'culture', 'common_phrases'
+      'greetings', 'numbers', 'family', 'food', 'colors', 'animals', 'body-parts',
+      'clothing', 'home', 'nature', 'transport', 'technology', 'time', 'weather',
+      'professions', 'places', 'grammar', 'culture', 'everyday-phrases'
     ];
   }
 

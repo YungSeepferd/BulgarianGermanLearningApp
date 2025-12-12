@@ -5,8 +5,7 @@
    * Displays a lesson with vocabulary items and progress tracking.
    */
 
-  import { z } from 'zod';
-  import { LessonSchema, type Lesson } from '../schemas/lesson';
+  import type { Lesson, LessonDifficulty, LessonType } from '../schemas/lesson';
 
   // Props
   let { lesson, onStart } = $props<{ lesson: Lesson; onStart?: () => void }>();

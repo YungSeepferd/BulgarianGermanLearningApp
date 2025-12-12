@@ -31,6 +31,7 @@ import {
   getRandomVocabulary
 } from '../../data/loader';
 import type { VocabularyItem, PartOfSpeech as _PartOfSpeech } from '$lib/types/vocabulary';
+import type { VocabularyCategory } from '$lib/schemas/vocabulary';
 
 /**
  * LessonGenerationEngine class
@@ -75,20 +76,28 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     options: LessonGenerationOptions = {}
   ): Promise<GeneratedLesson> {
     try {
+      const normalizedParams: LessonGenerationParams = {
+        ...params,
+        type: this.normalizeLessonType(params.type),
+        criteria: {
+          ...params.criteria,
+          categories: this.normalizeCategories(params.criteria.categories)
+        }
+      };
+
       // Dispatch to specific generation method based on lesson type
-      switch (params.type) {
+      switch (normalizedParams.type) {
         case 'vocabulary':
-          return this.generateThematicLesson(params, options);
+          return this.generateThematicLesson(normalizedParams, options);
         case 'grammar':
-          return this.generateGrammarLesson(params, options);
-        case 'cultural':
-          return this.generateContextualLesson(params, options);
+          return this.generateGrammarLesson(normalizedParams, options);
+        case 'culture':
+          return this.generateContextualLesson(normalizedParams, options);
         case 'mixed':
-        case 'contextual':
-          return this.generateContextualLesson(params, options);
+          return this.generateContextualLesson(normalizedParams, options);
         default:
           // Default to thematic/vocabulary if type is unknown or general
-          return this.generateThematicLesson(params, options);
+          return this.generateThematicLesson(normalizedParams, options);
       }
     } catch (_error) {
       // Error handling is done by throwing a new error with the original message
@@ -110,8 +119,8 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
   ): Promise<GeneratedLesson> {
     // 1. Determine Lesson Structure based on metadata or defaults
     // A standard thematic lesson has an Introduction and a Practice section
-    const includePractice = params.metadata?.includePractice !== false;
-    const includeReview = params.metadata?.includeReview === true;
+    const includePractice = params.metadata?.['includePractice'] !== false;
+    const includeReview = params.metadata?.['includeReview'] === true;
 
     const sections: GeneratedLessonSection[] = [];
     const allVocabularyItems: VocabularyItem[] = [];
@@ -120,7 +129,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     // 2. Fetch Vocabulary
     // Load vocabulary data if not already cached
     if (!this.vocabularyCache) {
-      this.vocabularyCache = await loadVocabulary;
+      this.vocabularyCache = (await loadVocabulary).map(item => this.normalizeVocabularyItem(item));
     }
     const limit = params.criteria.limit || options.maxItems || 10;
     const numericDifficulty = this.mapDifficultyToNumber(params.difficulty);
@@ -169,7 +178,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     }
     
     // Ensure we respect the limit
-    vocabularyItems = vocabularyItems.slice(0, limit);
+    vocabularyItems = this.normalizeVocabularyList(vocabularyItems.slice(0, limit));
     allVocabularyItems.push(...vocabularyItems);
 
     // 3. Generate Introduction Section
@@ -258,9 +267,9 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
         // Fetch some older vocabulary for review (mocking this logic for now)
         // In a real app, this would come from the user's learning history (UserLearningProfile)
         // For now, we'll just grab some random words different from the main vocabulary
-        const reviewItems = await getRandomVocabulary(5, {
+        const reviewItems = this.normalizeVocabularyList(await getRandomVocabulary(5, {
           difficulty: numericDifficulty
-        });
+        }));
 
         // Enhance review items with corrected part-of-speech and grammar info
         const enhancedReviewItems = reviewItems.map(item => ({
@@ -316,8 +325,8 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     params: LessonGenerationParams,
     _options: LessonGenerationOptions = {}
   ): Promise<GeneratedLesson> {
-    const includePractice = params.metadata?.includePractice !== false;
-    const includeComparison = params.metadata?.includeComparison !== false;
+    const includePractice = params.metadata?.['includePractice'] !== false;
+    const includeComparison = params.metadata?.['includeComparison'] !== false;
 
     const sections: GeneratedLessonSection[] = [];
     
@@ -339,7 +348,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     // 2. Fetch Supporting Vocabulary
     // Load vocabulary data if not already cached
     if (!this.vocabularyCache) {
-      this.vocabularyCache = await loadVocabulary;
+      this.vocabularyCache = (await loadVocabulary).map(item => this.normalizeVocabularyItem(item));
     }
     const numericDifficulty = this.mapDifficultyToNumber(params.difficulty);
     let exampleVocabulary: VocabularyItem[] = [];
@@ -351,9 +360,9 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
         partOfSpeech: mainConcept.partOfSpeech[0], // Prioritize primary POS
         limit: 8
       });
-      exampleVocabulary = searchResult.items;
+      exampleVocabulary = this.normalizeVocabularyList(searchResult.items);
     } else {
-      exampleVocabulary = await getRandomVocabulary(8, { difficulty: numericDifficulty });
+      exampleVocabulary = this.normalizeVocabularyList(await getRandomVocabulary(8, { difficulty: numericDifficulty }));
     }
 
     // 3. Generate Concept Explanation Section
@@ -488,13 +497,14 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     const limit = options.maxItems || 8;
     
     // Pick a category if none provided
-    const category = params.criteria.categories?.[0] || 'travel'; // Default to travel for context
-    
+    const category = params.criteria.categories?.[0] || 'culture';
+    const normalizedCategory = this.normalizeCategories([category])[0];
+
     // Get vocabulary items and enhance them with corrected part-of-speech info
-    const vocabularyItems = await loadVocabularyByCategory(category, {
+    const vocabularyItems = this.normalizeVocabularyList(await loadVocabularyByCategory(normalizedCategory, {
       difficulty: numericDifficulty,
       limit: limit
-    });
+    }));
 
     // Enhance vocabulary items with corrected part-of-speech and grammar info
     const enhancedVocabularyItems = vocabularyItems.map(item => ({
@@ -505,8 +515,8 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
 
     // 3. Prepare Context
     const context: TemplateRenderingContext = {
-      sectionTitle: `Contextual Lesson: ${category.charAt(0).toUpperCase() + category.slice(1)}`,
-      theme: category,
+      sectionTitle: `Contextual Lesson: ${normalizedCategory.charAt(0).toUpperCase() + normalizedCategory.slice(1)}`,
+      theme: normalizedCategory,
       difficulty: params.difficulty,
       grammarConcept: mainConcept,
       vocabulary: enhancedVocabularyItems,
@@ -557,6 +567,81 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
       'C1': 5
     };
     return map[difficulty] || 1;
+  }
+
+  /**
+   * Normalize lesson types to the subset compatible with the schema
+   */
+  private normalizeLessonType(type: LessonGenerationParams['type']): LessonGenerationParams['type'] {
+    const allowed: LessonGenerationParams['type'][] = ['vocabulary', 'grammar', 'mixed', 'culture'];
+    if (allowed.includes(type)) {
+      return type;
+    }
+    if (type === 'contextual' || type === 'composition') {
+      return 'mixed';
+    }
+    if (type === 'cultural') {
+      return 'culture';
+    }
+    return 'vocabulary';
+  }
+
+  /**
+   * Ensure categories conform to the vocabulary category union
+   */
+  private normalizeCategories(categories?: Array<VocabularyCategory | string>): VocabularyCategory[] {
+    const allowed: VocabularyCategory[] = [
+      'greetings',
+      'numbers',
+      'family',
+      'food',
+      'colors',
+      'animals',
+      'body-parts',
+      'clothing',
+      'home',
+      'nature',
+      'transport',
+      'technology',
+      'time',
+      'weather',
+      'professions',
+      'places',
+      'grammar',
+      'culture',
+      'everyday-phrases',
+      'uncategorized'
+    ];
+
+    if (!categories || categories.length === 0) {
+      return ['uncategorized'];
+    }
+
+    const normalized = categories
+      .map(category => (allowed.includes(category as VocabularyCategory) ? (category as VocabularyCategory) : 'uncategorized'))
+      .filter(Boolean) as VocabularyCategory[];
+
+    return normalized.length > 0 ? normalized : ['uncategorized'];
+  }
+
+  /**
+   * Align vocabulary items with lesson expectations (metadata, categories)
+   */
+  private normalizeVocabularyItem(item: VocabularyItem): VocabularyItem {
+    return {
+      ...item,
+      categories: this.normalizeCategories(item.categories as Array<VocabularyCategory | string>),
+      isCommon: item.isCommon ?? item.metadata?.isCommon ?? false,
+      isVerified: item.isVerified ?? item.metadata?.isVerified ?? false,
+      learningPhase: (item as { learningPhase?: number }).learningPhase ?? item.metadata?.learningPhase ?? 0,
+      metadata: item.metadata ?? {},
+      createdAt: item.createdAt ?? new Date(),
+      updatedAt: item.updatedAt ?? new Date()
+    };
+  }
+
+  private normalizeVocabularyList(items: VocabularyItem[]): VocabularyItem[] {
+    return items.map(item => this.normalizeVocabularyItem(item));
   }
 
   /**
@@ -683,22 +768,24 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     grammarConcepts: CulturalGrammarConcept[],
     learningObjectives: string[]
   ): GeneratedLesson {
+    const normalizedType = this.normalizeLessonType(params.type);
+    const normalizedVocabulary = this.normalizeVocabularyList(vocabulary);
     const section: GeneratedLessonSection = {
       id: uuidv4(),
       title: 'Main Content', // Could be dynamic
       content: content,
-      type: params.type === 'vocabulary' ? 'vocabulary' : 
-            params.type === 'grammar' ? 'grammar' : 'mixed',
+      type: normalizedType === 'vocabulary' ? 'vocabulary' : 
+            normalizedType === 'grammar' ? 'grammar' : 'mixed',
       metadata: {}
     };
 
     return {
       id: uuidv4(),
-      type: params.type,
+      type: normalizedType,
       difficulty: params.difficulty,
       title: title,
       sections: [section],
-      vocabulary: vocabulary,
+      vocabulary: normalizedVocabulary,
       grammarConcepts: grammarConcepts,
       learningObjectives: learningObjectives,
       metadata: params.metadata || {},

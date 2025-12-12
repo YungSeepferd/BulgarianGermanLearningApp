@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { fade } from 'svelte/transition';
   import { appState } from '$lib/state/app-state';
 
   let { mode = 'practice', onDirectionChange, onModeChange } = $props<{

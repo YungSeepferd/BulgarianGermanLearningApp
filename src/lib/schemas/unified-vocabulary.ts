@@ -39,9 +39,9 @@ export const VocabularyCategorySchema = z.enum([
   'food',
   'colors',
   'animals',
-  'body',
+  'body-parts',
   'clothing',
-  'house',
+  'home',
   'nature',
   'transport',
   'technology',
@@ -51,15 +51,7 @@ export const VocabularyCategorySchema = z.enum([
   'places',
   'grammar',
   'culture',
-  'common_phrases',
-  'verbs',
-  'adjectives',
-  'adverbs',
-  'pronouns',
-  'prepositions',
-  'conjunctions',
-  'interjections',
-  'uncategorized'
+  'everyday-phrases'
 ]);
 
 export type VocabularyCategory = z.infer<typeof VocabularyCategorySchema>;
@@ -184,6 +176,14 @@ export const VocabularyMetadataSchema = z.object({
   isVerified: z.boolean().default(false).describe('Whether the item has been verified'),
   learningPhase: z.number().min(0).max(6).optional().describe('SRS learning phase (0-6)'),
   xpValue: z.number().min(1).max(100).optional().describe('Experience points value'),
+  components: z.array(z.object({
+    part: z.string(),
+    meaning: z.string()
+  })).optional().describe('Word components for compound words'),
+  notes: z.string().optional().describe('General notes about the item'),
+  mnemonic: z.string().optional().describe('Memory aid or mnemonic device'),
+  etymology: z.string().optional().describe('Word origin and etymology'),
+  culturalNote: z.string().optional().describe('Cultural context or usage notes'),
   sourceFiles: z.array(z.string()).optional().describe('Source files where this item appeared'),
   mergeSources: z.array(z.string()).optional().describe('IDs of items merged into this one'),
   createdBy: z.string().optional().describe('Creator of the item'),
@@ -218,6 +218,11 @@ export const UnifiedVocabularyItemSchema = z.object({
   categories: z.array(VocabularyCategorySchema).min(1).describe('Categories the item belongs to'),
   transliteration: TransliterationSchema.optional().describe('Pronunciation guides in Latin script'),
   emoji: z.string().emoji().optional().describe('Emoji representation of the word'),
+  literalBreakdown: z.array(z.object({
+    segment: z.string(),
+    literal: z.string(),
+    grammarTag: z.string()
+  })).optional().describe('Breakdown of compound words/grammar for learning'),
   audio: AudioSchema.optional().describe('Audio resources for pronunciation'),
   grammar: GrammarSchema.optional().describe('Grammar details and properties'),
   examples: z.array(ExampleSchema).default([]).describe('Usage examples'),
@@ -228,6 +233,15 @@ export const UnifiedVocabularyItemSchema = z.object({
   synonyms: z.array(z.string()).optional().describe('Synonyms for this word/phrase'),
   antonyms: z.array(z.string()).optional().describe('Antonyms for this word/phrase'),
   relatedWords: z.array(z.string()).optional().describe('Related words or phrases'),
+  type: z.enum(['word', 'rule', 'phrase']).optional().default('word').describe('Type of vocabulary entry'),
+  tags: z.array(z.string()).optional().describe('Custom tags for filtering and organization'),
+  level: LanguageLevelSchema.optional().describe('CEFR language level (direct accessor, mirrors cefrLevel)'),
+  xp_value: z.number().min(1).max(100).optional().describe('Experience points value (direct accessor, mirrors metadata.xpValue)'),
+  global_stats: z.object({
+    correct_count: z.number().min(0).default(0),
+    incorrect_count: z.number().min(0).default(0),
+    success_rate: z.number().min(0).max(100).default(0)
+  }).optional().describe('Global practice statistics for this item'),
   metadata: VocabularyMetadataSchema.optional().describe('Additional metadata'),
   enrichment: EnrichmentSchema.optional().describe('External enrichment metadata'),
   definitions: z.array(DefinitionLinkSchema).optional().describe('Links to external dictionary definitions'),
@@ -291,7 +305,7 @@ export const _createFallbackUnifiedItem = (input: unknown): z.infer<typeof Unifi
       : 'unknown',
     partOfSpeech: 'noun',
     difficulty: 1,
-    categories: ['uncategorized'],
+    categories: ['greetings'],
     examples: [],
     createdAt: now,
     updatedAt: now,
@@ -377,9 +391,9 @@ export function _getCategoryLabel(category: VocabularyCategory): string {
     food: 'Food',
     colors: 'Colors',
     animals: 'Animals',
-    body: 'Body',
+    'body-parts': 'Body Parts',
     clothing: 'Clothing',
-    house: 'House',
+    home: 'Home',
     nature: 'Nature',
     transport: 'Transport',
     technology: 'Technology',
@@ -389,15 +403,8 @@ export function _getCategoryLabel(category: VocabularyCategory): string {
     places: 'Places',
     grammar: 'Grammar',
     culture: 'Culture',
-    common_phrases: 'Common Phrases',
-    verbs: 'Verbs',
-    adjectives: 'Adjectives',
-    adverbs: 'Adverbs',
-    pronouns: 'Pronouns',
-    prepositions: 'Prepositions',
-    conjunctions: 'Conjunctions',
-    interjections: 'Interjections',
-    uncategorized: 'Uncategorized'
+    'everyday-phrases': 'Everyday Phrases',
+    'everyday-phrases': 'Everyday Phrases'
   };
   return labels[category];
 }
@@ -430,34 +437,35 @@ export function convertLegacyCategory(legacyCategory: string): VocabularyCategor
   const categoryMap: Record<string, VocabularyCategory> = {
     // English categories
     'Food': 'food',
-    'Household': 'house',
-    'Verbs': 'verbs',
-    'Adjectives': 'adjectives',
+    'Household': 'home',
+    'Verbs': 'grammar',
+    'Adjectives': 'grammar',
     'Greetings': 'greetings',
+    'Body': 'body-parts',
 
     // German categories
     'Zahlen': 'numbers',
     'Familie': 'family',
     'Farben': 'colors',
     'Begrüßung': 'greetings',
-    'Ausdruck': 'common_phrases',
+    'Ausdruck': 'everyday-phrases',
     'Lebensmittel': 'food',
     'Transport': 'transport',
-    'Gesundheit': 'body',
+    'Gesundheit': 'body-parts',
     'Natur': 'nature',
-    'Einkauf': 'uncategorized',
+    'Einkauf': 'places',
     'Tag': 'time',
     'Zeit': 'time',
 
     // Bulgarian categories
     'Храна': 'food',
-    'Дом': 'house',
-    'Глаголи': 'verbs',
-    'Прилагателни': 'adjectives',
+    'Дом': 'home',
+    'Глаголи': 'grammar',
+    'Прилагателни': 'grammar',
     'Поздрави': 'greetings'
   };
 
-  return categoryMap[legacyCategory] || 'uncategorized';
+  return categoryMap[legacyCategory] || 'greetings';
 }
 
 /**

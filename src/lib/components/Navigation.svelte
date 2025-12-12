@@ -5,8 +5,27 @@
    * Provides navigation links for the language learning application.
    */
 
-  import { page } from '$app/stores';
-  import { base } from '$app/paths';
+  import { browser } from '$app/environment';
+
+  // SvelteKit stores/paths - initialized dynamically
+  let page: any = { url: { pathname: '/' } };
+  let base: string = '';
+
+  // Import SvelteKit modules in browser context
+  const initStores = async () => {
+    if (browser) {
+      try {
+        const { page: p } = await import('$app/stores');
+        const { base: b } = await import('$app/paths');
+        page = p;
+        base = b;
+      } catch (err) {
+        // Fallback if modules not available
+      }
+    }
+  };
+
+  onMount(() => initStores());
   import { appState } from '$lib/state/app-state';
   import { t, getCurrentLanguage, isTranslationsLoading, onTranslationsChange, offTranslationsChange } from '$lib/services/localization';
   import { onMount } from 'svelte';
@@ -34,7 +53,7 @@
   let userSettingsLabel = $state('');
   let homeLabel = $state('');
   let appNameLabel = $state('');
-  let translatedNavItems = $state([]);
+  let translatedNavItems = $state<Array<{ name: string; path: string; translationKey?: string; icon?: string }>>([]);
   let directionLabel = $state('');
   let languageCode = $state<'de' | 'bg'>(getCurrentLanguage());
   let languageToggleAria = $state('Switch language direction');

@@ -42,32 +42,22 @@
       <div class="emoji">📝</div>
       <h2 class="word">{item.german}</h2>
       <p class="part-of-speech">{item.partOfSpeech}</p>
-      {#if item.audio_url}
-        <button
-          class="audio-button"
-          onclick={(e) => { e.stopPropagation(); playAudio(); }}
-          aria-label="Play pronunciation"
-        >
-          🔊
-        </button>
-      {/if}
+      <!-- Audio feature removed: use metadata for audio URLs if available -->
       <p class="hint">Tap to flip</p>
     </div>
 
     <!-- Back Face -->
     <div class="card-face card-face-back">
       <div class="header">
-        <span class="category">{item.category}</span>
-        {#if item.level}
-          <span class="level-badge {item.level.toLowerCase()}">{item.level}</span>
+        <span class="category">{item.categories?.[0] ?? 'general'}</span>
+        {#if item.metadata?.level}
+          <span class="level-badge {item.metadata.level.toLowerCase()}">{item.metadata.level}</span>
         {/if}
       </div>
 
       <h2 class="word-bg">{item.bulgarian}</h2>
       
-      {#if item.pronunciation?.bulgarian}
-        <p class="pronunciation">{item.pronunciation.bulgarian}</p>
-      {/if}
+      <!-- Pronunciation feature uses metadata if available -->
 
       {#if item.audio_url}
         <button
@@ -79,29 +69,28 @@
         </button>
       {/if}
 
-      {#if item.contextual_nuance}
+
+      {#if item.metadata?.culturalNote}
         <div class="nuance-box">
           <span class="icon">💡</span>
-          <p>{item.contextual_nuance}</p>
+          <p>{item.metadata.culturalNote}</p>
         </div>
       {/if}
-
+    </div>
       {#if item.grammar}
         <div class="grammar-pills">
-          <span class="pill">{item.grammar.part_of_speech}</span>
           {#if item.grammar.gender}
             <span class="pill gender-{item.grammar.gender}">{item.grammar.gender}</span>
           {/if}
-          {#if item.grammar.verb_aspect}
-            <span class="pill aspect">{item.grammar.verb_aspect}</span>
+          {#if item.grammar.verbAspect}
+            <span class="pill aspect">{item.grammar.verbAspect}</span>
           {/if}
         </div>
       {/if}
       
-      {#if item.mnemonics}
-        <p class="mnemonic">🧠 {item.mnemonics}</p>
+      {#if item.metadata?.mnemonic}
+        <p class="mnemonic">🧠 {item.metadata.mnemonic}</p>
       {/if}
-    </div>
   </div>
 </div>
 

@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { VocabularyItem } from '$lib/types/vocabulary';
-  import { fade, fly } from 'svelte/transition';
+  import { fade } from 'svelte/transition';
   import { flip } from 'svelte/animate';
   import { appState } from '$lib/state/app-state';
   import { formatGermanTerm } from '$lib/utils/formatGerman';
@@ -47,9 +47,9 @@
       food: 'Essen',
       colors: 'Farben',
       animals: 'Tiere',
-      body: 'Körper',
+      'body-parts': 'Körperteile',
       clothing: 'Kleidung',
-      house: 'Haus & Wohnen',
+      home: 'Zuhause',
       nature: 'Natur',
       transport: 'Verkehr',
       technology: 'Technologie',
@@ -59,7 +59,7 @@
       places: 'Orte',
       grammar: 'Grammatik',
       culture: 'Kultur',
-      common_phrases: 'Alltagsphrasen'
+      'everyday-phrases': 'Alltagsphrasen'
     },
     bg: {
       greetings: 'Поздрави',
@@ -68,9 +68,9 @@
       food: 'Храна',
       colors: 'Цветове',
       animals: 'Животни',
-      body: 'Тяло',
+      'body-parts': 'Части на тялото',
       clothing: 'Облекло',
-      house: 'Дом',
+      home: 'Дом',
       nature: 'Природа',
       transport: 'Транспорт',
       technology: 'Технологии',
@@ -80,7 +80,7 @@
       places: 'Места',
       grammar: 'Граматика',
       culture: 'Култура',
-      common_phrases: 'Често срещани изрази'
+      'everyday-phrases': 'Често срещани изрази'
     }
   } as const;
 
@@ -201,7 +201,7 @@
 
   function handleQuickPractice(item: VocabularyItem, event: MouseEvent) {
     event.stopPropagation(); // Prevent modal from opening
-    appState.startPracticeSession([item]);
+    appState.startPracticeSession(item);
   }
 
   function handleMouseEnter(itemId: string) {
@@ -299,7 +299,7 @@
               {/if}
 
               <span class="category-tag" in:tagAnimation>
-                {getCategoryLabel(item.category)}
+                {getCategoryLabel(item.categories[0])}
               </span>
 
               {#each item.tags || [] as tag}
@@ -309,7 +309,7 @@
               {#if showTooltips}
                 <div class="meta-tooltip">
                   <p><strong>{ui.difficulty}:</strong> {item.level || 'N/A'}</p>
-                  <p><strong>{ui.category}:</strong> {getCategoryLabel(item.category)}</p>
+                  <p><strong>{ui.category}:</strong> {getCategoryLabel(item.categories[0])}</p>
                   <p><strong>{ui.type}:</strong> {item.type === 'word' ? ui.typeWord : ui.typeRule}</p>
                 </div>
               {/if}
@@ -348,8 +348,8 @@
               <div class="examples-header">{ui.examples}</div>
               {#each item.examples.slice(0, 2) as example}
                 <div class="example-item">
-                  <span class="example-text">{example.sentence}</span>
-                  <span class="example-translation">{example.translation}</span>
+                  <span class="example-text">{example.german}</span>
+                  <span class="example-translation">{example.bulgarian}</span>
                   {#if example.context}
                     <span class="example-context">{example.context}</span>
                   {/if}

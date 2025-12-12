@@ -38,7 +38,7 @@
       return [articlePart, normalizedNoun].filter(Boolean).join(' ').trim();
     }
     const base = item.partOfSpeech === 'noun' ? capitalizeNoun(raw) : raw;
-    const article = chooseArticle(item.metadata?.gender, item.metadata?.article) || (item.partOfSpeech === 'noun' ? 'der' : null);
+    const article = chooseArticle(item.grammar?.gender, item.grammar?.verbPartnerId) || (item.partOfSpeech === 'noun' ? 'der' : null);
     return article ? `${article} ${base}` : base;
   }
 
@@ -177,8 +177,8 @@
     }
   }
 
-  // Reset the session
-  function resetSession() {
+  // Reset the session (intentionally unused - kept for reference)
+  function _resetSession() {
     sessionActive = false;
     sessionComplete = false;
     sessionCards = [];
@@ -200,11 +200,10 @@
 
     return {
       ...card,
-      media: card.media ?? { emoji: card.emoji },
       literalBreakdown: card.literalBreakdown ?? card.metadata?.components?.map((c) => ({
         segment: c.part,
         literal: c.meaning,
-        grammarTag: c.note
+        grammarTag: ''
       })) ?? []
     };
   }

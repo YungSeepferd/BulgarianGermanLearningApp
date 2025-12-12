@@ -31,7 +31,18 @@ export class LessonService {
     try {
       await db.initialize();
       const vocabData = await db.getVocabulary();
-      this.vocabularyData = vocabData;
+      // Normalize unified vocabulary items to lesson service expectations
+      this.vocabularyData = vocabData.map((item) => ({
+        ...item,
+        categories: item.categories && item.categories.length > 0 ? item.categories : ['uncategorized'],
+        metadata: item.metadata ?? {},
+        isCommon: item.metadata?.isCommon ?? false,
+        isVerified: item.metadata?.isVerified ?? false,
+        learningPhase: item.metadata?.learningPhase ?? (item as { learningPhase?: number }).learningPhase ?? 0,
+        createdAt: item.createdAt ?? item.metadata?.createdAt ?? new Date(),
+        updatedAt: item.updatedAt ?? item.metadata?.updatedAt ?? new Date(),
+        cefrLevel: (item.metadata?.level ?? item.level ?? 'A1') as 'A1' | 'A2' | 'B1' | 'B2',
+      }));
       this.initialized = true;
     } catch (_error) {
       // Failed to initialize LessonService
@@ -84,14 +95,7 @@ export class LessonService {
       difficulty: lessonDifficulty,
       type,
       duration: this.calculateLessonDuration(vocabularyItems.length),
-      vocabulary: vocabularyItems.map(item => ({
-        id: item.id,
-        german: item.german,
-        bulgarian: item.bulgarian,
-        partOfSpeech: item.partOfSpeech,
-        difficulty: item.difficulty,
-        categories: item.categories
-      })),
+      vocabulary: vocabularyItems.map(item => this.normalizeVocabularyItem(item)),
       objectives,
       isCompleted: false,
       completionPercentage: 0,
@@ -132,17 +136,17 @@ export class LessonService {
       // Query vocabulary based on criteria
       const vocabularyItems = this.queryVocabulary(criteria);
 
-      // Apply limit if specified
-      const limitedItems = criteria.limit
+      // Apply limit if specified and normalize items for schema compatibility
+      const limitedItems = (criteria.limit
         ? vocabularyItems.slice(0, criteria.limit)
-        : vocabularyItems;
+        : vocabularyItems).map(item => this.normalizeVocabularyItem(item));
 
       // Generate lesson
       return this.generateLessonFromVocabulary(limitedItems, {
-        title: criteria.title,
-        difficulty: criteria.difficulty,
-        type: criteria.type,
-        description: criteria.description
+        title: criteria.title ?? 'Untitled Lesson',
+        difficulty: criteria.difficulty ?? 'A1',
+        type: criteria.type ?? 'vocabulary',
+        description: criteria.description ?? ''
       });
 
     } catch (_error) {
@@ -213,7 +217,7 @@ export class LessonService {
     // Extract unique categories
     const categories = new Set<VocabularyCategory>();
     vocabularyItems.forEach(item => {
-      item.categories.forEach(category => categories.add(category));
+      this.normalizeCategories(item.categories).forEach(category => categories.add(category));
     });
 
     // Determine lesson type name
@@ -361,9 +365,9 @@ export class LessonService {
     const tags: string[] = [type, difficulty];
 
     // Add categories as tags
-    const categories = new Set<string>();
+    const categories = new Set<VocabularyCategory>();
     vocabularyItems.forEach(item => {
-      item.categories.forEach(category => categories.add(category));
+      this.normalizeCategories(item.categories).forEach(category => categories.add(category));
     });
 
     // Add up to 3 categories as tags
@@ -377,7 +381,7 @@ export class LessonService {
   /**
    * Get display name for a vocabulary category
    */
-  private getCategoryDisplayName(category: VocabularyCategory): string {
+  public getCategoryDisplayName(category: VocabularyCategory): string {
     const displayNames: Record<VocabularyCategory, string> = {
       'greetings': 'Greetings',
       'numbers': 'Numbers',
@@ -385,9 +389,9 @@ export class LessonService {
       'food': 'Food',
       'colors': 'Colors',
       'animals': 'Animals',
-      'body': 'Body Parts',
+      'body-parts': 'Body Parts',
       'clothing': 'Clothing',
-      'house': 'House & Home',
+      'home': 'House & Home',
       'nature': 'Nature',
       'transport': 'Transportation',
       'technology': 'Technology',
@@ -397,9 +401,7 @@ export class LessonService {
       'places': 'Places',
       'grammar': 'Grammar',
       'culture': 'Culture',
-      'common_phrases': 'Common Phrases',
-      'verbs': 'Verbs',
-      'uncategorized': 'Uncategorized'
+      'everyday-phrases': 'Everyday Phrases'
     };
 
     return displayNames[category] || category;
@@ -425,6 +427,61 @@ export class LessonService {
     };
 
     return displayNames[partOfSpeech] || partOfSpeech;
+  }
+
+  /**
+   * Coerce category strings into the schema-backed category union
+   */
+  private normalizeCategories(categories?: VocabularyCategory[] | string[]): VocabularyCategory[] {
+    const allowed: VocabularyCategory[] = [
+      'greetings',
+      'numbers',
+      'family',
+      'food',
+      'colors',
+      'animals',
+      'body-parts',
+      'clothing',
+      'home',
+      'nature',
+      'transport',
+      'technology',
+      'time',
+      'weather',
+      'professions',
+      'places',
+      'grammar',
+      'culture',
+      'everyday-phrases',
+      'uncategorized'
+    ];
+
+    if (!categories || categories.length === 0) {
+      return ['uncategorized'];
+    }
+
+    const normalized = categories
+      .map(category => (allowed.includes(category as VocabularyCategory) ? (category as VocabularyCategory) : 'uncategorized'))
+      .filter(Boolean) as VocabularyCategory[];
+
+    return normalized.length > 0 ? normalized : ['uncategorized'];
+  }
+
+  /**
+   * Align vocabulary items with LessonSchema requirements
+   */
+  private normalizeVocabularyItem(item: VocabularyItem): VocabularyItem {
+    return {
+      ...item,
+      categories: this.normalizeCategories(item.categories),
+      metadata: item.metadata ?? {},
+      isCommon: item.isCommon ?? item.metadata?.isCommon ?? false,
+      isVerified: item.isVerified ?? item.metadata?.isVerified ?? false,
+      learningPhase: item.learningPhase ?? item.metadata?.learningPhase ?? 0,
+      createdAt: item.createdAt ?? item.metadata?.createdAt ?? new Date(),
+      updatedAt: item.updatedAt ?? item.metadata?.updatedAt ?? new Date(),
+      cefrLevel: (item as { cefrLevel?: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' }).cefrLevel ?? (item.metadata as { level?: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' } | undefined)?.level ?? 'A1'
+    };
   }
 
   /**
@@ -521,10 +578,21 @@ export class LessonService {
     if (index === -1) return undefined;
 
     const currentLesson = this.lessons[index];
-    const updatedLesson = {
+    const baseLesson = {
       ...currentLesson,
       ...updates,
       updatedAt: new Date()
+    };
+
+    const updatedLesson = {
+      ...baseLesson,
+      id: baseLesson.id ?? `lesson_${Date.now()}`,
+      title: baseLesson.title ?? 'Untitled',
+      description: baseLesson.description ?? '',
+      difficulty: (baseLesson.difficulty ?? 'A1') as 'A1' | 'A2' | 'B1' | 'B2' | 'C1',
+      type: (baseLesson.type ?? 'vocabulary') as LessonType,
+      vocabulary: baseLesson.vocabulary ?? [],
+      duration: baseLesson.duration ?? 0
     };
 
     const validatedLesson = this.validateLesson(updatedLesson);

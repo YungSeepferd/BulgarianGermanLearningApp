@@ -23,34 +23,26 @@ export const PartOfSpeechSchema = z.enum([
 
 // Schema for vocabulary categories (used for grouping)
 export const VocabularyCategorySchema = z.enum([
-  'greetings',
-  'numbers',
-  'family',
-  'food',
-  'colors',
-  'animals',
-  'body',
-  'clothing',
-  'house',
-  'nature',
-  'transport',
-  'technology',
-  'time',
-  'weather',
-  'professions',
-  'places',
-  'grammar',
-  'culture',
-  'common_phrases',
-  'verbs',
-  'adjectives',
-  'adverbs',
-  'pronouns',
-  'prepositions',
-  'conjunctions',
-  'interjections',
-  'uncategorized'
-]);
+      'greetings',
+      'numbers',
+      'family',
+      'food',
+      'colors',
+      'animals',
+      'body-parts',
+      'clothing',
+      'home',
+      'nature',
+      'transport',
+      'technology',
+      'time',
+      'weather',
+      'professions',
+      'places',
+      'grammar',
+      'culture',
+      'everyday-phrases'
+    ]);
 
 // Schema for CEFR language proficiency levels
 export const CEFRLevelSchema = z.enum([
@@ -143,7 +135,7 @@ const BaseVocabularyItemSchema = z.object({
   partOfSpeech: PartOfSpeechSchema.default('noun'),
   difficulty: z.number().min(1).max(5).default(1).describe('1-5 scale where 1 is easiest'),
   cefrLevel: CEFRLevelSchema.describe('CEFR proficiency level (A1/A2/B1/B2)'),
-  categories: z.array(VocabularyCategorySchemaWithFallback).min(1).default(['uncategorized']),
+  categories: z.array(VocabularyCategorySchema).min(1).default(['greetings']),
   transliteration: z.string().optional(), // Latin characters for pronunciation
   emoji: z.string().optional(), // Visual representation
   literalBreakdown: z.array(z.object({ // For understanding compound words/grammar
@@ -182,7 +174,7 @@ export const createFallbackItem = (input: unknown): VocabularyItem => {
     partOfSpeech: 'noun',
     difficulty: 1,
     cefrLevel: 'A1',
-    categories: ['uncategorized'],
+    categories: ['greetings'],
     metadata: {},
     createdAt: new Date(),
     updatedAt: new Date(),

@@ -127,10 +127,10 @@
               {ui.externalLinks}
             </h3>
             <div class="links-grid">
-              {#if item.enrichment?.sourceURL}
+              {#if item.enrichment && item.enrichment.sourceURL}
                 <EnrichmentBadge variant="card" enrichment={item.enrichment} />
               {/if}
-              {#if item.definitions}
+              {#if item.definitions && Array.isArray(item.definitions)}
                 {#each item.definitions as def}
                   <DefinitionLink definition={def} compact={false} showIcon={true} showLabel={true} />
                 {/each}

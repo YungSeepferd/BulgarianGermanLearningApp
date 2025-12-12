@@ -60,10 +60,25 @@
  
   // Categories for filtering
   const categories: VocabularyCategory[] = [
-    'greetings', 'numbers', 'family', 'food', 'colors', 'animals',
-    'body', 'clothing', 'house', 'nature', 'transport', 'technology',
-    'time', 'weather', 'professions', 'places', 'grammar', 'culture',
-    'common_phrases'
+    'greetings',
+    'numbers',
+    'family',
+    'food',
+    'colors',
+    'animals',
+    'body-parts',
+    'clothing',
+    'home',
+    'nature',
+    'transport',
+    'technology',
+    'time',
+    'weather',
+    'professions',
+    'places',
+    'grammar',
+    'culture',
+    'everyday-phrases'
   ];
 
   const categoryLabels = {
@@ -74,9 +89,9 @@
       food: 'Essen',
       colors: 'Farben',
       animals: 'Tiere',
-      body: 'Körper',
+      'body-parts': 'Körperteile',
       clothing: 'Kleidung',
-      house: 'Haus & Wohnen',
+      home: 'Zuhause',
       nature: 'Natur',
       transport: 'Verkehr',
       technology: 'Technologie',
@@ -86,7 +101,7 @@
       places: 'Orte',
       grammar: 'Grammatik',
       culture: 'Kultur',
-      common_phrases: 'Alltagsphrasen'
+      'everyday-phrases': 'Alltagsphrasen'
     },
     bg: {
       greetings: 'Поздрави',
@@ -95,9 +110,9 @@
       food: 'Храна',
       colors: 'Цветове',
       animals: 'Животни',
-      body: 'Тяло',
+      'body-parts': 'Части на тялото',
       clothing: 'Облекло',
-      house: 'Дом',
+      home: 'Дом',
       nature: 'Природа',
       transport: 'Транспорт',
       technology: 'Технологии',
@@ -107,7 +122,7 @@
       places: 'Места',
       grammar: 'Граматика',
       culture: 'Култура',
-      common_phrases: 'Често срещани изрази'
+      'everyday-phrases': 'Често срещани изрази'
     }
   } as const;
 
@@ -181,7 +196,7 @@
       const queryMatch = q
         ? item.german.toLowerCase().includes(q) ||
           item.bulgarian.toLowerCase().includes(q) ||
-          (item.tags || []).some(tag => tag.toLowerCase().includes(q))
+          item.categories.some(cat => cat.toLowerCase().includes(q))
         : true;
       const posMatch = selectedPartOfSpeech ? item.partOfSpeech === selectedPartOfSpeech : true;
       const diffMatch = selectedDifficulty != null ? Math.round(item.difficulty) === selectedDifficulty : true;

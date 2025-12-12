@@ -366,9 +366,9 @@
       food: 'Essen',
       colors: 'Farben',
       animals: 'Tiere',
-      body: 'Körper',
+      'body-parts': 'Körperteile',
       clothing: 'Kleidung',
-      house: 'Haus & Wohnen',
+      home: 'Zuhause',
       nature: 'Natur',
       transport: 'Verkehr',
       technology: 'Technologie',
@@ -378,7 +378,7 @@
       places: 'Orte',
       grammar: 'Grammatik',
       culture: 'Kultur',
-      common_phrases: 'Alltagsphrasen'
+      'everyday-phrases': 'Alltagsphrasen'
     },
     bg: {
       greetings: 'Поздрави',
@@ -387,9 +387,9 @@
       food: 'Храна',
       colors: 'Цветове',
       animals: 'Животни',
-      body: 'Тяло',
+      'body-parts': 'Части на тялото',
       clothing: 'Облекло',
-      house: 'Дом',
+      home: 'Дом',
       nature: 'Природа',
       transport: 'Транспорт',
       technology: 'Технологии',
@@ -399,7 +399,7 @@
       places: 'Места',
       grammar: 'Граматика',
       culture: 'Култура',
-      common_phrases: 'Често срещани изрази'
+      'everyday-phrases': 'Често срещани изрази'
     }
   } as const;
 
@@ -538,7 +538,7 @@
           </div>
           <h3 class="question-text" in:scale>{getQuestionText()}</h3>
           <div class="item-meta">
-            <span class="category">{getCategoryLabel(currentItem.category)}</span>
+            <span class="category">{getCategoryLabel(currentItem.categories?.[0])}</span>
             {#if mapNumericDifficultyToCEFR(currentItem.difficulty)}
               <span class="difficulty" style="color: {getDifficultyColor(mapNumericDifficultyToCEFR(currentItem.difficulty))}">
                 {mapNumericDifficultyToCEFR(currentItem.difficulty)}
@@ -623,8 +623,8 @@
           <div class="examples-section" in:slide>
             <h4>{t('practice.example')}:</h4>
             <div class="example">
-              <p class="example-sentence">{currentItem.examples[0].sentence}</p>
-              <p class="example-translation">{currentItem.examples[0].translation}</p>
+              <p class="example-sentence">{currentItem.examples[0].german}</p>
+              <p class="example-translation">{currentItem.examples[0].bulgarian}</p>
             </div>
           </div>
         {/if}
@@ -646,12 +646,12 @@
                       practiceThisItem(item);
                     }
                   }}
-                  aria-label={`${t('practice.practice_word')}: ${appState.languageMode === 'DE_BG' ? item.german : item.bulgarian}. ${t('practice.category')}: ${getCategoryLabel(item.category)}`}
+                  aria-label={`${t('practice.practice_word')}: ${appState.languageMode === 'DE_BG' ? item.german : item.bulgarian}. ${t('practice.category')}: ${getCategoryLabel(item.categories?.[0])}`}
                 >
                   <span class="rec-text">
                     {appState.languageMode === 'DE_BG' ? formatGermanTerm(item) : item.bulgarian}
                   </span>
-                  <span class="rec-meta">{getCategoryLabel(item.category)}</span>
+                  <span class="rec-meta">{getCategoryLabel(item.categories?.[0])}</span>
                 </div>
               {/each}
             </div>

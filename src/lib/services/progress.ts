@@ -5,10 +5,8 @@
  * It handles vocabulary mastery, lesson completion, quiz performance, and overall user progress.
  */
 
-import { browser } from '$app/environment';
 import { v4 as uuidv4 } from 'uuid';
 import { TransactionManager } from '$lib/utils/transaction';
-import { diContainer } from './di-container';
 import {
   VocabularyMasterySchema,
   LessonProgressSchema,
@@ -120,7 +118,6 @@ export class ProgressService {
     const transaction = TransactionManager.startTransaction(transactionId);
 
     try {
-        const _today = new Date().toISOString().split('T')[0];
         const now = new Date().toISOString();
 
         // Store original state for rollback
@@ -202,16 +199,16 @@ export class ProgressService {
         // Commit the transaction
         await TransactionManager.commitTransaction(transactionId);
 
-    } catch (error) {
+    } catch (error: unknown) {
         // Attempt to rollback the transaction if it wasn't committed
         try {
             await TransactionManager.rollbackTransaction(transactionId);
-        } catch (rollbackError) {
-            Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError);
+        } catch (rollbackError: unknown) {
+          Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
         }
 
-        ErrorHandler.handleError(error, 'Failed to record vocabulary practice', this.eventBus);
-        throw new ProgressError('Failed to record vocabulary practice', { itemId, error });
+        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to record vocabulary practice', this.eventBus);
+        throw new ProgressError('Failed to record vocabulary practice', { itemId, error: error instanceof Error ? error : new Error(String(error)) });
     }
   }
 
@@ -283,7 +280,6 @@ export class ProgressService {
 
     try {
         const now = new Date().toISOString();
-        const _today = now.split('T')[0];
 
         // Store original state for rollback
         const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
@@ -357,15 +353,15 @@ export class ProgressService {
         // Commit the transaction
         await TransactionManager.commitTransaction(transactionId);
 
-    } catch (error) {
-        // Attempt to rollback the transaction if it wasn't committed
-        try {
-            await TransactionManager.rollbackTransaction(transactionId);
-        } catch (rollbackError) {
-            Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError);
-        }
+    } catch (error: unknown) {
+      // Attempt to rollback the transaction if it wasn't committed
+      try {
+        await TransactionManager.rollbackTransaction(transactionId);
+      } catch (rollbackError: unknown) {
+        Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
+      }
 
-        ErrorHandler.handleError(error, 'Failed to record lesson progress', this.eventBus);
+        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to record lesson progress', this.eventBus);
         throw new ProgressError('Failed to record lesson progress', { lessonId, completionPercentage, error });
     }
   }
@@ -494,15 +490,15 @@ export class ProgressService {
         // Commit the transaction
         await TransactionManager.commitTransaction(transactionId);
 
-    } catch (error) {
-        // Attempt to rollback the transaction if it wasn't committed
-        try {
-            await TransactionManager.rollbackTransaction(transactionId);
-        } catch (rollbackError) {
-            Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError);
-        }
+    } catch (error: unknown) {
+      // Attempt to rollback the transaction if it wasn't committed
+      try {
+        await TransactionManager.rollbackTransaction(transactionId);
+      } catch (rollbackError: unknown) {
+        Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
+      }
 
-        ErrorHandler.handleError(error, 'Failed to record quiz performance', this.eventBus);
+      ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to record quiz performance', this.eventBus);
         throw new ProgressError('Failed to record quiz performance', { quizId, score, error });
     }
   }
@@ -623,16 +619,16 @@ export class ProgressService {
         // Commit the transaction
         await TransactionManager.commitTransaction(transactionId);
 
-    } catch (error) {
-        // Attempt to rollback the transaction if it wasn't committed
-        try {
-            await TransactionManager.rollbackTransaction(transactionId);
-        } catch (rollbackError) {
-            Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError);
-        }
+    } catch (error: unknown) {
+      // Attempt to rollback the transaction if it wasn't committed
+      try {
+        await TransactionManager.rollbackTransaction(transactionId);
+      } catch (rollbackError: unknown) {
+        Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
+      }
 
-        ErrorHandler.handleError(error, 'Failed to record question performance', this.eventBus);
-        throw new ProgressError('Failed to record question performance', { questionId, error });
+      ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to record question performance', this.eventBus);
+        throw new ProgressError('Failed to record question performance', { questionId, error: error instanceof Error ? error : new Error(String(error)) });
     }
   }
 
@@ -762,16 +758,16 @@ export class ProgressService {
         // Commit the transaction
         await TransactionManager.commitTransaction(transactionId);
 
-    } catch (error) {
-        // Attempt to rollback the transaction if it wasn't committed
-        try {
-            await TransactionManager.rollbackTransaction(transactionId);
-        } catch (rollbackError) {
-            Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError);
-        }
+    } catch (error: unknown) {
+      // Attempt to rollback the transaction if it wasn't committed
+      try {
+        await TransactionManager.rollbackTransaction(transactionId);
+      } catch (rollbackError: unknown) {
+        Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
+      }
 
-        ErrorHandler.handleError(error, 'Failed to record daily progress', this.eventBus);
-        throw new ProgressError('Failed to record daily progress', { date, error });
+      ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to record daily progress', this.eventBus);
+        throw new ProgressError('Failed to record daily progress', { date, error: error instanceof Error ? error : new Error(String(error)) });
     }
   }
 
@@ -928,15 +924,15 @@ export class ProgressService {
             } as LevelUpEvent);
         }
 
-    } catch (error) {
-        // Attempt to rollback the transaction if it wasn't committed
-        try {
-            await TransactionManager.rollbackTransaction(transactionId);
-        } catch (rollbackError) {
-            Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError);
-        }
+    } catch (error: unknown) {
+      // Attempt to rollback the transaction if it wasn't committed
+      try {
+        await TransactionManager.rollbackTransaction(transactionId);
+      } catch (rollbackError: unknown) {
+        Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
+      }
 
-        ErrorHandler.handleError(error, 'Failed to update overall progress', this.eventBus);
+      ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to update overall progress', this.eventBus);
         throw new ProgressError('Failed to update overall progress', { error });
     }
   }
@@ -1041,9 +1037,9 @@ export class ProgressService {
 
       // If validation passes, data is valid
       return;
-    } catch (validationError) {
+    } catch (validationError: unknown) {
       // If validation fails, try to repair the data
-      ErrorHandler.handleError(validationError, 'Progress data validation failed, attempting repair', this.eventBus);
+      ErrorHandler.handleError(validationError as Error, 'Progress data validation failed, attempting repair', this.eventBus);
 
       try {
         // Create a new default progress data structure
@@ -1121,8 +1117,8 @@ export class ProgressService {
         // Log successful repair
         ErrorHandler.handleError(new Error('Progress data repair completed'), 'Successfully repaired progress data', this.eventBus);
 
-      } catch (repairError) {
-        ErrorHandler.handleError(repairError, 'Failed to repair progress data', this.eventBus);
+      } catch (repairError: unknown) {
+        ErrorHandler.handleError(repairError as Error, 'Failed to repair progress data', this.eventBus);
         throw new ValidationError('Failed to repair corrupted progress data', { validationError, repairError });
       }
     }
@@ -1192,26 +1188,25 @@ export class ProgressService {
 
                     // Validate the data against our schema
                     try {
-                        const validatedData = ProgressDataSchema.parse(parsedData);
-                        this.progressData = validatedData;
+                      const validatedData = ProgressDataSchema.parse(parsedData);
+                      this.progressData = validatedData;
+                      return;
+                    } catch (validationError: unknown) {
+                      ErrorHandler.handleError(validationError as Error, 'Data validation failed during progress load, attempting repair', this.eventBus);
+   
+                      // Try to repair the corrupted data
+                      try {
+                        // Create a temporary instance to validate and repair
+                        this.progressData = parsedData; // Temporarily set corrupted data
+   
+                        // Attempt to validate and repair
+                        await this.validateAndRepairProgressData();
+   
+                        // If repair succeeds, log and continue
+                        ErrorHandler.handleError(new Error('Progress data repair successful'), 'Successfully repaired corrupted progress data', this.eventBus);
                         return;
-                    } catch (validationError) {
-                        ErrorHandler.handleError(validationError, 'Data validation failed during progress load, attempting repair', this.eventBus);
-   
-                        // Try to repair the corrupted data
-                        try {
-                            // Create a temporary instance to validate and repair
-                            const tempProgressData = this.getDefaultProgressData();
-                            this.progressData = parsedData; // Temporarily set corrupted data
-   
-                            // Attempt to validate and repair
-                            await this.validateAndRepairProgressData();
-   
-                            // If repair succeeds, log and continue
-                            ErrorHandler.handleError(new Error('Progress data repair successful'), 'Successfully repaired corrupted progress data', this.eventBus);
-                            return;
-                        } catch (repairError) {
-                            ErrorHandler.handleError(repairError, 'Failed to repair corrupted progress data', this.eventBus);
+                      } catch (repairError: unknown) {
+                        ErrorHandler.handleError(repairError as Error, 'Failed to repair corrupted progress data', this.eventBus);
                             this.progressData = this.getDefaultProgressData();
                             await this.saveProgress(); // Save the default data to overwrite invalid data
                             throw new ValidationError('Invalid progress data format and repair failed', { validationError, repairError });
@@ -1232,15 +1227,15 @@ export class ProgressService {
         // Commit the transaction
         await TransactionManager.commitTransaction(transactionId);
 
-    } catch (error) {
-        // Attempt to rollback the transaction if it wasn't committed
-        try {
-            await TransactionManager.rollbackTransaction(transactionId);
-        } catch (rollbackError) {
-            Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError);
-        }
+    } catch (error: unknown) {
+      // Attempt to rollback the transaction if it wasn't committed
+      try {
+        await TransactionManager.rollbackTransaction(transactionId);
+      } catch (rollbackError: unknown) {
+        Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
+      }
 
-        ErrorHandler.handleError(error, 'Failed to load progress data', this.eventBus);
+      ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to load progress data', this.eventBus);
         this.progressData = this.getDefaultProgressData();
         throw new StorageError('Failed to load progress data', { error });
     }
@@ -1277,15 +1272,15 @@ export class ProgressService {
        // Commit the transaction
        await TransactionManager.commitTransaction(transactionId);
 
-   } catch (error) {
+     } catch (error: unknown) {
        // Attempt to rollback the transaction if it wasn't committed
        try {
-           await TransactionManager.rollbackTransaction(transactionId);
-       } catch (rollbackError) {
-           Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError);
+         await TransactionManager.rollbackTransaction(transactionId);
+       } catch (rollbackError: unknown) {
+         Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
        }
 
-       ErrorHandler.handleError(error, 'Failed to save progress data', this.eventBus);
+       ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to save progress data', this.eventBus);
        throw new StorageError('Failed to save progress data', { error });
    }
 
@@ -1358,15 +1353,15 @@ export class ProgressService {
         // Commit the transaction
         await TransactionManager.commitTransaction(transactionId);
 
-    } catch (error) {
-        // Attempt to rollback the transaction if it wasn't committed
-        try {
-            await TransactionManager.rollbackTransaction(transactionId);
-        } catch (rollbackError) {
-            Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError);
-        }
+    } catch (error: unknown) {
+      // Attempt to rollback the transaction if it wasn't committed
+      try {
+        await TransactionManager.rollbackTransaction(transactionId);
+      } catch (rollbackError: unknown) {
+        Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
+      }
 
-        ErrorHandler.handleError(error, 'Failed to migrate old progress data', this.eventBus);
+      ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to migrate old progress data', this.eventBus);
         throw new StorageError('Failed to migrate old progress data', { error });
     }
   }
@@ -1415,7 +1410,7 @@ export class ProgressService {
         // Commit the transaction
         await TransactionManager.commitTransaction(transactionId);
 
-    } catch (error) {
+    } catch (error: unknown) {
         // Attempt to rollback the transaction if it wasn't committed
         try {
             await TransactionManager.rollbackTransaction(transactionId);
@@ -1423,7 +1418,7 @@ export class ProgressService {
             Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError);
         }
 
-        ErrorHandler.handleError(error, 'Failed to import progress data', this.eventBus);
+        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to import progress data', this.eventBus);
         throw new ValidationError('Failed to import progress data', { error });
     }
   }
@@ -1456,7 +1451,7 @@ export class ProgressService {
         // Commit the transaction
         await TransactionManager.commitTransaction(transactionId);
 
-    } catch (error) {
+    } catch (error: unknown) {
         // Attempt to rollback the transaction if it wasn't committed
         try {
             await TransactionManager.rollbackTransaction(transactionId);
@@ -1464,7 +1459,7 @@ export class ProgressService {
             Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError);
         }
 
-        ErrorHandler.handleError(error, 'Failed to reset progress data', this.eventBus);
+        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to reset progress data', this.eventBus);
         throw new StorageError('Failed to reset progress data', { error });
     }
   }
@@ -1583,4 +1578,3 @@ export class ProgressService {
 }
 
 // Export the ProgressService class for use with dependency injection
-export { ProgressService };
