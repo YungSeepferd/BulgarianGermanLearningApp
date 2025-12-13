@@ -113,15 +113,23 @@
   }
 </script>
 
-<div class="flashcard-container">
+<div class="flashcard-container" role="region" aria-label={appState.languageMode === 'DE_BG' ? 'Vokabelkarte' : 'Карта с думи'}>
   <button
     class="flashcard {flipped ? 'flipped' : ''}"
     onclick={toggleFlip}
-    aria-label={flipped ? ui.showFront : ui.showBack}
+    role="button"
+    aria-label={flipped 
+      ? (appState.languageMode === 'DE_BG' ? `Vorderseite zeigen: ${frontTerm}` : `Покажи предната страна: ${frontTerm}`)
+      : (appState.languageMode === 'DE_BG' ? `Rückseite zeigen: ${backTerm}` : `Покажи задната страна: ${backTerm}`)}
+    aria-expanded={flipped}
+    aria-describedby="flip-hint"
     onkeydown={(e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         toggleFlip();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        flipped = false;
       }
     }}
   >
@@ -138,7 +146,7 @@
         {:else if vocabularyItem.pronunciation?.german && !isBulgarianFront}
           <p class="pronunciation">{vocabularyItem.pronunciation.german}</p>
         {/if}
-        <div class="flip-hint">{ui.flipHint}</div>
+        <div id="flip-hint" class="flip-hint">{ui.flipHint}</div>
       </div>
     </div>
 
@@ -287,6 +295,11 @@
     overflow: hidden;
   }
 
+  .flashcard:focus-visible {
+    outline: 3px solid var(--color-focus-ring, #0d6efd);
+    outline-offset: 4px;
+  }
+
   .declension-block { margin-top: 0.75rem; }
   .declension-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
   .declension-case { text-align: left; padding: 0.25rem 0.5rem; color: #555; }
@@ -294,6 +307,7 @@
   .external-links { margin-top: 0.75rem; }
   .links-list { display: flex; gap: 0.5rem; flex-wrap: wrap; }
   .ext-link { color: #0a58ca; text-decoration: underline; }
+  .ext-link:focus-visible { outline: 3px solid var(--color-focus-ring, #0d6efd); outline-offset: 2px; }
 
   .flashcard.flipped {
     transform: rotateY(180deg);

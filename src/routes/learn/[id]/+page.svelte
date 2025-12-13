@@ -45,7 +45,12 @@
   });
 </script>
 
-<div class="learn-container">
+<div class="learn-container" role="main" aria-label={appState.languageMode === 'DE_BG' ? 'Lernseite für Vokabel' : 'Страница за учене на дума'} onkeydown={(e) => {
+  if (e.key === 'Escape') {
+    window.history.back();
+  }
+}}>
+  <div class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
   {#if error}
     <div class="state-block" role="alert"><p>{error}</p></div>
   {:else if item}
@@ -53,18 +58,18 @@
     <div class="learn-card">
       <Flashcard vocabularyItem={item} />
     </div>
-    <header class="hero">
+    <header class="hero" aria-labelledby="learn-title">
       <div class="hero__main">
-        <h1 class="hero__title">{item.german}</h1>
-        <div class="hero__arrow">{dirArrow}</div>
+        <h1 id="learn-title" class="hero__title">{item.german}</h1>
+        <div class="hero__arrow" aria-hidden="true">{dirArrow}</div>
         <h2 class="hero__subtitle">{item.bulgarian}</h2>
       </div>
-      <div class="hero__badges">
-        {#if item.cefrLevel}<span class="badge badge--cefr">CEFR {item.cefrLevel}</span>{/if}
-        <span class="badge badge--pos">{item.partOfSpeech}</span>
+      <div class="hero__badges" role="list" aria-label={appState.languageMode === 'DE_BG' ? 'Wort-Eigenschaften' : 'Свойства на думата'}>
+        {#if item.cefrLevel}<span class="badge badge--cefr" role="listitem">CEFR {item.cefrLevel}</span>{/if}
+        <span class="badge badge--pos" role="listitem">{item.partOfSpeech}</span>
         {#if item.categories?.length}
           {#each item.categories.slice(0, 3) as cat}
-            <span class="badge badge--cat">{cat}</span>
+            <span class="badge badge--cat" role="listitem">{cat}</span>
           {/each}
         {/if}
       </div>
@@ -126,12 +131,12 @@
     </div>
 
     <!-- Actions -->
-    <div class="actions">
+    <nav class="actions" role="navigation" aria-label={appState.languageMode === 'DE_BG' ? 'Lernaktionen' : 'Учебни действия'}>
       <a class="button" href="/practice" aria-label={appState.languageMode === 'DE_BG' ? 'Mit diesem Wort üben' : 'Упражнявай тази дума'}>
         {appState.languageMode === 'DE_BG' ? 'Üben' : 'Упражнения'}
       </a>
       <a class="button button--secondary" href="/vocabulary">{appState.languageMode === 'DE_BG' ? 'Zurück zum Wörterbuch' : 'Назад към речника'}</a>
-    </div>
+    </nav>
   {/if}
 </div>
 
@@ -179,9 +184,11 @@
 
   .actions { display: flex; gap: var(--space-3); margin-top: var(--space-6); }
   .button { padding: var(--space-3) var(--space-4); border-radius: var(--border-radius-lg); background: var(--color-button-primary); color: #fff; text-decoration: none; font-weight: var(--font-semibold); }
+  .button:focus-visible { outline: 3px solid var(--color-focus-ring, #0d6efd); outline-offset: 2px; }
   .button--secondary { background: var(--color-secondary-light); color: var(--color-neutral-dark); border: 1px solid var(--color-neutral-border); }
 
   .state-block { text-align: center; color: var(--color-neutral-text); }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
   /* removed unused spinner styles */
 
   @media (max-width: var(--breakpoint-md)) {
