@@ -67,15 +67,35 @@
   }
 
   const breakdown = $derived(normalizeBreakdown(vocabularyItem));
-  const examples = $derived(
-    vocabularyItem.metadata?.examples
-      ?? vocabularyItem.examples?.map((ex: any) => ({
+  
+  interface NormalizedExample {
+    german: string;
+    bulgarian: string;
+    context?: string;
+  }
+  
+  const examples = $derived.by((): NormalizedExample[] => {
+    const metadata = vocabularyItem.metadata;
+    const legacy = (vocabularyItem as any).examples;
+    
+    if (metadata?.examples) {
+      return metadata.examples.map(ex => ({
+        german: ex.german || ex.source || '',
+        bulgarian: ex.bulgarian || ex.target || '',
+        context: ex.context
+      }));
+    }
+    
+    if (Array.isArray(legacy)) {
+      return legacy.map((ex: any) => ({
         german: ex.sentence || ex.translation || '',
         bulgarian: ex.translation || ex.sentence || '',
         context: ex.context
-      }))
-      ?? []
-  );
+      }));
+    }
+    
+    return [];
+  });
 
   const culturalNote = $derived(vocabularyItem.metadata?.culturalNote || vocabularyItem.metadata?.notes);
   const mnemonic = $derived(vocabularyItem.metadata?.mnemonic || vocabularyItem.mnemonics);
@@ -216,10 +236,11 @@
               <table class="declension-table">
                 <tbody>
                   {#each Object.entries(vocabularyItem.metadata.declension) as [caseName, forms]}
+                    {@const declensionForms = forms as { singular?: string; plural?: string }}
                     <tr>
                       <th class="declension-case">{caseName}</th>
-                      <td class="declension-form">{(forms as any).singular ?? ''}</td>
-                      <td class="declension-form">{(forms as any).plural ?? ''}</td>
+                      <td class="declension-form">{declensionForms.singular ?? ''}</td>
+                      <td class="declension-form">{declensionForms.plural ?? ''}</td>
                     </tr>
                   {/each}
                 </tbody>

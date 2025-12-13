@@ -7,6 +7,42 @@
   let error = $derived<string | null>(item ? null : (appState.languageMode === 'DE_BG' ? 'Eintrag nicht gefunden' : 'Записът не е намерен'));
 
   const dirArrow = $derived(appState.languageMode === 'DE_BG' ? '→' : '←');
+
+  // Type-safe derived values with proper guards
+  const exampleSentences = $derived.by(() => {
+    if (!item) return [];
+    const metadata = item.metadata;
+    const legacy = (item as any).exampleSentences;
+    
+    if (metadata?.examples) {
+      return metadata.examples.map(ex => ({
+        source: ex.german || ex.source || '',
+        target: ex.bulgarian || ex.target || '',
+        context: ex.context
+      }));
+    }
+    
+    if (Array.isArray(legacy)) {
+      return legacy.map((ex: any) => ({
+        source: ex.source ?? ex.de ?? '',
+        target: ex.target ?? ex.bg ?? '',
+        context: ex.context
+      }));
+    }
+    
+    return [];
+  });
+
+  const article = $derived((item as any)?.article ?? null);
+  const gender = $derived((item as any)?.gender ?? null);
+  const declension = $derived((item as any)?.declension ?? null);
+  const conjugation = $derived((item as any)?.conjugation ?? null);
+  const etymology = $derived(item?.metadata?.etymology ?? null);
+  const alternatives = $derived.by(() => {
+    if (!item) return [];
+    const alts = (item as any).alternatives;
+    return Array.isArray(alts) ? alts : [];
+  });
 </script>
 
 <div class="learn-container">
@@ -40,13 +76,13 @@
         <div class="panel__header">
           <h3>{appState.languageMode === 'DE_BG' ? 'Kontext & Beispiele' : 'Контекст и примери'}</h3>
         </div>
-        {#if (item as any).exampleSentences?.length}
+        {#if exampleSentences.length > 0}
           <ul class="example-list">
-            {#each (item as any).exampleSentences.slice(0,8) as ex}
+            {#each exampleSentences.slice(0, 8) as ex}
               <li class="example-row">
-                <span class="example-src">{ex.source ?? ex.de ?? ''}</span>
+                <span class="example-src">{ex.source}</span>
                 <span class="example-arrow">{dirArrow}</span>
-                <span class="example-tgt">{ex.target ?? ex.bg ?? ''}</span>
+                <span class="example-tgt">{ex.target}</span>
               </li>
             {/each}
           </ul>
@@ -61,24 +97,24 @@
           <h3>{appState.languageMode === 'DE_BG' ? 'Formen & Eigenschaften' : 'Форми и свойства'}</h3>
         </div>
         <div class="property-grid">
-          {#if (item as any).article}<div class="prop"><span class="prop__label">Artikel</span><span class="prop__value">{(item as any).article}</span></div>{/if}
-          {#if (item as any).gender}<div class="prop"><span class="prop__label">Genus</span><span class="prop__value">{(item as any).gender}</span></div>{/if}
-          {#if (item as any).declension}<div class="prop"><span class="prop__label">Deklination</span><span class="prop__value">{(item as any).declension}</span></div>{/if}
-          {#if (item as any).conjugation}<div class="prop"><span class="prop__label">Konjugation</span><span class="prop__value">{(item as any).conjugation}</span></div>{/if}
+          {#if article}<div class="prop"><span class="prop__label">Artikel</span><span class="prop__value">{article}</span></div>{/if}
+          {#if gender}<div class="prop"><span class="prop__label">Genus</span><span class="prop__value">{gender}</span></div>{/if}
+          {#if declension}<div class="prop"><span class="prop__label">Deklination</span><span class="prop__value">{declension}</span></div>{/if}
+          {#if conjugation}<div class="prop"><span class="prop__label">Konjugation</span><span class="prop__value">{conjugation}</span></div>{/if}
         </div>
         <div class="panel__section">
           <h4>{appState.languageMode === 'DE_BG' ? 'Etymologie' : 'Етимология'}</h4>
-          {#if (item as any).metadata?.etymology}
-            <p class="etymology">{(item as any).metadata.etymology}</p>
+          {#if etymology}
+            <p class="etymology">{etymology}</p>
           {:else}
             <p class="muted">{appState.languageMode === 'DE_BG' ? 'Keine Daten vorhanden' : 'Няма налични данни'}</p>
           {/if}
         </div>
         <div class="panel__section">
           <h4>{appState.languageMode === 'DE_BG' ? 'Verwandte Formen' : 'Свързани форми'}</h4>
-          {#if (item as any).alternatives?.length}
+          {#if alternatives.length > 0}
             <ul class="tag-list">
-              {#each (item as any).alternatives as alt}
+              {#each alternatives as alt}
                 <li class="tag">{alt}</li>
               {/each}
             </ul>
