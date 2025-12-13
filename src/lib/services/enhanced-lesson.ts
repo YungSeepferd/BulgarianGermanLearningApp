@@ -7,9 +7,10 @@
  */
 import { lessonService } from './lesson';
 import { lessonGenerationEngine } from './lesson-generation/lesson-generator';
-import type { LessonGenerationParams, GeneratedLesson, EnhancedLessonCriteria, VocabularyItem } from './lesson-generation/types';
+import type { LessonGenerationParams, GeneratedLesson, EnhancedLessonCriteria } from './lesson-generation/types';
 import { isLessonDifficulty, isLessonType } from './lesson-generation/types';
-import type { Lesson, LessonSection, LearningObjective } from '../schemas/lesson';
+import type { Lesson, LearningObjective, LessonType, LessonDifficulty } from '../schemas/lesson';
+import type { VocabularyItem, VocabularyCategory } from '../schemas/vocabulary';
 import { v4 as uuidv4 } from 'uuid';
 
 class EnhancedLessonService {
@@ -58,7 +59,7 @@ class EnhancedLessonService {
    * @param options Additional options for lesson generation
    * @returns Generated lesson in standard Lesson format
    */
-  async generateThematicLesson(categories: string[], difficulty: string, options?: { includePractice?: boolean; includeReview?: boolean }): Promise<Lesson> {
+  async generateThematicLesson(categories: VocabularyCategory[], difficulty: string, options?: { includePractice?: boolean; includeReview?: boolean }): Promise<Lesson> {
     const validatedDifficulty = isLessonDifficulty(difficulty) ? difficulty : 'A1';
     const params: LessonGenerationParams = {
       userId: 'default',
@@ -104,7 +105,7 @@ class EnhancedLessonService {
    * @param options Additional options for lesson generation
    * @returns Generated lesson in standard Lesson format
    */
-  async generateMixedLesson(category: string, difficulty: string, options?: { includePractice?: boolean; includeReview?: boolean }): Promise<Lesson> {
+  async generateMixedLesson(category: VocabularyCategory, difficulty: string, options?: { includePractice?: boolean; includeReview?: boolean }): Promise<Lesson> {
     const validatedDifficulty = isLessonDifficulty(difficulty) ? difficulty : 'A1';
     const params: LessonGenerationParams = {
       userId: 'default',
@@ -155,20 +156,11 @@ class EnhancedLessonService {
   private convertGeneratedLessonToLesson(generatedLesson: GeneratedLesson): Lesson {
     // Converting generated lesson to standard format
 
-    // Convert sections
-    const sections: LessonSection[] = generatedLesson.sections.map(section => {
-      // Use the section's original type if available, otherwise fall back to lesson type
-      const sectionType = section.type || generatedLesson.type;
-      // Section converted to standard format
-      return {
-        ...section,
-        type: sectionType,
-        isCompleted: false,
-        completionPercentage: 0,
-        createdAt: new Date(),
-        updatedAt: new Date()
-      };
-    });
+    // Note: Lesson schema does NOT have sections field
+    // Convert sections to content string instead
+    const sectionContent = generatedLesson.sections
+      .map(section => `## ${section.title || section.type}\n${section.content || ''}`)
+      .join('\n\n');
 
     // Convert learning objectives
     const objectives: LearningObjective[] = generatedLesson.learningObjectives.map(objective => ({
@@ -179,7 +171,7 @@ class EnhancedLessonService {
     }));
 
     // Calculate duration (5 minutes per section + 5 minutes buffer)
-    const duration = sections.length * 5 + 5;
+    const duration = generatedLesson.sections.length * 5 + 5;
 
     // Generate tags
     const tags = this.generateLessonTags(generatedLesson);
@@ -189,12 +181,12 @@ class EnhancedLessonService {
       id: generatedLesson.id,
       title: generatedLesson.title,
       description: this.generateLessonDescription(generatedLesson),
-      difficulty: generatedLesson.difficulty,
-      type: generatedLesson.type,
+      difficulty: this.normalizeDifficulty(generatedLesson.difficulty),
+      type: this.normalizeLessonType(generatedLesson.type),
       duration,
-      vocabulary: generatedLesson.vocabulary || [],
+      vocabulary: this.normalizeVocabulary(generatedLesson.vocabulary || []),
       objectives,
-      sections,
+      content: sectionContent || this.generateLessonDescription(generatedLesson),
       isCompleted: false,
       completionPercentage: 0,
       createdAt: generatedLesson.createdAt || new Date(),
@@ -203,8 +195,7 @@ class EnhancedLessonService {
         tags,
         prerequisites: [],
         relatedLessons: [],
-        generated: true,
-        templateIds: generatedLesson.sections.map(s => s.metadata?.templateId).filter(Boolean) as string[],
+        isPremium: false,
         ...generatedLesson.metadata
       }
     };
@@ -292,6 +283,30 @@ class EnhancedLessonService {
     return `This ${difficultyLevel} level lesson focuses on ${focusArea} with ${vocabCount} vocabulary items${grammarConceptsText}`;
   }
 
+  private normalizeLessonType(type: LessonType | 'contextual' | undefined): LessonType {
+    if (type === 'vocabulary' || type === 'grammar' || type === 'conversation' || type === 'reading' || type === 'listening' || type === 'writing' || type === 'culture' || type === 'mixed') {
+      return type;
+    }
+    return 'mixed';
+  }
+
+  private normalizeDifficulty(difficulty: LessonDifficulty | undefined): LessonDifficulty {
+    if (difficulty === 'A1' || difficulty === 'A2' || difficulty === 'B1' || difficulty === 'B2' || difficulty === 'C1') {
+      return difficulty;
+    }
+    return 'A1';
+  }
+
+  private normalizeVocabulary(items: VocabularyItem[]): VocabularyItem[] {
+    return items.map(item => ({
+      ...item,
+      isCommon: item.isCommon ?? false,
+      isVerified: item.isVerified ?? false,
+      categories: item.categories ?? [],
+      metadata: item.metadata ?? {}
+    }));
+  }
+
   /**
    * Create a fallback lesson when generation fails
    * @param type Lesson type
@@ -317,8 +332,7 @@ class EnhancedLessonService {
         tags: [type, difficulty],
         prerequisites: [],
         relatedLessons: [],
-        generated: true,
-        fallback: true
+        isPremium: false
       }
     };
   }
@@ -337,7 +351,14 @@ class EnhancedLessonService {
   }
 
   async generateLessonFromCriteria(criteria: EnhancedLessonCriteria) {
-    const result = await lessonService.generateLessonFromCriteria(criteria);
+    const normalizedCriteria = {
+      ...criteria,
+      type: criteria.type ? this.normalizeLessonType(criteria.type) : undefined,
+      difficulty: criteria.difficulty ? this.normalizeDifficulty(criteria.difficulty as LessonDifficulty) : undefined,
+      categories: criteria.categories as VocabularyCategory[] | undefined
+    };
+
+    const result = await lessonService.generateLessonFromCriteria(normalizedCriteria);
     return result || this.createFallbackLesson('vocabulary', 'A1');
   }
 

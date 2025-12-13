@@ -24,6 +24,11 @@
 - **[VOCABULARY_ENRICHMENT_TECHNICAL.md](VOCABULARY_ENRICHMENT_TECHNICAL.md)** - Technical architecture details
 - **[VOCABULARY_ENRICHMENT_IMPLEMENTATION_CHECKLIST.md](VOCABULARY_ENRICHMENT_IMPLEMENTATION_CHECKLIST.md)** - Implementation status and verification
 
+### Implementation Status (Dec 13, 2025)
+- **[../PHASE_2_COMPLETION.md](../PHASE_2_COMPLETION.md)** - Phase 2: VocabularyCard + Design Tokens (✅ Complete)
+- **[../PHASE_3_COMPLETION.md](../PHASE_3_COMPLETION.md)** - Phase 3: Button Migrations + Flashcard Variant (✅ Complete)
+- **[../PHASE_4_ITERATIVE_TESTING_PLAN.md](../PHASE_4_ITERATIVE_TESTING_PLAN.md)** - Phase 4: Comprehensive Tab Testing (🚀 In Progress)
+
 ### Reference
 - **[BILINGUAL_SUPPORT.md](BILINGUAL_SUPPORT.md)** - How the bilingual system works
 - **[CHANGELOG.md](CHANGELOG.md)** - What changed in recent versions

@@ -55,13 +55,11 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
   constructor(
     templateRepository: ILessonTemplateRepository = lessonTemplateRepository,
     grammarService: ICulturalGrammarService = culturalGrammarService,
-    renderer: ITemplateRenderer = templateRenderer,
-    vocabularyServicePromise?: Promise<any>
+    renderer: ITemplateRenderer = templateRenderer
   ) {
     this.templateRepository = templateRepository;
     this.grammarService = grammarService;
     this.renderer = renderer;
-    this.vocabularyServicePromise = vocabularyServicePromise;
   }
 
   /**
@@ -129,7 +127,8 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     // 2. Fetch Vocabulary
     // Load vocabulary data if not already cached
     if (!this.vocabularyCache) {
-      this.vocabularyCache = (await loadVocabulary).map(item => this.normalizeVocabularyItem(item));
+      const vocabulary = await loadVocabulary();
+      this.vocabularyCache = vocabulary.items.map(item => this.normalizeVocabularyItem(item));
     }
     const limit = params.criteria.limit || options.maxItems || 10;
     const numericDifficulty = this.mapDifficultyToNumber(params.difficulty);
@@ -163,7 +162,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
       if (params.criteria.partOfSpeech) {
         const result = await loadVocabularyBySearch({
            difficulty: numericDifficulty,
-           partOfSpeech: params.criteria.partOfSpeech,
+           partOfSpeech: params.criteria.partOfSpeech ?? undefined,
            limit: limit
          });
         // Apply validation to ensure correct POS filtering
@@ -334,8 +333,8 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     // We try to find a concept matching specific criteria, or get a suitable one for the level
     const grammarConcepts = await this.grammarService.query({
       difficulty: params.difficulty,
-      partOfSpeech: params.criteria.partOfSpeech,
-      conceptType: params.criteria.conceptType
+      partOfSpeech: params.criteria.partOfSpeech ?? undefined,
+      conceptType: params.criteria.conceptType ?? undefined
     });
 
     if (grammarConcepts.length === 0) {
@@ -348,7 +347,8 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     // 2. Fetch Supporting Vocabulary
     // Load vocabulary data if not already cached
     if (!this.vocabularyCache) {
-      this.vocabularyCache = (await loadVocabulary).map(item => this.normalizeVocabularyItem(item));
+      const vocabulary = await loadVocabulary();
+      this.vocabularyCache = vocabulary.items.map(item => this.normalizeVocabularyItem(item));
     }
     const numericDifficulty = this.mapDifficultyToNumber(params.difficulty);
     let exampleVocabulary: VocabularyItem[] = [];
@@ -357,7 +357,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     if (mainConcept && mainConcept.partOfSpeech && mainConcept.partOfSpeech.length > 0) {
       const searchResult = await loadVocabularyBySearch({
         difficulty: numericDifficulty,
-        partOfSpeech: mainConcept.partOfSpeech[0], // Prioritize primary POS
+        partOfSpeech: mainConcept.partOfSpeech[0] ?? undefined, // Prioritize primary POS
         limit: 8
       });
       exampleVocabulary = this.normalizeVocabularyList(searchResult.items);
@@ -770,12 +770,17 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
   ): GeneratedLesson {
     const normalizedType = this.normalizeLessonType(params.type);
     const normalizedVocabulary = this.normalizeVocabularyList(vocabulary);
+    const sectionType: GeneratedLessonSection['type'] = normalizedType === 'grammar'
+      ? 'grammar'
+      : normalizedType === 'culture'
+        ? 'cultural'
+        : 'vocabulary';
+
     const section: GeneratedLessonSection = {
       id: uuidv4(),
       title: 'Main Content', // Could be dynamic
       content: content,
-      type: normalizedType === 'vocabulary' ? 'vocabulary' : 
-            normalizedType === 'grammar' ? 'grammar' : 'mixed',
+      type: sectionType,
       metadata: {}
     };
 

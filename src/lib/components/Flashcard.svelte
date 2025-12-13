@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { VocabularyItem } from '$lib/types/vocabulary';
   import { appState } from '$lib/state/app-state';
+  import { APP_ICONS } from '$lib/constants/icons';
   import EnrichmentBadge from '$lib/components/vocabulary/EnrichmentBadge.svelte';
   import DefinitionLink from '$lib/components/vocabulary/DefinitionLink.svelte';
 
@@ -79,7 +80,7 @@
   const culturalNote = $derived(vocabularyItem.metadata?.culturalNote || vocabularyItem.metadata?.notes);
   const mnemonic = $derived(vocabularyItem.metadata?.mnemonic || vocabularyItem.mnemonics);
   const nuance = $derived(vocabularyItem.contextualNuance || vocabularyItem.metadata?.notes);
-  const emoji = $derived(vocabularyItem.media?.emoji || vocabularyItem.emoji || '📝');
+  const emoji = $derived(vocabularyItem.media?.emoji || vocabularyItem.emoji || APP_ICONS.VOCABULARY);
   const compositionSummary = $derived(
     breakdown.length > 1
       ? `${breakdown.map((b) => b.part).join(' + ')} → ${frontTerm}`
@@ -194,7 +195,7 @@
 
         {#if mnemonic}
           <div class="note-block">
-            <p class="section-title">{ui.mnemonic}</p>
+            <p class="section-title"><span class="icon">{APP_ICONS.MNEMONIC}</span> {ui.mnemonic}</p>
             <p class="section-body">{mnemonic}</p>
           </div>
         {/if}
@@ -244,9 +245,9 @@
 <style>
   .flashcard-container {
     perspective: 1000px;
-    width: 100%;
-    max-width: 420px;
-    height: 520px;
+    width: min(420px, 100%);
+    height: clamp(320px, 65vw, 520px);
+    max-height: 80vh;
     margin: 0 auto;
     pointer-events: auto;
   }
@@ -262,6 +263,7 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     background: transparent;
     border: none;
+    overflow: hidden;
   }
 
   .declension-block { margin-top: 0.75rem; }
@@ -295,6 +297,12 @@
   .flashcard-back {
     transform: rotateY(180deg);
     overflow-y: auto;
+  }
+
+  @media (max-width: 640px) {
+    .flashcard-container {
+      height: clamp(300px, 75vh, 480px);
+    }
   }
 
   .front-content {

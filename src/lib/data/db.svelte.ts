@@ -36,18 +36,17 @@ class VocabularyDB {
             });
 
             // Convert UnifiedVocabularyItem to VocabularyItem format
+            // Ensure all required fields are present with defaults
             this.items = result.items.map(item => ({
-                id: item.id,
-                german: item.german,
-                bulgarian: item.bulgarian,
+                ...item,
                 category: item.categories[0] || 'greetings',
                 categories: item.categories || ['greetings'],
-                tags: item.tags || [],
-                difficulty: item.difficulty,
-                partOfSpeech: item.partOfSpeech,
-                xp_value: item.xp_value || 10,
-                createdAt: item.createdAt,
-                updatedAt: item.updatedAt
+                tags: (item.tags ?? []),
+                // Ensure required fields from metadata or use defaults
+                isCommon: item.metadata?.isCommon ?? false,
+                isVerified: item.metadata?.isVerified ?? false,
+                learningPhase: item.metadata?.learningPhase ?? 0,
+                xp_value: item.xp_value ?? item.metadata?.xpValue ?? 10
             }));
 
             this.initialized = true;
@@ -199,7 +198,7 @@ class VocabularyDB {
         const results = this.items.filter(item =>
             item.german.toLowerCase().includes(lowerQuery) ||
             item.bulgarian.toLowerCase().includes(lowerQuery) ||
-            item.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
+            (item.tags ?? []).some(tag => tag.toLowerCase().includes(lowerQuery))
         );
 
         Debug.log('VocabularyDB', 'Vocabulary search completed', { query, results: results.length });

@@ -1,0 +1,286 @@
+/* Design Tokens - Centralized Design System
+ * ============================================
+ * 
+ * This file defines CSS custom properties (variables) for:
+ * - Spacing (4px-based, 7-point scale)
+ * - Typography (Major Third 1.250 ratio)
+ * - Color palette (semantic naming)
+ * - Transitions (consistent animation timing)
+ * 
+ * Usage: Replace all hardcoded values with CSS variables
+ * 
+ * Examples:
+ *   padding: var(--space-3);           // 12px
+ *   font-size: var(--text-base);       // 1rem
+ *   color: var(--color-primary);       // #3b82f6
+ *   transition: all var(--duration-200);
+ */
+
+:root {
+  /* ========================================
+   * SPACING SYSTEM (4px base unit)
+   * ======================================== */
+
+  /* Base: 4px = 0.25rem */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem; /* 24px */
+  --space-7: 2rem; /* 32px */
+
+  /* Aliases for common usage */
+  --gap-xs: var(--space-1);
+  --gap-sm: var(--space-2);
+  --gap-md: var(--space-3);
+  --gap-lg: var(--space-4);
+  --gap-xl: var(--space-5);
+  --gap-2xl: var(--space-6);
+  --gap-3xl: var(--space-7);
+
+  /* Vocabulary page spacing */
+  --vocabulary-card-padding: var(--space-4);
+  --vocabulary-card-gap: var(--space-4);
+  --vocabulary-grid-gap: var(--space-3);
+  --filter-panel-padding: var(--space-5);
+  --filter-group-spacing: var(--space-4);
+
+  /* ========================================
+   * TYPOGRAPHY SYSTEM (Major Third 1.250 ratio)
+   * ======================================== */
+
+  /* Base: 1rem = 16px */
+  --text-xs: 0.64rem; /* 10.24px → 10px */
+  --text-sm: 0.8rem; /* 12.8px → 13px */
+  --text-base: 1rem; /* 16px */
+  --text-lg: 1.25rem; /* 20px */
+  --text-xl: 1.563rem; /* 25px */
+  --text-2xl: 1.953rem; /* 31px */
+  --text-3xl: 2.441rem; /* 39px */
+
+  /* Vocabulary-specific type styles */
+  --font-vocabulary-word: var(--text-lg);
+  --font-vocabulary-translation: var(--text-base);
+  --font-vocabulary-metadata: var(--text-sm);
+  --font-vocabulary-badge: var(--text-xs);
+
+  /* Line heights (tight, normal, loose) */
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-loose: 1.8;
+
+  /* Font weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* Vocabulary font weights */
+  --weight-vocabulary-word: 600;
+  --weight-vocabulary-translation: 500;
+  --weight-metadata: 400;
+  --weight-badge: 500;
+
+  /* ========================================
+   * COLOR PALETTE (Semantic naming)
+   * ======================================== */
+
+  /* Primary Colors */
+  --color-primary: #3b82f6; /* Blue-500 */
+  --color-primary-light: #eff6ff; /* Blue-50 */
+  --color-primary-lighter: #dbeafe; /* Blue-100 */
+  --color-primary-dark: #2563eb; /* Blue-600 */
+  --color-primary-darker: #1e40af; /* Blue-700 */
+
+  /* Secondary Colors */
+  --color-secondary: #6b7280; /* Gray-500 */
+  --color-secondary-light: #f9fafb; /* Gray-50 */
+  --color-secondary-dark: #374151; /* Gray-700 */
+
+  /* Success Colors */
+  --color-success: #10b981; /* Emerald-500 */
+  --color-success-light: #d1fae5; /* Emerald-100 */
+  --color-success-lighter: #f0fdf4; /* Emerald-50 */
+  --color-success-dark: #059669; /* Emerald-600 */
+
+  /* Warning/Amber Colors */
+  --color-warning: #f59e0b; /* Amber-500 */
+  --color-warning-light: #fef3c7; /* Amber-100 */
+  --color-warning-lighter: #fffbeb; /* Amber-50 */
+  --color-warning-dark: #d97706; /* Amber-600 */
+
+  /* Danger/Red Colors */
+  --color-danger: #ef4444; /* Red-500 */
+  --color-danger-light: #fee2e2; /* Red-100 */
+  --color-danger-lighter: #fef2f2; /* Red-50 */
+  --color-danger-dark: #dc2626; /* Red-600 */
+
+  /* Learn/Violet Colors */
+  --color-learn: #a855f7; /* Violet-500 */
+  --color-learn-light: #ede9fe; /* Violet-100 */
+  --color-learn-lighter: #f5f3ff; /* Violet-50 */
+  --color-learn-dark: #9333ea; /* Violet-600 */
+
+  /* Neutral Colors */
+  --color-neutral-light: #ffffff;
+  --color-neutral-lighter: #f8fafc; /* Slate-50 */
+  --color-neutral-border: #e5e7eb; /* Gray-200 */
+  --color-neutral-divider: #f3f4f6; /* Gray-100 */
+  --color-neutral-text-light: #9ca3af; /* Gray-400 */
+  --color-neutral-text: #6b7280; /* Gray-500 */
+  --color-neutral-text-dark: #374151; /* Gray-700 */
+  --color-neutral-dark: #1f2937; /* Gray-800 */
+
+  /* Status Colors */
+  --color-error: var(--color-danger);
+  --color-warning-status: var(--color-warning);
+  --color-success-status: var(--color-success);
+  --color-info: var(--color-primary);
+
+  /* Semantic Colors for Components */
+  --color-button-primary: var(--color-primary);
+  --color-button-primary-hover: var(--color-primary-dark);
+  --color-button-secondary: var(--color-secondary-light);
+  --color-button-secondary-text: var(--color-secondary-dark);
+  --color-button-success: var(--color-success);
+  --color-button-success-hover: var(--color-success-dark);
+  --color-button-danger: var(--color-danger);
+  --color-button-danger-hover: var(--color-danger-dark);
+  --color-button-practice: var(--color-primary);
+  --color-button-quick-practice: var(--color-warning);
+  --color-button-learn: var(--color-learn);
+
+  /* Interaction & accessibility colors */
+  --color-hover-overlay: rgba(0,0,0,0.05);
+  --color-active-overlay: rgba(0,0,0,0.08);
+  --color-focus-ring: #2563eb; /* Blue-600 for focus */
+  --color-focus-ring-offset: 2px;
+
+  /* Card surfaces */
+  --color-card-default: var(--color-neutral-light);
+  --color-card-hover: #f8fafc; /* Slate-50 */
+  --color-card-selected: #eef2ff; /* Indigo-50 */
+  --color-card-border: #e5e7eb; /* Gray-200 */
+  --color-card-border-hover: #94a3b8; /* Slate-400 */
+
+  /* Filter panel surfaces */
+  --color-filter-bg: #f8fafc; /* Slate-50 */
+  --color-filter-active: var(--color-primary);
+  --color-filter-inactive: #cbd5e1; /* Slate-300 */
+
+  /* CEFR level palette */
+  --color-cefr-a1: #86efac; /* Green-300 */
+  --color-cefr-a2: #4ade80; /* Green-400 */
+  --color-cefr-b1: #fde047; /* Yellow-300 */
+  --color-cefr-b2: #fb923c; /* Orange-400 */
+  --color-cefr-c1: #f43f5e; /* Rose-500 */
+
+  /* Language direction accent colors */
+  --color-german-primary: #3b82f6; /* Blue-500 */
+  --color-bulgarian-primary: #ef4444; /* Red-500 */
+
+  /* ========================================
+   * TRANSITIONS & ANIMATIONS
+   * ======================================== */
+
+  --duration-75: 75ms;
+  --duration-100: 100ms;
+  --duration-150: 150ms;
+  --duration-200: 200ms;
+  --duration-300: 300ms;
+  --duration-500: 500ms;
+
+  --easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Vocabulary transitions */
+  --transition-card-hover: all var(--duration-200) var(--easing-ease-out);
+  --transition-filter: opacity var(--duration-150) var(--easing-ease-in-out);
+  --transition-badge: transform var(--duration-150) var(--easing-ease-out);
+
+  /* ========================================
+   * BORDERS & SHADOWS
+   * ======================================== */
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 8px;
+  --border-radius-xl: 12px;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /* Elevation for vocabulary UI */
+  --shadow-card: var(--shadow-md);
+  --shadow-card-hover: var(--shadow-lg);
+  --shadow-card-active: var(--shadow-xl);
+  --shadow-filter-panel: var(--shadow-lg);
+
+  /* ========================================
+   * BREAKPOINTS (for responsive design)
+   * ======================================== */
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Extended breakpoints */
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1440px;
+  
+  /* Layout containers */
+  --container-max-width: 1400px;
+  --filter-panel-width: 280px;
+  --filter-panel-width-collapsed: 0px;
+}
+
+/* ========================================
+ * USAGE EXAMPLES
+ * ======================================== */
+
+/*
+ * SPACING:
+ *   margin: var(--space-4);
+ *   padding: var(--space-3);
+ *   gap: var(--gap-md);
+ *
+ * TYPOGRAPHY:
+ *   font-size: var(--text-lg);
+ *   line-height: var(--leading-normal);
+ *   font-weight: var(--font-semibold);
+ *
+ * COLORS:
+ *   background-color: var(--color-neutral-light);
+ *   color: var(--color-neutral-text-dark);
+ *   border-color: var(--color-neutral-border);
+ *
+ * BUTTONS:
+ *   background-color: var(--color-button-primary);
+ *   transition: all var(--duration-200) var(--easing-ease-in-out);
+ *
+ * HOVER STATES:
+ *   &:hover {
+ *     background-color: var(--color-button-primary-hover);
+ *   }
+ *
+ * FOCUS STATES:
+ *   &:focus {
+ *     outline: 2px solid var(--color-primary);
+ *     outline-offset: 2px;
+ *   }
+ *
+ * RESPONSIVE:
+ *   @media (max-width: var(--breakpoint-md)) {
+ *     padding: var(--space-2);
+ *   }
+ */

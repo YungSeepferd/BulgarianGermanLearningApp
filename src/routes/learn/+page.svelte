@@ -2,7 +2,8 @@
   import { onMount } from 'svelte';
   import { vocabularyDb } from '$lib/data/db.svelte';
   import { appState } from '$lib/state/app-state';
-  import Flashcard from '$lib/components/Flashcard.svelte';
+  import VocabularyCard from '$lib/components/ui/VocabularyCard.svelte';
+  import ActionButton from '$lib/components/ui/ActionButton.svelte';
   import { Debug } from '$lib/utils';
   import type { VocabularyItem } from '$lib/types/vocabulary';
 
@@ -232,50 +233,76 @@
     {#if sessionActive && getCurrentCard()}
       <!-- Flashcard display -->
       <div class="flashcard-wrapper {animationType}">
-        <Flashcard vocabularyItem={getCurrentCard()!} />
+        <VocabularyCard
+          item={getCurrentCard()!}
+          variant="flashcard"
+          direction={appState.languageMode === 'DE_BG' ? 'DE->BG' : 'BG->DE'}
+          showMetadata={true}
+          showActions={false}
+          showTags={false}
+        />
       </div>
 
       <!-- Interaction buttons -->
       <div class="button-container">
-        <button
-          class="hard-button"
-          onclick={handleHard}
+        <ActionButton
+          variant="secondary"
+          size="lg"
           disabled={isAnimating}
+          onclick={handleHard}
+          label={ui.hard}
         >
           {ui.hard}
-        </button>
-        <button
-          class="easy-button"
-          onclick={handleEasy}
+        </ActionButton>
+        <ActionButton
+          variant="primary"
+          size="lg"
           disabled={isAnimating}
+          onclick={handleEasy}
+          label={ui.easy}
         >
           {ui.easy}
-        </button>
+        </ActionButton>
       </div>
     {:else if sessionComplete}
       <!-- Session completion message -->
       <div class="completion-message">
         <h2>{ui.completedTitle}</h2>
         <p>{ui.completedBody}</p>
-        <button onclick={startSession} class="restart-button">
+        <ActionButton
+          variant="primary"
+          size="lg"
+          onclick={startSession}
+          label={ui.startNew}
+        >
           {ui.startNew}
-        </button>
+        </ActionButton>
       </div>
     {:else}
       <!-- Loading or initial state -->
       <div class="loading-message">
         {#if loadError}
           <p>{loadError}</p>
-          <button onclick={startSession} class="restart-button">
+          <ActionButton
+            variant="secondary"
+            size="lg"
+            onclick={startSession}
+            label={ui.retry}
+          >
             {ui.retry}
-          </button>
+          </ActionButton>
         {:else if sessionCards.length === 0}
           <p>{ui.loading}</p>
         {:else}
           <p>{ui.mastered}</p>
-          <button onclick={startSession} class="restart-button">
+          <ActionButton
+            variant="primary"
+            size="lg"
+            onclick={startSession}
+            label={ui.startNew}
+          >
             {ui.startNew}
-          </button>
+          </ActionButton>
         {/if}
       </div>
     {/if}

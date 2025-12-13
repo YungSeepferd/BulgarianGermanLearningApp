@@ -34,14 +34,14 @@ export class LessonService {
       // Normalize unified vocabulary items to lesson service expectations
       this.vocabularyData = vocabData.map((item) => ({
         ...item,
-        categories: item.categories && item.categories.length > 0 ? item.categories : ['uncategorized'],
+        categories: this.normalizeCategories(item.categories as VocabularyCategory[] | undefined),
         metadata: item.metadata ?? {},
-        isCommon: item.metadata?.isCommon ?? false,
-        isVerified: item.metadata?.isVerified ?? false,
-        learningPhase: item.metadata?.learningPhase ?? (item as { learningPhase?: number }).learningPhase ?? 0,
-        createdAt: item.createdAt ?? item.metadata?.createdAt ?? new Date(),
-        updatedAt: item.updatedAt ?? item.metadata?.updatedAt ?? new Date(),
-        cefrLevel: (item.metadata?.level ?? item.level ?? 'A1') as 'A1' | 'A2' | 'B1' | 'B2',
+        isCommon: item.isCommon ?? false,
+        isVerified: item.isVerified ?? false,
+        learningPhase: (item as { learningPhase?: number }).learningPhase ?? 0,
+        createdAt: (item as { createdAt?: Date }).createdAt ?? new Date(),
+        updatedAt: (item as { updatedAt?: Date }).updatedAt ?? new Date(),
+        cefrLevel: this.normalizeCefrLevel((item as { cefrLevel?: LessonDifficulty | 'C1' }).cefrLevel)
       }));
       this.initialized = true;
     } catch (_error) {
@@ -208,6 +208,13 @@ export class LessonService {
     return ranges[difficulty];
   }
 
+  private normalizeCefrLevel(level?: LessonDifficulty | 'C1'): LessonDifficulty {
+    if (level === 'A1' || level === 'A2' || level === 'B1' || level === 'B2') {
+      return level;
+    }
+    return 'A1';
+  }
+
   /**
    * Generate a lesson title based on vocabulary content
    */
@@ -236,8 +243,10 @@ export class LessonService {
 
     // If single category, use it in the title
     if (categories.size === 1) {
-      const category = categories.values().next().value;
-      return `${typeName}: ${this.getCategoryDisplayName(category)}`;
+      const categoryEntry = categories.values().next();
+      if (!categoryEntry.done) {
+        return `${typeName}: ${this.getCategoryDisplayName(categoryEntry.value)}`;
+      }
     }
 
     // If multiple categories, use a generic title
@@ -452,19 +461,18 @@ export class LessonService {
       'places',
       'grammar',
       'culture',
-      'everyday-phrases',
-      'uncategorized'
+      'everyday-phrases'
     ];
 
     if (!categories || categories.length === 0) {
-      return ['uncategorized'];
+      return ['culture'];
     }
 
     const normalized = categories
-      .map(category => (allowed.includes(category as VocabularyCategory) ? (category as VocabularyCategory) : 'uncategorized'))
+      .map(category => (allowed.includes(category as VocabularyCategory) ? (category as VocabularyCategory) : 'culture'))
       .filter(Boolean) as VocabularyCategory[];
 
-    return normalized.length > 0 ? normalized : ['uncategorized'];
+    return normalized.length > 0 ? normalized : ['culture'];
   }
 
   /**

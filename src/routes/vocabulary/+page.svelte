@@ -1,11 +1,20 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import SearchList from '$lib/components/SearchList.svelte';
   import { t } from '$lib/services/localization';
   import { vocabularyDb } from '$lib/data/db.svelte';
   import { appState } from '$lib/state/app-state';
   import type { VocabularyItem } from '$lib/types/vocabulary';
   import type { VocabularyCategory } from '$lib/schemas/vocabulary';
+  import { PRACTICE_ICONS } from '$lib/constants/icons';
+  import ActionButton from '$lib/components/ui/ActionButton.svelte';
+  import VocabularyCard from '$lib/components/ui/VocabularyCard.svelte';
+  import { goto } from '$app/navigation';
+
+  type ActiveFilter = {
+    key: string;
+    label: string;
+    onClear: () => void;
+  };
 
   // State management with Svelte 5 Runes
   let vocabularyItems = $state<VocabularyItem[]>([]);
@@ -13,12 +22,14 @@
   let loading = $state(true);
   let error = $state<string | null>(null);
   let selectedCategory = $state<VocabularyCategory | 'all'>('all');
-  let selectedDifficulty = $state<number | null>(null);
+  let selectedDifficulty = $state<string | null>(null);
   let selectedPartOfSpeech = $state<string | null>(null);
   let selectedLearningPhase = $state<number | null>(null);
   let currentPage = $state(0);
-  const ITEMS_PER_PAGE = 20;
+  const ITEMS_PER_PAGE = 750; // Load all items at once
   let selectedItems = $state(new Set<string>());
+  let filteredCount = $state(0);
+  let totalCount = $state(0);
 
   const ui = $derived(appState.languageMode === 'DE_BG'
     ? {
@@ -57,6 +68,10 @@
         emptyHint: 'Променете търсенето или филтрите.',
         loadMore: 'Зареди още'
       });
+
+  const countLabel = $derived(appState.languageMode === 'DE_BG'
+    ? `${filteredCount} von ${totalCount} Einträgen`
+    : `${filteredCount} от ${totalCount} записа`);
  
   // Categories for filtering
   const categories: VocabularyCategory[] = [
@@ -126,8 +141,8 @@
     }
   } as const;
 
-  // Difficulty levels
-  const difficultyLevels = [1, 2, 3, 4, 5];
+  // CEFR Difficulty levels
+  const difficultyLevels = ['A1', 'A2', 'B1', 'B2', 'C1'];
 
   // Parts of speech for filtering
   const partsOfSpeech = [
@@ -174,20 +189,60 @@
     { value: 6, de: 'Phase 6: Experte', bg: 'Фаза 6: Експерт' }
   ] as const;
 
-  function getCategoryLabel(category: VocabularyCategory) {
-    return (appState.languageMode === 'DE_BG' ? categoryLabels.de[category] : categoryLabels.bg[category]) ?? category;
+  function getCategoryLabel(category: VocabularyCategory | string | undefined): string {
+    if (!category) return '';
+    const labels = appState.languageMode === 'DE_BG' ? categoryLabels.de : categoryLabels.bg;
+    return (labels[category as VocabularyCategory] ?? category) as string;
   }
 
-  function getPartOfSpeechLabel(pos: string) {
+  function getPartOfSpeechLabel(pos: string): string {
     const labels = appState.languageMode === 'DE_BG' ? partOfSpeechLabels.de : partOfSpeechLabels.bg;
     return labels[pos as keyof typeof labels] ?? pos;
   }
 
-  function getLearningPhaseLabel(value: number) {
+  function getLearningPhaseLabel(value: number): string {
     const phase = learningPhases.find((p) => p.value === value);
-    if (!phase) return value;
+    if (!phase) return String(value);
     return appState.languageMode === 'DE_BG' ? phase.de : phase.bg;
   }
+
+  const activeFilters = $derived<ActiveFilter[]>([
+    searchTerm
+      ? {
+          key: 'search',
+          label: appState.languageMode === 'DE_BG' ? `Suche: "${searchTerm}"` : `Търсене: "${searchTerm}"`,
+          onClear: () => (searchTerm = '')
+        }
+      : null,
+    selectedDifficulty
+      ? {
+          key: 'difficulty',
+          label: `${ui.difficulty}: ${selectedDifficulty}`,
+          onClear: () => (selectedDifficulty = null)
+        }
+      : null,
+    selectedCategory !== 'all'
+      ? {
+          key: 'category',
+          label: `${ui.category}: ${getCategoryLabel(selectedCategory)}`,
+          onClear: () => (selectedCategory = 'all')
+        }
+      : null,
+    selectedPartOfSpeech
+      ? {
+          key: 'pos',
+          label: `${ui.pos}: ${getPartOfSpeechLabel(selectedPartOfSpeech)}`,
+          onClear: () => (selectedPartOfSpeech = null)
+        }
+      : null,
+    selectedLearningPhase !== null
+      ? {
+          key: 'learningPhase',
+          label: `${ui.learningPhase}: ${getLearningPhaseLabel(selectedLearningPhase)}`,
+          onClear: () => (selectedLearningPhase = null)
+        }
+      : null
+  ].filter(Boolean) as ActiveFilter[]);
  
   // Helper to filter all items based on current UI state
   function filterItems(all: VocabularyItem[]) {
@@ -199,7 +254,7 @@
           item.categories.some(cat => cat.toLowerCase().includes(q))
         : true;
       const posMatch = selectedPartOfSpeech ? item.partOfSpeech === selectedPartOfSpeech : true;
-      const diffMatch = selectedDifficulty != null ? Math.round(item.difficulty) === selectedDifficulty : true;
+      const diffMatch = selectedDifficulty != null ? item.cefrLevel === selectedDifficulty : true;
         const catMatch = selectedCategory !== 'all' ? item.categories.includes(selectedCategory as VocabularyCategory) : true;
       // learningPhase not present in app type; ignore for now
       return queryMatch && posMatch && diffMatch && catMatch;
@@ -214,9 +269,11 @@
 
       await vocabularyDb.initialize();
       const all = vocabularyDb.getVocabulary();
+      totalCount = all.length;
       const offset = currentPage * ITEMS_PER_PAGE;
 
       const filtered = filterItems(all);
+      filteredCount = filtered.length;
 
       hasMore = offset + ITEMS_PER_PAGE < filtered.length;
       vocabularyItems = filtered.slice(offset, offset + ITEMS_PER_PAGE);
@@ -239,6 +296,7 @@
     } else {
       selectedItems.add(itemId);
     }
+    selectedItems = new Set(selectedItems);
   }
 
   function startPracticeWithSelected() {
@@ -251,18 +309,17 @@
     }
   }
 
-  // Handle search input changes
+  // React to search and filter changes
   $effect(() => {
-    currentPage = 0; // Reset to first page on new search
-    loadVocabulary();
-  });
+    // Track dependencies explicitly for the effect
+    searchTerm;
+    selectedCategory;
+    selectedDifficulty;
+    selectedPartOfSpeech;
+    selectedLearningPhase;
 
-  // Handle filter changes
-  $effect(() => {
-    if (selectedCategory || selectedDifficulty || selectedPartOfSpeech || selectedLearningPhase) {
-      currentPage = 0; // Reset to first page on filter change
-      loadVocabulary();
-    }
+    currentPage = 0;
+    loadVocabulary();
   });
 
   // Initialize on component mount
@@ -282,6 +339,7 @@
       const all = vocabularyDb.getVocabulary();
       const offset = currentPage * ITEMS_PER_PAGE;
       const filtered = filterItems(all);
+      filteredCount = filtered.length;
       hasMore = offset + ITEMS_PER_PAGE < filtered.length;
       const nextSlice = filtered.slice(offset, offset + ITEMS_PER_PAGE);
       vocabularyItems = [...vocabularyItems, ...nextSlice];
@@ -292,383 +350,554 @@
     }
   }
 
-  // Reset all filters
+  // Reset all filters and reload
   function resetFilters() {
     searchTerm = '';
     selectedCategory = 'all';
     selectedDifficulty = null;
     selectedPartOfSpeech = null;
     selectedLearningPhase = null;
+    currentPage = 0;
+    loadVocabulary();
   }
 
-  // Get direction for SearchList component
-  let direction = $derived<'DE->BG' | 'BG->DE'>(
-    appState.languageMode === 'DE_BG' ? 'DE->BG' : 'BG->DE'
-  );
+
+
+  // Sidebar state
+  let showFilters = $state(true);
 </script>
 
-<h1 class="page-title">{ui.title}</h1>
-
-<div class="vocabulary-grid">
-  <section class="intro-card">
-    <div>
+<div class="vocabulary-page">
+  <header class="page-header">
+    <div class="headline">
       <p class="eyebrow">{appState.languageMode === 'DE_BG' ? 'Wortschatz • Vocabulary' : 'Речник • Vocabulary'}</p>
-      <h2>{ui.introTitle}</h2>
-      <p class="lede">{ui.introLede}</p>
+      <h1 class="vocabulary-title">{ui.introTitle}</h1>
+      <p class="intro-lede">{ui.introLede}</p>
     </div>
-  </section>
-
-  <!-- Search and filters -->
-  <div class="search-filters-container">
-    <!-- Search bar -->
-    <div class="search-container">
-      <input
-        type="search"
-        placeholder={ui.searchPlaceholder}
-        bind:value={searchTerm}
-        class="search-input"
-        aria-label={ui.searchAria}
-      />
-    </div>
-
-    <!-- Filters -->
-    <div class="filters-container">
-      <!-- Category filter -->
-      <div class="filter-group">
-        <label for="category-filter" class="filter-label">{ui.category}</label>
-        <select id="category-filter" bind:value={selectedCategory} class="filter-select">
-          <option value="all">{appState.languageMode === 'DE_BG' ? 'Alle Kategorien' : 'Всички категории'}</option>
-          {#each categories as category}
-            <option value={category}>{getCategoryLabel(category)}</option>
-          {/each}
-        </select>
-      </div>
-
-      <!-- Difficulty filter -->
-      <div class="filter-group">
-        <label for="difficulty-filter" class="filter-label">{ui.difficulty}</label>
-        <select id="difficulty-filter" bind:value={selectedDifficulty} class="filter-select">
-          <option value={null}>{appState.languageMode === 'DE_BG' ? 'Alle Schwierigkeitsgrade' : 'Всички трудности'}</option>
-          {#each difficultyLevels as level}
-            <option value={level}>{level}</option>
-          {/each}
-        </select>
-      </div>
-
-      <!-- Part of speech filter -->
-      <div class="filter-group">
-        <label for="pos-filter" class="filter-label">{ui.pos}</label>
-        <select id="pos-filter" bind:value={selectedPartOfSpeech} class="filter-select">
-          <option value={null}>{appState.languageMode === 'DE_BG' ? 'Alle Wortarten' : 'Всички части на речта'}</option>
-          {#each partsOfSpeech as pos}
-            <option value={pos}>{getPartOfSpeechLabel(pos)}</option>
-          {/each}
-        </select>
-      </div>
-
-      <!-- Learning Phase filter -->
-      <div class="filter-group">
-        <label for="learning-phase-filter" class="filter-label">{ui.learningPhase}</label>
-        <select id="learning-phase-filter" bind:value={selectedLearningPhase} class="filter-select">
-          <option value={null}>{appState.languageMode === 'DE_BG' ? 'Alle Phasen' : 'Всички етапи'}</option>
-          {#each learningPhases as phase}
-            <option value={phase.value}>{getLearningPhaseLabel(phase.value)}</option>
-          {/each}
-        </select>
-      </div>
- 
-      <!-- Reset button -->
-      <button class="reset-btn" onclick={resetFilters}>
-        {ui.reset}
-      </button>
-
-      <button class="practice-selected-btn" onclick={startPracticeWithSelected} disabled={selectedItems.size === 0}>
+    <div class="header-actions">
+      <ActionButton
+        variant="primary"
+        size="medium"
+        iconLeft={PRACTICE_ICONS.flashcard}
+        ariaLabel={ui.practiceSelected(selectedItems.size)}
+        disabled={selectedItems.size === 0}
+        on:click={startPracticeWithSelected}
+      >
         {ui.practiceSelected(selectedItems.size)}
+      </ActionButton>
+      <button class="filter-toggle" on:click={() => (showFilters = !showFilters)} aria-expanded={showFilters}>
+        {showFilters ? (appState.languageMode === 'DE_BG' ? 'Filter ausblenden' : 'Скрий филтрите') : (appState.languageMode === 'DE_BG' ? 'Filter anzeigen' : 'Покажи филтрите')}
       </button>
     </div>
-  </div>
+  </header>
 
-  <!-- Loading and error states -->
-  {#if loading && vocabularyItems.length === 0}
-    <div class="loading-state">
-      <div class="spinner">🌀</div>
-      <p>{ui.loading}</p>
-    </div>
-  {:else if error}
-    <div class="error-state" role="alert">
-      <span class="error-icon">⚠️</span>
-      <p>{ui.error}</p>
-    </div>
-  {:else if vocabularyItems.length === 0}
-    <div class="empty-state">
-      <div class="empty-icon">🔍</div>
-      <h3>{ui.emptyTitle}</h3>
-      <p>{ui.emptyHint}</p>
-    </div>
-  {/if}
+  <div class="vocabulary-layout">
+    <aside class="filter-panel" data-open={showFilters}>
+      <div class="filter-panel__header">
+        <div>
+          <p class="eyebrow-small">{ui.title}</p>
+          <h2 class="panel-title">{appState.languageMode === 'DE_BG' ? 'Gezielt filtern' : 'Намери точните думи'}</h2>
+        </div>
+        <button class="panel-reset" on:click={resetFilters}>{ui.reset}</button>
+      </div>
 
-  <!-- Search results -->
-  {#if vocabularyItems.length > 0}
-    <div class="search-results-container">
-      <SearchList
-        items={vocabularyItems}
-        direction={direction}
-        onSelectItem={handleSelectItem}
-        onToggleSelectItem={handleToggleSelectItem}
-        selectedItems={selectedItems}
-        showQuickPractice={true}
-      />
+      <div class="filter-stack">
+        <div class="filter-group">
+          <label class="filter-label">{ui.searchAria}</label>
+          <input
+            type="search"
+            placeholder={ui.searchPlaceholder}
+            bind:value={searchTerm}
+            class="filter-input"
+            aria-label={ui.searchAria}
+          />
+        </div>
 
-      <!-- Load more button -->
-      {#if hasMore}
-        <div class="load-more-container">
-          <button
-            onclick={loadMore}
-            disabled={loading}
-            class="load-more-btn"
-            aria-label={loading ? ui.loading : ui.loadMore}
-          >
-            {loading ? ui.loading : ui.loadMore}
+        <div class="filter-group">
+          <label class="filter-label">{ui.difficulty}</label>
+          <div class="pill-row" role="list">
+            <button
+              class={`pill ${selectedDifficulty === null ? 'pill--active' : ''}`}
+              on:click={() => (selectedDifficulty = null)}
+              role="listitem"
+            >
+              {appState.languageMode === 'DE_BG' ? 'Alle' : 'Всички'}
+            </button>
+            {#each difficultyLevels as level}
+              <button
+                class={`pill ${selectedDifficulty === level ? 'pill--active' : ''}`}
+                on:click={() => (selectedDifficulty = level)}
+                role="listitem"
+              >
+                {level}
+              </button>
+            {/each}
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label for="category-filter" class="filter-label">{ui.category}</label>
+          <select id="category-filter" bind:value={selectedCategory} class="filter-select">
+            <option value="all">{appState.languageMode === 'DE_BG' ? 'Alle Kategorien' : 'Всички категории'}</option>
+            {#each categories as category}
+              <option value={category}>{getCategoryLabel(category)}</option>
+            {/each}
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="pos-filter" class="filter-label">{ui.pos}</label>
+          <select id="pos-filter" bind:value={selectedPartOfSpeech} class="filter-select">
+            <option value={null}>{appState.languageMode === 'DE_BG' ? 'Alle Wortarten' : 'Всички части на речта'}</option>
+            {#each partsOfSpeech as pos}
+              <option value={pos}>{getPartOfSpeechLabel(pos)}</option>
+            {/each}
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="learning-phase-filter" class="filter-label">{ui.learningPhase}</label>
+          <select id="learning-phase-filter" bind:value={selectedLearningPhase} class="filter-select">
+            <option value={null}>{appState.languageMode === 'DE_BG' ? 'Alle Phasen' : 'Всички етапи'}</option>
+            {#each learningPhases as phase}
+              <option value={phase.value}>{getLearningPhaseLabel(phase.value)}</option>
+            {/each}
+          </select>
+        </div>
+
+        <div class="filter-actions">
+          <button class="secondary-button" on:click={resetFilters}>{ui.reset}</button>
+          <button class="primary-button" on:click={startPracticeWithSelected} disabled={selectedItems.size === 0}>
+            {ui.practiceSelected(selectedItems.size)}
           </button>
         </div>
+      </div>
+    </aside>
+
+    <main class="vocabulary-content">
+      <div class="summary-bar">
+        <div class="summary-count">{countLabel}</div>
+        <div class="active-filters">
+          {#if activeFilters.length > 0}
+            {#each activeFilters as filter (filter.key)}
+              <button class="filter-chip" on:click={filter.onClear}>
+                <span>{filter.label}</span>
+                <span aria-hidden="true">✕</span>
+              </button>
+            {/each}
+            <button class="clear-all" on:click={resetFilters}>
+              {appState.languageMode === 'DE_BG' ? 'Alle zurücksetzen' : 'Изчисти всички'}
+            </button>
+          {:else}
+            <span class="no-active-filters">{appState.languageMode === 'DE_BG' ? 'Alle Einträge aktiv' : 'Използваш всички записи'}</span>
+          {/if}
+        </div>
+      </div>
+
+      {#if loading && vocabularyItems.length === 0}
+        <div class="state-block">
+          <div class="spinner">🌀</div>
+          <p>{ui.loading}</p>
+        </div>
+      {:else if error}
+        <div class="state-block" role="alert">
+          <span class="state-icon">⚠️</span>
+          <p>{ui.error}</p>
+        </div>
+      {:else if vocabularyItems.length === 0}
+        <div class="state-block">
+          <div class="state-icon">🔍</div>
+          <h3>{ui.emptyTitle}</h3>
+          <p>{ui.emptyHint}</p>
+        </div>
       {/if}
-    </div>
-  {/if}
+
+      {#if vocabularyItems.length > 0}
+        <div class="vocabulary-grid-items">
+          {#each vocabularyItems as item (item.id)}
+            <div class="card-link" role="link" tabindex="0" on:click={() => goto(`/learn/${item.id}`)} on:keydown={(e) => { if (e.key === 'Enter') goto(`/learn/${item.id}`) }}>
+              <VocabularyCard
+                {item}
+                variant="grid"
+                direction={appState.languageMode === 'DE_BG' ? 'DE->BG' : 'BG->DE'}
+                isSelected={selectedItems.has(item.id)}
+                showMetadata={true}
+                showActions={true}
+                showTags={true}
+                onPractice={handleSelectItem}
+                onToggleSelect={handleToggleSelectItem}
+              />
+            </div>
+          {/each}
+        </div>
+
+        {#if hasMore}
+          <div class="load-more-container">
+            <button
+              on:click={loadMore}
+              disabled={loading}
+              class="primary-button"
+              aria-label={loading ? ui.loading : ui.loadMore}
+            >
+              {loading ? ui.loading : ui.loadMore}
+            </button>
+          </div>
+        {/if}
+      {/if}
+    </main>
+  </div>
 </div>
 
-<!-- Enhanced CSS with responsive design -->
 <style>
-  .vocabulary-grid {
-    display: grid;
-    gap: 1.5rem;
-    max-width: 1400px;
+  .vocabulary-page {
+    max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: 1rem;
+    padding: var(--space-7) var(--space-5) var(--space-7);
+    color: var(--color-neutral-text-dark);
   }
 
-  .page-title {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    text-align: center;
+  .page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
   }
 
-  .search-filters-container {
+  .headline {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    gap: var(--space-2);
   }
 
-  .search-container {
-    margin: 0.5rem 0;
+  .vocabulary-title {
+    margin: 0;
+    font-size: var(--text-3xl);
+    line-height: var(--leading-tight);
+    font-weight: var(--font-extrabold);
+    color: var(--color-neutral-dark);
   }
 
-  .search-input {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 2px solid #e9ecef;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.2s ease;
+  .intro-lede {
+    margin: 0;
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+    color: var(--color-neutral-text);
   }
 
-  .search-input:focus {
-    outline: none;
-    border-color: #4285f4;
-    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.2);
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
   }
 
-  .filters-container {
+  .filter-toggle {
+    display: none;
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--color-neutral-border);
+    border-radius: var(--border-radius-lg);
+    background: var(--color-neutral-light);
+    color: var(--color-neutral-dark);
+    cursor: pointer;
+    transition: var(--transition-filter);
+  }
+
+  .vocabulary-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    align-items: end;
+    grid-template-columns: minmax(var(--filter-panel-width), 360px) 1fr;
+    gap: var(--space-6);
+    align-items: start;
+  }
+
+  .filter-panel {
+    position: sticky;
+    top: 0;
+    background: var(--color-filter-bg);
+    border: 1px solid var(--color-neutral-border);
+    border-radius: var(--border-radius-xl);
+    padding: var(--filter-panel-padding);
+    box-shadow: var(--shadow-filter-panel);
+    display: flex;
+    flex-direction: column;
+    gap: var(--filter-group-spacing);
+  }
+
+  .filter-panel__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
+
+  .panel-title {
+    margin: 0;
+    font-size: var(--text-lg);
+    color: var(--color-neutral-dark);
+  }
+
+  .panel-reset {
+    border: none;
+    background: transparent;
+    color: var(--color-primary);
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+    padding: var(--space-1) var(--space-2);
+  }
+
+  .filter-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--filter-group-spacing);
   }
 
   .filter-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: var(--space-2);
   }
 
   .filter-label {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #495057;
+    font-size: var(--text-sm);
+    color: var(--color-neutral-text-dark);
+    font-weight: var(--font-semibold);
   }
 
+  .filter-input,
   .filter-select {
-    padding: 0.5rem 0.75rem;
-    border: 1px solid #ced4da;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    background-color: white;
-    transition: border-color 0.2s ease;
+    width: 100%;
+    padding: var(--space-3);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--color-neutral-border);
+    background: var(--color-neutral-light);
+    font-size: var(--text-base);
+    color: var(--color-neutral-dark);
+    transition: var(--transition-filter);
   }
 
+  .filter-input:focus,
   .filter-select:focus {
-    outline: none;
-    border-color: #4285f4;
-    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: var(--color-focus-ring-offset);
   }
 
-  .reset-btn {
-    padding: 0.5rem 1rem;
-    background-color: #6c757d;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 0.9rem;
+  .pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .pill {
+    border: 1px solid var(--color-neutral-border);
+    background: var(--color-neutral-light);
+    color: var(--color-neutral-dark);
+    border-radius: 999px;
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-sm);
     cursor: pointer;
-    transition: background-color 0.2s ease;
-    align-self: end;
-    margin-top: auto;
+    transition: var(--transition-filter);
   }
 
-  .reset-btn:hover {
-    background-color: #5a6268;
+  .pill:hover {
+    border-color: var(--color-primary);
   }
 
-  .practice-selected-btn {
-    padding: 0.5rem 1rem;
-    background-color: #28a745;
-    color: white;
+  .pill--active {
+    background: var(--color-primary-light);
+    color: var(--color-primary-darker);
+    border-color: var(--color-primary);
+    font-weight: var(--font-semibold);
+  }
+
+  .filter-actions {
+    display: flex;
+    gap: var(--space-3);
+    justify-content: flex-end;
+  }
+
+  .primary-button {
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--border-radius-lg);
     border: none;
-    border-radius: 6px;
-    font-size: 0.9rem;
+    background: var(--color-button-primary);
+    color: var(--color-neutral-light);
+    font-weight: var(--font-semibold);
     cursor: pointer;
-    transition: background-color 0.2s ease;
-    align-self: end;
+    transition: var(--transition-filter);
   }
 
-  .practice-selected-btn:hover:not(:disabled) {
-    background-color: #218838;
-  }
-
-  .practice-selected-btn:disabled {
-    background-color: #cccccc;
+  .primary-button:disabled {
+    background: var(--color-neutral-border);
     cursor: not-allowed;
   }
- 
-  .loading-state, .empty-state, .error-state {
+
+  .primary-button:not(:disabled):hover {
+    background: var(--color-button-primary-hover);
+  }
+
+  .secondary-button {
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--color-neutral-border);
+    background: var(--color-neutral-light);
+    color: var(--color-neutral-dark);
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+    transition: var(--transition-filter);
+  }
+
+  .secondary-button:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  .vocabulary-content {
+    background: var(--color-neutral-light);
+    border: 1px solid var(--color-neutral-border);
+    border-radius: var(--border-radius-xl);
+    padding: var(--space-5);
+    box-shadow: var(--shadow-card);
+  }
+
+  .summary-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+
+  .summary-count {
+    font-weight: var(--font-semibold);
+    color: var(--color-neutral-dark);
+  }
+
+  .active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    border-radius: 999px;
+    border: 1px solid var(--color-primary);
+    background: var(--color-primary-lighter);
+    color: var(--color-primary-darker);
+    cursor: pointer;
+    transition: var(--transition-filter);
+  }
+
+  .filter-chip:hover {
+    background: var(--color-primary-light);
+  }
+
+  .clear-all {
+    border: none;
+    background: transparent;
+    color: var(--color-primary);
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+    padding: var(--space-1) var(--space-2);
+  }
+
+  .no-active-filters {
+    color: var(--color-neutral-text);
+    font-size: var(--text-sm);
+  }
+
+  .state-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 2rem;
+    gap: var(--space-3);
+    padding: var(--space-6) 0;
+    color: var(--color-neutral-text);
     text-align: center;
-    color: #6c757d;
-    gap: 1rem;
+  }
+
+  .state-icon {
+    font-size: var(--text-2xl);
   }
 
   .spinner {
-    font-size: 2rem;
+    font-size: var(--text-2xl);
     animation: spin 1s linear infinite;
   }
 
   @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
-  .error-icon {
-    font-size: 2rem;
+  .vocabulary-grid-items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--vocabulary-grid-gap);
+    margin-top: var(--space-4);
   }
 
-  .empty-icon {
-    font-size: 3rem;
+  .card-link {
+    display: block;
+    outline: none;
+    border-radius: var(--border-radius-xl);
   }
 
-  .search-results-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  .card-link:focus {
+    box-shadow: 0 0 0 2px var(--color-focus-ring);
   }
 
   .load-more-container {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: var(--space-5);
   }
 
-  .load-more-btn {
-    padding: 0.75rem 1.5rem;
-    background-color: #4285f4;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-  }
-
-  .load-more-btn:hover:not(:disabled) {
-    background-color: #3367d6;
-    transform: translateY(-1px);
-  }
-
-  .load-more-btn:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-    transform: none;
-  }
-
-  .intro-card {
-    background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
-    color: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 18px rgba(14, 165, 233, 0.25);
-  }
-
-  .intro-card h2 {
-    margin: 0.25rem 0 0.5rem;
-    font-size: 1.8rem;
-  }
-
-  .intro-card .lede {
-    margin: 0;
-    max-width: 720px;
-    line-height: 1.5;
-  }
-
-  .eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 0.8rem;
-    margin: 0;
-    opacity: 0.9;
-  }
-
-  @media (max-width: 768px) {
-    .vocabulary-grid {
-      padding: 0.5rem;
-    }
-
-    .filters-container {
+  @media (max-width: var(--breakpoint-lg)) {
+    .vocabulary-layout {
       grid-template-columns: 1fr;
     }
 
-    .search-filters-container {
-      padding: 1rem;
+    .filter-toggle {
+      display: inline-flex;
     }
 
-    .filter-select {
-      width: 100%;
+    .filter-panel {
+      position: relative;
+      top: 0;
+    }
+
+    .filter-panel[data-open='false'] {
+      display: none;
     }
   }
 
-  @media (max-width: 480px) {
-    .page-title {
-      font-size: 1.5rem;
+  @media (max-width: var(--breakpoint-md)) {
+    .page-header {
+      flex-direction: column;
+      align-items: flex-start;
     }
 
-    .filters-container {
-      gap: 0.75rem;
+    .header-actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: var(--breakpoint-mobile)) {
+    .vocabulary-content {
+      padding: var(--space-4);
+    }
+
+    .vocabulary-grid-items {
+      grid-template-columns: 1fr;
     }
   }
 </style>

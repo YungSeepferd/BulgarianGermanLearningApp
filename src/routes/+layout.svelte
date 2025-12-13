@@ -1,5 +1,6 @@
 <script lang="ts">
   import Navigation from '$lib/components/Navigation.svelte';
+  import '$lib/styles/tokens.css';
   // Layout shell: no page-level logic needed here
 
   let { children } = $props();

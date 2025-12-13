@@ -60,11 +60,13 @@ export class DataLoader {
     }> {
         // Use the new search service
         const { searchVocabulary } = await import('../services/search');
+        
+        // Cast parameters to correct types (schema validation is done by searchVocabulary)
         return searchVocabulary({
             query: params.query,
-            partOfSpeech: params.partOfSpeech,
+            partOfSpeech: params.partOfSpeech as any,
             difficulty: params.difficulty,
-            categories: params.categories,
+            categories: params.categories as any,
             limit: params.limit || 20,
             offset: params.offset || 0,
             sortBy: 'german',

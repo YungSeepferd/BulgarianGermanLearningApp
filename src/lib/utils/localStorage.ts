@@ -54,8 +54,9 @@ export class LocalStorageManager {
             JSON.stringify(dataToSave)
         );
     } catch (error) {
-        ErrorHandler.handleError(error, 'Failed to save user progress', eventBus);
-        throw new StorageError('Failed to save user progress', { error });
+        const err = error instanceof Error ? error : new Error(String(error));
+        ErrorHandler.handleError(err, 'Failed to save user progress', eventBus);
+        throw new StorageError('Failed to save user progress', { error: err });
     }
   }
 
@@ -102,8 +103,9 @@ export class LocalStorageManager {
             lastUpdated: validationResult.data.lastUpdated
         };
     } catch (error) {
-        ErrorHandler.handleError(error, 'Failed to load user progress', eventBus);
-        throw new StorageError('Failed to load user progress', { error });
+        const err = error instanceof Error ? error : new Error(String(error));
+        ErrorHandler.handleError(err, 'Failed to load user progress', eventBus);
+        throw new StorageError('Failed to load user progress', { error: err });
     }
   }
 
@@ -126,8 +128,9 @@ export class LocalStorageManager {
             JSON.stringify(session)
         );
     } catch (error) {
-        ErrorHandler.handleError(error, 'Failed to save practice session', eventBus);
-        throw new StorageError('Failed to save practice session', { error });
+        const err = error instanceof Error ? error : new Error(String(error));
+        ErrorHandler.handleError(err, 'Failed to save practice session', eventBus);
+        throw new StorageError('Failed to save practice session', { error: err });
     }
   }
 
@@ -150,8 +153,9 @@ export class LocalStorageManager {
 
         return result.data;
     } catch (error) {
-        ErrorHandler.handleError(error, 'Failed to load practice session', eventBus);
-        throw new StorageError('Failed to load practice session', { error });
+        const err = error instanceof Error ? error : new Error(String(error));
+        ErrorHandler.handleError(err, 'Failed to load practice session', eventBus);
+        throw new StorageError('Failed to load practice session', { error: err });
     }
   }
 
@@ -164,8 +168,9 @@ export class LocalStorageManager {
     try {
         localStorage.removeItem(LocalStorageManager.SESSION_KEY);
     } catch (error) {
-        ErrorHandler.handleError(error, 'Failed to clear practice session', eventBus);
-        throw new StorageError('Failed to clear practice session', { error });
+        const err = error instanceof Error ? error : new Error(String(error));
+        ErrorHandler.handleError(err, 'Failed to clear practice session', eventBus);
+        throw new StorageError('Failed to clear practice session', { error: err });
     }
   }
 
@@ -186,8 +191,9 @@ export class LocalStorageManager {
             exportedAt: new Date().toISOString()
         }, null, 2);
     } catch (error) {
-        ErrorHandler.handleError(error, 'Failed to export user data', eventBus);
-        throw new StorageError('Failed to export user data', { error });
+        const err = error instanceof Error ? error : new Error(String(error));
+        ErrorHandler.handleError(err, 'Failed to export user data', eventBus);
+        throw new StorageError('Failed to export user data', { error: err });
     }
   }
 
@@ -213,8 +219,9 @@ export class LocalStorageManager {
             this.savePracticeSession(data.session, eventBus);
         }
     } catch (error) {
-        ErrorHandler.handleError(error, 'Failed to import user data', eventBus);
-        throw new StorageError('Failed to import user data', { error });
+        const err = error instanceof Error ? error : new Error(String(error));
+        ErrorHandler.handleError(err, 'Failed to import user data', eventBus);
+        throw new StorageError('Failed to import user data', { error: err });
     }
   }
 
@@ -229,8 +236,9 @@ export class LocalStorageManager {
             .filter(key => key.startsWith(LocalStorageManager.PREFIX))
             .forEach(key => localStorage.removeItem(key));
     } catch (error) {
-        ErrorHandler.handleError(error, 'Failed to clear all user data', eventBus);
-        throw new StorageError('Failed to clear all user data', { error });
+        const err = error instanceof Error ? error : new Error(String(error));
+        ErrorHandler.handleError(err, 'Failed to clear all user data', eventBus);
+        throw new StorageError('Failed to clear all user data', { error: err });
     }
   }
 }

@@ -1,6 +1,7 @@
 <script lang="ts">
   import TandemToggle from './TandemToggle.svelte';
   import SearchList from './SearchList.svelte';
+  import ActionButton from './ui/ActionButton.svelte';
   import { appState } from '$lib/state/app-state';
   import { t } from '$lib/services/localization';
   import { fade, fly, slide, scale } from 'svelte/transition';
@@ -443,20 +444,30 @@
       <h3>{t('errors.practice_load_error')}</h3>
       <p>{errorMessage || t('errors.unknown_error')}</p>
       <div class="error-actions">
-        <button class="btn-primary" onclick={() => window.location.reload()}>
+        <ActionButton
+          variant="primary"
+          size="md"
+          onclick={() => window.location.reload()}
+          label={t('common.reload_page')}
+        >
           {t('common.reload_page')}
-        </button>
-        <button class="btn-secondary" onclick={() => {
-          try {
-            hasError = false;
-            errorMessage = null;
-            loadNewItem();
-          } catch (err) {
-            handleError(err, 'Failed to retry loading');
-          }
-        }}>
+        </ActionButton>
+        <ActionButton
+          variant="secondary"
+          size="md"
+          onclick={() => {
+            try {
+              hasError = false;
+              errorMessage = null;
+              loadNewItem();
+            } catch (err) {
+              handleError(err, 'Failed to retry loading');
+            }
+          }}
+          label={t('common.try_again')}
+        >
           {t('common.try_again')}
-        </button>
+        </ActionButton>
       </div>
     </div>
   {:else}
@@ -510,24 +521,34 @@
         <h3 class="error-title">{t('practice.loading_failed')}</h3>
         <p class="error-message">{error}</p>
         <div class="error-actions">
-          <button class="btn-primary" onclick={() => {
-            try {
-              loadNewItem();
-            } catch (err) {
-              handleError(err, 'Failed to retry loading');
-            }
-          }} aria-label={t('practice.retry_loading')}>
+          <ActionButton
+            variant="primary"
+            size="md"
+            onclick={() => {
+              try {
+                loadNewItem();
+              } catch (err) {
+                handleError(err, 'Failed to retry loading');
+              }
+            }}
+            label={t('practice.retry_loading')}
+          >
             {t('common.retry')}
-          </button>
-          <button class="btn-secondary" onclick={() => {
-            try {
-              mode = 'search';
-            } catch (err) {
-              handleError(err, 'Failed to switch to search mode');
-            }
-          }} aria-label={t('practice.switch_to_search')}>
+          </ActionButton>
+          <ActionButton
+            variant="secondary"
+            size="md"
+            onclick={() => {
+              try {
+                mode = 'search';
+              } catch (err) {
+                handleError(err, 'Failed to switch to search mode');
+              }
+            }}
+            label={t('practice.switch_to_search')}
+          >
             {t('practice.search_vocabulary')}
-          </button>
+          </ActionButton>
         </div>
       </div>
     {:else if currentItem}
@@ -569,13 +590,15 @@
                 }}
                 class="answer-input"
               />
-              <button
-                class="btn-primary"
+              <ActionButton
+                variant="primary"
+                size="md"
                 onclick={checkAnswer}
                 disabled={!userAnswer.trim()}
+                label={t('practice.check_answer')}
               >
                 {t('practice.check_answer')}
-              </button>
+              </ActionButton>
             </div>
           {:else}
             <div
@@ -602,12 +625,22 @@
             </div>
 
             <div class="action-buttons" in:fade>
-              <button class="btn-secondary" onclick={nextItem}>
+              <ActionButton
+                variant="secondary"
+                size="md"
+                onclick={nextItem}
+                label={t('practice.next_word')}
+              >
                 {t('practice.next_word')}
-              </button>
-              <button class="btn-tertiary" onclick={toggleExamples}>
+              </ActionButton>
+              <ActionButton
+                variant="text"
+                size="md"
+                onclick={toggleExamples}
+                label={showExamples ? t('common.hide') : t('common.show')}
+              >
                 {showExamples ? t('common.hide') : t('common.show')} {t('practice.examples')}
-              </button>
+              </ActionButton>
               <button
                 class="btn-favorite"
                 onclick={toggleFavorite}

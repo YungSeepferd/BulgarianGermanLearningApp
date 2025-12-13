@@ -5,38 +5,20 @@
    * Provides navigation links for the language learning application.
    */
 
-  import { browser } from '$app/environment';
-
-  // SvelteKit stores/paths - initialized dynamically
-  let page: any = { url: { pathname: '/' } };
-  let base: string = '';
-
-  // Import SvelteKit modules in browser context
-  const initStores = async () => {
-    if (browser) {
-      try {
-        const { page: p } = await import('$app/stores');
-        const { base: b } = await import('$app/paths');
-        page = p;
-        base = b;
-      } catch (err) {
-        // Fallback if modules not available
-      }
-    }
-  };
-
-  onMount(() => initStores());
+  import { page } from '$app/stores';
+  import { base } from '$app/paths';
   import { appState } from '$lib/state/app-state';
+  import { APP_ICONS } from '$lib/constants/icons';
   import { t, getCurrentLanguage, isTranslationsLoading, onTranslationsChange, offTranslationsChange } from '$lib/services/localization';
   import { onMount } from 'svelte';
 
   // Default navigation items with base path support for GitHub Pages deployment
   const defaultNavItems = [
-    { translationKey: 'navigation.dashboard', path: '/', icon: '🏠' },
-    { translationKey: 'navigation.vocabulary', path: '/vocabulary', icon: '📚' },
-    { translationKey: 'navigation.grammar', path: '/grammar', icon: '📖' },
-    { translationKey: 'navigation.practice', path: '/practice', icon: '🎯' },
-    { translationKey: 'navigation.learn', path: '/learn', icon: '🧠' }
+    { translationKey: 'navigation.dashboard', path: '/', icon: APP_ICONS.DASHBOARD },
+    { translationKey: 'navigation.vocabulary', path: '/vocabulary', icon: APP_ICONS.VOCABULARY },
+    { translationKey: 'navigation.grammar', path: '/grammar', icon: APP_ICONS.GRAMMAR },
+    { translationKey: 'navigation.practice', path: '/practice', icon: APP_ICONS.PRACTICE },
+    { translationKey: 'navigation.learn', path: '/learn', icon: APP_ICONS.LEARN }
   ];
 
   // Helper function to apply base path to navigation paths

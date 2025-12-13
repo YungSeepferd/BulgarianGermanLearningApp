@@ -8,31 +8,27 @@
     5
   ],
   "categories": [
-    "greetings",
-    "common_phrases",
-    "uncategorized",
-    "verbs",
-    "adjectives",
-    "adverbs",
-    "time",
-    "food",
-    "transport",
-    "body",
-    "nature",
-    "family",
-    "numbers",
-    "pronouns",
-    "colors",
-    "house",
-    "grammar",
-    "clothing",
     "animals",
-    "professions",
+    "body-parts",
+    "clothing",
+    "colors",
+    "culture",
+    "everyday-phrases",
+    "family",
+    "food",
+    "grammar",
+    "greetings",
+    "home",
+    "nature",
+    "numbers",
     "places",
-    "weather",
-    "technology"
+    "professions",
+    "technology",
+    "time",
+    "transport",
+    "weather"
   ],
-  "itemCount": 745,
+  "itemCount": 746,
   "createdAt": "2025-12-11T22:19:46.865Z",
   "updatedAt": "2025-12-12T11:55:17.038Z",
   "version": 2,
@@ -49,11 +45,13 @@
       "literalBreakdown": [
         {
           "segment": "за",
-          "literal": "für"
+          "literal": "für",
+          "grammarTag": "prefix"
         },
         {
           "segment": "едно",
-          "literal": "eins"
+          "literal": "eins",
+          "grammarTag": "root"
         }
       ],
       "contextualNuance": "Wird oft für gemeinsames Handeln und Zusammengehörigkeit verwendet.",

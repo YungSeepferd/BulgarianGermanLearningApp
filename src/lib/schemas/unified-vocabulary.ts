@@ -307,6 +307,8 @@ export const _createFallbackUnifiedItem = (input: unknown): z.infer<typeof Unifi
     difficulty: 1,
     categories: ['greetings'],
     examples: [],
+    type: 'word',
+    tags: [],
     createdAt: now,
     updatedAt: now,
     version: 1
@@ -403,7 +405,6 @@ export function _getCategoryLabel(category: VocabularyCategory): string {
     places: 'Places',
     grammar: 'Grammar',
     culture: 'Culture',
-    'everyday-phrases': 'Everyday Phrases',
     'everyday-phrases': 'Everyday Phrases'
   };
   return labels[category];

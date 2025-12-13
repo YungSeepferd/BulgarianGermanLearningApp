@@ -4,9 +4,11 @@
   import { flip } from 'svelte/animate';
   import { appState } from '$lib/state/app-state';
   import { formatGermanTerm } from '$lib/utils/formatGerman';
+  import { APP_ICONS, PRACTICE_ICONS } from '$lib/constants/icons';
   import EnrichmentBadge from '$lib/components/vocabulary/EnrichmentBadge.svelte';
   import DefinitionLink from '$lib/components/vocabulary/DefinitionLink.svelte';
   import WordDetailModal from '$lib/components/vocabulary/WordDetailModal.svelte';
+  import VocabularyCard from '$lib/components/ui/VocabularyCard.svelte';
 
   let {
     items = [],
@@ -231,166 +233,18 @@
     <div class="items-grid">
       {#each items as item (item.id)}
         <div animate:flip>
-          <div
-            class="vocabulary-item"
-            class:active={hoveredItemId === item.id}
-            onmouseenter={() => handleMouseEnter(item.id)}
-            onmouseleave={handleMouseLeave}
-            onclick={(e) => handleItemClick(item, e)}
-            onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleItemClick(item, e); } }}
-            role="button"
-            tabindex="0"
-            in:itemAnimation
-          >
-          <div class="item-header">
-            <div class="item-head-left">
-              <label class="item-select">
-                <input
-                  type="checkbox"
-                  class="item-checkbox"
-                  checked={selectedItems.has(item.id)}
-                  onchange={() => onToggleSelectItem(item.id)}
-                  aria-label={ui.selectForPractice(getItemText(item))}
-                />
-                <span class="direction-pill">
-                  {direction === 'DE->BG'
-                    ? `${ui.sourceLang} → ${ui.targetLang}`
-                    : `${ui.targetLang} → ${ui.sourceLang}`}
-                </span>
-              </label>
-              <div class="term-row">
-                <span class="word">{getItemText(item)}</span>
-                <span class="arrow">{direction === 'DE->BG' ? '→' : '←'}</span>
-                <span class="translation">{getItemTranslation(item)}</span>
-              </div>
-            </div>
-            <div class="action-buttons">
-              <button
-                class="practice-btn primary"
-                onclick={(e) => handlePracticeClick(item, e)}
-                aria-label={`${ui.practice}: ${getItemText(item)}`}
-              >
-                <span class="btn-icon">📝</span>
-                <span class="btn-text">{ui.practice}</span>
-              </button>
-              {#if showQuickPractice}
-                <button
-                  class="practice-btn ghost"
-                  onclick={(e) => handleQuickPractice(item, e)}
-                  aria-label={ui.quickPracticeLabel(getItemText(item))}
-                  title={ui.quickPracticeLabel(getItemText(item))}
-                >
-                  <span class="btn-icon">⚡</span>
-                </button>
-              {/if}
-            </div>
-          </div>
-
-          <div class="item-meta">
-            <div class="meta-tags">
-              {#if item.level}
-                <span
-                  class="difficulty-tag"
-                  style="background-color: {getDifficultyColor(item.level)}20; color: {getDifficultyColor(item.level)}"
-                  in:tagAnimation
-                >
-                  {item.level}
-                </span>
-              {/if}
-
-              <span class="category-tag" in:tagAnimation>
-                {getCategoryLabel(item.categories[0])}
-              </span>
-
-              {#each item.tags || [] as tag}
-                <span class="category-tag">{tag}</span>
-              {/each}
-
-              {#if showTooltips}
-                <div class="meta-tooltip">
-                  <p><strong>{ui.difficulty}:</strong> {item.level || 'N/A'}</p>
-                  <p><strong>{ui.category}:</strong> {getCategoryLabel(item.categories[0])}</p>
-                  <p><strong>{ui.type}:</strong> {item.type === 'word' ? ui.typeWord : ui.typeRule}</p>
-                </div>
-              {/if}
-            </div>
-
-            <div class="stats">
-              <span class="type">
-                <span class="stat-icon">{item.type === 'word' ? '📝' : '📋'}</span>
-                {item.type === 'word' ? ui.typeWord : ui.typeRule}
-              </span>
-
-              {#if showTooltips}
-                <div class="stats-tooltip">
-                  <p><strong>{ui.type}:</strong> {item.type === 'word' ? ui.typeWord : ui.typeRule}</p>
-                  {#if item.global_stats}
-                    <p><strong>{ui.practiceStats}:</strong></p>
-                    <p>{ui.correct}: {item.global_stats.correct_count}</p>
-                    <p>{ui.incorrect}: {item.global_stats.incorrect_count}</p>
-                    <p>{ui.successRate}: {Math.round(item.global_stats.success_rate)}%</p>
-                  {/if}
-                </div>
-              {/if}
-            </div>
-          </div>
-
-          {#if item.enrichment?.sourceURL || (item.definitions && item.definitions.length > 0)}
-            <div class="enrichment-section" aria-label="Dictionary enrichment">
-              <div class="section-label">{ui.enrich}</div>
-              <EnrichmentBadge {item} variant="inline" />
-              <DefinitionLink {item} showIcon={true} showLabel={true} compact={true} />
-            </div>
-          {/if}
-
-          {#if item.examples && item.examples.length > 0}
-            <div class="examples-preview" aria-label={ui.examples}>
-              <div class="examples-header">{ui.examples}</div>
-              {#each item.examples.slice(0, 2) as example}
-                <div class="example-item">
-                  <span class="example-text">{example.german}</span>
-                  <span class="example-translation">{example.bulgarian}</span>
-                  {#if example.context}
-                    <span class="example-context">{example.context}</span>
-                  {/if}
-                </div>
-              {/each}
-            </div>
-          {/if}
-          </div>
-          {#if hoveredItemId === item.id}
-          <div class="rich-context-details" transition:fade>
-            <h4>{ui.richContext}</h4>
-            {#if (item.literalBreakdown && item.literalBreakdown.length) || (item.metadata?.components && item.metadata.components.length)}
-              <p><strong>{ui.etymology}:</strong>
-                {#if item.literalBreakdown && item.literalBreakdown.length}
-                  {item.literalBreakdown.map((p) => `${p.segment} → ${p.literal}`).join(' + ')}
-                {:else}
-                  {item.metadata?.components?.map((p) => `${p.part} → ${p.meaning}`).join(' + ')}
-                {/if}
-              </p>
-            {/if}
-            {#if item.metadata?.notes}
-              <p><strong>{ui.note}:</strong> {item.metadata.notes}</p>
-            {/if}
-            {#if item.metadata?.mnemonic}
-              <p><strong>{ui.mnemonic}:</strong> {item.metadata.mnemonic}</p>
-            {/if}
-            {#if item.metadata?.culturalNote}
-              <p><strong>{ui.culturalNote}:</strong> {item.metadata.culturalNote}</p>
-            {/if}
-            {#if item.metadata?.etymology}
-              <p><strong>{ui.etymology}:</strong> {item.metadata.etymology}</p>
-            {/if}
-            {#if item.metadata && 'links' in item.metadata && item.metadata.links && item.metadata.links.length > 0}
-              <p><strong>{appState.languageMode === 'DE_BG' ? 'Wörterbuch' : 'Речници'}:</strong>
-                {#each item.metadata.links as link}
-                  <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label || 'Link'}</a>
-                {/each}
-              </p>
-            {/if}
-          </div>
-          {/if}
+          <VocabularyCard
+            {item}
+            variant="list"
+            direction={direction === 'DE->BG' ? 'DE->BG' : 'BG->DE'}
+            isSelected={selectedItems.has(item.id)}
+            showMetadata={true}
+            showActions={true}
+            showTags={true}
+            onPractice={() => handlePracticeClick(item, new MouseEvent('click'))}
+            onQuickPractice={() => handleQuickPractice(item, new MouseEvent('click'))}
+            onToggleSelect={() => onToggleSelectItem(item.id)}
+          />
         </div>
       {/each}
     </div>

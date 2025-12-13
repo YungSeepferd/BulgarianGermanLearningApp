@@ -1,6 +1,7 @@
 /**
  * App-wide vocabulary types - SINGLE SOURCE OF TRUTH
  * All vocabulary data uses UnifiedVocabularyItem from unified-vocabulary.ts
+ * Extended with top-level fields required by lesson services
  */
 import type { 
   UnifiedVocabularyItem,
@@ -8,8 +9,19 @@ import type {
   VocabularyCategory as SchemaVocabularyCategory 
 } from '$lib/schemas/unified-vocabulary';
 
-// Re-export unified types as canonical VocabularyItem
-export type VocabularyItem = UnifiedVocabularyItem;
+/**
+ * Extended vocabulary item with top-level fields for lesson/practice services
+ * These fields may come from metadata or be added during normalization
+ */
+export type VocabularyItem = UnifiedVocabularyItem & {
+  /** Whether the word is common enough for basic lessons (default: false) */
+  isCommon?: boolean;
+  /** Whether the item has been manually verified (default: false) */
+  isVerified?: boolean;
+  /** SRS learning phase (0-6, default: 0 for unstarted) */
+  learningPhase?: number;
+};
+
 export type PartOfSpeech = SchemaPartOfSpeech;
 export type VocabularyCategory = SchemaVocabularyCategory;
 

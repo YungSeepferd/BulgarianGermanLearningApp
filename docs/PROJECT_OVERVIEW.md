@@ -48,6 +48,11 @@ A clean, focused **tandem language learning application** for Bulgarian and Germ
 ### Frontend
 - **SvelteKit 2** - Web framework with file-based routing
 - **Svelte 5** - Latest component syntax with Runes
+- **Design System** - Phase 2-3 implementation (Dec 2025)
+  - Unified VocabularyCard component (4 variants: grid, list, flashcard, lesson)
+  - ActionButton semantic system (7 variants for consistent UI)
+  - Design tokens (40+ CSS variables for spacing, typography, colors)
+  - Responsive breakpoints (mobile-first approach)
 - **Tailwind CSS v4** - Utility-first styling
 - **TypeScript** - Type safety
 
