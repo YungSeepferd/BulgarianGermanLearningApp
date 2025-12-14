@@ -1,0 +1,147 @@
+[
+  {
+    "id": "tochter",
+    "german": "Tochter",
+    "bulgarian": "дъщеря",
+    "partOfSpeech": "noun",
+    "difficulty": 1,
+    "categories": [
+      "family"
+    ],
+    "examples": [],
+    "notes": {
+      "forBulgarianSpeakers": "Add explanation for Bulgarian speakers",
+      "forGermanSpeakers": "Für Deutschsprachige: Add explanation",
+      "linguisticForBulgarians": "Add linguistic notes",
+      "linguisticForGermans": "Add linguistic notes",
+      "source": "manual"
+    },
+    "etymology": "Add etymology information",
+    "culturalNotes": [
+      "Add cultural notes"
+    ],
+    "metadata": {
+      "article": "die",
+      "gender": "feminine",
+      "pluralForm": "Töchter",
+      "frequency": 90,
+      "level": "A1",
+      "isCommon": true,
+      "isVerified": true,
+      "createdBy": "core-vocabulary-checker",
+      "grammarSource": "duden",
+      "grammarVerified": "2025-12-13"
+    },
+    "createdAt": "2025-12-13T23:31:45.519Z",
+    "updatedAt": "2025-12-13T23:31:45.519Z",
+    "version": 1
+  },
+  {
+    "id": "sohn",
+    "german": "Sohn",
+    "bulgarian": "син",
+    "partOfSpeech": "noun",
+    "difficulty": 1,
+    "categories": [
+      "family"
+    ],
+    "examples": [],
+    "notes": {
+      "forBulgarianSpeakers": "Add explanation for Bulgarian speakers",
+      "forGermanSpeakers": "Für Deutschsprachige: Add explanation",
+      "linguisticForBulgarians": "Add linguistic notes",
+      "linguisticForGermans": "Add linguistic notes",
+      "source": "manual"
+    },
+    "etymology": "Add etymology information",
+    "culturalNotes": [
+      "Add cultural notes"
+    ],
+    "metadata": {
+      "article": "der",
+      "gender": "masculine",
+      "pluralForm": "Söhne",
+      "frequency": 90,
+      "level": "A1",
+      "isCommon": true,
+      "isVerified": true,
+      "createdBy": "core-vocabulary-checker",
+      "grammarSource": "duden",
+      "grammarVerified": "2025-12-13"
+    },
+    "createdAt": "2025-12-13T23:31:45.519Z",
+    "updatedAt": "2025-12-13T23:31:45.519Z",
+    "version": 1
+  },
+  {
+    "id": "ihr",
+    "german": "ihr",
+    "bulgarian": "вие",
+    "partOfSpeech": "pronoun",
+    "difficulty": 1,
+    "categories": [
+      "pronouns"
+    ],
+    "examples": [],
+    "notes": {
+      "forBulgarianSpeakers": "Add explanation for Bulgarian speakers",
+      "forGermanSpeakers": "Für Deutschsprachige: Add explanation",
+      "linguisticForBulgarians": "Add linguistic notes",
+      "linguisticForGermans": "Add linguistic notes",
+      "source": "manual"
+    },
+    "etymology": "Add etymology information",
+    "culturalNotes": [
+      "Add cultural notes"
+    ],
+    "metadata": {
+      "frequency": 90,
+      "level": "A1",
+      "isCommon": true,
+      "isVerified": true,
+      "createdBy": "core-vocabulary-checker",
+      "grammarSource": "duden",
+      "grammarVerified": "2025-12-13"
+    },
+    "createdAt": "2025-12-13T23:31:45.519Z",
+    "updatedAt": "2025-12-13T23:31:45.519Z",
+    "version": 1
+  },
+  {
+    "id": "apfel",
+    "german": "Apfel",
+    "bulgarian": "ябълка",
+    "partOfSpeech": "noun",
+    "difficulty": 1,
+    "categories": [
+      "food"
+    ],
+    "examples": [],
+    "notes": {
+      "forBulgarianSpeakers": "Add explanation for Bulgarian speakers",
+      "forGermanSpeakers": "Für Deutschsprachige: Add explanation",
+      "linguisticForBulgarians": "Add linguistic notes",
+      "linguisticForGermans": "Add linguistic notes",
+      "source": "manual"
+    },
+    "etymology": "Add etymology information",
+    "culturalNotes": [
+      "Add cultural notes"
+    ],
+    "metadata": {
+      "article": "der",
+      "gender": "masculine",
+      "pluralForm": "Äpfel",
+      "frequency": 90,
+      "level": "A1",
+      "isCommon": true,
+      "isVerified": true,
+      "createdBy": "core-vocabulary-checker",
+      "grammarSource": "duden",
+      "grammarVerified": "2025-12-13"
+    },
+    "createdAt": "2025-12-13T23:31:45.519Z",
+    "updatedAt": "2025-12-13T23:31:45.519Z",
+    "version": 1
+  }
+]

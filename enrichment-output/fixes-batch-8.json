@@ -1,0 +1,192 @@
+[
+  {
+    "id": "fleisch",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "fleisch",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Fleisch",
+        "bulgarian": "Пример с Месо"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "fisch",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "fisch",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Fisch",
+        "bulgarian": "Пример с Риба"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "gemuse",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "gemuse",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Gemüse",
+        "bulgarian": "Пример с Зеленчуци"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "obst",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "obst",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Obst",
+        "bulgarian": "Пример с Плодове"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "saft",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "saft",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Saft",
+        "bulgarian": "Пример с Сок"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "kaffee",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "kaffee",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Kaffee",
+        "bulgarian": "Пример с Кафе"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "bus",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "bus",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Bus",
+        "bulgarian": "Пример с Автобус"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "zug",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "zug",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Zug",
+        "bulgarian": "Пример с Влак"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "flugzeug",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "flugzeug",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Flugzeug",
+        "bulgarian": "Пример с Самолет"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "taxi",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "taxi",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Taxi",
+        "bulgarian": "Пример с Такси"
+      }
+    ],
+    "reason": "Add placeholder example"
+  }
+]

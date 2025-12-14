@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+wolken,"Wolken","Облаци",noun,2,,,0,nature,unreviewed,
+wald,"Wald","Гора",noun,2,,,0,nature,unreviewed,
+fluss,"Fluss","Река",noun,2,,,0,nature,unreviewed,
+berg,"Berg","Планина",noun,2,,,0,nature,unreviewed,
+meer,"Meer","Море",noun,2,,,0,nature,unreviewed,
+mutter,"Mutter","Майка",phrase,2,,,0,family,unreviewed,
+vater,"Vater","Баща",phrase,2,,,0,family,unreviewed,
+bruder,"Bruder","Брат",phrase,2,,,0,family,unreviewed,
+schwester,"Schwester","Сестра",phrase,2,,,0,family,unreviewed,
+ehemann,"Ehemann","Съпруг",phrase,2,,,0,family,unreviewed,

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "a1_number_017",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_number_017",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "a1_number_018",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_number_018",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "a1_number_019",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_number_019",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "a1_number_030",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_number_030",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "a1_number_040",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_number_040",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "a1_number_050",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_number_050",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "a1_number_060",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_number_060",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "a1_number_070",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_number_070",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "a1_number_080",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_number_080",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "a1_number_090",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_number_090",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  }
+]

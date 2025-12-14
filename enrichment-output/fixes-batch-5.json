@@ -1,0 +1,214 @@
+[
+  {
+    "id": "funf",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "funf",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "funf",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with fünf",
+        "bulgarian": "Пример с Пет"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "sechs",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "sechs",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "sechs",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with sechs",
+        "bulgarian": "Пример с Шест"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "sieben",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "sieben",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "sieben",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with sieben",
+        "bulgarian": "Пример с Седем"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "acht",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "acht",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "acht",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with acht",
+        "bulgarian": "Пример с Осем"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "neun",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "neun",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "neun",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with neun",
+        "bulgarian": "Пример с Девет"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "zehn",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "zehn",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "zehn",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with zehn",
+        "bulgarian": "Пример с Десет"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "elf",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "elf",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "zwoelf",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "zwoelf",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "dreizehn",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "dreizehn",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  },
+  {
+    "id": "zwanzig",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "zwanzig",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "number",
+    "newValue": "noun",
+    "reason": "Normalize invalid PoS \"number\" → noun"
+  }
+]

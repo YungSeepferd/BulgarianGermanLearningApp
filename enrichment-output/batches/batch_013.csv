@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+rabatt,"Rabatt","Отстъпка",phrase,2,,,0,everyday-phrases,unreviewed,
+einkaufen,"einkaufen","Пазарувам",verb,3,,,0,numbers,unreviewed,
+zaedno_001,"zusammen","заедно",adverb,1,,,2,everyday-phrases,unreviewed,
+dobur_den_002,"Guten Tag","Добър ден",interjection,2,,,1,greetings,unreviewed,
+dom_003,"Haus","дом",phrase,1,,,2,home,unreviewed,
+rabota_005,"Arbeit","работа",phrase,2,,,2,professions,unreviewed,
+kniga_006,"Buch","книга",phrase,1,,,2,culture,unreviewed,
+a1_number_014,"vierzehn","Четиринадесет",number,1,,,2,numbers,unreviewed,
+a1_number_015,"fünfzehn","Петнадесет",number,1,,,2,numbers,unreviewed,
+a1_number_016,"sechzehn","Шестнадесет",number,1,,,2,numbers,unreviewed,

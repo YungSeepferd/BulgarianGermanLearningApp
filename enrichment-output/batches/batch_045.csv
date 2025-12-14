@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+a1_profession_011,"der Koch","Готвач",phrase,1,,,3,professions,unreviewed,
+a1_profession_012,"der Kellner","Официант",phrase,1,,,3,professions,unreviewed,
+a1_profession_013,"der Polizist","Полицай",phrase,1,,,3,professions,unreviewed,
+a1_profession_014,"der Künstler","Художник",phrase,1,,,3,professions,unreviewed,
+a1_profession_015,"der Sänger","Певец",phrase,1,,,3,professions,unreviewed,
+a1_place_001,"die Stadt","Град",phrase,1,,,3,places,unreviewed,
+a1_place_002,"das Dorf","Село",phrase,1,,,3,places,unreviewed,
+a1_place_003,"das Zentrum","Център",phrase,1,,,3,places,unreviewed,
+a1_place_004,"der Park","Парк",phrase,1,,,3,places,unreviewed,
+a1_place_005,"der Platz","Площад",phrase,1,,,3,places,unreviewed,

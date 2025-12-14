@@ -1,508 +1,395 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { goto } from '$app/navigation';
   import { vocabularyDb } from '$lib/data/db.svelte';
   import { appState } from '$lib/state/app-state';
   import VocabularyCard from '$lib/components/ui/VocabularyCard.svelte';
   import ActionButton from '$lib/components/ui/ActionButton.svelte';
-  import { Debug } from '$lib/utils';
   import type { VocabularyItem } from '$lib/types/vocabulary';
 
-  // State for the learning session
-  let currentCardIndex = $state(0);
-  let sessionActive = $state(false);
-  let sessionComplete = $state(false);
-  let sessionCards = $state<VocabularyItem[]>([]);
-  let isAnimating = $state(false);
-  let animationType = $state<'easy' | 'hard' | null>(null);
-  let loadError = $state<string | null>(null);
-
-  function capitalizeNoun(term: string): string {
-    if (!term) return term;
-    return term.charAt(0).toUpperCase() + term.slice(1);
-  }
-
-  function chooseArticle(gender?: string, fallback?: string): string | null {
-    if (fallback) return fallback;
-    if (!gender) return null;
-    const map: Record<string, string> = { masculine: 'der', feminine: 'die', neuter: 'das' };
-    return map[gender] || null;
-  }
-
-  function formatGermanTerm(item: VocabularyItem): string {
-    const raw = (item.german || '').trim();
-    if (!raw) return raw;
-    const hasArticlePrefix = /^(der|die|das|ein|eine|einen|einem|einer|eines)\s/i.test(raw);
-    if (hasArticlePrefix) {
-      const [articlePart, ...rest] = raw.split(/\s+/);
-      const nounPart = rest.join(' ');
-      const normalizedNoun = item.partOfSpeech === 'noun' ? capitalizeNoun(nounPart) : nounPart;
-      return [articlePart, normalizedNoun].filter(Boolean).join(' ').trim();
-    }
-    const base = item.partOfSpeech === 'noun' ? capitalizeNoun(raw) : raw;
-    const article = chooseArticle(item.grammar?.gender, item.grammar?.verbPartnerId) || (item.partOfSpeech === 'noun' ? 'der' : null);
-    return article ? `${article} ${base}` : base;
-  }
+  let isLoading = $state(true);
+  let recentWords = $state<VocabularyItem[]>([]);
+  let recommendedWords = $state<VocabularyItem[]>([]);
+  let learningPaths = $state<Array<{ id: string; label: string; labelBg: string; count: number; progress: number }>>([]);
 
   const ui = $derived(appState.languageMode === 'DE_BG'
     ? {
-        heading: 'Lernkarten',
-        hard: '🔴 Schwer',
-        easy: '🟢 Leicht',
-        completedTitle: '🎉 Großartige Arbeit!',
-        completedBody: 'Du hast diese Lerneinheit beendet.',
-        startNew: 'Neue Einheit starten',
-        loading: 'Vokabular wird geladen...',
-        retry: 'Erneut versuchen',
-        mastered: 'Keine Wörter zu üben. Alles gemeistert!'
+        title: 'Lernen',
+        subtitle: 'Wähle Wörter zum Lernen oder starte eine zufällige Übungssitzung',
+        recentTitle: 'Zuletzt angesehen',
+        recommendedTitle: 'Empfohlen für dich',
+        pathsTitle: 'Lernpfade',
+        quickPractice: '🎲 Schnell üben',
+        browseVocab: '📚 Vokabular durchsuchen',
+        noRecent: 'Keine kürzlich angesehenen Wörter',
+        noRecommended: 'Alle Wörter sind gemeistert! 🎉',
+        essentialA1: 'Essenzielle A1 Wörter',
+        essentialA2: 'Essenzielle A2 Wörter',
+        intermediateB1: 'Zwischenstufe B1',
+        advancedB2: 'Fortgeschritten B2',
+        words: 'Wörter',
+        complete: 'Fertig',
+        inProgress: 'In Bearbeitung'
       }
     : {
-        heading: 'Карти за учене',
-        hard: '🔴 Трудно',
-        easy: '🟢 Лесно',
-        completedTitle: '🎉 Страхотна работа!',
-        completedBody: 'Завърши тази сесия за учене.',
-        startNew: 'Започни нова сесия',
-        loading: 'Зареждане на речника...',
-        retry: 'Опитай отново',
-        mastered: 'Няма думи за упражнение. Всичко е усвоено!'
+        title: 'Учене',
+        subtitle: 'Изберете думи за учене или започнете случайна практика',
+        recentTitle: 'Отскоро разглеждано',
+        recommendedTitle: 'Препоръчано за теб',
+        pathsTitle: 'Пътеки за учене',
+        quickPractice: '🎲 Бърза практика',
+        browseVocab: '📚 Преглед на речника',
+        noRecent: 'Нямате отскоро разглеждани думи',
+        noRecommended: 'Всички думи са усвоени! 🎉',
+        essentialA1: 'Основни думи A1',
+        essentialA2: 'Основни думи A2',
+        intermediateB1: 'Междинна степен B1',
+        advancedB2: 'Напредна степен B2',
+        words: 'думи',
+        complete: 'Завършено',
+        inProgress: 'В ход'
       });
 
-  // Load vocabulary data and filter for unmastered words
-  async function startSession() {
+  onMount(async () => {
     try {
-      loadError = null;
-      Debug.log('LearnPage', 'Starting learning session');
-
-      // Initialize vocabulary database if not already loaded
+      isLoading = true;
+      
+      // Initialize vocabulary database
       await vocabularyDb.initialize();
+      const allVocab = vocabularyDb.getVocabulary();
 
-      // Get all vocabulary items
-      const allVocabulary = vocabularyDb.getVocabulary().map((item) => ({
-        ...item,
-        german: formatGermanTerm(item)
-      }));
+      // Get recent words from progress tracking (fallback to recent searches)
+      const recentIds = appState.practiceStats?.keys() ? Array.from(appState.practiceStats.keys()).slice(0, 6) : [];
+      recentWords = recentIds
+        .map(id => allVocab.find(v => v.id === id))
+        .filter(Boolean) as VocabularyItem[];
 
-      if (allVocabulary.length === 0) {
-        loadError = 'No vocabulary loaded. Please check the data files and try again.';
-        sessionActive = false;
-        sessionComplete = false;
-        sessionCards = [];
-        return;
+      // If no recent words, show some from recent searches
+      if (recentWords.length === 0) {
+        const searchTerms = appState.recentSearches?.slice(0, 3) || [];
+        recentWords = searchTerms
+          .map(term => allVocab.find(v => v.german?.toLowerCase().includes(term.toLowerCase()) || v.bulgarian?.toLowerCase().includes(term.toLowerCase())))
+          .filter(Boolean) as VocabularyItem[];
       }
 
-      // Shuffle vocabulary for the session
-      Debug.log('LearnPage', 'Vocabulary loaded', {
-        totalWords: allVocabulary.length
-      });
+      // Get recommended words (A1/A2 difficulty, not yet mastered)
+      const masteredIds = new Set(
+        Array.from(appState.practiceStats?.entries() || [])
+          .filter(([, stats]) => stats && stats.correct >= 3)
+          .map(([id]) => id)
+      );
 
-      // Use all vocabulary shuffled
-      sessionCards = [...allVocabulary].sort(() => 0.5 - Math.random());
-      Debug.log('LearnPage', 'Session cards prepared', {
-        cardCount: sessionCards.length
-      });
+      recommendedWords = allVocab
+        .filter(v => (v.difficulty === 'A1' || v.difficulty === 'A2') && !masteredIds.has(v.id))
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 6);
 
-      // Reset session state
-      currentCardIndex = 0;
-      sessionActive = true;
-      sessionComplete = false;
-      isAnimating = false;
-      animationType = null;
-
-      Debug.log('LearnPage', 'Session started', {
-        cardCount: sessionCards.length,
-        firstCard: sessionCards[0]?.id
-      });
-
-    } catch (error) {
-      Debug.error('LearnPage', 'Failed to start session', error as Error);
-      loadError = 'Failed to start session. Please retry.';
-      sessionActive = false;
-      sessionCards = [];
+      // Set up learning paths
+      learningPaths = [
+        {
+          id: 'a1',
+          label: ui.essentialA1,
+          labelBg: ui.essentialA1,
+          count: allVocab.filter(v => v.difficulty === 'A1').length,
+          progress: calculateProgress(allVocab.filter(v => v.difficulty === 'A1'), masteredIds)
+        },
+        {
+          id: 'a2',
+          label: ui.essentialA2,
+          labelBg: ui.essentialA2,
+          count: allVocab.filter(v => v.difficulty === 'A2').length,
+          progress: calculateProgress(allVocab.filter(v => v.difficulty === 'A2'), masteredIds)
+        },
+        {
+          id: 'b1',
+          label: ui.intermediateB1,
+          labelBg: ui.intermediateB1,
+          count: allVocab.filter(v => v.difficulty === 'B1').length,
+          progress: calculateProgress(allVocab.filter(v => v.difficulty === 'B1'), masteredIds)
+        },
+        {
+          id: 'b2',
+          label: ui.advancedB2,
+          labelBg: ui.advancedB2,
+          count: allVocab.filter(v => v.difficulty === 'B2').length,
+          progress: calculateProgress(allVocab.filter(v => v.difficulty === 'B2'), masteredIds)
+        }
+      ];
+    } finally {
+      isLoading = false;
     }
-  }
-
-  // Handle card completion (Easy button)
-  function handleEasy() {
-    if (!sessionActive || isAnimating) return;
-
-    isAnimating = true;
-    animationType = 'easy';
-
-    // Mark word as completed
-    const currentCard = sessionCards[currentCardIndex];
-    if (currentCard) {
-      const xpValue = currentCard.xp_value || 10;
-
-      Debug.log('LearnPage', 'Word marked as easy', {
-        wordId: currentCard.id,
-        xpAdded: xpValue
-      });
-    }
-
-    // Move to next card after animation
-    setTimeout(() => {
-      moveToNextCard();
-      isAnimating = false;
-      animationType = null;
-    }, 600);
-  }
-
-  // Handle card repetition (Hard button)
-  function handleHard() {
-    if (!sessionActive || isAnimating) return;
-
-    isAnimating = true;
-    animationType = 'hard';
-
-    // Just move to next card without marking as completed
-    Debug.log('LearnPage', 'Word marked as hard', {
-      wordId: sessionCards[currentCardIndex]?.id
-    });
-
-    setTimeout(() => {
-      moveToNextCard();
-      isAnimating = false;
-      animationType = null;
-    }, 600);
-  }
-
-  // Move to the next card in the session
-  function moveToNextCard() {
-    if (currentCardIndex < sessionCards.length - 1) {
-      currentCardIndex++;
-    } else {
-      // Session complete
-      sessionActive = false;
-      sessionComplete = true;
-      Debug.log('LearnPage', 'Session completed');
-    }
-  }
-
-  // Reset the session (intentionally unused - kept for reference)
-  function _resetSession() {
-    sessionActive = false;
-    sessionComplete = false;
-    sessionCards = [];
-    currentCardIndex = 0;
-    isAnimating = false;
-    animationType = null;
-  }
-
-  // Calculate progress percentage
-  function getProgressPercentage(): number {
-    if (sessionCards.length === 0) return 0;
-    return Math.round(((currentCardIndex + 1) / sessionCards.length) * 100);
-  }
-
-  // Get current card and transform to match Flashcard component expectations
-  function getCurrentCard(): any {
-    const card = sessionCards[currentCardIndex];
-    if (!card) return null;
-
-    return {
-      ...card,
-      literalBreakdown: card.literalBreakdown ?? card.metadata?.components?.map((c) => ({
-        segment: c.part,
-        literal: c.meaning,
-        grammarTag: ''
-      })) ?? []
-    };
-  }
-
-  // Format the progress text
-  function getProgressText(): string {
-    if (sessionCards.length === 0) return '0/0';
-    return `${currentCardIndex + 1}/${sessionCards.length}`;
-  }
-
-  // Initialize session on component mount
-  onMount(() => {
-    startSession();
   });
+
+  function calculateProgress(words: VocabularyItem[], masteredIds: Set<string>): number {
+    if (words.length === 0) return 0;
+    return Math.round((words.filter(w => masteredIds.has(w.id)).length / words.length) * 100);
+  }
+
+  function handleCardClick(item: VocabularyItem) {
+    goto(`/learn/${item.id}`);
+  }
+
+  function handleQuickPractice() {
+    goto('/learn/shuffle');
+  }
+
+  function handleBrowseVocab() {
+    goto('/vocabulary');
+  }
+
+  function handlePathClick(pathId: string) {
+    goto(`/vocabulary?difficulty=${pathId.toUpperCase()}`);
+  }
 </script>
 
-<div class="learn-page">
-  <!-- Progress bar at the top -->
-  <div class="progress-container">
-    <div class="progress-bar" style={`width: ${getProgressPercentage()}%`}></div>
-    <div class="progress-text">{getProgressText()}</div>
-  </div>
+<div class="learn-hub">
+  <header class="learn-header">
+    <h1>{ui.title}</h1>
+    <p class="subtitle">{ui.subtitle}</p>
+  </header>
 
-  <!-- Main content area -->
-  <div class="content-container">
-    {#if sessionActive && getCurrentCard()}
-      <!-- Flashcard display -->
-      <div class="flashcard-wrapper {animationType}">
-        <VocabularyCard
-          item={getCurrentCard()!}
-          variant="flashcard"
-          direction={appState.languageMode === 'DE_BG' ? 'DE->BG' : 'BG->DE'}
-          showMetadata={true}
-          showActions={false}
-          showTags={false}
-        />
-      </div>
+  {#if isLoading}
+    <div class="loading">
+      <p>{ui.title === 'Lernen' ? 'Wörter werden geladen...' : 'Думите се зареждат...'}</p>
+    </div>
+  {:else}
+    <section class="quick-actions">
+      <ActionButton
+        label={ui.quickPractice}
+        icon="🎲"
+        onclick={handleQuickPractice}
+        variant="primary"
+      />
+      <ActionButton
+        label={ui.browseVocab}
+        icon="📚"
+        onclick={handleBrowseVocab}
+        variant="secondary"
+      />
+    </section>
 
-      <!-- Interaction buttons -->
-      <div class="button-container">
-        <ActionButton
-          variant="secondary"
-          size="lg"
-          disabled={isAnimating}
-          onclick={handleHard}
-          label={ui.hard}
-        >
-          {ui.hard}
-        </ActionButton>
-        <ActionButton
-          variant="primary"
-          size="lg"
-          disabled={isAnimating}
-          onclick={handleEasy}
-          label={ui.easy}
-        >
-          {ui.easy}
-        </ActionButton>
-      </div>
-    {:else if sessionComplete}
-      <!-- Session completion message -->
-      <div class="completion-message">
-        <h2>{ui.completedTitle}</h2>
-        <p>{ui.completedBody}</p>
-        <ActionButton
-          variant="primary"
-          size="lg"
-          onclick={startSession}
-          label={ui.startNew}
-        >
-          {ui.startNew}
-        </ActionButton>
-      </div>
-    {:else}
-      <!-- Loading or initial state -->
-      <div class="loading-message">
-        {#if loadError}
-          <p>{loadError}</p>
-          <ActionButton
-            variant="secondary"
-            size="lg"
-            onclick={startSession}
-            label={ui.retry}
-          >
-            {ui.retry}
-          </ActionButton>
-        {:else if sessionCards.length === 0}
-          <p>{ui.loading}</p>
-        {:else}
-          <p>{ui.mastered}</p>
-          <ActionButton
-            variant="primary"
-            size="lg"
-            onclick={startSession}
-            label={ui.startNew}
-          >
-            {ui.startNew}
-          </ActionButton>
-        {/if}
-      </div>
+    {#if recentWords.length > 0}
+      <section class="recent-section">
+        <h2>{ui.recentTitle}</h2>
+        <div class="word-grid">
+          {#each recentWords as word (word.id)}
+            <div class="card-wrapper" role="button" tabindex="0" onclick={() => handleCardClick(word)} onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && handleCardClick(word)}>
+              <VocabularyCard item={word} variant="compact" />
+            </div>
+          {/each}
+        </div>
+      </section>
     {/if}
-  </div>
+
+    {#if recommendedWords.length > 0}
+      <section class="recommended-section">
+        <h2>{ui.recommendedTitle}</h2>
+        <div class="word-grid">
+          {#each recommendedWords as word (word.id)}
+            <div class="card-wrapper" role="button" tabindex="0" onclick={() => handleCardClick(word)} onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && handleCardClick(word)}>
+              <VocabularyCard item={word} variant="compact" />
+            </div>
+          {/each}
+        </div>
+      </section>
+    {:else}
+      <section class="no-recommended">
+        <p>{ui.noRecommended}</p>
+      </section>
+    {/if}
+
+    <section class="paths-section">
+      <h2>{ui.pathsTitle}</h2>
+      <div class="paths-grid">
+        {#each learningPaths as path (path.id)}
+          <button class="path-card" onclick={() => handlePathClick(path.id)}>
+            <div class="path-header">
+              <h3>{appState.languageMode === 'DE_BG' ? path.label : path.labelBg}</h3>
+              <span class="word-count">{path.count} {ui.words}</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: {path.progress}%"></div>
+            </div>
+            <div class="progress-text">
+              {path.progress}% {path.progress === 100 ? ui.complete : ui.inProgress}
+            </div>
+          </button>
+        {/each}
+      </div>
+    </section>
+  {/if}
 </div>
 
 <style>
-  .learn-page {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    max-width: 1000px;
+  .learn-hub {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
-    box-sizing: border-box;
+    padding: 2rem 1rem;
   }
 
-  .progress-container {
-    width: 100%;
-    height: 24px;
-    background-color: #e5e7eb;
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
-    position: relative;
-    overflow: hidden;
+  .learn-header {
+    text-align: center;
+    margin-bottom: 3rem;
   }
 
-  .progress-bar {
-    height: 100%;
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-    border-radius: 12px;
-    transition: width 0.3s ease;
+  .learn-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-primary);
   }
 
-  .progress-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-weight: bold;
-    font-size: 0.875rem;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin: 0;
   }
 
-  .content-container {
-    flex: 1;
+  .loading {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--color-text-secondary);
+  }
+
+  .quick-actions {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .recent-section,
+  .recommended-section,
+  .no-recommended,
+  .paths-section {
+    margin-bottom: 3rem;
+  }
+
+  .recent-section h2,
+  .recommended-section h2,
+  .paths-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-primary);
+  }
+
+  .word-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
   }
 
-  .flashcard-wrapper {
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 1.25rem;
-    transition: transform 0.6s ease;
-    position: relative;
-    z-index: 1; /* Lower z-index than buttons */
-  }
-
-  /* Animation for card completion */
-  .flashcard-wrapper.easy {
-    animation: scaleUp 0.6s ease;
-  }
-
-  .flashcard-wrapper.hard {
-    animation: shake 0.6s ease;
-  }
-
-  @keyframes scaleUp {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-  }
-
-  @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    20%, 60% { transform: translateX(-5px); }
-    40%, 80% { transform: translateX(5px); }
-  }
-
-  .button-container {
-    display: flex;
-    gap: 1.5rem;
-    margin-top: 1rem;
-    position: relative;
-    z-index: 10; /* Higher z-index to ensure buttons are on top */
-  }
-
-  .hard-button, .easy-button {
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
-    border-radius: 50px;
-    border: none;
+  .card-wrapper {
     cursor: pointer;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
 
-  .hard-button {
-    background-color: #ef4444;
-    color: white;
-  }
-
-  .hard-button:hover:not(:disabled) {
-    background-color: #dc2626;
+  .card-wrapper:hover,
+  .card-wrapper:focus-visible {
     transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    outline: none;
   }
 
-  .easy-button {
-    background-color: #10b981;
-    color: white;
-  }
-
-  .easy-button:hover:not(:disabled) {
-    background-color: #059669;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  }
-
-  .hard-button:disabled, .easy-button:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-    transform: none;
-  }
-
-  .completion-message {
+  .no-recommended {
     text-align: center;
     padding: 2rem;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    background: var(--color-background-secondary);
+    border-radius: 0.5rem;
+    color: var(--color-text-secondary);
   }
 
-  .completion-message h2 {
-    color: #10b981;
+  .paths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .path-card {
+    background: var(--color-background-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+
+  .path-card:hover,
+  .path-card:focus-visible {
+    background: var(--color-background-tertiary);
+    border-color: var(--color-primary);
+    outline: none;
+  }
+
+  .path-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 1rem;
   }
 
-  .loading-message {
-    text-align: center;
-    padding: 2rem;
+  .path-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    flex: 1;
   }
 
-  .restart-button {
-    background-color: #3b82f6;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: background-color 0.2s ease;
+  .word-count {
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
   }
 
-  .restart-button:hover {
-    background-color: #2563eb;
+  .progress-bar {
+    height: 6px;
+    background: var(--color-background);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
   }
 
-  /* Responsive design */
+  .progress-fill {
+    height: 100%;
+    background: var(--color-success);
+    transition: width 0.3s;
+    border-radius: 3px;
+  }
+
+  .progress-text {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+  }
+
   @media (max-width: 768px) {
-    .learn-page {
-      padding: 0.5rem;
+    .learn-hub {
+      padding: 1rem;
     }
 
-    .button-container {
+    .learn-header h1 {
+      font-size: 1.75rem;
+    }
+
+    .word-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .paths-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .quick-actions {
       flex-direction: column;
-      gap: 1rem;
-    }
-
-    .hard-button, .easy-button {
-      width: 100%;
-      max-width: 300px;
-      justify-content: center;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .progress-container {
-      height: 20px;
-    }
-
-    .progress-text {
-      font-size: 0.75rem;
-    }
-
-    .hard-button, .easy-button {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
     }
   }
 </style>

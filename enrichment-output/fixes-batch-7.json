@@ -1,0 +1,241 @@
+[
+  {
+    "id": "nachmittag",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "nachmittag",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "phrase",
+    "newValue": "interjection",
+    "reason": "Normalize invalid PoS \"phrase\" → interjection"
+  },
+  {
+    "id": "nachmittag",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Nachmittag",
+        "bulgarian": "Пример с Следобед"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "abend",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "abend",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "phrase",
+    "newValue": "interjection",
+    "reason": "Normalize invalid PoS \"phrase\" → interjection"
+  },
+  {
+    "id": "abend",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Abend",
+        "bulgarian": "Пример с Вечер"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "nacht",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "nacht",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "phrase",
+    "newValue": "interjection",
+    "reason": "Normalize invalid PoS \"phrase\" → interjection"
+  },
+  {
+    "id": "nacht",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Nacht",
+        "bulgarian": "Пример с Нощ"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "wie_geht_s",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "wie_geht_s",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "phrase",
+    "newValue": "interjection",
+    "reason": "Normalize invalid PoS \"phrase\" → interjection"
+  },
+  {
+    "id": "wie_geht_s",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Wie geht's?",
+        "bulgarian": "Пример с Как си?"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "mir_geht_s_gut",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "mir_geht_s_gut",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "phrase",
+    "newValue": "interjection",
+    "reason": "Normalize invalid PoS \"phrase\" → interjection"
+  },
+  {
+    "id": "mir_geht_s_gut",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Mir geht's gut",
+        "bulgarian": "Пример с Добре съм"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "entschuldige",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "entschuldige",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "phrase",
+    "newValue": "interjection",
+    "reason": "Normalize invalid PoS \"phrase\" → interjection"
+  },
+  {
+    "id": "entschuldige",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Entschuldige",
+        "bulgarian": "Пример с Извинявай"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "darf_ich",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "darf_ich",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "phrase",
+    "newValue": "interjection",
+    "reason": "Normalize invalid PoS \"phrase\" → interjection"
+  },
+  {
+    "id": "darf_ich",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Darf ich?",
+        "bulgarian": "Пример с Може ли?"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "brot",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "brot",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Brot",
+        "bulgarian": "Пример с Хляб"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "milch",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "milch",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Milch",
+        "bulgarian": "Пример с Мляко"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "kase",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "kase",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Käse",
+        "bulgarian": "Пример с Сирене"
+      }
+    ],
+    "reason": "Add placeholder example"
+  }
+]

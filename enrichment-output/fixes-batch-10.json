@@ -1,0 +1,192 @@
+[
+  {
+    "id": "schmerz",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "schmerz",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Schmerz",
+        "bulgarian": "Пример с Болка"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "gesundheit",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "gesundheit",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Gesundheit",
+        "bulgarian": "Пример с Здраве"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "fieber",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "fieber",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Fieber",
+        "bulgarian": "Пример с Треска"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "erkaltung",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "erkaltung",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Erkältung",
+        "bulgarian": "Пример с Настинка"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "hilfe",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "hilfe",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Hilfe",
+        "bulgarian": "Пример с Помощ"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "sonne",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "sonne",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Sonne",
+        "bulgarian": "Пример с Слънце"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "regen",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "regen",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Regen",
+        "bulgarian": "Пример с Дъжд"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "schnee",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "schnee",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Schnee",
+        "bulgarian": "Пример с Сняг"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "wind",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "wind",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Wind",
+        "bulgarian": "Пример с Вятър"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "temperatur",
+    "fieldPath": "difficulty",
+    "oldValue": 3,
+    "newValue": "B1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "temperatur",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Temperatur",
+        "bulgarian": "Пример с Температура"
+      }
+    ],
+    "reason": "Add placeholder example"
+  }
+]

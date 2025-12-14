@@ -1,0 +1,959 @@
+[
+  {
+    "id": "brot",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Brot",
+        "plural": "Brote"
+      },
+      "accusative": {
+        "singular": "Brot",
+        "plural": "Brote"
+      },
+      "dative": {
+        "singular": "Brot",
+        "plural": "Broten"
+      },
+      "genitive": {
+        "singular": "Brotes",
+        "plural": "Brote"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.786Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 7
+    }
+  },
+  {
+    "id": "milch",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": {
+        "singular": "Milch",
+        "plural": "Milchen"
+      },
+      "accusative": {
+        "singular": "Milch",
+        "plural": "Milchen"
+      },
+      "dative": {
+        "singular": "Milch",
+        "plural": "Milchenn"
+      },
+      "genitive": {
+        "singular": "Milches",
+        "plural": "Milchen"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 7
+    }
+  },
+  {
+    "id": "kase",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Käse",
+        "plural": "Käsen"
+      },
+      "accusative": {
+        "singular": "Käse",
+        "plural": "Käsen"
+      },
+      "dative": {
+        "singular": "Käse",
+        "plural": "Käsenn"
+      },
+      "genitive": {
+        "singular": "Käsees",
+        "plural": "Käsen"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 7
+    }
+  },
+  {
+    "id": "fleisch",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "Fleisch",
+        "plural": "Fleische"
+      },
+      "accusative": {
+        "singular": "Fleisch",
+        "plural": "Fleische"
+      },
+      "dative": {
+        "singular": "Fleisch",
+        "plural": "Fleischen"
+      },
+      "genitive": {
+        "singular": "Fleischs",
+        "plural": "Fleische"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 8
+    }
+  },
+  {
+    "id": "fisch",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Fisch",
+        "plural": "Fische"
+      },
+      "accusative": {
+        "singular": "Fisch",
+        "plural": "Fische"
+      },
+      "dative": {
+        "singular": "Fisch",
+        "plural": "Fischen"
+      },
+      "genitive": {
+        "singular": "Fisches",
+        "plural": "Fische"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 8
+    }
+  },
+  {
+    "id": "gemuse",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "Gemüse",
+        "plural": "Gemüsee"
+      },
+      "accusative": {
+        "singular": "Gemüse",
+        "plural": "Gemüsee"
+      },
+      "dative": {
+        "singular": "Gemüse",
+        "plural": "Gemüseen"
+      },
+      "genitive": {
+        "singular": "Gemüses",
+        "plural": "Gemüsee"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 8
+    }
+  },
+  {
+    "id": "obst",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "Obst",
+        "plural": "Obste"
+      },
+      "accusative": {
+        "singular": "Obst",
+        "plural": "Obste"
+      },
+      "dative": {
+        "singular": "Obst",
+        "plural": "Obsten"
+      },
+      "genitive": {
+        "singular": "Obsts",
+        "plural": "Obste"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 8
+    }
+  },
+  {
+    "id": "saft",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Saft",
+        "plural": "Safte"
+      },
+      "accusative": {
+        "singular": "Saft",
+        "plural": "Safte"
+      },
+      "dative": {
+        "singular": "Saft",
+        "plural": "Saften"
+      },
+      "genitive": {
+        "singular": "Saftes",
+        "plural": "Safte"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 8
+    }
+  },
+  {
+    "id": "kaffee",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Kaffee",
+        "plural": "Kaffeen"
+      },
+      "accusative": {
+        "singular": "Kaffee",
+        "plural": "Kaffeen"
+      },
+      "dative": {
+        "singular": "Kaffee",
+        "plural": "Kaffeenn"
+      },
+      "genitive": {
+        "singular": "Kaffeees",
+        "plural": "Kaffeen"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 8
+    }
+  },
+  {
+    "id": "bus",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Bus",
+        "plural": "Buse"
+      },
+      "accusative": {
+        "singular": "Bus",
+        "plural": "Buse"
+      },
+      "dative": {
+        "singular": "Bus",
+        "plural": "Busen"
+      },
+      "genitive": {
+        "singular": "Buses",
+        "plural": "Buse"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 8
+    }
+  },
+  {
+    "id": "zug",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Zug",
+        "plural": "Zuge"
+      },
+      "accusative": {
+        "singular": "Zug",
+        "plural": "Zuge"
+      },
+      "dative": {
+        "singular": "Zug",
+        "plural": "Zugen"
+      },
+      "genitive": {
+        "singular": "Zuges",
+        "plural": "Zuge"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 8
+    }
+  },
+  {
+    "id": "flugzeug",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "Flugzeug",
+        "plural": "Flugzeuge"
+      },
+      "accusative": {
+        "singular": "Flugzeug",
+        "plural": "Flugzeuge"
+      },
+      "dative": {
+        "singular": "Flugzeug",
+        "plural": "Flugzeugen"
+      },
+      "genitive": {
+        "singular": "Flugzeugs",
+        "plural": "Flugzeuge"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 8
+    }
+  },
+  {
+    "id": "taxi",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "Taxi",
+        "plural": "Taxie"
+      },
+      "accusative": {
+        "singular": "Taxi",
+        "plural": "Taxie"
+      },
+      "dative": {
+        "singular": "Taxi",
+        "plural": "Taxien"
+      },
+      "genitive": {
+        "singular": "Taxis",
+        "plural": "Taxie"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 8
+    }
+  },
+  {
+    "id": "bahnhof",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Bahnhof",
+        "plural": "Bahnhofe"
+      },
+      "accusative": {
+        "singular": "Bahnhof",
+        "plural": "Bahnhofe"
+      },
+      "dative": {
+        "singular": "Bahnhof",
+        "plural": "Bahnhofen"
+      },
+      "genitive": {
+        "singular": "Bahnhofes",
+        "plural": "Bahnhofe"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 9
+    }
+  },
+  {
+    "id": "flughafen",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Flughafen",
+        "plural": "Flughafene"
+      },
+      "accusative": {
+        "singular": "Flughafen",
+        "plural": "Flughafene"
+      },
+      "dative": {
+        "singular": "Flughafen",
+        "plural": "Flughafenen"
+      },
+      "genitive": {
+        "singular": "Flughafenes",
+        "plural": "Flughafene"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 9
+    }
+  },
+  {
+    "id": "hotel",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "Hotel",
+        "plural": "Hotele"
+      },
+      "accusative": {
+        "singular": "Hotel",
+        "plural": "Hotele"
+      },
+      "dative": {
+        "singular": "Hotel",
+        "plural": "Hotelen"
+      },
+      "genitive": {
+        "singular": "Hotels",
+        "plural": "Hotele"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 9
+    }
+  },
+  {
+    "id": "stra_e",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": {
+        "singular": "Straße",
+        "plural": "Straßen"
+      },
+      "accusative": {
+        "singular": "Straße",
+        "plural": "Straßen"
+      },
+      "dative": {
+        "singular": "Straße",
+        "plural": "Straßenn"
+      },
+      "genitive": {
+        "singular": "Straßees",
+        "plural": "Straßen"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 9
+    }
+  },
+  {
+    "id": "karte",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": {
+        "singular": "Karte",
+        "plural": "Karten"
+      },
+      "accusative": {
+        "singular": "Karte",
+        "plural": "Karten"
+      },
+      "dative": {
+        "singular": "Karte",
+        "plural": "Kartenn"
+      },
+      "genitive": {
+        "singular": "Kartees",
+        "plural": "Karten"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 9
+    }
+  },
+  {
+    "id": "arzt",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Arzt",
+        "plural": "Arzte"
+      },
+      "accusative": {
+        "singular": "Arzt",
+        "plural": "Arzte"
+      },
+      "dative": {
+        "singular": "Arzt",
+        "plural": "Arzten"
+      },
+      "genitive": {
+        "singular": "Arztes",
+        "plural": "Arzte"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 9
+    }
+  },
+  {
+    "id": "krankenhaus",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "Krankenhaus",
+        "plural": "Krankenhause"
+      },
+      "accusative": {
+        "singular": "Krankenhaus",
+        "plural": "Krankenhause"
+      },
+      "dative": {
+        "singular": "Krankenhaus",
+        "plural": "Krankenhausen"
+      },
+      "genitive": {
+        "singular": "Krankenhauss",
+        "plural": "Krankenhause"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 9
+    }
+  },
+  {
+    "id": "apotheke",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": {
+        "singular": "Apotheke",
+        "plural": "Apotheken"
+      },
+      "accusative": {
+        "singular": "Apotheke",
+        "plural": "Apotheken"
+      },
+      "dative": {
+        "singular": "Apotheke",
+        "plural": "Apothekenn"
+      },
+      "genitive": {
+        "singular": "Apothekees",
+        "plural": "Apotheken"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 9
+    }
+  },
+  {
+    "id": "medikamente",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": {
+        "singular": "Medikamente",
+        "plural": "Medikamenten"
+      },
+      "accusative": {
+        "singular": "Medikamente",
+        "plural": "Medikamenten"
+      },
+      "dative": {
+        "singular": "Medikamente",
+        "plural": "Medikamentenn"
+      },
+      "genitive": {
+        "singular": "Medikamentees",
+        "plural": "Medikamenten"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 9
+    }
+  },
+  {
+    "id": "notfall",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Notfall",
+        "plural": "Notfalle"
+      },
+      "accusative": {
+        "singular": "Notfall",
+        "plural": "Notfalle"
+      },
+      "dative": {
+        "singular": "Notfall",
+        "plural": "Notfallen"
+      },
+      "genitive": {
+        "singular": "Notfalles",
+        "plural": "Notfalle"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 9
+    }
+  },
+  {
+    "id": "schmerz",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Schmerz",
+        "plural": "Schmerze"
+      },
+      "accusative": {
+        "singular": "Schmerz",
+        "plural": "Schmerze"
+      },
+      "dative": {
+        "singular": "Schmerz",
+        "plural": "Schmerzen"
+      },
+      "genitive": {
+        "singular": "Schmerzes",
+        "plural": "Schmerze"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 10
+    }
+  },
+  {
+    "id": "gesundheit",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": {
+        "singular": "Gesundheit",
+        "plural": "Gesundheiten"
+      },
+      "accusative": {
+        "singular": "Gesundheit",
+        "plural": "Gesundheiten"
+      },
+      "dative": {
+        "singular": "Gesundheit",
+        "plural": "Gesundheitenn"
+      },
+      "genitive": {
+        "singular": "Gesundheites",
+        "plural": "Gesundheiten"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 10
+    }
+  },
+  {
+    "id": "fieber",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "Fieber",
+        "plural": "Fiebere"
+      },
+      "accusative": {
+        "singular": "Fieber",
+        "plural": "Fiebere"
+      },
+      "dative": {
+        "singular": "Fieber",
+        "plural": "Fieberen"
+      },
+      "genitive": {
+        "singular": "Fiebers",
+        "plural": "Fiebere"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 10
+    }
+  },
+  {
+    "id": "erkaltung",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": {
+        "singular": "Erkältung",
+        "plural": "Erkältungen"
+      },
+      "accusative": {
+        "singular": "Erkältung",
+        "plural": "Erkältungen"
+      },
+      "dative": {
+        "singular": "Erkältung",
+        "plural": "Erkältungenn"
+      },
+      "genitive": {
+        "singular": "Erkältunges",
+        "plural": "Erkältungen"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 10
+    }
+  },
+  {
+    "id": "hilfe",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": {
+        "singular": "Hilfe",
+        "plural": "Hilfen"
+      },
+      "accusative": {
+        "singular": "Hilfe",
+        "plural": "Hilfen"
+      },
+      "dative": {
+        "singular": "Hilfe",
+        "plural": "Hilfenn"
+      },
+      "genitive": {
+        "singular": "Hilfees",
+        "plural": "Hilfen"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 10
+    }
+  },
+  {
+    "id": "sonne",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": {
+        "singular": "Sonne",
+        "plural": "Sonnen"
+      },
+      "accusative": {
+        "singular": "Sonne",
+        "plural": "Sonnen"
+      },
+      "dative": {
+        "singular": "Sonne",
+        "plural": "Sonnenn"
+      },
+      "genitive": {
+        "singular": "Sonnees",
+        "plural": "Sonnen"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 10
+    }
+  },
+  {
+    "id": "regen",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Regen",
+        "plural": "Regene"
+      },
+      "accusative": {
+        "singular": "Regen",
+        "plural": "Regene"
+      },
+      "dative": {
+        "singular": "Regen",
+        "plural": "Regenen"
+      },
+      "genitive": {
+        "singular": "Regenes",
+        "plural": "Regene"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 10
+    }
+  },
+  {
+    "id": "schnee",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Schnee",
+        "plural": "Schneen"
+      },
+      "accusative": {
+        "singular": "Schnee",
+        "plural": "Schneen"
+      },
+      "dative": {
+        "singular": "Schnee",
+        "plural": "Schneenn"
+      },
+      "genitive": {
+        "singular": "Schneees",
+        "plural": "Schneen"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 10
+    }
+  },
+  {
+    "id": "wind",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Wind",
+        "plural": "Winde"
+      },
+      "accusative": {
+        "singular": "Wind",
+        "plural": "Winde"
+      },
+      "dative": {
+        "singular": "Wind",
+        "plural": "Winden"
+      },
+      "genitive": {
+        "singular": "Windes",
+        "plural": "Winde"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 10
+    }
+  },
+  {
+    "id": "temperatur",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": {
+        "singular": "Temperatur",
+        "plural": "Temperaturen"
+      },
+      "accusative": {
+        "singular": "Temperatur",
+        "plural": "Temperaturen"
+      },
+      "dative": {
+        "singular": "Temperatur",
+        "plural": "Temperaturenn"
+      },
+      "genitive": {
+        "singular": "Temperatures",
+        "plural": "Temperaturen"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T09:49:19.787Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 10
+    }
+  }
+]

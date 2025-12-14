@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+a1_nature_006,"das Gras","Трева",noun,1,,,3,nature,unreviewed,
+a1_nature_007,"der Berg","Планина",noun,1,,,3,nature,unreviewed,
+a1_nature_008,"der Fluss","Река",noun,1,,,3,nature,unreviewed,
+a1_nature_009,"das Meer","Море",noun,1,,,3,nature,unreviewed,
+a1_nature_010,"der Himmel","Небе",noun,1,,,3,nature,unreviewed,
+a1_animal_001,"der Hund","Куче",noun,1,,,3,animals,unreviewed,
+a1_animal_002,"die Katze","Котка",noun,1,,,3,animals,unreviewed,
+a1_animal_003,"der Vogel","Птица",noun,1,,,3,animals,unreviewed,
+a1_animal_005,"das Pferd","Кон",noun,1,,,3,animals,unreviewed,
+a1_animal_006,"die Kuh","Крава",noun,1,,,3,animals,unreviewed,

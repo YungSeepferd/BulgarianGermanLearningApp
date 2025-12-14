@@ -1,0 +1,234 @@
+{
+  "timestamp": "2025-12-14T09:48:32.908Z",
+  "appliedCount": 10,
+  "skippedCount": 10,
+  "errorCount": 0,
+  "backup": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/data/unified-vocabulary-backup-1765705712893.json",
+  "details": {
+    "applied": [
+      {
+        "id": "schmerz",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "gesundheit",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "fieber",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "erkaltung",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "hilfe",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "sonne",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "regen",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "schnee",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "wind",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "temperatur",
+        "fieldPath": "difficulty",
+        "oldValue": 3,
+        "newValue": "B1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      }
+    ],
+    "skipped": [
+      {
+        "fix": {
+          "id": "schmerz",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Schmerz",
+              "bulgarian": "Пример с Болка"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "gesundheit",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Gesundheit",
+              "bulgarian": "Пример с Здраве"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "fieber",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Fieber",
+              "bulgarian": "Пример с Треска"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "erkaltung",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Erkältung",
+              "bulgarian": "Пример с Настинка"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "hilfe",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Hilfe",
+              "bulgarian": "Пример с Помощ"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "sonne",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Sonne",
+              "bulgarian": "Пример с Слънце"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "regen",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Regen",
+              "bulgarian": "Пример с Дъжд"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "schnee",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Schnee",
+              "bulgarian": "Пример с Сняг"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "wind",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Wind",
+              "bulgarian": "Пример с Вятър"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "temperatur",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Temperatur",
+              "bulgarian": "Пример с Температура"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      }
+    ],
+    "errors": []
+  }
+}

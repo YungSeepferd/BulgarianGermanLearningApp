@@ -1,0 +1,234 @@
+{
+  "timestamp": "2025-12-14T09:48:32.411Z",
+  "appliedCount": 10,
+  "skippedCount": 10,
+  "errorCount": 0,
+  "backup": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/data/unified-vocabulary-backup-1765705712397.json",
+  "details": {
+    "applied": [
+      {
+        "id": "fleisch",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "fisch",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "gemuse",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "obst",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "saft",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "kaffee",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "bus",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "zug",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "flugzeug",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "taxi",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      }
+    ],
+    "skipped": [
+      {
+        "fix": {
+          "id": "fleisch",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Fleisch",
+              "bulgarian": "Пример с Месо"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "fisch",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Fisch",
+              "bulgarian": "Пример с Риба"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "gemuse",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Gemüse",
+              "bulgarian": "Пример с Зеленчуци"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "obst",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Obst",
+              "bulgarian": "Пример с Плодове"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "saft",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Saft",
+              "bulgarian": "Пример с Сок"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "kaffee",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Kaffee",
+              "bulgarian": "Пример с Кафе"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "bus",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Bus",
+              "bulgarian": "Пример с Автобус"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "zug",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Zug",
+              "bulgarian": "Пример с Влак"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "flugzeug",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Flugzeug",
+              "bulgarian": "Пример с Самолет"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "taxi",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Taxi",
+              "bulgarian": "Пример с Такси"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      }
+    ],
+    "errors": []
+  }
+}

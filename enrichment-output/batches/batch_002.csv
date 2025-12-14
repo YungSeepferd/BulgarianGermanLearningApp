@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+mensch,"Mensch","Човек",noun,1,,,0,everyday-phrases,unreviewed,
+familie,"Familie","Семейство",noun,1,,,0,family,unreviewed,
+haus,"Haus","Къща",noun,1,,,0,home,unreviewed,
+schule,"Schule","Училище",noun,1,,,0,places,unreviewed,
+stadt,"Stadt","Град",noun,1,,,0,places,unreviewed,
+dorf,"Dorf","Село",noun,1,,,0,nature;places,unreviewed,
+essen,"Essen","Храна",noun,1,,,0,food,unreviewed,
+sein,"sein","Съм",verb,2,,,0,everyday-phrases,unreviewed,
+machen,"machen","Правя",verb,2,,,0,everyday-phrases,unreviewed,
+sprechen,"sprechen","Говоря",verb,2,,,0,everyday-phrases,unreviewed,

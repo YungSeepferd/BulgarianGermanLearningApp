@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+a1_object_001,"das Telefon","Телефон",noun,1,,,3,home,unreviewed,
+a1_object_002,"der Computer","Компютър",noun,1,,,3,home,unreviewed,
+a1_object_003,"die Uhr","Часовник",noun,1,,,3,home,unreviewed,
+a1_object_004,"der Schlüssel","Ключ",noun,1,,,3,home,unreviewed,
+a1_object_005,"das Glas, die Tasse","Чаша",noun,1,,,3,home,unreviewed,
+a1_object_006,"der Teller","Чиния",noun,1,,,3,home,unreviewed,
+a1_object_007,"das Messer","Нож",noun,1,,,3,home,unreviewed,
+a1_object_008,"die Gabel","Вилица",noun,1,,,3,home,unreviewed,
+a1_object_009,"der Löffel","Лъжица",noun,1,,,3,home,unreviewed,
+a1_object_010,"das Geld","Паричка",noun,1,,,3,home,unreviewed,

@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+funf,"fünf","Пет",number,2,,,0,numbers,unreviewed,
+sechs,"sechs","Шест",number,2,,,0,numbers,unreviewed,
+sieben,"sieben","Седем",number,2,,,0,numbers,unreviewed,
+acht,"acht","Осем",number,2,,,0,numbers,unreviewed,
+neun,"neun","Девет",number,2,,,0,numbers,unreviewed,
+zehn,"zehn","Десет",number,2,,,0,numbers,unreviewed,
+elf,"elf","Единадесет",number,1,,,1,numbers,unreviewed,
+zwoelf,"zwölf","Дванадесет",number,1,,,1,numbers,unreviewed,
+dreizehn,"dreizehn","Тринадесет",number,1,,,1,numbers,unreviewed,
+zwanzig,"zwanzig","Двадесет",number,1,,,1,numbers,unreviewed,

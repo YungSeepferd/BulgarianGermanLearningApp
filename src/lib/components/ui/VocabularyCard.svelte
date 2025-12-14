@@ -316,7 +316,12 @@
   <!-- FLASHCARD VARIANT: Learn page flip cards -->
 {:else if variant === 'flashcard'}
   <div class={cardClass} transition:fade={{ duration: 200 }}>
-    <div class="flashcard-inner" onclick={handleFlipClick} role="button" tabindex="0">
+    <button 
+      class="flashcard-inner" 
+      onclick={handleFlipClick}
+      onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleFlipClick(); } }}
+      aria-label={isFlipped ? (appState.languageMode === 'DE_BG' ? 'Zur Vorderseite umdrehen' : 'Обърни към предната страна') : (appState.languageMode === 'DE_BG' ? 'Zur Rückseite umdrehen' : 'Обърни към задната страна')}
+    >
       {#if !isFlipped}
         <!-- Front side (question) -->
         <div class="flashcard-front" transition:fade={{ duration: 300 }}>
@@ -361,7 +366,7 @@
           </div>
         </div>
       {/if}
-    </div>
+    </button>
 
     {#if showActions}
       <div class="flashcard-actions">
@@ -708,6 +713,22 @@
     cursor: pointer;
     background-color: white;
     border-radius: 8px;
+    /* Button reset styles */
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    text-align: left;
+    outline: none;
+  }
+
+  .flashcard-inner:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 4px;
+  }
+
+  .flashcard-inner:active {
+    transform: scale(0.98);
   }
 
   .flashcard-front,

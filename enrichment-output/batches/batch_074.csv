@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+a1_time_001_dup1,"Montag","Понеделник",phrase,1,,,3,time,unreviewed,
+a1_time_002_dup1,"Dienstag","Вторник",phrase,1,,,3,time,unreviewed,
+a1_time_003_dup1,"Mittwoch","Сряда",phrase,1,,,3,time,unreviewed,
+a1_time_004_dup1,"Donnerstag","Четвъртък",phrase,2,,,3,time,unreviewed,
+a1_time_005_dup1,"Freitag","Петък",phrase,1,,,3,time,unreviewed,
+a1_time_007_dup1,"Sonntag","Неделя",phrase,1,,,3,time,unreviewed,
+a1_final14_033_dup1,"Ticket","Билет",noun,1,,,3,home,unreviewed,
+a1_verb_045_dup1,"kaufen","Купувам",phrase,1,,,3,everyday-phrases,unreviewed,
+a1_verb_021_dup1,"verkaufen","Продавам",phrase,1,,,3,everyday-phrases,unreviewed,
+a1_question_002_dup1,"was","Какво",pronoun,1,,,6,everyday-phrases,unreviewed,

@@ -1,0 +1,234 @@
+{
+  "timestamp": "2025-12-14T01:46:44.901Z",
+  "appliedCount": 10,
+  "skippedCount": 10,
+  "errorCount": 0,
+  "backup": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/data/unified-vocabulary-backup-1765676804886.json",
+  "details": {
+    "applied": [
+      {
+        "id": "mensch",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "familie",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "haus",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "schule",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "stadt",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "dorf",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "essen",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "sein",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "machen",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "sprechen",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      }
+    ],
+    "skipped": [
+      {
+        "fix": {
+          "id": "mensch",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Mensch",
+              "bulgarian": "Пример с Човек"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "familie",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Familie",
+              "bulgarian": "Пример с Семейство"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "haus",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Haus",
+              "bulgarian": "Пример с Къща"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "schule",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Schule",
+              "bulgarian": "Пример с Училище"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "stadt",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Stadt",
+              "bulgarian": "Пример с Град"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "dorf",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Dorf",
+              "bulgarian": "Пример с Село"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "essen",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Essen",
+              "bulgarian": "Пример с Храна"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "sein",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with sein",
+              "bulgarian": "Пример с Съм"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "machen",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with machen",
+              "bulgarian": "Пример с Правя"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "sprechen",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with sprechen",
+              "bulgarian": "Пример с Говоря"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      }
+    ],
+    "errors": []
+  }
+}

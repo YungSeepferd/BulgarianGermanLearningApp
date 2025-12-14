@@ -32,10 +32,10 @@
     "weather",
     "technology"
   ],
-  "itemCount": 745,
+  "itemCount": 747,
   "createdAt": "2025-12-11T22:19:46.865Z",
-  "updatedAt": "2025-12-12T11:55:17.038Z",
-  "version": 2,
+  "updatedAt": "2025-12-13T23:25:00.000Z",
+  "version": 3,
   "items": [
     {
       "id": "zusammen_bg_zaedno_sample",
@@ -377,17 +377,17 @@
       "id": "entschuldigung",
       "german": "Entschuldigung",
       "bulgarian": "Извинете",
-      "partOfSpeech": "phrase",
+      "partOfSpeech": "noun",
       "difficulty": 1,
       "categories": [
         "common_phrases"
       ],
       "examples": [],
       "notes": {
-        "forBulgarianSpeakers": "'Entschuldigung' е и извинение, и начин да привлечете вниманието (като 'Извинете, госпожо'). При по-близки хора може да чуете съкратеното 'Entschuldige'.",
-        "forGermanSpeakers": "Entspricht 'Entschuldigung'; als Anrede z. B. 'Извинете, ...'.",
-        "linguisticForBulgarians": "'Entschuldigung' се произнася [ɛntˈʃʊldɪɡʊŋ]; съкратената форма за близки е 'Entschuldige!'.",
-        "linguisticForGermans": "Formelle Imperativform im Plural: извине́те. Einzahl für Freunde: 'извини'.",
+        "forBulgarianSpeakers": "'Die Entschuldigung' е извинение в немски. Използва се и за привличане на вниманието (като 'Извинете, госпожо'). При по-близки хора може да чуете съкратеното 'Entschuldige'.",
+        "forGermanSpeakers": "Entspricht 'Entschuldigung'; als Anrede z. B. 'Извинете, ...'. 'Die Entschuldigung' ist feminin.",
+        "linguisticForBulgarians": "'Entschuldigung' се произнася [ɛntˈʃʊldɪɡʊŋ]; съкратената форма за близки е 'Entschuldige!'. Женски род.",
+        "linguisticForGermans": "Feminine noun. Formelle Imperativform im Plural: извине́те. Einzahl für Freunde: 'извини'.",
         "source": "merged"
       },
       "etymology": "Произход: повелително от 'извинявам' (< вина).\nHerkunft: Imperativform aus dem Verb 'извинявам'.",
@@ -395,15 +395,20 @@
         "Ползва се за извинение и привличане на внимание.\nKultureller Kontext: Höfliche Anrede in Bulgarien."
       ],
       "metadata": {
+        "article": "die",
+        "gender": "feminine",
+        "pluralForm": "Entschuldigungen",
         "frequency": 100,
         "level": "A1",
-        "isCommon": false,
+        "isCommon": true,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "grammarSource": "duden",
+        "grammarVerified": "2025-12-13"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
-      "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "updatedAt": "2025-12-13T23:06:13.103Z",
+      "version": 2
     },
     {
       "id": "es_tut_mir_leid",
@@ -449,7 +454,7 @@
       "examples": [],
       "notes": {
         "forBulgarianSpeakers": "В немски 'der Mensch' обозначава човек като вид и се използва в обобщени изрази като 'jeder Mensch'. Запомнете мъжкия род и множеството 'die Menschen'.",
-        "forGermanSpeakers": "Für Deutschsprachige: 'Човек' ≈ 'Mensch'. Betonung: чо́век. Maskulinum. Sehr häufig verwendet.",
+        "forGermanSpeakers": "Für Deutschsprachige: 'Човек' ≈ 'Mensch'. Maskulinum. Betonung: чо́век. Sehr häufig verwendet.",
         "linguisticForBulgarians": "Irregular plural: 'хора' (people). Gender: masculine. Stress: чо́век",
         "linguisticForGermans": "Irregular plural: 'хора' (people). Gender: masculine. Stress: чо́век",
         "source": "merged"
@@ -459,15 +464,20 @@
         "Основна дума за човек; използва се и безлично като 'man'.\nKultureller Kontext: Grundwort für Menschen, auch unpersönlich wie das deutsche 'man'."
       ],
       "metadata": {
+        "article": "der",
+        "gender": "masculine",
+        "pluralForm": "Menschen",
         "frequency": 98,
         "level": "A1",
-        "isCommon": false,
+        "isCommon": true,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "grammarSource": "duden",
+        "grammarVerified": "2025-12-13"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
-      "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "updatedAt": "2025-12-13T23:06:13.103Z",
+      "version": 2
     },
     {
       "id": "familie",
@@ -476,14 +486,14 @@
       "partOfSpeech": "noun",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "family"
       ],
       "examples": [],
       "notes": {
         "forBulgarianSpeakers": "'Die Familie' в немски съчетава близките роднини. Използвайте определителен член 'die' и множествено число 'die Familien' при разговор за повече семейства.",
-        "forGermanSpeakers": "Für Deutschsprachige: 'Семейство' ≈ 'Familie'; von 'семе (Samen)'. Betonung: семе́йство. Neutrum. Sehr häufig verwendet.",
-        "linguisticForBulgarians": "Neuter noun. Collective meaning. Stress: семе́йство",
-        "linguisticForGermans": "Neuter noun. Collective meaning. Stress: семе́йство",
+        "forGermanSpeakers": "Für Deutschsprachige: 'Семейство' ≈ 'Familie'. Femininum. Betonung: семе́йство. Sehr häufig verwendet.",
+        "linguisticForBulgarians": "Feminine noun. Collective meaning. Stress: семе́йство. Plural: Familien",
+        "linguisticForGermans": "Feminine noun. Collective meaning. Stress: семе́йство. Plural: Familien",
         "source": "merged"
       },
       "etymology": "Произход: 'семе' + суфикса '-ейство'; буквално 'тези от едно семе'.\nHerkunft: Von 'семе' (Same) + Suffix '-ейство', verwandt mit lat. 'semen'.",
@@ -491,15 +501,20 @@
         "Разширеното семейство е ядро на българската култура.\nKultureller Kontext: Großfamilientreffen sind zentral in Bulgarien."
       ],
       "metadata": {
+        "article": "die",
+        "gender": "feminine",
+        "pluralForm": "Familien",
         "frequency": 93,
         "level": "A1",
-        "isCommon": false,
+        "isCommon": true,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "grammarSource": "duden",
+        "grammarVerified": "2025-12-13"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
-      "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "updatedAt": "2025-12-13T23:06:13.103Z",
+      "version": 2
     },
     {
       "id": "haus",
@@ -523,11 +538,16 @@
         "Традиционните къщи имат двор и лозя; собствеността е ценност. Kultureller Kontext: Häuser mit Gärten sind typisch, Eigentum gilt als wichtig."
       ],
       "metadata": {
+        "article": "das",
+        "gender": "neuter",
+        "pluralForm": "Häuser",
         "frequency": 99,
         "level": "A1",
-        "isCommon": false,
+        "isCommon": true,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "grammarSource": "duden",
+        "grammarVerified": "2025-12-13"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
@@ -540,14 +560,14 @@
       "partOfSpeech": "noun",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "education"
       ],
       "examples": [],
       "notes": {
         "forBulgarianSpeakers": "'Die Schule' в немски покрива училището като институция. Често се използва с глагола 'gehen' – 'zur Schule gehen' означава 'ходя на училище'.",
-        "forGermanSpeakers": "Für Deutschsprachige: 'Училище' ≈ 'Schule'; von 'уча (lernen)'. Betonung: учи́лище. Neutrum. Sehr häufig verwendet.",
-        "linguisticForBulgarians": "Neuter noun. Stress: учи́лище. Related: учител (teacher)",
-        "linguisticForGermans": "Neuter noun. Stress: учи́лище. Related: учител (teacher)",
+        "forGermanSpeakers": "Für Deutschsprachige: 'Училище' ≈ 'Schule'. Femininum. Betonung: учи́лище. Sehr häufig verwendet.",
+        "linguisticForBulgarians": "Feminine noun. Stress: учи́лище. Related: учител (teacher). Plural: Schulen",
+        "linguisticForGermans": "Feminine noun. Stress: учи́лище. Related: учител (teacher). Plural: Schulen",
         "source": "merged"
       },
       "etymology": "Произход: глагол 'уча' + наставка '-лище' (място); 'място за учене'.\nHerkunft: Verb 'уча' kombiniert mit Suffix '-лище' = Lernort.",
@@ -555,15 +575,20 @@
         "Учебната година започва на 15 септември и образованието е престижно.\nKultureller Kontext: Schuljahr startet am 15. September; Bildung hat hohen Stellenwert."
       ],
       "metadata": {
+        "article": "die",
+        "gender": "feminine",
+        "pluralForm": "Schulen",
         "frequency": 93,
         "level": "A1",
-        "isCommon": false,
+        "isCommon": true,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "grammarSource": "duden",
+        "grammarVerified": "2025-12-13"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
-      "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "updatedAt": "2025-12-13T23:06:13.103Z",
+      "version": 2
     },
     {
       "id": "stadt",
@@ -572,14 +597,14 @@
       "partOfSpeech": "noun",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "places"
       ],
       "examples": [],
       "notes": {
         "forBulgarianSpeakers": "В немски 'die Stadt' е град и е от женски род. Множественото 'die Städte' добавя умлаут на 'a' и наставка '-e'.",
-        "forGermanSpeakers": "Für Deutschsprachige: 'Град' ≈ 'Stadt'. Betonung: гра́д. Maskulinum. Sehr häufig verwendet.",
-        "linguisticForBulgarians": "Masculine noun. Also means 'castle' in archaic usage. Stress: гра́д",
-        "linguisticForGermans": "Masculine noun. Also means 'castle' in archaic usage. Stress: гра́д",
+        "forGermanSpeakers": "Für Deutschsprachige: 'Град' ≈ 'Stadt'. Femininum. Betonung: гра́д. Sehr häufig verwendet.",
+        "linguisticForBulgarians": "Feminine noun. Also means 'castle' in archaic usage. Stress: гра́д. Plural: Städte",
+        "linguisticForGermans": "Feminine noun. Also means 'castle' in archaic usage. Stress: гра́д. Plural: Städte",
         "source": "merged"
       },
       "etymology": "Произход: праслав. *gordъ (укрепено селище); сродно на рус. 'город'.\nHerkunft: Proto-slawisch *gordъ für befestigte Siedlung, verwandt mit рус. 'город'.",
@@ -587,15 +612,20 @@
         "Българските градове пазят крепости и исторически центрове; столица е София.\nKultureller Kontext: Viele Städte mit Altstädten, Hauptstadt Sofia."
       ],
       "metadata": {
+        "article": "die",
+        "gender": "feminine",
+        "pluralForm": "Städte",
         "frequency": 99,
         "level": "A1",
-        "isCommon": false,
+        "isCommon": true,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "grammarSource": "duden",
+        "grammarVerified": "2025-12-13"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
-      "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "updatedAt": "2025-12-13T23:06:13.103Z",
+      "version": 2
     },
     {
       "id": "dorf",
@@ -604,15 +634,15 @@
       "partOfSpeech": "noun",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "places"
       ],
       "examples": [],
       "notes": {
         "general": "'Село' bedeutet Dorf und ist mit anderen slawischen Wörtern für Siedlung verwandt.",
         "forBulgarianSpeakers": "В немски 'das Dorf' описва малко населено място. Членът 'das' показва среден род, а множественото 'die Dörfer' добавя умлаут върху 'o'.",
         "forGermanSpeakers": "Für Deutschsprachige: 'Село' ≈ 'Dorf'. Neutrum. Sehr häufig verwendet.",
-        "linguisticForBulgarians": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
-        "linguisticForGermans": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+        "linguisticForBulgarians": "Neuter noun. Plural: Dörfer. Definite article suffix: -ът/-та/-то",
+        "linguisticForGermans": "Neuter noun. Plural: Dörfer. Definite article suffix: -ът/-та/-то",
         "source": "merged"
       },
       "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
@@ -620,15 +650,20 @@
         "Common everyday word in Bulgarian. Useful for A1 learners"
       ],
       "metadata": {
+        "article": "das",
+        "gender": "neuter",
+        "pluralForm": "Dörfer",
         "frequency": 94,
         "level": "A1",
-        "isCommon": false,
+        "isCommon": true,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "grammarSource": "duden",
+        "grammarVerified": "2025-12-13"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
-      "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "updatedAt": "2025-12-13T23:06:13.103Z",
+      "version": 2
     },
     {
       "id": "essen",
@@ -637,14 +672,14 @@
       "partOfSpeech": "noun",
       "difficulty": 1,
       "categories": [
-        "uncategorized"
+        "food"
       ],
       "examples": [],
       "notes": {
         "forBulgarianSpeakers": "В немски 'das Essen' назовава храната или самото хранене. Изразът 'etwas zu essen' означава 'нещо за ядене'.",
-        "forGermanSpeakers": "Für Deutschsprachige: 'Храна' ≈ 'Essen'. Betonung: храна́. Femininum. Sehr häufig verwendet.",
-        "linguisticForBulgarians": "Feminine noun. Related: 'хранене' (nutrition), 'хранителен' (nutritional). Stress: храна́",
-        "linguisticForGermans": "Feminine noun. Related: 'хранене' (nutrition), 'хранителен' (nutritional). Stress: храна́",
+        "forGermanSpeakers": "Für Deutschsprachige: 'Храна' ≈ 'Essen'. Neutrum. Betonung: храна́. Sehr häufig verwendet.",
+        "linguisticForBulgarians": "Neuter noun. Related: 'хранене' (nutrition), 'хранителен' (nutritional). Stress: храна́",
+        "linguisticForGermans": "Neuter noun. Related: 'хранене' (nutrition), 'хранителен' (nutritional). Stress: храна́",
         "source": "merged"
       },
       "etymology": "Произход: праслав. *xorna (храна), свързано с глагола 'храня'.\nHerkunft: Proto-slawisch *xorna, verwandt mit Verb 'храня'.",
@@ -652,15 +687,20 @@
         "Гостоприемството включва ястия като шопска салата и баница.\nKultureller Kontext: Essen wie Shopska-Salat und Baniza prägt die Gastfreundschaft."
       ],
       "metadata": {
+        "article": "das",
+        "gender": "neuter",
+        "pluralForm": "Essen",
         "frequency": 96,
         "level": "A1",
-        "isCommon": false,
+        "isCommon": true,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "grammarSource": "duden",
+        "grammarVerified": "2025-12-13"
       },
       "createdAt": "2025-12-11T22:19:46.850Z",
-      "updatedAt": "2025-12-11T22:19:46.850Z",
-      "version": 1
+      "updatedAt": "2025-12-13T23:06:13.103Z",
+      "version": 2
     },
     {
       "id": "sein",
@@ -36978,12 +37018,113 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1
+    },
+    {
+      "id": "frau",
+      "german": "Frau",
+      "bulgarian": "жена",
+      "partOfSpeech": "noun",
+      "difficulty": 1,
+      "categories": [
+        "family"
+      ],
+      "examples": [
+        {
+          "german": "Die Frau liest ein Buch.",
+          "bulgarian": "Жената чете книга.",
+          "context": "neutral",
+          "source": "manual"
+        },
+        {
+          "german": "Meine Frau heißt Anna.",
+          "bulgarian": "Съпругата ми се казва Анна.",
+          "context": "personal",
+          "source": "manual"
+        }
+      ],
+      "notes": {
+        "forBulgarianSpeakers": "'Die Frau' е женски род; множествено 'die Frauen'. Може да означава 'жена' или 'съпруга'.",
+        "forGermanSpeakers": "Für Deutschsprachige: 'жена' ≈ 'Frau' (woman/wife). Femininum. Betonung: же́на. Häufig verwendet.",
+        "linguisticForBulgarians": "Feminine noun. Plural: Frauen. Stress: же́на. Diminutive: 'женичка'.",
+        "linguisticForGermans": "Feminine noun. Plural: Frauen. Stress: же́на. Diminutive: 'женичка'.",
+        "source": "manual"
+      },
+      "etymology": "Произход: праславянски *žena. Сродно с немското 'Frau' (от старонемски 'frouwa' - господарка).\nHerkunft: Von althochdeutsch 'frouwa' (Herrin), verwandt mit slawisch *žena.",
+      "culturalNotes": [
+        "Основна дума за жена; в семейния контекст означава 'съпруга'.\nKultureller Kontext: Grundwort für Frau; im Familienkontext 'Ehefrau'."
+      ],
+      "metadata": {
+        "article": "die",
+        "gender": "feminine",
+        "pluralForm": "Frauen",
+        "frequency": 99,
+        "level": "A1",
+        "isCommon": true,
+        "isVerified": true,
+        "createdBy": "manual-correction",
+        "grammarSource": "duden",
+        "grammarVerified": "2025-12-13"
+      },
+      "createdAt": "2025-12-13T23:25:00.000Z",
+      "updatedAt": "2025-12-13T23:25:00.000Z",
+      "version": 1
+    },
+    {
+      "id": "mann",
+      "german": "Mann",
+      "bulgarian": "мъж",
+      "partOfSpeech": "noun",
+      "difficulty": 1,
+      "categories": [
+        "family"
+      ],
+      "examples": [
+        {
+          "german": "Der Mann arbeitet im Garten.",
+          "bulgarian": "Мъжът работи в градината.",
+          "context": "neutral",
+          "source": "manual"
+        },
+        {
+          "german": "Mein Mann ist Arzt.",
+          "bulgarian": "Съпругът ми е лекар.",
+          "context": "personal",
+          "source": "manual"
+        }
+      ],
+      "notes": {
+        "forBulgarianSpeakers": "'Der Mann' е мъжки род; множествено 'die Männer'. Може да означава 'мъж' или 'съпруг'.",
+        "forGermanSpeakers": "Für Deutschsprachige: 'мъж' ≈ 'Mann' (man/husband). Maskulinum. Betonung: мъ́ж. Häufig verwendet.",
+        "linguisticForBulgarians": "Masculine noun. Irregular plural: Männer. Stress: мъ́ж. Diminutive: 'мъжле'.",
+        "linguisticForGermans": "Masculine noun. Irregular plural: Männer. Stress: мъ́ж. Diminutive: 'мъжле'.",
+        "source": "manual"
+      },
+      "etymology": "Произход: праславянски *mǫžь. Сродно с немското 'Mann' (от старонемски 'man').\nHerkunft: Von althochdeutsch 'man', verwandt mit slawisch *mǫžь.",
+      "culturalNotes": [
+        "Основна дума за мъж; в семейния контекст означава 'съпруг'.\nKultureller Kontext: Grundwort für Mann; im Familienkontext 'Ehemann'."
+      ],
+      "metadata": {
+        "article": "der",
+        "gender": "masculine",
+        "pluralForm": "Männer",
+        "frequency": 99,
+        "level": "A1",
+        "isCommon": true,
+        "isVerified": true,
+        "createdBy": "manual-correction",
+        "grammarSource": "duden",
+        "grammarVerified": "2025-12-13"
+      },
+      "createdAt": "2025-12-13T23:25:00.000Z",
+      "updatedAt": "2025-12-13T23:25:00.000Z",
+      "version": 1
     }
   ],
   "enrichmentMetadata": {
     "enrichedWith": "Langenscheidt Dictionary",
     "enrichmentDate": "2025-12-12T11:55:17.038Z",
     "itemsWithEnrichment": 0,
-    "itemsWithLinks": 0
+    "itemsWithLinks": 0,
+    "manualCorrections": 2
   }
 }

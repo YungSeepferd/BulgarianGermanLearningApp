@@ -39,6 +39,7 @@ pnpm run dev
 
 | Role | Start Here |
 |------|-----------|
+| **AI Agent / New Team Member** | [AGENTS.md](AGENTS.md) (complete project guide for humans & AI) |
 | **New Developer** | [GETTING_STARTED.md](docs/GETTING_STARTED.md) (setup + first run) |
 | **Understanding the App** | [PROJECT_OVERVIEW.md](docs/PROJECT_OVERVIEW.md) (features + architecture) |
 | **Writing Code** | [DEVELOPMENT.md](docs/development/DEVELOPMENT.md) (patterns + conventions) |

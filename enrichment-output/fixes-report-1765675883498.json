@@ -1,0 +1,232 @@
+{
+  "timestamp": "2025-12-14T01:31:23.490Z",
+  "appliedCount": 14,
+  "skippedCount": 8,
+  "errorCount": 0,
+  "backup": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/data/unified-vocabulary-backup-1765675883472.json",
+  "details": {
+    "applied": [
+      {
+        "id": "zusammen_bg_zaedno_sample",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "zdravej_001",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "dobro_utro_002",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "guten_abend",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "gute_nacht",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "auf_wiedersehen",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "bitte",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "bitte",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "danke",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "danke",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "entschuldigung",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "entschuldigung",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "es_tut_mir_leid",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "es_tut_mir_leid",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      }
+    ],
+    "skipped": [
+      {
+        "fix": {
+          "id": "zusammen_bg_zaedno_sample",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with zusammen",
+              "bulgarian": "Пример с заедно"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"undefined\""
+      },
+      {
+        "fix": {
+          "id": "guten_abend",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Guten Abend",
+              "bulgarian": "Пример с Добър вечер"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "gute_nacht",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Gute Nacht",
+              "bulgarian": "Пример с Лека нощ"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "auf_wiedersehen",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Auf Wiedersehen",
+              "bulgarian": "Пример с Довиждане"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "bitte",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Bitte",
+              "bulgarian": "Пример с Моля"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "danke",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Danke",
+              "bulgarian": "Пример с Благодаря"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "entschuldigung",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Entschuldigung",
+              "bulgarian": "Пример с Извинете"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "es_tut_mir_leid",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Es tut mir leid",
+              "bulgarian": "Пример с Съжалявам"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      }
+    ],
+    "errors": []
+  }
+}

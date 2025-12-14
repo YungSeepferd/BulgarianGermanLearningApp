@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+a1_number_100,"hundert","Сто",number,1,,,2,numbers,unreviewed,
+a1_number_200,"zweihundert","Двеста",number,1,,,2,numbers,unreviewed,
+a1_number_1000,"tausend","Хиляда",number,1,,,2,numbers,unreviewed,
+a1_verb_001,"wollen / möchten","Искам",phrase,1,,,2,everyday-phrases,unreviewed,
+a1_verb_002,"schlafen","Спя",phrase,1,,,2,everyday-phrases,unreviewed,
+a1_verb_003,"trinken","Пия",phrase,1,,,2,food,unreviewed,
+a1_verb_004,"essen","Ям",phrase,1,,,2,food,unreviewed,
+a1_verb_005,"sehen","Видя",phrase,1,,,2,everyday-phrases,unreviewed,
+a1_verb_006,"können","Мога",phrase,1,,,2,everyday-phrases,unreviewed,
+a1_verb_007,"machen / tun","Правя",phrase,1,,,2,everyday-phrases,unreviewed,

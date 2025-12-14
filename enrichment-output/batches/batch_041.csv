@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+a1_transport_002,"der Bus","Автобус",noun,1,,,3,transport,unreviewed,
+a1_transport_003,"der Zug","Влак",noun,1,,,3,transport,unreviewed,
+a1_transport_004,"das Flugzeug","Самолет",noun,1,,,3,transport,unreviewed,
+a1_transport_005,"das Fahrrad","Колело",noun,1,,,3,transport,unreviewed,
+a1_transport_006,"die Straßenbahn","Трамвай",noun,1,,,3,transport,unreviewed,
+a1_transport_007,"das Taxi","Такси",noun,1,,,3,transport,unreviewed,
+a1_transport_008,"die U-Bahn, die Metro","Метро",noun,1,,,3,transport,unreviewed,
+a1_transport_009,"das Schiff","Кораб",noun,1,,,3,transport,unreviewed,
+a1_transport_010,"das Boot","Лодка",noun,1,,,3,transport,unreviewed,
+a1_verb_085,"sprechen, reden","Говоря",phrase,1,,,3,everyday-phrases,unreviewed,

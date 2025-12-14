@@ -1,0 +1,843 @@
+[
+  {
+    "id": "mensch",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Mensch",
+        "plural": "Mensche"
+      },
+      "accusative": {
+        "singular": "Mensch",
+        "plural": "Mensche"
+      },
+      "dative": {
+        "singular": "Mensch",
+        "plural": "Menschen"
+      },
+      "genitive": {
+        "singular": "Mensches",
+        "plural": "Mensche"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.232Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 2
+    }
+  },
+  {
+    "id": "familie",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": {
+        "singular": "Familie",
+        "plural": "Familien"
+      },
+      "accusative": {
+        "singular": "Familie",
+        "plural": "Familien"
+      },
+      "dative": {
+        "singular": "Familie",
+        "plural": "Familienn"
+      },
+      "genitive": {
+        "singular": "Familiees",
+        "plural": "Familien"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 2
+    }
+  },
+  {
+    "id": "haus",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Haus",
+        "plural": "Hause"
+      },
+      "accusative": {
+        "singular": "Haus",
+        "plural": "Hause"
+      },
+      "dative": {
+        "singular": "Haus",
+        "plural": "Hausen"
+      },
+      "genitive": {
+        "singular": "Hauses",
+        "plural": "Hause"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 2
+    }
+  },
+  {
+    "id": "schule",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": {
+        "singular": "Schule",
+        "plural": "Schulen"
+      },
+      "accusative": {
+        "singular": "Schule",
+        "plural": "Schulen"
+      },
+      "dative": {
+        "singular": "Schule",
+        "plural": "Schulenn"
+      },
+      "genitive": {
+        "singular": "Schulees",
+        "plural": "Schulen"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 2
+    }
+  },
+  {
+    "id": "stadt",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Stadt",
+        "plural": "Stadte"
+      },
+      "accusative": {
+        "singular": "Stadt",
+        "plural": "Stadte"
+      },
+      "dative": {
+        "singular": "Stadt",
+        "plural": "Stadten"
+      },
+      "genitive": {
+        "singular": "Stadtes",
+        "plural": "Stadte"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 2
+    }
+  },
+  {
+    "id": "dorf",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Dorf",
+        "plural": "Dorfe"
+      },
+      "accusative": {
+        "singular": "Dorf",
+        "plural": "Dorfe"
+      },
+      "dative": {
+        "singular": "Dorf",
+        "plural": "Dorfen"
+      },
+      "genitive": {
+        "singular": "Dorfes",
+        "plural": "Dorfe"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 2
+    }
+  },
+  {
+    "id": "essen",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Essen",
+        "plural": "Essene"
+      },
+      "accusative": {
+        "singular": "Essen",
+        "plural": "Essene"
+      },
+      "dative": {
+        "singular": "Essen",
+        "plural": "Essenen"
+      },
+      "genitive": {
+        "singular": "Essenes",
+        "plural": "Essene"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 2
+    }
+  },
+  {
+    "id": "tisch",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Tisch",
+        "plural": "Tische"
+      },
+      "accusative": {
+        "singular": "Tisch",
+        "plural": "Tische"
+      },
+      "dative": {
+        "singular": "Tisch",
+        "plural": "Tischen"
+      },
+      "genitive": {
+        "singular": "Tisches",
+        "plural": "Tische"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 3
+    }
+  },
+  {
+    "id": "stuhl",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Stuhl",
+        "plural": "Stuhle"
+      },
+      "accusative": {
+        "singular": "Stuhl",
+        "plural": "Stuhle"
+      },
+      "dative": {
+        "singular": "Stuhl",
+        "plural": "Stuhlen"
+      },
+      "genitive": {
+        "singular": "Stuhles",
+        "plural": "Stuhle"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 3
+    }
+  },
+  {
+    "id": "kuche",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": {
+        "singular": "Küche",
+        "plural": "Küchen"
+      },
+      "accusative": {
+        "singular": "Küche",
+        "plural": "Küchen"
+      },
+      "dative": {
+        "singular": "Küche",
+        "plural": "Küchenn"
+      },
+      "genitive": {
+        "singular": "Küchees",
+        "plural": "Küchen"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 3
+    }
+  },
+  {
+    "id": "wohnung",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": {
+        "singular": "Wohnung",
+        "plural": "Wohnungen"
+      },
+      "accusative": {
+        "singular": "Wohnung",
+        "plural": "Wohnungen"
+      },
+      "dative": {
+        "singular": "Wohnung",
+        "plural": "Wohnungenn"
+      },
+      "genitive": {
+        "singular": "Wohnunges",
+        "plural": "Wohnungen"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 3
+    }
+  },
+  {
+    "id": "auto",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Auto",
+        "plural": "Autoe"
+      },
+      "accusative": {
+        "singular": "Auto",
+        "plural": "Autoe"
+      },
+      "dative": {
+        "singular": "Auto",
+        "plural": "Autoen"
+      },
+      "genitive": {
+        "singular": "Autoes",
+        "plural": "Autoe"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 3
+    }
+  },
+  {
+    "id": "laden",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Laden",
+        "plural": "Ladene"
+      },
+      "accusative": {
+        "singular": "Laden",
+        "plural": "Ladene"
+      },
+      "dative": {
+        "singular": "Laden",
+        "plural": "Ladenen"
+      },
+      "genitive": {
+        "singular": "Ladenes",
+        "plural": "Ladene"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 4
+    }
+  },
+  {
+    "id": "garten",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Garten",
+        "plural": "Gartene"
+      },
+      "accusative": {
+        "singular": "Garten",
+        "plural": "Gartene"
+      },
+      "dative": {
+        "singular": "Garten",
+        "plural": "Gartenen"
+      },
+      "genitive": {
+        "singular": "Gartenes",
+        "plural": "Gartene"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 4
+    }
+  },
+  {
+    "id": "uhr",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": {
+        "singular": "Uhr",
+        "plural": "Uhre"
+      },
+      "accusative": {
+        "singular": "Uhr",
+        "plural": "Uhre"
+      },
+      "dative": {
+        "singular": "Uhr",
+        "plural": "Uhren"
+      },
+      "genitive": {
+        "singular": "Uhres",
+        "plural": "Uhre"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 4
+    }
+  },
+  {
+    "id": "eins",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "eins",
+        "plural": "einse"
+      },
+      "accusative": {
+        "singular": "eins",
+        "plural": "einse"
+      },
+      "dative": {
+        "singular": "eins",
+        "plural": "einsen"
+      },
+      "genitive": {
+        "singular": "einss",
+        "plural": "einse"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 4
+    }
+  },
+  {
+    "id": "zwei",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "zwei",
+        "plural": "zweie"
+      },
+      "accusative": {
+        "singular": "zwei",
+        "plural": "zweie"
+      },
+      "dative": {
+        "singular": "zwei",
+        "plural": "zweien"
+      },
+      "genitive": {
+        "singular": "zweis",
+        "plural": "zweie"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 4
+    }
+  },
+  {
+    "id": "drei",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "drei",
+        "plural": "dreie"
+      },
+      "accusative": {
+        "singular": "drei",
+        "plural": "dreie"
+      },
+      "dative": {
+        "singular": "drei",
+        "plural": "dreien"
+      },
+      "genitive": {
+        "singular": "dreis",
+        "plural": "dreie"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 4
+    }
+  },
+  {
+    "id": "vier",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "vier",
+        "plural": "viere"
+      },
+      "accusative": {
+        "singular": "vier",
+        "plural": "viere"
+      },
+      "dative": {
+        "singular": "vier",
+        "plural": "vieren"
+      },
+      "genitive": {
+        "singular": "viers",
+        "plural": "viere"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 4
+    }
+  },
+  {
+    "id": "funf",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "fünf",
+        "plural": "fünfe"
+      },
+      "accusative": {
+        "singular": "fünf",
+        "plural": "fünfe"
+      },
+      "dative": {
+        "singular": "fünf",
+        "plural": "fünfen"
+      },
+      "genitive": {
+        "singular": "fünfs",
+        "plural": "fünfe"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 5
+    }
+  },
+  {
+    "id": "sechs",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "sechs",
+        "plural": "sechse"
+      },
+      "accusative": {
+        "singular": "sechs",
+        "plural": "sechse"
+      },
+      "dative": {
+        "singular": "sechs",
+        "plural": "sechsen"
+      },
+      "genitive": {
+        "singular": "sechss",
+        "plural": "sechse"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 5
+    }
+  },
+  {
+    "id": "sieben",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "sieben",
+        "plural": "siebene"
+      },
+      "accusative": {
+        "singular": "sieben",
+        "plural": "siebene"
+      },
+      "dative": {
+        "singular": "sieben",
+        "plural": "siebenen"
+      },
+      "genitive": {
+        "singular": "siebens",
+        "plural": "siebene"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 5
+    }
+  },
+  {
+    "id": "acht",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "acht",
+        "plural": "achte"
+      },
+      "accusative": {
+        "singular": "acht",
+        "plural": "achte"
+      },
+      "dative": {
+        "singular": "acht",
+        "plural": "achten"
+      },
+      "genitive": {
+        "singular": "achts",
+        "plural": "achte"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 5
+    }
+  },
+  {
+    "id": "neun",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "neun",
+        "plural": "neune"
+      },
+      "accusative": {
+        "singular": "neun",
+        "plural": "neune"
+      },
+      "dative": {
+        "singular": "neun",
+        "plural": "neunen"
+      },
+      "genitive": {
+        "singular": "neuns",
+        "plural": "neune"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 5
+    }
+  },
+  {
+    "id": "zehn",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "zehn",
+        "plural": "zehne"
+      },
+      "accusative": {
+        "singular": "zehn",
+        "plural": "zehne"
+      },
+      "dative": {
+        "singular": "zehn",
+        "plural": "zehnen"
+      },
+      "genitive": {
+        "singular": "zehns",
+        "plural": "zehne"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 5
+    }
+  },
+  {
+    "id": "elf",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "elf",
+        "plural": "elfe"
+      },
+      "accusative": {
+        "singular": "elf",
+        "plural": "elfe"
+      },
+      "dative": {
+        "singular": "elf",
+        "plural": "elfen"
+      },
+      "genitive": {
+        "singular": "elfs",
+        "plural": "elfe"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 5
+    }
+  },
+  {
+    "id": "zwoelf",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "zwölf",
+        "plural": "zwölfe"
+      },
+      "accusative": {
+        "singular": "zwölf",
+        "plural": "zwölfe"
+      },
+      "dative": {
+        "singular": "zwölf",
+        "plural": "zwölfen"
+      },
+      "genitive": {
+        "singular": "zwölfs",
+        "plural": "zwölfe"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 5
+    }
+  },
+  {
+    "id": "dreizehn",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "dreizehn",
+        "plural": "dreizehne"
+      },
+      "accusative": {
+        "singular": "dreizehn",
+        "plural": "dreizehne"
+      },
+      "dative": {
+        "singular": "dreizehn",
+        "plural": "dreizehnen"
+      },
+      "genitive": {
+        "singular": "dreizehns",
+        "plural": "dreizehne"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 5
+    }
+  },
+  {
+    "id": "zwanzig",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": {
+        "singular": "zwanzig",
+        "plural": "zwanzige"
+      },
+      "accusative": {
+        "singular": "zwanzig",
+        "plural": "zwanzige"
+      },
+      "dative": {
+        "singular": "zwanzig",
+        "plural": "zwanzigen"
+      },
+      "genitive": {
+        "singular": "zwanzigs",
+        "plural": "zwanzige"
+      }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14T01:55:10.233Z",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchId": 5
+    }
+  }
+]

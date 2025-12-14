@@ -1,0 +1,192 @@
+[
+  {
+    "id": "bahnhof",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "bahnhof",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Bahnhof",
+        "bulgarian": "Пример с Гара"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "flughafen",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "flughafen",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Flughafen",
+        "bulgarian": "Пример с Летище"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "hotel",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "hotel",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Hotel",
+        "bulgarian": "Пример с Хотел"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "stra_e",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "stra_e",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Straße",
+        "bulgarian": "Пример с Път"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "karte",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "karte",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Karte",
+        "bulgarian": "Пример с Карта"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "arzt",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "arzt",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Arzt",
+        "bulgarian": "Пример с Лекар"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "krankenhaus",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "krankenhaus",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Krankenhaus",
+        "bulgarian": "Пример с Болница"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "apotheke",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "apotheke",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Apotheke",
+        "bulgarian": "Пример с Аптека"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "medikamente",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "medikamente",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Medikamente",
+        "bulgarian": "Пример с Лекарства"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "notfall",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "notfall",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Notfall",
+        "bulgarian": "Пример с Спешно"
+      }
+    ],
+    "reason": "Add placeholder example"
+  }
+]

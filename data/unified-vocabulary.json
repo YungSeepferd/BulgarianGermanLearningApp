@@ -30,7 +30,7 @@
   ],
   "itemCount": 746,
   "createdAt": "2025-12-11T22:19:46.865Z",
-  "updatedAt": "2025-12-12T11:55:17.038Z",
+  "updatedAt": "2025-12-14T10:03:45.839Z",
   "version": 2,
   "items": [
     {
@@ -38,7 +38,7 @@
       "german": "zusammen",
       "bulgarian": "заедно",
       "partOfSpeech": "adverb",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -82,31 +82,71 @@
           }
         ],
         "categorizedAt": "2025-12-12T16:05:22.284Z",
-        "categorizedBy": "ai-agent-batch-001"
+        "categorizedBy": "ai-agent-batch-001",
+        "culturalNotes": "Standard masculine noun for adult male. Note the umlaut changes in plural.",
+        "mnemonics": "MANN = Masculine pronoun - 'Man' with two n's = strong, solid man"
       },
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Mann",
+            "plural": "Männer"
+          },
+          "accusative": {
+            "singular": "Mann",
+            "plural": "Männer"
+          },
+          "dative": {
+            "singular": "Mann",
+            "plural": "Männern"
+          },
+          "genitive": {
+            "singular": "Mannes",
+            "plural": "Männer"
+          }
+        }
+      },
+      "examples": [
+        {
+          "german": "Der Mann ist 35 Jahre alt.",
+          "bulgarian": "Мъжът е на 35 години.",
+          "context": "age_description",
+          "formality": "neutral",
+          "frequency": "very_common"
+        },
+        {
+          "german": "Mein Mann arbeitet als Ingenieur.",
+          "bulgarian": "Моят мъж работи като инженер.",
+          "context": "family",
+          "formality": "neutral",
+          "frequency": "common"
+        }
+      ]
     },
     {
       "id": "zdravej_001",
       "german": "Hallo",
       "bulgarian": "Здравей",
       "partOfSpeech": "interjection",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "greetings"
       ],
       "examples": [
         {
-          "german": "Hallo, wie geht's?",
+          "german": "Hallo, wie geht es dir?",
           "bulgarian": "Здравей, как си?",
-          "context": "informal",
-          "source": "legacy"
+          "context": "greeting",
+          "formality": "informal",
+          "frequency": "very_common"
         },
         {
-          "german": "Hallo, Schatz!",
-          "bulgarian": "Здравей, мило!",
-          "context": "intimate",
-          "source": "legacy"
+          "german": "Hallo zusammen!",
+          "bulgarian": "Здравей всички!",
+          "context": "group_greeting",
+          "formality": "informal",
+          "frequency": "common"
         }
       ],
       "notes": {
@@ -127,7 +167,9 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "culturalNotes": "Common casual greeting in German-speaking countries. Equivalent to 'Hi' in English.",
+        "mnemonics": "HALLO = 'Hey ALL Others' - a friendly greeting to everyone"
       },
       "enrichment": {
         "enriched": true,
@@ -153,16 +195,24 @@
       "german": "Guten Morgen",
       "bulgarian": "Добро утро",
       "partOfSpeech": "interjection",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "greetings"
       ],
       "examples": [
         {
-          "german": "Guten Morgen! Wie haben Sie geschlafen?",
-          "bulgarian": "Добро утро! Как спахте?",
-          "context": "formal",
-          "source": "legacy"
+          "german": "Ich arbeite im Büro.",
+          "bulgarian": "Аз работя в офиса.",
+          "context": "work_location",
+          "formality": "neutral",
+          "frequency": "very_common"
+        },
+        {
+          "german": "Sie arbeiten zusammen an einem Projekt.",
+          "bulgarian": "Те работят заедно на един проект.",
+          "context": "teamwork",
+          "formality": "neutral",
+          "frequency": "common"
         }
       ],
       "notes": {
@@ -181,7 +231,9 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "culturalNotes": "Regular verb (weak). Uses 'haben' as auxiliary in present perfect.",
+        "mnemonics": "ARBEITEN = ARB + EITEN = 'ar' sounds like work beginning"
       },
       "enrichment": {
         "enriched": true,
@@ -200,18 +252,55 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "conjugation": {
+          "presentIndicative": {
+            "ich": "arbeite",
+            "du": "arbeitest",
+            "erSieEs": "arbeitet",
+            "wir": "arbeiten",
+            "ihr": "arbeitet",
+            "sieSie": "arbeiten"
+          },
+          "simpleStPast": {
+            "ich": "arbeitete",
+            "du": "arbeitetest",
+            "erSieEs": "arbeitete",
+            "wir": "arbeiteten",
+            "ihr": "arbeitetet",
+            "sieSie": "arbeiteten"
+          },
+          "pastParticiple": "gearbeitet",
+          "presentParticiple": "arbeitend"
+        }
+      }
     },
     {
       "id": "guten_abend",
       "german": "Guten Abend",
       "bulgarian": "Добър вечер",
       "partOfSpeech": "interjection",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "greetings"
       ],
-      "examples": [],
+      "examples": [
+        {
+          "german": "Ich habe keine Zeit.",
+          "bulgarian": "Нямам време.",
+          "context": "lack_of_time",
+          "formality": "neutral",
+          "frequency": "very_common"
+        },
+        {
+          "german": "Die Zeit vergeht schnell.",
+          "bulgarian": "Времето минава бързо.",
+          "context": "passage_of_time",
+          "formality": "formal",
+          "frequency": "common"
+        }
+      ],
       "notes": {
         "forBulgarianSpeakers": "В немски 'Guten Abend' се казва след 18 ч. при първа среща вечер и показва уважение. При приятели можете да преминете на 'Hallo' след първото обръщение.",
         "forGermanSpeakers": "Wie 'Guten Abend'; eher bei Erstkontakt/Höflichkeit verwendet.",
@@ -228,7 +317,9 @@
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
-        "createdBy": "vocab-migration"
+        "createdBy": "vocab-migration",
+        "culturalNotes": "Feminine noun. Common expression: 'Es ist Zeit' (It's time). Important concept in German culture.",
+        "mnemonics": "ZEIT = German word for time; rhymes with German 'Weit' (wide/far)"
       },
       "enrichment": {
         "enriched": true,
@@ -247,14 +338,34 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Zeit",
+            "plural": "Zeiten"
+          },
+          "accusative": {
+            "singular": "Zeit",
+            "plural": "Zeiten"
+          },
+          "dative": {
+            "singular": "Zeit",
+            "plural": "Zeiten"
+          },
+          "genitive": {
+            "singular": "Zeit",
+            "plural": "Zeiten"
+          }
+        }
+      }
     },
     {
       "id": "gute_nacht",
       "german": "Gute Nacht",
       "bulgarian": "Лека нощ",
       "partOfSpeech": "interjection",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "greetings"
       ],
@@ -287,7 +398,7 @@
       "german": "Auf Wiedersehen",
       "bulgarian": "Довиждане",
       "partOfSpeech": "interjection",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "greetings"
       ],
@@ -319,8 +430,8 @@
       "id": "bitte",
       "german": "Bitte",
       "bulgarian": "Моля",
-      "partOfSpeech": "phrase",
-      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "difficulty": "A1",
       "categories": [
         "greetings",
         "everyday-phrases"
@@ -353,8 +464,8 @@
       "id": "danke",
       "german": "Danke",
       "bulgarian": "Благодаря",
-      "partOfSpeech": "phrase",
-      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "difficulty": "A1",
       "categories": [
         "greetings",
         "everyday-phrases"
@@ -387,8 +498,8 @@
       "id": "entschuldigung",
       "german": "Entschuldigung",
       "bulgarian": "Извинете",
-      "partOfSpeech": "phrase",
-      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "difficulty": "A1",
       "categories": [
         "greetings",
         "everyday-phrases"
@@ -421,8 +532,8 @@
       "id": "es_tut_mir_leid",
       "german": "Es tut mir leid",
       "bulgarian": "Съжалявам",
-      "partOfSpeech": "phrase",
-      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "difficulty": "A1",
       "categories": [
         "everyday-phrases"
       ],
@@ -455,7 +566,7 @@
       "german": "Mensch",
       "bulgarian": "Човек",
       "partOfSpeech": "noun",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "everyday-phrases"
       ],
@@ -483,14 +594,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Mensch",
+            "plural": "Mensche"
+          },
+          "accusative": {
+            "singular": "Mensch",
+            "plural": "Mensche"
+          },
+          "dative": {
+            "singular": "Mensch",
+            "plural": "Menschen"
+          },
+          "genitive": {
+            "singular": "Mensches",
+            "plural": "Mensche"
+          }
+        },
+        "gender": "m"
+      }
     },
     {
       "id": "familie",
       "german": "Familie",
       "bulgarian": "Семейство",
       "partOfSpeech": "noun",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "family"
       ],
@@ -516,14 +648,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Familie",
+            "plural": "Familien"
+          },
+          "accusative": {
+            "singular": "Familie",
+            "plural": "Familien"
+          },
+          "dative": {
+            "singular": "Familie",
+            "plural": "Familienn"
+          },
+          "genitive": {
+            "singular": "Familiees",
+            "plural": "Familien"
+          }
+        },
+        "gender": "f"
+      }
     },
     {
       "id": "haus",
       "german": "Haus",
       "bulgarian": "Къща",
       "partOfSpeech": "noun",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "home"
       ],
@@ -549,14 +702,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Haus",
+            "plural": "Hause"
+          },
+          "accusative": {
+            "singular": "Haus",
+            "plural": "Hause"
+          },
+          "dative": {
+            "singular": "Haus",
+            "plural": "Hausen"
+          },
+          "genitive": {
+            "singular": "Hauses",
+            "plural": "Hause"
+          }
+        },
+        "gender": "m"
+      }
     },
     {
       "id": "schule",
       "german": "Schule",
       "bulgarian": "Училище",
       "partOfSpeech": "noun",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "places"
       ],
@@ -582,14 +756,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Schule",
+            "plural": "Schulen"
+          },
+          "accusative": {
+            "singular": "Schule",
+            "plural": "Schulen"
+          },
+          "dative": {
+            "singular": "Schule",
+            "plural": "Schulenn"
+          },
+          "genitive": {
+            "singular": "Schulees",
+            "plural": "Schulen"
+          }
+        },
+        "gender": "f"
+      }
     },
     {
       "id": "stadt",
       "german": "Stadt",
       "bulgarian": "Град",
       "partOfSpeech": "noun",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "places"
       ],
@@ -615,14 +810,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Stadt",
+            "plural": "Stadte"
+          },
+          "accusative": {
+            "singular": "Stadt",
+            "plural": "Stadte"
+          },
+          "dative": {
+            "singular": "Stadt",
+            "plural": "Stadten"
+          },
+          "genitive": {
+            "singular": "Stadtes",
+            "plural": "Stadte"
+          }
+        },
+        "gender": "m"
+      }
     },
     {
       "id": "dorf",
       "german": "Dorf",
       "bulgarian": "Село",
       "partOfSpeech": "noun",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "nature",
         "places"
@@ -652,14 +868,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Dorf",
+            "plural": "Dorfe"
+          },
+          "accusative": {
+            "singular": "Dorf",
+            "plural": "Dorfe"
+          },
+          "dative": {
+            "singular": "Dorf",
+            "plural": "Dorfen"
+          },
+          "genitive": {
+            "singular": "Dorfes",
+            "plural": "Dorfe"
+          }
+        },
+        "gender": "m"
+      }
     },
     {
       "id": "essen",
       "german": "Essen",
       "bulgarian": "Храна",
       "partOfSpeech": "noun",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "food"
       ],
@@ -685,14 +922,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Essen",
+            "plural": "Essene"
+          },
+          "accusative": {
+            "singular": "Essen",
+            "plural": "Essene"
+          },
+          "dative": {
+            "singular": "Essen",
+            "plural": "Essenen"
+          },
+          "genitive": {
+            "singular": "Essenes",
+            "plural": "Essene"
+          }
+        },
+        "gender": "m"
+      }
     },
     {
       "id": "sein",
       "german": "sein",
       "bulgarian": "Съм",
       "partOfSpeech": "verb",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -727,7 +985,7 @@
       "german": "machen",
       "bulgarian": "Правя",
       "partOfSpeech": "verb",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -761,7 +1019,7 @@
       "german": "sprechen",
       "bulgarian": "Говоря",
       "partOfSpeech": "verb",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -795,7 +1053,7 @@
       "german": "hören",
       "bulgarian": "Чувам",
       "partOfSpeech": "verb",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -829,7 +1087,7 @@
       "german": "schön",
       "bulgarian": "Красив",
       "partOfSpeech": "adjective",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "everyday-phrases"
       ],
@@ -864,7 +1122,7 @@
       "german": "dann",
       "bulgarian": "Тогава",
       "partOfSpeech": "adverb",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "everyday-phrases"
       ],
@@ -898,7 +1156,7 @@
       "german": "selten",
       "bulgarian": "Редко",
       "partOfSpeech": "adverb",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "everyday-phrases"
       ],
@@ -932,7 +1190,7 @@
       "german": "schlecht",
       "bulgarian": "Зле",
       "partOfSpeech": "adverb",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "everyday-phrases"
       ],
@@ -966,7 +1224,7 @@
       "german": "Tisch",
       "bulgarian": "Маса",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "home"
       ],
@@ -992,14 +1250,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Tisch",
+            "plural": "Tische"
+          },
+          "accusative": {
+            "singular": "Tisch",
+            "plural": "Tische"
+          },
+          "dative": {
+            "singular": "Tisch",
+            "plural": "Tischen"
+          },
+          "genitive": {
+            "singular": "Tisches",
+            "plural": "Tische"
+          }
+        },
+        "gender": "m"
+      }
     },
     {
       "id": "stuhl",
       "german": "Stuhl",
       "bulgarian": "Стол",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "home"
       ],
@@ -1025,14 +1304,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Stuhl",
+            "plural": "Stuhle"
+          },
+          "accusative": {
+            "singular": "Stuhl",
+            "plural": "Stuhle"
+          },
+          "dative": {
+            "singular": "Stuhl",
+            "plural": "Stuhlen"
+          },
+          "genitive": {
+            "singular": "Stuhles",
+            "plural": "Stuhle"
+          }
+        },
+        "gender": "m"
+      }
     },
     {
       "id": "kuche",
       "german": "Küche",
       "bulgarian": "Кухня",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "food",
         "home"
@@ -1059,14 +1359,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Küche",
+            "plural": "Küchen"
+          },
+          "accusative": {
+            "singular": "Küche",
+            "plural": "Küchen"
+          },
+          "dative": {
+            "singular": "Küche",
+            "plural": "Küchenn"
+          },
+          "genitive": {
+            "singular": "Küchees",
+            "plural": "Küchen"
+          }
+        },
+        "gender": "f"
+      }
     },
     {
       "id": "wohnung",
       "german": "Wohnung",
       "bulgarian": "Апартамент",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "home"
       ],
@@ -1092,14 +1413,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Wohnung",
+            "plural": "Wohnungen"
+          },
+          "accusative": {
+            "singular": "Wohnung",
+            "plural": "Wohnungen"
+          },
+          "dative": {
+            "singular": "Wohnung",
+            "plural": "Wohnungenn"
+          },
+          "genitive": {
+            "singular": "Wohnunges",
+            "plural": "Wohnungen"
+          }
+        },
+        "gender": "f"
+      }
     },
     {
       "id": "auto",
       "german": "Auto",
       "bulgarian": "Автомобил",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "transport"
       ],
@@ -1126,14 +1468,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Auto",
+            "plural": "Autoe"
+          },
+          "accusative": {
+            "singular": "Auto",
+            "plural": "Autoe"
+          },
+          "dative": {
+            "singular": "Auto",
+            "plural": "Autoen"
+          },
+          "genitive": {
+            "singular": "Autoes",
+            "plural": "Autoe"
+          }
+        },
+        "gender": "m"
+      }
     },
     {
       "id": "laden",
       "german": "Laden",
       "bulgarian": "Магазин",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "places"
       ],
@@ -1159,14 +1522,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Laden",
+            "plural": "Ladene"
+          },
+          "accusative": {
+            "singular": "Laden",
+            "plural": "Ladene"
+          },
+          "dative": {
+            "singular": "Laden",
+            "plural": "Ladenen"
+          },
+          "genitive": {
+            "singular": "Ladenes",
+            "plural": "Ladene"
+          }
+        },
+        "gender": "m"
+      }
     },
     {
       "id": "garten",
       "german": "Garten",
       "bulgarian": "Градина",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "nature"
       ],
@@ -1192,14 +1576,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Garten",
+            "plural": "Gartene"
+          },
+          "accusative": {
+            "singular": "Garten",
+            "plural": "Gartene"
+          },
+          "dative": {
+            "singular": "Garten",
+            "plural": "Gartenen"
+          },
+          "genitive": {
+            "singular": "Gartenes",
+            "plural": "Gartene"
+          }
+        },
+        "gender": "m"
+      }
     },
     {
       "id": "uhr",
       "german": "Uhr",
       "bulgarian": "Часовник",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "time"
       ],
@@ -1225,14 +1630,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "Uhr",
+            "plural": "Uhre"
+          },
+          "accusative": {
+            "singular": "Uhr",
+            "plural": "Uhre"
+          },
+          "dative": {
+            "singular": "Uhr",
+            "plural": "Uhren"
+          },
+          "genitive": {
+            "singular": "Uhres",
+            "plural": "Uhre"
+          }
+        },
+        "gender": "m"
+      }
     },
     {
       "id": "fahren",
       "german": "fahren",
       "bulgarian": "Карам",
       "partOfSpeech": "verb",
-      "difficulty": 3,
+      "difficulty": "B1",
       "categories": [
         "transport"
       ],
@@ -1264,7 +1690,7 @@
       "german": "leben",
       "bulgarian": "Живея",
       "partOfSpeech": "verb",
-      "difficulty": 3,
+      "difficulty": "B1",
       "categories": [
         "everyday-phrases"
       ],
@@ -1298,7 +1724,7 @@
       "german": "lernen",
       "bulgarian": "Уча",
       "partOfSpeech": "verb",
-      "difficulty": 3,
+      "difficulty": "B1",
       "categories": [
         "everyday-phrases"
       ],
@@ -1331,8 +1757,8 @@
       "id": "eins",
       "german": "eins",
       "bulgarian": "Едно",
-      "partOfSpeech": "number",
-      "difficulty": 2,
+      "partOfSpeech": "noun",
+      "difficulty": "A2",
       "categories": [
         "numbers"
       ],
@@ -1357,14 +1783,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "eins",
+            "plural": "einse"
+          },
+          "accusative": {
+            "singular": "eins",
+            "plural": "einse"
+          },
+          "dative": {
+            "singular": "eins",
+            "plural": "einsen"
+          },
+          "genitive": {
+            "singular": "einss",
+            "plural": "einse"
+          }
+        },
+        "gender": "n"
+      }
     },
     {
       "id": "zwei",
       "german": "zwei",
       "bulgarian": "Две",
-      "partOfSpeech": "number",
-      "difficulty": 2,
+      "partOfSpeech": "noun",
+      "difficulty": "A2",
       "categories": [
         "numbers"
       ],
@@ -1389,14 +1836,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "zwei",
+            "plural": "zweie"
+          },
+          "accusative": {
+            "singular": "zwei",
+            "plural": "zweie"
+          },
+          "dative": {
+            "singular": "zwei",
+            "plural": "zweien"
+          },
+          "genitive": {
+            "singular": "zweis",
+            "plural": "zweie"
+          }
+        },
+        "gender": "n"
+      }
     },
     {
       "id": "drei",
       "german": "drei",
       "bulgarian": "Три",
-      "partOfSpeech": "number",
-      "difficulty": 2,
+      "partOfSpeech": "noun",
+      "difficulty": "A2",
       "categories": [
         "numbers"
       ],
@@ -1421,14 +1889,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "drei",
+            "plural": "dreie"
+          },
+          "accusative": {
+            "singular": "drei",
+            "plural": "dreie"
+          },
+          "dative": {
+            "singular": "drei",
+            "plural": "dreien"
+          },
+          "genitive": {
+            "singular": "dreis",
+            "plural": "dreie"
+          }
+        },
+        "gender": "n"
+      }
     },
     {
       "id": "vier",
       "german": "vier",
       "bulgarian": "Четири",
-      "partOfSpeech": "number",
-      "difficulty": 2,
+      "partOfSpeech": "noun",
+      "difficulty": "A2",
       "categories": [
         "numbers"
       ],
@@ -1453,14 +1942,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "vier",
+            "plural": "viere"
+          },
+          "accusative": {
+            "singular": "vier",
+            "plural": "viere"
+          },
+          "dative": {
+            "singular": "vier",
+            "plural": "vieren"
+          },
+          "genitive": {
+            "singular": "viers",
+            "plural": "viere"
+          }
+        },
+        "gender": "n"
+      }
     },
     {
       "id": "funf",
       "german": "fünf",
       "bulgarian": "Пет",
-      "partOfSpeech": "number",
-      "difficulty": 2,
+      "partOfSpeech": "noun",
+      "difficulty": "A2",
       "categories": [
         "numbers"
       ],
@@ -1485,14 +1995,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "fünf",
+            "plural": "fünfe"
+          },
+          "accusative": {
+            "singular": "fünf",
+            "plural": "fünfe"
+          },
+          "dative": {
+            "singular": "fünf",
+            "plural": "fünfen"
+          },
+          "genitive": {
+            "singular": "fünfs",
+            "plural": "fünfe"
+          }
+        },
+        "gender": "n"
+      }
     },
     {
       "id": "sechs",
       "german": "sechs",
       "bulgarian": "Шест",
-      "partOfSpeech": "number",
-      "difficulty": 2,
+      "partOfSpeech": "noun",
+      "difficulty": "A2",
       "categories": [
         "numbers"
       ],
@@ -1517,14 +2048,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "sechs",
+            "plural": "sechse"
+          },
+          "accusative": {
+            "singular": "sechs",
+            "plural": "sechse"
+          },
+          "dative": {
+            "singular": "sechs",
+            "plural": "sechsen"
+          },
+          "genitive": {
+            "singular": "sechss",
+            "plural": "sechse"
+          }
+        },
+        "gender": "n"
+      }
     },
     {
       "id": "sieben",
       "german": "sieben",
       "bulgarian": "Седем",
-      "partOfSpeech": "number",
-      "difficulty": 2,
+      "partOfSpeech": "noun",
+      "difficulty": "A2",
       "categories": [
         "numbers"
       ],
@@ -1549,14 +2101,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "sieben",
+            "plural": "siebene"
+          },
+          "accusative": {
+            "singular": "sieben",
+            "plural": "siebene"
+          },
+          "dative": {
+            "singular": "sieben",
+            "plural": "siebenen"
+          },
+          "genitive": {
+            "singular": "siebens",
+            "plural": "siebene"
+          }
+        },
+        "gender": "n"
+      }
     },
     {
       "id": "acht",
       "german": "acht",
       "bulgarian": "Осем",
-      "partOfSpeech": "number",
-      "difficulty": 2,
+      "partOfSpeech": "noun",
+      "difficulty": "A2",
       "categories": [
         "numbers"
       ],
@@ -1581,14 +2154,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "acht",
+            "plural": "achte"
+          },
+          "accusative": {
+            "singular": "acht",
+            "plural": "achte"
+          },
+          "dative": {
+            "singular": "acht",
+            "plural": "achten"
+          },
+          "genitive": {
+            "singular": "achts",
+            "plural": "achte"
+          }
+        },
+        "gender": "n"
+      }
     },
     {
       "id": "neun",
       "german": "neun",
       "bulgarian": "Девет",
-      "partOfSpeech": "number",
-      "difficulty": 2,
+      "partOfSpeech": "noun",
+      "difficulty": "A2",
       "categories": [
         "numbers"
       ],
@@ -1613,14 +2207,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "neun",
+            "plural": "neune"
+          },
+          "accusative": {
+            "singular": "neun",
+            "plural": "neune"
+          },
+          "dative": {
+            "singular": "neun",
+            "plural": "neunen"
+          },
+          "genitive": {
+            "singular": "neuns",
+            "plural": "neune"
+          }
+        },
+        "gender": "n"
+      }
     },
     {
       "id": "zehn",
       "german": "zehn",
       "bulgarian": "Десет",
-      "partOfSpeech": "number",
-      "difficulty": 2,
+      "partOfSpeech": "noun",
+      "difficulty": "A2",
       "categories": [
         "numbers"
       ],
@@ -1647,14 +2262,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "zehn",
+            "plural": "zehne"
+          },
+          "accusative": {
+            "singular": "zehn",
+            "plural": "zehne"
+          },
+          "dative": {
+            "singular": "zehn",
+            "plural": "zehnen"
+          },
+          "genitive": {
+            "singular": "zehns",
+            "plural": "zehne"
+          }
+        },
+        "gender": "n"
+      }
     },
     {
       "id": "elf",
       "german": "elf",
       "bulgarian": "Единадесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -1687,14 +2323,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "elf",
+            "plural": "elfe"
+          },
+          "accusative": {
+            "singular": "elf",
+            "plural": "elfe"
+          },
+          "dative": {
+            "singular": "elf",
+            "plural": "elfen"
+          },
+          "genitive": {
+            "singular": "elfs",
+            "plural": "elfe"
+          }
+        },
+        "gender": "n"
+      }
     },
     {
       "id": "zwoelf",
       "german": "zwölf",
       "bulgarian": "Дванадесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -1727,14 +2384,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "zwölf",
+            "plural": "zwölfe"
+          },
+          "accusative": {
+            "singular": "zwölf",
+            "plural": "zwölfe"
+          },
+          "dative": {
+            "singular": "zwölf",
+            "plural": "zwölfen"
+          },
+          "genitive": {
+            "singular": "zwölfs",
+            "plural": "zwölfe"
+          }
+        },
+        "gender": "n"
+      }
     },
     {
       "id": "dreizehn",
       "german": "dreizehn",
       "bulgarian": "Тринадесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -1769,14 +2447,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "dreizehn",
+            "plural": "dreizehne"
+          },
+          "accusative": {
+            "singular": "dreizehn",
+            "plural": "dreizehne"
+          },
+          "dative": {
+            "singular": "dreizehn",
+            "plural": "dreizehnen"
+          },
+          "genitive": {
+            "singular": "dreizehns",
+            "plural": "dreizehne"
+          }
+        },
+        "gender": "n"
+      }
     },
     {
       "id": "zwanzig",
       "german": "zwanzig",
       "bulgarian": "Двадесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -1809,14 +2508,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "declension": {
+          "nominative": {
+            "singular": "zwanzig",
+            "plural": "zwanzige"
+          },
+          "accusative": {
+            "singular": "zwanzig",
+            "plural": "zwanzige"
+          },
+          "dative": {
+            "singular": "zwanzig",
+            "plural": "zwanzigen"
+          },
+          "genitive": {
+            "singular": "zwanzigs",
+            "plural": "zwanzige"
+          }
+        },
+        "gender": "n"
+      }
     },
     {
       "id": "viele",
       "german": "viele",
       "bulgarian": "Много",
       "partOfSpeech": "adjective",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -1850,7 +2570,7 @@
       "german": "wenig",
       "bulgarian": "Малко",
       "partOfSpeech": "adjective",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -1884,7 +2604,7 @@
       "german": "alle",
       "bulgarian": "Всички",
       "partOfSpeech": "adjective",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -1918,7 +2638,7 @@
       "german": "einige",
       "bulgarian": "Няколко",
       "partOfSpeech": "adjective",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "numbers"
       ],
@@ -1950,7 +2670,7 @@
       "german": "keiner",
       "bulgarian": "Никой",
       "partOfSpeech": "adjective",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -1983,8 +2703,8 @@
       "id": "samstag",
       "german": "Samstag",
       "bulgarian": "Събота",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "time"
       ],
@@ -2015,8 +2735,8 @@
       "id": "stunde",
       "german": "Stunde",
       "bulgarian": "Час",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "time"
       ],
@@ -2047,8 +2767,8 @@
       "id": "minute",
       "german": "Minute",
       "bulgarian": "Минута",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "time"
       ],
@@ -2079,8 +2799,8 @@
       "id": "morgen",
       "german": "Morgen",
       "bulgarian": "Сутрин",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "time"
       ],
@@ -2111,8 +2831,8 @@
       "id": "mittag",
       "german": "Mittag",
       "bulgarian": "Обед",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "time"
       ],
@@ -2143,8 +2863,8 @@
       "id": "nachmittag",
       "german": "Nachmittag",
       "bulgarian": "Следобед",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "time"
       ],
@@ -2175,8 +2895,8 @@
       "id": "abend",
       "german": "Abend",
       "bulgarian": "Вечер",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "time"
       ],
@@ -2207,8 +2927,8 @@
       "id": "nacht",
       "german": "Nacht",
       "bulgarian": "Нощ",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "time"
       ],
@@ -2240,8 +2960,8 @@
       "id": "wie_geht_s",
       "german": "Wie geht's?",
       "bulgarian": "Как си?",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -2272,8 +2992,8 @@
       "id": "mir_geht_s_gut",
       "german": "Mir geht's gut",
       "bulgarian": "Добре съм",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -2304,8 +3024,8 @@
       "id": "entschuldige",
       "german": "Entschuldige",
       "bulgarian": "Извинявай",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -2338,8 +3058,8 @@
       "id": "darf_ich",
       "german": "Darf ich?",
       "bulgarian": "Може ли?",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -2371,7 +3091,7 @@
       "german": "Brot",
       "bulgarian": "Хляб",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "food"
       ],
@@ -2396,14 +3116,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "m",
+        "declension": {
+          "nominative": {
+            "singular": "Brot",
+            "plural": "Brote"
+          },
+          "accusative": {
+            "singular": "Brot",
+            "plural": "Brote"
+          },
+          "dative": {
+            "singular": "Brot",
+            "plural": "Broten"
+          },
+          "genitive": {
+            "singular": "Brotes",
+            "plural": "Brote"
+          }
+        }
+      }
     },
     {
       "id": "milch",
       "german": "Milch",
       "bulgarian": "Мляко",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "food"
       ],
@@ -2428,14 +3169,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "f",
+        "declension": {
+          "nominative": {
+            "singular": "Milch",
+            "plural": "Milchen"
+          },
+          "accusative": {
+            "singular": "Milch",
+            "plural": "Milchen"
+          },
+          "dative": {
+            "singular": "Milch",
+            "plural": "Milchenn"
+          },
+          "genitive": {
+            "singular": "Milches",
+            "plural": "Milchen"
+          }
+        }
+      }
     },
     {
       "id": "kase",
       "german": "Käse",
       "bulgarian": "Сирене",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "food"
       ],
@@ -2460,14 +3222,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "m",
+        "declension": {
+          "nominative": {
+            "singular": "Käse",
+            "plural": "Käsen"
+          },
+          "accusative": {
+            "singular": "Käse",
+            "plural": "Käsen"
+          },
+          "dative": {
+            "singular": "Käse",
+            "plural": "Käsenn"
+          },
+          "genitive": {
+            "singular": "Käsees",
+            "plural": "Käsen"
+          }
+        }
+      }
     },
     {
       "id": "fleisch",
       "german": "Fleisch",
       "bulgarian": "Месо",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "food"
       ],
@@ -2492,14 +3275,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "n",
+        "declension": {
+          "nominative": {
+            "singular": "Fleisch",
+            "plural": "Fleische"
+          },
+          "accusative": {
+            "singular": "Fleisch",
+            "plural": "Fleische"
+          },
+          "dative": {
+            "singular": "Fleisch",
+            "plural": "Fleischen"
+          },
+          "genitive": {
+            "singular": "Fleischs",
+            "plural": "Fleische"
+          }
+        }
+      }
     },
     {
       "id": "fisch",
       "german": "Fisch",
       "bulgarian": "Риба",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "food"
       ],
@@ -2524,14 +3328,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "m",
+        "declension": {
+          "nominative": {
+            "singular": "Fisch",
+            "plural": "Fische"
+          },
+          "accusative": {
+            "singular": "Fisch",
+            "plural": "Fische"
+          },
+          "dative": {
+            "singular": "Fisch",
+            "plural": "Fischen"
+          },
+          "genitive": {
+            "singular": "Fisches",
+            "plural": "Fische"
+          }
+        }
+      }
     },
     {
       "id": "gemuse",
       "german": "Gemüse",
       "bulgarian": "Зеленчуци",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "food"
       ],
@@ -2556,14 +3381,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "n",
+        "declension": {
+          "nominative": {
+            "singular": "Gemüse",
+            "plural": "Gemüsee"
+          },
+          "accusative": {
+            "singular": "Gemüse",
+            "plural": "Gemüsee"
+          },
+          "dative": {
+            "singular": "Gemüse",
+            "plural": "Gemüseen"
+          },
+          "genitive": {
+            "singular": "Gemüses",
+            "plural": "Gemüsee"
+          }
+        }
+      }
     },
     {
       "id": "obst",
       "german": "Obst",
       "bulgarian": "Плодове",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "food"
       ],
@@ -2588,14 +3434,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "n",
+        "declension": {
+          "nominative": {
+            "singular": "Obst",
+            "plural": "Obste"
+          },
+          "accusative": {
+            "singular": "Obst",
+            "plural": "Obste"
+          },
+          "dative": {
+            "singular": "Obst",
+            "plural": "Obsten"
+          },
+          "genitive": {
+            "singular": "Obsts",
+            "plural": "Obste"
+          }
+        }
+      }
     },
     {
       "id": "saft",
       "german": "Saft",
       "bulgarian": "Сок",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "food"
       ],
@@ -2620,14 +3487,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "m",
+        "declension": {
+          "nominative": {
+            "singular": "Saft",
+            "plural": "Safte"
+          },
+          "accusative": {
+            "singular": "Saft",
+            "plural": "Safte"
+          },
+          "dative": {
+            "singular": "Saft",
+            "plural": "Saften"
+          },
+          "genitive": {
+            "singular": "Saftes",
+            "plural": "Safte"
+          }
+        }
+      }
     },
     {
       "id": "kaffee",
       "german": "Kaffee",
       "bulgarian": "Кафе",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "food"
       ],
@@ -2652,14 +3540,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "m",
+        "declension": {
+          "nominative": {
+            "singular": "Kaffee",
+            "plural": "Kaffeen"
+          },
+          "accusative": {
+            "singular": "Kaffee",
+            "plural": "Kaffeen"
+          },
+          "dative": {
+            "singular": "Kaffee",
+            "plural": "Kaffeenn"
+          },
+          "genitive": {
+            "singular": "Kaffeees",
+            "plural": "Kaffeen"
+          }
+        }
+      }
     },
     {
       "id": "bus",
       "german": "Bus",
       "bulgarian": "Автобус",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "transport"
       ],
@@ -2684,14 +3593,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "m",
+        "declension": {
+          "nominative": {
+            "singular": "Bus",
+            "plural": "Buse"
+          },
+          "accusative": {
+            "singular": "Bus",
+            "plural": "Buse"
+          },
+          "dative": {
+            "singular": "Bus",
+            "plural": "Busen"
+          },
+          "genitive": {
+            "singular": "Buses",
+            "plural": "Buse"
+          }
+        }
+      }
     },
     {
       "id": "zug",
       "german": "Zug",
       "bulgarian": "Влак",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "transport"
       ],
@@ -2716,14 +3646,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "m",
+        "declension": {
+          "nominative": {
+            "singular": "Zug",
+            "plural": "Zuge"
+          },
+          "accusative": {
+            "singular": "Zug",
+            "plural": "Zuge"
+          },
+          "dative": {
+            "singular": "Zug",
+            "plural": "Zugen"
+          },
+          "genitive": {
+            "singular": "Zuges",
+            "plural": "Zuge"
+          }
+        }
+      }
     },
     {
       "id": "flugzeug",
       "german": "Flugzeug",
       "bulgarian": "Самолет",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "transport"
       ],
@@ -2748,14 +3699,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "n",
+        "declension": {
+          "nominative": {
+            "singular": "Flugzeug",
+            "plural": "Flugzeuge"
+          },
+          "accusative": {
+            "singular": "Flugzeug",
+            "plural": "Flugzeuge"
+          },
+          "dative": {
+            "singular": "Flugzeug",
+            "plural": "Flugzeugen"
+          },
+          "genitive": {
+            "singular": "Flugzeugs",
+            "plural": "Flugzeuge"
+          }
+        }
+      }
     },
     {
       "id": "taxi",
       "german": "Taxi",
       "bulgarian": "Такси",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "transport"
       ],
@@ -2780,14 +3752,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "n",
+        "declension": {
+          "nominative": {
+            "singular": "Taxi",
+            "plural": "Taxie"
+          },
+          "accusative": {
+            "singular": "Taxi",
+            "plural": "Taxie"
+          },
+          "dative": {
+            "singular": "Taxi",
+            "plural": "Taxien"
+          },
+          "genitive": {
+            "singular": "Taxis",
+            "plural": "Taxie"
+          }
+        }
+      }
     },
     {
       "id": "bahnhof",
       "german": "Bahnhof",
       "bulgarian": "Гара",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "transport"
       ],
@@ -2812,14 +3805,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "m",
+        "declension": {
+          "nominative": {
+            "singular": "Bahnhof",
+            "plural": "Bahnhofe"
+          },
+          "accusative": {
+            "singular": "Bahnhof",
+            "plural": "Bahnhofe"
+          },
+          "dative": {
+            "singular": "Bahnhof",
+            "plural": "Bahnhofen"
+          },
+          "genitive": {
+            "singular": "Bahnhofes",
+            "plural": "Bahnhofe"
+          }
+        }
+      }
     },
     {
       "id": "flughafen",
       "german": "Flughafen",
       "bulgarian": "Летище",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "transport"
       ],
@@ -2844,14 +3858,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "m",
+        "declension": {
+          "nominative": {
+            "singular": "Flughafen",
+            "plural": "Flughafene"
+          },
+          "accusative": {
+            "singular": "Flughafen",
+            "plural": "Flughafene"
+          },
+          "dative": {
+            "singular": "Flughafen",
+            "plural": "Flughafenen"
+          },
+          "genitive": {
+            "singular": "Flughafenes",
+            "plural": "Flughafene"
+          }
+        }
+      }
     },
     {
       "id": "hotel",
       "german": "Hotel",
       "bulgarian": "Хотел",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "transport"
       ],
@@ -2876,14 +3911,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "n",
+        "declension": {
+          "nominative": {
+            "singular": "Hotel",
+            "plural": "Hotele"
+          },
+          "accusative": {
+            "singular": "Hotel",
+            "plural": "Hotele"
+          },
+          "dative": {
+            "singular": "Hotel",
+            "plural": "Hotelen"
+          },
+          "genitive": {
+            "singular": "Hotels",
+            "plural": "Hotele"
+          }
+        }
+      }
     },
     {
       "id": "stra_e",
       "german": "Straße",
       "bulgarian": "Път",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "transport"
       ],
@@ -2908,14 +3964,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "f",
+        "declension": {
+          "nominative": {
+            "singular": "Straße",
+            "plural": "Straßen"
+          },
+          "accusative": {
+            "singular": "Straße",
+            "plural": "Straßen"
+          },
+          "dative": {
+            "singular": "Straße",
+            "plural": "Straßenn"
+          },
+          "genitive": {
+            "singular": "Straßees",
+            "plural": "Straßen"
+          }
+        }
+      }
     },
     {
       "id": "karte",
       "german": "Karte",
       "bulgarian": "Карта",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "transport"
       ],
@@ -2940,14 +4017,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "f",
+        "declension": {
+          "nominative": {
+            "singular": "Karte",
+            "plural": "Karten"
+          },
+          "accusative": {
+            "singular": "Karte",
+            "plural": "Karten"
+          },
+          "dative": {
+            "singular": "Karte",
+            "plural": "Kartenn"
+          },
+          "genitive": {
+            "singular": "Kartees",
+            "plural": "Karten"
+          }
+        }
+      }
     },
     {
       "id": "arzt",
       "german": "Arzt",
       "bulgarian": "Лекар",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "professions"
       ],
@@ -2974,14 +4072,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "m",
+        "declension": {
+          "nominative": {
+            "singular": "Arzt",
+            "plural": "Arzte"
+          },
+          "accusative": {
+            "singular": "Arzt",
+            "plural": "Arzte"
+          },
+          "dative": {
+            "singular": "Arzt",
+            "plural": "Arzten"
+          },
+          "genitive": {
+            "singular": "Arztes",
+            "plural": "Arzte"
+          }
+        }
+      }
     },
     {
       "id": "krankenhaus",
       "german": "Krankenhaus",
       "bulgarian": "Болница",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "places"
       ],
@@ -3009,14 +4128,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "n",
+        "declension": {
+          "nominative": {
+            "singular": "Krankenhaus",
+            "plural": "Krankenhause"
+          },
+          "accusative": {
+            "singular": "Krankenhaus",
+            "plural": "Krankenhause"
+          },
+          "dative": {
+            "singular": "Krankenhaus",
+            "plural": "Krankenhausen"
+          },
+          "genitive": {
+            "singular": "Krankenhauss",
+            "plural": "Krankenhause"
+          }
+        }
+      }
     },
     {
       "id": "apotheke",
       "german": "Apotheke",
       "bulgarian": "Аптека",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -3043,14 +4183,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "f",
+        "declension": {
+          "nominative": {
+            "singular": "Apotheke",
+            "plural": "Apotheken"
+          },
+          "accusative": {
+            "singular": "Apotheke",
+            "plural": "Apotheken"
+          },
+          "dative": {
+            "singular": "Apotheke",
+            "plural": "Apothekenn"
+          },
+          "genitive": {
+            "singular": "Apothekees",
+            "plural": "Apotheken"
+          }
+        }
+      }
     },
     {
       "id": "medikamente",
       "german": "Medikamente",
       "bulgarian": "Лекарства",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -3077,14 +4238,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "f",
+        "declension": {
+          "nominative": {
+            "singular": "Medikamente",
+            "plural": "Medikamenten"
+          },
+          "accusative": {
+            "singular": "Medikamente",
+            "plural": "Medikamenten"
+          },
+          "dative": {
+            "singular": "Medikamente",
+            "plural": "Medikamentenn"
+          },
+          "genitive": {
+            "singular": "Medikamentees",
+            "plural": "Medikamenten"
+          }
+        }
+      }
     },
     {
       "id": "notfall",
       "german": "Notfall",
       "bulgarian": "Спешно",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -3111,14 +4293,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "m",
+        "declension": {
+          "nominative": {
+            "singular": "Notfall",
+            "plural": "Notfalle"
+          },
+          "accusative": {
+            "singular": "Notfall",
+            "plural": "Notfalle"
+          },
+          "dative": {
+            "singular": "Notfall",
+            "plural": "Notfallen"
+          },
+          "genitive": {
+            "singular": "Notfalles",
+            "plural": "Notfalle"
+          }
+        }
+      }
     },
     {
       "id": "schmerz",
       "german": "Schmerz",
       "bulgarian": "Болка",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -3145,14 +4348,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "m",
+        "declension": {
+          "nominative": {
+            "singular": "Schmerz",
+            "plural": "Schmerze"
+          },
+          "accusative": {
+            "singular": "Schmerz",
+            "plural": "Schmerze"
+          },
+          "dative": {
+            "singular": "Schmerz",
+            "plural": "Schmerzen"
+          },
+          "genitive": {
+            "singular": "Schmerzes",
+            "plural": "Schmerze"
+          }
+        }
+      }
     },
     {
       "id": "gesundheit",
       "german": "Gesundheit",
       "bulgarian": "Здраве",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -3179,14 +4403,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "f",
+        "declension": {
+          "nominative": {
+            "singular": "Gesundheit",
+            "plural": "Gesundheiten"
+          },
+          "accusative": {
+            "singular": "Gesundheit",
+            "plural": "Gesundheiten"
+          },
+          "dative": {
+            "singular": "Gesundheit",
+            "plural": "Gesundheitenn"
+          },
+          "genitive": {
+            "singular": "Gesundheites",
+            "plural": "Gesundheiten"
+          }
+        }
+      }
     },
     {
       "id": "fieber",
       "german": "Fieber",
       "bulgarian": "Треска",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -3213,14 +4458,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "n",
+        "declension": {
+          "nominative": {
+            "singular": "Fieber",
+            "plural": "Fiebere"
+          },
+          "accusative": {
+            "singular": "Fieber",
+            "plural": "Fiebere"
+          },
+          "dative": {
+            "singular": "Fieber",
+            "plural": "Fieberen"
+          },
+          "genitive": {
+            "singular": "Fiebers",
+            "plural": "Fiebere"
+          }
+        }
+      }
     },
     {
       "id": "erkaltung",
       "german": "Erkältung",
       "bulgarian": "Настинка",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -3247,14 +4513,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "f",
+        "declension": {
+          "nominative": {
+            "singular": "Erkältung",
+            "plural": "Erkältungen"
+          },
+          "accusative": {
+            "singular": "Erkältung",
+            "plural": "Erkältungen"
+          },
+          "dative": {
+            "singular": "Erkältung",
+            "plural": "Erkältungenn"
+          },
+          "genitive": {
+            "singular": "Erkältunges",
+            "plural": "Erkältungen"
+          }
+        }
+      }
     },
     {
       "id": "hilfe",
       "german": "Hilfe",
       "bulgarian": "Помощ",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "greetings"
       ],
@@ -3281,14 +4568,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "f",
+        "declension": {
+          "nominative": {
+            "singular": "Hilfe",
+            "plural": "Hilfen"
+          },
+          "accusative": {
+            "singular": "Hilfe",
+            "plural": "Hilfen"
+          },
+          "dative": {
+            "singular": "Hilfe",
+            "plural": "Hilfenn"
+          },
+          "genitive": {
+            "singular": "Hilfees",
+            "plural": "Hilfen"
+          }
+        }
+      }
     },
     {
       "id": "sonne",
       "german": "Sonne",
       "bulgarian": "Слънце",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "nature"
       ],
@@ -3313,14 +4621,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "f",
+        "declension": {
+          "nominative": {
+            "singular": "Sonne",
+            "plural": "Sonnen"
+          },
+          "accusative": {
+            "singular": "Sonne",
+            "plural": "Sonnen"
+          },
+          "dative": {
+            "singular": "Sonne",
+            "plural": "Sonnenn"
+          },
+          "genitive": {
+            "singular": "Sonnees",
+            "plural": "Sonnen"
+          }
+        }
+      }
     },
     {
       "id": "regen",
       "german": "Regen",
       "bulgarian": "Дъжд",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "nature"
       ],
@@ -3345,14 +4674,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "m",
+        "declension": {
+          "nominative": {
+            "singular": "Regen",
+            "plural": "Regene"
+          },
+          "accusative": {
+            "singular": "Regen",
+            "plural": "Regene"
+          },
+          "dative": {
+            "singular": "Regen",
+            "plural": "Regenen"
+          },
+          "genitive": {
+            "singular": "Regenes",
+            "plural": "Regene"
+          }
+        }
+      }
     },
     {
       "id": "schnee",
       "german": "Schnee",
       "bulgarian": "Сняг",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "nature"
       ],
@@ -3377,14 +4727,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "m",
+        "declension": {
+          "nominative": {
+            "singular": "Schnee",
+            "plural": "Schneen"
+          },
+          "accusative": {
+            "singular": "Schnee",
+            "plural": "Schneen"
+          },
+          "dative": {
+            "singular": "Schnee",
+            "plural": "Schneenn"
+          },
+          "genitive": {
+            "singular": "Schneees",
+            "plural": "Schneen"
+          }
+        }
+      }
     },
     {
       "id": "wind",
       "german": "Wind",
       "bulgarian": "Вятър",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "nature"
       ],
@@ -3409,14 +4780,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "gender": "m",
+        "declension": {
+          "nominative": {
+            "singular": "Wind",
+            "plural": "Winde"
+          },
+          "accusative": {
+            "singular": "Wind",
+            "plural": "Winde"
+          },
+          "dative": {
+            "singular": "Wind",
+            "plural": "Winden"
+          },
+          "genitive": {
+            "singular": "Windes",
+            "plural": "Winde"
+          }
+        }
+      }
     },
     {
       "id": "temperatur",
       "german": "Temperatur",
       "bulgarian": "Температура",
       "partOfSpeech": "noun",
-      "difficulty": 3,
+      "difficulty": "B1",
       "categories": [
         "nature"
       ],
@@ -3441,14 +4833,35 @@
       "createdAt": "2025-12-11T22:19:46.850Z",
       "updatedAt": "2025-12-11T22:19:46.850Z",
       "version": 1,
-      "cefrLevel": "B1"
+      "cefrLevel": "B1",
+      "grammar": {
+        "gender": "f",
+        "declension": {
+          "nominative": {
+            "singular": "Temperatur",
+            "plural": "Temperaturen"
+          },
+          "accusative": {
+            "singular": "Temperatur",
+            "plural": "Temperaturen"
+          },
+          "dative": {
+            "singular": "Temperatur",
+            "plural": "Temperaturenn"
+          },
+          "genitive": {
+            "singular": "Temperatures",
+            "plural": "Temperaturen"
+          }
+        }
+      }
     },
     {
       "id": "wolken",
       "german": "Wolken",
       "bulgarian": "Облаци",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "nature"
       ],
@@ -3480,7 +4893,7 @@
       "german": "Wald",
       "bulgarian": "Гора",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "nature"
       ],
@@ -3512,7 +4925,7 @@
       "german": "Fluss",
       "bulgarian": "Река",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "nature"
       ],
@@ -3544,7 +4957,7 @@
       "german": "Berg",
       "bulgarian": "Планина",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "nature"
       ],
@@ -3576,7 +4989,7 @@
       "german": "Meer",
       "bulgarian": "Море",
       "partOfSpeech": "noun",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "nature"
       ],
@@ -3608,8 +5021,8 @@
       "id": "mutter",
       "german": "Mutter",
       "bulgarian": "Майка",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "family"
       ],
@@ -3641,8 +5054,8 @@
       "id": "vater",
       "german": "Vater",
       "bulgarian": "Баща",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "family"
       ],
@@ -3674,8 +5087,8 @@
       "id": "bruder",
       "german": "Bruder",
       "bulgarian": "Брат",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "family"
       ],
@@ -3706,8 +5119,8 @@
       "id": "schwester",
       "german": "Schwester",
       "bulgarian": "Сестра",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "family"
       ],
@@ -3738,8 +5151,8 @@
       "id": "ehemann",
       "german": "Ehemann",
       "bulgarian": "Съпруг",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "family"
       ],
@@ -3770,8 +5183,8 @@
       "id": "ehefrau",
       "german": "Ehefrau",
       "bulgarian": "Съпруга",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "family"
       ],
@@ -3802,8 +5215,8 @@
       "id": "kind",
       "german": "Kind",
       "bulgarian": "Дете",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "family"
       ],
@@ -3834,8 +5247,8 @@
       "id": "freund",
       "german": "Freund",
       "bulgarian": "Приятел",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "family"
       ],
@@ -3866,8 +5279,8 @@
       "id": "freundin",
       "german": "Freundin",
       "bulgarian": "Приятелка",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "family"
       ],
@@ -3898,8 +5311,8 @@
       "id": "geld",
       "german": "Geld",
       "bulgarian": "Пари",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -3932,8 +5345,8 @@
       "id": "preis",
       "german": "Preis",
       "bulgarian": "Цена",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -3966,8 +5379,8 @@
       "id": "euro",
       "german": "Euro",
       "bulgarian": "Евро",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -4000,8 +5413,8 @@
       "id": "lew",
       "german": "Lew",
       "bulgarian": "Лев",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -4035,8 +5448,8 @@
       "id": "rechnung",
       "german": "Rechnung",
       "bulgarian": "Сметка",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -4069,8 +5482,8 @@
       "id": "quittung",
       "german": "Quittung",
       "bulgarian": "Касова бележка",
-      "partOfSpeech": "phrase",
-      "difficulty": 3,
+      "partOfSpeech": "interjection",
+      "difficulty": "B1",
       "categories": [
         "everyday-phrases"
       ],
@@ -4103,8 +5516,8 @@
       "id": "rabatt",
       "german": "Rabatt",
       "bulgarian": "Отстъпка",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "everyday-phrases"
       ],
@@ -4138,7 +5551,7 @@
       "german": "einkaufen",
       "bulgarian": "Пазарувам",
       "partOfSpeech": "verb",
-      "difficulty": 3,
+      "difficulty": "B1",
       "categories": [
         "numbers"
       ],
@@ -4170,7 +5583,7 @@
       "german": "zusammen",
       "bulgarian": "заедно",
       "partOfSpeech": "adverb",
-      "difficulty": 1,
+      "difficulty": "A1",
       "categories": [
         "everyday-phrases"
       ],
@@ -4219,7 +5632,7 @@
       "german": "Guten Tag",
       "bulgarian": "Добър ден",
       "partOfSpeech": "interjection",
-      "difficulty": 2,
+      "difficulty": "A2",
       "categories": [
         "greetings"
       ],
@@ -4256,8 +5669,8 @@
       "id": "dom_003",
       "german": "Haus",
       "bulgarian": "дом",
-      "partOfSpeech": "phrase",
-      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "difficulty": "A1",
       "categories": [
         "home"
       ],
@@ -4300,8 +5713,8 @@
       "id": "rabota_005",
       "german": "Arbeit",
       "bulgarian": "работа",
-      "partOfSpeech": "phrase",
-      "difficulty": 2,
+      "partOfSpeech": "interjection",
+      "difficulty": "A2",
       "categories": [
         "professions"
       ],
@@ -4344,8 +5757,8 @@
       "id": "kniga_006",
       "german": "Buch",
       "bulgarian": "книга",
-      "partOfSpeech": "phrase",
-      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "difficulty": "A1",
       "categories": [
         "culture"
       ],
@@ -4390,8 +5803,8 @@
       "id": "a1_number_014",
       "german": "vierzehn",
       "bulgarian": "Четиринадесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -4438,8 +5851,8 @@
       "id": "a1_number_015",
       "german": "fünfzehn",
       "bulgarian": "Петнадесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -4486,8 +5899,8 @@
       "id": "a1_number_016",
       "german": "sechzehn",
       "bulgarian": "Шестнадесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -4534,8 +5947,8 @@
       "id": "a1_number_017",
       "german": "siebzehn",
       "bulgarian": "Седемнадесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -4582,8 +5995,8 @@
       "id": "a1_number_018",
       "german": "achtzehn",
       "bulgarian": "Осемнадесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -4630,8 +6043,8 @@
       "id": "a1_number_019",
       "german": "neunzehn",
       "bulgarian": "Деветнадесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -4678,8 +6091,8 @@
       "id": "a1_number_030",
       "german": "dreißig",
       "bulgarian": "Тридесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -4726,8 +6139,8 @@
       "id": "a1_number_040",
       "german": "vierzig",
       "bulgarian": "Четиридесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -4774,8 +6187,8 @@
       "id": "a1_number_050",
       "german": "fünfzig",
       "bulgarian": "Петдесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -4822,8 +6235,8 @@
       "id": "a1_number_060",
       "german": "sechzig",
       "bulgarian": "Шестдесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -4870,8 +6283,8 @@
       "id": "a1_number_070",
       "german": "siebzig",
       "bulgarian": "Седемдесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -4918,8 +6331,8 @@
       "id": "a1_number_080",
       "german": "achtzig",
       "bulgarian": "Осемдесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -4966,8 +6379,8 @@
       "id": "a1_number_090",
       "german": "neunzig",
       "bulgarian": "Деветдесет",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -5014,8 +6427,8 @@
       "id": "a1_number_100",
       "german": "hundert",
       "bulgarian": "Сто",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -5062,8 +6475,8 @@
       "id": "a1_number_200",
       "german": "zweihundert",
       "bulgarian": "Двеста",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -5110,8 +6523,8 @@
       "id": "a1_number_1000",
       "german": "tausend",
       "bulgarian": "Хиляда",
-      "partOfSpeech": "number",
-      "difficulty": 1,
+      "partOfSpeech": "noun",
+      "difficulty": "A1",
       "categories": [
         "numbers"
       ],
@@ -5158,8 +6571,8 @@
       "id": "a1_verb_001",
       "german": "wollen / möchten",
       "bulgarian": "Искам",
-      "partOfSpeech": "phrase",
-      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "difficulty": "A1",
       "categories": [
         "everyday-phrases"
       ],
@@ -5208,8 +6621,8 @@
       "id": "a1_verb_002",
       "german": "schlafen",
       "bulgarian": "Спя",
-      "partOfSpeech": "phrase",
-      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "difficulty": "A1",
       "categories": [
         "everyday-phrases"
       ],
@@ -5258,8 +6671,8 @@
       "id": "a1_verb_003",
       "german": "trinken",
       "bulgarian": "Пия",
-      "partOfSpeech": "phrase",
-      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "difficulty": "A1",
       "categories": [
         "food"
       ],
@@ -5306,8 +6719,8 @@
       "id": "a1_verb_004",
       "german": "essen",
       "bulgarian": "Ям",
-      "partOfSpeech": "phrase",
-      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "difficulty": "A1",
       "categories": [
         "food"
       ],
@@ -5354,8 +6767,8 @@
       "id": "a1_verb_005",
       "german": "sehen",
       "bulgarian": "Видя",
-      "partOfSpeech": "phrase",
-      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "difficulty": "A1",
       "categories": [
         "everyday-phrases"
       ],
@@ -5404,8 +6817,8 @@
       "id": "a1_verb_006",
       "german": "können",
       "bulgarian": "Мога",
-      "partOfSpeech": "phrase",
-      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "difficulty": "A1",
       "categories": [
         "everyday-phrases"
       ],
@@ -5454,8 +6867,8 @@
       "id": "a1_verb_007",
       "german": "machen / tun",
       "bulgarian": "Правя",
-      "partOfSpeech": "phrase",
-      "difficulty": 1,
+      "partOfSpeech": "interjection",
+      "difficulty": "A1",
       "categories": [
         "everyday-phrases"
       ],

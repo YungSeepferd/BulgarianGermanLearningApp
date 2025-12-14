@@ -1,0 +1,227 @@
+[
+  {
+    "id": "wolken",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "wolken",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Wolken",
+        "bulgarian": "Пример с Облаци"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "wald",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "wald",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Wald",
+        "bulgarian": "Пример с Гора"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "fluss",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "fluss",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Fluss",
+        "bulgarian": "Пример с Река"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "berg",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "berg",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Berg",
+        "bulgarian": "Пример с Планина"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "meer",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "meer",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Meer",
+        "bulgarian": "Пример с Море"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "mutter",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "mutter",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "phrase",
+    "newValue": "interjection",
+    "reason": "Normalize invalid PoS \"phrase\" → interjection"
+  },
+  {
+    "id": "mutter",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Mutter",
+        "bulgarian": "Пример с Майка"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "vater",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "vater",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "phrase",
+    "newValue": "interjection",
+    "reason": "Normalize invalid PoS \"phrase\" → interjection"
+  },
+  {
+    "id": "vater",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Vater",
+        "bulgarian": "Пример с Баща"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "bruder",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "bruder",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "phrase",
+    "newValue": "interjection",
+    "reason": "Normalize invalid PoS \"phrase\" → interjection"
+  },
+  {
+    "id": "bruder",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Bruder",
+        "bulgarian": "Пример с Брат"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "schwester",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "schwester",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "phrase",
+    "newValue": "interjection",
+    "reason": "Normalize invalid PoS \"phrase\" → interjection"
+  },
+  {
+    "id": "schwester",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Schwester",
+        "bulgarian": "Пример с Сестра"
+      }
+    ],
+    "reason": "Add placeholder example"
+  },
+  {
+    "id": "ehemann",
+    "fieldPath": "difficulty",
+    "oldValue": 2,
+    "newValue": "A2",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "ehemann",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "phrase",
+    "newValue": "interjection",
+    "reason": "Normalize invalid PoS \"phrase\" → interjection"
+  },
+  {
+    "id": "ehemann",
+    "fieldPath": "examples",
+    "oldValue": [],
+    "newValue": [
+      {
+        "german": "Example with Ehemann",
+        "bulgarian": "Пример с Съпруг"
+      }
+    ],
+    "reason": "Add placeholder example"
+  }
+]

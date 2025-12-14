@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+nachmittag,"Nachmittag","Следобед",phrase,2,,,0,time,unreviewed,
+abend,"Abend","Вечер",phrase,2,,,0,time,unreviewed,
+nacht,"Nacht","Нощ",phrase,2,,,0,time,unreviewed,
+wie_geht_s,"Wie geht's?","Как си?",phrase,2,,,0,everyday-phrases,unreviewed,
+mir_geht_s_gut,"Mir geht's gut","Добре съм",phrase,2,,,0,everyday-phrases,unreviewed,
+entschuldige,"Entschuldige","Извинявай",phrase,2,,,0,everyday-phrases,unreviewed,
+darf_ich,"Darf ich?","Може ли?",phrase,2,,,0,everyday-phrases,unreviewed,
+brot,"Brot","Хляб",noun,2,,,0,food,unreviewed,
+milch,"Milch","Мляко",noun,2,,,0,food,unreviewed,
+kase,"Käse","Сирене",noun,2,,,0,food,unreviewed,

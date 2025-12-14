@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+a1_food_014,"die Butter","Масло",noun,1,,,3,food,unreviewed,
+a1_food_015,"der Käse","Сирене",noun,1,,,3,food,unreviewed,
+a1_food_016,"das Fleisch","Месо",noun,1,,,3,food,unreviewed,
+a1_food_017,"der Fisch","Риба",noun,1,,,3,food,unreviewed,
+a1_adj_004,"gut","Добър",phrase,1,,,3,everyday-phrases,unreviewed,
+a1_adj_005,"schlecht","Лош",phrase,1,,,3,everyday-phrases,unreviewed,
+a1_adj_006,"neu","Нов",phrase,1,,,3,everyday-phrases,unreviewed,
+a1_adj_007,"alt","Стар",phrase,1,,,3,everyday-phrases,unreviewed,
+a1_question_003,"wann","Кога",pronoun,1,,,3,everyday-phrases,unreviewed,
+a1_question_004,"wo","Къде",pronoun,1,,,3,everyday-phrases,unreviewed,

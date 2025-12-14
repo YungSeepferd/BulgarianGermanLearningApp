@@ -1,0 +1,154 @@
+[
+  {
+    "id": "zdravej_001",
+    "type": "interjection",
+    "examples": [
+      {
+        "german": "Hallo, wie geht es dir?",
+        "bulgarian": "Здравей, как си?",
+        "context": "greeting",
+        "formality": "informal",
+        "frequency": "very_common"
+      },
+      {
+        "german": "Hallo zusammen!",
+        "bulgarian": "Здравей всички!",
+        "context": "group_greeting",
+        "formality": "informal",
+        "frequency": "common"
+      }
+    ],
+    "culturalNotes": "Common casual greeting in German-speaking countries. Equivalent to 'Hi' in English.",
+    "mnemonics": "HALLO = 'Hey ALL Others' - a friendly greeting to everyone"
+  },
+  {
+    "id": "zusammen_bg_zaedno_sample",
+    "type": "adverb",
+    "gender": "m",
+    "declension": {
+      "nominative": { "singular": "Mann", "plural": "Männer" },
+      "accusative": { "singular": "Mann", "plural": "Männer" },
+      "dative": { "singular": "Mann", "plural": "Männern" },
+      "genitive": { "singular": "Mannes", "plural": "Männer" }
+    },
+    "examples": [
+      {
+        "german": "Der Mann ist 35 Jahre alt.",
+        "bulgarian": "Мъжът е на 35 години.",
+        "context": "age_description",
+        "formality": "neutral",
+        "frequency": "very_common"
+      },
+      {
+        "german": "Mein Mann arbeitet als Ingenieur.",
+        "bulgarian": "Моят мъж работи като инженер.",
+        "context": "family",
+        "formality": "neutral",
+        "frequency": "common"
+      }
+    ],
+    "culturalNotes": "Standard masculine noun for adult male. Note the umlaut changes in plural.",
+    "mnemonics": "MANN = Masculine pronoun - 'Man' with two n's = strong, solid man"
+  },
+  {
+    "id": "dobro_utro_002",
+    "type": "interjection",
+    "auxiliary": "haben",
+    "conjugation": {
+      "presentIndicative": {
+        "ich": "arbeite",
+        "du": "arbeitest",
+        "erSieEs": "arbeitet",
+        "wir": "arbeiten",
+        "ihr": "arbeitet",
+        "sieSie": "arbeiten"
+      },
+      "simpleStPast": {
+        "ich": "arbeitete",
+        "du": "arbeitetest",
+        "erSieEs": "arbeitete",
+        "wir": "arbeiteten",
+        "ihr": "arbeitetet",
+        "sieSie": "arbeiteten"
+      },
+      "pastParticiple": "gearbeitet",
+      "presentParticiple": "arbeitend"
+    },
+    "examples": [
+      {
+        "german": "Ich arbeite im Büro.",
+        "bulgarian": "Аз работя в офиса.",
+        "context": "work_location",
+        "formality": "neutral",
+        "frequency": "very_common"
+      },
+      {
+        "german": "Sie arbeiten zusammen an einem Projekt.",
+        "bulgarian": "Те работят заедно на един проект.",
+        "context": "teamwork",
+        "formality": "neutral",
+        "frequency": "common"
+      }
+    ],
+    "culturalNotes": "Regular verb (weak). Uses 'haben' as auxiliary in present perfect.",
+    "mnemonics": "ARBEITEN = ARB + EITEN = 'ar' sounds like work beginning"
+  },
+  {
+    "id": "guten_abend",
+    "type": "interjection",
+    "gender": "f",
+    "declension": {
+      "nominative": { "singular": "Zeit", "plural": "Zeiten" },
+      "accusative": { "singular": "Zeit", "plural": "Zeiten" },
+      "dative": { "singular": "Zeit", "plural": "Zeiten" },
+      "genitive": { "singular": "Zeit", "plural": "Zeiten" }
+    },
+    "examples": [
+      {
+        "german": "Ich habe keine Zeit.",
+        "bulgarian": "Нямам време.",
+        "context": "lack_of_time",
+        "formality": "neutral",
+        "frequency": "very_common"
+      },
+      {
+        "german": "Die Zeit vergeht schnell.",
+        "bulgarian": "Времето минава бързо.",
+        "context": "passage_of_time",
+        "formality": "formal",
+        "frequency": "common"
+      }
+    ],
+    "culturalNotes": "Feminine noun. Common expression: 'Es ist Zeit' (It's time). Important concept in German culture.",
+    "mnemonics": "ZEIT = German word for time; rhymes with German 'Weit' (wide/far)"
+  },
+  {
+    "id": "bitte_schoen",
+    "type": "interjection",
+    "examples": [
+      {
+        "german": "Danke schön!",
+        "bulgarian": "Благодаря много!",
+        "context": "gratitude",
+        "formality": "polite",
+        "frequency": "very_common"
+      },
+      {
+        "german": "Danke dir!",
+        "bulgarian": "Благодаря ти!",
+        "context": "personal_thanks",
+        "formality": "informal",
+        "frequency": "very_common"
+      },
+      {
+        "german": "Vielen Dank!",
+        "bulgarian": "Много благодаря!",
+        "context": "formal_gratitude",
+        "formality": "formal",
+        "frequency": "common"
+      }
+    ],
+    "culturalNotes": "Essential politeness word. 'Danke schön' adds warmth vs formal 'Vielen Dank'.",
+    "mnemonics": "DANKE = 'DANKe' = 'Thank' - almost sounds the same!"
+  }
+]

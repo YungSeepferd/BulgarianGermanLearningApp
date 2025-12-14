@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+a1_house_001,"das Haus","Къща",noun,1,,,3,everyday-phrases,unreviewed,
+a1_house_002,"das Heim, das Zuhause","Дом",noun,1,,,3,everyday-phrases,unreviewed,
+a1_house_003,"das Zimmer","Стая",noun,1,,,3,everyday-phrases,unreviewed,
+a1_house_004,"die Küche","Кухня",noun,1,,,3,home,unreviewed,
+a1_house_005,"das Badezimmer","Баня",noun,1,,,3,home,unreviewed,
+a1_house_006,"das Schlafzimmer","Спалня",noun,1,,,3,home,unreviewed,
+a1_house_007,"das Fenster","Прозорец",noun,1,,,3,home,unreviewed,
+a1_house_008,"die Tür","Врата",noun,1,,,3,home,unreviewed,
+a1_family_001,"die Mutter","Майка",phrase,1,,,3,family,unreviewed,
+a1_family_002,"der Vater","Баща",phrase,1,,,3,family,unreviewed,

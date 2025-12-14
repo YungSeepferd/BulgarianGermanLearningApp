@@ -1,0 +1,5488 @@
+# Archive vs Current Vocabulary Comparison Report
+
+Generated on: 2025-12-13T23:59:20.324Z
+
+## Statistics
+
+| Metric | Count |
+|--------|-------|
+| Archive Entries | 732 |
+| Current Entries | 678 |
+| Only in Archive | 585 |
+| Only in Current | 531 |
+| Different Entries | 147 |
+
+## Entries Only in Archive (585)
+
+These entries exist in the archive but not in the current vocabulary:
+
+- **Здравей** (unknown)
+  - Bulgarian: Здравей
+  - Category: Begrüßung
+- **заедно** (unknown)
+  - Bulgarian: заедно
+  - Category: Adverb
+- **müssen, sollen** (Verb)
+  - Bulgarian: Трябва
+  - Category: Verben
+- **wollen, möchten** (Verb)
+  - Bulgarian: Искам
+  - Category: Verben
+- **können, dürfen** (Verb)
+  - Bulgarian: Мога
+  - Category: Verben
+- **haben** (Verb)
+  - Bulgarian: Имам
+  - Category: Verben
+- **nicht haben** (Verb)
+  - Bulgarian: Нямам
+  - Category: Verben
+- **sein (perfektiv)** (Verb)
+  - Bulgarian: Бъда
+  - Category: Verben
+- **sagen (perfektiv)** (Verb)
+  - Bulgarian: Кажа
+  - Category: Verben
+- **machen, tun (perfektiv)** (Verb)
+  - Bulgarian: Направя
+  - Category: Verben
+- **werden, aufstehen (perfektiv)** (Verb)
+  - Bulgarian: Стана
+  - Category: Verben
+- **kommen (perfektiv)** (Verb)
+  - Bulgarian: Дойда
+  - Category: Verben
+- **gehen (perfektiv)** (Verb)
+  - Bulgarian: Отида
+  - Category: Verben
+- **sich setzen (perfektiv)** (Verb)
+  - Bulgarian: Седна
+  - Category: Verben
+- **sehen (perfektiv)** (Verb)
+  - Bulgarian: Видя
+  - Category: Verben
+- **finden (perfektiv)** (Verb)
+  - Bulgarian: Намеря
+  - Category: Verben
+- **verstehen (perfektiv)** (Verb)
+  - Bulgarian: Разбера
+  - Category: Verben
+- **glücklich** (Noun)
+  - Bulgarian: Щастлив
+  - Category: Adjektive
+- **traurig** (Noun)
+  - Bulgarian: Тъжен
+  - Category: Adjektive
+- **fröhlich, lustig** (Noun)
+  - Bulgarian: Весел
+  - Category: Adjektive
+- **wütend, böse** (Noun)
+  - Bulgarian: Сърдит
+  - Category: Adjektive
+- **müde** (Noun)
+  - Bulgarian: Уморен
+  - Category: Adjektive
+- **hungrig** (Noun)
+  - Bulgarian: Гладен
+  - Category: Adjektive
+- **durstig** (Noun)
+  - Bulgarian: Жаден
+  - Category: Adjektive
+- **krank** (Noun)
+  - Bulgarian: Болен
+  - Category: Adjektive
+- **gesund** (Noun)
+  - Bulgarian: Здрав
+  - Category: Adjektive
+- **bereit, fertig** (Noun)
+  - Bulgarian: Готов
+  - Category: Adjektive
+- **das Kleidungsstück** (Noun)
+  - Bulgarian: Дреха
+  - Category: Kleidung
+- **das Hemd** (Noun)
+  - Bulgarian: Риза
+  - Category: Kleidung
+- **die Bluse** (Noun)
+  - Bulgarian: Блуза
+  - Category: Kleidung
+- **die Hose** (Noun)
+  - Bulgarian: Панталон
+  - Category: Kleidung
+- **der Rock** (Noun)
+  - Bulgarian: Пола
+  - Category: Kleidung
+- **das Kleid** (Noun)
+  - Bulgarian: Рокля
+  - Category: Kleidung
+- **der Mantel** (Noun)
+  - Bulgarian: Палто
+  - Category: Kleidung
+- **die Jacke** (Noun)
+  - Bulgarian: Яке
+  - Category: Kleidung
+- **der Schuh** (Noun)
+  - Bulgarian: Обувка
+  - Category: Kleidung
+- **die Socke, der Strumpf** (Noun)
+  - Bulgarian: Чорап
+  - Category: Kleidung
+- **die Mütze, der Hut** (Noun)
+  - Bulgarian: Шапка
+  - Category: Kleidung
+- **der Handschuh** (Noun)
+  - Bulgarian: Ръкавица
+  - Category: Kleidung
+- **der Schal** (Noun)
+  - Bulgarian: Шал
+  - Category: Kleidung
+- **der Gürtel** (Noun)
+  - Bulgarian: Колан
+  - Category: Kleidung
+- **die Tasche** (Noun)
+  - Bulgarian: Чанта
+  - Category: Kleidung
+- **arbeiten** (Verb)
+  - Bulgarian: Работя
+  - Category: Verben
+- **lernen, studieren** (Verb)
+  - Bulgarian: Уча
+  - Category: Verben
+- **verstehen** (Verb)
+  - Bulgarian: Разбирам
+  - Category: Verben
+- **lieben, mögen** (Verb)
+  - Bulgarian: Обичам
+  - Category: Verben
+- **gefallen, mögen** (Verb)
+  - Bulgarian: Харесвам
+  - Category: Verben
+- **wissen, kennen** (Verb)
+  - Bulgarian: Зная
+  - Category: Verben
+- **kennen (Person)** (Verb)
+  - Bulgarian: Познавам
+  - Category: Verben
+- **glauben** (Verb)
+  - Bulgarian: Вярвам
+  - Category: Verben
+- **fühlen** (Verb)
+  - Bulgarian: Чувствам
+  - Category: Verben
+- **denken, meinen** (Verb)
+  - Bulgarian: Мисля
+  - Category: Verben
+- **benutzen, verwenden** (Verb)
+  - Bulgarian: Използвам
+  - Category: Verben
+- **bekommen, erhalten** (Verb)
+  - Bulgarian: Получавам
+  - Category: Verben
+- **bleiben** (Verb)
+  - Bulgarian: Оставам
+  - Category: Verben
+- **fortsetzen, weitermachen** (Verb)
+  - Bulgarian: Продължавам
+  - Category: Verben
+- **anhalten, stoppen** (Verb)
+  - Bulgarian: Спирам
+  - Category: Verben
+- **lassen, loslassen** (Verb)
+  - Bulgarian: Пускам
+  - Category: Verben
+- **fahren (lenken)** (Verb)
+  - Bulgarian: Карам
+  - Category: Verben
+- **fangen, ergreifen** (Verb)
+  - Bulgarian: Хващам
+  - Category: Verben
+- **suchen** (Verb)
+  - Bulgarian: Търся
+  - Category: Verben
+- **sprechen, sich unterhalten** (Verb)
+  - Bulgarian: Разговарям
+  - Category: Verben
+- **jung** (Noun)
+  - Bulgarian: Млад
+  - Category: Adjektive
+- **alt** (Noun)
+  - Bulgarian: Стар
+  - Category: Adjektive
+- **heiß** (Noun)
+  - Bulgarian: Горещ
+  - Category: Adjektive
+- **kalt** (Noun)
+  - Bulgarian: Студен
+  - Category: Adjektive
+- **warm** (Noun)
+  - Bulgarian: Топъл
+  - Category: Adjektive
+- **teuer, lieb** (Noun)
+  - Bulgarian: Скъп
+  - Category: Adjektive
+- **billig, günstig** (Noun)
+  - Bulgarian: Евтин
+  - Category: Adjektive
+- **reich** (Noun)
+  - Bulgarian: Богат
+  - Category: Adjektive
+- **arm** (Noun)
+  - Bulgarian: Беден
+  - Category: Adjektive
+- **stark** (Noun)
+  - Bulgarian: Силен
+  - Category: Adjektive
+- **schwach** (Noun)
+  - Bulgarian: Слаб
+  - Category: Adjektive
+- **schnell** (Noun)
+  - Bulgarian: Бърз
+  - Category: Adjektive
+- **langsam** (Noun)
+  - Bulgarian: Бавен
+  - Category: Adjektive
+- **leicht, einfach** (Noun)
+  - Bulgarian: Лесен
+  - Category: Adjektive
+- **schwer, schwierig** (Noun)
+  - Bulgarian: Труден
+  - Category: Adjektive
+- **das Buch** (Noun)
+  - Bulgarian: Книга
+  - Category: Substantive
+- **der Tisch** (Noun)
+  - Bulgarian: Маса
+  - Category: Substantive
+- **der Stuhl** (Noun)
+  - Bulgarian: Стол
+  - Category: Substantive
+- **das Bett** (Noun)
+  - Bulgarian: Легло
+  - Category: Substantive
+- **die Straße** (Noun)
+  - Bulgarian: Улица
+  - Category: Substantive
+- **das Geschäft, der Laden** (Noun)
+  - Bulgarian: Магазин
+  - Category: Substantive
+- **das Restaurant** (Noun)
+  - Bulgarian: Ресторант
+  - Category: Substantive
+- **das Krankenhaus** (Noun)
+  - Bulgarian: Болница
+  - Category: Substantive
+- **die Schule** (Noun)
+  - Bulgarian: Училище
+  - Category: Substantive
+- **und** (Noun)
+  - Bulgarian: И
+  - Category: Grammatik
+- **aber** (Noun)
+  - Bulgarian: Но
+  - Category: Grammatik
+- **oder** (Noun)
+  - Bulgarian: Или
+  - Category: Grammatik
+- **für, über** (Noun)
+  - Bulgarian: За
+  - Category: Grammatik
+- **von, aus** (Noun)
+  - Bulgarian: От
+  - Category: Grammatik
+- **ich** (Noun)
+  - Bulgarian: Аз
+  - Category: Pronomen
+- **du** (Noun)
+  - Bulgarian: Ти
+  - Category: Pronomen
+- **er** (Noun)
+  - Bulgarian: Той
+  - Category: Pronomen
+- **sie** (Noun)
+  - Bulgarian: Тя
+  - Category: Pronomen
+- **es** (Noun)
+  - Bulgarian: То
+  - Category: Pronomen
+- **wir** (Noun)
+  - Bulgarian: Ние
+  - Category: Pronomen
+- **ihr, Sie** (Noun)
+  - Bulgarian: Вие
+  - Category: Pronomen
+- **sie (plural)** (Noun)
+  - Bulgarian: Те
+  - Category: Pronomen
+- **dieser (m)** (Noun)
+  - Bulgarian: Този
+  - Category: Pronomen
+- **was** (Noun)
+  - Bulgarian: Какво
+  - Category: Pronomen
+- **die Mutter** (Noun)
+  - Bulgarian: Майка
+  - Category: Familie
+- **der Vater** (Noun)
+  - Bulgarian: Баща
+  - Category: Familie
+- **der Sohn** (Noun)
+  - Bulgarian: Син
+  - Category: Familie
+- **die Tochter** (Noun)
+  - Bulgarian: Дъщеря
+  - Category: Familie
+- **der Bruder** (Noun)
+  - Bulgarian: Брат
+  - Category: Familie
+- **die Schwester** (Noun)
+  - Bulgarian: Сестра
+  - Category: Familie
+- **die Großmutter, die Oma** (Noun)
+  - Bulgarian: Баба
+  - Category: Familie
+- **der Großvater, der Opa** (Noun)
+  - Bulgarian: Дядо
+  - Category: Familie
+- **der Ehemann** (Noun)
+  - Bulgarian: Съпруг
+  - Category: Familie
+- **die Ehefrau** (Noun)
+  - Bulgarian: Съпруга
+  - Category: Familie
+- **Januar** (Noun)
+  - Bulgarian: Януари
+  - Category: Zeit
+- **Februar** (Noun)
+  - Bulgarian: Февруари
+  - Category: Zeit
+- **März** (Noun)
+  - Bulgarian: Март
+  - Category: Zeit
+- **April** (Noun)
+  - Bulgarian: Април
+  - Category: Zeit
+- **Mai** (Noun)
+  - Bulgarian: Май
+  - Category: Zeit
+- **Juni** (Noun)
+  - Bulgarian: Юни
+  - Category: Zeit
+- **Juli** (Noun)
+  - Bulgarian: Юли
+  - Category: Zeit
+- **August** (Noun)
+  - Bulgarian: Август
+  - Category: Zeit
+- **September** (Noun)
+  - Bulgarian: Септември
+  - Category: Zeit
+- **Oktober** (Noun)
+  - Bulgarian: Октомври
+  - Category: Zeit
+- **November** (Noun)
+  - Bulgarian: Ноември
+  - Category: Zeit
+- **Dezember** (Noun)
+  - Bulgarian: Декември
+  - Category: Zeit
+- **Montag** (Noun)
+  - Bulgarian: Понеделник
+  - Category: Zeit
+- **Dienstag** (Noun)
+  - Bulgarian: Вторник
+  - Category: Zeit
+- **Mittwoch** (Noun)
+  - Bulgarian: Сряда
+  - Category: Zeit
+- **Donnerstag** (Noun)
+  - Bulgarian: Четвъртък
+  - Category: Zeit
+- **Freitag** (Noun)
+  - Bulgarian: Петък
+  - Category: Zeit
+- **Samstag, Sonnabend** (Noun)
+  - Bulgarian: Събота
+  - Category: Zeit
+- **Sonntag** (Noun)
+  - Bulgarian: Неделя
+  - Category: Zeit
+- **der Tag** (Noun)
+  - Bulgarian: Ден
+  - Category: Zeit
+- **die Woche** (Noun)
+  - Bulgarian: Седмица
+  - Category: Zeit
+- **das Jahr** (Noun)
+  - Bulgarian: Година
+  - Category: Zeit
+- **schauen, sehen, ansehen** (Verb)
+  - Bulgarian: Гледам
+  - Category: Verben
+- **gehen, fahren (weggehen)** (Verb)
+  - Bulgarian: Отивам
+  - Category: Verben
+- **kommen** (Verb)
+  - Bulgarian: Идвам
+  - Category: Verben
+- **aufstehen, werden** (Verb)
+  - Bulgarian: Ставам
+  - Category: Verben
+- **sich setzen, sich hinsetzen** (Verb)
+  - Bulgarian: Сядам
+  - Category: Verben
+- **sich hinlegen, schlafen gehen** (Verb)
+  - Bulgarian: Лягам
+  - Category: Verben
+- **tragen, anhaben** (Verb)
+  - Bulgarian: Нося
+  - Category: Verben
+- **kaufen** (Verb)
+  - Bulgarian: Купувам
+  - Category: Verben
+- **nehmen, holen** (Verb)
+  - Bulgarian: Взимам
+  - Category: Verben
+- **geben** (Verb)
+  - Bulgarian: Давам
+  - Category: Verben
+- **groß** (Noun)
+  - Bulgarian: Голям
+  - Category: Adjektive
+- **klein** (Noun)
+  - Bulgarian: Малък
+  - Category: Adjektive
+- **hoch, groß (von Personen)** (Noun)
+  - Bulgarian: Висок
+  - Category: Adjektive
+- **niedrig, klein (von Personen)** (Noun)
+  - Bulgarian: Нисък
+  - Category: Adjektive
+- **lang** (Noun)
+  - Bulgarian: Дълъг
+  - Category: Adjektive
+- **kurz** (Noun)
+  - Bulgarian: Къс
+  - Category: Adjektive
+- **dick, fett** (Noun)
+  - Bulgarian: Дебел
+  - Category: Adjektive
+- **dünn** (Noun)
+  - Bulgarian: Тънък
+  - Category: Adjektive
+- **schön, hübsch, nett** (Noun)
+  - Bulgarian: Хубав
+  - Category: Adjektive
+- **hässlich** (Noun)
+  - Bulgarian: Грозен
+  - Category: Adjektive
+- **schwarz** (Noun)
+  - Bulgarian: Черен
+  - Category: Farben
+- **weiß** (Noun)
+  - Bulgarian: Бял
+  - Category: Farben
+- **rot** (Noun)
+  - Bulgarian: Червен
+  - Category: Farben
+- **blau** (Noun)
+  - Bulgarian: Син
+  - Category: Farben
+- **grün** (Noun)
+  - Bulgarian: Зелен
+  - Category: Farben
+- **gelb** (Noun)
+  - Bulgarian: Жълт
+  - Category: Farben
+- **orange** (Noun)
+  - Bulgarian: Оранжев
+  - Category: Farben
+- **braun** (Noun)
+  - Bulgarian: Кафяв
+  - Category: Farben
+- **grau** (Noun)
+  - Bulgarian: Сив
+  - Category: Farben
+- **rosa, pink** (Noun)
+  - Bulgarian: Розов
+  - Category: Farben
+- **wann** (Noun)
+  - Bulgarian: Кога
+  - Category: Fragewörter
+- **wo** (Noun)
+  - Bulgarian: Къде
+  - Category: Fragewörter
+- **warum** (Noun)
+  - Bulgarian: Защо
+  - Category: Fragewörter
+- **wie** (Noun)
+  - Bulgarian: Как
+  - Category: Fragewörter
+- **wie viel, wie viele** (Noun)
+  - Bulgarian: Колко
+  - Category: Fragewörter
+- **wessen** (Noun)
+  - Bulgarian: Чий
+  - Category: Fragewörter
+- **was für ein, welcher Art** (Noun)
+  - Bulgarian: Какъв
+  - Category: Fragewörter
+- **woher** (Noun)
+  - Bulgarian: Откъде
+  - Category: Fragewörter
+- **wohin** (Noun)
+  - Bulgarian: Накъде
+  - Category: Fragewörter
+- **ob** (Noun)
+  - Bulgarian: Дали
+  - Category: Fragewörter
+- **die Milch** (Noun)
+  - Bulgarian: Мляко
+  - Category: Getränke
+- **gut** (Noun)
+  - Bulgarian: Добър
+  - Category: Adjektive
+- **schlecht** (Noun)
+  - Bulgarian: Лош
+  - Category: Adjektive
+- **neu** (Noun)
+  - Bulgarian: Нов
+  - Category: Adjektive
+- **finden** (Verb)
+  - Bulgarian: Намирам
+  - Category: Verben
+- **helfen** (Verb)
+  - Bulgarian: Помагам
+  - Category: Verben
+- **öffnen / aufmachen** (Verb)
+  - Bulgarian: Отварям
+  - Category: Verben
+- **schließen / zumachen** (Verb)
+  - Bulgarian: Затварям
+  - Category: Verben
+- **verkaufen** (Verb)
+  - Bulgarian: Продавам
+  - Category: Verben
+- **bezahlen / zahlen** (Verb)
+  - Bulgarian: Плащам
+  - Category: Verben
+- **sagen** (Verb)
+  - Bulgarian: Казвам
+  - Category: Verben
+- **denken / meinen** (Verb)
+  - Bulgarian: Мисля
+  - Category: Verben
+- **wer** (Noun)
+  - Bulgarian: Кой
+  - Category: Fragewörter
+- **sprechen / reden** (Verb)
+  - Bulgarian: Говоря
+  - Category: Verben
+- **hören / zuhören** (Verb)
+  - Bulgarian: Слушам
+  - Category: Verben
+- **lesen** (Verb)
+  - Bulgarian: Чета
+  - Category: Verben
+- **schreiben** (Verb)
+  - Bulgarian: Пиша
+  - Category: Verben
+- **leben / wohnen** (Verb)
+  - Bulgarian: Живея
+  - Category: Verben
+- **anfangen / beginnen** (Verb)
+  - Bulgarian: Започвам
+  - Category: Verben
+- **beenden / abschließen** (Verb)
+  - Bulgarian: Завършвам
+  - Category: Verben
+- **warten** (Verb)
+  - Bulgarian: Чакам
+  - Category: Verben
+- **hundert** (Noun)
+  - Bulgarian: Сто
+  - Category: Zahlen
+- **zweihundert** (Noun)
+  - Bulgarian: Двеста
+  - Category: Zahlen
+- **tausend** (Noun)
+  - Bulgarian: Хиляда
+  - Category: Zahlen
+- **wollen / möchten** (Verb)
+  - Bulgarian: Искам
+  - Category: Verben
+- **schlafen** (Verb)
+  - Bulgarian: Спя
+  - Category: Verben
+- **trinken** (Verb)
+  - Bulgarian: Пия
+  - Category: Verben
+- **essen** (Verb)
+  - Bulgarian: Ям
+  - Category: Verben
+- **sehen** (Verb)
+  - Bulgarian: Видя
+  - Category: Verben
+- **können** (Verb)
+  - Bulgarian: Мога
+  - Category: Verben
+- **machen / tun** (Verb)
+  - Bulgarian: Правя
+  - Category: Verben
+- **dreißig** (Noun)
+  - Bulgarian: Тридесет
+  - Category: Zahlen
+- **vierzig** (Noun)
+  - Bulgarian: Четиридесет
+  - Category: Zahlen
+- **fünfzig** (Noun)
+  - Bulgarian: Петдесет
+  - Category: Zahlen
+- **sechzig** (Noun)
+  - Bulgarian: Шестдесет
+  - Category: Zahlen
+- **siebzig** (Noun)
+  - Bulgarian: Седемдесет
+  - Category: Zahlen
+- **achtzig** (Noun)
+  - Bulgarian: Осемдесет
+  - Category: Zahlen
+- **neunzig** (Noun)
+  - Bulgarian: Деветдесет
+  - Category: Zahlen
+- **vierzehn** (Noun)
+  - Bulgarian: Четиринадесет
+  - Category: Zahlen
+- **fünfzehn** (Noun)
+  - Bulgarian: Петнадесет
+  - Category: Zahlen
+- **sechzehn** (Noun)
+  - Bulgarian: Шестнадесет
+  - Category: Zahlen
+- **siebzehn** (Noun)
+  - Bulgarian: Седемнадесет
+  - Category: Zahlen
+- **achtzehn** (Noun)
+  - Bulgarian: Осемнадесет
+  - Category: Zahlen
+- **neunzehn** (Noun)
+  - Bulgarian: Деветнадесет
+  - Category: Zahlen
+- **Regel** (Noun)
+  - Bulgarian: Правило
+  - Category: Substantive
+- **Fehler** (Noun)
+  - Bulgarian: Грешка
+  - Category: Substantive
+- **Antwort** (Noun)
+  - Bulgarian: Отговор
+  - Category: Substantive
+- **Frage** (Noun)
+  - Bulgarian: Въпрос
+  - Category: Substantive
+- **Problem** (Noun)
+  - Bulgarian: Проблем
+  - Category: Substantive
+- **Lösung** (Noun)
+  - Bulgarian: Решение
+  - Category: Substantive
+- **Anfang** (Noun)
+  - Bulgarian: Начало
+  - Category: Substantive
+- **Ende** (Noun)
+  - Bulgarian: Край
+  - Category: Substantive
+- **Mitte** (Noun)
+  - Bulgarian: Среда
+  - Category: Substantive
+- **Land/Seite** (Noun)
+  - Bulgarian: Страна
+  - Category: Substantive
+- **Welt** (Noun)
+  - Bulgarian: Свят
+  - Category: Substantive
+- **Erde** (Noun)
+  - Bulgarian: Земя
+  - Category: Substantive
+- **Luft** (Noun)
+  - Bulgarian: Въздух
+  - Category: Substantive
+- **Feuer** (Noun)
+  - Bulgarian: Огън
+  - Category: Substantive
+- **Wasser** (Noun)
+  - Bulgarian: Вода
+  - Category: Substantive
+- **Eis** (Noun)
+  - Bulgarian: Лед
+  - Category: Substantive
+- **Stein** (Noun)
+  - Bulgarian: Камък
+  - Category: Substantive
+- **Sand** (Noun)
+  - Bulgarian: Пясък
+  - Category: Substantive
+- **Staub** (Noun)
+  - Bulgarian: Прах
+  - Category: Substantive
+- **Rauch** (Noun)
+  - Bulgarian: Дим
+  - Category: Substantive
+- **Licht** (Noun)
+  - Bulgarian: Светлина
+  - Category: Substantive
+- **Schatten** (Noun)
+  - Bulgarian: Сянка
+  - Category: Substantive
+- **Geräusch/Klang** (Noun)
+  - Bulgarian: Звук
+  - Category: Substantive
+- **Stimme** (Noun)
+  - Bulgarian: Глас
+  - Category: Substantive
+- **Lärm** (Noun)
+  - Bulgarian: Шум
+  - Category: Substantive
+- **Stille** (Noun)
+  - Bulgarian: Тишина
+  - Category: Substantive
+- **Geschwindigkeit** (Noun)
+  - Bulgarian: Скорост
+  - Category: Substantive
+- **Richtung** (Noun)
+  - Bulgarian: Посока
+  - Category: Substantive
+- **Entfernung** (Noun)
+  - Bulgarian: Разстояние
+  - Category: Substantive
+- **Platz/Ort** (Noun)
+  - Bulgarian: Място
+  - Category: Substantive
+- **Punkt** (Noun)
+  - Bulgarian: Точка
+  - Category: Substantive
+- **Linie** (Noun)
+  - Bulgarian: Линия
+  - Category: Substantive
+- **Form** (Noun)
+  - Bulgarian: Форма
+  - Category: Substantive
+- **Größe** (Noun)
+  - Bulgarian: Размер
+  - Category: Substantive
+- **Farbe** (Noun)
+  - Bulgarian: Цвят
+  - Category: Substantive
+- **Geruch** (Noun)
+  - Bulgarian: Мирис
+  - Category: Substantive
+- **Geschmack** (Noun)
+  - Bulgarian: Вкус
+  - Category: Substantive
+- **Gefühl** (Noun)
+  - Bulgarian: Чувство
+  - Category: Substantive
+- **Gedanke** (Noun)
+  - Bulgarian: Мисъл
+  - Category: Substantive
+- **Idee** (Noun)
+  - Bulgarian: Идея
+  - Category: Substantive
+- **Plan** (Noun)
+  - Bulgarian: План
+  - Category: Substantive
+- **Ziel** (Noun)
+  - Bulgarian: Цел
+  - Category: Substantive
+- **Art/Weise** (Noun)
+  - Bulgarian: Начин
+  - Category: Substantive
+- **Grund/Ursache** (Noun)
+  - Bulgarian: Причина
+  - Category: Substantive
+- **Ergebnis** (Noun)
+  - Bulgarian: Резултат
+  - Category: Substantive
+- **Beispiel** (Noun)
+  - Bulgarian: Пример
+  - Category: Substantive
+- **Tatsache** (Noun)
+  - Bulgarian: Факт
+  - Category: Substantive
+- **Wahrheit** (Noun)
+  - Bulgarian: Истина
+  - Category: Substantive
+- **Lüge** (Noun)
+  - Bulgarian: Лъжа
+  - Category: Substantive
+- **Geheimnis** (Noun)
+  - Bulgarian: Тайна
+  - Category: Substantive
+- **Versprechen** (Noun)
+  - Bulgarian: Обещание
+  - Category: Substantive
+- **Recht/Gerechtigkeit** (Noun)
+  - Bulgarian: Правда
+  - Category: Substantive
+- **Gesetz** (Noun)
+  - Bulgarian: Закон
+  - Category: Substantive
+- **Ordnung/Reihe** (Noun)
+  - Bulgarian: Ред
+  - Category: Substantive
+- **Gruppe** (Noun)
+  - Bulgarian: Група
+  - Category: Substantive
+- **Mitglied** (Noun)
+  - Bulgarian: Член
+  - Category: Substantive
+- **Gesellschaft** (Noun)
+  - Bulgarian: Общество
+  - Category: Substantive
+- **die Bildung** (Noun)
+  - Bulgarian: Образование
+  - Category: Bildung
+- **das Wissen** (Noun)
+  - Bulgarian: Знание
+  - Category: Bildung
+- **die Aufgabe** (Noun)
+  - Bulgarian: Задача
+  - Category: Bildung
+- **die Prüfung** (Noun)
+  - Bulgarian: Изпит
+  - Category: Bildung
+- **der Test** (Noun)
+  - Bulgarian: Тест
+  - Category: Bildung
+- **die Note** (Noun)
+  - Bulgarian: Оценка
+  - Category: Bildung
+- **das Diplom** (Noun)
+  - Bulgarian: Диплома
+  - Category: Bildung
+- **der Bleistift** (Noun)
+  - Bulgarian: Молив
+  - Category: Bildung
+- **der Kugelschreiber** (Noun)
+  - Bulgarian: Химикалка
+  - Category: Bildung
+- **das Heft** (Noun)
+  - Bulgarian: Тетрадка
+  - Category: Bildung
+- **das Lehrbuch** (Noun)
+  - Bulgarian: Учебник
+  - Category: Bildung
+- **das Wörterbuch** (Noun)
+  - Bulgarian: Речник
+  - Category: Bildung
+- **die Tafel** (Noun)
+  - Bulgarian: Дъска
+  - Category: Bildung
+- **die Stunde** (Noun)
+  - Bulgarian: Час
+  - Category: Bildung
+- **die Minute** (Noun)
+  - Bulgarian: Минута
+  - Category: Bildung
+- **das Vergnügen** (Noun)
+  - Bulgarian: Забавление
+  - Category: Unterhaltung
+- **die Party** (Noun)
+  - Bulgarian: Партия
+  - Category: Unterhaltung
+- **der Geburtstag** (Noun)
+  - Bulgarian: Рожден ден
+  - Category: Unterhaltung
+- **das Fest** (Noun)
+  - Bulgarian: Празник
+  - Category: Unterhaltung
+- **die Ferien** (Noun)
+  - Bulgarian: Ваканция
+  - Category: Unterhaltung
+- **der Strand** (Noun)
+  - Bulgarian: Плаж
+  - Category: Unterhaltung
+- **das Schwimmbad** (Noun)
+  - Bulgarian: Басейн
+  - Category: Unterhaltung
+- **das Café** (Noun)
+  - Bulgarian: Кафене
+  - Category: Unterhaltung
+- **die Bar** (Noun)
+  - Bulgarian: Бар
+  - Category: Unterhaltung
+- **die Diskothek** (Noun)
+  - Bulgarian: Дискотека
+  - Category: Unterhaltung
+- **das Abendessen** (Noun)
+  - Bulgarian: Вечеря
+  - Category: Unterhaltung
+- **das Frühstück** (Noun)
+  - Bulgarian: Закуска
+  - Category: Unterhaltung
+- **das Mittagessen** (Noun)
+  - Bulgarian: Обяд
+  - Category: Unterhaltung
+- **das Geschenk** (Noun)
+  - Bulgarian: Подарък
+  - Category: Unterhaltung
+- **die Karte** (Noun)
+  - Bulgarian: Картичка
+  - Category: Unterhaltung
+- **sehr, viel** (Noun)
+  - Bulgarian: Много
+  - Category: Adverbien
+- **wenig, ein bisschen** (Noun)
+  - Bulgarian: Малко
+  - Category: Adverbien
+- **immer** (Noun)
+  - Bulgarian: Винаги
+  - Category: Adverbien
+- **nie** (Noun)
+  - Bulgarian: Никога
+  - Category: Adverbien
+- **oft** (Noun)
+  - Bulgarian: Често
+  - Category: Adverbien
+- **selten** (Noun)
+  - Bulgarian: Рядко
+  - Category: Adverbien
+- **schon, bereits** (Noun)
+  - Bulgarian: Вече
+  - Category: Adverbien
+- **noch** (Noun)
+  - Bulgarian: Още
+  - Category: Adverbien
+- **jetzt** (Noun)
+  - Bulgarian: Сега
+  - Category: Adverbien
+- **später, danach** (Noun)
+  - Bulgarian: После
+  - Category: Adverbien
+- **gestern** (Noun)
+  - Bulgarian: Вчера
+  - Category: Adverbien
+- **morgen** (Noun)
+  - Bulgarian: Утре
+  - Category: Adverbien
+- **heute** (Noun)
+  - Bulgarian: Днес
+  - Category: Adverbien
+- **hier** (Noun)
+  - Bulgarian: Тук
+  - Category: Adverbien
+- **dort** (Noun)
+  - Bulgarian: Там
+  - Category: Adverbien
+- **wichtig** (Noun)
+  - Bulgarian: Важен
+  - Category: Adjektive
+- **interessant** (Noun)
+  - Bulgarian: Интересен
+  - Category: Adjektive
+- **schön, hübsch** (Noun)
+  - Bulgarian: Красив
+  - Category: Adjektive
+- **sauber, rein** (Noun)
+  - Bulgarian: Чист
+  - Category: Adjektive
+- **schmutzig** (Noun)
+  - Bulgarian: Мръсен
+  - Category: Adjektive
+- **voll** (Noun)
+  - Bulgarian: Пълен
+  - Category: Adjektive
+- **leer** (Noun)
+  - Bulgarian: Празен
+  - Category: Adjektive
+- **offen, geöffnet** (Noun)
+  - Bulgarian: Отворен
+  - Category: Adjektive
+- **geschlossen** (Noun)
+  - Bulgarian: Затворен
+  - Category: Adjektive
+- **gerade, richtig** (Noun)
+  - Bulgarian: Прав
+  - Category: Adjektive
+- **krumm, schief** (Noun)
+  - Bulgarian: Криви
+  - Category: Adjektive
+- **weich** (Noun)
+  - Bulgarian: Мек
+  - Category: Adjektive
+- **hart** (Noun)
+  - Bulgarian: Твърд
+  - Category: Adjektive
+- **glatt** (Noun)
+  - Bulgarian: Гладък
+  - Category: Adjektive
+- **rau, grob** (Noun)
+  - Bulgarian: Груб
+  - Category: Adjektive
+- **in** (Noun)
+  - Bulgarian: В
+  - Category: Grammatik
+- **auf, zu** (Noun)
+  - Bulgarian: На
+  - Category: Grammatik
+- **mit** (Noun)
+  - Bulgarian: С
+  - Category: Grammatik
+- **ohne** (Noun)
+  - Bulgarian: Без
+  - Category: Grammatik
+- **bis, neben** (Noun)
+  - Bulgarian: До
+  - Category: Grammatik
+- **zu, nach** (Noun)
+  - Bulgarian: Към
+  - Category: Grammatik
+- **vor** (Noun)
+  - Bulgarian: Пред
+  - Category: Grammatik
+- **nach** (Noun)
+  - Bulgarian: След
+  - Category: Grammatik
+- **über** (Noun)
+  - Bulgarian: Над
+  - Category: Grammatik
+- **unter** (Noun)
+  - Bulgarian: Под
+  - Category: Grammatik
+- **zwischen** (Noun)
+  - Bulgarian: Между
+  - Category: Grammatik
+- **bei** (Noun)
+  - Bulgarian: При
+  - Category: Grammatik
+- **dass** (Noun)
+  - Bulgarian: Че
+  - Category: Grammatik
+- **wenn, falls** (Noun)
+  - Bulgarian: Ако
+  - Category: Grammatik
+- **wenn, als** (Noun)
+  - Bulgarian: Когато
+  - Category: Grammatik
+- **der Lehrer** (Noun)
+  - Bulgarian: Учител
+  - Category: Berufe
+- **die Lehrerin** (Noun)
+  - Bulgarian: Учителка
+  - Category: Berufe
+- **der Arzt** (Noun)
+  - Bulgarian: Лекар
+  - Category: Berufe
+- **die Ärztin** (Noun)
+  - Bulgarian: Лекарка
+  - Category: Berufe
+- **der Student** (Noun)
+  - Bulgarian: Студент
+  - Category: Berufe
+- **die Studentin** (Noun)
+  - Bulgarian: Студентка
+  - Category: Berufe
+- **der Ingenieur** (Noun)
+  - Bulgarian: Инженер
+  - Category: Berufe
+- **der Programmierer** (Noun)
+  - Bulgarian: Програмист
+  - Category: Berufe
+- **der Verkäufer** (Noun)
+  - Bulgarian: Продавач
+  - Category: Berufe
+- **der Fahrer** (Noun)
+  - Bulgarian: Шофьор
+  - Category: Berufe
+- **der Koch** (Noun)
+  - Bulgarian: Готвач
+  - Category: Berufe
+- **der Kellner** (Noun)
+  - Bulgarian: Официант
+  - Category: Berufe
+- **der Polizist** (Noun)
+  - Bulgarian: Полицай
+  - Category: Berufe
+- **der Künstler** (Noun)
+  - Bulgarian: Художник
+  - Category: Berufe
+- **der Sänger** (Noun)
+  - Bulgarian: Певец
+  - Category: Berufe
+- **die Stadt** (Noun)
+  - Bulgarian: Град
+  - Category: Orte
+- **das Dorf** (Noun)
+  - Bulgarian: Село
+  - Category: Orte
+- **das Zentrum** (Noun)
+  - Bulgarian: Център
+  - Category: Orte
+- **der Park** (Noun)
+  - Bulgarian: Парк
+  - Category: Orte
+- **der Platz** (Noun)
+  - Bulgarian: Площад
+  - Category: Orte
+- **die Brücke** (Noun)
+  - Bulgarian: Мост
+  - Category: Orte
+- **der Bahnhof** (Noun)
+  - Bulgarian: Гара
+  - Category: Orte
+- **der Flughafen** (Noun)
+  - Bulgarian: Летище
+  - Category: Orte
+- **das Museum** (Noun)
+  - Bulgarian: Музей
+  - Category: Orte
+- **das Theater** (Noun)
+  - Bulgarian: Театър
+  - Category: Orte
+- **das Kino** (Noun)
+  - Bulgarian: Кино
+  - Category: Orte
+- **die Bibliothek** (Noun)
+  - Bulgarian: Библиотека
+  - Category: Orte
+- **die Bank** (Noun)
+  - Bulgarian: Банка
+  - Category: Orte
+- **die Post** (Noun)
+  - Bulgarian: Поща
+  - Category: Orte
+- **die Apotheke** (Noun)
+  - Bulgarian: Аптека
+  - Category: Orte
+- **das Wetter** (Noun)
+  - Bulgarian: Време
+  - Category: Wetter
+- **der Regen** (Noun)
+  - Bulgarian: Дъжд
+  - Category: Wetter
+- **der Schnee** (Noun)
+  - Bulgarian: Сняг
+  - Category: Wetter
+- **der Wind** (Noun)
+  - Bulgarian: Вятър
+  - Category: Wetter
+- **die Wolke** (Noun)
+  - Bulgarian: Облак
+  - Category: Wetter
+- **der Donner** (Noun)
+  - Bulgarian: Гръм
+  - Category: Wetter
+- **der Frühling** (Noun)
+  - Bulgarian: Пролет
+  - Category: Wetter
+- **der Sommer** (Noun)
+  - Bulgarian: Лято
+  - Category: Wetter
+- **der Herbst** (Noun)
+  - Bulgarian: Есен
+  - Category: Wetter
+- **der Winter** (Noun)
+  - Bulgarian: Зима
+  - Category: Wetter
+- **der Sport** (Noun)
+  - Bulgarian: Спорт
+  - Category: Aktivitäten
+- **das Spiel** (Noun)
+  - Bulgarian: Игра
+  - Category: Aktivitäten
+- **die Musik** (Noun)
+  - Bulgarian: Музика
+  - Category: Aktivitäten
+- **das Lied** (Noun)
+  - Bulgarian: Песен
+  - Category: Aktivitäten
+- **der Tanz** (Noun)
+  - Bulgarian: Танц
+  - Category: Aktivitäten
+- **das Hobby** (Noun)
+  - Bulgarian: Хоби
+  - Category: Aktivitäten
+- **der Film** (Noun)
+  - Bulgarian: Филм
+  - Category: Aktivitäten
+- **das Foto** (Noun)
+  - Bulgarian: Снимка
+  - Category: Aktivitäten
+- **die Zeichnung** (Noun)
+  - Bulgarian: Рисунка
+  - Category: Aktivitäten
+- **die Unterrichtsstunde** (Noun)
+  - Bulgarian: Урок
+  - Category: Aktivitäten
+- **sprechen, reden** (Verb)
+  - Bulgarian: Говоря
+  - Category: Verben
+- **hören, zuhören** (Verb)
+  - Bulgarian: Слушам
+  - Category: Verben
+- **schauen, sehen** (Verb)
+  - Bulgarian: Гледам
+  - Category: Verben
+- **danken** (Verb)
+  - Bulgarian: Благодаря
+  - Category: Verben
+- **bitten** (Verb)
+  - Bulgarian: Моля
+  - Category: Verben
+- **entschuldigen** (Verb)
+  - Bulgarian: Извинявам
+  - Category: Verben
+- **bezahlen** (Verb)
+  - Bulgarian: Плащам
+  - Category: Verben
+- **kosten** (Verb)
+  - Bulgarian: Струвам
+  - Category: Verben
+- **sich ausruhen** (Verb)
+  - Bulgarian: Почивам
+  - Category: Verben
+- **reisen** (Verb)
+  - Bulgarian: Пътувам
+  - Category: Verben
+- **Добро утро** (unknown)
+  - Bulgarian: Добро утро
+  - Category: Begrüßung
+- **Единадесет** (unknown)
+  - Bulgarian: Единадесет
+  - Category: Zahl
+- **Дванадесет** (unknown)
+  - Bulgarian: Дванадесет
+  - Category: Zahl
+- **Тринадесет** (unknown)
+  - Bulgarian: Тринадесет
+  - Category: Zahl
+- **Четиринадесет** (unknown)
+  - Bulgarian: Четиринадесет
+  - Category: Zahl
+- **Петнадесет** (unknown)
+  - Bulgarian: Петнадесет
+  - Category: Zahl
+- **Шестнадесет** (unknown)
+  - Bulgarian: Шестнадесет
+  - Category: Zahl
+- **Седемнадесет** (unknown)
+  - Bulgarian: Седемнадесет
+  - Category: Zahl
+- **Осемнадесет** (unknown)
+  - Bulgarian: Осемнадесет
+  - Category: Zahl
+- **Деветнадесет** (unknown)
+  - Bulgarian: Деветнадесет
+  - Category: Zahl
+- **Двадесет** (unknown)
+  - Bulgarian: Двадесет
+  - Category: Zahl
+- **Тридесет** (unknown)
+  - Bulgarian: Тридесет
+  - Category: Zahl
+- **Четиридесет** (unknown)
+  - Bulgarian: Четиридесет
+  - Category: Zahl
+- **Петдесет** (unknown)
+  - Bulgarian: Петдесет
+  - Category: Zahl
+- **Шестдесет** (unknown)
+  - Bulgarian: Шестдесет
+  - Category: Zahl
+- **Седемдесет** (unknown)
+  - Bulgarian: Седемдесет
+  - Category: Zahl
+- **Осемдесет** (unknown)
+  - Bulgarian: Осемдесет
+  - Category: Zahl
+- **Деветдесет** (unknown)
+  - Bulgarian: Деветдесет
+  - Category: Zahl
+- **Сто** (unknown)
+  - Bulgarian: Сто
+  - Category: Zahl
+- **Хиляда** (unknown)
+  - Bulgarian: Хиляда
+  - Category: Zahl
+- **laufen** (Verb)
+  - Bulgarian: бягам
+  - Category: Verbs
+- **gut** (Adjective)
+  - Bulgarian: добър
+  - Category: Adjectives
+- **Село** (unknown)
+  - Bulgarian: Село
+  - Category: Substantiv
+- **Книга** (unknown)
+  - Bulgarian: Книга
+  - Category: Substantiv
+- **Вода** (unknown)
+  - Bulgarian: Вода
+  - Category: Substantiv
+- **Съм** (unknown)
+  - Bulgarian: Съм
+  - Category: Verb
+- **Ям** (unknown)
+  - Bulgarian: Ям
+  - Category: Verb
+- **Автомобил** (unknown)
+  - Bulgarian: Автомобил
+  - Category: Substantiv
+- **Болница** (unknown)
+  - Bulgarian: Болница
+  - Category: Gesundheit
+- **Море** (unknown)
+  - Bulgarian: Море
+  - Category: Natur
+- **Лев** (unknown)
+  - Bulgarian: Лев
+  - Category: Einkauf
+- **Добър ден** (unknown)
+  - Bulgarian: Добър ден
+  - Category: Begrüßung
+- **Добър вечер** (unknown)
+  - Bulgarian: Добър вечер
+  - Category: Begrüßung
+- **Лека нощ** (unknown)
+  - Bulgarian: Лека нощ
+  - Category: Begrüßung
+- **Довиждане** (unknown)
+  - Bulgarian: Довиждане
+  - Category: Begrüßung
+- **Моля** (unknown)
+  - Bulgarian: Моля
+  - Category: Ausdruck
+- **Благодаря** (unknown)
+  - Bulgarian: Благодаря
+  - Category: Ausdruck
+- **Извинете** (unknown)
+  - Bulgarian: Извинете
+  - Category: Ausdruck
+- **Съжалявам** (unknown)
+  - Bulgarian: Съжалявам
+  - Category: Ausdruck
+- **Човек** (unknown)
+  - Bulgarian: Човек
+  - Category: Substantiv
+- **Семейство** (unknown)
+  - Bulgarian: Семейство
+  - Category: Substantiv
+- **Къща** (unknown)
+  - Bulgarian: Къща
+  - Category: Substantiv
+- **Училище** (unknown)
+  - Bulgarian: Училище
+  - Category: Substantiv
+- **Работа** (unknown)
+  - Bulgarian: Работа
+  - Category: Substantiv
+- **Град** (unknown)
+  - Bulgarian: Град
+  - Category: Substantiv
+- **Храна** (unknown)
+  - Bulgarian: Храна
+  - Category: Substantiv
+- **Имам** (unknown)
+  - Bulgarian: Имам
+  - Category: Verb
+- **Правя** (unknown)
+  - Bulgarian: Правя
+  - Category: Verb
+- **Мога** (unknown)
+  - Bulgarian: Мога
+  - Category: Verb
+- **Ходя** (unknown)
+  - Bulgarian: Ходя
+  - Category: Verb
+- **Пия** (unknown)
+  - Bulgarian: Пия
+  - Category: Verb
+- **Говоря** (unknown)
+  - Bulgarian: Говоря
+  - Category: Verb
+- **Виждам** (unknown)
+  - Bulgarian: Виждам
+  - Category: Verb
+- **Чувам** (unknown)
+  - Bulgarian: Чувам
+  - Category: Verb
+- **Добър** (unknown)
+  - Bulgarian: Добър
+  - Category: Adjektiv
+- **Лош** (unknown)
+  - Bulgarian: Лош
+  - Category: Adjektiv
+- **Голям** (unknown)
+  - Bulgarian: Голям
+  - Category: Adjektiv
+- **Малък** (unknown)
+  - Bulgarian: Малък
+  - Category: Adjektiv
+- **Нов** (unknown)
+  - Bulgarian: Нов
+  - Category: Adjektiv
+- **Стар** (unknown)
+  - Bulgarian: Стар
+  - Category: Adjektiv
+- **Красив** (unknown)
+  - Bulgarian: Красив
+  - Category: Adjektiv
+- **Грозен** (unknown)
+  - Bulgarian: Грозен
+  - Category: Adjektiv
+- **Топъл** (unknown)
+  - Bulgarian: Топъл
+  - Category: Adjektiv
+- **Студен** (unknown)
+  - Bulgarian: Студен
+  - Category: Adjektiv
+- **Тук** (unknown)
+  - Bulgarian: Тук
+  - Category: Adverb
+- **Там** (unknown)
+  - Bulgarian: Там
+  - Category: Adverb
+- **Сега** (unknown)
+  - Bulgarian: Сега
+  - Category: Adverb
+- **Тогава** (unknown)
+  - Bulgarian: Тогава
+  - Category: Adverb
+- **Бързо** (unknown)
+  - Bulgarian: Бързо
+  - Category: Adverb
+- **Бавно** (unknown)
+  - Bulgarian: Бавно
+  - Category: Adverb
+- **Често** (unknown)
+  - Bulgarian: Често
+  - Category: Adverb
+- **Редко** (unknown)
+  - Bulgarian: Редко
+  - Category: Adverb
+- **Добре** (unknown)
+  - Bulgarian: Добре
+  - Category: Adverb
+- **Зле** (unknown)
+  - Bulgarian: Зле
+  - Category: Adverb
+- **Маса** (unknown)
+  - Bulgarian: Маса
+  - Category: Substantiv
+- **Стол** (unknown)
+  - Bulgarian: Стол
+  - Category: Substantiv
+- **Хладилник** (unknown)
+  - Bulgarian: Хладилник
+  - Category: Substantiv
+- **Кухня** (unknown)
+  - Bulgarian: Кухня
+  - Category: Substantiv
+- **Апартамент** (unknown)
+  - Bulgarian: Апартамент
+  - Category: Substantiv
+- **Магазин** (unknown)
+  - Bulgarian: Магазин
+  - Category: Substantiv
+- **Градина** (unknown)
+  - Bulgarian: Градина
+  - Category: Substantiv
+- **Часовник** (unknown)
+  - Bulgarian: Часовник
+  - Category: Substantiv
+- **Чета** (unknown)
+  - Bulgarian: Чета
+  - Category: Verb
+- **Пиша** (unknown)
+  - Bulgarian: Пиша
+  - Category: Verb
+- **Карам** (unknown)
+  - Bulgarian: Карам
+  - Category: Verb
+- **Живея** (unknown)
+  - Bulgarian: Живея
+  - Category: Verb
+- **Работя** (unknown)
+  - Bulgarian: Работя
+  - Category: Verb
+- **Уча** (unknown)
+  - Bulgarian: Уча
+  - Category: Verb
+- **Едно** (unknown)
+  - Bulgarian: Едно
+  - Category: Zahl
+- **Две** (unknown)
+  - Bulgarian: Две
+  - Category: Zahl
+- **Три** (unknown)
+  - Bulgarian: Три
+  - Category: Zahl
+- **Четири** (unknown)
+  - Bulgarian: Четири
+  - Category: Zahl
+- **Пет** (unknown)
+  - Bulgarian: Пет
+  - Category: Zahl
+- **Шест** (unknown)
+  - Bulgarian: Шест
+  - Category: Zahl
+- **Седем** (unknown)
+  - Bulgarian: Седем
+  - Category: Zahl
+- **Осем** (unknown)
+  - Bulgarian: Осем
+  - Category: Zahl
+- **Девет** (unknown)
+  - Bulgarian: Девет
+  - Category: Zahl
+- **Десет** (unknown)
+  - Bulgarian: Десет
+  - Category: Zahl
+- **Много** (unknown)
+  - Bulgarian: Много
+  - Category: Quantor
+- **Малко** (unknown)
+  - Bulgarian: Малко
+  - Category: Quantor
+- **Всички** (unknown)
+  - Bulgarian: Всички
+  - Category: Quantor
+- **Няколко** (unknown)
+  - Bulgarian: Няколко
+  - Category: Quantor
+- **Никой** (unknown)
+  - Bulgarian: Никой
+  - Category: Quantor
+- **Понеделник** (unknown)
+  - Bulgarian: Понеделник
+  - Category: Tag
+- **Вторник** (unknown)
+  - Bulgarian: Вторник
+  - Category: Tag
+- **Сряда** (unknown)
+  - Bulgarian: Сряда
+  - Category: Tag
+- **Четвъртък** (unknown)
+  - Bulgarian: Четвъртък
+  - Category: Tag
+- **Петък** (unknown)
+  - Bulgarian: Петък
+  - Category: Tag
+- **Събота** (unknown)
+  - Bulgarian: Събота
+  - Category: Tag
+- **Неделя** (unknown)
+  - Bulgarian: Неделя
+  - Category: Tag
+- **Час** (unknown)
+  - Bulgarian: Час
+  - Category: Zeit
+- **Минута** (unknown)
+  - Bulgarian: Минута
+  - Category: Zeit
+- **Сутрин** (unknown)
+  - Bulgarian: Сутрин
+  - Category: Zeit
+- **Обед** (unknown)
+  - Bulgarian: Обед
+  - Category: Zeit
+- **Следобед** (unknown)
+  - Bulgarian: Следобед
+  - Category: Zeit
+- **Вечер** (unknown)
+  - Bulgarian: Вечер
+  - Category: Zeit
+- **Нощ** (unknown)
+  - Bulgarian: Нощ
+  - Category: Zeit
+- **Как си?** (unknown)
+  - Bulgarian: Как си?
+  - Category: Ausdruck
+- **Добре съм** (unknown)
+  - Bulgarian: Добре съм
+  - Category: Ausdruck
+- **Извинявай** (unknown)
+  - Bulgarian: Извинявай
+  - Category: Ausdruck
+- **Може ли?** (unknown)
+  - Bulgarian: Може ли?
+  - Category: Ausdruck
+- **Хляб** (unknown)
+  - Bulgarian: Хляб
+  - Category: Lebensmittel
+- **Мляко** (unknown)
+  - Bulgarian: Мляко
+  - Category: Lebensmittel
+- **Сирене** (unknown)
+  - Bulgarian: Сирене
+  - Category: Lebensmittel
+- **Месо** (unknown)
+  - Bulgarian: Месо
+  - Category: Lebensmittel
+- **Риба** (unknown)
+  - Bulgarian: Риба
+  - Category: Lebensmittel
+- **Зеленчуци** (unknown)
+  - Bulgarian: Зеленчуци
+  - Category: Lebensmittel
+- **Плодове** (unknown)
+  - Bulgarian: Плодове
+  - Category: Lebensmittel
+- **Сок** (unknown)
+  - Bulgarian: Сок
+  - Category: Lebensmittel
+- **Кафе** (unknown)
+  - Bulgarian: Кафе
+  - Category: Lebensmittel
+- **Автобус** (unknown)
+  - Bulgarian: Автобус
+  - Category: Transport
+- **Влак** (unknown)
+  - Bulgarian: Влак
+  - Category: Transport
+- **Самолет** (unknown)
+  - Bulgarian: Самолет
+  - Category: Transport
+- **Такси** (unknown)
+  - Bulgarian: Такси
+  - Category: Transport
+- **Гара** (unknown)
+  - Bulgarian: Гара
+  - Category: Transport
+- **Летище** (unknown)
+  - Bulgarian: Летище
+  - Category: Transport
+- **Хотел** (unknown)
+  - Bulgarian: Хотел
+  - Category: Transport
+- **Билет** (unknown)
+  - Bulgarian: Билет
+  - Category: Transport
+- **Път** (unknown)
+  - Bulgarian: Път
+  - Category: Transport
+- **Карта** (unknown)
+  - Bulgarian: Карта
+  - Category: Transport
+- **Лекар** (unknown)
+  - Bulgarian: Лекар
+  - Category: Gesundheit
+- **Аптека** (unknown)
+  - Bulgarian: Аптека
+  - Category: Gesundheit
+- **Лекарства** (unknown)
+  - Bulgarian: Лекарства
+  - Category: Gesundheit
+- **Спешно** (unknown)
+  - Bulgarian: Спешно
+  - Category: Gesundheit
+- **Болка** (unknown)
+  - Bulgarian: Болка
+  - Category: Gesundheit
+- **Здраве** (unknown)
+  - Bulgarian: Здраве
+  - Category: Gesundheit
+- **Треска** (unknown)
+  - Bulgarian: Треска
+  - Category: Gesundheit
+- **Настинка** (unknown)
+  - Bulgarian: Настинка
+  - Category: Gesundheit
+- **Помощ** (unknown)
+  - Bulgarian: Помощ
+  - Category: Gesundheit
+- **Слънце** (unknown)
+  - Bulgarian: Слънце
+  - Category: Natur
+- **Дъжд** (unknown)
+  - Bulgarian: Дъжд
+  - Category: Natur
+- **Сняг** (unknown)
+  - Bulgarian: Сняг
+  - Category: Natur
+- **Вятър** (unknown)
+  - Bulgarian: Вятър
+  - Category: Natur
+- **Температура** (unknown)
+  - Bulgarian: Температура
+  - Category: Natur
+- **Облаци** (unknown)
+  - Bulgarian: Облаци
+  - Category: Natur
+- **Гора** (unknown)
+  - Bulgarian: Гора
+  - Category: Natur
+- **Река** (unknown)
+  - Bulgarian: Река
+  - Category: Natur
+- **Планина** (unknown)
+  - Bulgarian: Планина
+  - Category: Natur
+- **Майка** (unknown)
+  - Bulgarian: Майка
+  - Category: Familie
+- **Баща** (unknown)
+  - Bulgarian: Баща
+  - Category: Familie
+- **Брат** (unknown)
+  - Bulgarian: Брат
+  - Category: Familie
+- **Сестра** (unknown)
+  - Bulgarian: Сестра
+  - Category: Familie
+- **Съпруг** (unknown)
+  - Bulgarian: Съпруг
+  - Category: Familie
+- **Съпруга** (unknown)
+  - Bulgarian: Съпруга
+  - Category: Familie
+- **Дете** (unknown)
+  - Bulgarian: Дете
+  - Category: Familie
+- **Приятел** (unknown)
+  - Bulgarian: Приятел
+  - Category: Familie
+- **Приятелка** (unknown)
+  - Bulgarian: Приятелка
+  - Category: Familie
+- **Пари** (unknown)
+  - Bulgarian: Пари
+  - Category: Einkauf
+- **Цена** (unknown)
+  - Bulgarian: Цена
+  - Category: Einkauf
+- **Евро** (unknown)
+  - Bulgarian: Евро
+  - Category: Einkauf
+- **Сметка** (unknown)
+  - Bulgarian: Сметка
+  - Category: Einkauf
+- **Касова бележка** (unknown)
+  - Bulgarian: Касова бележка
+  - Category: Einkauf
+- **Отстъпка** (unknown)
+  - Bulgarian: Отстъпка
+  - Category: Einkauf
+- **Купувам** (unknown)
+  - Bulgarian: Купувам
+  - Category: Verb
+- **Продавам** (unknown)
+  - Bulgarian: Продавам
+  - Category: Verb
+- **Пазарувам** (unknown)
+  - Bulgarian: Пазарувам
+  - Category: Verb
+
+## Entries Only in Current (531)
+
+These entries exist in the current vocabulary but not in the archive:
+
+- **zusammen** (adverb)
+  - Bulgarian: заедно
+- **Hallo** (interjection)
+  - Bulgarian: Здравей
+- **Guten Morgen** (interjection)
+  - Bulgarian: Добро утро
+- **Guten Abend** (interjection)
+  - Bulgarian: Добър вечер
+- **Gute Nacht** (interjection)
+  - Bulgarian: Лека нощ
+- **Auf Wiedersehen** (interjection)
+  - Bulgarian: Довиждане
+- **Bitte** (phrase)
+  - Bulgarian: Моля
+- **Entschuldigung** (phrase)
+  - Bulgarian: Извинете
+- **Es tut mir leid** (phrase)
+  - Bulgarian: Съжалявам
+- **Mensch** (noun)
+  - Bulgarian: Човек
+- **Familie** (noun)
+  - Bulgarian: Семейство
+- **Haus** (noun)
+  - Bulgarian: Къща
+- **Schule** (noun)
+  - Bulgarian: Училище
+- **Stadt** (noun)
+  - Bulgarian: Град
+- **Dorf** (noun)
+  - Bulgarian: Село
+- **Essen** (noun)
+  - Bulgarian: Храна
+- **sein** (verb)
+  - Bulgarian: Съм
+- **machen** (verb)
+  - Bulgarian: Правя
+- **sprechen** (verb)
+  - Bulgarian: Говоря
+- **hören** (verb)
+  - Bulgarian: Чувам
+- **schön** (adjective)
+  - Bulgarian: Красив
+- **dann** (adverb)
+  - Bulgarian: Тогава
+- **selten** (adverb)
+  - Bulgarian: Редко
+- **schlecht** (adverb)
+  - Bulgarian: Зле
+- **Tisch** (noun)
+  - Bulgarian: Маса
+- **Stuhl** (noun)
+  - Bulgarian: Стол
+- **Küche** (noun)
+  - Bulgarian: Кухня
+- **Wohnung** (noun)
+  - Bulgarian: Апартамент
+- **Auto** (noun)
+  - Bulgarian: Автомобил
+- **Laden** (noun)
+  - Bulgarian: Магазин
+- **Garten** (noun)
+  - Bulgarian: Градина
+- **Uhr** (noun)
+  - Bulgarian: Часовник
+- **fahren** (verb)
+  - Bulgarian: Карам
+- **leben** (verb)
+  - Bulgarian: Живея
+- **lernen** (verb)
+  - Bulgarian: Уча
+- **eins** (number)
+  - Bulgarian: Едно
+- **zwei** (number)
+  - Bulgarian: Две
+- **drei** (number)
+  - Bulgarian: Три
+- **vier** (number)
+  - Bulgarian: Четири
+- **fünf** (number)
+  - Bulgarian: Пет
+- **sechs** (number)
+  - Bulgarian: Шест
+- **sieben** (number)
+  - Bulgarian: Седем
+- **acht** (number)
+  - Bulgarian: Осем
+- **neun** (number)
+  - Bulgarian: Девет
+- **zehn** (number)
+  - Bulgarian: Десет
+- **elf** (number)
+  - Bulgarian: Единадесет
+- **zwölf** (number)
+  - Bulgarian: Дванадесет
+- **dreizehn** (number)
+  - Bulgarian: Тринадесет
+- **zwanzig** (number)
+  - Bulgarian: Двадесет
+- **viele** (adjective)
+  - Bulgarian: Много
+- **wenig** (adjective)
+  - Bulgarian: Малко
+- **alle** (adjective)
+  - Bulgarian: Всички
+- **einige** (adjective)
+  - Bulgarian: Няколко
+- **keiner** (adjective)
+  - Bulgarian: Никой
+- **Samstag** (phrase)
+  - Bulgarian: Събота
+- **Stunde** (phrase)
+  - Bulgarian: Час
+- **Minute** (phrase)
+  - Bulgarian: Минута
+- **morgen** (phrase)
+  - Bulgarian: Утре
+- **Mittag** (phrase)
+  - Bulgarian: Обед
+- **Nachmittag** (phrase)
+  - Bulgarian: Следобед
+- **Abend** (phrase)
+  - Bulgarian: Вечер
+- **Nacht** (phrase)
+  - Bulgarian: Нощ
+- **Wie geht's?** (phrase)
+  - Bulgarian: Как си?
+- **Mir geht's gut** (phrase)
+  - Bulgarian: Добре съм
+- **Entschuldige** (phrase)
+  - Bulgarian: Извинявай
+- **Darf ich?** (phrase)
+  - Bulgarian: Може ли?
+- **Brot** (noun)
+  - Bulgarian: Хляб
+- **Milch** (noun)
+  - Bulgarian: Мляко
+- **Käse** (noun)
+  - Bulgarian: Сирене
+- **Fleisch** (noun)
+  - Bulgarian: Месо
+- **Fisch** (noun)
+  - Bulgarian: Риба
+- **Gemüse** (noun)
+  - Bulgarian: Зеленчуци
+- **Obst** (noun)
+  - Bulgarian: Плодове
+- **Saft** (noun)
+  - Bulgarian: Сок
+- **Kaffee** (noun)
+  - Bulgarian: Кафе
+- **Bus** (noun)
+  - Bulgarian: Автобус
+- **Zug** (noun)
+  - Bulgarian: Влак
+- **Flugzeug** (noun)
+  - Bulgarian: Самолет
+- **Taxi** (noun)
+  - Bulgarian: Такси
+- **Bahnhof** (noun)
+  - Bulgarian: Гара
+- **Flughafen** (noun)
+  - Bulgarian: Летище
+- **Hotel** (noun)
+  - Bulgarian: Хотел
+- **Straße** (noun)
+  - Bulgarian: Път
+- **Karte** (noun)
+  - Bulgarian: Карта
+- **Arzt** (noun)
+  - Bulgarian: Лекар
+- **Krankenhaus** (noun)
+  - Bulgarian: Болница
+- **Apotheke** (noun)
+  - Bulgarian: Аптека
+- **Medikamente** (noun)
+  - Bulgarian: Лекарства
+- **Notfall** (noun)
+  - Bulgarian: Спешно
+- **Schmerz** (noun)
+  - Bulgarian: Болка
+- **Gesundheit** (noun)
+  - Bulgarian: Здраве
+- **Fieber** (noun)
+  - Bulgarian: Треска
+- **Erkältung** (noun)
+  - Bulgarian: Настинка
+- **Hilfe** (noun)
+  - Bulgarian: Помощ
+- **Sonne** (noun)
+  - Bulgarian: Слънце
+- **Regen** (noun)
+  - Bulgarian: Дъжд
+- **Schnee** (noun)
+  - Bulgarian: Сняг
+- **Wind** (noun)
+  - Bulgarian: Вятър
+- **Temperatur** (noun)
+  - Bulgarian: Температура
+- **Wolken** (noun)
+  - Bulgarian: Облаци
+- **Wald** (noun)
+  - Bulgarian: Гора
+- **Fluss** (noun)
+  - Bulgarian: Река
+- **Berg** (noun)
+  - Bulgarian: Планина
+- **Meer** (noun)
+  - Bulgarian: Море
+- **Mutter** (phrase)
+  - Bulgarian: Майка
+- **Vater** (phrase)
+  - Bulgarian: Баща
+- **Bruder** (phrase)
+  - Bulgarian: Брат
+- **Schwester** (phrase)
+  - Bulgarian: Сестра
+- **Ehemann** (phrase)
+  - Bulgarian: Съпруг
+- **Ehefrau** (phrase)
+  - Bulgarian: Съпруга
+- **Kind** (phrase)
+  - Bulgarian: Дете
+- **Freund** (phrase)
+  - Bulgarian: Приятел
+- **Freundin** (phrase)
+  - Bulgarian: Приятелка
+- **Geld** (phrase)
+  - Bulgarian: Пари
+- **Preis** (phrase)
+  - Bulgarian: Цена
+- **Euro** (phrase)
+  - Bulgarian: Евро
+- **Lew** (phrase)
+  - Bulgarian: Лев
+- **Rechnung** (phrase)
+  - Bulgarian: Сметка
+- **Quittung** (phrase)
+  - Bulgarian: Касова бележка
+- **Rabatt** (phrase)
+  - Bulgarian: Отстъпка
+- **einkaufen** (verb)
+  - Bulgarian: Пазарувам
+- **Guten Tag** (interjection)
+  - Bulgarian: Добър ден
+- **Haus** (phrase)
+  - Bulgarian: дом
+- **Arbeit** (phrase)
+  - Bulgarian: работа
+- **Buch** (phrase)
+  - Bulgarian: книга
+- **vierzehn** (number)
+  - Bulgarian: Четиринадесет
+- **fünfzehn** (number)
+  - Bulgarian: Петнадесет
+- **sechzehn** (number)
+  - Bulgarian: Шестнадесет
+- **siebzehn** (number)
+  - Bulgarian: Седемнадесет
+- **achtzehn** (number)
+  - Bulgarian: Осемнадесет
+- **neunzehn** (number)
+  - Bulgarian: Деветнадесет
+- **dreißig** (number)
+  - Bulgarian: Тридесет
+- **vierzig** (number)
+  - Bulgarian: Четиридесет
+- **fünfzig** (number)
+  - Bulgarian: Петдесет
+- **sechzig** (number)
+  - Bulgarian: Шестдесет
+- **siebzig** (number)
+  - Bulgarian: Седемдесет
+- **achtzig** (number)
+  - Bulgarian: Осемдесет
+- **neunzig** (number)
+  - Bulgarian: Деветдесет
+- **hundert** (number)
+  - Bulgarian: Сто
+- **zweihundert** (number)
+  - Bulgarian: Двеста
+- **tausend** (number)
+  - Bulgarian: Хиляда
+- **wollen / möchten** (phrase)
+  - Bulgarian: Искам
+- **schlafen** (phrase)
+  - Bulgarian: Спя
+- **trinken** (phrase)
+  - Bulgarian: Пия
+- **essen** (phrase)
+  - Bulgarian: Ям
+- **sehen** (phrase)
+  - Bulgarian: Виждам
+- **können** (phrase)
+  - Bulgarian: Мога
+- **machen / tun** (phrase)
+  - Bulgarian: Правя
+- **wer** (pronoun)
+  - Bulgarian: Кой
+- **was** (pronoun)
+  - Bulgarian: Какво
+- **sprechen / reden** (phrase)
+  - Bulgarian: Говоря
+- **hören / zuhören** (phrase)
+  - Bulgarian: Слушам
+- **lesen** (phrase)
+  - Bulgarian: Чета
+- **schreiben** (phrase)
+  - Bulgarian: Пиша
+- **leben / wohnen** (phrase)
+  - Bulgarian: Живея
+- **anfangen / beginnen** (phrase)
+  - Bulgarian: Започвам
+- **beenden / abschließen** (phrase)
+  - Bulgarian: Завършвам
+- **warten** (phrase)
+  - Bulgarian: Чакам
+- **finden** (phrase)
+  - Bulgarian: Намирам
+- **helfen** (phrase)
+  - Bulgarian: Помагам
+- **öffnen / aufmachen** (phrase)
+  - Bulgarian: Отварям
+- **schließen / zumachen** (phrase)
+  - Bulgarian: Затварям
+- **verkaufen** (phrase)
+  - Bulgarian: Продавам
+- **bezahlen / zahlen** (phrase)
+  - Bulgarian: Плащам
+- **sagen** (phrase)
+  - Bulgarian: Казвам
+- **denken / meinen** (phrase)
+  - Bulgarian: Мисля
+- **die Milch** (phrase)
+  - Bulgarian: Мляко
+- **gut** (phrase)
+  - Bulgarian: Добре
+- **schlecht** (phrase)
+  - Bulgarian: Лош
+- **neu** (phrase)
+  - Bulgarian: Нов
+- **alt** (phrase)
+  - Bulgarian: Стар
+- **wann** (pronoun)
+  - Bulgarian: Кога
+- **wo** (pronoun)
+  - Bulgarian: Къде
+- **warum** (pronoun)
+  - Bulgarian: Защо
+- **wie** (pronoun)
+  - Bulgarian: Как
+- **wie viel, wie viele** (pronoun)
+  - Bulgarian: Колко
+- **wessen** (pronoun)
+  - Bulgarian: Чий
+- **was für ein, welcher Art** (pronoun)
+  - Bulgarian: Какъв
+- **woher** (pronoun)
+  - Bulgarian: Откъде
+- **wohin** (pronoun)
+  - Bulgarian: Накъде
+- **ob** (pronoun)
+  - Bulgarian: Дали
+- **schwarz** (phrase)
+  - Bulgarian: Черен
+- **weiß** (phrase)
+  - Bulgarian: Бял
+- **rot** (phrase)
+  - Bulgarian: Червен
+- **blau** (phrase)
+  - Bulgarian: Син
+- **grün** (phrase)
+  - Bulgarian: Зелен
+- **gelb** (phrase)
+  - Bulgarian: Жълт
+- **orange** (phrase)
+  - Bulgarian: Оранжев
+- **braun** (phrase)
+  - Bulgarian: Кафяв
+- **grau** (phrase)
+  - Bulgarian: Сив
+- **rosa, pink** (phrase)
+  - Bulgarian: Розов
+- **groß** (phrase)
+  - Bulgarian: Голям
+- **klein** (phrase)
+  - Bulgarian: Малък
+- **hoch, groß (von Personen)** (phrase)
+  - Bulgarian: Висок
+- **niedrig, klein (von Personen)** (phrase)
+  - Bulgarian: Нисък
+- **lang** (phrase)
+  - Bulgarian: Дълъг
+- **kurz** (phrase)
+  - Bulgarian: Къс
+- **dick, fett** (phrase)
+  - Bulgarian: Дебел
+- **dünn** (phrase)
+  - Bulgarian: Тънък
+- **schön, hübsch, nett** (phrase)
+  - Bulgarian: Хубав
+- **hässlich** (phrase)
+  - Bulgarian: Грозен
+- **schauen, sehen, ansehen** (phrase)
+  - Bulgarian: Гледам
+- **gehen, fahren (weggehen)** (phrase)
+  - Bulgarian: Отивам
+- **kommen** (phrase)
+  - Bulgarian: Идвам
+- **aufstehen, werden** (phrase)
+  - Bulgarian: Ставам
+- **sich setzen, sich hinsetzen** (phrase)
+  - Bulgarian: Сядам
+- **sich hinlegen, schlafen gehen** (phrase)
+  - Bulgarian: Лягам
+- **tragen, anhaben** (phrase)
+  - Bulgarian: Нося
+- **kaufen** (phrase)
+  - Bulgarian: Купувам
+- **nehmen, holen** (phrase)
+  - Bulgarian: Взимам
+- **geben** (phrase)
+  - Bulgarian: Давам
+- **Montag** (phrase)
+  - Bulgarian: Понеделник
+- **Dienstag** (phrase)
+  - Bulgarian: Вторник
+- **Mittwoch** (phrase)
+  - Bulgarian: Сряда
+- **Donnerstag** (phrase)
+  - Bulgarian: Четвъртък
+- **Freitag** (phrase)
+  - Bulgarian: Петък
+- **Samstag, Sonnabend** (phrase)
+  - Bulgarian: Събота
+- **Sonntag** (phrase)
+  - Bulgarian: Неделя
+- **der Tag** (phrase)
+  - Bulgarian: Ден
+- **die Woche** (phrase)
+  - Bulgarian: Седмица
+- **das Jahr** (phrase)
+  - Bulgarian: Година
+- **Januar** (phrase)
+  - Bulgarian: Януари
+- **Februar** (phrase)
+  - Bulgarian: Февруари
+- **März** (phrase)
+  - Bulgarian: Март
+- **April** (phrase)
+  - Bulgarian: Април
+- **Mai** (phrase)
+  - Bulgarian: Май
+- **Juni** (phrase)
+  - Bulgarian: Юни
+- **Juli** (phrase)
+  - Bulgarian: Юли
+- **August** (phrase)
+  - Bulgarian: Август
+- **September** (phrase)
+  - Bulgarian: Септември
+- **Oktober** (phrase)
+  - Bulgarian: Октомври
+- **November** (phrase)
+  - Bulgarian: Ноември
+- **Dezember** (phrase)
+  - Bulgarian: Декември
+- **die Mutter** (phrase)
+  - Bulgarian: Майка
+- **der Vater** (phrase)
+  - Bulgarian: Баща
+- **der Sohn** (phrase)
+  - Bulgarian: Син
+- **die Tochter** (phrase)
+  - Bulgarian: Дъщеря
+- **der Bruder** (phrase)
+  - Bulgarian: Брат
+- **die Schwester** (phrase)
+  - Bulgarian: Сестра
+- **die Großmutter, die Oma** (phrase)
+  - Bulgarian: Баба
+- **der Großvater, der Opa** (phrase)
+  - Bulgarian: Дядо
+- **der Ehemann** (phrase)
+  - Bulgarian: Съпруг
+- **die Ehefrau** (phrase)
+  - Bulgarian: Съпруга
+- **ich** (pronoun)
+  - Bulgarian: Аз
+- **du** (pronoun)
+  - Bulgarian: Ти
+- **er** (pronoun)
+  - Bulgarian: Той
+- **sie** (pronoun)
+  - Bulgarian: Тя
+- **es** (pronoun)
+  - Bulgarian: То
+- **wir** (pronoun)
+  - Bulgarian: Ние
+- **ihr, Sie** (pronoun)
+  - Bulgarian: Вие
+- **sie (plural)** (pronoun)
+  - Bulgarian: Те
+- **dieser (m)** (pronoun)
+  - Bulgarian: Този
+- **arbeiten** (phrase)
+  - Bulgarian: Работя
+- **lernen, studieren** (phrase)
+  - Bulgarian: Уча
+- **verstehen** (phrase)
+  - Bulgarian: Разбирам
+- **lieben, mögen** (phrase)
+  - Bulgarian: Обичам
+- **gefallen, mögen** (phrase)
+  - Bulgarian: Харесвам
+- **wissen, kennen** (phrase)
+  - Bulgarian: Зная
+- **kennen (Person)** (phrase)
+  - Bulgarian: Познавам
+- **glauben** (phrase)
+  - Bulgarian: Вярвам
+- **fühlen** (phrase)
+  - Bulgarian: Чувствам
+- **denken, meinen** (phrase)
+  - Bulgarian: Мисля
+- **benutzen, verwenden** (phrase)
+  - Bulgarian: Използвам
+- **bekommen, erhalten** (phrase)
+  - Bulgarian: Получавам
+- **bleiben** (phrase)
+  - Bulgarian: Оставам
+- **fortsetzen, weitermachen** (phrase)
+  - Bulgarian: Продължавам
+- **anhalten, stoppen** (phrase)
+  - Bulgarian: Спирам
+- **lassen, loslassen** (phrase)
+  - Bulgarian: Пускам
+- **fahren (lenken)** (phrase)
+  - Bulgarian: Карам
+- **fangen, ergreifen** (phrase)
+  - Bulgarian: Хващам
+- **suchen** (phrase)
+  - Bulgarian: Търся
+- **sprechen, sich unterhalten** (phrase)
+  - Bulgarian: Разговарям
+- **jung** (phrase)
+  - Bulgarian: Млад
+- **heiß** (phrase)
+  - Bulgarian: Горещ
+- **kalt** (phrase)
+  - Bulgarian: Студен
+- **warm** (phrase)
+  - Bulgarian: Топъл
+- **teuer, lieb** (phrase)
+  - Bulgarian: Скъп
+- **billig, günstig** (phrase)
+  - Bulgarian: Евтин
+- **reich** (phrase)
+  - Bulgarian: Богат
+- **arm** (phrase)
+  - Bulgarian: Беден
+- **stark** (phrase)
+  - Bulgarian: Силен
+- **schwach** (phrase)
+  - Bulgarian: Слаб
+- **schnell** (phrase)
+  - Bulgarian: Бързо
+- **langsam** (phrase)
+  - Bulgarian: Бавно
+- **leicht, einfach** (phrase)
+  - Bulgarian: Лесен
+- **schwer, schwierig** (phrase)
+  - Bulgarian: Труден
+- **das Buch** (phrase)
+  - Bulgarian: Книга
+- **der Tisch** (phrase)
+  - Bulgarian: Маса
+- **der Stuhl** (phrase)
+  - Bulgarian: Стол
+- **das Bett** (phrase)
+  - Bulgarian: Легло
+- **die Straße** (phrase)
+  - Bulgarian: Улица
+- **das Geschäft, der Laden** (phrase)
+  - Bulgarian: Магазин
+- **das Restaurant** (phrase)
+  - Bulgarian: Ресторант
+- **das Krankenhaus** (phrase)
+  - Bulgarian: Болница
+- **die Schule** (phrase)
+  - Bulgarian: Училище
+- **und** (phrase)
+  - Bulgarian: И
+- **aber** (phrase)
+  - Bulgarian: Но
+- **oder** (phrase)
+  - Bulgarian: Или
+- **für, über** (phrase)
+  - Bulgarian: За
+- **von, aus** (phrase)
+  - Bulgarian: От
+- **müssen, sollen** (phrase)
+  - Bulgarian: Трябва
+- **wollen, möchten** (phrase)
+  - Bulgarian: Искам
+- **können, dürfen** (phrase)
+  - Bulgarian: Мога
+- **haben** (phrase)
+  - Bulgarian: Имам
+- **nicht haben** (phrase)
+  - Bulgarian: Нямам
+- **sein (perfektiv)** (phrase)
+  - Bulgarian: Бъда
+- **sagen (perfektiv)** (phrase)
+  - Bulgarian: Кажа
+- **machen, tun (perfektiv)** (phrase)
+  - Bulgarian: Направя
+- **werden, aufstehen (perfektiv)** (phrase)
+  - Bulgarian: Стана
+- **kommen (perfektiv)** (phrase)
+  - Bulgarian: Дойда
+- **gehen (perfektiv)** (phrase)
+  - Bulgarian: Отида
+- **sich setzen (perfektiv)** (phrase)
+  - Bulgarian: Седна
+- **sehen (perfektiv)** (phrase)
+  - Bulgarian: Видя
+- **finden (perfektiv)** (phrase)
+  - Bulgarian: Намеря
+- **verstehen (perfektiv)** (phrase)
+  - Bulgarian: Разбера
+- **glücklich** (phrase)
+  - Bulgarian: Щастлив
+- **traurig** (phrase)
+  - Bulgarian: Тъжен
+- **fröhlich, lustig** (phrase)
+  - Bulgarian: Весел
+- **wütend, böse** (phrase)
+  - Bulgarian: Сърдит
+- **müde** (phrase)
+  - Bulgarian: Уморен
+- **hungrig** (phrase)
+  - Bulgarian: Гладен
+- **durstig** (phrase)
+  - Bulgarian: Жаден
+- **krank** (phrase)
+  - Bulgarian: Болен
+- **gesund** (phrase)
+  - Bulgarian: Здрав
+- **bereit, fertig** (phrase)
+  - Bulgarian: Готов
+- **das Kleidungsstück** (phrase)
+  - Bulgarian: Дреха
+- **das Hemd** (phrase)
+  - Bulgarian: Риза
+- **die Bluse** (phrase)
+  - Bulgarian: Блуза
+- **die Hose** (phrase)
+  - Bulgarian: Панталон
+- **der Rock** (phrase)
+  - Bulgarian: Пола
+- **das Kleid** (phrase)
+  - Bulgarian: Рокля
+- **der Mantel** (phrase)
+  - Bulgarian: Палто
+- **die Jacke** (phrase)
+  - Bulgarian: Яке
+- **der Schuh** (phrase)
+  - Bulgarian: Обувка
+- **die Socke, der Strumpf** (phrase)
+  - Bulgarian: Чорап
+- **die Mütze, der Hut** (phrase)
+  - Bulgarian: Шапка
+- **der Handschuh** (phrase)
+  - Bulgarian: Ръкавица
+- **der Schal** (phrase)
+  - Bulgarian: Шал
+- **der Gürtel** (phrase)
+  - Bulgarian: Колан
+- **die Tasche** (phrase)
+  - Bulgarian: Чанта
+- **sprechen, reden** (phrase)
+  - Bulgarian: Говоря
+- **hören, zuhören** (phrase)
+  - Bulgarian: Слушам
+- **schauen, sehen** (phrase)
+  - Bulgarian: Гледам
+- **danken** (phrase)
+  - Bulgarian: Благодаря
+- **bitten** (phrase)
+  - Bulgarian: Моля
+- **entschuldigen** (phrase)
+  - Bulgarian: Извинявам
+- **bezahlen** (phrase)
+  - Bulgarian: Плащам
+- **kosten** (phrase)
+  - Bulgarian: Струвам
+- **sich ausruhen** (phrase)
+  - Bulgarian: Почивам
+- **reisen** (phrase)
+  - Bulgarian: Пътувам
+- **der Lehrer** (phrase)
+  - Bulgarian: Учител
+- **die Lehrerin** (phrase)
+  - Bulgarian: Учителка
+- **der Arzt** (phrase)
+  - Bulgarian: Лекар
+- **die Ärztin** (phrase)
+  - Bulgarian: Лекарка
+- **der Student** (phrase)
+  - Bulgarian: Студент
+- **die Studentin** (phrase)
+  - Bulgarian: Студентка
+- **der Ingenieur** (phrase)
+  - Bulgarian: Инженер
+- **der Programmierer** (phrase)
+  - Bulgarian: Програмист
+- **der Verkäufer** (phrase)
+  - Bulgarian: Продавач
+- **der Fahrer** (phrase)
+  - Bulgarian: Шофьор
+- **der Koch** (phrase)
+  - Bulgarian: Готвач
+- **der Kellner** (phrase)
+  - Bulgarian: Официант
+- **der Polizist** (phrase)
+  - Bulgarian: Полицай
+- **der Künstler** (phrase)
+  - Bulgarian: Художник
+- **der Sänger** (phrase)
+  - Bulgarian: Певец
+- **die Stadt** (phrase)
+  - Bulgarian: Град
+- **das Dorf** (phrase)
+  - Bulgarian: Село
+- **das Zentrum** (phrase)
+  - Bulgarian: Център
+- **der Park** (phrase)
+  - Bulgarian: Парк
+- **der Platz** (phrase)
+  - Bulgarian: Площад
+- **die Brücke** (phrase)
+  - Bulgarian: Мост
+- **der Bahnhof** (phrase)
+  - Bulgarian: Гара
+- **der Flughafen** (phrase)
+  - Bulgarian: Летище
+- **das Museum** (phrase)
+  - Bulgarian: Музей
+- **das Theater** (phrase)
+  - Bulgarian: Театър
+- **das Kino** (phrase)
+  - Bulgarian: Кино
+- **die Bibliothek** (phrase)
+  - Bulgarian: Библиотека
+- **die Bank** (phrase)
+  - Bulgarian: Банка
+- **die Post** (phrase)
+  - Bulgarian: Поща
+- **die Apotheke** (phrase)
+  - Bulgarian: Аптека
+- **das Wetter** (phrase)
+  - Bulgarian: Време
+- **der Regen** (phrase)
+  - Bulgarian: Дъжд
+- **der Schnee** (phrase)
+  - Bulgarian: Сняг
+- **der Wind** (phrase)
+  - Bulgarian: Вятър
+- **die Wolke** (phrase)
+  - Bulgarian: Облак
+- **der Donner** (phrase)
+  - Bulgarian: Гръм
+- **der Frühling** (phrase)
+  - Bulgarian: Пролет
+- **der Sommer** (phrase)
+  - Bulgarian: Лято
+- **der Herbst** (phrase)
+  - Bulgarian: Есен
+- **der Winter** (phrase)
+  - Bulgarian: Зима
+- **der Sport** (phrase)
+  - Bulgarian: Спорт
+- **das Spiel** (phrase)
+  - Bulgarian: Игра
+- **die Musik** (phrase)
+  - Bulgarian: Музика
+- **das Lied** (phrase)
+  - Bulgarian: Песен
+- **der Tanz** (phrase)
+  - Bulgarian: Танц
+- **das Hobby** (phrase)
+  - Bulgarian: Хоби
+- **der Film** (phrase)
+  - Bulgarian: Филм
+- **das Foto** (phrase)
+  - Bulgarian: Снимка
+- **die Zeichnung** (phrase)
+  - Bulgarian: Рисунка
+- **die Unterrichtsstunde** (phrase)
+  - Bulgarian: Урок
+- **sehr, viel** (phrase)
+  - Bulgarian: Много
+- **wenig, ein bisschen** (phrase)
+  - Bulgarian: Малко
+- **immer** (phrase)
+  - Bulgarian: Винаги
+- **nie** (phrase)
+  - Bulgarian: Никога
+- **oft** (phrase)
+  - Bulgarian: Често
+- **selten** (phrase)
+  - Bulgarian: Рядко
+- **schon, bereits** (phrase)
+  - Bulgarian: Вече
+- **noch** (phrase)
+  - Bulgarian: Още
+- **jetzt** (phrase)
+  - Bulgarian: Сега
+- **später, danach** (phrase)
+  - Bulgarian: После
+- **gestern** (phrase)
+  - Bulgarian: Вчера
+- **heute** (phrase)
+  - Bulgarian: Днес
+- **hier** (phrase)
+  - Bulgarian: Тук
+- **dort** (phrase)
+  - Bulgarian: Там
+- **wichtig** (phrase)
+  - Bulgarian: Важен
+- **interessant** (phrase)
+  - Bulgarian: Интересен
+- **schön, hübsch** (phrase)
+  - Bulgarian: Красив
+- **sauber, rein** (phrase)
+  - Bulgarian: Чист
+- **schmutzig** (phrase)
+  - Bulgarian: Мръсен
+- **voll** (phrase)
+  - Bulgarian: Пълен
+- **leer** (phrase)
+  - Bulgarian: Празен
+- **offen, geöffnet** (phrase)
+  - Bulgarian: Отворен
+- **geschlossen** (phrase)
+  - Bulgarian: Затворен
+- **gerade, richtig** (phrase)
+  - Bulgarian: Прав
+- **krumm, schief** (phrase)
+  - Bulgarian: Криви
+- **weich** (phrase)
+  - Bulgarian: Мек
+- **hart** (phrase)
+  - Bulgarian: Твърд
+- **glatt** (phrase)
+  - Bulgarian: Гладък
+- **rau, grob** (phrase)
+  - Bulgarian: Груб
+- **in** (phrase)
+  - Bulgarian: В
+- **auf, zu** (phrase)
+  - Bulgarian: На
+- **mit** (phrase)
+  - Bulgarian: С
+- **ohne** (phrase)
+  - Bulgarian: Без
+- **bis, neben** (phrase)
+  - Bulgarian: До
+- **zu, nach** (phrase)
+  - Bulgarian: Към
+- **vor** (phrase)
+  - Bulgarian: Пред
+- **nach** (phrase)
+  - Bulgarian: След
+- **über** (phrase)
+  - Bulgarian: Над
+- **unter** (phrase)
+  - Bulgarian: Под
+- **zwischen** (phrase)
+  - Bulgarian: Между
+- **bei** (phrase)
+  - Bulgarian: При
+- **dass** (phrase)
+  - Bulgarian: Че
+- **wenn, falls** (phrase)
+  - Bulgarian: Ако
+- **wenn, als** (phrase)
+  - Bulgarian: Когато
+- **die Bildung** (phrase)
+  - Bulgarian: Образование
+- **das Wissen** (phrase)
+  - Bulgarian: Знание
+- **die Aufgabe** (phrase)
+  - Bulgarian: Задача
+- **die Prüfung** (phrase)
+  - Bulgarian: Изпит
+- **der Test** (phrase)
+  - Bulgarian: Тест
+- **die Note** (phrase)
+  - Bulgarian: Оценка
+- **das Diplom** (phrase)
+  - Bulgarian: Диплома
+- **der Bleistift** (phrase)
+  - Bulgarian: Молив
+- **der Kugelschreiber** (phrase)
+  - Bulgarian: Химикалка
+- **das Heft** (phrase)
+  - Bulgarian: Тетрадка
+- **das Lehrbuch** (phrase)
+  - Bulgarian: Учебник
+- **das Wörterbuch** (phrase)
+  - Bulgarian: Речник
+- **die Tafel** (phrase)
+  - Bulgarian: Дъска
+- **die Stunde** (phrase)
+  - Bulgarian: Час
+- **die Minute** (phrase)
+  - Bulgarian: Минута
+- **das Vergnügen** (phrase)
+  - Bulgarian: Забавление
+- **die Party** (phrase)
+  - Bulgarian: Партия
+- **der Geburtstag** (phrase)
+  - Bulgarian: Рожден ден
+- **das Fest** (phrase)
+  - Bulgarian: Празник
+- **die Ferien** (phrase)
+  - Bulgarian: Ваканция
+- **der Strand** (phrase)
+  - Bulgarian: Плаж
+- **das Schwimmbad** (phrase)
+  - Bulgarian: Басейн
+- **das Café** (phrase)
+  - Bulgarian: Кафене
+- **die Bar** (phrase)
+  - Bulgarian: Бар
+- **die Diskothek** (phrase)
+  - Bulgarian: Дискотека
+- **das Abendessen** (phrase)
+  - Bulgarian: Вечеря
+- **das Frühstück** (phrase)
+  - Bulgarian: Закуска
+- **das Mittagessen** (phrase)
+  - Bulgarian: Обяд
+- **das Geschenk** (phrase)
+  - Bulgarian: Подарък
+- **die Karte** (phrase)
+  - Bulgarian: Картичка
+- **Regel** (phrase)
+  - Bulgarian: Правило
+- **Fehler** (phrase)
+  - Bulgarian: Грешка
+- **Antwort** (phrase)
+  - Bulgarian: Отговор
+- **Frage** (phrase)
+  - Bulgarian: Въпрос
+- **Problem** (phrase)
+  - Bulgarian: Проблем
+- **Lösung** (phrase)
+  - Bulgarian: Решение
+- **Anfang** (phrase)
+  - Bulgarian: Начало
+- **Ende** (phrase)
+  - Bulgarian: Край
+- **Mitte** (phrase)
+  - Bulgarian: Среда
+- **Land/Seite** (phrase)
+  - Bulgarian: Страна
+- **Welt** (phrase)
+  - Bulgarian: Свят
+- **Erde** (phrase)
+  - Bulgarian: Земя
+- **Luft** (phrase)
+  - Bulgarian: Въздух
+- **Feuer** (phrase)
+  - Bulgarian: Огън
+- **Wasser** (phrase)
+  - Bulgarian: Вода
+- **Eis** (phrase)
+  - Bulgarian: Лед
+- **Stein** (phrase)
+  - Bulgarian: Камък
+- **Sand** (phrase)
+  - Bulgarian: Пясък
+- **Staub** (phrase)
+  - Bulgarian: Прах
+- **Rauch** (phrase)
+  - Bulgarian: Дим
+- **Licht** (phrase)
+  - Bulgarian: Светлина
+- **Schatten** (phrase)
+  - Bulgarian: Сянка
+- **Geräusch/Klang** (phrase)
+  - Bulgarian: Звук
+- **Stimme** (phrase)
+  - Bulgarian: Глас
+- **Lärm** (phrase)
+  - Bulgarian: Шум
+- **Stille** (phrase)
+  - Bulgarian: Тишина
+- **Geschwindigkeit** (phrase)
+  - Bulgarian: Скорост
+- **Richtung** (phrase)
+  - Bulgarian: Посока
+- **Entfernung** (phrase)
+  - Bulgarian: Разстояние
+- **Platz/Ort** (phrase)
+  - Bulgarian: Място
+- **Punkt** (phrase)
+  - Bulgarian: Точка
+- **Linie** (phrase)
+  - Bulgarian: Линия
+- **Form** (phrase)
+  - Bulgarian: Форма
+- **Größe** (phrase)
+  - Bulgarian: Размер
+- **Farbe** (phrase)
+  - Bulgarian: Цвят
+- **Geruch** (phrase)
+  - Bulgarian: Мирис
+- **Geschmack** (phrase)
+  - Bulgarian: Вкус
+- **Gefühl** (phrase)
+  - Bulgarian: Чувство
+- **Gedanke** (phrase)
+  - Bulgarian: Мисъл
+- **Idee** (phrase)
+  - Bulgarian: Идея
+- **Plan** (phrase)
+  - Bulgarian: План
+- **Ziel** (phrase)
+  - Bulgarian: Цел
+- **Art/Weise** (phrase)
+  - Bulgarian: Начин
+- **Grund/Ursache** (phrase)
+  - Bulgarian: Причина
+- **Ergebnis** (phrase)
+  - Bulgarian: Резултат
+- **Beispiel** (phrase)
+  - Bulgarian: Пример
+- **Tatsache** (phrase)
+  - Bulgarian: Факт
+- **Wahrheit** (phrase)
+  - Bulgarian: Истина
+- **Lüge** (phrase)
+  - Bulgarian: Лъжа
+- **Geheimnis** (phrase)
+  - Bulgarian: Тайна
+- **Versprechen** (phrase)
+  - Bulgarian: Обещание
+- **Recht/Gerechtigkeit** (phrase)
+  - Bulgarian: Правда
+- **Gesetz** (phrase)
+  - Bulgarian: Закон
+- **Ordnung/Reihe** (phrase)
+  - Bulgarian: Ред
+- **Gruppe** (phrase)
+  - Bulgarian: Група
+- **Mitglied** (phrase)
+  - Bulgarian: Член
+- **Gesellschaft** (phrase)
+  - Bulgarian: Общество
+
+## Entries with Differences (147)
+
+These entries exist in both but have different content:
+
+### der Apfel (der apfel||noun)
+
+- **category**:
+  - Archive: "Essen"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Ям ябълка всеки ден.","translation":"Ich esse jeden Tag einen Apfel.","context":"Daily habit"},{"sentence":"Тази ябълка е червена.","translation":"Dieser Apfel ist rot.","context":"Describing color"},{"sentence":"Колко струва една ябълка?","translation":"Wie viel kostet ein Apfel?","context":"Shopping"}]
+  - Current: [{"german":"Ich esse jeden Tag einen Apfel.","bulgarian":"Ям ябълка всеки ден.","context":"Daily habit","source":"legacy"},{"german":"Dieser Apfel ist rot.","bulgarian":"Тази ябълка е червена.","context":"Describing color","source":"legacy"},{"german":"Wie viel kostet ein Apfel?","bulgarian":"Колко струва една ябълка?","context":"Shopping","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Apple. One of the most common fruits in Bulgarian cuisine. Note the unique Bulgarian form 'ябълка' differs from most other Slavic languages.\n\nApples are central to Bulgarian folklore and cuisine. 'Ябълка на раздора' (apple of discord) is a common idiom. Baked apples and apple preserves (компот) are traditional, especially in winter.\n\nBG→DE: В немски 'der Apfel' е мъжки род, докато в български 'ябълка' е женски род. Внимавайте с местоименията: der Apfel - er (той), ябълката - тя.\n\nDE→BG: Für Deutschsprachige: 'Ябълка' ist feminin (im Gegensatz zu maskulinem 'der Apfel'). Die Form ist einzigartig bulgarisch - vergleiche russisch 'яблоко'."]
+  - Current: ["Apples are central to Bulgarian folklore and cuisine. 'Ябълка на раздора' (apple of discord) is a common idiom. Baked apples and apple preserves (компот) are traditional, especially in winter."]
+- **usageNotes**:
+  - Archive: "Stress on second syllable: ябъ́лка [jɐˈbɤlkɐ]. The 'ъ' is schwa [ɤ]. The initial 'я' is [jɐ]. Plural: ябълки.\n\nBG→DE: Ябълка се произнася [jɐˈbɤlkɐ] с ударение на 'бъл'. Буквата 'ъ' е [ɤ]. Множествено: ябълки.\n\nDE→BG: Betonung auf der zweiten Silbe: ябъ́лка [jɐˈbɤlkɐ]. Das 'я' am Anfang ist [jɐ], das 'ъ' ist Schwa [ɤ]. Plural: ябълки."
+  - Current: undefined
+
+### das Haus (das haus||noun)
+
+- **category**:
+  - Archive: "Haus"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам къща.","translation":"Ich habe Haus.","context":"Possession"},{"sentence":"Къщата е голяма.","translation":"Das Haus ist groß.","context":"Description"},{"sentence":"В къщата.","translation":"Im/In der Haus.","context":"Location"}]
+  - Current: [{"german":"Ich habe Haus.","bulgarian":"Имам къща.","context":"Possession","source":"legacy"},{"german":"Das Haus ist groß.","bulgarian":"Къщата е голяма.","context":"Description","source":"legacy"},{"german":"Im/In der Haus.","bulgarian":"В къщата.","context":"Location","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["House, building for living. From Proto-Slavic '*kǫtja'. Feminine noun.\n\nEssential vocabulary for home and housing in Bulgarian culture.\n\nBG→DE: В български 'къща' е женски род. Основна дума за дома.\n\nDE→BG: Für Deutschsprachige: 'Къща' = 'das Haus'. Femininum."]
+  - Current: ["Essential vocabulary for home and housing in Bulgarian culture."]
+- **usageNotes**:
+  - Archive: "женски род. Къща [къща].\n\nBG→DE: Къща е женски род.\n\nDE→BG: Къща = Femininum."
+  - Current: undefined
+
+### die Sonne (die sonne||noun)
+
+- **category**:
+  - Archive: "Natur"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Слънцето/та е голямо.","translation":"die Sonne ist groß.","context":"Size"},{"sentence":"Виждам слънцето/та.","translation":"Ich sehe die Sonne.","context":"Seeing"},{"sentence":"Слънцето/та е красиво.","translation":"die Sonne ist schön.","context":"Beauty"}]
+  - Current: [{"german":"die Sonne ist groß.","bulgarian":"Слънцето/та е голямо.","context":"Size","source":"legacy"},{"german":"Ich sehe die Sonne.","bulgarian":"Виждам слънцето/та.","context":"Seeing","source":"legacy"},{"german":"die Sonne ist schön.","bulgarian":"Слънцето/та е красиво.","context":"Beauty","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Sun. среден род.\n\nNature vocabulary essential for describing Bulgarian landscape. Sun\n\nBG→DE: 'Слънце' е среден род. Sun\n\nDE→BG: Für Deutschsprachige: 'Слънце' = 'die Sonne'. Neutrum."]
+  - Current: ["Nature vocabulary essential for describing Bulgarian landscape. Sun"]
+- **usageNotes**:
+  - Archive: "среден род.\n\nBG→DE: Слънце е среден род.\n\nDE→BG: Neutrum."
+  - Current: undefined
+
+### der Mond (der mond||noun)
+
+- **category**:
+  - Archive: "Natur"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Лунато/та е голяма.","translation":"der Mond ist groß.","context":"Size"},{"sentence":"Виждам лунато/та.","translation":"Ich sehe der Mond.","context":"Seeing"},{"sentence":"Лунато/та е красива.","translation":"der Mond ist schön.","context":"Beauty"}]
+  - Current: [{"german":"der Mond ist groß.","bulgarian":"Лунато/та е голяма.","context":"Size","source":"legacy"},{"german":"Ich sehe der Mond.","bulgarian":"Виждам лунато/та.","context":"Seeing","source":"legacy"},{"german":"der Mond ist schön.","bulgarian":"Лунато/та е красива.","context":"Beauty","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Moon. женски род.\n\nNature vocabulary essential for describing Bulgarian landscape. Moon\n\nBG→DE: 'Луна' е женски род. Moon\n\nDE→BG: Für Deutschsprachige: 'Луна' = 'der Mond'. Femininum."]
+  - Current: ["Nature vocabulary essential for describing Bulgarian landscape. Moon"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Луна е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### der Stern (der stern||noun)
+
+- **category**:
+  - Archive: "Natur"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Звездато/та е голяма.","translation":"der Stern ist groß.","context":"Size"},{"sentence":"Виждам звездато/та.","translation":"Ich sehe der Stern.","context":"Seeing"},{"sentence":"Звездато/та е красива.","translation":"der Stern ist schön.","context":"Beauty"}]
+  - Current: [{"german":"der Stern ist groß.","bulgarian":"Звездато/та е голяма.","context":"Size","source":"legacy"},{"german":"Ich sehe der Stern.","bulgarian":"Виждам звездато/та.","context":"Seeing","source":"legacy"},{"german":"der Stern ist schön.","bulgarian":"Звездато/та е красива.","context":"Beauty","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Star. женски род.\n\nNature vocabulary essential for describing Bulgarian landscape. Star\n\nBG→DE: 'Звезда' е женски род. Star\n\nDE→BG: Für Deutschsprachige: 'Звезда' = 'der Stern'. Femininum."]
+  - Current: ["Nature vocabulary essential for describing Bulgarian landscape. Star"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Звезда е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### der Baum (der baum||noun)
+
+- **category**:
+  - Archive: "Natur"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Дървото/та е голямо.","translation":"der Baum ist groß.","context":"Size"},{"sentence":"Виждам дървото/та.","translation":"Ich sehe der Baum.","context":"Seeing"},{"sentence":"Дървото/та е красиво.","translation":"der Baum ist schön.","context":"Beauty"}]
+  - Current: [{"german":"der Baum ist groß.","bulgarian":"Дървото/та е голямо.","context":"Size","source":"legacy"},{"german":"Ich sehe der Baum.","bulgarian":"Виждам дървото/та.","context":"Seeing","source":"legacy"},{"german":"der Baum ist schön.","bulgarian":"Дървото/та е красиво.","context":"Beauty","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Tree. среден род.\n\nNature vocabulary essential for describing Bulgarian landscape. Tree\n\nBG→DE: 'Дърво' е среден род. Tree\n\nDE→BG: Für Deutschsprachige: 'Дърво' = 'der Baum'. Neutrum."]
+  - Current: ["Nature vocabulary essential for describing Bulgarian landscape. Tree"]
+- **usageNotes**:
+  - Archive: "среден род.\n\nBG→DE: Дърво е среден род.\n\nDE→BG: Neutrum."
+  - Current: undefined
+
+### die Blume (die blume||noun)
+
+- **category**:
+  - Archive: "Natur"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Цветето/та е голямо.","translation":"die Blume ist groß.","context":"Size"},{"sentence":"Виждам цветето/та.","translation":"Ich sehe die Blume.","context":"Seeing"},{"sentence":"Цветето/та е красиво.","translation":"die Blume ist schön.","context":"Beauty"}]
+  - Current: [{"german":"die Blume ist groß.","bulgarian":"Цветето/та е голямо.","context":"Size","source":"legacy"},{"german":"Ich sehe die Blume.","bulgarian":"Виждам цветето/та.","context":"Seeing","source":"legacy"},{"german":"die Blume ist schön.","bulgarian":"Цветето/та е красиво.","context":"Beauty","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Flower. среден род.\n\nNature vocabulary essential for describing Bulgarian landscape. Flower\n\nBG→DE: 'Цвете' е среден род. Flower\n\nDE→BG: Für Deutschsprachige: 'Цвете' = 'die Blume'. Neutrum."]
+  - Current: ["Nature vocabulary essential for describing Bulgarian landscape. Flower"]
+- **usageNotes**:
+  - Archive: "среден род.\n\nBG→DE: Цвете е среден род.\n\nDE→BG: Neutrum."
+  - Current: undefined
+
+### das Gras (das gras||noun)
+
+- **category**:
+  - Archive: "Natur"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Тревато/та е голяма.","translation":"das Gras ist groß.","context":"Size"},{"sentence":"Виждам тревато/та.","translation":"Ich sehe das Gras.","context":"Seeing"},{"sentence":"Тревато/та е красива.","translation":"das Gras ist schön.","context":"Beauty"}]
+  - Current: [{"german":"das Gras ist groß.","bulgarian":"Тревато/та е голяма.","context":"Size","source":"legacy"},{"german":"Ich sehe das Gras.","bulgarian":"Виждам тревато/та.","context":"Seeing","source":"legacy"},{"german":"das Gras ist schön.","bulgarian":"Тревато/та е красива.","context":"Beauty","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Grass. женски род.\n\nNature vocabulary essential for describing Bulgarian landscape. Grass\n\nBG→DE: 'Трева' е женски род. Grass\n\nDE→BG: Für Deutschsprachige: 'Трева' = 'das Gras'. Femininum."]
+  - Current: ["Nature vocabulary essential for describing Bulgarian landscape. Grass"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Трева е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### der Berg (der berg||noun)
+
+- **category**:
+  - Archive: "Natur"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Планинато/та е голяма.","translation":"der Berg ist groß.","context":"Size"},{"sentence":"Виждам планинато/та.","translation":"Ich sehe der Berg.","context":"Seeing"},{"sentence":"Планинато/та е красива.","translation":"der Berg ist schön.","context":"Beauty"}]
+  - Current: [{"german":"der Berg ist groß.","bulgarian":"Планинато/та е голяма.","context":"Size","source":"legacy"},{"german":"Ich sehe der Berg.","bulgarian":"Виждам планинато/та.","context":"Seeing","source":"legacy"},{"german":"der Berg ist schön.","bulgarian":"Планинато/та е красива.","context":"Beauty","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Mountain. женски род.\n\nNature vocabulary essential for describing Bulgarian landscape. Mountain\n\nBG→DE: 'Планина' е женски род. Mountain\n\nDE→BG: Für Deutschsprachige: 'Планина' = 'der Berg'. Femininum."]
+  - Current: ["Nature vocabulary essential for describing Bulgarian landscape. Mountain"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Планина е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### der Fluss (der fluss||noun)
+
+- **category**:
+  - Archive: "Natur"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Рекато/та е голяма.","translation":"der Fluss ist groß.","context":"Size"},{"sentence":"Виждам рекато/та.","translation":"Ich sehe der Fluss.","context":"Seeing"},{"sentence":"Рекато/та е красива.","translation":"der Fluss ist schön.","context":"Beauty"}]
+  - Current: [{"german":"der Fluss ist groß.","bulgarian":"Рекато/та е голяма.","context":"Size","source":"legacy"},{"german":"Ich sehe der Fluss.","bulgarian":"Виждам рекато/та.","context":"Seeing","source":"legacy"},{"german":"der Fluss ist schön.","bulgarian":"Рекато/та е красива.","context":"Beauty","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["River. женски род.\n\nNature vocabulary essential for describing Bulgarian landscape. River\n\nBG→DE: 'Река' е женски род. River\n\nDE→BG: Für Deutschsprachige: 'Река' = 'der Fluss'. Femininum."]
+  - Current: ["Nature vocabulary essential for describing Bulgarian landscape. River"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Река е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### das Meer (das meer||noun)
+
+- **category**:
+  - Archive: "Natur"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Морето/та е голямо.","translation":"das Meer ist groß.","context":"Size"},{"sentence":"Виждам морето/та.","translation":"Ich sehe das Meer.","context":"Seeing"},{"sentence":"Морето/та е красиво.","translation":"das Meer ist schön.","context":"Beauty"}]
+  - Current: [{"german":"das Meer ist groß.","bulgarian":"Морето/та е голямо.","context":"Size","source":"legacy"},{"german":"Ich sehe das Meer.","bulgarian":"Виждам морето/та.","context":"Seeing","source":"legacy"},{"german":"das Meer ist schön.","bulgarian":"Морето/та е красиво.","context":"Beauty","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Sea. 'Черно море' (Black Sea) borders Bulgaria. среден род.\n\nNature vocabulary essential for describing Bulgarian landscape. Sea. 'Черно море' (Black Sea) borders Bulgaria\n\nBG→DE: 'Море' е среден род. Sea. 'Черно море' (Black Sea) borders Bulgaria\n\nDE→BG: Für Deutschsprachige: 'Море' = 'das Meer'. Neutrum."]
+  - Current: ["Nature vocabulary essential for describing Bulgarian landscape. Sea. 'Черно море' (Black Sea) borders Bulgaria"]
+- **usageNotes**:
+  - Archive: "среден род.\n\nBG→DE: Море е среден род.\n\nDE→BG: Neutrum."
+  - Current: undefined
+
+### der Himmel (der himmel||noun)
+
+- **category**:
+  - Archive: "Natur"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Небето/та е голямо.","translation":"der Himmel ist groß.","context":"Size"},{"sentence":"Виждам небето/та.","translation":"Ich sehe der Himmel.","context":"Seeing"},{"sentence":"Небето/та е красиво.","translation":"der Himmel ist schön.","context":"Beauty"}]
+  - Current: [{"german":"der Himmel ist groß.","bulgarian":"Небето/та е голямо.","context":"Size","source":"legacy"},{"german":"Ich sehe der Himmel.","bulgarian":"Виждам небето/та.","context":"Seeing","source":"legacy"},{"german":"der Himmel ist schön.","bulgarian":"Небето/та е красиво.","context":"Beauty","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Sky, heaven. среден род.\n\nNature vocabulary essential for describing Bulgarian landscape. Sky, heaven\n\nBG→DE: 'Небе' е среден род. Sky, heaven\n\nDE→BG: Für Deutschsprachige: 'Небе' = 'der Himmel'. Neutrum."]
+  - Current: ["Nature vocabulary essential for describing Bulgarian landscape. Sky, heaven"]
+- **usageNotes**:
+  - Archive: "среден род.\n\nBG→DE: Небе е среден род.\n\nDE→BG: Neutrum."
+  - Current: undefined
+
+### das Fenster (das fenster||noun)
+
+- **category**:
+  - Archive: "Substantive"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Виждам прозорецта/ът/то.","translation":"Ich sehe das/die/den Fenster.","context":"Seeing"},{"sentence":"Прозорецта/ът/то е голям.","translation":"Das/Die/Der Fenster ist groß.","context":"Description"},{"sentence":"Отивам в/на прозорецта/а.","translation":"Ich gehe zu/in das/die/den Fenster.","context":"Location"}]
+  - Current: [{"german":"Ich habe Fenster.","bulgarian":"Имам прозорец.","context":"Possession","source":"legacy"},{"german":"Das Fenster ist groß.","bulgarian":"Прозорецът е голям.","context":"Description","source":"legacy"},{"german":"Im/In der Fenster.","bulgarian":"В прозореца.","context":"Location","source":"legacy"},{"german":"Ich sehe das/die/den Fenster.","bulgarian":"Виждам прозорецта/ът/то.","context":"Seeing","source":"legacy"},{"german":"Das/Die/Der Fenster ist groß.","bulgarian":"Прозорецта/ът/то е голям.","context":"Description","source":"legacy"},{"german":"Ich gehe zu/in das/die/den Fenster.","bulgarian":"Отивам в/на прозорецта/а.","context":"Location","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Window (duplicate check - if exists, skip). мъжки род.\n\nCommon noun in daily Bulgarian life. Window (duplicate check - if exists, skip)\n\nBG→DE: 'Прозорец' е мъжки род.\n\nDE→BG: Für Deutschsprachige: 'Прозорец' = 'das Fenster'. Maskulinum."]
+  - Current: ["Essential vocabulary for home and housing in Bulgarian culture. | Common noun in daily Bulgarian life. Window (duplicate check - if exists, skip)"]
+- **usageNotes**:
+  - Archive: "мъжки род. Прозорец.\n\nBG→DE: Прозорец е мъжки род.\n\nDE→BG: Прозорец = Maskulinum."
+  - Current: undefined
+
+### der Kopf (der kopf||noun)
+
+- **category**:
+  - Archive: "Körper"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Боли ме главата/ът/то.","translation":"Mein/Meine Kopf tut weh.","context":"Pain"},{"sentence":"Главата/ът/то е здрав/а/о.","translation":"Das/Die/Der Kopf ist gesund.","context":"Health"},{"sentence":"Имам силен/на/но глава.","translation":"Ich habe starke/n/s Kopf.","context":"Description"}]
+  - Current: [{"german":"Mein/Meine Kopf tut weh.","bulgarian":"Боли ме главата/ът/то.","context":"Pain","source":"legacy"},{"german":"Das/Die/Der Kopf ist gesund.","bulgarian":"Главата/ът/то е здрав/а/о.","context":"Health","source":"legacy"},{"german":"Ich habe starke/n/s Kopf.","bulgarian":"Имам силен/на/но глава.","context":"Description","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Head. женски род.\n\n'Боли ме главата' (my head hurts)\n\nBG→DE: В български 'глава' е женски род.\n\nDE→BG: Für Deutschsprachige: 'Глава' = 'der Kopf'. Femininum."]
+  - Current: ["'Боли ме главата' (my head hurts)"]
+- **usageNotes**:
+  - Archive: "женски род. Глава.\n\nBG→DE: Глава е женски род.\n\nDE→BG: Глава = Femininum."
+  - Current: undefined
+
+### die Hand, der Arm (die hand der arm||noun)
+
+- **category**:
+  - Archive: "Körper"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Боли ме ръката/ът/то.","translation":"Mein/Meine Hand tut weh.","context":"Pain"},{"sentence":"Ръката/ът/то е здрав/а/о.","translation":"Das/Die/Der Hand ist gesund.","context":"Health"},{"sentence":"Имам силен/на/но ръка.","translation":"Ich habe starke/n/s Hand.","context":"Description"}]
+  - Current: [{"german":"Mein/Meine Hand tut weh.","bulgarian":"Боли ме ръката/ът/то.","context":"Pain","source":"legacy"},{"german":"Das/Die/Der Hand ist gesund.","bulgarian":"Ръката/ът/то е здрав/а/о.","context":"Health","source":"legacy"},{"german":"Ich habe starke/n/s Hand.","bulgarian":"Имам силен/на/но ръка.","context":"Description","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Hand/arm (no distinction). женски род.\n\nSame word for hand and arm in Bulgarian\n\nBG→DE: В български 'ръка' е женски род.\n\nDE→BG: Für Deutschsprachige: 'Ръка' = 'die Hand, der Arm'. Femininum."]
+  - Current: ["Same word for hand and arm in Bulgarian"]
+- **usageNotes**:
+  - Archive: "женски род. Ръка.\n\nBG→DE: Ръка е женски род.\n\nDE→BG: Ръка = Femininum."
+  - Current: undefined
+
+### der Fuß, das Bein (der fuß das bein||noun)
+
+- **category**:
+  - Archive: "Körper"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Боли ме кракта/ът/то.","translation":"Mein/Meine Fuß tut weh.","context":"Pain"},{"sentence":"Кракта/ът/то е здрав/а/о.","translation":"Das/Die/Der Fuß ist gesund.","context":"Health"},{"sentence":"Имам силен/на/но крак.","translation":"Ich habe starke/n/s Fuß.","context":"Description"}]
+  - Current: [{"german":"Mein/Meine Fuß tut weh.","bulgarian":"Боли ме кракта/ът/то.","context":"Pain","source":"legacy"},{"german":"Das/Die/Der Fuß ist gesund.","bulgarian":"Кракта/ът/то е здрав/а/о.","context":"Health","source":"legacy"},{"german":"Ich habe starke/n/s Fuß.","bulgarian":"Имам силен/на/но крак.","context":"Description","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Foot/leg (no distinction). мъжки род.\n\nSame word for foot and leg\n\nBG→DE: В български 'крак' е мъжки род.\n\nDE→BG: Für Deutschsprachige: 'Крак' = 'der Fuß, das Bein'. Maskulinum."]
+  - Current: ["Same word for foot and leg"]
+- **usageNotes**:
+  - Archive: "мъжки род. Крак.\n\nBG→DE: Крак е мъжки род.\n\nDE→BG: Крак = Maskulinum."
+  - Current: undefined
+
+### das Auge (das auge||noun)
+
+- **category**:
+  - Archive: "Körper"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Боли ме окота/ът/то.","translation":"Mein/Meine Auge tut weh.","context":"Pain"},{"sentence":"Окота/ът/то е здрав/а/о.","translation":"Das/Die/Der Auge ist gesund.","context":"Health"},{"sentence":"Имам силен/на/но око.","translation":"Ich habe starke/n/s Auge.","context":"Description"}]
+  - Current: [{"german":"Mein/Meine Auge tut weh.","bulgarian":"Боли ме окота/ът/то.","context":"Pain","source":"legacy"},{"german":"Das/Die/Der Auge ist gesund.","bulgarian":"Окота/ът/то е здрав/а/о.","context":"Health","source":"legacy"},{"german":"Ich habe starke/n/s Auge.","bulgarian":"Имам силен/на/но око.","context":"Description","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Eye. Neuter noun. среден род.\n\nPlural: очи (irregular)\n\nBG→DE: В български 'око' е среден род.\n\nDE→BG: Für Deutschsprachige: 'Око' = 'das Auge'. Neutrum."]
+  - Current: ["Plural: очи (irregular)"]
+- **usageNotes**:
+  - Archive: "среден род. Око.\n\nBG→DE: Око е среден род.\n\nDE→BG: Око = Neutrum."
+  - Current: undefined
+
+### das Ohr (das ohr||noun)
+
+- **category**:
+  - Archive: "Körper"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Боли ме ухота/ът/то.","translation":"Mein/Meine Ohr tut weh.","context":"Pain"},{"sentence":"Ухота/ът/то е здрав/а/о.","translation":"Das/Die/Der Ohr ist gesund.","context":"Health"},{"sentence":"Имам силен/на/но ухо.","translation":"Ich habe starke/n/s Ohr.","context":"Description"}]
+  - Current: [{"german":"Mein/Meine Ohr tut weh.","bulgarian":"Боли ме ухота/ът/то.","context":"Pain","source":"legacy"},{"german":"Das/Die/Der Ohr ist gesund.","bulgarian":"Ухота/ът/то е здрав/а/о.","context":"Health","source":"legacy"},{"german":"Ich habe starke/n/s Ohr.","bulgarian":"Имам силен/на/но ухо.","context":"Description","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Ear. Neuter noun. среден род.\n\nPlural: уши (irregular)\n\nBG→DE: В български 'ухо' е среден род.\n\nDE→BG: Für Deutschsprachige: 'Ухо' = 'das Ohr'. Neutrum."]
+  - Current: ["Plural: уши (irregular)"]
+- **usageNotes**:
+  - Archive: "среден род. Ухо.\n\nBG→DE: Ухо е среден род.\n\nDE→BG: Ухо = Neutrum."
+  - Current: undefined
+
+### die Nase (die nase||noun)
+
+- **category**:
+  - Archive: "Körper"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Боли ме носта/ът/то.","translation":"Mein/Meine Nase tut weh.","context":"Pain"},{"sentence":"Носта/ът/то е здрав/а/о.","translation":"Das/Die/Der Nase ist gesund.","context":"Health"},{"sentence":"Имам силен/на/но нос.","translation":"Ich habe starke/n/s Nase.","context":"Description"}]
+  - Current: [{"german":"Mein/Meine Nase tut weh.","bulgarian":"Боли ме носта/ът/то.","context":"Pain","source":"legacy"},{"german":"Das/Die/Der Nase ist gesund.","bulgarian":"Носта/ът/то е здрав/а/о.","context":"Health","source":"legacy"},{"german":"Ich habe starke/n/s Nase.","bulgarian":"Имам силен/на/но нос.","context":"Description","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Nose. мъжки род.\n\nSimple and direct term\n\nBG→DE: В български 'нос' е мъжки род.\n\nDE→BG: Für Deutschsprachige: 'Нос' = 'die Nase'. Maskulinum."]
+  - Current: ["Simple and direct term"]
+- **usageNotes**:
+  - Archive: "мъжки род. Нос.\n\nBG→DE: Нос е мъжки род.\n\nDE→BG: Нос = Maskulinum."
+  - Current: undefined
+
+### der Mund (der mund||noun)
+
+- **category**:
+  - Archive: "Körper"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Боли ме устата/ът/то.","translation":"Mein/Meine Mund tut weh.","context":"Pain"},{"sentence":"Устата/ът/то е здрав/а/о.","translation":"Das/Die/Der Mund ist gesund.","context":"Health"},{"sentence":"Имам силен/на/но уста.","translation":"Ich habe starke/n/s Mund.","context":"Description"}]
+  - Current: [{"german":"Mein/Meine Mund tut weh.","bulgarian":"Боли ме устата/ът/то.","context":"Pain","source":"legacy"},{"german":"Das/Die/Der Mund ist gesund.","bulgarian":"Устата/ът/то е здрав/а/о.","context":"Health","source":"legacy"},{"german":"Ich habe starke/n/s Mund.","bulgarian":"Имам силен/на/но уста.","context":"Description","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Mouth (formal). женски род.\n\nPlural form used as singular. Informal: 'устата'\n\nBG→DE: В български 'уста' е женски род.\n\nDE→BG: Für Deutschsprachige: 'Уста' = 'der Mund'. Femininum."]
+  - Current: ["Plural form used as singular. Informal: 'устата'"]
+- **usageNotes**:
+  - Archive: "женски род. Уста.\n\nBG→DE: Уста е женски род.\n\nDE→BG: Уста = Femininum."
+  - Current: undefined
+
+### der Zahn (der zahn||noun)
+
+- **category**:
+  - Archive: "Körper"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Боли ме зъбта/ът/то.","translation":"Mein/Meine Zahn tut weh.","context":"Pain"},{"sentence":"Зъбта/ът/то е здрав/а/о.","translation":"Das/Die/Der Zahn ist gesund.","context":"Health"},{"sentence":"Имам силен/на/но зъб.","translation":"Ich habe starke/n/s Zahn.","context":"Description"}]
+  - Current: [{"german":"Mein/Meine Zahn tut weh.","bulgarian":"Боли ме зъбта/ът/то.","context":"Pain","source":"legacy"},{"german":"Das/Die/Der Zahn ist gesund.","bulgarian":"Зъбта/ът/то е здрав/а/о.","context":"Health","source":"legacy"},{"german":"Ich habe starke/n/s Zahn.","bulgarian":"Имам силен/на/но зъб.","context":"Description","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Tooth. мъжки род.\n\nPlural: зъби\n\nBG→DE: В български 'зъб' е мъжки род.\n\nDE→BG: Für Deutschsprachige: 'Зъб' = 'der Zahn'. Maskulinum."]
+  - Current: ["Plural: зъби"]
+- **usageNotes**:
+  - Archive: "мъжки род. Зъб.\n\nBG→DE: Зъб е мъжки род.\n\nDE→BG: Зъб = Maskulinum."
+  - Current: undefined
+
+### das Haar, die Haare (das haar die haare||noun)
+
+- **category**:
+  - Archive: "Körper"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Боли ме косата/ът/то.","translation":"Mein/Meine Haar tut weh.","context":"Pain"},{"sentence":"Косата/ът/то е здрав/а/о.","translation":"Das/Die/Der Haar ist gesund.","context":"Health"},{"sentence":"Имам силен/на/но коса.","translation":"Ich habe starke/n/s Haar.","context":"Description"}]
+  - Current: [{"german":"Mein/Meine Haar tut weh.","bulgarian":"Боли ме косата/ът/то.","context":"Pain","source":"legacy"},{"german":"Das/Die/Der Haar ist gesund.","bulgarian":"Косата/ът/то е здрав/а/о.","context":"Health","source":"legacy"},{"german":"Ich habe starke/n/s Haar.","bulgarian":"Имам силен/на/но коса.","context":"Description","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Hair. женски род.\n\nCollective noun for hair\n\nBG→DE: В български 'коса' е женски род.\n\nDE→BG: Für Deutschsprachige: 'Коса' = 'das Haar, die Haare'. Femininum."]
+  - Current: ["Collective noun for hair"]
+- **usageNotes**:
+  - Archive: "женски род. Коса.\n\nBG→DE: Коса е женски род.\n\nDE→BG: Коса = Femininum."
+  - Current: undefined
+
+### das Herz (das herz||noun)
+
+- **category**:
+  - Archive: "Körper"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Боли ме сърцета/ът/то.","translation":"Mein/Meine Herz tut weh.","context":"Pain"},{"sentence":"Сърцета/ът/то е здрав/а/о.","translation":"Das/Die/Der Herz ist gesund.","context":"Health"},{"sentence":"Имам силен/на/но сърце.","translation":"Ich habe starke/n/s Herz.","context":"Description"}]
+  - Current: [{"german":"Mein/Meine Herz tut weh.","bulgarian":"Боли ме сърцета/ът/то.","context":"Pain","source":"legacy"},{"german":"Das/Die/Der Herz ist gesund.","bulgarian":"Сърцета/ът/то е здрав/а/о.","context":"Health","source":"legacy"},{"german":"Ich habe starke/n/s Herz.","bulgarian":"Имам силен/на/но сърце.","context":"Description","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Heart. Neuter. среден род.\n\nAlso used metaphorically for emotions\n\nBG→DE: В български 'сърце' е среден род.\n\nDE→BG: Für Deutschsprachige: 'Сърце' = 'das Herz'. Neutrum."]
+  - Current: ["Also used metaphorically for emotions"]
+- **usageNotes**:
+  - Archive: "среден род. Сърце.\n\nBG→DE: Сърце е среден род.\n\nDE→BG: Сърце = Neutrum."
+  - Current: undefined
+
+### das Heim, das Zuhause (das heim das zuhause||noun)
+
+- **category**:
+  - Archive: "Haus"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам дом.","translation":"Ich habe Heim.","context":"Possession"},{"sentence":"Домът е голям.","translation":"Das Heim ist groß.","context":"Description"},{"sentence":"В дома.","translation":"Im/In der Heim.","context":"Location"}]
+  - Current: [{"german":"Ich habe Heim.","bulgarian":"Имам дом.","context":"Possession","source":"legacy"},{"german":"Das Heim ist groß.","bulgarian":"Домът е голям.","context":"Description","source":"legacy"},{"german":"Im/In der Heim.","bulgarian":"В дома.","context":"Location","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Home (abstract concept). From Proto-Slavic '*domъ'. Masculine. More emotional than къща.\n\nEssential vocabulary for home and housing in Bulgarian culture.\n\nBG→DE: В български 'дом' е мъжки род. Основна дума за дома.\n\nDE→BG: Für Deutschsprachige: 'Дом' = 'das Heim, das Zuhause'. Maskulinum."]
+  - Current: ["Essential vocabulary for home and housing in Bulgarian culture."]
+- **usageNotes**:
+  - Archive: "мъжки род. Дом [дом].\n\nBG→DE: Дом е мъжки род.\n\nDE→BG: Дом = Maskulinum."
+  - Current: undefined
+
+### das Zimmer (das zimmer||noun)
+
+- **category**:
+  - Archive: "Haus"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам стая.","translation":"Ich habe Zimmer.","context":"Possession"},{"sentence":"Стаята е голяма.","translation":"Das Zimmer ist groß.","context":"Description"},{"sentence":"В стаята.","translation":"Im/In der Zimmer.","context":"Location"}]
+  - Current: [{"german":"Ich habe Zimmer.","bulgarian":"Имам стая.","context":"Possession","source":"legacy"},{"german":"Das Zimmer ist groß.","bulgarian":"Стаята е голяма.","context":"Description","source":"legacy"},{"german":"Im/In der Zimmer.","bulgarian":"В стаята.","context":"Location","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Room. From Old Church Slavonic 'stati' (to stand/stay). Feminine noun.\n\nEssential vocabulary for home and housing in Bulgarian culture.\n\nBG→DE: В български 'стая' е женски род. Основна дума за дома.\n\nDE→BG: Für Deutschsprachige: 'Стая' = 'das Zimmer'. Femininum."]
+  - Current: ["Essential vocabulary for home and housing in Bulgarian culture."]
+- **usageNotes**:
+  - Archive: "женски род. Стая [стая].\n\nBG→DE: Стая е женски род.\n\nDE→BG: Стая = Femininum."
+  - Current: undefined
+
+### die Küche (die küche||noun)
+
+- **category**:
+  - Archive: "Haus"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам кухня.","translation":"Ich habe Küche.","context":"Possession"},{"sentence":"Кухнята е голяма.","translation":"Die Küche ist groß.","context":"Description"},{"sentence":"В кухнята.","translation":"Im/In der Küche.","context":"Location"}]
+  - Current: [{"german":"Ich habe Küche.","bulgarian":"Имам кухня.","context":"Possession","source":"legacy"},{"german":"Die Küche ist groß.","bulgarian":"Кухнята е голяма.","context":"Description","source":"legacy"},{"german":"Im/In der Küche.","bulgarian":"В кухнята.","context":"Location","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Kitchen. From Latin 'coquina' via Slavic. Feminine noun. Center of Bulgarian home.\n\nEssential vocabulary for home and housing in Bulgarian culture.\n\nBG→DE: В български 'кухня' е женски род. Основна дума за дома.\n\nDE→BG: Für Deutschsprachige: 'Кухня' = 'die Küche'. Femininum."]
+  - Current: ["Essential vocabulary for home and housing in Bulgarian culture."]
+- **usageNotes**:
+  - Archive: "женски род. Кухня [кухня].\n\nBG→DE: Кухня е женски род.\n\nDE→BG: Кухня = Femininum."
+  - Current: undefined
+
+### das Badezimmer (das badezimmer||noun)
+
+- **category**:
+  - Archive: "Haus"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам баня.","translation":"Ich habe Badezimmer.","context":"Possession"},{"sentence":"Банята е голяма.","translation":"Das Badezimmer ist groß.","context":"Description"},{"sentence":"В банята.","translation":"Im/In der Badezimmer.","context":"Location"}]
+  - Current: [{"german":"Ich habe Badezimmer.","bulgarian":"Имам баня.","context":"Possession","source":"legacy"},{"german":"Das Badezimmer ist groß.","bulgarian":"Банята е голяма.","context":"Description","source":"legacy"},{"german":"Im/In der Badezimmer.","bulgarian":"В банята.","context":"Location","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Bathroom. From Proto-Slavic '*banja' (bath). Feminine. Also means 'bath/bathing'.\n\nEssential vocabulary for home and housing in Bulgarian culture.\n\nBG→DE: В български 'баня' е женски род. Основна дума за дома.\n\nDE→BG: Für Deutschsprachige: 'Баня' = 'das Badezimmer'. Femininum."]
+  - Current: ["Essential vocabulary for home and housing in Bulgarian culture."]
+- **usageNotes**:
+  - Archive: "женски род. Баня [баня].\n\nBG→DE: Баня е женски род.\n\nDE→BG: Баня = Femininum."
+  - Current: undefined
+
+### das Schlafzimmer (das schlafzimmer||noun)
+
+- **category**:
+  - Archive: "Haus"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам спалня.","translation":"Ich habe Schlafzimmer.","context":"Possession"},{"sentence":"Спалнята е голяма.","translation":"Das Schlafzimmer ist groß.","context":"Description"},{"sentence":"В спалнята.","translation":"Im/In der Schlafzimmer.","context":"Location"}]
+  - Current: [{"german":"Ich habe Schlafzimmer.","bulgarian":"Имам спалня.","context":"Possession","source":"legacy"},{"german":"Das Schlafzimmer ist groß.","bulgarian":"Спалнята е голяма.","context":"Description","source":"legacy"},{"german":"Im/In der Schlafzimmer.","bulgarian":"В спалнята.","context":"Location","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Bedroom. From 'спя' (to sleep). Feminine noun.\n\nEssential vocabulary for home and housing in Bulgarian culture.\n\nBG→DE: В български 'спалня' е женски род. Основна дума за дома.\n\nDE→BG: Für Deutschsprachige: 'Спалня' = 'das Schlafzimmer'. Femininum."]
+  - Current: ["Essential vocabulary for home and housing in Bulgarian culture."]
+- **usageNotes**:
+  - Archive: "женски род. Спалня [спалня].\n\nBG→DE: Спалня е женски род.\n\nDE→BG: Спалня = Femininum."
+  - Current: undefined
+
+### die Tür (die tür||noun)
+
+- **category**:
+  - Archive: "Haus"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам врата.","translation":"Ich habe Tür.","context":"Possession"},{"sentence":"Вратата е голяма.","translation":"Die Tür ist groß.","context":"Description"},{"sentence":"В вратата.","translation":"Im/In der Tür.","context":"Location"}]
+  - Current: [{"german":"Ich habe Tür.","bulgarian":"Имам врата.","context":"Possession","source":"legacy"},{"german":"Die Tür ist groß.","bulgarian":"Вратата е голяма.","context":"Description","source":"legacy"},{"german":"Im/In der Tür.","bulgarian":"В вратата.","context":"Location","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Door. From Proto-Slavic '*vort-'. Feminine. Plural: врати.\n\nEssential vocabulary for home and housing in Bulgarian culture.\n\nBG→DE: В български 'врата' е женски род. Основна дума за дома.\n\nDE→BG: Für Deutschsprachige: 'Врата' = 'die Tür'. Femininum."]
+  - Current: ["Essential vocabulary for home and housing in Bulgarian culture."]
+- **usageNotes**:
+  - Archive: "женски род. Врата [врата].\n\nBG→DE: Врата е женски род.\n\nDE→BG: Врата = Femininum."
+  - Current: undefined
+
+### das Gemüse (das gemüse||noun)
+
+- **category**:
+  - Archive: "Essen"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Обичам зеленчуци.","translation":"Ich mag Gemüse.","context":"Expressing preference"},{"sentence":"Купувам зеленчук от пазара.","translation":"Ich kaufe Gemüse vom Markt.","context":"Shopping context"},{"sentence":"Ядете повече зеленчуци!","translation":"Esst mehr Gemüse!","context":"Health advice"}]
+  - Current: [{"german":"Ich mag Gemüse.","bulgarian":"Обичам зеленчуци.","context":"Expressing preference","source":"legacy"},{"german":"Ich kaufe Gemüse vom Markt.","bulgarian":"Купувам зеленчук от пазара.","context":"Shopping context","source":"legacy"},{"german":"Esst mehr Gemüse!","bulgarian":"Ядете повече зеленчуци!","context":"Health advice","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["General term for vegetables. The word literally means 'green things'. Used as a collective noun, can also refer to a single vegetable in context.\n\nBulgarian cuisine is heavily vegetable-based. The word 'зеленчук' has positive connotations - fresh vegetables are central to Bulgarian food culture. Markets (пазар) are filled with locally grown seasonal зеленчуци.\n\nBG→DE: В немски 'das Gemüse' е събирателно за зеленчуци, както и в български 'зеленчук'. За отделни видове използваме: домат, морков, картоф и т.н.\n\nDE→BG: Für Deutschsprachige: 'Зеленчук' = 'Gemüse' (Kollektivbegriff). Kommt von 'зелен' (grün), ähnlich wie deutsches 'Grünzeug' (umgangssprachlich)."]
+  - Current: ["Bulgarian cuisine is heavily vegetable-based. The word 'зеленчук' has positive connotations - fresh vegetables are central to Bulgarian food culture. Markets (пазар) are filled with locally grown seasonal зеленчуци."]
+- **usageNotes**:
+  - Archive: "Stress on second syllable: зеле́нчук [zɛˈlent͡ʃuk]. The 'н' before 'ч' creates a slight palatalization. Plural: зеленчуци.\n\nBG→DE: Зеленчук се произнася [zɛˈlent͡ʃuk] с ударение на 'лен'. Множествено число: зеленчуци [zɛˈlent͡ʃut͡si].\n\nDE→BG: Betonung auf der zweiten Silbe: зеле́нчук [zɛˈlent͡ʃuk]. Plural: зеленчуци. Das 'ч' wird wie 'tsch' ausgesprochen."
+  - Current: undefined
+
+### die Frucht, das Obst (die frucht das obst||noun)
+
+- **category**:
+  - Archive: "Essen"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Обичам плодове.","translation":"Ich mag Obst.","context":"General preference"},{"sentence":"Яж пресни плодове.","translation":"Iss frisches Obst.","context":"Health advice"},{"sentence":"Този плод е сладък.","translation":"Diese Frucht ist süß.","context":"Describing single fruit"}]
+  - Current: [{"german":"Ich mag Obst.","bulgarian":"Обичам плодове.","context":"General preference","source":"legacy"},{"german":"Iss frisches Obst.","bulgarian":"Яж пресни плодове.","context":"Health advice","source":"legacy"},{"german":"Diese Frucht ist süß.","bulgarian":"Този плод е сладък.","context":"Describing single fruit","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Word for fruit. Can mean both a single fruit (die Frucht) or fruits collectively (das Obst). Plural 'плодове' is used for multiple fruits.\n\nBulgaria is famous for its fruits, especially plums (сливи), apricots (кайсии), and cherries (череши). The phrase 'плодородна земя' (fruitful land) reflects the agricultural importance of fruit cultivation in Bulgarian culture.\n\nBG→DE: В немски има два термина: 'die Frucht' (отделен плод) и 'das Obst' (плодове като събирателно). Българското 'плод' покрива и двете значения.\n\nDE→BG: Für Deutschsprachige: 'Плод' kann sowohl 'Frucht' (einzeln) als auch 'Obst' (kollektiv) bedeuten. Plural 'плодове' (Früchte) macht den Unterschied klarer."]
+  - Current: ["Bulgaria is famous for its fruits, especially plums (сливи), apricots (кайсии), and cherries (череши). The phrase 'плодородна земя' (fruitful land) reflects the agricultural importance of fruit cultivation in Bulgarian culture."]
+- **usageNotes**:
+  - Archive: "Single syllable with stress: пло́д [plɔt]. The final 'д' is devoiced to [t]. Plural: плодове [ˈplɔdɔvɛ].\n\nBG→DE: Плод се произнася [plɔt] с ударение на единствената сричка. Финалното 'д' се оглушава на [t]. Множествено: плодове.\n\nDE→BG: Betonung auf der einzigen Silbe: пло́д [plɔt]. Das finale 'д' wird als [t] ausgesprochen (Auslautverhärtung). Plural: плодове."
+  - Current: undefined
+
+### die Banane (die banane||noun)
+
+- **category**:
+  - Archive: "Essen"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Обичам банани.","translation":"Ich mag Bananen.","context":"Preference"},{"sentence":"Купи банан за закуска.","translation":"Kauf eine Banane zum Frühstück.","context":"Shopping instruction"},{"sentence":"Този банан е узрял.","translation":"Diese Banane ist reif.","context":"Describing ripeness"}]
+  - Current: [{"german":"Ich mag Bananen.","bulgarian":"Обичам банани.","context":"Preference","source":"legacy"},{"german":"Kauf eine Banane zum Frühstück.","bulgarian":"Купи банан за закуска.","context":"Shopping instruction","source":"legacy"},{"german":"Diese Banane ist reif.","bulgarian":"Този банан е узрял.","context":"Describing ripeness","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Banana. An international loanword, easily recognizable. Note the stress difference from German and the masculine gender in Bulgarian.\n\nBananas were considered exotic in Bulgaria during communist times and were available mainly for special occasions. Today they're common, but older Bulgarians remember them as a luxury item. 'Банана е извита, но е сладка' (The banana is curved, but it's sweet) - a saying about accepting imperfections.\n\nBG→DE: В немски 'die Banane' е женски род, докато в български 'банан' е мъжки род. Ударението също е различно: нем. Banáne [baˈnaːnə], бълг. бана́н [bɐˈnan].\n\nDE→BG: Für Deutschsprachige: 'Банан' ist maskulin (im Gegensatz zu femininem 'die Banane'). Betonung auf der letzten Silbe, nicht wie im Deutschen auf der zweiten."]
+  - Current: ["Bananas were considered exotic in Bulgaria during communist times and were available mainly for special occasions. Today they're common, but older Bulgarians remember them as a luxury item. 'Банана е извита, но е сладка' (The banana is curved, but it's sweet) - a saying about accepting imperfections."]
+- **usageNotes**:
+  - Archive: "Stress on last syllable: бана́н [bɐˈnan]. Both 'а' sounds are pronounced clearly. Plural: банани [bɐˈnani].\n\nBG→DE: Банан се произнася [bɐˈnan] с ударение на последната сричка. И двете 'а' са ясни. Множествено: банани.\n\nDE→BG: Betonung auf der letzten Silbe: бана́н [bɐˈnan], anders als deutsches Banáne. Beide 'а' werden klar ausgesprochen. Plural: банани."
+  - Current: undefined
+
+### die Orange, die Apfelsine (die orange die apfelsine||noun)
+
+- **category**:
+  - Archive: "Essen"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Обичам пресен портокал.","translation":"Ich mag frische Orangen.","context":"Preference"},{"sentence":"Портокалов сок, моля.","translation":"Orangensaft, bitte.","context":"Ordering drinks"},{"sentence":"Този портокал е сочен.","translation":"Diese Orange ist saftig.","context":"Describing quality"}]
+  - Current: [{"german":"Ich mag frische Orangen.","bulgarian":"Обичам пресен портокал.","context":"Preference","source":"legacy"},{"german":"Orangensaft, bitte.","bulgarian":"Портокалов сок, моля.","context":"Ordering drinks","source":"legacy"},{"german":"Diese Orange ist saftig.","bulgarian":"Този портокал е сочен.","context":"Describing quality","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Orange (fruit). The word comes from Portuguese 'Portugal' - oranges arrived via Portuguese trade routes. Can also refer to the color orange colloquially.\n\nOranges are associated with winter in Bulgaria - fresh oranges become abundant and cheap in winter months. 'Портокалов сок' (orange juice) is a breakfast staple. The phrase 'свеж като портокал' (fresh as an orange) means energetic and vibrant.\n\nBG→DE: В немски има два термина: 'die Orange' (по-често на север) и 'die Apfelsine' (традиционно на юг). Българското 'портокал' идва от 'Portugal', защото портокалите са дошли чрез португалска търговия.\n\nDE→BG: Für Deutschsprachige: 'Портокал' kommt von 'Portugal' (woher die Früchte ursprünglich kamen). Maskulines Genus, im Gegensatz zu femininem 'die Orange'."]
+  - Current: ["Oranges are associated with winter in Bulgaria - fresh oranges become abundant and cheap in winter months. 'Портокалов сок' (orange juice) is a breakfast staple. The phrase 'свеж като портокал' (fresh as an orange) means energetic and vibrant."]
+- **usageNotes**:
+  - Archive: "Stress on second syllable: порто́кал [pɔrˈtɔkal]. All vowels are pronounced clearly. Plural: портокали [pɔrtɔˈkali].\n\nBG→DE: Портокал се произнася [pɔrˈtɔkal] с ударение на 'то'. Всички гласни са ясни. Множествено: портокали.\n\nDE→BG: Betonung auf der zweiten Silbe: порто́кал [pɔrˈtɔkal]. Alle Vokale werden klar ausgesprochen. Plural: портокали."
+  - Current: undefined
+
+### die Tomate (die tomate||noun)
+
+- **category**:
+  - Archive: "Essen"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Искам домати за салата.","translation":"Ich möchte Tomaten für den Salat.","context":"Shopping"},{"sentence":"Този домат е сочен.","translation":"Diese Tomate ist saftig.","context":"Describing quality"},{"sentence":"Купи три домата.","translation":"Kauf drei Tomaten.","context":"Shopping instruction"}]
+  - Current: [{"german":"Ich möchte Tomaten für den Salat.","bulgarian":"Искам домати за салата.","context":"Shopping","source":"legacy"},{"german":"Diese Tomate ist saftig.","bulgarian":"Този домат е сочен.","context":"Describing quality","source":"legacy"},{"german":"Kauf drei Tomaten.","bulgarian":"Купи три домата.","context":"Shopping instruction","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Tomato. Essential ingredient in Bulgarian cuisine. The word is similar across many languages but with Bulgarian phonetic characteristics.\n\nTomatoes are ubiquitous in Bulgarian cuisine. Fresh tomatoes are a summer staple, and 'домашен домат' (homegrown tomato) is considered far superior to store-bought. The peak of summer is 'сезон на доматите' (tomato season) when they're cheapest and tastiest.\n\nBG→DE: В немски 'die Tomate' е женски род, докато в български 'домат' е мъжки род. Домати са основна съставка в българската кухня - шопска салата, люта, таратор.\n\nDE→BG: Für Deutschsprachige: 'Домат' ist maskulin (im Gegensatz zu femininem 'die Tomate'). Aussprache ähnlich, aber mit bulgarischem [ɔ]-Laut."]
+  - Current: ["Tomatoes are ubiquitous in Bulgarian cuisine. Fresh tomatoes are a summer staple, and 'домашен домат' (homegrown tomato) is considered far superior to store-bought. The peak of summer is 'сезон на доматите' (tomato season) when they're cheapest and tastiest."]
+- **usageNotes**:
+  - Archive: "Stress on second syllable: дома́т [dɔˈmat]. The 'о' is open [ɔ]. Plural: домати [dɔˈmati].\n\nBG→DE: Домат се произнася [dɔˈmat] с ударение на 'мат'. Буквата 'о' е отворена [ɔ]. Множествено: домати.\n\nDE→BG: Betonung auf der zweiten Silbe: дома́т [dɔˈmat]. Das 'о' ist ein offenes [ɔ] wie in 'Tomate'. Plural: домати."
+  - Current: undefined
+
+### die Kartoffel (die kartoffel||noun)
+
+- **category**:
+  - Archive: "Essen"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Обичам пържени картофи.","translation":"Ich mag Bratkartoffeln.","context":"Food preference"},{"sentence":"Купи килограм картофи.","translation":"Kauf ein Kilo Kartoffeln.","context":"Shopping"},{"sentence":"Картофите са изварени.","translation":"Die Kartoffeln sind gekocht.","context":"Cooking status"}]
+  - Current: [{"german":"Ich mag Bratkartoffeln.","bulgarian":"Обичам пържени картофи.","context":"Food preference","source":"legacy"},{"german":"Kauf ein Kilo Kartoffeln.","bulgarian":"Купи килограм картофи.","context":"Shopping","source":"legacy"},{"german":"Die Kartoffeln sind gekocht.","bulgarian":"Картофите са изварени.","context":"Cooking status","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Potato. Staple food in Bulgarian cuisine. The word comes from German 'Kartoffel' via Russian, showing the European origin of the potato in Bulgaria.\n\nPotatoes are a staple in Bulgarian cuisine, especially in colder months. 'Пържени картофи' (fried potatoes) are a classic side dish. 'Картофена салата' (potato salad) is mandatory at celebrations. The phrase 'прост като картоф' (simple as a potato) means something is basic or unsophisticated.\n\nBG→DE: В немски 'die Kartoffel' е женски род, докато в български 'картоф' е мъжки род. Думата е заемка от немски през руски 'картофель'.\n\nDE→BG: Für Deutschsprachige: 'Картоф' kommt etymologisch von deutschem 'Kartoffel' (via Russisch). Aber: maskulines Genus in Bulgarisch."]
+  - Current: ["Potatoes are a staple in Bulgarian cuisine, especially in colder months. 'Пържени картофи' (fried potatoes) are a classic side dish. 'Картофена салата' (potato salad) is mandatory at celebrations. The phrase 'прост като картоф' (simple as a potato) means something is basic or unsophisticated."]
+- **usageNotes**:
+  - Archive: "Stress on second syllable: карто́ф [kɐrˈtɔf]. The final 'ф' is [f]. Plural: картофи [kɐrˈtɔfi].\n\nBG→DE: Картоф се произнася [kɐrˈtɔf] с ударение на 'то'. Крайното 'ф' е [f]. Множествено: картофи.\n\nDE→BG: Betonung auf der zweiten Silbe: карто́ф [kɐrˈtɔf]. Ähnlich wie deutsches 'Kartoffel' aber ohne das finale '-el'. Plural: картофи."
+  - Current: undefined
+
+### die Karotte, die Möhre (die karotte die möhre||noun)
+
+- **category**:
+  - Archive: "Essen"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Обичам моркови.","translation":"Ich mag Karotten.","context":"Preference"},{"sentence":"Рендай морков за салатата.","translation":"Reibe Karotte für den Salat.","context":"Cooking instruction"},{"sentence":"Тези моркови са пресни.","translation":"Diese Karotten sind frisch.","context":"Describing quality"}]
+  - Current: [{"german":"Ich mag Karotten.","bulgarian":"Обичам моркови.","context":"Preference","source":"legacy"},{"german":"Reibe Karotte für den Salat.","bulgarian":"Рендай морков за салатата.","context":"Cooking instruction","source":"legacy"},{"german":"Diese Karotten sind frisch.","bulgarian":"Тези моркови са пресни.","context":"Describing quality","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Carrot. Common vegetable in Bulgarian cuisine. The word is of Slavic origin and related to similar words in other Slavic languages.\n\nCarrots are essential in Bulgarian cuisine, especially in winter salads and as a base for many dishes. 'Морковена халва' (carrot halva) is a traditional sweet. Fresh carrots from the market are preferred over packaged ones.\n\nBG→DE: В немски има два термина: 'die Karotte' (общо) и 'die Möhre' (по-често на север). Българското 'морков' е мъжки род и покрива и двете немски думи.\n\nDE→BG: Für Deutschsprachige: 'Морков' ist maskulin (im Gegensatz zu femininen 'die Karotte/Möhre'). Das Wort ist slawischen Ursprungs, im Gegensatz zum lateinstämmigen 'Karotte'."]
+  - Current: ["Carrots are essential in Bulgarian cuisine, especially in winter salads and as a base for many dishes. 'Морковена халва' (carrot halva) is a traditional sweet. Fresh carrots from the market are preferred over packaged ones."]
+- **usageNotes**:
+  - Archive: "Stress on second syllable: морко́в [mɔrˈkɔf]. The final 'в' is devoiced to [f]. Plural: моркови [mɔrˈkɔvi].\n\nBG→DE: Морков се произнася [mɔrˈkɔf] с ударение на 'ко'. Крайното 'в' се оглушава на [f]. Множествено: моркови.\n\nDE→BG: Betonung auf der zweiten Silbe: морко́в [mɔrˈkɔf]. Das finale 'в' wird als [f] ausgesprochen (Auslautverhärtung). Plural: моркови."
+  - Current: undefined
+
+### die Zwiebel (die zwiebel||noun)
+
+- **category**:
+  - Archive: "Essen"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Нарежи лук за яхнията.","translation":"Schneide Zwiebeln für den Eintopf.","context":"Cooking instruction"},{"sentence":"Обичам ли сурово лукче?","translation":"Mag ich rohe Zwiebeln?","context":"Food preference question"},{"sentence":"Лукът е здравословен.","translation":"Zwiebeln sind gesund.","context":"Health statement"}]
+  - Current: [{"german":"Schneide Zwiebeln für den Eintopf.","bulgarian":"Нарежи лук за яхнията.","context":"Cooking instruction","source":"legacy"},{"german":"Mag ich rohe Zwiebeln?","bulgarian":"Обичам ли сурово лукче?","context":"Food preference question","source":"legacy"},{"german":"Zwiebeln sind gesund.","bulgarian":"Лукът е здравословен.","context":"Health statement","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Onion. Essential ingredient in Bulgarian cooking. Note: 'лук' can also mean 'bow' (weapon/tool) in different contexts, but context makes it clear.\n\nOnions are the base of most Bulgarian dishes. 'Сурово лукче' (raw onion) is often served with grilled meats. Crying from cutting onions is jokingly called 'лукът ме кара да плача' (the onion makes me cry). Spring onions ('пресен лук') are a seasonal delicacy.\n\nBG→DE: В немски 'die Zwiebel' е женски род, докато в български 'лук' е мъжки род. Лукът е основна съставка в българската кухня - почти всяко ястие започва с 'запръжка от лук'.\n\nDE→BG: Für Deutschsprachige: 'Лук' ist maskulin (im Gegensatz zu femininem 'die Zwiebel'). Achtung: Das Wort bedeutet auch 'Bogen' (Waffe/Werkzeug), aber der Kontext macht die Bedeutung klar."]
+  - Current: ["Onions are the base of most Bulgarian dishes. 'Сурово лукче' (raw onion) is often served with grilled meats. Crying from cutting onions is jokingly called 'лукът ме кара да плача' (the onion makes me cry). Spring onions ('пресен лук') are a seasonal delicacy."]
+- **usageNotes**:
+  - Archive: "Single syllable with stress: лу́к [luk]. Clear 'л' and 'у' sounds, final 'к' is hard [k]. Plural: лукове [ˈlukɔvɛ].\n\nBG→DE: Лук се произнася [luk] с ударение на единствената сричка. Крайното 'к' е твърдо [k]. Множествено: лукове.\n\nDE→BG: Betonung auf der einzigen Silbe: лу́к [luk]. Das finale 'к' wird hart ausgesprochen wie deutsches 'k'. Plural: лукове (Ausnahme: nicht *лукци)."
+  - Current: undefined
+
+### der Salat (der salat||noun)
+
+- **category**:
+  - Archive: "Essen"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Правя шопска салата.","translation":"Ich mache Schopska-Salat.","context":"Cooking"},{"sentence":"Искам зелена салата.","translation":"Ich möchte grünen Salat (Blattsalat).","context":"Ordering food"},{"sentence":"Салатата е свежа.","translation":"Der Salat ist frisch.","context":"Describing food"}]
+  - Current: [{"german":"Ich mache Schopska-Salat.","bulgarian":"Правя шопска салата.","context":"Cooking","source":"legacy"},{"german":"Ich möchte grünen Salat (Blattsalat).","bulgarian":"Искам зелена салата.","context":"Ordering food","source":"legacy"},{"german":"Der Salat ist frisch.","bulgarian":"Салатата е свежа.","context":"Describing food","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Salad. Can refer to both the dish (салата) and lettuce leaves (зелена салата). Very important in Bulgarian cuisine - meals often start with a salad.\n\nSalads are central to Bulgarian meals. 'Шопска салата' (tomatoes, cucumbers, peppers, onions, white cheese) is the national salad. Every region has its own salad specialty. Fresh salads are mandatory at celebrations, and 'без салата не е ядене' (without salad, it's not a meal) is a common saying.\n\nBG→DE: В немски 'der Salat' е мъжки род, както и в български. Думата означава и ястието 'салата' и зеленчука 'маруля'. В контекста става ясно кое е.\n\nDE→BG: Für Deutschsprachige: 'Салата' = 'Salat' (beide Bedeutungen: Gericht und Pflanze). Die berühmte 'шопска салата' (Schopska-Salat) ist Bulgarians Nationalgericht."]
+  - Current: ["Salads are central to Bulgarian meals. 'Шопска салата' (tomatoes, cucumbers, peppers, onions, white cheese) is the national salad. Every region has its own salad specialty. Fresh salads are mandatory at celebrations, and 'без салата не е ядене' (without salad, it's not a meal) is a common saying."]
+- **usageNotes**:
+  - Archive: "Stress on second syllable: сала́та [sɐˈlatɐ]. All vowels are pronounced clearly. Definite form: салатата [sɐˈlatɐtɐ].\n\nBG→DE: Салата се произнася [sɐˈlatɐ] с ударение на 'ла'. Всички гласни са ясни. Определена форма: салатата.\n\nDE→BG: Betonung auf der zweiten Silbe: сала́та [sɐˈlatɐ]. Ähnlich wie deutsches 'Salat'. Alle Vokale werden klar ausgesprochen."
+  - Current: undefined
+
+### das Brot (das brot||noun)
+
+- **category**:
+  - Archive: "Essen"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Купи хляб, моля.","translation":"Kauf bitte Brot.","context":"shopping"},{"sentence":"Искам хляб с масло.","translation":"Ich möchte Brot mit Butter.","context":"meal"},{"sentence":"Прясно изпечен хляб.","translation":"Frisch gebackenes Brot.","context":"description"}]
+  - Current: [{"german":"Kauf bitte Brot.","bulgarian":"Купи хляб, моля.","context":"shopping","source":"legacy"},{"german":"Ich möchte Brot mit Butter.","bulgarian":"Искам хляб с масло.","context":"meal","source":"legacy"},{"german":"Frisch gebackenes Brot.","bulgarian":"Прясно изпечен хляб.","context":"description","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential food staple: bread\n\nBread is sacred in Bulgarian culture. Never throw away bread. Traditional round bread (пита) for special occasions. Breaking bread together symbolizes friendship.\n\nBG→DE: В немски 'Brot' [bʁoːt] е среден род (das), единствено число. Множествено: 'Brote'. Основна храна.\n\nDE→BG: Für Deutschsprachige: 'Хляб' ist maskulin. Sehr wichtig in bulgarischer Kultur - Brot bei jeder Mahlzeit. Verschiedene Sorten."]
+  - Current: ["Bread is sacred in Bulgarian culture. Never throw away bread. Traditional round bread (пита) for special occasions. Breaking bread together symbolizes friendship."]
+- **usageNotes**:
+  - Archive: "Masculine noun. Definite form: хлябът. Plural: хлябове.\n\nBG→DE: Хляб [xljap] - мъжки род. Определен член: хлябът [xljɐˈbɤt]. Множ.: хлябове.\n\nDE→BG: Maskulinum. 'Х' ist [x] wie 'ch' in 'Bach'. Betonung: хляб (monosyllabisch)."
+  - Current: undefined
+
+### die Butter (die butter||noun)
+
+- **category**:
+  - Archive: "Essen"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Хляб с масло и мед.","translation":"Brot mit Butter und Honig.","context":"breakfast - butter"},{"sentence":"Готвя с олио.","translation":"Ich koche mit Öl.","context":"cooking - using 'олио' for clarity"},{"sentence":"Сложи масло на хляба.","translation":"Schmier Butter aufs Brot.","context":"instruction"}]
+  - Current: [{"german":"Brot mit Butter und Honig.","bulgarian":"Хляб с масло и мед.","context":"breakfast - butter","source":"legacy"},{"german":"Ich koche mit Öl.","bulgarian":"Готвя с олио.","context":"cooking - using 'олио' for clarity","source":"legacy"},{"german":"Schmier Butter aufs Brot.","bulgarian":"Сложи масло на хляба.","context":"instruction","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential dairy product: butter (note: also means oil/grease)\n\nDouble meaning: butter (for bread) and oil (cooking). Sunflower oil (слънчогледово масло) very common in Bulgarian cooking. Clarify with context.\n\nBG→DE: В немски 'Butter' [ˈbʊtɐ] е женски род. Внимание: 'масло' означава и butter и oil! Контекстът определя.\n\nDE→BG: Für Deutschsprachige: 'Масло' = Butter UND Öl! Context matters: 'масло за хляб' (Butter), 'олио' spezifischer für oil. Neutrum."]
+  - Current: ["Double meaning: butter (for bread) and oil (cooking). Sunflower oil (слънчогледово масло) very common in Bulgarian cooking. Clarify with context."]
+- **usageNotes**:
+  - Archive: "Neuter noun. Definite: маслото. Note: covers both butter and oil in Bulgarian.\n\nBG→DE: Масло [ˈmaslɔ] - среден род. Определен: маслото. ВАЖНО: масло = butter И oil!\n\nDE→BG: Neutrum. Polysem: Butter UND Öl. Kontext wichtig. Betonung: ма́сло."
+  - Current: undefined
+
+### der Käse (der käse||noun)
+
+- **category**:
+  - Archive: "Essen"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Шопска салата със сирене.","translation":"Shopska-Salat mit Käse.","context":"traditional dish"},{"sentence":"Баница със сирене.","translation":"Banitsa mit Käse.","context":"traditional pastry"},{"sentence":"Сирене и домати за закуска.","translation":"Käse und Tomaten zum Frühstück.","context":"breakfast"}]
+  - Current: [{"german":"Shopska-Salat mit Käse.","bulgarian":"Шопска салата със сирене.","context":"traditional dish","source":"legacy"},{"german":"Banitsa mit Käse.","bulgarian":"Баница със сирене.","context":"traditional pastry","source":"legacy"},{"german":"Käse und Tomaten zum Frühstück.","bulgarian":"Сирене и домати за закуска.","context":"breakfast","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential dairy product: cheese (typically refers to white brine cheese)\n\nEssential in Bulgarian cuisine: Shopska salad uses сирене. Breakfast often includes сирене. Different from yellow cheese (кашкавал). Made from sheep/cow milk.\n\nBG→DE: В немски 'Käse' [ˈkɛːzə] е мъжки род. 'Сирене' в България обикновено означава бяло саламурено сирене (like feta).\n\nDE→BG: Für Deutschsprachige: 'Сирене' meist weiße Salzlake-Käse (ähnlich Feta). Yellow cheese = 'кашкавал'. Bulgarian белo сирене is staple food."]
+  - Current: ["Essential in Bulgarian cuisine: Shopska salad uses сирене. Breakfast often includes сирене. Different from yellow cheese (кашкавал). Made from sheep/cow milk."]
+- **usageNotes**:
+  - Archive: "Neuter noun. Definite: сиренето. Type of cheese in Bulgaria: white brine cheese.\n\nBG→DE: Сирене [siˈrɛnɛ] - среден род. Определен: сиренето. Конкретно: бяло саламурено.\n\nDE→BG: Neutrum. Spezifisch für weißen Salzlakekäse. Gelber Käse = кашкавал. Betonung сире́не."
+  - Current: undefined
+
+### das Fleisch (das fleisch||noun)
+
+- **category**:
+  - Archive: "Essen"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Ядеш ли месо?","translation":"Isst du Fleisch?","context":"dietary question"},{"sentence":"Свинско месо с ориз.","translation":"Schweinefleisch mit Reis.","context":"meal"},{"sentence":"Не ям месо - вегетарианец съм.","translation":"Ich esse kein Fleisch - ich bin Vegetarier.","context":"dietary preference"}]
+  - Current: [{"german":"Isst du Fleisch?","bulgarian":"Ядеш ли месо?","context":"dietary question","source":"legacy"},{"german":"Schweinefleisch mit Reis.","bulgarian":"Свинско месо с ориз.","context":"meal","source":"legacy"},{"german":"Ich esse kein Fleisch - ich bin Vegetarier.","bulgarian":"Не ям месо - вегетарианец съм.","context":"dietary preference","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential protein food: meat\n\nMeat dishes central to Bulgarian cuisine: кебапче, кюфте, шишчета (grilled meats). Pork (свинско) most common. Mixed grill (скара) popular.\n\nBG→DE: В немски 'Fleisch' [flaɪ̯ʃ] е среден род (das), общо за месо. Видове: Schweinefleisch, Rindfleisch, etc.\n\nDE→BG: Für Deutschsprachige: 'Месо' ist neutrum, Oberbegriff. Spezifisch: свинско (Schwein), телешко (Kalb), пилешко (Huhn)."]
+  - Current: ["Meat dishes central to Bulgarian cuisine: кебапче, кюфте, шишчета (grilled meats). Pork (свинско) most common. Mixed grill (скара) popular."]
+- **usageNotes**:
+  - Archive: "Neuter noun. Definite: месото. Types: свинско, телешко, пилешко.\n\nBG→DE: Месо [ˈmɛsɔ] - среден род. Определен: месото. Видове: свинско, телешко, пилешко.\n\nDE→BG: Neutrum. Oberbegriff. Betonung: ме́со. 'М' ist bilabial [m]."
+  - Current: undefined
+
+### der Fisch (der fisch||noun)
+
+- **category**:
+  - Archive: "Essen"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Обичам риба.","translation":"Ich mag Fisch.","context":"preference"},{"sentence":"Пържена риба с лимон.","translation":"Gebratener Fisch mit Zitrone.","context":"dish"},{"sentence":"Има ли свежа риба?","translation":"Gibt es frischen Fisch?","context":"market/restaurant"}]
+  - Current: [{"german":"Ich mag Fisch.","bulgarian":"Обичам риба.","context":"preference","source":"legacy"},{"german":"Gebratener Fisch mit Zitrone.","bulgarian":"Пържена риба с лимон.","context":"dish","source":"legacy"},{"german":"Gibt es frischen Fisch?","bulgarian":"Има ли свежа риба?","context":"market/restaurant","source":"legacy"},{"german":"Ich sehe Fisch.","bulgarian":"Виждам риба.","context":"Seeing","source":"legacy"},{"german":"der Fisch ist groß.","bulgarian":"Рибато/та е голяма.","context":"Size","source":"legacy"},{"german":"Ich habe Fisch.","bulgarian":"Имам риба.","context":"Possession","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Protein food: fish\n\nBlack Sea fish: цаца (sprat), попче (goby). Grilled fish (риба на скара) popular in coastal regions. Fish soup (рибена чорба) traditional.\n\nBG→DE: В немски 'Fisch' [fɪʃ] е мъжки род (der). Използва се за храна И за живото животно.\n\nDE→BG: Für Deutschsprachige: 'Риба' ist feminin. Sowohl das Tier als auch das Essen. Black Sea fish popular in Bulgaria."]
+  - Current: ["Black Sea fish: цаца (sprat), попче (goby). Grilled fish (риба на скара) popular in coastal regions. Fish soup (рибена чорба) traditional. | Common animal in Bulgarian culture/agriculture. Fish - already covered but essential animal"]
+- **usageNotes**:
+  - Archive: "Feminine noun. Definite: рибата. Plural: риби.\n\nBG→DE: Риба [ˈribɐ] - женски род. Определен: рибата. Множ.: риби.\n\nDE→BG: Femininum. 'Р' ist gerolltes [r]. Betonung: ри́ба."
+  - Current: undefined
+
+### singen (singen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам пея.","translation":"Ich habe singen.","context":"Having"},{"sentence":"Харесвам пея.","translation":"Ich mag singen.","context":"Liking"},{"sentence":"Търся пея.","translation":"Ich suche singen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe singen.","bulgarian":"Имам пея.","context":"Having","source":"legacy"},{"german":"Ich mag singen.","bulgarian":"Харесвам пея.","context":"Liking","source":"legacy"},{"german":"Ich suche singen.","bulgarian":"Търся пея.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### tanzen (tanzen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам танцувам.","translation":"Ich habe tanzen.","context":"Having"},{"sentence":"Харесвам танцувам.","translation":"Ich mag tanzen.","context":"Liking"},{"sentence":"Търся танцувам.","translation":"Ich suche tanzen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe tanzen.","bulgarian":"Имам танцувам.","context":"Having","source":"legacy"},{"german":"Ich mag tanzen.","bulgarian":"Харесвам танцувам.","context":"Liking","source":"legacy"},{"german":"Ich suche tanzen.","bulgarian":"Търся танцувам.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### schwimmen (schwimmen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам плувам.","translation":"Ich habe schwimmen.","context":"Having"},{"sentence":"Харесвам плувам.","translation":"Ich mag schwimmen.","context":"Liking"},{"sentence":"Търся плувам.","translation":"Ich suche schwimmen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe schwimmen.","bulgarian":"Имам плувам.","context":"Having","source":"legacy"},{"german":"Ich mag schwimmen.","bulgarian":"Харесвам плувам.","context":"Liking","source":"legacy"},{"german":"Ich suche schwimmen.","bulgarian":"Търся плувам.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### laufen (laufen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам бягам.","translation":"Ich habe laufen.","context":"Having"},{"sentence":"Харесвам бягам.","translation":"Ich mag laufen.","context":"Liking"},{"sentence":"Търся бягам.","translation":"Ich suche laufen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe laufen.","bulgarian":"Имам бягам.","context":"Having","source":"legacy"},{"german":"Ich mag laufen.","bulgarian":"Харесвам бягам.","context":"Liking","source":"legacy"},{"german":"Ich suche laufen.","bulgarian":"Търся бягам.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### gehen (gehen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам ходя.","translation":"Ich habe gehen.","context":"Having"},{"sentence":"Харесвам ходя.","translation":"Ich mag gehen.","context":"Liking"},{"sentence":"Търся ходя.","translation":"Ich suche gehen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe gehen.","bulgarian":"Имам ходя.","context":"Having","source":"legacy"},{"german":"Ich mag gehen.","bulgarian":"Харесвам ходя.","context":"Liking","source":"legacy"},{"german":"Ich suche gehen.","bulgarian":"Търся ходя.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Essential action word. Bulgarian verbs conjugate for person and number | Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### sitzen (sitzen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам седя.","translation":"Ich habe sitzen.","context":"Having"},{"sentence":"Харесвам седя.","translation":"Ich mag sitzen.","context":"Liking"},{"sentence":"Търся седя.","translation":"Ich suche sitzen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe sitzen.","bulgarian":"Имам седя.","context":"Having","source":"legacy"},{"german":"Ich mag sitzen.","bulgarian":"Харесвам седя.","context":"Liking","source":"legacy"},{"german":"Ich suche sitzen.","bulgarian":"Търся седя.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### liegen (liegen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам лежа.","translation":"Ich habe liegen.","context":"Having"},{"sentence":"Харесвам лежа.","translation":"Ich mag liegen.","context":"Liking"},{"sentence":"Търся лежа.","translation":"Ich suche liegen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe liegen.","bulgarian":"Имам лежа.","context":"Having","source":"legacy"},{"german":"Ich mag liegen.","bulgarian":"Харесвам лежа.","context":"Liking","source":"legacy"},{"german":"Ich suche liegen.","bulgarian":"Търся лежа.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### stehen (stehen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам стоя.","translation":"Ich habe stehen.","context":"Having"},{"sentence":"Харесвам стоя.","translation":"Ich mag stehen.","context":"Liking"},{"sentence":"Търся стоя.","translation":"Ich suche stehen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe stehen.","bulgarian":"Имам стоя.","context":"Having","source":"legacy"},{"german":"Ich mag stehen.","bulgarian":"Харесвам стоя.","context":"Liking","source":"legacy"},{"german":"Ich suche stehen.","bulgarian":"Търся стоя.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### weinen (weinen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам плача.","translation":"Ich habe weinen.","context":"Having"},{"sentence":"Харесвам плача.","translation":"Ich mag weinen.","context":"Liking"},{"sentence":"Търся плача.","translation":"Ich suche weinen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe weinen.","bulgarian":"Имам плача.","context":"Having","source":"legacy"},{"german":"Ich mag weinen.","bulgarian":"Харесвам плача.","context":"Liking","source":"legacy"},{"german":"Ich suche weinen.","bulgarian":"Търся плача.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### lachen (lachen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам смея се.","translation":"Ich habe lachen.","context":"Having"},{"sentence":"Харесвам смея се.","translation":"Ich mag lachen.","context":"Liking"},{"sentence":"Търся смея се.","translation":"Ich suche lachen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe lachen.","bulgarian":"Имам смея се.","context":"Having","source":"legacy"},{"german":"Ich mag lachen.","bulgarian":"Харесвам смея се.","context":"Liking","source":"legacy"},{"german":"Ich suche lachen.","bulgarian":"Търся смея се.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### waschen (waschen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам мия.","translation":"Ich habe waschen.","context":"Having"},{"sentence":"Харесвам мия.","translation":"Ich mag waschen.","context":"Liking"},{"sentence":"Търся мия.","translation":"Ich suche waschen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe waschen.","bulgarian":"Имам мия.","context":"Having","source":"legacy"},{"german":"Ich mag waschen.","bulgarian":"Харесвам мия.","context":"Liking","source":"legacy"},{"german":"Ich suche waschen.","bulgarian":"Търся мия.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### kochen (kochen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам готвя.","translation":"Ich habe kochen.","context":"Having"},{"sentence":"Харесвам готвя.","translation":"Ich mag kochen.","context":"Liking"},{"sentence":"Търся готвя.","translation":"Ich suche kochen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe kochen.","bulgarian":"Имам готвя.","context":"Having","source":"legacy"},{"german":"Ich mag kochen.","bulgarian":"Харесвам готвя.","context":"Liking","source":"legacy"},{"german":"Ich suche kochen.","bulgarian":"Търся готвя.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### putzen (putzen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам чистя.","translation":"Ich habe putzen.","context":"Having"},{"sentence":"Харесвам чистя.","translation":"Ich mag putzen.","context":"Liking"},{"sentence":"Търся чистя.","translation":"Ich suche putzen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe putzen.","bulgarian":"Имам чистя.","context":"Having","source":"legacy"},{"german":"Ich mag putzen.","bulgarian":"Харесвам чистя.","context":"Liking","source":"legacy"},{"german":"Ich suche putzen.","bulgarian":"Търся чистя.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### anziehen (anziehen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам обличам.","translation":"Ich habe anziehen.","context":"Having"},{"sentence":"Харесвам обличам.","translation":"Ich mag anziehen.","context":"Liking"},{"sentence":"Търся обличам.","translation":"Ich suche anziehen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe anziehen.","bulgarian":"Имам обличам.","context":"Having","source":"legacy"},{"german":"Ich mag anziehen.","bulgarian":"Харесвам обличам.","context":"Liking","source":"legacy"},{"german":"Ich suche anziehen.","bulgarian":"Търся обличам.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### schneiden (schneiden||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам режа.","translation":"Ich habe schneiden.","context":"Having"},{"sentence":"Харесвам режа.","translation":"Ich mag schneiden.","context":"Liking"},{"sentence":"Търся режа.","translation":"Ich suche schneiden.","context":"Searching"}]
+  - Current: [{"german":"Ich habe schneiden.","bulgarian":"Имам режа.","context":"Having","source":"legacy"},{"german":"Ich mag schneiden.","bulgarian":"Харесвам режа.","context":"Liking","source":"legacy"},{"german":"Ich suche schneiden.","bulgarian":"Търся режа.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Papier (papier||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам хартия.","translation":"Ich habe Papier.","context":"Having"},{"sentence":"Харесвам хартия.","translation":"Ich mag Papier.","context":"Liking"},{"sentence":"Търся хартия.","translation":"Ich suche Papier.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Papier.","bulgarian":"Имам хартия.","context":"Having","source":"legacy"},{"german":"Ich mag Papier.","bulgarian":"Харесвам хартия.","context":"Liking","source":"legacy"},{"german":"Ich suche Papier.","bulgarian":"Търся хартия.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Tasche (tasche||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам торба.","translation":"Ich habe Tasche.","context":"Having"},{"sentence":"Харесвам торба.","translation":"Ich mag Tasche.","context":"Liking"},{"sentence":"Търся торба.","translation":"Ich suche Tasche.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Tasche.","bulgarian":"Имам торба.","context":"Having","source":"legacy"},{"german":"Ich mag Tasche.","bulgarian":"Харесвам торба.","context":"Liking","source":"legacy"},{"german":"Ich suche Tasche.","bulgarian":"Търся торба.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Box (box||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам кутия.","translation":"Ich habe Box.","context":"Having"},{"sentence":"Харесвам кутия.","translation":"Ich mag Box.","context":"Liking"},{"sentence":"Търся кутия.","translation":"Ich suche Box.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Box.","bulgarian":"Имам кутия.","context":"Having","source":"legacy"},{"german":"Ich mag Box.","bulgarian":"Харесвам кутия.","context":"Liking","source":"legacy"},{"german":"Ich suche Box.","bulgarian":"Търся кутия.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Flasche (flasche||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам бутилка.","translation":"Ich habe Flasche.","context":"Having"},{"sentence":"Харесвам бутилка.","translation":"Ich mag Flasche.","context":"Liking"},{"sentence":"Търся бутилка.","translation":"Ich suche Flasche.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Flasche.","bulgarian":"Имам бутилка.","context":"Having","source":"legacy"},{"german":"Ich mag Flasche.","bulgarian":"Харесвам бутилка.","context":"Liking","source":"legacy"},{"german":"Ich suche Flasche.","bulgarian":"Търся бутилка.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Kanne (kanne||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам кана.","translation":"Ich habe Kanne.","context":"Having"},{"sentence":"Харесвам кана.","translation":"Ich mag Kanne.","context":"Liking"},{"sentence":"Търся кана.","translation":"Ich suche Kanne.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Kanne.","bulgarian":"Имам кана.","context":"Having","source":"legacy"},{"german":"Ich mag Kanne.","bulgarian":"Харесвам кана.","context":"Liking","source":"legacy"},{"german":"Ich suche Kanne.","bulgarian":"Търся кана.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Pfanne (pfanne||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам тигня.","translation":"Ich habe Pfanne.","context":"Having"},{"sentence":"Харесвам тигня.","translation":"Ich mag Pfanne.","context":"Liking"},{"sentence":"Търся тигня.","translation":"Ich suche Pfanne.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Pfanne.","bulgarian":"Имам тигня.","context":"Having","source":"legacy"},{"german":"Ich mag Pfanne.","bulgarian":"Харесвам тигня.","context":"Liking","source":"legacy"},{"german":"Ich suche Pfanne.","bulgarian":"Търся тигня.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Topf (topf||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам гърне.","translation":"Ich habe Topf.","context":"Having"},{"sentence":"Харесвам гърне.","translation":"Ich mag Topf.","context":"Liking"},{"sentence":"Търся гърне.","translation":"Ich suche Topf.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Topf.","bulgarian":"Имам гърне.","context":"Having","source":"legacy"},{"german":"Ich mag Topf.","bulgarian":"Харесвам гърне.","context":"Liking","source":"legacy"},{"german":"Ich suche Topf.","bulgarian":"Търся гърне.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Ofen (ofen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам фурна.","translation":"Ich habe Ofen.","context":"Having"},{"sentence":"Харесвам фурна.","translation":"Ich mag Ofen.","context":"Liking"},{"sentence":"Търся фурна.","translation":"Ich suche Ofen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Ofen.","bulgarian":"Имам фурна.","context":"Having","source":"legacy"},{"german":"Ich mag Ofen.","bulgarian":"Харесвам фурна.","context":"Liking","source":"legacy"},{"german":"Ich suche Ofen.","bulgarian":"Търся фурна.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Kühlschrank (kühlschrank||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам хладилник.","translation":"Ich habe Kühlschrank.","context":"Having"},{"sentence":"Харесвам хладилник.","translation":"Ich mag Kühlschrank.","context":"Liking"},{"sentence":"Търся хладилник.","translation":"Ich suche Kühlschrank.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Kühlschrank.","bulgarian":"Имам хладилник.","context":"Having","source":"legacy"},{"german":"Ich mag Kühlschrank.","bulgarian":"Харесвам хладилник.","context":"Liking","source":"legacy"},{"german":"Ich suche Kühlschrank.","bulgarian":"Търся хладилник.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common everyday word in Bulgarian. Useful for A2 learners | Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Fernseher (fernseher||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам телевизор.","translation":"Ich habe Fernseher.","context":"Having"},{"sentence":"Харесвам телевизор.","translation":"Ich mag Fernseher.","context":"Liking"},{"sentence":"Търся телевизор.","translation":"Ich suche Fernseher.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Fernseher.","bulgarian":"Имам телевизор.","context":"Having","source":"legacy"},{"german":"Ich mag Fernseher.","bulgarian":"Харесвам телевизор.","context":"Liking","source":"legacy"},{"german":"Ich suche Fernseher.","bulgarian":"Търся телевизор.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Radio (radio||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам радио.","translation":"Ich habe Radio.","context":"Having"},{"sentence":"Харесвам радио.","translation":"Ich mag Radio.","context":"Liking"},{"sentence":"Търся радио.","translation":"Ich suche Radio.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Radio.","bulgarian":"Имам радио.","context":"Having","source":"legacy"},{"german":"Ich mag Radio.","bulgarian":"Харесвам радио.","context":"Liking","source":"legacy"},{"german":"Ich suche Radio.","bulgarian":"Търся радио.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Lampe (lampe||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам лампа.","translation":"Ich habe Lampe.","context":"Having"},{"sentence":"Харесвам лампа.","translation":"Ich mag Lampe.","context":"Liking"},{"sentence":"Търся лампа.","translation":"Ich suche Lampe.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Lampe.","bulgarian":"Имам лампа.","context":"Having","source":"legacy"},{"german":"Ich mag Lampe.","bulgarian":"Харесвам лампа.","context":"Liking","source":"legacy"},{"german":"Ich suche Lampe.","bulgarian":"Търся лампа.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Kerze (kerze||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам свещ.","translation":"Ich habe Kerze.","context":"Having"},{"sentence":"Харесвам свещ.","translation":"Ich mag Kerze.","context":"Liking"},{"sentence":"Търся свещ.","translation":"Ich suche Kerze.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Kerze.","bulgarian":"Имам свещ.","context":"Having","source":"legacy"},{"german":"Ich mag Kerze.","bulgarian":"Харесвам свещ.","context":"Liking","source":"legacy"},{"german":"Ich suche Kerze.","bulgarian":"Търся свещ.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Spiegel (spiegel||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам огледало.","translation":"Ich habe Spiegel.","context":"Having"},{"sentence":"Харесвам огледало.","translation":"Ich mag Spiegel.","context":"Liking"},{"sentence":"Търся огледало.","translation":"Ich suche Spiegel.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Spiegel.","bulgarian":"Имам огледало.","context":"Having","source":"legacy"},{"german":"Ich mag Spiegel.","bulgarian":"Харесвам огледало.","context":"Liking","source":"legacy"},{"german":"Ich suche Spiegel.","bulgarian":"Търся огледало.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Gemälde (gemälde||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам картина.","translation":"Ich habe Gemälde.","context":"Having"},{"sentence":"Харесвам картина.","translation":"Ich mag Gemälde.","context":"Liking"},{"sentence":"Търся картина.","translation":"Ich suche Gemälde.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Gemälde.","bulgarian":"Имам картина.","context":"Having","source":"legacy"},{"german":"Ich mag Gemälde.","bulgarian":"Харесвам картина.","context":"Liking","source":"legacy"},{"german":"Ich suche Gemälde.","bulgarian":"Търся картина.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Kalender (kalender||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам календар.","translation":"Ich habe Kalender.","context":"Having"},{"sentence":"Харесвам календар.","translation":"Ich mag Kalender.","context":"Liking"},{"sentence":"Търся календар.","translation":"Ich suche Kalender.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Kalender.","bulgarian":"Имам календар.","context":"Having","source":"legacy"},{"german":"Ich mag Kalender.","bulgarian":"Харесвам календар.","context":"Liking","source":"legacy"},{"german":"Ich suche Kalender.","bulgarian":"Търся календар.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Karte/Map (karte/map||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам карта.","translation":"Ich habe Karte/Map.","context":"Having"},{"sentence":"Харесвам карта.","translation":"Ich mag Karte/Map.","context":"Liking"},{"sentence":"Търся карта.","translation":"Ich suche Karte/Map.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Karte/Map.","bulgarian":"Имам карта.","context":"Having","source":"legacy"},{"german":"Ich mag Karte/Map.","bulgarian":"Харесвам карта.","context":"Liking","source":"legacy"},{"german":"Ich suche Karte/Map.","bulgarian":"Търся карта.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Ticket (ticket||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам билет.","translation":"Ich habe Ticket.","context":"Having"},{"sentence":"Харесвам билет.","translation":"Ich mag Ticket.","context":"Liking"},{"sentence":"Търся билет.","translation":"Ich suche Ticket.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Ticket.","bulgarian":"Имам билет.","context":"Having","source":"legacy"},{"german":"Ich mag Ticket.","bulgarian":"Харесвам билет.","context":"Liking","source":"legacy"},{"german":"Ich suche Ticket.","bulgarian":"Търся билет.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Bulgarian public transport system includes buses, trams, metro (Sofia) | Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Brief (brief||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам писмо.","translation":"Ich habe Brief.","context":"Having"},{"sentence":"Харесвам писмо.","translation":"Ich mag Brief.","context":"Liking"},{"sentence":"Търся писмо.","translation":"Ich suche Brief.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Brief.","bulgarian":"Имам писмо.","context":"Having","source":"legacy"},{"german":"Ich mag Brief.","bulgarian":"Харесвам писмо.","context":"Liking","source":"legacy"},{"german":"Ich suche Brief.","bulgarian":"Търся писмо.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Umschlag (umschlag||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам плик.","translation":"Ich habe Umschlag.","context":"Having"},{"sentence":"Харесвам плик.","translation":"Ich mag Umschlag.","context":"Liking"},{"sentence":"Търся плик.","translation":"Ich suche Umschlag.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Umschlag.","bulgarian":"Имам плик.","context":"Having","source":"legacy"},{"german":"Ich mag Umschlag.","bulgarian":"Харесвам плик.","context":"Liking","source":"legacy"},{"german":"Ich suche Umschlag.","bulgarian":"Търся плик.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Waage (waage||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам везна.","translation":"Ich habe Waage.","context":"Having"},{"sentence":"Харесвам везна.","translation":"Ich mag Waage.","context":"Liking"},{"sentence":"Търся везна.","translation":"Ich suche Waage.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Waage.","bulgarian":"Имам везна.","context":"Having","source":"legacy"},{"german":"Ich mag Waage.","bulgarian":"Харесвам везна.","context":"Liking","source":"legacy"},{"german":"Ich suche Waage.","bulgarian":"Търся везна.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Meter (meter||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам метър.","translation":"Ich habe Meter.","context":"Having"},{"sentence":"Харесвам метър.","translation":"Ich mag Meter.","context":"Liking"},{"sentence":"Търся метър.","translation":"Ich suche Meter.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Meter.","bulgarian":"Имам метър.","context":"Having","source":"legacy"},{"german":"Ich mag Meter.","bulgarian":"Харесвам метър.","context":"Liking","source":"legacy"},{"german":"Ich suche Meter.","bulgarian":"Търся метър.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Lineal (lineal||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам линийка.","translation":"Ich habe Lineal.","context":"Having"},{"sentence":"Харесвам линийка.","translation":"Ich mag Lineal.","context":"Liking"},{"sentence":"Търся линийка.","translation":"Ich suche Lineal.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Lineal.","bulgarian":"Имам линийка.","context":"Having","source":"legacy"},{"german":"Ich mag Lineal.","bulgarian":"Харесвам линийка.","context":"Liking","source":"legacy"},{"german":"Ich suche Lineal.","bulgarian":"Търся линийка.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Schere (schere||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам ножица.","translation":"Ich habe Schere.","context":"Having"},{"sentence":"Харесвам ножица.","translation":"Ich mag Schere.","context":"Liking"},{"sentence":"Търся ножица.","translation":"Ich suche Schere.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Schere.","bulgarian":"Имам ножица.","context":"Having","source":"legacy"},{"german":"Ich mag Schere.","bulgarian":"Харесвам ножица.","context":"Liking","source":"legacy"},{"german":"Ich suche Schere.","bulgarian":"Търся ножица.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Faden (faden||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам конец.","translation":"Ich habe Faden.","context":"Having"},{"sentence":"Харесвам конец.","translation":"Ich mag Faden.","context":"Liking"},{"sentence":"Търся конец.","translation":"Ich suche Faden.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Faden.","bulgarian":"Имам конец.","context":"Having","source":"legacy"},{"german":"Ich mag Faden.","bulgarian":"Харесвам конец.","context":"Liking","source":"legacy"},{"german":"Ich suche Faden.","bulgarian":"Търся конец.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Nadel (nadel||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам игла.","translation":"Ich habe Nadel.","context":"Having"},{"sentence":"Харесвам игла.","translation":"Ich mag Nadel.","context":"Liking"},{"sentence":"Търся игла.","translation":"Ich suche Nadel.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Nadel.","bulgarian":"Имам игла.","context":"Having","source":"legacy"},{"german":"Ich mag Nadel.","bulgarian":"Харесвам игла.","context":"Liking","source":"legacy"},{"german":"Ich suche Nadel.","bulgarian":"Търся игла.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Knopf (knopf||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам копче.","translation":"Ich habe Knopf.","context":"Having"},{"sentence":"Харесвам копче.","translation":"Ich mag Knopf.","context":"Liking"},{"sentence":"Търся копче.","translation":"Ich suche Knopf.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Knopf.","bulgarian":"Имам копче.","context":"Having","source":"legacy"},{"german":"Ich mag Knopf.","bulgarian":"Харесвам копче.","context":"Liking","source":"legacy"},{"german":"Ich suche Knopf.","bulgarian":"Търся копче.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Reißverschluss (reißverschluss||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам цип.","translation":"Ich habe Reißverschluss.","context":"Having"},{"sentence":"Харесвам цип.","translation":"Ich mag Reißverschluss.","context":"Liking"},{"sentence":"Търся цип.","translation":"Ich suche Reißverschluss.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Reißverschluss.","bulgarian":"Имам цип.","context":"Having","source":"legacy"},{"german":"Ich mag Reißverschluss.","bulgarian":"Харесвам цип.","context":"Liking","source":"legacy"},{"german":"Ich suche Reißverschluss.","bulgarian":"Търся цип.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Tüte (tüte||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам торбичка.","translation":"Ich habe Tüte.","context":"Having"},{"sentence":"Харесвам торбичка.","translation":"Ich mag Tüte.","context":"Liking"},{"sentence":"Търся торбичка.","translation":"Ich suche Tüte.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Tüte.","bulgarian":"Имам торбичка.","context":"Having","source":"legacy"},{"german":"Ich mag Tüte.","bulgarian":"Харесвам торбичка.","context":"Liking","source":"legacy"},{"german":"Ich suche Tüte.","bulgarian":"Търся торбичка.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Handtuch (handtuch||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам кърпа.","translation":"Ich habe Handtuch.","context":"Having"},{"sentence":"Харесвам кърпа.","translation":"Ich mag Handtuch.","context":"Liking"},{"sentence":"Търся кърпа.","translation":"Ich suche Handtuch.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Handtuch.","bulgarian":"Имам кърпа.","context":"Having","source":"legacy"},{"german":"Ich mag Handtuch.","bulgarian":"Харесвам кърпа.","context":"Liking","source":"legacy"},{"german":"Ich suche Handtuch.","bulgarian":"Търся кърпа.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Decke (decke||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам одеяло.","translation":"Ich habe Decke.","context":"Having"},{"sentence":"Харесвам одеяло.","translation":"Ich mag Decke.","context":"Liking"},{"sentence":"Търся одеяло.","translation":"Ich suche Decke.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Decke.","bulgarian":"Имам одеяло.","context":"Having","source":"legacy"},{"german":"Ich mag Decke.","bulgarian":"Харесвам одеяло.","context":"Liking","source":"legacy"},{"german":"Ich suche Decke.","bulgarian":"Търся одеяло.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Kissen (kissen||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам възглавница.","translation":"Ich habe Kissen.","context":"Having"},{"sentence":"Харесвам възглавница.","translation":"Ich mag Kissen.","context":"Liking"},{"sentence":"Търся възглавница.","translation":"Ich suche Kissen.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Kissen.","bulgarian":"Имам възглавница.","context":"Having","source":"legacy"},{"german":"Ich mag Kissen.","bulgarian":"Харесвам възглавница.","context":"Liking","source":"legacy"},{"german":"Ich suche Kissen.","bulgarian":"Търся възглавница.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Bettlaken (bettlaken||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам чаршаф.","translation":"Ich habe Bettlaken.","context":"Having"},{"sentence":"Харесвам чаршаф.","translation":"Ich mag Bettlaken.","context":"Liking"},{"sentence":"Търся чаршаф.","translation":"Ich suche Bettlaken.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Bettlaken.","bulgarian":"Имам чаршаф.","context":"Having","source":"legacy"},{"german":"Ich mag Bettlaken.","bulgarian":"Харесвам чаршаф.","context":"Liking","source":"legacy"},{"german":"Ich suche Bettlaken.","bulgarian":"Търся чаршаф.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Waschbecken (waschbecken||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам мивка.","translation":"Ich habe Waschbecken.","context":"Having"},{"sentence":"Харесвам мивка.","translation":"Ich mag Waschbecken.","context":"Liking"},{"sentence":"Търся мивка.","translation":"Ich suche Waschbecken.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Waschbecken.","bulgarian":"Имам мивка.","context":"Having","source":"legacy"},{"german":"Ich mag Waschbecken.","bulgarian":"Харесвам мивка.","context":"Liking","source":"legacy"},{"german":"Ich suche Waschbecken.","bulgarian":"Търся мивка.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### Toilette (toilette||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам тоалетна.","translation":"Ich habe Toilette.","context":"Having"},{"sentence":"Харесвам тоалетна.","translation":"Ich mag Toilette.","context":"Liking"},{"sentence":"Търся тоалетна.","translation":"Ich suche Toilette.","context":"Searching"}]
+  - Current: [{"german":"Ich habe Toilette.","bulgarian":"Имам тоалетна.","context":"Having","source":"legacy"},{"german":"Ich mag Toilette.","bulgarian":"Харесвам тоалетна.","context":"Liking","source":"legacy"},{"german":"Ich suche Toilette.","bulgarian":"Търся тоалетна.","context":"Searching","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Essential A1 vocabulary.\n\nCommon word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."]
+  - Current: ["Common word."]
+- **usageNotes**:
+  - Archive: "Essential word.\n\nBG→DE: Основна дума.\n\nDE→BG: Grundwort."
+  - Current: undefined
+
+### die Gesundheit (die gesundheit||noun)
+
+- **category**:
+  - Archive: "Gesundheit"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам здраве.","translation":"Ich habe Gesundheit.","context":"Having"},{"sentence":"Търся здраве.","translation":"Ich suche Gesundheit.","context":"Searching"},{"sentence":"Харесвам здраве.","translation":"Ich mag Gesundheit.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Gesundheit.","bulgarian":"Имам здраве.","context":"Having","source":"legacy"},{"german":"Ich suche Gesundheit.","bulgarian":"Търся здраве.","context":"Searching","source":"legacy"},{"german":"Ich mag Gesundheit.","bulgarian":"Харесвам здраве.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Health. среден род.\n\nEssential health vocabulary.\n\nBG→DE: Словото 'Здраве' е среден род.\n\nDE→BG: Das Wort 'Здраве' = 'die Gesundheit'. Neutrum."]
+  - Current: ["Essential health vocabulary."]
+- **usageNotes**:
+  - Archive: "среден род.\n\nBG→DE: среден род.\n\nDE→BG: Neutrum."
+  - Current: undefined
+
+### der Schmerz (der schmerz||noun)
+
+- **category**:
+  - Archive: "Gesundheit"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам болка.","translation":"Ich habe Schmerz.","context":"Having"},{"sentence":"Търся болка.","translation":"Ich suche Schmerz.","context":"Searching"},{"sentence":"Харесвам болка.","translation":"Ich mag Schmerz.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Schmerz.","bulgarian":"Имам болка.","context":"Having","source":"legacy"},{"german":"Ich suche Schmerz.","bulgarian":"Търся болка.","context":"Searching","source":"legacy"},{"german":"Ich mag Schmerz.","bulgarian":"Харесвам болка.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Pain. женски род.\n\nEssential health vocabulary.\n\nBG→DE: Словото 'Болка' е женски род.\n\nDE→BG: Das Wort 'Болка' = 'der Schmerz'. Femininum."]
+  - Current: ["Essential health vocabulary."]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### das Medikament (das medikament||noun)
+
+- **category**:
+  - Archive: "Gesundheit"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам лекарство.","translation":"Ich habe Medikament.","context":"Having"},{"sentence":"Търся лекарство.","translation":"Ich suche Medikament.","context":"Searching"},{"sentence":"Харесвам лекарство.","translation":"Ich mag Medikament.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Medikament.","bulgarian":"Имам лекарство.","context":"Having","source":"legacy"},{"german":"Ich suche Medikament.","bulgarian":"Търся лекарство.","context":"Searching","source":"legacy"},{"german":"Ich mag Medikament.","bulgarian":"Харесвам лекарство.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Medicine. среден род.\n\nEssential health vocabulary.\n\nBG→DE: Словото 'Лекарство' е среден род.\n\nDE→BG: Das Wort 'Лекарство' = 'das Medikament'. Neutrum."]
+  - Current: ["Essential health vocabulary."]
+- **usageNotes**:
+  - Archive: "среден род.\n\nBG→DE: среден род.\n\nDE→BG: Neutrum."
+  - Current: undefined
+
+### der Zahnarzt (der zahnarzt||noun)
+
+- **category**:
+  - Archive: "Gesundheit"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам зъболекар.","translation":"Ich habe Zahnarzt.","context":"Having"},{"sentence":"Търся зъболекар.","translation":"Ich suche Zahnarzt.","context":"Searching"},{"sentence":"Харесвам зъболекар.","translation":"Ich mag Zahnarzt.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Zahnarzt.","bulgarian":"Имам зъболекар.","context":"Having","source":"legacy"},{"german":"Ich suche Zahnarzt.","bulgarian":"Търся зъболекар.","context":"Searching","source":"legacy"},{"german":"Ich mag Zahnarzt.","bulgarian":"Харесвам зъболекар.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Dentist. мъжки род.\n\nEssential health vocabulary.\n\nBG→DE: Словото 'Зъболекар' е мъжки род.\n\nDE→BG: Das Wort 'Зъболекар' = 'der Zahnarzt'. Maskulinum."]
+  - Current: ["Essential health vocabulary."]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### das Fieber (das fieber||noun)
+
+- **category**:
+  - Archive: "Gesundheit"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам треска.","translation":"Ich habe Fieber.","context":"Having"},{"sentence":"Търся треска.","translation":"Ich suche Fieber.","context":"Searching"},{"sentence":"Харесвам треска.","translation":"Ich mag Fieber.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Fieber.","bulgarian":"Имам треска.","context":"Having","source":"legacy"},{"german":"Ich suche Fieber.","bulgarian":"Търся треска.","context":"Searching","source":"legacy"},{"german":"Ich mag Fieber.","bulgarian":"Харесвам треска.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Fever. женски род.\n\nEssential health vocabulary.\n\nBG→DE: Словото 'Треска' е женски род.\n\nDE→BG: Das Wort 'Треска' = 'das Fieber'. Femininum."]
+  - Current: ["Essential health vocabulary."]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### der Husten (der husten||noun)
+
+- **category**:
+  - Archive: "Gesundheit"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам кашлица.","translation":"Ich habe Husten.","context":"Having"},{"sentence":"Търся кашлица.","translation":"Ich suche Husten.","context":"Searching"},{"sentence":"Харесвам кашлица.","translation":"Ich mag Husten.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Husten.","bulgarian":"Имам кашлица.","context":"Having","source":"legacy"},{"german":"Ich suche Husten.","bulgarian":"Търся кашлица.","context":"Searching","source":"legacy"},{"german":"Ich mag Husten.","bulgarian":"Харесвам кашлица.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Cough. женски род.\n\nEssential health vocabulary.\n\nBG→DE: Словото 'Кашлица' е женски род.\n\nDE→BG: Das Wort 'Кашлица' = 'der Husten'. Femininum."]
+  - Current: ["Essential health vocabulary."]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### die Grippe (die grippe||noun)
+
+- **category**:
+  - Archive: "Gesundheit"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам грип.","translation":"Ich habe Grippe.","context":"Having"},{"sentence":"Търся грип.","translation":"Ich suche Grippe.","context":"Searching"},{"sentence":"Харесвам грип.","translation":"Ich mag Grippe.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Grippe.","bulgarian":"Имам грип.","context":"Having","source":"legacy"},{"german":"Ich suche Grippe.","bulgarian":"Търся грип.","context":"Searching","source":"legacy"},{"german":"Ich mag Grippe.","bulgarian":"Харесвам грип.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Flu. мъжки род.\n\nEssential health vocabulary.\n\nBG→DE: Словото 'Грип' е мъжки род.\n\nDE→BG: Das Wort 'Грип' = 'die Grippe'. Maskulinum."]
+  - Current: ["Essential health vocabulary."]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### die Erkältung (die erkältung||noun)
+
+- **category**:
+  - Archive: "Gesundheit"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам настинка.","translation":"Ich habe Erkältung.","context":"Having"},{"sentence":"Търся настинка.","translation":"Ich suche Erkältung.","context":"Searching"},{"sentence":"Харесвам настинка.","translation":"Ich mag Erkältung.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Erkältung.","bulgarian":"Имам настинка.","context":"Having","source":"legacy"},{"german":"Ich suche Erkältung.","bulgarian":"Търся настинка.","context":"Searching","source":"legacy"},{"german":"Ich mag Erkältung.","bulgarian":"Харесвам настинка.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Cold. женски род.\n\nEssential health vocabulary.\n\nBG→DE: Словото 'Настинка' е женски род.\n\nDE→BG: Das Wort 'Настинка' = 'die Erkältung'. Femininum."]
+  - Current: ["Essential health vocabulary."]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### die Krankheit (die krankheit||noun)
+
+- **category**:
+  - Archive: "Gesundheit"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам болест.","translation":"Ich habe Krankheit.","context":"Having"},{"sentence":"Търся болест.","translation":"Ich suche Krankheit.","context":"Searching"},{"sentence":"Харесвам болест.","translation":"Ich mag Krankheit.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Krankheit.","bulgarian":"Имам болест.","context":"Having","source":"legacy"},{"german":"Ich suche Krankheit.","bulgarian":"Търся болест.","context":"Searching","source":"legacy"},{"german":"Ich mag Krankheit.","bulgarian":"Харесвам болест.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Illness. женски род.\n\nEssential health vocabulary.\n\nBG→DE: Словото 'Болест' е женски род.\n\nDE→BG: Das Wort 'Болест' = 'die Krankheit'. Femininum."]
+  - Current: ["Essential health vocabulary."]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### die Behandlung (die behandlung||noun)
+
+- **category**:
+  - Archive: "Gesundheit"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам лечение.","translation":"Ich habe Behandlung.","context":"Having"},{"sentence":"Търся лечение.","translation":"Ich suche Behandlung.","context":"Searching"},{"sentence":"Харесвам лечение.","translation":"Ich mag Behandlung.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Behandlung.","bulgarian":"Имам лечение.","context":"Having","source":"legacy"},{"german":"Ich suche Behandlung.","bulgarian":"Търся лечение.","context":"Searching","source":"legacy"},{"german":"Ich mag Behandlung.","bulgarian":"Харесвам лечение.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Treatment. среден род.\n\nEssential health vocabulary.\n\nBG→DE: Словото 'Лечение' е среден род.\n\nDE→BG: Das Wort 'Лечение' = 'die Behandlung'. Neutrum."]
+  - Current: ["Essential health vocabulary."]
+- **usageNotes**:
+  - Archive: "среден род.\n\nBG→DE: среден род.\n\nDE→BG: Neutrum."
+  - Current: undefined
+
+### das Internet (das internet||noun)
+
+- **category**:
+  - Archive: "Technologie"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам интернет.","translation":"Ich habe Internet.","context":"Having"},{"sentence":"Търся интернет.","translation":"Ich suche Internet.","context":"Searching"},{"sentence":"Харесвам интернет.","translation":"Ich mag Internet.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Internet.","bulgarian":"Имам интернет.","context":"Having","source":"legacy"},{"german":"Ich suche Internet.","bulgarian":"Търся интернет.","context":"Searching","source":"legacy"},{"german":"Ich mag Internet.","bulgarian":"Харесвам интернет.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Internet. мъжки род.\n\nEssential technology vocabulary.\n\nBG→DE: Словото 'Интернет' е мъжки род.\n\nDE→BG: Das Wort 'Интернет' = 'das Internet'. Maskulinum."]
+  - Current: ["Essential technology vocabulary."]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### die E-Mail (die e-mail||noun)
+
+- **category**:
+  - Archive: "Technologie"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам имейл.","translation":"Ich habe E-Mail.","context":"Having"},{"sentence":"Търся имейл.","translation":"Ich suche E-Mail.","context":"Searching"},{"sentence":"Харесвам имейл.","translation":"Ich mag E-Mail.","context":"Liking"}]
+  - Current: [{"german":"Ich habe E-Mail.","bulgarian":"Имам имейл.","context":"Having","source":"legacy"},{"german":"Ich suche E-Mail.","bulgarian":"Търся имейл.","context":"Searching","source":"legacy"},{"german":"Ich mag E-Mail.","bulgarian":"Харесвам имейл.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Email. мъжки род.\n\nEssential technology vocabulary.\n\nBG→DE: Словото 'Имейл' е мъжки род.\n\nDE→BG: Das Wort 'Имейл' = 'die E-Mail'. Maskulinum."]
+  - Current: ["Essential technology vocabulary."]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### der Bildschirm (der bildschirm||noun)
+
+- **category**:
+  - Archive: "Technologie"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам екран.","translation":"Ich habe Bildschirm.","context":"Having"},{"sentence":"Търся екран.","translation":"Ich suche Bildschirm.","context":"Searching"},{"sentence":"Харесвам екран.","translation":"Ich mag Bildschirm.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Bildschirm.","bulgarian":"Имам екран.","context":"Having","source":"legacy"},{"german":"Ich suche Bildschirm.","bulgarian":"Търся екран.","context":"Searching","source":"legacy"},{"german":"Ich mag Bildschirm.","bulgarian":"Харесвам екран.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Screen. мъжки род.\n\nEssential technology vocabulary.\n\nBG→DE: Словото 'Екран' е мъжки род.\n\nDE→BG: Das Wort 'Екран' = 'der Bildschirm'. Maskulinum."]
+  - Current: ["Essential technology vocabulary."]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### die Tastatur (die tastatur||noun)
+
+- **category**:
+  - Archive: "Technologie"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам клавиатура.","translation":"Ich habe Tastatur.","context":"Having"},{"sentence":"Търся клавиатура.","translation":"Ich suche Tastatur.","context":"Searching"},{"sentence":"Харесвам клавиатура.","translation":"Ich mag Tastatur.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Tastatur.","bulgarian":"Имам клавиатура.","context":"Having","source":"legacy"},{"german":"Ich suche Tastatur.","bulgarian":"Търся клавиатура.","context":"Searching","source":"legacy"},{"german":"Ich mag Tastatur.","bulgarian":"Харесвам клавиатура.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Keyboard. женски род.\n\nEssential technology vocabulary.\n\nBG→DE: Словото 'Клавиатура' е женски род.\n\nDE→BG: Das Wort 'Клавиатура' = 'die Tastatur'. Femininum."]
+  - Current: ["Essential technology vocabulary."]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### die Maus (die maus||noun)
+
+- **category**:
+  - Archive: "Technologie"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам мишка.","translation":"Ich habe Maus.","context":"Having"},{"sentence":"Търся мишка.","translation":"Ich suche Maus.","context":"Searching"},{"sentence":"Харесвам мишка.","translation":"Ich mag Maus.","context":"Liking"}]
+  - Current: [{"german":"Ich sehe Maus.","bulgarian":"Виждам мишка.","context":"Seeing","source":"legacy"},{"german":"die Maus ist groß.","bulgarian":"Мишкато/та е голяма.","context":"Size","source":"legacy"},{"german":"Ich habe Maus.","bulgarian":"Имам мишка.","context":"Possession","source":"legacy"},{"german":"Ich suche Maus.","bulgarian":"Търся мишка.","context":"Searching","source":"legacy"},{"german":"Ich mag Maus.","bulgarian":"Харесвам мишка.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Mouse. женски род.\n\nEssential technology vocabulary.\n\nBG→DE: Словото 'Мишка' е женски род.\n\nDE→BG: Das Wort 'Мишка' = 'die Maus'. Femininum."]
+  - Current: ["Common animal in Bulgarian culture/agriculture. Mouse | Essential technology vocabulary."]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### der Drucker (der drucker||noun)
+
+- **category**:
+  - Archive: "Technologie"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам принтер.","translation":"Ich habe Drucker.","context":"Having"},{"sentence":"Търся принтер.","translation":"Ich suche Drucker.","context":"Searching"},{"sentence":"Харесвам принтер.","translation":"Ich mag Drucker.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Drucker.","bulgarian":"Имам принтер.","context":"Having","source":"legacy"},{"german":"Ich suche Drucker.","bulgarian":"Търся принтер.","context":"Searching","source":"legacy"},{"german":"Ich mag Drucker.","bulgarian":"Харесвам принтер.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Printer. мъжки род.\n\nEssential technology vocabulary.\n\nBG→DE: Словото 'Принтер' е мъжки род.\n\nDE→BG: Das Wort 'Принтер' = 'der Drucker'. Maskulinum."]
+  - Current: ["Essential technology vocabulary."]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### die Datei (die datei||noun)
+
+- **category**:
+  - Archive: "Technologie"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам файл.","translation":"Ich habe Datei.","context":"Having"},{"sentence":"Търся файл.","translation":"Ich suche Datei.","context":"Searching"},{"sentence":"Харесвам файл.","translation":"Ich mag Datei.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Datei.","bulgarian":"Имам файл.","context":"Having","source":"legacy"},{"german":"Ich suche Datei.","bulgarian":"Търся файл.","context":"Searching","source":"legacy"},{"german":"Ich mag Datei.","bulgarian":"Харесвам файл.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["File. мъжки род.\n\nEssential technology vocabulary.\n\nBG→DE: Словото 'Файл' е мъжки род.\n\nDE→BG: Das Wort 'Файл' = 'die Datei'. Maskulinum."]
+  - Current: ["Essential technology vocabulary."]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### der Ordner (der ordner||noun)
+
+- **category**:
+  - Archive: "Technologie"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам папка.","translation":"Ich habe Ordner.","context":"Having"},{"sentence":"Търся папка.","translation":"Ich suche Ordner.","context":"Searching"},{"sentence":"Харесвам папка.","translation":"Ich mag Ordner.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Ordner.","bulgarian":"Имам папка.","context":"Having","source":"legacy"},{"german":"Ich suche Ordner.","bulgarian":"Търся папка.","context":"Searching","source":"legacy"},{"german":"Ich mag Ordner.","bulgarian":"Харесвам папка.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Folder. женски род.\n\nEssential technology vocabulary.\n\nBG→DE: Словото 'Папка' е женски род.\n\nDE→BG: Das Wort 'Папка' = 'der Ordner'. Femininum."]
+  - Current: ["Essential technology vocabulary."]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### das Passwort (das passwort||noun)
+
+- **category**:
+  - Archive: "Technologie"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам паролла.","translation":"Ich habe Passwort.","context":"Having"},{"sentence":"Търся паролла.","translation":"Ich suche Passwort.","context":"Searching"},{"sentence":"Харесвам паролла.","translation":"Ich mag Passwort.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Passwort.","bulgarian":"Имам паролла.","context":"Having","source":"legacy"},{"german":"Ich suche Passwort.","bulgarian":"Търся паролла.","context":"Searching","source":"legacy"},{"german":"Ich mag Passwort.","bulgarian":"Харесвам паролла.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Password. женски род.\n\nEssential technology vocabulary.\n\nBG→DE: Словото 'Паролла' е женски род.\n\nDE→BG: Das Wort 'Паролла' = 'das Passwort'. Femininum."]
+  - Current: ["Essential technology vocabulary."]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### die Software (die software||noun)
+
+- **category**:
+  - Archive: "Technologie"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам софтуер.","translation":"Ich habe Software.","context":"Having"},{"sentence":"Търся софтуер.","translation":"Ich suche Software.","context":"Searching"},{"sentence":"Харесвам софтуер.","translation":"Ich mag Software.","context":"Liking"}]
+  - Current: [{"german":"Ich habe Software.","bulgarian":"Имам софтуер.","context":"Having","source":"legacy"},{"german":"Ich suche Software.","bulgarian":"Търся софтуер.","context":"Searching","source":"legacy"},{"german":"Ich mag Software.","bulgarian":"Харесвам софтуер.","context":"Liking","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Software. мъжки род.\n\nEssential technology vocabulary.\n\nBG→DE: Словото 'Софтуер' е мъжки род.\n\nDE→BG: Das Wort 'Софтуер' = 'die Software'. Maskulinum."]
+  - Current: ["Essential technology vocabulary."]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### der Hund (der hund||noun)
+
+- **category**:
+  - Archive: "Tiere"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Виждам куче.","translation":"Ich sehe Hund.","context":"Seeing"},{"sentence":"Кучето/та е голямо.","translation":"der Hund ist groß.","context":"Size"},{"sentence":"Имам куче.","translation":"Ich habe Hund.","context":"Possession"}]
+  - Current: [{"german":"Ich sehe Hund.","bulgarian":"Виждам куче.","context":"Seeing","source":"legacy"},{"german":"der Hund ist groß.","bulgarian":"Кучето/та е голямо.","context":"Size","source":"legacy"},{"german":"Ich habe Hund.","bulgarian":"Имам куче.","context":"Possession","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Dog. среден род.\n\nCommon animal in Bulgarian culture/agriculture. Dog\n\nBG→DE: 'Куче' е среден род. Dog\n\nDE→BG: Für Deutschsprachige: 'Куче' = 'der Hund'. Neutrum."]
+  - Current: ["Common animal in Bulgarian culture/agriculture. Dog"]
+- **usageNotes**:
+  - Archive: "среден род.\n\nBG→DE: Куче е среден род.\n\nDE→BG: Neutrum."
+  - Current: undefined
+
+### die Katze (die katze||noun)
+
+- **category**:
+  - Archive: "Tiere"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Виждам котка.","translation":"Ich sehe Katze.","context":"Seeing"},{"sentence":"Коткато/та е голяма.","translation":"die Katze ist groß.","context":"Size"},{"sentence":"Имам котка.","translation":"Ich habe Katze.","context":"Possession"}]
+  - Current: [{"german":"Ich sehe Katze.","bulgarian":"Виждам котка.","context":"Seeing","source":"legacy"},{"german":"die Katze ist groß.","bulgarian":"Коткато/та е голяма.","context":"Size","source":"legacy"},{"german":"Ich habe Katze.","bulgarian":"Имам котка.","context":"Possession","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Cat. женски род.\n\nCommon animal in Bulgarian culture/agriculture. Cat\n\nBG→DE: 'Котка' е женски род. Cat\n\nDE→BG: Für Deutschsprachige: 'Котка' = 'die Katze'. Femininum."]
+  - Current: ["Common animal in Bulgarian culture/agriculture. Cat"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Котка е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### der Vogel (der vogel||noun)
+
+- **category**:
+  - Archive: "Tiere"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Виждам птица.","translation":"Ich sehe Vogel.","context":"Seeing"},{"sentence":"Птицато/та е голяма.","translation":"der Vogel ist groß.","context":"Size"},{"sentence":"Имам птица.","translation":"Ich habe Vogel.","context":"Possession"}]
+  - Current: [{"german":"Ich sehe Vogel.","bulgarian":"Виждам птица.","context":"Seeing","source":"legacy"},{"german":"der Vogel ist groß.","bulgarian":"Птицато/та е голяма.","context":"Size","source":"legacy"},{"german":"Ich habe Vogel.","bulgarian":"Имам птица.","context":"Possession","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Bird. женски род.\n\nCommon animal in Bulgarian culture/agriculture. Bird\n\nBG→DE: 'Птица' е женски род. Bird\n\nDE→BG: Für Deutschsprachige: 'Птица' = 'der Vogel'. Femininum."]
+  - Current: ["Common animal in Bulgarian culture/agriculture. Bird"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Птица е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### das Pferd (das pferd||noun)
+
+- **category**:
+  - Archive: "Tiere"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Виждам кон.","translation":"Ich sehe Pferd.","context":"Seeing"},{"sentence":"Конто/та е голям.","translation":"das Pferd ist groß.","context":"Size"},{"sentence":"Имам кон.","translation":"Ich habe Pferd.","context":"Possession"}]
+  - Current: [{"german":"Ich sehe Pferd.","bulgarian":"Виждам кон.","context":"Seeing","source":"legacy"},{"german":"das Pferd ist groß.","bulgarian":"Конто/та е голям.","context":"Size","source":"legacy"},{"german":"Ich habe Pferd.","bulgarian":"Имам кон.","context":"Possession","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Horse. мъжки род.\n\nCommon animal in Bulgarian culture/agriculture. Horse\n\nBG→DE: 'Кон' е мъжки род. Horse\n\nDE→BG: Für Deutschsprachige: 'Кон' = 'das Pferd'. Maskulinum."]
+  - Current: ["Common animal in Bulgarian culture/agriculture. Horse"]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: Кон е мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### die Kuh (die kuh||noun)
+
+- **category**:
+  - Archive: "Tiere"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Виждам крава.","translation":"Ich sehe Kuh.","context":"Seeing"},{"sentence":"Кравато/та е голяма.","translation":"die Kuh ist groß.","context":"Size"},{"sentence":"Имам крава.","translation":"Ich habe Kuh.","context":"Possession"}]
+  - Current: [{"german":"Ich sehe Kuh.","bulgarian":"Виждам крава.","context":"Seeing","source":"legacy"},{"german":"die Kuh ist groß.","bulgarian":"Кравато/та е голяма.","context":"Size","source":"legacy"},{"german":"Ich habe Kuh.","bulgarian":"Имам крава.","context":"Possession","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Cow. женски род.\n\nCommon animal in Bulgarian culture/agriculture. Cow\n\nBG→DE: 'Крава' е женски род. Cow\n\nDE→BG: Für Deutschsprachige: 'Крава' = 'die Kuh'. Femininum."]
+  - Current: ["Common animal in Bulgarian culture/agriculture. Cow"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Крава е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### das Schwein (das schwein||noun)
+
+- **category**:
+  - Archive: "Tiere"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Виждам свиня.","translation":"Ich sehe Schwein.","context":"Seeing"},{"sentence":"Свинято/та е голяма.","translation":"das Schwein ist groß.","context":"Size"},{"sentence":"Имам свиня.","translation":"Ich habe Schwein.","context":"Possession"}]
+  - Current: [{"german":"Ich sehe Schwein.","bulgarian":"Виждам свиня.","context":"Seeing","source":"legacy"},{"german":"das Schwein ist groß.","bulgarian":"Свинято/та е голяма.","context":"Size","source":"legacy"},{"german":"Ich habe Schwein.","bulgarian":"Имам свиня.","context":"Possession","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Pig. женски род.\n\nCommon animal in Bulgarian culture/agriculture. Pig\n\nBG→DE: 'Свиня' е женски род. Pig\n\nDE→BG: Für Deutschsprachige: 'Свиня' = 'das Schwein'. Femininum."]
+  - Current: ["Common animal in Bulgarian culture/agriculture. Pig"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Свиня е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### das Schaf (das schaf||noun)
+
+- **category**:
+  - Archive: "Tiere"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Виждам овца.","translation":"Ich sehe Schaf.","context":"Seeing"},{"sentence":"Овцато/та е голяма.","translation":"das Schaf ist groß.","context":"Size"},{"sentence":"Имам овца.","translation":"Ich habe Schaf.","context":"Possession"}]
+  - Current: [{"german":"Ich sehe Schaf.","bulgarian":"Виждам овца.","context":"Seeing","source":"legacy"},{"german":"das Schaf ist groß.","bulgarian":"Овцато/та е голяма.","context":"Size","source":"legacy"},{"german":"Ich habe Schaf.","bulgarian":"Имам овца.","context":"Possession","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Sheep. женски род.\n\nCommon animal in Bulgarian culture/agriculture. Sheep\n\nBG→DE: 'Овца' е женски род. Sheep\n\nDE→BG: Für Deutschsprachige: 'Овца' = 'das Schaf'. Femininum."]
+  - Current: ["Common animal in Bulgarian culture/agriculture. Sheep"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Овца е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### das Huhn, das Küken (das huhn das küken||noun)
+
+- **category**:
+  - Archive: "Tiere"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Виждам пиле.","translation":"Ich sehe Huhn.","context":"Seeing"},{"sentence":"Пилето/та е голямо.","translation":"das Huhn ist groß.","context":"Size"},{"sentence":"Имам пиле.","translation":"Ich habe Huhn.","context":"Possession"}]
+  - Current: [{"german":"Ich sehe Huhn.","bulgarian":"Виждам пиле.","context":"Seeing","source":"legacy"},{"german":"das Huhn ist groß.","bulgarian":"Пилето/та е голямо.","context":"Size","source":"legacy"},{"german":"Ich habe Huhn.","bulgarian":"Имам пиле.","context":"Possession","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Chicken, chick. среден род.\n\nCommon animal in Bulgarian culture/agriculture. Chicken, chick\n\nBG→DE: 'Пиле' е среден род. Chicken, chick\n\nDE→BG: Für Deutschsprachige: 'Пиле' = 'das Huhn, das Küken'. Neutrum."]
+  - Current: ["Common animal in Bulgarian culture/agriculture. Chicken, chick"]
+- **usageNotes**:
+  - Archive: "среден род.\n\nBG→DE: Пиле е среден род.\n\nDE→BG: Neutrum."
+  - Current: undefined
+
+### der Bär (der bär||noun)
+
+- **category**:
+  - Archive: "Tiere"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Виждам мечка.","translation":"Ich sehe Bär.","context":"Seeing"},{"sentence":"Мечкато/та е голяма.","translation":"der Bär ist groß.","context":"Size"},{"sentence":"Имам мечка.","translation":"Ich habe Bär.","context":"Possession"}]
+  - Current: [{"german":"Ich sehe Bär.","bulgarian":"Виждам мечка.","context":"Seeing","source":"legacy"},{"german":"der Bär ist groß.","bulgarian":"Мечкато/та е голяма.","context":"Size","source":"legacy"},{"german":"Ich habe Bär.","bulgarian":"Имам мечка.","context":"Possession","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Bear. Symbol of Bulgaria. женски род.\n\nCommon animal in Bulgarian culture/agriculture. Bear. Symbol of Bulgaria\n\nBG→DE: 'Мечка' е женски род. Bear. Symbol of Bulgaria\n\nDE→BG: Für Deutschsprachige: 'Мечка' = 'der Bär'. Femininum."]
+  - Current: ["Common animal in Bulgarian culture/agriculture. Bear. Symbol of Bulgaria"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Мечка е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### der Wolf (der wolf||noun)
+
+- **category**:
+  - Archive: "Tiere"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Виждам вълк.","translation":"Ich sehe Wolf.","context":"Seeing"},{"sentence":"Вълкто/та е голям.","translation":"der Wolf ist groß.","context":"Size"},{"sentence":"Имам вълк.","translation":"Ich habe Wolf.","context":"Possession"}]
+  - Current: [{"german":"Ich sehe Wolf.","bulgarian":"Виждам вълк.","context":"Seeing","source":"legacy"},{"german":"der Wolf ist groß.","bulgarian":"Вълкто/та е голям.","context":"Size","source":"legacy"},{"german":"Ich habe Wolf.","bulgarian":"Имам вълк.","context":"Possession","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Wolf. мъжки род.\n\nCommon animal in Bulgarian culture/agriculture. Wolf\n\nBG→DE: 'Вълк' е мъжки род. Wolf\n\nDE→BG: Für Deutschsprachige: 'Вълк' = 'der Wolf'. Maskulinum."]
+  - Current: ["Common animal in Bulgarian culture/agriculture. Wolf"]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: Вълк е мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### der Fuchs (der fuchs||noun)
+
+- **category**:
+  - Archive: "Tiere"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Виждам лисица.","translation":"Ich sehe Fuchs.","context":"Seeing"},{"sentence":"Лисицато/та е голяма.","translation":"der Fuchs ist groß.","context":"Size"},{"sentence":"Имам лисица.","translation":"Ich habe Fuchs.","context":"Possession"}]
+  - Current: [{"german":"Ich sehe Fuchs.","bulgarian":"Виждам лисица.","context":"Seeing","source":"legacy"},{"german":"der Fuchs ist groß.","bulgarian":"Лисицато/та е голяма.","context":"Size","source":"legacy"},{"german":"Ich habe Fuchs.","bulgarian":"Имам лисица.","context":"Possession","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Fox. женски род.\n\nCommon animal in Bulgarian culture/agriculture. Fox\n\nBG→DE: 'Лисица' е женски род. Fox\n\nDE→BG: Für Deutschsprachige: 'Лисица' = 'der Fuchs'. Femininum."]
+  - Current: ["Common animal in Bulgarian culture/agriculture. Fox"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Лисица е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### der Hase (der hase||noun)
+
+- **category**:
+  - Archive: "Tiere"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Виждам заек.","translation":"Ich sehe Hase.","context":"Seeing"},{"sentence":"Заекто/та е голям.","translation":"der Hase ist groß.","context":"Size"},{"sentence":"Имам заек.","translation":"Ich habe Hase.","context":"Possession"}]
+  - Current: [{"german":"Ich sehe Hase.","bulgarian":"Виждам заек.","context":"Seeing","source":"legacy"},{"german":"der Hase ist groß.","bulgarian":"Заекто/та е голям.","context":"Size","source":"legacy"},{"german":"Ich habe Hase.","bulgarian":"Имам заек.","context":"Possession","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Hare, rabbit. мъжки род.\n\nCommon animal in Bulgarian culture/agriculture. Hare, rabbit\n\nBG→DE: 'Заек' е мъжки род. Hare, rabbit\n\nDE→BG: Für Deutschsprachige: 'Заек' = 'der Hase'. Maskulinum."]
+  - Current: ["Common animal in Bulgarian culture/agriculture. Hare, rabbit"]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: Заек е мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### die Schlange (die schlange||noun)
+
+- **category**:
+  - Archive: "Tiere"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Виждам змия.","translation":"Ich sehe Schlange.","context":"Seeing"},{"sentence":"Змиято/та е голяма.","translation":"die Schlange ist groß.","context":"Size"},{"sentence":"Имам змия.","translation":"Ich habe Schlange.","context":"Possession"}]
+  - Current: [{"german":"Ich sehe Schlange.","bulgarian":"Виждам змия.","context":"Seeing","source":"legacy"},{"german":"die Schlange ist groß.","bulgarian":"Змиято/та е голяма.","context":"Size","source":"legacy"},{"german":"Ich habe Schlange.","bulgarian":"Имам змия.","context":"Possession","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Snake. женски род.\n\nCommon animal in Bulgarian culture/agriculture. Snake\n\nBG→DE: 'Змия' е женски род. Snake\n\nDE→BG: Für Deutschsprachige: 'Змия' = 'die Schlange'. Femininum."]
+  - Current: ["Common animal in Bulgarian culture/agriculture. Snake"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Змия е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### das Auto (das auto||noun)
+
+- **category**:
+  - Archive: "Transport"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Пътувам с кола.","translation":"Ich fahre mit Auto.","context":"Travel"},{"sentence":"Колата/ът/то е бърза.","translation":"das Auto ist schnell.","context":"Speed"},{"sentence":"Чакам кола.","translation":"Ich warte auf Auto.","context":"Waiting"}]
+  - Current: [{"german":"Ich fahre mit Auto.","bulgarian":"Пътувам с кола.","context":"Travel","source":"legacy"},{"german":"das Auto ist schnell.","bulgarian":"Колата/ът/то е бърза.","context":"Speed","source":"legacy"},{"german":"Ich warte auf Auto.","bulgarian":"Чакам кола.","context":"Waiting","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Car. женски род.\n\nCommon transportation in Bulgaria. Car\n\nBG→DE: 'Кола' е женски род. Car\n\nDE→BG: Für Deutschsprachige: 'Кола' = 'das Auto'. Femininum."]
+  - Current: ["Common transportation in Bulgaria. Car"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Кола е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### der Bus (der bus||noun)
+
+- **category**:
+  - Archive: "Transport"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Пътувам с автобус.","translation":"Ich fahre mit Bus.","context":"Travel"},{"sentence":"Автобуста/ът/то е бърз.","translation":"der Bus ist schnell.","context":"Speed"},{"sentence":"Чакам автобус.","translation":"Ich warte auf Bus.","context":"Waiting"}]
+  - Current: [{"german":"Ich fahre mit Bus.","bulgarian":"Пътувам с автобус.","context":"Travel","source":"legacy"},{"german":"der Bus ist schnell.","bulgarian":"Автобуста/ът/то е бърз.","context":"Speed","source":"legacy"},{"german":"Ich warte auf Bus.","bulgarian":"Чакам автобус.","context":"Waiting","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Bus. мъжки род.\n\nCommon transportation in Bulgaria. Bus\n\nBG→DE: 'Автобус' е мъжки род. Bus\n\nDE→BG: Für Deutschsprachige: 'Автобус' = 'der Bus'. Maskulinum."]
+  - Current: ["Common transportation in Bulgaria. Bus"]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: Автобус е мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### der Zug (der zug||noun)
+
+- **category**:
+  - Archive: "Transport"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Пътувам с влак.","translation":"Ich fahre mit Zug.","context":"Travel"},{"sentence":"Влакта/ът/то е бърз.","translation":"der Zug ist schnell.","context":"Speed"},{"sentence":"Чакам влак.","translation":"Ich warte auf Zug.","context":"Waiting"}]
+  - Current: [{"german":"Ich fahre mit Zug.","bulgarian":"Пътувам с влак.","context":"Travel","source":"legacy"},{"german":"der Zug ist schnell.","bulgarian":"Влакта/ът/то е бърз.","context":"Speed","source":"legacy"},{"german":"Ich warte auf Zug.","bulgarian":"Чакам влак.","context":"Waiting","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Train. мъжки род.\n\nCommon transportation in Bulgaria. Train\n\nBG→DE: 'Влак' е мъжки род. Train\n\nDE→BG: Für Deutschsprachige: 'Влак' = 'der Zug'. Maskulinum."]
+  - Current: ["Common transportation in Bulgaria. Train"]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: Влак е мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### das Flugzeug (das flugzeug||noun)
+
+- **category**:
+  - Archive: "Transport"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Пътувам с самолет.","translation":"Ich fahre mit Flugzeug.","context":"Travel"},{"sentence":"Самолетта/ът/то е бърз.","translation":"das Flugzeug ist schnell.","context":"Speed"},{"sentence":"Чакам самолет.","translation":"Ich warte auf Flugzeug.","context":"Waiting"}]
+  - Current: [{"german":"Ich fahre mit Flugzeug.","bulgarian":"Пътувам с самолет.","context":"Travel","source":"legacy"},{"german":"das Flugzeug ist schnell.","bulgarian":"Самолетта/ът/то е бърз.","context":"Speed","source":"legacy"},{"german":"Ich warte auf Flugzeug.","bulgarian":"Чакам самолет.","context":"Waiting","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Airplane. мъжки род.\n\nCommon transportation in Bulgaria. Airplane\n\nBG→DE: 'Самолет' е мъжки род. Airplane\n\nDE→BG: Für Deutschsprachige: 'Самолет' = 'das Flugzeug'. Maskulinum."]
+  - Current: ["Common transportation in Bulgaria. Airplane"]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: Самолет е мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### das Fahrrad (das fahrrad||noun)
+
+- **category**:
+  - Archive: "Transport"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Пътувам с колело.","translation":"Ich fahre mit Fahrrad.","context":"Travel"},{"sentence":"Колелота/ът/то е бързо.","translation":"das Fahrrad ist schnell.","context":"Speed"},{"sentence":"Чакам колело.","translation":"Ich warte auf Fahrrad.","context":"Waiting"}]
+  - Current: [{"german":"Ich fahre mit Fahrrad.","bulgarian":"Пътувам с колело.","context":"Travel","source":"legacy"},{"german":"das Fahrrad ist schnell.","bulgarian":"Колелота/ът/то е бързо.","context":"Speed","source":"legacy"},{"german":"Ich warte auf Fahrrad.","bulgarian":"Чакам колело.","context":"Waiting","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Bicycle. среден род.\n\nCommon transportation in Bulgaria. Bicycle\n\nBG→DE: 'Колело' е среден род. Bicycle\n\nDE→BG: Für Deutschsprachige: 'Колело' = 'das Fahrrad'. Neutrum."]
+  - Current: ["Common transportation in Bulgaria. Bicycle"]
+- **usageNotes**:
+  - Archive: "среден род.\n\nBG→DE: Колело е среден род.\n\nDE→BG: Neutrum."
+  - Current: undefined
+
+### die Straßenbahn (die straßenbahn||noun)
+
+- **category**:
+  - Archive: "Transport"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Пътувам с трамвай.","translation":"Ich fahre mit Straßenbahn.","context":"Travel"},{"sentence":"Трамвайта/ът/то е бърз.","translation":"die Straßenbahn ist schnell.","context":"Speed"},{"sentence":"Чакам трамвай.","translation":"Ich warte auf Straßenbahn.","context":"Waiting"}]
+  - Current: [{"german":"Ich fahre mit Straßenbahn.","bulgarian":"Пътувам с трамвай.","context":"Travel","source":"legacy"},{"german":"die Straßenbahn ist schnell.","bulgarian":"Трамвайта/ът/то е бърз.","context":"Speed","source":"legacy"},{"german":"Ich warte auf Straßenbahn.","bulgarian":"Чакам трамвай.","context":"Waiting","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Tram. мъжки род.\n\nCommon transportation in Bulgaria. Tram\n\nBG→DE: 'Трамвай' е мъжки род. Tram\n\nDE→BG: Für Deutschsprachige: 'Трамвай' = 'die Straßenbahn'. Maskulinum."]
+  - Current: ["Common transportation in Bulgaria. Tram"]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: Трамвай е мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### das Taxi (das taxi||noun)
+
+- **category**:
+  - Archive: "Transport"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Пътувам с такси.","translation":"Ich fahre mit Taxi.","context":"Travel"},{"sentence":"Таксита/ът/то е бързо.","translation":"das Taxi ist schnell.","context":"Speed"},{"sentence":"Чакам такси.","translation":"Ich warte auf Taxi.","context":"Waiting"}]
+  - Current: [{"german":"Ich fahre mit Taxi.","bulgarian":"Пътувам с такси.","context":"Travel","source":"legacy"},{"german":"das Taxi ist schnell.","bulgarian":"Таксита/ът/то е бързо.","context":"Speed","source":"legacy"},{"german":"Ich warte auf Taxi.","bulgarian":"Чакам такси.","context":"Waiting","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Taxi. среден род.\n\nCommon transportation in Bulgaria. Taxi\n\nBG→DE: 'Такси' е среден род. Taxi\n\nDE→BG: Für Deutschsprachige: 'Такси' = 'das Taxi'. Neutrum."]
+  - Current: ["Common transportation in Bulgaria. Taxi"]
+- **usageNotes**:
+  - Archive: "среден род.\n\nBG→DE: Такси е среден род.\n\nDE→BG: Neutrum."
+  - Current: undefined
+
+### die U-Bahn, die Metro (die u-bahn die metro||noun)
+
+- **category**:
+  - Archive: "Transport"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Пътувам с метро.","translation":"Ich fahre mit U-Bahn.","context":"Travel"},{"sentence":"Метрота/ът/то е бързо.","translation":"die U-Bahn ist schnell.","context":"Speed"},{"sentence":"Чакам метро.","translation":"Ich warte auf U-Bahn.","context":"Waiting"}]
+  - Current: [{"german":"Ich fahre mit U-Bahn.","bulgarian":"Пътувам с метро.","context":"Travel","source":"legacy"},{"german":"die U-Bahn ist schnell.","bulgarian":"Метрота/ът/то е бързо.","context":"Speed","source":"legacy"},{"german":"Ich warte auf U-Bahn.","bulgarian":"Чакам метро.","context":"Waiting","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Metro, subway. среден род.\n\nCommon transportation in Bulgaria. Metro, subway\n\nBG→DE: 'Метро' е среден род. Metro, subway\n\nDE→BG: Für Deutschsprachige: 'Метро' = 'die U-Bahn, die Metro'. Neutrum."]
+  - Current: ["Common transportation in Bulgaria. Metro, subway"]
+- **usageNotes**:
+  - Archive: "среден род.\n\nBG→DE: Метро е среден род.\n\nDE→BG: Neutrum."
+  - Current: undefined
+
+### das Schiff (das schiff||noun)
+
+- **category**:
+  - Archive: "Transport"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Пътувам с кораб.","translation":"Ich fahre mit Schiff.","context":"Travel"},{"sentence":"Корабта/ът/то е бърз.","translation":"das Schiff ist schnell.","context":"Speed"},{"sentence":"Чакам кораб.","translation":"Ich warte auf Schiff.","context":"Waiting"}]
+  - Current: [{"german":"Ich fahre mit Schiff.","bulgarian":"Пътувам с кораб.","context":"Travel","source":"legacy"},{"german":"das Schiff ist schnell.","bulgarian":"Корабта/ът/то е бърз.","context":"Speed","source":"legacy"},{"german":"Ich warte auf Schiff.","bulgarian":"Чакам кораб.","context":"Waiting","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Ship. мъжки род.\n\nCommon transportation in Bulgaria. Ship\n\nBG→DE: 'Кораб' е мъжки род. Ship\n\nDE→BG: Für Deutschsprachige: 'Кораб' = 'das Schiff'. Maskulinum."]
+  - Current: ["Common transportation in Bulgaria. Ship"]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: Кораб е мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### das Boot (das boot||noun)
+
+- **category**:
+  - Archive: "Transport"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Пътувам с лодка.","translation":"Ich fahre mit Boot.","context":"Travel"},{"sentence":"Лодката/ът/то е бърза.","translation":"das Boot ist schnell.","context":"Speed"},{"sentence":"Чакам лодка.","translation":"Ich warte auf Boot.","context":"Waiting"}]
+  - Current: [{"german":"Ich fahre mit Boot.","bulgarian":"Пътувам с лодка.","context":"Travel","source":"legacy"},{"german":"das Boot ist schnell.","bulgarian":"Лодката/ът/то е бърза.","context":"Speed","source":"legacy"},{"german":"Ich warte auf Boot.","bulgarian":"Чакам лодка.","context":"Waiting","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Boat. женски род.\n\nCommon transportation in Bulgaria. Boat\n\nBG→DE: 'Лодка' е женски род. Boat\n\nDE→BG: Für Deutschsprachige: 'Лодка' = 'das Boot'. Femininum."]
+  - Current: ["Common transportation in Bulgaria. Boat"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Лодка е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### das Telefon (das telefon||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам телефон.","translation":"Ich habe Telefon.","context":"Possession"},{"sentence":"Търся телефон.","translation":"Ich suche Telefon.","context":"Searching"},{"sentence":"Телефонът/та е нов.","translation":"das Telefon ist neu.","context":"New"}]
+  - Current: [{"german":"Ich habe Telefon.","bulgarian":"Имам телефон.","context":"Possession","source":"legacy"},{"german":"Ich suche Telefon.","bulgarian":"Търся телефон.","context":"Searching","source":"legacy"},{"german":"das Telefon ist neu.","bulgarian":"Телефонът/та е нов.","context":"New","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Telephone, phone. мъжки род.\n\nCommon everyday object in Bulgarian life. Telephone, phone\n\nBG→DE: 'Телефон' е мъжки род. Telephone, phone\n\nDE→BG: Für Deutschsprachige: 'Телефон' = 'das Telefon'. Maskulinum."]
+  - Current: ["Common everyday object in Bulgarian life. Telephone, phone"]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: Телефон е мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### der Computer (der computer||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам компютър.","translation":"Ich habe Computer.","context":"Possession"},{"sentence":"Търся компютър.","translation":"Ich suche Computer.","context":"Searching"},{"sentence":"Компютърът/та е нов.","translation":"der Computer ist neu.","context":"New"}]
+  - Current: [{"german":"Ich habe Computer.","bulgarian":"Имам компютър.","context":"Possession","source":"legacy"},{"german":"Ich suche Computer.","bulgarian":"Търся компютър.","context":"Searching","source":"legacy"},{"german":"der Computer ist neu.","bulgarian":"Компютърът/та е нов.","context":"New","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Computer. мъжки род.\n\nCommon everyday object in Bulgarian life. Computer\n\nBG→DE: 'Компютър' е мъжки род. Computer\n\nDE→BG: Für Deutschsprachige: 'Компютър' = 'der Computer'. Maskulinum."]
+  - Current: ["Common everyday object in Bulgarian life. Computer"]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: Компютър е мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### die Uhr (die uhr||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам часовник.","translation":"Ich habe Uhr.","context":"Possession"},{"sentence":"Търся часовник.","translation":"Ich suche Uhr.","context":"Searching"},{"sentence":"Часовникът/та е нов.","translation":"die Uhr ist neu.","context":"New"}]
+  - Current: [{"german":"Ich habe Uhr.","bulgarian":"Имам часовник.","context":"Possession","source":"legacy"},{"german":"Ich suche Uhr.","bulgarian":"Търся часовник.","context":"Searching","source":"legacy"},{"german":"die Uhr ist neu.","bulgarian":"Часовникът/та е нов.","context":"New","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Clock, watch. мъжки род.\n\nCommon everyday object in Bulgarian life. Clock, watch\n\nBG→DE: 'Часовник' е мъжки род. Clock, watch\n\nDE→BG: Für Deutschsprachige: 'Часовник' = 'die Uhr'. Maskulinum."]
+  - Current: ["Common everyday object in Bulgarian life. Clock, watch"]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: Часовник е мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### der Schlüssel (der schlüssel||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам ключ.","translation":"Ich habe Schlüssel.","context":"Possession"},{"sentence":"Търся ключ.","translation":"Ich suche Schlüssel.","context":"Searching"},{"sentence":"Ключът/та е нов.","translation":"der Schlüssel ist neu.","context":"New"}]
+  - Current: [{"german":"Ich habe Schlüssel.","bulgarian":"Имам ключ.","context":"Possession","source":"legacy"},{"german":"Ich suche Schlüssel.","bulgarian":"Търся ключ.","context":"Searching","source":"legacy"},{"german":"der Schlüssel ist neu.","bulgarian":"Ключът/та е нов.","context":"New","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Key. мъжки род.\n\nCommon everyday object in Bulgarian life. Key\n\nBG→DE: 'Ключ' е мъжки род. Key\n\nDE→BG: Für Deutschsprachige: 'Ключ' = 'der Schlüssel'. Maskulinum."]
+  - Current: ["Common everyday object in Bulgarian life. Key"]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: Ключ е мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### das Glas, die Tasse (das glas die tasse||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам чаша.","translation":"Ich habe Glas.","context":"Possession"},{"sentence":"Търся чаша.","translation":"Ich suche Glas.","context":"Searching"},{"sentence":"Чашаът/та е нова.","translation":"das Glas ist neu.","context":"New"}]
+  - Current: [{"german":"Ich habe Glas.","bulgarian":"Имам чаша.","context":"Possession","source":"legacy"},{"german":"Ich suche Glas.","bulgarian":"Търся чаша.","context":"Searching","source":"legacy"},{"german":"das Glas ist neu.","bulgarian":"Чашаът/та е нова.","context":"New","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Glass, cup. женски род.\n\nCommon everyday object in Bulgarian life. Glass, cup\n\nBG→DE: 'Чаша' е женски род. Glass, cup\n\nDE→BG: Für Deutschsprachige: 'Чаша' = 'das Glas, die Tasse'. Femininum."]
+  - Current: ["Common everyday object in Bulgarian life. Glass, cup"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Чаша е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### der Teller (der teller||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам чиния.","translation":"Ich habe Teller.","context":"Possession"},{"sentence":"Търся чиния.","translation":"Ich suche Teller.","context":"Searching"},{"sentence":"Чинияът/та е нова.","translation":"der Teller ist neu.","context":"New"}]
+  - Current: [{"german":"Ich habe Teller.","bulgarian":"Имам чиния.","context":"Possession","source":"legacy"},{"german":"Ich suche Teller.","bulgarian":"Търся чиния.","context":"Searching","source":"legacy"},{"german":"der Teller ist neu.","bulgarian":"Чинияът/та е нова.","context":"New","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Plate. женски род.\n\nCommon everyday object in Bulgarian life. Plate\n\nBG→DE: 'Чиния' е женски род. Plate\n\nDE→BG: Für Deutschsprachige: 'Чиния' = 'der Teller'. Femininum."]
+  - Current: ["Common everyday object in Bulgarian life. Plate"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Чиния е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### das Messer (das messer||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам нож.","translation":"Ich habe Messer.","context":"Possession"},{"sentence":"Търся нож.","translation":"Ich suche Messer.","context":"Searching"},{"sentence":"Ножът/та е нов.","translation":"das Messer ist neu.","context":"New"}]
+  - Current: [{"german":"Ich habe Messer.","bulgarian":"Имам нож.","context":"Possession","source":"legacy"},{"german":"Ich suche Messer.","bulgarian":"Търся нож.","context":"Searching","source":"legacy"},{"german":"das Messer ist neu.","bulgarian":"Ножът/та е нов.","context":"New","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Knife. мъжки род.\n\nCommon everyday object in Bulgarian life. Knife\n\nBG→DE: 'Нож' е мъжки род. Knife\n\nDE→BG: Für Deutschsprachige: 'Нож' = 'das Messer'. Maskulinum."]
+  - Current: ["Common everyday object in Bulgarian life. Knife"]
+- **usageNotes**:
+  - Archive: "мъжки род.\n\nBG→DE: Нож е мъжки род.\n\nDE→BG: Maskulinum."
+  - Current: undefined
+
+### die Gabel (die gabel||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам вилица.","translation":"Ich habe Gabel.","context":"Possession"},{"sentence":"Търся вилица.","translation":"Ich suche Gabel.","context":"Searching"},{"sentence":"Вилицаът/та е нова.","translation":"die Gabel ist neu.","context":"New"}]
+  - Current: [{"german":"Ich habe Gabel.","bulgarian":"Имам вилица.","context":"Possession","source":"legacy"},{"german":"Ich suche Gabel.","bulgarian":"Търся вилица.","context":"Searching","source":"legacy"},{"german":"die Gabel ist neu.","bulgarian":"Вилицаът/та е нова.","context":"New","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Fork. женски род.\n\nCommon everyday object in Bulgarian life. Fork\n\nBG→DE: 'Вилица' е женски род. Fork\n\nDE→BG: Für Deutschsprachige: 'Вилица' = 'die Gabel'. Femininum."]
+  - Current: ["Common everyday object in Bulgarian life. Fork"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Вилица е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### der Löffel (der löffel||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам лъжица.","translation":"Ich habe Löffel.","context":"Possession"},{"sentence":"Търся лъжица.","translation":"Ich suche Löffel.","context":"Searching"},{"sentence":"Лъжицаът/та е нова.","translation":"der Löffel ist neu.","context":"New"}]
+  - Current: [{"german":"Ich habe Löffel.","bulgarian":"Имам лъжица.","context":"Possession","source":"legacy"},{"german":"Ich suche Löffel.","bulgarian":"Търся лъжица.","context":"Searching","source":"legacy"},{"german":"der Löffel ist neu.","bulgarian":"Лъжицаът/та е нова.","context":"New","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Spoon. женски род.\n\nCommon everyday object in Bulgarian life. Spoon\n\nBG→DE: 'Лъжица' е женски род. Spoon\n\nDE→BG: Für Deutschsprachige: 'Лъжица' = 'der Löffel'. Femininum."]
+  - Current: ["Common everyday object in Bulgarian life. Spoon"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Лъжица е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### das Geld (das geld||noun)
+
+- **category**:
+  - Archive: "Gegenstände"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Noun"
+  - Current: "noun"
+- **examples**:
+  - Archive: [{"sentence":"Имам паричка.","translation":"Ich habe Geld.","context":"Possession"},{"sentence":"Търся паричка.","translation":"Ich suche Geld.","context":"Searching"},{"sentence":"Паричкаът/та е нова.","translation":"das Geld ist neu.","context":"New"}]
+  - Current: [{"german":"Ich habe Geld.","bulgarian":"Имам паричка.","context":"Possession","source":"legacy"},{"german":"Ich suche Geld.","bulgarian":"Търся паричка.","context":"Searching","source":"legacy"},{"german":"das Geld ist neu.","bulgarian":"Паричкаът/та е нова.","context":"New","source":"legacy"}]
+- **culturalNotes**:
+  - Archive: ["Money. Plural: пари. женски род.\n\nCommon everyday object in Bulgarian life. Money. Plural: пари\n\nBG→DE: 'Паричка' е женски род. Money. Plural: пари\n\nDE→BG: Für Deutschsprachige: 'Паричка' = 'das Geld'. Femininum."]
+  - Current: ["Common everyday object in Bulgarian life. Money. Plural: пари"]
+- **usageNotes**:
+  - Archive: "женски род.\n\nBG→DE: Паричка е женски род.\n\nDE→BG: Femininum."
+  - Current: undefined
+
+### Danke (danke||phrase)
+
+- **category**:
+  - Archive: "Greetings"
+  - Current: undefined
+- **partOfSpeech**:
+  - Archive: "Phrase"
+  - Current: "phrase"
+- **examples**:
+  - Archive: ["German: 'Danke schön!', Bulgarian: 'Благодаря много!'"]
+  - Current: []
+- **culturalNotes**:
+  - Archive: ["In German, 'Danke' is used to say thank you. In Bulgarian, 'Благодаря' is used to say thank you."]
+  - Current: ["Стандартно благодарност; усилва се с 'много'.\nKultureller Kontext: Formelle Dankesformel."]
+

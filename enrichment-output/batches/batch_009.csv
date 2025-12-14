@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+bahnhof,"Bahnhof","Гара",noun,2,,,0,transport,unreviewed,
+flughafen,"Flughafen","Летище",noun,2,,,0,transport,unreviewed,
+hotel,"Hotel","Хотел",noun,2,,,0,transport,unreviewed,
+stra_e,"Straße","Път",noun,2,,,0,transport,unreviewed,
+karte,"Karte","Карта",noun,2,,,0,transport,unreviewed,
+arzt,"Arzt","Лекар",noun,2,,,0,professions,unreviewed,
+krankenhaus,"Krankenhaus","Болница",noun,2,,,0,places,unreviewed,
+apotheke,"Apotheke","Аптека",noun,2,,,0,everyday-phrases,unreviewed,
+medikamente,"Medikamente","Лекарства",noun,2,,,0,everyday-phrases,unreviewed,
+notfall,"Notfall","Спешно",noun,2,,,0,everyday-phrases,unreviewed,

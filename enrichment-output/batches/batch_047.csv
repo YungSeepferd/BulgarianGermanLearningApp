@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+a1_weather_001,"das Wetter","Време",phrase,1,,,3,weather,unreviewed,
+a1_weather_002,"der Regen","Дъжд",phrase,1,,,3,weather,unreviewed,
+a1_weather_003,"der Schnee","Сняг",phrase,1,,,3,weather,unreviewed,
+a1_weather_004,"der Wind","Вятър",phrase,1,,,3,weather,unreviewed,
+a1_weather_005,"die Wolke","Облак",phrase,1,,,3,weather,unreviewed,
+a1_weather_006,"der Donner","Гръм",phrase,1,,,3,weather,unreviewed,
+a1_weather_007,"der Frühling","Пролет",phrase,1,,,3,weather,unreviewed,
+a1_weather_008,"der Sommer","Лято",phrase,1,,,3,weather,unreviewed,
+a1_weather_009,"der Herbst","Есен",phrase,1,,,3,weather,unreviewed,
+a1_weather_010,"der Winter","Зима",phrase,1,,,3,weather,unreviewed,

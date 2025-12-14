@@ -9,6 +9,9 @@
 	"/learn": [
 		"src/routes/+layout.ts"
 	],
+	"/learn/shuffle": [
+		"src/routes/+layout.ts"
+	],
 	"/learn/[id]": [
 		"src/routes/learn/[id]/+page.ts",
 		"src/routes/+layout.ts"

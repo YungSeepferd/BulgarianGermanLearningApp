@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+fleisch,"Fleisch","Месо",noun,2,,,0,food,unreviewed,
+fisch,"Fisch","Риба",noun,2,,,0,food,unreviewed,
+gemuse,"Gemüse","Зеленчуци",noun,2,,,0,food,unreviewed,
+obst,"Obst","Плодове",noun,2,,,0,food,unreviewed,
+saft,"Saft","Сок",noun,2,,,0,food,unreviewed,
+kaffee,"Kaffee","Кафе",noun,2,,,0,food,unreviewed,
+bus,"Bus","Автобус",noun,2,,,0,transport,unreviewed,
+zug,"Zug","Влак",noun,2,,,0,transport,unreviewed,
+flugzeug,"Flugzeug","Самолет",noun,2,,,0,transport,unreviewed,
+taxi,"Taxi","Такси",noun,2,,,0,transport,unreviewed,

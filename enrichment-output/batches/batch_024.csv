@@ -1,0 +1,11 @@
+ID,German,Bulgarian,Part of Speech,Difficulty,Gender,Plural,Examples,Categories,Status,Notes
+a1_time_003,"Mittwoch","Сряда",phrase,1,,,3,time,unreviewed,
+a1_time_004,"Donnerstag","Четвъртък",phrase,2,,,3,time,unreviewed,
+a1_time_005,"Freitag","Петък",phrase,1,,,3,time,unreviewed,
+a1_time_006,"Samstag, Sonnabend","Събота",phrase,1,,,3,time,unreviewed,
+a1_time_007,"Sonntag","Неделя",phrase,1,,,3,time,unreviewed,
+a1_time_008,"der Tag","Ден",phrase,1,,,3,time,unreviewed,
+a1_time_009,"die Woche","Седмица",phrase,1,,,3,time,unreviewed,
+a1_time_010,"das Jahr","Година",phrase,1,,,3,time,unreviewed,
+a1_month_001,"Januar","Януари",phrase,1,,,3,time,unreviewed,
+a1_month_002,"Februar","Февруари",phrase,1,,,3,time,unreviewed,
