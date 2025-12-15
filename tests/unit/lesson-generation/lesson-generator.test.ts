@@ -21,6 +21,15 @@ import type {
 } from '$lib/services/lesson-generation/types';
 import type { VocabularyService } from '$lib/data/vocabulary';
 import type { VocabularyItem } from '$lib/types/vocabulary';
+import * as loader from '$lib/data/loader';
+
+// Mock loader
+vi.mock('$lib/data/loader', () => ({
+  loadVocabulary: vi.fn(),
+  loadVocabularyByCategory: vi.fn(),
+  loadVocabularyBySearch: vi.fn(),
+  getRandomVocabulary: vi.fn()
+}));
 
 // Mocks
 const mockTemplateRepository = {
@@ -41,12 +50,6 @@ const mockRenderer = {
   validateTemplate: vi.fn(),
   validateData: vi.fn()
 } as unknown as ITemplateRenderer;
-
-const mockVocabularyService = {
-  getRandomVocabulary: vi.fn(),
-  getVocabularyByCategory: vi.fn(),
-  searchVocabulary: vi.fn()
-} as unknown as VocabularyService;
 
 // Mock Data
 const mockTemplate: LessonTemplate = {
@@ -92,11 +95,13 @@ describe('LessonGenerationEngine', () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
+    // Default mock for loadVocabulary to prevent undefined errors
+    vi.mocked(loader.loadVocabulary).mockResolvedValue({ items: [mockVocabularyItem] } as any);
+    
     engine = new LessonGenerationEngine(
       mockTemplateRepository,
       mockGrammarService,
-      mockRenderer,
-      Promise.resolve(mockVocabularyService)
+      mockRenderer
     );
   });
 
@@ -104,7 +109,8 @@ describe('LessonGenerationEngine', () => {
     it('should generate a thematic vocabulary lesson successfully', async () => {
       // Setup mocks
       vi.mocked(mockTemplateRepository.getTemplateById).mockResolvedValue(mockTemplate);
-      vi.mocked(mockVocabularyService.getVocabularyByCategory).mockResolvedValue([mockVocabularyItem]);
+      vi.mocked(loader.loadVocabulary).mockResolvedValue({ items: [mockVocabularyItem] } as any);
+      vi.mocked(loader.loadVocabularyByCategory).mockResolvedValue([mockVocabularyItem]);
       vi.mocked(mockRenderer.render).mockReturnValue('Rendered Content');
 
       const params: LessonGenerationParams = {
@@ -120,7 +126,7 @@ describe('LessonGenerationEngine', () => {
       const result = await engine.generateThematicLesson(params);
 
       // Verify interactions
-      expect(mockVocabularyService.getVocabularyByCategory).toHaveBeenCalledWith('home', expect.anything());
+      expect(loader.loadVocabularyByCategory).toHaveBeenCalledWith('home', expect.anything());
       expect(mockRenderer.render).toHaveBeenCalled();
 
       // Verify result
@@ -133,7 +139,7 @@ describe('LessonGenerationEngine', () => {
 
     it('should fallback to random vocabulary if no category specified', async () => {
         vi.mocked(mockTemplateRepository.getTemplateById).mockResolvedValue(mockTemplate);
-        vi.mocked(mockVocabularyService.getRandomVocabulary).mockResolvedValue([mockVocabularyItem]);
+        vi.mocked(loader.getRandomVocabulary).mockResolvedValue([mockVocabularyItem]);
         vi.mocked(mockRenderer.render).mockReturnValue('Rendered Content');
 
         const params: LessonGenerationParams = {
@@ -145,12 +151,12 @@ describe('LessonGenerationEngine', () => {
 
         await engine.generateThematicLesson(params);
 
-        expect(mockVocabularyService.getRandomVocabulary).toHaveBeenCalled();
+        expect(loader.getRandomVocabulary).toHaveBeenCalled();
     });
 
     it('should include practice section by default', async () => {
         vi.mocked(mockTemplateRepository.getTemplateById).mockResolvedValue(mockTemplate);
-        vi.mocked(mockVocabularyService.getRandomVocabulary).mockResolvedValue([mockVocabularyItem]);
+        vi.mocked(loader.getRandomVocabulary).mockResolvedValue([mockVocabularyItem]);
         vi.mocked(mockRenderer.render).mockReturnValue('Rendered Content');
 
         const params: LessonGenerationParams = {
@@ -168,7 +174,7 @@ describe('LessonGenerationEngine', () => {
 
     it('should include review section if requested', async () => {
         vi.mocked(mockTemplateRepository.getTemplateById).mockResolvedValue(mockTemplate);
-        vi.mocked(mockVocabularyService.getRandomVocabulary).mockResolvedValue([mockVocabularyItem]);
+        vi.mocked(loader.getRandomVocabulary).mockResolvedValue([mockVocabularyItem]);
         vi.mocked(mockRenderer.render).mockReturnValue('Rendered Content');
 
         const params: LessonGenerationParams = {
@@ -194,7 +200,7 @@ describe('LessonGenerationEngine', () => {
         .mockResolvedValueOnce(conceptTemplate)
         .mockResolvedValueOnce(practiceTemplate);
       vi.mocked(mockGrammarService.query).mockResolvedValue([mockGrammarConcept]);
-      vi.mocked(mockVocabularyService.searchVocabulary).mockResolvedValue({ items: [mockVocabularyItem], total: 1, hasMore: false });
+      vi.mocked(loader.loadVocabularyBySearch).mockResolvedValue({ items: [mockVocabularyItem], total: 1, hasMore: false });
       vi.mocked(mockRenderer.render).mockReturnValue('Rendered Section');
 
       const params: LessonGenerationParams = {
@@ -226,7 +232,7 @@ describe('LessonGenerationEngine', () => {
             .mockResolvedValueOnce(practiceTemplate)
             .mockResolvedValueOnce(comparisonTemplate);
       vi.mocked(mockGrammarService.query).mockResolvedValue([mockGrammarConcept]);
-      vi.mocked(mockVocabularyService.searchVocabulary).mockResolvedValue({ items: [mockVocabularyItem], total: 1, hasMore: false });
+      vi.mocked(loader.loadVocabularyBySearch).mockResolvedValue({ items: [mockVocabularyItem], total: 1, hasMore: false });
       vi.mocked(mockRenderer.render).mockReturnValue('Rendered Section');
 
       const params: LessonGenerationParams = {

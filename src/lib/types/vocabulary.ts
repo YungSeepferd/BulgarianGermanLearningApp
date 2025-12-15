@@ -15,11 +15,11 @@ import type {
  */
 export type VocabularyItem = UnifiedVocabularyItem & {
   /** Whether the word is common enough for basic lessons (default: false) */
-  isCommon?: boolean;
+  isCommon: boolean;
   /** Whether the item has been manually verified (default: false) */
-  isVerified?: boolean;
+  isVerified: boolean;
   /** SRS learning phase (0-6, default: 0 for unstarted) */
-  learningPhase?: number;
+  learningPhase: number;
 };
 
 export type PartOfSpeech = SchemaPartOfSpeech;

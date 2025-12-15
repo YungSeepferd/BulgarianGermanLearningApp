@@ -54,13 +54,13 @@
     const fromLiteral = item.literalBreakdown?.map((piece) => ({
       part: piece.segment,
       meaning: piece.literal,
-      note: piece.note || piece.grammarTag
+      note: piece.grammarTag
     })) ?? [];
 
     const fromMetadata = item.metadata?.components?.map((piece) => ({
       part: piece.part,
       meaning: piece.meaning,
-      note: piece.note
+      note: undefined
     })) ?? [];
 
     return [...fromLiteral, ...fromMetadata];
@@ -79,7 +79,7 @@
     const legacy = (vocabularyItem as any).examples;
     
     if (metadata?.examples) {
-      return metadata.examples.map(ex => ({
+      return metadata.examples.map((ex: any) => ({
         german: ex.german || ex.source || '',
         bulgarian: ex.bulgarian || ex.target || '',
         context: ex.context
@@ -107,6 +107,29 @@
       : null
   );
 
+  // Audio Logic
+  const audioUrl = $derived(
+    (vocabularyItem as any).audioUrl || 
+    (vocabularyItem as any).audio_url || 
+    (isBulgarianFront ? vocabularyItem.audio?.bulgarian : vocabularyItem.audio?.german)
+  );
+
+  let audioPlayer: HTMLAudioElement | null = $state(null);
+  let isPlaying = $state(false);
+
+  function playAudio(e: Event) {
+    e.stopPropagation(); // Prevent card flip
+    if (audioPlayer) {
+      isPlaying = true;
+      audioPlayer.currentTime = 0;
+      audioPlayer.play()
+        .catch(err => console.error('Audio playback failed:', err))
+        .finally(() => {
+           // Reset playing state when done (handled by onended)
+        });
+    }
+  }
+
   // Toggle flip state
   function toggleFlip() {
     flipped = !flipped;
@@ -114,10 +137,11 @@
 </script>
 
 <div class="flashcard-container" role="region" aria-label={appState.languageMode === 'DE_BG' ? 'Vokabelkarte' : 'Карта с думи'}>
-  <button
+  <div
     class="flashcard {flipped ? 'flipped' : ''}"
     onclick={toggleFlip}
     role="button"
+    tabindex="0"
     aria-label={flipped 
       ? (appState.languageMode === 'DE_BG' ? `Vorderseite zeigen: ${frontTerm}` : `Покажи предната страна: ${frontTerm}`)
       : (appState.languageMode === 'DE_BG' ? `Rückseite zeigen: ${backTerm}` : `Покажи задната страна: ${backTerm}`)}
@@ -135,10 +159,34 @@
   >
     <!-- Front of the card -->
     <div class="flashcard-front">
+      {#if vocabularyItem.level}
+        <div class="level-badge {vocabularyItem.level.toLowerCase()}">
+          {vocabularyItem.level}
+        </div>
+      {/if}
+
       <div class="front-content">
         <div class="emoji-container">
           <span class="emoji">{emoji}</span>
         </div>
+        
+        {#if audioUrl}
+          <button 
+            class="audio-button {isPlaying ? 'playing' : ''}" 
+            onclick={playAudio}
+            aria-label="Play pronunciation"
+            title="Play pronunciation"
+          >
+            🔊
+          </button>
+          <audio 
+            bind:this={audioPlayer} 
+            src={audioUrl} 
+            onended={() => isPlaying = false}
+            onpause={() => isPlaying = false}
+          ></audio>
+        {/if}
+
         <p class="part-of-speech">{vocabularyItem.partOfSpeech}</p>
         <h2 class="front-term">{frontTerm}</h2>
         {#if vocabularyItem.pronunciation?.bulgarian && isBulgarianFront}
@@ -268,7 +316,7 @@
           {/if}
       </div>
     </div>
-  </button>
+  </div>
 </div>
 
 <style>
@@ -298,6 +346,59 @@
   .flashcard:focus-visible {
     outline: 3px solid var(--color-focus-ring, #0d6efd);
     outline-offset: 4px;
+  }
+
+  .level-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #f1f5f9;
+    color: #64748b;
+  }
+
+  .level-badge.a1 { background: #dcfce7; color: #166534; }
+  .level-badge.a2 { background: #bbf7d0; color: #15803d; }
+  .level-badge.b1 { background: #dbeafe; color: #1e40af; }
+  .level-badge.b2 { background: #bfdbfe; color: #1d4ed8; }
+  .level-badge.c1 { background: #f3e8ff; color: #6b21a8; }
+  .level-badge.c2 { background: #e9d5ff; color: #7e22ce; }
+
+  .audio-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .audio-button:hover {
+    background-color: #f1f5f9;
+  }
+
+  .audio-button:focus-visible {
+    outline: 3px solid var(--color-focus-ring, #0d6efd);
+    outline-offset: 2px;
+  }
+
+  .audio-button.playing {
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
   }
 
   .declension-block { margin-top: 0.75rem; }

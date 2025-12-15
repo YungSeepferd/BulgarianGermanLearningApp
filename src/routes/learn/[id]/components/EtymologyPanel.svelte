@@ -4,9 +4,27 @@
 
   let { item }: { item: VocabularyItem } = $props();
 
-  const etymology = $derived(item.metadata?.etymology || item.etymology || '');
-  const components = $derived(item.metadata?.components || item.literalBreakdown || []);
-  const contextualNuance = $derived(item.metadata?.contextualNuance || item.contextualNuance || '');
+  const etymology = $derived(item.etymology || item.metadata?.etymology || '');
+  
+  const components = $derived.by(() => {
+    if (item.literalBreakdown) {
+      return item.literalBreakdown.map(c => ({
+        part: c.segment,
+        meaning: c.literal,
+        note: c.grammarTag
+      }));
+    }
+    if (item.metadata?.components) {
+      return item.metadata.components.map(c => ({
+        part: c.part,
+        meaning: c.meaning,
+        note: ''
+      }));
+    }
+    return [];
+  });
+
+  const contextualNuance = $derived((item as any).contextualNuance || (item as any).metadata?.contextualNuance || '');
 
   const hasData = $derived(!!etymology || components.length > 0 || !!contextualNuance);
 </script>
@@ -40,15 +58,15 @@
           {#each components as component}
             <div class="component-card">
               <div class="component-part">
-                {component.segment || component.part}
+                {component.part}
               </div>
               <div class="component-arrow" aria-hidden="true">→</div>
               <div class="component-meaning">
-                {component.literal || component.meaning}
+                {component.meaning}
               </div>
-              {#if component.note || component.grammarTag}
+              {#if component.note}
                 <div class="component-note">
-                  {component.note || component.grammarTag}
+                  {component.note}
                 </div>
               {/if}
             </div>

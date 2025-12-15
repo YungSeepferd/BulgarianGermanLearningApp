@@ -80,7 +80,7 @@
       );
 
       recommendedWords = allVocab
-        .filter(v => (v.difficulty === 'A1' || v.difficulty === 'A2') && !masteredIds.has(v.id))
+        .filter(v => (v.cefrLevel === 'A1' || v.cefrLevel === 'A2') && !masteredIds.has(v.id))
         .sort(() => Math.random() - 0.5)
         .slice(0, 6);
 
@@ -90,31 +90,33 @@
           id: 'a1',
           label: ui.essentialA1,
           labelBg: ui.essentialA1,
-          count: allVocab.filter(v => v.difficulty === 'A1').length,
-          progress: calculateProgress(allVocab.filter(v => v.difficulty === 'A1'), masteredIds)
+          count: allVocab.filter(v => v.cefrLevel === 'A1').length,
+          progress: calculateProgress(allVocab.filter(v => v.cefrLevel === 'A1'), masteredIds)
         },
         {
           id: 'a2',
           label: ui.essentialA2,
           labelBg: ui.essentialA2,
-          count: allVocab.filter(v => v.difficulty === 'A2').length,
-          progress: calculateProgress(allVocab.filter(v => v.difficulty === 'A2'), masteredIds)
+          count: allVocab.filter(v => v.cefrLevel === 'A2').length,
+          progress: calculateProgress(allVocab.filter(v => v.cefrLevel === 'A2'), masteredIds)
         },
         {
           id: 'b1',
           label: ui.intermediateB1,
           labelBg: ui.intermediateB1,
-          count: allVocab.filter(v => v.difficulty === 'B1').length,
-          progress: calculateProgress(allVocab.filter(v => v.difficulty === 'B1'), masteredIds)
+          count: allVocab.filter(v => v.cefrLevel === 'B1').length,
+          progress: calculateProgress(allVocab.filter(v => v.cefrLevel === 'B1'), masteredIds)
         },
         {
           id: 'b2',
           label: ui.advancedB2,
           labelBg: ui.advancedB2,
-          count: allVocab.filter(v => v.difficulty === 'B2').length,
-          progress: calculateProgress(allVocab.filter(v => v.difficulty === 'B2'), masteredIds)
+          count: allVocab.filter(v => v.cefrLevel === 'B2').length,
+          progress: calculateProgress(allVocab.filter(v => v.cefrLevel === 'B2'), masteredIds)
         }
       ];
+    } catch (e) {
+      console.error('Error in Learn page onMount:', e);
     } finally {
       isLoading = false;
     }
@@ -142,7 +144,12 @@
   }
 </script>
 
+<svelte:head>
+  <title>{ui.title}</title>
+</svelte:head>
+
 <div class="learn-hub">
+
   <header class="learn-header">
     <h1>{ui.title}</h1>
     <p class="subtitle">{ui.subtitle}</p>
@@ -173,8 +180,8 @@
         <h2>{ui.recentTitle}</h2>
         <div class="word-grid">
           {#each recentWords as word (word.id)}
-            <div class="card-wrapper" role="button" tabindex="0" onclick={() => handleCardClick(word)} onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && handleCardClick(word)}>
-              <VocabularyCard item={word} variant="compact" />
+            <div class="card-wrapper">
+              <VocabularyCard item={word} variant="grid" onOpenDetail={() => handleCardClick(word)} />
             </div>
           {/each}
         </div>
@@ -186,8 +193,8 @@
         <h2>{ui.recommendedTitle}</h2>
         <div class="word-grid">
           {#each recommendedWords as word (word.id)}
-            <div class="card-wrapper" role="button" tabindex="0" onclick={() => handleCardClick(word)} onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && handleCardClick(word)}>
-              <VocabularyCard item={word} variant="compact" />
+            <div class="card-wrapper">
+              <VocabularyCard item={word} variant="grid" onOpenDetail={() => handleCardClick(word)} />
             </div>
           {/each}
         </div>
@@ -342,7 +349,7 @@
 
   .word-count {
     background: var(--color-primary-light);
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.85rem;

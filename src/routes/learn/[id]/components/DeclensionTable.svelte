@@ -21,7 +21,7 @@
 
 {#if hasData}
   <div class="declension-table">
-    <table role="table" aria-label={appState.languageMode === 'DE_BG' ? 'Deklinationstabelle' : 'Таблица на склонение'}>
+    <table aria-label={appState.languageMode === 'DE_BG' ? 'Deklinationstabelle' : 'Таблица на склонение'}>
       <thead>
         <tr>
           <th scope="col">{appState.languageMode === 'DE_BG' ? 'Kasus' : 'Падеж'}</th>
@@ -36,8 +36,8 @@
               <th scope="row" class="case-label" title={caseRow.description}>
                 {caseRow.label}
               </th>
-              <td>{declension[caseRow.key].singular || '—'}</td>
-              <td>{declension[caseRow.key].plural || '—'}</td>
+            <td>{declension[caseRow.key]?.singular || '—'}</td>
+            <td>{declension[caseRow.key]?.plural || '—'}</td>
             </tr>
           {/if}
         {/each}

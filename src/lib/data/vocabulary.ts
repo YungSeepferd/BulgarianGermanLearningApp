@@ -7,7 +7,7 @@
 
 import { searchVocabulary, getVocabularyStats, getSearchSuggestions, clearVocabularyCache } from '../services/search';
 import { loadVocabularyById, loadVocabularyByCategory, loadVocabularyByDifficulty, getRandomVocabulary } from './loader';
-import { vocabularyDb } from './db.svelte';
+// import { vocabularyDb } from './db.svelte';
 import { type VocabularyItem, type VocabularyCategory } from '../schemas/vocabulary';
 import { Debug } from '../utils';
 
@@ -35,9 +35,9 @@ const vocabularyService = {
             Debug.log('vocabularyService', 'Searching vocabulary with params', params);
             const result = await searchVocabulary({
                 query: params.query,
-                partOfSpeech: params.partOfSpeech,
+                partOfSpeech: params.partOfSpeech as any,
                 difficulty: params.difficulty,
-                categories: params.categories,
+                categories: params.categories as any,
                 learningPhase: params.learningPhase,
                 limit: params.limit || 20,
                 offset: params.offset || 0,
@@ -45,7 +45,17 @@ const vocabularyService = {
                 sortOrder: 'asc'
             });
             Debug.log('vocabularyService', 'Search completed', { count: result.items.length });
-            return result;
+            
+            // Map items to VocabularyItem
+            return {
+                ...result,
+                items: result.items.map(item => ({
+                    ...item,
+                    isCommon: false,
+                    isVerified: false,
+                    learningPhase: 0
+                })) as VocabularyItem[]
+            };
         } catch (error) {
             Debug.error('vocabularyService', 'Failed to search vocabulary', error as Error);
             return { items: [], total: 0, hasMore: false };
@@ -60,7 +70,14 @@ const vocabularyService = {
     getVocabularyById: async (id: string): Promise<VocabularyItem | null> => {
         try {
             Debug.log('vocabularyService', 'Getting vocabulary by ID', { id });
-            return await loadVocabularyById(id);
+            const item = await loadVocabularyById(id);
+            if (!item) return null;
+            return {
+                ...item,
+                isCommon: false,
+                isVerified: false,
+                learningPhase: 0
+            } as VocabularyItem;
         } catch (error) {
             Debug.error('vocabularyService', 'Failed to get vocabulary by ID', error as Error);
             return null;
@@ -76,7 +93,13 @@ const vocabularyService = {
     getVocabularyByCategory: async (category: VocabularyCategory, options: { limit?: number; difficulty?: number } = {}) => {
         try {
             Debug.log('vocabularyService', 'Getting vocabulary by category', { category, options });
-            return await loadVocabularyByCategory(category, options);
+            const items = await loadVocabularyByCategory(category, options);
+            return items.map(item => ({
+                ...item,
+                isCommon: false,
+                isVerified: false,
+                learningPhase: 0
+            })) as VocabularyItem[];
         } catch (error) {
             Debug.error('vocabularyService', 'Failed to get vocabulary by category', error as Error);
             return [];
@@ -92,7 +115,13 @@ const vocabularyService = {
     getVocabularyByDifficulty: async (difficulty: number, options: { limit?: number; category?: string } = {}) => {
         try {
             Debug.log('vocabularyService', 'Getting vocabulary by difficulty', { difficulty, options });
-            return await loadVocabularyByDifficulty(difficulty, options);
+            const items = await loadVocabularyByDifficulty(difficulty, options);
+            return items.map(item => ({
+                ...item,
+                isCommon: false,
+                isVerified: false,
+                learningPhase: 0
+            })) as VocabularyItem[];
         } catch (error) {
             Debug.error('vocabularyService', 'Failed to get vocabulary by difficulty', error as Error);
             return [];
@@ -108,7 +137,13 @@ const vocabularyService = {
     getRandomVocabulary: async (count: number = 5, options: { difficulty?: number; category?: string } = {}) => {
         try {
             Debug.log('vocabularyService', 'Getting random vocabulary', { count, options });
-            return await getRandomVocabulary(count, options);
+            const items = await getRandomVocabulary(count, options);
+            return items.map(item => ({
+                ...item,
+                isCommon: false,
+                isVerified: false,
+                learningPhase: 0
+            })) as VocabularyItem[];
         } catch (error) {
             Debug.error('vocabularyService', 'Failed to get random vocabulary', error as Error);
             return [];
@@ -151,57 +186,6 @@ const vocabularyService = {
     },
 
     /**
-     * Update practice statistics for a vocabulary item
-     * @param itemId The ID of the vocabulary item
-     * @param correct Whether the answer was correct
-     * @param responseTime Response time in seconds (optional)
-     * @returns Promise that resolves when the update is complete
-     */
-    updateStats: async (itemId: string, correct: boolean, responseTime?: number) => {
-        try {
-            Debug.log('vocabularyService', 'Updating stats', { itemId, correct, responseTime });
-
-            // Get the current item from the database
-            const item = vocabularyDb.get(itemId);
-            if (!item) {
-                throw new Error(`Item with ID ${itemId} not found`);
-            }
-
-            // Update the item's practice statistics
-            const now = new Date();
-            const stats = item.stats || {
-                correctCount: 0,
-                incorrectCount: 0,
-                lastPracticed: null,
-                lastCorrect: null,
-                streak: 0
-            };
-
-            if (correct) {
-                stats.correctCount++;
-                stats.lastCorrect = now;
-                stats.streak++;
-            } else {
-                stats.incorrectCount++;
-                stats.streak = 0;
-            }
-
-            stats.lastPracticed = now;
-
-            // Update the item in the database
-            vocabularyDb.update(itemId, {
-                stats,
-                updatedAt: now
-            });
-
-            // Clear cache to ensure fresh data
-            clearVocabularyCache();
-        } catch (error) {
-            Debug.error('vocabularyService', 'Failed to update stats', error as Error);
-        }
-    },
-
-    /**
      * Clear the vocabulary cache to force fresh data loading
      */
     clearCache: () => {
@@ -212,3 +196,4 @@ const vocabularyService = {
 
 // Export the service directly
 export { vocabularyService };
+export type _VocabularyService = typeof vocabularyService;

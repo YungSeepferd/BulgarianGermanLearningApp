@@ -132,7 +132,7 @@ export class CulturalGrammarService implements ICulturalGrammarService {
    * @returns True if concept is valid
    * @throws DataValidationError if concept is invalid
    */
-  private validateConcept(concept: CulturalGrammarConcept): boolean {
+  private validateConcept(concept: any): concept is CulturalGrammarConcept {
     // Check required fields
     if (!concept.id || typeof concept.id !== 'string') {
       throw new DataValidationError('Concept id is required and must be a string');

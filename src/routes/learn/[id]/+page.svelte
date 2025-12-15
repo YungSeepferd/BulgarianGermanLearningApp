@@ -19,32 +19,22 @@
   const dirArrow = $derived(appState.languageMode === 'DE_BG' ? '→' : '←');
 
   // Active tab state for dashboard
-  let activeTab = $state<string>('overview');
-
-  // Tab definitions with bilingual labels
-  const tabs = $derived([
-    { id: 'overview', icon: '📋', labelDE: 'Überblick', labelBG: 'Преглед' },
-    { id: 'grammar', icon: '📖', labelDE: 'Grammatik', labelBG: 'Граматика' },
-    { id: 'family', icon: '🔗', labelDE: 'Wortfamilie', labelBG: 'Семейство' },
-    { id: 'examples', icon: '💬', labelDE: 'Beispiele', labelBG: 'Примери' },
-    { id: 'analysis', icon: '🔍', labelDE: 'Analyse', labelBG: 'Анализ' },
-    { id: 'notes', icon: '📝', labelDE: 'Notizen', labelBG: 'Бележки' },
-    { id: 'resources', icon: '🌐', labelDE: 'Ressourcen', labelBG: 'Ресурси' }
-  ]);
+  type TabId = 'overview' | 'grammar' | 'family' | 'examples' | 'analysis' | 'notes' | 'resources';
+  let activeTab = $state<TabId>('overview');
 
   // Type-safe derived values with proper guards
   const exampleSentences = $derived.by(() => {
     if (!item) return [];
-    const metadata = item.metadata;
-    const legacy = (item as any).exampleSentences;
     
-    if (metadata?.examples) {
-      return metadata.examples.map(ex => ({
-        source: ex.german || ex.source || '',
-        target: ex.bulgarian || ex.target || '',
+    if (item.examples && item.examples.length > 0) {
+      return item.examples.map(ex => ({
+        source: ex.german,
+        target: ex.bulgarian,
         context: ex.context
       }));
     }
+
+    const legacy = (item as any).exampleSentences;
     
     if (Array.isArray(legacy)) {
       return legacy.map((ex: any) => ({
@@ -64,11 +54,13 @@
   });
 </script>
 
-<div class="learn-container" role="main" aria-label={appState.languageMode === 'DE_BG' ? 'Lernseite für Vokabel' : 'Страница за учене на дума'} onkeydown={(e) => {
+<svelte:window onkeydown={(e) => {
   if (e.key === 'Escape') {
     window.history.back();
   }
-}}>
+}} />
+
+<div class="learn-container" role="main" aria-label={appState.languageMode === 'DE_BG' ? 'Lernseite für Vokabel' : 'Страница за учене на дума'}>
   <div class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
   {#if error}
     <div class="state-block" role="alert"><p>{error}</p></div>
@@ -97,7 +89,7 @@
     </header>
 
     <!-- Dashboard tabs navigation -->
-    <DashboardTabs {tabs} bind:activeTab />
+    <DashboardTabs bind:activeTab />
 
     <!-- Dashboard panels -->
     <div class="dashboard-content">
@@ -186,7 +178,7 @@
     </div>
 
     <!-- Actions -->
-    <nav class="actions" role="navigation" aria-label={appState.languageMode === 'DE_BG' ? 'Lernaktionen' : 'Учебни действия'}>
+    <nav class="actions" aria-label={appState.languageMode === 'DE_BG' ? 'Lernaktionen' : 'Учебни действия'}>
       <a class="button" href="/practice" aria-label={appState.languageMode === 'DE_BG' ? 'Mit diesem Wort üben' : 'Упражнявай тази дума'}>
         {appState.languageMode === 'DE_BG' ? 'Üben' : 'Упражнения'}
       </a>

@@ -129,23 +129,23 @@
   <h2>Bilingual Support Test</h2>
 
   <div class="test-controls">
-    <button on:click={runAllTests} class="btn btn-primary">
+    <button onclick={runAllTests} class="btn btn-primary">
       Run All Tests
     </button>
 
-    <button on:click={testLanguageState} class="btn btn-secondary">
+    <button onclick={testLanguageState} class="btn btn-secondary">
       Test Language State
     </button>
 
-    <button on:click={testLocalization} class="btn btn-secondary">
+    <button onclick={testLocalization} class="btn btn-secondary">
       Test Localization
     </button>
 
-    <button on:click={testLanguageAdapter} class="btn btn-secondary">
+    <button onclick={testLanguageAdapter} class="btn btn-secondary">
       Test Language Adapter
     </button>
 
-    <button on:click={testTemplateLanguage} class="btn btn-secondary">
+    <button onclick={testTemplateLanguage} class="btn btn-secondary">
       Test Template Language
     </button>
   </div>

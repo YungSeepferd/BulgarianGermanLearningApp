@@ -195,8 +195,9 @@ export class LearningSession {
     private loadState(): void {
         if (!browser) return;
 
+        let saved: string | null = null;
         try {
-            const saved = localStorage.getItem('learning-session');
+            saved = localStorage.getItem('learning-session');
             if (saved) {
                 const parsed = JSON.parse(saved);
 

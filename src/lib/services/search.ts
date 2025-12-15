@@ -115,7 +115,7 @@ function applyFilters(items: UnifiedVocabularyItem[], params: VocabularySearchPa
 
     // Filter by learning phase
     const learningPhaseMatch = params.learningPhase !== undefined
-      ? (item.metadata?.learningPhase ?? 0) === params.learningPhase
+      ? (item.learningPhase ?? 0) === params.learningPhase
       : true;
 
     return partOfSpeechMatch && difficultyMatch && categoryMatch && learningPhaseMatch;
@@ -217,8 +217,8 @@ export async function getSearchSuggestions(query: string, limit: number = 5): Pr
       suggestions.add(item.bulgarian);
     }
     if (item.transliteration && typeof item.transliteration === 'string') {
-      if (item.transliteration.toLowerCase().startsWith(lowerQuery)) {
-        suggestions.add(item.transliteration);
+      if ((item.transliteration as string).toLowerCase().startsWith(lowerQuery)) {
+        suggestions.add(item.transliteration as string);
       }
     } else if (item.transliteration && typeof item.transliteration === 'object' && item.transliteration !== null) {
       const translit = item.transliteration as { german?: string; bulgarian?: string };
@@ -268,15 +268,15 @@ export async function getVocabularyStats(): Promise<{
     });
 
     // Count by learning phase
-    const phase = item.metadata?.learningPhase ?? 0;
+    const phase = item.learningPhase ?? 0;
     learningPhase[phase] = (learningPhase[phase] || 0) + 1;
 
     // Count by common status
-    const commonStatus = String(item.metadata?.isCommon ?? false);
+    const commonStatus = String(item.isCommon ?? false);
     isCommon[commonStatus] = (isCommon[commonStatus] || 0) + 1;
 
     // Count by verified status
-    const verifiedStatus = String(item.metadata?.isVerified ?? false);
+    const verifiedStatus = String(item.isVerified ?? false);
     isVerified[verifiedStatus] = (isVerified[verifiedStatus] || 0) + 1;
   });
 

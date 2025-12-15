@@ -1,122 +1,105 @@
 <script lang="ts">
   import { appState } from '$lib/state/app-state';
   import type { VocabularyItem } from '$lib/types/vocabulary';
+  import MnemonicEditor from '$lib/components/ui/MnemonicEditor.svelte';
 
   let { item }: { item: VocabularyItem } = $props();
 
   // Type-safe derived values with proper guards
-  const generalNotes = $derived(item.metadata?.notes?.general || (item as any).notes?.general || '');
-  const culturalNotes = $derived(item.metadata?.culturalNote || item.metadata?.notes?.cultural || (item as any).culturalNote || '');
-  const mnemonics = $derived(item.metadata?.mnemonics || (item as any).mnemonics || '');
-  const forGerman = $derived(item.metadata?.notes?.forGermanSpeakers || (item as any).notes?.forGermanSpeakers || '');
-  const forBulgarian = $derived(item.metadata?.notes?.forBulgarianSpeakers || (item as any).notes?.forBulgarianSpeakers || '');
-  const linguisticNote = $derived(item.metadata?.notes?.linguistic || (item as any).notes?.linguistic || '');
-
-  const hasData = $derived(
-    !!generalNotes || !!culturalNotes || !!mnemonics || !!forGerman || !!forBulgarian || !!linguisticNote
+  const generalNotes = $derived(item.notes?.general || item.metadata?.notes || '');
+  const culturalNotes = $derived(
+    (item.culturalNotes && item.culturalNotes.length > 0 ? item.culturalNotes[0] : '') || 
+    item.metadata?.culturalNote || 
+    ''
   );
+  const forGerman = $derived(item.notes?.forGermanSpeakers || '');
+  const forBulgarian = $derived(item.notes?.forBulgarianSpeakers || '');
+  const linguisticNote = $derived(item.notes?.linguistic || '');
 </script>
 
 <div class="notes-panel" role="region" aria-label={appState.languageMode === 'DE_BG' ? 'Notizen und Tipps' : 'Бележки и съвети'}>
-  {#if hasData}
-    <!-- Cultural Notes -->
-    {#if culturalNotes}
-      <section class="note-section cultural-note">
-        <h4 class="section-title">
-          <span class="section-icon" aria-hidden="true">🌍</span>
-          {appState.languageMode === 'DE_BG' ? 'Kulturelle Hinweise' : 'Културни бележки'}
-        </h4>
-        <div class="note-content">
-          <p class="note-text">{culturalNotes}</p>
-        </div>
-      </section>
-    {/if}
-
-    <!-- Mnemonics -->
-    {#if mnemonics}
-      <section class="note-section mnemonic-note">
-        <h4 class="section-title">
-          <span class="section-icon" aria-hidden="true">💡</span>
-          {appState.languageMode === 'DE_BG' ? 'Merkhilfe' : 'Помощ за запомняне'}
-        </h4>
-        <div class="note-content">
-          <p class="note-text">{mnemonics}</p>
-        </div>
-      </section>
-    {/if}
-
-    <!-- General Notes -->
-    {#if generalNotes}
-      <section class="note-section general-note">
-        <h4 class="section-title">
-          <span class="section-icon" aria-hidden="true">📝</span>
-          {appState.languageMode === 'DE_BG' ? 'Allgemeine Hinweise' : 'Общи бележки'}
-        </h4>
-        <div class="note-content">
-          <p class="note-text">{generalNotes}</p>
-        </div>
-      </section>
-    {/if}
-
-    <!-- Linguistic Notes -->
-    {#if linguisticNote}
-      <section class="note-section linguistic-note">
-        <h4 class="section-title">
-          <span class="section-icon" aria-hidden="true">🔬</span>
-          {appState.languageMode === 'DE_BG' ? 'Linguistische Anmerkungen' : 'Лингвистични бележки'}
-        </h4>
-        <div class="note-content">
-          <p class="note-text">{linguisticNote}</p>
-        </div>
-      </section>
-    {/if}
-
-    <!-- Language-Specific Tips -->
-    {#if forGerman || forBulgarian}
-      <section class="note-section language-tips">
-        <h4 class="section-title">
-          <span class="section-icon" aria-hidden="true">🎓</span>
-          {appState.languageMode === 'DE_BG' ? 'Lerntipps' : 'Съвети за учене'}
-        </h4>
-        <div class="tips-grid">
-          {#if forGerman}
-            <div class="tip-card german-tip">
-              <div class="tip-header">
-                <span class="tip-flag" aria-hidden="true">🇩🇪</span>
-                <span class="tip-label">
-                  {appState.languageMode === 'DE_BG' ? 'Für Deutschsprachige' : 'За говорещи немски'}
-                </span>
-              </div>
-              <p class="tip-text">{forGerman}</p>
-            </div>
-          {/if}
-          {#if forBulgarian}
-            <div class="tip-card bulgarian-tip">
-              <div class="tip-header">
-                <span class="tip-flag" aria-hidden="true">🇧🇬</span>
-                <span class="tip-label">
-                  {appState.languageMode === 'DE_BG' ? 'Für Bulgarischsprachige' : 'За говорещи български'}
-                </span>
-              </div>
-              <p class="tip-text">{forBulgarian}</p>
-            </div>
-          {/if}
-        </div>
-      </section>
-    {/if}
-  {:else}
-    <div class="no-data-container">
-      <p class="no-data">
-        {appState.languageMode === 'DE_BG' 
-          ? 'Keine zusätzlichen Notizen verfügbar' 
-          : 'Няма налични допълнителни бележки'}
-      </p>
-      <p class="no-data-hint">
-        {appState.languageMode === 'DE_BG' 
-          ? 'Diese Information wird mit zukünftigen Updates ergänzt.' 
-          : 'Тази информация ще бъде допълнена с бъдещи актуализации.'}
-      </p>
+  <!-- Mnemonics (Always visible to allow adding) -->
+  <section class="note-section mnemonic-note">
+    <h4 class="section-title">
+      <span class="section-icon" aria-hidden="true">💡</span>
+      {appState.languageMode === 'DE_BG' ? 'Merkhilfe' : 'Помощ за запомняне'}
+    </h4>
+    <div class="note-content">
+      <MnemonicEditor {item} />
     </div>
+  </section>
+
+  <!-- Cultural Notes -->
+  {#if culturalNotes}
+    <section class="note-section cultural-note">
+      <h4 class="section-title">
+        <span class="section-icon" aria-hidden="true">🌍</span>
+        {appState.languageMode === 'DE_BG' ? 'Kulturelle Hinweise' : 'Културни бележки'}
+      </h4>
+      <div class="note-content">
+        <p class="note-text">{culturalNotes}</p>
+      </div>
+    </section>
+  {/if}
+
+  <!-- General Notes -->
+  {#if generalNotes}
+    <section class="note-section general-note">
+      <h4 class="section-title">
+        <span class="section-icon" aria-hidden="true">📝</span>
+        {appState.languageMode === 'DE_BG' ? 'Allgemeine Hinweise' : 'Общи бележки'}
+      </h4>
+      <div class="note-content">
+        <p class="note-text">{generalNotes}</p>
+      </div>
+    </section>
+  {/if}
+
+  <!-- Linguistic Notes -->
+  {#if linguisticNote}
+    <section class="note-section linguistic-note">
+      <h4 class="section-title">
+        <span class="section-icon" aria-hidden="true">🔬</span>
+        {appState.languageMode === 'DE_BG' ? 'Linguistische Anmerkungen' : 'Лингвистични бележки'}
+      </h4>
+      <div class="note-content">
+        <p class="note-text">{linguisticNote}</p>
+      </div>
+    </section>
+  {/if}
+
+  <!-- Language-Specific Tips -->
+  {#if forGerman || forBulgarian}
+    <section class="note-section language-tips">
+      <h4 class="section-title">
+        <span class="section-icon" aria-hidden="true">🎓</span>
+        {appState.languageMode === 'DE_BG' ? 'Lerntipps' : 'Съвети за учене'}
+      </h4>
+      <div class="tips-grid">
+        {#if forGerman}
+          <div class="tip-card german-tip">
+            <div class="tip-header">
+              <span class="tip-flag" aria-hidden="true">🇩🇪</span>
+              <span class="tip-label">
+                {appState.languageMode === 'DE_BG' ? 'Für Deutschsprachige' : 'За говорещи немски'}
+              </span>
+            </div>
+            <p class="tip-text">{forGerman}</p>
+          </div>
+        {/if}
+        {#if forBulgarian}
+          <div class="tip-card bulgarian-tip">
+            <div class="tip-header">
+              <span class="tip-flag" aria-hidden="true">🇧🇬</span>
+              <span class="tip-label">
+                {appState.languageMode === 'DE_BG' ? 'Für Bulgarischsprachige' : 'За говорещи български'}
+              </span>
+            </div>
+            <p class="tip-text">{forBulgarian}</p>
+          </div>
+        {/if}
+      </div>
+    </section>
   {/if}
 </div>
 
@@ -236,27 +219,6 @@
     line-height: 1.6;
     color: var(--color-neutral-dark);
     font-size: var(--text-sm);
-  }
-
-  .no-data-container {
-    text-align: center;
-    padding: var(--space-8) var(--space-4);
-    background: var(--color-neutral-light);
-    border: 1px dashed var(--color-neutral-border);
-    border-radius: var(--border-radius-lg);
-  }
-
-  .no-data {
-    color: var(--color-neutral-text);
-    font-style: italic;
-    margin: 0;
-    font-size: var(--text-md);
-  }
-
-  .no-data-hint {
-    color: var(--color-neutral-text);
-    font-size: var(--text-sm);
-    margin: var(--space-2) 0 0 0;
   }
 
   @media (max-width: 768px) {

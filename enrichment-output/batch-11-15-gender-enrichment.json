@@ -1,0 +1,359 @@
+[
+  {
+    "id": "wolken",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": { "singular": "Wolke", "plural": "Wolken" },
+      "accusative": { "singular": "Wolke", "plural": "Wolken" },
+      "dative": { "singular": "Wolke", "plural": "Wolken" },
+      "genitive": { "singular": "Wolke", "plural": "Wolken" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "wald",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": { "singular": "Wald", "plural": "Wälder" },
+      "accusative": { "singular": "Wald", "plural": "Wälder" },
+      "dative": { "singular": "Wald", "plural": "Wäldern" },
+      "genitive": { "singular": "Waldes", "plural": "Wälder" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "fluss",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": { "singular": "Fluss", "plural": "Flüsse" },
+      "accusative": { "singular": "Fluss", "plural": "Flüsse" },
+      "dative": { "singular": "Fluss", "plural": "Flüssen" },
+      "genitive": { "singular": "Flusses", "plural": "Flüsse" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "berg",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": { "singular": "Berg", "plural": "Berge" },
+      "accusative": { "singular": "Berg", "plural": "Berge" },
+      "dative": { "singular": "Berg", "plural": "Bergen" },
+      "genitive": { "singular": "Berges", "plural": "Berge" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "meer",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "Meer", "plural": "Meere" },
+      "accusative": { "singular": "Meer", "plural": "Meere" },
+      "dative": { "singular": "Meer", "plural": "Meeren" },
+      "genitive": { "singular": "Meeres", "plural": "Meere" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "high",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_014",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "vierzehn", "plural": "vierzehn" },
+      "accusative": { "singular": "vierzehn", "plural": "vierzehn" },
+      "dative": { "singular": "vierzehn", "plural": "vierzehn" },
+      "genitive": { "singular": "vierzehn", "plural": "vierzehn" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_015",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "fünfzehn", "plural": "fünfzehn" },
+      "accusative": { "singular": "fünfzehn", "plural": "fünfzehn" },
+      "dative": { "singular": "fünfzehn", "plural": "fünfzehn" },
+      "genitive": { "singular": "fünfzehn", "plural": "fünfzehn" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_016",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "sechzehn", "plural": "sechzehn" },
+      "accusative": { "singular": "sechzehn", "plural": "sechzehn" },
+      "dative": { "singular": "sechzehn", "plural": "sechzehn" },
+      "genitive": { "singular": "sechzehn", "plural": "sechzehn" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_017",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "siebzehn", "plural": "siebzehn" },
+      "accusative": { "singular": "siebzehn", "plural": "siebzehn" },
+      "dative": { "singular": "siebzehn", "plural": "siebzehn" },
+      "genitive": { "singular": "siebzehn", "plural": "siebzehn" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_018",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "achtzehn", "plural": "achtzehn" },
+      "accusative": { "singular": "achtzehn", "plural": "achtzehn" },
+      "dative": { "singular": "achtzehn", "plural": "achtzehn" },
+      "genitive": { "singular": "achtzehn", "plural": "achtzehn" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_019",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "neunzehn", "plural": "neunzehn" },
+      "accusative": { "singular": "neunzehn", "plural": "neunzehn" },
+      "dative": { "singular": "neunzehn", "plural": "neunzehn" },
+      "genitive": { "singular": "neunzehn", "plural": "neunzehn" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_030",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "dreißig", "plural": "dreißig" },
+      "accusative": { "singular": "dreißig", "plural": "dreißig" },
+      "dative": { "singular": "dreißig", "plural": "dreißig" },
+      "genitive": { "singular": "dreißig", "plural": "dreißig" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_040",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "vierzig", "plural": "vierzig" },
+      "accusative": { "singular": "vierzig", "plural": "vierzig" },
+      "dative": { "singular": "vierzig", "plural": "vierzig" },
+      "genitive": { "singular": "vierzig", "plural": "vierzig" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_050",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "fünfzig", "plural": "fünfzig" },
+      "accusative": { "singular": "fünfzig", "plural": "fünfzig" },
+      "dative": { "singular": "fünfzig", "plural": "fünfzig" },
+      "genitive": { "singular": "fünfzig", "plural": "fünfzig" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_060",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "sechzig", "plural": "sechzig" },
+      "accusative": { "singular": "sechzig", "plural": "sechzig" },
+      "dative": { "singular": "sechzig", "plural": "sechzig" },
+      "genitive": { "singular": "sechzig", "plural": "sechzig" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_070",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "siebzig", "plural": "siebzig" },
+      "accusative": { "singular": "siebzig", "plural": "siebzig" },
+      "dative": { "singular": "siebzig", "plural": "siebzig" },
+      "genitive": { "singular": "siebzig", "plural": "siebzig" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_080",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "achtzig", "plural": "achtzig" },
+      "accusative": { "singular": "achtzig", "plural": "achtzig" },
+      "dative": { "singular": "achtzig", "plural": "achtzig" },
+      "genitive": { "singular": "achtzig", "plural": "achtzig" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_090",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "neunzig", "plural": "neunzig" },
+      "accusative": { "singular": "neunzig", "plural": "neunzig" },
+      "dative": { "singular": "neunzig", "plural": "neunzig" },
+      "genitive": { "singular": "neunzig", "plural": "neunzig" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_100",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "hundert", "plural": "hundert" },
+      "accusative": { "singular": "hundert", "plural": "hundert" },
+      "dative": { "singular": "hundert", "plural": "hundert" },
+      "genitive": { "singular": "hundert", "plural": "hundert" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_200",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "zweihundert", "plural": "zweihundert" },
+      "accusative": { "singular": "zweihundert", "plural": "zweihundert" },
+      "dative": { "singular": "zweihundert", "plural": "zweihundert" },
+      "genitive": { "singular": "zweihundert", "plural": "zweihundert" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  },
+  {
+    "id": "a1_number_1000",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "tausend", "plural": "tausend" },
+      "accusative": { "singular": "tausend", "plural": "tausend" },
+      "dative": { "singular": "tausend", "plural": "tausend" },
+      "genitive": { "singular": "tausend", "plural": "tausend" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-14",
+      "source": "automated_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "11-15"
+    }
+  }
+]

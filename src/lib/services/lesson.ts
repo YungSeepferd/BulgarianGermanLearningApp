@@ -7,7 +7,7 @@
 
 import { LessonSchema } from '../schemas/lesson';
 import type { Lesson, LearningObjective, LessonDifficulty, LessonType } from '../schemas/lesson';
-import type { VocabularyItem, VocabularyCategory, PartOfSpeech } from '../schemas/vocabulary';
+import type { VocabularyItem, VocabularyCategory, PartOfSpeech } from '../types/vocabulary';
 import { vocabularyDb as db } from '../data/db.svelte.js';
 
 /**
@@ -35,7 +35,7 @@ export class LessonService {
       this.vocabularyData = vocabData.map((item) => ({
         ...item,
         categories: this.normalizeCategories(item.categories as VocabularyCategory[] | undefined),
-        metadata: item.metadata ?? {},
+        metadata: (item.metadata ?? {}) as any,
         isCommon: item.isCommon ?? false,
         isVerified: item.isVerified ?? false,
         learningPhase: (item as { learningPhase?: number }).learningPhase ?? 0,
@@ -236,7 +236,8 @@ export class LessonService {
       'listening': 'Listening',
       'writing': 'Writing',
       'culture': 'Culture',
-      'mixed': 'Mixed Topics'
+      'mixed': 'Mixed Topics',
+      'contextual': 'Contextual'
     };
 
     const typeName = typeNames[type] || 'Lesson';
@@ -269,7 +270,8 @@ export class LessonService {
       'listening': 'listening skills',
       'writing': 'writing practice',
       'culture': 'cultural insights',
-      'mixed': 'various language skills'
+      'mixed': 'various language skills',
+      'contextual': 'contextual usage'
     };
 
     const partsOfSpeech = new Set<PartOfSpeech>();
@@ -326,7 +328,8 @@ export class LessonService {
       'listening': 'Listen and understand spoken language at this level',
       'writing': 'Write sentences or paragraphs using learned vocabulary',
       'culture': 'Understand cultural context of vocabulary',
-      'mixed': 'Practice various language skills at this level'
+      'mixed': 'Practice various language skills at this level',
+      'contextual': 'Use vocabulary in specific contexts'
     };
 
     objectives.push({
@@ -482,13 +485,13 @@ export class LessonService {
     return {
       ...item,
       categories: this.normalizeCategories(item.categories),
-      metadata: item.metadata ?? {},
-      isCommon: item.isCommon ?? item.metadata?.isCommon ?? false,
-      isVerified: item.isVerified ?? item.metadata?.isVerified ?? false,
-      learningPhase: item.learningPhase ?? item.metadata?.learningPhase ?? 0,
-      createdAt: item.createdAt ?? item.metadata?.createdAt ?? new Date(),
-      updatedAt: item.updatedAt ?? item.metadata?.updatedAt ?? new Date(),
-      cefrLevel: (item as { cefrLevel?: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' }).cefrLevel ?? (item.metadata as { level?: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' } | undefined)?.level ?? 'A1'
+      metadata: (item.metadata ?? {}) as any,
+      isCommon: item.isCommon ?? false,
+      isVerified: item.isVerified ?? false,
+      learningPhase: item.learningPhase ?? 0,
+      createdAt: item.createdAt ?? new Date(),
+      updatedAt: item.updatedAt ?? new Date(),
+      cefrLevel: item.cefrLevel ?? 'A1'
     };
   }
 
@@ -600,10 +603,13 @@ export class LessonService {
       difficulty: (baseLesson.difficulty ?? 'A1') as 'A1' | 'A2' | 'B1' | 'B2' | 'C1',
       type: (baseLesson.type ?? 'vocabulary') as LessonType,
       vocabulary: baseLesson.vocabulary ?? [],
-      duration: baseLesson.duration ?? 0
+      duration: baseLesson.duration ?? 0,
+      objectives: baseLesson.objectives ?? [],
+      isCompleted: baseLesson.isCompleted ?? false,
+      completionPercentage: baseLesson.completionPercentage ?? 0
     };
 
-    const validatedLesson = this.validateLesson(updatedLesson);
+    const validatedLesson = this.validateLesson(updatedLesson as Lesson);
     this.lessons[index] = validatedLesson;
     return validatedLesson;
   }

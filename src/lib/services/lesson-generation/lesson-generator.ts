@@ -19,7 +19,8 @@ import type {
   CulturalGrammarConcept,
   ILessonTemplateRepository,
   ICulturalGrammarService,
-  ITemplateRenderer
+  ITemplateRenderer,
+  LessonDifficulty
 } from './types';
 import { lessonTemplateRepository } from './lesson-templates';
 import { culturalGrammarService } from './cultural-grammar';
@@ -155,7 +156,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
           ? items.filter(i => this.validatePartOfSpeech(i.partOfSpeech, i.id) === params.criteria.partOfSpeech)
           : items;
           
-        vocabularyItems = [...vocabularyItems, ...filteredItems];
+        vocabularyItems = [...vocabularyItems, ...this.normalizeVocabularyList(filteredItems)];
       }
     } else {
       // Fallback: Random but respect POS, using validation method
@@ -166,13 +167,13 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
            limit: limit
          });
         // Apply validation to ensure correct POS filtering
-        vocabularyItems = result.items.filter(i =>
+        vocabularyItems = this.normalizeVocabularyList(result.items.filter(i =>
           this.validatePartOfSpeech(i.partOfSpeech, i.id) === params.criteria.partOfSpeech
-        );
+        ));
       } else {
-        vocabularyItems = await getRandomVocabulary(limit, {
+        vocabularyItems = this.normalizeVocabularyList(await getRandomVocabulary(limit, {
           difficulty: numericDifficulty
-        });
+        }));
       }
     }
     
@@ -330,12 +331,14 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     const sections: GeneratedLessonSection[] = [];
     
     // 1. Fetch Grammar Concepts
+    const queryParams: any = {
+      difficulty: params.difficulty
+    };
+    if (params.criteria.partOfSpeech) queryParams.partOfSpeech = params.criteria.partOfSpeech;
+    if (params.criteria.conceptType) queryParams.conceptType = params.criteria.conceptType;
+
     // We try to find a concept matching specific criteria, or get a suitable one for the level
-    const grammarConcepts = await this.grammarService.query({
-      difficulty: params.difficulty,
-      partOfSpeech: params.criteria.partOfSpeech ?? undefined,
-      conceptType: params.criteria.conceptType ?? undefined
-    });
+    const grammarConcepts = await this.grammarService.query(queryParams);
 
     if (grammarConcepts.length === 0) {
       // No grammar concepts found, using fallback logic
@@ -355,11 +358,15 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
 
     // Find vocabulary relevant to the grammar concept (e.g. nouns for gender rules)
     if (mainConcept && mainConcept.partOfSpeech && mainConcept.partOfSpeech.length > 0) {
-      const searchResult = await loadVocabularyBySearch({
+      const searchParams: any = {
         difficulty: numericDifficulty,
-        partOfSpeech: mainConcept.partOfSpeech[0] ?? undefined, // Prioritize primary POS
         limit: 8
-      });
+      };
+      if (mainConcept.partOfSpeech[0]) {
+        searchParams.partOfSpeech = mainConcept.partOfSpeech[0];
+      }
+
+      const searchResult = await loadVocabularyBySearch(searchParams);
       exampleVocabulary = this.normalizeVocabularyList(searchResult.items);
     } else {
       exampleVocabulary = this.normalizeVocabularyList(await getRandomVocabulary(8, { difficulty: numericDifficulty }));
@@ -372,7 +379,6 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
 
       const conceptContext: TemplateRenderingContext = {
         sectionTitle: `Grammar: ${mainConcept ? mainConcept.name.german : 'Grammar Rule'}`,
-        grammarConcept: mainConcept,
         vocabulary: exampleVocabulary,
         learningTip: 'Focus on understanding the underlying logic rather than just memorizing rules.',
         learningObjectives: [
@@ -381,6 +387,10 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
         ]
       };
 
+      if (mainConcept) {
+        conceptContext.grammarConcept = mainConcept;
+      }
+
       const conceptContent = this.renderer.render(conceptTemplate, conceptContext);
 
       sections.push({
@@ -388,7 +398,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
         title: 'Explanation',
         content: conceptContent,
         type: 'grammar',
-        metadata: { templateId: conceptTemplate.id, conceptId: mainConcept?.id }
+        metadata: { templateId: conceptTemplate.id, conceptId: mainConcept?.id || '' }
       });
     } catch (_error) {
       // Grammar explanation generation failed, but we continue with other sections
@@ -498,7 +508,8 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     
     // Pick a category if none provided
     const category = params.criteria.categories?.[0] || 'culture';
-    const normalizedCategory = this.normalizeCategories([category])[0];
+    const normalizedCategories = this.normalizeCategories([category]);
+    const normalizedCategory = normalizedCategories[0] || 'everyday-phrases';
 
     // Get vocabulary items and enhance them with corrected part-of-speech info
     const vocabularyItems = this.normalizeVocabularyList(await loadVocabularyByCategory(normalizedCategory, {
@@ -518,7 +529,6 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
       sectionTitle: `Contextual Lesson: ${normalizedCategory.charAt(0).toUpperCase() + normalizedCategory.slice(1)}`,
       theme: normalizedCategory,
       difficulty: params.difficulty,
-      grammarConcept: mainConcept,
       vocabulary: enhancedVocabularyItems,
       learningTip: 'Try to narrate a short story using these words.',
       learningObjectives: [
@@ -527,6 +537,10 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
         'Build reading comprehension'
       ]
     };
+
+    if (mainConcept) {
+      context.grammarConcept = mainConcept;
+    }
 
     // 4. Render
     const renderedContent = this.renderer.render(template, context);
@@ -577,11 +591,8 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     if (allowed.includes(type)) {
       return type;
     }
-    if (type === 'contextual' || type === 'composition') {
+    if (type === 'contextual') {
       return 'mixed';
-    }
-    if (type === 'cultural') {
-      return 'culture';
     }
     return 'vocabulary';
   }
@@ -609,38 +620,38 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
       'places',
       'grammar',
       'culture',
-      'everyday-phrases',
-      'uncategorized'
+      'everyday-phrases'
     ];
 
     if (!categories || categories.length === 0) {
-      return ['uncategorized'];
+      return ['everyday-phrases'];
     }
 
     const normalized = categories
-      .map(category => (allowed.includes(category as VocabularyCategory) ? (category as VocabularyCategory) : 'uncategorized'))
+      .map(category => (allowed.includes(category as VocabularyCategory) ? (category as VocabularyCategory) : 'everyday-phrases'))
       .filter(Boolean) as VocabularyCategory[];
 
-    return normalized.length > 0 ? normalized : ['uncategorized'];
+    return normalized.length > 0 ? normalized : ['everyday-phrases'];
   }
 
   /**
    * Align vocabulary items with lesson expectations (metadata, categories)
    */
-  private normalizeVocabularyItem(item: VocabularyItem): VocabularyItem {
-    return {
+  private normalizeVocabularyItem(item: any): VocabularyItem {
+    const normalized: VocabularyItem = {
       ...item,
       categories: this.normalizeCategories(item.categories as Array<VocabularyCategory | string>),
-      isCommon: item.isCommon ?? item.metadata?.isCommon ?? false,
-      isVerified: item.isVerified ?? item.metadata?.isVerified ?? false,
-      learningPhase: (item as { learningPhase?: number }).learningPhase ?? item.metadata?.learningPhase ?? 0,
-      metadata: item.metadata ?? {},
+      isCommon: item.isCommon ?? (item.metadata as any)?.isCommon ?? false,
+      isVerified: item.isVerified ?? (item.metadata as any)?.isVerified ?? false,
+      learningPhase: item.learningPhase ?? (item.metadata as any)?.learningPhase ?? 0,
+      metadata: (item.metadata ?? {}) as any,
       createdAt: item.createdAt ?? new Date(),
       updatedAt: item.updatedAt ?? new Date()
     };
+    return normalized;
   }
 
-  private normalizeVocabularyList(items: VocabularyItem[]): VocabularyItem[] {
+  private normalizeVocabularyList(items: any[]): VocabularyItem[] {
     return items.map(item => this.normalizeVocabularyItem(item));
   }
 

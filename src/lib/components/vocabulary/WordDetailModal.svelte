@@ -128,12 +128,10 @@
             </h3>
             <div class="links-grid">
               {#if item.enrichment && item.enrichment.sourceURL}
-                <EnrichmentBadge variant="card" enrichment={item.enrichment} />
+                <EnrichmentBadge variant="card" item={item} />
               {/if}
-              {#if item.definitions && Array.isArray(item.definitions)}
-                {#each item.definitions as def}
-                  <DefinitionLink definition={def} compact={false} showIcon={true} showLabel={true} />
-                {/each}
+              {#if item.definitions && Array.isArray(item.definitions) && item.definitions.length > 0}
+                <DefinitionLink item={item} compact={false} showIcon={true} showLabel={true} />
               {/if}
             </div>
           </section>

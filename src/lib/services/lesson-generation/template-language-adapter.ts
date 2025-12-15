@@ -91,7 +91,6 @@ export function getLanguageProperty(obj: any, property: string): string {
     if (!obj) return '';
 
     const sourceLang = getSourceLanguage();
-    const targetLang = getTargetLanguage();
 
     // Try direct property first (e.g., description.de)
     if (obj[`${property}.${sourceLang}`]) {
@@ -137,10 +136,10 @@ export function getOppositeLanguageProperty(obj: any, property: string): string 
 
 /**
  * Format a bilingual example
- * @param example The example object with sentence and translation
+ * @param example The example object with german and bulgarian text
  * @returns Formatted example string
  */
-export function formatBilingualExample(example: { sentence: string; translation: string }): string {
+export function formatBilingualExample(example: { german: string; bulgarian: string }): string {
     if (!example) return '';
 
     const sourceText = getSourceText(example);

@@ -800,7 +800,7 @@ export class ProgressService {
     for (let i = 0; i < days; i++) {
       const date = new Date(today);
       date.setDate(today.getDate() - i);
-      const dateStr = date.toISOString().split('T')[0];
+      const dateStr = date.toISOString().split('T')[0] as string;
       const progress = this.progressData.dailyProgress[dateStr];
       if (progress) {
         result.push(progress);
@@ -873,17 +873,21 @@ export class ProgressService {
                 }
 
                 // Update streak information
-                this.updateStreak(today);
+                if (today) {
+                    this.updateStreak(today);
+                }
 
                 // Record daily progress
-                await this.recordDailyProgress(
-                    today,
-                    params.xpEarned,
-                    params.wordsPracticed || 0,
-                    params.lessonsCompleted || 0,
-                    params.quizzesTaken || 0,
-                    params.timeSpent
-                );
+                if (today) {
+                    await this.recordDailyProgress(
+                        today,
+                        params.xpEarned,
+                        params.wordsPracticed || 0,
+                        params.lessonsCompleted || 0,
+                        params.quizzesTaken || 0,
+                        params.timeSpent
+                    );
+                }
 
                 // Emit XP earned event
                 await this.eventBus.emit(EventTypes.XP_EARNED, {
@@ -1282,6 +1286,7 @@ export class ProgressService {
 
        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to save progress data', this.eventBus);
        throw new StorageError('Failed to save progress data', { error });
+     }
    }
 
   /**
@@ -1415,7 +1420,7 @@ export class ProgressService {
         try {
             await TransactionManager.rollbackTransaction(transactionId);
         } catch (rollbackError) {
-            Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError);
+            Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
         }
 
         ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to import progress data', this.eventBus);
@@ -1456,7 +1461,7 @@ export class ProgressService {
         try {
             await TransactionManager.rollbackTransaction(transactionId);
         } catch (rollbackError) {
-            Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError);
+            Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
         }
 
         ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to reset progress data', this.eventBus);
@@ -1500,7 +1505,7 @@ export class ProgressService {
     const levelInfo = this.getLevelInfo();
     const overallProgress = this.getOverallProgress();
     const today = new Date().toISOString().split('T')[0];
-    const dailyProgress = this.getDailyProgress(today) || { xpEarned: 0 };
+    const dailyProgress = (today ? this.getDailyProgress(today) : null) || { xpEarned: 0 };
 
     // Get the daily target - use a reasonable default to avoid circular dependency
     const dailyTarget = 50; // Default daily target

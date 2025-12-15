@@ -1,0 +1,83 @@
+{
+  "timestamp": "2025-12-14T21:56:08.360Z",
+  "appliedCount": 10,
+  "skippedCount": 0,
+  "errorCount": 0,
+  "backup": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/data/unified-vocabulary-backup-1765749368344.json",
+  "details": {
+    "applied": [
+      {
+        "id": "a1_question_005",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_question_006",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_question_007",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_question_008",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_question_009",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_question_010",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_question_011",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_question_012",
+        "fieldPath": "difficulty",
+        "oldValue": 2,
+        "newValue": "A2",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_food_018",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_food_019",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      }
+    ],
+    "skipped": [],
+    "errors": []
+  }
+}

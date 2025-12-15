@@ -14,8 +14,13 @@ const VocabularyItemBaseSchema = z.object({
   bulgarian: z.string().min(1).max(100),
   partOfSpeech: PartOfSpeechSchema.default('noun'),
   difficulty: z.number().min(1).max(5).default(1).describe('1-5 scale where 1 is easiest'),
+  cefrLevel: z.enum(['A1', 'A2', 'B1', 'B2', 'C1']).optional(),
   categories: z.array(VocabularyCategorySchemaWithFallback).min(1).default(['uncategorized']),
   metadata: VocabularyMetadataSchema.optional(),
+  transliteration: z.object({
+    german: z.string().optional(),
+    bulgarian: z.string().optional()
+  }).optional(),
   createdAt: z.union([
     z.date(),
     z.string().datetime().transform(str => new Date(str))
@@ -40,7 +45,7 @@ export const LessonDifficultySchema = z.enum(['A1', 'A2', 'B1', 'B2', 'C1']);
 
 // Lesson types
 export const LessonTypeSchema = z.enum([
-  'vocabulary', 'grammar', 'conversation', 'reading', 'listening', 'writing', 'culture', 'mixed'
+  'vocabulary', 'grammar', 'conversation', 'reading', 'listening', 'writing', 'culture', 'mixed', 'contextual'
 ]);
 
 // Learning objective schema
@@ -57,7 +62,12 @@ export const LessonMetadataSchema = z.object({
   prerequisites: z.array(LegacyIdSchema).default([]),
   relatedLessons: z.array(LegacyIdSchema).default([]),
   isPremium: z.boolean().default(false)
-}).default({});
+}).default({
+  tags: [],
+  prerequisites: [],
+  relatedLessons: [],
+  isPremium: false
+});
 
 // Main Lesson Schema
 export const LessonSchema = z.object({
@@ -85,9 +95,17 @@ export const LessonSchema = z.object({
     duration: 15,
     vocabulary: [],
     objectives: [],
+    content: undefined,
+    isCompleted: false,
+    completionPercentage: 0,
     createdAt: new Date(),
     updatedAt: new Date(),
-    metadata: {}
+    metadata: {
+      tags: [],
+      prerequisites: [],
+      relatedLessons: [],
+      isPremium: false
+    }
   };
 });
 

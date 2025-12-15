@@ -1,0 +1,1925 @@
+{
+  "count": 120,
+  "items": [
+    {
+      "id": "gute_nacht",
+      "german": "Gute Nacht",
+      "bulgarian": "Лека нощ",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Gute Nacht!",
+          "target": "Лека нощ!"
+        },
+        {
+          "source": "Er sagte: \"Gute Nacht\"",
+          "target": "Той каза: \"Лека нощ\""
+        }
+      ]
+    },
+    {
+      "id": "auf_wiedersehen",
+      "german": "Auf Wiedersehen",
+      "bulgarian": "Довиждане",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Auf Wiedersehen!",
+          "target": "Довиждане!"
+        },
+        {
+          "source": "Er sagte: \"Auf Wiedersehen\"",
+          "target": "Той каза: \"Довиждане\""
+        }
+      ]
+    },
+    {
+      "id": "bitte",
+      "german": "Bitte",
+      "bulgarian": "Моля",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Bitte!",
+          "target": "Моля!"
+        },
+        {
+          "source": "Er sagte: \"Bitte\"",
+          "target": "Той каза: \"Моля\""
+        }
+      ]
+    },
+    {
+      "id": "danke",
+      "german": "Danke",
+      "bulgarian": "Благодаря",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Danke!",
+          "target": "Благодаря!"
+        },
+        {
+          "source": "Er sagte: \"Danke\"",
+          "target": "Той каза: \"Благодаря\""
+        }
+      ]
+    },
+    {
+      "id": "entschuldigung",
+      "german": "Entschuldigung",
+      "bulgarian": "Извинете",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Entschuldigung!",
+          "target": "Извинете!"
+        },
+        {
+          "source": "Er sagte: \"Entschuldigung\"",
+          "target": "Той каза: \"Извинете\""
+        }
+      ]
+    },
+    {
+      "id": "es_tut_mir_leid",
+      "german": "Es tut mir leid",
+      "bulgarian": "Съжалявам",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Es tut mir leid!",
+          "target": "Съжалявам!"
+        },
+        {
+          "source": "Er sagte: \"Es tut mir leid\"",
+          "target": "Той каза: \"Съжалявам\""
+        }
+      ]
+    },
+    {
+      "id": "mensch",
+      "german": "Mensch",
+      "bulgarian": "Човек",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Mensch?",
+          "target": "Къде е Човек?"
+        },
+        {
+          "source": "Das ist Mensch.",
+          "target": "Това е Човек."
+        }
+      ]
+    },
+    {
+      "id": "familie",
+      "german": "Familie",
+      "bulgarian": "Семейство",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Familie?",
+          "target": "Къде е Семейство?"
+        },
+        {
+          "source": "Das ist Familie.",
+          "target": "Това е Семейство."
+        }
+      ]
+    },
+    {
+      "id": "haus",
+      "german": "Haus",
+      "bulgarian": "Къща",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Haus?",
+          "target": "Къде е Къща?"
+        },
+        {
+          "source": "Das ist Haus.",
+          "target": "Това е Къща."
+        }
+      ]
+    },
+    {
+      "id": "schule",
+      "german": "Schule",
+      "bulgarian": "Училище",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Schule?",
+          "target": "Къде е Училище?"
+        },
+        {
+          "source": "Das ist Schule.",
+          "target": "Това е Училище."
+        }
+      ]
+    },
+    {
+      "id": "stadt",
+      "german": "Stadt",
+      "bulgarian": "Град",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Stadt?",
+          "target": "Къде е Град?"
+        },
+        {
+          "source": "Das ist Stadt.",
+          "target": "Това е Град."
+        }
+      ]
+    },
+    {
+      "id": "dorf",
+      "german": "Dorf",
+      "bulgarian": "Село",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Dorf?",
+          "target": "Къде е Село?"
+        },
+        {
+          "source": "Das ist Dorf.",
+          "target": "Това е Село."
+        }
+      ]
+    },
+    {
+      "id": "essen",
+      "german": "Essen",
+      "bulgarian": "Храна",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Essen?",
+          "target": "Къде е Храна?"
+        },
+        {
+          "source": "Das ist Essen.",
+          "target": "Това е Храна."
+        }
+      ]
+    },
+    {
+      "id": "sein",
+      "german": "sein",
+      "bulgarian": "Съм",
+      "partOfSpeech": "verb",
+      "existingExamples": [
+        {
+          "source": "Ich kann sein.",
+          "target": "Аз мога да съм."
+        },
+        {
+          "source": "Wir wollen sein.",
+          "target": "Ние искаме да съм."
+        }
+      ]
+    },
+    {
+      "id": "machen",
+      "german": "machen",
+      "bulgarian": "Правя",
+      "partOfSpeech": "verb",
+      "existingExamples": [
+        {
+          "source": "Ich kann machen.",
+          "target": "Аз мога да правя."
+        },
+        {
+          "source": "Wir wollen machen.",
+          "target": "Ние искаме да правя."
+        }
+      ]
+    },
+    {
+      "id": "sprechen",
+      "german": "sprechen",
+      "bulgarian": "Говоря",
+      "partOfSpeech": "verb",
+      "existingExamples": [
+        {
+          "source": "Ich kann sprechen.",
+          "target": "Аз мога да говоря."
+        },
+        {
+          "source": "Wir wollen sprechen.",
+          "target": "Ние искаме да говоря."
+        }
+      ]
+    },
+    {
+      "id": "horen",
+      "german": "hören",
+      "bulgarian": "Чувам",
+      "partOfSpeech": "verb",
+      "existingExamples": [
+        {
+          "source": "Ich kann hören.",
+          "target": "Аз мога да чувам."
+        },
+        {
+          "source": "Wir wollen hören.",
+          "target": "Ние искаме да чувам."
+        }
+      ]
+    },
+    {
+      "id": "schon",
+      "german": "schön",
+      "bulgarian": "Красив",
+      "partOfSpeech": "adjective",
+      "existingExamples": [
+        {
+          "source": "Das ist schön.",
+          "target": "Това е красив."
+        },
+        {
+          "source": "Es ist sehr schön.",
+          "target": "Много е красив."
+        }
+      ]
+    },
+    {
+      "id": "dann",
+      "german": "dann",
+      "bulgarian": "Тогава",
+      "partOfSpeech": "adverb",
+      "existingExamples": [
+        {
+          "source": "Das passiert dann.",
+          "target": "Това се случва тогава."
+        },
+        {
+          "source": "Er macht das dann.",
+          "target": "Той прави това тогава."
+        }
+      ]
+    },
+    {
+      "id": "selten",
+      "german": "selten",
+      "bulgarian": "Редко",
+      "partOfSpeech": "adverb",
+      "existingExamples": [
+        {
+          "source": "Das passiert selten.",
+          "target": "Това се случва редко."
+        },
+        {
+          "source": "Er macht das selten.",
+          "target": "Той прави това редко."
+        }
+      ]
+    },
+    {
+      "id": "schlecht_01",
+      "german": "schlecht",
+      "bulgarian": "Зле",
+      "partOfSpeech": "adverb",
+      "existingExamples": [
+        {
+          "source": "Das passiert schlecht.",
+          "target": "Това се случва зле."
+        },
+        {
+          "source": "Er macht das schlecht.",
+          "target": "Той прави това зле."
+        }
+      ]
+    },
+    {
+      "id": "tisch",
+      "german": "Tisch",
+      "bulgarian": "Маса",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Tisch?",
+          "target": "Къде е Маса?"
+        },
+        {
+          "source": "Das ist Tisch.",
+          "target": "Това е Маса."
+        }
+      ]
+    },
+    {
+      "id": "stuhl",
+      "german": "Stuhl",
+      "bulgarian": "Стол",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Stuhl?",
+          "target": "Къде е Стол?"
+        },
+        {
+          "source": "Das ist Stuhl.",
+          "target": "Това е Стол."
+        }
+      ]
+    },
+    {
+      "id": "kuche",
+      "german": "Küche",
+      "bulgarian": "Кухня",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Küche?",
+          "target": "Къде е Кухня?"
+        },
+        {
+          "source": "Das ist Küche.",
+          "target": "Това е Кухня."
+        }
+      ]
+    },
+    {
+      "id": "wohnung",
+      "german": "Wohnung",
+      "bulgarian": "Апартамент",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Wohnung?",
+          "target": "Къде е Апартамент?"
+        },
+        {
+          "source": "Das ist Wohnung.",
+          "target": "Това е Апартамент."
+        }
+      ]
+    },
+    {
+      "id": "auto",
+      "german": "Auto",
+      "bulgarian": "Автомобил",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Auto?",
+          "target": "Къде е Автомобил?"
+        },
+        {
+          "source": "Das ist Auto.",
+          "target": "Това е Автомобил."
+        }
+      ]
+    },
+    {
+      "id": "laden",
+      "german": "Laden",
+      "bulgarian": "Магазин",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Laden?",
+          "target": "Къде е Магазин?"
+        },
+        {
+          "source": "Das ist Laden.",
+          "target": "Това е Магазин."
+        }
+      ]
+    },
+    {
+      "id": "garten",
+      "german": "Garten",
+      "bulgarian": "Градина",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Garten?",
+          "target": "Къде е Градина?"
+        },
+        {
+          "source": "Das ist Garten.",
+          "target": "Това е Градина."
+        }
+      ]
+    },
+    {
+      "id": "uhr",
+      "german": "Uhr",
+      "bulgarian": "Часовник",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Uhr?",
+          "target": "Къде е Часовник?"
+        },
+        {
+          "source": "Das ist Uhr.",
+          "target": "Това е Часовник."
+        }
+      ]
+    },
+    {
+      "id": "fahren",
+      "german": "fahren",
+      "bulgarian": "Карам",
+      "partOfSpeech": "verb",
+      "existingExamples": [
+        {
+          "source": "Ich kann fahren.",
+          "target": "Аз мога да карам."
+        },
+        {
+          "source": "Wir wollen fahren.",
+          "target": "Ние искаме да карам."
+        }
+      ]
+    },
+    {
+      "id": "leben",
+      "german": "leben",
+      "bulgarian": "Живея",
+      "partOfSpeech": "verb",
+      "existingExamples": [
+        {
+          "source": "Ich kann leben.",
+          "target": "Аз мога да живея."
+        },
+        {
+          "source": "Wir wollen leben.",
+          "target": "Ние искаме да живея."
+        }
+      ]
+    },
+    {
+      "id": "lernen",
+      "german": "lernen",
+      "bulgarian": "Уча",
+      "partOfSpeech": "verb",
+      "existingExamples": [
+        {
+          "source": "Ich kann lernen.",
+          "target": "Аз мога да уча."
+        },
+        {
+          "source": "Wir wollen lernen.",
+          "target": "Ние искаме да уча."
+        }
+      ]
+    },
+    {
+      "id": "eins",
+      "german": "eins",
+      "bulgarian": "Едно",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist eins?",
+          "target": "Къде е Едно?"
+        },
+        {
+          "source": "Das ist eins.",
+          "target": "Това е Едно."
+        }
+      ]
+    },
+    {
+      "id": "zwei",
+      "german": "zwei",
+      "bulgarian": "Две",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist zwei?",
+          "target": "Къде е Две?"
+        },
+        {
+          "source": "Das ist zwei.",
+          "target": "Това е Две."
+        }
+      ]
+    },
+    {
+      "id": "drei",
+      "german": "drei",
+      "bulgarian": "Три",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist drei?",
+          "target": "Къде е Три?"
+        },
+        {
+          "source": "Das ist drei.",
+          "target": "Това е Три."
+        }
+      ]
+    },
+    {
+      "id": "vier",
+      "german": "vier",
+      "bulgarian": "Четири",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist vier?",
+          "target": "Къде е Четири?"
+        },
+        {
+          "source": "Das ist vier.",
+          "target": "Това е Четири."
+        }
+      ]
+    },
+    {
+      "id": "funf",
+      "german": "fünf",
+      "bulgarian": "Пет",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist fünf?",
+          "target": "Къде е Пет?"
+        },
+        {
+          "source": "Das ist fünf.",
+          "target": "Това е Пет."
+        }
+      ]
+    },
+    {
+      "id": "sechs",
+      "german": "sechs",
+      "bulgarian": "Шест",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist sechs?",
+          "target": "Къде е Шест?"
+        },
+        {
+          "source": "Das ist sechs.",
+          "target": "Това е Шест."
+        }
+      ]
+    },
+    {
+      "id": "sieben",
+      "german": "sieben",
+      "bulgarian": "Седем",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist sieben?",
+          "target": "Къде е Седем?"
+        },
+        {
+          "source": "Das ist sieben.",
+          "target": "Това е Седем."
+        }
+      ]
+    },
+    {
+      "id": "acht",
+      "german": "acht",
+      "bulgarian": "Осем",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist acht?",
+          "target": "Къде е Осем?"
+        },
+        {
+          "source": "Das ist acht.",
+          "target": "Това е Осем."
+        }
+      ]
+    },
+    {
+      "id": "neun",
+      "german": "neun",
+      "bulgarian": "Девет",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist neun?",
+          "target": "Къде е Девет?"
+        },
+        {
+          "source": "Das ist neun.",
+          "target": "Това е Девет."
+        }
+      ]
+    },
+    {
+      "id": "zehn",
+      "german": "zehn",
+      "bulgarian": "Десет",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist zehn?",
+          "target": "Къде е Десет?"
+        },
+        {
+          "source": "Das ist zehn.",
+          "target": "Това е Десет."
+        }
+      ]
+    },
+    {
+      "id": "elf",
+      "german": "elf",
+      "bulgarian": "Единадесет",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist elf?",
+          "target": "Къде е Единадесет?"
+        },
+        {
+          "source": "Das ist elf.",
+          "target": "Това е Единадесет."
+        }
+      ]
+    },
+    {
+      "id": "zwoelf",
+      "german": "zwölf",
+      "bulgarian": "Дванадесет",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist zwölf?",
+          "target": "Къде е Дванадесет?"
+        },
+        {
+          "source": "Das ist zwölf.",
+          "target": "Това е Дванадесет."
+        }
+      ]
+    },
+    {
+      "id": "dreizehn",
+      "german": "dreizehn",
+      "bulgarian": "Тринадесет",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist dreizehn?",
+          "target": "Къде е Тринадесет?"
+        },
+        {
+          "source": "Das ist dreizehn.",
+          "target": "Това е Тринадесет."
+        }
+      ]
+    },
+    {
+      "id": "zwanzig",
+      "german": "zwanzig",
+      "bulgarian": "Двадесет",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist zwanzig?",
+          "target": "Къде е Двадесет?"
+        },
+        {
+          "source": "Das ist zwanzig.",
+          "target": "Това е Двадесет."
+        }
+      ]
+    },
+    {
+      "id": "viele",
+      "german": "viele",
+      "bulgarian": "Много",
+      "partOfSpeech": "adjective",
+      "existingExamples": [
+        {
+          "source": "Das ist viele.",
+          "target": "Това е много."
+        },
+        {
+          "source": "Es ist sehr viele.",
+          "target": "Много е много."
+        }
+      ]
+    },
+    {
+      "id": "wenig",
+      "german": "wenig",
+      "bulgarian": "Малко",
+      "partOfSpeech": "adjective",
+      "existingExamples": [
+        {
+          "source": "Das ist wenig.",
+          "target": "Това е малко."
+        },
+        {
+          "source": "Es ist sehr wenig.",
+          "target": "Много е малко."
+        }
+      ]
+    },
+    {
+      "id": "alle",
+      "german": "alle",
+      "bulgarian": "Всички",
+      "partOfSpeech": "adjective",
+      "existingExamples": [
+        {
+          "source": "Das ist alle.",
+          "target": "Това е всички."
+        },
+        {
+          "source": "Es ist sehr alle.",
+          "target": "Много е всички."
+        }
+      ]
+    },
+    {
+      "id": "einige",
+      "german": "einige",
+      "bulgarian": "Няколко",
+      "partOfSpeech": "adjective",
+      "existingExamples": [
+        {
+          "source": "Das ist einige.",
+          "target": "Това е няколко."
+        },
+        {
+          "source": "Es ist sehr einige.",
+          "target": "Много е няколко."
+        }
+      ]
+    },
+    {
+      "id": "keiner",
+      "german": "keiner",
+      "bulgarian": "Никой",
+      "partOfSpeech": "adjective",
+      "existingExamples": [
+        {
+          "source": "Das ist keiner.",
+          "target": "Това е никой."
+        },
+        {
+          "source": "Es ist sehr keiner.",
+          "target": "Много е никой."
+        }
+      ]
+    },
+    {
+      "id": "samstag",
+      "german": "Samstag",
+      "bulgarian": "Събота",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Samstag!",
+          "target": "Събота!"
+        },
+        {
+          "source": "Er sagte: \"Samstag\"",
+          "target": "Той каза: \"Събота\""
+        }
+      ]
+    },
+    {
+      "id": "stunde",
+      "german": "Stunde",
+      "bulgarian": "Час",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Stunde!",
+          "target": "Час!"
+        },
+        {
+          "source": "Er sagte: \"Stunde\"",
+          "target": "Той каза: \"Час\""
+        }
+      ]
+    },
+    {
+      "id": "minute",
+      "german": "Minute",
+      "bulgarian": "Минута",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Minute!",
+          "target": "Минута!"
+        },
+        {
+          "source": "Er sagte: \"Minute\"",
+          "target": "Той каза: \"Минута\""
+        }
+      ]
+    },
+    {
+      "id": "morgen",
+      "german": "Morgen",
+      "bulgarian": "Сутрин",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Morgen!",
+          "target": "Сутрин!"
+        },
+        {
+          "source": "Er sagte: \"Morgen\"",
+          "target": "Той каза: \"Сутрин\""
+        }
+      ]
+    },
+    {
+      "id": "mittag",
+      "german": "Mittag",
+      "bulgarian": "Обед",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Mittag!",
+          "target": "Обед!"
+        },
+        {
+          "source": "Er sagte: \"Mittag\"",
+          "target": "Той каза: \"Обед\""
+        }
+      ]
+    },
+    {
+      "id": "nachmittag",
+      "german": "Nachmittag",
+      "bulgarian": "Следобед",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Nachmittag!",
+          "target": "Следобед!"
+        },
+        {
+          "source": "Er sagte: \"Nachmittag\"",
+          "target": "Той каза: \"Следобед\""
+        }
+      ]
+    },
+    {
+      "id": "abend",
+      "german": "Abend",
+      "bulgarian": "Вечер",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Abend!",
+          "target": "Вечер!"
+        },
+        {
+          "source": "Er sagte: \"Abend\"",
+          "target": "Той каза: \"Вечер\""
+        }
+      ]
+    },
+    {
+      "id": "nacht",
+      "german": "Nacht",
+      "bulgarian": "Нощ",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Nacht!",
+          "target": "Нощ!"
+        },
+        {
+          "source": "Er sagte: \"Nacht\"",
+          "target": "Той каза: \"Нощ\""
+        }
+      ]
+    },
+    {
+      "id": "wie_geht_s",
+      "german": "Wie geht's?",
+      "bulgarian": "Как си?",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Wie geht's?!",
+          "target": "Как си?!"
+        },
+        {
+          "source": "Er sagte: \"Wie geht's?\"",
+          "target": "Той каза: \"Как си?\""
+        }
+      ]
+    },
+    {
+      "id": "mir_geht_s_gut",
+      "german": "Mir geht's gut",
+      "bulgarian": "Добре съм",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Mir geht's gut!",
+          "target": "Добре съм!"
+        },
+        {
+          "source": "Er sagte: \"Mir geht's gut\"",
+          "target": "Той каза: \"Добре съм\""
+        }
+      ]
+    },
+    {
+      "id": "entschuldige",
+      "german": "Entschuldige",
+      "bulgarian": "Извинявай",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Entschuldige!",
+          "target": "Извинявай!"
+        },
+        {
+          "source": "Er sagte: \"Entschuldige\"",
+          "target": "Той каза: \"Извинявай\""
+        }
+      ]
+    },
+    {
+      "id": "darf_ich",
+      "german": "Darf ich?",
+      "bulgarian": "Може ли?",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Darf ich?!",
+          "target": "Може ли?!"
+        },
+        {
+          "source": "Er sagte: \"Darf ich?\"",
+          "target": "Той каза: \"Може ли?\""
+        }
+      ]
+    },
+    {
+      "id": "brot",
+      "german": "Brot",
+      "bulgarian": "Хляб",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Brot?",
+          "target": "Къде е Хляб?"
+        },
+        {
+          "source": "Das ist Brot.",
+          "target": "Това е Хляб."
+        }
+      ]
+    },
+    {
+      "id": "milch",
+      "german": "Milch",
+      "bulgarian": "Мляко",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Milch?",
+          "target": "Къде е Мляко?"
+        },
+        {
+          "source": "Das ist Milch.",
+          "target": "Това е Мляко."
+        }
+      ]
+    },
+    {
+      "id": "kase",
+      "german": "Käse",
+      "bulgarian": "Сирене",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Käse?",
+          "target": "Къде е Сирене?"
+        },
+        {
+          "source": "Das ist Käse.",
+          "target": "Това е Сирене."
+        }
+      ]
+    },
+    {
+      "id": "fleisch",
+      "german": "Fleisch",
+      "bulgarian": "Месо",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Fleisch?",
+          "target": "Къде е Месо?"
+        },
+        {
+          "source": "Das ist Fleisch.",
+          "target": "Това е Месо."
+        }
+      ]
+    },
+    {
+      "id": "fisch",
+      "german": "Fisch",
+      "bulgarian": "Риба",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Fisch?",
+          "target": "Къде е Риба?"
+        },
+        {
+          "source": "Das ist Fisch.",
+          "target": "Това е Риба."
+        }
+      ]
+    },
+    {
+      "id": "gemuse",
+      "german": "Gemüse",
+      "bulgarian": "Зеленчуци",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Gemüse?",
+          "target": "Къде е Зеленчуци?"
+        },
+        {
+          "source": "Das ist Gemüse.",
+          "target": "Това е Зеленчуци."
+        }
+      ]
+    },
+    {
+      "id": "obst",
+      "german": "Obst",
+      "bulgarian": "Плодове",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Obst?",
+          "target": "Къде е Плодове?"
+        },
+        {
+          "source": "Das ist Obst.",
+          "target": "Това е Плодове."
+        }
+      ]
+    },
+    {
+      "id": "saft",
+      "german": "Saft",
+      "bulgarian": "Сок",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Saft?",
+          "target": "Къде е Сок?"
+        },
+        {
+          "source": "Das ist Saft.",
+          "target": "Това е Сок."
+        }
+      ]
+    },
+    {
+      "id": "kaffee",
+      "german": "Kaffee",
+      "bulgarian": "Кафе",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Kaffee?",
+          "target": "Къде е Кафе?"
+        },
+        {
+          "source": "Das ist Kaffee.",
+          "target": "Това е Кафе."
+        }
+      ]
+    },
+    {
+      "id": "bus",
+      "german": "Bus",
+      "bulgarian": "Автобус",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Bus?",
+          "target": "Къде е Автобус?"
+        },
+        {
+          "source": "Das ist Bus.",
+          "target": "Това е Автобус."
+        }
+      ]
+    },
+    {
+      "id": "zug",
+      "german": "Zug",
+      "bulgarian": "Влак",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Zug?",
+          "target": "Къде е Влак?"
+        },
+        {
+          "source": "Das ist Zug.",
+          "target": "Това е Влак."
+        }
+      ]
+    },
+    {
+      "id": "flugzeug",
+      "german": "Flugzeug",
+      "bulgarian": "Самолет",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Flugzeug?",
+          "target": "Къде е Самолет?"
+        },
+        {
+          "source": "Das ist Flugzeug.",
+          "target": "Това е Самолет."
+        }
+      ]
+    },
+    {
+      "id": "taxi",
+      "german": "Taxi",
+      "bulgarian": "Такси",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Taxi?",
+          "target": "Къде е Такси?"
+        },
+        {
+          "source": "Das ist Taxi.",
+          "target": "Това е Такси."
+        }
+      ]
+    },
+    {
+      "id": "bahnhof",
+      "german": "Bahnhof",
+      "bulgarian": "Гара",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Bahnhof?",
+          "target": "Къде е Гара?"
+        },
+        {
+          "source": "Das ist Bahnhof.",
+          "target": "Това е Гара."
+        }
+      ]
+    },
+    {
+      "id": "flughafen",
+      "german": "Flughafen",
+      "bulgarian": "Летище",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Flughafen?",
+          "target": "Къде е Летище?"
+        },
+        {
+          "source": "Das ist Flughafen.",
+          "target": "Това е Летище."
+        }
+      ]
+    },
+    {
+      "id": "hotel",
+      "german": "Hotel",
+      "bulgarian": "Хотел",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Hotel?",
+          "target": "Къде е Хотел?"
+        },
+        {
+          "source": "Das ist Hotel.",
+          "target": "Това е Хотел."
+        }
+      ]
+    },
+    {
+      "id": "stra_e",
+      "german": "Straße",
+      "bulgarian": "Път",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Straße?",
+          "target": "Къде е Път?"
+        },
+        {
+          "source": "Das ist Straße.",
+          "target": "Това е Път."
+        }
+      ]
+    },
+    {
+      "id": "karte",
+      "german": "Karte",
+      "bulgarian": "Карта",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Karte?",
+          "target": "Къде е Карта?"
+        },
+        {
+          "source": "Das ist Karte.",
+          "target": "Това е Карта."
+        }
+      ]
+    },
+    {
+      "id": "arzt",
+      "german": "Arzt",
+      "bulgarian": "Лекар",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Arzt?",
+          "target": "Къде е Лекар?"
+        },
+        {
+          "source": "Das ist Arzt.",
+          "target": "Това е Лекар."
+        }
+      ]
+    },
+    {
+      "id": "krankenhaus",
+      "german": "Krankenhaus",
+      "bulgarian": "Болница",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Krankenhaus?",
+          "target": "Къде е Болница?"
+        },
+        {
+          "source": "Das ist Krankenhaus.",
+          "target": "Това е Болница."
+        }
+      ]
+    },
+    {
+      "id": "apotheke",
+      "german": "Apotheke",
+      "bulgarian": "Аптека",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Apotheke?",
+          "target": "Къде е Аптека?"
+        },
+        {
+          "source": "Das ist Apotheke.",
+          "target": "Това е Аптека."
+        }
+      ]
+    },
+    {
+      "id": "medikamente",
+      "german": "Medikamente",
+      "bulgarian": "Лекарства",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Medikamente?",
+          "target": "Къде е Лекарства?"
+        },
+        {
+          "source": "Das ist Medikamente.",
+          "target": "Това е Лекарства."
+        }
+      ]
+    },
+    {
+      "id": "notfall",
+      "german": "Notfall",
+      "bulgarian": "Спешно",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Notfall?",
+          "target": "Къде е Спешно?"
+        },
+        {
+          "source": "Das ist Notfall.",
+          "target": "Това е Спешно."
+        }
+      ]
+    },
+    {
+      "id": "schmerz",
+      "german": "Schmerz",
+      "bulgarian": "Болка",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Schmerz?",
+          "target": "Къде е Болка?"
+        },
+        {
+          "source": "Das ist Schmerz.",
+          "target": "Това е Болка."
+        }
+      ]
+    },
+    {
+      "id": "gesundheit",
+      "german": "Gesundheit",
+      "bulgarian": "Здраве",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Gesundheit?",
+          "target": "Къде е Здраве?"
+        },
+        {
+          "source": "Das ist Gesundheit.",
+          "target": "Това е Здраве."
+        }
+      ]
+    },
+    {
+      "id": "fieber",
+      "german": "Fieber",
+      "bulgarian": "Треска",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Fieber?",
+          "target": "Къде е Треска?"
+        },
+        {
+          "source": "Das ist Fieber.",
+          "target": "Това е Треска."
+        }
+      ]
+    },
+    {
+      "id": "erkaltung",
+      "german": "Erkältung",
+      "bulgarian": "Настинка",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Erkältung?",
+          "target": "Къде е Настинка?"
+        },
+        {
+          "source": "Das ist Erkältung.",
+          "target": "Това е Настинка."
+        }
+      ]
+    },
+    {
+      "id": "hilfe",
+      "german": "Hilfe",
+      "bulgarian": "Помощ",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Hilfe?",
+          "target": "Къде е Помощ?"
+        },
+        {
+          "source": "Das ist Hilfe.",
+          "target": "Това е Помощ."
+        }
+      ]
+    },
+    {
+      "id": "sonne",
+      "german": "Sonne",
+      "bulgarian": "Слънце",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Sonne?",
+          "target": "Къде е Слънце?"
+        },
+        {
+          "source": "Das ist Sonne.",
+          "target": "Това е Слънце."
+        }
+      ]
+    },
+    {
+      "id": "regen",
+      "german": "Regen",
+      "bulgarian": "Дъжд",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Regen?",
+          "target": "Къде е Дъжд?"
+        },
+        {
+          "source": "Das ist Regen.",
+          "target": "Това е Дъжд."
+        }
+      ]
+    },
+    {
+      "id": "schnee",
+      "german": "Schnee",
+      "bulgarian": "Сняг",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Schnee?",
+          "target": "Къде е Сняг?"
+        },
+        {
+          "source": "Das ist Schnee.",
+          "target": "Това е Сняг."
+        }
+      ]
+    },
+    {
+      "id": "wind",
+      "german": "Wind",
+      "bulgarian": "Вятър",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Wind?",
+          "target": "Къде е Вятър?"
+        },
+        {
+          "source": "Das ist Wind.",
+          "target": "Това е Вятър."
+        }
+      ]
+    },
+    {
+      "id": "temperatur",
+      "german": "Temperatur",
+      "bulgarian": "Температура",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Temperatur?",
+          "target": "Къде е Температура?"
+        },
+        {
+          "source": "Das ist Temperatur.",
+          "target": "Това е Температура."
+        }
+      ]
+    },
+    {
+      "id": "wolken",
+      "german": "Wolken",
+      "bulgarian": "Облаци",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Wolken?",
+          "target": "Къде е Облаци?"
+        },
+        {
+          "source": "Das ist Wolken.",
+          "target": "Това е Облаци."
+        }
+      ]
+    },
+    {
+      "id": "wald",
+      "german": "Wald",
+      "bulgarian": "Гора",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Wald?",
+          "target": "Къде е Гора?"
+        },
+        {
+          "source": "Das ist Wald.",
+          "target": "Това е Гора."
+        }
+      ]
+    },
+    {
+      "id": "fluss",
+      "german": "Fluss",
+      "bulgarian": "Река",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Fluss?",
+          "target": "Къде е Река?"
+        },
+        {
+          "source": "Das ist Fluss.",
+          "target": "Това е Река."
+        }
+      ]
+    },
+    {
+      "id": "berg",
+      "german": "Berg",
+      "bulgarian": "Планина",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Berg?",
+          "target": "Къде е Планина?"
+        },
+        {
+          "source": "Das ist Berg.",
+          "target": "Това е Планина."
+        }
+      ]
+    },
+    {
+      "id": "meer",
+      "german": "Meer",
+      "bulgarian": "Море",
+      "partOfSpeech": "noun",
+      "existingExamples": [
+        {
+          "source": "Wo ist Meer?",
+          "target": "Къде е Море?"
+        },
+        {
+          "source": "Das ist Meer.",
+          "target": "Това е Море."
+        }
+      ]
+    },
+    {
+      "id": "mutter",
+      "german": "Mutter",
+      "bulgarian": "Майка",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Mutter!",
+          "target": "Майка!"
+        },
+        {
+          "source": "Er sagte: \"Mutter\"",
+          "target": "Той каза: \"Майка\""
+        }
+      ]
+    },
+    {
+      "id": "vater",
+      "german": "Vater",
+      "bulgarian": "Баща",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Vater!",
+          "target": "Баща!"
+        },
+        {
+          "source": "Er sagte: \"Vater\"",
+          "target": "Той каза: \"Баща\""
+        }
+      ]
+    },
+    {
+      "id": "bruder",
+      "german": "Bruder",
+      "bulgarian": "Брат",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Bruder!",
+          "target": "Брат!"
+        },
+        {
+          "source": "Er sagte: \"Bruder\"",
+          "target": "Той каза: \"Брат\""
+        }
+      ]
+    },
+    {
+      "id": "schwester",
+      "german": "Schwester",
+      "bulgarian": "Сестра",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Schwester!",
+          "target": "Сестра!"
+        },
+        {
+          "source": "Er sagte: \"Schwester\"",
+          "target": "Той каза: \"Сестра\""
+        }
+      ]
+    },
+    {
+      "id": "ehemann",
+      "german": "Ehemann",
+      "bulgarian": "Съпруг",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Ehemann!",
+          "target": "Съпруг!"
+        },
+        {
+          "source": "Er sagte: \"Ehemann\"",
+          "target": "Той каза: \"Съпруг\""
+        }
+      ]
+    },
+    {
+      "id": "ehefrau",
+      "german": "Ehefrau",
+      "bulgarian": "Съпруга",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Ehefrau!",
+          "target": "Съпруга!"
+        },
+        {
+          "source": "Er sagte: \"Ehefrau\"",
+          "target": "Той каза: \"Съпруга\""
+        }
+      ]
+    },
+    {
+      "id": "kind",
+      "german": "Kind",
+      "bulgarian": "Дете",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Kind!",
+          "target": "Дете!"
+        },
+        {
+          "source": "Er sagte: \"Kind\"",
+          "target": "Той каза: \"Дете\""
+        }
+      ]
+    },
+    {
+      "id": "freund",
+      "german": "Freund",
+      "bulgarian": "Приятел",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Freund!",
+          "target": "Приятел!"
+        },
+        {
+          "source": "Er sagte: \"Freund\"",
+          "target": "Той каза: \"Приятел\""
+        }
+      ]
+    },
+    {
+      "id": "freundin",
+      "german": "Freundin",
+      "bulgarian": "Приятелка",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Freundin!",
+          "target": "Приятелка!"
+        },
+        {
+          "source": "Er sagte: \"Freundin\"",
+          "target": "Той каза: \"Приятелка\""
+        }
+      ]
+    },
+    {
+      "id": "geld",
+      "german": "Geld",
+      "bulgarian": "Пари",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Geld!",
+          "target": "Пари!"
+        },
+        {
+          "source": "Er sagte: \"Geld\"",
+          "target": "Той каза: \"Пари\""
+        }
+      ]
+    },
+    {
+      "id": "preis",
+      "german": "Preis",
+      "bulgarian": "Цена",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Preis!",
+          "target": "Цена!"
+        },
+        {
+          "source": "Er sagte: \"Preis\"",
+          "target": "Той каза: \"Цена\""
+        }
+      ]
+    },
+    {
+      "id": "euro",
+      "german": "Euro",
+      "bulgarian": "Евро",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Euro!",
+          "target": "Евро!"
+        },
+        {
+          "source": "Er sagte: \"Euro\"",
+          "target": "Той каза: \"Евро\""
+        }
+      ]
+    },
+    {
+      "id": "lew",
+      "german": "Lew",
+      "bulgarian": "Лев",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Lew!",
+          "target": "Лев!"
+        },
+        {
+          "source": "Er sagte: \"Lew\"",
+          "target": "Той каза: \"Лев\""
+        }
+      ]
+    },
+    {
+      "id": "rechnung",
+      "german": "Rechnung",
+      "bulgarian": "Сметка",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Rechnung!",
+          "target": "Сметка!"
+        },
+        {
+          "source": "Er sagte: \"Rechnung\"",
+          "target": "Той каза: \"Сметка\""
+        }
+      ]
+    },
+    {
+      "id": "quittung",
+      "german": "Quittung",
+      "bulgarian": "Касова бележка",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Quittung!",
+          "target": "Касова бележка!"
+        },
+        {
+          "source": "Er sagte: \"Quittung\"",
+          "target": "Той каза: \"Касова бележка\""
+        }
+      ]
+    },
+    {
+      "id": "rabatt",
+      "german": "Rabatt",
+      "bulgarian": "Отстъпка",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Rabatt!",
+          "target": "Отстъпка!"
+        },
+        {
+          "source": "Er sagte: \"Rabatt\"",
+          "target": "Той каза: \"Отстъпка\""
+        }
+      ]
+    },
+    {
+      "id": "einkaufen",
+      "german": "einkaufen",
+      "bulgarian": "Пазарувам",
+      "partOfSpeech": "verb",
+      "existingExamples": [
+        {
+          "source": "Ich kann einkaufen.",
+          "target": "Аз мога да пазарувам."
+        },
+        {
+          "source": "Wir wollen einkaufen.",
+          "target": "Ние искаме да пазарувам."
+        }
+      ]
+    },
+    {
+      "id": "dobur_den_002",
+      "german": "Guten Tag",
+      "bulgarian": "Добър ден",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Guten Tag!",
+          "target": "Добър ден!"
+        },
+        {
+          "source": "Er sagte: \"Guten Tag\"",
+          "target": "Той каза: \"Добър ден\""
+        }
+      ]
+    },
+    {
+      "id": "dobur_den_002_dup1",
+      "german": "Guten Tag",
+      "bulgarian": "Добър ден",
+      "partOfSpeech": "interjection",
+      "existingExamples": [
+        {
+          "source": "Guten Tag!",
+          "target": "Добър ден!"
+        },
+        {
+          "source": "Er sagte: \"Guten Tag\"",
+          "target": "Той каза: \"Добър ден\""
+        }
+      ]
+    }
+  ]
+}

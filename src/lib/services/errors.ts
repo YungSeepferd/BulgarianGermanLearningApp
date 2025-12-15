@@ -64,14 +64,15 @@ export class ErrorHandler {
      * @param context Additional context about the error
      * @param eventBus Optional event bus for emitting error events
      */
-    static handleError(error: Error, context?: string, eventBus?: { emit: (type: string, data: any) => Promise<void> }): void {
+    static handleError(error: unknown, context?: string, eventBus?: { emit: (type: string, data: any) => Promise<void> }): void {
+        const err = error instanceof Error ? error : new Error(String(error));
         // Log the error
-        console.error(`[${error.name}] ${context || 'Error'}:`, error.message, error.stack);
+        console.error(`[${err.name}] ${context || 'Error'}:`, err.message, err.stack);
 
         // Emit error event if event bus is available
         if (eventBus) {
             eventBus.emit('error', {
-                error,
+                error: err,
                 context,
                 timestamp: new Date()
             }).catch(emitError => {

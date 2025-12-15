@@ -8,7 +8,7 @@
     onNext: () => void;
   };
 
-  let { item, onNext } = $props();
+  let { item, onNext }: Props = $props();
 
   let userAnswer = $state('');
   let feedbackStatus = $state<'idle' | 'correct' | 'incorrect'>('idle');

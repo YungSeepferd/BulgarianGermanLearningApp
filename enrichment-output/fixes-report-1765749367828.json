@@ -1,0 +1,146 @@
+{
+  "timestamp": "2025-12-14T21:56:07.820Z",
+  "appliedCount": 19,
+  "skippedCount": 0,
+  "errorCount": 0,
+  "backup": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/data/unified-vocabulary-backup-1765749367803.json",
+  "details": {
+    "applied": [
+      {
+        "id": "a1_verb_017",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_017",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "a1_verb_018",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_018",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "a1_verb_019",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_019",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "a1_verb_020",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_020",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "a1_verb_021",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_021",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "a1_verb_022",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_022",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "a1_verb_023",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_023",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "a1_verb_024",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_024",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "a1_food_012",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_food_013",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_food_013",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      }
+    ],
+    "skipped": [],
+    "errors": []
+  }
+}

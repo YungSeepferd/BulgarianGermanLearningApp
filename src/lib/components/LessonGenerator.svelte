@@ -133,7 +133,7 @@
       }
       else if (isMixedLesson) {
         // Generate mixed lesson
-        const category = lessonParams.category || 'common_phrases';
+        const category = lessonParams.category || 'everyday-phrases';
         generatedLesson = await enhancedLessonService.generateMixedLesson(
           category,
           lessonParams.difficulty,
@@ -149,11 +149,12 @@
           type: lessonParams.type,
           difficulty: lessonParams.difficulty,
           criteria: {
-            categories: lessonParams.category ? [lessonParams.category] : undefined,
-            partOfSpeech: lessonParams.partOfSpeech,
+            categories: lessonParams.category && (lessonParams.category as string) !== 'uncategorized' ? [lessonParams.category as VocabularyCategory] : [],
+            ...(lessonParams.partOfSpeech ? { partOfSpeech: lessonParams.partOfSpeech as PartOfSpeech } : {}),
             conceptType: lessonParams.conceptType,
             limit: lessonParams.limit
           },
+          userId: 'local-user',
           metadata: {
             includePractice: lessonParams.includePractice,
             includeComparison: lessonParams.includeComparison,

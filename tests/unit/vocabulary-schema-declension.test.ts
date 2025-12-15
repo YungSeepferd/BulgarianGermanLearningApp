@@ -112,7 +112,7 @@ describe('Vocabulary Schema - Declension & Links', () => {
         bulgarian: 'Тест',
         partOfSpeech: 'noun' as const,
         difficulty: 1,
-        categories: ['uncategorized'] as const[],
+        categories: ['grammar'] as const[],
         createdAt: new Date(),
         updatedAt: new Date(),
         examples: [],

@@ -101,7 +101,12 @@
       });
 </script>
 
-<div class="page">
+<svelte:head>
+  <title>{ui.title} | Bulgarian-German Learning</title>
+  <meta name="description" content={ui.lede} />
+</svelte:head>
+
+<div class="page" role="region" aria-label={appState.languageMode === 'DE_BG' ? 'Grammatikregeln' : 'Граматични правила'}>
   <header class="page-header">
     <div>
       <p class="eyebrow">{ui.eyebrow}</p>
@@ -117,6 +122,7 @@
         <input
           id="search"
           type="search"
+          role="searchbox"
           placeholder={ui.searchPlaceholder}
           bind:value={searchTerm}
           class="input"
@@ -130,7 +136,7 @@
               type="checkbox"
               checked={showExamples}
               onchange={toggleExamples}
-              aria-label="Покажи примерите"
+              aria-label={appState.languageMode === 'DE_BG' ? 'Beispiele anzeigen' : 'Покажи примерите'}
             />
             <span>{ui.examplesState(showExamples)}</span>
           </label>
@@ -160,7 +166,7 @@
 
         {#if filteredRules.length > 0}
           <div class="table-wrapper" role="region" aria-label="Таблица с граматични правила">
-            <table>
+            <table class="grammar-table">
               <thead>
                 <tr>
                   <th scope="col">{ui.colRule}</th>
@@ -264,8 +270,8 @@
 
   .input:focus {
     outline: none;
-    border-color: #0ea5e9;
-    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
   }
 
   .toggle {
@@ -326,7 +332,7 @@
   }
 
   .count {
-    background: #0ea5e9;
+    background: var(--color-primary-dark);
     color: white;
     border-radius: 999px;
     padding: 0.35rem 0.75rem;

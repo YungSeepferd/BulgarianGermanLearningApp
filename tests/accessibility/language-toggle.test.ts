@@ -23,12 +23,11 @@ test.describe('Language toggle', () => {
     const homeLink = page.getByRole('link', { name: /Startseite|Начало/ });
     await expect(homeLink).toBeVisible();
 
-    const beforeHome = await getText(homeLink);
+    const beforeHomeLabel = await homeLink.getAttribute('aria-label');
     await navToggle.click();
-    const afterHome = await getText(homeLink);
-
-    // Language switch should change the home link label
-    expect(afterHome).not.toEqual(beforeHome);
+    
+    // Wait for the language switch to propagate (aria-label should change)
+    await expect(homeLink).not.toHaveAttribute('aria-label', beforeHomeLabel || '');
 
     await page.goto('/practice');
     const practiceDirection = page.locator('.direction-toggle .direction-text');

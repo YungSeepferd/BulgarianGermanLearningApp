@@ -1,0 +1,213 @@
+{
+  "timestamp": "2025-12-14T21:49:19.025Z",
+  "appliedCount": 0,
+  "skippedCount": 20,
+  "errorCount": 0,
+  "backup": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/data/unified-vocabulary-backup-1765748959007.json",
+  "details": {
+    "applied": [],
+    "skipped": [
+      {
+        "fix": {
+          "id": "a1_number_017",
+          "fieldPath": "difficulty",
+          "oldValue": 1,
+          "newValue": "A1",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"1\", got \"A1\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_017",
+          "fieldPath": "partOfSpeech",
+          "oldValue": "number",
+          "newValue": "noun",
+          "reason": "Normalize invalid PoS \"number\" → noun"
+        },
+        "reason": "Value mismatch: expected \"number\", got \"noun\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_018",
+          "fieldPath": "difficulty",
+          "oldValue": 1,
+          "newValue": "A1",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"1\", got \"A1\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_018",
+          "fieldPath": "partOfSpeech",
+          "oldValue": "number",
+          "newValue": "noun",
+          "reason": "Normalize invalid PoS \"number\" → noun"
+        },
+        "reason": "Value mismatch: expected \"number\", got \"noun\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_019",
+          "fieldPath": "difficulty",
+          "oldValue": 1,
+          "newValue": "A1",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"1\", got \"A1\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_019",
+          "fieldPath": "partOfSpeech",
+          "oldValue": "number",
+          "newValue": "noun",
+          "reason": "Normalize invalid PoS \"number\" → noun"
+        },
+        "reason": "Value mismatch: expected \"number\", got \"noun\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_030",
+          "fieldPath": "difficulty",
+          "oldValue": 1,
+          "newValue": "A1",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"1\", got \"A1\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_030",
+          "fieldPath": "partOfSpeech",
+          "oldValue": "number",
+          "newValue": "noun",
+          "reason": "Normalize invalid PoS \"number\" → noun"
+        },
+        "reason": "Value mismatch: expected \"number\", got \"noun\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_040",
+          "fieldPath": "difficulty",
+          "oldValue": 1,
+          "newValue": "A1",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"1\", got \"A1\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_040",
+          "fieldPath": "partOfSpeech",
+          "oldValue": "number",
+          "newValue": "noun",
+          "reason": "Normalize invalid PoS \"number\" → noun"
+        },
+        "reason": "Value mismatch: expected \"number\", got \"noun\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_050",
+          "fieldPath": "difficulty",
+          "oldValue": 1,
+          "newValue": "A1",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"1\", got \"A1\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_050",
+          "fieldPath": "partOfSpeech",
+          "oldValue": "number",
+          "newValue": "noun",
+          "reason": "Normalize invalid PoS \"number\" → noun"
+        },
+        "reason": "Value mismatch: expected \"number\", got \"noun\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_060",
+          "fieldPath": "difficulty",
+          "oldValue": 1,
+          "newValue": "A1",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"1\", got \"A1\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_060",
+          "fieldPath": "partOfSpeech",
+          "oldValue": "number",
+          "newValue": "noun",
+          "reason": "Normalize invalid PoS \"number\" → noun"
+        },
+        "reason": "Value mismatch: expected \"number\", got \"noun\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_070",
+          "fieldPath": "difficulty",
+          "oldValue": 1,
+          "newValue": "A1",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"1\", got \"A1\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_070",
+          "fieldPath": "partOfSpeech",
+          "oldValue": "number",
+          "newValue": "noun",
+          "reason": "Normalize invalid PoS \"number\" → noun"
+        },
+        "reason": "Value mismatch: expected \"number\", got \"noun\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_080",
+          "fieldPath": "difficulty",
+          "oldValue": 1,
+          "newValue": "A1",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"1\", got \"A1\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_080",
+          "fieldPath": "partOfSpeech",
+          "oldValue": "number",
+          "newValue": "noun",
+          "reason": "Normalize invalid PoS \"number\" → noun"
+        },
+        "reason": "Value mismatch: expected \"number\", got \"noun\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_090",
+          "fieldPath": "difficulty",
+          "oldValue": 1,
+          "newValue": "A1",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"1\", got \"A1\""
+      },
+      {
+        "fix": {
+          "id": "a1_number_090",
+          "fieldPath": "partOfSpeech",
+          "oldValue": "number",
+          "newValue": "noun",
+          "reason": "Normalize invalid PoS \"number\" → noun"
+        },
+        "reason": "Value mismatch: expected \"number\", got \"noun\""
+      }
+    ],
+    "errors": []
+  }
+}

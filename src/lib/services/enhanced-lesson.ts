@@ -10,7 +10,7 @@ import { lessonGenerationEngine } from './lesson-generation/lesson-generator';
 import type { LessonGenerationParams, GeneratedLesson, EnhancedLessonCriteria } from './lesson-generation/types';
 import { isLessonDifficulty, isLessonType } from './lesson-generation/types';
 import type { Lesson, LearningObjective, LessonType, LessonDifficulty } from '../schemas/lesson';
-import type { VocabularyItem, VocabularyCategory } from '../schemas/vocabulary';
+import type { VocabularyItem, VocabularyCategory } from '../types/vocabulary';
 import { v4 as uuidv4 } from 'uuid';
 
 class EnhancedLessonService {
@@ -302,8 +302,9 @@ class EnhancedLessonService {
       ...item,
       isCommon: item.isCommon ?? false,
       isVerified: item.isVerified ?? false,
+      learningPhase: item.learningPhase ?? 0,
       categories: item.categories ?? [],
-      metadata: item.metadata ?? {}
+      metadata: (item.metadata ?? {}) as any
     }));
   }
 
@@ -323,7 +324,6 @@ class EnhancedLessonService {
       duration: 10,
       vocabulary: [],
       objectives: [],
-      sections: [],
       isCompleted: false,
       completionPercentage: 0,
       createdAt: new Date(),
@@ -358,16 +358,22 @@ class EnhancedLessonService {
       categories: criteria.categories as VocabularyCategory[] | undefined
     };
 
-    const result = await lessonService.generateLessonFromCriteria(normalizedCriteria);
+    const result = await lessonService.generateLessonFromCriteria(normalizedCriteria as any);
     return result || this.createFallbackLesson('vocabulary', 'A1');
   }
 
   getLessonsByDifficulty(difficulty: string) {
-    return lessonService.getLessonsByDifficulty(difficulty) || [];
+    if (isLessonDifficulty(difficulty)) {
+      return lessonService.getLessonsByDifficulty(difficulty) || [];
+    }
+    return [];
   }
 
   getLessonsByType(type: string) {
-    return lessonService.getLessonsByType(type) || [];
+    if (isLessonType(type)) {
+      return lessonService.getLessonsByType(type) || [];
+    }
+    return [];
   }
 
   getLessonsByTag(tag: string) {

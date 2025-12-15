@@ -1,0 +1,501 @@
+{
+  "count": 62,
+  "items": [
+    {
+      "index": 251,
+      "id": "a1_house_001",
+      "german": "das Haus",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 252,
+      "id": "a1_house_002",
+      "german": "das Heim, das Zuhause",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 253,
+      "id": "a1_house_003",
+      "german": "das Zimmer",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 254,
+      "id": "a1_house_004",
+      "german": "die Küche",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 255,
+      "id": "a1_house_005",
+      "german": "das Badezimmer",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 256,
+      "id": "a1_house_006",
+      "german": "das Schlafzimmer",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 257,
+      "id": "a1_house_007",
+      "german": "das Fenster",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 258,
+      "id": "a1_house_008",
+      "german": "die Tür",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 269,
+      "id": "a1_body_001",
+      "german": "der Kopf",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 270,
+      "id": "a1_body_002",
+      "german": "die Hand, der Arm",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 271,
+      "id": "a1_body_003",
+      "german": "der Fuß, das Bein",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 272,
+      "id": "a1_body_004",
+      "german": "das Auge",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 273,
+      "id": "a1_body_005",
+      "german": "das Ohr",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 274,
+      "id": "a1_body_006",
+      "german": "die Nase",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 275,
+      "id": "a1_body_007",
+      "german": "der Mund",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 276,
+      "id": "a1_body_008",
+      "german": "der Zahn",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 277,
+      "id": "a1_body_009",
+      "german": "das Haar, die Haare",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 278,
+      "id": "a1_body_010",
+      "german": "das Herz",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 376,
+      "id": "a1_nature_001",
+      "german": "die Sonne",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 377,
+      "id": "a1_nature_002",
+      "german": "der Mond",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 378,
+      "id": "a1_nature_003",
+      "german": "der Stern",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 379,
+      "id": "a1_nature_004",
+      "german": "der Baum",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 380,
+      "id": "a1_nature_005",
+      "german": "die Blume",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 381,
+      "id": "a1_nature_006",
+      "german": "das Gras",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 382,
+      "id": "a1_nature_007",
+      "german": "der Berg",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 383,
+      "id": "a1_nature_008",
+      "german": "der Fluss",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 384,
+      "id": "a1_nature_009",
+      "german": "das Meer",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 385,
+      "id": "a1_nature_010",
+      "german": "der Himmel",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 386,
+      "id": "a1_animal_001",
+      "german": "der Hund",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 387,
+      "id": "a1_animal_002",
+      "german": "die Katze",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 388,
+      "id": "a1_animal_003",
+      "german": "der Vogel",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 389,
+      "id": "a1_animal_005",
+      "german": "das Pferd",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 390,
+      "id": "a1_animal_006",
+      "german": "die Kuh",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 391,
+      "id": "a1_animal_007",
+      "german": "das Schwein",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 392,
+      "id": "a1_animal_008",
+      "german": "das Schaf",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 393,
+      "id": "a1_animal_009",
+      "german": "das Huhn, das Küken",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 394,
+      "id": "a1_animal_010",
+      "german": "die Maus",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 395,
+      "id": "a1_animal_011",
+      "german": "der Bär",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 396,
+      "id": "a1_animal_012",
+      "german": "der Wolf",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 397,
+      "id": "a1_animal_013",
+      "german": "der Fuchs",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 398,
+      "id": "a1_animal_014",
+      "german": "der Hase",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 399,
+      "id": "a1_animal_015",
+      "german": "die Schlange",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 400,
+      "id": "a1_transport_001",
+      "german": "das Auto",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 401,
+      "id": "a1_transport_002",
+      "german": "der Bus",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 402,
+      "id": "a1_transport_003",
+      "german": "der Zug",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 403,
+      "id": "a1_transport_004",
+      "german": "das Flugzeug",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 404,
+      "id": "a1_transport_005",
+      "german": "das Fahrrad",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 405,
+      "id": "a1_transport_006",
+      "german": "die Straßenbahn",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 406,
+      "id": "a1_transport_007",
+      "german": "das Taxi",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 407,
+      "id": "a1_transport_008",
+      "german": "die U-Bahn, die Metro",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 408,
+      "id": "a1_transport_009",
+      "german": "das Schiff",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 409,
+      "id": "a1_transport_010",
+      "german": "das Boot",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 421,
+      "id": "a1_object_001",
+      "german": "das Telefon",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 422,
+      "id": "a1_object_002",
+      "german": "der Computer",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 423,
+      "id": "a1_object_003",
+      "german": "die Uhr",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 424,
+      "id": "a1_object_004",
+      "german": "der Schlüssel",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 425,
+      "id": "a1_object_005",
+      "german": "das Glas, die Tasse",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 426,
+      "id": "a1_object_006",
+      "german": "der Teller",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 427,
+      "id": "a1_object_007",
+      "german": "das Messer",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 428,
+      "id": "a1_object_008",
+      "german": "die Gabel",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 429,
+      "id": "a1_object_009",
+      "german": "der Löffel",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    },
+    {
+      "index": 430,
+      "id": "a1_object_010",
+      "german": "das Geld",
+      "partOfSpeech": "noun",
+      "hasGender": true,
+      "hasFullDeclension": false
+    }
+  ]
+}

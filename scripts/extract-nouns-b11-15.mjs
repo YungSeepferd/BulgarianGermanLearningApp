@@ -43,7 +43,8 @@ function summarize(items) {
 
 function main() {
   try {
-    const vocab = loadVocabulary();
+    const vocabData = loadVocabulary();
+    const vocab = vocabData.items;
     const targets = [];
 
     for (const item of vocab) {
@@ -74,46 +75,3 @@ function main() {
 }
 
 main();
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const projectRoot = path.join(__dirname, '..');
-
-const batches = [11, 12, 13, 14, 15];
-const nounsNeedingGender = [];
-
-batches.forEach(batchId => {
-  const csvPath = path.join(projectRoot, 'enrichment-output', 'batches', `batch-${String(batchId).padStart(3, '0')}.csv`);
-  if (!fs.existsSync(csvPath)) return;
-  
-  const content = fs.readFileSync(csvPath, 'utf-8');
-  const lines = content.split('\n').filter(l => l.trim());
-  const headers = lines[0].split(',').map(h => h.trim());
-  
-  for (let i = 1; i < lines.length; i++) {
-    const values = lines[i].split(',').map(v => v.trim());
-    const item = {};
-    headers.forEach((h, idx) => item[h] = values[idx]);
-    
-    if (item.partOfSpeech === 'noun' || item.partOfSpeech === 'interjection') {
-      const vocab = JSON.parse(fs.readFileSync(path.join(projectRoot, 'data', 'unified-vocabulary.json'), 'utf-8'));
-      const found = vocab.find(v => v.id === item.id);
-      if (found && (!found.grammar || !found.grammar.gender)) {
-        nounsNeedingGender.push({
-          id: item.id,
-          german: item.german,
-          bulgarian: item.bulgarian,
-          batch: batchId
-        });
-      }
-    }
-  }
-});
-
-console.log(`Found ${nounsNeedingGender.length} nouns needing gender:`);
-nounsNeedingGender.forEach(n => console.log(`  - Batch ${n.batch}: ${n.german} (${n.id})`));
-
-fs.writeFileSync('/tmp/nouns-b11-15.json', JSON.stringify(nounsNeedingGender, null, 2));
-console.log('\nSaved to /tmp/nouns-b11-15.json');

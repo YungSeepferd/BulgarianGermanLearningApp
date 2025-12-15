@@ -1,0 +1,139 @@
+{
+  "timestamp": "2025-12-14T21:56:07.569Z",
+  "appliedCount": 18,
+  "skippedCount": 0,
+  "errorCount": 0,
+  "backup": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/data/unified-vocabulary-backup-1765749367553.json",
+  "details": {
+    "applied": [
+      {
+        "id": "a1_question_001",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_question_002",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_008",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_008",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "a1_verb_009",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_009",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "a1_verb_010",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_010",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "a1_verb_011",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_011",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "a1_verb_012",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_012",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "a1_verb_013",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_013",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "a1_verb_014",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_014",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      },
+      {
+        "id": "a1_verb_015",
+        "fieldPath": "difficulty",
+        "oldValue": 1,
+        "newValue": "A1",
+        "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+      },
+      {
+        "id": "a1_verb_015",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "phrase",
+        "newValue": "interjection",
+        "reason": "Normalize invalid PoS \"phrase\" → interjection"
+      }
+    ],
+    "skipped": [],
+    "errors": []
+  }
+}

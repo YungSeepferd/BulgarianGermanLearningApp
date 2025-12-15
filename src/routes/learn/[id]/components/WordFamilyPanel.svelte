@@ -4,9 +4,9 @@
 
   let { item }: { item: VocabularyItem } = $props();
 
-  const synonyms = $derived(item.metadata?.synonyms || []);
-  const antonyms = $derived(item.metadata?.antonyms || []);
-  const relatedWords = $derived(item.metadata?.relatedWords || []);
+  const synonyms = $derived(item.synonyms || []);
+  const antonyms = $derived(item.antonyms || []);
+  const relatedWords = $derived(item.relatedWords || []);
 
   const hasData = $derived(synonyms.length > 0 || antonyms.length > 0 || relatedWords.length > 0);
 </script>

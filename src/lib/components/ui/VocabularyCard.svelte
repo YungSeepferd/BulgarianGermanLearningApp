@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { fade, slide } from 'svelte/transition';
+  import { fade } from 'svelte/transition';
   import { appState } from '$lib/state/app-state';
   import type { VocabularyItem } from '$lib/types/vocabulary';
   import { APP_ICONS, PRACTICE_ICONS } from '$lib/constants/icons';
@@ -167,6 +167,14 @@
     onOpenDetail(item);
   }
 
+  // Handle card keydown (open detail modal)
+  function handleCardKeydown(e: KeyboardEvent) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handleCardClick(e);
+    }
+  }
+
   // Handle flip for flashcard variant
   function handleFlipClick() {
     onFlip();
@@ -175,33 +183,44 @@
 
 <!-- GRID VARIANT: Vocabulary page compact grid cards -->
 {#if variant === 'grid'}
-  <div class={cardClass} transition:fade={{ duration: 200 }} onclick={handleCardClick} role="button" tabindex="0">
-    <!-- Card Tags -->
-    {#if showTags}
-      <div class="card-tags">
-        <span class="tag cerf-tag">{item.cefrLevel}</span>
-        <span class="tag category-tag">{getCategoryLabel(item.categories[0])}</span>
-        <span class="tag pos-tag">{getPartOfSpeechLabel(item.partOfSpeech)}</span>
-      </div>
-    {/if}
-
-    <!-- Card Content -->
-    <div class="card-content">
-      <div class="vocab-pair">
-        <div class="vocab-term source-lang">{sourceText}</div>
-        <div class="vocab-arrow">{arrowDirection}</div>
-        <div class="vocab-term target-lang">{targetText}</div>
-      </div>
-
-      <!-- Examples preview -->
-      {#if showMetadata && item.metadata?.examples && item.metadata.examples.length > 0}
-        <div class="examples-preview">
-          <span class="example-label">{APP_ICONS.EXAMPLE}</span>
-          <span class="example-text">
-            {isDE_BG ? item.metadata.examples[0]?.german : item.metadata.examples[0]?.bulgarian}
-          </span>
+  <div 
+    class={cardClass} 
+    transition:fade={{ duration: 200 }} 
+  >
+    <div 
+      class="card-main-area"
+      role="button" 
+      tabindex="0"
+      onclick={handleCardClick} 
+      onkeydown={handleCardKeydown}
+    >
+      <!-- Card Tags -->
+      {#if showTags}
+        <div class="card-tags">
+          <span class="tag cerf-tag">{item.cefrLevel}</span>
+          <span class="tag category-tag">{getCategoryLabel(item.categories[0])}</span>
+          <span class="tag pos-tag">{getPartOfSpeechLabel(item.partOfSpeech)}</span>
         </div>
       {/if}
+
+      <!-- Card Content -->
+      <div class="card-content">
+        <div class="vocab-pair">
+          <div class="vocab-term source-lang">{sourceText}</div>
+          <div class="vocab-arrow">{arrowDirection}</div>
+          <div class="vocab-term target-lang">{targetText}</div>
+        </div>
+
+        <!-- Examples preview -->
+        {#if showMetadata && item.examples && item.examples.length > 0}
+          <div class="examples-preview">
+            <span class="example-label">{APP_ICONS.EXAMPLE}</span>
+            <span class="example-text">
+              {isDE_BG ? item.examples[0]?.german : item.examples[0]?.bulgarian}
+            </span>
+          </div>
+        {/if}
+      </div>
     </div>
 
     <!-- Card Actions -->
@@ -212,7 +231,7 @@
           variant="practice"
           size="sm"
           icon={PRACTICE_ICONS.STANDARD}
-          on:click={handlePracticeClick}
+          onclick={handlePracticeClick}
         />
         <label class="checkbox-label">
           <input
@@ -233,8 +252,6 @@
     class={cardClass}
     transition:fade={{ duration: 200 }}
     onclick={handleCardClick}
-    role="button"
-    tabindex="0"
   >
     <div class="item-header">
       <div class="item-head-left">
@@ -250,7 +267,13 @@
             {direction === 'DE->BG' ? 'Deutsch → Bulgarisch' : 'Български → Немски'}
           </span>
         </label>
-        <div class="term-row">
+        <div 
+          class="term-row"
+          role="button"
+          tabindex="0"
+          onclick={(e) => { e.stopPropagation(); handleCardClick(e); }}
+          onkeydown={handleCardKeydown}
+        >
           <span class="word">{sourceText}</span>
           <span class="arrow">{arrowDirection}</span>
           <span class="translation">{targetText}</span>
@@ -264,7 +287,7 @@
             variant="practice"
             size="sm"
             icon={PRACTICE_ICONS.STANDARD}
-            on:click={handlePracticeClick}
+            onclick={handlePracticeClick}
           />
           <button
             class="quick-practice-btn"
@@ -301,10 +324,10 @@
     {/if}
 
     <!-- Examples preview -->
-    {#if showMetadata && item.metadata?.examples && item.metadata.examples.length > 0}
+    {#if showMetadata && item.examples && item.examples.length > 0}
       <div class="examples-preview">
         <div class="examples-header">{appState.languageMode === 'DE_BG' ? 'Beispiele' : 'Примери'}</div>
-        {#each item.metadata.examples.slice(0, 2) as example}
+        {#each item.examples.slice(0, 2) as example}
           <div class="example-item">
             <span class="example-text">{isDE_BG ? example.german : example.bulgarian}</span>
           </div>
@@ -340,26 +363,26 @@
 
             <!-- Metadata sections on back -->
             {#if showMetadata}
-              {#if item.metadata?.mnemonic}
+              {#if item.mnemonics && item.mnemonics.length > 0}
                 <div class="flashcard-section">
                   <div class="flashcard-section-title">{APP_ICONS.MNEMONIC} {appState.languageMode === 'DE_BG' ? 'Eselsbrücke' : 'Мнемоника'}</div>
-                  <div class="flashcard-section-content">{item.metadata.mnemonic}</div>
+                  <div class="flashcard-section-content">{item.mnemonics[0]}</div>
                 </div>
               {/if}
 
-              {#if item.metadata?.examples && item.metadata.examples.length > 0}
+              {#if item.examples && item.examples.length > 0}
                 <div class="flashcard-section">
                   <div class="flashcard-section-title">{APP_ICONS.EXAMPLE} {appState.languageMode === 'DE_BG' ? 'Beispiel' : 'Пример'}</div>
                   <div class="flashcard-section-content">
-                    {isDE_BG ? item.metadata.examples[0]?.german : item.metadata.examples[0]?.bulgarian}
+                    {isDE_BG ? item.examples[0]?.german : item.examples[0]?.bulgarian}
                   </div>
                 </div>
               {/if}
 
-              {#if item.metadata?.culturalNote}
+              {#if item.culturalNotes && item.culturalNotes.length > 0}
                 <div class="flashcard-section">
                   <div class="flashcard-section-title">{APP_ICONS.CULTURAL_NOTE} {appState.languageMode === 'DE_BG' ? 'Kulturelle Notiz' : 'Културна бележка'}</div>
-                  <div class="flashcard-section-content">{item.metadata.culturalNote}</div>
+                  <div class="flashcard-section-content">{item.culturalNotes[0]}</div>
                 </div>
               {/if}
             {/if}
@@ -374,19 +397,19 @@
           label={appState.languageMode === 'DE_BG' ? 'Leicht' : 'Лесно'}
           variant="success"
           size="sm"
-          on:click={() => onQuickPractice(item)}
+          onclick={() => onQuickPractice(item)}
         />
         <ActionButton
           label={appState.languageMode === 'DE_BG' ? 'Normal' : 'Нормално'}
           variant="primary"
           size="sm"
-          on:click={() => onPractice(item)}
+          onclick={() => onPractice(item)}
         />
         <ActionButton
           label={appState.languageMode === 'DE_BG' ? 'Schwer' : 'Трудно'}
           variant="danger"
           size="sm"
-          on:click={() => onPractice(item)}
+          onclick={() => onPractice(item)}
         />
       </div>
     {/if}
@@ -394,8 +417,17 @@
 
   <!-- LESSON VARIANT: Lesson preview cards -->
 {:else if variant === 'lesson'}
-  <div class={cardClass} transition:fade={{ duration: 200 }} onclick={handleCardClick} role="button" tabindex="0">
-    <div class="lesson-card-content">
+  <div 
+    class={cardClass} 
+    transition:fade={{ duration: 200 }} 
+  >
+    <div 
+      class="lesson-card-content card-main-area"
+      role="button" 
+      tabindex="0"
+      onclick={handleCardClick} 
+      onkeydown={handleCardKeydown}
+    >
       <div class="lesson-header">
         <h3 class="lesson-title">{sourceText}</h3>
         {#if item.cefrLevel}
@@ -403,8 +435,8 @@
         {/if}
       </div>
 
-      {#if item.metadata?.summary}
-        <p class="lesson-summary">{item.metadata.summary}</p>
+      {#if item.notes?.general}
+        <p class="lesson-summary">{item.notes.general}</p>
       {/if}
 
       {#if showTags && item.categories}
@@ -414,19 +446,19 @@
           {/each}
         </div>
       {/if}
-
-      {#if showActions}
-        <div class="lesson-actions">
-          <ActionButton
-            label={appState.languageMode === 'DE_BG' ? 'Lernen' : 'Учи'}
-            variant="learn"
-            size="md"
-            icon={APP_ICONS.LEARN}
-            on:click={handlePracticeClick}
-          />
-        </div>
-      {/if}
     </div>
+
+    {#if showActions}
+      <div class="lesson-actions">
+        <ActionButton
+          label={appState.languageMode === 'DE_BG' ? 'Lernen' : 'Учи'}
+          variant="learn"
+          size="md"
+          icon={APP_ICONS.LEARN}
+          onclick={handlePracticeClick}
+        />
+      </div>
+    {/if}
   </div>
 {/if}
 
@@ -439,7 +471,22 @@
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     transition: all 0.2s ease;
+    /* cursor: pointer; - Moved to card-main-area */
+  }
+
+  .card-main-area {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    outline: none;
     cursor: pointer;
+  }
+
+  .card-main-area:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 
   .vocabulary-card:hover {
@@ -515,7 +562,7 @@
   }
 
   .vocab-term.target-lang {
-    color: #0ea5e9;
+    color: #0369a1;
     flex: 1;
   }
 
@@ -635,7 +682,7 @@
   }
 
   .term-row .translation {
-    color: #0ea5e9;
+    color: #0369a1;
   }
 
   .action-buttons {

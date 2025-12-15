@@ -62,11 +62,12 @@ export class TemplateRenderer implements ITemplateRenderer {
    */
   validateData(template: LessonTemplate, data: TemplateRenderingContext): boolean {
     for (const variable of template.variables) {
-      if (variable.required && data[variable.name] === undefined) {
+      const value = data[variable.name];
+      if (variable.required && value === undefined) {
         throw new DataValidationError(`Required variable '${variable.name}' is missing`);
       }
 
-      if (data[variable.name] !== undefined && !this.isValidValue(data[variable.name], variable.type)) {
+      if (value !== undefined && !this.isValidValue(value, variable.type)) {
         throw new DataValidationError(`Variable '${variable.name}' must be of type ${variable.type}`);
       }
     }
@@ -139,7 +140,7 @@ export class TemplateRenderer implements ITemplateRenderer {
 
     if (!path.includes('.')) return undefined;
 
-    return path.split('.').reduce((obj, key) => {
+    return path.split('.').reduce((obj: any, key) => {
       return (obj && typeof obj === 'object') ? obj[key] : undefined;
     }, data);
   }
@@ -152,7 +153,7 @@ export class TemplateRenderer implements ITemplateRenderer {
    */
   private processVariables(content: string, data: TemplateRenderingContext): string {
     // Add language adapter functions to the data context
-    const extendedData = {
+    const extendedData: TemplateRenderingContext = {
       ...data,
       getSourceText,
       getTargetText,
@@ -170,10 +171,10 @@ export class TemplateRenderer implements ITemplateRenderer {
     };
 
     // Updated regex to support dotted paths
-    return content.replace(/\{\{\s*([a-zA-Z_][a-zA-Z0-9_.]*)\s*\}\}/g, (match, variableName) => {
+    return content.replace(/\{\{\s*([a-zA-Z_][a-zA-Z0-9_.]*)\s*\}\}/g, (_match, variableName) => {
       // Skip special template variables
       if (variableName.startsWith('@') || variableName === 'this' || variableName === 'else') {
-        return match;
+        return _match;
       }
 
       const value = this.resolveValue(variableName, extendedData);
@@ -211,7 +212,7 @@ export class TemplateRenderer implements ITemplateRenderer {
   private processConditionals(content: string, data: TemplateRenderingContext): string {
     // Process {{#unless variable}}...{{/unless}} blocks
     // Updated regex to support dotted paths ([@a-zA-Z_][a-zA-Z0-9_.]*)
-    content = content.replace(/\{\{\s*#unless\s+([@a-zA-Z_][a-zA-Z0-9_.]*)\s*\}\}((?:(?!\{\{\s*#unless)[\s\S])*?)\{\{\s*\/unless\s*\}\}/g, (match, variableName, blockContent) => {
+    content = content.replace(/\{\{\s*#unless\s+([@a-zA-Z_][a-zA-Z0-9_.]*)\s*\}\}((?:(?!\{\{\s*#unless)[\s\S])*?)\{\{\s*\/unless\s*\}\}/g, (_match, variableName, blockContent) => {
       const value = this.resolveValue(variableName, data);
       const condition = Boolean(value) && value !== 'false' && value !== '0';
       return condition ? '' : this.renderTemplate(blockContent, data);
@@ -219,7 +220,7 @@ export class TemplateRenderer implements ITemplateRenderer {
 
     // Process {{#if variable}}...{{/if}} blocks (handling optional {{else}})
     // Updated regex to support dotted paths
-    content = content.replace(/\{\{\s*#if\s+([@a-zA-Z_][a-zA-Z0-9_.]*)\s*\}\}((?:(?!\{\{\s*#if)[\s\S])*?)\{\{\s*\/if\s*\}\}/g, (match, variableName, fullBlockContent) => {
+    content = content.replace(/\{\{\s*#if\s+([@a-zA-Z_][a-zA-Z0-9_.]*)\s*\}\}((?:(?!\{\{\s*#if)[\s\S])*?)\{\{\s*\/if\s*\}\}/g, (_match, variableName, fullBlockContent) => {
       const value = this.resolveValue(variableName, data);
       const condition = Boolean(value) && value !== 'false' && value !== '0';
 
@@ -252,8 +253,13 @@ export class TemplateRenderer implements ITemplateRenderer {
     let match;
 
     while ((match = eachRegex.exec(result)) !== null) {
-      const [fullMatch, arrayName, blockContent] = match;
-      const arrayValue = data[arrayName];
+      const fullMatch = match[0];
+      const arrayName = match[1];
+      const blockContent = match[2];
+      
+      if (!arrayName) continue;
+
+      const arrayValue = (data as any)[arrayName];
 
       // Skip processing if the variable is not defined
       if (arrayValue === undefined) {
@@ -276,7 +282,7 @@ export class TemplateRenderer implements ITemplateRenderer {
 
       const renderedItems = arrayValue.map((item, index) => {
         // Create a new context for each iteration
-        const iterationContext = {
+        const iterationContext: TemplateRenderingContext = {
           ...data,
           // If item is object, spread it. If primitive, put in 'this'
           // BUT: also need to support 'this' for objects if template uses {{this.prop}}
@@ -294,7 +300,8 @@ export class TemplateRenderer implements ITemplateRenderer {
         // We need to manually process {{this}} and @ variables BEFORE recursion
         // because renderTemplate might not handle them if they are not in "variables" definition of template schema
         // or simply to ensure they are bound to THIS iteration context immediately.
-        let processedBlock = blockContent;
+        let processedBlock = blockContent || '';
+
         
         // Replace special variables eagerly in this block
         // This is crucial because renderTemplate() recursion might treat them as standard variables

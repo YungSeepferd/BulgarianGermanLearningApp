@@ -1,10 +1,10 @@
 <script lang="ts">
+	import type { HTMLButtonAttributes } from "svelte/elements";
 	import { type VariantProps } from "tailwind-variants";
-	import type { Button as ButtonPrimitive } from "bits-ui";
 	import { cn } from "$lib/utils";
 	import { buttonVariants } from ".";
 
-	let { variant, size, class: className, children, disabled, ...rest }: ButtonPrimitive.RootProps & VariantProps<typeof buttonVariants> & {
+	let { variant, size, class: className, children, disabled, ...rest }: HTMLButtonAttributes & VariantProps<typeof buttonVariants> & {
 		[key: `aria-${string}`]: any;
 		class?: string;
 	} = $props();
@@ -22,5 +22,7 @@ aria-disabled={disabled}
 disabled={disabled}
 {...rest}
 >
-{@render children()}
+	{#if children}
+		{@render children()}
+	{/if}
 </button>

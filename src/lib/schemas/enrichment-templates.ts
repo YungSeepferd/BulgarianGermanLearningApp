@@ -142,11 +142,22 @@ export const BulgarianNounTemplate = {
  * }
  */
 export const EnrichedExampleTemplate = {
+  id: '', // optional stable handle for deduplication
   german: '',
   bulgarian: '',
+  literalTranslation: '', // optional gloss to aid learners
   context: '', // 'greeting', 'business', 'casual', 'formal', etc.
   formality: '', // 'informal', 'formal', 'neutral'
   frequency: '', // 'common', 'occasional', 'rare'
+  grammarFocus: '', // e.g., 'perfect tense', 'separable verb'
+  tags: [], // string[]
+  difficulty: '', // 'A1' | 'A2' | 'B1' | 'B2'
+  source: '', // 'auto-generated' | 'human-curated' | 'hybrid'
+  confidence: '', // 'low' | 'medium' | 'high'
+  audio: {
+    de: '', // URL or asset ref
+    bg: ''
+  },
   notes: ''
 };
 

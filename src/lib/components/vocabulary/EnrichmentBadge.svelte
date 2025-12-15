@@ -7,11 +7,11 @@
 	import type { VocabularyItem } from '$lib/types/vocabulary';
 
 	interface Props {
-		item: VocabularyItem & { enrichment?: any; definitions?: any[] };
+		item: VocabularyItem;
 		variant?: 'inline' | 'card' | 'detailed';
 	}
 
-	let { item, variant = 'inline' } = $props();
+	let { item, variant = 'inline' }: Props = $props();
 
 	// Determine confidence level for color coding
 	const getConfidenceLevel = (score: number) => {
@@ -37,7 +37,6 @@
 	// Get enrichment timestamp
 	const getEnrichmentDate = () => {
 		if (item.enrichment?.enrichedAt) return new Date(item.enrichment.enrichedAt).toLocaleDateString();
-		if (item.definitions?.[0]?.enrichedAt) return new Date(item.definitions[0].enrichedAt).toLocaleDateString();
 		return null;
 	};
 

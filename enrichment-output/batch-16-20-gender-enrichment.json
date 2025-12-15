@@ -1,0 +1,274 @@
+[
+  {
+    "id": "a1_food_012",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "Brot", "plural": "Brote" },
+      "accusative": { "singular": "Brot", "plural": "Brote" },
+      "dative": { "singular": "Brot", "plural": "Broten" },
+      "genitive": { "singular": "Brotes", "plural": "Brote" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "high",
+      "batchRange": "16-20"
+    }
+  },
+  {
+    "id": "a1_food_013",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": { "singular": "Milch", "plural": "Milch" },
+      "accusative": { "singular": "Milch", "plural": "Milch" },
+      "dative": { "singular": "Milch", "plural": "Milch" },
+      "genitive": { "singular": "Milch", "plural": "Milch" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "high",
+      "batchRange": "16-20"
+    }
+  },
+  {
+    "id": "a1_food_014",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": { "singular": "Butter", "plural": "Butter" },
+      "accusative": { "singular": "Butter", "plural": "Butter" },
+      "dative": { "singular": "Butter", "plural": "Butter" },
+      "genitive": { "singular": "Butter", "plural": "Butter" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "high",
+      "batchRange": "16-20"
+    }
+  },
+  {
+    "id": "a1_food_015",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": { "singular": "Käse", "plural": "Käse" },
+      "accusative": { "singular": "Käse", "plural": "Käse" },
+      "dative": { "singular": "Käse", "plural": "Käsen" },
+      "genitive": { "singular": "Käses", "plural": "Käse" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "high",
+      "batchRange": "16-20"
+    }
+  },
+  {
+    "id": "a1_food_016",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "Fleisch", "plural": "Fleisch" },
+      "accusative": { "singular": "Fleisch", "plural": "Fleisch" },
+      "dative": { "singular": "Fleisch", "plural": "Fleisch" },
+      "genitive": { "singular": "Fleisches", "plural": "Fleisch" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "high",
+      "batchRange": "16-20"
+    }
+  },
+  {
+    "id": "a1_food_017",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": { "singular": "Fisch", "plural": "Fische" },
+      "accusative": { "singular": "Fisch", "plural": "Fische" },
+      "dative": { "singular": "Fisch", "plural": "Fischen" },
+      "genitive": { "singular": "Fisches", "plural": "Fische" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "high",
+      "batchRange": "16-20"
+    }
+  },
+  {
+    "id": "a1_food_018",
+    "type": "noun",
+    "gender": "n",
+    "declension": {
+      "nominative": { "singular": "Gemüse", "plural": "Gemüse" },
+      "accusative": { "singular": "Gemüse", "plural": "Gemüse" },
+      "dative": { "singular": "Gemüse", "plural": "Gemüsen" },
+      "genitive": { "singular": "Gemüses", "plural": "Gemüse" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "high",
+      "batchRange": "16-20"
+    }
+  },
+  {
+    "id": "a1_food_019",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": { "singular": "Frucht", "plural": "Früchte" },
+      "accusative": { "singular": "Frucht", "plural": "Früchte" },
+      "dative": { "singular": "Frucht", "plural": "Früchten" },
+      "genitive": { "singular": "Frucht", "plural": "Früchte" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "medium",
+      "batchRange": "16-20"
+    }
+  },
+  {
+    "id": "a1_food_020",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": { "singular": "Apfel", "plural": "Äpfel" },
+      "accusative": { "singular": "Apfel", "plural": "Äpfel" },
+      "dative": { "singular": "Apfel", "plural": "Äpfeln" },
+      "genitive": { "singular": "Apfels", "plural": "Äpfel" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "high",
+      "batchRange": "16-20"
+    }
+  },
+  {
+    "id": "a1_food_021",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": { "singular": "Banane", "plural": "Bananen" },
+      "accusative": { "singular": "Banane", "plural": "Bananen" },
+      "dative": { "singular": "Banane", "plural": "Bananen" },
+      "genitive": { "singular": "Banane", "plural": "Bananen" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "high",
+      "batchRange": "16-20"
+    }
+  },
+  {
+    "id": "a1_food_022",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": { "singular": "Orange", "plural": "Orangen" },
+      "accusative": { "singular": "Orange", "plural": "Orangen" },
+      "dative": { "singular": "Orange", "plural": "Orangen" },
+      "genitive": { "singular": "Orange", "plural": "Orangen" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "high",
+      "batchRange": "16-20"
+    }
+  },
+  {
+    "id": "a1_food_023",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": { "singular": "Tomate", "plural": "Tomaten" },
+      "accusative": { "singular": "Tomate", "plural": "Tomaten" },
+      "dative": { "singular": "Tomate", "plural": "Tomaten" },
+      "genitive": { "singular": "Tomate", "plural": "Tomaten" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "high",
+      "batchRange": "16-20"
+    }
+  },
+  {
+    "id": "a1_food_024",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": { "singular": "Kartoffel", "plural": "Kartoffeln" },
+      "accusative": { "singular": "Kartoffel", "plural": "Kartoffeln" },
+      "dative": { "singular": "Kartoffel", "plural": "Kartoffeln" },
+      "genitive": { "singular": "Kartoffel", "plural": "Kartoffeln" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "high",
+      "batchRange": "16-20"
+    }
+  },
+  {
+    "id": "a1_food_025",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": { "singular": "Karotte", "plural": "Karotten" },
+      "accusative": { "singular": "Karotte", "plural": "Karotten" },
+      "dative": { "singular": "Karotte", "plural": "Karotten" },
+      "genitive": { "singular": "Karotte", "plural": "Karotten" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "high",
+      "batchRange": "16-20"
+    }
+  },
+  {
+    "id": "a1_food_026",
+    "type": "noun",
+    "gender": "f",
+    "declension": {
+      "nominative": { "singular": "Zwiebel", "plural": "Zwiebeln" },
+      "accusative": { "singular": "Zwiebel", "plural": "Zwiebeln" },
+      "dative": { "singular": "Zwiebel", "plural": "Zwiebeln" },
+      "genitive": { "singular": "Zwiebel", "plural": "Zwiebeln" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "high",
+      "batchRange": "16-20"
+    }
+  },
+  {
+    "id": "a1_food_027",
+    "type": "noun",
+    "gender": "m",
+    "declension": {
+      "nominative": { "singular": "Salat", "plural": "Salate" },
+      "accusative": { "singular": "Salat", "plural": "Salate" },
+      "dative": { "singular": "Salat", "plural": "Salaten" },
+      "genitive": { "singular": "Salats", "plural": "Salate" }
+    },
+    "metadata": {
+      "enrichmentDate": "2025-12-15",
+      "source": "manual_gender_assignment",
+      "confidence": "high",
+      "batchRange": "16-20"
+    }
+  }
+]

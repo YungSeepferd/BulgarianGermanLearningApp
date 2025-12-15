@@ -53,13 +53,16 @@ export class Transaction {
             // Rollback in reverse order
             for (let i = executedOperations.length - 1; i >= 0; i--) {
                 try {
-                    const rollbackIndex = this.operations.indexOf(executedOperations[i]);
+                    const op = executedOperations[i];
+                    if (!op) continue;
+                    
+                    const rollbackIndex = this.operations.indexOf(op);
                     const rollbackOp = this.rollbackOperations[rollbackIndex];
                     if (rollbackIndex !== -1 && rollbackOp) {
                         await rollbackOp();
                     } else {
-                        Debug.error('Transaction', 'No rollback operation found for operation', executedOperations[i]);
-                        errors.push(new Error(`No rollback operation found for operation: ${executedOperations[i]}`));
+                        Debug.error('Transaction', 'No rollback operation found for operation');
+                        errors.push(new Error(`No rollback operation found for operation index: ${i}`));
                     }
                 } catch (rollbackError: unknown) {
                     const typedRollbackError = rollbackError instanceof Error ? rollbackError : new Error(String(rollbackError));

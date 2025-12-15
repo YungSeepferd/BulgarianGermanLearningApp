@@ -1,0 +1,159 @@
+{
+  "count": 22,
+  "items": [
+    {
+      "batch": 11,
+      "entry": 101,
+      "id": "wolken",
+      "german": "Wolken",
+      "partOfSpeech": "noun"
+    },
+    {
+      "batch": 11,
+      "entry": 102,
+      "id": "wald",
+      "german": "Wald",
+      "partOfSpeech": "noun"
+    },
+    {
+      "batch": 11,
+      "entry": 103,
+      "id": "fluss",
+      "german": "Fluss",
+      "partOfSpeech": "noun"
+    },
+    {
+      "batch": 11,
+      "entry": 104,
+      "id": "berg",
+      "german": "Berg",
+      "partOfSpeech": "noun"
+    },
+    {
+      "batch": 11,
+      "entry": 105,
+      "id": "meer",
+      "german": "Meer",
+      "partOfSpeech": "noun"
+    },
+    {
+      "batch": 11,
+      "entry": 106,
+      "id": "mutter",
+      "german": "Mutter",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 11,
+      "entry": 107,
+      "id": "vater",
+      "german": "Vater",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 11,
+      "entry": 108,
+      "id": "bruder",
+      "german": "Bruder",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 11,
+      "entry": 109,
+      "id": "schwester",
+      "german": "Schwester",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 11,
+      "entry": 110,
+      "id": "ehemann",
+      "german": "Ehemann",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 12,
+      "entry": 111,
+      "id": "ehefrau",
+      "german": "Ehefrau",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 12,
+      "entry": 112,
+      "id": "kind",
+      "german": "Kind",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 12,
+      "entry": 113,
+      "id": "freund",
+      "german": "Freund",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 12,
+      "entry": 114,
+      "id": "freundin",
+      "german": "Freundin",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 12,
+      "entry": 115,
+      "id": "geld",
+      "german": "Geld",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 12,
+      "entry": 116,
+      "id": "preis",
+      "german": "Preis",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 12,
+      "entry": 117,
+      "id": "euro",
+      "german": "Euro",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 12,
+      "entry": 118,
+      "id": "lew",
+      "german": "Lew",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 12,
+      "entry": 119,
+      "id": "rechnung",
+      "german": "Rechnung",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 12,
+      "entry": 120,
+      "id": "quittung",
+      "german": "Quittung",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 13,
+      "entry": 121,
+      "id": "rabatt",
+      "german": "Rabatt",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "batch": 13,
+      "entry": 122,
+      "id": "einkaufen",
+      "german": "einkaufen",
+      "partOfSpeech": "verb"
+    }
+  ]
+}

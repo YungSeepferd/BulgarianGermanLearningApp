@@ -272,17 +272,15 @@ describe('EnhancedLessonService', () => {
       expect(result.difficulty).toBe('A1');
       expect(result.type).toBe('vocabulary');
       expect(result.vocabulary).toHaveLength(1);
-      expect(result.sections).toHaveLength(2);
       expect(result.objectives).toHaveLength(2);
+      expect(result.content).toBeDefined();
 
-      // Verify sections are properly converted
-      expect(result.sections[0].title).toBe('Introduction');
-      expect(result.sections[0].content).toBe('This is the introduction content.');
-      expect(result.sections[0].type).toBe('introduction');
-
-      expect(result.sections[1].title).toBe('Practice');
-      expect(result.sections[1].content).toBe('This is the practice content.');
-      expect(result.sections[1].type).toBe('exercise');
+      // Verify sections are properly converted to content
+      expect(result.content).toContain('## Introduction');
+      expect(result.content).toContain('This is the introduction content.');
+      
+      expect(result.content).toContain('## Practice');
+      expect(result.content).toContain('This is the practice content.');
 
       // Verify vocabulary is properly converted
       expect(result.vocabulary[0].german).toBe('das Haus');
@@ -336,14 +334,13 @@ describe('EnhancedLessonService', () => {
       expect(result.title).toBe('Thematic Lesson: Home');
       expect(result.type).toBe('vocabulary');
       expect(result.difficulty).toBe('A1');
-      expect(result.sections).toHaveLength(2);
+      expect(result.content).toBeDefined();
     });
 
     it('should include practice section by default', async () => {
       const result = await enhancedLessonService.generateThematicLesson(['home'], 'A1');
 
-      const practiceSection = result.sections.find(s => s.title === 'Practice');
-      expect(practiceSection).toBeDefined();
+      expect(result.content).toContain('## Practice');
     });
 
     it('should include review section when requested', async () => {
@@ -366,9 +363,7 @@ describe('EnhancedLessonService', () => {
         includeReview: true
       });
 
-      const reviewSection = result.sections.find(s => s.title === 'Review');
-      expect(reviewSection).toBeDefined();
-      expect(result.sections).toHaveLength(3);
+      expect(result.content).toContain('## Review');
     });
   });
 
@@ -380,14 +375,10 @@ describe('EnhancedLessonService', () => {
       expect(result.title).toBe('Grammar: Noun Genders');
       expect(result.type).toBe('grammar');
       expect(result.difficulty).toBe('A2');
-      expect(result.sections).toHaveLength(2);
+      expect(result.content).toBeDefined();
 
       // Verify grammar concept is included in the lesson
       expect(result.metadata.tags).toContain('Nomen Geschlecht');
-
-      // Verify sections are properly typed (preserving original section types)
-      expect(result.sections[0].type).toBe('grammar');
-      expect(result.sections[1].type).toBe('exercise'); // exercise section
     });
 
     it('should include comparison section when requested', async () => {
@@ -410,10 +401,7 @@ describe('EnhancedLessonService', () => {
         includeComparison: true
       });
 
-      const comparisonSection = result.sections.find(s => s.title === 'Comparison');
-      expect(comparisonSection).toBeDefined();
-      expect(comparisonSection?.type).toBe('cultural');
-      expect(result.sections).toHaveLength(3);
+      expect(result.content).toContain('## Comparison');
     });
   });
 
@@ -449,7 +437,7 @@ describe('EnhancedLessonService', () => {
       expect(result).toBeDefined();
       expect(result.title).toContain('Home and Grammar');
       expect(result.type).toBe('mixed');
-      expect(result.sections[0].type).toBe('mixed');
+      expect(result.content).toContain('## Main Content');
       expect(result.metadata.tags).toContain('Grundgrammatik');
     });
   });
@@ -515,7 +503,7 @@ describe('EnhancedLessonService', () => {
       expect(result.duration).toBeDefined();
       expect(result.vocabulary).toBeDefined();
       expect(result.objectives).toBeDefined();
-      expect(result.sections).toBeDefined();
+      expect(result.content).toBeDefined();
       expect(result.isCompleted).toBe(false);
       expect(result.completionPercentage).toBe(0);
       expect(result.createdAt).toBeInstanceOf(Date);

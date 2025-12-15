@@ -8,6 +8,9 @@
 import type { VocabularyItem, PartOfSpeech, VocabularyCategory } from '$lib/types/vocabulary';
 import type { Lesson as _Lesson, LessonDifficulty as _LessonDifficulty, LessonType as _LessonType } from '$lib/schemas/lesson';
 
+export type { VocabularyItem, PartOfSpeech, VocabularyCategory };
+
+
 /**
  * Lesson difficulty levels
  */
@@ -16,7 +19,7 @@ export type LessonDifficulty = 'A1' | 'A2' | 'B1' | 'B2' | 'C1';
 /**
  * Lesson types
  */
-export type LessonType = 'vocabulary' | 'grammar' | 'mixed' | 'culture' | 'contextual';
+export type LessonType = 'vocabulary' | 'grammar' | 'mixed' | 'culture' | 'contextual' | 'conversation' | 'reading' | 'listening' | 'writing';
 
 /**
  * Template variable types

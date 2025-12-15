@@ -26,33 +26,33 @@ vi.mock('$lib/data/db.svelte', () => {
             id: 'test_001',
             german: 'Hallo',
             bulgarian: 'Здравей',
-            category: 'Greetings',
+            categories: ['greetings'],
             tags: ['A1'],
             type: 'word',
-            difficulty: 'A1'
+            difficulty: 1
         },
         {
             id: 'test_002',
             german: 'Danke',
             bulgarian: 'Благодаря',
-            category: 'Greetings',
+            categories: ['greetings'],
             tags: ['A1'],
             type: 'word',
-            difficulty: 'A1'
+            difficulty: 1
         },
         {
             id: 'test_003',
             german: 'Auf Wiedersehen',
             bulgarian: 'Довиждане',
-            category: 'Greetings',
+            categories: ['greetings'],
             tags: ['A1'],
             type: 'word',
-            difficulty: 'A2'
+            difficulty: 2
         }
     ];
 
     return {
-        db: {
+        vocabularyDb: {
             items: mockItems
         }
     };
@@ -81,7 +81,8 @@ vi.mock('$lib/utils/localStorage', async (importOriginal) => {
             }),
             exportUserData: vi.fn(),
             importUserData: vi.fn(),
-            clearUserData: vi.fn()
+            clearUserData: vi.fn(),
+            clearAllData: vi.fn()
         }
     };
 });

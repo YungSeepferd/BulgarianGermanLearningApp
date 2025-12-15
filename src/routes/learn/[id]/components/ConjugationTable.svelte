@@ -10,7 +10,7 @@
     tense?: 'present' | 'past' | 'perfect' | 'future';
   } = $props();
 
-  const conjugation = $derived(item.metadata?.conjugation || {});
+  const conjugation = $derived(item.grammar?.conjugation || {});
 
   const tenses = $derived.by(() => {
     const isDE = appState.languageMode === 'DE_BG';
@@ -57,7 +57,7 @@
   <!-- Conjugation table -->
   {#if hasData}
     <div id="{tense}-conjugation" role="tabpanel" aria-labelledby="{tense}-tab">
-      <table role="table" aria-label={appState.languageMode === 'DE_BG' ? 'Konjugationstabelle' : 'Таблица на спрежение'}>
+      <table aria-label={appState.languageMode === 'DE_BG' ? 'Konjugationstabelle' : 'Таблица на спрежение'}>
         <thead>
           <tr>
             <th scope="col">{appState.languageMode === 'DE_BG' ? 'Pronomen' : 'Местоимение'}</th>

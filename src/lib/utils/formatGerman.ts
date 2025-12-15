@@ -27,6 +27,8 @@ export function formatGermanTerm(item: VocabularyItem): string {
     return [articlePart, normalizedNoun].filter(Boolean).join(' ').trim();
   }
   const base = item.partOfSpeech === 'noun' ? capitalizeNoun(raw) : raw;
-  const article = chooseArticle(item.metadata?.gender, item.metadata?.article) || (item.partOfSpeech === 'noun' ? 'der' : null);
+  const metadata = item.metadata as any;
+  const gender = metadata?.gender || item.grammar?.gender;
+  const article = chooseArticle(gender, metadata?.article) || (item.partOfSpeech === 'noun' ? 'der' : null);
   return article ? `${article} ${base}` : base;
 }

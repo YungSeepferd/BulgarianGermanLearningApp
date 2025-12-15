@@ -19,7 +19,7 @@
   const hasLinks = $derived(externalLinks.length > 0);
 
   // Predefined external resources
-  const germanResources = [
+  const germanResources = $derived([
     {
       name: 'DWDS',
       url: `https://www.dwds.de/wb/${encodeURIComponent(item.german)}`,
@@ -36,9 +36,9 @@
         ? 'Standardwerk der deutschen Rechtschreibung' 
         : 'Стандартна работа по немска граматика'
     }
-  ];
+  ]);
 
-  const bulgarianResources = [
+  const bulgarianResources = $derived([
     {
       name: 'Речник на БАН',
       url: `https://ibl.bas.bg/rbe/lang/bg/${encodeURIComponent(item.bulgarian)}`,
@@ -47,7 +47,7 @@
         ? 'Bulgarische Akademie der Wissenschaften' 
         : 'Българска академия на науките'
     }
-  ];
+  ]);
 </script>
 
 <div class="links-panel" role="region" aria-label={appState.languageMode === 'DE_BG' ? 'Externe Ressourcen' : 'Външни ресурси'}>

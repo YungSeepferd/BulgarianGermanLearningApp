@@ -5,15 +5,13 @@
 
 	let {
 		children,
-		open = undefined,
-		onOpenChange = undefined,
+		open = $bindable(false),
 		...rest
 	}: $$Props = $props();
 </script>
 
 <DialogPrimitive.Root
 	bind:open
-	{onOpenChange}
 	{...rest}
 >
 	{#if children}

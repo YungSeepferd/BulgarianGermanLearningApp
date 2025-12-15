@@ -1,0 +1,86 @@
+[
+  {
+    "id": "a1_food_020",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_food_021",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_food_022",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_food_023",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_food_024",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_food_025",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_food_026",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_food_027",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_color_001",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_color_001",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "phrase",
+    "newValue": "interjection",
+    "reason": "Normalize invalid PoS \"phrase\" → interjection"
+  },
+  {
+    "id": "a1_color_002",
+    "fieldPath": "difficulty",
+    "oldValue": 1,
+    "newValue": "A1",
+    "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+  },
+  {
+    "id": "a1_color_002",
+    "fieldPath": "partOfSpeech",
+    "oldValue": "phrase",
+    "newValue": "interjection",
+    "reason": "Normalize invalid PoS \"phrase\" → interjection"
+  }
+]

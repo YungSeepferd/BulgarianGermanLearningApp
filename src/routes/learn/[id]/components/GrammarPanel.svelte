@@ -1,18 +1,17 @@
 <script lang="ts">
   import { appState } from '$lib/state/app-state';
   import type { VocabularyItem } from '$lib/types/vocabulary';
-  import DeclensionTable from './DeclensionTable.svelte';
+  import GrammarTabs from '$lib/components/vocabulary/GrammarTabs.svelte';
   import ConjugationTable from './ConjugationTable.svelte';
 
   let { item }: { item: VocabularyItem } = $props();
 
   const isNoun = $derived(item.partOfSpeech === 'noun');
   const isVerb = $derived(item.partOfSpeech === 'verb');
-  const isAdjective = $derived(item.partOfSpeech === 'adjective');
 
-  const article = $derived(item.metadata?.article || null);
-  const gender = $derived(item.metadata?.gender || null);
-  const pluralForm = $derived(item.metadata?.pluralForm || null);
+  const article = $derived(null); // Article is not stored in new schema, derived from gender usually
+  const gender = $derived(item.grammar?.gender || null);
+  const pluralForm = $derived(item.grammar?.pluralForm || null);
 
   const genderLabel = $derived.by(() => {
     if (!gender) return null;
@@ -72,7 +71,7 @@
       <h3 class="section-title">
         {appState.languageMode === 'DE_BG' ? 'Deklination' : 'Склонение'}
       </h3>
-      <DeclensionTable {item} />
+      <GrammarTabs {item} />
     </section>
   {/if}
 
@@ -87,7 +86,8 @@
   {/if}
 
   <!-- Adjective Comparison (if data available) -->
-  {#if isAdjective && item.metadata?.comparativeForms}
+  <!-- 
+  {#if isAdjective && (item as any).metadata?.comparativeForms}
     <section class="grammar-section">
       <h3 class="section-title">
         {appState.languageMode === 'DE_BG' ? 'Steigerung' : 'Степенуване'}
@@ -97,21 +97,22 @@
           <span class="comparison-label">Positiv</span>
           <span class="comparison-value">{item.german}</span>
         </div>
-        {#if item.metadata.comparativeForms.comparative}
+        {#if (item as any).metadata.comparativeForms.comparative}
           <div class="comparison-card">
             <span class="comparison-label">Komparativ</span>
-            <span class="comparison-value">{item.metadata.comparativeForms.comparative}</span>
+            <span class="comparison-value">{(item as any).metadata.comparativeForms.comparative}</span>
           </div>
         {/if}
-        {#if item.metadata.comparativeForms.superlative}
+        {#if (item as any).metadata.comparativeForms.superlative}
           <div class="comparison-card">
             <span class="comparison-label">Superlativ</span>
-            <span class="comparison-value">{item.metadata.comparativeForms.superlative}</span>
+            <span class="comparison-value">{(item as any).metadata.comparativeForms.superlative}</span>
           </div>
         {/if}
       </div>
     </section>
   {/if}
+  -->
 
   <!-- Grammar Notes -->
   {#if item.metadata?.notes || (item as any).notes?.linguistic}
@@ -182,35 +183,7 @@
     font-weight: var(--font-semibold);
   }
 
-  .comparison-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: var(--space-3);
-  }
 
-  .comparison-card {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
-    padding: var(--space-3);
-    border: 1px solid var(--color-primary-light);
-    border-radius: var(--border-radius-md);
-    background: var(--color-primary-light);
-  }
-
-  .comparison-label {
-    font-size: var(--text-xs);
-    color: var(--color-primary-darker);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: var(--font-medium);
-  }
-
-  .comparison-value {
-    font-size: var(--text-md);
-    color: var(--color-primary-darker);
-    font-weight: var(--font-semibold);
-  }
 
   .notes-content {
     padding: var(--space-3);
@@ -234,8 +207,6 @@
       grid-template-columns: 1fr;
     }
 
-    .comparison-grid {
-      grid-template-columns: 1fr;
-    }
+
   }
 </style>

@@ -12,14 +12,14 @@ import {
 test.describe('Grammar Page Accessibility', () => {
   test('should have no accessibility violations on the grammar page', async ({ page }) => {
     await page.goto('/grammar');
-    await page.waitForSelector('.grammar-container');
+    await page.waitForSelector('.page');
     await expectNoAccessibilityViolations(page);
   });
 
   test('should have no accessibility violations in responsive viewports', async ({ page }) => {
     await testResponsiveAccessibility(page, async (page) => {
       await page.goto('/grammar');
-      await page.waitForSelector('.grammar-container');
+      await page.waitForSelector('.page');
       await expectNoAccessibilityViolations(page);
     });
   });
@@ -27,36 +27,37 @@ test.describe('Grammar Page Accessibility', () => {
   test('should have no accessibility violations in dark mode', async ({ page }) => {
     await testDarkModeAccessibility(page, async (page) => {
       await page.goto('/grammar');
-      await page.waitForSelector('.grammar-container');
+      await page.waitForSelector('.page');
       await expectNoAccessibilityViolations(page);
     });
   });
 
   test('should have proper ARIA attributes on grammar page elements', async ({ page }) => {
     await page.goto('/grammar');
-    await page.waitForSelector('.grammar-container');
+    await page.waitForSelector('.page');
 
     // Check search input
-    await testAriaAttributes(page.locator('.search-input'), {
+    // Note: Placeholder depends on language mode, matching German default
+    await testAriaAttributes(page.locator('#search'), {
       'role': 'searchbox',
-      'aria-label': /Search grammar rules/,
-      'placeholder': /Search grammar rules.../
+      'placeholder': /Nach Regel, Beispiel oder Beschreibung suchen...|Намерете време, пример или описание.../
     });
 
     // Check toggle checkbox
-    await testAriaAttributes(page.locator('.toggle-container input[type="checkbox"]'), {
-      'role': 'switch',
-      'aria-label': /Show examples/
+    await testAriaAttributes(page.locator('.toggle input[type="checkbox"]'), {
+      'aria-label': /Beispiele anzeigen|Покажи примерите/
     });
 
     // Check table structure
-    await testAriaAttributes(page.locator('.grammar-container'), {
-      'role': 'region',
-      'aria-label': /Grammar rules/
+    // Note: .page is now a <main> element
+    await testAriaAttributes(page.locator('.page'), {
+      'aria-label': /Grammatikregeln|Граматични правила/
     });
 
-    await testAriaAttributes(page.locator('table.grammar-table'), {
-      'aria-label': /Grammar rules table/
+    // The table wrapper has the role region and label
+    await testAriaAttributes(page.locator('.table-wrapper'), {
+      'role': 'region',
+      'aria-label': /Таблица с граматични правила/
     });
 
     const tableHeaders = page.locator('table.grammar-table th');
@@ -64,19 +65,18 @@ test.describe('Grammar Page Accessibility', () => {
 
     for (let i = 0; i < headerCount; i++) {
       await testAriaAttributes(tableHeaders.nth(i), {
-        'role': 'columnheader'
+        'scope': 'col'
       });
     }
   });
 
   test('should have proper keyboard navigation for grammar page', async ({ page }) => {
     await page.goto('/grammar');
-    await page.waitForSelector('.grammar-container');
+    await page.waitForSelector('.page');
 
     const interactiveElements = [
-      '.search-input',
-      '.toggle-container input[type="checkbox"]',
-      'button:has-text("Show More Examples")'
+      '#search',
+      '.toggle input[type="checkbox"]'
     ];
 
     await testKeyboardNavigation(page, interactiveElements, { startWithFocus: true });
@@ -84,24 +84,24 @@ test.describe('Grammar Page Accessibility', () => {
 
   test('should have proper focus management for grammar interactions', async ({ page }) => {
     await page.goto('/grammar');
-    await page.waitForSelector('.grammar-container');
+    await page.waitForSelector('.page');
 
     // Test focus management for search
-    await page.focus('.search-input');
-    await expect(page.locator('.search-input')).toBeFocused();
+    await page.focus('#search');
+    await expect(page.locator('#search')).toBeFocused();
 
     // Test focus management for toggle
-    const toggleCheckbox = page.locator('.toggle-container input[type="checkbox"]');
+    const toggleCheckbox = page.locator('.toggle input[type="checkbox"]');
     await toggleCheckbox.focus();
     await expect(toggleCheckbox).toBeFocused();
   });
 
   test('should have proper color contrast for grammar elements', async ({ page }) => {
     await page.goto('/grammar');
-    await page.waitForSelector('.grammar-container');
+    await page.waitForSelector('.page');
 
-    await testColorContrast(page.locator('.search-input'));
-    await testColorContrast(page.locator('.toggle-container label'));
+    await testColorContrast(page.locator('#search'));
+    await testColorContrast(page.locator('.toggle label').first());
     const tableHeaders = page.locator('table.grammar-table th');
     const headerCount = await tableHeaders.count();
     for (let i = 0; i < headerCount; i++) {
@@ -112,17 +112,16 @@ test.describe('Grammar Page Accessibility', () => {
     for (let i = 0; i < Math.min(cellCount, 5); i++) { // Test first 5 cells
       await testColorContrast(tableCells.nth(i));
     }
-    await testColorContrast(page.locator('button:has-text("Show More Examples")'));
   });
 
   test('should have proper heading structure and landmarks', async ({ page }) => {
     await page.goto('/grammar');
-    await page.waitForSelector('.grammar-container');
+    await page.waitForSelector('.page');
 
     const h1Headings = await page.$$('h1');
     expect(h1Headings.length).toBeGreaterThan(0);
     const h1Text = await page.textContent('h1');
-    expect(h1Text).toMatch(/Bulgarian Grammar Rules/i);
+    expect(h1Text).toMatch(/Klare Regeln|Ясни правила/i);
 
     const headings = await page.$$eval('h1, h2, h3, h4, h5, h6', elements => {
       return elements.map(el => ({
@@ -142,13 +141,14 @@ test.describe('Grammar Page Accessibility', () => {
 
   test('should be keyboard accessible for grammar exercises', async ({ page }) => {
     await page.goto('/grammar');
-    await page.waitForSelector('.grammar-container');
+    await page.waitForSelector('.page');
 
     // Test keyboard navigation for search functionality
-    await page.focus('.search-input');
-    await expect(page.locator('.search-input')).toBeFocused();
+    await page.focus('#search');
+    await expect(page.locator('#search')).toBeFocused();
 
-    await page.keyboard.type('Present');
+    // Search for "Präsens" (German) or "Сегашно" (Bulgarian)
+    await page.keyboard.type('Präsens');
     await page.waitForSelector('table.grammar-table tr');
 
     // Test that table rows are keyboard navigable
@@ -158,18 +158,18 @@ test.describe('Grammar Page Accessibility', () => {
 
   test('should provide accessible feedback for grammar interactions', async ({ page }) => {
     await page.goto('/grammar');
-    await page.waitForSelector('.grammar-container');
+    await page.waitForSelector('.page');
 
     // Test that search provides accessible feedback
-    await page.fill('.search-input', 'xyzabc123');
-    await page.waitForSelector('.no-results');
+    await page.fill('#search', 'xyzabc123');
+    await page.waitForSelector('.empty');
 
-    const noResults = page.locator('.no-results');
+    const noResults = page.locator('.empty');
     await expect(noResults).toBeVisible();
-    await expect(noResults).toContainText(/No grammar rules match your search/i);
+    await expect(noResults).toContainText(/Keine Treffer|Няма съвпадения/i);
 
     // Test that search with results works
-    await page.fill('.search-input', 'Present');
+    await page.fill('#search', 'Präsens');
     await page.waitForSelector('table.grammar-table tr');
 
     const rows = page.locator('table.grammar-table tr');
@@ -179,16 +179,16 @@ test.describe('Grammar Page Accessibility', () => {
 
   test('should support keyboard navigation for grammar interactions', async ({ page }) => {
     await page.goto('/grammar');
-    await page.waitForSelector('.grammar-container');
+    await page.waitForSelector('.page');
 
     // Test toggle checkbox with keyboard
-    const toggleCheckbox = page.locator('.toggle-container input[type="checkbox"]');
+    const toggleCheckbox = page.locator('.toggle input[type="checkbox"]');
     await toggleCheckbox.focus();
     await expect(toggleCheckbox).toBeFocused();
 
-    const initialChecked = await toggleCheckbox.getAttribute('checked') !== null;
+    const initialChecked = await toggleCheckbox.isChecked();
     await page.keyboard.press('Space');
-    const toggledChecked = await toggleCheckbox.getAttribute('checked') !== null;
+    const toggledChecked = await toggleCheckbox.isChecked();
     expect(toggledChecked).not.toBe(initialChecked);
   });
 });

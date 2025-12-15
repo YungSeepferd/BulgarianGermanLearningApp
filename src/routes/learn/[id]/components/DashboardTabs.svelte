@@ -30,7 +30,7 @@
   }
 </script>
 
-<nav class="dashboard-tabs" role="tablist" aria-label={appState.languageMode === 'DE_BG' ? 'Dashboard-Navigation' : 'Навигация на таблото'}>
+<div class="dashboard-tabs" role="tablist" aria-label={appState.languageMode === 'DE_BG' ? 'Dashboard-Navigation' : 'Навигация на таблото'}>
   {#each tabs as tab}
     <button
       class="tab"
@@ -46,7 +46,7 @@
       <span class="tab-label">{tab.label}</span>
     </button>
   {/each}
-</nav>
+</div>
 
 <style>
   .dashboard-tabs {

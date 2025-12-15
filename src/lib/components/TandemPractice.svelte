@@ -956,48 +956,6 @@
     gap: 1rem;
   }
 
-  .btn-primary, .btn-secondary, .btn-tertiary {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .btn-primary {
-    background: #007bff;
-    color: white;
-  }
-
-  .btn-primary:hover:not(:disabled) {
-    background: #0056b3;
-  }
-
-  .btn-primary:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-
-  .btn-secondary {
-    background: #6c757d;
-    color: white;
-  }
-
-  .btn-secondary:hover {
-    background: #545b62;
-  }
-
-  .btn-tertiary {
-    background: #f8f9fa;
-    color: #6c757d;
-    border: 1px solid #dee2e6;
-  }
-
-  .btn-tertiary:hover {
-    background: #e9ecef;
-  }
-
   .examples-section {
     margin-top: 2rem;
     padding-top: 2rem;
@@ -1201,7 +1159,7 @@
       gap: 0.75rem;
     }
 
-    .btn-primary, .btn-secondary, .btn-tertiary, .btn-favorite {
+    .btn-favorite {
       width: 100%;
       padding: 1rem;
     }

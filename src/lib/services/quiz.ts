@@ -105,7 +105,7 @@ export class QuizService {
         options,
         correctAnswer: item.bulgarian,
         difficulty: this.mapNumericDifficultyToCEFR(item.difficulty),
-        category: [item.category],
+        category: item.categories || ['general'],
         vocabularyIds: [item.id],
         explanation: undefined
       };
@@ -134,13 +134,13 @@ export class QuizService {
 
   private generateQuizTitle(vocabulary: VocabItem[], criteria: QuizCriteria): string {
     const difficulty = criteria.difficulty || (vocabulary[0] ? this.mapNumericDifficultyToCEFR(vocabulary[0].difficulty) : 'A1');
-    const category = vocabulary[0]?.category || 'general';
+    const category = vocabulary[0]?.categories?.[0] || 'general';
     return `Vocabulary Quiz: ${difficulty} ${category}`;
   }
 
   private generateQuizDescription(vocabulary: VocabItem[], criteria: QuizCriteria): string {
     const difficulty = criteria.difficulty || (vocabulary[0] ? this.mapNumericDifficultyToCEFR(vocabulary[0].difficulty) : 'A1');
-    const category = vocabulary[0]?.category || 'general';
+    const category = vocabulary[0]?.categories?.[0] || 'general';
     const count = vocabulary.length;
     return `Test your knowledge of ${difficulty} level ${category} vocabulary. This quiz contains ${count} questions.`;
   }

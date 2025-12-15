@@ -10,12 +10,7 @@ import { appState } from '../state/app-state';
 import { browser } from '$app/environment';
 
 // Define the structure of our translation files
-type _TranslationKey = string;
-type TranslationValue = string | { [key: string]: TranslationValue };
-
-interface _TranslationDictionary {
-    [key: string]: TranslationValue;
-}
+// type TranslationValue = string | { [key: string]: TranslationValue };
 
 // Define the structure for our translations
 interface Translations {
@@ -223,7 +218,7 @@ export class LocalizationService {
 
             // Split the key by dots to navigate the nested structure
             const keys = key.split('.');
-            let value: TranslationValue = translations;
+            let value: any = translations;
 
             for (const k of keys) {
                 if (value && typeof value === 'object' && k in value) {

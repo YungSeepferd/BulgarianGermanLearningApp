@@ -32,11 +32,11 @@ export class AppState {
     get searchQuery(): string { return appUIState.searchQuery; }
     get currentItem(): VocabularyItem | null { return appUIState.currentItem; }
     get showAnswer(): boolean { return appUIState.showAnswer; }
-    get practiceMode(): 'practice' | 'search' { return appUIState.practiceMode; }
+    get practiceMode(): 'practice' | 'search' { return appUIState.practiceMode ? 'practice' : 'search'; }
     get isLoading(): boolean { return appUIState.isLoading; }
     get error(): string | null { return appUIState.error; }
     get filteredItems(): VocabularyItem[] { return appUIState.filteredItems; }
-    get displayDirection(): 'DE->BG' | 'BG->DE' { return appUIState.displayDirection; }
+    get displayDirection(): string { return appUIState.displayDirection; }
     get practiceRecommendations(): VocabularyItem[] { return appUIState.practiceRecommendations; }
 
     // Data State accessors with proper typing

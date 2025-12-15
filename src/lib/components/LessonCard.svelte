@@ -104,7 +104,8 @@
       'listening': '🔊',
       'writing': '✍️',
       'culture': '🏛️',
-      'mixed': '🎯'
+      'mixed': '🔄',
+      'contextual': '🌐'
     };
     return icons[type] || '📚';
   }

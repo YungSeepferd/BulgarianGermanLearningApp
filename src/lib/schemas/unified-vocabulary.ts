@@ -119,7 +119,11 @@ export const GrammarSchema = z.object({
   pluralForm: z.string().optional().describe('Plural form of the word'),
   verbAspect: VerbAspectSchema.optional().describe('Verb aspect (perfective/imperfective)'),
   verbPartnerId: z.string().optional().describe('ID of the aspectual partner verb'),
-  conjugation: z.record(z.string(), z.string()).optional().describe('Verb conjugations by person/tense')
+  conjugation: z.record(z.string(), z.string()).optional().describe('Verb conjugations by person/tense'),
+  declension: z.record(z.string(), z.object({
+    singular: z.string().optional(),
+    plural: z.string().optional()
+  })).optional().describe('Noun declension by case')
 });
 
 /**

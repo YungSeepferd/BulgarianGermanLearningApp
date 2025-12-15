@@ -1,6 +1,6 @@
 import { browser } from '$app/environment';
 import { vocabularyDb } from '$lib/data/db.svelte';
-import { vocabularyService } from '$lib/data/vocabulary';
+// import { vocabularyService } from '$lib/data/vocabulary';
 import { LocalStorageManager } from '$lib/utils/localStorage';
 import { Debug } from '$lib/utils';
 import { TransactionManager } from '$lib/utils/transaction';
@@ -105,15 +105,16 @@ export class AppDataState {
             const originalSearches = [...this.recentSearches];
 
             // Add data loader update operation
-            transaction.addOperation(
-                async () => {
-                    await vocabularyService.updateStats(itemId, correct, responseTime);
-                },
-                async () => {
-                    Debug.log('AppDataState', 'Rolling back data loader update', { itemId });
-                    // No rollback needed for data loader as it's read-only
-                }
-            );
+            // vocabularyService.updateStats removed as it's not supported in the new architecture
+            // transaction.addOperation(
+            //     async () => {
+            //         await vocabularyService.updateStats(itemId, correct, responseTime);
+            //     },
+            //     async () => {
+            //         Debug.log('AppDataState', 'Rolling back data loader update', { itemId });
+            //         // No rollback needed for data loader as it's read-only
+            //     }
+            // );
 
             // Add local stats update operation
             transaction.addOperation(

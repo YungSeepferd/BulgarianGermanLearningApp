@@ -1,0 +1,313 @@
+{
+  "timestamp": "2025-12-14T21:49:17.827Z",
+  "appliedCount": 0,
+  "skippedCount": 25,
+  "errorCount": 0,
+  "backup": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/data/unified-vocabulary-backup-1765748957807.json",
+  "details": {
+    "applied": [],
+    "skipped": [
+      {
+        "fix": {
+          "id": "wolken",
+          "fieldPath": "difficulty",
+          "oldValue": 2,
+          "newValue": "A2",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"2\", got \"A2\""
+      },
+      {
+        "fix": {
+          "id": "wolken",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Wolken",
+              "bulgarian": "Пример с Облаци"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "wald",
+          "fieldPath": "difficulty",
+          "oldValue": 2,
+          "newValue": "A2",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"2\", got \"A2\""
+      },
+      {
+        "fix": {
+          "id": "wald",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Wald",
+              "bulgarian": "Пример с Гора"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "fluss",
+          "fieldPath": "difficulty",
+          "oldValue": 2,
+          "newValue": "A2",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"2\", got \"A2\""
+      },
+      {
+        "fix": {
+          "id": "fluss",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Fluss",
+              "bulgarian": "Пример с Река"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "berg",
+          "fieldPath": "difficulty",
+          "oldValue": 2,
+          "newValue": "A2",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"2\", got \"A2\""
+      },
+      {
+        "fix": {
+          "id": "berg",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Berg",
+              "bulgarian": "Пример с Планина"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "meer",
+          "fieldPath": "difficulty",
+          "oldValue": 2,
+          "newValue": "A2",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"2\", got \"A2\""
+      },
+      {
+        "fix": {
+          "id": "meer",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Meer",
+              "bulgarian": "Пример с Море"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "mutter",
+          "fieldPath": "difficulty",
+          "oldValue": 2,
+          "newValue": "A2",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"2\", got \"A2\""
+      },
+      {
+        "fix": {
+          "id": "mutter",
+          "fieldPath": "partOfSpeech",
+          "oldValue": "phrase",
+          "newValue": "interjection",
+          "reason": "Normalize invalid PoS \"phrase\" → interjection"
+        },
+        "reason": "Value mismatch: expected \"phrase\", got \"interjection\""
+      },
+      {
+        "fix": {
+          "id": "mutter",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Mutter",
+              "bulgarian": "Пример с Майка"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "vater",
+          "fieldPath": "difficulty",
+          "oldValue": 2,
+          "newValue": "A2",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"2\", got \"A2\""
+      },
+      {
+        "fix": {
+          "id": "vater",
+          "fieldPath": "partOfSpeech",
+          "oldValue": "phrase",
+          "newValue": "interjection",
+          "reason": "Normalize invalid PoS \"phrase\" → interjection"
+        },
+        "reason": "Value mismatch: expected \"phrase\", got \"interjection\""
+      },
+      {
+        "fix": {
+          "id": "vater",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Vater",
+              "bulgarian": "Пример с Баща"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "bruder",
+          "fieldPath": "difficulty",
+          "oldValue": 2,
+          "newValue": "A2",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"2\", got \"A2\""
+      },
+      {
+        "fix": {
+          "id": "bruder",
+          "fieldPath": "partOfSpeech",
+          "oldValue": "phrase",
+          "newValue": "interjection",
+          "reason": "Normalize invalid PoS \"phrase\" → interjection"
+        },
+        "reason": "Value mismatch: expected \"phrase\", got \"interjection\""
+      },
+      {
+        "fix": {
+          "id": "bruder",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Bruder",
+              "bulgarian": "Пример с Брат"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "schwester",
+          "fieldPath": "difficulty",
+          "oldValue": 2,
+          "newValue": "A2",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"2\", got \"A2\""
+      },
+      {
+        "fix": {
+          "id": "schwester",
+          "fieldPath": "partOfSpeech",
+          "oldValue": "phrase",
+          "newValue": "interjection",
+          "reason": "Normalize invalid PoS \"phrase\" → interjection"
+        },
+        "reason": "Value mismatch: expected \"phrase\", got \"interjection\""
+      },
+      {
+        "fix": {
+          "id": "schwester",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Schwester",
+              "bulgarian": "Пример с Сестра"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      },
+      {
+        "fix": {
+          "id": "ehemann",
+          "fieldPath": "difficulty",
+          "oldValue": 2,
+          "newValue": "A2",
+          "reason": "Normalize numeric difficulty to A1/A2/B1/B2 enum"
+        },
+        "reason": "Value mismatch: expected \"2\", got \"A2\""
+      },
+      {
+        "fix": {
+          "id": "ehemann",
+          "fieldPath": "partOfSpeech",
+          "oldValue": "phrase",
+          "newValue": "interjection",
+          "reason": "Normalize invalid PoS \"phrase\" → interjection"
+        },
+        "reason": "Value mismatch: expected \"phrase\", got \"interjection\""
+      },
+      {
+        "fix": {
+          "id": "ehemann",
+          "fieldPath": "examples",
+          "oldValue": [],
+          "newValue": [
+            {
+              "german": "Example with Ehemann",
+              "bulgarian": "Пример с Съпруг"
+            }
+          ],
+          "reason": "Add placeholder example"
+        },
+        "reason": "Value mismatch: expected \"\", got \"\""
+      }
+    ],
+    "errors": []
+  }
+}

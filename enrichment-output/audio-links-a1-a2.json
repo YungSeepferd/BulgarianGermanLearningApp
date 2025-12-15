@@ -1,0 +1,402 @@
+[
+  {
+    "id": "zusammen_bg_zaedno_sample",
+    "audioUrl": "https://forvo.com/word/zusammen/"
+  },
+  {
+    "id": "zdravej_001",
+    "audioUrl": "https://forvo.com/word/hallo/"
+  },
+  {
+    "id": "dobro_utro_002",
+    "audioUrl": "https://forvo.com/word/guten_morgen/"
+  },
+  {
+    "id": "guten_abend",
+    "audioUrl": "https://forvo.com/word/guten_abend/"
+  },
+  {
+    "id": "gute_nacht",
+    "audioUrl": "https://forvo.com/word/gute_nacht/"
+  },
+  {
+    "id": "auf_wiedersehen",
+    "audioUrl": "https://forvo.com/word/auf_wiedersehen/"
+  },
+  {
+    "id": "bitte",
+    "audioUrl": "https://forvo.com/word/bitte/"
+  },
+  {
+    "id": "danke",
+    "audioUrl": "https://forvo.com/word/danke/"
+  },
+  {
+    "id": "entschuldigung",
+    "audioUrl": "https://forvo.com/word/entschuldigung/"
+  },
+  {
+    "id": "es_tut_mir_leid",
+    "audioUrl": "https://forvo.com/word/es_tut_mir_leid/"
+  },
+  {
+    "id": "mensch",
+    "audioUrl": "https://forvo.com/word/mensch/"
+  },
+  {
+    "id": "familie",
+    "audioUrl": "https://forvo.com/word/familie/"
+  },
+  {
+    "id": "haus",
+    "audioUrl": "https://forvo.com/word/haus/"
+  },
+  {
+    "id": "schule",
+    "audioUrl": "https://forvo.com/word/schule/"
+  },
+  {
+    "id": "stadt",
+    "audioUrl": "https://forvo.com/word/stadt/"
+  },
+  {
+    "id": "dorf",
+    "audioUrl": "https://forvo.com/word/dorf/"
+  },
+  {
+    "id": "essen",
+    "audioUrl": "https://forvo.com/word/essen/"
+  },
+  {
+    "id": "sein",
+    "audioUrl": "https://forvo.com/word/sein/"
+  },
+  {
+    "id": "machen",
+    "audioUrl": "https://forvo.com/word/machen/"
+  },
+  {
+    "id": "sprechen",
+    "audioUrl": "https://forvo.com/word/sprechen/"
+  },
+  {
+    "id": "horen",
+    "audioUrl": "https://forvo.com/word/hören/"
+  },
+  {
+    "id": "schon",
+    "audioUrl": "https://forvo.com/word/schön/"
+  },
+  {
+    "id": "dann",
+    "audioUrl": "https://forvo.com/word/dann/"
+  },
+  {
+    "id": "selten",
+    "audioUrl": "https://forvo.com/word/selten/"
+  },
+  {
+    "id": "schlecht_01",
+    "audioUrl": "https://forvo.com/word/schlecht/"
+  },
+  {
+    "id": "tisch",
+    "audioUrl": "https://forvo.com/word/tisch/"
+  },
+  {
+    "id": "stuhl",
+    "audioUrl": "https://forvo.com/word/stuhl/"
+  },
+  {
+    "id": "kuche",
+    "audioUrl": "https://forvo.com/word/küche/"
+  },
+  {
+    "id": "wohnung",
+    "audioUrl": "https://forvo.com/word/wohnung/"
+  },
+  {
+    "id": "auto",
+    "audioUrl": "https://forvo.com/word/auto/"
+  },
+  {
+    "id": "laden",
+    "audioUrl": "https://forvo.com/word/laden/"
+  },
+  {
+    "id": "garten",
+    "audioUrl": "https://forvo.com/word/garten/"
+  },
+  {
+    "id": "uhr",
+    "audioUrl": "https://forvo.com/word/uhr/"
+  },
+  {
+    "id": "eins",
+    "audioUrl": "https://forvo.com/word/eins/"
+  },
+  {
+    "id": "zwei",
+    "audioUrl": "https://forvo.com/word/zwei/"
+  },
+  {
+    "id": "drei",
+    "audioUrl": "https://forvo.com/word/drei/"
+  },
+  {
+    "id": "vier",
+    "audioUrl": "https://forvo.com/word/vier/"
+  },
+  {
+    "id": "funf",
+    "audioUrl": "https://forvo.com/word/fünf/"
+  },
+  {
+    "id": "sechs",
+    "audioUrl": "https://forvo.com/word/sechs/"
+  },
+  {
+    "id": "sieben",
+    "audioUrl": "https://forvo.com/word/sieben/"
+  },
+  {
+    "id": "acht",
+    "audioUrl": "https://forvo.com/word/acht/"
+  },
+  {
+    "id": "neun",
+    "audioUrl": "https://forvo.com/word/neun/"
+  },
+  {
+    "id": "zehn",
+    "audioUrl": "https://forvo.com/word/zehn/"
+  },
+  {
+    "id": "elf",
+    "audioUrl": "https://forvo.com/word/elf/"
+  },
+  {
+    "id": "zwoelf",
+    "audioUrl": "https://forvo.com/word/zwölf/"
+  },
+  {
+    "id": "dreizehn",
+    "audioUrl": "https://forvo.com/word/dreizehn/"
+  },
+  {
+    "id": "zwanzig",
+    "audioUrl": "https://forvo.com/word/zwanzig/"
+  },
+  {
+    "id": "viele",
+    "audioUrl": "https://forvo.com/word/viele/"
+  },
+  {
+    "id": "wenig",
+    "audioUrl": "https://forvo.com/word/wenig/"
+  },
+  {
+    "id": "alle",
+    "audioUrl": "https://forvo.com/word/alle/"
+  },
+  {
+    "id": "einige",
+    "audioUrl": "https://forvo.com/word/einige/"
+  },
+  {
+    "id": "keiner",
+    "audioUrl": "https://forvo.com/word/keiner/"
+  },
+  {
+    "id": "samstag",
+    "audioUrl": "https://forvo.com/word/samstag/"
+  },
+  {
+    "id": "stunde",
+    "audioUrl": "https://forvo.com/word/stunde/"
+  },
+  {
+    "id": "minute",
+    "audioUrl": "https://forvo.com/word/minute/"
+  },
+  {
+    "id": "morgen",
+    "audioUrl": "https://forvo.com/word/morgen/"
+  },
+  {
+    "id": "mittag",
+    "audioUrl": "https://forvo.com/word/mittag/"
+  },
+  {
+    "id": "nachmittag",
+    "audioUrl": "https://forvo.com/word/nachmittag/"
+  },
+  {
+    "id": "abend",
+    "audioUrl": "https://forvo.com/word/abend/"
+  },
+  {
+    "id": "nacht",
+    "audioUrl": "https://forvo.com/word/nacht/"
+  },
+  {
+    "id": "wie_geht_s",
+    "audioUrl": "https://forvo.com/word/wie_geht's?/"
+  },
+  {
+    "id": "mir_geht_s_gut",
+    "audioUrl": "https://forvo.com/word/mir_geht's_gut/"
+  },
+  {
+    "id": "entschuldige",
+    "audioUrl": "https://forvo.com/word/entschuldige/"
+  },
+  {
+    "id": "darf_ich",
+    "audioUrl": "https://forvo.com/word/darf_ich?/"
+  },
+  {
+    "id": "brot",
+    "audioUrl": "https://forvo.com/word/brot/"
+  },
+  {
+    "id": "milch",
+    "audioUrl": "https://forvo.com/word/milch/"
+  },
+  {
+    "id": "kase",
+    "audioUrl": "https://forvo.com/word/käse/"
+  },
+  {
+    "id": "fleisch",
+    "audioUrl": "https://forvo.com/word/fleisch/"
+  },
+  {
+    "id": "fisch",
+    "audioUrl": "https://forvo.com/word/fisch/"
+  },
+  {
+    "id": "gemuse",
+    "audioUrl": "https://forvo.com/word/gemüse/"
+  },
+  {
+    "id": "obst",
+    "audioUrl": "https://forvo.com/word/obst/"
+  },
+  {
+    "id": "saft",
+    "audioUrl": "https://forvo.com/word/saft/"
+  },
+  {
+    "id": "kaffee",
+    "audioUrl": "https://forvo.com/word/kaffee/"
+  },
+  {
+    "id": "bus",
+    "audioUrl": "https://forvo.com/word/bus/"
+  },
+  {
+    "id": "zug",
+    "audioUrl": "https://forvo.com/word/zug/"
+  },
+  {
+    "id": "flugzeug",
+    "audioUrl": "https://forvo.com/word/flugzeug/"
+  },
+  {
+    "id": "taxi",
+    "audioUrl": "https://forvo.com/word/taxi/"
+  },
+  {
+    "id": "bahnhof",
+    "audioUrl": "https://forvo.com/word/bahnhof/"
+  },
+  {
+    "id": "flughafen",
+    "audioUrl": "https://forvo.com/word/flughafen/"
+  },
+  {
+    "id": "hotel",
+    "audioUrl": "https://forvo.com/word/hotel/"
+  },
+  {
+    "id": "stra_e",
+    "audioUrl": "https://forvo.com/word/straße/"
+  },
+  {
+    "id": "karte",
+    "audioUrl": "https://forvo.com/word/karte/"
+  },
+  {
+    "id": "arzt",
+    "audioUrl": "https://forvo.com/word/arzt/"
+  },
+  {
+    "id": "krankenhaus",
+    "audioUrl": "https://forvo.com/word/krankenhaus/"
+  },
+  {
+    "id": "apotheke",
+    "audioUrl": "https://forvo.com/word/apotheke/"
+  },
+  {
+    "id": "medikamente",
+    "audioUrl": "https://forvo.com/word/medikamente/"
+  },
+  {
+    "id": "notfall",
+    "audioUrl": "https://forvo.com/word/notfall/"
+  },
+  {
+    "id": "schmerz",
+    "audioUrl": "https://forvo.com/word/schmerz/"
+  },
+  {
+    "id": "gesundheit",
+    "audioUrl": "https://forvo.com/word/gesundheit/"
+  },
+  {
+    "id": "fieber",
+    "audioUrl": "https://forvo.com/word/fieber/"
+  },
+  {
+    "id": "erkaltung",
+    "audioUrl": "https://forvo.com/word/erkältung/"
+  },
+  {
+    "id": "hilfe",
+    "audioUrl": "https://forvo.com/word/hilfe/"
+  },
+  {
+    "id": "sonne",
+    "audioUrl": "https://forvo.com/word/sonne/"
+  },
+  {
+    "id": "regen",
+    "audioUrl": "https://forvo.com/word/regen/"
+  },
+  {
+    "id": "schnee",
+    "audioUrl": "https://forvo.com/word/schnee/"
+  },
+  {
+    "id": "wind",
+    "audioUrl": "https://forvo.com/word/wind/"
+  },
+  {
+    "id": "wolken",
+    "audioUrl": "https://forvo.com/word/wolken/"
+  },
+  {
+    "id": "wald",
+    "audioUrl": "https://forvo.com/word/wald/"
+  },
+  {
+    "id": "fluss",
+    "audioUrl": "https://forvo.com/word/fluss/"
+  },
+  {
+    "id": "berg",
+    "audioUrl": "https://forvo.com/word/berg/"
+  }
+]

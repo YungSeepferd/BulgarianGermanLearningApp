@@ -71,14 +71,16 @@ function importEnrichment() {
         if (enrichment.gender) {
           if (!vocabItem.grammar) vocabItem.grammar = {};
           vocabItem.grammar.gender = enrichment.gender;
+          console.log(`${GREEN}✅${RESET} [${idx + 1}] Merged gender: ${vocabItem.german} (${enrichment.gender})`);
+          mergedCount++;
         }
         
         // Merge declension
         if (enrichment.declension) {
           if (!vocabItem.grammar) vocabItem.grammar = {};
           vocabItem.grammar.declension = enrichment.declension;
-          console.log(`${GREEN}✅${RESET} [${idx + 1}] Merged declension${enrichment.gender ? ` (${enrichment.gender})` : ''}: ${vocabItem.german}`);
-          mergedCount++;
+          console.log(`${GREEN}✅${RESET} [${idx + 1}] Merged declension: ${vocabItem.german}`);
+          if (!enrichment.gender) mergedCount++; // Avoid double counting if both present
         }
       }
 

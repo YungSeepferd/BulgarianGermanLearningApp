@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-12-14T22:09:04.625Z",
+  "appliedCount": 1,
+  "skippedCount": 0,
+  "errorCount": 0,
+  "backup": "/Users/dinz/Coding Projects/BulgariaLearn/BulgarianApp-Fresh/data/unified-vocabulary-backup-1765750144608.json",
+  "details": {
+    "applied": [
+      {
+        "id": "a1_food_013",
+        "fieldPath": "partOfSpeech",
+        "oldValue": "interjection",
+        "newValue": "noun"
+      }
+    ],
+    "skipped": [],
+    "errors": []
+  }
+}

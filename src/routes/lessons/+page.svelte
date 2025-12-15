@@ -15,7 +15,7 @@
   import { appState } from '$lib/state/app-state';
   import type { VocabularyCategory, PartOfSpeech } from '$lib/schemas/vocabulary';
   import type { VocabularyItem } from '$lib/types/vocabulary';
-  import type { Lesson, LessonDifficulty, LessonType } from '$lib/schemas/lesson';
+  import type { Lesson, LessonDifficulty } from '$lib/schemas/lesson';
 
   // State
   let lessons = $state<Lesson[]>([]);
@@ -25,17 +25,6 @@
   let selectedType = $state<string>('all');
   let showLessonGenerationModal = $state(false);
   let showGeneratedLesson = $state<Lesson | null>(null);
-  let _newLessonCriteria = $state<{
-    difficulty?: LessonDifficulty;
-    type?: LessonType;
-    category?: VocabularyCategory;
-    partOfSpeech?: PartOfSpeech;
-    limit?: number;
-    title?: string;
-    description?: string;
-  }>({
-    limit: 10
-  });
 
   const typeLabels = {
     de: {
@@ -347,8 +336,8 @@
           const lesson = lessonService.generateLessonFromVocabulary(
             items.slice(0, 8).map((item) => {
               const transliteration = typeof item.transliteration === 'string'
-                ? item.transliteration
-                : (item.transliteration?.german ?? '');
+                ? { german: item.transliteration }
+                : (item.transliteration ?? {});
               return {
                 ...item,
                 // Adapt unified vocabulary item to legacy expectations of lesson service
@@ -359,7 +348,8 @@
                   const level = item.metadata?.level ?? item.level ?? 'A1';
                   return (level === 'C1' ? 'B2' : level) as 'A1' | 'A2' | 'B1' | 'B2';
                 })(),
-                transliteration
+                transliteration,
+                culturalNotes: item.culturalNotes
               };
             }),
             {

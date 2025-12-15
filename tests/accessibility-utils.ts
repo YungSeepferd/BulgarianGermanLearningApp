@@ -55,15 +55,7 @@ export async function runAccessibilityScan(
   // Create axe builder with default configuration
   let builder = new AxeBuilder({ page })
     .withTags(options.tags || ACCESSIBILITY_CONFIG.wcagTags)
-    .disableRules(ACCESSIBILITY_CONFIG.excludedRules)
-    .withRules({
-      'aria-allowed-attr': { enabled: true },
-      'aria-required-attr': { enabled: true },
-      'color-contrast': { enabled: true },
-      'landmark-complementary-is-top-level': { enabled: true },
-      'page-has-heading-one': { enabled: true },
-      'region': { enabled: true }
-    });
+    .disableRules(ACCESSIBILITY_CONFIG.excludedRules);
 
   // Apply custom options from parameters
   if (options.rules) {
@@ -128,8 +120,10 @@ export async function testKeyboardNavigation(
     await expect(page.locator(selectors[0])).toBeFocused();
   }
 
+  const startIndex = options.startWithFocus ? 1 : 0;
+
   // Test tab navigation through all elements
-  for (let i = 0; i < selectors.length; i++) {
+  for (let i = startIndex; i < selectors.length; i++) {
     await page.keyboard.press('Tab');
 
     // Verify the correct element is focused

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { APP_ICONS } from "$lib/constants/icons";
+  // import { APP_ICONS } from "$lib/constants/icons";
 
   // Svelte 5 runes props
   let {
@@ -9,6 +9,8 @@
     icon = "",
     disabled = false,
     type = "button",
+    onclick,
+    ...rest
   } = $props<{
     label?: string;
     variant?:
@@ -18,14 +20,17 @@
       | "danger"
       | "practice"
       | "quick-practice"
-      | "learn";
+      | "learn"
+      | "text";
     size?: "sm" | "md" | "lg";
     icon?: string; // pass emoji from APP_ICONS or PRACTICE_ICONS
     disabled?: boolean;
     type?: "button" | "submit";
+    onclick?: (event: MouseEvent) => void;
+    [key: string]: any;
   }>();
 
-  let classes = $derived(() => {
+  let classes = $derived.by(() => {
     const base =
       "inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-60 disabled:pointer-events-none select-none";
 
@@ -56,7 +61,7 @@
   });
 </script>
 
-<button {type} class={classes} {disabled}>
+<button {type} class={classes} {disabled} {onclick} {...rest}>
   {#if icon}
     <span aria-hidden="true" class="mr-2">{icon}</span>
   {/if}

@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { appState } from '$lib/state/app.svelte';
-import { appUIState, appDataState } from '$lib/state/app.svelte';
+import { appUIState, appDataState } from '$lib/state/app-state';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 
 // Mock $app/environment
@@ -24,33 +24,33 @@ vi.mock('$lib/data/db.svelte', () => {
             id: 'test_001',
             german: 'Hallo',
             bulgarian: 'Здравей',
-            category: 'Greetings',
+            categories: ['greetings'],
             tags: ['A1'],
             type: 'word',
-            difficulty: 'A1'
+            difficulty: 1
         },
         {
             id: 'test_002',
             german: 'Danke',
             bulgarian: 'Благодаря',
-            category: 'Greetings',
+            categories: ['greetings'],
             tags: ['A1'],
             type: 'word',
-            difficulty: 'A1'
+            difficulty: 1
         },
         {
             id: 'test_003',
             german: 'Auf Wiedersehen',
             bulgarian: 'Довиждане',
-            category: 'Greetings',
+            categories: ['greetings'],
             tags: ['A2'], // Changed from A1 to A2 to match the test expectation
             type: 'word',
-            difficulty: 'A2'
+            difficulty: 2
         }
     ];
 
     return {
-        db: {
+        vocabularyDb: {
             get items() {
                 return mockItems;
             }
@@ -81,7 +81,8 @@ vi.mock('$lib/utils/localStorage', async (importOriginal) => {
             }),
             exportUserData: vi.fn(),
             importUserData: vi.fn(),
-            clearUserData: vi.fn()
+            clearUserData: vi.fn(),
+            clearAllData: vi.fn()
         }
     };
 });
@@ -293,9 +294,9 @@ describe('AppState', () => {
 
         describe('Data Management', () => {
             it('should clear all data', () => {
-                appState.practiceStats.set('test_001', { correct: 1, incorrect: 0, lastPracticed: new Date().toISOString() });
-                appState.favorites = ['test_001'];
-                appState.recentSearches = ['test'];
+                appDataState.practiceStats.set('test_001', { correct: 1, incorrect: 0, lastPracticed: new Date().toISOString() });
+                appDataState.favorites = ['test_001'];
+                appDataState.recentSearches = ['test'];
 
                 appState.clearAllData();
 

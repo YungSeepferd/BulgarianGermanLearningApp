@@ -32,7 +32,6 @@
 
   // Reactive variables
   let currentPath = $derived.by(() => $page.url.pathname);
-  let userSettingsLabel = $state('');
   let homeLabel = $state('');
   let appNameLabel = $state('');
   let translatedNavItems = $state<Array<{ name: string; path: string; translationKey?: string; icon?: string }>>([]);
@@ -62,7 +61,6 @@
   function updateTranslations() {
     const loading = isTranslationsLoading();
 
-    userSettingsLabel = loading ? 'Loading…' : (t('navigation.user_settings') || 'User Settings');
     homeLabel = loading ? 'Loading…' : (t('navigation.home') || 'Home');
     appNameLabel = loading ? 'BulgarianApp' : (t('navigation.app_name') || 'BulgarianApp');
     directionLabel = buildDirectionLabel(loading);
@@ -114,6 +112,7 @@
             href={getNavPath(item.path)}
             class="nav-link {currentPath === item.path ? 'active' : ''}"
             aria-current={currentPath === item.path ? 'page' : undefined}
+            aria-label={item.name}
           >
             <span class="nav-icon" aria-hidden="true">{item.icon}</span>
             <span class="nav-text">{item.name}</span>
@@ -206,12 +205,12 @@
   }
 
   .nav-link:hover {
-    color: #3b82f6;
+    color: #1d4ed8;
   }
 
   .nav-link.active {
-    color: #3b82f6;
-    border-bottom-color: #3b82f6;
+    color: #1d4ed8;
+    border-bottom-color: #1d4ed8;
   }
 
   .nav-icon {

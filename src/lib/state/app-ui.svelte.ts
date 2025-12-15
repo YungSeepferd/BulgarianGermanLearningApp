@@ -122,8 +122,8 @@ export class AppUIState {
         return this.dataState.allItems.filter((item: VocabularyItem) => {
             return item.german.toLowerCase().includes(q) ||
                    item.bulgarian.toLowerCase().includes(q) ||
-                   item.category.toLowerCase().includes(q) ||
-                   item.tags.some(tag => tag.toLowerCase().includes(q));
+                   item.categories.some(c => c.toLowerCase().includes(q)) ||
+                   (item.tags && item.tags.some(tag => tag.toLowerCase().includes(q)));
         });
     });
 

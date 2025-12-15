@@ -49,7 +49,8 @@ export const CEFRLevelSchema = z.enum([
   'A1',  // Elementary (Beginner)
   'A2',  // Elementary (Post-beginner)
   'B1',  // Intermediate (Threshold)
-  'B2'   // Upper-Intermediate (Vantage)
+  'B2',  // Upper-Intermediate (Vantage)
+  'C1'   // Advanced (Effective Operational Proficiency)
 ]);
 
 // Schema for vocabulary difficulty levels
@@ -144,6 +145,15 @@ const BaseVocabularyItemSchema = z.object({
     grammarTag: z.string()
   })).optional(),
   contextualNuance: z.string().optional(),
+  mnemonic: z.object({
+    text: z.string().describe("Mnemonic or Esels-Brücke"),
+    author: z.string().optional(),
+    upvotes: z.number().int().default(0),
+    confidence: z.number().min(0).max(1).optional(),
+    createdAt: z.string().datetime().optional()
+  }).optional(),
+  audioUrl: z.string().url().optional().describe("Forvo or embedded audio link"),
+  culturalNotes: z.string().optional().describe("Historical, cultural, or usage context"),
   metadata: VocabularyMetadataSchema.optional(),
   enrichment: EnrichmentSchema.optional(),
   definitions: z.array(DefinitionLinkSchema).optional(),

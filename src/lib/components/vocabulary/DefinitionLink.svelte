@@ -7,13 +7,18 @@
 	import type { VocabularyItem } from '$lib/types/vocabulary';
 
 	interface Props {
-		item: VocabularyItem & { enrichment?: any; definitions?: any[] };
+		item: VocabularyItem;
 		showIcon?: boolean;
 		showLabel?: boolean;
 		compact?: boolean;
 	}
 
-	let { item, showIcon = true, showLabel = true, compact = false } = $props();
+	let { 
+		item, 
+		showIcon = true, 
+		showLabel = true, 
+		compact = false 
+	}: Props = $props();
 
 	// Get all definition links from item
 	const getDefinitionLinks = () => {
@@ -84,7 +89,7 @@
 
 {#if links.length > 0}
 	<div class="definition-links space-y-1">
-		{#each links as link, index}
+		{#each links as link}
 			<a
 				href={link.url}
 				target="_blank"

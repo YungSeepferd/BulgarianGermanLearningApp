@@ -1,0 +1,133 @@
+{
+  "count": 16,
+  "items": [
+    {
+      "id": "a1_food_012",
+      "german": "das Brot",
+      "partOfSpeech": "noun",
+      "gender": "n",
+      "hasDeclension": true,
+      "batchIndex": 319
+    },
+    {
+      "id": "a1_food_013",
+      "german": "die Milch",
+      "partOfSpeech": "noun",
+      "gender": "f",
+      "hasDeclension": true,
+      "batchIndex": 320
+    },
+    {
+      "id": "a1_food_014",
+      "german": "die Butter",
+      "partOfSpeech": "noun",
+      "gender": "f",
+      "hasDeclension": true,
+      "batchIndex": 321
+    },
+    {
+      "id": "a1_food_015",
+      "german": "der Käse",
+      "partOfSpeech": "noun",
+      "gender": "m",
+      "hasDeclension": true,
+      "batchIndex": 322
+    },
+    {
+      "id": "a1_food_016",
+      "german": "das Fleisch",
+      "partOfSpeech": "noun",
+      "gender": "n",
+      "hasDeclension": true,
+      "batchIndex": 323
+    },
+    {
+      "id": "a1_food_017",
+      "german": "der Fisch",
+      "partOfSpeech": "noun",
+      "gender": "m",
+      "hasDeclension": true,
+      "batchIndex": 324
+    },
+    {
+      "id": "a1_food_018",
+      "german": "das Gemüse",
+      "partOfSpeech": "noun",
+      "gender": "n",
+      "hasDeclension": true,
+      "batchIndex": 339
+    },
+    {
+      "id": "a1_food_019",
+      "german": "die Frucht, das Obst",
+      "partOfSpeech": "noun",
+      "gender": "f",
+      "hasDeclension": true,
+      "batchIndex": 340
+    },
+    {
+      "id": "a1_food_020",
+      "german": "der Apfel",
+      "partOfSpeech": "noun",
+      "gender": "m",
+      "hasDeclension": true,
+      "batchIndex": 341
+    },
+    {
+      "id": "a1_food_021",
+      "german": "die Banane",
+      "partOfSpeech": "noun",
+      "gender": "f",
+      "hasDeclension": true,
+      "batchIndex": 342
+    },
+    {
+      "id": "a1_food_022",
+      "german": "die Orange, die Apfelsine",
+      "partOfSpeech": "noun",
+      "gender": "f",
+      "hasDeclension": true,
+      "batchIndex": 343
+    },
+    {
+      "id": "a1_food_023",
+      "german": "die Tomate",
+      "partOfSpeech": "noun",
+      "gender": "f",
+      "hasDeclension": true,
+      "batchIndex": 344
+    },
+    {
+      "id": "a1_food_024",
+      "german": "die Kartoffel",
+      "partOfSpeech": "noun",
+      "gender": "f",
+      "hasDeclension": true,
+      "batchIndex": 345
+    },
+    {
+      "id": "a1_food_025",
+      "german": "die Karotte, die Möhre",
+      "partOfSpeech": "noun",
+      "gender": "f",
+      "hasDeclension": true,
+      "batchIndex": 346
+    },
+    {
+      "id": "a1_food_026",
+      "german": "die Zwiebel",
+      "partOfSpeech": "noun",
+      "gender": "f",
+      "hasDeclension": true,
+      "batchIndex": 347
+    },
+    {
+      "id": "a1_food_027",
+      "german": "der Salat",
+      "partOfSpeech": "noun",
+      "gender": "m",
+      "hasDeclension": true,
+      "batchIndex": 348
+    }
+  ]
+}

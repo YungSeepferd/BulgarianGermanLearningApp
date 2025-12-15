@@ -367,6 +367,10 @@
   let showFilters = $state(true);
 </script>
 
+<svelte:head>
+  <title>{ui.title} | {appState.languageMode === 'DE_BG' ? 'BulgarianApp' : 'BulgarianApp'}</title>
+</svelte:head>
+
 <div class="vocabulary-page">
   <header class="page-header">
     <div class="headline">
@@ -377,15 +381,15 @@
     <div class="header-actions">
       <ActionButton
         variant="primary"
-        size="medium"
-        iconLeft={PRACTICE_ICONS.flashcard}
-        ariaLabel={ui.practiceSelected(selectedItems.size)}
+        size="md"
+        iconLeft={PRACTICE_ICONS.STANDARD}
+        aria-label={ui.practiceSelected(selectedItems.size)}
         disabled={selectedItems.size === 0}
-        on:click={startPracticeWithSelected}
+        onclick={startPracticeWithSelected}
       >
         {ui.practiceSelected(selectedItems.size)}
       </ActionButton>
-      <button class="filter-toggle" on:click={() => (showFilters = !showFilters)} aria-expanded={showFilters}>
+      <button class="filter-toggle" onclick={() => (showFilters = !showFilters)} aria-expanded={showFilters}>
         {showFilters ? (appState.languageMode === 'DE_BG' ? 'Filter ausblenden' : 'Скрий филтрите') : (appState.languageMode === 'DE_BG' ? 'Filter anzeigen' : 'Покажи филтрите')}
       </button>
     </div>
@@ -398,36 +402,35 @@
           <p class="eyebrow-small">{ui.title}</p>
           <h2 class="panel-title">{appState.languageMode === 'DE_BG' ? 'Gezielt filtern' : 'Намери точните думи'}</h2>
         </div>
-        <button class="panel-reset" on:click={resetFilters}>{ui.reset}</button>
+        <button class="panel-reset" onclick={resetFilters}>{ui.reset}</button>
       </div>
 
       <div class="filter-stack">
         <div class="filter-group">
-          <label class="filter-label">{ui.searchAria}</label>
+          <label for="search-input" class="filter-label">{ui.searchAria || (appState.languageMode === 'DE_BG' ? 'Vokabular durchsuchen' : 'Търсене в речника')}</label>
           <input
+            id="search-input"
             type="search"
             placeholder={ui.searchPlaceholder}
             bind:value={searchTerm}
             class="filter-input"
-            aria-label={ui.searchAria}
+            aria-label={ui.searchAria || (appState.languageMode === 'DE_BG' ? 'Vokabular durchsuchen' : 'Търсене в речника')}
           />
         </div>
 
         <div class="filter-group">
-          <label class="filter-label">{ui.difficulty}</label>
-          <div class="pill-row" role="list">
+          <span id="difficulty-label" class="filter-label">{ui.difficulty}</span>
+          <div class="pill-row" role="group" aria-labelledby="difficulty-label">
             <button
               class={`pill ${selectedDifficulty === null ? 'pill--active' : ''}`}
-              on:click={() => (selectedDifficulty = null)}
-              role="listitem"
+              onclick={() => (selectedDifficulty = null)}
             >
               {appState.languageMode === 'DE_BG' ? 'Alle' : 'Всички'}
             </button>
             {#each difficultyLevels as level}
               <button
                 class={`pill ${selectedDifficulty === level ? 'pill--active' : ''}`}
-                on:click={() => (selectedDifficulty = level)}
-                role="listitem"
+                onclick={() => (selectedDifficulty = level)}
               >
                 {level}
               </button>
@@ -466,26 +469,26 @@
         </div>
 
         <div class="filter-actions">
-          <button class="secondary-button" on:click={resetFilters}>{ui.reset}</button>
-          <button class="primary-button" on:click={startPracticeWithSelected} disabled={selectedItems.size === 0}>
+          <button class="secondary-button" onclick={resetFilters}>{ui.reset}</button>
+          <button class="primary-button" onclick={startPracticeWithSelected} disabled={selectedItems.size === 0}>
             {ui.practiceSelected(selectedItems.size)}
           </button>
         </div>
       </div>
     </aside>
 
-    <main class="vocabulary-content">
+    <div class="vocabulary-content">
       <div class="summary-bar">
         <div class="summary-count">{countLabel}</div>
         <div class="active-filters">
           {#if activeFilters.length > 0}
             {#each activeFilters as filter (filter.key)}
-              <button class="filter-chip" on:click={filter.onClear}>
+              <button class="filter-chip" onclick={filter.onClear}>
                 <span>{filter.label}</span>
                 <span aria-hidden="true">✕</span>
               </button>
             {/each}
-            <button class="clear-all" on:click={resetFilters}>
+            <button class="clear-all" onclick={resetFilters}>
               {appState.languageMode === 'DE_BG' ? 'Alle zurücksetzen' : 'Изчисти всички'}
             </button>
           {:else}
@@ -515,7 +518,7 @@
       {#if vocabularyItems.length > 0}
         <div class="vocabulary-grid-items">
           {#each vocabularyItems as item (item.id)}
-            <div class="card-link" role="link" tabindex="0" on:click={() => goto(`/learn/${item.id}`)} on:keydown={(e) => { if (e.key === 'Enter') goto(`/learn/${item.id}`) }}>
+            <div class="card-link">
               <VocabularyCard
                 {item}
                 variant="grid"
@@ -526,6 +529,7 @@
                 showTags={true}
                 onPractice={handleSelectItem}
                 onToggleSelect={handleToggleSelectItem}
+                onOpenDetail={(item) => goto(`/learn/${item.id}`)}
               />
             </div>
           {/each}
@@ -534,7 +538,7 @@
         {#if hasMore}
           <div class="load-more-container">
             <button
-              on:click={loadMore}
+              onclick={loadMore}
               disabled={loading}
               class="primary-button"
               aria-label={loading ? ui.loading : ui.loadMore}
@@ -544,7 +548,7 @@
           </div>
         {/if}
       {/if}
-    </main>
+    </div>
   </div>
 </div>
 
@@ -638,7 +642,7 @@
   .panel-reset {
     border: none;
     background: transparent;
-    color: var(--color-primary);
+    color: var(--color-primary-darker);
     font-weight: var(--font-semibold);
     cursor: pointer;
     padding: var(--space-1) var(--space-2);
@@ -798,7 +802,7 @@
   .clear-all {
     border: none;
     background: transparent;
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
     font-weight: var(--font-semibold);
     cursor: pointer;
     padding: var(--space-1) var(--space-2);

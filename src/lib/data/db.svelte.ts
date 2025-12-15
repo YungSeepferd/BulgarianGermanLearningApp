@@ -73,21 +73,21 @@ class VocabularyDB {
     // Remove the unused import workaround since we're using DataLoader instead
 
     /** @param {VocabularyItem} item */
-    add(item) {
+    add(item: VocabularyItem) {
         this.items.push(item);
     }
 
     /** @param {string} id @param {Partial<VocabularyItem>} updates */
-    update(id, updates) {
+    update(id: string, updates: Partial<VocabularyItem>) {
         const index = this.items.findIndex((i) => i.id === id);
         if (index !== -1) {
             const current = this.items[index];
-            this.items[index] = { ...current, ...updates };
+            this.items[index] = { ...current, ...updates } as VocabularyItem;
         }
     }
 
     /** @param {string} id @returns {VocabularyItem | undefined} */
-    get(id) {
+    get(id: string) {
         return this.items.find((i) => i.id === id);
     }
 

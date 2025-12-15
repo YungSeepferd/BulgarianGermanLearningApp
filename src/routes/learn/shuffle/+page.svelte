@@ -186,16 +186,6 @@
     Debug.log('LearnPage', 'Flashcard flipped', { isFlipped });
   }
 
-  // Reset the session (intentionally unused - kept for reference)
-  function _resetSession() {
-    sessionActive = false;
-    sessionComplete = false;
-    sessionCards = [];
-    currentCardIndex = 0;
-    isAnimating = false;
-    animationType = null;
-  }
-
   // Calculate progress percentage
   function getProgressPercentage(): number {
     if (sessionCards.length === 0) return 0;

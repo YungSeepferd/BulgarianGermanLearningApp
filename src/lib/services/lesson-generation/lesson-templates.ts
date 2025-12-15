@@ -23,6 +23,7 @@ export class LessonTemplateRepository implements ILessonTemplateRepository {
   private templates: LessonTemplate[] = [];
   private _initialized = false;
   private templateCache: Map<string, LessonTemplate> = new Map();
+  public _testTemplates?: LessonTemplate[];
 
   /**
    * Get the initialization status
@@ -78,6 +79,10 @@ export class LessonTemplateRepository implements ILessonTemplateRepository {
     const selectedTemplate = matchingTemplates[
       Math.floor(Math.random() * matchingTemplates.length)
     ];
+
+    if (!selectedTemplate) {
+      throw new LessonGenerationError(`Failed to select a template for type ${type}`);
+    }
 
     // Cache the selected template
     this.templateCache.set(cacheKey, selectedTemplate);
@@ -182,8 +187,8 @@ export class LessonTemplateRepository implements ILessonTemplateRepository {
       // so we'll use a fallback approach
       if (import.meta.env?.MODE === 'test') {
         // For testing, we'll check if we have any mock templates
-        if ((this as LessonTemplateRepository)._testTemplates) {
-          return (this as LessonTemplateRepository)._testTemplates as LessonTemplate[];
+        if (this._testTemplates) {
+          return this._testTemplates;
         }
         return [this.createFallbackTemplate()];
       }
@@ -195,7 +200,7 @@ export class LessonTemplateRepository implements ILessonTemplateRepository {
 
       for (const [_path, importFn] of Object.entries(templateModules)) {
         try {
-          const module = await importFn();
+          const module = await importFn() as { default: LessonTemplate };
           const template = module.default;
 
           if (this.validateTemplate(template)) {
