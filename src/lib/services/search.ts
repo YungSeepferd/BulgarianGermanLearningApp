@@ -12,6 +12,7 @@
 
 import { type VocabularySearchParams } from '$lib/schemas/vocabulary';
 import type { UnifiedVocabularyItem, VocabularyCategory, VocabularyMetadata } from '$lib/schemas/unified-vocabulary';
+import type { VocabularyItem } from '$lib/types/vocabulary';
 import { UnifiedVocabularyItemSchema } from '$lib/schemas/unified-vocabulary';
 import { loadVocabulary } from '$lib/data/loader';
 import { z } from 'zod';
@@ -115,7 +116,7 @@ function applyFilters(items: UnifiedVocabularyItem[], params: VocabularySearchPa
 
     // Filter by learning phase
     const learningPhaseMatch = params.learningPhase !== undefined
-      ? (item.learningPhase ?? 0) === params.learningPhase
+      ? ((item as unknown as VocabularyItem).learningPhase ?? 0) === params.learningPhase
       : true;
 
     return partOfSpeechMatch && difficultyMatch && categoryMatch && learningPhaseMatch;
@@ -268,15 +269,15 @@ export async function getVocabularyStats(): Promise<{
     });
 
     // Count by learning phase
-    const phase = item.learningPhase ?? 0;
+    const phase = (item as unknown as VocabularyItem).learningPhase ?? 0;
     learningPhase[phase] = (learningPhase[phase] || 0) + 1;
 
     // Count by common status
-    const commonStatus = String(item.isCommon ?? false);
+    const commonStatus = String((item as unknown as VocabularyItem).isCommon ?? item.metadata?.isCommon ?? false);
     isCommon[commonStatus] = (isCommon[commonStatus] || 0) + 1;
 
     // Count by verified status
-    const verifiedStatus = String(item.isVerified ?? false);
+    const verifiedStatus = String((item as unknown as VocabularyItem).isVerified ?? item.metadata?.isVerified ?? false);
     isVerified[verifiedStatus] = (isVerified[verifiedStatus] || 0) + 1;
   });
 
