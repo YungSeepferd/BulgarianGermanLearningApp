@@ -1,0 +1,695 @@
+[
+  {
+    "id": "a1_verb_038",
+    "conjugation": {
+      "present": {
+        "ich": "schaueschau",
+        "du": "schaust",
+        "er_sie_es": "schaut",
+        "wir": "schauen",
+        "sie": "schauen"
+      },
+      "past": {
+        "ich": "schaute",
+        "wir": "schauten",
+        "sie": "schauten"
+      },
+      "perfect": {
+        "participle": "geschaut",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_039",
+    "conjugation": {
+      "present": {
+        "ich": "gehe",
+        "du": "gehst",
+        "er_sie_es": "geht",
+        "wir": "gehen",
+        "sie": "gehen"
+      },
+      "past": {
+        "ich": "ging",
+        "wir": "gingen",
+        "sie": "gingen"
+      },
+      "perfect": {
+        "participle": "gegangen",
+        "auxiliary": "sein"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_040",
+    "conjugation": {
+      "present": {
+        "ich": "komme",
+        "du": "kommst",
+        "er_sie_es": "kommt",
+        "wir": "kommen",
+        "sie": "kommen"
+      },
+      "past": {
+        "ich": "kam",
+        "wir": "kamen",
+        "sie": "kamen"
+      },
+      "perfect": {
+        "participle": "gekommen",
+        "auxiliary": "sein"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_041",
+    "conjugation": {
+      "present": {
+        "ich": "stehe auf",
+        "du": "stehst auf",
+        "er_sie_es": "steht auf",
+        "wir": "aufstehen",
+        "sie": "aufstehen"
+      },
+      "past": {
+        "ich": "stand auf",
+        "wir": "stand aufen",
+        "sie": "stand aufen"
+      },
+      "perfect": {
+        "participle": "aufgestanden",
+        "auxiliary": "sein, haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_042",
+    "conjugation": {
+      "present": {
+        "ich": "setze",
+        "du": "setzt",
+        "er_sie_es": "setzt",
+        "wir": "setzen",
+        "sie": "setzen"
+      },
+      "past": {
+        "ich": "setzte",
+        "wir": "setzten",
+        "sie": "setzten"
+      },
+      "perfect": {
+        "participle": "gesetzt",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_043",
+    "conjugation": {
+      "present": {
+        "ich": "lege hin",
+        "du": "legst hin",
+        "er_sie_es": "legt hin",
+        "wir": "hinlegen",
+        "sie": "hinlegen"
+      },
+      "past": {
+        "ich": "legte hin",
+        "wir": "legte hinen",
+        "sie": "legte hinen"
+      },
+      "perfect": {
+        "participle": "hingelegt",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_044",
+    "conjugation": {
+      "present": {
+        "ich": "trage",
+        "du": "trägst",
+        "er_sie_es": "trägt",
+        "wir": "tragen",
+        "sie": "tragen"
+      },
+      "past": {
+        "ich": "trug",
+        "wir": "trugen",
+        "sie": "trugen"
+      },
+      "perfect": {
+        "participle": "getragen",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_045",
+    "conjugation": {
+      "present": {
+        "ich": "kaufe",
+        "du": "kaufst",
+        "er_sie_es": "kauft",
+        "wir": "kaufen",
+        "sie": "kaufen"
+      },
+      "past": {
+        "ich": "kaufte",
+        "wir": "kauften",
+        "sie": "kauften"
+      },
+      "perfect": {
+        "participle": "gekauft",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_046",
+    "conjugation": {
+      "present": {
+        "ich": "nehme",
+        "du": "nimmst",
+        "er_sie_es": "nimmt",
+        "wir": "nehmen",
+        "sie": "nehmen"
+      },
+      "past": {
+        "ich": "nahm",
+        "wir": "nahmen",
+        "sie": "nahmen"
+      },
+      "perfect": {
+        "participle": "genommen",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_047",
+    "conjugation": {
+      "present": {
+        "ich": "gebe",
+        "du": "gibst",
+        "er_sie_es": "gibt",
+        "wir": "geben",
+        "sie": "geben"
+      },
+      "past": {
+        "ich": "gab",
+        "wir": "gaben",
+        "sie": "gaben"
+      },
+      "perfect": {
+        "participle": "gegeben",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_048",
+    "conjugation": {
+      "present": {
+        "ich": "arbeite",
+        "du": "arbeitest",
+        "er_sie_es": "arbeitet",
+        "wir": "arbeiten",
+        "sie": "arbeiten"
+      },
+      "past": {
+        "ich": "arbeitete",
+        "wir": "arbeiteten",
+        "sie": "arbeiteten"
+      },
+      "perfect": {
+        "participle": "gearbeitet",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_050",
+    "conjugation": {
+      "present": {
+        "ich": "verstehe",
+        "du": "verstehst",
+        "er_sie_es": "versteht",
+        "wir": "verstehen",
+        "sie": "verstehen"
+      },
+      "past": {
+        "ich": "verstand",
+        "wir": "verstanden",
+        "sie": "verstanden"
+      },
+      "perfect": {
+        "participle": "verstanden",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_055",
+    "conjugation": {
+      "present": {
+        "ich": "glaube",
+        "du": "glaubst",
+        "er_sie_es": "glaubt",
+        "wir": "glauben",
+        "sie": "glauben"
+      },
+      "past": {
+        "ich": "glaubte",
+        "wir": "glaubten",
+        "sie": "glaubten"
+      },
+      "perfect": {
+        "participle": "geglaubt",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_056",
+    "conjugation": {
+      "present": {
+        "ich": "fühle",
+        "du": "fühlst",
+        "er_sie_es": "fühlt",
+        "wir": "fühlen",
+        "sie": "fühlen"
+      },
+      "past": {
+        "ich": "fühlte",
+        "wir": "fühlten",
+        "sie": "fühlten"
+      },
+      "perfect": {
+        "participle": "gefühlt",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_060",
+    "conjugation": {
+      "present": {
+        "ich": "bleibe",
+        "du": "bleibst",
+        "er_sie_es": "bleibt",
+        "wir": "bleiben",
+        "sie": "bleiben"
+      },
+      "past": {
+        "ich": "blieb",
+        "wir": "blieben",
+        "sie": "blieben"
+      },
+      "perfect": {
+        "participle": "geblieben",
+        "auxiliary": "sein"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_066",
+    "conjugation": {
+      "present": {
+        "ich": "suche",
+        "du": "suchst",
+        "er_sie_es": "sucht",
+        "wir": "suchen",
+        "sie": "suchen"
+      },
+      "past": {
+        "ich": "suchte",
+        "wir": "suchten",
+        "sie": "suchten"
+      },
+      "perfect": {
+        "participle": "gesucht",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_071",
+    "conjugation": {
+      "present": {
+        "ich": "habe",
+        "du": "hast",
+        "er_sie_es": "hat",
+        "wir": "haben",
+        "sie": "haben"
+      },
+      "past": {
+        "ich": "hatte",
+        "wir": "hatten",
+        "sie": "hatten"
+      },
+      "perfect": {
+        "participle": "gehabt",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_076",
+    "conjugation": {
+      "present": {
+        "ich": "werde",
+        "du": "wirst",
+        "er_sie_es": "wird",
+        "wir": "werden",
+        "sie": "werden"
+      },
+      "past": {
+        "ich": "wurdeward",
+        "wir": "wurdewarden",
+        "sie": "wurdewarden"
+      },
+      "perfect": {
+        "participle": "gewordenworden",
+        "auxiliary": "sein"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_077",
+    "conjugation": {
+      "present": {
+        "ich": "komme",
+        "du": "kommst",
+        "er_sie_es": "kommt",
+        "wir": "kommen",
+        "sie": "kommen"
+      },
+      "past": {
+        "ich": "kam",
+        "wir": "kamen",
+        "sie": "kamen"
+      },
+      "perfect": {
+        "participle": "gekommen",
+        "auxiliary": "sein"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_078",
+    "conjugation": {
+      "present": {
+        "ich": "gehe",
+        "du": "gehst",
+        "er_sie_es": "geht",
+        "wir": "gehen",
+        "sie": "gehen"
+      },
+      "past": {
+        "ich": "ging",
+        "wir": "gingen",
+        "sie": "gingen"
+      },
+      "perfect": {
+        "participle": "gegangen",
+        "auxiliary": "sein"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_079",
+    "conjugation": {
+      "present": {
+        "ich": "setze",
+        "du": "setzt",
+        "er_sie_es": "setzt",
+        "wir": "setzen",
+        "sie": "setzen"
+      },
+      "past": {
+        "ich": "setzte",
+        "wir": "setzten",
+        "sie": "setzten"
+      },
+      "perfect": {
+        "participle": "gesetzt",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_064",
+    "conjugation": {
+      "present": {
+        "ich": "fahre",
+        "du": "fährst",
+        "er_sie_es": "fährt",
+        "wir": "fahren",
+        "sie": "fahren"
+      },
+      "past": {
+        "ich": "fuhr",
+        "wir": "fuhren",
+        "sie": "fuhren"
+      },
+      "perfect": {
+        "participle": "gefahren",
+        "auxiliary": "sein, haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_080",
+    "conjugation": {
+      "present": {
+        "ich": "sehe",
+        "du": "siehst",
+        "er_sie_es": "sieht",
+        "wir": "sehen",
+        "sie": "sehen"
+      },
+      "past": {
+        "ich": "sah",
+        "wir": "sahen",
+        "sie": "sahen"
+      },
+      "perfect": {
+        "participle": "gesehensehen",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_082",
+    "conjugation": {
+      "present": {
+        "ich": "verstehe",
+        "du": "verstehst",
+        "er_sie_es": "versteht",
+        "wir": "verstehen",
+        "sie": "verstehen"
+      },
+      "past": {
+        "ich": "verstand",
+        "wir": "verstanden",
+        "sie": "verstanden"
+      },
+      "perfect": {
+        "participle": "verstanden",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_088",
+    "conjugation": {
+      "present": {
+        "ich": "schaueschau",
+        "du": "schaust",
+        "er_sie_es": "schaut",
+        "wir": "schauen",
+        "sie": "schauen"
+      },
+      "past": {
+        "ich": "schaute",
+        "wir": "schauten",
+        "sie": "schauten"
+      },
+      "perfect": {
+        "participle": "geschaut",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_090",
+    "conjugation": {
+      "present": {
+        "ich": "danke",
+        "du": "dankst",
+        "er_sie_es": "dankt",
+        "wir": "danken",
+        "sie": "danken"
+      },
+      "past": {
+        "ich": "dankte",
+        "wir": "dankten",
+        "sie": "dankten"
+      },
+      "perfect": {
+        "participle": "gedankt",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_091",
+    "conjugation": {
+      "present": {
+        "ich": "bitte",
+        "du": "bittest",
+        "er_sie_es": "bittet",
+        "wir": "bitten",
+        "sie": "bitten"
+      },
+      "past": {
+        "ich": "bat",
+        "wir": "baten",
+        "sie": "baten"
+      },
+      "perfect": {
+        "participle": "gebeten",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_092",
+    "conjugation": {
+      "present": {
+        "ich": "entschuldige",
+        "du": "entschuldigst",
+        "er_sie_es": "entschuldigt",
+        "wir": "entschuldigen",
+        "sie": "entschuldigen"
+      },
+      "past": {
+        "ich": "entschuldigte",
+        "wir": "entschuldigten",
+        "sie": "entschuldigten"
+      },
+      "perfect": {
+        "participle": "entschuldigt",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_093",
+    "conjugation": {
+      "present": {
+        "ich": "bezahle",
+        "du": "bezahlst",
+        "er_sie_es": "bezahlt",
+        "wir": "bezahlen",
+        "sie": "bezahlen"
+      },
+      "past": {
+        "ich": "bezahlte",
+        "wir": "bezahlten",
+        "sie": "bezahlten"
+      },
+      "perfect": {
+        "participle": "bezahlt",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_087",
+    "conjugation": {
+      "present": {
+        "ich": "sehe",
+        "du": "siehst",
+        "er_sie_es": "sieht",
+        "wir": "sehen",
+        "sie": "sehen"
+      },
+      "past": {
+        "ich": "sah",
+        "wir": "sahen",
+        "sie": "sahen"
+      },
+      "perfect": {
+        "participle": "gesehensehen",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_096",
+    "conjugation": {
+      "present": {
+        "ich": "ruhe aus",
+        "du": "ruhst aus",
+        "er_sie_es": "ruht aus",
+        "wir": "ausruhen",
+        "sie": "ausruhen"
+      },
+      "past": {
+        "ich": "ruhte aus",
+        "wir": "ruhte ausen",
+        "sie": "ruhte ausen"
+      },
+      "perfect": {
+        "participle": "ausgeruht",
+        "auxiliary": "haben"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_097",
+    "conjugation": {
+      "present": {
+        "ich": "reise",
+        "du": "reist",
+        "er_sie_es": "reist",
+        "wir": "reisen",
+        "sie": "reisen"
+      },
+      "past": {
+        "ich": "reiste",
+        "wir": "reisten",
+        "sie": "reisten"
+      },
+      "perfect": {
+        "participle": "gereist",
+        "auxiliary": "sein"
+      }
+    }
+  },
+  {
+    "id": "a1_verb_094",
+    "conjugation": {
+      "present": {
+        "ich": "koste",
+        "du": "kostest",
+        "er_sie_es": "kostet",
+        "wir": "kosten",
+        "sie": "kosten"
+      },
+      "past": {
+        "ich": "kostete",
+        "wir": "kosteten",
+        "sie": "kosteten"
+      },
+      "perfect": {
+        "participle": "gekostet",
+        "auxiliary": "haben"
+      }
+    }
+  }
+]

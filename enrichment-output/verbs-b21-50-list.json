@@ -1,0 +1,167 @@
+[
+  {
+    "id": "a1_verb_038",
+    "german": "schauen, sehen, ansehen",
+    "cleanGerman": "schauen"
+  },
+  {
+    "id": "a1_verb_039",
+    "german": "gehen, fahren (weggehen)",
+    "cleanGerman": "gehen"
+  },
+  {
+    "id": "a1_verb_040",
+    "german": "kommen",
+    "cleanGerman": "kommen"
+  },
+  {
+    "id": "a1_verb_041",
+    "german": "aufstehen, werden",
+    "cleanGerman": "aufstehen"
+  },
+  {
+    "id": "a1_verb_042",
+    "german": "sich setzen, sich hinsetzen",
+    "cleanGerman": "sich setzen"
+  },
+  {
+    "id": "a1_verb_043",
+    "german": "sich hinlegen, schlafen gehen",
+    "cleanGerman": "sich hinlegen"
+  },
+  {
+    "id": "a1_verb_044",
+    "german": "tragen, anhaben",
+    "cleanGerman": "tragen"
+  },
+  {
+    "id": "a1_verb_045",
+    "german": "kaufen",
+    "cleanGerman": "kaufen"
+  },
+  {
+    "id": "a1_verb_046",
+    "german": "nehmen, holen",
+    "cleanGerman": "nehmen"
+  },
+  {
+    "id": "a1_verb_047",
+    "german": "geben",
+    "cleanGerman": "geben"
+  },
+  {
+    "id": "a1_verb_048",
+    "german": "arbeiten",
+    "cleanGerman": "arbeiten"
+  },
+  {
+    "id": "a1_verb_050",
+    "german": "verstehen",
+    "cleanGerman": "verstehen"
+  },
+  {
+    "id": "a1_verb_055",
+    "german": "glauben",
+    "cleanGerman": "glauben"
+  },
+  {
+    "id": "a1_verb_056",
+    "german": "fühlen",
+    "cleanGerman": "fühlen"
+  },
+  {
+    "id": "a1_verb_060",
+    "german": "bleiben",
+    "cleanGerman": "bleiben"
+  },
+  {
+    "id": "a1_verb_064",
+    "german": "fahren (lenken)",
+    "cleanGerman": "fahren"
+  },
+  {
+    "id": "a1_verb_066",
+    "german": "suchen",
+    "cleanGerman": "suchen"
+  },
+  {
+    "id": "a1_verb_071",
+    "german": "haben",
+    "cleanGerman": "haben"
+  },
+  {
+    "id": "a1_verb_076",
+    "german": "werden, aufstehen (perfektiv)",
+    "cleanGerman": "werden"
+  },
+  {
+    "id": "a1_verb_077",
+    "german": "kommen (perfektiv)",
+    "cleanGerman": "kommen"
+  },
+  {
+    "id": "a1_verb_078",
+    "german": "gehen (perfektiv)",
+    "cleanGerman": "gehen"
+  },
+  {
+    "id": "a1_verb_079",
+    "german": "sich setzen (perfektiv)",
+    "cleanGerman": "sich setzen"
+  },
+  {
+    "id": "a1_verb_080",
+    "german": "sehen (perfektiv)",
+    "cleanGerman": "sehen"
+  },
+  {
+    "id": "a1_verb_082",
+    "german": "verstehen (perfektiv)",
+    "cleanGerman": "verstehen"
+  },
+  {
+    "id": "a1_verb_087",
+    "german": "sehen",
+    "cleanGerman": "sehen"
+  },
+  {
+    "id": "a1_verb_088",
+    "german": "schauen, sehen",
+    "cleanGerman": "schauen"
+  },
+  {
+    "id": "a1_verb_090",
+    "german": "danken",
+    "cleanGerman": "danken"
+  },
+  {
+    "id": "a1_verb_091",
+    "german": "bitten",
+    "cleanGerman": "bitten"
+  },
+  {
+    "id": "a1_verb_092",
+    "german": "entschuldigen",
+    "cleanGerman": "entschuldigen"
+  },
+  {
+    "id": "a1_verb_093",
+    "german": "bezahlen",
+    "cleanGerman": "bezahlen"
+  },
+  {
+    "id": "a1_verb_094",
+    "german": "kosten",
+    "cleanGerman": "kosten"
+  },
+  {
+    "id": "a1_verb_096",
+    "german": "sich ausruhen",
+    "cleanGerman": "sich ausruhen"
+  },
+  {
+    "id": "a1_verb_097",
+    "german": "reisen",
+    "cleanGerman": "reisen"
+  }
+]
