@@ -27,10 +27,8 @@ const config = {
 	// File extensions - enable markdown support
 	extensions: ['.svelte', '.md'],
 	
-	// Enable Svelte 5 runes mode for full Svelte 5 compatibility
-	compilerOptions: {
-	  runes: true // Enable Svelte 5 runes now that TypeScript errors are fixed
-	},
+	// compilerOptions removed to allow auto-detection of runes vs legacy mode
+	// This fixes compatibility with libraries like lucide-svelte that use legacy syntax
 
 	kit: {
 		// adapter-static for GitHub Pages deployment

@@ -60,9 +60,6 @@ importers:
       '@axe-core/playwright':
         specifier: ^4.11.0
         version: 4.11.0(playwright-core@1.57.0)
-      '@lucide/svelte':
-        specifier: ^0.560.0
-        version: 0.560.0(svelte@5.45.8)
       '@playwright/test':
         specifier: ^1.57.0
         version: 1.57.0
@@ -139,8 +136,8 @@ importers:
         specifier: ^27.2.0
         version: 27.3.0(postcss@8.5.6)
       lucide-svelte:
-        specifier: ^0.560.0
-        version: 0.560.0(svelte@5.45.8)
+        specifier: ^0.561.0
+        version: 0.561.0(svelte@5.45.8)
       postcss:
         specifier: ^8.5.6
         version: 8.5.6
@@ -690,11 +687,6 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
-
-  '@lucide/svelte@0.560.0':
-    resolution: {integrity: sha512-5z9W4srHj17RWj8HKBUl1lnaUIRE53oiKaPQFKK+TdH3xutyCAzEeTwLAiM7qGk5EeskfgHMhR5IEHhelnfp5A==}
-    peerDependencies:
-      svelte: ^5
 
   '@playwright/test@1.57.0':
     resolution: {integrity: sha512-6TyEnHgd6SArQO8UO2OMTxshln3QMWBtPGrOCgs3wVEmQmwyuNtB10IZMfmYDE0riwNR1cu4q+pPcxMVtaG3TA==}
@@ -2107,8 +2099,8 @@ packages:
     resolution: {integrity: sha512-B5Y16Jr9LB9dHVkh6ZevG+vAbOsNOYCX+sXvFWFu7B3Iz5mijW3zdbMyhsh8ANd2mSWBYdJgnqi+mL7/LrOPYg==}
     engines: {node: 20 || >=22}
 
-  lucide-svelte@0.560.0:
-    resolution: {integrity: sha512-TsQV0pQp3wl++PHCYTRWiJPBZbJ+kVDxXASEF+r4FDw1dn5zSq1aDqxXjqkZ/1Ks6K7ND8xYmy8W6m3kVaoaMw==}
+  lucide-svelte@0.561.0:
+    resolution: {integrity: sha512-LxKemRvPNMNBjBa7JIVd4gZzBrTtwG1JA2ohpdM15jpQDcZCFWKyJz8eG1McaD0bq2weufkYSuVWQLclmmdUlw==}
     peerDependencies:
       svelte: ^3 || ^4 || ^5.0.0-next.42
 
@@ -3268,10 +3260,6 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
-
-  '@lucide/svelte@0.560.0(svelte@5.45.8)':
-    dependencies:
-      svelte: 5.45.8
 
   '@playwright/test@1.57.0':
     dependencies:
@@ -4802,7 +4790,7 @@ snapshots:
 
   lru-cache@11.2.4: {}
 
-  lucide-svelte@0.560.0(svelte@5.45.8):
+  lucide-svelte@0.561.0(svelte@5.45.8):
     dependencies:
       svelte: 5.45.8
 

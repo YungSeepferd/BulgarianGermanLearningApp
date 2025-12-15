@@ -5,8 +5,6 @@ import { translationPlugin } from './src/lib/utils/translation-plugin';
 
 export default defineConfig(({ mode }) => ({
   plugins: [sveltekit(), devtoolsJson(), translationPlugin()],
-  // Enable Svelte 5 runes support
-  svelte: { compilerOptions: { runes: true } },
   resolve: {
     conditions: mode === 'test' ? ['browser'] : undefined,
     alias: { // Add alias to handle TypeScript files without extensions
