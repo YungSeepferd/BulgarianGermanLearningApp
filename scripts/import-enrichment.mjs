@@ -93,6 +93,16 @@ function importEnrichment() {
         }
       }
 
+      if (ENRICHMENT_TYPE === 'adjective' || ENRICHMENT_TYPE === 'mixed') {
+        if (enrichment.grammar && (enrichment.grammar.comparative || enrichment.grammar.superlative)) {
+          if (!vocabItem.grammar) vocabItem.grammar = {};
+          if (enrichment.grammar.comparative) vocabItem.grammar.comparative = enrichment.grammar.comparative;
+          if (enrichment.grammar.superlative) vocabItem.grammar.superlative = enrichment.grammar.superlative;
+          console.log(`${GREEN}✅${RESET} [${idx + 1}] Merged adjective forms: ${vocabItem.german}`);
+          mergedCount++;
+        }
+      }
+
       if (ENRICHMENT_TYPE === 'examples' || ENRICHMENT_TYPE === 'mixed') {
         if (enrichment.examples && Array.isArray(enrichment.examples)) {
           vocabItem.examples = enrichment.examples;

@@ -1,0 +1,282 @@
+[
+  {
+    "id": "a1_color_003",
+    "grammar": {
+      "comparative": "röterroter",
+      "superlative": "am rötestenam rotesten"
+    }
+  },
+  {
+    "id": "a1_color_005",
+    "grammar": {
+      "comparative": "grüner",
+      "superlative": "am grünsten"
+    }
+  },
+  {
+    "id": "a1_color_006",
+    "grammar": {
+      "comparative": "gelber",
+      "superlative": "am gelbsten"
+    }
+  },
+  {
+    "id": "a1_color_007",
+    "grammar": {
+      "comparative": "—",
+      "superlative": "—"
+    }
+  },
+  {
+    "id": "a1_color_004",
+    "grammar": {
+      "comparative": "blauer",
+      "superlative": "am blaustenam blauesten"
+    }
+  },
+  {
+    "id": "a1_color_008",
+    "grammar": {
+      "comparative": "brauner",
+      "superlative": "am braunsten"
+    }
+  },
+  {
+    "id": "a1_color_009",
+    "grammar": {
+      "comparative": "grauer",
+      "superlative": "am grausten"
+    }
+  },
+  {
+    "id": "a1_color_010",
+    "grammar": {
+      "comparative": "—",
+      "superlative": "—"
+    }
+  },
+  {
+    "id": "a1_adj_009",
+    "grammar": {
+      "comparative": "kleiner",
+      "superlative": "am kleinsten"
+    }
+  },
+  {
+    "id": "a1_adj_008",
+    "grammar": {
+      "comparative": "größer",
+      "superlative": "am größten"
+    }
+  },
+  {
+    "id": "a1_adj_011",
+    "grammar": {
+      "comparative": "niedriger",
+      "superlative": "am niedrigsten"
+    }
+  },
+  {
+    "id": "a1_adj_012",
+    "grammar": {
+      "comparative": "länger",
+      "superlative": "am längsten"
+    }
+  },
+  {
+    "id": "a1_adj_013",
+    "grammar": {
+      "comparative": "kürzer",
+      "superlative": "am kürzesten"
+    }
+  },
+  {
+    "id": "a1_adj_010",
+    "grammar": {
+      "comparative": "höher",
+      "superlative": "am höchsten"
+    }
+  },
+  {
+    "id": "a1_adj_015",
+    "grammar": {
+      "comparative": "dünner",
+      "superlative": "am dünnsten"
+    }
+  },
+  {
+    "id": "a1_adj_014",
+    "grammar": {
+      "comparative": "dicker",
+      "superlative": "am dicksten"
+    }
+  },
+  {
+    "id": "a1_adj_016",
+    "grammar": {
+      "comparative": "schöner",
+      "superlative": "am schönsten"
+    }
+  },
+  {
+    "id": "a1_adj_018",
+    "grammar": {
+      "comparative": "jünger",
+      "superlative": "am jüngsten"
+    }
+  },
+  {
+    "id": "a1_adj_020",
+    "grammar": {
+      "comparative": "heißer",
+      "superlative": "am heißesten"
+    }
+  },
+  {
+    "id": "a1_adj_017",
+    "grammar": {
+      "comparative": "hässlicher",
+      "superlative": "am hässlichsten"
+    }
+  },
+  {
+    "id": "a1_adj_022",
+    "grammar": {
+      "comparative": "wärmer",
+      "superlative": "am wärmsten"
+    }
+  },
+  {
+    "id": "a1_adj_021",
+    "grammar": {
+      "comparative": "kälter",
+      "superlative": "am kältesten"
+    }
+  },
+  {
+    "id": "a1_adj_025",
+    "grammar": {
+      "comparative": "reicher",
+      "superlative": "am reichsten"
+    }
+  },
+  {
+    "id": "a1_adj_026",
+    "grammar": {
+      "comparative": "ärmer",
+      "superlative": "am ärmsten"
+    }
+  },
+  {
+    "id": "a1_adj_028",
+    "grammar": {
+      "comparative": "schwächer",
+      "superlative": "am schwächsten"
+    }
+  },
+  {
+    "id": "a1_adj_027",
+    "grammar": {
+      "comparative": "stärker",
+      "superlative": "am stärksten"
+    }
+  },
+  {
+    "id": "a1_adj_029",
+    "grammar": {
+      "comparative": "schneller",
+      "superlative": "am schnellsten"
+    }
+  },
+  {
+    "id": "a1_adj_030",
+    "grammar": {
+      "comparative": "langsamer",
+      "superlative": "am langsamsten"
+    }
+  },
+  {
+    "id": "a1_adj_034",
+    "grammar": {
+      "comparative": "trauriger",
+      "superlative": "am traurigsten"
+    }
+  },
+  {
+    "id": "a1_adj_033",
+    "grammar": {
+      "comparative": "glücklicher",
+      "superlative": "am glücklichsten"
+    }
+  },
+  {
+    "id": "a1_adj_037",
+    "grammar": {
+      "comparative": "müder",
+      "superlative": "am müdesten"
+    }
+  },
+  {
+    "id": "a1_adj_038",
+    "grammar": {
+      "comparative": "hungriger",
+      "superlative": "am hungrigsten"
+    }
+  },
+  {
+    "id": "a1_adj_040",
+    "grammar": {
+      "comparative": "kränkerkranker",
+      "superlative": "am kränkstenam kranksten"
+    }
+  },
+  {
+    "id": "a1_adj_041",
+    "grammar": {
+      "comparative": "gesündergesunder",
+      "superlative": "am gesündestenam gesundesten"
+    }
+  },
+  {
+    "id": "a1_adverb_003",
+    "grammar": {
+      "comparative": "besser",
+      "superlative": "am besten"
+    }
+  },
+  {
+    "id": "a1_adj_039",
+    "grammar": {
+      "comparative": "durstiger",
+      "superlative": "am durstigsten"
+    }
+  },
+  {
+    "id": "a1_adverb_005",
+    "grammar": {
+      "comparative": "schneller",
+      "superlative": "am schnellsten"
+    }
+  },
+  {
+    "id": "a1_adverb_004",
+    "grammar": {
+      "comparative": "schlechter",
+      "superlative": "am schlechtesten"
+    }
+  },
+  {
+    "id": "a1_adverb_006",
+    "grammar": {
+      "comparative": "langsamer",
+      "superlative": "am langsamsten"
+    }
+  },
+  {
+    "id": "a1_adj_043",
+    "grammar": {
+      "comparative": "wichtiger",
+      "superlative": "am wichtigsten"
+    }
+  }
+]

@@ -30,7 +30,7 @@
   ],
   "itemCount": 746,
   "createdAt": "2025-12-11T22:19:46.865Z",
-  "updatedAt": "2025-12-15T23:17:50.717Z",
+  "updatedAt": "2025-12-15T23:21:21.827Z",
   "version": 2,
   "items": [
     {
@@ -11894,7 +11894,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "röterroter",
+        "superlative": "am rötestenam rotesten"
+      }
     },
     {
       "id": "a1_color_004",
@@ -11948,7 +11952,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "blauer",
+        "superlative": "am blaustenam blauesten"
+      }
     },
     {
       "id": "a1_color_005",
@@ -12002,7 +12010,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "grüner",
+        "superlative": "am grünsten"
+      }
     },
     {
       "id": "a1_color_006",
@@ -12056,7 +12068,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "comparative": "gelber",
+        "superlative": "am gelbsten"
+      }
     },
     {
       "id": "a1_color_007",
@@ -12110,7 +12126,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "comparative": "—",
+        "superlative": "—"
+      }
     },
     {
       "id": "a1_color_008",
@@ -12164,7 +12184,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "comparative": "brauner",
+        "superlative": "am braunsten"
+      }
     },
     {
       "id": "a1_color_009",
@@ -12218,7 +12242,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "grauer",
+        "superlative": "am grausten"
+      }
     },
     {
       "id": "a1_color_010",
@@ -12272,7 +12300,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "—",
+        "superlative": "—"
+      }
     },
     {
       "id": "a1_adj_008",
@@ -12328,7 +12360,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "größer",
+        "superlative": "am größten"
+      }
     },
     {
       "id": "a1_adj_009",
@@ -12384,7 +12420,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "kleiner",
+        "superlative": "am kleinsten"
+      }
     },
     {
       "id": "a1_adj_010",
@@ -12440,7 +12480,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "höher",
+        "superlative": "am höchsten"
+      }
     },
     {
       "id": "a1_adj_011",
@@ -12496,7 +12540,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "niedriger",
+        "superlative": "am niedrigsten"
+      }
     },
     {
       "id": "a1_adj_012",
@@ -12552,7 +12600,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "comparative": "länger",
+        "superlative": "am längsten"
+      }
     },
     {
       "id": "a1_adj_013",
@@ -12608,7 +12660,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "comparative": "kürzer",
+        "superlative": "am kürzesten"
+      }
     },
     {
       "id": "a1_adj_014",
@@ -12664,7 +12720,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "dicker",
+        "superlative": "am dicksten"
+      }
     },
     {
       "id": "a1_adj_015",
@@ -12720,7 +12780,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A2"
+      "cefrLevel": "A2",
+      "grammar": {
+        "comparative": "dünner",
+        "superlative": "am dünnsten"
+      }
     },
     {
       "id": "a1_adj_016",
@@ -12776,7 +12840,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "schöner",
+        "superlative": "am schönsten"
+      }
     },
     {
       "id": "a1_adj_017",
@@ -12832,7 +12900,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "hässlicher",
+        "superlative": "am hässlichsten"
+      }
     },
     {
       "id": "a1_verb_038",
@@ -18372,7 +18444,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "jünger",
+        "superlative": "am jüngsten"
+      }
     },
     {
       "id": "a1_adj_020",
@@ -18426,7 +18502,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "heißer",
+        "superlative": "am heißesten"
+      }
     },
     {
       "id": "a1_adj_021",
@@ -18480,7 +18560,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "kälter",
+        "superlative": "am kältesten"
+      }
     },
     {
       "id": "a1_adj_022",
@@ -18534,7 +18618,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "wärmer",
+        "superlative": "am wärmsten"
+      }
     },
     {
       "id": "a1_adj_023",
@@ -18696,7 +18784,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "reicher",
+        "superlative": "am reichsten"
+      }
     },
     {
       "id": "a1_adj_026",
@@ -18750,7 +18842,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "ärmer",
+        "superlative": "am ärmsten"
+      }
     },
     {
       "id": "a1_adj_027",
@@ -18804,7 +18900,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "stärker",
+        "superlative": "am stärksten"
+      }
     },
     {
       "id": "a1_adj_028",
@@ -18858,7 +18958,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "schwächer",
+        "superlative": "am schwächsten"
+      }
     },
     {
       "id": "a1_adj_029",
@@ -18912,7 +19016,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "schneller",
+        "superlative": "am schnellsten"
+      }
     },
     {
       "id": "a1_adj_030",
@@ -18966,7 +19074,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "langsamer",
+        "superlative": "am langsamsten"
+      }
     },
     {
       "id": "a1_adj_031",
@@ -20834,7 +20946,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "glücklicher",
+        "superlative": "am glücklichsten"
+      }
     },
     {
       "id": "a1_adj_034",
@@ -20888,7 +21004,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "trauriger",
+        "superlative": "am traurigsten"
+      }
     },
     {
       "id": "a1_adj_035",
@@ -21050,7 +21170,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "müder",
+        "superlative": "am müdesten"
+      }
     },
     {
       "id": "a1_adj_038",
@@ -21104,7 +21228,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "hungriger",
+        "superlative": "am hungrigsten"
+      }
     },
     {
       "id": "a1_adj_039",
@@ -21158,7 +21286,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "durstiger",
+        "superlative": "am durstigsten"
+      }
     },
     {
       "id": "a1_adj_040",
@@ -21212,7 +21344,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "kränkerkranker",
+        "superlative": "am kränkstenam kranksten"
+      }
     },
     {
       "id": "a1_adj_041",
@@ -21266,7 +21402,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "gesündergesunder",
+        "superlative": "am gesündestenam gesundesten"
+      }
     },
     {
       "id": "a1_adj_042",
@@ -28890,7 +29030,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "besser",
+        "superlative": "am besten"
+      }
     },
     {
       "id": "a1_adverb_004",
@@ -28944,7 +29088,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "schlechter",
+        "superlative": "am schlechtesten"
+      }
     },
     {
       "id": "a1_adverb_005",
@@ -28998,7 +29146,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "schneller",
+        "superlative": "am schnellsten"
+      }
     },
     {
       "id": "a1_adverb_006",
@@ -29052,7 +29204,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "langsamer",
+        "superlative": "am langsamsten"
+      }
     },
     {
       "id": "a1_adverb_007",
@@ -29808,7 +29964,11 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1"
+      "cefrLevel": "A1",
+      "grammar": {
+        "comparative": "wichtiger",
+        "superlative": "am wichtigsten"
+      }
     },
     {
       "id": "a1_adj_044",

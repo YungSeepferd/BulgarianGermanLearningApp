@@ -1,0 +1,202 @@
+[
+  {
+    "id": "a1_color_003",
+    "german": "rot",
+    "cleanGerman": "rot"
+  },
+  {
+    "id": "a1_color_004",
+    "german": "blau",
+    "cleanGerman": "blau"
+  },
+  {
+    "id": "a1_color_005",
+    "german": "grün",
+    "cleanGerman": "grün"
+  },
+  {
+    "id": "a1_color_006",
+    "german": "gelb",
+    "cleanGerman": "gelb"
+  },
+  {
+    "id": "a1_color_007",
+    "german": "orange",
+    "cleanGerman": "orange"
+  },
+  {
+    "id": "a1_color_008",
+    "german": "braun",
+    "cleanGerman": "braun"
+  },
+  {
+    "id": "a1_color_009",
+    "german": "grau",
+    "cleanGerman": "grau"
+  },
+  {
+    "id": "a1_color_010",
+    "german": "rosa, pink",
+    "cleanGerman": "rosa"
+  },
+  {
+    "id": "a1_adj_008",
+    "german": "groß",
+    "cleanGerman": "groß"
+  },
+  {
+    "id": "a1_adj_009",
+    "german": "klein",
+    "cleanGerman": "klein"
+  },
+  {
+    "id": "a1_adj_010",
+    "german": "hoch, groß (von Personen)",
+    "cleanGerman": "hoch"
+  },
+  {
+    "id": "a1_adj_011",
+    "german": "niedrig, klein (von Personen)",
+    "cleanGerman": "niedrig"
+  },
+  {
+    "id": "a1_adj_012",
+    "german": "lang",
+    "cleanGerman": "lang"
+  },
+  {
+    "id": "a1_adj_013",
+    "german": "kurz",
+    "cleanGerman": "kurz"
+  },
+  {
+    "id": "a1_adj_014",
+    "german": "dick, fett",
+    "cleanGerman": "dick"
+  },
+  {
+    "id": "a1_adj_015",
+    "german": "dünn",
+    "cleanGerman": "dünn"
+  },
+  {
+    "id": "a1_adj_016",
+    "german": "schön, hübsch, nett",
+    "cleanGerman": "schön"
+  },
+  {
+    "id": "a1_adj_017",
+    "german": "hässlich",
+    "cleanGerman": "hässlich"
+  },
+  {
+    "id": "a1_adj_018",
+    "german": "jung",
+    "cleanGerman": "jung"
+  },
+  {
+    "id": "a1_adj_020",
+    "german": "heiß",
+    "cleanGerman": "heiß"
+  },
+  {
+    "id": "a1_adj_021",
+    "german": "kalt",
+    "cleanGerman": "kalt"
+  },
+  {
+    "id": "a1_adj_022",
+    "german": "warm",
+    "cleanGerman": "warm"
+  },
+  {
+    "id": "a1_adj_025",
+    "german": "reich",
+    "cleanGerman": "reich"
+  },
+  {
+    "id": "a1_adj_026",
+    "german": "arm",
+    "cleanGerman": "arm"
+  },
+  {
+    "id": "a1_adj_027",
+    "german": "stark",
+    "cleanGerman": "stark"
+  },
+  {
+    "id": "a1_adj_028",
+    "german": "schwach",
+    "cleanGerman": "schwach"
+  },
+  {
+    "id": "a1_adj_029",
+    "german": "schnell",
+    "cleanGerman": "schnell"
+  },
+  {
+    "id": "a1_adj_030",
+    "german": "langsam",
+    "cleanGerman": "langsam"
+  },
+  {
+    "id": "a1_adj_033",
+    "german": "glücklich",
+    "cleanGerman": "glücklich"
+  },
+  {
+    "id": "a1_adj_034",
+    "german": "traurig",
+    "cleanGerman": "traurig"
+  },
+  {
+    "id": "a1_adj_037",
+    "german": "müde",
+    "cleanGerman": "müde"
+  },
+  {
+    "id": "a1_adj_038",
+    "german": "hungrig",
+    "cleanGerman": "hungrig"
+  },
+  {
+    "id": "a1_adj_039",
+    "german": "durstig",
+    "cleanGerman": "durstig"
+  },
+  {
+    "id": "a1_adj_040",
+    "german": "krank",
+    "cleanGerman": "krank"
+  },
+  {
+    "id": "a1_adj_041",
+    "german": "gesund",
+    "cleanGerman": "gesund"
+  },
+  {
+    "id": "a1_adverb_003",
+    "german": "gut",
+    "cleanGerman": "gut"
+  },
+  {
+    "id": "a1_adverb_004",
+    "german": "schlecht",
+    "cleanGerman": "schlecht"
+  },
+  {
+    "id": "a1_adverb_005",
+    "german": "schnell",
+    "cleanGerman": "schnell"
+  },
+  {
+    "id": "a1_adverb_006",
+    "german": "langsam",
+    "cleanGerman": "langsam"
+  },
+  {
+    "id": "a1_adj_043",
+    "german": "wichtig",
+    "cleanGerman": "wichtig"
+  }
+]
