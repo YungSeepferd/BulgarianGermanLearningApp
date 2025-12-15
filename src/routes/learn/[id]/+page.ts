@@ -1,6 +1,8 @@
 import type { PageLoad } from './$types';
 import { vocabularyDb } from '$lib/data/db.svelte';
 
+export const prerender = false;
+
 export const load: PageLoad = async ({ params }) => {
   await vocabularyDb.initialize();
   const all = vocabularyDb.getVocabulary();
