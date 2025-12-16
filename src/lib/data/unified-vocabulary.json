@@ -2072,7 +2072,7 @@
       "id": "eins",
       "german": "eins",
       "bulgarian": "Едно",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A2",
       "categories": [
         "numbers"
@@ -2126,8 +2126,7 @@
             "singular": "einss",
             "plural": "einse"
           }
-        },
-        "gender": "n"
+        }
       },
       "audioUrl": "https://forvo.com/word/eins/"
     },
@@ -2135,7 +2134,7 @@
       "id": "zwei",
       "german": "zwei",
       "bulgarian": "Две",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A2",
       "categories": [
         "numbers"
@@ -2189,8 +2188,7 @@
             "singular": "zweis",
             "plural": "zweie"
           }
-        },
-        "gender": "n"
+        }
       },
       "audioUrl": "https://forvo.com/word/zwei/"
     },
@@ -2198,7 +2196,7 @@
       "id": "drei",
       "german": "drei",
       "bulgarian": "Три",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A2",
       "categories": [
         "numbers"
@@ -2252,8 +2250,7 @@
             "singular": "dreis",
             "plural": "dreie"
           }
-        },
-        "gender": "n"
+        }
       },
       "audioUrl": "https://forvo.com/word/drei/"
     },
@@ -2261,7 +2258,7 @@
       "id": "vier",
       "german": "vier",
       "bulgarian": "Четири",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A2",
       "categories": [
         "numbers"
@@ -2315,8 +2312,7 @@
             "singular": "viers",
             "plural": "viere"
           }
-        },
-        "gender": "n"
+        }
       },
       "audioUrl": "https://forvo.com/word/vier/"
     },
@@ -2324,7 +2320,7 @@
       "id": "funf",
       "german": "fünf",
       "bulgarian": "Пет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A2",
       "categories": [
         "numbers"
@@ -2378,8 +2374,7 @@
             "singular": "fünfs",
             "plural": "fünfe"
           }
-        },
-        "gender": "n"
+        }
       },
       "audioUrl": "https://forvo.com/word/fünf/"
     },
@@ -2387,7 +2382,7 @@
       "id": "sechs",
       "german": "sechs",
       "bulgarian": "Шест",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A2",
       "categories": [
         "numbers"
@@ -2441,8 +2436,7 @@
             "singular": "sechss",
             "plural": "sechse"
           }
-        },
-        "gender": "n"
+        }
       },
       "audioUrl": "https://forvo.com/word/sechs/"
     },
@@ -2450,7 +2444,7 @@
       "id": "sieben",
       "german": "sieben",
       "bulgarian": "Седем",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A2",
       "categories": [
         "numbers"
@@ -2504,8 +2498,7 @@
             "singular": "siebens",
             "plural": "siebene"
           }
-        },
-        "gender": "n"
+        }
       },
       "audioUrl": "https://forvo.com/word/sieben/"
     },
@@ -2513,7 +2506,7 @@
       "id": "acht",
       "german": "acht",
       "bulgarian": "Осем",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A2",
       "categories": [
         "numbers"
@@ -2567,8 +2560,7 @@
             "singular": "achts",
             "plural": "achte"
           }
-        },
-        "gender": "n"
+        }
       },
       "audioUrl": "https://forvo.com/word/acht/"
     },
@@ -2576,7 +2568,7 @@
       "id": "neun",
       "german": "neun",
       "bulgarian": "Девет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A2",
       "categories": [
         "numbers"
@@ -2630,8 +2622,7 @@
             "singular": "neuns",
             "plural": "neune"
           }
-        },
-        "gender": "n"
+        }
       },
       "audioUrl": "https://forvo.com/word/neun/"
     },
@@ -2639,7 +2630,7 @@
       "id": "zehn",
       "german": "zehn",
       "bulgarian": "Десет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A2",
       "categories": [
         "numbers"
@@ -2695,8 +2686,7 @@
             "singular": "zehns",
             "plural": "zehne"
           }
-        },
-        "gender": "n"
+        }
       },
       "audioUrl": "https://forvo.com/word/zehn/"
     },
@@ -2704,7 +2694,7 @@
       "id": "elf",
       "german": "elf",
       "bulgarian": "Единадесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -2759,8 +2749,7 @@
             "singular": "elfs",
             "plural": "elfe"
           }
-        },
-        "gender": "n"
+        }
       },
       "audioUrl": "https://forvo.com/word/elf/"
     },
@@ -2768,7 +2757,7 @@
       "id": "zwoelf",
       "german": "zwölf",
       "bulgarian": "Дванадесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -2823,8 +2812,7 @@
             "singular": "zwölfs",
             "plural": "zwölfe"
           }
-        },
-        "gender": "n"
+        }
       },
       "audioUrl": "https://forvo.com/word/zwölf/"
     },
@@ -2832,7 +2820,7 @@
       "id": "dreizehn",
       "german": "dreizehn",
       "bulgarian": "Тринадесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -2889,8 +2877,7 @@
             "singular": "dreizehns",
             "plural": "dreizehne"
           }
-        },
-        "gender": "n"
+        }
       },
       "audioUrl": "https://forvo.com/word/dreizehn/"
     },
@@ -2898,7 +2885,7 @@
       "id": "zwanzig",
       "german": "zwanzig",
       "bulgarian": "Двадесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -2953,8 +2940,7 @@
             "singular": "zwanzigs",
             "plural": "zwanzige"
           }
-        },
-        "gender": "n"
+        }
       },
       "audioUrl": "https://forvo.com/word/zwanzig/"
     },
@@ -7030,7 +7016,7 @@
       "id": "a1_number_014",
       "german": "vierzehn",
       "bulgarian": "Четиринадесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -7072,7 +7058,6 @@
       "version": 1,
       "cefrLevel": "A1",
       "grammar": {
-        "gender": "n",
         "declension": {
           "nominative": {
             "singular": "vierzehn",
@@ -7097,7 +7082,7 @@
       "id": "a1_number_015",
       "german": "fünfzehn",
       "bulgarian": "Петнадесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -7139,7 +7124,6 @@
       "version": 1,
       "cefrLevel": "A1",
       "grammar": {
-        "gender": "n",
         "declension": {
           "nominative": {
             "singular": "fünfzehn",
@@ -7164,7 +7148,7 @@
       "id": "a1_number_016",
       "german": "sechzehn",
       "bulgarian": "Шестнадесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -7206,7 +7190,6 @@
       "version": 1,
       "cefrLevel": "A1",
       "grammar": {
-        "gender": "n",
         "declension": {
           "nominative": {
             "singular": "sechzehn",
@@ -7231,7 +7214,7 @@
       "id": "a1_number_017",
       "german": "siebzehn",
       "bulgarian": "Седемнадесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -7273,7 +7256,6 @@
       "version": 1,
       "cefrLevel": "A1",
       "grammar": {
-        "gender": "n",
         "declension": {
           "nominative": {
             "singular": "siebzehn",
@@ -7298,7 +7280,7 @@
       "id": "a1_number_018",
       "german": "achtzehn",
       "bulgarian": "Осемнадесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -7340,7 +7322,6 @@
       "version": 1,
       "cefrLevel": "A1",
       "grammar": {
-        "gender": "n",
         "declension": {
           "nominative": {
             "singular": "achtzehn",
@@ -7365,7 +7346,7 @@
       "id": "a1_number_019",
       "german": "neunzehn",
       "bulgarian": "Деветнадесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -7407,7 +7388,6 @@
       "version": 1,
       "cefrLevel": "A1",
       "grammar": {
-        "gender": "n",
         "declension": {
           "nominative": {
             "singular": "neunzehn",
@@ -7432,7 +7412,7 @@
       "id": "a1_number_030",
       "german": "dreißig",
       "bulgarian": "Тридесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -7474,7 +7454,6 @@
       "version": 1,
       "cefrLevel": "A1",
       "grammar": {
-        "gender": "n",
         "declension": {
           "nominative": {
             "singular": "dreißig",
@@ -7499,7 +7478,7 @@
       "id": "a1_number_040",
       "german": "vierzig",
       "bulgarian": "Четиридесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -7541,7 +7520,6 @@
       "version": 1,
       "cefrLevel": "A1",
       "grammar": {
-        "gender": "n",
         "declension": {
           "nominative": {
             "singular": "vierzig",
@@ -7566,7 +7544,7 @@
       "id": "a1_number_050",
       "german": "fünfzig",
       "bulgarian": "Петдесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -7608,7 +7586,6 @@
       "version": 1,
       "cefrLevel": "A1",
       "grammar": {
-        "gender": "n",
         "declension": {
           "nominative": {
             "singular": "fünfzig",
@@ -7633,7 +7610,7 @@
       "id": "a1_number_060",
       "german": "sechzig",
       "bulgarian": "Шестдесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -7675,7 +7652,6 @@
       "version": 1,
       "cefrLevel": "A1",
       "grammar": {
-        "gender": "n",
         "declension": {
           "nominative": {
             "singular": "sechzig",
@@ -7700,7 +7676,7 @@
       "id": "a1_number_070",
       "german": "siebzig",
       "bulgarian": "Седемдесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -7742,7 +7718,6 @@
       "version": 1,
       "cefrLevel": "A1",
       "grammar": {
-        "gender": "n",
         "declension": {
           "nominative": {
             "singular": "siebzig",
@@ -7767,7 +7742,7 @@
       "id": "a1_number_080",
       "german": "achtzig",
       "bulgarian": "Осемдесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -7809,7 +7784,6 @@
       "version": 1,
       "cefrLevel": "A1",
       "grammar": {
-        "gender": "n",
         "declension": {
           "nominative": {
             "singular": "achtzig",
@@ -7834,7 +7808,7 @@
       "id": "a1_number_090",
       "german": "neunzig",
       "bulgarian": "Деветдесет",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -7876,7 +7850,6 @@
       "version": 1,
       "cefrLevel": "A1",
       "grammar": {
-        "gender": "n",
         "declension": {
           "nominative": {
             "singular": "neunzig",
@@ -7901,7 +7874,7 @@
       "id": "a1_number_100",
       "german": "hundert",
       "bulgarian": "Сто",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -7943,7 +7916,6 @@
       "version": 1,
       "cefrLevel": "A1",
       "grammar": {
-        "gender": "n",
         "declension": {
           "nominative": {
             "singular": "hundert",
@@ -8035,7 +8007,7 @@
       "id": "a1_number_1000",
       "german": "tausend",
       "bulgarian": "Хиляда",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "number",
       "difficulty": "A1",
       "categories": [
         "numbers"
@@ -8077,7 +8049,6 @@
       "version": 1,
       "cefrLevel": "A1",
       "grammar": {
-        "gender": "n",
         "declension": {
           "nominative": {
             "singular": "tausend",
@@ -44802,786 +44773,6 @@
       "culturalNotes": "Essential action word. Bulgarian verbs conjugate for person and number | Work culture important in Bulgaria. 8-hour workday standard. | Essential communication verb in Bulgarian. To work - duplicate check, already covered",
       "metadata": {
         "frequency": 95,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1"
-    },
-    {
-      "id": "a1_number_014_dup1",
-      "german": "vierzehn",
-      "bulgarian": "Четиринадесет",
-      "partOfSpeech": "number",
-      "difficulty": "A1",
-      "categories": [
-        "numbers"
-      ],
-      "examples": [
-        {
-          "german": "Sie wird im Juni vierzehn.",
-          "bulgarian": "Тя ще стане на четиринадесет през юни.",
-          "context": "informal",
-          "source": "legacy"
-        },
-        {
-          "german": "Sie ist vierzehn Jahre alt.",
-          "bulgarian": "Тя е на четиринадесет години.",
-          "context": "stating age",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich habe vierzehn Eier gekauft.",
-          "bulgarian": "Купих четиринадесет яйца.",
-          "context": "counting items",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "The number 14 formed from 'четири' (four) + 'надесет' (over ten)",
-        "forBulgarianSpeakers": "'Vierzehn' се произнася [ˈfiːɐ̯tseːn] и образува 'vierzehn Jahre', 'vierzehn Tage'. Запомнете писането с 'ie'. | В немски 'vierzehn' се образува от 'vier' + 'zehn'. Произнася се [ˈfiːɐ̯ˌtseːn]. Използва се при броене и възраст.",
-        "forGermanSpeakers": "Für Deutschsprachige: Beachten Sie die zusätzliche Silbe 'на' in 'четиринадесет'. | Für Deutschsprachige: 'Четиринадесет' folgt dem Muster 'vier' + 'надесет'. Betonung: четиринаде́сет.",
-        "linguistic": "Stress on the third-to-last syllable: четиринаде́сет [tʃɛtirināˈdɛsɛt]",
-        "linguisticForBulgarians": "Stress on четиринаде́сет. German 'vierzehn' keeps long [iː] sound, spelled ohne Umlaut. | Четиринадесет се произнася [tʃɛtirināˈdɛsɛt]. В немски 'vierzehn' [ˈfiːɐ̯ˌtseːn] – 'r' не се произнася силно.",
-        "linguisticForGermans": "Stress on четиринаде́сет. German 'vierzehn' keeps long [iː] sound, spelled ohne Umlaut. | Betonung auf четиринаде́сет. Alle bulgarischen Teens (11-19) tragen Betonung auf derselben Silbe '-де́-'.",
-        "source": "merged"
-      },
-      "etymology": "From 'четири' (four) with inserted 'на' + 'десет'. German forms 'vierzehn' (vier + zehn). | From Proto-Slavic 'četyri' (four) + 'nadъ desętь' (over ten). The pattern mirrors German 'vierzehn'.",
-      "culturalNotes": "Used in school contexts (grade levels, age milestones). | Bulgarian teens (11-19) all use the suffix '-надесет'. In German, teens are written as one word ('vierzehn').",
-      "metadata": {
-        "frequency": 70,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1"
-    },
-    {
-      "id": "a1_number_015_dup1",
-      "german": "fünfzehn",
-      "bulgarian": "Петнадесет",
-      "partOfSpeech": "number",
-      "difficulty": "A1",
-      "categories": [
-        "numbers"
-      ],
-      "examples": [
-        {
-          "german": "Wir haben fünfzehn Minuten Pause.",
-          "bulgarian": "Имаме петнадесет минути почивка.",
-          "context": "informal",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich habe fünfzehn Lewa.",
-          "bulgarian": "Имам петнадесет лева.",
-          "context": "money",
-          "source": "legacy"
-        },
-        {
-          "german": "Der Unterricht beginnt um fünfzehn Uhr.",
-          "bulgarian": "Урокът започва в петнадесет часа.",
-          "context": "24-hour time",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "The number 15 formed from 'пет' (five) + 'надесет' (over ten)",
-        "forBulgarianSpeakers": "'Fünfzehn' се произнася [ˈfʏnfʦeːn]. Немският умлаут ü се чете [y]. Често се използва в часовете: 'fünfzehn Uhr'. | В немски 'fünfzehn' се образува от 'fünf' + 'zehn'. Обърнете внимание на умлаута 'ü' [yː].",
-        "forGermanSpeakers": "Für Deutschsprachige: Bulgarische Form behält 'пет'. Deutsch kürzt 'fünf' zu 'fünfzehn'. | Für Deutschsprachige: 'Петнадесет' = 'fünfzehn'. Einfacher als Deutsch: kein Umlaut, direkte Kombination 'пет' + 'надесет'.",
-        "linguistic": "Stress on петнаде́сет [pɛtnāˈdɛsɛt]. Often shortened colloquially to 'петна́йсе'.",
-        "linguisticForBulgarians": "Stress on петнаде́сет. German 'fünfzehn' keeps Umlaut [ʏ]. | Петнадесет [pɛtnāˈdɛsɛt]. В немски 'fünfzehn' [ˈfʏnfˌtseːn] – 'ü' се произнася с rounded lips.",
-        "linguisticForGermans": "Stress on петнаде́сет. German 'fünfzehn' keeps Umlaut [ʏ]. | Betonung петнаде́сет. In Umgangssprache oft verkürzt zu 'петна́йсе' [pɛtnˈajsɛ].",
-        "source": "merged"
-      },
-      "etymology": "From 'пет' (five) + 'над десет'. German combines 'fünf' + 'zehn' with spelling 'fünfzehn'. | From Proto-Slavic 'pętь' (five) + 'nadъ desętь' (over ten). Related to Latin 'quīnque' through Indo-European roots.",
-      "culturalNotes": "Relevant for school schedule (15 минути break) and telling time. | Used for age, counting, and telling time. In Bulgaria, 15 minutes is often 'четвърт' (quarter) in time expressions.",
-      "metadata": {
-        "frequency": 70,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1"
-    },
-    {
-      "id": "a1_number_016_dup1",
-      "german": "sechzehn",
-      "bulgarian": "Шестнадесет",
-      "partOfSpeech": "number",
-      "difficulty": "A1",
-      "categories": [
-        "numbers"
-      ],
-      "examples": [
-        {
-          "german": "Er wird im Mai sechzehn.",
-          "bulgarian": "Той навършва шестнадесет през май.",
-          "context": "informal",
-          "source": "legacy"
-        },
-        {
-          "german": "Sie ist sechzehn geworden.",
-          "bulgarian": "Тя навърши шестнадесет години.",
-          "context": "birthday/age milestone",
-          "source": "legacy"
-        },
-        {
-          "german": "Der Bus fährt um sechzehn Uhr dreißig ab.",
-          "bulgarian": "Автобусът тръгва в шестнадесет и тридесет.",
-          "context": "schedule",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "The number 16 formed from 'шест' (six) + 'надесет' (over ten)",
-        "forBulgarianSpeakers": "'Sechzehn' се пише без 's' (не 'sechszehn') и се произнася [ˈzɛçtseːn]. Запомнете изключението. | В немски 'sechzehn' произхожда от 'sechs' + 'zehn'. Обърнете внимание: 'sechs' губи 's' при образуване на 'sechzehn'.",
-        "forGermanSpeakers": "Für Deutschsprachige: 'Шестнадесет' folgt dem Grundmuster. Deutsche Besonderheit: 'sechzehn' ohne 's'. | Für Deutschsprachige: 'Шестнадесет' ist regelmäßig gebildet. Anders als Deutsch ('sechs' → 'sechzehn') bleibt im Bulgarischen 'шест' unverändert.",
-        "linguistic": "Stress on шестнаде́сет [ʃɛstnāˈdɛsɛt]. The 'шест' part pronounced clearly.",
-        "linguisticForBulgarians": "Stress on шестнаде́сет. German anomaly: 'sechzehn' ohne 's'. | Шестнадесет [ʃɛstnāˈdɛsɛt]. В немски 'sechzehn' [ˈzɛçˌtseːn] – 'ch' е палатално [ç].",
-        "linguisticForGermans": "Stress on шестнаде́сет. German anomaly: 'sechzehn' ohne 's'. | Betonung шестнаде́сет. 'Шест' [ʃɛst] mit stimmlosem 'š' wie deutsches 'sch'.",
-        "source": "merged"
-      },
-      "etymology": "From 'шест' (six) + 'над десет'. German drops the 's' in 'sechzehn'. | From Proto-Slavic 'šestь' (six) + 'nadъ desętь'. The 'š' sound [ʃ] is preserved from ancient times.",
-      "culturalNotes": "Driving age references in some countries (16). | Age of consent and driving age in Bulgaria. Often used in sports scores and measurements.",
-      "metadata": {
-        "frequency": 69,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1"
-    },
-    {
-      "id": "a1_number_017_dup1",
-      "german": "siebzehn",
-      "bulgarian": "Седемнадесет",
-      "partOfSpeech": "number",
-      "difficulty": "A1",
-      "categories": [
-        "numbers"
-      ],
-      "examples": [
-        {
-          "german": "Das Treffen ist um siebzehn Uhr.",
-          "bulgarian": "Срещата е в седемнадесет часа.",
-          "context": "formal",
-          "source": "legacy"
-        },
-        {
-          "german": "In der Gruppe sind siebzehn Studenten.",
-          "bulgarian": "В групата има седемнадесет студенти.",
-          "context": "counting people",
-          "source": "legacy"
-        },
-        {
-          "german": "Mein Geburtstag ist am siebzehnten Mai.",
-          "bulgarian": "Роденият ми ден е на седемнадесети май.",
-          "context": "ordinal form/date",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "The number 17 formed from 'седем' (seven) + 'надесет' (over ten)",
-        "forBulgarianSpeakers": "'Siebzehn' се пише без 'en' (не 'siebzehn'). Произношение [ˈziːptseːn]. Използва се в изрази като 'siebzehn Uhr'. | В немски 'siebzehn' произхожда от 'sieben' + 'zehn'. Забележете: 'sieben' губи '-en' и става 'sieb-'.",
-        "forGermanSpeakers": "Für Deutschsprachige: Bulgarische Form behält 'седем'. Deutsch kürzt 'sieben' zu 'sieb-'. | Für Deutschsprachige: 'Седемнадесет' behält 'седем' vollständig. Im Deutschen wird 'sieben' zu 'sieb-' verkürzt.",
-        "linguistic": "Stress on седемнаде́сет [sɛdɛmnāˈdɛsɛt]. Longer word with clear syllable boundaries.",
-        "linguisticForBulgarians": "Stress on седемнаде́сет. German 'siebzehn' loses the 'en'. | Седемнадесет [sɛdɛmnāˈdɛsɛt]. В немски 'siebzehn' [ˈziːpˌtseːn] – забележете shortening 'sieb-'.",
-        "linguisticForGermans": "Stress on седемнаде́сет. German 'siebzehn' loses the 'en'. | Betonung седемнаде́сет. Alle fünf Silben werden deutlich ausgesprochen: се-дем-на-де-сет.",
-        "source": "merged"
-      },
-      "etymology": "From 'седем' (seven) + 'над десет'. German shortens 'sieben' to 'sieb-' in 'siebzehn'. | From Proto-Slavic 'sedmь' (seven) + 'nadъ desętь'. Cognate with Latin 'septem' and Greek 'hepta'.",
-      "culturalNotes": "Common for school grades and calendar references. | In Bulgarian culture, no special significance. In German-speaking countries, 17 is just a regular number.",
-      "metadata": {
-        "frequency": 69,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1"
-    },
-    {
-      "id": "a1_number_018_dup1",
-      "german": "achtzehn",
-      "bulgarian": "Осемнадесет",
-      "partOfSpeech": "number",
-      "difficulty": "A1",
-      "categories": [
-        "numbers"
-      ],
-      "examples": [
-        {
-          "german": "Sie ist letzte Woche achtzehn geworden.",
-          "bulgarian": "Тя навърши осемнадесет миналата седмица.",
-          "context": "informal",
-          "source": "legacy"
-        },
-        {
-          "german": "Mit achtzehn Jahren darfst du wählen.",
-          "bulgarian": "На осемнадесет години можеш да гласуваш.",
-          "context": "legal age",
-          "source": "legacy"
-        },
-        {
-          "german": "Die Temperatur ist achtzehn Grad.",
-          "bulgarian": "Температурата е осемнадесет градуса.",
-          "context": "temperature",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "The number 18 formed from 'осем' (eight) + 'надесет' (over ten)",
-        "forBulgarianSpeakers": "'Achtzehn' се произнася [ˈaxtseːn] и е важна възрастова граница. В комбинации: 'achtzehnjährige'. | В немски 'achtzehn' от 'acht' + 'zehn'. Забележете 'cht' [χt] – рязък гърлен звук.",
-        "forGermanSpeakers": "Für Deutschsprachige: 'Осемнадесет' hat eingefügtes 'на'. Deutsch behält 'acht'. | Für Deutschsprachige: 'Осемнадесет' regelmäßig gebildet aus 'осем' + 'надесет'. Betonung wie bei allen Teens auf '-де́-'.",
-        "linguistic": "Stress on осемнаде́сет [ɔsɛmnāˈdɛsɛt]. Clear pronunciation of all syllables.",
-        "linguisticForBulgarians": "Stress on осемнаде́сет. German 'achtzehn' keeps 't' pronunciation [ˈaxtseːn]. | Осемнадесет [ɔsɛmnāˈdɛsɛt]. В немски 'achtzehn' [ˈaχtˌtseːn] – 'ch' е velares [χ].",
-        "linguisticForGermans": "Stress on осемнаде́сет. German 'achtzehn' keeps 't' pronunciation [ˈaxtseːn]. | Betonung осемнаде́сет. Das 'о' wird als offenes [ɔ] ausgesprochen, nicht wie deutsches [o:].",
-        "source": "merged"
-      },
-      "etymology": "From 'осем' (eight) + 'над десет'. German combines 'acht' + 'zehn'. | From Proto-Slavic 'osmь' (eight) + 'nadъ desętь'. The root 'os-' relates to Indo-European *oḱtṓ.",
-      "culturalNotes": "Marks adulthood in many contexts (18th birthday celebrations). | Age of legal adulthood in Bulgaria (18 years). Important milestone for voting rights and legal responsibilities.",
-      "metadata": {
-        "frequency": 70,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1"
-    },
-    {
-      "id": "a1_number_019_dup1",
-      "german": "neunzehn",
-      "bulgarian": "Деветнадесет",
-      "partOfSpeech": "number",
-      "difficulty": "A1",
-      "categories": [
-        "numbers"
-      ],
-      "examples": [
-        {
-          "german": "Die Universität wurde im neunzehnten Jahrhundert gegründet.",
-          "bulgarian": "Университетът е основан през деветнадесет век.",
-          "context": "formal",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich arbeite bis neunzehn Uhr.",
-          "bulgarian": "Работя до деветнадесет часа.",
-          "context": "work schedule",
-          "source": "legacy"
-        },
-        {
-          "german": "Das Zimmer ist im neunzehnten Stock.",
-          "bulgarian": "Стаята е на деветнадесети етаж.",
-          "context": "ordinal/floor number",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "The number 19 formed from 'девет' (nine) + 'надесет' (over ten)",
-        "forBulgarianSpeakers": "'Neunzehn' се произнася [ˈnɔʏ̯ntseːn] и често се съкращава в разговор: 'neunzehn Uhr' (19 часа). | В немски 'neunzehn' от 'neun' + 'zehn'. Забележете дифтонга 'eu' [ɔʏ] и носовото 'n'.",
-        "forGermanSpeakers": "Für Deutschsprachige: Bulgarisches Muster bleibt konstant ('девет' + 'надесет'). | Für Deutschsprachige: 'Деветнадесет' einfach aus 'девет' + 'надесет'. Letztes Teen-Zahl vor Sprung zu 20.",
-        "linguistic": "Stress on деветнаде́сет [dɛvɛtnāˈdɛsɛt]. The longest single-syllable number name.",
-        "linguisticForBulgarians": "Stress on деветнаде́сет. German 'neunzehn' uses diphthong [nɔɪ̯n]. | Деветнадесет [dɛvɛtnāˈdɛsɛt]. В немски 'neunzehn' [ˈnɔʏnˌtseːn] – 'eu' [ɔʏ] дифтонг.",
-        "linguisticForGermans": "Stress on деветнаде́сет. German 'neunzehn' uses diphthong [nɔɪ̯n]. | Betonung деветнаде́сет. Fünf Silben: де-вет-на-де-сет, alle klar artikuliert.",
-        "source": "merged"
-      },
-      "etymology": "From 'девет' (nine) + 'над десет'. German forms 'neun' + 'zehn'. | From Proto-Slavic 'devętь' (nine) + 'nadъ desętь'. Related to Latin 'novem' through PIE *h₁néwn̥.",
-      "culturalNotes": "Used frequently in dates (e.g., 19th century references). | Last of the teen numbers. The transition from 19 to 20 marks entry into adulthood age range in many contexts.",
-      "metadata": {
-        "frequency": 70,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1"
-    },
-    {
-      "id": "a1_number_030_dup1",
-      "german": "dreißig",
-      "bulgarian": "Тридесет",
-      "partOfSpeech": "number",
-      "difficulty": "A1",
-      "categories": [
-        "numbers"
-      ],
-      "examples": [
-        {
-          "german": "Das Unternehmen hat dreißig Mitarbeitende.",
-          "bulgarian": "Компанията има тридесет служители.",
-          "context": "formal",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich bin dreißig Jahre alt.",
-          "bulgarian": "Имам тридесет години.",
-          "context": "age",
-          "source": "legacy"
-        },
-        {
-          "german": "Das kostet dreißig Lewa.",
-          "bulgarian": "Това струва тридесет лева.",
-          "context": "price",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "The number 30 - first of the tens after 20",
-        "forBulgarianSpeakers": "'Dreißig' се изговаря [ˈdʁaɪ̯sɪç]. При писане без ß използвайте 'dreissig'. | В немски 'dreißig' се пише с 'ß' (eszett), произнася се [ˈdʁaɪ̯sɪç]. Забележете: 'drei' + 'ßig' (не 'zehn').",
-        "forGermanSpeakers": "Für Deutschsprachige: Bulgarische Form bleibt regelhaft. Deutsch verwendet 'ß'. | Für Deutschsprachige: 'Тридесет' aus 'три' + 'десет'. Einfacher als Deutsch: kein 'ß', direkte Kombination.",
-        "linguistic": "Stress on триде́сет [triˈdɛsɛt]. Pattern continues for all tens: -де́сет stressed.",
-        "linguisticForBulgarians": "Stress on три́десет. German nutzt scharfes ß und Laut [ˈdʁaɪ̯sɪç]. | Тридесет [triˈdɛsɛt]. В немски 'dreißig' [ˈdʁaɪ̯sɪç] – 'ß' е специален звук [s].",
-        "linguisticForGermans": "Stress on три́десет. German nutzt scharfes ß und Laut [ˈdʁaɪ̯sɪç]. | Betonung триде́сет. Kombination ist regelmäßig: число + десет.",
-        "source": "merged"
-      },
-      "etymology": "From 'три' (three) + 'десет'. German uses 'dreißig' (drei + ßig). | From Proto-Slavic 'tri' (three) + 'desętь' (ten). Pattern: base number + десет for all tens.",
-      "culturalNotes": "Milestone age (30). | Round numbers like 30 are common in prices and measurements. Bulgarian uses 'и' between tens and units (тридесет и един).",
-      "metadata": {
-        "frequency": 75,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1"
-    },
-    {
-      "id": "a1_number_040_dup1",
-      "german": "vierzig",
-      "bulgarian": "Четиридесет",
-      "partOfSpeech": "number",
-      "difficulty": "A1",
-      "categories": [
-        "numbers"
-      ],
-      "examples": [
-        {
-          "german": "Das Ticket kostet vierzig Lewa.",
-          "bulgarian": "Билетът струва четиридесет лева.",
-          "context": "formal",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich arbeite vierzig Stunden pro Woche.",
-          "bulgarian": "Работя четиридесет часа седмично.",
-          "context": "work hours",
-          "source": "legacy"
-        },
-        {
-          "german": "Die Temperatur erreichte vierzig Grad.",
-          "bulgarian": "Температурата достигна четиридесет градуса.",
-          "context": "temperature",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "The number 40 formed from 'четири' (four) + 'десет' (ten)",
-        "forBulgarianSpeakers": "'Vierzig' се пише без 'u' (не 'vierzig'). Произношение [ˈfiːɐ̯tsɪç]. | В немски 'vierzig' има 'zig' окончание (не 'zehn'). Произнася се [ˈfiːɐ̯tsɪç].",
-        "forGermanSpeakers": "Für Deutschsprachige: Deutsche Form hat kein 'u' wie 'vier'. | Für Deutschsprachige: 'Четиридесет' behält 'четири' vollständig + 'десет'. Regelmäßiger als Deutsch.",
-        "linguistic": "Stress on четириде́сет [tʃɛtiriˈdɛsɛt]. Longest of the common tens.",
-        "linguisticForBulgarians": "Stress on четириде́сет. German 'vierzig' pronounced [ˈfiːɐ̯tsɪç]. | Четиридесет [tʃɛtiriˈdɛsɛt]. В немски 'vierzig' [ˈfiːɐ̯tsɪç] – 'g' става [ç].",
-        "linguisticForGermans": "Stress on четириде́сет. German 'vierzig' pronounced [ˈfiːɐ̯tsɪç]. | Betonung четириде́сет. Alle Silben klar: че-ти-ри-де-сет.",
-        "source": "merged"
-      },
-      "etymology": "From 'четири' (four) + 'десет'. German 'vierzig' is vier + zig (without 'u'). | From 'четири' + 'десет'. Bulgarian tens are more regular than German (which has 'zig' vs 'zehn').",
-      "culturalNotes": "Used in pricing, e.g., 40 лева. | 40 is culturally significant: '40 days' appears in many Bulgarian traditions and Orthodox Christian practices.",
-      "metadata": {
-        "frequency": 70,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1"
-    },
-    {
-      "id": "a1_number_050_dup1",
-      "german": "fünfzig",
-      "bulgarian": "Петдесет",
-      "partOfSpeech": "number",
-      "difficulty": "A1",
-      "categories": [
-        "numbers"
-      ],
-      "examples": [
-        {
-          "german": "Das Buch hat fünfzig Seiten.",
-          "bulgarian": "Книгата има петдесет страници.",
-          "context": "informal",
-          "source": "legacy"
-        },
-        {
-          "german": "Gestern bin ich fünfzig geworden.",
-          "bulgarian": "Вчера навърших петдесет години.",
-          "context": "birthday",
-          "source": "legacy"
-        },
-        {
-          "german": "Gib mir fünfzig Lewa.",
-          "bulgarian": "Дай ми петдесет лева.",
-          "context": "money",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "The number 50 - midpoint of counting to 100",
-        "forBulgarianSpeakers": "'Fünfzig' се произнася [ˈfʏnfʦɪç]. Немският ü се чете [y], а 'g' в края е [ç]. | В немски 'fünfzig' с умлаут 'ü'. Произнася се [ˈfʏnftsɪç]. Означава половината от 100.",
-        "forGermanSpeakers": "Für Deutschsprachige: Bulgarisch bleibt regulär. Deutsch behält ü und fügt '-zig'. | Für Deutschsprachige: 'Петдесет' aus 'пет' + 'десет'. Halbzahl, wichtig für Prozente und Teilungen.",
-        "linguistic": "Stress on петдесе́т [pɛtdɛˈsɛt]. Shorter than четиридесет.",
-        "linguisticForBulgarians": "Stress on петде́сет. German 'fünfzig' retains Umlaut [ʏ]. | Петдесет [pɛtdɛˈsɛt]. В немски 'fünfzig' [ˈfʏnftsɪç] – 'ü' с rounded lips.",
-        "linguisticForGermans": "Stress on петде́сет. German 'fünfzig' retains Umlaut [ʏ]. | Betonung петдесе́т. 'Пет' ohne Vokalwechsel wie im Deutschen (fünf → fünfzig).",
-        "source": "merged"
-      },
-      "etymology": "From 'пет' (five) + 'десет'. German shortens 'fünf' to 'fünfzig'. | From 'пет' (five) + 'десет' (ten). Related to Proto-Slavic 'pętьdesętь'.",
-      "culturalNotes": "Used for measures (50 кг, 50%) and milestone birthdays. | 50th birthday (полувековен юбилей) is a significant milestone in Bulgarian culture.",
-      "metadata": {
-        "frequency": 75,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1"
-    },
-    {
-      "id": "a1_number_060_dup1",
-      "german": "sechzig",
-      "bulgarian": "Шестдесет",
-      "partOfSpeech": "number",
-      "difficulty": "A1",
-      "categories": [
-        "numbers"
-      ],
-      "examples": [
-        {
-          "german": "Eine Stunde hat sechzig Minuten.",
-          "bulgarian": "Един час има шестдесет минути.",
-          "context": "informal",
-          "source": "legacy"
-        },
-        {
-          "german": "Er ist sechzig Jahre alt.",
-          "bulgarian": "Той е на шестдесет години.",
-          "context": "age/retirement",
-          "source": "legacy"
-        },
-        {
-          "german": "Vor sechzig Jahren.",
-          "bulgarian": "Преди шестдесет години.",
-          "context": "historical time",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "The number 60 formed from 'шест' (six) + 'десет' (ten)",
-        "forBulgarianSpeakers": "'Sechzig' се пише без 's' (не 'sechszig') и се произнася [ˈzɛçtsɪç]. | В немски 'sechzig' губи 's' от 'sechs'. Произнася се [ˈzɛçtsɪç].",
-        "forGermanSpeakers": "Für Deutschsprachige: Beachten Sie die fehlende 's' in 'sechzig'. | Für Deutschsprachige: 'Шестдесет' behält 'шест' vollständig, während Deutsch 'sechs' → 'sechzig' ändert.",
-        "linguistic": "Stress on шестдесе́т [ʃɛstdɛˈsɛt]. 'Шест' clearly articulated.",
-        "linguisticForBulgarians": "Stress on шестде́сет. German anomaly: 'sechzig' ohne 's'. | Шестдесет [ʃɛstdɛˈsɛt]. В немски 'sechzig' [ˈzɛçtsɪç] – 'ch' е палатално.",
-        "linguisticForGermans": "Stress on шестде́сет. German anomaly: 'sechzig' ohne 's'. | Betonung шестдесе́т. 'Ш' ist wie deutsches 'sch' in 'Schule'.",
-        "source": "merged"
-      },
-      "etymology": "From 'шест' (six) + 'десет'. German 'sechzig' loses the 's'. | From 'шест' + 'десет'. The 'ш' [ʃ] sound is characteristic of Slavic languages.",
-      "culturalNotes": "Common in time expressions (60 минути = 1 час). | 60 minutes = 1 hour. Used frequently in time expressions and retirement age discussions.",
-      "metadata": {
-        "frequency": 70,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1"
-    },
-    {
-      "id": "a1_number_070_dup1",
-      "german": "siebzig",
-      "bulgarian": "Седемдесет",
-      "partOfSpeech": "number",
-      "difficulty": "A1",
-      "categories": [
-        "numbers"
-      ],
-      "examples": [
-        {
-          "german": "Mein Großvater ist siebzig Jahre alt.",
-          "bulgarian": "Дядо ми е на седемдесет години.",
-          "context": "informal",
-          "source": "legacy"
-        },
-        {
-          "german": "Meine Oma ist siebzig Jahre alt.",
-          "bulgarian": "Баба ми е на седемдесет години.",
-          "context": "family/age",
-          "source": "legacy"
-        },
-        {
-          "german": "Die Geschwindigkeit ist siebzig Stundenkilometer.",
-          "bulgarian": "Скоростта е седемдесет километра в час.",
-          "context": "speed limit",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "The number 70 formed from 'седем' (seven) + 'десет' (ten)",
-        "forBulgarianSpeakers": "'Siebzig' се произнася [ˈziːptsɪç] и се пише без 'en'. | В немски 'siebzig' произхожда от 'sieben'. Забележете скъсяването: 'sieb-' (не 'sieben-').",
-        "forGermanSpeakers": "Für Deutschsprachige: Muster wie bei 'siebzehn' – 'sieben' verliert '-en'. | Für Deutschsprachige: 'Седемдесет' ist regelmäßig: 'седем' + 'десет', kein Vokalwechsel wie bei 'sieben' → 'siebzig'.",
-        "linguistic": "Stress on седемдесе́т [sɛdɛmdɛˈsɛt]. Five clear syllables.",
-        "linguisticForBulgarians": "Stress on седемде́сет. German 'siebzig' ohne 'en'. | Седемдесет [sɛdɛmdɛˈsɛt]. В немски 'siebzig' [ˈziːptsɪç] – обърнете внимание на скъсяването.",
-        "linguisticForGermans": "Stress on седемде́сет. German 'siebzig' ohne 'en'. | Betonung седемдесе́т. Vollform 'седем' bleibt erhalten, nicht verkürzt.",
-        "source": "merged"
-      },
-      "etymology": "From 'седем' (seven) + 'десет'. German shortens 'sieben' to 'sieb-' in 'siebzig'. | From 'седем' + 'десет'. Cognate with Latin 'septuaginta' and Greek 'hebdomēkonta'.",
-      "culturalNotes": "Appears in date references (70-те години). | Average life expectancy in Bulgaria is around 70-75 years. Used in demographics and health statistics.",
-      "metadata": {
-        "frequency": 65,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1"
-    },
-    {
-      "id": "a1_number_080_dup1",
-      "german": "achtzig",
-      "bulgarian": "Осемдесет",
-      "partOfSpeech": "number",
-      "difficulty": "A1",
-      "categories": [
-        "numbers"
-      ],
-      "examples": [
-        {
-          "german": "Hier gilt eine Begrenzung von achtzig Stundenkilometern.",
-          "bulgarian": "Осемдесет километра в час е ограничението тук.",
-          "context": "formal",
-          "source": "legacy"
-        },
-        {
-          "german": "Mein Opa lebte achtzig Jahre.",
-          "bulgarian": "Дядо ми живя осемдесет години.",
-          "context": "lifespan",
-          "source": "legacy"
-        },
-        {
-          "german": "Im Raum gibt es achtzig Stühle.",
-          "bulgarian": "В стаята има осемдесет стола.",
-          "context": "counting objects",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "The number 80 formed from 'осем' (eight) + 'десет' (ten)",
-        "forBulgarianSpeakers": "'Achtzig' се произнася [ˈaxtsɪç] – 't' се чува ясно. Използва се в 'achtziger Jahre'. | В немски 'achtzig' с 'cht' [χt]. Произнася се [ˈaχtsɪç]. Забележете 'zig' окончанието.",
-        "forGermanSpeakers": "Für Deutschsprachige: Struktur bleibt regelmäßig. Deutsch bewahrt 't'. | Für Deutschsprachige: 'Осемдесет' folgt dem Standard: 'осем' + 'десет'. Regelmäßiger als Deutsch.",
-        "linguistic": "Stress on осемдесе́т [ɔsɛmdɛˈsɛt]. 'Осем' retained fully.",
-        "linguisticForBulgarians": "Stress on осемде́сет. German [ˈaxtsɪç] with audible 't'. | Осемдесет [ɔsɛmdɛˈsɛt]. В немски 'achtzig' [ˈaχtsɪç] – 'ch' е velares [χ].",
-        "linguisticForGermans": "Stress on осемде́сет. German [ˈaxtsɪç] with audible 't'. | Betonung осемдесе́т. 'О' als offenes [ɔ], nicht geschlossenes [o:].",
-        "source": "merged"
-      },
-      "etymology": "From 'осем' (eight) + 'десет'. German 'achtzig' keeps 't'. | From 'осем' + 'десет'. The root relates to Indo-European *oḱtṓ (eight).",
-      "culturalNotes": "Common in speed limits (80 km/h). | Living to 80 is considered a long life. Used in longevity wishes and demographic statistics.",
-      "metadata": {
-        "frequency": 63,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1"
-    },
-    {
-      "id": "a1_number_090_dup1",
-      "german": "neunzig",
-      "bulgarian": "Деветдесет",
-      "partOfSpeech": "number",
-      "difficulty": "A1",
-      "categories": [
-        "numbers"
-      ],
-      "examples": [
-        {
-          "german": "Neunzig Prozent der Befragten stimmen zu.",
-          "bulgarian": "Деветдесет процента от анкетираните са съгласни.",
-          "context": "formal",
-          "source": "legacy"
-        },
-        {
-          "german": "Er lebte neunzig Jahre.",
-          "bulgarian": "Той живя деветдесет години.",
-          "context": "long lifespan",
-          "source": "legacy"
-        },
-        {
-          "german": "In den Neunzigern.",
-          "bulgarian": "През деветдесетте години.",
-          "context": "decade reference",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "The number 90 - last of the tens before 100",
-        "forBulgarianSpeakers": "'Neunzig' се произнася [ˈnɔʏ̯ntsɪç] и често се съкращава в разговор до 'neunzig Prozent'. | В немски 'neunzig' с дифтонг 'eu' [ɔʏ]. Произнася се [ˈnɔʏntsɪç]. Последното десятично число.",
-        "forGermanSpeakers": "Für Deutschsprachige: Bulgarische Endung '-десет' bleibt; Deutsch sagt 'neunzig' mit Diphtong. | Für Deutschsprachige: 'Деветдесет' aus 'девет' + 'десет'. Letztes Zehnerzahl vor 100.",
-        "linguistic": "Stress on деветдесе́т [dɛvɛtdɛˈsɛt]. Five syllables like седемдесет.",
-        "linguisticForBulgarians": "Stress on деветде́сет. German diphthong [nɔʏ̯n]. | Деветдесет [dɛvɛtdɛˈsɛt]. В немски 'neunzig' [ˈnɔʏntsɪç] – 'eu' дифтонг [ɔʏ].",
-        "linguisticForGermans": "Stress on деветде́сет. German diphthong [nɔʏ̯n]. | Betonung деветдесе́т. Klar artikuliert: де-вет-де-сет.",
-        "source": "merged"
-      },
-      "etymology": "From 'девет' (nine) + 'десет'. German 'neun' + '-zig'. | From 'девет' + 'десет'. Related to Latin 'nonaginta' through PIE *h₁néwn̥.",
-      "culturalNotes": "Used in percentages (90%) and pricing. | The 1990s (деветдесетте години) mark Bulgaria's transition to democracy and market economy.",
-      "metadata": {
-        "frequency": 62,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1"
-    },
-    {
-      "id": "a1_number_100_dup1",
-      "german": "hundert",
-      "bulgarian": "Сто",
-      "partOfSpeech": "number",
-      "difficulty": "A1",
-      "categories": [
-        "numbers"
-      ],
-      "examples": [
-        {
-          "german": "Der Kurs kostet hundert Lewa.",
-          "bulgarian": "Курсът струва сто лева.",
-          "context": "formal",
-          "source": "legacy"
-        },
-        {
-          "german": "Das kostet hundert Lewa.",
-          "bulgarian": "Това струва сто лева.",
-          "context": "price",
-          "source": "legacy"
-        },
-        {
-          "german": "Lebe hundert Jahre! (Traditioneller Wunsch)",
-          "bulgarian": "Живей сто години!",
-          "context": "toast/wish",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "The number 100 - first three-digit number",
-        "forBulgarianSpeakers": "'Hundert' се произнася [ˈhʊndɐt]. В комбинации немският ред е обратно: 'hundertfünf'. | В немски 'hundert' [ˈhʊndɐt]. Забележете: 'ein hundert' vs просто 'hundert' (100).",
-        "forGermanSpeakers": "Für Deutschsprachige: Bulgarisches 'Сто' ist kurz und tonisch. Verwenden Sie Postposition bei zusammengesetzten Zahlen ('сто и пет'). | Für Deutschsprachige: 'Сто' [sto] ist einfach und kurz. Wird ohne Artikel verwendet.",
-        "linguistic": "Stress on сто́ [sto]. Short, monosyllabic.",
-        "linguisticForBulgarians": "Stress on сто́. German 'hundert' pronounced [ˈhʊndɐt]. | Сто [sto] - едносрично. В немски 'hundert' [ˈhʊndɐt] - двусрично.",
-        "linguisticForGermans": "Stress on сто́. German 'hundert' pronounced [ˈhʊndɐt]. | Einfache Aussprache: [sto]. Betonung auf der einzigen Silbe.",
-        "source": "merged"
-      },
-      "etymology": "Proto-Slavic *sъto (hundred). Cognate with Germanic 'hundert'. | From Proto-Slavic 'sъto', related to Latin 'centum' through PIE *ḱm̥tóm.",
-      "culturalNotes": "Used for percentages (100%) and academic grading (100 точки). | Round numbers in Bulgarian: на сто години (100 years old) is a common longevity wish.",
-      "metadata": {
-        "frequency": 80,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1"
-    },
-    {
-      "id": "a1_number_1000_dup1",
-      "german": "tausend",
-      "bulgarian": "Хиляда",
-      "partOfSpeech": "number",
-      "difficulty": "A1",
-      "categories": [
-        "numbers"
-      ],
-      "examples": [
-        {
-          "german": "Die Stadt hat tausend Einwohner.",
-          "bulgarian": "Градът има хиляда жители.",
-          "context": "informal",
-          "source": "legacy"
-        },
-        {
-          "german": "In der Stadt leben hunderttausend Menschen.",
-          "bulgarian": "В града живеят сто хиляди души.",
-          "context": "population",
-          "source": "legacy"
-        },
-        {
-          "german": "Das kostet tausend Euro.",
-          "bulgarian": "Това струва хиляда евро.",
-          "context": "price",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "The number 1000 - first four-digit threshold",
-        "forBulgarianSpeakers": "'Tausend' се произнася [ˈtaʊ̯zn̩t]. Немският ред е 'tausendzweihundert'. В писане често се използва точка за разделяне: 1.000. | В немски 'tausend' [ˈtaʊ̯zn̩t]. Забележете: 'eine Tausend' (женски род) vs 'ein Tausender' (мъжки).",
-        "forGermanSpeakers": "Für Deutschsprachige: 'Хиляда' hat weiches 'л' und endet auf -а. In zusammengesetzten Zahlen bleibt Plural unverändert. | Für Deutschsprachige: 'Хиляда' ist feminin. Plural: 'хиляди' (Tausende).",
-        "linguistic": "Stress on хи́ляда [ˈxiljɐdɐ]. Note the 'я' [jа] diphthong.",
-        "linguisticForBulgarians": "Stress on хиля́да. German 'tausend' [ˈtaʊ̯zn̩t]. | Хиляда [ˈxiljɐdɐ]. 'Х' е фрикативен [x]. В немски 'tausend' [ˈtaʊ̯zn̩t].",
-        "linguisticForGermans": "Stress on хиля́да. German 'tausend' [ˈtaʊ̯zn̩t]. | Betonung хи́ляда. 'Х' ist wie 'ch' in 'Bach', nicht wie deutsches 'h'.",
-        "source": "merged"
-      },
-      "etymology": "From Proto-Slavic *tisyęta. German 'tausend' from Proto-Germanic *þūsundī. Cognates show Indo-European link. | From Old Bulgarian 'хилѩда', possibly from Greek 'chiliás'. Different origin than other Slavic 'tysiąc'.",
-      "culturalNotes": "Used in financial contexts and large counts (e.g., 1000 лева). | Common in year dates: две хиляди и двадесет и пет (2025). Also in prices, populations.",
-      "metadata": {
-        "frequency": 75,
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
