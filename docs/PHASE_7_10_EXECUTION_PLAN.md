@@ -313,6 +313,162 @@ node <<'NODE'
 const fs=require('fs');
 const items=(JSON.parse(fs.readFileSync('data/unified-vocabulary.json','utf8')).items)||[];
 const withAudio=items.filter(it=>it.audioUrl);
+console.log(`Items with audioUrl: ${withAudio.length}`);
+NODE
+```
+
+**Expected**: 100 items with valid Forvo links.
+
+---
+
+## Phase 8: Schema Extension & Import (1–2 weeks)
+
+### Goal
+Formalize the new data fields in the Zod schema and ensure the application can handle them safely.
+
+### 8.1 Schema Updates (2–3 hours)
+
+**File**: `src/lib/schemas/vocabulary.ts`
+
+1.  **Add `audioUrl`**: Optional string (URL format).
+2.  **Add `mnemonic`**: Optional object.
+    ```typescript
+    mnemonic: z.object({
+      text: z.string(),
+      author: z.string().optional(),
+      confidence: z.number().min(0).max(1).optional()
+    }).optional()
+    ```
+3.  **Add `culturalNotes`**: Optional string (already in some items, but formalize it).
+
+**Action**: Update the Zod schema definition.
+
+### 8.2 Re-validation (1 hour)
+
+Run the full validation suite against the updated schema to ensure no regressions.
+
+```bash
+pnpm run validate:vocabulary:comprehensive
+```
+
+**Expected**: 100% valid (746 items).
+
+### 8.3 Mnemonic Editor Component (2–3 days)
+
+Create a simple UI component to allow users (or devs in dev mode) to add mnemonics to cards.
+
+- **File**: `src/lib/components/enrichment/MnemonicEditor.svelte`
+- **Features**: Text area, save button, local storage persistence (for now).
+
+### 8.4 Offline Mode Testing (1–2 days)
+
+Verify that the new data fields (especially `audioUrl`) degrade gracefully when offline.
+
+- **Test**: Disconnect internet.
+- **Expected**: Audio button should be disabled or show "Offline" tooltip. Text content (mnemonics, examples) should still load from local JSON.
+
+---
+
+## Phase 9: UI Polish & Components (1 week)
+
+### Goal
+Expose the enriched data to the user in a clean, accessible way.
+
+### 9.1 Grammar Table Tabs (2–3 days)
+
+**Component**: `src/lib/components/vocabulary/GrammarTables.svelte`
+
+- **Nouns**: Tabs for Nominative, Accusative, Dative, Genitive.
+  - Show definite article + noun for each case.
+- **Verbs**: Tabs for Present, Past, Future.
+  - Show conjugation table (ich, du, er/sie/es, wir, ihr, sie).
+
+**Integration**: Add to `VocabularyCard.svelte` (back side).
+
+### 9.2 Example Carousel (1–2 days)
+
+**Component**: `src/lib/components/vocabulary/ExampleCarousel.svelte`
+
+- Display 1 example at a time.
+- "Next/Prev" arrows.
+- Show German source + Bulgarian translation.
+- **Accessibility**: Ensure screen readers announce the change when sliding.
+
+### 9.3 Audio Widget (1 day)
+
+**Component**: `src/lib/components/vocabulary/AudioPlayer.svelte`
+
+- Simple "Speaker" icon.
+- Click → plays audio from `audioUrl`.
+- **Fallback**: If `audioUrl` is a Forvo link, open in new tab (simplest MVP). If direct MP3, play inline.
+
+### 9.4 Mnemonic Highlight (1 day)
+
+- Show mnemonic on the **back** of the flashcard.
+- Style: Italic, slightly different background color (e.g., light yellow note).
+
+---
+
+## Phase 10: MVP Launch (1 week)
+
+### Goal
+Final verification and deployment.
+
+### 10.1 Final Accessibility Audit (1–2 days)
+
+- Run **Axe DevTools** on all major routes.
+- Verify keyboard navigation (Tab order, Focus visible).
+- Verify screen reader announcements for:
+  - Flashcard flips.
+  - Language toggles.
+  - Carousel navigation.
+
+### 10.2 Bilingual Testing (1 day)
+
+- Switch app to **Bulgarian UI**.
+- Verify all labels, buttons, and help text are translated.
+- Verify layout doesn't break with longer Cyrillic text.
+
+### 10.3 Deployment & Release (1 day)
+
+1.  **Build**: `pnpm run build`
+2.  **Deploy**: `pnpm run deploy` (to GitHub Pages).
+3.  **Verify Live**: Check `https://yungseepferd.github.io/BulgarianGermanLearningApp/`.
+4.  **Release Notes**: Create a GitHub Release tagged `v1.0.0-mvp`.
+
+---
+
+## Troubleshooting & Rollback
+
+### Data Corruption
+If `unified-vocabulary.json` becomes invalid:
+1.  **Revert**: `git checkout HEAD~1 data/unified-vocabulary.json`
+2.  **Validate**: `pnpm run validate:vocabulary:comprehensive`
+
+### Build Failures
+If `pnpm run build` fails:
+1.  Check **TypeScript errors**: `pnpm run check`
+2.  Check **Svelte 5 runes usage**: Ensure no legacy `export let` mixed with runes.
+
+### Deployment Issues
+If GitHub Pages 404s:
+1.  Check `base` path in `svelte.config.js`.
+2.  Ensure `.nojekyll` file exists in `static/` (or build output).
+  const item=items.find(it=>it.id===link.id);
+  if(item) item.audioUrl=link.audioUrl;
+});
+vocab.items=items;
+fs.writeFileSync('data/unified-vocabulary.json',JSON.stringify(vocab,null,2));
+console.log(`Applied audio URLs to ${audio.length} items`);
+NODE
+```
+
+**Verify**:
+```bash
+node <<'NODE'
+const fs=require('fs');
+const items=(JSON.parse(fs.readFileSync('data/unified-vocabulary.json','utf8')).items)||[];
+const withAudio=items.filter(it=>it.audioUrl);
 console.log(`Items with audio: ${withAudio.length}/${items.length} (${(withAudio.length/items.length*100).toFixed(1)}%)`);
 NODE
 ```
