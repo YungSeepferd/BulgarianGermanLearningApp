@@ -3,8 +3,8 @@ import path from 'path';
 import { JSDOM } from 'jsdom';
 import PQueue from 'p-queue';
 
-const INPUT_FILE = 'enrichment-output/nouns-b21-50-incomplete.json';
-const OUTPUT_FILE = 'enrichment-output/batch-21-50-gender-enrichment.json';
+const INPUT_FILE = 'enrichment-output/nouns-missing-declension.json';
+const OUTPUT_FILE = 'enrichment-output/nouns-declension-enrichment.json';
 
 async function main() {
   console.log(`Reading input from ${INPUT_FILE}...`);

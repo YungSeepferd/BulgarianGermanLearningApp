@@ -119,7 +119,10 @@ export const GrammarSchema = z.object({
   pluralForm: z.string().optional().describe('Plural form of the word'),
   verbAspect: VerbAspectSchema.optional().describe('Verb aspect (perfective/imperfective)'),
   verbPartnerId: z.string().optional().describe('ID of the aspectual partner verb'),
-  conjugation: z.record(z.string(), z.string()).optional().describe('Verb conjugations by person/tense'),
+  conjugation: z.record(z.string(), z.union([
+    z.string(),
+    z.record(z.string(), z.string())
+  ])).optional().describe('Verb conjugations by person/tense'),
   declension: z.record(z.string(), z.object({
     singular: z.string().optional(),
     plural: z.string().optional()
@@ -228,12 +231,20 @@ export const UnifiedVocabularyItemSchema = z.object({
     grammarTag: z.string()
   })).optional().describe('Breakdown of compound words/grammar for learning'),
   audio: AudioSchema.optional().describe('Audio resources for pronunciation'),
+  audioUrl: z.string().url().optional().describe('Direct URL to audio file (Forvo/MP3)'),
   grammar: GrammarSchema.optional().describe('Grammar details and properties'),
   examples: z.array(ExampleSchema).default([]).describe('Usage examples'),
   notes: NotesSchema.optional().describe('Comprehensive notes about the item'),
   etymology: z.string().optional().describe('Word origin and etymology'),
-  culturalNotes: z.array(z.string()).optional().describe('Cultural context notes'),
-  mnemonics: z.array(z.string()).optional().describe('Memory aids and techniques'),
+  culturalNotes: z.string().optional().describe('Cultural context notes'),
+  mnemonic: z.object({
+    text: z.string().describe("Mnemonic or Esels-Brücke"),
+    author: z.string().optional(),
+    upvotes: z.number().int().default(0),
+    confidence: z.number().min(0).max(1).optional(),
+    createdAt: z.string().datetime().optional()
+  }).optional().describe('Memory aid'),
+  mnemonics: z.array(z.string()).optional().describe('Legacy: Memory aids and techniques'),
   synonyms: z.array(z.string()).optional().describe('Synonyms for this word/phrase'),
   antonyms: z.array(z.string()).optional().describe('Antonyms for this word/phrase'),
   relatedWords: z.array(z.string()).optional().describe('Related words or phrases'),

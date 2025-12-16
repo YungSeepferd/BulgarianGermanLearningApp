@@ -1,17 +1,13 @@
 <script lang="ts">
   import { appState } from '$lib/state/app-state';
   import type { VocabularyItem } from '$lib/types/vocabulary';
-  import MnemonicEditor from '$lib/components/ui/MnemonicEditor.svelte';
+  import MnemonicEditor from '$lib/components/enrichment/MnemonicEditor.svelte';
 
   let { item }: { item: VocabularyItem } = $props();
 
   // Type-safe derived values with proper guards
   const generalNotes = $derived(item.notes?.general || item.metadata?.notes || '');
-  const culturalNotes = $derived(
-    (item.culturalNotes && item.culturalNotes.length > 0 ? item.culturalNotes[0] : '') || 
-    item.metadata?.culturalNote || 
-    ''
-  );
+  const culturalNotes = $derived(item.culturalNotes || item.metadata?.culturalNote || '');
   const forGerman = $derived(item.notes?.forGermanSpeakers || '');
   const forBulgarian = $derived(item.notes?.forBulgarianSpeakers || '');
   const linguisticNote = $derived(item.notes?.linguistic || '');

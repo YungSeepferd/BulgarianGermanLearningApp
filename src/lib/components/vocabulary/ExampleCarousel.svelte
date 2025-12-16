@@ -3,10 +3,10 @@
   import { ChevronLeft, ChevronRight } from 'lucide-svelte';
   import type { VocabularyItem } from '$lib/types/vocabulary';
 
-  let { item } = $props<{ item: VocabularyItem }>();
+  let { item, examples: propExamples } = $props<{ item: VocabularyItem, examples?: any[] }>();
 
   let currentIndex = $state(0);
-  let examples = $derived(item.examples || []);
+  let examples = $derived(propExamples || item.examples || []);
   let hasExamples = $derived(examples.length > 0);
 
   function next() {

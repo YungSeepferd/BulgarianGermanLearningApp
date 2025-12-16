@@ -4,6 +4,9 @@
   import { APP_ICONS } from '$lib/constants/icons';
   import EnrichmentBadge from '$lib/components/vocabulary/EnrichmentBadge.svelte';
   import DefinitionLink from '$lib/components/vocabulary/DefinitionLink.svelte';
+  import GrammarTabs from '$lib/components/vocabulary/GrammarTabs.svelte';
+  import ExampleCarousel from '$lib/components/vocabulary/ExampleCarousel.svelte';
+  import AudioWidget from '$lib/components/vocabulary/AudioWidget.svelte';
 
   let { vocabularyItem } = $props<{ vocabularyItem: VocabularyItem }>();
 
@@ -97,8 +100,8 @@
     return [];
   });
 
-  const culturalNote = $derived(vocabularyItem.metadata?.culturalNote || vocabularyItem.metadata?.notes);
-  const mnemonic = $derived(vocabularyItem.metadata?.mnemonic || vocabularyItem.mnemonics);
+  const culturalNote = $derived(vocabularyItem.culturalNotes || vocabularyItem.metadata?.culturalNote || vocabularyItem.metadata?.notes);
+  const mnemonic = $derived(vocabularyItem.mnemonic?.text || vocabularyItem.metadata?.mnemonic || vocabularyItem.mnemonics);
   const nuance = $derived(vocabularyItem.contextualNuance || vocabularyItem.metadata?.notes);
   const emoji = $derived(vocabularyItem.media?.emoji || vocabularyItem.emoji || APP_ICONS.VOCABULARY);
   const compositionSummary = $derived(
@@ -113,22 +116,6 @@
     (vocabularyItem as any).audio_url || 
     (isBulgarianFront ? vocabularyItem.audio?.bulgarian : vocabularyItem.audio?.german)
   );
-
-  let audioPlayer: HTMLAudioElement | null = $state(null);
-  let isPlaying = $state(false);
-
-  function playAudio(e: Event) {
-    e.stopPropagation(); // Prevent card flip
-    if (audioPlayer) {
-      isPlaying = true;
-      audioPlayer.currentTime = 0;
-      audioPlayer.play()
-        .catch(err => console.error('Audio playback failed:', err))
-        .finally(() => {
-           // Reset playing state when done (handled by onended)
-        });
-    }
-  }
 
   // Toggle flip state
   function toggleFlip() {
@@ -171,20 +158,9 @@
         </div>
         
         {#if audioUrl}
-          <button 
-            class="audio-button {isPlaying ? 'playing' : ''}" 
-            onclick={playAudio}
-            aria-label="Play pronunciation"
-            title="Play pronunciation"
-          >
-            🔊
-          </button>
-          <audio 
-            bind:this={audioPlayer} 
-            src={audioUrl} 
-            onended={() => isPlaying = false}
-            onpause={() => isPlaying = false}
-          ></audio>
+          <div class="audio-container" onclick={(e) => e.stopPropagation()} role="none">
+            <AudioWidget {audioUrl} />
+          </div>
         {/if}
 
         <p class="part-of-speech">{vocabularyItem.partOfSpeech}</p>
@@ -204,6 +180,10 @@
         <div class="translation-block">
           <p class="translation-label">{isBulgarianFront ? 'Deutsch' : 'Български'}</p>
           <h2 class="translation-text">{backTerm}</h2>
+        </div>
+
+        <div onclick={(e) => e.stopPropagation()} role="none">
+          <GrammarTabs item={vocabularyItem} />
         </div>
 
         {#if nuance}
@@ -245,22 +225,9 @@
           </div>
         {/if}
 
-        {#if examples.length > 0}
-          <div class="examples">
-            <p class="section-title">{ui.examples}</p>
-            <ul>
-              {#each examples as example}
-                <li>
-                  <div class="example-line">{example.german}</div>
-                  <div class="example-translation">{example.bulgarian}</div>
-                  {#if example.context}
-                    <div class="example-context">{example.context}</div>
-                  {/if}
-                </li>
-              {/each}
-            </ul>
-          </div>
-        {/if}
+        <div onclick={(e) => e.stopPropagation()} role="none">
+          <ExampleCarousel item={vocabularyItem} examples={examples} />
+        </div>
 
         {#if culturalNote}
           <div class="note-block">
@@ -270,7 +237,7 @@
         {/if}
 
         {#if mnemonic}
-          <div class="note-block">
+          <div class="note-block mnemonic-highlight">
             <p class="section-title"><span class="icon">{APP_ICONS.MNEMONIC}</span> {ui.mnemonic}</p>
             <p class="section-body">{mnemonic}</p>
           </div>
@@ -650,5 +617,17 @@
     .flashcard-container {
       height: 480px;
     }
+  }
+
+  .mnemonic-highlight {
+    background-color: #fef9c3;
+    border-left: 4px solid #facc15;
+    font-style: italic;
+  }
+
+  .audio-container {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
   }
 </style>

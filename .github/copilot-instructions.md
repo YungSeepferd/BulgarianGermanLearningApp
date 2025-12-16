@@ -26,6 +26,11 @@ These instructions capture the essential, project-specific rules AI agents must 
 - **Events**: Cross-service comms via `src/lib/services/event-bus.ts`; avoid direct cyclic imports.
 
 ## Data & Validation
+- **Grammar Verification**: ALWAYS verify German and Bulgarian grammar rules (articles, gender, cases) before adding data.
+  - **German**: Check correct article (der/die/das) for nouns. NEVER use placeholders like "Das/Die/Der" or "Mein/Meine". Ensure correct case (Nominative, Accusative, Dative) in examples.
+  - **Bulgarian**: Check correct gender and definite article forms (-та/-ът/-то). Ensure correct agreement in examples.
+- **Validation**: Use `src/lib/schemas/vocabulary.ts` Zod schemas for all data.
+- **Enrichment**: Use `pnpm run enrich:vocabulary` for adding new data with validation.
 
 ## Testing Tips
 - Prefer Playwright MCP to interact with the live dev server (navigate, click, assert). Check runtime errors with Console Ninja.

@@ -3,8 +3,8 @@
 
   let { item } = $props<{ item: VocabularyItem }>();
 
-  let activeTab = $state('nominative');
-
+  // Noun State
+  let activeCase = $state('nominative');
   const cases = ['nominative', 'accusative', 'dative', 'genitive'];
   const caseLabels: Record<string, string> = {
     nominative: 'Nominativ',
@@ -13,7 +13,35 @@
     genitive: 'Genitiv'
   };
 
+  // Verb State
+  let activeTense = $state('presentIndicative');
+  const tenses = ['presentIndicative', 'simpleStPast'];
+  const tenseLabels: Record<string, string> = {
+    presentIndicative: 'Präsens',
+    simpleStPast: 'Präteritum'
+  };
+  
+  const pronouns = ['ich', 'du', 'erSieEs', 'wir', 'ihr', 'sieSie'];
+  const pronounLabels: Record<string, string> = {
+    ich: 'ich',
+    du: 'du',
+    erSieEs: 'er/sie/es',
+    wir: 'wir',
+    ihr: 'ihr',
+    sieSie: 'sie/Sie'
+  };
+
   let hasDeclension = $derived(!!item.grammar?.declension);
+  let hasConjugation = $derived(!!item.grammar?.conjugation);
+  
+  function getConjugation(tense: string, pronoun: string): string {
+    if (!item.grammar?.conjugation) return '-';
+    const tenseObj = item.grammar.conjugation[tense];
+    if (typeof tenseObj === 'object' && tenseObj !== null) {
+      return (tenseObj as Record<string, string>)[pronoun] || '-';
+    }
+    return '-';
+  }
 </script>
 
 {#if hasDeclension && item.grammar?.declension}
@@ -22,10 +50,10 @@
       {#each cases as caseName}
         <button
           class="tab-btn"
-          class:active={activeTab === caseName}
+          class:active={activeCase === caseName}
           role="tab"
-          aria-selected={activeTab === caseName}
-          onclick={() => activeTab = caseName}
+          aria-selected={activeCase === caseName}
+          onclick={() => activeCase = caseName}
         >
           {caseLabels[caseName]}
         </button>
@@ -42,9 +70,40 @@
         </thead>
         <tbody>
           <tr>
-            <td>{item.grammar.declension[activeTab as keyof typeof item.grammar.declension]?.singular || '-'}</td>
-            <td>{item.grammar.declension[activeTab as keyof typeof item.grammar.declension]?.plural || '-'}</td>
+            <td>{item.grammar.declension[activeCase as keyof typeof item.grammar.declension]?.singular || '-'}</td>
+            <td>{item.grammar.declension[activeCase as keyof typeof item.grammar.declension]?.plural || '-'}</td>
           </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+{:else if hasConjugation && item.grammar?.conjugation}
+  <div class="grammar-tabs">
+    <div class="tabs" role="tablist">
+      {#each tenses as tense}
+        {#if item.grammar.conjugation[tense]}
+          <button
+            class="tab-btn"
+            class:active={activeTense === tense}
+            role="tab"
+            aria-selected={activeTense === tense}
+            onclick={() => activeTense = tense}
+          >
+            {tenseLabels[tense] || tense}
+          </button>
+        {/if}
+      {/each}
+    </div>
+
+    <div class="tab-content" role="tabpanel">
+      <table class="declension-table">
+        <tbody>
+          {#each pronouns as pronoun}
+            <tr>
+              <td class="pronoun-col">{pronounLabels[pronoun]}</td>
+              <td>{getConjugation(activeTense, pronoun)}</td>
+            </tr>
+          {/each}
         </tbody>
       </table>
     </div>
@@ -109,5 +168,13 @@
     background-color: var(--color-surface-alt);
     font-weight: 600;
     font-size: 0.875rem;
+  }
+
+  .pronoun-col {
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-align: right;
+    width: 40%;
+    background-color: var(--color-surface-alt);
   }
 </style>

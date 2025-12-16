@@ -1,0 +1,20 @@
+[
+  {
+    "id": "a1_final14_032",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Karte",
+        "genitiv": "der Karte",
+        "dativ": "der Karte",
+        "akkusativ": "die Karte"
+      },
+      "plural": {
+        "nominativ": "die Karten",
+        "genitiv": "der Karten",
+        "dativ": "den Karten",
+        "akkusativ": "die Karten"
+      }
+    }
+  }
+]

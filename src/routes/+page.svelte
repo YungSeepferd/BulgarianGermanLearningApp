@@ -33,6 +33,10 @@
   });
 </script>
 
+<svelte:head>
+  <title>{dashboardTitle || 'Bulgarian-German Learning App'}</title>
+</svelte:head>
+
 <div class="dashboard-container">
   <h1>{dashboardTitle}</h1>
   <SimpleProgressCounter />

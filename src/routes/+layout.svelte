@@ -6,6 +6,10 @@
   let { children } = $props();
 </script>
 
+<svelte:head>
+  <title>Bulgarian-German Learning App</title>
+</svelte:head>
+
 <div class="app-layout">
   <Navigation />
   <main>

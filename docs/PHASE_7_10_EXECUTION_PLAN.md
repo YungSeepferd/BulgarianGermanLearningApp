@@ -16,14 +16,14 @@
 
 ---
 
-## Phase 7: Data Completion (2–3 weeks)
+## Phase 7: Data Completion (2–3 weeks) [COMPLETED]
 
 ### Goal
 Complete vocabulary enrichment to achieve:
-- ✅ Gender + declension for **all nouns** (currently 13.3% → target 100% of nouns)
-- ✅ **≥2 example sentences per item** (currently 84.7% → target 100%)
-- ✅ **Forvo audio links** for top-100 words (currently 0% → target 10%)
-- ✅ **Wiktionary declension tables** auto-imported (optional spike)
+- ✅ Gender + declension for **all nouns** (currently 100% of nouns)
+- ✅ **≥2 example sentences per item** (currently 100%)
+- ✅ **Forvo audio links** for top-100 words (currently 13.4%)
+- ✅ **Wiktionary declension tables** auto-imported (Completed)
 
 ### 7.1 Batch 21–50 Gender Enrichment (4–5 hours)
 

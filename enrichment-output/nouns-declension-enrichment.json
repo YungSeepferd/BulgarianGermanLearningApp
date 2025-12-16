@@ -1,0 +1,1658 @@
+[
+  {
+    "id": "a1_time_001",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Montag",
+        "genitiv": "des Montags, des Montages",
+        "dativ": "dem Montag, dem Montage",
+        "akkusativ": "den Montag"
+      },
+      "plural": {
+        "nominativ": "die Montage",
+        "genitiv": "der Montage",
+        "dativ": "den Montagen",
+        "akkusativ": "die Montage"
+      }
+    }
+  },
+  {
+    "id": "a1_time_002",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Dienstag",
+        "genitiv": "des Dienstags, des Dienstages",
+        "dativ": "dem Dienstag, dem Dienstage",
+        "akkusativ": "den Dienstag"
+      },
+      "plural": {
+        "nominativ": "die Dienstage",
+        "genitiv": "der Dienstage",
+        "dativ": "den Dienstagen",
+        "akkusativ": "die Dienstage"
+      }
+    }
+  },
+  {
+    "id": "a1_time_004",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Donnerstag",
+        "genitiv": "des Donnerstags, des Donnerstages",
+        "dativ": "dem Donnerstag, dem Donnerstage",
+        "akkusativ": "den Donnerstag"
+      },
+      "plural": {
+        "nominativ": "die Donnerstage",
+        "genitiv": "der Donnerstage",
+        "dativ": "den Donnerstagen",
+        "akkusativ": "die Donnerstage"
+      }
+    }
+  },
+  {
+    "id": "a1_time_005",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Freitag",
+        "genitiv": "des Freitags, des Freitages",
+        "dativ": "dem Freitag, dem Freitage",
+        "akkusativ": "den Freitag"
+      },
+      "plural": {
+        "nominativ": "die Freitage",
+        "genitiv": "der Freitage",
+        "dativ": "den Freitagen",
+        "akkusativ": "die Freitage"
+      }
+    }
+  },
+  {
+    "id": "a1_time_003",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Mittwoch",
+        "genitiv": "des Mittwochs, des Mittwoches",
+        "dativ": "dem Mittwoch, dem Mittwoche",
+        "akkusativ": "den Mittwoch"
+      },
+      "plural": {
+        "nominativ": "die Mittwoche",
+        "genitiv": "der Mittwoche",
+        "dativ": "den Mittwochen",
+        "akkusativ": "die Mittwoche"
+      }
+    }
+  },
+  {
+    "id": "a1_time_006",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Samstag",
+        "genitiv": "des Samstags, des Samstages",
+        "dativ": "dem Samstag, dem Samstage",
+        "akkusativ": "den Samstag"
+      },
+      "plural": {
+        "nominativ": "die Samstage",
+        "genitiv": "der Samstage",
+        "dativ": "den Samstagen",
+        "akkusativ": "die Samstage"
+      }
+    }
+  },
+  {
+    "id": "a1_time_008",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Tag",
+        "genitiv": "des Tages, des Tags",
+        "dativ": "dem Tag, dem Tage",
+        "akkusativ": "den Tag"
+      },
+      "plural": {
+        "nominativ": "die Tage",
+        "genitiv": "der Tage",
+        "dativ": "den Tagen",
+        "akkusativ": "die Tage"
+      }
+    }
+  },
+  {
+    "id": "a1_time_007",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Sonntag",
+        "genitiv": "des Sonntags, des Sonntages",
+        "dativ": "dem Sonntag, dem Sonntage",
+        "akkusativ": "den Sonntag"
+      },
+      "plural": {
+        "nominativ": "die Sonntage",
+        "genitiv": "der Sonntage",
+        "dativ": "den Sonntagen",
+        "akkusativ": "die Sonntage"
+      }
+    }
+  },
+  {
+    "id": "a1_time_010",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Jahr",
+        "genitiv": "des Jahrs, des Jahres",
+        "dativ": "dem Jahr, dem Jahre",
+        "akkusativ": "das Jahr"
+      },
+      "plural": {
+        "nominativ": "die Jahre",
+        "genitiv": "der Jahre",
+        "dativ": "den Jahren",
+        "akkusativ": "die Jahre"
+      }
+    }
+  },
+  {
+    "id": "a1_time_009",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Woche",
+        "genitiv": "der Woche",
+        "dativ": "der Woche",
+        "akkusativ": "die Woche"
+      },
+      "plural": {
+        "nominativ": "die Wochen",
+        "genitiv": "der Wochen",
+        "dativ": "den Wochen",
+        "akkusativ": "die Wochen"
+      }
+    }
+  },
+  {
+    "id": "a1_month_001",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Januar",
+        "genitiv": "des Januars, des Januar",
+        "dativ": "dem Januar",
+        "akkusativ": "den Januar"
+      },
+      "plural": {
+        "nominativ": "die Januare",
+        "genitiv": "der Januare",
+        "dativ": "den Januaren",
+        "akkusativ": "die Januare"
+      }
+    }
+  },
+  {
+    "id": "a1_month_003",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der März",
+        "genitiv": "des März, des Märzes, des Märzen",
+        "dativ": "dem März, dem Märzen",
+        "akkusativ": "den März"
+      },
+      "plural": {
+        "nominativ": "die Märze",
+        "genitiv": "der Märze",
+        "dativ": "den Märzen",
+        "akkusativ": "die Märze"
+      }
+    }
+  },
+  {
+    "id": "a1_month_004",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der April",
+        "genitiv": "des April, des Aprils",
+        "dativ": "dem April",
+        "akkusativ": "den April"
+      },
+      "plural": {
+        "nominativ": "die Aprile",
+        "genitiv": "der Aprile",
+        "dativ": "den Aprilen",
+        "akkusativ": "die Aprile"
+      }
+    }
+  },
+  {
+    "id": "a1_month_002",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Februar",
+        "genitiv": "des Februar, des Februars",
+        "dativ": "dem Februar",
+        "akkusativ": "den Februar"
+      },
+      "plural": {
+        "nominativ": "die Februare",
+        "genitiv": "der Februare",
+        "dativ": "den Februaren",
+        "akkusativ": "die Februare"
+      }
+    }
+  },
+  {
+    "id": "a1_month_005",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Mai",
+        "genitiv": "des Mai, des Mais, des Maien",
+        "dativ": "dem Mai",
+        "akkusativ": "den Mai"
+      },
+      "plural": {
+        "nominativ": "die Maie",
+        "genitiv": "der Maie",
+        "dativ": "den Maien",
+        "akkusativ": "die Maie"
+      }
+    }
+  },
+  {
+    "id": "a1_month_006",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Juni",
+        "genitiv": "des Juni, des Junis",
+        "dativ": "dem Juni",
+        "akkusativ": "den Juni"
+      },
+      "plural": {
+        "nominativ": "die Junis",
+        "genitiv": "der Junis",
+        "dativ": "den Junis",
+        "akkusativ": "die Junis"
+      }
+    }
+  },
+  {
+    "id": "a1_month_007",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Juli",
+        "genitiv": "des Juli, des Julis",
+        "dativ": "dem Juli",
+        "akkusativ": "den Juli"
+      },
+      "plural": {
+        "nominativ": "die Julis",
+        "genitiv": "der Julis",
+        "dativ": "den Julis",
+        "akkusativ": "die Julis"
+      }
+    }
+  },
+  {
+    "id": "a1_month_008",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der August",
+        "genitiv": "des Augusts, des Augustes",
+        "dativ": "dem August, dem Auguste",
+        "akkusativ": "den August"
+      },
+      "plural": {
+        "nominativ": "die Auguste",
+        "genitiv": "der Auguste",
+        "dativ": "den Augusten",
+        "akkusativ": "die Auguste"
+      }
+    }
+  },
+  {
+    "id": "a1_month_009",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der September",
+        "genitiv": "des September, des Septembers",
+        "dativ": "dem September",
+        "akkusativ": "den September"
+      },
+      "plural": {
+        "nominativ": "die September",
+        "genitiv": "der September",
+        "dativ": "den Septembern",
+        "akkusativ": "die September"
+      }
+    }
+  },
+  {
+    "id": "a1_month_010",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Oktober",
+        "genitiv": "des Oktober, des Oktobers",
+        "dativ": "dem Oktober",
+        "akkusativ": "den Oktober"
+      },
+      "plural": {
+        "nominativ": "die Oktober",
+        "genitiv": "der Oktober",
+        "dativ": "den Oktobern",
+        "akkusativ": "die Oktober"
+      }
+    }
+  },
+  {
+    "id": "a1_month_011",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der November",
+        "genitiv": "des Novembers",
+        "dativ": "dem November",
+        "akkusativ": "den November"
+      },
+      "plural": {
+        "nominativ": "die November",
+        "genitiv": "der November",
+        "dativ": "den Novembern",
+        "akkusativ": "die November"
+      }
+    }
+  },
+  {
+    "id": "a1_month_012",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Dezember",
+        "genitiv": "des Dezembers",
+        "dativ": "dem Dezember",
+        "akkusativ": "den Dezember"
+      },
+      "plural": {
+        "nominativ": "die Dezember",
+        "genitiv": "der Dezember",
+        "dativ": "den Dezembern",
+        "akkusativ": "die Dezember"
+      }
+    }
+  },
+  {
+    "id": "a1_family_002",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Vater",
+        "genitiv": "des Vaters",
+        "dativ": "dem Vater",
+        "akkusativ": "den Vater"
+      },
+      "plural": {
+        "nominativ": "die Väter",
+        "genitiv": "der Väter",
+        "dativ": "den Vätern",
+        "akkusativ": "die Väter"
+      }
+    }
+  },
+  {
+    "id": "a1_family_003",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Sohn",
+        "genitiv": "des Sohns, des Sohnes",
+        "dativ": "dem Sohn, dem Sohne",
+        "akkusativ": "den Sohn"
+      },
+      "plural": {
+        "nominativ": "die Söhne",
+        "genitiv": "der Söhne",
+        "dativ": "den Söhnen",
+        "akkusativ": "die Söhne"
+      }
+    }
+  },
+  {
+    "id": "a1_family_001",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Mutter",
+        "genitiv": "der Mutter",
+        "dativ": "der Mutter",
+        "akkusativ": "die Mutter"
+      },
+      "plural": {
+        "nominativ": "die Mütter",
+        "genitiv": "der Mütter",
+        "dativ": "den Müttern",
+        "akkusativ": "die Mütter"
+      }
+    }
+  },
+  {
+    "id": "a1_family_004",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Tochter",
+        "genitiv": "der Tochter",
+        "dativ": "der Tochter",
+        "akkusativ": "die Tochter"
+      },
+      "plural": {
+        "nominativ": "die Töchter",
+        "genitiv": "der Töchter",
+        "dativ": "den Töchtern",
+        "akkusativ": "die Töchter"
+      }
+    }
+  },
+  {
+    "id": "a1_family_005",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Bruder",
+        "genitiv": "des Bruders",
+        "dativ": "dem Bruder",
+        "akkusativ": "den Bruder"
+      },
+      "plural": {
+        "nominativ": "die Brüder",
+        "genitiv": "der Brüder",
+        "dativ": "den Brüdern",
+        "akkusativ": "die Brüder"
+      }
+    }
+  },
+  {
+    "id": "a1_health_001",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Gesundheit",
+        "genitiv": "der Gesundheit",
+        "dativ": "der Gesundheit",
+        "akkusativ": "die Gesundheit"
+      },
+      "plural": {
+        "nominativ": "—",
+        "genitiv": "—",
+        "dativ": "—",
+        "akkusativ": "—"
+      }
+    }
+  },
+  {
+    "id": "a1_family_006",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Schwester",
+        "genitiv": "der Schwester",
+        "dativ": "der Schwester",
+        "akkusativ": "die Schwester"
+      },
+      "plural": {
+        "nominativ": "die Schwestern",
+        "genitiv": "der Schwestern",
+        "dativ": "den Schwestern",
+        "akkusativ": "die Schwestern"
+      }
+    }
+  },
+  {
+    "id": "a1_health_003",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Medikament",
+        "genitiv": "des Medikaments, des Medikamentes",
+        "dativ": "dem Medikament",
+        "akkusativ": "das Medikament"
+      },
+      "plural": {
+        "nominativ": "die Medikamente",
+        "genitiv": "der Medikamente",
+        "dativ": "den Medikamenten",
+        "akkusativ": "die Medikamente"
+      }
+    }
+  },
+  {
+    "id": "a1_health_002",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Schmerz",
+        "genitiv": "des Schmerzes",
+        "dativ": "dem Schmerz, dem Schmerze",
+        "akkusativ": "den Schmerz"
+      },
+      "plural": {
+        "nominativ": "die Schmerzen",
+        "genitiv": "der Schmerzen",
+        "dativ": "den Schmerzen",
+        "akkusativ": "die Schmerzen"
+      }
+    }
+  },
+  {
+    "id": "a1_health_004",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Zahnarzt",
+        "genitiv": "des Zahnarztes",
+        "dativ": "dem Zahnarzt",
+        "akkusativ": "den Zahnarzt"
+      },
+      "plural": {
+        "nominativ": "die Zahnärzte",
+        "genitiv": "der Zahnärzte",
+        "dativ": "den Zahnärzten",
+        "akkusativ": "die Zahnärzte"
+      }
+    }
+  },
+  {
+    "id": "a1_health_006",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Husten",
+        "genitiv": "des Hustens",
+        "dativ": "dem Husten",
+        "akkusativ": "den Husten"
+      },
+      "plural": {
+        "nominativ": "die Husten",
+        "genitiv": "der Husten",
+        "dativ": "den Husten",
+        "akkusativ": "die Husten"
+      }
+    }
+  },
+  {
+    "id": "a1_health_007",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Grippe",
+        "genitiv": "der Grippe",
+        "dativ": "der Grippe",
+        "akkusativ": "die Grippe"
+      },
+      "plural": {
+        "nominativ": "die Grippen",
+        "genitiv": "der Grippen",
+        "dativ": "den Grippen",
+        "akkusativ": "die Grippen"
+      }
+    }
+  },
+  {
+    "id": "a1_health_005",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Fieber",
+        "genitiv": "des Fiebers",
+        "dativ": "dem Fieber",
+        "akkusativ": "das Fieber"
+      },
+      "plural": {
+        "nominativ": "die Fieber",
+        "genitiv": "der Fieber",
+        "dativ": "den Fiebern",
+        "akkusativ": "die Fieber"
+      }
+    }
+  },
+  {
+    "id": "a1_health_008",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Erkältung",
+        "genitiv": "der Erkältung",
+        "dativ": "der Erkältung",
+        "akkusativ": "die Erkältung"
+      },
+      "plural": {
+        "nominativ": "die Erkältungen",
+        "genitiv": "der Erkältungen",
+        "dativ": "den Erkältungen",
+        "akkusativ": "die Erkältungen"
+      }
+    }
+  },
+  {
+    "id": "a1_health_010",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Behandlung",
+        "genitiv": "der Behandlung",
+        "dativ": "der Behandlung",
+        "akkusativ": "die Behandlung"
+      },
+      "plural": {
+        "nominativ": "die Behandlungen",
+        "genitiv": "der Behandlungen",
+        "dativ": "den Behandlungen",
+        "akkusativ": "die Behandlungen"
+      }
+    }
+  },
+  {
+    "id": "a1_health_009",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Krankheit",
+        "genitiv": "der Krankheit",
+        "dativ": "der Krankheit",
+        "akkusativ": "die Krankheit"
+      },
+      "plural": {
+        "nominativ": "die Krankheiten",
+        "genitiv": "der Krankheiten",
+        "dativ": "den Krankheiten",
+        "akkusativ": "die Krankheiten"
+      }
+    }
+  },
+  {
+    "id": "a1_tech_001",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Internet",
+        "genitiv": "des Internets",
+        "dativ": "dem Internet",
+        "akkusativ": "das Internet"
+      },
+      "plural": {
+        "nominativ": "—",
+        "genitiv": "—",
+        "dativ": "—",
+        "akkusativ": "—"
+      }
+    }
+  },
+  {
+    "id": "a1_tech_002",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die E-Mail",
+        "genitiv": "der E-Mail",
+        "dativ": "der E-Mail",
+        "akkusativ": "die E-Mail"
+      },
+      "plural": {
+        "nominativ": "das E-Mail",
+        "genitiv": "des E-Mail, des E-Mails",
+        "dativ": "dem E-Mail",
+        "akkusativ": "das E-Mail"
+      }
+    }
+  },
+  {
+    "id": "a1_tech_003",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Bildschirm",
+        "genitiv": "des Bildschirmes, des Bildschirms",
+        "dativ": "dem Bildschirm, dem Bildschirme",
+        "akkusativ": "den Bildschirm"
+      },
+      "plural": {
+        "nominativ": "die Bildschirme",
+        "genitiv": "der Bildschirme",
+        "dativ": "den Bildschirmen",
+        "akkusativ": "die Bildschirme"
+      }
+    }
+  },
+  {
+    "id": "a1_tech_004",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Tastatur",
+        "genitiv": "der Tastatur",
+        "dativ": "der Tastatur",
+        "akkusativ": "die Tastatur"
+      },
+      "plural": {
+        "nominativ": "die Tastaturen",
+        "genitiv": "der Tastaturen",
+        "dativ": "den Tastaturen",
+        "akkusativ": "die Tastaturen"
+      }
+    }
+  },
+  {
+    "id": "a1_tech_006",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Drucker",
+        "genitiv": "des Druckers",
+        "dativ": "dem Drucker",
+        "akkusativ": "den Drucker"
+      },
+      "plural": {
+        "nominativ": "die Drucker",
+        "genitiv": "der Drucker",
+        "dativ": "den Druckern",
+        "akkusativ": "die Drucker"
+      }
+    }
+  },
+  {
+    "id": "a1_tech_008",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Ordner",
+        "genitiv": "des Ordners",
+        "dativ": "dem Ordner",
+        "akkusativ": "den Ordner"
+      },
+      "plural": {
+        "nominativ": "die Ordner",
+        "genitiv": "der Ordner",
+        "dativ": "den Ordnern",
+        "akkusativ": "die Ordner"
+      }
+    }
+  },
+  {
+    "id": "a1_tech_007",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Datei",
+        "genitiv": "der Datei",
+        "dativ": "der Datei",
+        "akkusativ": "die Datei"
+      },
+      "plural": {
+        "nominativ": "die Dateien",
+        "genitiv": "der Dateien",
+        "dativ": "den Dateien",
+        "akkusativ": "die Dateien"
+      }
+    }
+  },
+  {
+    "id": "a1_tech_010",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Software",
+        "genitiv": "der Software",
+        "dativ": "der Software",
+        "akkusativ": "die Software"
+      },
+      "plural": {
+        "nominativ": "die Softwares",
+        "genitiv": "der Softwares",
+        "dativ": "den Softwares",
+        "akkusativ": "die Softwares"
+      }
+    }
+  },
+  {
+    "id": "a1_tech_009",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Passwort",
+        "genitiv": "des Passworts, des Passwortes",
+        "dativ": "dem Passwort, dem Passworte",
+        "akkusativ": "das Passwort"
+      },
+      "plural": {
+        "nominativ": "die Passwörter",
+        "genitiv": "der Passwörter",
+        "dativ": "den Passwörtern",
+        "akkusativ": "die Passwörter"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_017",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Tasche",
+        "genitiv": "der Tasche",
+        "dativ": "der Tasche",
+        "akkusativ": "die Tasche"
+      },
+      "plural": {
+        "nominativ": "die Taschen",
+        "genitiv": "der Taschen",
+        "dativ": "den Taschen",
+        "akkusativ": "die Taschen"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_018",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Box",
+        "genitiv": "der Box",
+        "dativ": "der Box",
+        "akkusativ": "die Box"
+      },
+      "plural": {
+        "nominativ": "die Boxen",
+        "genitiv": "der Boxen",
+        "dativ": "den Boxen",
+        "akkusativ": "die Boxen"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_016",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Papier",
+        "genitiv": "des Papieres, des Papiers",
+        "dativ": "dem Papier, dem Papiere",
+        "akkusativ": "das Papier"
+      },
+      "plural": {
+        "nominativ": "die Papiere",
+        "genitiv": "der Papiere",
+        "dativ": "den Papieren",
+        "akkusativ": "die Papiere"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_019",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Flasche",
+        "genitiv": "der Flasche",
+        "dativ": "der Flasche",
+        "akkusativ": "die Flasche"
+      },
+      "plural": {
+        "nominativ": "die Flaschen",
+        "genitiv": "der Flaschen",
+        "dativ": "den Flaschen",
+        "akkusativ": "die Flaschen"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_020",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Kanne",
+        "genitiv": "der Kanne",
+        "dativ": "der Kanne",
+        "akkusativ": "die Kanne"
+      },
+      "plural": {
+        "nominativ": "die Kannen",
+        "genitiv": "der Kannen",
+        "dativ": "den Kannen",
+        "akkusativ": "die Kannen"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_022",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Topf",
+        "genitiv": "des Topfs, des Topfes",
+        "dativ": "dem Topf, dem Topfe",
+        "akkusativ": "den Topf"
+      },
+      "plural": {
+        "nominativ": "die Töpfe",
+        "genitiv": "der Töpfe",
+        "dativ": "den Töpfen",
+        "akkusativ": "die Töpfe"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_021",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Pfanne",
+        "genitiv": "der Pfanne",
+        "dativ": "der Pfanne",
+        "akkusativ": "die Pfanne"
+      },
+      "plural": {
+        "nominativ": "die Pfannen",
+        "genitiv": "der Pfannen",
+        "dativ": "den Pfannen",
+        "akkusativ": "die Pfannen"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_024",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Kühlschrank",
+        "genitiv": "des Kühlschranks, des Kühlschrankes",
+        "dativ": "dem Kühlschrank, dem Kühlschranke",
+        "akkusativ": "den Kühlschrank"
+      },
+      "plural": {
+        "nominativ": "die Kühlschränke",
+        "genitiv": "der Kühlschränke",
+        "dativ": "den Kühlschränken",
+        "akkusativ": "die Kühlschränke"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_023",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Ofen",
+        "genitiv": "des Ofens",
+        "dativ": "dem Ofen",
+        "akkusativ": "den Ofen"
+      },
+      "plural": {
+        "nominativ": "die Öfen",
+        "genitiv": "der Öfen",
+        "dativ": "den Öfen",
+        "akkusativ": "die Öfen"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_025",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Fernseher",
+        "genitiv": "des Fernsehers",
+        "dativ": "dem Fernseher",
+        "akkusativ": "den Fernseher"
+      },
+      "plural": {
+        "nominativ": "die Fernseher",
+        "genitiv": "der Fernseher",
+        "dativ": "den Fernsehern",
+        "akkusativ": "die Fernseher"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_026",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Radio",
+        "genitiv": "des Radios",
+        "dativ": "dem Radio",
+        "akkusativ": "das Radio"
+      },
+      "plural": {
+        "nominativ": "der Radio",
+        "genitiv": "des Radios",
+        "dativ": "dem Radio",
+        "akkusativ": "den Radio"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_027",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Lampe",
+        "genitiv": "der Lampe",
+        "dativ": "der Lampe",
+        "akkusativ": "die Lampe"
+      },
+      "plural": {
+        "nominativ": "die Lampen",
+        "genitiv": "der Lampen",
+        "dativ": "den Lampen",
+        "akkusativ": "die Lampen"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_028",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Kerze",
+        "genitiv": "der Kerze",
+        "dativ": "der Kerze",
+        "akkusativ": "die Kerze"
+      },
+      "plural": {
+        "nominativ": "die Kerzen",
+        "genitiv": "der Kerzen",
+        "dativ": "den Kerzen",
+        "akkusativ": "die Kerzen"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_029",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Spiegel",
+        "genitiv": "des Spiegels",
+        "dativ": "dem Spiegel",
+        "akkusativ": "den Spiegel"
+      },
+      "plural": {
+        "nominativ": "die Spiegel",
+        "genitiv": "der Spiegel",
+        "dativ": "den Spiegeln",
+        "akkusativ": "die Spiegel"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_030",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Gemälde",
+        "genitiv": "des Gemäldes",
+        "dativ": "dem Gemälde",
+        "akkusativ": "das Gemälde"
+      },
+      "plural": {
+        "nominativ": "die Gemälde",
+        "genitiv": "der Gemälde",
+        "dativ": "den Gemälden",
+        "akkusativ": "die Gemälde"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_031",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Kalender",
+        "genitiv": "des Kalenders",
+        "dativ": "dem Kalender",
+        "akkusativ": "den Kalender"
+      },
+      "plural": {
+        "nominativ": "die Kalender",
+        "genitiv": "der Kalender",
+        "dativ": "den Kalendern",
+        "akkusativ": "die Kalender"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_033",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Ticket",
+        "genitiv": "des Tickets",
+        "dativ": "dem Ticket",
+        "akkusativ": "das Ticket"
+      },
+      "plural": {
+        "nominativ": "die Tickets",
+        "genitiv": "der Tickets",
+        "dativ": "den Tickets",
+        "akkusativ": "die Tickets"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_034",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Brief",
+        "genitiv": "des Briefs, des Briefes",
+        "dativ": "dem Brief, dem Briefe",
+        "akkusativ": "den Brief"
+      },
+      "plural": {
+        "nominativ": "die Briefe",
+        "genitiv": "der Briefe",
+        "dativ": "den Briefen",
+        "akkusativ": "die Briefe"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_035",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Umschlag",
+        "genitiv": "des Umschlags, des Umschlages",
+        "dativ": "dem Umschlag, dem Umschlage",
+        "akkusativ": "den Umschlag"
+      },
+      "plural": {
+        "nominativ": "die Umschläge",
+        "genitiv": "der Umschläge",
+        "dativ": "den Umschlägen",
+        "akkusativ": "die Umschläge"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_036",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Waage",
+        "genitiv": "der Waage",
+        "dativ": "der Waage",
+        "akkusativ": "die Waage"
+      },
+      "plural": {
+        "nominativ": "die Waagen",
+        "genitiv": "der Waagen",
+        "dativ": "den Waagen",
+        "akkusativ": "die Waagen"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_037",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "der Meter",
+        "genitiv": "des Meters",
+        "dativ": "dem Meter",
+        "akkusativ": "den Meter"
+      },
+      "plural": {
+        "nominativ": "das Meter",
+        "genitiv": "des Meters",
+        "dativ": "dem Meter",
+        "akkusativ": "das Meter"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_038",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Lineal",
+        "genitiv": "des Lineals",
+        "dativ": "dem Lineal",
+        "akkusativ": "das Lineal"
+      },
+      "plural": {
+        "nominativ": "die Lineale",
+        "genitiv": "der Lineale",
+        "dativ": "den Linealen",
+        "akkusativ": "die Lineale"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_039",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Schere",
+        "genitiv": "der Schere",
+        "dativ": "der Schere",
+        "akkusativ": "die Schere"
+      },
+      "plural": {
+        "nominativ": "die Scheren",
+        "genitiv": "der Scheren",
+        "dativ": "den Scheren",
+        "akkusativ": "die Scheren"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_040",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Faden",
+        "genitiv": "des Fadens",
+        "dativ": "dem Faden",
+        "akkusativ": "den Faden"
+      },
+      "plural": {
+        "nominativ": "die Fäden",
+        "genitiv": "der Fäden",
+        "dativ": "den Fäden",
+        "akkusativ": "die Fäden"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_041",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Nadel",
+        "genitiv": "der Nadel",
+        "dativ": "der Nadel",
+        "akkusativ": "die Nadel"
+      },
+      "plural": {
+        "nominativ": "die Nadeln",
+        "genitiv": "der Nadeln",
+        "dativ": "den Nadeln",
+        "akkusativ": "die Nadeln"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_043",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Reißverschluss",
+        "genitiv": "des Reißverschlusses",
+        "dativ": "dem Reißverschluss, dem Reißverschlusse",
+        "akkusativ": "den Reißverschluss"
+      },
+      "plural": {
+        "nominativ": "die Reißverschlüsse",
+        "genitiv": "der Reißverschlüsse",
+        "dativ": "den Reißverschlüssen",
+        "akkusativ": "die Reißverschlüsse"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_042",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Knopf",
+        "genitiv": "des Knopfes, des Knopfs",
+        "dativ": "dem Knopf, dem Knopfe",
+        "akkusativ": "den Knopf"
+      },
+      "plural": {
+        "nominativ": "die Knöpfe",
+        "genitiv": "der Knöpfe",
+        "dativ": "den Knöpfen",
+        "akkusativ": "die Knöpfe"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_044",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Tüte",
+        "genitiv": "der Tüte",
+        "dativ": "der Tüte",
+        "akkusativ": "die Tüte"
+      },
+      "plural": {
+        "nominativ": "die Tüten",
+        "genitiv": "der Tüten",
+        "dativ": "den Tüten",
+        "akkusativ": "die Tüten"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_045",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Handtuch",
+        "genitiv": "des Handtuches, des Handtuchs",
+        "dativ": "dem Handtuch, dem Handtuche",
+        "akkusativ": "das Handtuch"
+      },
+      "plural": {
+        "nominativ": "die Handtücher",
+        "genitiv": "der Handtücher",
+        "dativ": "den Handtüchern",
+        "akkusativ": "die Handtücher"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_046",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Decke",
+        "genitiv": "der Decke",
+        "dativ": "der Decke",
+        "akkusativ": "die Decke"
+      },
+      "plural": {
+        "nominativ": "die Decken",
+        "genitiv": "der Decken",
+        "dativ": "den Decken",
+        "akkusativ": "die Decken"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_047",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Kissen",
+        "genitiv": "des Kissens",
+        "dativ": "dem Kissen",
+        "akkusativ": "das Kissen"
+      },
+      "plural": {
+        "nominativ": "die Kissen",
+        "genitiv": "der Kissen",
+        "dativ": "den Kissen",
+        "akkusativ": "die Kissen"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_049",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Waschbecken",
+        "genitiv": "des Waschbeckens",
+        "dativ": "dem Waschbecken",
+        "akkusativ": "das Waschbecken"
+      },
+      "plural": {
+        "nominativ": "die Waschbecken",
+        "genitiv": "der Waschbecken",
+        "dativ": "den Waschbecken",
+        "akkusativ": "die Waschbecken"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_048",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Bettlaken",
+        "genitiv": "des Bettlakens",
+        "dativ": "dem Bettlaken",
+        "akkusativ": "das Bettlaken"
+      },
+      "plural": {
+        "nominativ": "die Bettlaken",
+        "genitiv": "der Bettlaken",
+        "dativ": "den Bettlaken",
+        "akkusativ": "die Bettlaken"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_024_dup1",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Kühlschrank",
+        "genitiv": "des Kühlschranks, des Kühlschrankes",
+        "dativ": "dem Kühlschrank, dem Kühlschranke",
+        "akkusativ": "den Kühlschrank"
+      },
+      "plural": {
+        "nominativ": "die Kühlschränke",
+        "genitiv": "der Kühlschränke",
+        "dativ": "den Kühlschränken",
+        "akkusativ": "die Kühlschränke"
+      }
+    }
+  },
+  {
+    "id": "a1_time_001_dup1",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Montag",
+        "genitiv": "des Montags, des Montages",
+        "dativ": "dem Montag, dem Montage",
+        "akkusativ": "den Montag"
+      },
+      "plural": {
+        "nominativ": "die Montage",
+        "genitiv": "der Montage",
+        "dativ": "den Montagen",
+        "akkusativ": "die Montage"
+      }
+    }
+  },
+  {
+    "id": "a1_time_002_dup1",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Dienstag",
+        "genitiv": "des Dienstags, des Dienstages",
+        "dativ": "dem Dienstag, dem Dienstage",
+        "akkusativ": "den Dienstag"
+      },
+      "plural": {
+        "nominativ": "die Dienstage",
+        "genitiv": "der Dienstage",
+        "dativ": "den Dienstagen",
+        "akkusativ": "die Dienstage"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_050",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Toilette",
+        "genitiv": "der Toilette",
+        "dativ": "der Toilette",
+        "akkusativ": "die Toilette"
+      },
+      "plural": {
+        "nominativ": "die Toiletten",
+        "genitiv": "der Toiletten",
+        "dativ": "den Toiletten",
+        "akkusativ": "die Toiletten"
+      }
+    }
+  },
+  {
+    "id": "a1_time_004_dup1",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Donnerstag",
+        "genitiv": "des Donnerstags, des Donnerstages",
+        "dativ": "dem Donnerstag, dem Donnerstage",
+        "akkusativ": "den Donnerstag"
+      },
+      "plural": {
+        "nominativ": "die Donnerstage",
+        "genitiv": "der Donnerstage",
+        "dativ": "den Donnerstagen",
+        "akkusativ": "die Donnerstage"
+      }
+    }
+  },
+  {
+    "id": "a1_time_003_dup1",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Mittwoch",
+        "genitiv": "des Mittwochs, des Mittwoches",
+        "dativ": "dem Mittwoch, dem Mittwoche",
+        "akkusativ": "den Mittwoch"
+      },
+      "plural": {
+        "nominativ": "die Mittwoche",
+        "genitiv": "der Mittwoche",
+        "dativ": "den Mittwochen",
+        "akkusativ": "die Mittwoche"
+      }
+    }
+  },
+  {
+    "id": "a1_time_007_dup1",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Sonntag",
+        "genitiv": "des Sonntags, des Sonntages",
+        "dativ": "dem Sonntag, dem Sonntage",
+        "akkusativ": "den Sonntag"
+      },
+      "plural": {
+        "nominativ": "die Sonntage",
+        "genitiv": "der Sonntage",
+        "dativ": "den Sonntagen",
+        "akkusativ": "die Sonntage"
+      }
+    }
+  },
+  {
+    "id": "a1_final14_033_dup1",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Ticket",
+        "genitiv": "des Tickets",
+        "dativ": "dem Ticket",
+        "akkusativ": "das Ticket"
+      },
+      "plural": {
+        "nominativ": "die Tickets",
+        "genitiv": "der Tickets",
+        "dativ": "den Tickets",
+        "akkusativ": "die Tickets"
+      }
+    }
+  },
+  {
+    "id": "a1_time_005_dup1",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Freitag",
+        "genitiv": "des Freitags, des Freitages",
+        "dativ": "dem Freitag, dem Freitage",
+        "akkusativ": "den Freitag"
+      },
+      "plural": {
+        "nominativ": "die Freitage",
+        "genitiv": "der Freitage",
+        "dativ": "den Freitagen",
+        "akkusativ": "die Freitage"
+      }
+    }
+  },
+  {
+    "id": "a1_food_017_dup1",
+    "gender": "m",
+    "declension": {
+      "singular": {
+        "nominativ": "der Fisch",
+        "genitiv": "des Fischs, des Fisches",
+        "dativ": "dem Fisch, dem Fische",
+        "akkusativ": "den Fisch"
+      },
+      "plural": {
+        "nominativ": "die Fische",
+        "genitiv": "der Fische",
+        "dativ": "den Fischen",
+        "akkusativ": "die Fische"
+      }
+    }
+  },
+  {
+    "id": "a1_house_007_dup1",
+    "gender": "n",
+    "declension": {
+      "singular": {
+        "nominativ": "das Fenster",
+        "genitiv": "des Fensters",
+        "dativ": "dem Fenster",
+        "akkusativ": "das Fenster"
+      },
+      "plural": {
+        "nominativ": "die Fenster",
+        "genitiv": "der Fenster",
+        "dativ": "den Fenstern",
+        "akkusativ": "die Fenster"
+      }
+    }
+  },
+  {
+    "id": "a1_animal_010_dup1",
+    "gender": "f",
+    "declension": {
+      "singular": {
+        "nominativ": "die Maus",
+        "genitiv": "der Maus",
+        "dativ": "der Maus",
+        "akkusativ": "die Maus"
+      },
+      "plural": {
+        "nominativ": "die Mäuse",
+        "genitiv": "der Mäuse",
+        "dativ": "den Mäusen",
+        "akkusativ": "die Mäuse"
+      }
+    }
+  }
+]

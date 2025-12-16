@@ -1,0 +1,238 @@
+[
+  {
+    "id": "a1_health_001",
+    "gender": "f"
+  },
+  {
+    "id": "a1_health_002",
+    "gender": "m"
+  },
+  {
+    "id": "a1_health_003",
+    "gender": "n"
+  },
+  {
+    "id": "a1_health_004",
+    "gender": "m"
+  },
+  {
+    "id": "a1_health_005",
+    "gender": "n"
+  },
+  {
+    "id": "a1_health_006",
+    "gender": "m"
+  },
+  {
+    "id": "a1_health_007",
+    "gender": "f"
+  },
+  {
+    "id": "a1_health_008",
+    "gender": "f"
+  },
+  {
+    "id": "a1_health_009",
+    "gender": "f"
+  },
+  {
+    "id": "a1_health_010",
+    "gender": "f"
+  },
+  {
+    "id": "a1_tech_001",
+    "gender": "n"
+  },
+  {
+    "id": "a1_tech_002",
+    "gender": "f"
+  },
+  {
+    "id": "a1_tech_003",
+    "gender": "m"
+  },
+  {
+    "id": "a1_tech_004",
+    "gender": "f"
+  },
+  {
+    "id": "a1_tech_006",
+    "gender": "m"
+  },
+  {
+    "id": "a1_tech_007",
+    "gender": "f"
+  },
+  {
+    "id": "a1_tech_008",
+    "gender": "m"
+  },
+  {
+    "id": "a1_tech_009",
+    "gender": "n"
+  },
+  {
+    "id": "a1_tech_010",
+    "gender": "f"
+  },
+  {
+    "id": "a1_final14_001",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_002",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_003",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_004",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_005",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_006",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_007",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_008",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_009",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_010",
+    "gender": "n"
+  },
+  {
+    "id": "a1_final14_011",
+    "gender": "n"
+  },
+  {
+    "id": "a1_final14_012",
+    "gender": "n"
+  },
+  {
+    "id": "a1_final14_013",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_014",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_015",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_016",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_017",
+    "gender": "f"
+  },
+  {
+    "id": "a1_final14_019",
+    "gender": "f"
+  },
+  {
+    "id": "a1_final14_020",
+    "gender": "f"
+  },
+  {
+    "id": "a1_final14_021",
+    "gender": "f"
+  },
+  {
+    "id": "a1_final14_023",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_025",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_027",
+    "gender": "f"
+  },
+  {
+    "id": "a1_final14_028",
+    "gender": "f"
+  },
+  {
+    "id": "a1_final14_030",
+    "gender": "f"
+  },
+  {
+    "id": "a1_final14_031",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_036",
+    "gender": "f"
+  },
+  {
+    "id": "a1_final14_037",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_039",
+    "gender": "f"
+  },
+  {
+    "id": "a1_final14_040",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_044",
+    "gender": "f"
+  },
+  {
+    "id": "a1_final14_046",
+    "gender": "f"
+  },
+  {
+    "id": "a1_final14_047",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_048",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_049",
+    "gender": "m"
+  },
+  {
+    "id": "a1_final14_050",
+    "gender": "f"
+  },
+  {
+    "id": "a1_final14_005_dup1",
+    "gender": "m"
+  },
+  {
+    "id": "a1_food_017_dup1",
+    "gender": "m"
+  },
+  {
+    "id": "a1_house_007_dup1",
+    "gender": "n"
+  },
+  {
+    "id": "a1_animal_010_dup1",
+    "gender": "f"
+  }
+]
