@@ -7,6 +7,7 @@
 These instructions capture the essential, project-specific rules AI agents must follow to be productive in this repo. For deeper context, see [AGENTS.md](../AGENTS.md).
 
 ## Big Picture
+- **Documentation First**: ALWAYS scan the `docs/` folder first to understand the project state, architecture, and current phase. The documentation is the source of truth.
 - **Stack**: SvelteKit 2 + Svelte 5 (Runes) + TypeScript strict + Tailwind v4; fully static (GitHub Pages), no backend.
 - **State**: Single `appState` facade over `AppUIState` (UI, ephemeral) and `AppDataState` (persistent). Never instantiate state classes; always import `src/lib/state/app-state.ts`.
 - **Data Flow**: `data/*.json` → `src/lib/data/loader.ts` (cache) → Zod schemas → derived UI state → components.
