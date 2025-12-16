@@ -116,6 +116,7 @@
     border: 1px solid var(--color-neutral-border);
     border-radius: var(--border-radius-lg);
     padding: var(--space-4);
+    box-shadow: var(--shadow-card);
   }
 
   .section-title {
@@ -219,7 +220,7 @@
     margin: var(--space-2) 0 0 0;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: var(--breakpoint-md)) {
     .component-card {
       grid-template-columns: 1fr;
       gap: var(--space-2);

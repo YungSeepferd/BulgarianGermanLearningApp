@@ -130,7 +130,7 @@ describe('FlashCard Component', () => {
     render(FlashCardWrapper, { item: itemWithAudio });
 
     // Should show audio button on front
-    const audioButton = screen.getByLabelText('Play pronunciation');
+    const audioButton = screen.getByRole('button', { name: /audio/i });
     expect(audioButton).toBeInTheDocument();
   });
 

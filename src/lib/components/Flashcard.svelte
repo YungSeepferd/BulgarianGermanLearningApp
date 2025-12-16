@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { VocabularyItem } from '$lib/types/vocabulary';
+  import type { Example } from '$lib/schemas/unified-vocabulary';
   import { appState } from '$lib/state/app-state';
   import { APP_ICONS } from '$lib/constants/icons';
   import EnrichmentBadge from '$lib/components/vocabulary/EnrichmentBadge.svelte';
@@ -78,23 +79,29 @@
   }
   
   const examples = $derived.by((): NormalizedExample[] => {
-    const metadata = vocabularyItem.metadata;
-    const legacy = (vocabularyItem as any).examples;
-    
-    if (metadata?.examples) {
-      return metadata.examples.map((ex: any) => ({
-        german: ex.german || ex.source || '',
-        bulgarian: ex.bulgarian || ex.target || '',
-        context: ex.context
-      }));
+    // Use standard schema field first
+    if (vocabularyItem.examples && vocabularyItem.examples.length > 0) {
+      // Check if the first item matches the expected schema to avoid runtime errors with legacy data
+      const first = vocabularyItem.examples[0];
+      if ('german' in first && 'bulgarian' in first) {
+        return vocabularyItem.examples.map((ex: Example) => ({
+          german: ex.german,
+          bulgarian: ex.bulgarian,
+          context: ex.context
+        }));
+      }
     }
+    
+    // Legacy fallback for runtime data that might not match schema perfectly
+    const legacyItem = vocabularyItem as unknown as { examples?: Array<any> };
+    const legacy = legacyItem.examples;
     
     if (Array.isArray(legacy)) {
       return legacy.map((ex: any) => ({
-        german: ex.sentence || ex.translation || '',
-        bulgarian: ex.translation || ex.sentence || '',
+        german: ex.sentence || ex.translation || ex.source || ex.german || '',
+        bulgarian: ex.translation || ex.sentence || ex.target || ex.bulgarian || '',
         context: ex.context
-      }));
+      })).filter(ex => ex.german && ex.bulgarian);
     }
     
     return [];
@@ -340,17 +347,17 @@
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    padding: 8px;
+    padding: var(--space-2);
     border-radius: 50%;
     transition: background-color 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2);
   }
 
   .audio-button:hover {
-    background-color: #f1f5f9;
+    background-color: var(--color-neutral-lighter);
   }
 
   .audio-button:focus-visible {
@@ -368,13 +375,13 @@
     100% { transform: scale(1); }
   }
 
-  .declension-block { margin-top: 0.75rem; }
-  .declension-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-  .declension-case { text-align: left; padding: 0.25rem 0.5rem; color: #555; }
-  .declension-form { padding: 0.25rem 0.5rem; }
-  .external-links { margin-top: 0.75rem; }
-  .links-list { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-  .ext-link { color: #0a58ca; text-decoration: underline; }
+  .declension-block { margin-top: var(--space-3); }
+  .declension-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+  .declension-case { text-align: left; padding: var(--space-1) var(--space-2); color: var(--color-neutral-text); }
+  .declension-form { padding: var(--space-1) var(--space-2); }
+  .external-links { margin-top: var(--space-3); }
+  .links-list { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+  .ext-link { color: var(--color-primary-dark); text-decoration: underline; }
   .ext-link:focus-visible { outline: 3px solid var(--color-focus-ring, #0d6efd); outline-offset: 2px; }
 
   .flashcard.flipped {
@@ -387,14 +394,14 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 16px;
-    padding: 24px;
+    border-radius: var(--border-radius-xl);
+    padding: var(--space-6);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: white;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--color-neutral-border);
   }
 
   .flashcard-back {
@@ -402,7 +409,7 @@
     overflow-y: auto;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: var(--breakpoint-sm)) {
     .flashcard-container {
       height: clamp(300px, 75vh, 480px);
     }
@@ -412,49 +419,49 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--space-2);
     width: 100%;
     height: 100%;
   }
 
   .emoji-container {
     font-size: 4rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-4);
   }
 
   .part-of-speech {
-    font-size: 0.9rem;
-    color: #64748b;
+    font-size: var(--text-sm);
+    color: var(--color-neutral-text);
     margin: 0;
     text-transform: capitalize;
   }
 
   .front-term {
-    font-size: 2.6rem;
-    font-weight: 800;
+    font-size: var(--text-3xl);
+    font-weight: var(--font-extrabold);
     text-align: center;
-    color: #0f172a;
-    margin: 0.5rem 0;
+    color: var(--color-neutral-dark);
+    margin: var(--space-2) 0;
   }
 
   .pronunciation {
     font-family: monospace;
-    color: #475569;
+    color: var(--color-neutral-text);
     margin: 0;
   }
 
   .flip-hint {
-    font-size: 0.95rem;
-    color: #94a3b8;
+    font-size: var(--text-sm);
+    color: var(--color-neutral-text-light);
     margin-top: auto;
   }
 
   .back-content {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--space-4);
     width: 100%;
-    color: #0f172a;
+    color: var(--color-neutral-dark);
   }
 
   .translation-block {
@@ -463,16 +470,16 @@
 
   .translation-label {
     margin: 0;
-    font-size: 0.9rem;
-    color: #94a3b8;
+    font-size: var(--text-sm);
+    color: var(--color-neutral-text-light);
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
 
   .translation-text {
-    margin: 0.35rem 0 0 0;
-    font-size: 1.8rem;
-    font-weight: 800;
+    margin: var(--space-1) 0 0 0;
+    font-size: var(--text-2xl);
+    font-weight: var(--font-extrabold);
   }
 
   .nuance-box,
@@ -480,138 +487,113 @@
   .composition-summary,
   .examples,
   .phrase-breakdown {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 1rem;
+    background: var(--color-neutral-lighter);
+    border: 1px solid var(--color-neutral-border);
+    border-radius: var(--border-radius-xl);
+    padding: var(--space-4);
   }
 
   .enrichment-block {
-    background: #f0f7ff;
-    border: 1px solid #dbeafe;
-    border-radius: 12px;
-    padding: 1rem;
+    background: var(--color-primary-light);
+    border: 1px solid var(--color-primary-lighter);
+    border-radius: var(--border-radius-xl);
+    padding: var(--space-4);
   }
 
   .enrichment-content {
     display: flex;
     flex-direction: column;
-    gap: 0.35rem;
-    margin-top: 0.75rem;
+    gap: var(--space-1);
+    margin-top: var(--space-3);
   }
 
   .nuance-box {
     display: flex;
-    gap: 0.75rem;
+    gap: var(--space-3);
   }
 
   .icon {
-    font-size: 1.25rem;
+    font-size: var(--text-lg);
   }
 
   .section-title {
     margin: 0;
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #0f172a;
+    font-size: var(--text-base);
+    font-weight: var(--font-bold);
+    color: var(--color-neutral-dark);
   }
 
   .section-body {
-    margin: 0.35rem 0 0 0;
-    font-size: 0.95rem;
-    color: #334155;
+    margin: var(--space-1) 0 0 0;
+    font-size: var(--text-base);
+    color: var(--color-neutral-text-dark);
     line-height: 1.45;
   }
 
   .phrase-breakdown {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: var(--space-3);
   }
 
   .breakdown-title {
     margin: 0;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #0f172a;
+    font-size: var(--text-base);
+    font-weight: var(--font-bold);
+    color: var(--color-neutral-dark);
     text-align: center;
   }
 
   .breakdown-container {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: var(--space-3);
   }
 
   .breakdown-item {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0.25rem;
+    gap: var(--space-1);
     text-align: center;
   }
 
   .breakdown-part {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
     display: flex;
     justify-content: center;
-    gap: 0.35rem;
-    color: #0f172a;
+    gap: var(--space-1);
+    color: var(--color-neutral-dark);
   }
 
   .breakdown-meaning {
-    font-size: 0.95rem;
-    color: #475569;
+    font-size: var(--text-base);
+    color: var(--color-neutral-text);
   }
 
   .breakdown-note {
-    font-size: 0.85rem;
-    color: #94a3b8;
+    font-size: var(--text-sm);
+    color: var(--color-neutral-text-light);
   }
 
   .connector {
-    color: #cbd5e1;
+    color: var(--color-neutral-text-light);
   }
 
   .composition-summary {
-    font-size: 0.95rem;
-    color: #334155;
+    font-size: var(--text-base);
+    color: var(--color-neutral-text-dark);
   }
 
-  .examples ul {
-    margin: 0.5rem 0 0 0;
-    padding-left: 1.1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
 
-  .examples li {
-    list-style: disc;
-    color: #334155;
-  }
 
-  .example-line {
-    font-weight: 600;
-  }
-
-  .example-translation {
-    font-size: 0.95rem;
-    color: #475569;
-  }
-
-  .example-context {
-    font-size: 0.85rem;
-    color: #94a3b8;
-  }
-
-  @media (max-width: 640px) {
+  @media (max-width: var(--breakpoint-sm)) {
     .front-term {
-      font-size: 2.2rem;
+      font-size: var(--text-3xl);
     }
 
     .translation-text {
-      font-size: 1.4rem;
+      font-size: var(--text-xl);
     }
 
     .flashcard-container {
@@ -620,13 +602,13 @@
   }
 
   .mnemonic-highlight {
-    background-color: #fef9c3;
-    border-left: 4px solid #facc15;
+    background-color: var(--color-warning-lighter);
+    border-left: 4px solid var(--color-warning);
     font-style: italic;
   }
 
   .audio-container {
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-4);
     display: flex;
     justify-content: center;
   }

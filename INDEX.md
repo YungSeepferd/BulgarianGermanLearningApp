@@ -10,7 +10,7 @@
 
 ### For Everyone
 **[README.md](README.md)** - Main entry point with quick start and feature overview
-**[docs/PROJECT-STATUS-DEC17.md](docs/PROJECT-STATUS-DEC17.md)** - Latest Project Status (Phase 7 Fully Complete)
+**[docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md)** - Latest Project Status (Single Source of Truth)
 
 ### Based on Your Role
 | Role | Document | Time |

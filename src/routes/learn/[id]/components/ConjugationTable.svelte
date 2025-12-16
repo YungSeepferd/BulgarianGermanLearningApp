@@ -182,7 +182,7 @@
     padding: var(--space-6);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: var(--breakpoint-md)) {
     .tense-tab {
       font-size: var(--text-xs);
       padding: var(--space-1) var(--space-2);

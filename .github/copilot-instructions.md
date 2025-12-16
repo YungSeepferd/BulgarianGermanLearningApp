@@ -1,7 +1,9 @@
 # AI Coding Agent Instructions for Bulgarian-German Learning App
 
 ## Project Status
-**Last Updated**: 12 December 2025 | **Status**: MVP v2 - Clean, focused learning platform  
+**Single Source of Truth**: [docs/PROJECT_STATUS.md](../docs/PROJECT_STATUS.md)
+**Status**: MVP Launch Readiness - Final Polish
+
 # AI Coding Agent Instructions (Concise)
 
 These instructions capture the essential, project-specific rules AI agents must follow to be productive in this repo. For deeper context, see [AGENTS.md](../AGENTS.md).

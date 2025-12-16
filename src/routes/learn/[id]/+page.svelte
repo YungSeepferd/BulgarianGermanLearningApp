@@ -1,10 +1,16 @@
 <script lang="ts">
   import { appState } from '$lib/state/app-state';
+  import { calculateMasteryLevel } from '$lib/schemas/progress';
   import type { VocabularyItem } from '$lib/types/vocabulary';
+  import { page } from '$app/stores';
+  import { goto } from '$app/navigation';
+  import { browser } from '$app/environment';
   import Flashcard from '$lib/components/Flashcard.svelte';
+  import MasteryGauge from '$lib/components/ui/MasteryGauge.svelte';
   
   // Dashboard components
   import DashboardTabs from './components/DashboardTabs.svelte';
+  import OverviewPanel from './components/OverviewPanel.svelte';
   import GrammarPanel from './components/GrammarPanel.svelte';
   import WordFamilyPanel from './components/WordFamilyPanel.svelte';
   import EtymologyPanel from './components/EtymologyPanel.svelte';
@@ -21,8 +27,34 @@
   // Active tab state for dashboard
   type TabId = 'overview' | 'grammar' | 'family' | 'examples' | 'analysis' | 'notes' | 'resources';
   let activeTab = $state<TabId>('overview');
+  let initialized = false;
+
+  $effect(() => {
+    if (!browser) return;
+    
+    if (!initialized) {
+        const tab = $page.url.searchParams.get('tab') as TabId;
+        if (tab && ['overview', 'grammar', 'family', 'examples', 'analysis', 'notes', 'resources'].includes(tab)) {
+            activeTab = tab;
+        }
+        initialized = true;
+    } else {
+        const url = new URL(window.location.href);
+        if (url.searchParams.get('tab') !== activeTab) {
+            url.searchParams.set('tab', activeTab);
+            goto(url, { replaceState: true, keepFocus: true, noScroll: true });
+        }
+    }
+  });
 
   // Type-safe derived values with proper guards
+  
+  // Define legacy interface for type safety
+  interface LegacyVocabularyItem {
+    exampleSentences?: Array<{ source?: string; de?: string; target?: string; bg?: string; context?: string }>;
+    alternatives?: string[];
+  }
+
   const exampleSentences = $derived.by(() => {
     if (!item) return [];
     
@@ -34,10 +66,11 @@
       }));
     }
 
-    const legacy = (item as any).exampleSentences;
+    const legacyItem = item as unknown as LegacyVocabularyItem;
+    const legacy = legacyItem.exampleSentences;
     
     if (Array.isArray(legacy)) {
-      return legacy.map((ex: any) => ({
+      return legacy.map(ex => ({
         source: ex.source ?? ex.de ?? '',
         target: ex.target ?? ex.bg ?? '',
         context: ex.context
@@ -49,9 +82,24 @@
 
   const alternatives = $derived.by(() => {
     if (!item) return [];
-    const alts = (item as any).alternatives;
+    
+    // Prefer standard synonyms if available
+    if (item.synonyms && item.synonyms.length > 0) {
+        return item.synonyms;
+    }
+
+    const legacyItem = item as unknown as LegacyVocabularyItem;
+    const alts = legacyItem.alternatives;
     return Array.isArray(alts) ? alts : [];
   });
+
+  const sourceText = $derived(appState.languageMode === 'DE_BG' ? item?.german : item?.bulgarian);
+  const targetText = $derived(appState.languageMode === 'DE_BG' ? item?.bulgarian : item?.german);
+  const targetLang = $derived(appState.languageMode === 'DE_BG' ? 'bg' : 'de');
+  const sourceLang = $derived(appState.languageMode === 'DE_BG' ? 'de' : 'bg');
+
+  const stats = $derived(item ? appState.practiceStats.get(item.id) : undefined);
+  const mastery = $derived(stats ? calculateMasteryLevel(stats.correct, stats.incorrect) : 0);
 </script>
 
 <svelte:window onkeydown={(e) => {
@@ -60,31 +108,40 @@
   }
 }} />
 
-<div class="learn-container" role="main" aria-label={appState.languageMode === 'DE_BG' ? 'Lernseite für Vokabel' : 'Страница за учене на дума'}>
+<div class="learn-container" role="main" aria-labelledby="learn-title">
   <div class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
   {#if error}
     <div class="state-block" role="alert"><p>{error}</p></div>
   {:else if item}
+    <!-- Screen reader only heading -->
+    <h1 id="learn-title" class="sr-only">
+      {appState.languageMode === 'DE_BG' ? 'Lernen: ' : 'Учене: '}
+      {item.german} {dirArrow} {item.bulgarian}
+    </h1>
+
     <!-- Flashcard primary learn UI -->
     <div class="learn-card">
       <Flashcard vocabularyItem={item} />
     </div>
 
     <!-- Hero section with word title -->
-    <header class="hero" aria-labelledby="learn-title">
+    <header class="hero" aria-hidden="true">
       <div class="hero__main">
-        <h1 id="learn-title" class="hero__title">{item.german}</h1>
-        <div class="hero__arrow" aria-hidden="true">{dirArrow}</div>
-        <h2 class="hero__subtitle">{item.bulgarian}</h2>
+        <div class="hero__title" lang={sourceLang}>{sourceText}</div>
+        <div class="hero__arrow">{dirArrow}</div>
+        <div class="hero__subtitle" lang={targetLang}>{targetText}</div>
       </div>
-      <div class="hero__badges" role="list" aria-label={appState.languageMode === 'DE_BG' ? 'Wort-Eigenschaften' : 'Свойства на думата'}>
-        {#if item.cefrLevel}<span class="badge badge--cefr" role="listitem">CEFR {item.cefrLevel}</span>{/if}
-        <span class="badge badge--pos" role="listitem">{item.partOfSpeech}</span>
+      <div class="hero__badges">
+        {#if item.cefrLevel}<span class="badge badge--cefr">CEFR {item.cefrLevel}</span>{/if}
+        <span class="badge badge--pos">{item.partOfSpeech}</span>
         {#if item.categories?.length}
           {#each item.categories.slice(0, 3) as cat}
-            <span class="badge badge--cat" role="listitem">{cat}</span>
+            <span class="badge badge--cat">{cat}</span>
           {/each}
         {/if}
+        <div class="mastery-badge">
+          <MasteryGauge {mastery} />
+        </div>
       </div>
     </header>
 
@@ -94,74 +151,7 @@
     <!-- Dashboard panels -->
     <div class="dashboard-content">
       {#if activeTab === 'overview'}
-        <!-- Overview panel - Quick summary of the word -->
-        <section class="panel overview-panel">
-          <div class="panel__header">
-            <h3>{appState.languageMode === 'DE_BG' ? '📋 Schnellübersicht' : '📋 Бърз преглед'}</h3>
-          </div>
-          <div class="overview-grid">
-            <!-- Quick properties -->
-            <div class="overview-section">
-              <h4 class="section-title">
-                {appState.languageMode === 'DE_BG' ? 'Grundinformationen' : 'Основна информация'}
-              </h4>
-              <div class="property-list">
-                <div class="property-item">
-                  <span class="property-label">
-                    {appState.languageMode === 'DE_BG' ? 'Wortart' : 'Част на речта'}
-                  </span>
-                  <span class="property-value">{item.partOfSpeech}</span>
-                </div>
-                {#if item.cefrLevel}
-                  <div class="property-item">
-                    <span class="property-label">CEFR</span>
-                    <span class="property-value badge-inline badge--cefr">{item.cefrLevel}</span>
-                  </div>
-                {/if}
-                {#if item.categories?.length}
-                  <div class="property-item">
-                    <span class="property-label">
-                      {appState.languageMode === 'DE_BG' ? 'Kategorien' : 'Категории'}
-                    </span>
-                    <span class="property-value">{item.categories.slice(0, 3).join(', ')}</span>
-                  </div>
-                {/if}
-              </div>
-            </div>
-
-            <!-- Quick examples -->
-            {#if exampleSentences.length > 0}
-              <div class="overview-section">
-                <h4 class="section-title">
-                  {appState.languageMode === 'DE_BG' ? 'Top-Beispiele' : 'Топ примери'}
-                </h4>
-                <ul class="example-list-compact">
-                  {#each exampleSentences.slice(0, 3) as ex}
-                    <li class="example-row-compact">
-                      <span class="example-src-compact">{ex.source}</span>
-                      <span class="example-arrow-compact" aria-hidden="true">{dirArrow}</span>
-                      <span class="example-tgt-compact">{ex.target}</span>
-                    </li>
-                  {/each}
-                </ul>
-              </div>
-            {/if}
-
-            <!-- Quick alternatives -->
-            {#if alternatives.length > 0}
-              <div class="overview-section">
-                <h4 class="section-title">
-                  {appState.languageMode === 'DE_BG' ? 'Verwandte Formen' : 'Свързани форми'}
-                </h4>
-                <div class="tag-list">
-                  {#each alternatives.slice(0, 5) as alt}
-                    <span class="tag">{alt}</span>
-                  {/each}
-                </div>
-              </div>
-            {/if}
-          </div>
-        </section>
+        <OverviewPanel {item} {exampleSentences} {alternatives} />
       {:else if activeTab === 'grammar'}
         <GrammarPanel {item} />
       {:else if activeTab === 'family'}
@@ -275,127 +265,6 @@
     margin-bottom: var(--space-6);
   }
 
-  /* Panel styles */
-  .panel { 
-    border: 1px solid var(--color-neutral-border); 
-    border-radius: var(--border-radius-xl); 
-    background: var(--color-neutral-light); 
-    padding: var(--space-5); 
-    box-shadow: var(--shadow-card); 
-  }
-
-  .panel__header h3 { 
-    margin: 0 0 var(--space-4) 0; 
-    font-size: var(--text-xl); 
-    font-weight: var(--font-bold);
-    color: var(--color-neutral-dark);
-  }
-
-  /* Overview panel specific styles */
-  .overview-panel {
-    background: linear-gradient(135deg, var(--color-neutral-light) 0%, white 100%);
-  }
-
-  .overview-grid {
-    display: grid;
-    gap: var(--space-5);
-  }
-
-  .overview-section {
-    background: white;
-    border: 1px solid var(--color-neutral-border);
-    border-radius: var(--border-radius-lg);
-    padding: var(--space-4);
-  }
-
-  .section-title {
-    margin: 0 0 var(--space-3) 0;
-    font-size: var(--text-md);
-    font-weight: var(--font-semibold);
-    color: var(--color-neutral-dark);
-    padding-bottom: var(--space-2);
-    border-bottom: 1px solid var(--color-neutral-border);
-  }
-
-  .property-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-  }
-
-  .property-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--space-2);
-    border-radius: var(--border-radius-md);
-    background: var(--color-neutral-light);
-  }
-
-  .property-label {
-    font-size: var(--text-sm);
-    color: var(--color-neutral-text);
-    font-weight: var(--font-medium);
-  }
-
-  .property-value {
-    font-size: var(--text-sm);
-    color: var(--color-neutral-dark);
-    font-weight: var(--font-semibold);
-  }
-
-  /* Compact example styles for overview */
-  .example-list-compact {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-  }
-
-  .example-row-compact {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: var(--space-2);
-    align-items: center;
-    font-size: var(--text-sm);
-    padding: var(--space-2);
-    background: var(--color-neutral-light);
-    border-radius: var(--border-radius-sm);
-  }
-
-  .example-src-compact {
-    color: var(--color-neutral-dark);
-  }
-
-  .example-arrow-compact {
-    color: var(--color-neutral-text);
-    font-weight: var(--font-bold);
-  }
-
-  .example-tgt-compact {
-    color: var(--color-primary-darker);
-    font-weight: var(--font-medium);
-  }
-
-  /* Tag list */
-  .tag-list { 
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: var(--space-2); 
-  }
-
-  .tag { 
-    padding: var(--space-1) var(--space-3); 
-    border-radius: 999px; 
-    background: var(--color-primary-light); 
-    color: var(--color-primary-darker);
-    font-size: var(--text-sm);
-    font-weight: var(--font-medium);
-    border: 1px solid var(--color-primary);
-  }
-
   /* Actions */
   .actions { 
     display: flex; 
@@ -453,20 +322,6 @@
     .hero { 
       flex-direction: column; 
       align-items: flex-start; 
-    }
-
-    .overview-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .example-row-compact {
-      grid-template-columns: 1fr;
-      gap: var(--space-1);
-      text-align: center;
-    }
-
-    .example-arrow-compact {
-      display: none;
     }
   }
 </style>

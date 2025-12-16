@@ -12,10 +12,10 @@
   const tabs = $derived.by(() => {
     const isDE = appState.languageMode === 'DE_BG';
     return [
-      { id: 'overview' as TabId, label: isDE ? 'Übersicht' : 'Преглед', icon: '📋' },
-      { id: 'grammar' as TabId, label: isDE ? 'Grammatik' : 'Граматика', icon: '📚' },
+      { id: 'overview' as TabId, label: isDE ? 'Übersicht' : 'Преглед', icon: '�' },
+      { id: 'grammar' as TabId, label: isDE ? 'Grammatik' : 'Граматика', icon: '📖' },
       { id: 'family' as TabId, label: isDE ? 'Wortfamilie' : 'Семейство думи', icon: '🌳' },
-      { id: 'examples' as TabId, label: isDE ? 'Beispiele' : 'Примери', icon: '💬' },
+      { id: 'examples' as TabId, label: isDE ? 'Beispiele' : 'Примери', icon: '💡' },
       { id: 'analysis' as TabId, label: isDE ? 'Analyse' : 'Анализ', icon: '🔍' },
       { id: 'notes' as TabId, label: isDE ? 'Notizen' : 'Бележки', icon: '📝' },
       { id: 'resources' as TabId, label: isDE ? 'Quellen' : 'Източници', icon: '🔗' }

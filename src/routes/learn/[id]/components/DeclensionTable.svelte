@@ -102,7 +102,7 @@
     padding: var(--space-6);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: var(--breakpoint-md)) {
     th,
     td {
       padding: var(--space-2);

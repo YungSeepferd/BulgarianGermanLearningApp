@@ -111,6 +111,7 @@
     border-radius: var(--border-radius-lg);
     padding: var(--space-4);
     background: var(--color-neutral-light);
+    box-shadow: var(--shadow-card);
   }
 
   .cultural-note {
@@ -217,7 +218,7 @@
     font-size: var(--text-sm);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: var(--breakpoint-md)) {
     .tips-grid {
       grid-template-columns: 1fr;
     }

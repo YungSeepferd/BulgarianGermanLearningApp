@@ -252,6 +252,9 @@
     class={cardClass}
     transition:fade={{ duration: 200 }}
     onclick={handleCardClick}
+    role="button"
+    tabindex="0"
+    onkeydown={handleCardKeydown}
   >
     <div class="item-header">
       <div class="item-head-left">

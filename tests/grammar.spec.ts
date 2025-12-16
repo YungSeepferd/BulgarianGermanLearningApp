@@ -1,47 +1,54 @@
 import { test, expect } from '@playwright/test';
 
 test('Grammar page loads successfully', async ({ page }) => {
-  // Navigate to the grammar page
   await page.goto('/grammar');
 
   // Verify the page title
-  await expect(page).toHaveTitle(/Grammar - Bulgarian Language Learning App/);
+  // The app uses "Klare Regeln für sicheren Gebrauch" (DE) or "Ясни правила за уверена употреба" (BG)
+  await expect(page).toHaveTitle(/Grammar|Klare Regeln|Ясни правила/);
 
   // Verify the header is present
   const header = page.locator('h1');
   await expect(header).toBeVisible();
-  await expect(header).toHaveText('Grammar Rules');
+  await expect(header).toHaveText(/Klare Regeln|Ясни правила/);
 
-  // Verify the grammar list is present
-  const grammarList = page.locator('.grammar-list');
-  await expect(grammarList).toBeVisible();
+  // Verify the grammar table is present
+  const table = page.locator('table.grammar-table');
+  await expect(table).toBeVisible();
 
-  // Verify the grammar items are present
-  const grammarItems = page.locator('.grammar-item');
-  await expect(grammarItems).toHaveCountGreaterThan(0);
-
-  // Verify each grammar item has a rule and example
-  const firstItem = grammarItems.first();
-  await expect(firstItem.locator('.rule')).toBeVisible();
-  await expect(firstItem.locator('.example')).toBeVisible();
+  // Verify we have grammar rules listed
+  const rules = page.locator('table.grammar-table tbody tr');
+  const count = await rules.count();
+  expect(count).toBeGreaterThan(0);
 });
 
 test('Grammar search functionality', async ({ page }) => {
-  // Navigate to the grammar page
   await page.goto('/grammar');
+
+  // Wait for table to load
+  const rules = page.locator('table.grammar-table tbody tr');
+  await expect(rules.first()).toBeVisible();
+  const initialCount = await rules.count();
 
   // Find the search input
   const searchInput = page.locator('input[type="search"]');
   await expect(searchInput).toBeVisible();
 
-  // Type a search term
-  await searchInput.fill('present tense');
+  // Type a search term that should exist (e.g., "Präsens" or "Сегашно")
+  await searchInput.fill('Präsens');
 
-  // Verify the search results
-  const searchResults = page.locator('.grammar-item');
-  await expect(searchResults).toHaveCountGreaterThan(0);
+  // Wait for filter to apply
+  await page.waitForTimeout(500);
+
+  const searchResults = page.locator('table.grammar-table tbody tr');
+  const searchCount = await searchResults.count();
+
+  // We expect some results, but fewer than total (unless everything matches)
+  expect(searchCount).toBeGreaterThan(0);
+  // If initial count was > 0, search count should ideally be <= initial count
+  expect(searchCount).toBeLessThanOrEqual(initialCount);
 
   // Verify the search results contain the search term
   const firstResult = searchResults.first();
-  await expect(firstResult.locator('.rule')).toContainText(/present tense/i);
+  await expect(firstResult).toContainText(/Präsens|Сегашно/i);
 });

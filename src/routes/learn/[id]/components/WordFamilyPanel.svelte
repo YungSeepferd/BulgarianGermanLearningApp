@@ -94,10 +94,11 @@
     border: 1px solid var(--color-neutral-border);
     border-radius: var(--border-radius-lg);
     padding: var(--space-4);
+    box-shadow: var(--shadow-card);
   }
 
   .family-title {
-    margin: 0 0 var(--space-1) 0;
+    margin: 0 0 var(--space-3) 0;
     font-size: var(--text-lg);
     font-weight: var(--font-semibold);
     color: var(--color-neutral-dark);

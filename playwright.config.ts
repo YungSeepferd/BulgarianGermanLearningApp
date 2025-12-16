@@ -12,11 +12,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export default defineConfig({
-  // Look for test files in the "tests/accessibility" directory
-  testDir: './tests/accessibility',
+  // Look for test files in the "tests" directory
+  testDir: './tests',
 
-  // Use test files with .test.ts extension
-  testMatch: '**/*.test.ts',
+  // Use test files with .spec.ts extension for E2E and .test.ts for accessibility
+  testMatch: ['**/*.spec.ts', 'accessibility/**/*.test.ts'],
 
   // Run tests in files in parallel
   fullyParallel: true,
