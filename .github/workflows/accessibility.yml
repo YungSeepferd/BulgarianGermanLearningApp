@@ -36,7 +36,7 @@ jobs:
         run: pnpm build
 
       - name: Run Accessibility Tests
-        run: pnpm test:accessibility:ci
+        run: pnpm test:accessibility
 
       - name: Upload Accessibility Report
         if: always()

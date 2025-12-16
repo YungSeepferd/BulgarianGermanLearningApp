@@ -112,9 +112,13 @@ async function loadFromStaticEndpoint(eventBus?: EventBus): Promise<z.infer<type
     // In browser environment, fetch from static endpoint
     if (typeof process !== 'undefined' && process.versions && process.versions.node) {
       // Node.js environment - read file directly
+      // @vite-ignore
       const fs = await import('fs/promises');
+      // @vite-ignore
       const path = await import('path');
+      // @vite-ignore
       const { fileURLToPath } = await import('url');
+      // @vite-ignore
       const { dirname } = await import('path');
 
       const __filename = fileURLToPath(import.meta.url);
@@ -192,9 +196,13 @@ async function loadBundledData(eventBus?: EventBus): Promise<z.infer<typeof Unif
   try {
     // In Node.js environment, load directly from the source file
     if (typeof process !== 'undefined' && process.versions && process.versions.node) {
+      // @vite-ignore
       const fs = await import('fs/promises');
+      // @vite-ignore
       const path = await import('path');
+      // @vite-ignore
       const { fileURLToPath } = await import('url');
+      // @vite-ignore
       const { dirname } = await import('path');
 
       const __filename = fileURLToPath(import.meta.url);
