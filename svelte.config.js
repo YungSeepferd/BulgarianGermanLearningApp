@@ -41,10 +41,12 @@ const config = {
 		}),
 		
 		// Configure paths for GitHub Pages
+		// Note: The base path can be overridden via --base flag in vite build,
+		// which takes precedence over this config
 		paths: {
-			// Use repository name in production so links work on GitHub Pages
-			// Keep empty in development for local dev server
-			base: process.env.NODE_ENV === 'production' ? '/BulgarianGermanLearningApp' : ''
+			// Default to GitHub Pages base path for production
+			// When building for GitHub Pages, also pass --base /BulgarianGermanLearningApp/
+			base: '/BulgarianGermanLearningApp'
 		}
 	}
 };
