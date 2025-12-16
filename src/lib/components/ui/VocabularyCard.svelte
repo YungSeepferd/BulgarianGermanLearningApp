@@ -183,15 +183,18 @@
 
 <!-- GRID VARIANT: Vocabulary page compact grid cards -->
 {#if variant === 'grid'}
-  <div 
-    class={cardClass} 
-    transition:fade={{ duration: 200 }} 
+  <div
+    class={cardClass}
+    transition:fade={{ duration: 200 }}
   >
-    <div 
+    <!-- Difficulty Badge - Always visible -->
+    <span class="difficulty-badge">{item.cefrLevel}</span>
+
+    <div
       class="card-main-area"
-      role="button" 
+      role="button"
       tabindex="0"
-      onclick={handleCardClick} 
+      onclick={handleCardClick}
       onkeydown={handleCardKeydown}
     >
       <!-- Card Tags -->
@@ -233,6 +236,14 @@
           icon={PRACTICE_ICONS.STANDARD}
           onclick={handlePracticeClick}
         />
+        <ActionButton
+          label={appState.languageMode === 'DE_BG' ? 'Lernen' : 'Научи'}
+          variant="learn"
+          size="sm"
+          icon={PRACTICE_ICONS.LEARN}
+          onclick={() => onOpenDetail(item)}
+          aria-label={appState.languageMode === 'DE_BG' ? `Lernen ${item.german}` : `Научи ${item.german}`}
+        />
         <label class="checkbox-label">
           <input
             type="checkbox"
@@ -256,6 +267,8 @@
     tabindex="0"
     onkeydown={handleCardKeydown}
   >
+    <!-- Difficulty Badge - Always visible -->
+    <span class="difficulty-badge">{item.cefrLevel}</span>
     <div class="item-header">
       <div class="item-head-left">
         <label class="item-select">
@@ -291,6 +304,14 @@
             size="sm"
             icon={PRACTICE_ICONS.STANDARD}
             onclick={handlePracticeClick}
+          />
+          <ActionButton
+            label={appState.languageMode === 'DE_BG' ? 'Lernen' : 'Научи'}
+            variant="learn"
+            size="sm"
+            icon={PRACTICE_ICONS.LEARN}
+            onclick={() => onOpenDetail(item)}
+            aria-label={appState.languageMode === 'DE_BG' ? `Lernen ${item.german}` : `Научи ${item.german}`}
           />
           <button
             class="quick-practice-btn"
@@ -457,7 +478,7 @@
           label={appState.languageMode === 'DE_BG' ? 'Lernen' : 'Учи'}
           variant="learn"
           size="md"
-          icon={APP_ICONS.LEARN}
+          icon={PRACTICE_ICONS.LEARN}
           onclick={handlePracticeClick}
         />
       </div>
@@ -524,6 +545,25 @@
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 500;
+  }
+
+  .difficulty-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: #dbeafe;
+    color: #0c4a6e;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #2563eb;
+    z-index: 10;
+  }
+
+  .variant-list .difficulty-badge {
+    position: static;
+    margin-left: 0.5rem;
   }
 
   .cerf-tag {

@@ -6,12 +6,12 @@
 
   // Langenscheidt URL builder
   const langenscheidtUrl = $derived.by(() => {
-    const bulgarian = item.bulgarian;
-    const normalized = bulgarian
+    const german = item.german;
+    const normalized = german
       .toLowerCase()
       .replace(/\s+/g, '-')
-      .replace(/[^a-zа-я0-9-]/g, '');
-    return `https://bg.langenscheidt.com/bulgarisch-deutsch/${normalized}`;
+      .replace(/[^a-zäöüß0-9-]/g, '');
+    return `https://de.langenscheidt.com/deutsch-bulgarisch/${normalized}`;
   });
 
   // Type-safe derived values with proper guards
@@ -57,22 +57,22 @@
       <span class="section-icon" aria-hidden="true">⭐</span>
       {appState.languageMode === 'DE_BG' ? 'Empfohlene Quelle' : 'Препоръчан източник'}
     </h4>
-    <a 
-      href={langenscheidtUrl} 
-      target="_blank" 
-      rel="noopener noreferrer" 
+    <a
+      href={langenscheidtUrl}
+      target="_blank"
+      rel="noopener noreferrer"
       class="primary-link"
-      aria-label={appState.languageMode === 'DE_BG' 
-        ? `Öffne ${item.bulgarian} in Langenscheidt` 
-        : `Отвори ${item.bulgarian} в Langenscheidt`}
+      aria-label={appState.languageMode === 'DE_BG'
+        ? `Öffne ${item.german} in Langenscheidt`
+        : `Отвори ${item.german} в Langenscheidt`}
     >
       <div class="link-icon">🔗</div>
       <div class="link-content">
-        <div class="link-name">Langenscheidt Bulgarisch-Deutsch</div>
-        <div class="link-url">{item.bulgarian}</div>
+        <div class="link-name">Langenscheidt Deutsch-Bulgarisch</div>
+        <div class="link-url">{item.german}</div>
         <div class="link-desc">
-          {appState.languageMode === 'DE_BG' 
-            ? 'Vollständiges Wörterbuch mit Beispielen und Audio' 
+          {appState.languageMode === 'DE_BG'
+            ? 'Vollständiges Wörterbuch mit Beispielen und Audio'
             : 'Пълен речник с примери и аудио'}
         </div>
       </div>
