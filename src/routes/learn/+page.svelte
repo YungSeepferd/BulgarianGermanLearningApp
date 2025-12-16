@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import { vocabularyDb } from '$lib/data/db.svelte';
   import { appState } from '$lib/state/app-state';
   import VocabularyCard from '$lib/components/ui/VocabularyCard.svelte';
@@ -128,19 +129,19 @@
   }
 
   function handleCardClick(item: VocabularyItem) {
-    goto(`/learn/${item.id}`);
+    goto(`${base}/learn/${item.id}`);
   }
 
   function handleQuickPractice() {
-    goto('/learn/shuffle');
+    goto(`${base}/learn/shuffle`);
   }
 
   function handleBrowseVocab() {
-    goto('/vocabulary');
+    goto(`${base}/vocabulary`);
   }
 
   function handlePathClick(pathId: string) {
-    goto(`/vocabulary?difficulty=${pathId.toUpperCase()}`);
+    goto(`${base}/vocabulary?difficulty=${pathId.toUpperCase()}`);
   }
 </script>
 

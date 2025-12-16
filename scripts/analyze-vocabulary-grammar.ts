@@ -189,7 +189,7 @@ const ARTICLE_GENDER_PATTERNS: Record<string, {article: Article, gender: Gender}
   'lein': { article: 'das', gender: 'neuter' },   // Büchlein, Fräulein
   'um': { article: 'das', gender: 'neuter' },     // Museum, Datum
   'ment': { article: 'das', gender: 'neuter' },   // Dokument, Instrument
-  'tum': { article: 'das', gender: 'neuter' },    // Eigentum, Christentum
+  'tum': { article: 'das', gender: 'neuter' }    // Eigentum, Christentum
 };
 
 class VocabularyGrammarAnalyzer {
@@ -571,7 +571,7 @@ class VocabularyGrammarAnalyzer {
       'mädchen': { article: 'das', gender: 'neuter' }, // das Mädchen
       'fräulein': { article: 'das', gender: 'neuter' }, // das Fräulein
       'weib': { article: 'das', gender: 'neuter' }, // das Weib
-      'männlein': { article: 'das', gender: 'neuter' }, // das Männlein
+      'männlein': { article: 'das', gender: 'neuter' } // das Männlein
     };
 
     if (exceptions[normalizedTerm]) {

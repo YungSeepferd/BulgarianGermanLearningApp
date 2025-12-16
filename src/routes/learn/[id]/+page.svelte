@@ -4,6 +4,7 @@
   import type { VocabularyItem } from '$lib/types/vocabulary';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import { browser } from '$app/environment';
   import Flashcard from '$lib/components/Flashcard.svelte';
   import MasteryGauge from '$lib/components/ui/MasteryGauge.svelte';
@@ -169,10 +170,10 @@
 
     <!-- Actions -->
     <nav class="actions" aria-label={appState.languageMode === 'DE_BG' ? 'Lernaktionen' : 'Учебни действия'}>
-      <a class="button" href="/practice" aria-label={appState.languageMode === 'DE_BG' ? 'Mit diesem Wort üben' : 'Упражнявай тази дума'}>
+      <a class="button" href="{base}/practice" aria-label={appState.languageMode === 'DE_BG' ? 'Mit diesem Wort üben' : 'Упражнявай тази дума'}>
         {appState.languageMode === 'DE_BG' ? 'Üben' : 'Упражнения'}
       </a>
-      <a class="button button--secondary" href="/vocabulary">{appState.languageMode === 'DE_BG' ? 'Zurück zum Wörterbuch' : 'Назад към речника'}</a>
+      <a class="button button--secondary" href="{base}/vocabulary">{appState.languageMode === 'DE_BG' ? 'Zurück zum Wörterbuch' : 'Назад към речника'}</a>
     </nav>
   {/if}
 </div>

@@ -3,6 +3,7 @@
 ## Project Status
 **Single Source of Truth**: [docs/PROJECT_STATUS.md](../docs/PROJECT_STATUS.md)
 **Status**: MVP Launch Readiness - Final Polish
+**Grammar Reference**: [docs/GERMAN_BULGARIAN_GRAMMAR_GUIDE.md](../docs/GERMAN_BULGARIAN_GRAMMAR_GUIDE.md)
 
 # AI Coding Agent Instructions (Concise)
 
@@ -32,6 +33,7 @@ These instructions capture the essential, project-specific rules AI agents must 
 - **Grammar Verification**: ALWAYS verify German and Bulgarian grammar rules (articles, gender, cases) before adding data.
   - **German**: Check correct article (der/die/das) for nouns. NEVER use placeholders like "Das/Die/Der" or "Mein/Meine". Ensure correct case (Nominative, Accusative, Dative) in examples.
   - **Bulgarian**: Check correct gender and definite article forms (-та/-ът/-то). Ensure correct agreement in examples.
+  - **Reference**: See [docs/GERMAN_BULGARIAN_GRAMMAR_GUIDE.md](../docs/GERMAN_BULGARIAN_GRAMMAR_GUIDE.md) for comprehensive grammar rules.
 - **Validation**: Use `src/lib/schemas/vocabulary.ts` Zod schemas for all data.
 - **Enrichment**: Use `pnpm run enrich:vocabulary` for adding new data with validation.
 

@@ -9,6 +9,7 @@
   import ActionButton from '$lib/components/ui/ActionButton.svelte';
   import VocabularyCard from '$lib/components/ui/VocabularyCard.svelte';
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
 
   type ActiveFilter = {
     key: string;
@@ -288,6 +289,7 @@
   // Handle item selection for practice
   function handleSelectItem(item: VocabularyItem) {
     appState.startPracticeSession(item);
+    goto(`${base}/practice`);
   }
 
   function handleToggleSelectItem(itemId: string) {
@@ -306,6 +308,7 @@
       // Start practice with the first selected item
       appState.startPracticeSession(firstItem);
       selectedItems.clear();
+      goto(`${base}/practice`);
     }
   }
 
@@ -350,15 +353,14 @@
     }
   }
 
-  // Reset all filters and reload
-  function resetFilters() {
+  async function resetFilters() {
     searchTerm = '';
     selectedCategory = 'all';
     selectedDifficulty = null;
     selectedPartOfSpeech = null;
     selectedLearningPhase = null;
     currentPage = 0;
-    loadVocabulary();
+    await loadVocabulary();
   }
 
 
@@ -529,7 +531,7 @@
                 showTags={true}
                 onPractice={handleSelectItem}
                 onToggleSelect={handleToggleSelectItem}
-                onOpenDetail={(item) => goto(`/learn/${item.id}`)}
+                onOpenDetail={(item) => goto(`${base}/learn/${item.id}`)}
               />
             </div>
           {/each}

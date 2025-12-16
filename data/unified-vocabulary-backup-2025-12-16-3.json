@@ -41486,9 +41486,9 @@
     },
     {
       "id": "a1_final_025",
-      "german": "der Lärm",
+      "german": "Lärm",
       "bulgarian": "Шум",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -41534,23 +41534,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "masculine",
-        "declension": {
-          "nominative": "der Lärm",
-          "accusative": "den Lärm",
-          "dative": "dem Lärm",
-          "genitive": "des Lärms"
-        },
-        "plural": "die Lärmarten"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_026",
-      "german": "die Stille",
+      "german": "Stille",
       "bulgarian": "Тишина",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -41596,23 +41586,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Stille",
-          "accusative": "die Stille",
-          "dative": "der Stille",
-          "genitive": "der Stille"
-        },
-        "plural": "die Stillen"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_027",
-      "german": "die Geschwindigkeit",
+      "german": "Geschwindigkeit",
       "bulgarian": "Скорост",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -41658,23 +41638,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Geschwindigkeit",
-          "accusative": "die Geschwindigkeit",
-          "dative": "der Geschwindigkeit",
-          "genitive": "der Geschwindigkeit"
-        },
-        "plural": "die Geschwindigkeiten"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_028",
-      "german": "die Richtung",
+      "german": "Richtung",
       "bulgarian": "Посока",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -41720,23 +41690,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Richtung",
-          "accusative": "die Richtung",
-          "dative": "der Richtung",
-          "genitive": "der Richtung"
-        },
-        "plural": "die Richtungen"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_029",
-      "german": "die Entfernung",
+      "german": "Entfernung",
       "bulgarian": "Разстояние",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -41782,23 +41742,65 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Entfernung",
-          "accusative": "die Entfernung",
-          "dative": "der Entfernung",
-          "genitive": "der Entfernung"
+      "cefrLevel": "A1"
+    },
+    {
+      "id": "a1_final_030",
+      "german": "Platz/Ort",
+      "bulgarian": "Място",
+      "partOfSpeech": "phrase",
+      "difficulty": "A1",
+      "categories": [
+        "places"
+      ],
+      "examples": [
+        {
+          "german": "Platz/Ort.",
+          "bulgarian": "Място.",
+          "context": "Basic",
+          "source": "legacy"
         },
-        "plural": "die Entfernungen"
-      }
+        {
+          "german": "Ich habe Platz/Ort.",
+          "bulgarian": "Имам място.",
+          "context": "Having",
+          "source": "legacy"
+        },
+        {
+          "german": "Ich mag Platz/Ort.",
+          "bulgarian": "Харесвам място.",
+          "context": "Liking",
+          "source": "legacy"
+        }
+      ],
+      "notes": {
+        "general": "Essential A1 vocabulary.",
+        "forBulgarianSpeakers": "Основна дума.",
+        "forGermanSpeakers": "Grundwort.",
+        "linguistic": "A1 word.",
+        "linguisticForBulgarians": "Дума от ниво A1.",
+        "linguisticForGermans": "A1-Wort.",
+        "source": "merged"
+      },
+      "etymology": "Proto-Slavic or international.",
+      "culturalNotes": "Common word.",
+      "metadata": {
+        "frequency": 80,
+        "level": "A1",
+        "isCommon": false,
+        "isVerified": true,
+        "createdBy": "vocab-migration"
+      },
+      "createdAt": "2025-12-11T22:19:46.851Z",
+      "updatedAt": "2025-12-11T22:19:46.851Z",
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_031",
-      "german": "der Punkt",
+      "german": "Punkt",
       "bulgarian": "Точка",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -41844,23 +41846,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "masculine",
-        "declension": {
-          "nominative": "der Punkt",
-          "accusative": "den Punkt",
-          "dative": "dem Punkt",
-          "genitive": "des Punkts"
-        },
-        "plural": "die Punkte"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_032",
-      "german": "die Linie",
+      "german": "Linie",
       "bulgarian": "Линия",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -41906,23 +41898,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Linie",
-          "accusative": "die Linie",
-          "dative": "der Linie",
-          "genitive": "der Linie"
-        },
-        "plural": "die Linien"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_033",
-      "german": "die Form",
+      "german": "Form",
       "bulgarian": "Форма",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -41968,23 +41950,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Form",
-          "accusative": "die Form",
-          "dative": "der Form",
-          "genitive": "der Form"
-        },
-        "plural": "die Formen"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_034",
-      "german": "die Größe",
+      "german": "Größe",
       "bulgarian": "Размер",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -42030,23 +42002,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Größe",
-          "accusative": "die Größe",
-          "dative": "der Größe",
-          "genitive": "der Größe"
-        },
-        "plural": "die Größen"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_035",
-      "german": "die Farbe",
+      "german": "Farbe",
       "bulgarian": "Цвят",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -42092,23 +42054,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Farbe",
-          "accusative": "die Farbe",
-          "dative": "der Farbe",
-          "genitive": "der Farbe"
-        },
-        "plural": "die Farben"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_036",
-      "german": "der Geruch",
+      "german": "Geruch",
       "bulgarian": "Мирис",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -42154,23 +42106,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "masculine",
-        "declension": {
-          "nominative": "der Geruch",
-          "accusative": "den Geruch",
-          "dative": "dem Geruch",
-          "genitive": "des Geruchs"
-        },
-        "plural": "die Gerüche"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_037",
-      "german": "der Geschmack",
+      "german": "Geschmack",
       "bulgarian": "Вкус",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -42216,23 +42158,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "masculine",
-        "declension": {
-          "nominative": "der Geschmack",
-          "accusative": "den Geschmack",
-          "dative": "dem Geschmack",
-          "genitive": "des Geschmacks"
-        },
-        "plural": "die Geschmäcke"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_038",
-      "german": "das Gefühl",
+      "german": "Gefühl",
       "bulgarian": "Чувство",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -42278,23 +42210,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "neuter",
-        "declension": {
-          "nominative": "das Gefühl",
-          "accusative": "das Gefühl",
-          "dative": "dem Gefühl",
-          "genitive": "des Gefühls"
-        },
-        "plural": "die Gefühle"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_039",
-      "german": "der Gedanke",
+      "german": "Gedanke",
       "bulgarian": "Мисъл",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -42340,23 +42262,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "masculine",
-        "declension": {
-          "nominative": "der Gedanke",
-          "accusative": "den Gedanke",
-          "dative": "dem Gedanke",
-          "genitive": "des Gedankes"
-        },
-        "plural": "die Gedanken"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_040",
-      "german": "die Idee",
+      "german": "Idee",
       "bulgarian": "Идея",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -42402,23 +42314,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Idee",
-          "accusative": "die Idee",
-          "dative": "der Idee",
-          "genitive": "der Idee"
-        },
-        "plural": "die Ideen"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_041",
-      "german": "der Plan",
+      "german": "Plan",
       "bulgarian": "План",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -42464,23 +42366,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "masculine",
-        "declension": {
-          "nominative": "der Plan",
-          "accusative": "den Plan",
-          "dative": "dem Plan",
-          "genitive": "des Plans"
-        },
-        "plural": "die Pläne"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_042",
-      "german": "das Ziel",
+      "german": "Ziel",
       "bulgarian": "Цел",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -42526,23 +42418,117 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "neuter",
-        "declension": {
-          "nominative": "das Ziel",
-          "accusative": "das Ziel",
-          "dative": "dem Ziel",
-          "genitive": "des Ziels"
+      "cefrLevel": "A1"
+    },
+    {
+      "id": "a1_final_043",
+      "german": "Art/Weise",
+      "bulgarian": "Начин",
+      "partOfSpeech": "phrase",
+      "difficulty": "A1",
+      "categories": [
+        "everyday-phrases"
+      ],
+      "examples": [
+        {
+          "german": "Art/Weise.",
+          "bulgarian": "Начин.",
+          "context": "Basic",
+          "source": "legacy"
         },
-        "plural": "die Ziele"
-      }
+        {
+          "german": "Ich habe Art/Weise.",
+          "bulgarian": "Имам начин.",
+          "context": "Having",
+          "source": "legacy"
+        },
+        {
+          "german": "Ich mag Art/Weise.",
+          "bulgarian": "Харесвам начин.",
+          "context": "Liking",
+          "source": "legacy"
+        }
+      ],
+      "notes": {
+        "general": "Essential A1 vocabulary.",
+        "forBulgarianSpeakers": "Основна дума.",
+        "forGermanSpeakers": "Grundwort.",
+        "linguistic": "A1 word.",
+        "linguisticForBulgarians": "Дума от ниво A1.",
+        "linguisticForGermans": "A1-Wort.",
+        "source": "merged"
+      },
+      "etymology": "Proto-Slavic or international.",
+      "culturalNotes": "Common word.",
+      "metadata": {
+        "frequency": 80,
+        "level": "A1",
+        "isCommon": false,
+        "isVerified": true,
+        "createdBy": "vocab-migration"
+      },
+      "createdAt": "2025-12-11T22:19:46.851Z",
+      "updatedAt": "2025-12-11T22:19:46.851Z",
+      "version": 1,
+      "cefrLevel": "A1"
+    },
+    {
+      "id": "a1_final_044",
+      "german": "Grund/Ursache",
+      "bulgarian": "Причина",
+      "partOfSpeech": "phrase",
+      "difficulty": "A1",
+      "categories": [
+        "everyday-phrases"
+      ],
+      "examples": [
+        {
+          "german": "Grund/Ursache.",
+          "bulgarian": "Причина.",
+          "context": "Basic",
+          "source": "legacy"
+        },
+        {
+          "german": "Ich habe Grund/Ursache.",
+          "bulgarian": "Имам причина.",
+          "context": "Having",
+          "source": "legacy"
+        },
+        {
+          "german": "Ich mag Grund/Ursache.",
+          "bulgarian": "Харесвам причина.",
+          "context": "Liking",
+          "source": "legacy"
+        }
+      ],
+      "notes": {
+        "general": "Essential A1 vocabulary.",
+        "forBulgarianSpeakers": "Основна дума.",
+        "forGermanSpeakers": "Grundwort.",
+        "linguistic": "A1 word.",
+        "linguisticForBulgarians": "Дума от ниво A1.",
+        "linguisticForGermans": "A1-Wort.",
+        "source": "merged"
+      },
+      "etymology": "Proto-Slavic or international.",
+      "culturalNotes": "Common word.",
+      "metadata": {
+        "frequency": 80,
+        "level": "A1",
+        "isCommon": false,
+        "isVerified": true,
+        "createdBy": "vocab-migration"
+      },
+      "createdAt": "2025-12-11T22:19:46.851Z",
+      "updatedAt": "2025-12-11T22:19:46.851Z",
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_045",
-      "german": "das Ergebnis",
+      "german": "Ergebnis",
       "bulgarian": "Резултат",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -42588,23 +42574,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "neuter",
-        "declension": {
-          "nominative": "das Ergebnis",
-          "accusative": "das Ergebnis",
-          "dative": "dem Ergebnis",
-          "genitive": "des Ergebniss"
-        },
-        "plural": "die Ergebnisse"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_046",
-      "german": "das Beispiel",
+      "german": "Beispiel",
       "bulgarian": "Пример",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -42650,23 +42626,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "neuter",
-        "declension": {
-          "nominative": "das Beispiel",
-          "accusative": "das Beispiel",
-          "dative": "dem Beispiel",
-          "genitive": "des Beispiels"
-        },
-        "plural": "die Beispiele"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_047",
-      "german": "die Tatsache",
+      "german": "Tatsache",
       "bulgarian": "Факт",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -42712,23 +42678,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Tatsache",
-          "accusative": "die Tatsache",
-          "dative": "der Tatsache",
-          "genitive": "der Tatsache"
-        },
-        "plural": "die Tatsachen"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_048",
-      "german": "die Wahrheit",
+      "german": "Wahrheit",
       "bulgarian": "Истина",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -42774,23 +42730,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Wahrheit",
-          "accusative": "die Wahrheit",
-          "dative": "der Wahrheit",
-          "genitive": "der Wahrheit"
-        },
-        "plural": "die Wahrheiten"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_049",
-      "german": "die Lüge",
+      "german": "Lüge",
       "bulgarian": "Лъжа",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -42836,23 +42782,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Lüge",
-          "accusative": "die Lüge",
-          "dative": "der Lüge",
-          "genitive": "der Lüge"
-        },
-        "plural": "die Lügen"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_050",
-      "german": "das Geheimnis",
+      "german": "Geheimnis",
       "bulgarian": "Тайна",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -42898,17 +42834,7 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "neuter",
-        "declension": {
-          "nominative": "das Geheimnis",
-          "accusative": "das Geheimnis",
-          "dative": "dem Geheimnis",
-          "genitive": "des Geheimniss"
-        },
-        "plural": "die Geheimnisse"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_051",
@@ -42975,10 +42901,62 @@
       }
     },
     {
+      "id": "a1_final_052",
+      "german": "Recht/Gerechtigkeit",
+      "bulgarian": "Правда",
+      "partOfSpeech": "phrase",
+      "difficulty": "A1",
+      "categories": [
+        "everyday-phrases"
+      ],
+      "examples": [
+        {
+          "german": "Recht/Gerechtigkeit.",
+          "bulgarian": "Правда.",
+          "context": "Basic",
+          "source": "legacy"
+        },
+        {
+          "german": "Ich habe Recht/Gerechtigkeit.",
+          "bulgarian": "Имам правда.",
+          "context": "Having",
+          "source": "legacy"
+        },
+        {
+          "german": "Ich mag Recht/Gerechtigkeit.",
+          "bulgarian": "Харесвам правда.",
+          "context": "Liking",
+          "source": "legacy"
+        }
+      ],
+      "notes": {
+        "general": "Essential A1 vocabulary.",
+        "forBulgarianSpeakers": "Основна дума.",
+        "forGermanSpeakers": "Grundwort.",
+        "linguistic": "A1 word.",
+        "linguisticForBulgarians": "Дума от ниво A1.",
+        "linguisticForGermans": "A1-Wort.",
+        "source": "merged"
+      },
+      "etymology": "Proto-Slavic or international.",
+      "culturalNotes": "Common word.",
+      "metadata": {
+        "frequency": 80,
+        "level": "A1",
+        "isCommon": false,
+        "isVerified": true,
+        "createdBy": "vocab-migration"
+      },
+      "createdAt": "2025-12-11T22:19:46.851Z",
+      "updatedAt": "2025-12-11T22:19:46.851Z",
+      "version": 1,
+      "cefrLevel": "A1"
+    },
+    {
       "id": "a1_final_053",
-      "german": "das Gesetz",
+      "german": "Gesetz",
       "bulgarian": "Закон",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -43024,23 +43002,65 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "neuter",
-        "declension": {
-          "nominative": "das Gesetz",
-          "accusative": "das Gesetz",
-          "dative": "dem Gesetz",
-          "genitive": "des Gesetzs"
+      "cefrLevel": "A1"
+    },
+    {
+      "id": "a1_final_054",
+      "german": "Ordnung/Reihe",
+      "bulgarian": "Ред",
+      "partOfSpeech": "phrase",
+      "difficulty": "A1",
+      "categories": [
+        "everyday-phrases"
+      ],
+      "examples": [
+        {
+          "german": "Ordnung/Reihe.",
+          "bulgarian": "Ред.",
+          "context": "Basic",
+          "source": "legacy"
         },
-        "plural": "die Gesetze"
-      }
+        {
+          "german": "Ich habe Ordnung/Reihe.",
+          "bulgarian": "Имам ред.",
+          "context": "Having",
+          "source": "legacy"
+        },
+        {
+          "german": "Ich mag Ordnung/Reihe.",
+          "bulgarian": "Харесвам ред.",
+          "context": "Liking",
+          "source": "legacy"
+        }
+      ],
+      "notes": {
+        "general": "Essential A1 vocabulary.",
+        "forBulgarianSpeakers": "Основна дума.",
+        "forGermanSpeakers": "Grundwort.",
+        "linguistic": "A1 word.",
+        "linguisticForBulgarians": "Дума от ниво A1.",
+        "linguisticForGermans": "A1-Wort.",
+        "source": "merged"
+      },
+      "etymology": "Proto-Slavic or international.",
+      "culturalNotes": "Common word.",
+      "metadata": {
+        "frequency": 80,
+        "level": "A1",
+        "isCommon": false,
+        "isVerified": true,
+        "createdBy": "vocab-migration"
+      },
+      "createdAt": "2025-12-11T22:19:46.851Z",
+      "updatedAt": "2025-12-11T22:19:46.851Z",
+      "version": 1,
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_055",
-      "german": "die Gruppe",
+      "german": "Gruppe",
       "bulgarian": "Група",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -43086,23 +43106,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Gruppe",
-          "accusative": "die Gruppe",
-          "dative": "der Gruppe",
-          "genitive": "der Gruppe"
-        },
-        "plural": "die Gruppen"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_056",
-      "german": "das Mitglied",
+      "german": "Mitglied",
       "bulgarian": "Член",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -43148,23 +43158,13 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "neuter",
-        "declension": {
-          "nominative": "das Mitglied",
-          "accusative": "das Mitglied",
-          "dative": "dem Mitglied",
-          "genitive": "des Mitglieds"
-        },
-        "plural": "die Mitglieder"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "a1_final_057",
-      "german": "die Gesellschaft",
+      "german": "Gesellschaft",
       "bulgarian": "Общество",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -43210,17 +43210,7 @@
       "createdAt": "2025-12-11T22:19:46.851Z",
       "updatedAt": "2025-12-11T22:19:46.851Z",
       "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Gesellschaft",
-          "accusative": "die Gesellschaft",
-          "dative": "der Gesellschaft",
-          "genitive": "der Gesellschaft"
-        },
-        "plural": "die Gesellschaften"
-      }
+      "cefrLevel": "A1"
     },
     {
       "id": "dobur_den_002_dup1",
@@ -43256,6 +43246,98 @@
       "culturalNotes": "Стандартно дневно приветствие от късна сутрин до вечер.\nKultureller Kontext: Neutraler Tagesgruß in Bulgarien. | More formal than 'Здравей'. Used in business contexts and with strangers",
       "metadata": {
         "frequency": 100,
+        "level": "A1",
+        "isCommon": false,
+        "isVerified": true,
+        "createdBy": "vocab-migration"
+      },
+      "createdAt": "2025-12-11T22:19:46.851Z",
+      "updatedAt": "2025-12-11T22:19:46.851Z",
+      "version": 1,
+      "cefrLevel": "A1"
+    },
+    {
+      "id": "rabota_005_dup1",
+      "german": "Arbeit",
+      "bulgarian": "работа",
+      "partOfSpeech": "phrase",
+      "difficulty": "A1",
+      "categories": [
+        "everyday-phrases"
+      ],
+      "examples": [
+        {
+          "german": "Ich gehe zur Arbeit.",
+          "bulgarian": "Отивам на работа.",
+          "context": "daily routine",
+          "source": "legacy"
+        },
+        {
+          "german": "Meine Arbeit ist interessant.",
+          "bulgarian": "Работата ми е интересна.",
+          "context": "job satisfaction",
+          "source": "legacy"
+        }
+      ],
+      "notes": {
+        "general": "Kann sowohl 'Arbeit' als auch 'Job' bedeuten, je nach Kontext",
+        "forBulgarianSpeakers": "'Die Arbeit' обозначава както работното място, така и конкретната задача. Кажете 'zur Arbeit gehen' (отивам на работа) или 'viel Arbeit haben' (имам много работа).",
+        "forGermanSpeakers": "Für Deutschsprachige: 'Работа' ≈ 'Arbeit'. Betonung: рабо́та. Femininum. Sehr häufig verwendet.",
+        "linguistic": "Feminine noun, definite form: 'работата'. Stress on second syllable: ра-БО-та",
+        "linguisticForBulgarians": "Feminine noun. Also used as verb 'работя' (to work). Stress: рабо́та",
+        "linguisticForGermans": "Feminine noun. Also used as verb 'работя' (to work). Stress: рабо́та",
+        "source": "merged"
+      },
+      "etymology": "Произход: праслав. *orbota („труд\"), сродно с 'раб'.\nHerkunft: Proto-slawisch *orbota, verwandt mit 'раб' (Arbeiter). | From Proto-Slavic 'orbota' - related to 'раб' (slave), but evolved to mean general work",
+      "culturalNotes": "Силна трудова етика; баланс работа-живот се развива.\nKultureller Kontext: Traditionell hohe Arbeitsmoral, Work-Life-Balance im Wandel. | Bulgarian work culture values personal relationships at work more than German efficiency focus",
+      "metadata": {
+        "frequency": 93,
+        "level": "A1",
+        "isCommon": false,
+        "isVerified": true,
+        "createdBy": "vocab-migration"
+      },
+      "createdAt": "2025-12-11T22:19:46.851Z",
+      "updatedAt": "2025-12-11T22:19:46.851Z",
+      "version": 1,
+      "cefrLevel": "A1"
+    },
+    {
+      "id": "kniga_006_dup1",
+      "german": "Buch",
+      "bulgarian": "книга",
+      "partOfSpeech": "phrase",
+      "difficulty": "A1",
+      "categories": [
+        "everyday-phrases"
+      ],
+      "examples": [
+        {
+          "german": "Ich lese ein Buch.",
+          "bulgarian": "Чета книга.",
+          "context": "activity",
+          "source": "legacy"
+        },
+        {
+          "german": "Dieses Buch ist interessant.",
+          "bulgarian": "Тази книга е интересна.",
+          "context": "opinion",
+          "source": "legacy"
+        }
+      ],
+      "notes": {
+        "general": "'Книга' stammt aus dem Altslawischen und war ursprünglich eine Bezeichnung für eine Schriftrolle oder ein gebundenes Werk. | Grundwort für Buch. Bulgarisch hat reiche Literaturgeschichte",
+        "forBulgarianSpeakers": "'Das Buch' е среден род и означава книга като предмет. Множественото 'die Bücher' образува умлаут върху 'u' и добавя '-er'.",
+        "forGermanSpeakers": "Für Deutschsprachige: 'Книга' ≈ 'Buch'. Femininum. Sehr häufig verwendet.",
+        "linguistic": "Feminine noun, definite form: 'книгата'. Stress on first syllable: КНИ-га",
+        "linguisticForBulgarians": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+        "linguisticForGermans": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+        "source": "merged"
+      },
+      "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian | From Old Church Slavonic 'кънига', ultimately from Chinese via Turkic languages",
+      "culturalNotes": "Common everyday word in Bulgarian. Useful for A1 learners | Books highly valued in Bulgarian culture - 'Ден на българската просвета' celebrates literacy",
+      "metadata": {
+        "frequency": 98,
         "level": "A1",
         "isCommon": false,
         "isVerified": true,
@@ -43895,7 +43977,7 @@
       "id": "a1_adj_006_dup1",
       "german": "neu",
       "bulgarian": "Нов",
-      "partOfSpeech": "adjective",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -43947,7 +44029,7 @@
       "id": "a1_adj_007_dup1",
       "german": "alt",
       "bulgarian": "Стар",
-      "partOfSpeech": "adjective",
+      "partOfSpeech": "phrase",
       "difficulty": "A1",
       "categories": [
         "everyday-phrases"
@@ -46706,626 +46788,6 @@
             "akkusativ": "die Mäuse"
           }
         }
-      }
-    },
-    {
-      "id": "8jxedvvix",
-      "german": "der Platz",
-      "bulgarian": "Място",
-      "partOfSpeech": "noun",
-      "difficulty": "A1",
-      "categories": [
-        "places"
-      ],
-      "examples": [
-        {
-          "german": "Platz/Ort.",
-          "bulgarian": "Място.",
-          "context": "Basic",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich habe Platz/Ort.",
-          "bulgarian": "Имам място.",
-          "context": "Having",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich mag Platz/Ort.",
-          "bulgarian": "Харесвам място.",
-          "context": "Liking",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "Essential A1 vocabulary.",
-        "forBulgarianSpeakers": "Основна дума.",
-        "forGermanSpeakers": "Grundwort.",
-        "linguistic": "A1 word.",
-        "linguisticForBulgarians": "Дума от ниво A1.",
-        "linguisticForGermans": "A1-Wort.",
-        "source": "merged"
-      },
-      "etymology": "Proto-Slavic or international.",
-      "culturalNotes": "Common word.",
-      "metadata": {
-        "frequency": 80,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "masculine",
-        "declension": {
-          "nominative": "der Platz",
-          "accusative": "den Platz",
-          "dative": "dem Platz",
-          "genitive": "des Platzs"
-        },
-        "plural": "die Plätze"
-      }
-    },
-    {
-      "id": "8nc1ts5qd",
-      "german": "der Ort",
-      "bulgarian": "Място",
-      "partOfSpeech": "noun",
-      "difficulty": "A1",
-      "categories": [
-        "places"
-      ],
-      "examples": [
-        {
-          "german": "Platz/Ort.",
-          "bulgarian": "Място.",
-          "context": "Basic",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich habe Platz/Ort.",
-          "bulgarian": "Имам място.",
-          "context": "Having",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich mag Platz/Ort.",
-          "bulgarian": "Харесвам място.",
-          "context": "Liking",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "Essential A1 vocabulary.",
-        "forBulgarianSpeakers": "Основна дума.",
-        "forGermanSpeakers": "Grundwort.",
-        "linguistic": "A1 word.",
-        "linguisticForBulgarians": "Дума от ниво A1.",
-        "linguisticForGermans": "A1-Wort.",
-        "source": "merged"
-      },
-      "etymology": "Proto-Slavic or international.",
-      "culturalNotes": "Common word.",
-      "metadata": {
-        "frequency": 80,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "masculine",
-        "declension": {
-          "nominative": "der Ort",
-          "accusative": "den Ort",
-          "dative": "dem Ort",
-          "genitive": "des Orts"
-        },
-        "plural": "die Orte"
-      }
-    },
-    {
-      "id": "bxr5g7xxd",
-      "german": "die Art",
-      "bulgarian": "Начин",
-      "partOfSpeech": "noun",
-      "difficulty": "A1",
-      "categories": [
-        "everyday-phrases"
-      ],
-      "examples": [
-        {
-          "german": "Art/Weise.",
-          "bulgarian": "Начин.",
-          "context": "Basic",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich habe Art/Weise.",
-          "bulgarian": "Имам начин.",
-          "context": "Having",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich mag Art/Weise.",
-          "bulgarian": "Харесвам начин.",
-          "context": "Liking",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "Essential A1 vocabulary.",
-        "forBulgarianSpeakers": "Основна дума.",
-        "forGermanSpeakers": "Grundwort.",
-        "linguistic": "A1 word.",
-        "linguisticForBulgarians": "Дума от ниво A1.",
-        "linguisticForGermans": "A1-Wort.",
-        "source": "merged"
-      },
-      "etymology": "Proto-Slavic or international.",
-      "culturalNotes": "Common word.",
-      "metadata": {
-        "frequency": 80,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Art",
-          "accusative": "die Art",
-          "dative": "der Art",
-          "genitive": "der Art"
-        },
-        "plural": "die Arten"
-      }
-    },
-    {
-      "id": "dfh75lf89",
-      "german": "die Weise",
-      "bulgarian": "Начин",
-      "partOfSpeech": "noun",
-      "difficulty": "A1",
-      "categories": [
-        "everyday-phrases"
-      ],
-      "examples": [
-        {
-          "german": "Art/Weise.",
-          "bulgarian": "Начин.",
-          "context": "Basic",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich habe Art/Weise.",
-          "bulgarian": "Имам начин.",
-          "context": "Having",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich mag Art/Weise.",
-          "bulgarian": "Харесвам начин.",
-          "context": "Liking",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "Essential A1 vocabulary.",
-        "forBulgarianSpeakers": "Основна дума.",
-        "forGermanSpeakers": "Grundwort.",
-        "linguistic": "A1 word.",
-        "linguisticForBulgarians": "Дума от ниво A1.",
-        "linguisticForGermans": "A1-Wort.",
-        "source": "merged"
-      },
-      "etymology": "Proto-Slavic or international.",
-      "culturalNotes": "Common word.",
-      "metadata": {
-        "frequency": 80,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Weise",
-          "accusative": "die Weise",
-          "dative": "der Weise",
-          "genitive": "der Weise"
-        },
-        "plural": "die Weisen"
-      }
-    },
-    {
-      "id": "qi2kc3jq9",
-      "german": "der Grund",
-      "bulgarian": "Причина",
-      "partOfSpeech": "noun",
-      "difficulty": "A1",
-      "categories": [
-        "everyday-phrases"
-      ],
-      "examples": [
-        {
-          "german": "Grund/Ursache.",
-          "bulgarian": "Причина.",
-          "context": "Basic",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich habe Grund/Ursache.",
-          "bulgarian": "Имам причина.",
-          "context": "Having",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich mag Grund/Ursache.",
-          "bulgarian": "Харесвам причина.",
-          "context": "Liking",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "Essential A1 vocabulary.",
-        "forBulgarianSpeakers": "Основна дума.",
-        "forGermanSpeakers": "Grundwort.",
-        "linguistic": "A1 word.",
-        "linguisticForBulgarians": "Дума от ниво A1.",
-        "linguisticForGermans": "A1-Wort.",
-        "source": "merged"
-      },
-      "etymology": "Proto-Slavic or international.",
-      "culturalNotes": "Common word.",
-      "metadata": {
-        "frequency": 80,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "masculine",
-        "declension": {
-          "nominative": "der Grund",
-          "accusative": "den Grund",
-          "dative": "dem Grund",
-          "genitive": "des Grunds"
-        },
-        "plural": "die Gründe"
-      }
-    },
-    {
-      "id": "tseo7f7xv",
-      "german": "die Ursache",
-      "bulgarian": "Причина",
-      "partOfSpeech": "noun",
-      "difficulty": "A1",
-      "categories": [
-        "everyday-phrases"
-      ],
-      "examples": [
-        {
-          "german": "Grund/Ursache.",
-          "bulgarian": "Причина.",
-          "context": "Basic",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich habe Grund/Ursache.",
-          "bulgarian": "Имам причина.",
-          "context": "Having",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich mag Grund/Ursache.",
-          "bulgarian": "Харесвам причина.",
-          "context": "Liking",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "Essential A1 vocabulary.",
-        "forBulgarianSpeakers": "Основна дума.",
-        "forGermanSpeakers": "Grundwort.",
-        "linguistic": "A1 word.",
-        "linguisticForBulgarians": "Дума от ниво A1.",
-        "linguisticForGermans": "A1-Wort.",
-        "source": "merged"
-      },
-      "etymology": "Proto-Slavic or international.",
-      "culturalNotes": "Common word.",
-      "metadata": {
-        "frequency": 80,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Ursache",
-          "accusative": "die Ursache",
-          "dative": "der Ursache",
-          "genitive": "der Ursache"
-        },
-        "plural": "die Ursachen"
-      }
-    },
-    {
-      "id": "fsm5l3sp3",
-      "german": "das Recht",
-      "bulgarian": "Правосъдие",
-      "partOfSpeech": "noun",
-      "difficulty": "A1",
-      "categories": [
-        "everyday-phrases"
-      ],
-      "examples": [
-        {
-          "german": "Recht/Gerechtigkeit.",
-          "bulgarian": "Правда.",
-          "context": "Basic",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich habe Recht/Gerechtigkeit.",
-          "bulgarian": "Имам правда.",
-          "context": "Having",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich mag Recht/Gerechtigkeit.",
-          "bulgarian": "Харесвам правда.",
-          "context": "Liking",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "Essential A1 vocabulary.",
-        "forBulgarianSpeakers": "Основна дума.",
-        "forGermanSpeakers": "Grundwort.",
-        "linguistic": "A1 word.",
-        "linguisticForBulgarians": "Дума от ниво A1.",
-        "linguisticForGermans": "A1-Wort.",
-        "source": "merged"
-      },
-      "etymology": "Proto-Slavic or international.",
-      "culturalNotes": "Common word.",
-      "metadata": {
-        "frequency": 80,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "neuter",
-        "declension": {
-          "nominative": "das Recht",
-          "accusative": "das Recht",
-          "dative": "dem Recht",
-          "genitive": "des Rechts"
-        },
-        "plural": "die Rechte"
-      }
-    },
-    {
-      "id": "fnpccbf97",
-      "german": "die Gerechtigkeit",
-      "bulgarian": "Справедливост",
-      "partOfSpeech": "noun",
-      "difficulty": "A1",
-      "categories": [
-        "everyday-phrases"
-      ],
-      "examples": [
-        {
-          "german": "Recht/Gerechtigkeit.",
-          "bulgarian": "Правда.",
-          "context": "Basic",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich habe Recht/Gerechtigkeit.",
-          "bulgarian": "Имам правда.",
-          "context": "Having",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich mag Recht/Gerechtigkeit.",
-          "bulgarian": "Харесвам правда.",
-          "context": "Liking",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "Essential A1 vocabulary.",
-        "forBulgarianSpeakers": "Основна дума.",
-        "forGermanSpeakers": "Grundwort.",
-        "linguistic": "A1 word.",
-        "linguisticForBulgarians": "Дума от ниво A1.",
-        "linguisticForGermans": "A1-Wort.",
-        "source": "merged"
-      },
-      "etymology": "Proto-Slavic or international.",
-      "culturalNotes": "Common word.",
-      "metadata": {
-        "frequency": 80,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Gerechtigkeit",
-          "accusative": "die Gerechtigkeit",
-          "dative": "der Gerechtigkeit",
-          "genitive": "der Gerechtigkeit"
-        },
-        "plural": "die Gerechtigkeiten"
-      }
-    },
-    {
-      "id": "e1q1bslwm",
-      "german": "die Ordnung",
-      "bulgarian": "Ред",
-      "partOfSpeech": "noun",
-      "difficulty": "A1",
-      "categories": [
-        "everyday-phrases"
-      ],
-      "examples": [
-        {
-          "german": "Ordnung/Reihe.",
-          "bulgarian": "Ред.",
-          "context": "Basic",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich habe Ordnung/Reihe.",
-          "bulgarian": "Имам ред.",
-          "context": "Having",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich mag Ordnung/Reihe.",
-          "bulgarian": "Харесвам ред.",
-          "context": "Liking",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "Essential A1 vocabulary.",
-        "forBulgarianSpeakers": "Основна дума.",
-        "forGermanSpeakers": "Grundwort.",
-        "linguistic": "A1 word.",
-        "linguisticForBulgarians": "Дума от ниво A1.",
-        "linguisticForGermans": "A1-Wort.",
-        "source": "merged"
-      },
-      "etymology": "Proto-Slavic or international.",
-      "culturalNotes": "Common word.",
-      "metadata": {
-        "frequency": 80,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Ordnung",
-          "accusative": "die Ordnung",
-          "dative": "der Ordnung",
-          "genitive": "der Ordnung"
-        },
-        "plural": "die Ordnungen"
-      }
-    },
-    {
-      "id": "xquvrpm4z",
-      "german": "die Reihe",
-      "bulgarian": "Ред",
-      "partOfSpeech": "noun",
-      "difficulty": "A1",
-      "categories": [
-        "everyday-phrases"
-      ],
-      "examples": [
-        {
-          "german": "Ordnung/Reihe.",
-          "bulgarian": "Ред.",
-          "context": "Basic",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich habe Ordnung/Reihe.",
-          "bulgarian": "Имам ред.",
-          "context": "Having",
-          "source": "legacy"
-        },
-        {
-          "german": "Ich mag Ordnung/Reihe.",
-          "bulgarian": "Харесвам ред.",
-          "context": "Liking",
-          "source": "legacy"
-        }
-      ],
-      "notes": {
-        "general": "Essential A1 vocabulary.",
-        "forBulgarianSpeakers": "Основна дума.",
-        "forGermanSpeakers": "Grundwort.",
-        "linguistic": "A1 word.",
-        "linguisticForBulgarians": "Дума от ниво A1.",
-        "linguisticForGermans": "A1-Wort.",
-        "source": "merged"
-      },
-      "etymology": "Proto-Slavic or international.",
-      "culturalNotes": "Common word.",
-      "metadata": {
-        "frequency": 80,
-        "level": "A1",
-        "isCommon": false,
-        "isVerified": true,
-        "createdBy": "vocab-migration"
-      },
-      "createdAt": "2025-12-11T22:19:46.851Z",
-      "updatedAt": "2025-12-11T22:19:46.851Z",
-      "version": 1,
-      "cefrLevel": "A1",
-      "grammar": {
-        "gender": "feminine",
-        "declension": {
-          "nominative": "die Reihe",
-          "accusative": "die Reihe",
-          "dative": "der Reihe",
-          "genitive": "der Reihe"
-        },
-        "plural": "die Reihen"
       }
     }
   ]

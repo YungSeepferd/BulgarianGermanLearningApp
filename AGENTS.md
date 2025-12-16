@@ -1,7 +1,8 @@
 # AI Agent Instructions - Bulgarian-German Learning App
 
-**Last Updated**: December 14, 2025  
-**Project Status**: Production Ready - MVP v2  
+**Last Updated**: December 16, 2025  
+**Project Status**: Final Content Validation & Architecture Refinement  
+**Current Focus**: Grammar accuracy validation, content verification, page architecture optimization  
 **Tech Stack**: SvelteKit 2 + Svelte 5 + TypeScript + Tailwind v4
 
 ---
@@ -9,6 +10,26 @@
 ## 🎯 Project Overview
 
 A **bilingual vocabulary learning application** for Bulgarian ↔ German with offline-first architecture, deployed to GitHub Pages.
+
+### 🔍 Current Development Focus (December 16, 2025)
+
+**Content Validation Priority**:
+- **German Grammar Accuracy**: Verifying correct articles (der/die/das) for all 746 nouns
+- **Declination Correctness**: Validating gender agreement and case usage
+- **Bulgarian Grammar**: Checking definite article forms (-та/-ът/-то) and gender agreement
+- **Category Accuracy**: Ensuring vocabulary items have correct semantic categories
+- **Example Sentences**: Validating grammar in all German and Bulgarian examples
+
+**Documentation Infrastructure**:
+- **Single Source of Truth**: `docs/PROJECT_STATUS.md` - Always check first
+- **Comprehensive Reports**: `docs/reports/` folder contains all phase completion summaries
+- **Architecture Docs**: `docs/architecture/` for system design references
+- **Testing Strategy**: `docs/development/TESTING.md` for test coverage requirements
+
+**Architecture Analysis Priority**:
+- **Vocabulary vs Learn Page Overlap**: Analyzing potential merger into unified learning hub
+- **Word-Type Specifications**: Each part of speech (noun, verb, adjective, adverb) needs unique learning features
+- **Learning Dashboard Design**: Creating type-specific learning experiences per vocabulary item
 
 ### Core Features
 - **746 vocabulary items** with enriched definitions, examples, and cultural notes
@@ -475,6 +496,9 @@ pnpm run build
 - **[docs/DEBUGGING_GUIDE.md](docs/DEBUGGING_GUIDE.md)** - Common issues
 - **[INDEX.md](INDEX.md)** - Complete documentation index
 
+### For Grammar Validation
+- **[docs/GERMAN_BULGARIAN_GRAMMAR_GUIDE.md](docs/GERMAN_BULGARIAN_GRAMMAR_GUIDE.md)** - Comprehensive grammar rules for both languages
+
 ---
 
 ## 🎓 Learning Resources
@@ -623,8 +647,8 @@ pnpm run build
 ---
 
 **Version**: 2.0.0  
-**Status**: Production Ready  
-**Last Updated**: December 14, 2025  
+**Status**: Final Content Validation & Architecture Refinement  
+**Last Updated**: December 16, 2025  
 **Maintained By**: YungSeepferd
 
 ---
@@ -634,6 +658,26 @@ pnpm run build
 ```bash
 # Daily commands
 pnpm run dev              # Start dev server
+pnpm run check            # Type check
+pnpm run lint             # Lint code
+pnpm run test:unit        # Unit tests
+pnpm run simulate-ci      # Pre-commit checks
+
+# Common tasks
+pnpm run build            # Production build
+pnpm run preview          # Preview build
+pnpm run test:all         # All tests
+
+# Data validation
+pnpm run verify:vocabulary    # Check vocabulary
+pnpm run quality:pipeline     # Run all data checks
+
+# Troubleshooting
+pkill -f "pnpm dev"           # Kill dev server
+rm -rf node_modules .svelte-kit # Clean install
+```
+
+**Pro Tip**: Use `pnpm run` to see all available scripts!
 pnpm run check            # Type check
 pnpm run lint             # Lint code
 pnpm run test:unit        # Unit tests
