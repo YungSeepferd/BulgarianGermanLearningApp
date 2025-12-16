@@ -8,6 +8,7 @@
   // Test vocabulary item
   const testItem: VocabularyItem = {
     id: 'acht',
+    type: 'word',
     german: 'acht',
     bulgarian: 'осем',
     partOfSpeech: 'number' as PartOfSpeech,

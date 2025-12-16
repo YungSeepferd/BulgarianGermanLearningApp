@@ -7,8 +7,8 @@ import type { DBSchema, IDBPDatabase } from 'idb';
 import { openDB } from 'idb';
 import type { VocabularyItem } from '$lib/schemas/vocabulary';
 import type { UserProgress, VocabularyProgress, ExerciseProgress } from '$lib/types/progress';
-import type { Lesson, LessonProgress } from '$lib/types/lesson';
-import type { LearningPath, LearningPathProgress } from '$lib/types/learning-path';
+import type { LessonProgress } from '$lib/types/lesson';
+import type { LearningPathProgress } from '$lib/types/learning-path';
 
 export interface AppDatabase extends DBSchema {
 	vocabulary: {
@@ -92,7 +92,7 @@ export async function initializeDB(): Promise<IDBPDatabase<AppDatabase>> {
 	}
 
 	dbInstance = await openDB<AppDatabase>('BulgarianGermanApp', 1, {
-		upgrade(db, oldVersion, newVersion, transaction) {
+		upgrade(db, oldVersion, newVersion) {
 			console.log(`[IndexedDB] Upgrading from v${oldVersion} to v${newVersion}`);
 
 			// Vocabulary store (with user edits)
