@@ -1,2 +1,0 @@
-import{i as s,S as t,u as n,k as o,T as a,U as f,J as r,V as c,W as e,X as i}from"./BVnrsRMV.js";function l(i=!1){const l=s,m=l.l.u;if(!m)return;let p=()=>c(l.s);if(i){let s=0,t={};const n=e(()=>{let n=!1;const o=l.s;for(const s in o)o[s]!==t[s]&&(t[s]=o[s],n=!0);return n&&s++,s});p=()=>r(n)}m.b.length&&t(()=>{u(l,p),a(m.b)}),n(()=>{const s=o(()=>m.m.map(f));return()=>{for(const t of s)"function"==typeof t&&t()}}),m.a.length&&n(()=>{u(l,p),a(m.a)})}function u(s,t){if(s.l.s)for(const n of s.l.s)r(n);t()}i();export{l as i};
-//# sourceMappingURL=B7hQN3Bi.js.map
