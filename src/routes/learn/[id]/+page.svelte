@@ -252,12 +252,6 @@
     background: var(--color-secondary-light); 
   }
 
-  .badge-inline {
-    padding: var(--space-1) var(--space-2);
-    border-radius: 999px;
-    font-size: var(--text-xs);
-    font-weight: var(--font-semibold);
-  }
 
   /* Dashboard content */
   .dashboard-content {

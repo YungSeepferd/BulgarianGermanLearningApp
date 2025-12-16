@@ -12,7 +12,7 @@
   const tabs = $derived.by(() => {
     const isDE = appState.languageMode === 'DE_BG';
     return [
-      { id: 'overview' as TabId, label: isDE ? 'Übersicht' : 'Преглед', icon: '�' },
+      { id: 'overview' as TabId, label: isDE ? 'Übersicht' : 'Преглед', icon: '📚' },
       { id: 'grammar' as TabId, label: isDE ? 'Grammatik' : 'Граматика', icon: '📖' },
       { id: 'family' as TabId, label: isDE ? 'Wortfamilie' : 'Семейство думи', icon: '🌳' },
       { id: 'examples' as TabId, label: isDE ? 'Beispiele' : 'Примери', icon: '💡' },

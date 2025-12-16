@@ -165,7 +165,7 @@
         </div>
         
         {#if audioUrl}
-          <div class="audio-container" onclick={(e) => e.stopPropagation()} role="none">
+          <div class="audio-container" onclick={(e) => e.stopPropagation()} role="none" onkeydown={(e) => e.stopPropagation()}>
             <AudioWidget {audioUrl} />
           </div>
         {/if}
@@ -189,7 +189,7 @@
           <h2 class="translation-text">{backTerm}</h2>
         </div>
 
-        <div onclick={(e) => e.stopPropagation()} role="none">
+        <div onclick={(e) => e.stopPropagation()} role="none" onkeydown={(e) => e.stopPropagation()}>
           <GrammarTabs item={vocabularyItem} />
         </div>
 
@@ -232,7 +232,7 @@
           </div>
         {/if}
 
-        <div onclick={(e) => e.stopPropagation()} role="none">
+        <div onclick={(e) => e.stopPropagation()} role="none" onkeydown={(e) => e.stopPropagation()}>
           <ExampleCarousel item={vocabularyItem} examples={examples} />
         </div>
 
