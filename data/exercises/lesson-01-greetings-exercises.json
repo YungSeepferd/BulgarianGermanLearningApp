@@ -1,0 +1,55 @@
+[
+  {
+    "id": "ex-greet-01-cloze",
+    "type": "fillInTheBlank",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440001",
+    "difficulty": "A1",
+    "prompt": "Complete the greeting: '_____ утро!' (Good morning!)",
+    "sentence": "_____ утро!",
+    "correctAnswer": "Добро",
+    "acceptableAnswers": ["добро", "Добро"],
+    "vocabularyIds": ["zdravey_morning_greeting"],
+    "hint": "This word means 'good' in Bulgarian",
+    "explanation": "'Добро утро' is the standard morning greeting in Bulgarian, similar to 'Guten Morgen' in German."
+  },
+  {
+    "id": "ex-greet-01-mc",
+    "type": "multipleChoice",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440001",
+    "difficulty": "A1",
+    "question": "How do you say 'Thank you' in Bulgarian?",
+    "options": [
+      "Моля",
+      "Благодаря",
+      "Извинете",
+      "Довиждане"
+    ],
+    "correctAnswer": "Благодаря",
+    "vocabularyIds": ["blagodarya_thank_you"],
+    "explanation": "'Благодаря' (Blagodarya) means 'Thank you'. 'Моля' means 'Please', 'Извинете' means 'Excuse me', and 'Довиждане' means 'Goodbye'."
+  },
+  {
+    "id": "ex-greet-01-typing",
+    "type": "typing",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440001",
+    "difficulty": "A1",
+    "prompt": "Type the Bulgarian word for 'Hello':",
+    "correctAnswer": "Здравей",
+    "acceptableAnswers": ["здравей", "Здравей"],
+    "vocabularyIds": ["zdravey_hello"],
+    "hint": "It starts with 'Зд...'",
+    "similarityThreshold": 0.85
+  },
+  {
+    "id": "ex-greet-01-ordering",
+    "type": "ordering",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440001",
+    "difficulty": "A1",
+    "instruction": "Arrange these words to form: 'Good evening!' in Bulgarian",
+    "words": ["Добър", "вечер", "!"],
+    "correctOrder": ["Добър", "вечер", "!"],
+    "vocabularyIds": ["dobar_vecher_evening"],
+    "translation": "Good evening!",
+    "hint": "The adjective comes before the noun in Bulgarian"
+  }
+]

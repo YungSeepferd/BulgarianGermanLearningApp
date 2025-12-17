@@ -1,12 +1,27 @@
 {
 	"/": [
+		"src/routes/+page.ts",
 		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/exercises": [
 		"src/routes/+layout.ts"
 	],
 	"/grammar": [
 		"src/routes/+layout.ts"
 	],
 	"/learn": [
+		"src/routes/+layout.ts"
+	],
+	"/learn/paths": [
+		"src/routes/+layout.ts"
+	],
+	"/learn/paths/[path]": [
+		"src/routes/learn/paths/[path]/+page.ts",
+		"src/routes/+layout.ts"
+	],
+	"/learn/paths/[path]/[lesson]": [
+		"src/routes/learn/paths/[path]/[lesson]/+page.ts",
 		"src/routes/+layout.ts"
 	],
 	"/learn/shuffle": [

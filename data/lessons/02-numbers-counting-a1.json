@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440002",
+  "title": "Numbers & Counting",
+  "description": "Master numbers from 1-100, learn to tell time, discuss dates, and count objects in Bulgarian. Essential foundation for prices, addresses, and daily communication.",
+  "difficulty": "A1",
+  "type": "vocabulary",
+  "duration": 20,
+  "vocabulary": [
+    "vocab-german-eins",
+    "vocab-german-zwei",
+    "vocab-german-drei",
+    "vocab-german-zehn",
+    "vocab-german-zwanzig",
+    "vocab-german-hundert",
+    "vocab-german-uhr",
+    "vocab-german-heute",
+    "vocab-german-morgen",
+    "vocab-german-gestern"
+  ],
+  "objectives": [
+    {
+      "id": "obj-numbers-1",
+      "description": "Count from 1 to 100 in Bulgarian",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-numbers-2",
+      "description": "Tell time and discuss dates",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-numbers-3",
+      "description": "Use ordinal numbers correctly",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Numbers & Counting\n\n## Grammar Explanation\n\n### Cardinal Numbers (1-100)\n\nBulgarian numbers follow patterns similar to German:\n- 1-10: Must be memorized\n- 11-19: Unique forms\n- 20-90: Tens + units (like German)\n- 100: сто (sto)\n\n**1-10**: един (edin), два (dva), три (tri), четири (chetiri), пет (pet), шест (shest), седем (sedem), осем (osem), девет (devet), десет (deset)\n\n**11-19**: единадесет (edinadeset), дванадесет (dvanadeset), тринадесет (trinadeset)... деветнадесет (devetnadeset)\n\n**Tens**: двадесет (dvadeset - 20), тридесет (trideset - 30), четиридесет (chetirideset - 40)... деветдесет (devetdeset - 90)\n\n### Time Expressions\n\n- **Колко е часът?** (Kolko e chasăt?) - What time is it?\n- **Час** (chas) - hour/o'clock\n- **Минута** (minuta) - minute\n- **В колко часа?** (V kolko chasa?) - At what time?\n\n### Date Expressions\n\n- **Днес** (dnes) - today\n- **Утре** (utre) - tomorrow  \n- **Вчера** (vchera) - yesterday\n- **Месец** (mesets) - month\n- **Година** (godina) - year\n\n## Cultural Notes\n\n1. **24-Hour Clock**: Bulgarians commonly use the 24-hour clock system, especially for official times (trains, appointments).\n\n2. **Date Format**: Bulgarian dates follow DD.MM.YYYY format (17.12.2025), similar to German.\n\n3. **Lucky/Unlucky Numbers**: Number 13 is generally considered unlucky (like in Western cultures), but some older beliefs vary.\n\n4. **Counting Money**: Bulgarian lev (лев) is the currency. Practice counting: \"десет лева\" (deset leva - 10 leva).\n\n## Practice Tips\n\n1. Practice counting objects around you\n2. Tell time throughout the day in Bulgarian\n3. Write out your birthday in Bulgarian format\n4. Practice phone numbers (Bulgarian format: +359...)",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["beginner", "numbers", "counting", "time", "dates", "A1"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440001"],
+    "relatedLessons": [],
+    "isPremium": false
+  }
+}

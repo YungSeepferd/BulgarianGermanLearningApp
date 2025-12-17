@@ -1,0 +1,57 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440001",
+  "title": "Greetings & Politeness",
+  "description": "Learn essential greetings and polite expressions in Bulgarian. Master basic social interactions including formal and informal greetings, expressing gratitude, and polite requests.",
+  "difficulty": "A1",
+  "type": "vocabulary",
+  "duration": 15,
+  "vocabulary": [
+    "vocab-german-hallo",
+    "vocab-german-danke",
+    "vocab-german-bitte",
+    "vocab-german-guten-morgen",
+    "vocab-german-guten-tag",
+    "vocab-german-gute-nacht",
+    "vocab-german-auf-wiedersehen",
+    "vocab-german-entschuldigung",
+    "vocab-german-ja",
+    "vocab-german-nein"
+  ],
+  "objectives": [
+    {
+      "id": "obj-greetings-1",
+      "description": "Greet people formally and informally in Bulgarian",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-greetings-2",
+      "description": "Express gratitude and make polite requests",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-greetings-3",
+      "description": "Use appropriate greetings for different times of day",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-greetings-4",
+      "description": "Distinguish between formal and informal address",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Greetings & Politeness\n\n## Grammar Explanation\n\nBulgarian greetings vary by time of day and formality level. Understanding these distinctions is crucial for proper social interaction.\n\n### Formal vs. Informal\n\n- **Здравей** (zdravey) - Informal 'hello' (singular)\n- **Здравейте** (zdraveyte) - Formal 'hello' or plural\n\nThe verb 'to be' (съм) is often omitted in present tense greetings, making Bulgarian greetings more concise than German.\n\n### Time-Based Greetings\n\n- **Добро утро** (dobro utro) - Good morning\n- **Добър ден** (dobăr den) - Good day (afternoon)\n- **Добър вечер** (dobăr vecher) - Good evening\n- **Лека нощ** (leka nosht) - Good night\n\n### Politeness Expressions\n\n- **Благодаря** (blagodarya) - Thank you\n- **Моля** (molya) - Please / You're welcome\n- **Извинете** (izvinete) - Excuse me (formal)\n- **Прощавай** (proshtavay) - Sorry (informal)\n\n## Cultural Notes\n\n1. **Physical Greetings**: Bulgarians shake hands firmly when meeting for the first time. Close friends and family kiss on both cheeks.\n\n2. **Formal Address**: Using formal 'Вие' (Vie - you formal) shows respect to elders, strangers, and in professional settings. It's similar to German 'Sie'.\n\n3. **Response to Thanks**: When someone says 'Благодаря' (thank you), you can respond with 'Моля' (please/you're welcome) or 'Няма защо' (you're welcome - literally 'there's no reason').\n\n4. **Nodding**: In Bulgaria, nodding means 'no' and shaking your head means 'yes' - the opposite of most Western cultures! This can cause confusion for foreigners.\n\n5. **Name Days**: Bulgarians celebrate name days (именден ден - imenden den) which are sometimes more important than birthdays. It's polite to congratulate someone on their name day.\n\n## Vocabulary in Context\n\n### Formal Greeting (Professional Setting)\n```\nDeutsch: Guten Tag! Wie heißen Sie?\nБългарски: Добър ден! Как се казвате?\n```\n\n### Informal Greeting (Friends)\n```\nDeutsch: Hallo! Wie geht's?\nБългарски: Здравей! Как си?\n```\n\n### Expressing Gratitude\n```\nDeutsch: Danke! - Bitte!\nБългарски: Благодаря! - Моля!\n```\n\n## Practice Tips\n\n1. **Listen and Repeat**: Practice the greetings out loud to get comfortable with Bulgarian pronunciation.\n\n2. **Time Association**: Associate time-based greetings with your daily routine (morning coffee → Добро утро).\n\n3. **Role Play**: Practice formal vs. informal scenarios with a partner.\n\n4. **Cultural Awareness**: Remember the nodding reversal to avoid misunderstandings!\n\n## Next Steps\n\nAfter mastering greetings, you'll be ready to move on to numbers and counting, which will help you discuss time, dates, and prices.",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["beginner", "greetings", "essential", "A1", "social-interaction", "politeness"],
+    "prerequisites": [],
+    "relatedLessons": [],
+    "isPremium": false
+  }
+}

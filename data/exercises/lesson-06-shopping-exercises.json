@@ -1,0 +1,57 @@
+[
+  {
+    "id": "ex-shopping-06-cloze",
+    "type": "fillInTheBlank",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440006",
+    "difficulty": "A2",
+    "prompt": "Complete: 'Колко _____ тази баница?' (How much does this banitsa cost?)",
+    "sentence": "Колко _____ тази баница?",
+    "correctAnswer": "струва",
+    "acceptableAnswers": ["струва", "Струва"],
+    "vocabularyIds": ["struva_costs"],
+    "hint": "Verb meaning 'costs' or 'is worth'",
+    "explanation": "'Струва' means 'costs' in Bulgarian, from the verb 'струвам' (to cost/be worth)."
+  },
+  {
+    "id": "ex-shopping-06-mc",
+    "type": "multipleChoice",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440006",
+    "difficulty": "A2",
+    "question": "What is 'Shopska salad' in Bulgarian?",
+    "options": [
+      "баница",
+      "шопска салата",
+      "кебапче",
+      "таратор"
+    ],
+    "correctAnswer": "шопска салата",
+    "vocabularyIds": ["shopska_salata"],
+    "explanation": "'Шопска салата' is the traditional Bulgarian salad with tomatoes, cucumbers, onions, and white cheese."
+  },
+  {
+    "id": "ex-shopping-06-typing",
+    "type": "typing",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440006",
+    "difficulty": "A2",
+    "prompt": "Type the Bulgarian word for 'bread':",
+    "correctAnswer": "хляб",
+    "acceptableAnswers": ["хляб", "Хляб"],
+    "vocabularyIds": ["hlyab_bread"],
+    "hint": "Starts with 'хл...'",
+    "similarityThreshold": 0.85
+  },
+  {
+    "id": "ex-shopping-06-matching",
+    "type": "matching",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440006",
+    "difficulty": "A2",
+    "instruction": "Match the German foods with Bulgarian:",
+    "pairs": [
+      {"left": "Milch", "right": "мляко"},
+      {"left": "Käse", "right": "сирене"},
+      {"left": "Wasser", "right": "вода"},
+      {"left": "Fleisch", "right": "месо"}
+    ],
+    "vocabularyIds": ["mlyako_milk", "sirene_cheese", "voda_water", "meso_meat"]
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440016",
+  "title": "Literature & Philosophy",
+  "description": "Engage with literary analysis, philosophical concepts, and abstract thinking in Bulgarian.",
+  "difficulty": "C1",
+  "type": "culture",
+  "duration": 35,
+  "vocabulary": [
+    "vocab-german-literatur-noun",
+    "vocab-german-philosophie",
+    "vocab-german-gedanke",
+    "vocab-german-theorie",
+    "vocab-german-bedeutung",
+    "vocab-german-symbol",
+    "vocab-german-metapher",
+    "vocab-german-analyse",
+    "vocab-german-interpretation",
+    "vocab-german-existenz"
+  ],
+  "objectives": [
+    {
+      "id": "obj-literature-1",
+      "description": "Analyze literary works and themes",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-literature-2",
+      "description": "Discuss philosophical concepts abstractly",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-literature-3",
+      "description": "Use sophisticated vocabulary for abstract ideas",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Literature & Philosophy\n\n## Grammar Explanation\n\n### Literary Terms\n\n**Genres**:\n- Роман (roman) - novel\n- Разказ (razkaz) - short story\n- Поема (poema) - epic poem\n- Драма (drama) - drama\n- Есе (ese) - essay\n- Критика (kritika) - criticism\n\n**Literary Devices**:\n- Метафора (metafora) - metaphor\n- Символ (simvol) - symbol\n- Алегория (alegoriya) - allegory\n- Ирония (ironiya) - irony\n- Сатира (satira) - satire\n\n**Analysis**:\n- Тема (tema) - theme\n- Мотив (motiv) - motif\n- Герой (geroy) - character/hero\n- Сюжет (syuzhet) - plot\n- Стил (stil) - style\n- Образ (obraz) - image/character\n\n### Philosophical Vocabulary\n\n**Concepts**:\n- Философия (filosofiya) - philosophy\n- Мисъл (misăl) - thought\n- Теория (teoriya) - theory\n- Истина (istina) - truth\n- Знание (znanie) - knowledge\n- Съзнание (săznanie) - consciousness\n- Съществуване (săshtestvuvane) - existence\n- Етика (etika) - ethics\n- Естетика (estetika) - aesthetics\n\n### Bulgarian Literary Canon\n\n**Major Works**:\n- \"Под игото\" (Pod igoto) - Иван Вазов\n- \"Железният светилник\" (Zhelezniyat svetilnik) - Димитър Талев\n- Poetry of Христо Ботев, Пенчо Славейков\n\n### Advanced Grammar\n\n**Passive Voice**:\n- **Написан е от...** (Napisan e ot...) - Written by...\n- **Разглежда се като...** (Razglezhdase kato...) - Considered as...\n\n**Abstract Nouns**:\n- Formation with suffixes -ост, -ство, -ие\n\n## Cultural Notes\n\n1. **Bulgarian Renaissance**: 19th-century national awakening produced major literary works.\n\n2. **Nobel Laureates**: Elias Canetti (born in Bulgaria) won Nobel Prize in Literature.\n\n3. **Philosophical Tradition**: Strong academic tradition in philosophy.\n\n4. **Literary Festivals**: Annual literary events celebrate Bulgarian authors.",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["advanced", "literature", "philosophy", "abstract-thinking", "C1"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440014"],
+    "relatedLessons": [],
+    "isPremium": true
+  }
+}

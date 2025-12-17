@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440014",
+  "title": "Culture & Arts",
+  "description": "Explore Bulgarian culture, discuss music, theater, literature, museums, and artistic expressions.",
+  "difficulty": "B2",
+  "type": "culture",
+  "duration": 28,
+  "vocabulary": [
+    "vocab-german-kultur",
+    "vocab-german-kunst",
+    "vocab-german-musik-noun",
+    "vocab-german-theater",
+    "vocab-german-literatur",
+    "vocab-german-museum",
+    "vocab-german-ausstellung",
+    "vocab-german-kuenstler",
+    "vocab-german-malerei",
+    "vocab-german-skulptur"
+  ],
+  "objectives": [
+    {
+      "id": "obj-culture-1",
+      "description": "Discuss various art forms and cultural events",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-culture-2",
+      "description": "Appreciate Bulgarian cultural heritage",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-culture-3",
+      "description": "Express artistic preferences and critiques",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Culture & Arts\n\n## Grammar Explanation\n\n### Arts Vocabulary\n\n**Visual Arts**:\n- Изкуство (izkustvo) - art\n- Живопис (zhivopis) - painting\n- Скулптура (skulptura) - sculpture\n- Художник (hudozhnik) - artist/painter\n- Изложба (izlozhba) - exhibition\n- Музей (muzey) - museum\n- Галерия (galeriya) - gallery\n\n**Performing Arts**:\n- Музика (muzika) - music\n- Театър (teatăr) - theater\n- Опера (opera) - opera\n- Балет (balet) - ballet\n- Концерт (kontsert) - concert\n- Представление (predstavlenie) - performance\n\n**Literature**:\n- Литература (literatura) - literature\n- Роман (roman) - novel\n- Поезия (poeziya) - poetry\n- Писател (pisatel) - writer\n- Поет (poet) - poet\n\n### Bulgarian Cultural Icons\n\n**Writers**:\n- Иван Вазов (Ivan Vazov) - \"Под игото\" (Under the Yoke)\n- Христо Ботев (Hristo Botev) - Revolutionary poet\n\n**Artists**:\n- Владимир Димитров-Майстора (Vladimir Dimitrov-Maystora)\n- Златю Бояджиев (Zlatyu Boyadzhiev)\n\n**Music**:\n- Folklore ensembles (хорова музика)\n- Contemporary music scene\n\n### Expressing Opinions\n\n- **По мое мнение...** (Po moe mnenie...) - In my opinion...\n- **Впечатлен съм от...** (Vpechatlen săm ot...) - I'm impressed by...\n- **Това ми напомня за...** (Tova mi napomnya za...) - This reminds me of...\n\n## Cultural Notes\n\n1. **UNESCO Sites**: Rila Monastery, Boyana Church, Thracian tombs.\n\n2. **Folk Music**: Bulgarian folk music recognized by UNESCO as cultural heritage.\n\n3. **Theater Scene**: Strong tradition of dramatic arts; Sofia has many theaters.\n\n4. **Contemporary Art**: Growing contemporary art scene in Sofia and Plovdiv.",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["upper-intermediate", "culture", "arts", "music", "literature", "B2"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440009"],
+    "relatedLessons": [],
+    "isPremium": false
+  }
+}

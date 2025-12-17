@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440003",
+  "title": "Family & Relationships",
+  "description": "Learn to talk about your family members, describe relationships, and use possessive pronouns in Bulgarian.",
+  "difficulty": "A1",
+  "type": "vocabulary",
+  "duration": 18,
+  "vocabulary": [
+    "vocab-german-vater",
+    "vocab-german-mutter",
+    "vocab-german-bruder",
+    "vocab-german-schwester",
+    "vocab-german-kind",
+    "vocab-german-eltern",
+    "vocab-german-familie",
+    "vocab-german-mein",
+    "vocab-german-dein",
+    "vocab-german-sein"
+  ],
+  "objectives": [
+    {
+      "id": "obj-family-1",
+      "description": "Name immediate family members in Bulgarian",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-family-2",
+      "description": "Use possessive pronouns correctly",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-family-3",
+      "description": "Describe family relationships",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Family & Relationships\n\n## Grammar Explanation\n\n### Family Vocabulary\n\n**Immediate Family**:\n- Баща (bashta) - father\n- Майка (mayka) - mother\n- Брат (brat) - brother\n- Сестра (sestra) - sister\n- Син (sin) - son\n- Дъщеря (dăshterya) - daughter\n\n**Extended Family**:\n- Баба (baba) - grandmother\n- Дядо (dyado) - grandfather\n- Чичо (chicho) - uncle\n- Леля (lelya) - aunt\n\n### Possessive Pronouns\n\nBulgarian possessive pronouns agree with the possessed object (not the possessor):\n\n**My**: мой (masculine), моя (feminine), мое (neuter), мои (plural)\n**Your (informal)**: твой, твоя, твое, твои\n**His/Her/Its**: негов, негова, негово, негови\n\nExample: \"Моята майка\" (moyata mayka - my mother)\n\n## Cultural Notes\n\n1. **Extended Family Importance**: Bulgarian families often include grandparents living together or nearby. Multi-generational households are common.\n\n2. **Godparents**: \"Кръстник/Кръстница\" (krăstnik/krăstnitsa) play important roles in Bulgarian Orthodox tradition.\n\n3. **Family Names**: Bulgarian surnames often end in -ов/-ова (masculine/feminine) or -ев/-ева.\n\n4. **Respect for Elders**: Using titles like \"чичо\" (uncle) or \"леля\" (aunt) for non-relatives shows respect.",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["beginner", "family", "relationships", "possessives", "A1"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440001"],
+    "relatedLessons": [],
+    "isPremium": false
+  }
+}

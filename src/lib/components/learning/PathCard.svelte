@@ -21,14 +21,6 @@
     'in-progress'
   );
   
-  const difficultyColor = $derived(
-    path.difficulty === 'beginner' ? 'success' :
-    path.difficulty === 'elementary' ? 'info' :
-    path.difficulty === 'intermediate' ? 'warning' :
-    path.difficulty === 'advanced' ? 'danger' :
-    'dark'
-  );
-  
   const estimatedDays = $derived(Math.ceil((path.lessons?.length ?? 0) / 5));
 </script>
 

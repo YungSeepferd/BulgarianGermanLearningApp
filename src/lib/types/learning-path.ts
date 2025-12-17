@@ -64,10 +64,10 @@ export interface LearningPathProgress {
 	progress: number;
 
 	/** Start date (ISO 8601) */
-	startedAt?: string;
+	startedAt?: string | undefined;
 
 	/** Completion date */
-	completedAt?: string;
+	completedAt?: string | undefined;
 
 	/** Total time spent in minutes */
 	timeSpent: number;

@@ -2,7 +2,7 @@
 
 **Branch**: `feature/unified-learning-hub-redesign`  
 **Started**: December 17, 2025  
-**Status**: In Progress (Day 1-4-5 Complete, 40% Phase 1 Done)
+**Status**: Complete (Day 1-10 Complete, 100% Phase 1 Done)
 
 ### ✅ Day 4-5: Learning Path Navigation (COMPLETE)
 
@@ -116,17 +116,59 @@
 - ✅ Removed unused imports (Lesson, LearningPath)
 - 📊 Remaining 2 errors (schema type conflicts in idb.ts, non-blocking)
 
+### ✅ Day 6-7: Data Integration & Progress Simulation (COMPLETE)
+
+**Time Spent**: 1.5 hours
+**Status**: Wired real data + progress updates
+
+**What Was Built**:
+
+1. **Learning Paths Service Enhancements**
+  - Added seeded A1 DE/BG paths now used by the test navigation page
+  - New helper `markLessonComplete()` updates `completedLessons`, `progress`, `timeSpent`, and persists to IndexedDB without double-counting
+
+2. **Test Navigation Page**
+  - Loads real paths/progress from the service
+  - Adds "Mark next lesson complete" action to visualize progress ring updates
+  - Uses persisted `timeSpent` values and Map reactivity to refresh PathBrowser stats
+
+3. **Unit Smoke**
+  - `tests/unit/learning-paths.service.test.ts` now covers the new helper and ensures progress persistence using fake IndexedDB
+
+  ### ✅ Day 8-10: Navigation & Polish (COMPLETE)
+
+  **Time Spent**: 2 hours
+  **Status**: Navigation wired, progress flow exposed in real routes
+
+  **What Was Built**:
+
+  1. **Navigation Surfaces**
+    - New `/learn/paths` page lists real paths with `PathBrowser` and persists progress snapshots
+    - Path detail route `/learn/paths/[path]` shows `ProgressIndicator`, `LessonList`, and a “Mark next lesson complete” action
+    - Lesson detail route `/learn/paths/[path]/[lesson]` displays lesson metadata and allows marking completion with persistence
+
+  2. **Routing & Base Path Safety**
+    - All navigation uses `goto` with `$app/paths` `base` to stay compatible with GitHub Pages base path
+    - Lesson clicks in `LessonList` now route to lesson detail pages; path cards route to their detail pages
+
+  3. **Progress UX**
+    - Completion helper wired through pages, updating `completedLessons`, `progress`, `timeSpent`, and `currentLesson` in IndexedDB
+    - Map reactivity refreshed after mutations so PathBrowser/ProgressIndicator reflect updates immediately
+
+  **Validation**:
+    - Navigation tested manually through new routes; unit smoke for learning-paths service still passing (vitest target run)
+
 ---
 
 ```
 Day 1:    ✅ Database & Types (Database infrastructure complete)
 Day 2-3:  ✅ Core Components (LearningDashboard, WordCard, ProgressStats, ExampleCard, GrammarInfo)
 Day 4-5:  ✅ Navigation Components (PathBrowser, PathCard, LessonList, ProgressIndicator)
-Day 6-7:  🚧 Data Integration (Next: Connect components to real data)
-Day 8-9:  ⏳ Navigation & Links
-Day 10:   ⏳ Testing & Polish
+Day 6-7:  ✅ Data Integration (Service wiring, progress helper, smoke tests)
+Day 8-9:  ✅ Navigation & Links (Path/lesson routes wired)
+Day 10:   ✅ Testing & Polish (manual nav verification + unit smoke)
 
-Overall: ████░░░░░░ 40% complete (4/10 days, 3,730 lines of code)
+Overall: ██████████ 100% complete (10/10 days, 4,000+ lines of code)
 ```
 
 
@@ -417,10 +459,10 @@ All components follow project design system:
    - User editing (Phase 3)
    - Gamification stats display (Phase 2)
 
-### Next Steps (Day 4-5)
-  - Search vocabulary
-  - Filter by mastery level
-  - Get items due for review
+### Next Steps (Post-Phase 1)
+  - Phase 2: exercise system (cloze, typing, multiple choice, matching)
+  - Phase 3: audio playback and user editing flows
+  - Phase 4: additional navigation polish and accessibility sweeps on new routes
 
 - ✅ `src/lib/db/mutations.ts`
   - 15+ write operations

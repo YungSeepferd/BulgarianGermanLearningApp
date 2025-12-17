@@ -7,11 +7,17 @@
   import VocabularyCard from '$lib/components/ui/VocabularyCard.svelte';
   import ActionButton from '$lib/components/ui/ActionButton.svelte';
   import type { VocabularyItem } from '$lib/types/vocabulary';
+  import PathBrowser from '$lib/components/learning/PathBrowser.svelte';
+  import type { LearningPath, LearningPathProgress } from '$lib/types/learning-path';
+  import { getLearningPaths, getLearningPathProgress } from '$lib/services/learning-paths';
 
   let isLoading = $state(true);
   let recentWords = $state<VocabularyItem[]>([]);
   let recommendedWords = $state<VocabularyItem[]>([]);
-  let learningPaths = $state<Array<{ id: string; label: string; labelBg: string; count: number; progress: number }>>([]);
+  let paths = $state<LearningPath[]>([]);
+  let pathProgress = $state<Map<string, LearningPathProgress>>(new Map());
+  let pathsLoading = $state(true);
+  let pathsError = $state<string | null>(null);
 
   const ui = $derived(appState.languageMode === 'DE_BG'
     ? {
@@ -85,48 +91,29 @@
         .sort(() => Math.random() - 0.5)
         .slice(0, 6);
 
-      // Set up learning paths
-      learningPaths = [
-        {
-          id: 'a1',
-          label: ui.essentialA1,
-          labelBg: ui.essentialA1,
-          count: allVocab.filter(v => v.cefrLevel === 'A1').length,
-          progress: calculateProgress(allVocab.filter(v => v.cefrLevel === 'A1'), masteredIds)
-        },
-        {
-          id: 'a2',
-          label: ui.essentialA2,
-          labelBg: ui.essentialA2,
-          count: allVocab.filter(v => v.cefrLevel === 'A2').length,
-          progress: calculateProgress(allVocab.filter(v => v.cefrLevel === 'A2'), masteredIds)
-        },
-        {
-          id: 'b1',
-          label: ui.intermediateB1,
-          labelBg: ui.intermediateB1,
-          count: allVocab.filter(v => v.cefrLevel === 'B1').length,
-          progress: calculateProgress(allVocab.filter(v => v.cefrLevel === 'B1'), masteredIds)
-        },
-        {
-          id: 'b2',
-          label: ui.advancedB2,
-          labelBg: ui.advancedB2,
-          count: allVocab.filter(v => v.cefrLevel === 'B2').length,
-          progress: calculateProgress(allVocab.filter(v => v.cefrLevel === 'B2'), masteredIds)
+      // Real learning paths from service
+      try {
+        const loadedPaths = await getLearningPaths();
+        const progressMap = new Map<string, LearningPathProgress>();
+
+        for (const path of loadedPaths) {
+          const progress = await getLearningPathProgress(path.id);
+          progressMap.set(path.id, progress);
         }
-      ];
+
+        paths = loadedPaths;
+        pathProgress = progressMap;
+      } catch (err) {
+        pathsError = (err as Error).message ?? 'Failed to load learning paths';
+      } finally {
+        pathsLoading = false;
+      }
     } catch (e) {
       console.error('Error in Learn page onMount:', e);
     } finally {
       isLoading = false;
     }
   });
-
-  function calculateProgress(words: VocabularyItem[], masteredIds: Set<string>): number {
-    if (words.length === 0) return 0;
-    return Math.round((words.filter(w => masteredIds.has(w.id)).length / words.length) * 100);
-  }
 
   function handleCardClick(item: VocabularyItem) {
     goto(`${base}/learn/${item.id}`);
@@ -140,8 +127,8 @@
     goto(`${base}/vocabulary`);
   }
 
-  function handlePathClick(pathId: string) {
-    goto(`${base}/vocabulary?difficulty=${pathId.toUpperCase()}`);
+  function handlePathOpen(pathId: string) {
+    goto(`${base}/learn/paths/${pathId}`);
   }
 </script>
 
@@ -208,22 +195,15 @@
 
     <section class="paths-section">
       <h2>{ui.pathsTitle}</h2>
-      <div class="paths-grid">
-        {#each learningPaths as path (path.id)}
-          <button class="path-card" onclick={() => handlePathClick(path.id)}>
-            <div class="path-header">
-              <h3>{appState.languageMode === 'DE_BG' ? path.label : path.labelBg}</h3>
-              <span class="word-count">{path.count} {ui.words}</span>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-fill" style="width: {path.progress}%"></div>
-            </div>
-            <div class="progress-text">
-              {path.progress}% {path.progress === 100 ? ui.complete : ui.inProgress}
-            </div>
-          </button>
-        {/each}
-      </div>
+      {#if pathsLoading}
+        <div class="loading">
+          <p>{ui.title === 'Lernen' ? 'Lernpfade werden geladen…' : 'Пътеките се зареждат…'}</p>
+        </div>
+      {:else if pathsError}
+        <div class="loading error">{pathsError}</div>
+      {:else}
+        <PathBrowser paths={paths} pathProgress={pathProgress} onPathSelect={handlePathOpen} />
+      {/if}
     </section>
   {/if}
 </div>

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "ex-weather-08-cloze",
+    "type": "fillInTheBlank",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440008",
+    "difficulty": "A2",
+    "prompt": "Complete: 'Днес е_____.' (Today it's sunny.)",
+    "sentence": "Днес е _____.",
+    "correctAnswer": "слънчево",
+    "acceptableAnswers": ["слънчево", "Слънчево"],
+    "vocabularyIds": ["slanchevo_sunny"],
+    "hint": "Weather adjective derived from 'слънце' (sun)",
+    "explanation": "'Слънчево' means 'sunny' in Bulgarian, the neuter form used for weather descriptions."
+  },
+  {
+    "id": "ex-weather-08-mc",
+    "type": "multipleChoice",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440008",
+    "difficulty": "A2",
+    "question": "What season is 'зима' in Bulgarian?",
+    "options": [
+      "пролет",
+      "лято",
+      "есен",
+      "зима"
+    ],
+    "correctAnswer": "зима",
+    "vocabularyIds": ["zima_winter"],
+    "explanation": "'Зима' means 'winter'. The four seasons: 'пролет' (spring), 'лято' (summer), 'есен' (autumn), 'зима' (winter)."
+  },
+  {
+    "id": "ex-weather-08-typing",
+    "type": "typing",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440008",
+    "difficulty": "A2",
+    "prompt": "Type the Bulgarian word for 'rain' (the weather condition):",
+    "correctAnswer": "дъжд",
+    "acceptableAnswers": ["дъжд", "Дъжд"],
+    "vocabularyIds": ["dazhd_rain"],
+    "hint": "Contains the letter 'ъ'",
+    "similarityThreshold": 0.85
+  },
+  {
+    "id": "ex-weather-08-matching",
+    "type": "matching",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440008",
+    "difficulty": "A2",
+    "instruction": "Match the seasons:",
+    "pairs": [
+      {"left": "Frühling", "right": "пролет"},
+      {"left": "Sommer", "right": "лято"},
+      {"left": "Herbst", "right": "есен"},
+      {"left": "Winter", "right": "зима"}
+    ],
+    "vocabularyIds": ["prolet_spring", "lyato_summer", "esen_autumn", "zima_winter"]
+  }
+]

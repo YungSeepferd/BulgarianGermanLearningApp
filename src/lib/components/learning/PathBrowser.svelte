@@ -1,42 +1,19 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import type { LearningPath, LearningPathProgress } from '$lib/types/learning-path';
-  import { getLearningPaths, getLearningPathProgress } from '$lib/db/queries';
   import PathCard from './PathCard.svelte';
   
   interface Props {
+    paths?: LearningPath[];
+    pathProgress?: Map<string, LearningPathProgress>;
     onPathSelect?: (pathId: string) => void;
   }
   
-  let { onPathSelect }: Props = $props();
+  let { paths = [], pathProgress = new Map(), onPathSelect }: Props = $props();
   
-  let paths = $state<LearningPath[]>([]);
-  let pathProgress = $state<Map<string, LearningPathProgress>>(new Map());
-  let loading = $state(true);
+  let loading = $state(false);
   let error = $state<string | undefined>();
   let selectedPath = $state<string | undefined>();
   let difficultyFilter = $state<string>('all');
-  
-  onMount(async () => {
-    try {
-      // Fetch all learning paths
-      const allPaths = await getLearningPaths();
-      paths = allPaths;
-      
-      // Fetch progress for each path
-      for (const path of allPaths) {
-        const progress = await getLearningPathProgress(path.id);
-        if (progress) {
-          pathProgress.set(path.id, progress);
-        }
-      }
-      
-      loading = false;
-    } catch (err) {
-      error = err instanceof Error ? err.message : 'Failed to load learning paths';
-      loading = false;
-    }
-  });
   
   // Derived: filtered paths based on difficulty
   const filteredPaths = $derived.by(() => {
@@ -48,7 +25,7 @@
   const completionStats = $derived.by(() => {
     return filteredPaths.map(path => {
       const progress = pathProgress.get(path.id);
-      const lessonsCompleted = progress?.lessonsCompleted ?? 0;
+      const lessonsCompleted = progress?.completedLessons?.length ?? 0;
       const totalLessons = path.lessons?.length ?? 0;
       const completionPercentage = totalLessons > 0 ? Math.round((lessonsCompleted / totalLessons) * 100) : 0;
       
@@ -120,10 +97,18 @@
   {:else}
     <div class="paths-grid">
       {#each filteredPaths as path (path.id)}
-        {#if completionStats.find(s => s.pathId === path.id) is { percentage, completed, total } stats}
+        {@const stats = completionStats.find((s) => s.pathId === path.id)}
+        {#if stats}
           <PathCard
             {path}
             progress={{ completed: stats.completed, total: stats.total, percentage: stats.percentage }}
+            isSelected={selectedPath === path.id}
+            onSelect={() => handlePathSelect(path.id)}
+          />
+        {:else}
+          <PathCard
+            {path}
+            progress={{ completed: 0, total: path.lessons?.length ?? 0, percentage: 0 }}
             isSelected={selectedPath === path.id}
             onSelect={() => handlePathSelect(path.id)}
           />

@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440017",
+  "title": "Advanced Business Communication",
+  "description": "Master professional Bulgarian for negotiations, presentations, contracts, and high-level business interactions.",
+  "difficulty": "C1",
+  "type": "vocabulary",
+  "duration": 32,
+  "vocabulary": [
+    "vocab-german-verhandlung",
+    "vocab-german-vertrag",
+    "vocab-german-praesentation",
+    "vocab-german-strategie",
+    "vocab-german-investition",
+    "vocab-german-gewinn",
+    "vocab-german-verlust",
+    "vocab-german-markt",
+    "vocab-german-konkurrenz",
+    "vocab-german-fusio"
+  ],
+  "objectives": [
+    {
+      "id": "obj-business-1",
+      "description": "Conduct business negotiations in Bulgarian",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-business-2",
+      "description": "Present business proposals professionally",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-business-3",
+      "description": "Understand and draft business documents",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Advanced Business Communication\n\n## Grammar Explanation\n\n### Business Vocabulary\n\n**Strategic Terms**:\n- Преговори (pregovori) - negotiations\n- Договор (dogovor) - contract\n- Презентация (prezentatsiya) - presentation\n- Стратегия (strategiya) - strategy\n- Инвестиция (investitsiya) - investment\n- Пазар (pazar) - market\n- Конкуренция (konkurentsiya) - competition\n\n**Financial Terms**:\n- Печалба (pechalba) - profit\n- Загуба (zaguba) - loss\n- Приход (prihod) - revenue\n- Разход (razhod) - expense\n- Бюджет (byudzhet) - budget\n- Акционер (aktsioner) - shareholder\n- Дивидент (dividend) - dividend\n\n**Corporate Actions**:\n- Сливане (slivane) - merger\n- Придобиване (pridobivane) - acquisition\n- Разширяване (razshiryavane) - expansion\n- Реструктуриране (restrukturirane) - restructuring\n\n### Formal Business Phrases\n\n**Negotiations**:\n- **Бихме искали да предложим...** (Bihme iskali da predlozhim...) - We would like to propose...\n- **От наша страна сме готови да...** (Ot nasha strana sme gotovi da...) - On our side, we're ready to...\n- **Необходимо е да обсъдим...** (Neobhodimo e da obsădim...) - It's necessary to discuss...\n\n**Presentations**:\n- **Днес ще ви представя...** (Dnes shte vi predstavya...) - Today I will present to you...\n- **Нашата цел е да...** (Nashata tsel e da...) - Our goal is to...\n- **Резултатите показват, че...** (Rezultatite pokazvat, che...) - The results show that...\n\n**Contracts**:\n- **Страните се съгласяват, че...** (Stranite se săglasyavat, che...) - The parties agree that...\n- **В сила от...** (V sila ot...) - Effective from...\n- **При нарушение на договора...** (Pri narushenie na dogovora...) - In case of breach of contract...\n\n### Business Etiquette\n\n1. **Formal Address**: Always use \"Вие\" (formal you) in business contexts.\n\n2. **Business Cards**: Exchange at beginning of meetings; present with both hands.\n\n3. **Punctuality**: Being on time is expected and respected.\n\n4. **Dress Code**: Conservative business attire is standard.\n\n## Cultural Notes\n\n1. **Business Hours**: Typically 9:00-18:00, Monday-Friday.\n\n2. **Meeting Structure**: Formal presentations followed by questions and discussion.\n\n3. **Decision-Making**: May take time; relationships matter in Bulgarian business culture.\n\n4. **Contracts**: Legal documents require careful review; notarization common.",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["advanced", "business", "negotiations", "professional", "C1"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440010"],
+    "relatedLessons": [],
+    "isPremium": true
+  }
+}

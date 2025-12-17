@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440008",
+  "title": "Weather & Seasons",
+  "description": "Discuss weather conditions, seasons, and climate. Learn to describe temperature and natural phenomena.",
+  "difficulty": "A2",
+  "type": "vocabulary",
+  "duration": 18,
+  "vocabulary": [
+    "vocab-german-wetter",
+    "vocab-german-sonne",
+    "vocab-german-regen",
+    "vocab-german-schnee",
+    "vocab-german-wind",
+    "vocab-german-warm",
+    "vocab-german-kalt",
+    "vocab-german-fruehling",
+    "vocab-german-sommer",
+    "vocab-german-winter"
+  ],
+  "objectives": [
+    {
+      "id": "obj-weather-1",
+      "description": "Describe current weather conditions",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-weather-2",
+      "description": "Name and discuss all four seasons",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-weather-3",
+      "description": "Talk about temperature and forecasts",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Weather & Seasons\n\n## Grammar Explanation\n\n### Weather Vocabulary\n\n**Conditions**:\n- Слънчево (slănchevo) - sunny\n- Дъждовно (dăzhdovno) - rainy\n- Снежно (snezhno) - snowy\n- Облачно (oblachno) - cloudy\n- Ветровито (vetrovito) - windy\n- Мъгливо (măgivo) - foggy\n\n**Elements**:\n- Слънце (slăntse) - sun\n- Дъжд (dăzhd) - rain\n- Сняг (snyag) - snow\n- Вятър (vyatăr) - wind\n- Гръм (grăm) - thunder\n- Мълния (mălniya) - lightning\n\n### Seasons (Годишни времена)\n\n- **Пролет** (prolet) - spring\n- **Лято** (lyato) - summer\n- **Есен** (esen) - autumn/fall\n- **Зима** (zima) - winter\n\n### Temperature\n\n- **Топло** (toplo) - warm\n- **Студено** (studeno) - cold\n- **Горещо** (goreshto) - hot\n- **Хладно** (hladno) - cool\n- **Градус** (gradus) - degree\n\n### Useful Phrases\n\n- **Какво е времето днес?** (Kakvo e vremeto dnes?) - What's the weather today?\n- **Колко градуса е?** (Kolko gradusa e?) - What's the temperature?\n- **Ще вали ли?** (Shte vali li?) - Will it rain?\n\n## Cultural Notes\n\n1. **Bulgarian Climate**: Continental climate with hot summers and cold winters. Black Sea coast is milder.\n\n2. **Summer Heat**: Temperatures can reach 35-40°C in summer. Many Bulgarians vacation at the Black Sea.\n\n3. **Winter Sports**: Skiing is popular; Bansko and Borovets are major ski resorts.\n\n4. **Weather Topics**: Weather is a common conversation starter, especially about extreme conditions.",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["elementary", "weather", "seasons", "climate", "A2"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440002"],
+    "relatedLessons": [],
+    "isPremium": false
+  }
+}

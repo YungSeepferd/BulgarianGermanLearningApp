@@ -1,0 +1,55 @@
+[
+  {
+    "id": "ex-family-03-cloze",
+    "type": "fillInTheBlank",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440003",
+    "difficulty": "A1",
+    "prompt": "Complete: 'Това е _____ майка.' (This is my mother.)",
+    "sentence": "Това е _____ майка.",
+    "correctAnswer": "моя",
+    "acceptableAnswers": ["моя", "Моя"],
+    "vocabularyIds": ["moya_my_feminine"],
+    "hint": "Possessive pronoun 'my' for feminine nouns",
+    "explanation": "'Моя' is the feminine form of 'my' in Bulgarian, used with feminine nouns like 'майка' (mother)."
+  },
+  {
+    "id": "ex-family-03-mc",
+    "type": "multipleChoice",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440003",
+    "difficulty": "A1",
+    "question": "What is the Bulgarian word for 'father'?",
+    "options": [
+      "майка",
+      "баща",
+      "брат",
+      "сестра"
+    ],
+    "correctAnswer": "баща",
+    "vocabularyIds": ["bashta_father"],
+    "explanation": "'Баща' means 'father' in Bulgarian. 'Майка' = mother, 'брат' = brother, 'сестра' = sister."
+  },
+  {
+    "id": "ex-family-03-typing",
+    "type": "typing",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440003",
+    "difficulty": "A1",
+    "prompt": "Type the Bulgarian word for 'grandmother':",
+    "correctAnswer": "баба",
+    "acceptableAnswers": ["баба", "Баба"],
+    "vocabularyIds": ["baba_grandmother"],
+    "hint": "A common word, sounds similar across many languages",
+    "similarityThreshold": 0.9
+  },
+  {
+    "id": "ex-family-03-ordering",
+    "type": "ordering",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440003",
+    "difficulty": "A1",
+    "instruction": "Arrange to form: 'His sister is a teacher.'",
+    "words": ["Неговата", "сестра", "е", "учителка", "."],
+    "correctOrder": ["Неговата", "сестра", "е", "учителка", "."],
+    "vocabularyIds": ["negovata_his", "sestra_sister", "uchitelka_teacher"],
+    "translation": "His sister is a teacher.",
+    "hint": "Subject + verb + predicate in Bulgarian"
+  }
+]

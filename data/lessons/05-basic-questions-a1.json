@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440005",
+  "title": "Basic Questions",
+  "description": "Learn to ask and answer fundamental questions using who, what, when, where, why, and how in Bulgarian.",
+  "difficulty": "A1",
+  "type": "grammar",
+  "duration": 18,
+  "vocabulary": [
+    "vocab-german-wer",
+    "vocab-german-was",
+    "vocab-german-wann",
+    "vocab-german-wo",
+    "vocab-german-warum",
+    "vocab-german-wie",
+    "vocab-german-welche",
+    "vocab-german-wieviel",
+    "vocab-german-woher",
+    "vocab-german-wohin"
+  ],
+  "objectives": [
+    {
+      "id": "obj-questions-1",
+      "description": "Form questions using interrogative pronouns",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-questions-2",
+      "description": "Distinguish between different question words",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-questions-3",
+      "description": "Answer questions appropriately",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Basic Questions\n\n## Grammar Explanation\n\n### Question Words (Въпросителни думи)\n\n**Essential Interrogatives**:\n- **Кой?** (koy?) - Who? (masculine)\n- **Коя?** (koya?) - Who? (feminine)\n- **Какво?** (kakvo?) - What?\n- **Кога?** (koga?) - When?\n- **Къде?** (kăde?) - Where?\n- **Защо?** (zashto?) - Why?\n- **Как?** (kak?) - How?\n- **Колко?** (kolko?) - How much/many?\n- **Кой/Коя/Кое?** (koy/koya/koe?) - Which?\n\n### Question Formation\n\nBulgarian questions use interrogative words at the beginning:\n- **Къде живееш?** (Kăde zhiveesh?) - Where do you live?\n- **Как се казваш?** (Kak se kazvash?) - What's your name?\n- **Колко струва?** (Kolko struva?) - How much does it cost?\n\n### Yes/No Questions\n\nRaised intonation at the end indicates a question:\n- **Говориш ли български?** (Govorish li bălgarski?) - Do you speak Bulgarian?\n- The particle \"ли\" (li) can be added after the verb for emphasis\n\n## Cultural Notes\n\n1. **Direct Questions**: Bulgarians tend to be direct in questioning, which might seem blunt to some cultures.\n\n2. **Privacy**: Personal questions about salary or age may be asked more openly than in Western cultures.\n\n3. **Head Gestures**: Remember the reversed head gestures (nod = no, shake = yes) when answering!\n\n4. **Politeness**: Add \"моля\" (please) to soften requests: \"Къде е банята, моля?\" (Where is the bathroom, please?)",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["beginner", "questions", "interrogatives", "grammar", "A1"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440001"],
+    "relatedLessons": [],
+    "isPremium": false
+  }
+}

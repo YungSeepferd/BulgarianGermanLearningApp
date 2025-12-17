@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440015",
+  "title": "Environment & Nature",
+  "description": "Discuss environmental issues, climate change, conservation, and Bulgaria's natural heritage.",
+  "difficulty": "B2",
+  "type": "mixed",
+  "duration": 26,
+  "vocabulary": [
+    "vocab-german-umwelt",
+    "vocab-german-natur",
+    "vocab-german-klima",
+    "vocab-german-verschmutzung",
+    "vocab-german-recycling",
+    "vocab-german-energie",
+    "vocab-german-berg",
+    "vocab-german-meer",
+    "vocab-german-wald",
+    "vocab-german-tier"
+  ],
+  "objectives": [
+    {
+      "id": "obj-environment-1",
+      "description": "Discuss environmental challenges and solutions",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-environment-2",
+      "description": "Describe natural landscapes and ecosystems",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-environment-3",
+      "description": "Express concerns about sustainability",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Environment & Nature\n\n## Grammar Explanation\n\n### Environmental Vocabulary\n\n**Issues**:\n- Околна среда (okolna sreda) - environment\n- Замърсяване (zamărsyavane) - pollution\n- Климат (klimat) - climate\n- Климатични промени (klimatichni promeni) - climate change\n- Глобално затопляне (globalno zatoplyane) - global warming\n- Отпадъци (otpadătsi) - waste\n\n**Solutions**:\n- Рециклиране (retsiklirane) - recycling\n- Възобновяема енергия (văzobnovяema energiya) - renewable energy\n- Опазване (opazvane) - conservation\n- Устойчивост (ustoychivost) - sustainability\n- Биоразнообразие (bioraznoobrazie) - biodiversity\n\n**Nature**:\n- Планина (planina) - mountain\n- Море (more) - sea\n- Гора (gora) - forest\n- Река (reka) - river\n- Езеро (ezero) - lake\n- Животно (zhivotno) - animal\n- Растение (rastenie) - plant\n\n### Bulgarian Natural Heritage\n\n**Mountains**:\n- Рила (Rila) - highest peak Musala (2,925m)\n- Пирин (Pirin) - UNESCO World Heritage site\n- Родопи (Rodopi) - extensive mountain range\n\n**Protected Areas**:\n- 3 national parks\n- 11 nature parks\n- Numerous reserves\n\n### Complex Expressions\n\n- **Трябва да защитаваме...** (Tryabva da zashtitavame...) - We must protect...\n- **Необходимо е да намалим...** (Neobhodimo e da nimalim...) - It's necessary to reduce...\n- **Ако не вземем мерки...** (Ako ne vzemem merki...) - If we don't take measures...\n\n## Cultural Notes\n\n1. **Natural Beauty**: Bulgaria is 30% forested with diverse ecosystems.\n\n2. **Black Sea Coast**: Important for tourism and marine ecosystems.\n\n3. **Environmental Challenges**: Air quality in cities, waste management issues.\n\n4. **Eco-Tourism**: Growing sector, especially in mountain regions.",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["upper-intermediate", "environment", "nature", "ecology", "B2"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440008"],
+    "relatedLessons": [],
+    "isPremium": false
+  }
+}

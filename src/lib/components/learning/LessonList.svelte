@@ -5,7 +5,7 @@
     lessons: Lesson[];
     lessonProgress?: Map<string, LessonProgress>;
     onLessonSelect?: (lessonId: string) => void;
-    currentLessonId?: string;
+    currentLessonId?: string | undefined;
   }
   
   let { 
@@ -76,8 +76,8 @@
           <div class="lesson-content">
             <div class="lesson-header">
               <h4 class="lesson-title">{lesson.title}</h4>
-              {#if lesson.description}
-                <p class="lesson-description">{lesson.description}</p>
+              {#if lesson.subtitle}
+                <p class="lesson-description">{lesson.subtitle}</p>
               {/if}
             </div>
             
@@ -88,23 +88,23 @@
                 </span>
               {/if}
               
-              {#if lesson.estimatedMinutes}
+              {#if lesson.duration}
                 <span class="meta-tag">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="14" height="14">
                     <circle cx="12" cy="12" r="10"></circle>
                     <polyline points="12 6 12 12 16 14"></polyline>
                   </svg>
-                  {lesson.estimatedMinutes} min
+                  {lesson.duration} min
                 </span>
               {/if}
               
-              {#if lesson.vocabularyCount}
+              {#if lesson.vocabularyIds?.length}
                 <span class="meta-tag">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="14" height="14">
                     <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                     <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                   </svg>
-                  {lesson.vocabularyCount} words
+                  {lesson.vocabularyIds.length} words
                 </span>
               {/if}
             </div>

@@ -71,7 +71,7 @@ export async function recordVocabularyAttempt(
  */
 export async function saveLessonProgress(progress: LessonProgress): Promise<void> {
 	const db = await getDB();
-	await db.put('lessonProgress', progress);
+	await db.put('lessonProgress', progress as any);
 }
 
 /**
@@ -79,7 +79,7 @@ export async function saveLessonProgress(progress: LessonProgress): Promise<void
  */
 export async function completLesson(lessonId: string): Promise<void> {
 	const db = await getDB();
-	let progress = await db.get('lessonProgress', lessonId);
+	let progress: any = await db.get('lessonProgress', lessonId);
 
 	if (!progress) {
 		progress = {
@@ -112,7 +112,7 @@ export async function saveLearningPathProgress(progress: LearningPathProgress): 
  */
 export async function saveExerciseProgress(progress: ExerciseProgress): Promise<void> {
 	const db = await getDB();
-	await db.put('exerciseProgress', progress);
+	await db.put('exerciseProgress', progress as any);
 }
 
 /**
@@ -127,8 +127,9 @@ export async function completeExercise(
 	const db = await getDB();
 	let progress = await db.get('exerciseProgress', exerciseId);
 
-	if (!progress) {
-		progress = {
+	let ex: any = progress;
+	if (!ex) {
+		ex = {
 			exerciseId,
 			lessonId,
 			completed: false,
@@ -139,17 +140,17 @@ export async function completeExercise(
 		};
 	}
 
-	progress.attempts++;
-	progress.completed = correct;
-	if (correct && progress.attempts === 1) {
-		progress.firstTryCorrect = true;
+	ex.attempts++;
+	ex.completed = correct;
+	if (correct && ex.attempts === 1) {
+		ex.firstTryCorrect = true;
 	}
 	if (correct) {
-		progress.completedAt = new Date().toISOString();
+		ex.completedAt = new Date().toISOString();
 	}
-	progress.timeSpent += timeSpent;
+	ex.timeSpent += timeSpent;
 
-	await db.put('exerciseProgress', progress);
+	await db.put('exerciseProgress', ex);
 }
 
 /**

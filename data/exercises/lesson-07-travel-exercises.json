@@ -1,0 +1,55 @@
+[
+  {
+    "id": "ex-travel-07-cloze",
+    "type": "fillInTheBlank",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440007",
+    "difficulty": "A2",
+    "prompt": "Complete: 'Завийте на_____!' (Turn left!)",
+    "sentence": "Завийте на _____!",
+    "correctAnswer": "ляво",
+    "acceptableAnswers": ["ляво", "Ляво"],
+    "vocabularyIds": ["lyavo_left"],
+    "hint": "Direction word for 'left'",
+    "explanation": "'Ляво' means 'left'. The imperative 'Завийте' means 'Turn!' (formal/plural)."
+  },
+  {
+    "id": "ex-travel-07-mc",
+    "type": "multipleChoice",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440007",
+    "difficulty": "A2",
+    "question": "What is the Bulgarian word for 'bus'?",
+    "options": [
+      "трамвай",
+      "автобус",
+      "метро",
+      "влак"
+    ],
+    "correctAnswer": "автобус",
+    "vocabularyIds": ["avtobus_bus"],
+    "explanation": "'Автобус' means 'bus'. Other transport: 'трамвай' = tram, 'метро' = metro, 'влак' = train."
+  },
+  {
+    "id": "ex-travel-07-typing",
+    "type": "typing",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440007",
+    "difficulty": "A2",
+    "prompt": "Type the Bulgarian word for 'straight ahead':",
+    "correctAnswer": "направо",
+    "acceptableAnswers": ["направо", "Направо"],
+    "vocabularyIds": ["napravo_straight"],
+    "hint": "Starts with 'напр...'",
+    "similarityThreshold": 0.85
+  },
+  {
+    "id": "ex-travel-07-ordering",
+    "type": "ordering",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440007",
+    "difficulty": "A2",
+    "instruction": "Arrange to form: 'Where is the metro station?'",
+    "words": ["Къде", "е", "метростанцията", "?"],
+    "correctOrder": ["Къде", "е", "метростанцията", "?"],
+    "vocabularyIds": ["kade_where", "metrostantsiya_metro_station"],
+    "translation": "Where is the metro station?",
+    "hint": "Question word + copula + noun"
+  }
+]

@@ -1,119 +1,75 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import PathBrowser from '$lib/components/learning/PathBrowser.svelte';
+  import LessonList from '$lib/components/learning/LessonList.svelte';
   import ProgressIndicator from '$lib/components/learning/ProgressIndicator.svelte';
   import type { LearningPath, LearningPathProgress } from '$lib/types/learning-path';
-  import type { Lesson, LessonProgress } from '$lib/types/lesson';
-  
-  // Mock data for testing
-  const mockLearningPaths: LearningPath[] = [
-    {
-      id: 'path-1',
-      title: 'German Basics A1',
-      description: 'Learn fundamental German vocabulary and grammar for absolute beginners',
-      difficulty: 'beginner',
-      lessons: Array(12).fill(null).map((_, i) => ({
-        id: `lesson-${i + 1}`,
-        title: `Lesson ${i + 1}: Greetings & Introductions`,
-        description: 'Learn basic greetings and how to introduce yourself',
-        difficulty: 'beginner',
-        estimatedMinutes: 15,
-        vocabularyCount: 10,
-        prerequisites: i > 0 ? [`lesson-${i}`] : []
-      })) as Lesson[],
-      createdAt: new Date('2025-01-01'),
-      updatedAt: new Date('2025-01-01'),
-      isActive: true
-    },
-    {
-      id: 'path-2',
-      title: 'German Elementary A2',
-      description: 'Intermediate vocabulary and conversation skills',
-      difficulty: 'elementary',
-      lessons: Array(15).fill(null).map((_, i) => ({
-        id: `lesson-elem-${i + 1}`,
-        title: `Lesson ${i + 1}: Shopping & Markets`,
-        description: 'Learn vocabulary for shopping and negotiating prices',
-        difficulty: 'elementary',
-        estimatedMinutes: 20,
-        vocabularyCount: 15,
-        prerequisites: [`lesson-elem-${i}`]
-      })) as Lesson[],
-      createdAt: new Date('2025-01-15'),
-      updatedAt: new Date('2025-01-15'),
-      isActive: true
-    },
-    {
-      id: 'path-3',
-      title: 'German Intermediate B1',
-      description: 'Advanced conversation and complex grammar',
-      difficulty: 'intermediate',
-      lessons: Array(18).fill(null).map((_, i) => ({
-        id: `lesson-int-${i + 1}`,
-        title: `Lesson ${i + 1}: Business Communication`,
-        description: 'Professional German for business environments',
-        difficulty: 'intermediate',
-        estimatedMinutes: 25,
-        vocabularyCount: 20,
-        prerequisites: [`lesson-int-${i}`]
-      })) as Lesson[],
-      createdAt: new Date('2025-02-01'),
-      updatedAt: new Date('2025-02-01'),
-      isActive: true
-    },
-    {
-      id: 'path-4',
-      title: 'German Advanced B2',
-      description: 'Complex topics and professional language',
-      difficulty: 'advanced',
-      lessons: Array(20).fill(null).map((_, i) => ({
-        id: `lesson-adv-${i + 1}`,
-        title: `Lesson ${i + 1}: Literature & Culture`,
-        description: 'Explore German literature and cultural nuances',
-        difficulty: 'advanced',
-        estimatedMinutes: 30,
-        vocabularyCount: 25,
-        prerequisites: [`lesson-adv-${i}`]
-      })) as Lesson[],
-      createdAt: new Date('2025-02-15'),
-      updatedAt: new Date('2025-02-15'),
-      isActive: true
-    },
-    {
-      id: 'path-5',
-      title: 'Bulgarian Basics A1',
-      description: 'Learn fundamental Bulgarian vocabulary and grammar',
-      difficulty: 'beginner',
-      lessons: Array(12).fill(null).map((_, i) => ({
-        id: `lesson-bg-${i + 1}`,
-        title: `Lesson ${i + 1}: Съставяне Фрази`,
-        description: 'Learn basic Bulgarian greetings and phrases',
-        difficulty: 'beginner',
-        estimatedMinutes: 15,
-        vocabularyCount: 12,
-        prerequisites: i > 0 ? [`lesson-bg-${i}`] : []
-      })) as Lesson[],
-      createdAt: new Date('2025-03-01'),
-      updatedAt: new Date('2025-03-01'),
-      isActive: true
+  import type { Lesson } from '$lib/types/lesson';
+  import {
+    getLearningPaths,
+    getLearningPathProgress,
+    getLessonsForPath,
+    markLessonComplete
+  } from '$lib/services/learning-paths';
+
+  let loading = $state(true);
+  let error = $state<string | null>(null);
+  let paths = $state<LearningPath[]>([]);
+  let selectedPathId = $state<string | null>(null);
+  let selectedPath = $derived(paths.find(p => p.id === selectedPathId) ?? null);
+  let pathProgress = $state<Map<string, LearningPathProgress>>(new Map());
+  let progress = $state<LearningPathProgress | null>(null);
+  let lessons = $state<Lesson[]>([]);
+
+  onMount(async () => {
+    try {
+      loading = true;
+      const loadedPaths = await getLearningPaths();
+      paths = loadedPaths;
+
+      if (!selectedPathId && loadedPaths.length > 0) {
+        selectedPathId = loadedPaths[0]?.id ?? null;
+      }
+
+      if (selectedPathId) {
+        const progressEntry = await getLearningPathProgress(selectedPathId);
+        pathProgress.set(selectedPathId, progressEntry);
+        pathProgress = new Map(pathProgress);
+        progress = progressEntry;
+        lessons = await getLessonsForPath(selectedPathId);
+      }
+    } catch (e) {
+      error = (e as Error).message ?? 'Failed to load navigation data';
+    } finally {
+      loading = false;
     }
-  ];
-  
-  // Mock progress data
-  const mockPathProgress: Map<string, LearningPathProgress> = new Map([
-    ['path-1', { pathId: 'path-1', lessonsCompleted: 5, totalXP: 250, startedAt: new Date('2025-03-10') }],
-    ['path-2', { pathId: 'path-2', lessonsCompleted: 0, totalXP: 0, startedAt: new Date() }],
-    ['path-3', { pathId: 'path-3', lessonsCompleted: 8, totalXP: 400, startedAt: new Date('2025-03-05') }],
-    ['path-4', { pathId: 'path-4', lessonsCompleted: 0, totalXP: 0, startedAt: new Date() }],
-    ['path-5', { pathId: 'path-5', lessonsCompleted: 12, totalXP: 600, startedAt: new Date('2025-02-20') }]
-  ]);
-  
-  let selectedPathId = $state<string | undefined>();
-  let selectedPath = $state<LearningPath | undefined>();
-  
-  const handlePathSelect = (pathId: string) => {
+  });
+
+  async function handleSelect(pathId: string) {
     selectedPathId = pathId;
-    selectedPath = mockLearningPaths.find(p => p.id === pathId);
-  };
+    try {
+      loading = true;
+      const progressEntry = await getLearningPathProgress(pathId);
+      pathProgress.set(pathId, progressEntry);
+      pathProgress = new Map(pathProgress);
+      progress = progressEntry;
+      lessons = await getLessonsForPath(pathId);
+    } finally {
+      loading = false;
+    }
+  }
+
+  async function completeNextLesson() {
+    if (!selectedPath || lessons.length === 0) return;
+
+    const nextLesson = lessons.find((lesson) => !progress?.completedLessons.includes(lesson.id)) ?? lessons[lessons.length - 1];
+    if (!nextLesson) return;
+    const updated = await markLessonComplete(selectedPath.id, nextLesson.id);
+
+    pathProgress.set(selectedPath.id, updated);
+    pathProgress = new Map(pathProgress);
+    progress = updated;
+  }
 </script>
 
 <div class="test-page">
@@ -122,67 +78,60 @@
     <p class="page-subtitle">Testing PathBrowser, LessonList, and ProgressIndicator components</p>
   </header>
   
-  <div class="test-container">
-    <div class="column-left">
-      <section class="test-section">
-        <h2 class="section-title">Available Learning Paths</h2>
-        <p class="section-description">Browse and select from available learning paths</p>
-        
-        <PathBrowser
-          onPathSelect={handlePathSelect}
-        />
-      </section>
-    </div>
-    
-    <div class="column-right">
-      {#if selectedPath}
+  {#if loading}
+    <div class="loading">Loading navigation…</div>
+  {:else if error}
+    <div class="error">{error}</div>
+  {:else}
+    <div class="test-container">
+      <div class="column-left">
         <section class="test-section">
-          <h2 class="section-title">Path Progress</h2>
-          
-          {#if mockPathProgress.get(selectedPath.id) is { lessonsCompleted, totalXP } progress}
-            <ProgressIndicator
-              completed={progress.lessonsCompleted}
-              total={selectedPath.lessons?.length ?? 0}
-              xpEarned={progress.totalXP}
-              timeSpent={progress.lessonsCompleted * 15}
-            />
-          {/if}
+          <h2 class="section-title">Available Learning Paths</h2>
+          <p class="section-description">Browse and select from available learning paths</p>
+          <PathBrowser paths={paths} pathProgress={pathProgress} onPathSelect={handleSelect} />
         </section>
-        
-        <section class="test-section">
-          <h2 class="section-title">Path Details</h2>
-          <div class="path-details">
-            <div class="detail-row">
-              <span class="detail-label">Title:</span>
-              <span class="detail-value">{selectedPath.title}</span>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label">Difficulty:</span>
-              <span class="detail-value difficulty">{selectedPath.difficulty}</span>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label">Lessons:</span>
-              <span class="detail-value">{selectedPath.lessons?.length ?? 0} total</span>
-            </div>
-            {#if selectedPath.description}
-              <div class="detail-row">
-                <span class="detail-label">Description:</span>
-                <span class="detail-value">{selectedPath.description}</span>
+      </div>
+      
+      <div class="column-right">
+        {#if selectedPath}
+          <section class="test-section">
+            <h2 class="section-title">Path Progress</h2>
+            {#if progress}
+              <div class="actions">
+                <button class="action-btn" on:click={completeNextLesson}>Mark next lesson complete</button>
+                <p class="hint">Use this to simulate completion and refresh the progress ring.</p>
+              </div>
+              <ProgressIndicator
+                completed={progress.completedLessons.length}
+                total={selectedPath.lessons?.length ?? 0}
+                xpEarned={(progress as any).totalXP ?? 0}
+                timeSpent={progress.timeSpent ?? (progress.completedLessons.length * (lessons.reduce((sum, l) => sum + (l.duration ?? 15), 0) / lessons.length || 15))}
+              />
+            {/if}
+          </section>
+          
+          <section class="test-section">
+            <h2 class="section-title">Lessons</h2>
+            {#if lessons.length > 0}
+              <LessonList lessons={lessons} onLessonSelect={() => { /* nav hook */ }} />
+            {:else}
+              <div class="empty-list">
+                <p>No lessons for this path.</p>
               </div>
             {/if}
+          </section>
+        {:else}
+          <div class="placeholder">
+            <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <p>Select a learning path to view progress and lessons</p>
           </div>
-        </section>
-      {:else}
-        <div class="placeholder">
-          <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-          <p>Select a learning path to view details and progress</p>
-        </div>
-      {/if}
+        {/if}
+      </div>
     </div>
-  </div>
+  {/if}
   
   <section class="test-section full-width">
     <h2 class="section-title">Component Testing Notes</h2>
@@ -393,6 +342,40 @@
     color: var(--color-success, #10b981);
     font-weight: 600;
     margin-right: 0.5rem;
+  }
+
+  .actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .action-btn {
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-primary, #3b82f6);
+    background: var(--color-primary, #3b82f6);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .action-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(59, 130, 246, 0.25);
+  }
+
+  .action-btn:focus-visible {
+    outline: 3px solid rgba(59, 130, 246, 0.35);
+    outline-offset: 2px;
+  }
+
+  .hint {
+    margin: 0;
+    color: var(--color-text-secondary, #6b7280);
+    font-size: 0.875rem;
   }
   
   @media (max-width: 1024px) {

@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440009",
+  "title": "Hobbies & Free Time",
+  "description": "Discuss leisure activities, sports, music preferences, and how you spend your free time in Bulgarian.",
+  "difficulty": "A2",
+  "type": "vocabulary",
+  "duration": 20,
+  "vocabulary": [
+    "vocab-german-sport",
+    "vocab-german-musik",
+    "vocab-german-lesen",
+    "vocab-german-spielen",
+    "vocab-german-film",
+    "vocab-german-schwimmen",
+    "vocab-german-tanzen",
+    "vocab-german-singen",
+    "vocab-german-freizeit",
+    "vocab-german-hobby"
+  ],
+  "objectives": [
+    {
+      "id": "obj-hobbies-1",
+      "description": "Describe personal hobbies and interests",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-hobbies-2",
+      "description": "Discuss sports and physical activities",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-hobbies-3",
+      "description": "Talk about cultural activities and entertainment",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Hobbies & Free Time\n\n## Grammar Explanation\n\n### Activities Vocabulary\n\n**Sports**:\n- Футбол (futbol) - football/soccer\n- Баскетбол (basketbol) - basketball\n- Волейбол (voleybol) - volleyball\n- Плуване (pluvane) - swimming\n- Тенис (tenis) - tennis\n\n**Cultural Activities**:\n- Четене (chetene) - reading\n- Музика (muzika) - music\n- Кино (kino) - cinema\n- Театър (teatăr) - theatre\n- Рисуване (risuvane) - drawing/painting\n\n**Hobbies**:\n- Готвене (gotvene) - cooking\n- Пътуване (pătuvane) - traveling\n- Фотография (fotografiya) - photography\n- Градинарство (gradinarstvo) - gardening\n\n### Expressing Preferences\n\n- **Обичам да...** (Obicham da...) - I love to...\n- **Харесвам да...** (Haresvam da...) - I like to...\n- **Предпочитам да...** (Predpochitam da...) - I prefer to...\n- **Интересувам се от...** (Interesuvam se ot...) - I'm interested in...\n\n### Frequency Adverbs\n\n- Винаги (vinagi) - always\n- Често (chesto) - often\n- Понякога (ponyakoga) - sometimes\n- Рядко (ryadko) - rarely\n- Никога (nikoga) - never\n\n## Cultural Notes\n\n1. **Football Culture**: Football is the most popular sport. CSKA and Levski are major Sofia clubs.\n\n2. **Outdoor Activities**: Hiking in mountains (Rila, Pirin, Rhodopes) is very popular.\n\n3. **Music Scene**: Chalga (pop-folk) is controversial but popular. Traditional folk music (folklore) is celebrated.\n\n4. **Reading Culture**: Bulgarians are avid readers; Sofia has many bookstores and libraries.",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["elementary", "hobbies", "sports", "leisure", "A2"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440004"],
+    "relatedLessons": [],
+    "isPremium": false
+  }
+}
