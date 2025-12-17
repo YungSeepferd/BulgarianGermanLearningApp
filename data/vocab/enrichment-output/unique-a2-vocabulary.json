@@ -1,0 +1,803 @@
+[
+  {
+    "id": "vocab-3000",
+    "german": "das Auto",
+    "bulgarian": "автомобилът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein Fahrzeug mit Motor auf vier Rädern.",
+      "bulgarian": "Превозно средство с мотор на четири колела."
+    },
+    "examples": [
+      {
+        "german": "Mein Auto ist rot.",
+        "bulgarian": "Моят автомобил е червен.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich fahre ein Auto.",
+        "bulgarian": "Карам автомобил.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["transportation", "vehicles"],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Autos"
+    },
+    "culturalNotes": ["Autos sind sehr wichtig in Deutschland."],
+    "tags": ["A1", "nouns", "transportation"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3001",
+    "german": "der Zug",
+    "bulgarian": "влакът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein Fahrzeug mit mehreren Wagen auf Schienen.",
+      "bulgarian": "Превозно средство с няколко вагона на релси."
+    },
+    "examples": [
+      {
+        "german": "Der Zug fährt nach Berlin.",
+        "bulgarian": "Влакът отива до Берлин.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich fahre mit dem Zug.",
+        "bulgarian": "Пътувам със влак.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["transportation"],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Züge"
+    },
+    "culturalNotes": ["Züge sind ein wichtiges Verkehrsmittel in Deutschland."],
+    "tags": ["A1", "nouns", "transportation"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3002",
+    "german": "das Flugzeug",
+    "bulgarian": "самолетът",
+    "partOfSpeech": "noun",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Ein Fahrzeug, das in der Luft fliegt.",
+      "bulgarian": "Превозно средство, което лети във въздуха."
+    },
+    "examples": [
+      {
+        "german": "Das Flugzeug fliegt nach Amerika.",
+        "bulgarian": "Самолетът лети до Америка.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich fliege mit dem Flugzeug.",
+        "bulgarian": "Летя със самолет.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["transportation", "travel"],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Flugzeuge"
+    },
+    "culturalNotes": [],
+    "tags": ["A2", "nouns", "transportation"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3003",
+    "german": "das Hotel",
+    "bulgarian": "хотелът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein Gebäude mit Zimmern für Gäste.",
+      "bulgarian": "Сграда с стаи за гости."
+    },
+    "examples": [
+      {
+        "german": "Das Hotel ist sehr schön.",
+        "bulgarian": "Хотелът е много красив.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich übernachte im Hotel.",
+        "bulgarian": "Преспивам в хотел.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["accommodation", "travel"],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Hotels"
+    },
+    "culturalNotes": [],
+    "tags": ["A1", "nouns", "accommodation"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3004",
+    "german": "das Zimmer",
+    "bulgarian": "стаята",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein Raum in einem Gebäude.",
+      "bulgarian": "Стая в сграда."
+    },
+    "examples": [
+      {
+        "german": "Mein Zimmer ist klein.",
+        "bulgarian": "Моята стая е малка.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich schlafe in meinem Zimmer.",
+        "bulgarian": "Спя в моята стая.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["home", "places"],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Zimmer"
+    },
+    "culturalNotes": [],
+    "tags": ["A1", "nouns", "home"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3005",
+    "german": "die Küche",
+    "bulgarian": "кухнята",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein Raum, wo man kocht.",
+      "bulgarian": "Стая, където се готви."
+    },
+    "examples": [
+      {
+        "german": "Ich koche in der Küche.",
+        "bulgarian": "Готвя в кухнята.",
+        "context": "neutral"
+      },
+      {
+        "german": "Die Küche ist groß.",
+        "bulgarian": "Кухнята е голяма.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["home", "places"],
+    "grammar": {
+      "gender": "feminine",
+      "article": "die",
+      "plural": "die Küchen"
+    },
+    "culturalNotes": [],
+    "tags": ["A1", "nouns", "home"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3006",
+    "german": "das Badezimmer",
+    "bulgarian": "банята",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein Raum mit Bad und Toilette.",
+      "bulgarian": "Стая с вана и тоалет."
+    },
+    "examples": [
+      {
+        "german": "Ich duschemich im Badezimmer.",
+        "bulgarian": "Вземам душ в банята.",
+        "context": "neutral"
+      },
+      {
+        "german": "Das Badezimmer ist klein.",
+        "bulgarian": "Банята е малка.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["home", "places"],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Badezimmer"
+    },
+    "culturalNotes": [],
+    "tags": ["A1", "nouns", "home"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3007",
+    "german": "die Tür",
+    "bulgarian": "вратата",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine Öffnung zum Ein- und Ausgang.",
+      "bulgarian": "Отваряне за влизане и излизане."
+    },
+    "examples": [
+      {
+        "german": "Die Tür ist rot.",
+        "bulgarian": "Вратата е червена.",
+        "context": "neutral"
+      },
+      {
+        "german": "Öffne die Tür!",
+        "bulgarian": "Отвори вратата!",
+        "context": "informal"
+      }
+    ],
+    "categories": ["home", "objects"],
+    "grammar": {
+      "gender": "feminine",
+      "article": "die",
+      "plural": "die Türen"
+    },
+    "culturalNotes": [],
+    "tags": ["A1", "nouns", "home"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3008",
+    "german": "das Fenster",
+    "bulgarian": "прозорецът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine Öffnung an der Wand zum Licht.",
+      "bulgarian": "Отваряне на стена за светлина."
+    },
+    "examples": [
+      {
+        "german": "Das Fenster ist offen.",
+        "bulgarian": "Прозорецът е отворен.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich schaue aus dem Fenster.",
+        "bulgarian": "Гледам през прозореца.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["home", "objects"],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Fenster"
+    },
+    "culturalNotes": [],
+    "tags": ["A1", "nouns", "home"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3009",
+    "german": "fahren",
+    "bulgarian": "карам",
+    "partOfSpeech": "verb",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Mit einem Fahrzeug bewegen.",
+      "bulgarian": "Да се движа с превозно средство."
+    },
+    "examples": [
+      {
+        "german": "Ich fahre mit dem Auto.",
+        "bulgarian": "Карам с автомобил.",
+        "context": "neutral"
+      },
+      {
+        "german": "Wir fahren nach Berlin.",
+        "bulgarian": "Ние карам до Берлин.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["transportation", "verbs"],
+    "grammar": {
+      "type": "strong verb",
+      "infinitive": "fahren",
+      "presentFirstPerson": "fahre",
+      "presentThirdPerson": "fährt",
+      "past": "fuhr",
+      "pastParticiple": "gefahren"
+    },
+    "culturalNotes": [],
+    "tags": ["A1", "verbs", "transportation"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3010",
+    "german": "fliegen",
+    "bulgarian": "летя",
+    "partOfSpeech": "verb",
+    "cefr": "A2",
+    "definitions": {
+      "german": "In der Luft fliegen.",
+      "bulgarian": "Да летя във въздуха."
+    },
+    "examples": [
+      {
+        "german": "Der Vogel fliegt.",
+        "bulgarian": "Птицата лети.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich fliege nach Amerika.",
+        "bulgarian": "Летя до Америка.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["transportation", "verbs"],
+    "grammar": {
+      "type": "strong verb",
+      "infinitive": "fliegen",
+      "presentFirstPerson": "fliege",
+      "presentThirdPerson": "fliegt",
+      "past": "flog",
+      "pastParticiple": "geflogen"
+    },
+    "culturalNotes": [],
+    "tags": ["A2", "verbs", "transportation"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3011",
+    "german": "schwimmen",
+    "bulgarian": "плувам",
+    "partOfSpeech": "verb",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Im Wasser bewegen.",
+      "bulgarian": "Да се движа във вода."
+    },
+    "examples": [
+      {
+        "german": "Ich schwimme im Pool.",
+        "bulgarian": "Плувам в басейна.",
+        "context": "neutral"
+      },
+      {
+        "german": "Die Kinder schwimmen.",
+        "bulgarian": "Детата плуват.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["activities", "verbs", "sports"],
+    "grammar": {
+      "type": "strong verb",
+      "infinitive": "schwimmen",
+      "presentFirstPerson": "schwimme",
+      "presentThirdPerson": "schwimmt",
+      "past": "schwamm",
+      "pastParticiple": "geschwommen"
+    },
+    "culturalNotes": [],
+    "tags": ["A1", "verbs", "sports"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3012",
+    "german": "wandern",
+    "bulgarian": "туристя",
+    "partOfSpeech": "verb",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Zu Fuß in der Natur gehen.",
+      "bulgarian": "Да ходя пешком в природата."
+    },
+    "examples": [
+      {
+        "german": "Ich wandere in den Alpen.",
+        "bulgarian": "Туристя в Алпите.",
+        "context": "neutral"
+      },
+      {
+        "german": "Wir wandern am Wochenende.",
+        "bulgarian": "Туристим в уикенда.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["activities", "verbs", "sports"],
+    "grammar": {
+      "type": "regular verb",
+      "infinitive": "wandern",
+      "presentFirstPerson": "wandere",
+      "presentThirdPerson": "wandert",
+      "past": "wanderte",
+      "pastParticiple": "gewandert"
+    },
+    "culturalNotes": ["Wandern ist sehr beliebt in Deutschland."],
+    "tags": ["A2", "verbs", "activities"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3013",
+    "german": "tanzen",
+    "bulgarian": "танцувам",
+    "partOfSpeech": "verb",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Sich rhythmisch zur Musik bewegen.",
+      "bulgarian": "Да се движа ритмично на музика."
+    },
+    "examples": [
+      {
+        "german": "Ich tanze gerne.",
+        "bulgarian": "Харесвам да танцувам.",
+        "context": "neutral"
+      },
+      {
+        "german": "Wir tanzen auf der Party.",
+        "bulgarian": "Танцуваме на партито.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["activities", "verbs", "sports"],
+    "grammar": {
+      "type": "regular verb",
+      "infinitive": "tanzen",
+      "presentFirstPerson": "tanze",
+      "presentThirdPerson": "tanzt",
+      "past": "tanzte",
+      "pastParticiple": "getanzt"
+    },
+    "culturalNotes": [],
+    "tags": ["A2", "verbs", "activities"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3014",
+    "german": "singen",
+    "bulgarian": "пея",
+    "partOfSpeech": "verb",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Melodien mit der Stimme produzieren.",
+      "bulgarian": "Да произвеждам мелодии с глас."
+    },
+    "examples": [
+      {
+        "german": "Ich singe gerne Lieder.",
+        "bulgarian": "Харесвам да пея песни.",
+        "context": "neutral"
+      },
+      {
+        "german": "Der Vogel singt.",
+        "bulgarian": "Птицата пее.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["activities", "verbs", "music"],
+    "grammar": {
+      "type": "strong verb",
+      "infinitive": "singen",
+      "presentFirstPerson": "singe",
+      "presentThirdPerson": "singt",
+      "past": "sang",
+      "pastParticiple": "gesungen"
+    },
+    "culturalNotes": [],
+    "tags": ["A2", "verbs", "music"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3015",
+    "german": "zeigen",
+    "bulgarian": "показвам",
+    "partOfSpeech": "verb",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Auf etwas hinweisen oder etwas präsentieren.",
+      "bulgarian": "Да посоча на нещо или да представя нещо."
+    },
+    "examples": [
+      {
+        "german": "Ich zeige dir mein Auto.",
+        "bulgarian": "Показвам ти моя автомобил.",
+        "context": "neutral"
+      },
+      {
+        "german": "Zeige mir die Fotos!",
+        "bulgarian": "Покажи ми снимките!",
+        "context": "informal"
+      }
+    ],
+    "categories": ["communication", "verbs"],
+    "grammar": {
+      "type": "regular verb",
+      "infinitive": "zeigen",
+      "presentFirstPerson": "zeige",
+      "presentThirdPerson": "zeigt",
+      "past": "zeigte",
+      "pastParticiple": "gezeigt"
+    },
+    "culturalNotes": [],
+    "tags": ["A2", "verbs", "communication"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3016",
+    "german": "hören",
+    "bulgarian": "слушам",
+    "partOfSpeech": "verb",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Mit den Ohren wahrnehmen.",
+      "bulgarian": "Да възприемам с ушите."
+    },
+    "examples": [
+      {
+        "german": "Ich höre Musik.",
+        "bulgarian": "Слушам музика.",
+        "context": "neutral"
+      },
+      {
+        "german": "Hörst du mich?",
+        "bulgarian": "Чуваш ли ме?",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["senses", "verbs"],
+    "grammar": {
+      "type": "regular verb",
+      "infinitive": "hören",
+      "presentFirstPerson": "höre",
+      "presentThirdPerson": "hört",
+      "past": "hörte",
+      "pastParticiple": "gehört"
+    },
+    "culturalNotes": [],
+    "tags": ["A1", "verbs", "senses"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3017",
+    "german": "sehen",
+    "bulgarian": "виждам",
+    "partOfSpeech": "verb",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Mit den Augen wahrnehmen.",
+      "bulgarian": "Да възприемам с очите."
+    },
+    "examples": [
+      {
+        "german": "Ich sehe einen Baum.",
+        "bulgarian": "Виждам дърво.",
+        "context": "neutral"
+      },
+      {
+        "german": "Siehst du das Haus?",
+        "bulgarian": "Виждаш ли къщата?",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["senses", "verbs"],
+    "grammar": {
+      "type": "strong verb",
+      "infinitive": "sehen",
+      "presentFirstPerson": "sehe",
+      "presentThirdPerson": "sieht",
+      "past": "sah",
+      "pastParticiple": "gesehen"
+    },
+    "culturalNotes": [],
+    "tags": ["A1", "verbs", "senses"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3018",
+    "german": "neu",
+    "bulgarian": "нов",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Kürzlich hergestellt oder erworben.",
+      "bulgarian": "Наскоро направен или придобит."
+    },
+    "examples": [
+      {
+        "german": "Das ist ein neues Auto.",
+        "bulgarian": "Това е нов автомобил.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich habe neue Schuhe.",
+        "bulgarian": "Имам нови обувки.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["adjectives", "descriptors"],
+    "grammar": {
+      "type": "adjective",
+      "positive": "neu",
+      "comparative": "neuer",
+      "superlative": "am neuesten"
+    },
+    "culturalNotes": [],
+    "tags": ["A1", "adjectives"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3019",
+    "german": "alt",
+    "bulgarian": "стар",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Von großem Alter, nicht jung.",
+      "bulgarian": "От голяма възраст, не млад."
+    },
+    "examples": [
+      {
+        "german": "Das ist ein altes Buch.",
+        "bulgarian": "Това е стара книга.",
+        "context": "neutral"
+      },
+      {
+        "german": "Mein Vater ist alt.",
+        "bulgarian": "Моят баща е стар.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["adjectives", "descriptors"],
+    "grammar": {
+      "type": "adjective",
+      "positive": "alt",
+      "comparative": "älter",
+      "superlative": "am ältesten"
+    },
+    "culturalNotes": [],
+    "tags": ["A1", "adjectives"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3020",
+    "german": "billig",
+    "bulgarian": "евтин",
+    "partOfSpeech": "adjective",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Mit niedrigem Preis.",
+      "bulgarian": "С нисък цена."
+    },
+    "examples": [
+      {
+        "german": "Das Buch ist billig.",
+        "bulgarian": "Книгата е евтина.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich kaufe billige Kleidung.",
+        "bulgarian": "Купувам евтини дрехи.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["adjectives", "descriptors"],
+    "grammar": {
+      "type": "adjective",
+      "positive": "billig",
+      "comparative": "billiger",
+      "superlative": "am billigsten"
+    },
+    "culturalNotes": [],
+    "tags": ["A2", "adjectives"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3021",
+    "german": "teuer",
+    "bulgarian": "скъп",
+    "partOfSpeech": "adjective",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Mit hohem Preis.",
+      "bulgarian": "С висок цена."
+    },
+    "examples": [
+      {
+        "german": "Das Auto ist teuer.",
+        "bulgarian": "Автомобилът е скъп.",
+        "context": "neutral"
+      },
+      {
+        "german": "Diese Kleidung ist teuer.",
+        "bulgarian": "Тези дрехи са скъпи.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["adjectives", "descriptors"],
+    "grammar": {
+      "type": "adjective",
+      "positive": "teuer",
+      "comparative": "teurer",
+      "superlative": "am teuersten"
+    },
+    "culturalNotes": [],
+    "tags": ["A2", "adjectives"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3022",
+    "german": "interessant",
+    "bulgarian": "интересен",
+    "partOfSpeech": "adjective",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Weckt Aufmerksamkeit oder Neugier.",
+      "bulgarian": "Пробужда внимание или любопитство."
+    },
+    "examples": [
+      {
+        "german": "Das Buch ist interessant.",
+        "bulgarian": "Книгата е интересна.",
+        "context": "neutral"
+      },
+      {
+        "german": "Das ist eine interessante Geschichte.",
+        "bulgarian": "Това е интересна история.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["adjectives", "descriptors"],
+    "grammar": {
+      "type": "adjective",
+      "positive": "interessant",
+      "comparative": "interessanter",
+      "superlative": "am interessantesten"
+    },
+    "culturalNotes": [],
+    "tags": ["A2", "adjectives"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3023",
+    "german": "langweilig",
+    "bulgarian": "скучен",
+    "partOfSpeech": "adjective",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Nicht interessant oder ermüdend.",
+      "bulgarian": "Не интересен или отегчителен."
+    },
+    "examples": [
+      {
+        "german": "Das Buch ist langweilig.",
+        "bulgarian": "Книгата е скучна.",
+        "context": "neutral"
+      },
+      {
+        "german": "Der Film ist langweilig.",
+        "bulgarian": "Филмът е скучен.",
+        "context": "neutral"
+      }
+    ],
+    "categories": ["adjectives", "descriptors"],
+    "grammar": {
+      "type": "adjective",
+      "positive": "langweilig",
+      "comparative": "langweiliger",
+      "superlative": "am langweiligsten"
+    },
+    "culturalNotes": [],
+    "tags": ["A2", "adjectives"],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  }
+]
