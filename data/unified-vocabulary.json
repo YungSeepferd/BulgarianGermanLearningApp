@@ -3221,5 +3221,342 @@
       "adjectives"
     ],
     "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "a1-fam-001-familie",
+    "german": "die Familie",
+    "bulgarian": "семейството",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine Gruppe von Menschen, die durch Blutsverwandtschaft oder Heirat verbunden sind",
+      "bulgarian": "Група от хора, свързани чрез кръвна връзка или брак"
+    },
+    "examples": [
+      {
+        "german": "Meine Familie ist sehr groß",
+        "bulgarian": "Моето семейство е много голямо",
+        "context": "Describing family size"
+      },
+      {
+        "german": "Die Familie kommt am Sonntag zusammen",
+        "bulgarian": "Семейството се събира в неделя",
+        "context": "Family gathering"
+      }
+    ],
+    "categories": [
+      "family",
+      "people",
+      "relationships"
+    ],
+    "grammar": {
+      "gender": "feminine",
+      "plural": "die Familien",
+      "definiteBulgarian": "семейството"
+    },
+    "tags": [
+      "A1",
+      "family",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
+  },
+  {
+    "id": "a1-fam-006-sohn",
+    "german": "der Sohn",
+    "bulgarian": "синът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein männliches Kind in Bezug auf seine Eltern",
+      "bulgarian": "Мъжко дете по отношение на неговите родители"
+    },
+    "examples": [
+      {
+        "german": "Mein Sohn geht in die Schule",
+        "bulgarian": "Синът ми ходи на училище",
+        "context": "Education"
+      },
+      {
+        "german": "Der Sohn hilft seinem Vater",
+        "bulgarian": "Синът помага на баща си",
+        "context": "Family cooperation"
+      }
+    ],
+    "categories": [
+      "family",
+      "people",
+      "relationships"
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "plural": "die Söhne",
+      "definiteBulgarian": "синът"
+    },
+    "tags": [
+      "A1",
+      "family",
+      "child",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
+  },
+  {
+    "id": "a1-fam-007-tochter",
+    "german": "die Tochter",
+    "bulgarian": "дъщерята",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein weibliches Kind in Bezug auf seine Eltern",
+      "bulgarian": "Женско дете по отношение на неговите родители"
+    },
+    "examples": [
+      {
+        "german": "Meine Tochter lernt Klavier spielen",
+        "bulgarian": "Дъщеря ми учи да свири на пиано",
+        "context": "Learning music"
+      },
+      {
+        "german": "Die Tochter ist sehr fleißig",
+        "bulgarian": "Дъщерята е много старателна",
+        "context": "Character description"
+      }
+    ],
+    "categories": [
+      "family",
+      "people",
+      "relationships"
+    ],
+    "grammar": {
+      "gender": "feminine",
+      "plural": "die Töchter",
+      "definiteBulgarian": "дъщерята"
+    },
+    "tags": [
+      "A1",
+      "family",
+      "child",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
+  },
+  {
+    "id": "a1-fam-010-mann",
+    "german": "der Mann",
+    "bulgarian": "мъжът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine erwachsene männliche Person; Ehemann",
+      "bulgarian": "Възрастен мъж; съпруг"
+    },
+    "examples": [
+      {
+        "german": "Der Mann geht zur Arbeit",
+        "bulgarian": "Мъжът отива на работа",
+        "context": "Daily routine"
+      },
+      {
+        "german": "Mein Mann kocht heute Abend",
+        "bulgarian": "Съпругът ми готви тази вечер",
+        "context": "Household tasks"
+      }
+    ],
+    "categories": [
+      "family",
+      "people",
+      "relationships"
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "plural": "die Männer",
+      "definiteBulgarian": "мъжът"
+    },
+    "tags": [
+      "A1",
+      "family",
+      "spouse",
+      "person",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
+  },
+  {
+    "id": "a1-fam-011-frau",
+    "german": "die Frau",
+    "bulgarian": "жената",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine erwachsene weibliche Person; Ehefrau",
+      "bulgarian": "Възрастна жена; съпруга"
+    },
+    "examples": [
+      {
+        "german": "Die Frau arbeitet im Büro",
+        "bulgarian": "Жената работи в офиса",
+        "context": "Workplace"
+      },
+      {
+        "german": "Meine Frau ist Lehrerin",
+        "bulgarian": "Съпругата ми е учителка",
+        "context": "Profession"
+      }
+    ],
+    "categories": [
+      "family",
+      "people",
+      "relationships"
+    ],
+    "grammar": {
+      "gender": "feminine",
+      "plural": "die Frauen",
+      "definiteBulgarian": "жената"
+    },
+    "tags": [
+      "A1",
+      "family",
+      "spouse",
+      "person",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
+  },
+  {
+    "id": "a1-fam-013-baby",
+    "german": "das Baby",
+    "bulgarian": "бебето",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein sehr junges Kind, besonders ein Säugling",
+      "bulgarian": "Много малко дете, особено кърмаче"
+    },
+    "examples": [
+      {
+        "german": "Das Baby schläft",
+        "bulgarian": "Бебето спи",
+        "context": "Baby sleeping"
+      },
+      {
+        "german": "Sie hat ein Baby bekommen",
+        "bulgarian": "Тя роди бебе",
+        "context": "Birth announcement"
+      }
+    ],
+    "categories": [
+      "family",
+      "people",
+      "age-groups"
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "plural": "die Babys",
+      "definiteBulgarian": "бебето"
+    },
+    "tags": [
+      "A1",
+      "family",
+      "infant",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
+  },
+  {
+    "id": "a1-fam-014-freund",
+    "german": "der Freund",
+    "bulgarian": "приятелят",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine Person, mit der man eine enge, vertraute Beziehung hat",
+      "bulgarian": "Човек, с когото имате близка, доверителна връзка"
+    },
+    "examples": [
+      {
+        "german": "Mein bester Freund wohnt in Berlin",
+        "bulgarian": "Най-добрият ми приятел живее в Берлин",
+        "context": "Friendship"
+      },
+      {
+        "german": "Ich treffe meine Freunde am Samstag",
+        "bulgarian": "Срещам приятелите си в събота",
+        "context": "Weekend plans"
+      }
+    ],
+    "categories": [
+      "relationships",
+      "people",
+      "social"
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "plural": "die Freunde",
+      "definiteBulgarian": "приятелят"
+    },
+    "tags": [
+      "A1",
+      "relationships",
+      "friend",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
+  },
+  {
+    "id": "a1-fam-015-verwandte",
+    "german": "der/die Verwandte",
+    "bulgarian": "роднината",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine Person, die zur Familie gehört",
+      "bulgarian": "Човек, който принадлежи към семейството"
+    },
+    "examples": [
+      {
+        "german": "Meine Verwandten leben in verschiedenen Städten",
+        "bulgarian": "Моите роднини живеят в различни градове",
+        "context": "Extended family"
+      },
+      {
+        "german": "Wir besuchen unsere Verwandten zu Weihnachten",
+        "bulgarian": "Посещаваме роднините си на Коледа",
+        "context": "Holiday tradition"
+      }
+    ],
+    "categories": [
+      "family",
+      "people",
+      "relationships"
+    ],
+    "grammar": {
+      "gender": "masculine/feminine",
+      "plural": "die Verwandten",
+      "definiteBulgarian": "роднината"
+    },
+    "tags": [
+      "A1",
+      "family",
+      "relative",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
   }
 ]
