@@ -1,0 +1,6013 @@
+{
+  "source": "a1-bulgarian-words-translated.json",
+  "generatedAt": "2025-12-18T20:03:11.683Z",
+  "totalCandidates": 316,
+  "skippedBg": 197,
+  "skippedDe": 58,
+  "candidates": [
+    {
+      "id": "a1_auto_cb8a8c89-db84-4f29-b39e-c807ae9c45a2",
+      "german": "ayran",
+      "bulgarian": "айран",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "ayran",
+          "bulgarian": "айран",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_c08ba82e-6b8a-481b-9f50-f78b6984c7d3",
+      "german": "ayte",
+      "bulgarian": "айте",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "ayte",
+          "bulgarian": "айте",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_0ef0dc9a-5d08-4220-8f3d-c394ff539ad6",
+      "german": "AYCH",
+      "bulgarian": "АЙЧ",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "AYCH",
+          "bulgarian": "АЙЧ",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_617e495d-086a-468a-ad5e-1399670ff083",
+      "german": "algerisch",
+      "bulgarian": "алжирец",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "algerisch",
+          "bulgarian": "алжирец",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_1ad36dd6-6751-479b-b818-b09d122393fa",
+      "german": "algerisch",
+      "bulgarian": "алжирка",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "algerisch",
+          "bulgarian": "алжирка",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b0a4ce57-764f-4ef0-9f5c-ab5dfc9e5206",
+      "german": "algerier",
+      "bulgarian": "алжирци",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "algerier",
+          "bulgarian": "алжирци",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_fde6fbd6-7fc8-40c2-837d-b444aef26539",
+      "german": "afghanisch",
+      "bulgarian": "афганистанец",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "afghanisch",
+          "bulgarian": "афганистанец",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_097e1b35-12c7-4921-9247-a1bc19c3e21c",
+      "german": "afghanisch",
+      "bulgarian": "афганистанка",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "afghanisch",
+          "bulgarian": "афганистанка",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_66af8762-0413-45ac-b5dd-5863e2e45ecb",
+      "german": "afghanen",
+      "bulgarian": "афганистанци",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "afghanen",
+          "bulgarian": "афганистанци",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a25133b5-bfd1-4dc9-88fd-4662809e8815",
+      "german": "Ahmed",
+      "bulgarian": "Ахмед",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Ahmed",
+          "bulgarian": "Ахмед",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_1c173f57-851d-40e6-b412-1d74e9dfd936",
+      "german": "Balkon",
+      "bulgarian": "балкон",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Balkon",
+          "bulgarian": "балкон",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_26d29ac7-ebc2-4894-bc42-38e86db210b8",
+      "german": "Bananen,",
+      "bulgarian": "банани",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Bananen,",
+          "bulgarian": "банани",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_1242126a-3abc-49dd-9aa4-6270777ae609",
+      "german": "ERLÄUTERUNG",
+      "bulgarian": "бележка",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "ERLÄUTERUNG",
+          "bulgarian": "бележка",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_64108daa-669b-47a5-a9e2-338c5b1f6b28",
+      "german": "tickets",
+      "bulgarian": "билети",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "tickets",
+          "bulgarian": "билети",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_758c0636-cb70-46af-8240-8545785660fa",
+      "german": "das Ticket",
+      "bulgarian": "билетът",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "das Ticket",
+          "bulgarian": "билетът",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a9a1072f-dcc0-4808-8892-9af7fa61b61d",
+      "german": "kräuter",
+      "bulgarian": "билков",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "kräuter",
+          "bulgarian": "билков",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_5f863168-0387-4629-96d2-8d4ac7685073",
+      "german": "BISC",
+      "bulgarian": "БИСК",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "BISC",
+          "bulgarian": "БИСК",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_4ba092bb-50b2-403a-8c8e-7f1a328c67bf",
+      "german": "Kekse und ähnliches Kleingebäck",
+      "bulgarian": "бисквити",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Kekse und ähnliches Kleingebäck",
+          "bulgarian": "бисквити",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_4fa0df4c-5c2d-42d8-8a7e-2d01cd65f5fd",
+      "german": "in der Nähe von",
+      "bulgarian": "близо",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "in der Nähe von",
+          "bulgarian": "близо",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_3014997c-dc4e-4b59-b11b-ad852d9a90bf",
+      "german": "Block",
+      "bulgarian": "блок",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Block",
+          "bulgarian": "блок",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_4bc17932-7fec-432a-a69c-284dedcf3de3",
+      "german": "bonbons",
+      "bulgarian": "бонбони",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "bonbons",
+          "bulgarian": "бонбони",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_3baa4031-5ecc-4133-980f-cb959dfed1e8",
+      "german": "bonbonpunsch",
+      "bulgarian": "бонбонишункаориз",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "bonbonpunsch",
+          "bulgarian": "бонбонишункаориз",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_2f27ceca-2eaf-4955-8389-7ab84dac2bb4",
+      "german": "stiefel",
+      "bulgarian": "боти",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "stiefel",
+          "bulgarian": "боти",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_05045711-6155-4c3f-bb9d-fe10393cf520",
+      "german": "Mehl",
+      "bulgarian": "брашно",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Mehl",
+          "bulgarian": "брашно",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_1e021687-8047-44ea-bc9e-9cd946278b93",
+      "german": "buchstaben",
+      "bulgarian": "буквите",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "buchstaben",
+          "bulgarian": "буквите",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_d59e2c55-0a96-4352-9879-a5e7eaf8738e",
+      "german": "Burgas",
+      "bulgarian": "Бургас",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Burgas",
+          "bulgarian": "Бургас",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_0491ee01-f38a-47b6-87d2-9e30cd54b75f",
+      "german": "Flaschen",
+      "bulgarian": "бутилки",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Flaschen",
+          "bulgarian": "бутилки",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_76d8890c-feea-4ed0-8e9f-685803d38403",
+      "german": "bulgaren",
+      "bulgarian": "българи",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "bulgaren",
+          "bulgarian": "българи",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_8772ae04-33e4-480d-972b-eb7d3755acc6",
+      "german": "Bube",
+      "bulgarian": "Вали",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Bube",
+          "bulgarian": "Вали",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_e042bf8f-7d82-4985-b04f-d3eab53577cb",
+      "german": "badewanne",
+      "bulgarian": "вана",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "badewanne",
+          "bulgarian": "вана",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_59624a4c-174d-47f8-827b-64e710003f1a",
+      "german": "Varna",
+      "bulgarian": "Варна",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Varna",
+          "bulgarian": "Варна",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_0267341d-2f1d-438b-b7b7-e6b2e42b5ace",
+      "german": "Großbritannien",
+      "bulgarian": "Великобритания",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Großbritannien",
+          "bulgarian": "Великобритания",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_95a1e363-d646-4bef-9b41-5401d5269db1",
+      "german": "Stürmisch",
+      "bulgarian": "Ветровито",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Stürmisch",
+          "bulgarian": "Ветровито",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_cd232201-5832-45c6-a8f2-b307814ff248",
+      "german": "speisen",
+      "bulgarian": "вечерям",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "speisen",
+          "bulgarian": "вечерям",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b65f6451-e4e7-4a4e-b867-7938d90e9dee",
+      "german": "nehmen",
+      "bulgarian": "вземам",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "nehmen",
+          "bulgarian": "вземам",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_79cd8ad7-b6d0-4c14-974e-6dd85722692e",
+      "german": "VILOKB",
+      "bulgarian": "ВИЛОКБ",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "VILOKB",
+          "bulgarian": "ВИЛОКБ",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_d11ccf5a-0621-4edd-86c5-c75747ea80fc",
+      "german": "Startseite",
+      "bulgarian": "Вкъщи",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Startseite",
+          "bulgarian": "Вкъщи",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_2e010f56-5590-4b90-8104-2b7f426457d7",
+      "german": "Einloggen",
+      "bulgarian": "Влизам",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Einloggen",
+          "bulgarian": "Влизам",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_bfdeadbf-a1e4-4518-8f53-f2d0eb6783a1",
+      "german": "Tür",
+      "bulgarian": "Вратата",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Tür",
+          "bulgarian": "Вратата",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_5db84467-10d4-4d1c-98f0-ab390ff8bdf6",
+      "german": "wetter",
+      "bulgarian": "времето",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "wetter",
+          "bulgarian": "времето",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_3d9ea4e4-3831-4c78-8ea3-a517f376b9e3",
+      "german": "rücksendungen",
+      "bulgarian": "връща",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "rücksendungen",
+          "bulgarian": "връща",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b4f6cc5f-dbbf-476a-8c0a-0fa12673880a",
+      "german": "Für jeden",
+      "bulgarian": "Всеки",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Für jeden",
+          "bulgarian": "Всеки",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_ba503d31-0f68-4155-a875-87d0a02d9c75",
+      "german": "sekunde",
+      "bulgarian": "втори",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "sekunde",
+          "bulgarian": "втори",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_4484b379-7048-49c9-931d-046518aeb9b8",
+      "german": "Die 2.",
+      "bulgarian": "Вторият",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Die 2.",
+          "bulgarian": "Вторият",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_d4e329ee-caea-4189-b311-fbe6dbc2d2f7",
+      "german": "Schrank",
+      "bulgarian": "гардероб",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Schrank",
+          "bulgarian": "гардероб",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_0a26808b-a6cc-4cb6-b4b1-33df9e74ccf1",
+      "german": "Die Garderobe",
+      "bulgarian": "Гардеробът",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Die Garderobe",
+          "bulgarian": "Гардеробът",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_0d62ea8a-1714-4e93-9718-222e8bce6ee1",
+      "german": "ansehen",
+      "bulgarian": "гледате",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "ansehen",
+          "bulgarian": "гледате",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_9ac9c8e5-c536-402d-afc0-b04fc43e6848",
+      "german": "jahr",
+      "bulgarian": "годината",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "jahr",
+          "bulgarian": "годината",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_c69e0314-e1c9-4056-a6a1-80ba4197d1b4",
+      "german": "2 Jahre",
+      "bulgarian": "години",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "2 Jahre",
+          "bulgarian": "години",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_cd743ff3-ed8f-417f-ae8f-6631763578fc",
+      "german": "Größere Eingriffe",
+      "bulgarian": "голяма",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Größere Eingriffe",
+          "bulgarian": "голяма",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a6839ea5-5564-4345-9df9-6e5c68a6d2a4",
+      "german": "städte",
+      "bulgarian": "градове",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "städte",
+          "bulgarian": "градове",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_e056416e-04ca-4d5e-8baf-c61be6dec2dc",
+      "german": "Grammatik",
+      "bulgarian": "ГРАМАТИКА",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Grammatik",
+          "bulgarian": "ГРАМАТИКА",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b520789a-ded3-4ed6-baef-d15e32482cf9",
+      "german": "Erbse",
+      "bulgarian": "грах",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Erbse",
+          "bulgarian": "грах",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_25e5639b-8ad2-46d9-9768-fb9ec49bce0a",
+      "german": "Fett",
+      "bulgarian": "Грее",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Fett",
+          "bulgarian": "Грее",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_284d1246-c989-4e6e-8508-82821ba68777",
+      "german": "Grapefruit",
+      "bulgarian": "грейпфрут",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Grapefruit",
+          "bulgarian": "грейпфрут",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_9de8f404-f595-4c02-aca7-c6f57f21ccc2",
+      "german": "trauben",
+      "bulgarian": "грозде",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "trauben",
+          "bulgarian": "грозде",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_ca7e89df-c33a-4090-bcf1-ce48f77a879b",
+      "german": "Schwamm:",
+      "bulgarian": "гъба",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Schwamm:",
+          "bulgarian": "гъба",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_44993fe4-418e-49c2-9d6f-9771deff00dc",
+      "german": "weit weg",
+      "bulgarian": "далече",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "weit weg",
+          "bulgarian": "далече",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_65cf7935-c084-4e0e-b1a0-0cd7ef6dc317",
+      "german": "Der Zwölfte",
+      "bulgarian": "Дванадесетият",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Der Zwölfte",
+          "bulgarian": "Дванадесетият",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_63d53367-35e5-4c82-a56a-c856debe86b0",
+      "german": "paare",
+      "bulgarian": "двойки",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "paare",
+          "bulgarian": "двойки",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b5eb4ae7-7d94-40f3-a1ef-c090d0e8e275",
+      "german": "neunte",
+      "bulgarian": "девети",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "neunte",
+          "bulgarian": "девети",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_4bf07985-fdcd-4418-bde0-42bf73161b3b",
+      "german": "Nachspeise",
+      "bulgarian": "десерт",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Nachspeise",
+          "bulgarian": "десерт",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b143b388-0de4-4ff5-b1a8-81c08a8e73c9",
+      "german": "zehnte",
+      "bulgarian": "десета",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "zehnte",
+          "bulgarian": "десета",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_608ce262-48ca-46f8-9fdb-6da1007f99c1",
+      "german": "zehntel",
+      "bulgarian": "десети",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "zehntel",
+          "bulgarian": "десети",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_595b7ab9-bb57-40b4-9753-bf69dba2281d",
+      "german": "Der 10.",
+      "bulgarian": "Десетият",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Der 10.",
+          "bulgarian": "Десетият",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_68323091-da16-4c93-bd58-b93d233997b1",
+      "german": "kinder",
+      "bulgarian": "детска",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "kinder",
+          "bulgarian": "детска",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_9a82a9ba-fdc8-4f31-872d-23f1b6f95fe9",
+      "german": "kinder",
+      "bulgarian": "детската",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "kinder",
+          "bulgarian": "детската",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_41a903b5-e99e-496f-acdc-18268c30a2da",
+      "german": "Moschee",
+      "bulgarian": "джамия",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Moschee",
+          "bulgarian": "джамия",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_f678b1cf-6b41-4bec-be5a-43b1ebfa7196",
+      "german": "flip-Flops",
+      "bulgarian": "джапанки",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "flip-Flops",
+          "bulgarian": "джапанки",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_41912d22-43b7-46ab-9733-4690359ddf5d",
+      "german": "Dialog",
+      "bulgarian": "ДИАЛОГ",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Dialog",
+          "bulgarian": "ДИАЛОГ",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_9d1a3192-f758-40b7-9c16-676bfd618bee",
+      "german": "dialoge",
+      "bulgarian": "диалозите",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "dialoge",
+          "bulgarian": "диалозите",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_3500e12d-c6af-408b-913f-27a058379920",
+      "german": "Sofa",
+      "bulgarian": "диван",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Sofa",
+          "bulgarian": "диван",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_f2984ce4-20f1-484a-9eda-020ce6185cfd",
+      "german": "Die Couch",
+      "bulgarian": "Диванът",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Die Couch",
+          "bulgarian": "Диванът",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b078fc29-80e7-435d-ba69-172ee58e3d63",
+      "german": "Wassermelonen",
+      "bulgarian": "дини",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Wassermelonen",
+          "bulgarian": "дини",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_f3a04841-5a17-4241-b76a-2a2f92c73fad",
+      "german": "Wassermelonen",
+      "bulgarian": "диня",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Wassermelonen",
+          "bulgarian": "диня",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_14c7342f-182f-4db6-a848-6b5470a780b5",
+      "german": "die Tage",
+      "bulgarian": "дните",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "die Tage",
+          "bulgarian": "дните",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a986dcbf-19f5-479c-b40f-65504ed1d414",
+      "german": "Fertigstellen",
+      "bulgarian": "Довършете",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Fertigstellen",
+          "bulgarian": "Довършете",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b4100015-3ff7-4c8f-a16c-1881837b559c",
+      "german": "einzureichen.",
+      "bulgarian": "докато",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "einzureichen.",
+          "bulgarian": "докато",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_4ea09723-45aa-4ab7-960c-4c07b5c0bab7",
+      "german": "kleidung",
+      "bulgarian": "дрехи",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "kleidung",
+          "bulgarian": "дрехи",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_0858a32e-2bfa-4ff7-a6af-7dbc362c6ecf",
+      "german": "Wörter",
+      "bulgarian": "думи",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Wörter",
+          "bulgarian": "думи",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_9cb77141-017b-4dd0-bf99-cd0b7e74daee",
+      "german": "die Angaben",
+      "bulgarian": "думите",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "die Angaben",
+          "bulgarian": "думите",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_59673de9-164c-4cce-b6da-b9832e33723d",
+      "german": "Spirit",
+      "bulgarian": "Духа",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Spirit",
+          "bulgarian": "Духа",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_8015974b-eb44-471f-bc9b-da8ba341b61d",
+      "german": "Dusche",
+      "bulgarian": "душ",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Dusche",
+          "bulgarian": "душ",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_5cda85cd-c5fe-4c56-a840-6720a42099ba",
+      "german": "Regnerisch",
+      "bulgarian": "Дъждовно",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Regnerisch",
+          "bulgarian": "Дъждовно",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_e584fa4c-ddab-4250-9bb0-f834ee4f7f90",
+      "german": "Boing",
+      "bulgarian": "дълго",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Boing",
+          "bulgarian": "дълго",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_0d6f3ac7-d35f-4730-afda-d2bf580106fa",
+      "german": "jeans",
+      "bulgarian": "дънки",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "jeans",
+          "bulgarian": "дънки",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b9df689d-cf40-4383-9bfe-a0df2a3f8c34",
+      "german": "Die Mitgliedstaaten gewährleisten, dass",
+      "bulgarian": "държавите",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Die Mitgliedstaaten gewährleisten, dass",
+          "bulgarian": "държавите",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_c59327fc-0953-4827-bc47-4a8c4f54ea44",
+      "german": "döner",
+      "bulgarian": "дюнер",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "döner",
+          "bulgarian": "дюнер",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_d6c3b69f-0048-47b5-b12a-97efcb5d3442",
+      "german": "II zu Lym-",
+      "bulgarian": "една",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "II zu Lym-",
+          "bulgarian": "една",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_dc0edaf4-0fc4-4af6-9a07-11daab3057ed",
+      "german": "express",
+      "bulgarian": "експрес",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "express",
+          "bulgarian": "експрес",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_e168f929-87a9-4c6c-95e5-6bdcad8e369b",
+      "german": "ECFA",
+      "bulgarian": "ЕКФА",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "ECFA",
+          "bulgarian": "ЕКФА",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b2ea6a8f-2612-413d-b656-b00822d74820",
+      "german": "Zagora",
+      "bulgarian": "Загора",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Zagora",
+          "bulgarian": "Загора",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_ad24584d-eb24-44bc-aefa-50f715f4817c",
+      "german": "reist ab",
+      "bulgarian": "заминава",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "reist ab",
+          "bulgarian": "заминава",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_597de990-0985-47b2-87bd-0aa70ca7f42e",
+      "german": "abreisen",
+      "bulgarian": "заминавам",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "abreisen",
+          "bulgarian": "заминавам",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_ce3338c8-e584-4bba-a902-edb5dbd24596",
+      "german": "Zucker",
+      "bulgarian": "захар",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Zucker",
+          "bulgarian": "захар",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_ac735665-5493-4eb4-a446-08789ce80fae",
+      "german": "sugarcetlestabob",
+      "bulgarian": "захароцетлещабоб",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "sugarcetlestabob",
+          "bulgarian": "захароцетлещабоб",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_30e5e935-0e73-4870-9b20-eaa6ce973d8c",
+      "german": "Kopfkohl,",
+      "bulgarian": "зеле",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Kopfkohl,",
+          "bulgarian": "зеле",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_602a04cf-b249-419f-bf4a-ae4a61da5d51",
+      "german": "Wissen Sie,",
+      "bulgarian": "Знаете",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Wissen Sie,",
+          "bulgarian": "Знаете",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_7470588b-823c-4bac-a25d-9c55f18289ea",
+      "german": "Flagge",
+      "bulgarian": "Знамето",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Flagge",
+          "bulgarian": "Знамето",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_f4500392-13b4-42a0-9818-0bc4f97a25b1",
+      "german": "EAGICR",
+      "bulgarian": "ИАГИЦР",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "EAGICR",
+          "bulgarian": "ИАГИЦР",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b1c6afed-2ec7-4f51-af38-696b887d0f5e",
+      "german": "Ivan",
+      "bulgarian": "Иван",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Ivan",
+          "bulgarian": "Иван",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_f98f3b07-2061-4d01-a3f4-14a941084dab",
+      "german": "Wählen Sie",
+      "bulgarian": "Изберете",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Wählen Sie",
+          "bulgarian": "Изберете",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_4b8756d3-38dd-4e44-bd44-84e641da2d16",
+      "german": "Wird beendet...",
+      "bulgarian": "Излизам",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Wird beendet...",
+          "bulgarian": "Излизам",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_55c51425-08d0-4bf9-93f7-107c168bed21",
+      "german": "Feuerlöscher",
+      "bulgarian": "Използвайте",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Feuerlöscher",
+          "bulgarian": "Използвайте",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_8398faf7-07b6-4ff0-b696-871e95430471",
+      "german": "verwendung",
+      "bulgarian": "използвате",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "verwendung",
+          "bulgarian": "използвате",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_25cac5e5-da44-4be0-abde-279cfccc87bf",
+      "german": "sätze",
+      "bulgarian": "изреченията",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "sätze",
+          "bulgarian": "изреченията",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_c8d2eff3-8cc7-43a5-b0e5-0991c1e1688a",
+      "german": "Es liegen",
+      "bulgarian": "Има",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Es liegen",
+          "bulgarian": "Има",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_2980bfc6-b5ab-463f-9d7a-97f157deb14f",
+      "german": "haben Sie",
+      "bulgarian": "имате",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "haben Sie",
+          "bulgarian": "имате",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_e3bb4236-1673-47c3-8b9e-93b88f6e0ae4",
+      "german": "Sie haben",
+      "bulgarian": "Имаш",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Sie haben",
+          "bulgarian": "Имаш",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_c9aba928-0b91-4257-a316-4416fc1e6b3c",
+      "german": "Benutzernamen:",
+      "bulgarian": "имена",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Benutzernamen:",
+          "bulgarian": "имена",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_ac864a84-c494-4525-9dbc-ba17bc432a42",
+      "german": "namen",
+      "bulgarian": "имената",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "namen",
+          "bulgarian": "имената",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_66c3687f-9b56-4e45-b950-cd216c08fef5",
+      "german": "die Bezeichnung;",
+      "bulgarian": "името",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "die Bezeichnung;",
+          "bulgarian": "името",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_28e199ab-1d88-4599-90f7-fd13662a5f88",
+      "german": "iraker",
+      "bulgarian": "иракчани",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "iraker",
+          "bulgarian": "иракчани",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_157f7afe-a383-4937-ab2b-b608ce5378fd",
+      "german": "irakisch",
+      "bulgarian": "иракчанин",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "irakisch",
+          "bulgarian": "иракчанин",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a75e6e78-885c-4822-ae33-a5e02ce2847a",
+      "german": "irakisch",
+      "bulgarian": "иракчанка",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "irakisch",
+          "bulgarian": "иракчанка",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_e13344e7-9ee1-417c-8b2c-c16f60e389ba",
+      "german": "iranisch",
+      "bulgarian": "иранец",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "iranisch",
+          "bulgarian": "иранец",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a6bbfbab-39d0-4e54-85cc-dc5eadae0ae9",
+      "german": "iranisch",
+      "bulgarian": "иранка",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "iranisch",
+          "bulgarian": "иранка",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_2032af8f-fd84-4300-98c3-530b3a19b8b3",
+      "german": "iraner",
+      "bulgarian": "иранци",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "iraner",
+          "bulgarian": "иранци",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_97b561a9-1061-44ad-94cb-b92478a54e03",
+      "german": "Istanbul",
+      "bulgarian": "Истанбул",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Istanbul",
+          "bulgarian": "Истанбул",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_d181d0c6-4149-43ff-903e-f0f51078197f",
+      "german": "Kairo",
+      "bulgarian": "Кайро",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Kairo",
+          "bulgarian": "Кайро",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_edea5d5f-f956-4b5a-bb16-2246fdf0c639",
+      "german": "Aprikosenbaum",
+      "bulgarian": "кайсия",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Aprikosenbaum",
+          "bulgarian": "кайсия",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_dff641a6-32db-45c0-b4aa-fea060620fdd",
+      "german": "WELCHE",
+      "bulgarian": "какви",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "WELCHE",
+          "bulgarian": "какви",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_74e567a5-c9a9-449b-b395-fbb6ceef0ab7",
+      "german": "Cappuccino",
+      "bulgarian": "капучино",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Cappuccino",
+          "bulgarian": "капучино",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a05a47b4-ba95-4bf5-b58e-78c914492f97",
+      "german": "kartoffel",
+      "bulgarian": "картофа",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "kartoffel",
+          "bulgarian": "картофа",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_597e9fc5-a231-40ef-8b69-94a22f26dc08",
+      "german": "Staatskasse",
+      "bulgarian": "каса",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Staatskasse",
+          "bulgarian": "каса",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_198f6b52-02c5-4cf7-847d-3f58ae4ef83e",
+      "german": "schatzkammer",
+      "bulgarian": "касова",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "schatzkammer",
+          "bulgarian": "касова",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_986eb1df-68b3-485f-8852-ce31a21ee43d",
+      "german": "Cmax",
+      "bulgarian": "като",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Cmax",
+          "bulgarian": "като",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_20a10aa5-ad0d-4682-a8e5-6e6a1d789327",
+      "german": "döner",
+      "bulgarian": "кебап",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "döner",
+          "bulgarian": "кебап",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_9b0775a6-875e-474a-8306-47f171fbb28d",
+      "german": "kebapche",
+      "bulgarian": "кебапче",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "kebapche",
+          "bulgarian": "кебапче",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_0118b664-d824-45d8-8cdc-24aa0d4b145c",
+      "german": "Ćevapčići",
+      "bulgarian": "кебапчета",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Ćevapčići",
+          "bulgarian": "кебапчета",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b59a8409-0749-495c-9ab1-5f0c99f3dedb",
+      "german": "kilogramm",
+      "bulgarian": "килограма",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "kilogramm",
+          "bulgarian": "килограма",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b79784f6-411f-4dab-af21-ad5265aa194f",
+      "german": "sauer",
+      "bulgarian": "кисело",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "sauer",
+          "bulgarian": "кисело",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_3788d312-abd5-4489-ae51-b1ae1dc4c87e",
+      "german": "welche",
+      "bulgarian": "кои",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "welche",
+          "bulgarian": "кои",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_94d173d5-9071-4381-82e4-21e3d1ec505f",
+      "german": "welche",
+      "bulgarian": "които",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "welche",
+          "bulgarian": "които",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_552a779d-706e-4fbd-9f94-0ffe33f239f9",
+      "german": "Korridor",
+      "bulgarian": "коридор",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Korridor",
+          "bulgarian": "коридор",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_c70f3a66-35e3-4c8d-85bf-4f7f7aba9a5e",
+      "german": "Anzug",
+      "bulgarian": "костюм",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Anzug",
+          "bulgarian": "костюм",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_80e44341-5e5d-49c7-95a3-47c231fc656e",
+      "german": "Croissant",
+      "bulgarian": "кроасан",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Croissant",
+          "bulgarian": "кроасан",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_f78eb6f7-92ec-4995-88a1-aaee11dd11b1",
+      "german": "Birnbaum",
+      "bulgarian": "круша",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Birnbaum",
+          "bulgarian": "круша",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_de8fc92f-b396-4632-a470-eafc4635519c",
+      "german": "die Kreise",
+      "bulgarian": "кръговете",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "die Kreise",
+          "bulgarian": "кръговете",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a0278051-85a2-4b91-8bd4-6e1afed5bbe8",
+      "german": "Koffer",
+      "bulgarian": "куфар",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Koffer",
+          "bulgarian": "куфар",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_d0fb36bd-3312-4548-80b8-5c172db3c184",
+      "german": "häuser",
+      "bulgarian": "къщи",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "häuser",
+          "bulgarian": "къщи",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_774ee1ad-0b9c-47ff-8b2f-4eb3ebe7eb54",
+      "german": "КЮФТЕ",
+      "bulgarian": "кюфте",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "КЮФТЕ",
+          "bulgarian": "кюфте",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_7bd3345f-6c42-4bf8-9db2-048ad51846f7",
+      "german": "fleischbällchen",
+      "bulgarian": "кюфтета",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "fleischbällchen",
+          "bulgarian": "кюфтета",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_d2c5d9dc-e360-40dc-b8f4-ac1d8a7cca8b",
+      "german": "Der Laptop",
+      "bulgarian": "Лаптопът",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Der Laptop",
+          "bulgarian": "Лаптопът",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a57529ff-a119-4f7a-87aa-87822c99768a",
+      "german": "LEVA",
+      "bulgarian": "лева",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "LEVA",
+          "bulgarian": "лева",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_282fae52-410e-4e20-8542-e5994c70754e",
+      "german": "Leicht",
+      "bulgarian": "Лека",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Leicht",
+          "bulgarian": "Лека",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_8e8f22b6-6782-4ab5-84c8-71b9529106ac",
+      "german": "Abschlussscheibe",
+      "bulgarian": "леща",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Abschlussscheibe",
+          "bulgarian": "леща",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a34c851d-8362-4195-95b8-e0d88531aad3",
+      "german": "libanesisch",
+      "bulgarian": "ливанец",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "libanesisch",
+          "bulgarian": "ливанец",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_d1e3b919-02fd-4ae7-aeba-a95b3e019ff2",
+      "german": "libanesisch",
+      "bulgarian": "ливанка",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "libanesisch",
+          "bulgarian": "ливанка",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_10c9c74f-2c4a-4145-8c6f-1e6d613473e8",
+      "german": "libanesisch",
+      "bulgarian": "ливанци",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "libanesisch",
+          "bulgarian": "ливанци",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_544d2f84-eaa3-4f4c-a328-5fd5375285fc",
+      "german": "zitrone",
+      "bulgarian": "лимона",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "zitrone",
+          "bulgarian": "лимона",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_1e96e9ff-7a21-4db5-b6f8-0141072db796",
+      "german": "fehlt",
+      "bulgarian": "липсващата",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "fehlt",
+          "bulgarian": "липсващата",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_f4959daf-0c14-4f41-a9e2-6ac70e5956bb",
+      "german": "fehlt",
+      "bulgarian": "липсващите",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "fehlt",
+          "bulgarian": "липсващите",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_85078c82-a080-45e1-a221-4084f1610154",
+      "german": "Lyulin",
+      "bulgarian": "Люлин",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Lyulin",
+          "bulgarian": "Люлин",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_ef406023-55b5-4a5d-9d82-792851a157cc",
+      "german": "geschäfte",
+      "bulgarian": "магазина",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "geschäfte",
+          "bulgarian": "магазина",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_81b3ce8c-e9a3-4f90-b654-edac1eb434e3",
+      "german": "makkaroni",
+      "bulgarian": "макарони",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "makkaroni",
+          "bulgarian": "макарони",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_43c398dd-df87-42a8-8ace-4dd9265c28bc",
+      "german": "turnschuhe",
+      "bulgarian": "маратонки",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "turnschuhe",
+          "bulgarian": "маратонки",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_20e5f205-0d17-4f94-ab31-db73ace8d858",
+      "german": "Maria",
+      "bulgarian": "Мария",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Maria",
+          "bulgarian": "Мария",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_000920df-9b35-4467-9f45-8474fce784c1",
+      "german": "Lattich",
+      "bulgarian": "маруля",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Lattich",
+          "bulgarian": "маруля",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_df419347-880a-4b6a-8173-846ac158014b",
+      "german": "sammelschiene",
+      "bulgarian": "маршрутка",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "sammelschiene",
+          "bulgarian": "маршрутка",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_1944406a-894d-4f92-b72f-3f7ea911c871",
+      "german": "Monat",
+      "bulgarian": "месец",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Monat",
+          "bulgarian": "месец",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_1328f872-77cd-446f-bedb-1e906580ead2",
+      "german": "monate",
+      "bulgarian": "месеците",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "monate",
+          "bulgarian": "месеците",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_4f690be1-bc15-4b4a-9c5c-33d9143b4415",
+      "german": "u-Bahn-Station",
+      "bulgarian": "метростанция",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "u-Bahn-Station",
+          "bulgarian": "метростанция",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_df6e5890-6a14-400a-a733-98d74435d975",
+      "german": "Spüle",
+      "bulgarian": "Мивката",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Spüle",
+          "bulgarian": "Мивката",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_e3f5e0a8-f023-4cc5-bb17-8594ca1cd769",
+      "german": "mini-Markt",
+      "bulgarian": "минимаркет",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "mini-Markt",
+          "bulgarian": "минимаркет",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_3db4ec74-027c-46ce-9e54-8975f8267a1d",
+      "german": "Modell",
+      "bulgarian": "Модел",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Modell",
+          "bulgarian": "Модел",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_1ef8965b-c9fc-49e6-a835-9be8a0942f37",
+      "german": "Es ist",
+      "bulgarian": "Може",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Es ist",
+          "bulgarian": "Може",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_78dafdfd-e8a7-491e-be33-4d0c296eddcc",
+      "german": "Sie können",
+      "bulgarian": "можете",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Sie können",
+          "bulgarian": "можете",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_4c431055-83d5-49f0-86b2-30b71e5b8feb",
+      "german": "Mohammed",
+      "bulgarian": "Мохамед",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Mohammed",
+          "bulgarian": "Мохамед",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_6c5a1726-a200-473c-9df7-d84b7a71d436",
+      "german": "moussaka",
+      "bulgarian": "мусака",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "moussaka",
+          "bulgarian": "мусака",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_924b04ed-f13d-470d-b1af-fe47fd848d0e",
+      "german": "Neblig",
+      "bulgarian": "Мъгливо",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Neblig",
+          "bulgarian": "Мъгливо",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_4c40dab5-b70b-4129-84df-9c85ba3698d4",
+      "german": "Hoffnung",
+      "bulgarian": "Надежда",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Hoffnung",
+          "bulgarian": "Надежда",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_5e5acbef-d303-4cff-902a-20221a8fc18e",
+      "german": "Nationaler Kulturpalast",
+      "bulgarian": "НДК",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Nationaler Kulturpalast",
+          "bulgarian": "НДК",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_aaa92f38-cd1f-46c4-8072-7459dd895909",
+      "german": "alles",
+      "bulgarian": "Нещо",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "alles",
+          "bulgarian": "Нещо",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_cda8a60f-38b3-4120-ae6e-2d6c873a1c55",
+      "german": "Nina",
+      "bulgarian": "Нина",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Nina",
+          "bulgarian": "Нина",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_4ee8442b-db0c-4acf-b8a6-e56312a67e1c",
+      "german": "{Nummer}",
+      "bulgarian": "номер",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "{Nummer}",
+          "bulgarian": "номер",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_2359bf39-e535-441e-a171-37c58cad96a1",
+      "german": "Keine",
+      "bulgarian": "няма",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Keine",
+          "bulgarian": "няма",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_4e1b233c-f2ba-4b7d-ba59-f363e27a6a6a",
+      "german": "liebt",
+      "bulgarian": "обича",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "liebt",
+          "bulgarian": "обича",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_d26a1d20-ea92-4a6e-bf86-a3c3d3e4160e",
+      "german": "Du liebst",
+      "bulgarian": "Обичате",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Du liebst",
+          "bulgarian": "Обичате",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_470a436e-7c54-4954-99dd-4d1503379290",
+      "german": "Bewölkt",
+      "bulgarian": "Облачно",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Bewölkt",
+          "bulgarian": "Облачно",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_001aa981-ff57-46c0-a2fd-75b10aa54d76",
+      "german": "Gemeinde",
+      "bulgarian": "община",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Gemeinde",
+          "bulgarian": "община",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_f880eb05-663a-4cf2-854f-e1b691f995ba",
+      "german": "zaun ab",
+      "bulgarian": "оградете",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "zaun ab",
+          "bulgarian": "оградете",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_78003826-e9c1-4807-bbb6-759c90860f13",
+      "german": "Öl",
+      "bulgarian": "олио",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Öl",
+          "bulgarian": "олио",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_e0e65276-0bd9-4376-822b-d28d43a040c9",
+      "german": "Omelett",
+      "bulgarian": "омлет",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Omelett",
+          "bulgarian": "омлет",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_03b11858-adbb-4452-b4d5-4e027e671932",
+      "german": "omeletts",
+      "bulgarian": "омлета",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "omeletts",
+          "bulgarian": "омлета",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_e5dcc08b-9b06-4fb3-9048-33253a0fa9c6",
+      "german": "Achse",
+      "bulgarian": "ОСКЪ",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Achse",
+          "bulgarian": "ОСКЪ",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_0047c159-add5-4ff3-aee2-1cdb666451a0",
+      "german": "achte",
+      "bulgarian": "осм",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "achte",
+          "bulgarian": "осм",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_42cae56d-f056-4f54-872f-4712fb49da28",
+      "german": "achte",
+      "bulgarian": "осми",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "achte",
+          "bulgarian": "осми",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_0a834415-6dcc-41b6-9782-7e979eb80e3c",
+      "german": "Der 8.",
+      "bulgarian": "Осмият",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Der 8.",
+          "bulgarian": "Осмият",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b7157689-9df6-4e3a-93b6-8ddb78b8995e",
+      "german": "Lesezeichen",
+      "bulgarian": "Отбележете",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Lesezeichen",
+          "bulgarian": "Отбележете",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a2f1e2ba-d6e1-4ec8-afde-2831ef54083c",
+      "german": "antworten",
+      "bulgarian": "отговаряйте",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "antworten",
+          "bulgarian": "отговаряйте",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b0574cdc-17f7-465e-bbc9-a8a46069faa6",
+      "german": "Antworten",
+      "bulgarian": "Отговорете",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Antworten",
+          "bulgarian": "Отговорете",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_7cc63d32-d465-4a4c-8bd3-d76d3bef1c5f",
+      "german": "Entdecken",
+      "bulgarian": "Открийте",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Entdecken",
+          "bulgarian": "Открийте",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_3cb19f2e-9b6c-4136-abf6-2357cc5876f2",
+      "german": "Essig,",
+      "bulgarian": "оцет",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Essig,",
+          "bulgarian": "оцет",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_bb7cc1ce-9f52-45a5-95bd-5bed774ce389",
+      "german": "markt",
+      "bulgarian": "пазара",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "markt",
+          "bulgarian": "пазара",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_fbeb5c99-97cf-4d97-833b-4d2e2d9140e2",
+      "german": "wieder",
+      "bulgarian": "пак",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "wieder",
+          "bulgarian": "пак",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_36fd611e-84c6-470f-a460-90ad4a9f5b05",
+      "german": "paket",
+      "bulgarian": "пакета",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "paket",
+          "bulgarian": "пакета",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_f31816ca-2c5c-4f4a-b511-fdd3da7bbaff",
+      "german": "palästinensische",
+      "bulgarian": "палестинец",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "palästinensische",
+          "bulgarian": "палестинец",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_059877e6-15fb-4b3a-8bb7-72ed11196c82",
+      "german": "palästinensische",
+      "bulgarian": "палестинка",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "palästinensische",
+          "bulgarian": "палестинка",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_64461d27-3498-439e-b81d-902e72e83645",
+      "german": "Palästinenser",
+      "bulgarian": "палестинци",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Palästinenser",
+          "bulgarian": "палестинци",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_37b8e98a-1b82-43fc-9292-0e025a03169c",
+      "german": "Denkmal",
+      "bulgarian": "паметник",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Denkmal",
+          "bulgarian": "паметник",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_64a024bf-66c9-4dad-bc47-bf831f12213f",
+      "german": "Paris",
+      "bulgarian": "Париж",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Paris",
+          "bulgarian": "Париж",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_9fa79d1b-8716-4f7a-a2a7-4c4d8222756a",
+      "german": "waschmaschine",
+      "bulgarian": "пералня",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "waschmaschine",
+          "bulgarian": "пералня",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_d8c0693f-6d26-435d-99d6-30d362eaa305",
+      "german": "Pernik",
+      "bulgarian": "Перник",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Pernik",
+          "bulgarian": "Перник",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_efb84431-66b5-4c36-9bef-b864d240364e",
+      "german": "5.",
+      "bulgarian": "пети",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "5.",
+          "bulgarian": "пети",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_219fa973-cb6c-455b-925d-3d8410b88aa9",
+      "german": "getränk",
+      "bulgarian": "пие",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "getränk",
+          "bulgarian": "пие",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_2419406d-644a-4dc3-8b03-efddd448df80",
+      "german": "Hühner.",
+      "bulgarian": "пилета",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Hühner.",
+          "bulgarian": "пилета",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_ed6d91d1-ce2e-4b09-96a9-975bac0df9a4",
+      "german": "huhn",
+      "bulgarian": "пилешко",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "huhn",
+          "bulgarian": "пилешко",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_110fafd5-aaed-4c0b-b280-9632b68ec22f",
+      "german": "chickenmeatoilolinisol",
+      "bulgarian": "пилешкомесомаслинисол",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "chickenmeatoilolinisol",
+          "bulgarian": "пилешкомесомаслинисол",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_2d465b78-acc7-4ca6-b14e-5a5d4c88004c",
+      "german": "Fragen",
+      "bulgarian": "Питайте",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Fragen",
+          "bulgarian": "Питайте",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_d4cc349e-f38a-4bdf-91c1-6f208060c2d2",
+      "german": "pizza",
+      "bulgarian": "пици",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "pizza",
+          "bulgarian": "пици",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_8114f429-a5bf-407a-b253-9576c5845f03",
+      "german": "Plovdiv",
+      "bulgarian": "Пловдив",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Plovdiv",
+          "bulgarian": "Пловдив",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_bfdc3896-ea6e-41ed-9b53-149506256c1f",
+      "german": "Standort",
+      "bulgarian": "площадка",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Standort",
+          "bulgarian": "площадка",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_93cd035a-31de-410e-990c-a95844769622",
+      "german": "Sortieren",
+      "bulgarian": "Подредете",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Sortieren",
+          "bulgarian": "Подредете",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_f5781cac-4b6d-44cb-8282-fb9d7a9e5888",
+      "german": "Unterstrichen",
+      "bulgarian": "Подчертайте",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Unterstrichen",
+          "bulgarian": "Подчертайте",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_85d658e8-ca66-46a1-801c-79f4a51fc44b",
+      "german": "get",
+      "bulgarian": "получите",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "get",
+          "bulgarian": "получите",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_5c22823c-5164-4aa7-95e9-31f671f049b4",
+      "german": "Abgeschlossen",
+      "bulgarian": "Попълнете",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Abgeschlossen",
+          "bulgarian": "Попълнете",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a99b6930-b094-4763-be47-34555da0552b",
+      "german": "Orangen",
+      "bulgarian": "портокали",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Orangen",
+          "bulgarian": "портокали",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_1fadc6cf-619b-4955-b123-a3b97c990771",
+      "german": "richtig",
+      "bulgarian": "правилната",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "richtig",
+          "bulgarian": "правилната",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_dad77662-046a-48e2-9129-e033cbffd315",
+      "german": "richtig",
+      "bulgarian": "правилните",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "richtig",
+          "bulgarian": "правилните",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b124ec2d-d561-4c3d-8b35-212a09328061",
+      "german": "Pfirsiche",
+      "bulgarian": "праскова",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Pfirsiche",
+          "bulgarian": "праскова",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_3ac2a46b-c895-474b-b1cd-99b689f6a24c",
+      "german": "vorschläge",
+      "bulgarian": "предлозите",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "vorschläge",
+          "bulgarian": "предлозите",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_d8a21011-5f24-49f4-9e09-e040cd65a0d6",
+      "german": "Ankunft",
+      "bulgarian": "Пристига",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Ankunft",
+          "bulgarian": "Пристига",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_f0023296-0fd3-47e5-9da1-3a3999420bc1",
+      "german": "ankommen",
+      "bulgarian": "пристигам",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "ankommen",
+          "bulgarian": "пристигам",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_8eddf4f9-c291-465a-9f74-86ea33623ab8",
+      "german": "Weiter",
+      "bulgarian": "Продължете",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Weiter",
+          "bulgarian": "Продължете",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_3014fc7f-cf33-4c59-8ee6-bc9ce9b6cf54",
+      "german": "frisch,",
+      "bulgarian": "прясно",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "frisch,",
+          "bulgarian": "прясно",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_7aa59807-a392-4d70-9dad-0043997552f0",
+      "german": "Rauchen",
+      "bulgarian": "Пушенето",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Rauchen",
+          "bulgarian": "Пушенето",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_1a9f4aa0-37cc-4e5f-a099-b14c71871dfd",
+      "german": "Melonen",
+      "bulgarian": "пъпеш",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Melonen",
+          "bulgarian": "пъпеш",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b1a0f7ae-edf1-47f2-ac01-43291856448f",
+      "german": "melone",
+      "bulgarian": "пъпеша",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "melone",
+          "bulgarian": "пъпеша",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_0477d992-7bd2-4d98-91ed-4f001f9ecfcb",
+      "german": "Zum ersten Mal",
+      "bulgarian": "първа",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Zum ersten Mal",
+          "bulgarian": "първа",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_5c4fc7ee-f2d8-4808-9fbf-12f33c6ae3f1",
+      "german": "erste",
+      "bulgarian": "първи",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "erste",
+          "bulgarian": "първи",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_2b4c4c1f-deec-4bec-9b66-2e58d2361813",
+      "german": "Den ersten",
+      "bulgarian": "Първият",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Den ersten",
+          "bulgarian": "Първият",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_2c2f4251-bea2-48ce-85d6-9ac880be9bb3",
+      "german": "erste",
+      "bulgarian": "първо",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "erste",
+          "bulgarian": "първо",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_ccdb9133-0a64-4cea-9e0b-0d9fef86dc6a",
+      "german": "passagier",
+      "bulgarian": "пътнически",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "passagier",
+          "bulgarian": "пътнически",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_87c7fb45-3ce1-462e-a21c-d27831672e99",
+      "german": "reist",
+      "bulgarian": "пътува",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "reist",
+          "bulgarian": "пътува",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_78e320bc-e5aa-4276-a3a2-f6af5ce8e175",
+      "german": "du reist",
+      "bulgarian": "пътуваш",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "du reist",
+          "bulgarian": "пътуваш",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_9f8cd6a0-11ee-49c7-8798-122229582248",
+      "german": "Rucksack",
+      "bulgarian": "раница",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Rucksack",
+          "bulgarian": "раница",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_96da6811-1358-4eb8-b5ad-7757d2e06b25",
+      "german": "reneto",
+      "bulgarian": "ренето",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "reneto",
+          "bulgarian": "ренето",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_87c6b77d-e844-4f2c-ab92-7e4d70e40ecc",
+      "german": "restaurants",
+      "bulgarian": "ресторанта",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "restaurants",
+          "bulgarian": "ресторанта",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_d695d90a-7df2-4a55-83b9-4217aa32ec67",
+      "german": "Lösen",
+      "bulgarian": "Решете",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Lösen",
+          "bulgarian": "Решете",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_3a029791-73a3-48b0-8b6d-b61293c50164",
+      "german": "jacke",
+      "bulgarian": "сако",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "jacke",
+          "bulgarian": "сако",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_c80aad7f-ddc4-4fd3-92c0-63dfc36f0b54",
+      "german": "Salami",
+      "bulgarian": "салам",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Salami",
+          "bulgarian": "салам",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_2c9ea130-a644-45b0-b97d-c996dfe50845",
+      "german": "Salate",
+      "bulgarian": "салати",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Salate",
+          "bulgarian": "салати",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_09945455-02c1-4886-b35e-175221bde8ca",
+      "german": "sandalen",
+      "bulgarian": "сандали",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "sandalen",
+          "bulgarian": "сандали",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_fa972c90-04b8-4315-a45b-2f14d2d373ae",
+      "german": "sandwich",
+      "bulgarian": "сандвич",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "sandwich",
+          "bulgarian": "сандвич",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_be6e1cd3-d014-44f8-9328-7500888d990c",
+      "german": "Seife",
+      "bulgarian": "сапун",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Seife",
+          "bulgarian": "сапун",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_f4cf09cf-3f8f-4874-9617-b41ff54829db",
+      "german": "Schweine",
+      "bulgarian": "свинско",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Schweine",
+          "bulgarian": "свинско",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_87e68be5-ab7e-49ca-8d8a-d8f9a0306271",
+      "german": "seine",
+      "bulgarian": "своята",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "seine",
+          "bulgarian": "своята",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_fb34a6ac-7f76-4bc4-a888-2cc9dc8ea5ad",
+      "german": "Verbinden",
+      "bulgarian": "Свържете",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Verbinden",
+          "bulgarian": "Свържете",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b9e7f15e-4c69-4bd0-a488-8bfc76566bb3",
+      "german": "Fertigstellen",
+      "bulgarian": "Свършвам",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Fertigstellen",
+          "bulgarian": "Свършвам",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_6a8f65a0-a1be-411f-8405-5a122f77928f",
+      "german": "woche",
+      "bulgarian": "седм",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "woche",
+          "bulgarian": "седм",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_c6b5357e-73ec-4d6c-8a69-4dc626899828",
+      "german": "siebte",
+      "bulgarian": "седми",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "siebte",
+          "bulgarian": "седми",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_6f0426ce-094d-4704-81a4-e530ff2ab01f",
+      "german": "Sektion",
+      "bulgarian": "сектор",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Sektion",
+          "bulgarian": "сектор",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_fff8f9dc-9a3a-4f7b-ae4b-129f317b9235",
+      "german": "zeichen",
+      "bulgarian": "символите",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "zeichen",
+          "bulgarian": "символите",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_146035af-77d8-4d28-8b03-02544439b516",
+      "german": "syrer",
+      "bulgarian": "сирийци",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "syrer",
+          "bulgarian": "сирийци",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_f6b8b0ea-6b86-45be-b7b2-1c6e4e51932c",
+      "german": "Speiseeis,",
+      "bulgarian": "сладолед",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Speiseeis,",
+          "bulgarian": "сладолед",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_58710dc3-fd66-4355-b68e-e6947a9a290e",
+      "german": "eiscreme",
+      "bulgarian": "сладоледа",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "eiscreme",
+          "bulgarian": "сладоледа",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_9e6ba346-d006-4253-aea5-21fae6077900",
+      "german": "Pflaume",
+      "bulgarian": "слива",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Pflaume",
+          "bulgarian": "слива",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_04902ed8-493d-4773-93d1-4d64c20673be",
+      "german": "Zuhören",
+      "bulgarian": "Слушайте",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Zuhören",
+          "bulgarian": "Слушайте",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_d96e07ce-073b-4347-972f-9787713aff93",
+      "german": "Sonnig",
+      "bulgarian": "Слънчево",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Sonnig",
+          "bulgarian": "Слънчево",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_d629b756-136c-4950-ab71-43fe50b1ac4c",
+      "german": "ersetzen",
+      "bulgarian": "сменям",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "ersetzen",
+          "bulgarian": "сменям",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_2b990179-cf07-4371-80a2-f8c1cdb2034f",
+      "german": "ersetzen",
+      "bulgarian": "сменяте",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "ersetzen",
+          "bulgarian": "сменяте",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_111b2e33-4f47-4113-bc73-a2bfb3466477",
+      "german": "Rahm,",
+      "bulgarian": "сметана",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Rahm,",
+          "bulgarian": "сметана",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_960ab57e-9ace-4450-8fff-cdca9a7626c9",
+      "german": "Feige",
+      "bulgarian": "смокиня",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Feige",
+          "bulgarian": "смокиня",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_aadfbdea-fa77-4e38-ac93-d01a58a513ad",
+      "german": "Spinat",
+      "bulgarian": "спанак",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Spinat",
+          "bulgarian": "спанак",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_492e3333-97b5-4ecc-9d4d-9eb2c660d800",
+      "german": "stopp",
+      "bulgarian": "спирка",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "stopp",
+          "bulgarian": "спирка",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_ec50701f-9ec9-4fb3-8e5f-8b48585d2276",
+      "german": "stopp",
+      "bulgarian": "спирката",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "stopp",
+          "bulgarian": "спирката",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_089e6164-7e72-45da-b719-49f9d9e88deb",
+      "german": "hört auf",
+      "bulgarian": "спирки",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "hört auf",
+          "bulgarian": "спирки",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_3cd9ea98-a760-4d8e-8d88-72875dbf5af7",
+      "german": " treffen.",
+      "bulgarian": "Срещам",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": " treffen.",
+          "bulgarian": "Срещам",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_299553e6-0474-491b-b744-6da668db7b1e",
+      "german": "silben",
+      "bulgarian": "сричките",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "silben",
+          "bulgarian": "сричките",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_be149deb-c3a0-4f5f-bf47-f5a019defaed",
+      "german": "Stühle",
+      "bulgarian": "Столовете",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Stühle",
+          "bulgarian": "Столовете",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_9cb32823-4357-4ca7-814b-75b3b5017fb3",
+      "german": "supermarkt",
+      "bulgarian": "супермаркет",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "supermarkt",
+          "bulgarian": "супермаркет",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_32de28db-1e15-419f-9bd9-8c18ae500436",
+      "german": "Suppen,",
+      "bulgarian": "супи",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Suppen,",
+          "bulgarian": "супи",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_91a9076e-88e1-4bc3-8f42-db19eb7d8d3b",
+      "german": "substantive",
+      "bulgarian": "съществителните",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "substantive",
+          "bulgarian": "съществителните",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_bd8f9a07-6ce9-4185-a417-252d1b770713",
+      "german": "gutschein",
+      "bulgarian": "талон",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "gutschein",
+          "bulgarian": "талон",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_0f5e2a4b-bffe-4ba1-9130-dd9dc4b0793e",
+      "german": "Tanya",
+      "bulgarian": "Таня",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Tanya",
+          "bulgarian": "Таня",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_bc53ee20-57b2-4f78-98a1-a92f2205ab58",
+      "german": "der Tarator",
+      "bulgarian": "таратора",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "der Tarator",
+          "bulgarian": "таратора",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_9b07643a-9315-4c92-a9da-55190b4f520b",
+      "german": "kalbfleisch",
+      "bulgarian": "телешко",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "kalbfleisch",
+          "bulgarian": "телешко",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_b0042b55-42f0-4f94-8401-fdb87d182883",
+      "german": "Zucchini",
+      "bulgarian": "тиквичка",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Zucchini",
+          "bulgarian": "тиквичка",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a1f44d26-26b4-4178-8349-5a72398037cf",
+      "german": "TMASEAN",
+      "bulgarian": "ТМАСЕАН",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "TMASEAN",
+          "bulgarian": "ТМАСЕАН",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_ab9a2fc0-0c56-40b4-b110-1cdf16434e2f",
+      "german": "untersucht.",
+      "bulgarian": "Това",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "untersucht.",
+          "bulgarian": "Това",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_34ec75c3-abc3-4eb3-b85d-ece44bdd54f8",
+      "german": "Torte",
+      "bulgarian": "торти",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Torte",
+          "bulgarian": "торти",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_c6056276-d439-4269-a04d-f6fe0c0c4e3d",
+      "german": "genau",
+      "bulgarian": "точно",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "genau",
+          "bulgarian": "точно",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_90bac324-bca2-4b8f-8d38-86e0f85f931a",
+      "german": "dritter",
+      "bulgarian": "трет",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "dritter",
+          "bulgarian": "трет",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_16b9075a-b378-443b-b514-93def29d9a75",
+      "german": "dritter",
+      "bulgarian": "трети",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "dritter",
+          "bulgarian": "трети",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_c7220012-c53e-49cb-b8ec-4dd8f2eef141",
+      "german": "trolley",
+      "bulgarian": "тролей",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "trolley",
+          "bulgarian": "тролей",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_4d259da9-e997-426c-8b74-2ccb6f4d9b8a",
+      "german": "blätter",
+      "bulgarian": "тръгва",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "blätter",
+          "bulgarian": "тръгва",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_77c62c6b-cba6-47d0-81e6-b0e73dc5ec5b",
+      "german": "UniversitÃ¤t",
+      "bulgarian": "университет",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "UniversitÃ¤t",
+          "bulgarian": "университет",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_78fc722e-0df6-41e4-9d69-f29e314eb093",
+      "german": "Falafel",
+      "bulgarian": "фалафел",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Falafel",
+          "bulgarian": "фалафел",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_e0ad2725-43e3-4197-be9f-f70c4b1f60a7",
+      "german": "scheibe",
+      "bulgarian": "филия",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "scheibe",
+          "bulgarian": "филия",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_2f28d18e-389c-43b7-bc6f-67976ff257ba",
+      "german": "& Textpassagen-Bücher",
+      "bulgarian": "фрази",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "& Textpassagen-Bücher",
+          "bulgarian": "фрази",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_cb48a9a2-555b-4266-8f31-decbe662fbda",
+      "german": "Tausende. ",
+      "bulgarian": "хиляди",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Tausende. ",
+          "bulgarian": "хиляди",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_acb9ab0a-3f71-4f64-a0e2-e42e70632f07",
+      "german": "verbrauchermarkt",
+      "bulgarian": "хипермаркет",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "verbrauchermarkt",
+          "bulgarian": "хипермаркет",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a35ba652-c240-4ecd-823a-905cdd919e78",
+      "german": "Cool",
+      "bulgarian": "Хладно",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Cool",
+          "bulgarian": "Хладно",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_c994aafa-9fb5-4fce-a8ec-fe3dc73d3edf",
+      "german": "wohnzimmer",
+      "bulgarian": "хола",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "wohnzimmer",
+          "bulgarian": "хола",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_5951537d-df93-4567-8138-add898ee6712",
+      "german": "& Schließen",
+      "bulgarian": "Цветове",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "& Schließen",
+          "bulgarian": "Цветове",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_46ba0e8d-b2ae-4f8c-b1a1-60716d90c024",
+      "german": "Mittelsitz",
+      "bulgarian": "Централна",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Mittelsitz",
+          "bulgarian": "Централна",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a60cfa79-a789-4e9e-bb0b-09549376711f",
+      "german": "innenstadt",
+      "bulgarian": "центъра",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "innenstadt",
+          "bulgarian": "центъра",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_9915f618-6aa0-4505-a9ae-64104d0b65d1",
+      "german": "zigaretten",
+      "bulgarian": "цигари",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "zigaretten",
+          "bulgarian": "цигари",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_ee8f6421-64fc-4fb0-8e80-f14216d7a8a7",
+      "german": "Kirche",
+      "bulgarian": "църква",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Kirche",
+          "bulgarian": "църква",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a30dd6c6-c110-487a-943e-2cdf393d2814",
+      "german": "Kirschen,",
+      "bulgarian": "череша",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Kirschen,",
+          "bulgarian": "череша",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_87b0b265-f180-476e-9983-d9f6176642c5",
+      "german": "KIRSCHEN",
+      "bulgarian": "череши",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "KIRSCHEN",
+          "bulgarian": "череши",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_229a2748-0ac3-496a-973d-ef8cae9bff98",
+      "german": "quartal",
+      "bulgarian": "четвърт",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "quartal",
+          "bulgarian": "четвърт",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_ad7ceaba-daa5-4ebc-a3ea-c60792c02717",
+      "german": "vierte",
+      "bulgarian": "четвърти",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "vierte",
+          "bulgarian": "четвърти",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_77fff703-3852-449f-90dd-9a7b032dd386",
+      "german": "Die 4.",
+      "bulgarian": "Четвъртият",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Die 4.",
+          "bulgarian": "Четвъртият",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_5a53ec05-0605-40d2-afc1-7a6dc32f77b9",
+      "german": "pfeffer",
+      "bulgarian": "чушка",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "pfeffer",
+          "bulgarian": "чушка",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_55b83801-a627-4e51-a1b7-14943232f965",
+      "german": "sechsten",
+      "bulgarian": "шести",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "sechsten",
+          "bulgarian": "шести",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_bd0a7fec-5c8d-4f44-b23e-f81cd97408ad",
+      "german": "Der 6.",
+      "bulgarian": "Шестият",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Der 6.",
+          "bulgarian": "Шестият",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a073a453-a53a-4992-9f41-1cf1ba8c4cce",
+      "german": "spieß",
+      "bulgarian": "шишче",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "spieß",
+          "bulgarian": "шишче",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_ee0bc139-82c9-44c0-a9d9-991ed7d1486a",
+      "german": "spieße",
+      "bulgarian": "шишчета",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "spieße",
+          "bulgarian": "шишчета",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_131db5ba-8ed3-4c10-89af-77470842efc0",
+      "german": "Schrank",
+      "bulgarian": "шкаф",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Schrank",
+          "bulgarian": "шкаф",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_2991bfa4-be64-4115-b00f-438f28528529",
+      "german": "Schränke",
+      "bulgarian": "Шкафовете",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Schränke",
+          "bulgarian": "Шкафовете",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_f97830dd-4f1f-4062-a3a6-e0a19a05a825",
+      "german": "Äpfel",
+      "bulgarian": "ябълки",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Äpfel",
+          "bulgarian": "ябълки",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_a172aa44-2c87-4cf4-9f9e-757737196890",
+      "german": "Erdbeeren",
+      "bulgarian": "ягоди",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "Erdbeeren",
+          "bulgarian": "ягоди",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_8fa146a8-afd4-4a1f-843b-e4c6f345d9c5",
+      "german": "yada",
+      "bulgarian": "яда",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "yada",
+          "bulgarian": "яда",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    },
+    {
+      "id": "a1_auto_6ca289bd-ffd6-460a-8894-1fb88edaa8fb",
+      "german": "muttern",
+      "bulgarian": "ядки",
+      "partOfSpeech": "unknown",
+      "difficulty": 1,
+      "categories": [
+        "a1"
+      ],
+      "examples": [
+        {
+          "german": "muttern",
+          "bulgarian": "ядки",
+          "context": "auto-import",
+          "source": "a1-extraction"
+        }
+      ],
+      "type": "word"
+    }
+  ]
+}

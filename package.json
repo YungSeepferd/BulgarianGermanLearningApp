@@ -47,10 +47,13 @@
 		"validate:vocabulary:batch": "node scripts/validate-vocabulary-batch.mjs",
 		"apply:vocabulary:fixes": "node scripts/apply-vocabulary-fixes.mjs",
 		"auto-fix:vocabulary": "node scripts/auto-fix-vocabulary.mjs",
-		"import:enrichment": "node scripts/import-enrichment.mjs"
+		"import:enrichment": "node scripts/import-enrichment.mjs",
+		"translate:a1": "tsx scripts/translate-a1-words.ts",
+		"translate:a1:dry": "tsx scripts/translate-a1-words.ts --dry-run --limit 25",
+		"prepare:a1-merge": "tsx scripts/prepare-a1-merge.ts"
 	},
 	"devDependencies": {
-		"@axe-core/playwright": "^4.11.0",
+
 		"@playwright/test": "^1.57.0",
 		"@sveltejs/adapter-auto": "^7.0.0",
 		"@sveltejs/adapter-static": "3.0.10",
@@ -97,6 +100,7 @@
 	},
 	"dependencies": {
 		"bits-ui": "^2.14.4",
+		"canvas": "^3.2.0",
 		"canvas-confetti": "^1.9.4",
 		"clsx": "^2.1.1",
 		"commander": "^14.0.0",
@@ -107,6 +111,9 @@
 		"marked": "^17.0.1",
 		"mdsvex": "^0.12.6",
 		"p-queue": "^8.0.1",
+		"pdf-parse": "^2.4.5",
+		"pdf2json": "^4.0.0",
+		"pdfjs-dist": "^5.4.449",
 		"playwright": "^1.57.0",
 		"tailwind-merge": "^3.4.0",
 		"tar-fs": "^3.1.1",
