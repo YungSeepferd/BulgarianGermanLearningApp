@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440010",
+  "title": "Work & Professions",
+  "description": "Discuss jobs, workplace environments, business vocabulary, and career-related conversations in Bulgarian.",
+  "difficulty": "B1",
+  "type": "vocabulary",
+  "duration": 25,
+  "vocabulary": [
+    "vocab-german-arbeit-noun",
+    "vocab-german-beruf",
+    "vocab-german-chef",
+    "vocab-german-kollege",
+    "vocab-german-buero",
+    "vocab-german-firma",
+    "vocab-german-projekt",
+    "vocab-german-meeting",
+    "vocab-german-gehalt",
+    "vocab-german-urlaub"
+  ],
+  "objectives": [
+    {
+      "id": "obj-work-1",
+      "description": "Name various professions and jobs",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-work-2",
+      "description": "Describe work responsibilities and tasks",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-work-3",
+      "description": "Use business and office vocabulary",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Work & Professions\n\n## Grammar Explanation\n\n### Professions\n\n**Common Jobs**:\n- Учител/Учителка (uchitel/uchitelka) - teacher (m/f)\n- Лекар/Лекарка (lekar/lekarka) - doctor (m/f)\n- Инженер (inzhener) - engineer\n- Програмист (programist) - programmer\n- Адвокат (advokat) - lawyer\n- Счетоводител (schetovoditel) - accountant\n\n**Workplace Vocabulary**:\n- Офис (ofis) - office\n- Фирма (firma) - company\n- Мениджър (menidzhăr) - manager\n- Колега (kolega) - colleague\n- Проект (proekt) - project\n- Среща (sreshta) - meeting\n- Срок (srok) - deadline\n\n### Work-Related Phrases\n\n- **Работя като...** (Rabotya kato...) - I work as...\n- **Работя в...** (Rabotya v...) - I work in/at...\n- **Отговарям за...** (Otgovaryam za...) - I'm responsible for...\n- **Имам среща** (Imam sreshta) - I have a meeting\n\n### Business Terms\n\n- Заплата (zaplata) - salary\n- Договор (dogovor) - contract\n- Отпуск (otpusk) - vacation/leave\n- Командировка (komandirovka) - business trip\n- Кариера (kariera) - career\n\n## Cultural Notes\n\n1. **Work Schedule**: Standard 40-hour work week, Monday-Friday.\n\n2. **Annual Leave**: Minimum 20 days paid vacation per year by law.\n\n3. **IT Sector**: Bulgaria has a growing IT industry, especially in Sofia.\n\n4. **Formality**: Business culture is moderately formal; first names used after initial meetings.",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["intermediate", "work", "professions", "business", "B1"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440004"],
+    "relatedLessons": [],
+    "isPremium": false
+  }
+}

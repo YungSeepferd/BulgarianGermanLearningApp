@@ -1,0 +1,55 @@
+[
+  {
+    "id": "ex-hobbies-09-cloze",
+    "type": "fillInTheBlank",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440009",
+    "difficulty": "A2",
+    "prompt": "Complete: 'Обичам да_____ футбол.' (I like to play football.)",
+    "sentence": "Обичам да _____ футбол.",
+    "correctAnswer": "играя",
+    "acceptableAnswers": ["играя", "Играя"],
+    "vocabularyIds": ["igraya_play"],
+    "hint": "Verb meaning 'to play' (sports/games)",
+    "explanation": "'Играя' means 'to play' in Bulgarian. The construction 'обичам да + verb' expresses liking/loving to do something."
+  },
+  {
+    "id": "ex-hobbies-09-mc",
+    "type": "multipleChoice",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440009",
+    "difficulty": "A2",
+    "question": "What does 'четене' mean?",
+    "options": [
+      "swimming",
+      "reading",
+      "writing",
+      "singing"
+    ],
+    "correctAnswer": "reading",
+    "vocabularyIds": ["chetene_reading"],
+    "explanation": "'Четене' means 'reading' in Bulgarian, derived from the verb 'чета' (to read)."
+  },
+  {
+    "id": "ex-hobbies-09-typing",
+    "type": "typing",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440009",
+    "difficulty": "A2",
+    "prompt": "Type the Bulgarian word for 'music':",
+    "correctAnswer": "музика",
+    "acceptableAnswers": ["музика", "Музика"],
+    "vocabularyIds": ["muzika_music"],
+    "hint": "Similar to the German 'Musik'",
+    "similarityThreshold": 0.85
+  },
+  {
+    "id": "ex-hobbies-09-ordering",
+    "type": "ordering",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440009",
+    "difficulty": "A2",
+    "instruction": "Arrange to form: 'I like to listen to music.'",
+    "words": ["Обичам", "да", "слушам", "музика", "."],
+    "correctOrder": ["Обичам", "да", "слушам", "музика", "."],
+    "vocabularyIds": ["obicham_like", "slusham_listen", "muzika_music"],
+    "translation": "I like to listen to music.",
+    "hint": "Verb of preference + да + infinitive + object"
+  }
+]

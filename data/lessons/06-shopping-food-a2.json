@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440006",
+  "title": "Shopping & Food",
+  "description": "Navigate grocery stores and restaurants, order food, ask about prices, and discuss quantities in Bulgarian.",
+  "difficulty": "A2",
+  "type": "vocabulary",
+  "duration": 25,
+  "vocabulary": [
+    "vocab-german-essen-noun",
+    "vocab-german-brot",
+    "vocab-german-milch",
+    "vocab-german-wasser",
+    "vocab-german-fleisch",
+    "vocab-german-gemuese",
+    "vocab-german-obst",
+    "vocab-german-einkaufen",
+    "vocab-german-bezahlen",
+    "vocab-german-kosten"
+  ],
+  "objectives": [
+    {
+      "id": "obj-shopping-1",
+      "description": "Navigate a grocery store in Bulgarian",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-shopping-2",
+      "description": "Order food at restaurants",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-shopping-3",
+      "description": "Discuss prices and quantities",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Shopping & Food\n\n## Grammar Explanation\n\n### Food Categories\n\n**Basic Foods**:\n- Хляб (hlyab) - bread\n- Мляко (mlyako) - milk\n- Вода (voda) - water\n- Месо (meso) - meat\n- Зеленчуци (zelenchutsi) - vegetables\n- Плодове (plodove) - fruits\n\n**Traditional Bulgarian Foods**:\n- Баница (banitsa) - cheese pastry\n- Шопска салата (shopska salata) - Shopska salad\n- Кебапче (kebapche) - grilled meat\n- Таратор (tarator) - cold cucumber soup\n\n### Shopping Phrases\n\n- **Колко струва?** (Kolko struva?) - How much does it cost?\n- **Имате ли...?** (Imate li...?) - Do you have...?\n- **Бих искал/искала...** (Bih iskal/iskala...) - I would like...\n- **Къде мога да намеря...?** (Kăde moga da namerya...?) - Where can I find...?\n\n### Quantities\n\n- Килограм (kilogram) - kilogram\n- Грам (gram) - gram  \n- Литър (lităr) - liter\n- Парче (parche) - piece\n- Пакет (paket) - packet\n\n## Cultural Notes\n\n1. **Market Culture**: Open-air markets (пазар - pazar) are popular for fresh produce.\n\n2. **Bargaining**: Bargaining is acceptable at markets but not in stores.\n\n3. **Tipping**: 10% tip is standard in restaurants.\n\n4. **Meal Structure**: Салата (salad) often comes first, followed by main course and dessert.",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["elementary", "shopping", "food", "restaurant", "A2"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440002", "550e8400-e29b-41d4-a716-446655440005"],
+    "relatedLessons": [],
+    "isPremium": false
+  }
+}

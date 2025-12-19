@@ -1,0 +1,64 @@
+[
+  {
+    "id": "fam-001-familie",
+    "german": "die Familie",
+    "bulgarian": "семейството",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine Gruppe von Menschen, die durch Blutsverwandtschaft oder Heirat verbunden sind",
+      "bulgarian": "Група от хора, свързани чрез кръвна връзка или брак"
+    },
+    "examples": [
+      {
+        "german": "Meine Familie ist sehr groß",
+        "bulgarian": "Моето семейство е много голямо",
+        "context": "Describing family size"
+      },
+      {
+        "german": "Wir besuchen die Familie am Wochenende",
+        "bulgarian": "Ние посещаваме семейството през уикенда",
+        "context": "Weekend plans"
+      }
+    ],
+    "categories": ["family", "people"],
+    "grammar": {
+      "gender": "feminine",
+      "plural": "die Familien",
+      "definiteBulgarian": "семейството"
+    },
+    "tags": ["A1", "family", "core-vocabulary"],
+    "lastModified": "2025-12-17"
+  },
+  {
+    "id": "fam-002-mutter",
+    "german": "die Mutter",
+    "bulgarian": "майката",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine Frau in Bezug auf ihr Kind oder ihre Kinder",
+      "bulgarian": "Жена по отношение на нейното дете или деца"
+    },
+    "examples": [
+      {
+        "german": "Meine Mutter arbeitet als Ärztin",
+        "bulgarian": "Моята майка работи като лекар",
+        "context": "Describing mother's profession"
+      },
+      {
+        "german": "Ich liebe meine Mutter sehr",
+        "bulgarian": "Обичам много майка си",
+        "context": "Expressing affection"
+      }
+    ],
+    "categories": ["family", "people", "relationships"],
+    "grammar": {
+      "gender": "feminine",
+      "plural": "die Mütter",
+      "definiteBulgarian": "майката"
+    },
+    "tags": ["A1", "family", "parent", "core-vocabulary"],
+    "lastModified": "2025-12-17"
+  }
+]

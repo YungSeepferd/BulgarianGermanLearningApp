@@ -520,6 +520,477 @@ pnpm run build
 
 ---
 
+## 🛠️ MCP Tools for AI Agents
+
+### Svelte MCP Server (CRITICAL - Use for ALL Svelte Work)
+
+The official Svelte MCP server provides authoritative Svelte 5 and SvelteKit documentation. **ALWAYS use this for Svelte development.**
+
+#### Available Tools:
+
+**1. list-sections**
+- Lists all available Svelte 5 and SvelteKit documentation sections
+- **MUST call this FIRST** for any Svelte question or task
+- Returns sections with "use_cases" field describing when each is relevant
+- Example use cases: "runes", "state management", "components", "routing", etc.
+
+```javascript
+// Example: Get all available documentation sections
+list-sections()
+// Returns: List of sections with titles, use_cases, and paths
+```
+
+**2. get-documentation**
+- Fetches full documentation content for specific sections
+- Call AFTER analyzing list-sections output
+- Can accept single section or array of sections
+- **Best Practice**: Fetch ALL relevant sections at once
+
+```javascript
+// Example: Get documentation for Svelte 5 runes
+get-documentation({ 
+  section: ["$state", "$derived", "$effect", "$props"] 
+})
+```
+
+**3. svelte-autofixer** (VALIDATION REQUIRED)
+- Validates Svelte components for Svelte 5 best practices
+- **MUST use before finalizing ANY .svelte file**
+- Checks:
+  - Svelte 5 runes patterns ($state, $derived, $effect, $props)
+  - Accessibility (ARIA, semantic HTML, screen reader support)
+  - Best practices (each block keys, tag closing, etc.)
+  - Common pitfalls and anti-patterns
+- Returns: issues, suggestions, and whether another call is needed
+
+```javascript
+// Example: Validate a component
+svelte-autofixer({
+  code: componentCode,
+  desired_svelte_version: 5,
+  filename: "MyComponent.svelte",
+  async: false // true if component uses top-level await
+})
+```
+
+**4. playground-link**
+- Generates Svelte REPL playground links
+- Use AFTER component is finalized and validated
+- **Always ask user** if they want playground link before calling
+- Supports multiple files and Tailwind CSS
+
+```javascript
+// Example: Create playground link
+playground-link({
+  name: "My Feature",
+  tailwind: true,
+  files: {
+    "App.svelte": componentCode,
+    "utils.js": utilityCode
+  }
+})
+```
+
+#### Svelte MCP Workflow (REQUIRED):
+
+```
+1. For ANY Svelte work → call list-sections FIRST
+2. Analyze use_cases to identify relevant sections
+3. Call get-documentation with ALL relevant sections at once
+4. Write component code using official patterns
+5. Validate with svelte-autofixer BEFORE finalizing
+6. Fix ALL issues found (iterate if needed)
+7. Run pnpm run check to verify TypeScript
+8. Optionally offer playground link to user
+```
+
+#### When to Use Svelte MCP:
+
+- ✅ Creating new .svelte components
+- ✅ Refactoring existing components
+- ✅ Debugging Svelte-specific issues
+- ✅ Learning new Svelte 5 features
+- ✅ Validating component best practices
+- ✅ Before committing component changes
+- ✅ When user asks about Svelte patterns
+
+#### Example Usage:
+
+```bash
+# Step 1: Get available sections
+list-sections()
+
+# Step 2: Analyze output, identify relevant sections
+# User wants to build interactive component → need: $state, $derived, $effect, events
+
+# Step 3: Fetch ALL relevant documentation
+get-documentation({ section: ["$state", "$derived", "$effect", "event-handlers"] })
+
+# Step 4: Write component using patterns from docs
+
+# Step 5: VALIDATE before finalizing
+svelte-autofixer({
+  code: myComponentCode,
+  desired_svelte_version: 5,
+  filename: "InteractiveCard.svelte"
+})
+
+# Step 6: Fix any issues found
+# Step 7: Repeat validation if needed
+# Step 8: Run pnpm run check
+```
+
+---
+
+### Sequential Thinking MCP (for Complex Problem Solving)
+
+Use for multi-step reasoning, planning, and complex analysis.
+
+#### Available Tool:
+
+**sequentialthinking**
+- Breaks down complex problems into thought steps
+- Supports iterative refinement and revision
+- Can adjust total thoughts as understanding deepens
+- Ideal for architecture decisions and debugging
+
+#### Parameters:
+- `thought`: Current thinking step (can revise previous thoughts)
+- `nextThoughtNeeded`: Boolean - whether more thinking is needed
+- `thoughtNumber`: Current thought number in sequence
+- `totalThoughts`: Estimated total thoughts (can adjust up/down)
+- `isRevision`: Boolean - whether this revises previous thinking
+- `revisesThought`: Which thought number is being reconsidered
+- `branchFromThought`: Branching point thought number
+- `branchId`: Identifier for current branch
+- `needsMoreThoughts`: If more thoughts needed at "end"
+
+#### When to Use Sequential Thinking:
+
+- ✅ Planning new feature architecture
+- ✅ Analyzing Phase implementation strategy
+- ✅ Debugging complex multi-file issues
+- ✅ Evaluating trade-offs between approaches
+- ✅ Breaking down large tasks into steps
+- ✅ Refactoring complex systems
+- ✅ Performance optimization analysis
+- ✅ Design pattern selection
+
+#### Sequential Thinking Workflow:
+
+```
+1. Identify complex problem requiring multi-step analysis
+2. Start with initial estimate of needed thoughts
+3. Break problem into logical reasoning steps
+4. Generate hypothesis at key decision points
+5. Verify hypothesis based on chain of thought
+6. Revise previous thoughts if new insights emerge
+7. Continue until satisfactory solution reached
+8. Provide single, correct answer as final output
+```
+
+#### Example Usage:
+
+```javascript
+// Problem: Should we merge Vocabulary and Learn pages?
+sequentialthinking({
+  thought: "First, let's identify what each page currently does. Vocabulary page shows all words with search/filter. Learn page shows flashcards for active learning.",
+  nextThoughtNeeded: true,
+  thoughtNumber: 1,
+  totalThoughts: 8
+})
+
+sequentialthinking({
+  thought: "Next, let's analyze overlap. Both pages deal with vocabulary items. Both have practice features. This suggests potential for unification.",
+  nextThoughtNeeded: true,
+  thoughtNumber: 2,
+  totalThoughts: 8
+})
+
+// ... continue through all thoughts ...
+
+sequentialthinking({
+  thought: "Final decision: Merge into unified Learning Hub with tabs for Browse, Practice, and Progress. This reduces navigation complexity and creates cohesive learning experience.",
+  nextThoughtNeeded: false,
+  thoughtNumber: 8,
+  totalThoughts: 8
+})
+```
+
+#### Best Practices:
+
+1. **Start with clear problem statement**
+2. **Use for problems requiring 5+ reasoning steps**
+3. **Don't hesitate to revise earlier thoughts**
+4. **Adjust totalThoughts if problem is more/less complex**
+5. **Branch thinking for alternative approaches**
+6. **Generate and verify hypotheses**
+7. **Ignore irrelevant information**
+8. **Provide single, clear answer at end**
+
+---
+
+### Playwright MCP (for Interactive Testing & Debugging)
+
+Use for live browser interaction, testing, and debugging during development.
+
+#### Available Tools:
+
+**Browser Navigation & Interaction**:
+- `browser_snapshot` - Take accessibility snapshot of current page
+- `browser_tabs` - Manage tabs (list, new, close, select)
+- `browser_run_code` - Execute Playwright code snippets
+- `browser_close` - Close the current page
+
+**Element Interaction**:
+- `browser_evaluate` - Execute JavaScript on page or element
+- `browser_drag` - Perform drag-and-drop operations
+- `evaluate_script` - Run JavaScript function and return JSON results
+
+**Testing & Debugging**:
+- `browser_console_messages` - Get console logs/errors/warnings
+- `browser_network_requests` - Monitor network activity
+- `get_network_request` - Get specific request details by ID
+- `browser_wait_for` - Wait for text to appear/disappear or time to pass
+
+**File Operations**:
+- `upload_file` - Upload files through file input elements
+
+**Dialog Handling**:
+- `handle_dialog` - Accept/dismiss browser dialogs (alert, confirm, prompt)
+
+**Performance**:
+- `performance_analyze_insight` - Analyze performance insights from traces
+
+#### When to Use Playwright MCP:
+
+**Interactive Development**:
+- ✅ Testing new components in live browser
+- ✅ Debugging UI behavior during development
+- ✅ Verifying responsive design changes
+- ✅ Testing user interactions (clicks, drags, forms)
+
+**Debugging**:
+- ✅ Inspecting console errors in browser
+- ✅ Checking network requests/responses
+- ✅ Verifying API integration
+- ✅ Debugging async/timing issues
+
+**Quality Assurance**:
+- ✅ Validating accessibility (snapshots)
+- ✅ Testing file upload functionality
+- ✅ Verifying dialog handling
+- ✅ Performance analysis
+
+**Rapid Prototyping**:
+- ✅ Quick component behavior validation
+- ✅ Testing before writing formal tests
+- ✅ Exploring edge cases interactively
+
+#### Common Use Cases:
+
+**1. Debug Console Errors**:
+```javascript
+// Get all console errors from browser
+browser_console_messages({ level: "error" })
+// Returns: Array of error messages with stack traces
+```
+
+**2. Monitor API Calls**:
+```javascript
+// Get all non-static network requests
+browser_network_requests({ includeStatic: false })
+// Returns: List of API calls with status codes
+
+// Get specific request details
+get_network_request({ reqid: 123 })
+// Returns: Full request/response data
+```
+
+**3. Take Accessibility Snapshot**:
+```javascript
+// Capture current page structure
+browser_snapshot()
+// Returns: Accessibility tree with elements, roles, labels
+```
+
+**4. Test Interactive Elements**:
+```javascript
+// Execute JavaScript to interact with page
+browser_evaluate({ 
+  function: "() => { document.querySelector('.flashcard').click(); return document.querySelector('.flashcard').classList.contains('flipped'); }"
+})
+// Returns: true/false based on interaction result
+```
+
+**5. Test Drag-and-Drop**:
+```javascript
+// Drag one element onto another
+browser_drag({
+  startElement: "Vocabulary item",
+  startRef: "vocab-item-123",
+  endElement: "Practice zone",
+  endRef: "practice-drop-zone"
+})
+```
+
+**6. Wait for Dynamic Content**:
+```javascript
+// Wait for loading to complete
+browser_wait_for({ text: "Vocabulary loaded", timeout: 5000 })
+
+// Wait for text to disappear
+browser_wait_for({ textGone: "Loading...", timeout: 3000 })
+
+// Wait for specific time
+browser_wait_for({ time: 2 }) // 2 seconds
+```
+
+**7. Test File Upload**:
+```javascript
+// Upload file through input element
+upload_file({ 
+  uid: "file-input-vocab", 
+  filePath: "/path/to/vocabulary.json" 
+})
+```
+
+**8. Handle Browser Dialogs**:
+```javascript
+// Accept a confirm dialog
+handle_dialog({ action: "accept" })
+
+// Dismiss an alert
+handle_dialog({ action: "dismiss" })
+
+// Enter text in prompt
+handle_dialog({ action: "accept", promptText: "New vocabulary word" })
+```
+
+**9. Manage Browser Tabs**:
+```javascript
+// List all open tabs
+browser_tabs({ action: "list" })
+
+// Open new tab
+browser_tabs({ action: "new" })
+
+// Switch to tab by index
+browser_tabs({ action: "select", index: 1 })
+
+// Close current tab
+browser_tabs({ action: "close" })
+```
+
+**10. Execute Custom Playwright Code**:
+```javascript
+// Run complex Playwright interactions
+browser_run_code({ 
+  code: `async (page) => {
+    await page.getByRole('button', { name: 'Start Practice' }).click();
+    await page.fill('input[placeholder="Your answer"]', 'Здравей');
+    await page.click('button:has-text("Check")');
+    return await page.textContent('.feedback');
+  }`
+})
+```
+
+#### Playwright MCP Workflow:
+
+**Development Testing**:
+```
+1. Start dev server: pnpm run dev
+2. Navigate to feature in browser
+3. Take snapshot: browser_snapshot()
+4. Interact: browser_evaluate() or browser_run_code()
+5. Check console: browser_console_messages()
+6. Monitor network: browser_network_requests()
+7. Validate behavior
+8. Write formal tests based on findings
+```
+
+**Debugging Issues**:
+```
+1. Reproduce issue in browser
+2. Check console errors: browser_console_messages({ level: "error" })
+3. Monitor network: browser_network_requests()
+4. Take snapshot: browser_snapshot()
+5. Execute diagnostic code: browser_evaluate()
+6. Identify root cause
+7. Fix and verify
+```
+
+**Testing New Features**:
+```
+1. Navigate to feature
+2. Test interactions: browser_evaluate() or browser_drag()
+3. Wait for results: browser_wait_for()
+4. Verify state: browser_snapshot()
+5. Check no errors: browser_console_messages()
+6. Validate network calls: browser_network_requests()
+```
+
+#### Best Practices:
+
+1. **Always check console messages** - Catch errors early
+2. **Monitor network requests** - Verify API integration
+3. **Use snapshots for validation** - Accessibility tree shows structure
+4. **Wait for dynamic content** - Avoid race conditions
+5. **Test interactively first** - Then write formal tests
+6. **Use evaluate for complex logic** - Return results for validation
+7. **Clean up tabs** - Close unused tabs to avoid confusion
+8. **Handle dialogs promptly** - Dialogs block other operations
+
+#### Example: Complete Feature Test Flow
+
+```javascript
+// 1. Take initial snapshot
+const initialState = await browser_snapshot();
+
+// 2. Interact with flashcard
+await browser_evaluate({ 
+  function: "() => document.querySelector('.flashcard-button').click()" 
+});
+
+// 3. Wait for animation
+await browser_wait_for({ time: 0.5 });
+
+// 4. Verify no console errors
+const errors = await browser_console_messages({ level: "error" });
+// Should be empty array
+
+// 5. Check network activity
+const requests = await browser_network_requests({ includeStatic: false });
+// Verify expected API calls
+
+// 6. Take final snapshot
+const finalState = await browser_snapshot();
+// Compare states to verify changes
+
+// 7. Validate result
+await browser_evaluate({ 
+  function: "() => document.querySelector('.flashcard').classList.contains('flipped')" 
+});
+// Should return true
+```
+
+#### Integration with Testing Strategy:
+
+**Playwright MCP complements formal tests**:
+- Use for **rapid prototyping** and **interactive debugging**
+- Write **formal Playwright tests** for CI/CD pipeline
+- Use MCP tools to **develop test scenarios** interactively
+- **Validate fixes** before running full test suite
+- **Explore edge cases** that are hard to reproduce
+
+**When to use each**:
+- **Playwright MCP**: Interactive development, debugging, exploration
+- **Unit Tests (Vitest)**: Business logic, utilities, pure functions
+- **Component Tests**: Isolated component behavior
+- **E2E Tests (Playwright)**: Critical user flows, CI/CD
+
+---
+
 ## ⚠️ Critical Rules for AI Agents
 
 ### 🚨 NEVER Do This

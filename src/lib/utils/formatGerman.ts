@@ -27,8 +27,19 @@ export function formatGermanTerm(item: VocabularyItem): string {
     return [articlePart, normalizedNoun].filter(Boolean).join(' ').trim();
   }
   const base = item.partOfSpeech === 'noun' ? capitalizeNoun(raw) : raw;
+  
+  // Only add article for NOUNS that have explicit gender data
+  // Do NOT add default articles for non-nouns (conjunctions, interjections, prepositions, etc.)
+  // Do NOT add default articles for nouns without gender data
+  if (item.partOfSpeech !== 'noun') {
+    return base;
+  }
+  
   const metadata = item.metadata as any;
   const gender = metadata?.gender || item.grammar?.gender;
-  const article = chooseArticle(gender, metadata?.article) || (item.partOfSpeech === 'noun' ? 'der' : null);
+  
+  // Only return an article if gender is explicitly defined
+  // No fallback to 'der' for missing gender data
+  const article = chooseArticle(gender, metadata?.article);
   return article ? `${article} ${base}` : base;
 }

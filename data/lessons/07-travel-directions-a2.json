@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440007",
+  "title": "Travel & Directions",
+  "description": "Ask for and give directions, use transportation vocabulary, and navigate Bulgarian cities confidently.",
+  "difficulty": "A2",
+  "type": "vocabulary",
+  "duration": 22,
+  "vocabulary": [
+    "vocab-german-links",
+    "vocab-german-rechts",
+    "vocab-german-geradeaus",
+    "vocab-german-bahnhof",
+    "vocab-german-bus",
+    "vocab-german-auto",
+    "vocab-german-strasse",
+    "vocab-german-platz",
+    "vocab-german-nah",
+    "vocab-german-weit"
+  ],
+  "objectives": [
+    {
+      "id": "obj-travel-1",
+      "description": "Ask for and understand directions",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-travel-2",
+      "description": "Use public transportation vocabulary",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-travel-3",
+      "description": "Navigate cities and read signs",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Travel & Directions\n\n## Grammar Explanation\n\n### Direction Words\n\n**Basic Directions**:\n- Ляво (lyavo) - left\n- Дясно (dyasno) - right\n- Направо (napravo) - straight ahead\n- Напред (napred) - forward\n- Назад (nazad) - back\n\n**Location Prepositions**:\n- До (do) - next to\n- Пред (pred) - in front of\n- Зад (zad) - behind\n- Между (mezhdu) - between\n- Срещу (sreshtu) - opposite\n\n### Transportation Vocabulary\n\n**Vehicles**:\n- Автобус (avtobus) - bus\n- Трамвай (tramvay) - tram\n- Метро (metro) - metro/subway\n- Влак (vlak) - train\n- Такси (taksi) - taxi\n- Кола (kola) - car\n\n**Places**:\n- Гара (gara) - train station\n- Спирка (spirka) - bus/tram stop\n- Летище (letishte) - airport\n- Център (tsentăr) - center/downtown\n\n### Useful Phrases\n\n- **Къде е...?** (Kăde e...?) - Where is...?\n- **Как мога да стигна до...?** (Kak moga da stigna do...?) - How can I get to...?\n- **Далеч ли е?** (Dalech li e?) - Is it far?\n- **Можете ли да ми покажете на картата?** (Mozhete li da mi pokazhete na kartata?) - Can you show me on the map?\n\n## Cultural Notes\n\n1. **Public Transport**: Sofia has metro, buses, and trams. Buy tickets before boarding.\n\n2. **Walking Culture**: Bulgarians walk a lot; cities are generally pedestrian-friendly.\n\n3. **Taxi Apps**: Taxi apps like Taxify/Bolt are widely used in cities.\n\n4. **Cyrillic Signs**: All signs are in Cyrillic; learning to read is essential for navigation.",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["elementary", "travel", "directions", "transportation", "A2"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440005"],
+    "relatedLessons": [],
+    "isPremium": false
+  }
+}

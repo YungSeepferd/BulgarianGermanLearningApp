@@ -1,0 +1,57 @@
+[
+  {
+    "id": "ex-numbers-02-cloze",
+    "type": "fillInTheBlank",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440002",
+    "difficulty": "A1",
+    "prompt": "Complete: 'Аз имам _____ брата.' (I have two brothers.)",
+    "sentence": "Аз имам _____ брата.",
+    "correctAnswer": "два",
+    "acceptableAnswers": ["два", "2"],
+    "vocabularyIds": ["dva_two"],
+    "hint": "The number 2 in Bulgarian",
+    "explanation": "'Два' means 'two' in Bulgarian. Numbers 2-4 require special noun forms in Bulgarian."
+  },
+  {
+    "id": "ex-numbers-02-mc",
+    "type": "multipleChoice",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440002",
+    "difficulty": "A1",
+    "question": "What is the Bulgarian word for '5' (five)?",
+    "options": [
+      "четири",
+      "пет",
+      "шест",
+      "седем"
+    ],
+    "correctAnswer": "пет",
+    "vocabularyIds": ["pet_five"],
+    "explanation": "'Пет' is the Bulgarian word for 'five'. Other options: 'четири' (4), 'шест' (6), 'седем' (7)."
+  },
+  {
+    "id": "ex-numbers-02-typing",
+    "type": "typing",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440002",
+    "difficulty": "A1",
+    "prompt": "Write the number '10' in Bulgarian:",
+    "correctAnswer": "десет",
+    "acceptableAnswers": ["десет", "Десет"],
+    "vocabularyIds": ["deset_ten"],
+    "hint": "It starts with 'дес...'",
+    "similarityThreshold": 0.85
+  },
+  {
+    "id": "ex-numbers-02-matching",
+    "type": "matching",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440002",
+    "difficulty": "A1",
+    "instruction": "Match the German numbers with their Bulgarian equivalents:",
+    "pairs": [
+      {"left": "eins", "right": "едно"},
+      {"left": "drei", "right": "три"},
+      {"left": "acht", "right": "осем"},
+      {"left": "zehn", "right": "десет"}
+    ],
+    "vocabularyIds": ["edno_one", "tri_three", "osem_eight", "deset_ten"]
+  }
+]

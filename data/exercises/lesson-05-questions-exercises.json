@@ -1,0 +1,55 @@
+[
+  {
+    "id": "ex-questions-05-cloze",
+    "type": "fillInTheBlank",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440005",
+    "difficulty": "A1",
+    "prompt": "Complete: '_____ се казваш?' (What is your name?)",
+    "sentence": "_____ се казваш?",
+    "correctAnswer": "Как",
+    "acceptableAnswers": ["как", "Как"],
+    "vocabularyIds": ["kak_how"],
+    "hint": "Question word meaning 'how' or 'what' in this context",
+    "explanation": "'Как се казваш?' literally means 'How are you called?' and is used to ask for someone's name."
+  },
+  {
+    "id": "ex-questions-05-mc",
+    "type": "multipleChoice",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440005",
+    "difficulty": "A1",
+    "question": "Which word means 'where' in Bulgarian?",
+    "options": [
+      "кога",
+      "къде",
+      "защо",
+      "колко"
+    ],
+    "correctAnswer": "къде",
+    "vocabularyIds": ["kade_where"],
+    "explanation": "'Къде' means 'where'. Other question words: 'кога' = when, 'защо' = why, 'колко' = how much/many."
+  },
+  {
+    "id": "ex-questions-05-typing",
+    "type": "typing",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440005",
+    "difficulty": "A1",
+    "prompt": "Type the Bulgarian question word for 'who':",
+    "correctAnswer": "кой",
+    "acceptableAnswers": ["кой", "Кой"],
+    "vocabularyIds": ["koy_who"],
+    "hint": "Sounds like English 'coy'",
+    "similarityThreshold": 0.9
+  },
+  {
+    "id": "ex-questions-05-ordering",
+    "type": "ordering",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440005",
+    "difficulty": "A1",
+    "instruction": "Arrange to form: 'When do you work?'",
+    "words": ["Кога", "работиш", "?"],
+    "correctOrder": ["Кога", "работиш", "?"],
+    "vocabularyIds": ["koga_when", "rabotish_work_2nd"],
+    "translation": "When do you work?",
+    "hint": "Question word + verb in Bulgarian"
+  }
+]

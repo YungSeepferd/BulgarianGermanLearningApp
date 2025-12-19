@@ -1,0 +1,4808 @@
+[
+  {
+    "id": "vocab-1000",
+    "german": "Guten Morgen",
+    "bulgarian": "Добро утро",
+    "partOfSpeech": "phrase",
+    "cefr": "A1",
+    "definitions": {
+      "german": "\"Guten Morgen\" ist eine übliche Redewendung.",
+      "bulgarian": "\"Добро утро\" е обичайна фраза."
+    },
+    "examples": [
+      {
+        "german": "Guten Morgen! Wie geht es dir?",
+        "bulgarian": "Добро утро! Как си?",
+        "context": "neutral"
+      },
+      {
+        "german": "Man sagt \"Guten Morgen\" am Morgen.",
+        "bulgarian": "Казваме \"Добро утро\" сутрин.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "greetings"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "greetings"
+    ],
+    "lastModified": "2025-12-17T11:21:52.266Z"
+  },
+  {
+    "id": "vocab-1001",
+    "german": "Guten Tag",
+    "bulgarian": "Добър ден",
+    "partOfSpeech": "phrase",
+    "cefr": "A1",
+    "definitions": {
+      "german": "\"Guten Tag\" ist eine übliche Redewendung.",
+      "bulgarian": "\"Добър ден\" е обичайна фраза."
+    },
+    "examples": [
+      {
+        "german": "Guten Tag! Wie geht es dir?",
+        "bulgarian": "Добър ден! Как си?",
+        "context": "neutral"
+      },
+      {
+        "german": "Man sagt \"Guten Tag\" am Morgen.",
+        "bulgarian": "Казваме \"Добър ден\" сутрин.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "greetings"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "greetings"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1002",
+    "german": "Guten Abend",
+    "bulgarian": "Добър вечер",
+    "partOfSpeech": "phrase",
+    "cefr": "A1",
+    "definitions": {
+      "german": "\"Guten Abend\" ist eine übliche Redewendung.",
+      "bulgarian": "\"Добър вечер\" е обичайна фраза."
+    },
+    "examples": [
+      {
+        "german": "Guten Abend! Wie geht es dir?",
+        "bulgarian": "Добър вечер! Как си?",
+        "context": "neutral"
+      },
+      {
+        "german": "Man sagt \"Guten Abend\" am Morgen.",
+        "bulgarian": "Казваме \"Добър вечер\" сутрин.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "greetings"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "greetings"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1003",
+    "german": "Gute Nacht",
+    "bulgarian": "Лека нощ",
+    "partOfSpeech": "phrase",
+    "cefr": "A1",
+    "definitions": {
+      "german": "\"Gute Nacht\" ist eine übliche Redewendung.",
+      "bulgarian": "\"Лека нощ\" е обичайна фраза."
+    },
+    "examples": [
+      {
+        "german": "Gute Nacht! Wie geht es dir?",
+        "bulgarian": "Лека нощ! Как си?",
+        "context": "neutral"
+      },
+      {
+        "german": "Man sagt \"Gute Nacht\" am Morgen.",
+        "bulgarian": "Казваме \"Лека нощ\" сутрин.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "greetings"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "greetings"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1004",
+    "german": "Hallo",
+    "bulgarian": "Здравей",
+    "partOfSpeech": "interjection",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Hallo ist ein Ausruf.",
+      "bulgarian": "Здравей е възклицание."
+    },
+    "examples": [
+      {
+        "german": "Hallo! Wie geht es dir?",
+        "bulgarian": "Здравей! Как си?",
+        "context": "neutral"
+      },
+      {
+        "german": "Man sagt \"Hallo\" am Morgen.",
+        "bulgarian": "Казваме \"Здравей\" сутрин.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "greetings"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "greetings"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1005",
+    "german": "Tschüss",
+    "bulgarian": "Довиждане",
+    "partOfSpeech": "interjection",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Tschüss ist ein Ausruf.",
+      "bulgarian": "Довиждане е възклицание."
+    },
+    "examples": [
+      {
+        "german": "Tschüss! Wie geht es dir?",
+        "bulgarian": "Довиждане! Как си?",
+        "context": "neutral"
+      },
+      {
+        "german": "Man sagt \"Tschüss\" am Morgen.",
+        "bulgarian": "Казваме \"Довиждане\" сутрин.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "greetings"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "greetings"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1007",
+    "german": "Danke",
+    "bulgarian": "Благодаря",
+    "partOfSpeech": "interjection",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Danke ist ein Ausruf.",
+      "bulgarian": "Благодаря е възклицание."
+    },
+    "examples": [
+      {
+        "german": "Danke! Wie geht es dir?",
+        "bulgarian": "Благодаря! Как си?",
+        "context": "neutral"
+      },
+      {
+        "german": "Man sagt \"Danke\" am Morgen.",
+        "bulgarian": "Казваме \"Благодаря\" сутрин.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "greetings"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "greetings"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1008",
+    "german": "Bitte",
+    "bulgarian": "Моля",
+    "partOfSpeech": "interjection",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Bitte ist ein Ausruf.",
+      "bulgarian": "Моля е възклицание."
+    },
+    "examples": [
+      {
+        "german": "Bitte! Wie geht es dir?",
+        "bulgarian": "Моля! Как си?",
+        "context": "neutral"
+      },
+      {
+        "german": "Man sagt \"Bitte\" am Morgen.",
+        "bulgarian": "Казваме \"Моля\" сутрин.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "greetings"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "greetings"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1009",
+    "german": "eins",
+    "bulgarian": "едно",
+    "partOfSpeech": "numeral",
+    "cefr": "A1",
+    "definitions": {
+      "german": "eins ist eine Zahl.",
+      "bulgarian": "едно е число."
+    },
+    "examples": [
+      {
+        "german": "Ich habe eins Bücher.",
+        "bulgarian": "Имам едно книги.",
+        "context": "neutral"
+      },
+      {
+        "german": "Zähle bis eins.",
+        "bulgarian": "Брой до едно.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "numbers"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "numbers"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1010",
+    "german": "zwei",
+    "bulgarian": "две",
+    "partOfSpeech": "numeral",
+    "cefr": "A1",
+    "definitions": {
+      "german": "zwei ist eine Zahl.",
+      "bulgarian": "две е число."
+    },
+    "examples": [
+      {
+        "german": "Ich habe zwei Bücher.",
+        "bulgarian": "Имам две книги.",
+        "context": "neutral"
+      },
+      {
+        "german": "Zähle bis zwei.",
+        "bulgarian": "Брой до две.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "numbers"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "numbers"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1011",
+    "german": "drei",
+    "bulgarian": "три",
+    "partOfSpeech": "numeral",
+    "cefr": "A1",
+    "definitions": {
+      "german": "drei ist eine Zahl.",
+      "bulgarian": "три е число."
+    },
+    "examples": [
+      {
+        "german": "Ich habe drei Bücher.",
+        "bulgarian": "Имам три книги.",
+        "context": "neutral"
+      },
+      {
+        "german": "Zähle bis drei.",
+        "bulgarian": "Брой до три.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "numbers"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "numbers"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1012",
+    "german": "vier",
+    "bulgarian": "четири",
+    "partOfSpeech": "numeral",
+    "cefr": "A1",
+    "definitions": {
+      "german": "vier ist eine Zahl.",
+      "bulgarian": "четири е число."
+    },
+    "examples": [
+      {
+        "german": "Ich habe vier Bücher.",
+        "bulgarian": "Имам четири книги.",
+        "context": "neutral"
+      },
+      {
+        "german": "Zähle bis vier.",
+        "bulgarian": "Брой до четири.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "numbers"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "numbers"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1013",
+    "german": "fünf",
+    "bulgarian": "пет",
+    "partOfSpeech": "numeral",
+    "cefr": "A1",
+    "definitions": {
+      "german": "fünf ist eine Zahl.",
+      "bulgarian": "пет е число."
+    },
+    "examples": [
+      {
+        "german": "Ich habe fünf Bücher.",
+        "bulgarian": "Имам пет книги.",
+        "context": "neutral"
+      },
+      {
+        "german": "Zähle bis fünf.",
+        "bulgarian": "Брой до пет.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "numbers"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "numbers"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1014",
+    "german": "sechs",
+    "bulgarian": "шест",
+    "partOfSpeech": "numeral",
+    "cefr": "A1",
+    "definitions": {
+      "german": "sechs ist eine Zahl.",
+      "bulgarian": "шест е число."
+    },
+    "examples": [
+      {
+        "german": "Ich habe sechs Bücher.",
+        "bulgarian": "Имам шест книги.",
+        "context": "neutral"
+      },
+      {
+        "german": "Zähle bis sechs.",
+        "bulgarian": "Брой до шест.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "numbers"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "numbers"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1015",
+    "german": "sieben",
+    "bulgarian": "седем",
+    "partOfSpeech": "numeral",
+    "cefr": "A1",
+    "definitions": {
+      "german": "sieben ist eine Zahl.",
+      "bulgarian": "седем е число."
+    },
+    "examples": [
+      {
+        "german": "Ich habe sieben Bücher.",
+        "bulgarian": "Имам седем книги.",
+        "context": "neutral"
+      },
+      {
+        "german": "Zähle bis sieben.",
+        "bulgarian": "Брой до седем.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "numbers"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "numbers"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1016",
+    "german": "acht",
+    "bulgarian": "осем",
+    "partOfSpeech": "numeral",
+    "cefr": "A1",
+    "definitions": {
+      "german": "acht ist eine Zahl.",
+      "bulgarian": "осем е число."
+    },
+    "examples": [
+      {
+        "german": "Ich habe acht Bücher.",
+        "bulgarian": "Имам осем книги.",
+        "context": "neutral"
+      },
+      {
+        "german": "Zähle bis acht.",
+        "bulgarian": "Брой до осем.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "numbers"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "numbers"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1017",
+    "german": "neun",
+    "bulgarian": "девет",
+    "partOfSpeech": "numeral",
+    "cefr": "A1",
+    "definitions": {
+      "german": "neun ist eine Zahl.",
+      "bulgarian": "девет е число."
+    },
+    "examples": [
+      {
+        "german": "Ich habe neun Bücher.",
+        "bulgarian": "Имам девет книги.",
+        "context": "neutral"
+      },
+      {
+        "german": "Zähle bis neun.",
+        "bulgarian": "Брой до девет.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "numbers"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "numbers"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1018",
+    "german": "zehn",
+    "bulgarian": "десет",
+    "partOfSpeech": "numeral",
+    "cefr": "A1",
+    "definitions": {
+      "german": "zehn ist eine Zahl.",
+      "bulgarian": "десет е число."
+    },
+    "examples": [
+      {
+        "german": "Ich habe zehn Bücher.",
+        "bulgarian": "Имам десет книги.",
+        "context": "neutral"
+      },
+      {
+        "german": "Zähle bis zehn.",
+        "bulgarian": "Брой до десет.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "numbers"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "numbers"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1019",
+    "german": "die Mutter",
+    "bulgarian": "майката",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein die Mutter ist ein Objekt oder eine Person.",
+      "bulgarian": "майката е обект или човек."
+    },
+    "examples": [
+      {
+        "german": "Das ist die Mutter.",
+        "bulgarian": "Това е майката.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich sehe die Mutter.",
+        "bulgarian": "Виждам майката.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "family"
+    ],
+    "grammar": {
+      "de": "feminine, die",
+      "bg": "feminine, -та"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "family"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1020",
+    "german": "der Vater",
+    "bulgarian": "бащата",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein der Vater ist ein Objekt oder eine Person.",
+      "bulgarian": "бащата е обект или човек."
+    },
+    "examples": [
+      {
+        "german": "Das ist der Vater.",
+        "bulgarian": "Това е бащата.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich sehe den.",
+        "bulgarian": "Виждам бащата.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "family"
+    ],
+    "grammar": {
+      "de": "masculine, der",
+      "bg": "masculine, -та"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "family"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1021",
+    "german": "die Schwester",
+    "bulgarian": "сестрата",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein die Schwester ist ein Objekt oder eine Person.",
+      "bulgarian": "сестрата е обект или човек."
+    },
+    "examples": [
+      {
+        "german": "Das ist die Schwester.",
+        "bulgarian": "Това е сестрата.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich sehe die Schwester.",
+        "bulgarian": "Виждам сестрата.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "family"
+    ],
+    "grammar": {
+      "de": "feminine, die",
+      "bg": "feminine, -та"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "family"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1022",
+    "german": "der Bruder",
+    "bulgarian": "братът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein der Bruder ist ein Objekt oder eine Person.",
+      "bulgarian": "братът е обект или човек."
+    },
+    "examples": [
+      {
+        "german": "Das ist der Bruder.",
+        "bulgarian": "Това е братът.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich sehe den.",
+        "bulgarian": "Виждам братът.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "family"
+    ],
+    "grammar": {
+      "de": "masculine, der",
+      "bg": "masculine, -ът"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "family"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1023",
+    "german": "das Kind",
+    "bulgarian": "детето",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein das Kind ist ein Objekt oder eine Person.",
+      "bulgarian": "детето е обект или човек."
+    },
+    "examples": [
+      {
+        "german": "Das ist das Kind.",
+        "bulgarian": "Това е детето.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich sehe das Kind.",
+        "bulgarian": "Виждам детето.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "family"
+    ],
+    "grammar": {
+      "de": "neuter, das",
+      "bg": "neuter, -то"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "family"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1024",
+    "german": "die Großmutter",
+    "bulgarian": "бабата",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein die Großmutter ist ein Objekt oder eine Person.",
+      "bulgarian": "бабата е обект или човек."
+    },
+    "examples": [
+      {
+        "german": "Das ist die Großmutter.",
+        "bulgarian": "Това е бабата.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich sehe die Großmutter.",
+        "bulgarian": "Виждам бабата.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "family"
+    ],
+    "grammar": {
+      "de": "feminine, die",
+      "bg": "feminine, -та"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "family"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1025",
+    "german": "der Großvater",
+    "bulgarian": "дядото",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein der Großvater ist ein Objekt oder eine Person.",
+      "bulgarian": "дядото е обект или човек."
+    },
+    "examples": [
+      {
+        "german": "Das ist der Großvater.",
+        "bulgarian": "Това е дядото.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich sehe den.",
+        "bulgarian": "Виждам дядото.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "family"
+    ],
+    "grammar": {
+      "de": "masculine, der",
+      "bg": "masculine, -то"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "family"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1026",
+    "german": "ja",
+    "bulgarian": "да",
+    "partOfSpeech": "particle",
+    "cefr": "A1",
+    "definitions": {
+      "german": "ja ist eine Partikel.",
+      "bulgarian": "да е частица."
+    },
+    "examples": [
+      {
+        "german": "ja",
+        "bulgarian": "да",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "basic"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "basic"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1027",
+    "german": "nein",
+    "bulgarian": "не",
+    "partOfSpeech": "particle",
+    "cefr": "A1",
+    "definitions": {
+      "german": "nein ist eine Partikel.",
+      "bulgarian": "не е частица."
+    },
+    "examples": [
+      {
+        "german": "nein",
+        "bulgarian": "не",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "basic"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "basic"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1028",
+    "german": "ich",
+    "bulgarian": "аз",
+    "partOfSpeech": "pronoun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "ich ist ein persönliches Fürwort.",
+      "bulgarian": "аз е местоимение."
+    },
+    "examples": [
+      {
+        "german": "Ich bin hier.",
+        "bulgarian": "Аз съм тук.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "basic"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "basic"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1029",
+    "german": "du",
+    "bulgarian": "ти",
+    "partOfSpeech": "pronoun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "du ist ein persönliches Fürwort.",
+      "bulgarian": "ти е местоимение."
+    },
+    "examples": [
+      {
+        "german": "Du bin hier.",
+        "bulgarian": "Ти съм тук.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "basic"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "basic"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1030",
+    "german": "er",
+    "bulgarian": "той",
+    "partOfSpeech": "pronoun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "er ist ein persönliches Fürwort.",
+      "bulgarian": "той е местоимение."
+    },
+    "examples": [
+      {
+        "german": "Er bin hier.",
+        "bulgarian": "Той съм тук.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "basic"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "basic"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1031",
+    "german": "sie",
+    "bulgarian": "тя",
+    "partOfSpeech": "pronoun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "sie ist ein persönliches Fürwort.",
+      "bulgarian": "тя е местоимение."
+    },
+    "examples": [
+      {
+        "german": "Sie bin hier.",
+        "bulgarian": "Тя съм тук.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "basic"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "basic"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1032",
+    "german": "wir",
+    "bulgarian": "ние",
+    "partOfSpeech": "pronoun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "wir ist ein persönliches Fürwort.",
+      "bulgarian": "ние е местоимение."
+    },
+    "examples": [
+      {
+        "german": "Wir bin hier.",
+        "bulgarian": "Ние съм тук.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "basic"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "basic"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1033",
+    "german": "ihr",
+    "bulgarian": "вие",
+    "partOfSpeech": "pronoun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "ihr ist ein persönliches Fürwort.",
+      "bulgarian": "вие е местоимение."
+    },
+    "examples": [
+      {
+        "german": "Ihr bin hier.",
+        "bulgarian": "Вие съм тук.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "basic"
+    ],
+    "grammar": {},
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "basic"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1034",
+    "german": "das Haus",
+    "bulgarian": "къщата",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein das Haus ist ein Objekt oder eine Person.",
+      "bulgarian": "къщата е обект или човек."
+    },
+    "examples": [
+      {
+        "german": "Das ist das Haus.",
+        "bulgarian": "Това е къщата.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich sehe das Haus.",
+        "bulgarian": "Виждам къщата.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "objects"
+    ],
+    "grammar": {
+      "de": "neuter, das",
+      "bg": "feminine, -та"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "objects"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1035",
+    "german": "der Tisch",
+    "bulgarian": "масата",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein der Tisch ist ein Objekt oder eine Person.",
+      "bulgarian": "масата е обект или човек."
+    },
+    "examples": [
+      {
+        "german": "Das ist der Tisch.",
+        "bulgarian": "Това е масата.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich sehe den.",
+        "bulgarian": "Виждам масата.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "objects"
+    ],
+    "grammar": {
+      "de": "masculine, der",
+      "bg": "feminine, -та"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "objects"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1036",
+    "german": "der Stuhl",
+    "bulgarian": "столът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein der Stuhl ist ein Objekt oder eine Person.",
+      "bulgarian": "столът е обект или човек."
+    },
+    "examples": [
+      {
+        "german": "Das ist der Stuhl.",
+        "bulgarian": "Това е столът.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich sehe den.",
+        "bulgarian": "Виждам столът.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "objects"
+    ],
+    "grammar": {
+      "de": "masculine, der",
+      "bg": "masculine, -ът"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "objects"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-1037",
+    "german": "das Buch",
+    "bulgarian": "книгата",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein das Buch ist ein Objekt oder eine Person.",
+      "bulgarian": "книгата е обект или човек."
+    },
+    "examples": [
+      {
+        "german": "Das ist das Buch.",
+        "bulgarian": "Това е книгата.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich sehe das Buch.",
+        "bulgarian": "Виждам книгата.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "objects"
+    ],
+    "grammar": {
+      "de": "neuter, das",
+      "bg": "feminine, -та"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "objects"
+    ],
+    "lastModified": "2025-12-17T11:21:52.267Z"
+  },
+  {
+    "id": "vocab-2000",
+    "german": "sprechen",
+    "bulgarian": "говоря",
+    "partOfSpeech": "verb",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Mit jemandem kommunizieren, Worte sagen.",
+      "bulgarian": "Да комунуцирам с някого, да говоря."
+    },
+    "examples": [
+      {
+        "german": "Ich spreche Deutsch und Englisch.",
+        "bulgarian": "Говоря немски и английски.",
+        "context": "neutral"
+      },
+      {
+        "german": "Können Sie Deutsch sprechen?",
+        "bulgarian": "Можете ли да говорите немски?",
+        "context": "formal"
+      }
+    ],
+    "categories": [
+      "communication",
+      "verbs"
+    ],
+    "grammar": {
+      "type": "strong verb",
+      "infinitive": "sprechen",
+      "presentFirstPerson": "spreche",
+      "presentThirdPerson": "spricht",
+      "past": "sprach",
+      "pastParticiple": "gesprochen"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A2",
+      "verbs",
+      "communication"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2001",
+    "german": "verstehen",
+    "bulgarian": "разбирам",
+    "partOfSpeech": "verb",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Das Sinn oder Bedeutung einer Sache erfassen.",
+      "bulgarian": "Да разбера значението на нещо."
+    },
+    "examples": [
+      {
+        "german": "Ich verstehe nicht, was Sie sagen.",
+        "bulgarian": "Не разбирам какво казвате.",
+        "context": "neutral"
+      },
+      {
+        "german": "Verstehst du Deutsch?",
+        "bulgarian": "Разбираш ли немски?",
+        "context": "informal"
+      }
+    ],
+    "categories": [
+      "communication",
+      "verbs"
+    ],
+    "grammar": {
+      "type": "strong verb",
+      "infinitive": "verstehen",
+      "presentFirstPerson": "verstehe",
+      "presentThirdPerson": "versteht",
+      "past": "verstand",
+      "pastParticiple": "verstanden"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A2",
+      "verbs",
+      "communication"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2002",
+    "german": "essen",
+    "bulgarian": "ям",
+    "partOfSpeech": "verb",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Nahrung zu sich nehmen.",
+      "bulgarian": "Да поемам храна."
+    },
+    "examples": [
+      {
+        "german": "Ich esse gerne Brot und Käse.",
+        "bulgarian": "Харесвам да ям хляб и сирене.",
+        "context": "neutral"
+      },
+      {
+        "german": "Was möchtest du essen?",
+        "bulgarian": "Какво искаш да ядеш?",
+        "context": "informal"
+      }
+    ],
+    "categories": [
+      "food",
+      "verbs"
+    ],
+    "grammar": {
+      "type": "strong verb",
+      "infinitive": "essen",
+      "presentFirstPerson": "esse",
+      "presentThirdPerson": "isst",
+      "past": "aß",
+      "pastParticiple": "gegessen"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "verbs",
+      "food"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2003",
+    "german": "trinken",
+    "bulgarian": "пия",
+    "partOfSpeech": "verb",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine Flüssigkeit zu sich nehmen.",
+      "bulgarian": "Да поемам течност."
+    },
+    "examples": [
+      {
+        "german": "Ich trinke Wasser und Kaffee.",
+        "bulgarian": "Пия вода и кафе.",
+        "context": "neutral"
+      },
+      {
+        "german": "Möchtest du etwas trinken?",
+        "bulgarian": "Искаш ли да пиеш нещо?",
+        "context": "informal"
+      }
+    ],
+    "categories": [
+      "food",
+      "verbs"
+    ],
+    "grammar": {
+      "type": "strong verb",
+      "infinitive": "trinken",
+      "presentFirstPerson": "trinke",
+      "presentThirdPerson": "trinkt",
+      "past": "trank",
+      "pastParticiple": "getrunken"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "verbs",
+      "food"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2004",
+    "german": "schlafen",
+    "bulgarian": "спя",
+    "partOfSpeech": "verb",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ruhen und ausruhen im Bett.",
+      "bulgarian": "Да почивам и да се отпускам в легло."
+    },
+    "examples": [
+      {
+        "german": "Ich schlafe acht Stunden pro Nacht.",
+        "bulgarian": "Спя осем часа всяка нощ.",
+        "context": "neutral"
+      },
+      {
+        "german": "Das Kind schläft.",
+        "bulgarian": "Детето спи.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "daily activities",
+      "verbs"
+    ],
+    "grammar": {
+      "type": "strong verb",
+      "infinitive": "schlafen",
+      "presentFirstPerson": "schlafe",
+      "presentThirdPerson": "schläft",
+      "past": "schlief",
+      "pastParticiple": "geschlafen"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "verbs",
+      "daily activities"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2005",
+    "german": "arbeiten",
+    "bulgarian": "работя",
+    "partOfSpeech": "verb",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine Tätigkeit ausüben, besonders beruflich.",
+      "bulgarian": "Да извършвам дейност, особено професионално."
+    },
+    "examples": [
+      {
+        "german": "Ich arbeite in einem Büro.",
+        "bulgarian": "Работя в офис.",
+        "context": "neutral"
+      },
+      {
+        "german": "Wann arbeitest du?",
+        "bulgarian": "Кога работиш?",
+        "context": "informal"
+      }
+    ],
+    "categories": [
+      "work",
+      "verbs"
+    ],
+    "grammar": {
+      "type": "regular verb",
+      "infinitive": "arbeiten",
+      "presentFirstPerson": "arbeite",
+      "presentThirdPerson": "arbeitet",
+      "past": "arbeitete",
+      "pastParticiple": "gearbeitet"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "verbs",
+      "work"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2006",
+    "german": "lernen",
+    "bulgarian": "уча",
+    "partOfSpeech": "verb",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Neue Fähigkeiten oder Wissen erwerben.",
+      "bulgarian": "Да придобия нови умения или знания."
+    },
+    "examples": [
+      {
+        "german": "Ich lerne Deutsch.",
+        "bulgarian": "Уча немски.",
+        "context": "neutral"
+      },
+      {
+        "german": "Sie lernen im Klassenzimmer.",
+        "bulgarian": "Те учат в класната стая.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "education",
+      "verbs"
+    ],
+    "grammar": {
+      "type": "regular verb",
+      "infinitive": "lernen",
+      "presentFirstPerson": "lerne",
+      "presentThirdPerson": "lernt",
+      "past": "lernte",
+      "pastParticiple": "gelernt"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "verbs",
+      "education"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2007",
+    "german": "das Bier",
+    "bulgarian": "бирата",
+    "partOfSpeech": "noun",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Ein alkoholisches Getränk, braun oder golden in Farbe.",
+      "bulgarian": "Алкохолна напитка, кафява или златна по цвят."
+    },
+    "examples": [
+      {
+        "german": "Ich trinke gerne Bier.",
+        "bulgarian": "Харесвам да пия бира.",
+        "context": "neutral"
+      },
+      {
+        "german": "Das Bier ist kalt.",
+        "bulgarian": "Бирата е студена.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "drinks",
+      "food"
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Biere"
+    },
+    "culturalNotes": [
+      "Bier ist sehr wichtig in der deutschen Kultur."
+    ],
+    "tags": [
+      "A2",
+      "nouns",
+      "drinks"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2008",
+    "german": "das Wasser",
+    "bulgarian": "водата",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine klare, farblose Flüssigkeit, notwendig zum Leben.",
+      "bulgarian": "Прозрачна, безцветна течност, необходима за живот."
+    },
+    "examples": [
+      {
+        "german": "Ich trinke viel Wasser.",
+        "bulgarian": "Пия много вода.",
+        "context": "neutral"
+      },
+      {
+        "german": "Das Wasser ist kalt.",
+        "bulgarian": "Водата е студена.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "drinks",
+      "nature"
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Wasser"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "nouns",
+      "drinks"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2009",
+    "german": "der Kaffee",
+    "bulgarian": "кафето",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein heißes Getränk aus Kaffeebohnen, braun oder schwarz.",
+      "bulgarian": "Горещо средство от кафейни зърна, кафяво или черно."
+    },
+    "examples": [
+      {
+        "german": "Ich trinke jeden Morgen Kaffee.",
+        "bulgarian": "Пия кафе всяко утро.",
+        "context": "neutral"
+      },
+      {
+        "german": "Der Kaffee ist heiß.",
+        "bulgarian": "Кафето е топло.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "drinks",
+      "food"
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Kaffees"
+    },
+    "culturalNotes": [
+      "Kaffee ist sehr beliebt in Deutschland."
+    ],
+    "tags": [
+      "A1",
+      "nouns",
+      "drinks"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2010",
+    "german": "der Tee",
+    "bulgarian": "чаят",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein warmes Getränk aus getrockneten Blättern.",
+      "bulgarian": "Топла напитка от сушени листа."
+    },
+    "examples": [
+      {
+        "german": "Ich trinke Tee mit Zucker.",
+        "bulgarian": "Пия чай със захар.",
+        "context": "neutral"
+      },
+      {
+        "german": "Der Tee ist warm.",
+        "bulgarian": "Чаят е топъл.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "drinks",
+      "food"
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Tees"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "nouns",
+      "drinks"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2011",
+    "german": "das Brot",
+    "bulgarian": "хлябът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein Lebensmittel aus Mehl, Wasser und Hefe.",
+      "bulgarian": "Хранителен продукт от брашно, вода и мая."
+    },
+    "examples": [
+      {
+        "german": "Ich esse Brot zum Frühstück.",
+        "bulgarian": "Ям хляб на закуска.",
+        "context": "neutral"
+      },
+      {
+        "german": "Das Brot ist frisch.",
+        "bulgarian": "Хлябът е пресен.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "food"
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Brote"
+    },
+    "culturalNotes": [
+      "Brot ist sehr wichtig in der deutschen Küche."
+    ],
+    "tags": [
+      "A1",
+      "nouns",
+      "food"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2012",
+    "german": "die Milch",
+    "bulgarian": "млякото",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine weiße Flüssigkeit von Kühen oder anderen Tieren.",
+      "bulgarian": "Бялата течност от кравите или други животни."
+    },
+    "examples": [
+      {
+        "german": "Die Milch ist weiß.",
+        "bulgarian": "Млякото е бяло.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich trinke Milch zum Frühstück.",
+        "bulgarian": "Пия мляко на закуска.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "drinks",
+      "food"
+    ],
+    "grammar": {
+      "gender": "feminine",
+      "article": "die",
+      "plural": "die Milche"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "nouns",
+      "drinks"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2013",
+    "german": "das Fleisch",
+    "bulgarian": "месото",
+    "partOfSpeech": "noun",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Das Gewebe von Tieren, das wir essen.",
+      "bulgarian": "Тъканта от животни, която ядем."
+    },
+    "examples": [
+      {
+        "german": "Ich esse Fleisch, aber nicht jeden Tag.",
+        "bulgarian": "Ям месо, но не всеки ден.",
+        "context": "neutral"
+      },
+      {
+        "german": "Das Fleisch ist lecker.",
+        "bulgarian": "Месото е вкусно.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "food"
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Fleische"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A2",
+      "nouns",
+      "food"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2014",
+    "german": "das Gemüse",
+    "bulgarian": "зеленчуците",
+    "partOfSpeech": "noun",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Pflanzenteile, die wir als Nahrung essen.",
+      "bulgarian": "Части на растения, които ядем като храна."
+    },
+    "examples": [
+      {
+        "german": "Ich esse viel Gemüse.",
+        "bulgarian": "Ям много зеленчуци.",
+        "context": "neutral"
+      },
+      {
+        "german": "Das Gemüse ist gesund.",
+        "bulgarian": "Зеленчуците са здравословни.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "food"
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Gemüse"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A2",
+      "nouns",
+      "food"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2015",
+    "german": "das Obst",
+    "bulgarian": "плодовете",
+    "partOfSpeech": "noun",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Süße Früchte von Bäumen und Pflanzen.",
+      "bulgarian": "Сладки плодове от дървета и растения."
+    },
+    "examples": [
+      {
+        "german": "Ich esse Obst zum Dessert.",
+        "bulgarian": "Ям плодове на десерт.",
+        "context": "neutral"
+      },
+      {
+        "german": "Das Obst ist frisch.",
+        "bulgarian": "Плодовете са свежи.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "food"
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Obste"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A2",
+      "nouns",
+      "food"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2016",
+    "german": "groß",
+    "bulgarian": "голям",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Mit großer Größe oder Ausdehnung.",
+      "bulgarian": "С голям размер или протежение."
+    },
+    "examples": [
+      {
+        "german": "Das Haus ist groß.",
+        "bulgarian": "Къщата е голяма.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ein großer Tisch.",
+        "bulgarian": "Голяма маса.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "groß",
+      "comparative": "größer",
+      "superlative": "am größten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2017",
+    "german": "klein",
+    "bulgarian": "малък",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Mit kleiner Größe oder Ausdehnung.",
+      "bulgarian": "С малък размер или протежение."
+    },
+    "examples": [
+      {
+        "german": "Das Kind ist klein.",
+        "bulgarian": "Детето е малко.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ein kleiner Stuhl.",
+        "bulgarian": "Малък стол.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "klein",
+      "comparative": "kleiner",
+      "superlative": "am kleinsten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2018",
+    "german": "heiß",
+    "bulgarian": "горещ",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Mit hoher Temperatur.",
+      "bulgarian": "С висока температура."
+    },
+    "examples": [
+      {
+        "german": "Der Kaffee ist heiß.",
+        "bulgarian": "Кафето е горещо.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ein heißer Tag.",
+        "bulgarian": "Горещ ден.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "heiß",
+      "comparative": "heißer",
+      "superlative": "am heißesten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2019",
+    "german": "kalt",
+    "bulgarian": "студен",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Mit niedriger Temperatur.",
+      "bulgarian": "С ниска температура."
+    },
+    "examples": [
+      {
+        "german": "Das Wasser ist kalt.",
+        "bulgarian": "Водата е студена.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ein kalter Tag.",
+        "bulgarian": "Студен ден.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "kalt",
+      "comparative": "kälter",
+      "superlative": "am kältesten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2020",
+    "german": "schön",
+    "bulgarian": "красив",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Angenehm anzusehen oder zu erleben.",
+      "bulgarian": "Приятно за гледане или преживяване."
+    },
+    "examples": [
+      {
+        "german": "Das Wetter ist schön.",
+        "bulgarian": "Времето е красиво.",
+        "context": "neutral"
+      },
+      {
+        "german": "Eine schöne Frau.",
+        "bulgarian": "Красива жена.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "schön",
+      "comparative": "schöner",
+      "superlative": "am schönsten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2021",
+    "german": "hässlich",
+    "bulgarian": "гадък",
+    "partOfSpeech": "adjective",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Nicht angenehm anzusehen.",
+      "bulgarian": "Не приятно за гледане."
+    },
+    "examples": [
+      {
+        "german": "Das Gebäude ist hässlich.",
+        "bulgarian": "Сградата е гадна.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ein hässlicher Hund.",
+        "bulgarian": "Гад куче.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "hässlich",
+      "comparative": "hässlicher",
+      "superlative": "am hässlichsten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A2",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2022",
+    "german": "schnell",
+    "bulgarian": "бързо",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Mit großer Geschwindigkeit.",
+      "bulgarian": "С голяма скорост."
+    },
+    "examples": [
+      {
+        "german": "Ein schnelles Auto.",
+        "bulgarian": "Бързо автомобил.",
+        "context": "neutral"
+      },
+      {
+        "german": "Der Läufer ist schnell.",
+        "bulgarian": "Бегачът е бърз.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "schnell",
+      "comparative": "schneller",
+      "superlative": "am schnellsten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2023",
+    "german": "langsam",
+    "bulgarian": "бавно",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Mit geringer Geschwindigkeit.",
+      "bulgarian": "С малка скорост."
+    },
+    "examples": [
+      {
+        "german": "Ein langsames Auto.",
+        "bulgarian": "Бавно автомобил.",
+        "context": "neutral"
+      },
+      {
+        "german": "Der Läufer ist langsam.",
+        "bulgarian": "Бегачът е бав.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "langsam",
+      "comparative": "langsamer",
+      "superlative": "am langsamsten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2024",
+    "german": "gut",
+    "bulgarian": "добър",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Von hoher Qualität oder Güte.",
+      "bulgarian": "От висока качество или благост."
+    },
+    "examples": [
+      {
+        "german": "Das Essen ist gut.",
+        "bulgarian": "Храната е добра.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ein guter Freund.",
+        "bulgarian": "Добър приятел.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "gut",
+      "comparative": "besser",
+      "superlative": "am besten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-2025",
+    "german": "schlecht",
+    "bulgarian": "лош",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Von niedriger Qualität oder schädlich.",
+      "bulgarian": "От ниска качество или вредна."
+    },
+    "examples": [
+      {
+        "german": "Das Wetter ist schlecht.",
+        "bulgarian": "Времето е лошо.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ein schlechter Tag.",
+        "bulgarian": "Лош ден.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "schlecht",
+      "comparative": "schlechter",
+      "superlative": "am schlechtesten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:00:00.000Z"
+  },
+  {
+    "id": "vocab-3000",
+    "german": "das Auto",
+    "bulgarian": "автомобилът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein Fahrzeug mit Motor auf vier Rädern.",
+      "bulgarian": "Превозно средство с мотор на четири колела."
+    },
+    "examples": [
+      {
+        "german": "Mein Auto ist rot.",
+        "bulgarian": "Моят автомобил е червен.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich fahre ein Auto.",
+        "bulgarian": "Карам автомобил.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "transportation",
+      "vehicles"
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Autos"
+    },
+    "culturalNotes": [
+      "Autos sind sehr wichtig in Deutschland."
+    ],
+    "tags": [
+      "A1",
+      "nouns",
+      "transportation"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3001",
+    "german": "der Zug",
+    "bulgarian": "влакът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein Fahrzeug mit mehreren Wagen auf Schienen.",
+      "bulgarian": "Превозно средство с няколко вагона на релси."
+    },
+    "examples": [
+      {
+        "german": "Der Zug fährt nach Berlin.",
+        "bulgarian": "Влакът отива до Берлин.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich fahre mit dem Zug.",
+        "bulgarian": "Пътувам със влак.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "transportation"
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Züge"
+    },
+    "culturalNotes": [
+      "Züge sind ein wichtiges Verkehrsmittel in Deutschland."
+    ],
+    "tags": [
+      "A1",
+      "nouns",
+      "transportation"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3002",
+    "german": "das Flugzeug",
+    "bulgarian": "самолетът",
+    "partOfSpeech": "noun",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Ein Fahrzeug, das in der Luft fliegt.",
+      "bulgarian": "Превозно средство, което лети във въздуха."
+    },
+    "examples": [
+      {
+        "german": "Das Flugzeug fliegt nach Amerika.",
+        "bulgarian": "Самолетът лети до Америка.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich fliege mit dem Flugzeug.",
+        "bulgarian": "Летя със самолет.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "transportation",
+      "travel"
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Flugzeuge"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A2",
+      "nouns",
+      "transportation"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3003",
+    "german": "das Hotel",
+    "bulgarian": "хотелът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein Gebäude mit Zimmern für Gäste.",
+      "bulgarian": "Сграда с стаи за гости."
+    },
+    "examples": [
+      {
+        "german": "Das Hotel ist sehr schön.",
+        "bulgarian": "Хотелът е много красив.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich übernachte im Hotel.",
+        "bulgarian": "Преспивам в хотел.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "accommodation",
+      "travel"
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Hotels"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "nouns",
+      "accommodation"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3004",
+    "german": "das Zimmer",
+    "bulgarian": "стаята",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein Raum in einem Gebäude.",
+      "bulgarian": "Стая в сграда."
+    },
+    "examples": [
+      {
+        "german": "Mein Zimmer ist klein.",
+        "bulgarian": "Моята стая е малка.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich schlafe in meinem Zimmer.",
+        "bulgarian": "Спя в моята стая.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "home",
+      "places"
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Zimmer"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "nouns",
+      "home"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3005",
+    "german": "die Küche",
+    "bulgarian": "кухнята",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein Raum, wo man kocht.",
+      "bulgarian": "Стая, където се готви."
+    },
+    "examples": [
+      {
+        "german": "Ich koche in der Küche.",
+        "bulgarian": "Готвя в кухнята.",
+        "context": "neutral"
+      },
+      {
+        "german": "Die Küche ist groß.",
+        "bulgarian": "Кухнята е голяма.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "home",
+      "places"
+    ],
+    "grammar": {
+      "gender": "feminine",
+      "article": "die",
+      "plural": "die Küchen"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "nouns",
+      "home"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3006",
+    "german": "das Badezimmer",
+    "bulgarian": "банята",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein Raum mit Bad und Toilette.",
+      "bulgarian": "Стая с вана и тоалет."
+    },
+    "examples": [
+      {
+        "german": "Ich duschemich im Badezimmer.",
+        "bulgarian": "Вземам душ в банята.",
+        "context": "neutral"
+      },
+      {
+        "german": "Das Badezimmer ist klein.",
+        "bulgarian": "Банята е малка.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "home",
+      "places"
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Badezimmer"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "nouns",
+      "home"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3007",
+    "german": "die Tür",
+    "bulgarian": "вратата",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine Öffnung zum Ein- und Ausgang.",
+      "bulgarian": "Отваряне за влизане и излизане."
+    },
+    "examples": [
+      {
+        "german": "Die Tür ist rot.",
+        "bulgarian": "Вратата е червена.",
+        "context": "neutral"
+      },
+      {
+        "german": "Öffne die Tür!",
+        "bulgarian": "Отвори вратата!",
+        "context": "informal"
+      }
+    ],
+    "categories": [
+      "home",
+      "objects"
+    ],
+    "grammar": {
+      "gender": "feminine",
+      "article": "die",
+      "plural": "die Türen"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "nouns",
+      "home"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3008",
+    "german": "das Fenster",
+    "bulgarian": "прозорецът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine Öffnung an der Wand zum Licht.",
+      "bulgarian": "Отваряне на стена за светлина."
+    },
+    "examples": [
+      {
+        "german": "Das Fenster ist offen.",
+        "bulgarian": "Прозорецът е отворен.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich schaue aus dem Fenster.",
+        "bulgarian": "Гледам през прозореца.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "home",
+      "objects"
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Fenster"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "nouns",
+      "home"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3009",
+    "german": "fahren",
+    "bulgarian": "карам",
+    "partOfSpeech": "verb",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Mit einem Fahrzeug bewegen.",
+      "bulgarian": "Да се движа с превозно средство."
+    },
+    "examples": [
+      {
+        "german": "Ich fahre mit dem Auto.",
+        "bulgarian": "Карам с автомобил.",
+        "context": "neutral"
+      },
+      {
+        "german": "Wir fahren nach Berlin.",
+        "bulgarian": "Ние карам до Берлин.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "transportation",
+      "verbs"
+    ],
+    "grammar": {
+      "type": "strong verb",
+      "infinitive": "fahren",
+      "presentFirstPerson": "fahre",
+      "presentThirdPerson": "fährt",
+      "past": "fuhr",
+      "pastParticiple": "gefahren"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "verbs",
+      "transportation"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3010",
+    "german": "fliegen",
+    "bulgarian": "летя",
+    "partOfSpeech": "verb",
+    "cefr": "A2",
+    "definitions": {
+      "german": "In der Luft fliegen.",
+      "bulgarian": "Да летя във въздуха."
+    },
+    "examples": [
+      {
+        "german": "Der Vogel fliegt.",
+        "bulgarian": "Птицата лети.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich fliege nach Amerika.",
+        "bulgarian": "Летя до Америка.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "transportation",
+      "verbs"
+    ],
+    "grammar": {
+      "type": "strong verb",
+      "infinitive": "fliegen",
+      "presentFirstPerson": "fliege",
+      "presentThirdPerson": "fliegt",
+      "past": "flog",
+      "pastParticiple": "geflogen"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A2",
+      "verbs",
+      "transportation"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3011",
+    "german": "schwimmen",
+    "bulgarian": "плувам",
+    "partOfSpeech": "verb",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Im Wasser bewegen.",
+      "bulgarian": "Да се движа във вода."
+    },
+    "examples": [
+      {
+        "german": "Ich schwimme im Pool.",
+        "bulgarian": "Плувам в басейна.",
+        "context": "neutral"
+      },
+      {
+        "german": "Die Kinder schwimmen.",
+        "bulgarian": "Детата плуват.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "activities",
+      "verbs",
+      "sports"
+    ],
+    "grammar": {
+      "type": "strong verb",
+      "infinitive": "schwimmen",
+      "presentFirstPerson": "schwimme",
+      "presentThirdPerson": "schwimmt",
+      "past": "schwamm",
+      "pastParticiple": "geschwommen"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "verbs",
+      "sports"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3012",
+    "german": "wandern",
+    "bulgarian": "туристя",
+    "partOfSpeech": "verb",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Zu Fuß in der Natur gehen.",
+      "bulgarian": "Да ходя пешком в природата."
+    },
+    "examples": [
+      {
+        "german": "Ich wandere in den Alpen.",
+        "bulgarian": "Туристя в Алпите.",
+        "context": "neutral"
+      },
+      {
+        "german": "Wir wandern am Wochenende.",
+        "bulgarian": "Туристим в уикенда.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "activities",
+      "verbs",
+      "sports"
+    ],
+    "grammar": {
+      "type": "regular verb",
+      "infinitive": "wandern",
+      "presentFirstPerson": "wandere",
+      "presentThirdPerson": "wandert",
+      "past": "wanderte",
+      "pastParticiple": "gewandert"
+    },
+    "culturalNotes": [
+      "Wandern ist sehr beliebt in Deutschland."
+    ],
+    "tags": [
+      "A2",
+      "verbs",
+      "activities"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3013",
+    "german": "tanzen",
+    "bulgarian": "танцувам",
+    "partOfSpeech": "verb",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Sich rhythmisch zur Musik bewegen.",
+      "bulgarian": "Да се движа ритмично на музика."
+    },
+    "examples": [
+      {
+        "german": "Ich tanze gerne.",
+        "bulgarian": "Харесвам да танцувам.",
+        "context": "neutral"
+      },
+      {
+        "german": "Wir tanzen auf der Party.",
+        "bulgarian": "Танцуваме на партито.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "activities",
+      "verbs",
+      "sports"
+    ],
+    "grammar": {
+      "type": "regular verb",
+      "infinitive": "tanzen",
+      "presentFirstPerson": "tanze",
+      "presentThirdPerson": "tanzt",
+      "past": "tanzte",
+      "pastParticiple": "getanzt"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A2",
+      "verbs",
+      "activities"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3014",
+    "german": "singen",
+    "bulgarian": "пея",
+    "partOfSpeech": "verb",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Melodien mit der Stimme produzieren.",
+      "bulgarian": "Да произвеждам мелодии с глас."
+    },
+    "examples": [
+      {
+        "german": "Ich singe gerne Lieder.",
+        "bulgarian": "Харесвам да пея песни.",
+        "context": "neutral"
+      },
+      {
+        "german": "Der Vogel singt.",
+        "bulgarian": "Птицата пее.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "activities",
+      "verbs",
+      "music"
+    ],
+    "grammar": {
+      "type": "strong verb",
+      "infinitive": "singen",
+      "presentFirstPerson": "singe",
+      "presentThirdPerson": "singt",
+      "past": "sang",
+      "pastParticiple": "gesungen"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A2",
+      "verbs",
+      "music"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3015",
+    "german": "zeigen",
+    "bulgarian": "показвам",
+    "partOfSpeech": "verb",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Auf etwas hinweisen oder etwas präsentieren.",
+      "bulgarian": "Да посоча на нещо или да представя нещо."
+    },
+    "examples": [
+      {
+        "german": "Ich zeige dir mein Auto.",
+        "bulgarian": "Показвам ти моя автомобил.",
+        "context": "neutral"
+      },
+      {
+        "german": "Zeige mir die Fotos!",
+        "bulgarian": "Покажи ми снимките!",
+        "context": "informal"
+      }
+    ],
+    "categories": [
+      "communication",
+      "verbs"
+    ],
+    "grammar": {
+      "type": "regular verb",
+      "infinitive": "zeigen",
+      "presentFirstPerson": "zeige",
+      "presentThirdPerson": "zeigt",
+      "past": "zeigte",
+      "pastParticiple": "gezeigt"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A2",
+      "verbs",
+      "communication"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3016",
+    "german": "hören",
+    "bulgarian": "слушам",
+    "partOfSpeech": "verb",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Mit den Ohren wahrnehmen.",
+      "bulgarian": "Да възприемам с ушите."
+    },
+    "examples": [
+      {
+        "german": "Ich höre Musik.",
+        "bulgarian": "Слушам музика.",
+        "context": "neutral"
+      },
+      {
+        "german": "Hörst du mich?",
+        "bulgarian": "Чуваш ли ме?",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "senses",
+      "verbs"
+    ],
+    "grammar": {
+      "type": "regular verb",
+      "infinitive": "hören",
+      "presentFirstPerson": "höre",
+      "presentThirdPerson": "hört",
+      "past": "hörte",
+      "pastParticiple": "gehört"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "verbs",
+      "senses"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3017",
+    "german": "sehen",
+    "bulgarian": "виждам",
+    "partOfSpeech": "verb",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Mit den Augen wahrnehmen.",
+      "bulgarian": "Да възприемам с очите."
+    },
+    "examples": [
+      {
+        "german": "Ich sehe einen Baum.",
+        "bulgarian": "Виждам дърво.",
+        "context": "neutral"
+      },
+      {
+        "german": "Siehst du das Haus?",
+        "bulgarian": "Виждаш ли къщата?",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "senses",
+      "verbs"
+    ],
+    "grammar": {
+      "type": "strong verb",
+      "infinitive": "sehen",
+      "presentFirstPerson": "sehe",
+      "presentThirdPerson": "sieht",
+      "past": "sah",
+      "pastParticiple": "gesehen"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "verbs",
+      "senses"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3018",
+    "german": "neu",
+    "bulgarian": "нов",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Kürzlich hergestellt oder erworben.",
+      "bulgarian": "Наскоро направен или придобит."
+    },
+    "examples": [
+      {
+        "german": "Das ist ein neues Auto.",
+        "bulgarian": "Това е нов автомобил.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich habe neue Schuhe.",
+        "bulgarian": "Имам нови обувки.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "neu",
+      "comparative": "neuer",
+      "superlative": "am neuesten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3019",
+    "german": "alt",
+    "bulgarian": "стар",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Von großem Alter, nicht jung.",
+      "bulgarian": "От голяма възраст, не млад."
+    },
+    "examples": [
+      {
+        "german": "Das ist ein altes Buch.",
+        "bulgarian": "Това е стара книга.",
+        "context": "neutral"
+      },
+      {
+        "german": "Mein Vater ist alt.",
+        "bulgarian": "Моят баща е стар.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "alt",
+      "comparative": "älter",
+      "superlative": "am ältesten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A1",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3020",
+    "german": "billig",
+    "bulgarian": "евтин",
+    "partOfSpeech": "adjective",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Mit niedrigem Preis.",
+      "bulgarian": "С нисък цена."
+    },
+    "examples": [
+      {
+        "german": "Das Buch ist billig.",
+        "bulgarian": "Книгата е евтина.",
+        "context": "neutral"
+      },
+      {
+        "german": "Ich kaufe billige Kleidung.",
+        "bulgarian": "Купувам евтини дрехи.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "billig",
+      "comparative": "billiger",
+      "superlative": "am billigsten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A2",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3021",
+    "german": "teuer",
+    "bulgarian": "скъп",
+    "partOfSpeech": "adjective",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Mit hohem Preis.",
+      "bulgarian": "С висок цена."
+    },
+    "examples": [
+      {
+        "german": "Das Auto ist teuer.",
+        "bulgarian": "Автомобилът е скъп.",
+        "context": "neutral"
+      },
+      {
+        "german": "Diese Kleidung ist teuer.",
+        "bulgarian": "Тези дрехи са скъпи.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "teuer",
+      "comparative": "teurer",
+      "superlative": "am teuersten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A2",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3022",
+    "german": "interessant",
+    "bulgarian": "интересен",
+    "partOfSpeech": "adjective",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Weckt Aufmerksamkeit oder Neugier.",
+      "bulgarian": "Пробужда внимание или любопитство."
+    },
+    "examples": [
+      {
+        "german": "Das Buch ist interessant.",
+        "bulgarian": "Книгата е интересна.",
+        "context": "neutral"
+      },
+      {
+        "german": "Das ist eine interessante Geschichte.",
+        "bulgarian": "Това е интересна история.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "interessant",
+      "comparative": "interessanter",
+      "superlative": "am interessantesten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A2",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "vocab-3023",
+    "german": "langweilig",
+    "bulgarian": "скучен",
+    "partOfSpeech": "adjective",
+    "cefr": "A2",
+    "definitions": {
+      "german": "Nicht interessant oder ermüdend.",
+      "bulgarian": "Не интересен или отегчителен."
+    },
+    "examples": [
+      {
+        "german": "Das Buch ist langweilig.",
+        "bulgarian": "Книгата е скучна.",
+        "context": "neutral"
+      },
+      {
+        "german": "Der Film ist langweilig.",
+        "bulgarian": "Филмът е скучен.",
+        "context": "neutral"
+      }
+    ],
+    "categories": [
+      "adjectives",
+      "descriptors"
+    ],
+    "grammar": {
+      "type": "adjective",
+      "positive": "langweilig",
+      "comparative": "langweiliger",
+      "superlative": "am langweiligsten"
+    },
+    "culturalNotes": [],
+    "tags": [
+      "A2",
+      "adjectives"
+    ],
+    "lastModified": "2025-12-17T12:10:00.000Z"
+  },
+  {
+    "id": "a1-fam-001-familie",
+    "german": "die Familie",
+    "bulgarian": "семейството",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine Gruppe von Menschen, die durch Blutsverwandtschaft oder Heirat verbunden sind",
+      "bulgarian": "Група от хора, свързани чрез кръвна връзка или брак"
+    },
+    "examples": [
+      {
+        "german": "Meine Familie ist sehr groß",
+        "bulgarian": "Моето семейство е много голямо",
+        "context": "Describing family size"
+      },
+      {
+        "german": "Die Familie kommt am Sonntag zusammen",
+        "bulgarian": "Семейството се събира в неделя",
+        "context": "Family gathering"
+      }
+    ],
+    "categories": [
+      "family",
+      "people",
+      "relationships"
+    ],
+    "grammar": {
+      "gender": "feminine",
+      "plural": "die Familien",
+      "definiteBulgarian": "семейството"
+    },
+    "tags": [
+      "A1",
+      "family",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
+  },
+  {
+    "id": "a1-fam-006-sohn",
+    "german": "der Sohn",
+    "bulgarian": "синът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein männliches Kind in Bezug auf seine Eltern",
+      "bulgarian": "Мъжко дете по отношение на неговите родители"
+    },
+    "examples": [
+      {
+        "german": "Mein Sohn geht in die Schule",
+        "bulgarian": "Синът ми ходи на училище",
+        "context": "Education"
+      },
+      {
+        "german": "Der Sohn hilft seinem Vater",
+        "bulgarian": "Синът помага на баща си",
+        "context": "Family cooperation"
+      }
+    ],
+    "categories": [
+      "family",
+      "people",
+      "relationships"
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "plural": "die Söhne",
+      "definiteBulgarian": "синът"
+    },
+    "tags": [
+      "A1",
+      "family",
+      "child",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
+  },
+  {
+    "id": "a1-fam-007-tochter",
+    "german": "die Tochter",
+    "bulgarian": "дъщерята",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein weibliches Kind in Bezug auf seine Eltern",
+      "bulgarian": "Женско дете по отношение на неговите родители"
+    },
+    "examples": [
+      {
+        "german": "Meine Tochter lernt Klavier spielen",
+        "bulgarian": "Дъщеря ми учи да свири на пиано",
+        "context": "Learning music"
+      },
+      {
+        "german": "Die Tochter ist sehr fleißig",
+        "bulgarian": "Дъщерята е много старателна",
+        "context": "Character description"
+      }
+    ],
+    "categories": [
+      "family",
+      "people",
+      "relationships"
+    ],
+    "grammar": {
+      "gender": "feminine",
+      "plural": "die Töchter",
+      "definiteBulgarian": "дъщерята"
+    },
+    "tags": [
+      "A1",
+      "family",
+      "child",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
+  },
+  {
+    "id": "a1-fam-010-mann",
+    "german": "der Mann",
+    "bulgarian": "мъжът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine erwachsene männliche Person; Ehemann",
+      "bulgarian": "Възрастен мъж; съпруг"
+    },
+    "examples": [
+      {
+        "german": "Der Mann geht zur Arbeit",
+        "bulgarian": "Мъжът отива на работа",
+        "context": "Daily routine"
+      },
+      {
+        "german": "Mein Mann kocht heute Abend",
+        "bulgarian": "Съпругът ми готви тази вечер",
+        "context": "Household tasks"
+      }
+    ],
+    "categories": [
+      "family",
+      "people",
+      "relationships"
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "plural": "die Männer",
+      "definiteBulgarian": "мъжът"
+    },
+    "tags": [
+      "A1",
+      "family",
+      "spouse",
+      "person",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
+  },
+  {
+    "id": "a1-fam-011-frau",
+    "german": "die Frau",
+    "bulgarian": "жената",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine erwachsene weibliche Person; Ehefrau",
+      "bulgarian": "Възрастна жена; съпруга"
+    },
+    "examples": [
+      {
+        "german": "Die Frau arbeitet im Büro",
+        "bulgarian": "Жената работи в офиса",
+        "context": "Workplace"
+      },
+      {
+        "german": "Meine Frau ist Lehrerin",
+        "bulgarian": "Съпругата ми е учителка",
+        "context": "Profession"
+      }
+    ],
+    "categories": [
+      "family",
+      "people",
+      "relationships"
+    ],
+    "grammar": {
+      "gender": "feminine",
+      "plural": "die Frauen",
+      "definiteBulgarian": "жената"
+    },
+    "tags": [
+      "A1",
+      "family",
+      "spouse",
+      "person",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
+  },
+  {
+    "id": "a1-fam-013-baby",
+    "german": "das Baby",
+    "bulgarian": "бебето",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Ein sehr junges Kind, besonders ein Säugling",
+      "bulgarian": "Много малко дете, особено кърмаче"
+    },
+    "examples": [
+      {
+        "german": "Das Baby schläft",
+        "bulgarian": "Бебето спи",
+        "context": "Baby sleeping"
+      },
+      {
+        "german": "Sie hat ein Baby bekommen",
+        "bulgarian": "Тя роди бебе",
+        "context": "Birth announcement"
+      }
+    ],
+    "categories": [
+      "family",
+      "people",
+      "age-groups"
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "plural": "die Babys",
+      "definiteBulgarian": "бебето"
+    },
+    "tags": [
+      "A1",
+      "family",
+      "infant",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
+  },
+  {
+    "id": "a1-fam-014-freund",
+    "german": "der Freund",
+    "bulgarian": "приятелят",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine Person, mit der man eine enge, vertraute Beziehung hat",
+      "bulgarian": "Човек, с когото имате близка, доверителна връзка"
+    },
+    "examples": [
+      {
+        "german": "Mein bester Freund wohnt in Berlin",
+        "bulgarian": "Най-добрият ми приятел живее в Берлин",
+        "context": "Friendship"
+      },
+      {
+        "german": "Ich treffe meine Freunde am Samstag",
+        "bulgarian": "Срещам приятелите си в събота",
+        "context": "Weekend plans"
+      }
+    ],
+    "categories": [
+      "relationships",
+      "people",
+      "social"
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "plural": "die Freunde",
+      "definiteBulgarian": "приятелят"
+    },
+    "tags": [
+      "A1",
+      "relationships",
+      "friend",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
+  },
+  {
+    "id": "a1-fam-015-verwandte",
+    "german": "der/die Verwandte",
+    "bulgarian": "роднината",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Eine Person, die zur Familie gehört",
+      "bulgarian": "Човек, който принадлежи към семейството"
+    },
+    "examples": [
+      {
+        "german": "Meine Verwandten leben in verschiedenen Städten",
+        "bulgarian": "Моите роднини живеят в различни градове",
+        "context": "Extended family"
+      },
+      {
+        "german": "Wir besuchen unsere Verwandten zu Weihnachten",
+        "bulgarian": "Посещаваме роднините си на Коледа",
+        "context": "Holiday tradition"
+      }
+    ],
+    "categories": [
+      "family",
+      "people",
+      "relationships"
+    ],
+    "grammar": {
+      "gender": "masculine/feminine",
+      "plural": "die Verwandten",
+      "definiteBulgarian": "роднината"
+    },
+    "tags": [
+      "A1",
+      "family",
+      "relative",
+      "core-vocabulary",
+      "priority-1"
+    ],
+    "lastModified": "2025-12-17",
+    "culturalNotes": []
+  },
+  {
+    "id": "body-001-kopf",
+    "german": "der Kopf",
+    "bulgarian": "главата",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Der oberste Teil des menschlichen Körpers, in dem sich Gehirn, Augen, Ohren, Nase und Mund befinden",
+      "bulgarian": "Горната част на човешкото тяло, в която се намират мозъкът, очите, ушите, носът и устата"
+    },
+    "examples": [
+      {
+        "german": "Der Mann hat einen großen Kopf.",
+        "bulgarian": "Мъжът има голяма глава.",
+        "context": "physical description"
+      },
+      {
+        "german": "Mir tut der Kopf weh.",
+        "bulgarian": "Болка ме главата.",
+        "context": "health/complaint"
+      },
+      {
+        "german": "Das Kind schüttelt den Kopf.",
+        "bulgarian": "Детето поклаща главата.",
+        "context": "movement/gesture"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Köpfe",
+      "definiteBulgarian": "главата",
+      "indefiniteBulgarian": "глава"
+    },
+    "categories": [
+      "body-parts",
+      "health",
+      "everyday-phrases"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "masculine",
+      "A1-core",
+      "health-context"
+    ],
+    "culturalNotes": [
+      "Germans often use 'Kopf' in idioms: 'Kopf hoch!' (Keep your head up!) means stay positive",
+      "Bulgarians use 'глава' similarly: 'Качи си главата!' for encouragement"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-002-auge",
+    "german": "das Auge",
+    "bulgarian": "окото",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Sinnesorgan zur Wahrnehmung von Licht und Farben",
+      "bulgarian": "Сетивен орган за възприемане на светлина и цветове"
+    },
+    "examples": [
+      {
+        "german": "Die Augen sind blau.",
+        "bulgarian": "Очите са сини.",
+        "context": "physical appearance"
+      },
+      {
+        "german": "Ich kann die Augen nicht öffnen.",
+        "bulgarian": "Не мога да отворя очите.",
+        "context": "action/ability"
+      },
+      {
+        "german": "Schau mir in die Augen!",
+        "bulgarian": "Погледни ме в очите!",
+        "context": "command/request"
+      }
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Augen",
+      "definiteBulgarian": "окото",
+      "indefiniteBulgarian": "око"
+    },
+    "categories": [
+      "body-parts",
+      "health",
+      "appearance"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "neuter",
+      "A1-core",
+      "appearance"
+    ],
+    "culturalNotes": [
+      "In German culture, direct eye contact shows honesty and attention",
+      "Bulgarian communication also values eye contact during conversation"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-003-nase",
+    "german": "die Nase",
+    "bulgarian": "носът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Organ in der Mitte des Gesichts, das zum Atmen und Riechen dient",
+      "bulgarian": "Орган в средата на лицето, който служи за дишане и миризма"
+    },
+    "examples": [
+      {
+        "german": "Die Nase ist rot.",
+        "bulgarian": "Носът е червен.",
+        "context": "observation"
+      },
+      {
+        "german": "Ich kann nicht durch die Nase atmen.",
+        "bulgarian": "Не мога да дишам през носа.",
+        "context": "health complaint"
+      },
+      {
+        "german": "Wische deine Nase ab!",
+        "bulgarian": "Избърши си носа!",
+        "context": "instruction/care"
+      }
+    ],
+    "grammar": {
+      "gender": "feminine",
+      "article": "die",
+      "plural": "die Nasen",
+      "definiteBulgarian": "носът",
+      "indefiniteBulgarian": "нос"
+    },
+    "categories": [
+      "body-parts",
+      "health",
+      "appearance"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "feminine",
+      "A1-core"
+    ],
+    "culturalNotes": [
+      "'Große Nase' (big nose) is a common descriptive phrase in German",
+      "Bulgarian uses 'голям нос' in similar contexts"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-004-mund",
+    "german": "der Mund",
+    "bulgarian": "устата",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Körperteil mit Zähnen und Zunge, durch den man isst und spricht",
+      "bulgarian": "Телесна част със зъби и език, през която се яде и говори"
+    },
+    "examples": [
+      {
+        "german": "Der Mund ist groß.",
+        "bulgarian": "Устата е голяма.",
+        "context": "description"
+      },
+      {
+        "german": "Halte deinen Mund geschlossen!",
+        "bulgarian": "Затвори устата!",
+        "context": "instruction"
+      },
+      {
+        "german": "Mit dem Mund spricht man.",
+        "bulgarian": "Устата се използва за говорене.",
+        "context": "function"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Münder/Mäuler",
+      "definiteBulgarian": "устата",
+      "indefiniteBulgarian": "уста"
+    },
+    "categories": [
+      "body-parts",
+      "health",
+      "appearance"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "masculine",
+      "A1-core"
+    ],
+    "culturalNotes": [
+      "'Mund halten' (keep one's mouth shut) means keeping a secret",
+      "Bulgarian: 'Да си затториш устата' has the same meaning"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-005-zahn",
+    "german": "der Zahn",
+    "bulgarian": "зъбът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Hartgebilde im Mund zum Kauen von Speisen",
+      "bulgarian": "Твърдо образувание в устата за дъвчене на храна"
+    },
+    "examples": [
+      {
+        "german": "Der Zahn tut mir weh.",
+        "bulgarian": "Болка ме зъбът.",
+        "context": "pain complaint"
+      },
+      {
+        "german": "Ich putze meine Zähne jeden Morgen.",
+        "bulgarian": "Чистя си зъбите всяко сутрин.",
+        "context": "daily routine"
+      },
+      {
+        "german": "Hast du einen kariösen Zahn?",
+        "bulgarian": "Имаш ли кариес в зъбите?",
+        "context": "health question"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Zähne",
+      "definiteBulgarian": "зъбът",
+      "indefiniteBulgarian": "зъб"
+    },
+    "categories": [
+      "body-parts",
+      "health"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "masculine",
+      "A1-core",
+      "health"
+    ],
+    "culturalNotes": [
+      "German dental care is very important; regular check-ups are common",
+      "Bulgarian culture also emphasizes oral hygiene and regular dental visits"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-006-ohr",
+    "german": "das Ohr",
+    "bulgarian": "ухото",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Sinnesorgan zur Wahrnehmung von Schall und Lärm",
+      "bulgarian": "Сетивен орган за възприемане на звук и шум"
+    },
+    "examples": [
+      {
+        "german": "Ich höre mit meinen Ohren.",
+        "bulgarian": "Слушам със своите уши.",
+        "context": "sense"
+      },
+      {
+        "german": "Das Ohr tut mir weh.",
+        "bulgarian": "Болка ме ухото.",
+        "context": "pain"
+      },
+      {
+        "german": "Kann dein Ohr gut hören?",
+        "bulgarian": "Твоето ухо може ли да чува добре?",
+        "context": "hearing question"
+      }
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Ohren",
+      "definiteBulgarian": "ухото",
+      "indefiniteBulgarian": "ухо"
+    },
+    "categories": [
+      "body-parts",
+      "health",
+      "senses"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "neuter",
+      "A1-core"
+    ],
+    "culturalNotes": [
+      "'Dicke Ohren haben' (to have thick ears) means to ignore criticism",
+      "Bulgarian: 'Да имаш тълстите уши' has similar connotation"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-007-hand",
+    "german": "die Hand",
+    "bulgarian": "ръката",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Körperteil am Ende des Armes mit fünf Fingern",
+      "bulgarian": "Телесна част на края на ръката с пет пръста"
+    },
+    "examples": [
+      {
+        "german": "Ich schüttle deine Hand.",
+        "bulgarian": "Пожимам ти ръката.",
+        "context": "greeting gesture"
+      },
+      {
+        "german": "Die Hand ist kalt.",
+        "bulgarian": "Ръката е студена.",
+        "context": "temperature observation"
+      },
+      {
+        "german": "Heben Sie die Hand!",
+        "bulgarian": "Вдигни ръката!",
+        "context": "classroom instruction"
+      }
+    ],
+    "grammar": {
+      "gender": "feminine",
+      "article": "die",
+      "plural": "die Hände",
+      "definiteBulgarian": "ръката",
+      "indefiniteBulgarian": "рука"
+    },
+    "categories": [
+      "body-parts",
+      "actions",
+      "greetings"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "feminine",
+      "A1-core",
+      "gesture"
+    ],
+    "culturalNotes": [
+      "Handshakes are standard greeting in German culture",
+      "Bulgarian culture also values handshakes for formal introductions"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-008-arm",
+    "german": "der Arm",
+    "bulgarian": "ръката",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Körperteil zwischen Schulter und Hand",
+      "bulgarian": "Телесна част между рамото и ръката"
+    },
+    "examples": [
+      {
+        "german": "Der Arm ist verletzt.",
+        "bulgarian": "Ръката е ранена.",
+        "context": "injury"
+      },
+      {
+        "german": "Er umarmt sie mit einem Arm.",
+        "bulgarian": "Той я прегръща с една ръка.",
+        "context": "action"
+      },
+      {
+        "german": "Mein Arm tut weh.",
+        "bulgarian": "Болка ме ръката.",
+        "context": "pain"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Arme",
+      "definiteBulgarian": "ръката",
+      "indefiniteBulgarian": "рука"
+    },
+    "categories": [
+      "body-parts",
+      "health",
+      "actions"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "masculine",
+      "A1-core"
+    ],
+    "culturalNotes": [
+      "German uses 'Arm' for the whole limb; similar in Bulgarian",
+      "Both cultures use arm-related idioms for expressions and emotions"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-009-bein",
+    "german": "das Bein",
+    "bulgarian": "краката",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Körperteil, auf dem man steht und geht",
+      "bulgarian": "Телесна част, на която човек стои и ходи"
+    },
+    "examples": [
+      {
+        "german": "Das Bein ist lang.",
+        "bulgarian": "Краката е дълга.",
+        "context": "description"
+      },
+      {
+        "german": "Ich bin auf den Beinen den ganzen Tag.",
+        "bulgarian": "Съм на краката целия ден.",
+        "context": "activity"
+      },
+      {
+        "german": "Das Bein tut mir weh.",
+        "bulgarian": "Болка ме краката.",
+        "context": "pain"
+      }
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Beine",
+      "definiteBulgarian": "краката",
+      "indefiniteBulgarian": "крак"
+    },
+    "categories": [
+      "body-parts",
+      "health",
+      "actions"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "neuter",
+      "A1-core"
+    ],
+    "culturalNotes": [
+      "'Beine in die Hand nehmen' (to take legs in hand) means to run away",
+      "Bulgarian: 'На краката' means standing/active"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-010-fuss",
+    "german": "der Fuß",
+    "bulgarian": "стъпалото",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Körperteil am Ende des Beines mit Zehen",
+      "bulgarian": "Телесна част на края на краката с пръсти"
+    },
+    "examples": [
+      {
+        "german": "Der Fuß ist groß.",
+        "bulgarian": "Стъпалото е голямо.",
+        "context": "description"
+      },
+      {
+        "german": "Der Fuß tut mir weh.",
+        "bulgarian": "Болка ме стъпалото.",
+        "context": "pain"
+      },
+      {
+        "german": "Ich trete auf den Fuß.",
+        "bulgarian": "Стъпвам на стъпалото.",
+        "context": "action"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Füße",
+      "definiteBulgarian": "стъпалото",
+      "indefiniteBulgarian": "стъпало"
+    },
+    "categories": [
+      "body-parts",
+      "health",
+      "actions"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "masculine",
+      "A1-core"
+    ],
+    "culturalNotes": [
+      "Germans often use 'Fuß' for precision (as opposed to general 'leg')",
+      "Bulgarian distinguishes foot from leg similarly"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-011-herz",
+    "german": "das Herz",
+    "bulgarian": "сърцето",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Organ, das Blut durch den Körper pumpt",
+      "bulgarian": "Орган, който помпа кръв през тялото"
+    },
+    "examples": [
+      {
+        "german": "Das Herz schlägt schnell.",
+        "bulgarian": "Сърцето бие бързо.",
+        "context": "health observation"
+      },
+      {
+        "german": "Mein Herz ist traurig.",
+        "bulgarian": "Моето сърце е тъжно.",
+        "context": "emotion metaphor"
+      },
+      {
+        "german": "Das Herz ist ein wichtiges Organ.",
+        "bulgarian": "Сърцето е важен орган.",
+        "context": "factual"
+      }
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Herzen",
+      "definiteBulgarian": "сърцето",
+      "indefiniteBulgarian": "сърце"
+    },
+    "categories": [
+      "body-parts",
+      "health",
+      "emotions"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "neuter",
+      "A1-core",
+      "medical"
+    ],
+    "culturalNotes": [
+      "'Mit ganzem Herzen' (with whole heart) means wholeheartedly",
+      "Bulgarian: 'От цялото си сърце' expresses the same sentiment"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-012-hals",
+    "german": "der Hals",
+    "bulgarian": "гърлото",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Körperteil zwischen Kopf und Schultern",
+      "bulgarian": "Телесна част между главата и раменете"
+    },
+    "examples": [
+      {
+        "german": "Der Hals ist kurz.",
+        "bulgarian": "Гърлото е късо.",
+        "context": "description"
+      },
+      {
+        "german": "Mir tut der Hals weh.",
+        "bulgarian": "Болка ме гърлото.",
+        "context": "illness symptom"
+      },
+      {
+        "german": "Der Hals ist rot.",
+        "bulgarian": "Гърлото е червено.",
+        "context": "observation"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Hälse",
+      "definiteBulgarian": "гърлото",
+      "indefiniteBulgarian": "гърло"
+    },
+    "categories": [
+      "body-parts",
+      "health"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "masculine",
+      "A1-core",
+      "health"
+    ],
+    "culturalNotes": [
+      "Sore throat is common cold symptom; same in both cultures",
+      "Both cultures have herbal remedies for throat problems"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-013-bauch",
+    "german": "der Bauch",
+    "bulgarian": "коремът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Der vordere Teil des Körpers zwischen Rippen und Hüften",
+      "bulgarian": "Предната част на тялото между ребрата и бедрата"
+    },
+    "examples": [
+      {
+        "german": "Der Bauch ist rund.",
+        "bulgarian": "Коремът е кръгъл.",
+        "context": "description"
+      },
+      {
+        "german": "Mir tut der Bauch weh.",
+        "bulgarian": "Болка ме корема.",
+        "context": "pain complaint"
+      },
+      {
+        "german": "Ich habe Hunger im Bauch.",
+        "bulgarian": "Гладен съм в корема.",
+        "context": "hunger feeling"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Bäuche",
+      "definiteBulgarian": "коремът",
+      "indefiniteBulgarian": "корем"
+    },
+    "categories": [
+      "body-parts",
+      "health",
+      "appearance"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "masculine",
+      "A1-core",
+      "health"
+    ],
+    "culturalNotes": [
+      "'Bauchschmerzen' (stomach pain) is a common complaint",
+      "Bulgarian uses 'болка в корема' similarly"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-014-ruecken",
+    "german": "der Rücken",
+    "bulgarian": "гърбът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Der hintere Teil des menschlichen Körpers von den Schultern bis zum Gesäß",
+      "bulgarian": "Задната част на човешкото тяло от раменете до седалката"
+    },
+    "examples": [
+      {
+        "german": "Der Rücken ist stark.",
+        "bulgarian": "Гърбът е силен.",
+        "context": "description"
+      },
+      {
+        "german": "Mir tut der Rücken weh.",
+        "bulgarian": "Болка ме гърбът.",
+        "context": "pain complaint"
+      },
+      {
+        "german": "Er liegt auf dem Rücken.",
+        "bulgarian": "Той лежи на гърба.",
+        "context": "position"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Rücken",
+      "definiteBulgarian": "гърбът",
+      "indefiniteBulgarian": "гръб"
+    },
+    "categories": [
+      "body-parts",
+      "health",
+      "appearance"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "masculine",
+      "A1-core",
+      "health"
+    ],
+    "culturalNotes": [
+      "Back pain is very common in modern life in both cultures",
+      "Proper posture is emphasized in German ergonomics and Bulgarian culture"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-001-gluecklich",
+    "german": "glücklich",
+    "bulgarian": "щастлив",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand der Freude und Zufriedenheit",
+      "bulgarian": "Състояние на радост и задоволство"
+    },
+    "examples": [
+      {
+        "german": "Ich bin glücklich.",
+        "bulgarian": "Аз съм щастлив.",
+        "context": "personal feeling"
+      },
+      {
+        "german": "Das Kind sieht glücklich aus.",
+        "bulgarian": "Детето изглежда щастливо.",
+        "context": "observation"
+      },
+      {
+        "german": "Sie sind sehr glücklich zusammen.",
+        "bulgarian": "Те са много щастливи заедно.",
+        "context": "relationship description"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "щастлив (masculine), щастлива (feminine), щастливо (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": [
+      "emotions",
+      "feelings",
+      "personality"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "adjective",
+      "A1-core",
+      "positive-emotion"
+    ],
+    "culturalNotes": [
+      "Happiness is a universal value in both German and Bulgarian cultures",
+      "German emphasis on 'Glück' (luck/happiness) as life goal",
+      "Bulgarian 'щастие' has similar philosophical importance"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-002-traurig",
+    "german": "traurig",
+    "bulgarian": "тъжен",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Traurigkeit und Niedergeschlagenheit",
+      "bulgarian": "Състояние на печал и депресия"
+    },
+    "examples": [
+      {
+        "german": "Ich bin traurig.",
+        "bulgarian": "Аз съм тъжен.",
+        "context": "personal feeling"
+      },
+      {
+        "german": "Das ist eine traurige Geschichte.",
+        "bulgarian": "Това е тъжна история.",
+        "context": "story description"
+      },
+      {
+        "german": "Er sieht traurig aus.",
+        "bulgarian": "Той изглежда тъжен.",
+        "context": "observation"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "тъжен (masculine), тъжна (feminine), тъжно (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": [
+      "emotions",
+      "feelings",
+      "personality"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "adjective",
+      "A1-core",
+      "negative-emotion"
+    ],
+    "culturalNotes": [
+      "Both cultures acknowledge sadness as natural human emotion",
+      "German literature emphasizes emotional depth including sadness",
+      "Bulgarian literature similarly explores melancholy themes"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-003-wuetend",
+    "german": "wütend",
+    "bulgarian": "ядосан",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Zorn und Verärgerung",
+      "bulgarian": "Състояние на гняв и раздразнение"
+    },
+    "examples": [
+      {
+        "german": "Ich bin wütend.",
+        "bulgarian": "Аз съм ядосан.",
+        "context": "personal feeling"
+      },
+      {
+        "german": "Er ist sehr wütend.",
+        "bulgarian": "Той е много ядосан.",
+        "context": "observation"
+      },
+      {
+        "german": "Sei nicht wütend mit mir!",
+        "bulgarian": "Не се ядосвай на мен!",
+        "context": "plea/request"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "ядосан (masculine), ядосана (feminine), ядосано (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": [
+      "emotions",
+      "feelings",
+      "personality"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "adjective",
+      "A1-core",
+      "negative-emotion"
+    ],
+    "culturalNotes": [
+      "Both cultures value emotional control in professional settings",
+      "German culture emphasizes rational problem-solving when angry",
+      "Bulgarian culture values reconciliation after anger"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-004-aengstlich",
+    "german": "ängstlich",
+    "bulgarian": "боязлив",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Angst und Besorgnis",
+      "bulgarian": "Състояние на страх и притеснение"
+    },
+    "examples": [
+      {
+        "german": "Das Kind ist ängstlich.",
+        "bulgarian": "Детето е боязливо.",
+        "context": "personality description"
+      },
+      {
+        "german": "Ich bin nicht ängstlich.",
+        "bulgarian": "Аз не съм боязлив.",
+        "context": "self-description"
+      },
+      {
+        "german": "Er ist ängstlich vor Hunden.",
+        "bulgarian": "Той е боязлив от кучета.",
+        "context": "specific fear"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "боязлив (masculine), боязлива (feminine), боязливо (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": [
+      "emotions",
+      "feelings",
+      "personality"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "adjective",
+      "A1-core",
+      "negative-emotion"
+    ],
+    "culturalNotes": [
+      "Fear is acknowledged as natural emotion in both cultures",
+      "German approach emphasizes overcoming fear through courage",
+      "Bulgarian culture values community support during fearful times"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-005-ueberrascht",
+    "german": "überrascht",
+    "bulgarian": "изненадан",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Überraschung und Verblüffung",
+      "bulgarian": "Състояние на неочаквано събитие или откровение"
+    },
+    "examples": [
+      {
+        "german": "Ich bin überrascht!",
+        "bulgarian": "Аз съм изненадан!",
+        "context": "exclamation"
+      },
+      {
+        "german": "Sie sieht überrascht aus.",
+        "bulgarian": "Тя изглежда изненадана.",
+        "context": "observation"
+      },
+      {
+        "german": "Das war eine überraschte Reaktion.",
+        "bulgarian": "Това беше неочакван отговор.",
+        "context": "response description"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "изненадан (masculine), изненадана (feminine), изненадано (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": [
+      "emotions",
+      "feelings",
+      "reactions"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "adjective",
+      "A1-core",
+      "mixed-emotion"
+    ],
+    "culturalNotes": [
+      "Surprise parties are popular in both German and Bulgarian cultures",
+      "Both cultures enjoy the element of surprise in social contexts"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-006-muede",
+    "german": "müde",
+    "bulgarian": "уморен",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Erschöpfung und Schlafbedarf",
+      "bulgarian": "Състояние на изтощение и нужда от сън"
+    },
+    "examples": [
+      {
+        "german": "Ich bin müde.",
+        "bulgarian": "Аз съм уморен.",
+        "context": "personal condition"
+      },
+      {
+        "german": "Das Kind ist müde nach der Schule.",
+        "bulgarian": "Детето е уморено след училище.",
+        "context": "situation"
+      },
+      {
+        "german": "Ich bin müde von arbeiten.",
+        "bulgarian": "Отегчен съм да работя.",
+        "context": "fatigue from activity"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "уморен (masculine), уморена (feminine), уморено (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": [
+      "emotions",
+      "feelings",
+      "physical-state"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "adjective",
+      "A1-core",
+      "physical-condition"
+    ],
+    "culturalNotes": [
+      "Work-life balance is important in German culture; acknowledging fatigue is acceptable",
+      "Bulgarian culture also values rest and recovery after hard work"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-007-hungrig",
+    "german": "hungrig",
+    "bulgarian": "гладен",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Appetit und Nahrungsbedarf",
+      "bulgarian": "Състояние на апетит и нужда от храна"
+    },
+    "examples": [
+      {
+        "german": "Ich bin hungrig.",
+        "bulgarian": "Аз съм гладен.",
+        "context": "personal condition"
+      },
+      {
+        "german": "Das Kind hat Hunger.",
+        "bulgarian": "Детето е гладно.",
+        "context": "observation"
+      },
+      {
+        "german": "Mir ist hungrig.",
+        "bulgarian": "Гладен съм.",
+        "context": "feeling expression"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "гладен (masculine), гладна (feminine), гладно (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": [
+      "emotions",
+      "physical-state",
+      "needs"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "adjective",
+      "A1-core",
+      "basic-need"
+    ],
+    "culturalNotes": [
+      "German culture values regular mealtimes and proper nutrition",
+      "Bulgarian culture emphasizes family meals and food sharing"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-008-duerstig",
+    "german": "durstig",
+    "bulgarian": "жадосан",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Durst und Flüssigkeitsbedarf",
+      "bulgarian": "Състояние на жажда и нужда от течност"
+    },
+    "examples": [
+      {
+        "german": "Ich bin durstig.",
+        "bulgarian": "Аз съм жадосан.",
+        "context": "personal condition"
+      },
+      {
+        "german": "Das Kind ist durstig nach dem Sport.",
+        "bulgarian": "Детето е жадосано след спорта.",
+        "context": "situation"
+      },
+      {
+        "german": "Gib mir ein Glas Wasser, ich bin durstig!",
+        "bulgarian": "Дай ми чаша вода, жадосан съм!",
+        "context": "request"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "жадосан (masculine), жадосана (feminine), жадосано (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": [
+      "emotions",
+      "physical-state",
+      "needs"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "adjective",
+      "A1-core",
+      "basic-need"
+    ],
+    "culturalNotes": [
+      "Staying hydrated is important in both German and Bulgarian climates",
+      "Both cultures offer refreshments in social situations"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-009-lieb",
+    "german": "lieb",
+    "bulgarian": "скъп",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Zuneigung und Zärtlichkeit",
+      "bulgarian": "Състояние на привързаност и нежност"
+    },
+    "examples": [
+      {
+        "german": "Das ist meine liebe Mutter.",
+        "bulgarian": "Това е моята скъпа майка.",
+        "context": "family relationship"
+      },
+      {
+        "german": "Ich liebe dich sehr, mein Liebes!",
+        "bulgarian": "Много те обичам, скъпа!",
+        "context": "romantic expression"
+      },
+      {
+        "german": "Das ist ein liebes Kind.",
+        "bulgarian": "Това е мило дете.",
+        "context": "character description"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "скъп (masculine), скъпа (feminine), скъпо (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": [
+      "emotions",
+      "feelings",
+      "relationships"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "adjective",
+      "A1-core",
+      "positive-emotion",
+      "relationships"
+    ],
+    "culturalNotes": [
+      "Family bonds are very important in both German and Bulgarian cultures",
+      "Expressing affection is valued in intimate relationships"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-010-boese",
+    "german": "böse",
+    "bulgarian": "лош",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Bosheit oder schlechtem Verhalten",
+      "bulgarian": "Състояние на зълост или лошо поведение"
+    },
+    "examples": [
+      {
+        "german": "Der Mann ist böse.",
+        "bulgarian": "Мъжът е лош.",
+        "context": "character description"
+      },
+      {
+        "german": "Das Kind war böse heute.",
+        "bulgarian": "Детето беше лошо днес.",
+        "context": "behavior description"
+      },
+      {
+        "german": "Sei nicht böse!",
+        "bulgarian": "Не буди лош!",
+        "context": "plea/request"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "лош (masculine), лоша (feminine), лошо (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": [
+      "emotions",
+      "personality",
+      "behavior"
+    ],
+    "tags": [
+      "essential",
+      "common",
+      "adjective",
+      "A1-core",
+      "negative-emotion"
+    ],
+    "culturalNotes": [
+      "Morality and good behavior are emphasized in both cultures",
+      "German fairy tales feature 'böse Hexen' (evil witches)",
+      "Bulgarian folklore similarly has 'лош' characters"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  }
+]

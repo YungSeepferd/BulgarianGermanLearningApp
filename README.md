@@ -11,7 +11,8 @@
 
 ## 🚀 5-Minute Start
 
-**New here?** Read **[GETTING_STARTED.md](docs/GETTING_STARTED.md)** first (5 min setup guide)
+**New here?** Read **[QUICK_START.md](QUICK_START.md)** first (10 min complete guide)  
+Or jump straight to **[GETTING_STARTED.md](docs/GETTING_STARTED.md)** for development setup only
 
 ```bash
 # 1. Clone & Install
@@ -23,6 +24,11 @@ pnpm install
 pnpm run dev
 
 # 3. Open browser to http://localhost:5173
+```
+
+**Verify it works:**
+```bash
+pnpm run simulate-ci  # All checks must pass
 ```
 
 ## 🌐 Live Deployment
@@ -143,10 +149,31 @@ docs/
 
 ---
 
+## � Documentation Organization
+
+**Active Docs** (use these):
+- [QUICK_START.md](QUICK_START.md) - Quick start guide (10 min)
+- [AGENTS.md](AGENTS.md) - Project guide for AI agents & team
+- [docs/ROADMAP_5_PHASES.md](docs/ROADMAP_5_PHASES.md) - Complete 5-phase roadmap
+- [docs/PHASE_2_EXERCISE_SYSTEM.md](docs/PHASE_2_EXERCISE_SYSTEM.md) - Phase 2 ready-to-execute plan
+- [docs/architecture/ARCHITECTURE.md](docs/architecture/ARCHITECTURE.md) - Technical architecture
+- [docs/development/DEVELOPMENT.md](docs/development/DEVELOPMENT.md) - Coding patterns
+- [docs/GERMAN_BULGARIAN_GRAMMAR_GUIDE.md](docs/GERMAN_BULGARIAN_GRAMMAR_GUIDE.md) - Grammar reference
+
+**Archive** (historical reference):
+- [docs/_archive/README.md](docs/_archive/README.md) - Archive guide
+- [docs/_archive/historic-analysis/](docs/_archive/historic-analysis/) - Research & planning docs
+- [docs/_archive/deprecated-phases/](docs/_archive/deprecated-phases/) - Old phase plans
+- [docs/_archive/temporary-reports/](docs/_archive/temporary-reports/) - Status reports
+
+---
+
 ## 📖 More Information
 
 - **What was removed?** → [SIMPLIFICATION.md](docs/SIMPLIFICATION.md)
 - **What changed?** → [CHANGELOG.md](docs/CHANGELOG.md)
+- **Full documentation index** → [docs/INDEX.md](docs/INDEX.md)
+- **New developers** → [docs/GETTING_STARTED.md](docs/GETTING_STARTED.md)
 - **Bilingual support?** → [BILINGUAL_SUPPORT.md](docs/BILINGUAL_SUPPORT.md)
 
 ---

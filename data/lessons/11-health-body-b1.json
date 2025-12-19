@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440011",
+  "title": "Health & Body",
+  "description": "Discuss health issues, body parts, medical vocabulary, and communicate effectively at doctor's appointments.",
+  "difficulty": "B1",
+  "type": "vocabulary",
+  "duration": 22,
+  "vocabulary": [
+    "vocab-german-gesund",
+    "vocab-german-krank",
+    "vocab-german-schmerz",
+    "vocab-german-arzt",
+    "vocab-german-medizin",
+    "vocab-german-kopf",
+    "vocab-german-bauch",
+    "vocab-german-arm",
+    "vocab-german-bein",
+    "vocab-german-fieber"
+  ],
+  "objectives": [
+    {
+      "id": "obj-health-1",
+      "description": "Name major body parts in Bulgarian",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-health-2",
+      "description": "Describe symptoms and health problems",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-health-3",
+      "description": "Communicate at medical appointments",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Health & Body\n\n## Grammar Explanation\n\n### Body Parts (Части на тялото)\n\n**Head & Face**:\n- Глава (glava) - head\n- Око (oko) - eye\n- Ухо (uho) - ear\n- Нос (nos) - nose\n- Уста (usta) - mouth\n- Зъб (zăb) - tooth\n\n**Body**:\n- Врат (vrat) - neck\n- Рамо (ramo) - shoulder\n- Гръб (grăb) - back\n- Корем (korem) - stomach/abdomen\n- Ръка (răka) - hand/arm\n- Крак (krak) - leg/foot\n\n### Health Vocabulary\n\n**Conditions**:\n- Здрав/Здрава (zdrav/zdrava) - healthy (m/f)\n- Болен/Болна (bolen/bolna) - sick (m/f)\n- Болка (bolka) - pain\n- Температура (temperatura) - fever\n- Настинка (nastinka) - cold\n- Грип (grip) - flu\n\n**Medical Terms**:\n- Лекар (lekar) - doctor\n- Аптека (apteka) - pharmacy\n- Лекарство (lekarstvo) - medicine\n- Рецепта (retsept) - prescription\n- Болница (bolnitsa) - hospital\n\n### Useful Phrases\n\n- **Боли ме...** (Boli me...) - My... hurts\n- **Не се чувствам добре** (Ne se chuvstvam dobre) - I don't feel well\n- **Имам нужда от лекар** (Imam nuzhda ot lekar) - I need a doctor\n\n## Cultural Notes\n\n1. **Healthcare System**: Bulgaria has both public and private healthcare. EU citizens can use European Health Insurance Card.\n\n2. **Pharmacies**: Bulgarian pharmacists can recommend treatments for minor ailments.\n\n3. **Home Remedies**: Traditional remedies like rakiya (brandy) with honey for colds are common.\n\n4. **Spa Culture**: Mineral springs and spa treatments are popular for health.",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["intermediate", "health", "body", "medical", "B1"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440003"],
+    "relatedLessons": [],
+    "isPremium": false
+  }
+}

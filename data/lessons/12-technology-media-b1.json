@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440012",
+  "title": "Technology & Media",
+  "description": "Navigate the digital world in Bulgarian: computers, internet, social media, and modern communication.",
+  "difficulty": "B1",
+  "type": "vocabulary",
+  "duration": 20,
+  "vocabulary": [
+    "vocab-german-computer",
+    "vocab-german-internet",
+    "vocab-german-handy",
+    "vocab-german-email",
+    "vocab-german-app",
+    "vocab-german-software",
+    "vocab-german-website",
+    "vocab-german-download",
+    "vocab-german-online",
+    "vocab-german-passwort"
+  ],
+  "objectives": [
+    {
+      "id": "obj-tech-1",
+      "description": "Use technology vocabulary confidently",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-tech-2",
+      "description": "Discuss social media and online activities",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-tech-3",
+      "description": "Troubleshoot basic tech issues in Bulgarian",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Technology & Media\n\n## Grammar Explanation\n\n### Technology Vocabulary\n\n**Devices**:\n- Компютър (kompyutăr) - computer\n- Лаптоп (laptop) - laptop\n- Телефон (telefon) - phone\n- Таблет (tablet) - tablet\n- Клавиатура (klaviatura) - keyboard\n- Мишка (mishka) - mouse\n\n**Internet & Digital**:\n- Интернет (internet) - internet\n- Имейл (imeyl) - email\n- Уебсайт (uebsayt) - website\n- Приложение (prilozhenie) - app/application\n- Софтуер (softuer) - software\n- Файл (fayl) - file\n- Парола (parola) - password\n\n**Social Media**:\n- Профил (profil) - profile\n- Публикация (publikatsiya) - post\n- Коментар (komentar) - comment\n- Харесване (haresvane) - like\n- Споделяне (spodelene) - share\n- Фейсбук (Feysbook) - Facebook\n- Инстаграм (Instagram) - Instagram\n\n### Useful Phrases\n\n- **Компютърът не работи** (Kompyutărăt ne raboti) - The computer doesn't work\n- **Нямам интернет** (Nyamam internet) - I don't have internet\n- **Забравих паролата си** (Zabravikh parolata si) - I forgot my password\n- **Изпрати ми имейл** (Izprati mi imeyl) - Send me an email\n\n## Cultural Notes\n\n1. **Tech Hub**: Sofia is becoming a significant tech hub in Eastern Europe.\n\n2. **Internet Penetration**: Bulgaria has high internet speeds and widespread coverage.\n\n3. **Social Media**: Facebook and Instagram are most popular; Viber is widely used for messaging.\n\n4. **E-Government**: Many government services available online (e-services).",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["intermediate", "technology", "internet", "media", "B1"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440010"],
+    "relatedLessons": [],
+    "isPremium": false
+  }
+}

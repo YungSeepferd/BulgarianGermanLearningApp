@@ -1,0 +1,1015 @@
+[
+  {
+    "id": "body-001-kopf",
+    "german": "der Kopf",
+    "bulgarian": "главата",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Der oberste Teil des menschlichen Körpers, in dem sich Gehirn, Augen, Ohren, Nase und Mund befinden",
+      "bulgarian": "Горната част на човешкото тяло, в която се намират мозъкът, очите, ушите, носът и устата"
+    },
+    "examples": [
+      {
+        "german": "Der Mann hat einen großen Kopf.",
+        "bulgarian": "Мъжът има голяма глава.",
+        "context": "physical description"
+      },
+      {
+        "german": "Mir tut der Kopf weh.",
+        "bulgarian": "Болка ме главата.",
+        "context": "health/complaint"
+      },
+      {
+        "german": "Das Kind schüttelt den Kopf.",
+        "bulgarian": "Детето поклаща главата.",
+        "context": "movement/gesture"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Köpfe",
+      "definiteBulgarian": "главата",
+      "indefiniteBulgarian": "глава"
+    },
+    "categories": ["body-parts", "health", "everyday-phrases"],
+    "tags": ["essential", "common", "masculine", "A1-core", "health-context"],
+    "culturalNotes": [
+      "Germans often use 'Kopf' in idioms: 'Kopf hoch!' (Keep your head up!) means stay positive",
+      "Bulgarians use 'глава' similarly: 'Качи си главата!' for encouragement"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-002-auge",
+    "german": "das Auge",
+    "bulgarian": "окото",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Sinnesorgan zur Wahrnehmung von Licht und Farben",
+      "bulgarian": "Сетивен орган за възприемане на светлина и цветове"
+    },
+    "examples": [
+      {
+        "german": "Die Augen sind blau.",
+        "bulgarian": "Очите са сини.",
+        "context": "physical appearance"
+      },
+      {
+        "german": "Ich kann die Augen nicht öffnen.",
+        "bulgarian": "Не мога да отворя очите.",
+        "context": "action/ability"
+      },
+      {
+        "german": "Schau mir in die Augen!",
+        "bulgarian": "Погледни ме в очите!",
+        "context": "command/request"
+      }
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Augen",
+      "definiteBulgarian": "окото",
+      "indefiniteBulgarian": "око"
+    },
+    "categories": ["body-parts", "health", "appearance"],
+    "tags": ["essential", "common", "neuter", "A1-core", "appearance"],
+    "culturalNotes": [
+      "In German culture, direct eye contact shows honesty and attention",
+      "Bulgarian communication also values eye contact during conversation"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-003-nase",
+    "german": "die Nase",
+    "bulgarian": "носът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Organ in der Mitte des Gesichts, das zum Atmen und Riechen dient",
+      "bulgarian": "Орган в средата на лицето, който служи за дишане и миризма"
+    },
+    "examples": [
+      {
+        "german": "Die Nase ist rot.",
+        "bulgarian": "Носът е червен.",
+        "context": "observation"
+      },
+      {
+        "german": "Ich kann nicht durch die Nase atmen.",
+        "bulgarian": "Не мога да дишам през носа.",
+        "context": "health complaint"
+      },
+      {
+        "german": "Wische deine Nase ab!",
+        "bulgarian": "Избърши си носа!",
+        "context": "instruction/care"
+      }
+    ],
+    "grammar": {
+      "gender": "feminine",
+      "article": "die",
+      "plural": "die Nasen",
+      "definiteBulgarian": "носът",
+      "indefiniteBulgarian": "нос"
+    },
+    "categories": ["body-parts", "health", "appearance"],
+    "tags": ["essential", "common", "feminine", "A1-core"],
+    "culturalNotes": [
+      "'Große Nase' (big nose) is a common descriptive phrase in German",
+      "Bulgarian uses 'голям нос' in similar contexts"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-004-mund",
+    "german": "der Mund",
+    "bulgarian": "устата",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Körperteil mit Zähnen und Zunge, durch den man isst und spricht",
+      "bulgarian": "Телесна част със зъби и език, през която се яде и говори"
+    },
+    "examples": [
+      {
+        "german": "Der Mund ist groß.",
+        "bulgarian": "Устата е голяма.",
+        "context": "description"
+      },
+      {
+        "german": "Halte deinen Mund geschlossen!",
+        "bulgarian": "Затвори устата!",
+        "context": "instruction"
+      },
+      {
+        "german": "Mit dem Mund spricht man.",
+        "bulgarian": "Устата се използва за говорене.",
+        "context": "function"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Münder/Mäuler",
+      "definiteBulgarian": "устата",
+      "indefiniteBulgarian": "уста"
+    },
+    "categories": ["body-parts", "health", "appearance"],
+    "tags": ["essential", "common", "masculine", "A1-core"],
+    "culturalNotes": [
+      "'Mund halten' (keep one's mouth shut) means keeping a secret",
+      "Bulgarian: 'Да си затториш устата' has the same meaning"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-005-zahn",
+    "german": "der Zahn",
+    "bulgarian": "зъбът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Hartgebilde im Mund zum Kauen von Speisen",
+      "bulgarian": "Твърдо образувание в устата за дъвчене на храна"
+    },
+    "examples": [
+      {
+        "german": "Der Zahn tut mir weh.",
+        "bulgarian": "Болка ме зъбът.",
+        "context": "pain complaint"
+      },
+      {
+        "german": "Ich putze meine Zähne jeden Morgen.",
+        "bulgarian": "Чистя си зъбите всяко сутрин.",
+        "context": "daily routine"
+      },
+      {
+        "german": "Hast du einen kariösen Zahn?",
+        "bulgarian": "Имаш ли кариес в зъбите?",
+        "context": "health question"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Zähne",
+      "definiteBulgarian": "зъбът",
+      "indefiniteBulgarian": "зъб"
+    },
+    "categories": ["body-parts", "health"],
+    "tags": ["essential", "common", "masculine", "A1-core", "health"],
+    "culturalNotes": [
+      "German dental care is very important; regular check-ups are common",
+      "Bulgarian culture also emphasizes oral hygiene and regular dental visits"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-006-ohr",
+    "german": "das Ohr",
+    "bulgarian": "ухото",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Sinnesorgan zur Wahrnehmung von Schall und Lärm",
+      "bulgarian": "Сетивен орган за възприемане на звук и шум"
+    },
+    "examples": [
+      {
+        "german": "Ich höre mit meinen Ohren.",
+        "bulgarian": "Слушам със своите уши.",
+        "context": "sense"
+      },
+      {
+        "german": "Das Ohr tut mir weh.",
+        "bulgarian": "Болка ме ухото.",
+        "context": "pain"
+      },
+      {
+        "german": "Kann dein Ohr gut hören?",
+        "bulgarian": "Твоето ухо може ли да чува добре?",
+        "context": "hearing question"
+      }
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Ohren",
+      "definiteBulgarian": "ухото",
+      "indefiniteBulgarian": "ухо"
+    },
+    "categories": ["body-parts", "health", "senses"],
+    "tags": ["essential", "common", "neuter", "A1-core"],
+    "culturalNotes": [
+      "'Dicke Ohren haben' (to have thick ears) means to ignore criticism",
+      "Bulgarian: 'Да имаш тълстите уши' has similar connotation"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-007-hand",
+    "german": "die Hand",
+    "bulgarian": "ръката",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Körperteil am Ende des Armes mit fünf Fingern",
+      "bulgarian": "Телесна част на края на ръката с пет пръста"
+    },
+    "examples": [
+      {
+        "german": "Ich schüttle deine Hand.",
+        "bulgarian": "Пожимам ти ръката.",
+        "context": "greeting gesture"
+      },
+      {
+        "german": "Die Hand ist kalt.",
+        "bulgarian": "Ръката е студена.",
+        "context": "temperature observation"
+      },
+      {
+        "german": "Heben Sie die Hand!",
+        "bulgarian": "Вдигни ръката!",
+        "context": "classroom instruction"
+      }
+    ],
+    "grammar": {
+      "gender": "feminine",
+      "article": "die",
+      "plural": "die Hände",
+      "definiteBulgarian": "ръката",
+      "indefiniteBulgarian": "рука"
+    },
+    "categories": ["body-parts", "actions", "greetings"],
+    "tags": ["essential", "common", "feminine", "A1-core", "gesture"],
+    "culturalNotes": [
+      "Handshakes are standard greeting in German culture",
+      "Bulgarian culture also values handshakes for formal introductions"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-008-arm",
+    "german": "der Arm",
+    "bulgarian": "ръката",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Körperteil zwischen Schulter und Hand",
+      "bulgarian": "Телесна част между рамото и ръката"
+    },
+    "examples": [
+      {
+        "german": "Der Arm ist verletzt.",
+        "bulgarian": "Ръката е ранена.",
+        "context": "injury"
+      },
+      {
+        "german": "Er umarmt sie mit einem Arm.",
+        "bulgarian": "Той я прегръща с една ръка.",
+        "context": "action"
+      },
+      {
+        "german": "Mein Arm tut weh.",
+        "bulgarian": "Болка ме ръката.",
+        "context": "pain"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Arme",
+      "definiteBulgarian": "ръката",
+      "indefiniteBulgarian": "рука"
+    },
+    "categories": ["body-parts", "health", "actions"],
+    "tags": ["essential", "common", "masculine", "A1-core"],
+    "culturalNotes": [
+      "German uses 'Arm' for the whole limb; similar in Bulgarian",
+      "Both cultures use arm-related idioms for expressions and emotions"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-009-bein",
+    "german": "das Bein",
+    "bulgarian": "краката",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Körperteil, auf dem man steht und geht",
+      "bulgarian": "Телесна част, на която човек стои и ходи"
+    },
+    "examples": [
+      {
+        "german": "Das Bein ist lang.",
+        "bulgarian": "Краката е дълга.",
+        "context": "description"
+      },
+      {
+        "german": "Ich bin auf den Beinen den ganzen Tag.",
+        "bulgarian": "Съм на краката целия ден.",
+        "context": "activity"
+      },
+      {
+        "german": "Das Bein tut mir weh.",
+        "bulgarian": "Болка ме краката.",
+        "context": "pain"
+      }
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Beine",
+      "definiteBulgarian": "краката",
+      "indefiniteBulgarian": "крак"
+    },
+    "categories": ["body-parts", "health", "actions"],
+    "tags": ["essential", "common", "neuter", "A1-core"],
+    "culturalNotes": [
+      "'Beine in die Hand nehmen' (to take legs in hand) means to run away",
+      "Bulgarian: 'На краката' means standing/active"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-010-fuss",
+    "german": "der Fuß",
+    "bulgarian": "стъпалото",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Körperteil am Ende des Beines mit Zehen",
+      "bulgarian": "Телесна част на края на краката с пръсти"
+    },
+    "examples": [
+      {
+        "german": "Der Fuß ist groß.",
+        "bulgarian": "Стъпалото е голямо.",
+        "context": "description"
+      },
+      {
+        "german": "Der Fuß tut mir weh.",
+        "bulgarian": "Болка ме стъпалото.",
+        "context": "pain"
+      },
+      {
+        "german": "Ich trete auf den Fuß.",
+        "bulgarian": "Стъпвам на стъпалото.",
+        "context": "action"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Füße",
+      "definiteBulgarian": "стъпалото",
+      "indefiniteBulgarian": "стъпало"
+    },
+    "categories": ["body-parts", "health", "actions"],
+    "tags": ["essential", "common", "masculine", "A1-core"],
+    "culturalNotes": [
+      "Germans often use 'Fuß' for precision (as opposed to general 'leg')",
+      "Bulgarian distinguishes foot from leg similarly"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-011-herz",
+    "german": "das Herz",
+    "bulgarian": "сърцето",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Organ, das Blut durch den Körper pumpt",
+      "bulgarian": "Орган, който помпа кръв през тялото"
+    },
+    "examples": [
+      {
+        "german": "Das Herz schlägt schnell.",
+        "bulgarian": "Сърцето бие бързо.",
+        "context": "health observation"
+      },
+      {
+        "german": "Mein Herz ist traurig.",
+        "bulgarian": "Моето сърце е тъжно.",
+        "context": "emotion metaphor"
+      },
+      {
+        "german": "Das Herz ist ein wichtiges Organ.",
+        "bulgarian": "Сърцето е важен орган.",
+        "context": "factual"
+      }
+    ],
+    "grammar": {
+      "gender": "neuter",
+      "article": "das",
+      "plural": "die Herzen",
+      "definiteBulgarian": "сърцето",
+      "indefiniteBulgarian": "сърце"
+    },
+    "categories": ["body-parts", "health", "emotions"],
+    "tags": ["essential", "common", "neuter", "A1-core", "medical"],
+    "culturalNotes": [
+      "'Mit ganzem Herzen' (with whole heart) means wholeheartedly",
+      "Bulgarian: 'От цялото си сърце' expresses the same sentiment"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-012-hals",
+    "german": "der Hals",
+    "bulgarian": "гърлото",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Körperteil zwischen Kopf und Schultern",
+      "bulgarian": "Телесна част между главата и раменете"
+    },
+    "examples": [
+      {
+        "german": "Der Hals ist kurz.",
+        "bulgarian": "Гърлото е късо.",
+        "context": "description"
+      },
+      {
+        "german": "Mir tut der Hals weh.",
+        "bulgarian": "Болка ме гърлото.",
+        "context": "illness symptom"
+      },
+      {
+        "german": "Der Hals ist rot.",
+        "bulgarian": "Гърлото е червено.",
+        "context": "observation"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Hälse",
+      "definiteBulgarian": "гърлото",
+      "indefiniteBulgarian": "гърло"
+    },
+    "categories": ["body-parts", "health"],
+    "tags": ["essential", "common", "masculine", "A1-core", "health"],
+    "culturalNotes": [
+      "Sore throat is common cold symptom; same in both cultures",
+      "Both cultures have herbal remedies for throat problems"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-013-bauch",
+    "german": "der Bauch",
+    "bulgarian": "коремът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Der vordere Teil des Körpers zwischen Rippen und Hüften",
+      "bulgarian": "Предната част на тялото между ребрата и бедрата"
+    },
+    "examples": [
+      {
+        "german": "Der Bauch ist rund.",
+        "bulgarian": "Коремът е кръгъл.",
+        "context": "description"
+      },
+      {
+        "german": "Mir tut der Bauch weh.",
+        "bulgarian": "Болка ме корема.",
+        "context": "pain complaint"
+      },
+      {
+        "german": "Ich habe Hunger im Bauch.",
+        "bulgarian": "Гладен съм в корема.",
+        "context": "hunger feeling"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Bäuche",
+      "definiteBulgarian": "коремът",
+      "indefiniteBulgarian": "корем"
+    },
+    "categories": ["body-parts", "health", "appearance"],
+    "tags": ["essential", "common", "masculine", "A1-core", "health"],
+    "culturalNotes": [
+      "'Bauchschmerzen' (stomach pain) is a common complaint",
+      "Bulgarian uses 'болка в корема' similarly"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "body-014-ruecken",
+    "german": "der Rücken",
+    "bulgarian": "гърбът",
+    "partOfSpeech": "noun",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Der hintere Teil des menschlichen Körpers von den Schultern bis zum Gesäß",
+      "bulgarian": "Задната част на човешкото тяло от раменете до седалката"
+    },
+    "examples": [
+      {
+        "german": "Der Rücken ist stark.",
+        "bulgarian": "Гърбът е силен.",
+        "context": "description"
+      },
+      {
+        "german": "Mir tut der Rücken weh.",
+        "bulgarian": "Болка ме гърбът.",
+        "context": "pain complaint"
+      },
+      {
+        "german": "Er liegt auf dem Rücken.",
+        "bulgarian": "Той лежи на гърба.",
+        "context": "position"
+      }
+    ],
+    "grammar": {
+      "gender": "masculine",
+      "article": "der",
+      "plural": "die Rücken",
+      "definiteBulgarian": "гърбът",
+      "indefiniteBulgarian": "гръб"
+    },
+    "categories": ["body-parts", "health", "appearance"],
+    "tags": ["essential", "common", "masculine", "A1-core", "health"],
+    "culturalNotes": [
+      "Back pain is very common in modern life in both cultures",
+      "Proper posture is emphasized in German ergonomics and Bulgarian culture"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-001-gluecklich",
+    "german": "glücklich",
+    "bulgarian": "щастлив",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand der Freude und Zufriedenheit",
+      "bulgarian": "Състояние на радост и задоволство"
+    },
+    "examples": [
+      {
+        "german": "Ich bin glücklich.",
+        "bulgarian": "Аз съм щастлив.",
+        "context": "personal feeling"
+      },
+      {
+        "german": "Das Kind sieht glücklich aus.",
+        "bulgarian": "Детето изглежда щастливо.",
+        "context": "observation"
+      },
+      {
+        "german": "Sie sind sehr glücklich zusammen.",
+        "bulgarian": "Те са много щастливи заедно.",
+        "context": "relationship description"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "щастлив (masculine), щастлива (feminine), щастливо (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": ["emotions", "feelings", "personality"],
+    "tags": ["essential", "common", "adjective", "A1-core", "positive-emotion"],
+    "culturalNotes": [
+      "Happiness is a universal value in both German and Bulgarian cultures",
+      "German emphasis on 'Glück' (luck/happiness) as life goal",
+      "Bulgarian 'щастие' has similar philosophical importance"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-002-traurig",
+    "german": "traurig",
+    "bulgarian": "тъжен",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Traurigkeit und Niedergeschlagenheit",
+      "bulgarian": "Състояние на печал и депресия"
+    },
+    "examples": [
+      {
+        "german": "Ich bin traurig.",
+        "bulgarian": "Аз съм тъжен.",
+        "context": "personal feeling"
+      },
+      {
+        "german": "Das ist eine traurige Geschichte.",
+        "bulgarian": "Това е тъжна история.",
+        "context": "story description"
+      },
+      {
+        "german": "Er sieht traurig aus.",
+        "bulgarian": "Той изглежда тъжен.",
+        "context": "observation"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "тъжен (masculine), тъжна (feminine), тъжно (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": ["emotions", "feelings", "personality"],
+    "tags": ["essential", "common", "adjective", "A1-core", "negative-emotion"],
+    "culturalNotes": [
+      "Both cultures acknowledge sadness as natural human emotion",
+      "German literature emphasizes emotional depth including sadness",
+      "Bulgarian literature similarly explores melancholy themes"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-003-wuetend",
+    "german": "wütend",
+    "bulgarian": "ядосан",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Zorn und Verärgerung",
+      "bulgarian": "Състояние на гняв и раздразнение"
+    },
+    "examples": [
+      {
+        "german": "Ich bin wütend.",
+        "bulgarian": "Аз съм ядосан.",
+        "context": "personal feeling"
+      },
+      {
+        "german": "Er ist sehr wütend.",
+        "bulgarian": "Той е много ядосан.",
+        "context": "observation"
+      },
+      {
+        "german": "Sei nicht wütend mit mir!",
+        "bulgarian": "Не се ядосвай на мен!",
+        "context": "plea/request"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "ядосан (masculine), ядосана (feminine), ядосано (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": ["emotions", "feelings", "personality"],
+    "tags": ["essential", "common", "adjective", "A1-core", "negative-emotion"],
+    "culturalNotes": [
+      "Both cultures value emotional control in professional settings",
+      "German culture emphasizes rational problem-solving when angry",
+      "Bulgarian culture values reconciliation after anger"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-004-aengstlich",
+    "german": "ängstlich",
+    "bulgarian": "боязлив",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Angst und Besorgnis",
+      "bulgarian": "Състояние на страх и притеснение"
+    },
+    "examples": [
+      {
+        "german": "Das Kind ist ängstlich.",
+        "bulgarian": "Детето е боязливо.",
+        "context": "personality description"
+      },
+      {
+        "german": "Ich bin nicht ängstlich.",
+        "bulgarian": "Аз не съм боязлив.",
+        "context": "self-description"
+      },
+      {
+        "german": "Er ist ängstlich vor Hunden.",
+        "bulgarian": "Той е боязлив от кучета.",
+        "context": "specific fear"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "боязлив (masculine), боязлива (feminine), боязливо (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": ["emotions", "feelings", "personality"],
+    "tags": ["essential", "common", "adjective", "A1-core", "negative-emotion"],
+    "culturalNotes": [
+      "Fear is acknowledged as natural emotion in both cultures",
+      "German approach emphasizes overcoming fear through courage",
+      "Bulgarian culture values community support during fearful times"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-005-ueberrascht",
+    "german": "überrascht",
+    "bulgarian": "изненадан",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Überraschung und Verblüffung",
+      "bulgarian": "Състояние на неочаквано събитие или откровение"
+    },
+    "examples": [
+      {
+        "german": "Ich bin überrascht!",
+        "bulgarian": "Аз съм изненадан!",
+        "context": "exclamation"
+      },
+      {
+        "german": "Sie sieht überrascht aus.",
+        "bulgarian": "Тя изглежда изненадана.",
+        "context": "observation"
+      },
+      {
+        "german": "Das war eine überraschte Reaktion.",
+        "bulgarian": "Това беше неочакван отговор.",
+        "context": "response description"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "изненадан (masculine), изненадана (feminine), изненадано (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": ["emotions", "feelings", "reactions"],
+    "tags": ["essential", "common", "adjective", "A1-core", "mixed-emotion"],
+    "culturalNotes": [
+      "Surprise parties are popular in both German and Bulgarian cultures",
+      "Both cultures enjoy the element of surprise in social contexts"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-006-muede",
+    "german": "müde",
+    "bulgarian": "уморен",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Erschöpfung und Schlafbedarf",
+      "bulgarian": "Състояние на изтощение и нужда от сън"
+    },
+    "examples": [
+      {
+        "german": "Ich bin müde.",
+        "bulgarian": "Аз съм уморен.",
+        "context": "personal condition"
+      },
+      {
+        "german": "Das Kind ist müde nach der Schule.",
+        "bulgarian": "Детето е уморено след училище.",
+        "context": "situation"
+      },
+      {
+        "german": "Ich bin müde von arbeiten.",
+        "bulgarian": "Отегчен съм да работя.",
+        "context": "fatigue from activity"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "уморен (masculine), уморена (feminine), уморено (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": ["emotions", "feelings", "physical-state"],
+    "tags": ["essential", "common", "adjective", "A1-core", "physical-condition"],
+    "culturalNotes": [
+      "Work-life balance is important in German culture; acknowledging fatigue is acceptable",
+      "Bulgarian culture also values rest and recovery after hard work"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-007-hungrig",
+    "german": "hungrig",
+    "bulgarian": "гладен",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Appetit und Nahrungsbedarf",
+      "bulgarian": "Състояние на апетит и нужда от храна"
+    },
+    "examples": [
+      {
+        "german": "Ich bin hungrig.",
+        "bulgarian": "Аз съм гладен.",
+        "context": "personal condition"
+      },
+      {
+        "german": "Das Kind hat Hunger.",
+        "bulgarian": "Детето е гладно.",
+        "context": "observation"
+      },
+      {
+        "german": "Mir ist hungrig.",
+        "bulgarian": "Гладен съм.",
+        "context": "feeling expression"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "гладен (masculine), гладна (feminine), гладно (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": ["emotions", "physical-state", "needs"],
+    "tags": ["essential", "common", "adjective", "A1-core", "basic-need"],
+    "culturalNotes": [
+      "German culture values regular mealtimes and proper nutrition",
+      "Bulgarian culture emphasizes family meals and food sharing"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-008-duerstig",
+    "german": "durstig",
+    "bulgarian": "жадосан",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Durst und Flüssigkeitsbedarf",
+      "bulgarian": "Състояние на жажда и нужда от течност"
+    },
+    "examples": [
+      {
+        "german": "Ich bin durstig.",
+        "bulgarian": "Аз съм жадосан.",
+        "context": "personal condition"
+      },
+      {
+        "german": "Das Kind ist durstig nach dem Sport.",
+        "bulgarian": "Детето е жадосано след спорта.",
+        "context": "situation"
+      },
+      {
+        "german": "Gib mir ein Glas Wasser, ich bin durstig!",
+        "bulgarian": "Дай ми чаша вода, жадосан съм!",
+        "context": "request"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "жадосан (masculine), жадосана (feminine), жадосано (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": ["emotions", "physical-state", "needs"],
+    "tags": ["essential", "common", "adjective", "A1-core", "basic-need"],
+    "culturalNotes": [
+      "Staying hydrated is important in both German and Bulgarian climates",
+      "Both cultures offer refreshments in social situations"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-009-lieb",
+    "german": "lieb",
+    "bulgarian": "скъп",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Zuneigung und Zärtlichkeit",
+      "bulgarian": "Състояние на привързаност и нежност"
+    },
+    "examples": [
+      {
+        "german": "Das ist meine liebe Mutter.",
+        "bulgarian": "Това е моята скъпа майка.",
+        "context": "family relationship"
+      },
+      {
+        "german": "Ich liebe dich sehr, mein Liebes!",
+        "bulgarian": "Много те обичам, скъпа!",
+        "context": "romantic expression"
+      },
+      {
+        "german": "Das ist ein liebes Kind.",
+        "bulgarian": "Това е мило дете.",
+        "context": "character description"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "скъп (masculine), скъпа (feminine), скъпо (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": ["emotions", "feelings", "relationships"],
+    "tags": ["essential", "common", "adjective", "A1-core", "positive-emotion", "relationships"],
+    "culturalNotes": [
+      "Family bonds are very important in both German and Bulgarian cultures",
+      "Expressing affection is valued in intimate relationships"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  },
+  {
+    "id": "emotion-010-boese",
+    "german": "böse",
+    "bulgarian": "лош",
+    "partOfSpeech": "adjective",
+    "cefr": "A1",
+    "definitions": {
+      "german": "Zustand von Bosheit oder schlechtem Verhalten",
+      "bulgarian": "Състояние на зълост или лошо поведение"
+    },
+    "examples": [
+      {
+        "german": "Der Mann ist böse.",
+        "bulgarian": "Мъжът е лош.",
+        "context": "character description"
+      },
+      {
+        "german": "Das Kind war böse heute.",
+        "bulgarian": "Детето беше лошо днес.",
+        "context": "behavior description"
+      },
+      {
+        "german": "Sei nicht böse!",
+        "bulgarian": "Не буди лош!",
+        "context": "plea/request"
+      }
+    ],
+    "grammar": {
+      "gender": "varies",
+      "article": "varies",
+      "plural": "varies",
+      "definiteBulgarian": "лош (masculine), лоша (feminine), лошо (neuter)",
+      "indefiniteBulgarian": "same forms"
+    },
+    "categories": ["emotions", "personality", "behavior"],
+    "tags": ["essential", "common", "adjective", "A1-core", "negative-emotion"],
+    "culturalNotes": [
+      "Morality and good behavior are emphasized in both cultures",
+      "German fairy tales feature 'böse Hexen' (evil witches)",
+      "Bulgarian folklore similarly has 'лош' characters"
+    ],
+    "lastModified": "2025-12-17T10:00:00Z"
+  }
+]

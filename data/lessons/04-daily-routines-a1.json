@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440004",
+  "title": "Daily Routines",
+  "description": "Describe your daily activities, learn time expressions, and master common verbs for everyday actions.",
+  "difficulty": "A1",
+  "type": "vocabulary",
+  "duration": 20,
+  "vocabulary": [
+    "vocab-german-essen",
+    "vocab-german-trinken",
+    "vocab-german-schlafen",
+    "vocab-german-arbeiten",
+    "vocab-german-lernen",
+    "vocab-german-morgen-noun",
+    "vocab-german-mittag",
+    "vocab-german-abend",
+    "vocab-german-nacht",
+    "vocab-german-fruehstueck"
+  ],
+  "objectives": [
+    {
+      "id": "obj-daily-1",
+      "description": "Describe daily activities using common verbs",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-daily-2",
+      "description": "Use time expressions correctly",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-daily-3",
+      "description": "Conjugate basic verbs in present tense",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Daily Routines\n\n## Grammar Explanation\n\n### Common Daily Verbs\n\n**Essential Actions**:\n- Ставам (stavam) - to wake up, get up\n- Ям (yam) - to eat\n- Пия (piya) - to drink\n- Спя (spya) - to sleep\n- Работя (rabotya) - to work\n- Уча (ucha) - to study/learn\n\n### Present Tense Conjugation\n\nBulgarian verbs conjugate by person:\n- Аз ям (az yam) - I eat\n- Ти ядеш (ti yadesh) - you eat\n- Той/тя/то яде (toy/tya/to yade) - he/she/it eats\n- Ние ядем (nie yadem) - we eat\n- Вие ядете (vie yadete) - you (formal/plural) eat\n- Те ядат (te yadat) - they eat\n\n### Time Expressions\n\n- **Сутрин** (sutrin) - in the morning\n- **На обяд** (na obyad) - at noon/lunch\n- **Вечер** (vecher) - in the evening\n- **През нощта** (prez noshtta) - at night\n- **Всеки ден** (vseki den) - every day\n- **Обикновено** (obiknoveno) - usually\n\n## Cultural Notes\n\n1. **Meal Times**: Bulgarians typically have breakfast (закуска), lunch (обяд - main meal around 1-2pm), and dinner (вечеря - lighter meal).\n\n2. **Work Schedule**: Standard work hours are 9:00-18:00, with some businesses closing for lunch.\n\n3. **Coffee Culture**: Taking coffee breaks (кафе пауза) is an important social ritual.\n\n4. **Afternoon Rest**: Some older Bulgarians still observe a brief afternoon rest, especially in summer.",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["beginner", "daily-life", "verbs", "time-expressions", "A1"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440002"],
+    "relatedLessons": [],
+    "isPremium": false
+  }
+}

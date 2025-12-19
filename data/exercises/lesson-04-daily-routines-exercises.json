@@ -1,0 +1,57 @@
+[
+  {
+    "id": "ex-daily-04-cloze",
+    "type": "fillInTheBlank",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440004",
+    "difficulty": "A1",
+    "prompt": "Complete: 'Аз _____ в 7 часа.' (I wake up at 7 o'clock.)",
+    "sentence": "Аз _____ в 7 часа.",
+    "correctAnswer": "ставам",
+    "acceptableAnswers": ["ставам", "Ставам"],
+    "vocabularyIds": ["stavam_wake_up"],
+    "hint": "Reflexive verb meaning 'to get up/wake up'",
+    "explanation": "'Ставам' is the first-person singular form of the verb 'to wake up/get up' in Bulgarian."
+  },
+  {
+    "id": "ex-daily-04-mc",
+    "type": "multipleChoice",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440004",
+    "difficulty": "A1",
+    "question": "Which verb means 'to eat' in Bulgarian?",
+    "options": [
+      "пия",
+      "ям",
+      "спя",
+      "работя"
+    ],
+    "correctAnswer": "ям",
+    "vocabularyIds": ["yam_eat"],
+    "explanation": "'Ям' means 'I eat'. Other verbs: 'пия' = drink, 'спя' = sleep, 'работя' = work."
+  },
+  {
+    "id": "ex-daily-04-typing",
+    "type": "typing",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440004",
+    "difficulty": "A1",
+    "prompt": "Type the Bulgarian word for 'evening':",
+    "correctAnswer": "вечер",
+    "acceptableAnswers": ["вечер", "Вечер"],
+    "vocabularyIds": ["vecher_evening"],
+    "hint": "Starts with 'веч...'",
+    "similarityThreshold": 0.85
+  },
+  {
+    "id": "ex-daily-04-matching",
+    "type": "matching",
+    "lessonId": "550e8400-e29b-41d4-a716-446655440004",
+    "difficulty": "A1",
+    "instruction": "Match the time expressions:",
+    "pairs": [
+      {"left": "Morgen", "right": "сутрин"},
+      {"left": "Mittag", "right": "обяд"},
+      {"left": "Abend", "right": "вечер"},
+      {"left": "Nacht", "right": "нощ"}
+    ],
+    "vocabularyIds": ["sutrin_morning", "obed_noon", "vecher_evening", "nosht_night"]
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440013",
+  "title": "Politics & Society",
+  "description": "Engage in discussions about government, laws, social issues, and current events in Bulgarian.",
+  "difficulty": "B2",
+  "type": "mixed",
+  "duration": 30,
+  "vocabulary": [
+    "vocab-german-politik",
+    "vocab-german-regierung",
+    "vocab-german-gesetz",
+    "vocab-german-partei",
+    "vocab-german-wahl",
+    "vocab-german-demokratie",
+    "vocab-german-recht",
+    "vocab-german-freiheit",
+    "vocab-german-gesellschaft",
+    "vocab-german-buerger"
+  ],
+  "objectives": [
+    {
+      "id": "obj-politics-1",
+      "description": "Discuss political systems and governance",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-politics-2",
+      "description": "Express opinions on social issues",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "id": "obj-politics-3",
+      "description": "Understand news and current events",
+      "isCompleted": false,
+      "createdAt": "2025-12-17T00:00:00.000Z"
+    }
+  ],
+  "content": "# Politics & Society\n\n## Grammar Explanation\n\n### Political Vocabulary\n\n**Government**:\n- Правителство (pravitelstvo) - government\n- Парламент (parlament) - parliament\n- Президент (prezident) - president\n- Министър (ministăr) - minister\n- Закон (zakon) - law\n- Политика (politika) - politics/policy\n\n**Democratic Processes**:\n- Избори (izbori) - elections\n- Гласуване (glasuvane) - voting\n- Партия (partiya) - party\n- Демокрация (demokratsiya) - democracy\n- Права (prava) - rights\n- Свобода (svoboda) - freedom\n\n**Social Issues**:\n- Общество (obshtestvo) - society\n- Гражданин (grazhdanin) - citizen\n- Образование (obrazovanie) - education\n- Здравеопазване (zdraveopazване) - healthcare\n- Икономика (ikonomika) - economy\n- Безработица (bezrabotitsa) - unemployment\n\n### Complex Grammar\n\n**Subjunctive Mood** (for opinions/wishes):\n- **Мисля, че...** (Mislya, che...) - I think that...\n- **Струва ми се, че...** (Struva mi se, che...) - It seems to me that...\n- **Важно е да...** (Vazhno e da...) - It's important to...\n\n**Conditional Clauses**:\n- **Ако...бих...** (Ako...bih...) - If...I would...\n\n## Cultural Notes\n\n1. **EU Member**: Bulgaria joined the EU in 2007.\n\n2. **Political System**: Parliamentary republic with multi-party system.\n\n3. **Media Landscape**: Mix of state and private media; press freedom concerns exist.\n\n4. **Social Discourse**: Bulgarians are generally politically engaged and opinionated.",
+  "isCompleted": false,
+  "completionPercentage": 0,
+  "createdAt": "2025-12-17T00:00:00.000Z",
+  "updatedAt": "2025-12-17T00:00:00.000Z",
+  "metadata": {
+    "tags": ["upper-intermediate", "politics", "society", "current-events", "B2"],
+    "prerequisites": ["550e8400-e29b-41d4-a716-446655440010"],
+    "relatedLessons": [],
+    "isPremium": false
+  }
+}
