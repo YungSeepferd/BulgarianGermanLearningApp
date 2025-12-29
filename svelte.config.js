@@ -46,6 +46,11 @@ const config = {
 		paths: {
 			// Conditionally set base path: empty for dev, GitHub Pages path for production
 			base: process.argv.includes('dev') ? '' : '/BulgarianGermanLearningApp'
+		},
+
+		// Handle prerender errors for dynamic routes that can't be crawled
+		prerender: {
+			handleUnseenRoutes: 'warn' // Warn instead of error for routes not found during crawl
 		}
 	}
 };
