@@ -12,7 +12,7 @@ import { EventBus } from '../services/event-bus';
 
 // DataLoader is unused
 
-import { UnifiedVocabularyItemSchema, UnifiedVocabularyCollectionSchema, ResilientUnifiedVocabularyCollectionSchema, ResilientUnifiedVocabularyItemSchema, SimplifiedVocabularyCollectionSchema, VocabularyCategorySchema } from '../schemas/unified-vocabulary';
+import { UnifiedVocabularyItemSchema, UnifiedVocabularyCollectionSchema, ResilientUnifiedVocabularyCollectionSchema, SimplifiedVocabularyCollectionSchema, VocabularyCategorySchema } from '../schemas/unified-vocabulary';
 import { z } from 'zod';
 
 /**
@@ -195,7 +195,7 @@ async function loadFromStaticEndpoint(eventBus?: EventBus): Promise<z.infer<type
         itemCount: validatedItems.length,
         createdAt: new Date(),
         updatedAt: new Date(),
-        version: '1.0.0',
+        version: 1,
         items: validatedItems as any
       } as z.infer<typeof UnifiedVocabularyCollectionSchema>;
     }
