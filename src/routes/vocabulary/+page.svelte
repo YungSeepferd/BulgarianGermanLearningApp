@@ -53,16 +53,6 @@
         loadMore: 'Mehr laden'
       }
     : {
-        title: 'Речник',
-        introTitle: 'Надграждай уверено, дума по дума',
-        introLede: 'Филтрирай по категория, трудност или част на речта и започни практика с избраните думи.',
-        searchPlaceholder: t('search.search_placeholder'),
-        searchAria: t('search.search_vocabulary'),
-        category: 'Категория',
-        difficulty: 'Трудност',
-        pos: 'Част на речта',
-        learningPhase: 'Етап на учене',
-        reset: 'Нулирай филтрите',
         practiceSelected: (n: number) => `Упражнявай избраните (${n})`,
         loading: 'Зареждане на речника...',
         error: 'Грешка при зареждане. Опитайте отново.',
@@ -561,6 +551,7 @@
     margin: 0 auto;
     padding: var(--space-7) var(--space-5) var(--space-7);
     color: var(--color-neutral-text-dark);
+    overflow-x: hidden; /* Prevent horizontal overflow */
   }
 
   .page-header {
@@ -569,64 +560,57 @@
     justify-content: space-between;
     gap: var(--space-4);
     margin-bottom: var(--space-6);
+    overflow-x: hidden; /* Prevent horizontal overflow */
   }
 
-  .headline {
+  .filter-chip:hover {
+    background: var(--color-primary-light);
+  }
+
+  .clear-all {
+    border: none;
+    background: transparent;
+    color: var(--color-primary-dark);
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+    padding: var(--space-1) var(--space-2);
+  }
+
+  .no-active-filters {
+    color: var(--color-neutral-text);
+    font-size: var(--text-sm);
+  }
+
+  .state-block {
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
-  }
-
-  .vocabulary-title {
-    margin: 0;
-    font-size: var(--text-3xl);
-    line-height: var(--leading-tight);
-    font-weight: var(--font-extrabold);
-    color: var(--color-neutral-dark);
-  }
-
-  .intro-lede {
-    margin: 0;
-    font-size: var(--text-base);
-    line-height: var(--leading-normal);
-    color: var(--color-neutral-text);
-  }
-
-  .header-actions {
-    display: flex;
     align-items: center;
     gap: var(--space-3);
+    padding: var(--space-6) 0;
+    color: var(--color-neutral-text);
+    text-align: center;
   }
 
-  .filter-toggle {
-    display: none;
-    padding: var(--space-2) var(--space-3);
-    border: 1px solid var(--color-neutral-border);
-    border-radius: var(--border-radius-lg);
-    background: var(--color-neutral-light);
-    color: var(--color-neutral-dark);
-    cursor: pointer;
-    transition: var(--transition-filter);
+  .state-icon {
+    font-size: var(--text-2xl);
   }
 
-  .vocabulary-layout {
-    display: grid;
-    grid-template-columns: minmax(var(--filter-panel-width), 360px) 1fr;
-    gap: var(--space-6);
-    align-items: start;
-  }
-
-  .filter-panel {
-    position: sticky;
-    top: 0;
-    background: var(--color-filter-bg);
-    border: 1px solid var(--color-neutral-border);
-    border-radius: var(--border-radius-xl);
-    padding: var(--filter-panel-padding);
-    box-shadow: var(--shadow-filter-panel);
+  .load-more-container {
     display: flex;
-    flex-direction: column;
-    gap: var(--filter-group-spacing);
+    justify-content: center;
+    margin-top: var(--space-5);
+  }
+
+  @media (min-width: var(--breakpoint-md)) {
+    .vocabulary-grid-items {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: var(--breakpoint-lg)) {
+    .vocabulary-grid-items {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
   }
 
   .filter-panel__header {
@@ -757,26 +741,50 @@
     color: var(--color-primary);
   }
 
-  .vocabulary-content {
-    background: var(--color-neutral-light);
+  .vocabulary-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    align-items: start;
+  }
+
+  /* Fix for grid children to respect container width */
+  .vocabulary-layout > * {
+    min-width: 0; /* Allow grid children to shrink below content size */
+  }
+
+  /* Fix for nested content to respect parent width */
+  .vocabulary-content > * {
+    min-width: 0; /* Allow nested content to shrink as well */
+  }
+
+  /* Force hide any overflow from phantom scrollWidth */
+  .vocabulary-content,
+  .vocabulary-grid-items {
+    overflow-x: hidden;
+  }
+
+  .filter-panel {
+    display: none; /* Hidden on mobile by default */
+    position: sticky;
+    top: 0;
+    background: var(--color-filter-bg);
     border: 1px solid var(--color-neutral-border);
     border-radius: var(--border-radius-xl);
-    padding: var(--space-5);
-    box-shadow: var(--shadow-card);
+    padding: var(--filter-panel-padding);
+    box-shadow: var(--shadow-filter-panel);
+    flex-direction: column;
+    gap: var(--filter-group-spacing);
   }
 
-  .summary-bar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-3);
-    margin-bottom: var(--space-4);
-  }
+  @media (min-width: 768px) {
+    .vocabulary-layout {
+      grid-template-columns: minmax(280px, 360px) 1fr;
+    }
 
-  .summary-count {
-    font-weight: var(--font-semibold);
-    color: var(--color-neutral-dark);
+    .filter-panel {
+      display: flex; /* Show on tablet+ screens */
+    }
   }
 
   .active-filters {
@@ -802,109 +810,9 @@
     background: var(--color-primary-light);
   }
 
-  .clear-all {
-    border: none;
-    background: transparent;
-    color: var(--color-primary-dark);
-    font-weight: var(--font-semibold);
-    cursor: pointer;
-    padding: var(--space-1) var(--space-2);
-  }
-
-  .no-active-filters {
-    color: var(--color-neutral-text);
-    font-size: var(--text-sm);
-  }
-
-  .state-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-3);
-    padding: var(--space-6) 0;
-    color: var(--color-neutral-text);
-    text-align: center;
-  }
-
-  .state-icon {
-    font-size: var(--text-2xl);
-  }
-
-  .spinner {
-    font-size: var(--text-2xl);
-    animation: spin 1s linear infinite;
-  }
-
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  .vocabulary-grid-items {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--vocabulary-grid-gap);
-    margin-top: var(--space-4);
-  }
-
-  .card-link {
-    display: block;
-    outline: none;
-    border-radius: var(--border-radius-xl);
-  }
-
-  .card-link:focus {
-    box-shadow: 0 0 0 2px var(--color-focus-ring);
-  }
-
   .load-more-container {
     display: flex;
     justify-content: center;
     margin-top: var(--space-5);
-  }
-
-  @media (max-width: var(--breakpoint-lg)) {
-    .vocabulary-layout {
-      grid-template-columns: 1fr;
-    }
-
-    .filter-toggle {
-      display: inline-flex;
-    }
-
-    .filter-panel {
-      position: relative;
-      top: 0;
-    }
-
-    .filter-panel[data-open='false'] {
-      display: none;
-    }
-  }
-
-  @media (max-width: var(--breakpoint-md)) {
-    .page-header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .header-actions {
-      width: 100%;
-      justify-content: space-between;
-    }
-  }
-
-  @media (max-width: var(--breakpoint-mobile)) {
-    .vocabulary-content {
-      padding: var(--space-4);
-    }
-
-    .vocabulary-grid-items {
-      grid-template-columns: 1fr;
-    }
   }
 </style>

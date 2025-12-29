@@ -41,12 +41,14 @@
     font-size: 16px;
     line-height: 1.5;
     color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
 
   :global(body) {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
 
   .app-layout {
@@ -57,12 +59,13 @@
 
   main {
     flex: 1;
-    padding: 2rem;
+    padding: 1rem;
     background-color: white;
   }
 
   @media (min-width: 769px) {
     main {
+        padding: 2rem;
       max-width: 1200px;
       margin: 0 auto;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

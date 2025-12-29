@@ -18,27 +18,18 @@ First, ensure you have Vibe installed:
 npm install -g @mistral/vibe
 ```
 
-### 2. Configure Vibe Home Directory
+### 2. Add MCP Servers to Vibe Configuration
 
-Set up the Vibe home directory to use this configuration:
-
-```bash
-# Set VIBE_HOME environment variable
-export VIBE_HOME="/path/to/this/project/vibe-config"
-
-# Or add to your shell configuration (.bashrc, .zshrc, etc.)
-echo 'export VIBE_HOME="/path/to/this/project/vibe-config"' >> ~/.zshrc
-source ~/.zshrc
-```
-
-### 3. Create Vibe Configuration Directory
+Vibe stores its configuration in `~/.vibe/config.toml`. Add the MCP server configurations:
 
 ```bash
-mkdir -p $VIBE_HOME
-cp vibe-mcp-config.toml $VIBE_HOME/config.toml
+# Append MCP server configurations to vibe config
+cat vibe-mcp-config.toml >> ~/.vibe/config.toml
 ```
 
-### 4. Install Required MCP Packages
+Alternatively, manually edit `~/.vibe/config.toml` and add the `[[mcp_servers]]` sections from `vibe-mcp-config.toml`.
+
+### 3. Install Required MCP Packages
 
 ```bash
 # Install all required MCP packages globally
