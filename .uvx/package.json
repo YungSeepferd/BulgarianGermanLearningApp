@@ -1,0 +1,23 @@
+{
+  "name": "uvx-fetch-mcp-config",
+  "version": "1.0.0",
+  "description": "UVX Fetch MCP Server Configuration for Bulgarian-German Learning App",
+  "type": "module",
+  "scripts": {
+    "test": "node test-config.js",
+    "validate": "node test-config.js",
+    "help": "echo 'UVX Fetch MCP Server Configuration' && echo 'Available scripts:' && echo '  test/validate - Validate configuration' && echo '  start - Start the UVX Fetch MCP server' && echo '  status - Check server status' && echo '  stop - Stop the server'",
+    "start": "echo 'Starting UVX Fetch MCP server...' && echo 'Server should be started with: uvx-fetch-mcp start'",
+    "status": "echo 'Checking UVX Fetch MCP server status...' && echo 'Server status should be checked with: uvx-fetch-mcp status'",
+    "stop": "echo 'Stopping UVX Fetch MCP server...' && echo 'Server should be stopped with: uvx-fetch-mcp stop'"
+  },
+  "keywords": [
+    "uvx",
+    "fetch",
+    "mcp",
+    "web-scraping",
+    "data-fetching"
+  ],
+  "author": "Bulgarian-German Learning App Team",
+  "license": "MIT"
+}

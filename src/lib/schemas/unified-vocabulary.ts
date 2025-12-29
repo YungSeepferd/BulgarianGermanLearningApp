@@ -345,6 +345,25 @@ export const ResilientUnifiedVocabularyCollectionSchema = UnifiedVocabularyColle
   items: z.array(ResilientUnifiedVocabularyItemSchema)
 });
 
+/**
+ * Simplified collection schema that matches the actual JSON file structure
+ * Used for loading from static/data/unified-vocabulary.linguistic-corrected.json
+ */
+export const SimplifiedVocabularyCollectionSchema = z.object({
+  version: z.union([
+    z.string().transform(v => parseInt(v, 10)),
+    z.number()
+  ]).describe('Schema version (string or number)'),
+  lastUpdated: z.union([
+    z.string().datetime().transform(str => new Date(str)),
+    z.date()
+  ]).describe('Last update timestamp'),
+  totalItems: z.number().min(0).describe('Total number of items'),
+  language: z.string().describe('Language pair description'),
+  direction: z.enum(['DE_BG', 'BG_DE']).describe('Learning direction'),
+  items: z.array(ResilientUnifiedVocabularyItemSchema).describe('Array of vocabulary items')
+});
+
 // ======================
 // Type Exports
 // ======================

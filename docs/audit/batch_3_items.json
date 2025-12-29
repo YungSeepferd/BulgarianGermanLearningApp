@@ -1,0 +1,1058 @@
+[
+  {
+    "id": "funf",
+    "german": "fünf",
+    "bulgarian": "Пет",
+    "partOfSpeech": "number",
+    "difficulty": "A2",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist fünf?",
+        "bulgarian": "Къде е Пет?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist fünf.",
+        "bulgarian": "Това е Пет.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Fünf' има умлаут ü (произнася се като между 'ю' и 'и'). Внимание при писане на 15: 'fünfzehn'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Пет' ≈ 'fünf'. Zahlwort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
+    "metadata": {
+      "frequency": 84,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "fünf",
+          "plural": "fünfe"
+        },
+        "accusative": {
+          "singular": "fünf",
+          "plural": "fünfe"
+        },
+        "dative": {
+          "singular": "fünf",
+          "plural": "fünfen"
+        },
+        "genitive": {
+          "singular": "fünfs",
+          "plural": "fünfe"
+        }
+      }
+    },
+    "audioUrl": "https://forvo.com/word/fünf/"
+  },
+  {
+    "id": "sechs",
+    "german": "sechs",
+    "bulgarian": "Шест",
+    "partOfSpeech": "number",
+    "difficulty": "A2",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist sechs?",
+        "bulgarian": "Къде е Шест?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist sechs.",
+        "bulgarian": "Това е Шест.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Sechs' завършва на -chs и се произнася като 'зекс'. В множествени съставки: 'sechzehn', 'sechzig'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Шест' ≈ 'sechs'. Zahlwort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
+    "metadata": {
+      "frequency": 80,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "sechs",
+          "plural": "sechse"
+        },
+        "accusative": {
+          "singular": "sechs",
+          "plural": "sechse"
+        },
+        "dative": {
+          "singular": "sechs",
+          "plural": "sechsen"
+        },
+        "genitive": {
+          "singular": "sechss",
+          "plural": "sechse"
+        }
+      }
+    },
+    "audioUrl": "https://forvo.com/word/sechs/"
+  },
+  {
+    "id": "sieben",
+    "german": "sieben",
+    "bulgarian": "Седем",
+    "partOfSpeech": "number",
+    "difficulty": "A2",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist sieben?",
+        "bulgarian": "Къде е Седем?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist sieben.",
+        "bulgarian": "Това е Седем.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Sieben' губи 'e' в 'siebzehn' (17) и 'siebzig' (70). Произношението е 'зибън'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Седем' ≈ 'sieben'. Zahlwort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
+    "metadata": {
+      "frequency": 76,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "sieben",
+          "plural": "siebene"
+        },
+        "accusative": {
+          "singular": "sieben",
+          "plural": "siebene"
+        },
+        "dative": {
+          "singular": "sieben",
+          "plural": "siebenen"
+        },
+        "genitive": {
+          "singular": "siebens",
+          "plural": "siebene"
+        }
+      }
+    },
+    "audioUrl": "https://forvo.com/word/sieben/"
+  },
+  {
+    "id": "acht",
+    "german": "acht",
+    "bulgarian": "Осем",
+    "partOfSpeech": "number",
+    "difficulty": "A2",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist acht?",
+        "bulgarian": "Къде е Осем?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist acht.",
+        "bulgarian": "Това е Осем.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Acht' се произнася с мек 'х' [ахт]. В съставни числа 'achtzehn', 'achtzig', 'achtundzwanzig'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Осем' ≈ 'acht'. Zahlwort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
+    "metadata": {
+      "frequency": 83,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "acht",
+          "plural": "achte"
+        },
+        "accusative": {
+          "singular": "acht",
+          "plural": "achte"
+        },
+        "dative": {
+          "singular": "acht",
+          "plural": "achten"
+        },
+        "genitive": {
+          "singular": "achts",
+          "plural": "achte"
+        }
+      }
+    },
+    "audioUrl": "https://forvo.com/word/acht/"
+  },
+  {
+    "id": "neun",
+    "german": "neun",
+    "bulgarian": "Девет",
+    "partOfSpeech": "number",
+    "difficulty": "A2",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist neun?",
+        "bulgarian": "Къде е Девет?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist neun.",
+        "bulgarian": "Това е Девет.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Neun' се произнася 'нойн'. Запомнете формите 'neunzehn' и 'neunzig'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Девет' ≈ 'neun'. Zahlwort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
+    "metadata": {
+      "frequency": 82,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "neun",
+          "plural": "neune"
+        },
+        "accusative": {
+          "singular": "neun",
+          "plural": "neune"
+        },
+        "dative": {
+          "singular": "neun",
+          "plural": "neunen"
+        },
+        "genitive": {
+          "singular": "neuns",
+          "plural": "neune"
+        }
+      }
+    },
+    "audioUrl": "https://forvo.com/word/neun/"
+  },
+  {
+    "id": "zehn",
+    "german": "zehn",
+    "bulgarian": "Десет",
+    "partOfSpeech": "number",
+    "difficulty": "A2",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist zehn?",
+        "bulgarian": "Къде е Десет?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist zehn.",
+        "bulgarian": "Това е Десет.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Zehn' се произнася [tseːn] и образува сложни числа като 'zehn Uhr' (десет часа).",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Десет' ≈ 'zehn'. Zahlwort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
+    "metadata": {
+      "frequency": 79,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration",
+      "categorizedAt": "2025-12-12T16:05:22.285Z",
+      "categorizedBy": "ai-agent-batch-001"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "zehn",
+          "plural": "zehne"
+        },
+        "accusative": {
+          "singular": "zehn",
+          "plural": "zehne"
+        },
+        "dative": {
+          "singular": "zehn",
+          "plural": "zehnen"
+        },
+        "genitive": {
+          "singular": "zehns",
+          "plural": "zehne"
+        }
+      }
+    },
+    "audioUrl": "https://forvo.com/word/zehn/"
+  },
+  {
+    "id": "elf",
+    "german": "elf",
+    "bulgarian": "Единадесет",
+    "partOfSpeech": "number",
+    "difficulty": "A1",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist elf?",
+        "bulgarian": "Къде е Единадесет?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist elf.",
+        "bulgarian": "Това е Единадесет.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Elf' се произнася кратко [ɛlf] и често обозначава възраст: 'Er ist elf Jahre alt'. Няма умлаут и не се променя в сложни числа като 'elf Uhr'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Единадесет' entsteht aus 'един' + 'надесет'. Betonung: единаде́сет. Merken: zusätzliche Silbe 'на'.",
+      "linguisticForBulgarians": "Stress on единаде́сет. German 'elf' is monosyllabic with [ɛlf].",
+      "linguisticForGermans": "Stress on единаде́сет. German 'elf' is monosyllabic with [ɛlf].",
+      "source": "merged"
+    },
+    "etymology": "From 'един' (one) + 'над десет' (over ten). Literally 'one over ten'.",
+    "culturalNotes": "Bulgarian teens (11-19) add 'надесет'. German writes 11-19 as one word without spaces.",
+    "metadata": {
+      "frequency": 74,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A1",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "elf",
+          "plural": "elfe"
+        },
+        "accusative": {
+          "singular": "elf",
+          "plural": "elfe"
+        },
+        "dative": {
+          "singular": "elf",
+          "plural": "elfen"
+        },
+        "genitive": {
+          "singular": "elfs",
+          "plural": "elfe"
+        }
+      }
+    },
+    "audioUrl": "https://forvo.com/word/elf/"
+  },
+  {
+    "id": "zwoelf",
+    "german": "zwölf",
+    "bulgarian": "Дванадесет",
+    "partOfSpeech": "number",
+    "difficulty": "A1",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist zwölf?",
+        "bulgarian": "Къде е Дванадесет?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist zwölf.",
+        "bulgarian": "Това е Дванадесет.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Zwölf' е с умлаут ö и произношение [tsvœlf]. В часовник често се казва 'zwölf Uhr'. В съставни числа стои отпред: 'zwölfmal'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Дванадесет' = 'zwölf'. Beachten Sie den Umlaut 'ö' in Deutsch und die Endung '-десет' im Bulgarischen.",
+      "linguisticForBulgarians": "Stress on дванаде́сет. German 'zwölf' carries Umlaut (ö) and [tsvœlf].",
+      "linguisticForGermans": "Stress on дванаде́сет. German 'zwölf' carries Umlaut (ö) and [tsvœlf].",
+      "source": "merged"
+    },
+    "etymology": "From 'две' (two) + 'над десет' (over ten). Literally 'two over ten'.",
+    "culturalNotes": "Used in both everyday counting and telling the time (e.g., noon).",
+    "metadata": {
+      "frequency": 74,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A1",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "zwölf",
+          "plural": "zwölfe"
+        },
+        "accusative": {
+          "singular": "zwölf",
+          "plural": "zwölfe"
+        },
+        "dative": {
+          "singular": "zwölf",
+          "plural": "zwölfen"
+        },
+        "genitive": {
+          "singular": "zwölfs",
+          "plural": "zwölfe"
+        }
+      }
+    },
+    "audioUrl": "https://forvo.com/word/zwölf/"
+  },
+  {
+    "id": "dreizehn",
+    "german": "dreizehn",
+    "bulgarian": "Тринадесет",
+    "partOfSpeech": "number",
+    "difficulty": "A1",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist dreizehn?",
+        "bulgarian": "Къде е Тринадесет?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist dreizehn.",
+        "bulgarian": "Това е Тринадесет.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Dreizehn' комбинира 'drei' + 'zehn' и се произнася [ˈdʁaɪ̯tseːn]. Използва се и като прилагателно: 'dreizehn Schüler'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Тринадесет' folgt dem Muster Grundzahl + 'надесет'. Betonung auf '-де́-'.",
+      "linguisticForBulgarians": "Stress on тринаде́сет. German 'dreizehn' keeps 'drei' stem and uses [ˈdʁaɪ̯tseːn].",
+      "linguisticForGermans": "Stress on тринаде́сет. German 'dreizehn' keeps 'drei' stem and uses [ˈdʁaɪ̯tseːn].",
+      "source": "merged"
+    },
+    "etymology": "From 'три' (three) + 'над десет'. Bulgarian pattern parallels German 'drei' + 'zehn'.",
+    "culturalNotes": "Both cultures consider 13 sometimes unlucky, but it is common in daily use.",
+    "metadata": {
+      "frequency": 72,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration",
+      "categorizedAt": "2025-12-12T16:05:22.285Z",
+      "categorizedBy": "ai-agent-batch-001"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A1",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "dreizehn",
+          "plural": "dreizehne"
+        },
+        "accusative": {
+          "singular": "dreizehn",
+          "plural": "dreizehne"
+        },
+        "dative": {
+          "singular": "dreizehn",
+          "plural": "dreizehnen"
+        },
+        "genitive": {
+          "singular": "dreizehns",
+          "plural": "dreizehne"
+        }
+      }
+    },
+    "audioUrl": "https://forvo.com/word/dreizehn/"
+  },
+  {
+    "id": "zwanzig",
+    "german": "zwanzig",
+    "bulgarian": "Двадесет",
+    "partOfSpeech": "number",
+    "difficulty": "A1",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist zwanzig?",
+        "bulgarian": "Къде е Двадесет?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist zwanzig.",
+        "bulgarian": "Това е Двадесет.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Zwanzig' се пише с 'z' и се произнася [ˈtsvanʦɪç]. В съставни числа (21) немският ред е 'einundzwanzig'.",
+      "forGermanSpeakers": "Für Deutschsprachige: Bulgarisch fügt 'десет' an, Deutsch nutzt die Endung '-zig'.",
+      "linguisticForBulgarians": "Stress on два́десет. German 'zwanzig' pronounced [ˈtsvanʦɪç].",
+      "linguisticForGermans": "Stress on два́десет. German 'zwanzig' pronounced [ˈtsvanʦɪç].",
+      "source": "merged"
+    },
+    "etymology": "From 'два' (two) + 'десет'. German 'zwanzig' derives from 'zwei' + '-zig'.",
+    "culturalNotes": "Round numbers like 20 are used in pricing and ages (20 години).",
+    "metadata": {
+      "frequency": 73,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A1",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "zwanzig",
+          "plural": "zwanzige"
+        },
+        "accusative": {
+          "singular": "zwanzig",
+          "plural": "zwanzige"
+        },
+        "dative": {
+          "singular": "zwanzig",
+          "plural": "zwanzigen"
+        },
+        "genitive": {
+          "singular": "zwanzigs",
+          "plural": "zwanzige"
+        }
+      }
+    },
+    "audioUrl": "https://forvo.com/word/zwanzig/"
+  },
+  {
+    "id": "viele",
+    "german": "viele",
+    "bulgarian": "Много",
+    "partOfSpeech": "adjective",
+    "difficulty": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Das ist viele.",
+        "bulgarian": "Това е много.",
+        "source": "legacy"
+      },
+      {
+        "german": "Es ist sehr viele.",
+        "bulgarian": "Много е много.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Viele' се използва с броими съществителни: 'viele Bücher'. За неброими използвайте 'viel'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Много' ≈ 'viele'. Bulgarisches Wort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Common Bulgarian word at A2 level. Useful for everyday communication",
+    "metadata": {
+      "frequency": 70,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration",
+      "categorizedAt": "2025-12-12T16:05:22.285Z",
+      "categorizedBy": "ai-agent-batch-001"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "audioUrl": "https://forvo.com/word/viele/"
+  },
+  {
+    "id": "wenig",
+    "german": "wenig",
+    "bulgarian": "Малко",
+    "partOfSpeech": "adjective",
+    "difficulty": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Das ist wenig.",
+        "bulgarian": "Това е малко.",
+        "source": "legacy"
+      },
+      {
+        "german": "Es ist sehr wenig.",
+        "bulgarian": "Много е малко.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Wenig' означава 'малко'; за множествено може да чуете 'wenige Leute'. Противоположно на 'viel/viele'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Малко' ≈ 'wenig'. Bulgarisches Wort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Common Bulgarian word at A2 level. Useful for everyday communication",
+    "metadata": {
+      "frequency": 70,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration",
+      "categorizedAt": "2025-12-12T16:05:22.285Z",
+      "categorizedBy": "ai-agent-batch-001"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "audioUrl": "https://forvo.com/word/wenig/"
+  },
+  {
+    "id": "alle",
+    "german": "alle",
+    "bulgarian": "Всички",
+    "partOfSpeech": "adjective",
+    "difficulty": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Das ist alle.",
+        "bulgarian": "Това е всички.",
+        "source": "legacy"
+      },
+      {
+        "german": "Es ist sehr alle.",
+        "bulgarian": "Много е всички.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Alle' изисква множествено число: 'alle Freunde'. В комбинация с определителен член става 'alle die'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Всички' ≈ 'alle'. Bulgarisches Wort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Common Bulgarian word at A2 level. Useful for everyday communication",
+    "metadata": {
+      "frequency": 78,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration",
+      "categorizedAt": "2025-12-12T16:05:22.285Z",
+      "categorizedBy": "ai-agent-batch-001"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "audioUrl": "https://forvo.com/word/alle/"
+  },
+  {
+    "id": "einige",
+    "german": "einige",
+    "bulgarian": "Няколко",
+    "partOfSpeech": "adjective",
+    "difficulty": "A2",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [
+      {
+        "german": "Das ist einige.",
+        "bulgarian": "Това е няколко.",
+        "source": "legacy"
+      },
+      {
+        "german": "Es ist sehr einige.",
+        "bulgarian": "Много е няколко.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Einige' обозначава неопределен малък брой: 'einige Tage' (няколко дни).",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Няколко' ≈ 'einige'. Bulgarisches Wort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Common Bulgarian word at A2 level. Useful for everyday communication",
+    "metadata": {
+      "frequency": 76,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "audioUrl": "https://forvo.com/word/einige/"
+  },
+  {
+    "id": "keiner",
+    "german": "keiner",
+    "bulgarian": "Никой",
+    "partOfSpeech": "adjective",
+    "difficulty": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Das ist keiner.",
+        "bulgarian": "Това е никой.",
+        "source": "legacy"
+      },
+      {
+        "german": "Es ist sehr keiner.",
+        "bulgarian": "Много е никой.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Keiner' е отрицателен заменящ за хора: 'Keiner kommt.' За съществителни използвайте 'kein' + род ('kein Auto').",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Никой' ≈ 'keiner'. Bulgarisches Wort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Common Bulgarian word at A2 level. Useful for everyday communication",
+    "metadata": {
+      "frequency": 75,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration",
+      "categorizedAt": "2025-12-12T16:05:22.285Z",
+      "categorizedBy": "ai-agent-batch-001"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "audioUrl": "https://forvo.com/word/keiner/"
+  },
+  {
+    "id": "samstag",
+    "german": "Samstag",
+    "bulgarian": "Събота",
+    "partOfSpeech": "interjection",
+    "difficulty": "A2",
+    "categories": [
+      "time"
+    ],
+    "examples": [
+      {
+        "german": "Samstag!",
+        "bulgarian": "Събота!",
+        "source": "legacy"
+      },
+      {
+        "german": "Er sagte: \"Samstag\"",
+        "bulgarian": "Той каза: \"Събота\"",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Samstag' е стандартното название; на юг често се използва 'Sonnabend'. Използвайте 'am Samstag'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Събота' ≈ 'Samstag'. Bulgarisches Wort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Common Bulgarian word at A2 level. Useful for everyday communication",
+    "metadata": {
+      "frequency": 79,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "audioUrl": "https://forvo.com/word/samstag/"
+  },
+  {
+    "id": "stunde",
+    "german": "Stunde",
+    "bulgarian": "Час",
+    "partOfSpeech": "interjection",
+    "difficulty": "A2",
+    "categories": [
+      "time"
+    ],
+    "examples": [
+      {
+        "german": "Stunde!",
+        "bulgarian": "Час!",
+        "source": "legacy"
+      },
+      {
+        "german": "Er sagte: \"Stunde\"",
+        "bulgarian": "Той каза: \"Час\"",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Die Stunde' означава 60 минути. Фраза: 'zwei Stunden warten'. Не се бърка с 'die Uhr' (часовник).",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Час' ≈ 'Stunde'. Zeitbegriff. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Time concept in Bulgarian. Note that времеmeans both 'time' and 'weather'",
+    "metadata": {
+      "frequency": 75,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "audioUrl": "https://forvo.com/word/stunde/"
+  },
+  {
+    "id": "minute",
+    "german": "Minute",
+    "bulgarian": "Минута",
+    "partOfSpeech": "interjection",
+    "difficulty": "A2",
+    "categories": [
+      "time"
+    ],
+    "examples": [
+      {
+        "german": "Minute!",
+        "bulgarian": "Минута!",
+        "source": "legacy"
+      },
+      {
+        "german": "Er sagte: \"Minute\"",
+        "bulgarian": "Той каза: \"Минута\"",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Die Minute' е женски род. Във време на часовник: 'Es ist fünf Minuten nach neun.' Съкратено 'Min.'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Минута' ≈ 'Minute'. Zeitbegriff. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Time concept in Bulgarian. Note that времеmeans both 'time' and 'weather'",
+    "metadata": {
+      "frequency": 79,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "audioUrl": "https://forvo.com/word/minute/"
+  },
+  {
+    "id": "morgen",
+    "german": "Morgen",
+    "bulgarian": "Сутрин",
+    "partOfSpeech": "interjection",
+    "difficulty": "A2",
+    "categories": [
+      "time"
+    ],
+    "examples": [
+      {
+        "german": "Morgen!",
+        "bulgarian": "Сутрин!",
+        "source": "legacy"
+      },
+      {
+        "german": "Er sagte: \"Morgen\"",
+        "bulgarian": "Той каза: \"Сутрин\"",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Der Morgen' обозначава периода до обяд. Фраза: 'am Morgen', а при пожелание 'Guten Morgen!'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Сутрин' ≈ 'Morgen'. Zeitbegriff. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Time concept in Bulgarian. Note that времеmeans both 'time' and 'weather'",
+    "metadata": {
+      "frequency": 73,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "audioUrl": "https://forvo.com/word/morgen/"
+  },
+  {
+    "id": "mittag",
+    "german": "Mittag",
+    "bulgarian": "Обед",
+    "partOfSpeech": "interjection",
+    "difficulty": "A2",
+    "categories": [
+      "time"
+    ],
+    "examples": [
+      {
+        "german": "Mittag!",
+        "bulgarian": "Обед!",
+        "source": "legacy"
+      },
+      {
+        "german": "Er sagte: \"Mittag\"",
+        "bulgarian": "Той каза: \"Обед\"",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Der Mittag' е обедът (~12 ч.). Изрази: 'am Mittag', 'Mittagessen' (обяд).",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Обед' ≈ 'Mittag'. Zeitbegriff. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Time concept in Bulgarian. Note that времеmeans both 'time' and 'weather'",
+    "metadata": {
+      "frequency": 75,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "audioUrl": "https://forvo.com/word/mittag/"
+  }
+]

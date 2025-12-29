@@ -107,30 +107,33 @@ export class ExerciseService {
 
     // Initialize matrix
     for (let i = 0; i < rows; i++) {
-      matrix[i] = [];
-      matrix[i][0] = i;
+      const row = (matrix[i] = [] as number[]);
+      row[0] = i;
     }
 
+    const firstRow = (matrix[0] ?? (matrix[0] = [] as number[]));
     for (let j = 0; j < cols; j++) {
-      matrix[0][j] = j;
+      firstRow[j] = j;
     }
 
     // Fill the matrix
     for (let i = 1; i < rows; i++) {
+      const row = (matrix[i] ?? (matrix[i] = [] as number[]));
       for (let j = 1; j < cols; j++) {
         if (b[i - 1] === a[j - 1]) {
-          matrix[i][j] = matrix[i - 1][j - 1] ?? 0;
+          row[j] = matrix[i - 1]?.[j - 1] ?? 0;
         } else {
           const val1 = matrix[i - 1]?.[j - 1] ?? 0;
-          const val2 = matrix[i]?.[j - 1] ?? 0;
+          const val2 = row[j - 1] ?? 0;
           const val3 = matrix[i - 1]?.[j] ?? 0;
 
-          matrix[i][j] = Math.min(val1, val2, val3) + 1;
+          row[j] = Math.min(val1, val2, val3) + 1;
         }
       }
     }
 
-    return matrix[b.length]?.[a.length] ?? 0;
+    const lastRow = matrix[b.length] ?? [];
+    return lastRow[a.length] ?? 0;
   }
 
   /**
@@ -173,7 +176,7 @@ export class ExerciseService {
     const similarity = this.calculateSimilarity(normalizedUser, normalizedCorrect);
     return {
       isCorrect: similarity >= threshold,
-      similarity,
+      similarity
     };
   }
 

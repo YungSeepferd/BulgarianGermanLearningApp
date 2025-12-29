@@ -3,6 +3,7 @@
   import { t } from '$lib/services/localization';
   import { vocabularyDb } from '$lib/data/db.svelte';
   import { appState } from '$lib/state/app-state';
+  import { ErrorHandler } from '$lib/services/errors';
   import type { VocabularyItem } from '$lib/types/vocabulary';
   import type { VocabularyCategory } from '$lib/schemas/vocabulary';
   import { PRACTICE_ICONS } from '$lib/constants/icons';
@@ -279,7 +280,7 @@
       hasMore = offset + ITEMS_PER_PAGE < filtered.length;
       vocabularyItems = filtered.slice(offset, offset + ITEMS_PER_PAGE);
     } catch (err) {
-      console.error('Failed to load vocabulary:', err);
+      ErrorHandler.handleError(err, 'Vocabulary Page: loadVocabulary');
       error = ui.error;
     } finally {
       loading = false;
@@ -347,7 +348,7 @@
       const nextSlice = filtered.slice(offset, offset + ITEMS_PER_PAGE);
       vocabularyItems = [...vocabularyItems, ...nextSlice];
     } catch (err) {
-      console.error('Failed to load more vocabulary:', err);
+      ErrorHandler.handleError(err, 'Vocabulary Page: loadMore');
     } finally {
       loading = false;
     }

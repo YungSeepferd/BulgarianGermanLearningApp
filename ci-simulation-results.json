@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-12-16T14:04:10.163Z",
-  "status": "success",
+  "timestamp": "2025-12-29T07:37:04.138Z",
+  "status": "failed",
   "steps": [
     {
       "name": "dependencies",
@@ -12,15 +12,8 @@
     },
     {
       "name": "type-check",
-      "status": "passed"
-    },
-    {
-      "name": "unit-tests",
-      "status": "passed"
-    },
-    {
-      "name": "build",
-      "status": "passed"
+      "status": "failed",
+      "error": "Process exited with code 1"
     }
   ]
 }

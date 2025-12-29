@@ -1,0 +1,108 @@
+# Vibe MCP Server Configuration
+# This configuration extends Vibe's capabilities with MCP (Model Context Protocol) servers
+
+# MCP Server Configurations
+[[mcp_servers]]
+name = "uvx_fetch_mcp"
+transport = "stdio"
+command = "uvx-fetch-mcp"
+args = ["start", "--port", "3001"]
+
+[[mcp_servers]]
+name = "svelte_mcp"
+transport = "stdio"
+command = "npx"
+args = ["-y", "@sveltejs/mcp@latest"]
+
+[[mcp_servers]]
+name = "playwright_mcp"
+transport = "stdio"
+command = "npx"
+args = ["@playwright/mcp@latest"]
+
+[[mcp_servers]]
+name = "context7_mcp"
+transport = "stdio"
+command = "npx"
+args = ["-y", "@upstash/context7-mcp@latest"]
+
+[[mcp_servers]]
+name = "sequential_thinking_mcp"
+transport = "stdio"
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+
+# Tool Permissions Configuration
+[tools]
+
+# UVX Fetch MCP Tools
+[tools.uvx_fetch_mcp_fetch]
+permission = "always"
+
+[tools.uvx_fetch_mcp_scrape]
+permission = "always"
+
+[tools.uvx_fetch_mcp_parse]
+permission = "always"
+
+[tools.uvx_fetch_mcp_extract]
+permission = "always"
+
+# Svelte MCP Tools
+[tools.svelte_mcp_validate]
+permission = "always"
+
+[tools.svelte_mcp_playground]
+permission = "always"
+
+[tools.svelte_mcp_accessibility]
+permission = "always"
+
+# Playwright MCP Tools
+[tools.playwright_mcp_test]
+permission = "always"
+
+[tools.playwright_mcp_debug]
+permission = "always"
+
+[tools.playwright_mcp_accessibility]
+permission = "always"
+
+# Context7 MCP Tools
+[tools.context7_mcp_analyze]
+permission = "always"
+
+[tools.context7_mcp_reason]
+permission = "always"
+
+# Sequential Thinking MCP Tools
+[tools.sequential_thinking_mcp_think]
+permission = "always"
+
+[tools.sequential_thinking_mcp_hypothesis]
+permission = "always"
+
+# Enable/disable tools configuration
+# Enable all MCP tools by default
+enabled_tools = [
+    "uvx_*",
+    "svelte_*",
+    "playwright_*",
+    "context7_*",
+    "sequential_*"
+]
+
+# Disable any conflicting or unused tools
+disabled_tools = []
+
+# MCP Server Configuration Notes
+# This configuration sets up MCP servers for:
+# 1. UVX Fetch MCP - Web scraping and data fetching
+# 2. Svelte MCP - Svelte 5 component validation
+# 3. Playwright MCP - End-to-end testing
+# 4. Context7 MCP - Contextual analysis
+# 5. Sequential Thinking MCP - Complex problem breakdown
+
+# All tools are configured with "always" permission for full access
+# Tools are organized by server name and functionality
+# The configuration supports both stdio transport for local processes

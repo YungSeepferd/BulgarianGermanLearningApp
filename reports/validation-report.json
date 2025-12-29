@@ -1,0 +1,5899 @@
+[
+  {
+    "id": "vocab-1026",
+    "german": "ja",
+    "partOfSpeech": "particle",
+    "errors": [
+      "Unknown part of speech: particle"
+    ]
+  },
+  {
+    "id": "vocab-1027",
+    "german": "nein",
+    "partOfSpeech": "particle",
+    "errors": [
+      "Unknown part of speech: particle"
+    ]
+  },
+  {
+    "id": "a1-fam-015-verwandte",
+    "german": "der/die Verwandte",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing required field: article",
+      "Invalid gender: masculine/feminine"
+    ]
+  },
+  {
+    "id": "8d493efe-bff6-4373-b37b-325c4293019a",
+    "german": "unknown_german",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_month_008",
+    "german": "август",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_transport_002",
+    "german": "автобус",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_pronoun_001",
+    "german": "аз",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_019",
+    "german": "ако",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_month_004",
+    "german": "април",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_place_015",
+    "german": "аптека",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_family_007",
+    "german": "баба",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_030",
+    "german": "бавен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_006",
+    "german": "бавно",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_006",
+    "german": "бавно",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_food_021",
+    "german": "банан",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_place_013",
+    "german": "банка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_house_005",
+    "german": "баня",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_entertainment_009",
+    "german": "бар",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_entertainment_007",
+    "german": "басейн",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_family_002",
+    "german": "баща",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_026",
+    "german": "беден",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_009",
+    "german": "без",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_place_012",
+    "german": "библиотека",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_033",
+    "german": "билет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_090",
+    "german": "благодаря",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "danke",
+    "german": "благодаря",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_clothing_040",
+    "german": "блуза",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_025",
+    "german": "богат",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_040",
+    "german": "болен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_health_009",
+    "german": "болест",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_health_002",
+    "german": "болка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_noun_036",
+    "german": "болница",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_family_005",
+    "german": "брат",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_019",
+    "german": "бутилка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_029",
+    "german": "бърз",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_005",
+    "german": "бързо",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_005",
+    "german": "бързо",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_final14_004",
+    "german": "бягам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_color_002",
+    "german": "бял",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_006",
+    "german": "в",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_043",
+    "german": "важен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_entertainment_005",
+    "german": "ваканция",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_036",
+    "german": "везна",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_035",
+    "german": "весел",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_011",
+    "german": "вече",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_011",
+    "german": "вече",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_entertainment_011",
+    "german": "вечеря",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_080",
+    "german": "видя",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_005",
+    "german": "видя",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_pronoun_007",
+    "german": "вие",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_087",
+    "german": "виждам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_object_008",
+    "german": "вилица",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_007",
+    "german": "винаги",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_007",
+    "german": "винаги",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_adj_010",
+    "german": "висок",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_037",
+    "german": "вкус",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_transport_003",
+    "german": "влак",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_015",
+    "german": "вода",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_house_008",
+    "german": "врата",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_weather_001",
+    "german": "време",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_time_002",
+    "german": "вторник",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_015",
+    "german": "вчера",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_015",
+    "german": "вчера",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_final14_047",
+    "german": "възглавница",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_013",
+    "german": "въздух",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_animal_012",
+    "german": "вълк",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_004",
+    "german": "въпрос",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_weather_004",
+    "german": "вятър",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_place_007",
+    "german": "гара",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_body_001",
+    "german": "глава",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_038",
+    "german": "гладен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_056",
+    "german": "гладък",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_024",
+    "german": "глас",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_038",
+    "german": "гледам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_088",
+    "german": "гледам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_008",
+    "german": "говоря",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_085",
+    "german": "говоря",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_time_010",
+    "german": "година",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_008",
+    "german": "голям",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_020",
+    "german": "горещ",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_profession_011",
+    "german": "готвач",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_012",
+    "german": "готвя",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_042",
+    "german": "готов",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_place_001",
+    "german": "град",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "stadt",
+    "german": "град",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_002",
+    "german": "грешка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_health_007",
+    "german": "грип",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_017",
+    "german": "грозен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_057",
+    "german": "груб",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_055",
+    "german": "група",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_weather_006",
+    "german": "гръм",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_022",
+    "german": "гърне",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_047",
+    "german": "давам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "zwanzig",
+    "german": "двадесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "zwanzig",
+    "german": "двадесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "zwoelf",
+    "german": "дванадесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "zwoelf",
+    "german": "дванадесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_200",
+    "german": "двеста",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_200",
+    "german": "двеста",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "a1_adj_014",
+    "german": "дебел",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_090",
+    "german": "деветдесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_090",
+    "german": "деветдесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "a1_number_019",
+    "german": "деветнадесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_019",
+    "german": "деветнадесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "a1_month_012",
+    "german": "декември",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_time_008",
+    "german": "ден",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_020",
+    "german": "дим",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_education_007",
+    "german": "диплома",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_entertainment_010",
+    "german": "дискотека",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_017",
+    "german": "днес",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_017",
+    "german": "днес",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_grammar_010",
+    "german": "до",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_003",
+    "german": "добре",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_003",
+    "german": "добре",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "dobro_utro_002",
+    "german": "добро утро",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_004",
+    "german": "добър",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "guten_abend",
+    "german": "добър вечер",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "auf_wiedersehen",
+    "german": "довиждане",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_077",
+    "german": "дойда",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_house_002",
+    "german": "дом",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "dom_003",
+    "german": "дом",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_food_023",
+    "german": "домат",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_clothing_038",
+    "german": "дреха",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_weather_002",
+    "german": "дъжд",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_nature_004",
+    "german": "дърво",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_education_013",
+    "german": "дъска",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_family_004",
+    "german": "дъщеря",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_family_008",
+    "german": "дядо",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_024",
+    "german": "евтин",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "elf",
+    "german": "единадесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "elf",
+    "german": "единадесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_tech_003",
+    "german": "екран",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_weather_009",
+    "german": "есен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_039",
+    "german": "жаден",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_012",
+    "german": "живея",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_004",
+    "german": "за",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_entertainment_001",
+    "german": "забавление",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_014",
+    "german": "завършвам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_education_003",
+    "german": "задача",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "zaedno_001",
+    "german": "заедно",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_animal_014",
+    "german": "заек",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_053",
+    "german": "закон",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_entertainment_012",
+    "german": "закуска",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_013",
+    "german": "започвам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_020",
+    "german": "затварям",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_051",
+    "german": "затворен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_question_005",
+    "german": "защо",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_nature_003",
+    "german": "звезда",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_023",
+    "german": "звук",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_041",
+    "german": "здрав",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_health_001",
+    "german": "здраве",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "zdravej_001",
+    "german": "здравей",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_color_005",
+    "german": "зелен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_food_018",
+    "german": "зеленчук",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_012",
+    "german": "земя",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_weather_010",
+    "german": "зима",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "schlecht_01",
+    "german": "зле",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_animal_015",
+    "german": "змия",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_education_002",
+    "german": "знание",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_053",
+    "german": "зная",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_body_008",
+    "german": "зъб",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_health_004",
+    "german": "зъболекар",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_001",
+    "german": "и",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_041",
+    "german": "игла",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_activity_002",
+    "german": "игра",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_040",
+    "german": "идвам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_040",
+    "german": "идея",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "entschuldigung",
+    "german": "извинете",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_092",
+    "german": "извинявам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_education_004",
+    "german": "изпит",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_003",
+    "german": "или",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_071",
+    "german": "имам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_tech_002",
+    "german": "имейл",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_profession_007",
+    "german": "инженер",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_044",
+    "german": "интересен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_tech_001",
+    "german": "интернет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_069",
+    "german": "искам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_001",
+    "german": "искам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_048",
+    "german": "истина",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_074",
+    "german": "кажа",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_023",
+    "german": "казвам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_question_006",
+    "german": "как",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_pronoun_010",
+    "german": "какво",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_031",
+    "german": "календар",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_017",
+    "german": "камък",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_020",
+    "german": "кана",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_064",
+    "german": "карам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_032",
+    "german": "карта",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_030",
+    "german": "картина",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_entertainment_015",
+    "german": "картичка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_food_024",
+    "german": "картоф",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_entertainment_008",
+    "german": "кафене",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_health_006",
+    "german": "кашлица",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_place_011",
+    "german": "кино",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_tech_004",
+    "german": "клавиатура",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_object_004",
+    "german": "ключ",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_noun_028",
+    "german": "книга",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "kniga_006",
+    "german": "книга",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_question_003",
+    "german": "кога",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_020",
+    "german": "когато",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_question_001",
+    "german": "кой",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_transport_001",
+    "german": "кола",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_clothing_051",
+    "german": "колан",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_transport_005",
+    "german": "колело",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_question_007",
+    "german": "колко",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_object_002",
+    "german": "компютър",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_animal_005",
+    "german": "кон",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_040",
+    "german": "конец",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_042",
+    "german": "копче",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_transport_009",
+    "german": "кораб",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_body_009",
+    "german": "коса",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_animal_002",
+    "german": "котка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_animal_006",
+    "german": "крава",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_008",
+    "german": "край",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_body_003",
+    "german": "крак",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_045",
+    "german": "красив",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "schon",
+    "german": "красив",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_053",
+    "german": "криви",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_045",
+    "german": "купувам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_018",
+    "german": "кутия",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_house_004",
+    "german": "кухня",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_animal_001",
+    "german": "куче",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_question_004",
+    "german": "къде",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_011",
+    "german": "към",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_045",
+    "german": "кърпа",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_house_001",
+    "german": "къща",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "haus",
+    "german": "къща",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_027",
+    "german": "лампа",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_noun_031",
+    "german": "легло",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_016",
+    "german": "лед",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_007",
+    "german": "лежа",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "gute_nacht",
+    "german": "лека нощ",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_profession_003",
+    "german": "лекар",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_profession_004",
+    "german": "лекарка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_health_003",
+    "german": "лекарство",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_031",
+    "german": "лесен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_place_008",
+    "german": "летище",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_health_010",
+    "german": "лечение",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_038",
+    "german": "линийка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_032",
+    "german": "линия",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_animal_013",
+    "german": "лисица",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_transport_010",
+    "german": "лодка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_005",
+    "german": "лош",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_004",
+    "german": "лошо",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_004",
+    "german": "лошо",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_food_026",
+    "german": "лук",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_nature_002",
+    "german": "луна",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_049",
+    "german": "лъжа",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_object_009",
+    "german": "лъжица",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_043",
+    "german": "лягам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_weather_008",
+    "german": "лято",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_noun_034",
+    "german": "магазин",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_month_005",
+    "german": "май",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_family_001",
+    "german": "майка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_002",
+    "german": "малко",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_002",
+    "german": "малко",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_adj_009",
+    "german": "малък",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_month_003",
+    "german": "март",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_noun_029",
+    "german": "маса",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_food_014",
+    "german": "масло",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_016",
+    "german": "между",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_054",
+    "german": "мек",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_food_016",
+    "german": "месо",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_transport_008",
+    "german": "метро",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_037",
+    "german": "метър",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_animal_011",
+    "german": "мечка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_049",
+    "german": "мивка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_education_015",
+    "german": "минута",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_036",
+    "german": "мирис",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_057",
+    "german": "мисля",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_024",
+    "german": "мисля",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_039",
+    "german": "мисъл",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_tech_005",
+    "german": "мишка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_011",
+    "german": "мия",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_018",
+    "german": "млад",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_food_013",
+    "german": "мляко",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_001",
+    "german": "много",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_001",
+    "german": "много",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_verb_070",
+    "german": "мога",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_006",
+    "german": "мога",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_education_008",
+    "german": "молив",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_091",
+    "german": "моля",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "bitte",
+    "german": "моля",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_nature_009",
+    "german": "море",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_food_025",
+    "german": "морков",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_place_006",
+    "german": "мост",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_047",
+    "german": "мръсен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_place_009",
+    "german": "музей",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_activity_003",
+    "german": "музика",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_030",
+    "german": "място",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_007",
+    "german": "на",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_014",
+    "german": "над",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_question_011",
+    "german": "накъде",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_081",
+    "german": "намеря",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_017",
+    "german": "намирам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_075",
+    "german": "направя",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_health_008",
+    "german": "настинка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_007",
+    "german": "начало",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_043",
+    "german": "начин",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_nature_010",
+    "german": "небе",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_time_007",
+    "german": "неделя",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_pronoun_006",
+    "german": "ние",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_008",
+    "german": "никога",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_008",
+    "german": "никога",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_adj_011",
+    "german": "нисък",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_002",
+    "german": "но",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_006",
+    "german": "нов",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_month_011",
+    "german": "ноември",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_object_007",
+    "german": "нож",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_039",
+    "german": "ножица",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_body_006",
+    "german": "нос",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_044",
+    "german": "нося",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_072",
+    "german": "нямам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_051",
+    "german": "обещание",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_051",
+    "german": "обичам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_weather_005",
+    "german": "облак",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_014",
+    "german": "обличам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_education_001",
+    "german": "образование",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_clothing_046",
+    "german": "обувка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_057",
+    "german": "общество",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_entertainment_013",
+    "german": "обяд",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_animal_008",
+    "german": "овца",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_029",
+    "german": "огледало",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_014",
+    "german": "огън",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_046",
+    "german": "одеяло",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_body_004",
+    "german": "око",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_month_010",
+    "german": "октомври",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_080",
+    "german": "осемдесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_080",
+    "german": "осемдесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "a1_number_018",
+    "german": "осемнадесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_018",
+    "german": "осемнадесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "a1_verb_060",
+    "german": "оставам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_005",
+    "german": "от",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_019",
+    "german": "отварям",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_050",
+    "german": "отворен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_003",
+    "german": "отговор",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_039",
+    "german": "отивам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_078",
+    "german": "отида",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_question_010",
+    "german": "откъде",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_profession_012",
+    "german": "официант",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_education_006",
+    "german": "оценка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_012",
+    "german": "още",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_012",
+    "german": "още",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_clothing_044",
+    "german": "палто",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_clothing_041",
+    "german": "панталон",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_tech_008",
+    "german": "папка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_object_010",
+    "german": "паричка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_place_004",
+    "german": "парк",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_tech_009",
+    "german": "паролла",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_entertainment_002",
+    "german": "партия",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_profession_015",
+    "german": "певец",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_activity_004",
+    "german": "песен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_050",
+    "german": "петдесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_050",
+    "german": "петдесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "a1_number_015",
+    "german": "петнадесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_015",
+    "german": "петнадесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "a1_time_005",
+    "german": "петък",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_001",
+    "german": "пея",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_animal_009",
+    "german": "пиле",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_034",
+    "german": "писмо",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_011",
+    "german": "пиша",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_003",
+    "german": "пия",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_entertainment_006",
+    "german": "плаж",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_041",
+    "german": "план",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_nature_007",
+    "german": "планина",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_009",
+    "german": "плача",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_022",
+    "german": "плащам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_093",
+    "german": "плащам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_035",
+    "german": "плик",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_food_019",
+    "german": "плод",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_place_005",
+    "german": "площад",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_003",
+    "german": "плувам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_015",
+    "german": "под",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_entertainment_014",
+    "german": "подарък",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_054",
+    "german": "познавам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_clothing_042",
+    "german": "пола",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_profession_013",
+    "german": "полицай",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_018",
+    "german": "помагам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_time_001",
+    "german": "понеделник",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_food_022",
+    "german": "портокал",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_014",
+    "german": "после",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_014",
+    "german": "после",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_final_028",
+    "german": "посока",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_096",
+    "german": "почивам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_place_014",
+    "german": "поща",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_052",
+    "german": "прав",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_052",
+    "german": "правда",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_001",
+    "german": "правило",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_007",
+    "german": "правя",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_049",
+    "german": "празен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_entertainment_004",
+    "german": "празник",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_019",
+    "german": "прах",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_012",
+    "german": "пред",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_017",
+    "german": "при",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_046",
+    "german": "пример",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_tech_006",
+    "german": "принтер",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_044",
+    "german": "причина",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_005",
+    "german": "проблем",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_profession_008",
+    "german": "програмист",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_021",
+    "german": "продавам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_profession_009",
+    "german": "продавач",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_noun_032",
+    "german": "прозорец",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_weather_007",
+    "german": "пролет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_animal_003",
+    "german": "птица",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_048",
+    "german": "пълен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_097",
+    "german": "пътувам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_018",
+    "german": "пясък",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_048",
+    "german": "работя",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_026",
+    "german": "радио",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_082",
+    "german": "разбера",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_050",
+    "german": "разбирам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_034",
+    "german": "размер",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_029",
+    "german": "разстояние",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_054",
+    "german": "ред",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "selten",
+    "german": "редко",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_015",
+    "german": "режа",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_045",
+    "german": "резултат",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_nature_008",
+    "german": "река",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_noun_035",
+    "german": "ресторант",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_education_012",
+    "german": "речник",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_006",
+    "german": "решение",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_food_017",
+    "german": "риба",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_clothing_039",
+    "german": "риза",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_activity_009",
+    "german": "рисунка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_entertainment_003",
+    "german": "рожден ден",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_color_010",
+    "german": "розов",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_clothing_043",
+    "german": "рокля",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_body_002",
+    "german": "ръка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_clothing_049",
+    "german": "ръкавица",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_010",
+    "german": "рядко",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_010",
+    "german": "рядко",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_grammar_008",
+    "german": "с",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_food_027",
+    "german": "салата",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_transport_004",
+    "german": "самолет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_021",
+    "german": "светлина",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_028",
+    "german": "свещ",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_animal_007",
+    "german": "свиня",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_011",
+    "german": "свят",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_013",
+    "german": "сега",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_013",
+    "german": "сега",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_number_070",
+    "german": "седемдесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_070",
+    "german": "седемдесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "a1_number_017",
+    "german": "седемнадесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_017",
+    "german": "седемнадесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "a1_time_009",
+    "german": "седмица",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_079",
+    "german": "седна",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_006",
+    "german": "седя",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_place_002",
+    "german": "село",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "dorf",
+    "german": "село",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "familie",
+    "german": "семейство",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_month_009",
+    "german": "септември",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_family_006",
+    "german": "сестра",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_color_009",
+    "german": "сив",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_027",
+    "german": "силен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_family_003",
+    "german": "син",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_color_004",
+    "german": "син",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_food_015",
+    "german": "сирене",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_027",
+    "german": "скорост",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_023",
+    "german": "скъп",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_028",
+    "german": "слаб",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_013",
+    "german": "след",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_009",
+    "german": "слушам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_086",
+    "german": "слушам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_nature_001",
+    "german": "слънце",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_010",
+    "german": "смея се",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_activity_008",
+    "german": "снимка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_weather_003",
+    "german": "сняг",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_tech_010",
+    "german": "софтуер",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_house_006",
+    "german": "спалня",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_062",
+    "german": "спирам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_activity_001",
+    "german": "спорт",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_002",
+    "german": "спя",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_009",
+    "german": "среда",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_time_003",
+    "german": "сряда",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_041",
+    "german": "ставам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_076",
+    "german": "стана",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_019",
+    "german": "стар",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_house_003",
+    "german": "стая",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_100",
+    "german": "сто",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_100",
+    "german": "сто",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "a1_noun_030",
+    "german": "стол",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_008",
+    "german": "стоя",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_010",
+    "german": "страна",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_094",
+    "german": "струвам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_021",
+    "german": "студен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_profession_005",
+    "german": "студент",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_profession_006",
+    "german": "студентка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_time_006",
+    "german": "събота",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "es_tut_mir_leid",
+    "german": "съжалявам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_family_009",
+    "german": "съпруг",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_family_010",
+    "german": "съпруга",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_036",
+    "german": "сърдит",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_body_010",
+    "german": "сърце",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_042",
+    "german": "сядам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_022",
+    "german": "сянка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_050",
+    "german": "тайна",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_transport_007",
+    "german": "такси",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_019",
+    "german": "там",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_019",
+    "german": "там",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_activity_005",
+    "german": "танц",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_002",
+    "german": "танцувам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_055",
+    "german": "твърд",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_pronoun_008",
+    "german": "те",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_place_010",
+    "german": "театър",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_025",
+    "german": "телевизор",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_object_001",
+    "german": "телефон",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_education_005",
+    "german": "тест",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_education_010",
+    "german": "тетрадка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_pronoun_002",
+    "german": "ти",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_021",
+    "german": "тигня",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_026",
+    "german": "тишина",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_pronoun_005",
+    "german": "то",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_050",
+    "german": "тоалетна",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "dann",
+    "german": "тогава",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_pronoun_009",
+    "german": "този",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_pronoun_003",
+    "german": "той",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_022",
+    "german": "топъл",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_017",
+    "german": "торба",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_044",
+    "german": "торбичка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_031",
+    "german": "точка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_transport_006",
+    "german": "трамвай",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_nature_006",
+    "german": "трева",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_health_005",
+    "german": "треска",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_030",
+    "german": "тридесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_030",
+    "german": "тридесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "dreizehn",
+    "german": "тринадесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "dreizehn",
+    "german": "тринадесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_032",
+    "german": "труден",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_068",
+    "german": "трябва",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_018",
+    "german": "тук",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_018",
+    "german": "тук",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_adj_034",
+    "german": "тъжен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_066",
+    "german": "търся",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_pronoun_004",
+    "german": "тя",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_noun_033",
+    "german": "улица",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_037",
+    "german": "уморен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_activity_010",
+    "german": "урок",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_body_007",
+    "german": "уста",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_016",
+    "german": "утре",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_016",
+    "german": "утре",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_body_005",
+    "german": "ухо",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_049",
+    "german": "уча",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_education_011",
+    "german": "учебник",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_noun_037",
+    "german": "училище",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "schule",
+    "german": "училище",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_profession_001",
+    "german": "учител",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_profession_002",
+    "german": "учителка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_tech_007",
+    "german": "файл",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_047",
+    "german": "факт",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_month_002",
+    "german": "февруари",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_activity_007",
+    "german": "филм",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_033",
+    "german": "форма",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_023",
+    "german": "фурна",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_052",
+    "german": "харесвам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_016",
+    "german": "хартия",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_1000",
+    "german": "хиляда",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_1000",
+    "german": "хиляда",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "a1_education_009",
+    "german": "химикалка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_024",
+    "german": "хладилник",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_food_012",
+    "german": "хляб",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_activity_006",
+    "german": "хоби",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_005",
+    "german": "ходя",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "essen",
+    "german": "храна",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_016",
+    "german": "хубав",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_profession_014",
+    "german": "художник",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_nature_005",
+    "german": "цвете",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_035",
+    "german": "цвят",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_042",
+    "german": "цел",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_place_003",
+    "german": "център",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_043",
+    "german": "цип",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_015",
+    "german": "чакам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_clothing_052",
+    "german": "чанта",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_048",
+    "german": "чаршаф",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_education_014",
+    "german": "час",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_object_003",
+    "german": "часовник",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_object_005",
+    "german": "чаша",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_grammar_018",
+    "german": "че",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_color_003",
+    "german": "червен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_color_001",
+    "german": "черен",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_009",
+    "german": "често",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adverb_009",
+    "german": "често",
+    "partOfSpeech": "adverb",
+    "errors": [
+      "Unknown part of speech: adverb"
+    ]
+  },
+  {
+    "id": "a1_verb_010",
+    "german": "чета",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_040",
+    "german": "четиридесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_040",
+    "german": "четиридесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "a1_number_014",
+    "german": "четиринадесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_014",
+    "german": "четиринадесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "a1_object_006",
+    "german": "чиния",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_046",
+    "german": "чист",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final14_013",
+    "german": "чистя",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_056",
+    "german": "член",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "mensch",
+    "german": "човек",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_clothing_047",
+    "german": "чорап",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_038",
+    "german": "чувство",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_clothing_050",
+    "german": "шал",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_clothing_048",
+    "german": "шапка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_060",
+    "german": "шестдесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_060",
+    "german": "шестдесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "a1_number_016",
+    "german": "шестнадесет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_number_016",
+    "german": "шестнадесет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "a1_profession_010",
+    "german": "шофьор",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_final_025",
+    "german": "шум",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_033",
+    "german": "щастлив",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_month_007",
+    "german": "юли",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_month_006",
+    "german": "юни",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_food_020",
+    "german": "ябълка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_clothing_045",
+    "german": "яке",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_004",
+    "german": "ям",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_month_001",
+    "german": "януари",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "bus",
+    "german": "автобус",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "auto",
+    "german": "автомобил",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "wohnung",
+    "german": "апартамент",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "apotheke",
+    "german": "аптека",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "vater",
+    "german": "баща",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "schmerz",
+    "german": "болка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "krankenhaus",
+    "german": "болница",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "bruder",
+    "german": "брат",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_073",
+    "german": "бъда",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "abend",
+    "german": "вечер",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_046",
+    "german": "взимам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "zug",
+    "german": "влак",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "alle",
+    "german": "всички",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_055",
+    "german": "вярвам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "wind",
+    "german": "вятър",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "bahnhof",
+    "german": "гара",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "sprechen",
+    "german": "говоря",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "wald",
+    "german": "гора",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "garten",
+    "german": "градина",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_question_012",
+    "german": "дали",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "zwei",
+    "german": "две",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "zwei",
+    "german": "две",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "neun",
+    "german": "девет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "neun",
+    "german": "девет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "zehn",
+    "german": "десет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "zehn",
+    "german": "десет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "kind",
+    "german": "дете",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "mir_geht_s_gut",
+    "german": "добре съм",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "dobur_den_002",
+    "german": "добър ден",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "regen",
+    "german": "дъжд",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_012",
+    "german": "дълъг",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "euro",
+    "german": "евро",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "eins",
+    "german": "едно",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "eins",
+    "german": "едно",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_color_006",
+    "german": "жълт",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "gesundheit",
+    "german": "здраве",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "gemuse",
+    "german": "зеленчуци",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "entschuldige",
+    "german": "извинявай",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_058",
+    "german": "използвам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "wie_geht_s",
+    "german": "как си?",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_question_009",
+    "german": "какъв",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "karte",
+    "german": "карта",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "kaffee",
+    "german": "кафе",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_color_008",
+    "german": "кафяв",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "kuche",
+    "german": "кухня",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_013",
+    "german": "къс",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "lew",
+    "german": "лев",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "arzt",
+    "german": "лекар",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "medikamente",
+    "german": "лекарства",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "flughafen",
+    "german": "летище",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "laden",
+    "german": "магазин",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "mutter",
+    "german": "майка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "wenig",
+    "german": "малко",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "tisch",
+    "german": "маса",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "fleisch",
+    "german": "месо",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "minute",
+    "german": "минута",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "milch",
+    "german": "мляко",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "viele",
+    "german": "много",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "darf_ich",
+    "german": "може ли?",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "meer",
+    "german": "море",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "erkaltung",
+    "german": "настинка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "keiner",
+    "german": "никой",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "nacht",
+    "german": "нощ",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "einige",
+    "german": "няколко",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "mittag",
+    "german": "обед",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "wolken",
+    "german": "облаци",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_color_007",
+    "german": "оранжев",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "acht",
+    "german": "осем",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "acht",
+    "german": "осем",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "rabatt",
+    "german": "отстъпка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "geld",
+    "german": "пари",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "funf",
+    "german": "пет",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "funf",
+    "german": "пет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "berg",
+    "german": "планина",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "obst",
+    "german": "плодове",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_059",
+    "german": "получавам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "hilfe",
+    "german": "помощ",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "machen",
+    "german": "правя",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "freund",
+    "german": "приятел",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "freundin",
+    "german": "приятелка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_061",
+    "german": "продължавам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_063",
+    "german": "пускам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "stra_e",
+    "german": "път",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "rabota_005",
+    "german": "работа",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_067",
+    "german": "разговарям",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "fluss",
+    "german": "река",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "fisch",
+    "german": "риба",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "flugzeug",
+    "german": "самолет",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "sieben",
+    "german": "седем",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "sieben",
+    "german": "седем",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "schwester",
+    "german": "сестра",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "kase",
+    "german": "сирене",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "nachmittag",
+    "german": "следобед",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "sonne",
+    "german": "слънце",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "rechnung",
+    "german": "сметка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "schnee",
+    "german": "сняг",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "saft",
+    "german": "сок",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "notfall",
+    "german": "спешно",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "stuhl",
+    "german": "стол",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "morgen",
+    "german": "сутрин",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "samstag",
+    "german": "събота",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "sein",
+    "german": "съм",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "ehemann",
+    "german": "съпруг",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "ehefrau",
+    "german": "съпруга",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "taxi",
+    "german": "такси",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "fieber",
+    "german": "треска",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "drei",
+    "german": "три",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "drei",
+    "german": "три",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_adj_015",
+    "german": "тънък",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_065",
+    "german": "хващам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "brot",
+    "german": "хляб",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "hotel",
+    "german": "хотел",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "preis",
+    "german": "цена",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "stunde",
+    "german": "час",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "uhr",
+    "german": "часовник",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_time_004",
+    "german": "четвъртък",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "vier",
+    "german": "четири",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "vier",
+    "german": "четири",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_question_008",
+    "german": "чий",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "horen",
+    "german": "чувам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "a1_verb_056",
+    "german": "чувствам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "sechs",
+    "german": "шест",
+    "partOfSpeech": "number",
+    "errors": [
+      "Unknown part of speech: number"
+    ]
+  },
+  {
+    "id": "sechs",
+    "german": "шест",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "leben",
+    "german": "живея",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "fahren",
+    "german": "карам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "quittung",
+    "german": "касова бележка",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "einkaufen",
+    "german": "пазарувам",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "temperatur",
+    "german": "температура",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  },
+  {
+    "id": "lernen",
+    "german": "уча",
+    "partOfSpeech": "noun",
+    "errors": [
+      "Missing German grammar information"
+    ]
+  }
+]

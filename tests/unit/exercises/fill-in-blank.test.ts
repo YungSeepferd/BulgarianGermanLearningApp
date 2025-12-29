@@ -17,16 +17,16 @@ describe('ExerciseService - Fill In The Blank', () => {
         question: 'Complete: "Guten ___"',
         correctAnswer: 'Tag',
         acceptedVariations: ['tag', 'TAG'],
-        hints: ['German greeting'],
+        hints: ['German greeting']
       },
       {
         id: 'q2',
         question: 'Complete: "Guten Morgen, ___ geht es dir?"',
         correctAnswer: 'wie',
         acceptedVariations: ['Wie', 'WIE'],
-        hints: ['German question'],
-      },
-    ],
+        hints: ['German question']
+      }
+    ]
   };
 
   describe('validateFillInBlankAnswer', () => {
@@ -141,7 +141,7 @@ describe('ExerciseService - Fill In The Blank', () => {
         { isCorrect: true },
         { isCorrect: true },
         { isCorrect: false },
-        { isCorrect: true },
+        { isCorrect: true }
       ];
       const stats = ExerciseService.calculateStats(feedback);
 

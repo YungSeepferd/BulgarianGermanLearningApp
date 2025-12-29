@@ -1,16 +1,18 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
-  import type { FillInTheBlankExercise } from '$lib/schemas/exercises';
+  import type { FillInTheBlankExerciseV2, FillInTheBlankQuestion } from '$lib/schemas/exercises';
   import { ExerciseService } from '$lib/services/exercise';
 
-  let { exercise = $bindable(), onComplete }: { exercise: FillInTheBlankExercise; onComplete?: (results: any) => void } = $props();
+  let { exercise = $bindable() }: { exercise: FillInTheBlankExerciseV2 } = $props();
   const dispatch = createEventDispatcher();
 
   let userAnswer = $state('');
   let showFeedback = $state(false);
   let isCorrect = $state(false);
 
-  const currentQuestion = $derived(exercise.questions[exercise.currentQuestionIndex]);
+  const currentQuestion = $derived<FillInTheBlankQuestion | undefined>(
+    exercise.questions[exercise.currentQuestionIndex]
+  );
 
   function checkAnswer() {
     if (!userAnswer.trim() || !currentQuestion) return;
@@ -28,11 +30,13 @@
       questionId: currentQuestion.id,
       isCorrect,
       userAnswer,
-      correctAnswer: currentQuestion.correctAnswer,
+      correctAnswer: currentQuestion.correctAnswer
     });
 
     // Store user answer
     exercise.userAnswers.push(userAnswer);
+
+    dispatch('exerciseComplete', { isCorrect });
   }
 
   function nextQuestion() {

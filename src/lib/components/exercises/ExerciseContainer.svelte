@@ -1,27 +1,16 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import type { Exercise } from '$lib/schemas/exercises';
+  // no lifecycle imports needed
   import FillInTheBlankExercise from './FillInTheBlankExercise.svelte';
   import MultipleChoiceExercise from './MultipleChoiceExercise.svelte';
   import MatchingExercise from './MatchingExercise.svelte';
   import OrderingExercise from './OrderingExercise.svelte';
   import TypingExercise from './TypingExercise.svelte';
 
-  interface Props {
-    exercise: Exercise;
-    onComplete?: (results: any) => void;
-    onSkip?: () => void;
-  }
+  // Props inferred from $props()
 
   let { exercise = $bindable(), onComplete, onSkip } = $props();
 
-  let currentQuestion = $derived(
-    exercise.type === 'fill-in-blank' ||
-    exercise.type === 'multiple-choice' ||
-    exercise.type === 'typing'
-      ? (exercise as any).questions[(exercise as any).currentQuestionIndex]
-      : null
-  );
+  // currentQuestion derived but not used in markup; remove to avoid unused warnings
 
   let progress = $derived.by(() => {
     if (exercise.type === 'fill-in-blank' || exercise.type === 'multiple-choice' || exercise.type === 'typing') {
@@ -80,15 +69,15 @@
 
   <div class="exercise-content">
     {#if exercise.type === 'fill-in-blank'}
-      <FillInTheBlankExercise {exercise} {onComplete} on:next={handleNext} on:skip={handleSkip} />
+      <FillInTheBlankExercise {exercise} on:next={handleNext} on:skip={handleSkip} />
     {:else if exercise.type === 'multiple-choice'}
-      <MultipleChoiceExercise {exercise} {onComplete} on:next={handleNext} on:skip={handleSkip} />
+      <MultipleChoiceExercise {exercise} on:next={handleNext} on:skip={handleSkip} />
     {:else if exercise.type === 'matching'}
-      <MatchingExercise {exercise} {onComplete} on:skip={handleSkip} />
+      <MatchingExercise {exercise} on:skip={handleSkip} />
     {:else if exercise.type === 'ordering'}
-      <OrderingExercise {exercise} {onComplete} on:skip={handleSkip} />
+      <OrderingExercise {exercise} on:skip={handleSkip} />
     {:else if exercise.type === 'typing'}
-      <TypingExercise {exercise} {onComplete} on:next={handleNext} on:skip={handleSkip} />
+      <TypingExercise {exercise} on:next={handleNext} on:skip={handleSkip} />
     {/if}
   </div>
 

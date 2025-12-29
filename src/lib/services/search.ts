@@ -14,41 +14,28 @@ import { type VocabularySearchParams } from '$lib/schemas/vocabulary';
 import type { UnifiedVocabularyItem, VocabularyCategory, VocabularyMetadata } from '$lib/schemas/unified-vocabulary';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 import { UnifiedVocabularyItemSchema } from '$lib/schemas/unified-vocabulary';
-import { loadVocabulary } from '$lib/data/loader';
+import { vocabularyRepository } from '$lib/data/vocabulary-repository.svelte';
 import { z } from 'zod';
 import Fuse from 'fuse.js';
 
-// Cache for vocabulary data to avoid repeated loading
-let vocabularyCache: UnifiedVocabularyItem[] | null = null;
-
 /**
- * Load vocabulary data with caching
+ * Load vocabulary data via the unified repository
  */
 async function getVocabularyData(): Promise<UnifiedVocabularyItem[]> {
-  if (vocabularyCache) {
-    return vocabularyCache;
-  }
-
-  try {
-    const collection = await loadVocabulary();
-    // Ensure all items have required properties
-    vocabularyCache = collection.items.map(item => {
-      const metadata = item.metadata || {};
-      return {
-        ...item,
-        metadata: {
-          ...metadata,
-          isCommon: (metadata as VocabularyMetadata).isCommon ?? false,
-          isVerified: (metadata as VocabularyMetadata).isVerified ?? false,
-          learningPhase: (metadata as VocabularyMetadata).learningPhase ?? 0
-        }
-      };
-    });
-    return vocabularyCache;
-  } catch (_error) {
-    // Failed to load vocabulary data
-    return [];
-  }
+  await vocabularyRepository.load();
+  const items = vocabularyRepository.getAll();
+  return items.map(item => {
+    const metadata = item.metadata || {} as VocabularyMetadata;
+    return {
+      ...item,
+      metadata: {
+        ...metadata,
+        isCommon: metadata.isCommon ?? false,
+        isVerified: metadata.isVerified ?? false,
+        learningPhase: metadata.learningPhase ?? 0
+      }
+    };
+  });
 }
 
 /**
@@ -195,7 +182,7 @@ function applyPagination(items: UnifiedVocabularyItem[], offset: number, limit: 
  * Clear the vocabulary cache (useful when data is updated)
  */
 export function clearVocabularyCache(): void {
-  vocabularyCache = null;
+  vocabularyRepository.invalidate();
 }
 
 /**

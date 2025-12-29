@@ -1,0 +1,1112 @@
+[
+  {
+    "id": "horen",
+    "german": "hören",
+    "bulgarian": "Чувам",
+    "partOfSpeech": "verb",
+    "difficulty": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Ich kann hören.",
+        "bulgarian": "Аз мога да чувам.",
+        "source": "legacy"
+      },
+      {
+        "german": "Wir wollen hören.",
+        "bulgarian": "Ние искаме да чувам.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Hören' е правилен: 'ich höre', 'du hörst'. Комбинация 'von etwas hören' означава 'чувам за нещо'. В израза 'anhören' става отделяем глагол.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Чувам' ≈ 'hören'. Bulgarisches Verb. Sehr häufig verwendet.",
+      "linguisticForGermans": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
+      "source": "merged"
+    },
+    "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
+    "culturalNotes": "Essential action word. Bulgarian verbs conjugate for person and number",
+    "metadata": {
+      "frequency": 98,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration",
+      "categorizedAt": "2025-12-12T16:05:22.284Z",
+      "categorizedBy": "ai-agent-batch-001"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "audioUrl": "https://forvo.com/word/hören/"
+  },
+  {
+    "id": "schon",
+    "german": "schön",
+    "bulgarian": "Красив",
+    "partOfSpeech": "adjective",
+    "difficulty": "A1",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Das ist schön.",
+        "bulgarian": "Това е красив.",
+        "source": "legacy"
+      },
+      {
+        "german": "Es ist sehr schön.",
+        "bulgarian": "Много е красив.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Schön' означава 'красив/приятен'. Фраза: 'Schön dich zu sehen!' (Радвам се да те видя). Степенуване: 'schöner', 'am schönsten'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Красив' ≈ 'schön'. Bulgarisches Adjektiv (flektiert nach Geschlecht). Sehr häufig verwendet.",
+      "linguisticForBulgarians": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
+      "linguisticForGermans": "Bulgarian adjectives have four forms: masculine (-ъ/-и), feminine (-а), neuter (-о), plural (-и)",
+      "source": "merged"
+    },
+    "etymology": "Bulgarian adjective with gender-specific endings: -ъ/-и/-а/-о",
+    "culturalNotes": "Descriptive word in Bulgarian. Adjectives agree with noun gender",
+    "metadata": {
+      "frequency": 98,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration",
+      "categorizedAt": "2025-12-12T16:05:22.284Z",
+      "categorizedBy": "ai-agent-batch-001"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A1",
+    "audioUrl": "https://forvo.com/word/schön/"
+  },
+  {
+    "id": "dann",
+    "german": "dann",
+    "bulgarian": "Тогава",
+    "partOfSpeech": "adverb",
+    "difficulty": "A1",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Das passiert dann.",
+        "bulgarian": "Това се случва тогава.",
+        "source": "legacy"
+      },
+      {
+        "german": "Er macht das dann.",
+        "bulgarian": "Той прави това тогава.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Dann' показва последователност: 'Zuerst ... dann ...'. Служи и като запълнително в разговорите ('Dann ...').",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Тогава' ≈ 'dann'. Unveränderliches Adverb. Sehr häufig verwendet.",
+      "linguisticForGermans": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Common Bulgarian word at A1 level. Useful for everyday communication",
+    "metadata": {
+      "frequency": 95,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration",
+      "categorizedAt": "2025-12-12T16:05:22.284Z",
+      "categorizedBy": "ai-agent-batch-001"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A1",
+    "audioUrl": "https://forvo.com/word/dann/"
+  },
+  {
+    "id": "selten",
+    "german": "selten",
+    "bulgarian": "Редко",
+    "partOfSpeech": "adverb",
+    "difficulty": "A1",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Das passiert selten.",
+        "bulgarian": "Това се случва редко.",
+        "source": "legacy"
+      },
+      {
+        "german": "Er macht das selten.",
+        "bulgarian": "Той прави това редко.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Selten' изразява рядкост: 'Ich esse selten Fleisch.' За допълнителен акцент използвайте 'nur selten'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Редко' ≈ 'selten'. Unveränderliches Adverb. Sehr häufig verwendet.",
+      "linguisticForGermans": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Common Bulgarian word at A1 level. Useful for everyday communication",
+    "metadata": {
+      "frequency": 96,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration",
+      "categorizedAt": "2025-12-12T16:05:22.285Z",
+      "categorizedBy": "ai-agent-batch-001"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A1",
+    "audioUrl": "https://forvo.com/word/selten/"
+  },
+  {
+    "id": "schlecht_01",
+    "german": "schlecht",
+    "bulgarian": "Зле",
+    "partOfSpeech": "adverb",
+    "difficulty": "A1",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Das passiert schlecht.",
+        "bulgarian": "Това се случва зле.",
+        "source": "legacy"
+      },
+      {
+        "german": "Er macht das schlecht.",
+        "bulgarian": "Той прави това зле.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Schlecht' означава 'зле': 'Mir geht es schlecht.' Степенуване: 'schlechter', 'am schlechtesten'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Зле' ≈ 'schlecht'. Unveränderliches Adverb. Sehr häufig verwendet.",
+      "linguisticForGermans": "Bulgarian adverb. Typically invariable (doesn't change form). Often derived from adjectives",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Common Bulgarian word at A1 level. Useful for everyday communication",
+    "metadata": {
+      "frequency": 99,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration",
+      "categorizedAt": "2025-12-12T16:05:22.285Z",
+      "categorizedBy": "ai-agent-batch-001"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A1",
+    "audioUrl": "https://forvo.com/word/schlecht/"
+  },
+  {
+    "id": "tisch",
+    "german": "Tisch",
+    "bulgarian": "Маса",
+    "partOfSpeech": "noun",
+    "difficulty": "A2",
+    "categories": [
+      "home"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist Tisch?",
+        "bulgarian": "Къде е Маса?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist Tisch.",
+        "bulgarian": "Това е Маса.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Der Tisch' е мъжки род и означава маса. Множественото 'die Tische' добавя '-e'. Типичен израз: 'am Tisch sitzen'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Маса' ≈ 'Tisch'. Femininum. Häufig verwendet.",
+      "linguisticForBulgarians": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "linguisticForGermans": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "source": "merged"
+    },
+    "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
+    "culturalNotes": "Common everyday word in Bulgarian. Useful for A2 learners",
+    "metadata": {
+      "frequency": 81,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "Tisch",
+          "plural": "Tische"
+        },
+        "accusative": {
+          "singular": "Tisch",
+          "plural": "Tische"
+        },
+        "dative": {
+          "singular": "Tisch",
+          "plural": "Tischen"
+        },
+        "genitive": {
+          "singular": "Tisches",
+          "plural": "Tische"
+        }
+      },
+      "gender": "m"
+    },
+    "audioUrl": "https://forvo.com/word/tisch/"
+  },
+  {
+    "id": "stuhl",
+    "german": "Stuhl",
+    "bulgarian": "Стол",
+    "partOfSpeech": "noun",
+    "difficulty": "A2",
+    "categories": [
+      "home"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist Stuhl?",
+        "bulgarian": "Къде е Стол?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist Stuhl.",
+        "bulgarian": "Това е Стол.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Der Stuhl' е мъжки род. В множествено число 'die Stühle' се появява умлаут. Комбинация: 'am Tisch stehen Stühle'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Стол' ≈ 'Stuhl'. Maskulinum. Häufig verwendet.",
+      "linguisticForBulgarians": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "linguisticForGermans": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "source": "merged"
+    },
+    "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
+    "culturalNotes": "Common everyday word in Bulgarian. Useful for A2 learners",
+    "metadata": {
+      "frequency": 82,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "Stuhl",
+          "plural": "Stuhle"
+        },
+        "accusative": {
+          "singular": "Stuhl",
+          "plural": "Stuhle"
+        },
+        "dative": {
+          "singular": "Stuhl",
+          "plural": "Stuhlen"
+        },
+        "genitive": {
+          "singular": "Stuhles",
+          "plural": "Stuhle"
+        }
+      },
+      "gender": "m"
+    },
+    "audioUrl": "https://forvo.com/word/stuhl/"
+  },
+  {
+    "id": "kuche",
+    "german": "Küche",
+    "bulgarian": "Кухня",
+    "partOfSpeech": "noun",
+    "difficulty": "A2",
+    "categories": [
+      "food",
+      "home"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist Küche?",
+        "bulgarian": "Къде е Кухня?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist Küche.",
+        "bulgarian": "Това е Кухня.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Die Küche' е женски род. Употреба: 'in der Küche kochen'. Множествено число 'die Küchen'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Кухня' ≈ 'Küche'. Femininum. Häufig verwendet.",
+      "linguisticForBulgarians": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "linguisticForGermans": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "source": "merged"
+    },
+    "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
+    "culturalNotes": "Common everyday word in Bulgarian. Useful for A2 learners",
+    "metadata": {
+      "frequency": 76,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "Küche",
+          "plural": "Küchen"
+        },
+        "accusative": {
+          "singular": "Küche",
+          "plural": "Küchen"
+        },
+        "dative": {
+          "singular": "Küche",
+          "plural": "Küchenn"
+        },
+        "genitive": {
+          "singular": "Küchees",
+          "plural": "Küchen"
+        }
+      },
+      "gender": "f"
+    },
+    "audioUrl": "https://forvo.com/word/küche/"
+  },
+  {
+    "id": "wohnung",
+    "german": "Wohnung",
+    "bulgarian": "Апартамент",
+    "partOfSpeech": "noun",
+    "difficulty": "A2",
+    "categories": [
+      "home"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist Wohnung?",
+        "bulgarian": "Къде е Апартамент?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist Wohnung.",
+        "bulgarian": "Това е Апартамент.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Die Wohnung' означава жилище или апартамент. Израз: 'eine Wohnung mieten'. Множествено 'die Wohnungen'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Апартамент' ≈ 'Wohnung'. Maskulinum. Häufig verwendet.",
+      "linguisticForBulgarians": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "linguisticForGermans": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "source": "merged"
+    },
+    "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
+    "culturalNotes": "Common everyday word in Bulgarian. Useful for A2 learners",
+    "metadata": {
+      "frequency": 77,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "Wohnung",
+          "plural": "Wohnungen"
+        },
+        "accusative": {
+          "singular": "Wohnung",
+          "plural": "Wohnungen"
+        },
+        "dative": {
+          "singular": "Wohnung",
+          "plural": "Wohnungenn"
+        },
+        "genitive": {
+          "singular": "Wohnunges",
+          "plural": "Wohnungen"
+        }
+      },
+      "gender": "f"
+    },
+    "audioUrl": "https://forvo.com/word/wohnung/"
+  },
+  {
+    "id": "auto",
+    "german": "Auto",
+    "bulgarian": "Автомобил",
+    "partOfSpeech": "noun",
+    "difficulty": "A2",
+    "categories": [
+      "transport"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist Auto?",
+        "bulgarian": "Къде е Автомобил?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist Auto.",
+        "bulgarian": "Това е Автомобил.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "general": "'Автомобил' ist ein Lehnwort aus dem Französischen; es setzt sich aus 'auto' (selbst) und 'mobile' (beweglich) zusammen.",
+      "forBulgarianSpeakers": "'Das Auto' е неутрален род и означава кола. В разговор се ползва и 'der Wagen'. Множествено 'die Autos'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Автомобил' ≈ 'Auto'. Maskulinum. Häufig verwendet.",
+      "linguisticForBulgarians": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "linguisticForGermans": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "source": "merged"
+    },
+    "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
+    "culturalNotes": "Common everyday word in Bulgarian. Useful for A2 learners",
+    "metadata": {
+      "frequency": 82,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "Auto",
+          "plural": "Autoe"
+        },
+        "accusative": {
+          "singular": "Auto",
+          "plural": "Autoe"
+        },
+        "dative": {
+          "singular": "Auto",
+          "plural": "Autoen"
+        },
+        "genitive": {
+          "singular": "Autoes",
+          "plural": "Autoe"
+        }
+      },
+      "gender": "m"
+    },
+    "audioUrl": "https://forvo.com/word/auto/"
+  },
+  {
+    "id": "laden",
+    "german": "Laden",
+    "bulgarian": "Магазин",
+    "partOfSpeech": "noun",
+    "difficulty": "A2",
+    "categories": [
+      "places"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist Laden?",
+        "bulgarian": "Къде е Магазин?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist Laden.",
+        "bulgarian": "Това е Магазин.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Der Laden' е мъжки род и означава малък магазин. В множествено число става 'die Läden' с умлаут. Израз: 'im Laden einkaufen'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Магазин' ≈ 'Laden'. Maskulinum. Häufig verwendet.",
+      "linguisticForBulgarians": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "linguisticForGermans": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "source": "merged"
+    },
+    "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
+    "culturalNotes": "Common everyday word in Bulgarian. Useful for A2 learners",
+    "metadata": {
+      "frequency": 81,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "Laden",
+          "plural": "Ladene"
+        },
+        "accusative": {
+          "singular": "Laden",
+          "plural": "Ladene"
+        },
+        "dative": {
+          "singular": "Laden",
+          "plural": "Ladenen"
+        },
+        "genitive": {
+          "singular": "Ladenes",
+          "plural": "Ladene"
+        }
+      },
+      "gender": "m"
+    },
+    "audioUrl": "https://forvo.com/word/laden/"
+  },
+  {
+    "id": "garten",
+    "german": "Garten",
+    "bulgarian": "Градина",
+    "partOfSpeech": "noun",
+    "difficulty": "A2",
+    "categories": [
+      "nature"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist Garten?",
+        "bulgarian": "Къде е Градина?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist Garten.",
+        "bulgarian": "Това е Градина.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Der Garten' е мъжки род. Множественото 'die Gärten' има умлаут. Фраза: 'im Garten arbeiten' (работя в градината).",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Градина' ≈ 'Garten'. Femininum. Häufig verwendet.",
+      "linguisticForBulgarians": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "linguisticForGermans": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "source": "merged"
+    },
+    "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
+    "culturalNotes": "Common everyday word in Bulgarian. Useful for A2 learners",
+    "metadata": {
+      "frequency": 74,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "Garten",
+          "plural": "Gartene"
+        },
+        "accusative": {
+          "singular": "Garten",
+          "plural": "Gartene"
+        },
+        "dative": {
+          "singular": "Garten",
+          "plural": "Gartenen"
+        },
+        "genitive": {
+          "singular": "Gartenes",
+          "plural": "Gartene"
+        }
+      },
+      "gender": "m"
+    },
+    "audioUrl": "https://forvo.com/word/garten/"
+  },
+  {
+    "id": "uhr",
+    "german": "Uhr",
+    "bulgarian": "Часовник",
+    "partOfSpeech": "noun",
+    "difficulty": "A2",
+    "categories": [
+      "time"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist Uhr?",
+        "bulgarian": "Къде е Часовник?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist Uhr.",
+        "bulgarian": "Това е Часовник.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Die Uhr' е женски род и означава часовник или час. За показване на време: 'Es ist zwei Uhr.' Настолен часовник е 'die Uhr', ръчен – 'die Armbanduhr'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Часовник' ≈ 'Uhr'. Maskulinum. Häufig verwendet.",
+      "linguisticForBulgarians": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "linguisticForGermans": "Bulgarian noun. Gender: Check ending (-ъ/-й usually masculine, -а/-я feminine, -е/-о neuter). Definite article suffix: -ът/-та/-то",
+      "source": "merged"
+    },
+    "etymology": "Bulgarian noun from Slavic root. Definite article is postfixed in Bulgarian",
+    "culturalNotes": "Common everyday word in Bulgarian. Useful for A2 learners",
+    "metadata": {
+      "frequency": 80,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "Uhr",
+          "plural": "Uhre"
+        },
+        "accusative": {
+          "singular": "Uhr",
+          "plural": "Uhre"
+        },
+        "dative": {
+          "singular": "Uhr",
+          "plural": "Uhren"
+        },
+        "genitive": {
+          "singular": "Uhres",
+          "plural": "Uhre"
+        }
+      },
+      "gender": "m"
+    },
+    "audioUrl": "https://forvo.com/word/uhr/"
+  },
+  {
+    "id": "fahren",
+    "german": "fahren",
+    "bulgarian": "Карам",
+    "partOfSpeech": "verb",
+    "difficulty": "B1",
+    "categories": [
+      "transport"
+    ],
+    "examples": [
+      {
+        "german": "Ich kann fahren.",
+        "bulgarian": "Аз мога да карам.",
+        "source": "legacy"
+      },
+      {
+        "german": "Wir wollen fahren.",
+        "bulgarian": "Ние искаме да карам.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Fahren' описва движение с превозно средство. Формите: 'ich fahre', 'du fährst', 'er fährt'; минало 'fuhr', Partizip 'gefahren'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Карам' ≈ 'fahren'. Bulgarisches Verb. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
+      "source": "merged"
+    },
+    "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
+    "culturalNotes": "Essential action word. Bulgarian verbs conjugate for person and number",
+    "metadata": {
+      "frequency": 83,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "leben",
+    "german": "leben",
+    "bulgarian": "Живея",
+    "partOfSpeech": "verb",
+    "difficulty": "B1",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Ich kann leben.",
+        "bulgarian": "Аз мога да живея.",
+        "source": "legacy"
+      },
+      {
+        "german": "Wir wollen leben.",
+        "bulgarian": "Ние искаме да живея.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Leben' означава 'живея/съществувам'. Израз: 'in Deutschland leben'. За 'живея в жилище' употребете 'wohnen'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Живея' ≈ 'leben'. Bulgarisches Verb. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
+      "source": "merged"
+    },
+    "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
+    "culturalNotes": "Essential action word. Bulgarian verbs conjugate for person and number",
+    "metadata": {
+      "frequency": 79,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration",
+      "categorizedAt": "2025-12-12T16:05:22.285Z",
+      "categorizedBy": "ai-agent-batch-001"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "lernen",
+    "german": "lernen",
+    "bulgarian": "Уча",
+    "partOfSpeech": "verb",
+    "difficulty": "B1",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Ich kann lernen.",
+        "bulgarian": "Аз мога да уча.",
+        "source": "legacy"
+      },
+      {
+        "german": "Wir wollen lernen.",
+        "bulgarian": "Ние искаме да уча.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Lernen' покрива учене/подготовка: 'Deutsch lernen'. Не бъркайте с 'studieren', което означава следвам в университет.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Уча' ≈ 'lernen'. Bulgarisches Verb. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian verbs conjugate for person, number, and tense. Perfective/imperfective aspect distinction important",
+      "source": "merged"
+    },
+    "etymology": "Bulgarian verb derived from Slavic root. Infinitive form ends in -м (first person singular present)",
+    "culturalNotes": "Essential action word. Bulgarian verbs conjugate for person and number",
+    "metadata": {
+      "frequency": 79,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration",
+      "categorizedAt": "2025-12-12T16:05:22.285Z",
+      "categorizedBy": "ai-agent-batch-001"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "B1"
+  },
+  {
+    "id": "eins",
+    "german": "eins",
+    "bulgarian": "Едно",
+    "partOfSpeech": "number",
+    "difficulty": "A2",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist eins?",
+        "bulgarian": "Къде е Едно?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist eins.",
+        "bulgarian": "Това е Едно.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "Числото 'eins' се използва самостоятелно или с съществително ('ein Auto' без -s). При броене следва 'eins, zwei, drei'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Едно' ≈ 'eins'. Zahlwort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
+    "metadata": {
+      "frequency": 75,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "eins",
+          "plural": "einse"
+        },
+        "accusative": {
+          "singular": "eins",
+          "plural": "einse"
+        },
+        "dative": {
+          "singular": "eins",
+          "plural": "einsen"
+        },
+        "genitive": {
+          "singular": "einss",
+          "plural": "einse"
+        }
+      }
+    },
+    "audioUrl": "https://forvo.com/word/eins/"
+  },
+  {
+    "id": "zwei",
+    "german": "zwei",
+    "bulgarian": "Две",
+    "partOfSpeech": "number",
+    "difficulty": "A2",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist zwei?",
+        "bulgarian": "Къде е Две?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist zwei.",
+        "bulgarian": "Това е Две.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Zwei' е числото 2. При даване на телефон или адрес немците често произнасят ясно 'zwei' вместо 'zwo'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Две' ≈ 'zwei'. Zahlwort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
+    "metadata": {
+      "frequency": 81,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "zwei",
+          "plural": "zweie"
+        },
+        "accusative": {
+          "singular": "zwei",
+          "plural": "zweie"
+        },
+        "dative": {
+          "singular": "zwei",
+          "plural": "zweien"
+        },
+        "genitive": {
+          "singular": "zweis",
+          "plural": "zweie"
+        }
+      }
+    },
+    "audioUrl": "https://forvo.com/word/zwei/"
+  },
+  {
+    "id": "drei",
+    "german": "drei",
+    "bulgarian": "Три",
+    "partOfSpeech": "number",
+    "difficulty": "A2",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist drei?",
+        "bulgarian": "Къде е Три?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist drei.",
+        "bulgarian": "Това е Три.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "Числото 'drei' се произнася като 'драй'. В сложни числа образува 'dreizehn' (13) и 'dreißig' (30).",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Три' ≈ 'drei'. Zahlwort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
+    "metadata": {
+      "frequency": 77,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "drei",
+          "plural": "dreie"
+        },
+        "accusative": {
+          "singular": "drei",
+          "plural": "dreie"
+        },
+        "dative": {
+          "singular": "drei",
+          "plural": "dreien"
+        },
+        "genitive": {
+          "singular": "dreis",
+          "plural": "dreie"
+        }
+      }
+    },
+    "audioUrl": "https://forvo.com/word/drei/"
+  },
+  {
+    "id": "vier",
+    "german": "vier",
+    "bulgarian": "Четири",
+    "partOfSpeech": "number",
+    "difficulty": "A2",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [
+      {
+        "german": "Wo ist vier?",
+        "bulgarian": "Къде е Четири?",
+        "source": "legacy"
+      },
+      {
+        "german": "Das ist vier.",
+        "bulgarian": "Това е Четири.",
+        "source": "legacy"
+      }
+    ],
+    "notes": {
+      "forBulgarianSpeakers": "'Vier' се произнася 'фиа' и запазва формата си в съставни числа: 'vierzehn', 'vierzig'. При броене използвайте 'eins, zwei, drei, vier'.",
+      "forGermanSpeakers": "Für Deutschsprachige: 'Четири' ≈ 'vier'. Zahlwort. Häufig verwendet.",
+      "linguisticForGermans": "Bulgarian word at word level. Pay attention to stress and pronunciation",
+      "source": "merged"
+    },
+    "etymology": "Slavic origin word. Related to other South Slavic languages",
+    "culturalNotes": "Numbers in Bulgarian follow Slavic pattern. Gender agreement with counted nouns",
+    "metadata": {
+      "frequency": 80,
+      "level": "A1",
+      "isCommon": false,
+      "isVerified": true,
+      "createdBy": "vocab-migration"
+    },
+    "createdAt": "2025-12-11T22:19:46.850Z",
+    "updatedAt": "2025-12-11T22:19:46.850Z",
+    "version": 1,
+    "cefrLevel": "A2",
+    "grammar": {
+      "declension": {
+        "nominative": {
+          "singular": "vier",
+          "plural": "viere"
+        },
+        "accusative": {
+          "singular": "vier",
+          "plural": "viere"
+        },
+        "dative": {
+          "singular": "vier",
+          "plural": "vieren"
+        },
+        "genitive": {
+          "singular": "viers",
+          "plural": "viere"
+        }
+      }
+    },
+    "audioUrl": "https://forvo.com/word/vier/"
+  }
+]

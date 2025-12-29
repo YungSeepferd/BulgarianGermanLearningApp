@@ -46,7 +46,7 @@
 
 <div class="page">
   <div class="toolbar">
-    <button class="link" on:click={goBack}>← Back to all paths</button>
+    <button class="link" onclick={goBack}>← Back to all paths</button>
   </div>
 
   {#if loading}
@@ -65,7 +65,7 @@
       </div>
       {#if progress}
         <div class="actions">
-          <button class="action-btn" on:click={completeNextLesson}>Mark next lesson complete</button>
+          <button class="action-btn" onclick={completeNextLesson}>Mark next lesson complete</button>
           <p class="hint">Updates progress and persists to IndexedDB.</p>
         </div>
       {/if}

@@ -1,6 +1,6 @@
-import { redirect } from '@sveltejs/kit';
-import { base } from '$app/paths';
+// Disable SSR for dashboard to avoid initialization errors
+export const ssr = false;
 
-export const load = () => {
-  throw redirect(307, `${base}/learn`);
+export const load = async () => {
+  return {};
 };

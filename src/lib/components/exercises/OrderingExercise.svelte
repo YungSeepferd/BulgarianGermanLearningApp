@@ -3,7 +3,7 @@
   import type { OrderingExercise } from '$lib/schemas/exercises';
   import { ExerciseService } from '$lib/services/exercise';
 
-  let { exercise = $bindable(), onComplete }: { exercise: OrderingExercise; onComplete?: (results: any) => void } = $props();
+  let { exercise = $bindable() }: { exercise: OrderingExercise } = $props();
   const dispatch = createEventDispatcher();
 
   let items = $state<Array<{ id: string; text: string }>>([]);
@@ -11,12 +11,13 @@
   let isCorrect = $state(false);
   let draggedItem = $state<string | null>(null);
 
-  const currentQuestion = $derived(exercise.questions[exercise.currentQuestionIndex]);
+  // Derive correct order from item positions
+  const correctOrderIds = $derived([...exercise.items].sort((a, b) => a.correctPosition - b.correctPosition).map((i) => i.id));
 
   $effect(() => {
-    // Shuffle items on component mount and when question changes
-    items = currentQuestion.items
-      .map((item) => ({ ...item }))
+    // Shuffle items on component mount
+    items = exercise.items
+      .map((item) => ({ id: item.id, text: item.text }))
       .sort(() => Math.random() - 0.5);
   });
 
@@ -46,28 +47,21 @@
     }
 
     // Reorder items
-    const [removed] = items.splice(draggedIndex, 1);
+    const removed = items.splice(draggedIndex, 1)[0];
+    if (!removed) {
+      draggedItem = null;
+      return;
+    }
     items.splice(targetIndex, 0, removed);
     draggedItem = null;
   }
 
   function checkAnswer() {
     const userOrder = items.map((item) => item.id);
-    const correctOrder = currentQuestion.correctOrder;
+    const correctOrder = correctOrderIds;
 
     isCorrect = ExerciseService.validateOrdering(userOrder, correctOrder);
     showFeedback = true;
-
-    // Store feedback
-    exercise.feedback.push({
-      questionId: currentQuestion.id,
-      isCorrect,
-      userOrder,
-      correctOrder,
-    });
-
-    // Store user answer
-    exercise.userAnswers.push(JSON.stringify(userOrder));
   }
 
   function nextQuestion() {
@@ -78,7 +72,6 @@
   }
 
   function skipQuestion() {
-    exercise.userAnswers.push('');
     dispatch('skip');
   }
 
@@ -89,7 +82,7 @@
 
 <div class="ordering">
   <div class="question">
-    <h3>{currentQuestion.question}</h3>
+    <h3>{exercise.title}</h3>
   </div>
 
   <div class="description">
@@ -104,13 +97,14 @@
         ondragstart={(e) => handleDragStart(e, item.id)}
         ondragover={handleDragOver}
         ondrop={(e) => handleDrop(e, index)}
+        role="listitem"
         class:dragging={draggedItem === item.id}
         class:disabled={showFeedback}
       >
         <span class="order-number">{index + 1}</span>
         <span class="item-text">{item.text}</span>
         {#if showFeedback}
-          {#if currentQuestion.correctOrder[index] === item.id}
+          {#if correctOrderIds[index] === item.id}
             <span class="status correct">✓</span>
           {:else}
             <span class="status incorrect">✗</span>
@@ -140,8 +134,8 @@
     <div class="correct-order">
       <strong>Correct Order:</strong>
       <ol>
-        {#each currentQuestion.correctOrder as itemId}
-          {@const correctItem = currentQuestion.items.find((i) => i.id === itemId)}
+        {#each correctOrderIds as itemId}
+          {@const correctItem = exercise.items.find((i) => i.id === itemId)}
           <li>{correctItem?.text}</li>
         {/each}
       </ol>

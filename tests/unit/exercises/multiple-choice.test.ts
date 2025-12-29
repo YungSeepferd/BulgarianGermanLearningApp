@@ -18,10 +18,10 @@ describe('ExerciseService - Multiple Choice', () => {
         options: [
           { id: 'opt1', text: 'Brot' },
           { id: 'opt2', text: 'Buch' },
-          { id: 'opt3', text: 'Baum' },
+          { id: 'opt3', text: 'Baum' }
         ],
         correctOptionId: 'opt2',
-        explanation: 'Buch is German for book. Brot means bread and Baum means tree.',
+        explanation: 'Buch is German for book. Brot means bread and Baum means tree.'
       },
       {
         id: 'q2',
@@ -29,12 +29,12 @@ describe('ExerciseService - Multiple Choice', () => {
         options: [
           { id: 'opt1', text: 'Здравей' },
           { id: 'opt2', text: 'Благодаря' },
-          { id: 'opt3', text: 'Довиждане' },
+          { id: 'opt3', text: 'Довиждане' }
         ],
         correctOptionId: 'opt1',
-        explanation: 'Здравей (Zdravey) means hello. Благодаря means thank you.',
-      },
-    ],
+        explanation: 'Здравей (Zdravey) means hello. Благодаря means thank you.'
+      }
+    ]
   };
 
   describe('validateMultipleChoiceAnswer', () => {
@@ -89,7 +89,7 @@ describe('ExerciseService - Multiple Choice', () => {
       const feedback = [
         { isCorrect: true },
         { isCorrect: false },
-        { isCorrect: true },
+        { isCorrect: true }
       ];
       const stats = ExerciseService.calculateStats(feedback);
 

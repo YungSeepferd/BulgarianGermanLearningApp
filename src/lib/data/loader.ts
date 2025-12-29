@@ -12,7 +12,7 @@ import { EventBus } from '../services/event-bus';
 
 // DataLoader is unused
 
-import { UnifiedVocabularyItemSchema, UnifiedVocabularyCollectionSchema, ResilientUnifiedVocabularyCollectionSchema, VocabularyCategorySchema } from '../schemas/unified-vocabulary';
+import { UnifiedVocabularyItemSchema, UnifiedVocabularyCollectionSchema, ResilientUnifiedVocabularyCollectionSchema, SimplifiedVocabularyCollectionSchema, VocabularyCategorySchema } from '../schemas/unified-vocabulary';
 import { z } from 'zod';
 
 /**
@@ -127,17 +127,52 @@ async function loadFromStaticEndpoint(eventBus?: EventBus): Promise<z.infer<type
 
       const data = await fs.readFile(filePath, 'utf-8');
       const jsonData = JSON.parse(data);
-      return ResilientUnifiedVocabularyCollectionSchema.parse(jsonData);
+      
+      // Parse with simplified schema that matches actual JSON structure
+      const parsed = SimplifiedVocabularyCollectionSchema.parse(jsonData);
+      
+      // Transform to expected UnifiedVocabularyCollectionSchema format
+      return {
+        id: crypto.randomUUID(),
+        name: `${parsed.language} Vocabulary`,
+        description: `Vocabulary collection with ${parsed.totalItems} items`,
+        languagePair: parsed.direction === 'DE_BG' ? 'de-bg' : 'bg-de',
+        difficultyRange: [1, 5] as [number, number],
+        categories: [...new Set(parsed.items.flatMap(item => item.categories))],
+        itemCount: parsed.totalItems,
+        createdAt: parsed.lastUpdated,
+        updatedAt: parsed.lastUpdated,
+        version: parsed.version,
+        items: parsed.items
+      } as z.infer<typeof UnifiedVocabularyCollectionSchema>;
     } else {
       // Browser environment - fetch from static endpoint
-      const response = await fetch(`${base}/data/unified-vocabulary.json`);
+      // Use the linguistically-corrected version for best quality
+      const response = await fetch(`${base}/data/unified-vocabulary.linguistic-corrected.json`);
 
       if (!response.ok) {
         throw new DataError(`HTTP error! status: ${response.status}`, { status: response.status });
       }
 
       const data = await response.json();
-      return ResilientUnifiedVocabularyCollectionSchema.parse(data);
+      
+      // Parse with simplified schema that matches actual JSON structure
+      const parsed = SimplifiedVocabularyCollectionSchema.parse(data);
+      
+      // Transform to expected UnifiedVocabularyCollectionSchema format
+      return {
+        id: crypto.randomUUID(),
+        name: `${parsed.language} Vocabulary`,
+        description: `Vocabulary collection with ${parsed.totalItems} items`,
+        languagePair: parsed.direction === 'DE_BG' ? 'de-bg' : 'bg-de',
+        difficultyRange: [1, 5] as [number, number],
+        categories: [...new Set(parsed.items.flatMap(item => item.categories))],
+        itemCount: parsed.totalItems,
+        createdAt: parsed.lastUpdated,
+        updatedAt: parsed.lastUpdated,
+        version: parsed.version,
+        items: parsed.items
+      } as z.infer<typeof UnifiedVocabularyCollectionSchema>;
     }
   } catch (error: unknown) {
     const typedError = error instanceof Error ? error : new Error(String(error));
@@ -217,7 +252,8 @@ async function loadBundledData(eventBus?: EventBus): Promise<z.infer<typeof Unif
     // Browser environment - use fetch API
     let jsonData: unknown = null;
     try {
-      const response = await fetch(`${base}/data/unified-vocabulary.json`);
+      // Use the linguistically-corrected version for best quality
+      const response = await fetch(`${base}/data/unified-vocabulary.linguistic-corrected.json`);
       if (!response.ok) {
         throw new DataError(`HTTP error! status: ${response.status}`, { status: response.status });
       }

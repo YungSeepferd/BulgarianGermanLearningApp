@@ -6,7 +6,7 @@
    * Listens for error events and displays them to users in a consistent way.
    */
 
-  import { diContainer } from '$lib/services/di-container';
+  import { getDIContainer } from '$lib/services/di-container';
   import { EventTypes, type ErrorEvent } from '$lib/services/event-bus';
   import { Debug } from '$lib/utils';
 
@@ -18,7 +18,7 @@
   // Subscribe to global error events
   $effect(() => {
     Debug.log('GlobalErrorHandler', 'Initializing global error handler');
-    const eventBus = diContainer.getService('eventBus');
+    const eventBus = getDIContainer().getService('eventBus');
     const unsubscribe = eventBus.subscribe(EventTypes.ERROR, (event: ErrorEvent) => {
       handleErrorEvent(event);
     });

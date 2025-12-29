@@ -1,0 +1,142 @@
+[
+  {
+    "id": "horen",
+    "partOfSpeech": "verb",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "schon",
+    "partOfSpeech": "adjective",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "dann",
+    "partOfSpeech": "adverb",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "selten",
+    "partOfSpeech": "adverb",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "schlecht_01",
+    "partOfSpeech": "adverb",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "tisch",
+    "partOfSpeech": "noun",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "stuhl",
+    "partOfSpeech": "noun",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "kuche",
+    "partOfSpeech": "noun",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "wohnung",
+    "partOfSpeech": "noun",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "auto",
+    "partOfSpeech": "noun",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "laden",
+    "partOfSpeech": "noun",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "garten",
+    "partOfSpeech": "noun",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "uhr",
+    "partOfSpeech": "noun",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "fahren",
+    "partOfSpeech": "verb",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "leben",
+    "partOfSpeech": "verb",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "lernen",
+    "partOfSpeech": "verb",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "eins",
+    "partOfSpeech": "number",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "zwei",
+    "partOfSpeech": "number",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "drei",
+    "partOfSpeech": "number",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "vier",
+    "partOfSpeech": "number",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  }
+]

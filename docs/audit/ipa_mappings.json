@@ -1,0 +1,22 @@
+[
+  {"id": "zusammen_bg_zaedno_sample", "ipa": {"bulgarian": "/zɐˈɛdno/", "german": "/t͡suˈzamən/"}},
+  {"id": "zdravej_001", "ipa": {"bulgarian": "/zdraˈvɛj/", "german": "/ˈhalo/"}},
+  {"id": "dobro_utro_002", "ipa": {"bulgarian": "/ˈdɔbro ˈutro/", "german": "/ˈɡuːtn̩ ˈmɔʁɡn̩/"}},
+  {"id": "guten_abend", "ipa": {"bulgarian": "/doˈbɤr ˈvɛt͡ʃɛr/", "german": "/ˈɡuːtn̩ ˈaːbn̩t/"}},
+  {"id": "gute_nacht", "ipa": {"bulgarian": "/ˈlɛka ˈnɔʃt/", "german": "/ˈɡuːtə ˈnaxt/"}},
+  {"id": "auf_wiedersehen", "ipa": {"bulgarian": "/doˈvid͡ʒɐnɛ/", "german": "/aʊ̯f ˈviːdɐzeːən/"}},
+  {"id": "bitte", "ipa": {"bulgarian": "/ˈmɔlʲɐ/", "german": "/ˈbɪtə/"}},
+  {"id": "danke", "ipa": {"bulgarian": "/blɐɡoˈdarʲɐ/", "german": "/ˈdaŋkə/"}},
+  {"id": "entschuldigung", "ipa": {"bulgarian": "/izviˈnɛtɛ/", "german": "/ɛntˈʃʊldɪɡʊŋ/"}},
+  {"id": "es_tut_mir_leid", "ipa": {"bulgarian": "/sɐʒɐˈlʲavɐm/", "german": "/ɛs tuːt miːɐ̯ laɪ̯t/"}},
+  {"id": "mensch", "ipa": {"bulgarian": "/ˈt͡ʃɔvɛk/", "german": "/mɛnʃ/"}},
+  {"id": "familie", "ipa": {"bulgarian": "/sɛˈmɛjstvɔ/", "german": "/faˈmiːliə/"}},
+  {"id": "haus", "ipa": {"bulgarian": "/ˈkɤʃtɐ/", "german": "/haʊ̯s/"}},
+  {"id": "schule", "ipa": {"bulgarian": "/uˈt͡ʃiliʃtɛ/", "german": "/ˈʃuːlə/"}},
+  {"id": "stadt", "ipa": {"bulgarian": "/ɡrat/", "german": "/ʃtat/"}},
+  {"id": "dorf", "ipa": {"bulgarian": "/ˈsɛɫɔ/", "german": "/dɔʁf/"}},
+  {"id": "essen", "ipa": {"bulgarian": "/ˈxranɐ/", "german": "/ˈɛsn̩/"}},
+  {"id": "sein", "ipa": {"bulgarian": "/sɤm/", "german": "/zaɪ̯n/"}},
+  {"id": "machen", "ipa": {"bulgarian": "/ˈpravʲɐ/", "german": "/ˈmaxn̩/"}},
+  {"id": "sprechen", "ipa": {"bulgarian": "/ɡoˈvɔrʲɐ/", "german": "/ˈʃprɛçn̩/"}}
+]

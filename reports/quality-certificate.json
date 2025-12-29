@@ -1,0 +1,15 @@
+{
+  "dataset": "German-Bulgarian Vocabulary",
+  "version": "2.0",
+  "validationDate": "2025-12-19T14:07:58.226Z",
+  "qualityScore": "46.78%",
+  "validationStandards": [
+    "Translation accuracy",
+    "Structural completeness",
+    "Content purity",
+    "Character encoding",
+    "Length appropriateness"
+  ],
+  "certification": "NEEDS_REVIEW",
+  "notes": "1142 items need review"
+}

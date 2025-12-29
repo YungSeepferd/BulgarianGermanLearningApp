@@ -1,0 +1,3630 @@
+{
+  "timestamp": "2025-12-19T10:20:10.087Z",
+  "totalItems": 2164,
+  "summary": {
+    "categoryMismatches": 391,
+    "missingFields": 1773,
+    "invalidValues": 3965,
+    "totalIssues": 2164
+  },
+  "categoryMismatches": [
+    {
+      "index": 17,
+      "item": {
+        "id": "pdf_da1023a3a69b",
+        "german": "Afghanistan",
+        "bulgarian": "Афганистан",
+        "category": "greetings",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"Afghanistan\" categorized as \"greetings\" - likely incorrect"
+    },
+    {
+      "index": 18,
+      "item": {
+        "id": "pdf_083b869fbeee",
+        "german": "Algerien",
+        "bulgarian": "Алжир",
+        "category": "greetings",
+        "partOfSpeech": "verb",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"Algerien\" categorized as \"greetings\" - likely incorrect"
+    },
+    {
+      "index": 37,
+      "item": {
+        "id": "pdf_746127900f53",
+        "german": "arbeiten",
+        "bulgarian": "работя",
+        "category": "verbs",
+        "partOfSpeech": "verb",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"arbeiten\" categorized as \"verbs\" - likely incorrect"
+    },
+    {
+      "index": 46,
+      "item": {
+        "id": "pdf_052d87c2eb18",
+        "german": "aufstehen",
+        "bulgarian": "ставам",
+        "category": "verbs",
+        "partOfSpeech": "verb",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"aufstehen\" categorized as \"verbs\" - likely incorrect"
+    },
+    {
+      "index": 98,
+      "item": {
+        "id": "pdf_38621000b6cf",
+        "german": "blau",
+        "bulgarian": "син",
+        "category": "family",
+        "partOfSpeech": "adjective",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"blau\" categorized as \"family\" - likely incorrect"
+    },
+    {
+      "index": 107,
+      "item": {
+        "id": "pdf_ad8d599238c2",
+        "german": "braun",
+        "bulgarian": "кафяв",
+        "category": "clothing",
+        "partOfSpeech": "adjective",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"braun\" categorized as \"clothing\" - likely incorrect"
+    },
+    {
+      "index": 114,
+      "item": {
+        "id": "pdf_f41b540466cb",
+        "german": "Bulgarien",
+        "bulgarian": "България",
+        "category": "greetings",
+        "partOfSpeech": "verb",
+        "source": "a1_textbook",
+        "example": "Bulgaria"
+      },
+      "issue": "Category mismatch: \"Bulgarien\" categorized as \"greetings\" - likely incorrect"
+    },
+    {
+      "index": 131,
+      "item": {
+        "id": "pdf_e9516c66958b",
+        "german": "das Auto",
+        "bulgarian": "кола",
+        "category": "travel",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Auto\" categorized as \"travel\" - likely incorrect"
+    },
+    {
+      "index": 134,
+      "item": {
+        "id": "pdf_0490fdb7fa3e",
+        "german": "das Badezimmer",
+        "bulgarian": "баня",
+        "category": "home",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Badezimmer\" categorized as \"home\" - likely incorrect"
+    },
+    {
+      "index": 137,
+      "item": {
+        "id": "pdf_8613c73827cd",
+        "german": "das Bett",
+        "bulgarian": "легло",
+        "category": "home",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Bett\" categorized as \"home\" - likely incorrect"
+    },
+    {
+      "index": 138,
+      "item": {
+        "id": "pdf_bc00eda00fe3",
+        "german": "das Bild",
+        "bulgarian": "картина",
+        "category": "home",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Bild\" categorized as \"home\" - likely incorrect"
+    },
+    {
+      "index": 141,
+      "item": {
+        "id": "pdf_b88c394cddf4",
+        "german": "das Brot",
+        "bulgarian": "хляб",
+        "category": "food",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook",
+        "example": "bread"
+      },
+      "issue": "Category mismatch: \"das Brot\" categorized as \"food\" - likely incorrect"
+    },
+    {
+      "index": 142,
+      "item": {
+        "id": "pdf_c7c7ba981aeb",
+        "german": "das Brot",
+        "bulgarian": "хлеб",
+        "category": "food",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Brot\" categorized as \"food\" - likely incorrect"
+    },
+    {
+      "index": 144,
+      "item": {
+        "id": "pdf_dea877b9e963",
+        "german": "das Büro",
+        "bulgarian": "офис",
+        "category": "places",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Büro\" categorized as \"places\" - likely incorrect"
+    },
+    {
+      "index": 148,
+      "item": {
+        "id": "pdf_87e1b401ba5b",
+        "german": "das Dorf",
+        "bulgarian": "село",
+        "category": "places",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook",
+        "example": "village"
+      },
+      "issue": "Category mismatch: \"das Dorf\" categorized as \"places\" - likely incorrect"
+    },
+    {
+      "index": 149,
+      "item": {
+        "id": "pdf_2497efd17f27",
+        "german": "das Ei",
+        "bulgarian": "яйце",
+        "category": "food",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Ei\" categorized as \"food\" - likely incorrect"
+    },
+    {
+      "index": 151,
+      "item": {
+        "id": "pdf_958a5c64626b",
+        "german": "das Fahrrad",
+        "bulgarian": "велосипед",
+        "category": "travel",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Fahrrad\" categorized as \"travel\" - likely incorrect"
+    },
+    {
+      "index": 153,
+      "item": {
+        "id": "pdf_6aaa9f00b3f9",
+        "german": "das Fenster",
+        "bulgarian": "прозорец",
+        "category": "home",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Fenster\" categorized as \"home\" - likely incorrect"
+    },
+    {
+      "index": 157,
+      "item": {
+        "id": "pdf_0b4ac33324dc",
+        "german": "das Fleisch",
+        "bulgarian": "месо",
+        "category": "food",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Fleisch\" categorized as \"food\" - likely incorrect"
+    },
+    {
+      "index": 159,
+      "item": {
+        "id": "pdf_5244461a1871",
+        "german": "das Flugzeug",
+        "bulgarian": "самолет",
+        "category": "travel",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Flugzeug\" categorized as \"travel\" - likely incorrect"
+    },
+    {
+      "index": 164,
+      "item": {
+        "id": "pdf_e86a13377192",
+        "german": "das Gepäck",
+        "bulgarian": "багаж",
+        "category": "travel",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Gepäck\" categorized as \"travel\" - likely incorrect"
+    },
+    {
+      "index": 165,
+      "item": {
+        "id": "pdf_9009f64066bf",
+        "german": "das Geschäft",
+        "bulgarian": "магазин",
+        "category": "places",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Geschäft\" categorized as \"places\" - likely incorrect"
+    },
+    {
+      "index": 168,
+      "item": {
+        "id": "pdf_1981d34c50c7",
+        "german": "das Getränk",
+        "bulgarian": "напитка",
+        "category": "food",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Getränk\" categorized as \"food\" - likely incorrect"
+    },
+    {
+      "index": 170,
+      "item": {
+        "id": "pdf_7fae9e1476d9",
+        "german": "das Gramm",
+        "bulgarian": "грам",
+        "category": "food",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Gramm\" categorized as \"food\" - likely incorrect"
+    },
+    {
+      "index": 173,
+      "item": {
+        "id": "pdf_6b4b47758e6b",
+        "german": "das Hähnchen",
+        "bulgarian": "печено пиле",
+        "category": "food",
+        "partOfSpeech": "verb",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Hähnchen\" categorized as \"food\" - likely incorrect"
+    },
+    {
+      "index": 178,
+      "item": {
+        "id": "pdf_5d5bc9801a13",
+        "german": "das Hemd",
+        "bulgarian": "риза",
+        "category": "clothing",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Hemd\" categorized as \"clothing\" - likely incorrect"
+    },
+    {
+      "index": 186,
+      "item": {
+        "id": "pdf_dddd807862df",
+        "german": "das Kilogramm",
+        "bulgarian": "килограм",
+        "category": "food",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Kilogramm\" categorized as \"food\" - likely incorrect"
+    },
+    {
+      "index": 190,
+      "item": {
+        "id": "pdf_f092418c55bc",
+        "german": "das Kleid",
+        "bulgarian": "рокля",
+        "category": "clothing",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Kleid\" categorized as \"clothing\" - likely incorrect"
+    },
+    {
+      "index": 193,
+      "item": {
+        "id": "pdf_8a9f7eb20b11",
+        "german": "das Krankenhaus",
+        "bulgarian": "болница",
+        "category": "places",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Krankenhaus\" categorized as \"places\" - likely incorrect"
+    },
+    {
+      "index": 200,
+      "item": {
+        "id": "pdf_a1401ceac8e2",
+        "german": "das Motorrad",
+        "bulgarian": "мотоциклет",
+        "category": "travel",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Motorrad\" categorized as \"travel\" - likely incorrect"
+    },
+    {
+      "index": 206,
+      "item": {
+        "id": "pdf_c4ae15ccdfc4",
+        "german": "das Radio",
+        "bulgarian": "радио",
+        "category": "home",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Radio\" categorized as \"home\" - likely incorrect"
+    },
+    {
+      "index": 211,
+      "item": {
+        "id": "pdf_ab2867d1580f",
+        "german": "das Schlafzimmer",
+        "bulgarian": "спалня",
+        "category": "home",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Schlafzimmer\" categorized as \"home\" - likely incorrect"
+    },
+    {
+      "index": 215,
+      "item": {
+        "id": "pdf_e7074ee00f7e",
+        "german": "das T-Shirt",
+        "bulgarian": "тениска",
+        "category": "clothing",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das T-Shirt\" categorized as \"clothing\" - likely incorrect"
+    },
+    {
+      "index": 217,
+      "item": {
+        "id": "pdf_44e2340a9ffc",
+        "german": "das Taxi",
+        "bulgarian": "такси",
+        "category": "travel",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Taxi\" categorized as \"travel\" - likely incorrect"
+    },
+    {
+      "index": 221,
+      "item": {
+        "id": "pdf_4716e5f19255",
+        "german": "das Wasser",
+        "bulgarian": "вода",
+        "category": "food",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Wasser\" categorized as \"food\" - likely incorrect"
+    },
+    {
+      "index": 224,
+      "item": {
+        "id": "pdf_137e77cdcb6f",
+        "german": "das Wohnzimmer",
+        "bulgarian": "хол",
+        "category": "home",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Wohnzimmer\" categorized as \"home\" - likely incorrect"
+    },
+    {
+      "index": 228,
+      "item": {
+        "id": "pdf_90a027883a17",
+        "german": "das Zimmer",
+        "bulgarian": "стая",
+        "category": "home",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"das Zimmer\" categorized as \"home\" - likely incorrect"
+    },
+    {
+      "index": 234,
+      "item": {
+        "id": "pdf_e5ddfb5b43f3",
+        "german": "der Apfel",
+        "bulgarian": "ябълка",
+        "category": "food",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"der Apfel\" categorized as \"food\" - likely incorrect"
+    },
+    {
+      "index": 235,
+      "item": {
+        "id": "pdf_fe7e77b9b666",
+        "german": "der April",
+        "bulgarian": "април",
+        "category": "nature",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"der April\" categorized as \"nature\" - likely incorrect"
+    },
+    {
+      "index": 238,
+      "item": {
+        "id": "pdf_d1a1d5d04d63",
+        "german": "der August",
+        "bulgarian": "август",
+        "category": "nature",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"der August\" categorized as \"nature\" - likely incorrect"
+    },
+    {
+      "index": 240,
+      "item": {
+        "id": "pdf_f4e382d92ff7",
+        "german": "der Bahnhof",
+        "bulgarian": "стъ нция",
+        "category": "places",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"der Bahnhof\" categorized as \"places\" - likely incorrect"
+    },
+    {
+      "index": 241,
+      "item": {
+        "id": "pdf_7c196f61788d",
+        "german": "der Bahnhof",
+        "bulgarian": "гара",
+        "category": "travel",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"der Bahnhof\" categorized as \"travel\" - likely incorrect"
+    },
+    {
+      "index": 250,
+      "item": {
+        "id": "pdf_8a673eaf0982",
+        "german": "der Bruder",
+        "bulgarian": "брат",
+        "category": "family",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"der Bruder\" categorized as \"family\" - likely incorrect"
+    },
+    {
+      "index": 251,
+      "item": {
+        "id": "pdf_6433496a9e7b",
+        "german": "der Bulgare",
+        "bulgarian": "българин",
+        "category": "greetings",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"der Bulgare\" categorized as \"greetings\" - likely incorrect"
+    },
+    {
+      "index": 253,
+      "item": {
+        "id": "pdf_6d6b74a31a5e",
+        "german": "der Bus",
+        "bulgarian": "автобус",
+        "category": "travel",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"der Bus\" categorized as \"travel\" - likely incorrect"
+    },
+    {
+      "index": 255,
+      "item": {
+        "id": "pdf_f68e0993fa13",
+        "german": "der Cousin",
+        "bulgarian": "братовчед",
+        "category": "family",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"der Cousin\" categorized as \"family\" - likely incorrect"
+    },
+    {
+      "index": 256,
+      "item": {
+        "id": "pdf_e8511b80394f",
+        "german": "der Deutsche",
+        "bulgarian": "немец",
+        "category": "greetings",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"der Deutsche\" categorized as \"greetings\" - likely incorrect"
+    },
+    {
+      "index": 257,
+      "item": {
+        "id": "pdf_3368914dfc27",
+        "german": "der Dezember",
+        "bulgarian": "декември",
+        "category": "nature",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"der Dezember\" categorized as \"nature\" - likely incorrect"
+    },
+    {
+      "index": 258,
+      "item": {
+        "id": "pdf_16ed23160954",
+        "german": "der Dienstag",
+        "bulgarian": "вторник",
+        "category": "nature",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"der Dienstag\" categorized as \"nature\" - likely incorrect"
+    },
+    {
+      "index": 260,
+      "item": {
+        "id": "pdf_d93ffe8de2a4",
+        "german": "der Donnerstag",
+        "bulgarian": "четвъртък",
+        "category": "nature",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Category mismatch: \"der Donnerstag\" categorized as \"nature\" - likely incorrect"
+    }
+  ],
+  "missingFields": [
+    {
+      "index": 0,
+      "item": {
+        "id": "wv_e784f838",
+        "german": "...zur Herberge _____?",
+        "bulgarian": "хостел ______?",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "transport"
+        ],
+        "examples": [
+          {
+            "german": "...zur Herberge _____?",
+            "bulgarian": "хостел ______?",
+            "context": "directions",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T10:05:50.669Z",
+        "updatedAt": "2025-12-18T10:05:50.669Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 1,
+      "item": {
+        "id": "wv_91d6b4ac",
+        "german": "à la carte",
+        "bulgarian": "а ла карт",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "food"
+        ],
+        "examples": [
+          {
+            "german": "à la carte",
+            "bulgarian": "а ла карт",
+            "context": "dining",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T10:05:18.893Z",
+        "updatedAt": "2025-12-18T10:05:18.893Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 2,
+      "item": {
+        "id": "wv_pc_bee32b26",
+        "german": "A: Bitte, nehmen Sie Platz!",
+        "bulgarian": "Да, благодаря.",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "food"
+        ],
+        "examples": [
+          {
+            "german": "A: Bitte, nehmen Sie Platz!",
+            "bulgarian": "Да, благодаря.",
+            "context": "A: Please, have a seat!",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 3,
+      "item": {
+        "id": "wv_pc_45b11c98",
+        "german": "A: Bitte, nehmen Sie Platz!",
+        "bulgarian": "А мляко?",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "food"
+        ],
+        "examples": [
+          {
+            "german": "A: Bitte, nehmen Sie Platz!",
+            "bulgarian": "А мляко?",
+            "context": "A: Please, have a seat!",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 4,
+      "item": {
+        "id": "wv_pc_c65c3b24",
+        "german": "A: Bitte, nehmen Sie Platz!",
+        "bulgarian": "Не, не обичам мляко.",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "food"
+        ],
+        "examples": [
+          {
+            "german": "A: Bitte, nehmen Sie Platz!",
+            "bulgarian": "Не, не обичам мляко.",
+            "context": "A: Please, have a seat!",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 5,
+      "item": {
+        "id": "abend",
+        "german": "Abend",
+        "bulgarian": "Вечер",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "time"
+        ],
+        "examples": [],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 6,
+      "item": {
+        "id": "wv_a57f6890",
+        "german": "Abend",
+        "bulgarian": "вечер  starting around 5PM",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "time"
+        ],
+        "examples": [
+          {
+            "german": "Abend",
+            "bulgarian": "вечер  starting around 5PM",
+            "context": "time-expressions",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 7,
+      "item": {
+        "id": "wv_04e0c0e6",
+        "german": "Abendessen",
+        "bulgarian": "вечеря",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "food"
+        ],
+        "examples": [
+          {
+            "german": "Abendessen",
+            "bulgarian": "вечеря",
+            "context": "dining",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T10:05:18.893Z",
+        "updatedAt": "2025-12-18T10:05:18.893Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 8,
+      "item": {
+        "id": "a1_grammar_002",
+        "german": "aber",
+        "bulgarian": "Но",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "grammar"
+        ],
+        "examples": [
+          {
+            "german": "Ich aber du.",
+            "bulgarian": "Аз Но ти.",
+            "context": "Basic usage",
+            "source": "merged"
+          },
+          {
+            "german": "Aber Kaffee aber Tee.",
+            "bulgarian": "Но кафе Но чай.",
+            "context": "Choice/connection",
+            "source": "merged"
+          },
+          {
+            "german": "Das ist aber dich.",
+            "bulgarian": "Това е Но теб.",
+            "context": "Prepositional",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 9,
+      "item": {
+        "id": "acht",
+        "german": "acht",
+        "bulgarian": "Осем",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 10,
+      "item": {
+        "id": "wv_dc2b8abe",
+        "german": "acht",
+        "bulgarian": "осем",
+        "partOfSpeech": "number",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "acht",
+            "bulgarian": "осем",
+            "context": "counting",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 11,
+      "item": {
+        "id": "wv_pc_da599994",
+        "german": "acht",
+        "bulgarian": "осем sixty shey'set шейсет",
+        "partOfSpeech": "number",
+        "difficulty": 1,
+        "categories": [
+          "greetings"
+        ],
+        "examples": [
+          {
+            "german": "acht",
+            "bulgarian": "осем sixty shey'set шейсет",
+            "context": "eight 'osem",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 12,
+      "item": {
+        "id": "wv_8a3ead75",
+        "german": "achthundert",
+        "bulgarian": "осемстотин",
+        "partOfSpeech": "number",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "achthundert",
+            "bulgarian": "осемстотин",
+            "context": "counting",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 13,
+      "item": {
+        "id": "a1_number_018",
+        "german": "achtzehn",
+        "bulgarian": "Осемнадесет",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "Mit achtzehn Jahren darfst du wählen.",
+            "bulgarian": "На осемнадесет години можеш да гласуваш.",
+            "context": "legal age",
+            "source": "merged"
+          },
+          {
+            "german": "Die Temperatur ist achtzehn Grad.",
+            "bulgarian": "Температурата е осемнадесет градуса.",
+            "context": "temperature",
+            "source": "merged"
+          },
+          {
+            "german": "Sie ist letzte Woche achtzehn geworden.",
+            "bulgarian": "Тя навърши осемнадесет миналата седмица.",
+            "context": "informal",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 14,
+      "item": {
+        "id": "wv_2d481174",
+        "german": "achtzehn",
+        "bulgarian": "осемнадесет",
+        "partOfSpeech": "number",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "achtzehn",
+            "bulgarian": "осемнадесет",
+            "context": "counting",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 15,
+      "item": {
+        "id": "a1_number_080",
+        "german": "achtzig",
+        "bulgarian": "Осемдесет",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "Mein Opa lebte achtzig Jahre.",
+            "bulgarian": "Дядо ми живя осемдесет години.",
+            "context": "lifespan",
+            "source": "merged"
+          },
+          {
+            "german": "Im Raum gibt es achtzig Stühle.",
+            "bulgarian": "В стаята има осемдесет стола.",
+            "context": "counting objects",
+            "source": "merged"
+          },
+          {
+            "german": "Hier gilt eine Begrenzung von achtzig Stundenkilometern.",
+            "bulgarian": "Осемдесет километра в час е ограничението тук.",
+            "context": "formal",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 16,
+      "item": {
+        "id": "wv_5b9be793",
+        "german": "achtzig",
+        "bulgarian": "осемдесет )",
+        "partOfSpeech": "number",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "achtzig",
+            "bulgarian": "осемдесет )",
+            "context": "counting",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 19,
+      "item": {
+        "id": "alle",
+        "german": "alle",
+        "bulgarian": "Всички",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 20,
+      "item": {
+        "id": "wv_pc_8eb17aa1",
+        "german": "Alles Gute!",
+        "bulgarian": "Всичко хубаво!",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "greetings"
+        ],
+        "examples": [
+          {
+            "german": "Alles Gute!",
+            "bulgarian": "Всичко хубаво!",
+            "context": "All the best!",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 21,
+      "item": {
+        "id": "a1_adj_007",
+        "german": "alt",
+        "bulgarian": "Стар",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Wie alt bist du?",
+            "bulgarian": "Колко си стар?",
+            "context": "asking age",
+            "source": "merged"
+          },
+          {
+            "german": "Ich wohne in einem alten Haus.",
+            "bulgarian": "Живея в стара къща.",
+            "context": "description - feminine",
+            "source": "merged"
+          },
+          {
+            "german": "Die alten Traditionen sind wichtig.",
+            "bulgarian": "Старите традиции са важни.",
+            "context": "cultural - plural definite",
+            "source": "merged"
+          },
+          {
+            "german": "Er ist alt.",
+            "bulgarian": "Той е стар.",
+            "context": "Description (m)",
+            "source": "merged"
+          },
+          {
+            "german": "Sie ist alt.",
+            "bulgarian": "Тя е стара.",
+            "context": "Description (f)",
+            "source": "merged"
+          },
+          {
+            "german": "Das Wetter ist alt.",
+            "bulgarian": "Времето е старо.",
+            "context": "Description (n)",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 22,
+      "item": {
+        "id": "wv_pc_18550741",
+        "german": "Amerika",
+        "bulgarian": "Америка",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "places"
+        ],
+        "examples": [
+          {
+            "german": "Amerika",
+            "bulgarian": "Америка",
+            "context": "America",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 23,
+      "item": {
+        "id": "a1_final_007",
+        "german": "Anfang",
+        "bulgarian": "Начало",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Anfang.",
+            "bulgarian": "Начало.",
+            "context": "Basic",
+            "source": "merged"
+          },
+          {
+            "german": "Ich habe Anfang.",
+            "bulgarian": "Имам начало.",
+            "context": "Having",
+            "source": "merged"
+          },
+          {
+            "german": "Ich mag Anfang.",
+            "bulgarian": "Харесвам начало.",
+            "context": "Liking",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 24,
+      "item": {
+        "id": "a1_verb_013",
+        "german": "anfangen / beginnen",
+        "bulgarian": "Започвам",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Ich fange morgen mit der Arbeit an.",
+            "bulgarian": "Започвам работа утре.",
+            "context": "starting job",
+            "source": "merged"
+          },
+          {
+            "german": "Der Film beginnt um 8 Uhr.",
+            "bulgarian": "Филмът започва в 8 часа.",
+            "context": "schedule",
+            "source": "merged"
+          },
+          {
+            "german": "Wir beginnen die Stunde.",
+            "bulgarian": "Започваме урока.",
+            "context": "school",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 25,
+      "item": {
+        "id": "emotion-004-aengstlich",
+        "german": "ängstlich",
+        "bulgarian": "боязлив",
+        "partOfSpeech": "adjective",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases",
+          "everyday-phrases",
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Das Kind ist ängstlich.",
+            "bulgarian": "Детето е боязливо.",
+            "context": "personality description",
+            "source": "merged"
+          },
+          {
+            "german": "Ich bin nicht ängstlich.",
+            "bulgarian": "Аз не съм боязлив.",
+            "context": "self-description",
+            "source": "merged"
+          },
+          {
+            "german": "Er ist ängstlich vor Hunden.",
+            "bulgarian": "Той е боязлив от кучета.",
+            "context": "specific fear",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-17T10:00:00.000Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 26,
+      "item": {
+        "id": "a1_verb_062",
+        "german": "anhalten, stoppen",
+        "bulgarian": "Спирам",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Ich anhalten jeden Tag.",
+            "bulgarian": "Спирам всеки ден.",
+            "context": "Routine",
+            "source": "merged"
+          },
+          {
+            "german": "Ich liebe es zu anhalten.",
+            "bulgarian": "Обичам да спирам.",
+            "context": "Preference",
+            "source": "merged"
+          },
+          {
+            "german": "Ich kann nicht anhalten.",
+            "bulgarian": "Не мога да спирам.",
+            "context": "Ability",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 27,
+      "item": {
+        "id": "wv_pc_50c0f17c",
+        "german": "Anredeformen:",
+        "bulgarian": "Госпожа",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "greetings"
+        ],
+        "examples": [
+          {
+            "german": "Anredeformen:",
+            "bulgarian": "Госпожа",
+            "context": "Forms of Address:",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 28,
+      "item": {
+        "id": "wv_pc_fdcb57f8",
+        "german": "Anredeformen:",
+        "bulgarian": "Госпожица",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "greetings"
+        ],
+        "examples": [
+          {
+            "german": "Anredeformen:",
+            "bulgarian": "Госпожица",
+            "context": "Forms of Address:",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 29,
+      "item": {
+        "id": "wv_pc_7a60f612",
+        "german": "Anredeformen:",
+        "bulgarian": "Господин",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "greetings"
+        ],
+        "examples": [
+          {
+            "german": "Anredeformen:",
+            "bulgarian": "Господин",
+            "context": "Forms of Address:",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 30,
+      "item": {
+        "id": "a1_final_003",
+        "german": "Antwort",
+        "bulgarian": "Отговор",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Antwort.",
+            "bulgarian": "Отговор.",
+            "context": "Basic",
+            "source": "merged"
+          },
+          {
+            "german": "Ich habe Antwort.",
+            "bulgarian": "Имам отговор.",
+            "context": "Having",
+            "source": "merged"
+          },
+          {
+            "german": "Ich mag Antwort.",
+            "bulgarian": "Харесвам отговор.",
+            "context": "Liking",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 31,
+      "item": {
+        "id": "a1_final14_014",
+        "german": "anziehen",
+        "bulgarian": "Обличам",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Ich habe anziehen.",
+            "bulgarian": "Имам обличам.",
+            "context": "Having",
+            "source": "merged"
+          },
+          {
+            "german": "Ich mag anziehen.",
+            "bulgarian": "Харесвам обличам.",
+            "context": "Liking",
+            "source": "merged"
+          },
+          {
+            "german": "Ich suche anziehen.",
+            "bulgarian": "Търся обличам.",
+            "context": "Searching",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 32,
+      "item": {
+        "id": "apotheke",
+        "german": "Apotheke",
+        "bulgarian": "Аптека",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 33,
+      "item": {
+        "id": "a1_month_004",
+        "german": "April",
+        "bulgarian": "Април",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "time"
+        ],
+        "examples": [
+          {
+            "german": "Ich bin im April geboren.",
+            "bulgarian": "Родих се в април.",
+            "context": "Birthday",
+            "source": "merged"
+          },
+          {
+            "german": "Im April werde ich reisen.",
+            "bulgarian": "В април ще пътувам.",
+            "context": "Plans",
+            "source": "merged"
+          },
+          {
+            "german": "Der April ist ein schöner Monat.",
+            "bulgarian": "Априлът е хубав месец.",
+            "context": "With article",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 34,
+      "item": {
+        "id": "wv_636d86c5",
+        "german": "April",
+        "bulgarian": "април",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "time"
+        ],
+        "examples": [
+          {
+            "german": "April",
+            "bulgarian": "април",
+            "context": "months",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 35,
+      "item": {
+        "id": "rabota_005",
+        "german": "Arbeit",
+        "bulgarian": "работа",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Ich gehe zur Arbeit.",
+            "bulgarian": "Отивам на работа.",
+            "context": "daily routine",
+            "source": "merged"
+          },
+          {
+            "german": "Meine Arbeit ist interessant.",
+            "bulgarian": "Работата ми е интересна.",
+            "context": "job satisfaction",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 36,
+      "item": {
+        "id": "a1_verb_048",
+        "german": "arbeiten",
+        "bulgarian": "Работя",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Ich arbeiten jeden Tag.",
+            "bulgarian": "Работя всеки ден.",
+            "context": "Routine",
+            "source": "merged"
+          },
+          {
+            "german": "Ich liebe es zu arbeiten.",
+            "bulgarian": "Обичам да работя.",
+            "context": "Preference",
+            "source": "merged"
+          },
+          {
+            "german": "Ich kann nicht arbeiten.",
+            "bulgarian": "Не мога да работя.",
+            "context": "Ability",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 38,
+      "item": {
+        "id": "a1_adj_026",
+        "german": "arm",
+        "bulgarian": "Беден",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Er ist arm.",
+            "bulgarian": "Той е беден.",
+            "context": "Description (m)",
+            "source": "merged"
+          },
+          {
+            "german": "Sie ist arm.",
+            "bulgarian": "Тя е бедна.",
+            "context": "Description (f)",
+            "source": "merged"
+          },
+          {
+            "german": "Das Wetter ist arm.",
+            "bulgarian": "Времето е бедно.",
+            "context": "Description (n)",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 39,
+      "item": {
+        "id": "a1_final_043",
+        "german": "Art/Weise",
+        "bulgarian": "Начин",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Art/Weise.",
+            "bulgarian": "Начин.",
+            "context": "Basic",
+            "source": "merged"
+          },
+          {
+            "german": "Ich habe Art/Weise.",
+            "bulgarian": "Имам начин.",
+            "context": "Having",
+            "source": "merged"
+          },
+          {
+            "german": "Ich mag Art/Weise.",
+            "bulgarian": "Харесвам начин.",
+            "context": "Liking",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 40,
+      "item": {
+        "id": "arzt",
+        "german": "Arzt",
+        "bulgarian": "Лекар",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 41,
+      "item": {
+        "id": "auf_wiedersehen",
+        "german": "Auf Wiedersehen",
+        "bulgarian": "Довиждане",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "greetings"
+        ],
+        "examples": [],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 42,
+      "item": {
+        "id": "wv_3a054fe9",
+        "german": "Auf Wiedersehen",
+        "bulgarian": "Довиждане",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "greetings"
+        ],
+        "examples": [
+          {
+            "german": "Auf Wiedersehen",
+            "bulgarian": "Довиждане",
+            "context": "basic-greetings",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 43,
+      "item": {
+        "id": "a1_grammar_007",
+        "german": "auf, zu",
+        "bulgarian": "На",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "grammar"
+        ],
+        "examples": [
+          {
+            "german": "Ich bin auf, zu Sofia/hier.",
+            "bulgarian": "Аз съм На София.",
+            "context": "Basic",
+            "source": "merged"
+          },
+          {
+            "german": "Auf, zu dem Haus.",
+            "bulgarian": "На къщата.",
+            "context": "Use",
+            "source": "merged"
+          },
+          {
+            "german": "Ich glaube auf, zu dich.",
+            "bulgarian": "Вярвам На теб.",
+            "context": "Belief",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 44,
+      "item": {
+        "id": "wv_pc_db29089c",
+        "german": "Aufbewahrungsbehälter.",
+        "bulgarian": "Не трябва да пия вода от",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "greetings"
+        ],
+        "examples": [
+          {
+            "german": "Aufbewahrungsbehälter.",
+            "bulgarian": "Не трябва да пия вода от",
+            "context": "'sudove za suHra'nenie.",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 45,
+      "item": {
+        "id": "wv_pc_ceeeb0f8",
+        "german": "Aufbewahrungsbehälter.",
+        "bulgarian": "чешмата.",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "greetings"
+        ],
+        "examples": [
+          {
+            "german": "Aufbewahrungsbehälter.",
+            "bulgarian": "чешмата.",
+            "context": "'sudove za suHra'nenie.",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 47,
+      "item": {
+        "id": "a1_verb_041",
+        "german": "aufstehen, werden",
+        "bulgarian": "Ставам",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Ich stehe früh auf.",
+            "bulgarian": "Ставам рано.",
+            "context": "Morning routine",
+            "source": "merged"
+          },
+          {
+            "german": "Es wird kalt.",
+            "bulgarian": "Става студено.",
+            "context": "Weather change",
+            "source": "merged"
+          },
+          {
+            "german": "Was ist los? / Was geht ab?",
+            "bulgarian": "Какво става?",
+            "context": "Greeting/inquiry",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 48,
+      "item": {
+        "id": "a1_month_008",
+        "german": "August",
+        "bulgarian": "Август",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "time"
+        ],
+        "examples": [
+          {
+            "german": "Ich bin im August geboren.",
+            "bulgarian": "Родих се в август.",
+            "context": "Birthday",
+            "source": "merged"
+          },
+          {
+            "german": "Im August werde ich reisen.",
+            "bulgarian": "В август ще пътувам.",
+            "context": "Plans",
+            "source": "merged"
+          },
+          {
+            "german": "Der August ist ein schöner Monat.",
+            "bulgarian": "Августът е хубав месец.",
+            "context": "With article",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 49,
+      "item": {
+        "id": "wv_ac2d7df0",
+        "german": "August",
+        "bulgarian": "август",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "time"
+        ],
+        "examples": [
+          {
+            "german": "August",
+            "bulgarian": "август",
+            "context": "months",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 50,
+      "item": {
+        "id": "wv_55385f0c",
+        "german": "AUSGANG",
+        "bulgarian": "ИЗХОД",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "greetings"
+        ],
+        "examples": [
+          {
+            "german": "AUSGANG",
+            "bulgarian": "ИЗХОД",
+            "context": "basic-greetings",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 51,
+      "item": {
+        "id": "auto",
+        "german": "Auto",
+        "bulgarian": "Автомобил",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 52,
+      "item": {
+        "id": "wv_cdcebbc4",
+        "german": "Auto",
+        "bulgarian": "кола",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "transport"
+        ],
+        "examples": [
+          {
+            "german": "Auto",
+            "bulgarian": "кола",
+            "context": "transportation",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T10:05:50.669Z",
+        "updatedAt": "2025-12-18T10:05:50.669Z",
+        "version": 1
+      },
+      "issue": "Missing category"
+    },
+    {
+      "index": 53,
+      "item": {
+        "id": "wv_pc_1c119994",
+        "german": "B: Dort drüben.",
+        "bulgarian": "Извинете, къде е пощата?",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "greetings"
+        ],
+        "examples": [
+          {
+            "german": "B: Dort drüben.",
+            "bulgarian": "Извинете, къде е пощата?",
+            "context": "B: Over there.",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Missing category"
+    }
+  ],
+  "invalidValues": [
+    {
+      "index": 0,
+      "item": {
+        "id": "wv_e784f838",
+        "german": "...zur Herberge _____?",
+        "bulgarian": "хостел ______?",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "transport"
+        ],
+        "examples": [
+          {
+            "german": "...zur Herberge _____?",
+            "bulgarian": "хостел ______?",
+            "context": "directions",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T10:05:50.669Z",
+        "updatedAt": "2025-12-18T10:05:50.669Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"phrase\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 0,
+      "item": {
+        "id": "wv_e784f838",
+        "german": "...zur Herberge _____?",
+        "bulgarian": "хостел ______?",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "transport"
+        ],
+        "examples": [
+          {
+            "german": "...zur Herberge _____?",
+            "bulgarian": "хостел ______?",
+            "context": "directions",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T10:05:50.669Z",
+        "updatedAt": "2025-12-18T10:05:50.669Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 0,
+      "item": {
+        "id": "wv_e784f838",
+        "german": "...zur Herberge _____?",
+        "bulgarian": "хостел ______?",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "transport"
+        ],
+        "examples": [
+          {
+            "german": "...zur Herberge _____?",
+            "bulgarian": "хостел ______?",
+            "context": "directions",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T10:05:50.669Z",
+        "updatedAt": "2025-12-18T10:05:50.669Z",
+        "version": 1
+      },
+      "issue": "German word contains underscore: \"...zur Herberge _____?\""
+    },
+    {
+      "index": 0,
+      "item": {
+        "id": "wv_e784f838",
+        "german": "...zur Herberge _____?",
+        "bulgarian": "хостел ______?",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "transport"
+        ],
+        "examples": [
+          {
+            "german": "...zur Herberge _____?",
+            "bulgarian": "хостел ______?",
+            "context": "directions",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T10:05:50.669Z",
+        "updatedAt": "2025-12-18T10:05:50.669Z",
+        "version": 1
+      },
+      "issue": "Bulgarian word contains underscore: \"хостел ______?\""
+    },
+    {
+      "index": 1,
+      "item": {
+        "id": "wv_91d6b4ac",
+        "german": "à la carte",
+        "bulgarian": "а ла карт",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "food"
+        ],
+        "examples": [
+          {
+            "german": "à la carte",
+            "bulgarian": "а ла карт",
+            "context": "dining",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T10:05:18.893Z",
+        "updatedAt": "2025-12-18T10:05:18.893Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"phrase\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 1,
+      "item": {
+        "id": "wv_91d6b4ac",
+        "german": "à la carte",
+        "bulgarian": "а ла карт",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "food"
+        ],
+        "examples": [
+          {
+            "german": "à la carte",
+            "bulgarian": "а ла карт",
+            "context": "dining",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T10:05:18.893Z",
+        "updatedAt": "2025-12-18T10:05:18.893Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 2,
+      "item": {
+        "id": "wv_pc_bee32b26",
+        "german": "A: Bitte, nehmen Sie Platz!",
+        "bulgarian": "Да, благодаря.",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "food"
+        ],
+        "examples": [
+          {
+            "german": "A: Bitte, nehmen Sie Platz!",
+            "bulgarian": "Да, благодаря.",
+            "context": "A: Please, have a seat!",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Invalid part of speech: \"phrase\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 2,
+      "item": {
+        "id": "wv_pc_bee32b26",
+        "german": "A: Bitte, nehmen Sie Platz!",
+        "bulgarian": "Да, благодаря.",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "food"
+        ],
+        "examples": [
+          {
+            "german": "A: Bitte, nehmen Sie Platz!",
+            "bulgarian": "Да, благодаря.",
+            "context": "A: Please, have a seat!",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 3,
+      "item": {
+        "id": "wv_pc_45b11c98",
+        "german": "A: Bitte, nehmen Sie Platz!",
+        "bulgarian": "А мляко?",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "food"
+        ],
+        "examples": [
+          {
+            "german": "A: Bitte, nehmen Sie Platz!",
+            "bulgarian": "А мляко?",
+            "context": "A: Please, have a seat!",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Invalid part of speech: \"phrase\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 3,
+      "item": {
+        "id": "wv_pc_45b11c98",
+        "german": "A: Bitte, nehmen Sie Platz!",
+        "bulgarian": "А мляко?",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "food"
+        ],
+        "examples": [
+          {
+            "german": "A: Bitte, nehmen Sie Platz!",
+            "bulgarian": "А мляко?",
+            "context": "A: Please, have a seat!",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 4,
+      "item": {
+        "id": "wv_pc_c65c3b24",
+        "german": "A: Bitte, nehmen Sie Platz!",
+        "bulgarian": "Не, не обичам мляко.",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "food"
+        ],
+        "examples": [
+          {
+            "german": "A: Bitte, nehmen Sie Platz!",
+            "bulgarian": "Не, не обичам мляко.",
+            "context": "A: Please, have a seat!",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Invalid part of speech: \"phrase\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 4,
+      "item": {
+        "id": "wv_pc_c65c3b24",
+        "german": "A: Bitte, nehmen Sie Platz!",
+        "bulgarian": "Не, не обичам мляко.",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "food"
+        ],
+        "examples": [
+          {
+            "german": "A: Bitte, nehmen Sie Platz!",
+            "bulgarian": "Не, не обичам мляко.",
+            "context": "A: Please, have a seat!",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 5,
+      "item": {
+        "id": "abend",
+        "german": "Abend",
+        "bulgarian": "Вечер",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "time"
+        ],
+        "examples": [],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"phrase\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 5,
+      "item": {
+        "id": "abend",
+        "german": "Abend",
+        "bulgarian": "Вечер",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "time"
+        ],
+        "examples": [],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 6,
+      "item": {
+        "id": "wv_a57f6890",
+        "german": "Abend",
+        "bulgarian": "вечер  starting around 5PM",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "time"
+        ],
+        "examples": [
+          {
+            "german": "Abend",
+            "bulgarian": "вечер  starting around 5PM",
+            "context": "time-expressions",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"noun\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 6,
+      "item": {
+        "id": "wv_a57f6890",
+        "german": "Abend",
+        "bulgarian": "вечер  starting around 5PM",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "time"
+        ],
+        "examples": [
+          {
+            "german": "Abend",
+            "bulgarian": "вечер  starting around 5PM",
+            "context": "time-expressions",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 7,
+      "item": {
+        "id": "wv_04e0c0e6",
+        "german": "Abendessen",
+        "bulgarian": "вечеря",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "food"
+        ],
+        "examples": [
+          {
+            "german": "Abendessen",
+            "bulgarian": "вечеря",
+            "context": "dining",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T10:05:18.893Z",
+        "updatedAt": "2025-12-18T10:05:18.893Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"noun\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 7,
+      "item": {
+        "id": "wv_04e0c0e6",
+        "german": "Abendessen",
+        "bulgarian": "вечеря",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "food"
+        ],
+        "examples": [
+          {
+            "german": "Abendessen",
+            "bulgarian": "вечеря",
+            "context": "dining",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T10:05:18.893Z",
+        "updatedAt": "2025-12-18T10:05:18.893Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 8,
+      "item": {
+        "id": "a1_grammar_002",
+        "german": "aber",
+        "bulgarian": "Но",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "grammar"
+        ],
+        "examples": [
+          {
+            "german": "Ich aber du.",
+            "bulgarian": "Аз Но ти.",
+            "context": "Basic usage",
+            "source": "merged"
+          },
+          {
+            "german": "Aber Kaffee aber Tee.",
+            "bulgarian": "Но кафе Но чай.",
+            "context": "Choice/connection",
+            "source": "merged"
+          },
+          {
+            "german": "Das ist aber dich.",
+            "bulgarian": "Това е Но теб.",
+            "context": "Prepositional",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"phrase\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 8,
+      "item": {
+        "id": "a1_grammar_002",
+        "german": "aber",
+        "bulgarian": "Но",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "grammar"
+        ],
+        "examples": [
+          {
+            "german": "Ich aber du.",
+            "bulgarian": "Аз Но ти.",
+            "context": "Basic usage",
+            "source": "merged"
+          },
+          {
+            "german": "Aber Kaffee aber Tee.",
+            "bulgarian": "Но кафе Но чай.",
+            "context": "Choice/connection",
+            "source": "merged"
+          },
+          {
+            "german": "Das ist aber dich.",
+            "bulgarian": "Това е Но теб.",
+            "context": "Prepositional",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 9,
+      "item": {
+        "id": "acht",
+        "german": "acht",
+        "bulgarian": "Осем",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"phrase\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 9,
+      "item": {
+        "id": "acht",
+        "german": "acht",
+        "bulgarian": "Осем",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 10,
+      "item": {
+        "id": "wv_dc2b8abe",
+        "german": "acht",
+        "bulgarian": "осем",
+        "partOfSpeech": "number",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "acht",
+            "bulgarian": "осем",
+            "context": "counting",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"number\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 10,
+      "item": {
+        "id": "wv_dc2b8abe",
+        "german": "acht",
+        "bulgarian": "осем",
+        "partOfSpeech": "number",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "acht",
+            "bulgarian": "осем",
+            "context": "counting",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 11,
+      "item": {
+        "id": "wv_pc_da599994",
+        "german": "acht",
+        "bulgarian": "осем sixty shey'set шейсет",
+        "partOfSpeech": "number",
+        "difficulty": 1,
+        "categories": [
+          "greetings"
+        ],
+        "examples": [
+          {
+            "german": "acht",
+            "bulgarian": "осем sixty shey'set шейсет",
+            "context": "eight 'osem",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Invalid part of speech: \"number\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 11,
+      "item": {
+        "id": "wv_pc_da599994",
+        "german": "acht",
+        "bulgarian": "осем sixty shey'set шейсет",
+        "partOfSpeech": "number",
+        "difficulty": 1,
+        "categories": [
+          "greetings"
+        ],
+        "examples": [
+          {
+            "german": "acht",
+            "bulgarian": "осем sixty shey'set шейсет",
+            "context": "eight 'osem",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 12,
+      "item": {
+        "id": "wv_8a3ead75",
+        "german": "achthundert",
+        "bulgarian": "осемстотин",
+        "partOfSpeech": "number",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "achthundert",
+            "bulgarian": "осемстотин",
+            "context": "counting",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"number\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 12,
+      "item": {
+        "id": "wv_8a3ead75",
+        "german": "achthundert",
+        "bulgarian": "осемстотин",
+        "partOfSpeech": "number",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "achthundert",
+            "bulgarian": "осемстотин",
+            "context": "counting",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 13,
+      "item": {
+        "id": "a1_number_018",
+        "german": "achtzehn",
+        "bulgarian": "Осемнадесет",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "Mit achtzehn Jahren darfst du wählen.",
+            "bulgarian": "На осемнадесет години можеш да гласуваш.",
+            "context": "legal age",
+            "source": "merged"
+          },
+          {
+            "german": "Die Temperatur ist achtzehn Grad.",
+            "bulgarian": "Температурата е осемнадесет градуса.",
+            "context": "temperature",
+            "source": "merged"
+          },
+          {
+            "german": "Sie ist letzte Woche achtzehn geworden.",
+            "bulgarian": "Тя навърши осемнадесет миналата седмица.",
+            "context": "informal",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"phrase\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 13,
+      "item": {
+        "id": "a1_number_018",
+        "german": "achtzehn",
+        "bulgarian": "Осемнадесет",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "Mit achtzehn Jahren darfst du wählen.",
+            "bulgarian": "На осемнадесет години можеш да гласуваш.",
+            "context": "legal age",
+            "source": "merged"
+          },
+          {
+            "german": "Die Temperatur ist achtzehn Grad.",
+            "bulgarian": "Температурата е осемнадесет градуса.",
+            "context": "temperature",
+            "source": "merged"
+          },
+          {
+            "german": "Sie ist letzte Woche achtzehn geworden.",
+            "bulgarian": "Тя навърши осемнадесет миналата седмица.",
+            "context": "informal",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 14,
+      "item": {
+        "id": "wv_2d481174",
+        "german": "achtzehn",
+        "bulgarian": "осемнадесет",
+        "partOfSpeech": "number",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "achtzehn",
+            "bulgarian": "осемнадесет",
+            "context": "counting",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"number\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 14,
+      "item": {
+        "id": "wv_2d481174",
+        "german": "achtzehn",
+        "bulgarian": "осемнадесет",
+        "partOfSpeech": "number",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "achtzehn",
+            "bulgarian": "осемнадесет",
+            "context": "counting",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 15,
+      "item": {
+        "id": "a1_number_080",
+        "german": "achtzig",
+        "bulgarian": "Осемдесет",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "Mein Opa lebte achtzig Jahre.",
+            "bulgarian": "Дядо ми живя осемдесет години.",
+            "context": "lifespan",
+            "source": "merged"
+          },
+          {
+            "german": "Im Raum gibt es achtzig Stühle.",
+            "bulgarian": "В стаята има осемдесет стола.",
+            "context": "counting objects",
+            "source": "merged"
+          },
+          {
+            "german": "Hier gilt eine Begrenzung von achtzig Stundenkilometern.",
+            "bulgarian": "Осемдесет километра в час е ограничението тук.",
+            "context": "formal",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"phrase\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 15,
+      "item": {
+        "id": "a1_number_080",
+        "german": "achtzig",
+        "bulgarian": "Осемдесет",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "Mein Opa lebte achtzig Jahre.",
+            "bulgarian": "Дядо ми живя осемдесет години.",
+            "context": "lifespan",
+            "source": "merged"
+          },
+          {
+            "german": "Im Raum gibt es achtzig Stühle.",
+            "bulgarian": "В стаята има осемдесет стола.",
+            "context": "counting objects",
+            "source": "merged"
+          },
+          {
+            "german": "Hier gilt eine Begrenzung von achtzig Stundenkilometern.",
+            "bulgarian": "Осемдесет километра в час е ограничението тук.",
+            "context": "formal",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 16,
+      "item": {
+        "id": "wv_5b9be793",
+        "german": "achtzig",
+        "bulgarian": "осемдесет )",
+        "partOfSpeech": "number",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "achtzig",
+            "bulgarian": "осемдесет )",
+            "context": "counting",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"number\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 16,
+      "item": {
+        "id": "wv_5b9be793",
+        "german": "achtzig",
+        "bulgarian": "осемдесет )",
+        "partOfSpeech": "number",
+        "difficulty": 1,
+        "categories": [
+          "numbers"
+        ],
+        "examples": [
+          {
+            "german": "achtzig",
+            "bulgarian": "осемдесет )",
+            "context": "counting",
+            "source": "current"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:48:28.911Z",
+        "updatedAt": "2025-12-18T09:48:28.911Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 17,
+      "item": {
+        "id": "pdf_da1023a3a69b",
+        "german": "Afghanistan",
+        "bulgarian": "Афганистан",
+        "category": "greetings",
+        "partOfSpeech": "noun",
+        "source": "a1_textbook"
+      },
+      "issue": "Invalid part of speech: \"noun\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 18,
+      "item": {
+        "id": "pdf_083b869fbeee",
+        "german": "Algerien",
+        "bulgarian": "Алжир",
+        "category": "greetings",
+        "partOfSpeech": "verb",
+        "source": "a1_textbook"
+      },
+      "issue": "Invalid part of speech: \"verb\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 19,
+      "item": {
+        "id": "alle",
+        "german": "alle",
+        "bulgarian": "Всички",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"phrase\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 19,
+      "item": {
+        "id": "alle",
+        "german": "alle",
+        "bulgarian": "Всички",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 20,
+      "item": {
+        "id": "wv_pc_8eb17aa1",
+        "german": "Alles Gute!",
+        "bulgarian": "Всичко хубаво!",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "greetings"
+        ],
+        "examples": [
+          {
+            "german": "Alles Gute!",
+            "bulgarian": "Всичко хубаво!",
+            "context": "All the best!",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Invalid part of speech: \"noun\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 20,
+      "item": {
+        "id": "wv_pc_8eb17aa1",
+        "german": "Alles Gute!",
+        "bulgarian": "Всичко хубаво!",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "greetings"
+        ],
+        "examples": [
+          {
+            "german": "Alles Gute!",
+            "bulgarian": "Всичко хубаво!",
+            "context": "All the best!",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 21,
+      "item": {
+        "id": "a1_adj_007",
+        "german": "alt",
+        "bulgarian": "Стар",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Wie alt bist du?",
+            "bulgarian": "Колко си стар?",
+            "context": "asking age",
+            "source": "merged"
+          },
+          {
+            "german": "Ich wohne in einem alten Haus.",
+            "bulgarian": "Живея в стара къща.",
+            "context": "description - feminine",
+            "source": "merged"
+          },
+          {
+            "german": "Die alten Traditionen sind wichtig.",
+            "bulgarian": "Старите традиции са важни.",
+            "context": "cultural - plural definite",
+            "source": "merged"
+          },
+          {
+            "german": "Er ist alt.",
+            "bulgarian": "Той е стар.",
+            "context": "Description (m)",
+            "source": "merged"
+          },
+          {
+            "german": "Sie ist alt.",
+            "bulgarian": "Тя е стара.",
+            "context": "Description (f)",
+            "source": "merged"
+          },
+          {
+            "german": "Das Wetter ist alt.",
+            "bulgarian": "Времето е старо.",
+            "context": "Description (n)",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"phrase\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 21,
+      "item": {
+        "id": "a1_adj_007",
+        "german": "alt",
+        "bulgarian": "Стар",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Wie alt bist du?",
+            "bulgarian": "Колко си стар?",
+            "context": "asking age",
+            "source": "merged"
+          },
+          {
+            "german": "Ich wohne in einem alten Haus.",
+            "bulgarian": "Живея в стара къща.",
+            "context": "description - feminine",
+            "source": "merged"
+          },
+          {
+            "german": "Die alten Traditionen sind wichtig.",
+            "bulgarian": "Старите традиции са важни.",
+            "context": "cultural - plural definite",
+            "source": "merged"
+          },
+          {
+            "german": "Er ist alt.",
+            "bulgarian": "Той е стар.",
+            "context": "Description (m)",
+            "source": "merged"
+          },
+          {
+            "german": "Sie ist alt.",
+            "bulgarian": "Тя е стара.",
+            "context": "Description (f)",
+            "source": "merged"
+          },
+          {
+            "german": "Das Wetter ist alt.",
+            "bulgarian": "Времето е старо.",
+            "context": "Description (n)",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 22,
+      "item": {
+        "id": "wv_pc_18550741",
+        "german": "Amerika",
+        "bulgarian": "Америка",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "places"
+        ],
+        "examples": [
+          {
+            "german": "Amerika",
+            "bulgarian": "Америка",
+            "context": "America",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Invalid part of speech: \"noun\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 22,
+      "item": {
+        "id": "wv_pc_18550741",
+        "german": "Amerika",
+        "bulgarian": "Америка",
+        "partOfSpeech": "noun",
+        "difficulty": 1,
+        "categories": [
+          "places"
+        ],
+        "examples": [
+          {
+            "german": "Amerika",
+            "bulgarian": "Америка",
+            "context": "America",
+            "source": "peace-corps-pdf"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T14:05:11.179Z",
+        "updatedAt": "2025-12-18T14:05:11.179Z",
+        "version": 1,
+        "enrichment": {
+          "enriched": true,
+          "source": "peace-corps-pdf-translation-layer",
+          "enrichedAt": "2025-12-18T14:05:11.179Z"
+        }
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 23,
+      "item": {
+        "id": "a1_final_007",
+        "german": "Anfang",
+        "bulgarian": "Начало",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Anfang.",
+            "bulgarian": "Начало.",
+            "context": "Basic",
+            "source": "merged"
+          },
+          {
+            "german": "Ich habe Anfang.",
+            "bulgarian": "Имам начало.",
+            "context": "Having",
+            "source": "merged"
+          },
+          {
+            "german": "Ich mag Anfang.",
+            "bulgarian": "Харесвам начало.",
+            "context": "Liking",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"phrase\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 23,
+      "item": {
+        "id": "a1_final_007",
+        "german": "Anfang",
+        "bulgarian": "Начало",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Anfang.",
+            "bulgarian": "Начало.",
+            "context": "Basic",
+            "source": "merged"
+          },
+          {
+            "german": "Ich habe Anfang.",
+            "bulgarian": "Имам начало.",
+            "context": "Having",
+            "source": "merged"
+          },
+          {
+            "german": "Ich mag Anfang.",
+            "bulgarian": "Харесвам начало.",
+            "context": "Liking",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    },
+    {
+      "index": 24,
+      "item": {
+        "id": "a1_verb_013",
+        "german": "anfangen / beginnen",
+        "bulgarian": "Започвам",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Ich fange morgen mit der Arbeit an.",
+            "bulgarian": "Започвам работа утре.",
+            "context": "starting job",
+            "source": "merged"
+          },
+          {
+            "german": "Der Film beginnt um 8 Uhr.",
+            "bulgarian": "Филмът започва в 8 часа.",
+            "context": "schedule",
+            "source": "merged"
+          },
+          {
+            "german": "Wir beginnen die Stunde.",
+            "bulgarian": "Започваме урока.",
+            "context": "school",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid part of speech: \"phrase\" (expected one of: Substantiv, Verb, Adjektiv, Adverb, Pronomen, Präposition, Konjunktion, Artikel, Zahlwort, Interjektion, Redewendung)"
+    },
+    {
+      "index": 24,
+      "item": {
+        "id": "a1_verb_013",
+        "german": "anfangen / beginnen",
+        "bulgarian": "Започвам",
+        "partOfSpeech": "phrase",
+        "difficulty": 1,
+        "categories": [
+          "everyday-phrases"
+        ],
+        "examples": [
+          {
+            "german": "Ich fange morgen mit der Arbeit an.",
+            "bulgarian": "Започвам работа утре.",
+            "context": "starting job",
+            "source": "merged"
+          },
+          {
+            "german": "Der Film beginnt um 8 Uhr.",
+            "bulgarian": "Филмът започва в 8 часа.",
+            "context": "schedule",
+            "source": "merged"
+          },
+          {
+            "german": "Wir beginnen die Stunde.",
+            "bulgarian": "Започваме урока.",
+            "context": "school",
+            "source": "merged"
+          }
+        ],
+        "type": "word",
+        "createdAt": "2025-12-18T09:38:36.476Z",
+        "updatedAt": "2025-12-18T09:38:36.476Z",
+        "version": 1
+      },
+      "issue": "Invalid difficulty: \"1\""
+    }
+  ]
+}

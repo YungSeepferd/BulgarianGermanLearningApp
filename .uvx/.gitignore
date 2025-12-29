@@ -1,0 +1,18 @@
+# UVX Fetch MCP Server - Git Ignore
+# Ignore log files
+*.log
+
+# Ignore cache directory
+cache/
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore environment files
+.env
+*.env
+
+# Ignore runtime files
+*.pid
+*.sock

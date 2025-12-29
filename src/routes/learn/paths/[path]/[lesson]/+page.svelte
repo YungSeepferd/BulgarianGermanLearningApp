@@ -36,7 +36,7 @@
 
 <div class="page">
   <div class="toolbar">
-    <button class="link" on:click={backToPath}>← Back to path</button>
+    <button class="link" onclick={backToPath}>← Back to path</button>
   </div>
 
   {#if loading}
@@ -53,7 +53,7 @@
         {#if lesson.subtitle}<p class="subtitle">{lesson.subtitle}</p>{/if}
       </div>
       <div class="actions">
-        <button class="action-btn" on:click={completeLesson}>Mark lesson complete</button>
+        <button class="action-btn" onclick={completeLesson}>Mark lesson complete</button>
         {#if progress}
           <p class="hint">Progress is persisted; current lesson: {progress.currentLesson}</p>
         {/if}

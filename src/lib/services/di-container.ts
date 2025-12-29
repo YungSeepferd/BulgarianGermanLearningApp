@@ -6,7 +6,9 @@
  */
 
 import { ProgressService } from './progress';
+import { ErrorHandler } from './errors';
 import { loadVocabulary, initializeVocabulary } from '../data/loader';
+import { vocabularyRepository } from '../data/vocabulary-repository.svelte';
 import { LessonGenerationEngine } from './lesson-generation/lesson-generator';
 import { lessonTemplateRepository } from './lesson-generation/lesson-templates';
 import { culturalGrammarService } from './lesson-generation/cultural-grammar';
@@ -25,11 +27,18 @@ type ServiceTypes = {
     learningSession: LearningSession;
 };
 
-// Singleton DI container
-class DIContainer {
+// Interface for the DI container (for type exports without exposing class)
+export interface DIContainerInterface {
+    initialize(): Promise<void>;
+    getService<K extends keyof ServiceTypes>(serviceName: K): ServiceTypes[K];
+    getEventBus(): EventBus;
+}
+
+// Singleton DI container (private class)
+class DIContainer implements DIContainerInterface {
     private static instance: DIContainer;
     private services: Partial<ServiceTypes> = {};
-    private eventBus: EventBus;
+    public eventBus: EventBus;
     private isInitialized = false;
     private initializationPromise: Promise<void> | null = null;
 
@@ -79,7 +88,8 @@ class DIContainer {
                 this.isInitialized = true;
                 resolve();
             } catch (error) {
-                console.error('DI Container initialization failed:', error);
+                // Use centralized error handling
+                ErrorHandler.handleError(error as Error, 'DI Container initialization failed', this.eventBus);
                 reject(error);
             }
         });
@@ -132,19 +142,32 @@ class DIContainer {
 }
 
 // Create and initialize the DI container
-export const diContainer = DIContainer.getInstance();
+const diContainerInstance = DIContainer.getInstance();
 
 // Initialize services
-diContainer.initialize().catch(error => {
-    console.error('Failed to initialize DI container:', error);
+diContainerInstance.initialize().catch((error: unknown) => {
+    // Non-fatal: app can still render minimal UI
+    ErrorHandler.handleError(error as Error, 'Failed to initialize DI container', diContainerInstance.getEventBus());
 });
 
+// Create a wrapper object that implements the interface  
+export const diContainerApi: DIContainerInterface = {
+    initialize: () => diContainerInstance.initialize(),
+    getService: (serviceName) => diContainerInstance.getService(serviceName as any),
+    getEventBus: () => diContainerInstance.getEventBus()
+};
+
+// Export function to get the DI container
+export function getDIContainer(): DIContainerInterface {
+    return diContainerApi;
+}
+
 // Export event bus immediately since it doesn't require initialization
-export const eventBus = diContainer.getEventBus();
+export const eventBus: EventBus = diContainerInstance.getEventBus();
 
 // Export a function to get services after initialization
 export function getProgressService(): ProgressService {
-    return diContainer.getService('progressService');
+    return getDIContainer().getService('progressService');
 }
 
 // VocabularyService has been removed - vocabulary data is loaded directly via loader functions
@@ -161,8 +184,14 @@ export async function initializeVocabularyData() {
     return await initializeVocabulary();
 }
 
+/** Initialize the unified vocabulary repository (client only) */
+export async function initializeVocabularyRepository() {
+    await vocabularyRepository.load();
+    return vocabularyRepository;
+}
+
 export function getLessonGenerationEngine(): LessonGenerationEngine {
-    return diContainer.getService('lessonGenerationEngine');
+    return getDIContainer().getService('lessonGenerationEngine');
 }
 
 // Note: AppDataState is initialized separately in app-state.ts to avoid circular dependencies

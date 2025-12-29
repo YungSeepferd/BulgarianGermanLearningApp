@@ -1,5 +1,8 @@
 import { AppUIState } from './app-ui.svelte';
 import { AppDataState } from './app-data.svelte';
+import { getProgressService, eventBus } from '$lib/services/di-container';
+import type { VocabularyMastery, OverallProgress } from '$lib/schemas/progress';
+import { ErrorHandler } from '$lib/services/errors';
 
 // Export initialization function instead of direct instances
 // Initialize and export the state instances directly
@@ -41,7 +44,23 @@ export class AppState {
 
     // Data State accessors with proper typing
     get practiceStats(): Map<string, { correct: number; incorrect: number; lastPracticed: string }> {
-        return appDataState.practiceStats;
+        // Derive practice stats from ProgressService to avoid duplication
+        try {
+            const svc = getProgressService();
+            const all = svc.getAllVocabularyMastery();
+            const stats = new Map<string, { correct: number; incorrect: number; lastPracticed: string }>();
+            for (const [itemId, mastery] of Object.entries(all)) {
+                stats.set(itemId, {
+                    correct: mastery.correctCount,
+                    incorrect: mastery.incorrectCount,
+                    lastPracticed: mastery.lastPracticed || ''
+                });
+            }
+            return stats;
+        } catch (error) {
+            ErrorHandler.handleError(error as Error, 'AppState.practiceStats');
+            return appDataState.practiceStats;
+        }
     }
     get recentSearches(): string[] { return appDataState.recentSearches; }
     get favorites(): string[] { return appDataState.favorites; }
@@ -68,7 +87,50 @@ export class AppState {
      * @param responseTime Response time in milliseconds (optional)
      */
     async recordPracticeResult(itemId: string, correct: boolean, responseTime?: number): Promise<void> {
-        return appDataState.recordPracticeResult(itemId, correct, responseTime);
+        try {
+            const svc = getProgressService();
+            await svc.recordVocabularyPractice(itemId, correct, responseTime);
+        } catch (error) {
+            ErrorHandler.handleError(error as Error, 'AppState.recordPracticeResult', eventBus);
+            // Fallback to legacy path if service fails
+            return appDataState.recordPracticeResult(itemId, correct, responseTime);
+        }
+    }
+
+    /** Get detailed mastery info from ProgressService */
+    getVocabularyMastery(itemId: string): VocabularyMastery | null {
+        try {
+            const svc = getProgressService();
+            return svc.getVocabularyMastery(itemId);
+        } catch (error) {
+            ErrorHandler.handleError(error as Error, 'AppState.getVocabularyMastery', eventBus);
+            return null;
+        }
+    }
+
+    /** Get overall progress summary */
+    getOverallProgress(): OverallProgress {
+        try {
+            const svc = getProgressService();
+            return svc.getOverallProgress();
+        } catch (error) {
+            ErrorHandler.handleError(error as Error, 'AppState.getOverallProgress', eventBus);
+            // Provide a minimal empty summary fallback
+            return {
+                id: 'fallback',
+                totalXP: 0,
+                totalWordsPracticed: 0,
+                totalLessonsCompleted: 0,
+                totalQuizzesTaken: 0,
+                totalTimeSpent: 0,
+                currentLevel: 1,
+                currentStreak: 0,
+                longestStreak: 0,
+                lastActiveDate: null,
+                createdAt: new Date().toISOString(),
+                updatedAt: new Date().toISOString()
+            };
+        }
     }
 
     /**

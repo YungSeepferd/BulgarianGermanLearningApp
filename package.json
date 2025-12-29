@@ -50,10 +50,11 @@
 		"import:enrichment": "node scripts/import-enrichment.mjs",
 		"translate:a1": "tsx scripts/translate-a1-words.ts",
 		"translate:a1:dry": "tsx scripts/translate-a1-words.ts --dry-run --limit 25",
-		"prepare:a1-merge": "tsx scripts/prepare-a1-merge.ts"
+		"prepare:a1-merge": "tsx scripts/prepare-a1-merge.ts",
+		"build:vocabulary": "tsx scripts/build-vocabulary.ts"
 	},
 	"devDependencies": {
-
+		"@axe-core/playwright": "^4.11.0",
 		"@playwright/test": "^1.57.0",
 		"@sveltejs/adapter-auto": "^7.0.0",
 		"@sveltejs/adapter-static": "3.0.10",

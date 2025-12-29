@@ -120,7 +120,16 @@
   }
 
   function handleQuickPractice() {
-    goto(`${base}/learn/shuffle`);
+    // Get all vocabulary items and select a random one
+    const items = vocabularyDb.getVocabulary();
+      if (!items || items.length === 0) return;
+
+    // Select random vocabulary item
+    const randomItem = items[Math.floor(Math.random() * items.length)];
+      if (randomItem) {
+        // Navigate to vocabulary detail view which shows the learning hub
+        goto(`${base}/vocabulary/${randomItem.id}`);
+      }
   }
 
   function handleBrowseVocab() {

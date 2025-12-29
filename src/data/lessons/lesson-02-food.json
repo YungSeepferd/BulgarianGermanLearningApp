@@ -1,0 +1,123 @@
+{
+  "id": "lesson-02",
+  "title": "Food and Shopping",
+  "description": "Learn vocabulary for food items and basic shopping phrases",
+  "level": "A1",
+  "grammarPoints": [
+    "noun-genders",
+    "present-tense-regular-verbs",
+    "food-vocabulary"
+  ],
+  "vocabularyIds": [
+    "word-10", "word-11", "word-12", "word-13", "word-14"
+  ],
+  "exercises": [
+    {
+      "type": "sentence-builder",
+      "id": "exercise-02-01",
+      "title": "Build Shopping Sentences",
+      "description": "Construct sentences for shopping scenarios",
+      "grammarHint": "Remember: Bulgarian nouns have gender (masculine/feminine/neuter)",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Build: I want bread",
+          "words": ["Аз", "искам", "хляб"],
+          "correctOrder": ["Аз", "искам", "хляб"],
+          "difficulty": "easy"
+        },
+        {
+          "id": "q2",
+          "prompt": "Build: How much does it cost?",
+          "words": ["Колко", "струва"],
+          "correctOrder": ["Колко", "струва"],
+          "difficulty": "medium"
+        },
+        {
+          "id": "q3",
+          "prompt": "Build: Thank you very much",
+          "words": ["Благодаря", "много"],
+          "correctOrder": ["Благодаря", "много"],
+          "difficulty": "easy"
+        }
+      ],
+      "currentQuestionIndex": 0,
+      "feedback": [],
+      "feedbackMessages": {
+        "correct": "✅ Excellent! You built the sentence correctly.",
+        "incorrect": "❌ Not quite. The correct order is: {correctAnswer}"
+      }
+    },
+    {
+      "type": "matching",
+      "id": "exercise-02-02",
+      "title": "Match Food Items",
+      "description": "Match Bulgarian and German food words",
+      "pairs": [
+        {
+          "leftId": "1",
+          "leftText": "Brot",
+          "rightId": "1",
+          "rightText": "хляб"
+        },
+        {
+          "leftId": "2",
+          "leftText": "Milch",
+          "rightId": "2",
+          "rightText": "мляко"
+        },
+        {
+          "leftId": "3",
+          "leftText": "Wasser",
+          "rightId": "3",
+          "rightText": "вода"
+        }
+      ],
+      "userMatches": [],
+      "isComplete": false,
+      "correctCount": 0
+    },
+    {
+      "type": "ordering",
+      "id": "exercise-02-03",
+      "title": "Order the Dialogue",
+      "description": "Put this shopping dialogue in the correct order",
+      "instruction": "Arrange these sentences in the order they would occur in a real conversation",
+      "items": [
+        {
+          "id": "1",
+          "text": "Колко струва?",
+          "correctPosition": 2
+        },
+        {
+          "id": "2",
+          "text": "Здравейте! Искам хляб, моля.",
+          "correctPosition": 0
+        },
+        {
+          "id": "3",
+          "text": "Един хляб струва 2 лева.",
+          "correctPosition": 3
+        },
+        {
+          "id": "4",
+          "text": "Благодаря!",
+          "correctPosition": 5
+        },
+        {
+          "id": "5",
+          "text": "Моля, ето ви.",
+          "correctPosition": 4
+        }
+      ],
+      "userOrder": [],
+      "isComplete": false,
+      "correctCount": 0
+    }
+  ],
+  "prerequisites": ["lesson-01"],
+  "unlocks": ["lesson-03"],
+  "estimatedTime": 20,
+  "createdAt": "2025-12-19T00:00:00Z",
+  "updatedAt": "2025-12-19T00:00:00Z"
+}

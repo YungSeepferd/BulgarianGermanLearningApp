@@ -99,16 +99,17 @@ export function getAllVocabularyItems() {
 
 // Import the learning session setter
 import { setLearningSession } from './session.svelte';
-import { diContainer } from '$lib/services/di-container';
+import { getDIContainer } from '$lib/services/di-container';
 
 // Export initialization function
 export async function initializeApp() {
     try {
         // Initialize DI container first
-        await diContainer.initialize();
+        const container = getDIContainer();
+        await container.initialize();
 
         // Set the learning session from DI container
-        const session = diContainer.getService('learningSession');
+        const session = container.getService('learningSession');
         setLearningSession(session);
 
         // Initialize both state modules

@@ -24,7 +24,7 @@
   const estimatedDays = $derived(Math.ceil((path.lessons?.length ?? 0) / 5));
 </script>
 
-<div class="path-card" class:selected={isSelected} onclick={onSelect}>
+<div class="path-card" class:selected={isSelected} role="button" tabindex="0" onclick={onSelect} onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && onSelect?.()} aria-pressed={isSelected}>
   <div class="card-header">
     <div class="title-section">
       <h3 class="path-title">{path.title}</h3>

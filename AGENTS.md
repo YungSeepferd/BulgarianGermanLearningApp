@@ -21,7 +21,7 @@ A **bilingual vocabulary learning application** for Bulgarian ↔ German with of
 - **Example Sentences**: Validating grammar in all German and Bulgarian examples
 
 **Documentation Infrastructure**:
-- **Single Source of Truth**: `docs/PROJECT_STATUS.md` - Always check first
+- **Single Source of Truth**: `docs/PROJECT_STATUS.md` - Always check first (created Dec 19, 2025)
 - **Comprehensive Reports**: `docs/reports/` folder contains all phase completion summaries
 - **Architecture Docs**: `docs/architecture/` for system design references
 - **Testing Strategy**: `docs/development/TESTING.md` for test coverage requirements
@@ -1106,6 +1106,85 @@ await browser_evaluate({
    ```
 
 4. **Create Pull Request** on GitHub
+
+---
+
+## 🧹 Repository Maintenance Routine
+
+**Documentation Organization Policy**
+
+To maintain a clean and organized repository, follow these guidelines:
+
+### File Location Rules
+
+**Documentation Files** (`*.md`):
+- **Project documentation**: `docs/` directory
+- **Audit/validation reports**: `docs/audit/` directory  
+- **Enrichment process docs**: `docs/enrichment/` directory
+- **MCP configuration docs**: `docs/mcp/` directory
+- **Architecture docs**: `docs/architecture/` directory
+- **Development guides**: `docs/development/` directory
+
+**Data/Report Files** (`*.json`, `*.csv`):
+- **Validation reports**: `reports/` directory
+- **Migration reports**: `reports/migration-reports/` directory
+- **Vocabulary data**: `data/` directory
+- **Enrichment output**: `enrichment-output/` directory
+
+**Configuration Files**:
+- **Build/config files**: Root directory (`.eslintrc`, `tsconfig.json`, etc.)
+- **Script files**: Root directory (`*.sh` files)
+- **VSCode settings**: Root directory
+
+### Repository Cleanup Procedure
+
+1. **Scan for misplaced files**
+   ```bash
+   find . -name "*.md" -not -path "./node_modules/*" -not -path "./.git/*"
+   find . -name "*.json" -not -path "./node_modules/*" -not -path "./.git/*"
+   ```
+
+2. **Identify files in wrong locations**
+   - Documentation files (`*.md`) should be in `docs/` subdirectories
+   - Data/report files (`*.json`, `*.csv`) should be in `reports/` or appropriate data directories
+   - Configuration files should stay in root directory
+
+3. **Move files to correct locations**
+   ```bash
+   mv filename.md docs/appropriate-subdirectory/
+   mv report.json reports/
+   ```
+
+4. **Update documentation references**
+   - Update `docs/INDEX.md` with new file locations
+   - Update `docs/README.md` with any changed references
+   - Update any other files that reference moved documentation
+
+5. **Verify cleanup**
+   ```bash
+   # Check root directory should only contain config files
+   ls -la | grep -v "^d" | grep -v "\.git" | grep -v "node_modules"
+   ```
+
+### Documentation Update Workflow
+
+1. **After moving files**, update all references:
+   - `docs/INDEX.md` - Main documentation index
+   - `docs/README.md` - Documentation hub
+   - `docs/AGENTS.md` - Agent instructions
+   - Any other files that reference documentation
+
+2. **Use relative paths** for documentation links:
+   ```markdown
+   [Documentation](docs/filename.md)
+   ```
+
+3. **Keep documentation organized** by topic:
+   - Architecture → `docs/architecture/`
+   - Development → `docs/development/`
+   - Testing → `docs/testing/`
+   - Reports → `reports/`
+   - Data → `data/`
 
 ---
 

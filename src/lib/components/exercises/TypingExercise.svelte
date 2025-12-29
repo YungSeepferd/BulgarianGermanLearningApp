@@ -3,7 +3,7 @@
   import type { TypingExercise } from '$lib/schemas/exercises';
   import { ExerciseService } from '$lib/services/exercise';
 
-  let { exercise = $bindable(), onComplete }: { exercise: TypingExercise; onComplete?: (results: any) => void } = $props();
+  let { exercise = $bindable() }: { exercise: TypingExercise } = $props();
   const dispatch = createEventDispatcher();
 
   let userAnswer = $state('');
@@ -19,20 +19,21 @@
     // Calculate similarity
     similarity = ExerciseService.calculateSimilarity(
       userAnswer.toLowerCase(),
-      currentQuestion.correctAnswer.toLowerCase()
+      (currentQuestion?.correctAnswer || '').toLowerCase()
     );
 
     // Determine if correct (default threshold 0.85)
-    isCorrect = similarity >= (currentQuestion.similarityThreshold || 0.85);
+    // Default threshold 0.85
+    isCorrect = similarity >= 0.85;
 
     showFeedback = true;
 
     // Store feedback
     exercise.feedback.push({
-      questionId: currentQuestion.id,
+      questionId: currentQuestion?.id || 'unknown',
       isCorrect,
       userAnswer,
-      correctAnswer: currentQuestion.correctAnswer,
+      correctAnswer: currentQuestion?.correctAnswer || '',
       similarity,
     });
 
@@ -53,7 +54,7 @@
   }
 
   function revealAnswer() {
-    userAnswer = currentQuestion.correctAnswer;
+    userAnswer = currentQuestion?.correctAnswer || '';
   }
 
   function getSimilarityPercentage(): number {
@@ -69,12 +70,10 @@
 
 <div class="typing">
   <div class="question">
-    <h3>{currentQuestion.question}</h3>
+    <h3>{currentQuestion ? (currentQuestion as any).prompt : ''}</h3>
   </div>
 
-  {#if currentQuestion.imageUrl}
-    <img src={currentQuestion.imageUrl} alt="Question context" class="question-image" />
-  {/if}
+  <!-- Image is not part of TypingExercise schema; removed -->
 
   <div class="input-group">
     <input
@@ -109,7 +108,7 @@
 
       <div class="similarity-info">
         <div class="similarity-bar">
-          <div class="similarity-fill" style={`width: ${getSimilarityPercentage()}%`} />
+          <div class="similarity-fill" style={`width: ${getSimilarityPercentage()}%`}></div>
         </div>
         <span class="similarity-text">{getSimilarityPercentage()}% match</span>
       </div>
@@ -121,15 +120,15 @@
         </div>
         <div class="answer-row">
           <strong>Correct answer:</strong>
-          <span>{currentQuestion.correctAnswer}</span>
+          <span>{currentQuestion?.correctAnswer || ''}</span>
         </div>
       </div>
 
-      {#if currentQuestion.hints && currentQuestion.hints.length > 0}
+      {#if currentQuestion && currentQuestion.hints && currentQuestion.hints.length > 0}
         <div class="hints">
           <strong>Tips:</strong>
           <ul>
-            {#each currentQuestion.hints as hint}
+            {#each (currentQuestion?.hints ?? []) as hint}
               <li>{hint}</li>
             {/each}
           </ul>

@@ -1,0 +1,103 @@
+{
+  "id": "lesson-01",
+  "title": "Greetings and Introductions",
+  "description": "Learn basic greetings and how to introduce yourself in Bulgarian",
+  "level": "A1",
+  "grammarPoints": [
+    "personal-pronouns",
+    "present-tense-of-to-be",
+    "basic-greetings"
+  ],
+  "vocabularyIds": [
+    "word-1", "word-2", "word-3", "word-4", "word-5"
+  ],
+  "exercises": [
+    {
+      "type": "sentence-builder",
+      "id": "exercise-01-01",
+      "title": "Build Basic Greetings",
+      "description": "Construct simple greeting sentences",
+      "grammarHint": "Remember: Bulgarian uses 'Аз съм' for 'I am' (not 'Аз е')",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Build: I am a student",
+          "words": ["Аз", "съм", "студент"],
+          "correctOrder": ["Аз", "съм", "студент"],
+          "difficulty": "easy"
+        },
+        {
+          "id": "q2",
+          "prompt": "Build: You are a teacher",
+          "words": ["Ти", "си", "учител"],
+          "correctOrder": ["Ти", "си", "учител"],
+          "difficulty": "easy"
+        },
+        {
+          "id": "q3",
+          "prompt": "Build: He is from Bulgaria",
+          "words": ["Той", "е", "от", "България"],
+          "correctOrder": ["Той", "е", "от", "България"],
+          "difficulty": "medium"
+        }
+      ],
+      "currentQuestionIndex": 0,
+      "feedback": [],
+      "feedbackMessages": {
+        "correct": "✅ Perfect! You built the sentence correctly.",
+        "incorrect": "❌ Not quite right. Try again!"
+      }
+    },
+    {
+      "type": "fill-in-blank",
+      "id": "exercise-01-02",
+      "title": "Complete the Greetings",
+      "description": "Fill in the missing words in these common phrases",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Здравей! Аз ___ Иван.",
+          "correctAnswer": "съм",
+          "acceptedVariations": [],
+          "difficulty": "easy"
+        },
+        {
+          "id": "q2",
+          "prompt": "Ти ___ добре?",
+          "correctAnswer": "си",
+          "acceptedVariations": [],
+          "difficulty": "easy"
+        }
+      ],
+      "currentQuestionIndex": 0,
+      "feedback": []
+    },
+    {
+      "type": "typing",
+      "id": "exercise-01-03",
+      "title": "Type the Translations",
+      "description": "Type the Bulgarian translations of these phrases",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Hello!",
+          "correctAnswer": "Здравей!",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q2",
+          "prompt": "Good morning!",
+          "correctAnswer": "Добро утро!",
+          "difficulty": "easy"
+        }
+      ],
+      "currentQuestionIndex": 0,
+      "feedback": []
+    }
+  ],
+  "prerequisites": [],
+  "unlocks": ["lesson-02"],
+  "estimatedTime": 15,
+  "createdAt": "2025-12-19T00:00:00Z",
+  "updatedAt": "2025-12-19T00:00:00Z"
+}

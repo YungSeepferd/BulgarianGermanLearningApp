@@ -1,0 +1,285 @@
+{
+  "metadata": {
+    "auditVersion": "1.0",
+    "auditDate": "2025-12-19",
+    "totalItems": 734,
+    "itemsAudited": 20,
+    "criticalIssuesFound": 4,
+    "majorIssuesFound": 8,
+    "minorIssuesFound": 12
+  },
+  "corrections": [
+    {
+      "id": "dobro_utro_002",
+      "type": "complete_overhaul",
+      "changes": {
+        "examples": [
+          {
+            "german": "Guten Morgen! Wie haben Sie geschlafen?",
+            "bulgarian": "Добро утро! Как спахте?",
+            "context": "morning_greeting",
+            "formality": "neutral",
+            "frequency": "very_common"
+          },
+          {
+            "german": "Guten Morgen, Herr Schmidt!",
+            "bulgarian": "Добро утро, господин Шмит!",
+            "context": "formal_morning",
+            "formality": "formal",
+            "frequency": "common"
+          }
+        ],
+        "ipa": {
+          "bulgarian": "/ˈdɔbro ˈutro/",
+          "german": "/ˈɡuːtn̩ ˈmɔʁɡn̩/"
+        },
+        "notes": {
+          "updated": "Fixed mismatched examples and added IPA transcription"
+        }
+      },
+      "reason": "Examples showed 'arbeiten' conjugation instead of greeting examples"
+    },
+    {
+      "id": "guten_abend",
+      "type": "complete_overhaul",
+      "changes": {
+        "examples": [
+          {
+            "german": "Guten Abend! Willkommen in unserem Restaurant.",
+            "bulgarian": "Добър вечер! Добре дошли в нашия ресторант.",
+            "context": "evening_welcome",
+            "formality": "neutral",
+            "frequency": "common"
+          },
+          {
+            "german": "Guten Abend, Frau Müller!",
+            "bulgarian": "Добър вечер, госпожо Мюлер!",
+            "context": "formal_evening",
+            "formality": "formal",
+            "frequency": "common"
+          }
+        ],
+        "ipa": {
+          "bulgarian": "/doˈbɤr ˈvɛt͡ʃɛr/",
+          "german": "/ˈɡuːtn̩ ˈaːbn̩t/"
+        }
+      },
+      "reason": "Examples showed 'Zeit' examples instead of greeting examples"
+    },
+    {
+      "id": "mensch",
+      "type": "grammar_and_examples",
+      "changes": {
+        "examples": [
+          {
+            "german": "Er ist ein guter Mensch.",
+            "bulgarian": "Той е добър човек.",
+            "context": "character_description",
+            "formality": "neutral",
+            "frequency": "very_common"
+          },
+          {
+            "german": "Alle Menschen sind gleich.",
+            "bulgarian": "Всички хора са равни.",
+            "context": "universal_statement",
+            "formality": "neutral",
+            "frequency": "common"
+          }
+        ],
+        "grammar": {
+          "declension": {
+            "nominative": {
+              "singular": "Mensch",
+              "plural": "Menschen"
+            },
+            "accusative": {
+              "singular": "Menschen",
+              "plural": "Menschen"
+            },
+            "dative": {
+              "singular": "Menschen",
+              "plural": "Menschen"
+            },
+            "genitive": {
+              "singular": "Menschen",
+              "plural": "Menschen"
+            }
+          },
+          "gender": "m"
+        },
+        "ipa": {
+          "bulgarian": "/ˈt͡ʃɔvɛk/",
+          "german": "/mɛnʃ/"
+        }
+      },
+      "reason": "Unnatural examples and incorrect plural forms (Mensche -> Menschen)"
+    },
+    {
+      "id": "familie",
+      "type": "grammar_and_examples",
+      "changes": {
+        "examples": [
+          {
+            "german": "Meine Familie wohnt in Berlin.",
+            "bulgarian": "Моето семейство живее в Берлин.",
+            "context": "family_location",
+            "formality": "neutral",
+            "frequency": "very_common"
+          },
+          {
+            "german": "Wir haben eine große Familie.",
+            "bulgarian": "Ние имаме голямо семейство.",
+            "context": "family_size",
+            "formality": "neutral",
+            "frequency": "common"
+          }
+        ],
+        "grammar": {
+          "declension": {
+            "nominative": {
+              "singular": "Familie",
+              "plural": "Familien"
+            },
+            "accusative": {
+              "singular": "Familie",
+              "plural": "Familien"
+            },
+            "dative": {
+              "singular": "Familie",
+              "plural": "Familien"
+            },
+            "genitive": {
+              "singular": "Familie",
+              "plural": "Familien"
+            }
+          },
+          "gender": "f"
+        },
+        "ipa": {
+          "bulgarian": "/sɛˈmɛjstvɔ/",
+          "german": "/faˈmiːliə/"
+        }
+      },
+      "reason": "Unnatural examples and incorrect plural forms (Familienn -> Familien)"
+    },
+    {
+      "id": "haus",
+      "type": "grammar_and_examples",
+      "changes": {
+        "examples": [
+          {
+            "german": "Wir haben ein schönes Haus.",
+            "bulgarian": "Ние имаме красива къща.",
+            "context": "home_description",
+            "formality": "neutral",
+            "frequency": "very_common"
+          },
+          {
+            "german": "Das Haus ist groß und hell.",
+            "bulgarian": "Къщата е голяма и светла.",
+            "context": "house_description",
+            "formality": "neutral",
+            "frequency": "common"
+          }
+        ],
+        "grammar": {
+          "declension": {
+            "nominative": {
+              "singular": "Haus",
+              "plural": "Häuser"
+            },
+            "accusative": {
+              "singular": "Haus",
+              "plural": "Häuser"
+            },
+            "dative": {
+              "singular": "Haus",
+              "plural": "Häusern"
+            },
+            "genitive": {
+              "singular": "Hauses",
+              "plural": "Häuser"
+            }
+          },
+          "gender": "n"
+        },
+        "ipa": {
+          "bulgarian": "/ˈkɤʃtɐ/",
+          "german": "/haʊ̯s/"
+        }
+      },
+      "reason": "Unnatural examples, incorrect plural forms, and wrong gender"
+    },
+    {
+      "id": "sein",
+      "type": "complete_verb_fix",
+      "changes": {
+        "examples": [
+          {
+            "german": "Ich bin Student.",
+            "bulgarian": "Аз съм студент.",
+            "context": "self_description",
+            "formality": "neutral",
+            "frequency": "very_common"
+          },
+          {
+            "german": "Er ist ein guter Freund.",
+            "bulgarian": "Той е добър приятел.",
+            "context": "description",
+            "formality": "neutral",
+            "frequency": "common"
+          }
+        ],
+        "grammar": {
+          "conjugation": {
+            "presentIndicative": {
+              "ich": "bin",
+              "du": "bist",
+              "erSieEs": "ist",
+              "wir": "sind",
+              "ihr": "seid",
+              "sieSie": "sind"
+            },
+            "simpleStPast": {
+              "ich": "war",
+              "du": "warst",
+              "erSieEs": "war",
+              "wir": "waren",
+              "ihr": "wart",
+              "sieSie": "waren"
+            },
+            "pastParticiple": "gewesen",
+            "presentParticiple": "seiend"
+          }
+        },
+        "ipa": {
+          "bulgarian": "/sɤm/",
+          "german": "/zaɪ̯n/"
+        }
+      },
+      "reason": "Missing complete conjugation table and unnatural examples"
+    }
+  ],
+  "statistics": {
+    "itemsWithIPAAdded": 6,
+    "itemsWithExamplesFixed": 6,
+    "itemsWithGrammarFixed": 5,
+    "itemsWithConjugationsAdded": 1,
+    "translationErrorsFound": 0,
+    "culturalNotesEnhanced": 0
+  },
+  "recommendations": {
+    "immediate": [
+      "Apply these corrections to the vocabulary database",
+      "Continue audit with remaining 714 items",
+      "Prioritize IPA transcription addition",
+      "Fix all unnatural examples"
+    ],
+    "longTerm": [
+      "Implement automated validation for new entries",
+      "Create style guide for example sentences",
+      "Develop IPA generation tool",
+      "Add native speaker review process"
+    ]
+  }
+}

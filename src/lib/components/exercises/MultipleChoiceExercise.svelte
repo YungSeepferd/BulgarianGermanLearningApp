@@ -1,9 +1,8 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
   import type { MultipleChoiceExercise } from '$lib/schemas/exercises';
-  import { ExerciseService } from '$lib/services/exercise';
 
-  let { exercise = $bindable(), onComplete }: { exercise: MultipleChoiceExercise; onComplete?: (results: any) => void } = $props();
+  let { exercise = $bindable() }: { exercise: MultipleChoiceExercise } = $props();
   const dispatch = createEventDispatcher();
 
   let selectedOptionId = $state<string | null>(null);
@@ -21,10 +20,8 @@
   function checkAnswer() {
     if (!selectedOptionId || !currentQuestion) return;
 
-    isCorrect = ExerciseService.validateMultipleChoiceAnswer(
-      selectedOptionId,
-      currentQuestion.correctOptionId
-    );
+    const correctOpt = currentQuestion.options.find((opt) => opt.isCorrect);
+    isCorrect = selectedOptionId === (correctOpt?.id || null);
 
     showFeedback = true;
 
@@ -32,8 +29,8 @@
     exercise.feedback.push({
       questionId: currentQuestion.id,
       isCorrect,
-      selectedOptionId,
-      correctOptionId: currentQuestion.correctOptionId,
+      userAnswer: selectedOptionId,
+      correctAnswerId: correctOpt?.id || ''
     });
 
     // Store user answer
@@ -52,7 +49,7 @@
   }
 
   function getCorrectOption() {
-    return currentQuestion?.options.find((opt) => opt.id === currentQuestion?.correctOptionId);
+    return currentQuestion?.options.find((opt) => opt.isCorrect);
   }
 </script>
 
@@ -66,11 +63,11 @@
       {#each currentQuestion.options as option (option.id)}
       <button
         onclick={() => selectOption(option.id)}
-        class={`option ${selectedOptionId === option.id ? 'selected' : ''} ${showFeedback && option.id === currentQuestion.correctOptionId ? 'correct' : ''} ${showFeedback && selectedOptionId === option.id && !isCorrect ? 'incorrect' : ''}`}
+        class={`option ${selectedOptionId === option.id ? 'selected' : ''} ${showFeedback && option.isCorrect ? 'correct' : ''} ${showFeedback && selectedOptionId === option.id && !isCorrect ? 'incorrect' : ''}`}
         disabled={showFeedback}
       >
         <span class="option-text">{option.text}</span>
-        {#if showFeedback && option.id === currentQuestion.correctOptionId}
+        {#if showFeedback && option.isCorrect}
           <span class="icon">✓</span>
         {/if}
         {#if showFeedback && selectedOptionId === option.id && !isCorrect}

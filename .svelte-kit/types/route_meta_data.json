@@ -13,6 +13,9 @@
 	"/learn": [
 		"src/routes/+layout.ts"
 	],
+	"/learn/lesson/[lessonId]": [
+		"src/routes/+layout.ts"
+	],
 	"/learn/paths": [
 		"src/routes/+layout.ts"
 	],
@@ -44,6 +47,10 @@
 		"src/routes/+layout.ts"
 	],
 	"/vocabulary": [
+		"src/routes/+layout.ts"
+	],
+	"/vocabulary/[id]": [
+		"src/routes/vocabulary/[id]/+page.ts",
 		"src/routes/+layout.ts"
 	]
 }

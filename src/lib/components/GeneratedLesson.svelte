@@ -264,21 +264,22 @@
     return icons[type] || '📚';
   }
 
+  // Reactive section names using Svelte 5 runes
+  const sectionNames = $derived({
+    'introduction': t('sections.introduction') || 'Introduction',
+    'vocabulary': t('sections.vocabulary') || 'Vocabulary',
+    'grammar': t('sections.grammar') || 'Grammar',
+    'exercise': t('sections.exercise') || 'Exercise',
+    'cultural': t('sections.cultural_note') || 'Cultural Note',
+    'summary': t('sections.summary') || 'Summary',
+    'conversation': t('sections.conversation') || 'Conversation',
+    'reading': t('sections.reading') || 'Reading',
+    'listening': t('sections.listening') || 'Listening',
+    'writing': t('sections.writing') || 'Writing'
+  });
+
   function getSectionTypeName(type) {
-    // Reactive section names
-    $: names = {
-      'introduction': t('sections.introduction') || 'Introduction',
-      'vocabulary': t('sections.vocabulary') || 'Vocabulary',
-      'grammar': t('sections.grammar') || 'Grammar',
-      'exercise': t('sections.exercise') || 'Exercise',
-      'cultural': t('sections.cultural_note') || 'Cultural Note',
-      'summary': t('sections.summary') || 'Summary',
-      'conversation': t('sections.conversation') || 'Conversation',
-      'reading': t('sections.reading') || 'Reading',
-      'listening': t('sections.listening') || 'Listening',
-      'writing': t('sections.writing') || 'Writing'
-    };
-    return names[type] || type;
+    return sectionNames[type] || type;
   }
 
   function renderSectionContent(content) {

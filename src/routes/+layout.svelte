@@ -2,8 +2,25 @@
   import Navigation from '$lib/components/Navigation.svelte';
   import '$lib/styles/tokens.css';
   // Layout shell: no page-level logic needed here
+  import { initializeVocabularyRepository } from '$lib/services/di-container';
+  import { initializeAppState } from '$lib/state/app-state';
+  import { ErrorHandler } from '$lib/services/errors';
 
   let { children } = $props();
+
+  // Initialize shared data on client startup
+  $effect(() => {
+    (async () => {
+      try {
+        await initializeVocabularyRepository();
+        await initializeAppState();
+      } catch (error) {
+        // Non-fatal: UI can still render empty states
+        ErrorHandler.handleError(error, 'Layout Initialization');
+      }
+    })();
+    return () => {};
+  });
 </script>
 
 <svelte:head>

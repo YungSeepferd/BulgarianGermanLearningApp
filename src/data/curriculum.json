@@ -1,0 +1,103 @@
+{
+  "version": "1.0",
+  "language": "Bulgarian-German",
+  "description": "Structured curriculum for learning Bulgarian and German bidirectionally",
+  "levels": [
+    {
+      "level": "A1",
+      "title": "Beginner",
+      "description": "Basic phrases, greetings, and simple sentences",
+      "lessons": [
+        {
+          "id": "lesson-01",
+          "title": "Greetings and Introductions",
+          "description": "Learn basic greetings and how to introduce yourself",
+          "prerequisites": [],
+          "unlocks": ["lesson-02"],
+          "estimatedTime": 15,
+          "grammarPoints": ["personal-pronouns", "present-tense-of-to-be"],
+          "vocabularyCount": 20,
+          "exerciseCount": 3
+        },
+        {
+          "id": "lesson-02",
+          "title": "Food and Shopping",
+          "description": "Learn vocabulary for food items and basic shopping phrases",
+          "prerequisites": ["lesson-01"],
+          "unlocks": ["lesson-03"],
+          "estimatedTime": 20,
+          "grammarPoints": ["noun-genders", "present-tense-regular-verbs"],
+          "vocabularyCount": 25,
+          "exerciseCount": 3
+        },
+        {
+          "id": "lesson-03",
+          "title": "Daily Routines",
+          "description": "Talk about daily activities and time",
+          "prerequisites": ["lesson-02"],
+          "unlocks": ["lesson-04"],
+          "estimatedTime": 25,
+          "grammarPoints": ["reflexive-verbs", "time-expressions"],
+          "vocabularyCount": 30,
+          "exerciseCount": 4,
+          "status": "planned"
+        },
+        {
+          "id": "lesson-04",
+          "title": "Travel and Directions",
+          "description": "Ask for and give directions, talk about travel",
+          "prerequisites": ["lesson-03"],
+          "unlocks": ["lesson-05"],
+          "estimatedTime": 30,
+          "grammarPoints": ["prepositions", "imperative-mood"],
+          "vocabularyCount": 35,
+          "exerciseCount": 4,
+          "status": "planned"
+        },
+        {
+          "id": "lesson-05",
+          "title": "Family and Relationships",
+          "description": "Talk about family members and relationships",
+          "prerequisites": ["lesson-04"],
+          "unlocks": [],
+          "estimatedTime": 25,
+          "grammarPoints": ["possessive-pronouns", "family-vocabulary"],
+          "vocabularyCount": 20,
+          "exerciseCount": 3,
+          "status": "planned"
+        }
+      ],
+      "totalLessons": 5,
+      "completedLessons": 2,
+      "progress": 40
+    },
+    {
+      "level": "A2",
+      "title": "Elementary",
+      "description": "More complex sentences, past and future tenses",
+      "lessons": [
+        {
+          "id": "lesson-06",
+          "title": "Past Tense Basics",
+          "description": "Talk about past events using simple past",
+          "prerequisites": ["A1-complete"],
+          "unlocks": ["lesson-07"],
+          "estimatedTime": 30,
+          "grammarPoints": ["past-tense", "time-markers"],
+          "vocabularyCount": 40,
+          "exerciseCount": 4,
+          "status": "planned"
+        }
+      ],
+      "totalLessons": 5,
+      "completedLessons": 0,
+      "progress": 0,
+      "status": "upcoming"
+    }
+  ],
+  "totalLessons": 6,
+  "completedLessons": 2,
+  "overallProgress": 33,
+  "createdAt": "2025-12-19T00:00:00Z",
+  "updatedAt": "2025-12-19T00:00:00Z"
+}

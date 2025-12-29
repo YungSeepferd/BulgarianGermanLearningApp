@@ -1,32 +1,66 @@
 <script lang="ts">
   import { z } from 'zod';
-  import { UnifiedVocabularyItemSchema } from '$lib/schemas/vocabulary';
+  import { VocabularyItemSchema } from '$lib/schemas/vocabulary';
   import { ErrorHandler } from '$lib/services/errors';
+  import { validateVocabularyForm } from '$lib/utils/validation';
   import { v4 as uuidv4 } from 'uuid';
 
+  type EditorItem = {
+    id?: string;
+    german?: string;
+    bulgarian?: string;
+    partOfSpeech?: string;
+    difficulty?: string | number;
+    categories?: string[];
+    definition?: { german?: string; bulgarian?: string };
+    examples?: Array<{ german?: string; bulgarian?: string; context?: string }>;
+    grammarNotes?: { german?: string; bulgarian?: string };
+    culturalNotes?: string;
+    pronunciation?: { german?: string; bulgarian?: string };
+  };
+
+  type FormData = {
+    id: string;
+    german: string;
+    bulgarian: string;
+    partOfSpeech: string;
+    difficulty: string;
+    categories: string[];
+    definition: { german: string; bulgarian: string };
+    examples: Array<{ german: string; bulgarian: string; context: string }>;
+    grammarNotes: { german: string; bulgarian: string };
+    culturalNotes: string;
+    pronunciation: { german: string; bulgarian: string };
+  };
+
   interface Props {
-    item?: z.infer<typeof UnifiedVocabularyItemSchema> | null;
-    onSave: (item: z.infer<typeof UnifiedVocabularyItemSchema>) => void;
+    item?: EditorItem | null;
+    onSave: (item: z.infer<typeof VocabularyItemSchema>) => void;
     onCancel: () => void;
   }
 
   let { item = null, onSave, onCancel }: Props = $props();
 
   // Form state
-  let formData = $state({
+  let formData: FormData = $state({
     id: item?.id ?? uuidv4(),
     german: item?.german ?? '',
     bulgarian: item?.bulgarian ?? '',
     partOfSpeech: item?.partOfSpeech ?? 'noun',
-    difficulty: item?.difficulty ?? 'A1',
+    difficulty: (item?.difficulty ?? 'A1') as string,
     categories: item?.categories ?? [],
     definition: {
       german: item?.definition?.german ?? '',
       bulgarian: item?.definition?.bulgarian ?? '',
     },
-    examples: item?.examples ?? [
+    // Normalize examples to required string fields
+    examples: (item?.examples ?? [
       { german: '', bulgarian: '', context: 'neutral' },
-    ],
+    ]).map((ex) => ({
+      german: ex.german ?? '',
+      bulgarian: ex.bulgarian ?? '',
+      context: ex.context ?? 'neutral',
+    })),
     grammarNotes: {
       german: item?.grammarNotes?.german ?? '',
       bulgarian: item?.grammarNotes?.bulgarian ?? '',
@@ -44,17 +78,11 @@
 
   // Validation
   function validateForm(): boolean {
-    const newErrors: Record<string, string> = {};
-
-    if (!formData.german.trim()) {
-      newErrors.german = 'German word is required';
-    }
-    if (!formData.bulgarian.trim()) {
-      newErrors.bulgarian = 'Bulgarian word is required';
-    }
-    if (formData.examples.some((ex) => !ex.german.trim() && !ex.bulgarian.trim())) {
-      newErrors.examples = 'All example fields must be filled';
-    }
+    const newErrors = validateVocabularyForm({
+      german: formData.german,
+      bulgarian: formData.bulgarian,
+      examples: formData.examples
+    });
 
     errors = newErrors;
     return Object.keys(newErrors).length === 0;
@@ -97,7 +125,7 @@
 
     try {
       // Validate against Zod schema
-      const validatedItem = UnifiedVocabularyItemSchema.parse({
+      const validatedItem = VocabularyItemSchema.parse({
         ...formData,
         // Ensure required fields have defaults
         etymology: formData.grammarNotes.german, // Use grammar notes as etymology placeholder
@@ -111,18 +139,16 @@
       onSave(validatedItem);
     } catch (error) {
       if (error instanceof z.ZodError) {
-        const schemaErrors = error.errors.reduce(
-          (acc, err) => {
+        const schemaErrors = error.issues.reduce(
+          (acc: Record<string, string>, err: z.ZodIssue) => {
             acc[err.path.join('.')] = err.message;
             return acc;
           },
-          {} as Record<string, string>
+          {}
         );
         errors = schemaErrors;
       } else {
-        ErrorHandler.handleError(error, 'VocabularyEditor.save', {
-          formData,
-        });
+        ErrorHandler.handleError(error, 'VocabularyEditor.save');
       }
     } finally {
       isSaving = false;
@@ -137,7 +163,7 @@
   }
 
   function removeExample(index: number) {
-    formData.examples = formData.examples.filter((_, i) => i !== index);
+    formData.examples = formData.examples.filter((_: unknown, i: number) => i !== index);
   }
 
   function addCategory() {
@@ -158,10 +184,10 @@
 <div class="vocabulary-editor">
   <div class="editor-header">
     <h2>{item ? 'Edit Vocabulary Item' : 'Add New Vocabulary Item'}</h2>
-    <button
-      class="btn-preview"
-      onclick={() => (showPreview = !showPreview)}
-      aria-label="Toggle preview"
+        <button
+          class="btn-preview"
+          onclick={() => (showPreview = !showPreview)}
+          aria-label="Toggle preview"
     >
       {showPreview ? '✏️ Edit' : '👁️ Preview'}
     </button>
@@ -221,9 +247,16 @@
                   {#if example.bulgarian}
                     <div class="example-text">🇧🇬 {example.bulgarian}</div>
                   {/if}
-                  {#if example.context}
-                    <span class="context">{example.context}</span>
-                  {/if}
+                  <div class="form-group">
+                    <button
+                      type="button"
+                      class="btn-danger btn-small"
+                      onclick={() => removeExample(idx)}
+                      aria-label="Remove example {idx + 1}"
+                    >
+                      Remove
+                    </button>
+                  </div>
                 </div>
               {/if}
             {/each}
@@ -259,8 +292,8 @@
             placeholder="Enter German word"
             aria-label="German word"
           />
-          {#if errors.german}
-            <span class="error">{errors.german}</span>
+            {#if errors['german']}
+              <span class="error">{errors['german']}</span>
           {/if}
         </div>
 
@@ -273,8 +306,8 @@
             placeholder="Enter Bulgarian word"
             aria-label="Bulgarian word"
           />
-          {#if errors.bulgarian}
-            <span class="error">{errors.bulgarian}</span>
+            {#if errors['bulgarian']}
+              <span class="error">{errors['bulgarian']}</span>
           {/if}
         </div>
 
@@ -327,7 +360,7 @@
             placeholder="Definition in German"
             rows="3"
             aria-label="German definition"
-          />
+          ></textarea>
         </div>
 
         <div class="form-group">
@@ -338,7 +371,7 @@
             placeholder="Definition in Bulgarian"
             rows="3"
             aria-label="Bulgarian definition"
-          />
+          ></textarea>
         </div>
       </fieldset>
 
@@ -383,7 +416,7 @@
             placeholder="Article, case, conjugation info, etc."
             rows="3"
             aria-label="German grammar notes"
-          />
+          ></textarea>
           {#each germanWarnings as warning}
             <span class="hint">{warning}</span>
           {/each}
@@ -397,7 +430,7 @@
             placeholder="Gender, definite article forms, aspect, etc."
             rows="3"
             aria-label="Bulgarian grammar notes"
-          />
+          ></textarea>
           {#each bulgarianWarnings as warning}
             <span class="hint">{warning}</span>
           {/each}
@@ -409,7 +442,8 @@
         <legend>Examples</legend>
 
         {#each formData.examples as example, idx}
-          <div class="example-group" key={idx}>
+          {#key idx}
+          <div class="example-group">
             <h4>Example {idx + 1}</h4>
 
             <div class="form-row">
@@ -467,12 +501,13 @@
               {/if}
             </div>
           </div>
+          {/key}
         {/each}
 
         <button
           type="button"
           class="btn-secondary"
-          onclick={addExample}
+            onclick={addExample}
           aria-label="Add new example"
         >
           + Add Example
@@ -504,7 +539,7 @@
         <button
           type="button"
           class="btn-secondary"
-          onclick={addCategory}
+            onclick={addCategory}
           aria-label="Add category"
         >
           + Add Category
@@ -523,7 +558,7 @@
             placeholder="Cultural context, usage tips, regional variations, etc."
             rows="4"
             aria-label="Cultural notes"
-          />
+          ></textarea>
         </div>
       </fieldset>
 
@@ -544,7 +579,7 @@
         <button
           type="button"
           class="btn-secondary"
-          onclick={onCancel}
+            onclick={onCancel}
           disabled={isSaving}
           aria-label="Cancel editing"
         >
@@ -553,7 +588,7 @@
         <button
           type="button"
           class="btn-primary"
-          onclick={handleSave}
+            onclick={handleSave}
           disabled={isSaving}
           aria-label="Save vocabulary item"
         >

@@ -18,7 +18,7 @@ A clean, focused **tandem language learning application** for Bulgarian and Germ
 ## What Can Users Do?
 
 ### 1. Learn Vocabulary
-- Search 2700+ vocabulary items
+- Search 2,164 vocabulary items
 - Filter by category, difficulty, part of speech
 - See translations, examples, pronunciation
 - Track learning progress locally

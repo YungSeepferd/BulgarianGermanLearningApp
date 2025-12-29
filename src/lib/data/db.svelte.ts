@@ -1,7 +1,7 @@
 import { browser } from '$app/environment';
 import { Debug } from '$lib/utils';
-import { DataLoader } from '$lib/data/DataLoader.svelte';
-import { diContainer } from '$lib/services/di-container';
+import { vocabularyRepository } from '$lib/data/vocabulary-repository.svelte';
+import { getDIContainer } from '$lib/services/di-container';
 import { EventTypes } from '$lib/services/event-bus';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 import type { LessonDifficulty } from '$lib/schemas/lesson';
@@ -28,16 +28,13 @@ class VocabularyDB {
     async loadInitialData() {
         try {
             Debug.log('VocabularyDB', 'Loading initial vocabulary data');
-            // Use the DataLoader which now includes Zod validation
-            const dataLoader = DataLoader.getInstance();
-            const result = await dataLoader.getVocabularyBySearch({
-                limit: Number.MAX_SAFE_INTEGER,
-                offset: 0
-            });
+            // Load via unified repository
+            await vocabularyRepository.load();
+            const repoItems = vocabularyRepository.getAll();
 
             // Convert UnifiedVocabularyItem to VocabularyItem format
             // Ensure all required fields are present with defaults
-            this.items = result.items.map(item => ({
+            this.items = repoItems.map(item => ({
                 ...item,
                 category: item.categories[0] || 'greetings',
                 categories: item.categories || ['greetings'],
@@ -61,7 +58,7 @@ class VocabularyDB {
             this.initialized = true;
 
             // Emit error event for global error handling
-            const eventBus = diContainer.getService('eventBus');
+            const eventBus = getDIContainer().getService('eventBus');
             eventBus.emit(EventTypes.ERROR, {
                 error: new Error('Failed to load vocabulary data'),
                 context: 'VocabularyDB.loadInitialData',

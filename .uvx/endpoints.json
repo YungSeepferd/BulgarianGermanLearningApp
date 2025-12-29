@@ -1,0 +1,133 @@
+{
+  "endpoints": {
+    "fetch": {
+      "method": "POST",
+      "path": "/fetch",
+      "description": "Fetch content from a URL",
+      "parameters": {
+        "url": {
+          "type": "string",
+          "required": true,
+          "description": "The URL to fetch"
+        },
+        "method": {
+          "type": "string",
+          "default": "GET",
+          "description": "HTTP method (GET, POST, etc.)"
+        },
+        "headers": {
+          "type": "object",
+          "default": {},
+          "description": "Custom headers to send"
+        },
+        "body": {
+          "type": "object",
+          "default": null,
+          "description": "Request body for POST/PUT requests"
+        },
+        "timeout": {
+          "type": "number",
+          "default": 30000,
+          "description": "Request timeout in milliseconds"
+        }
+      },
+      "response": {
+        "status": "number",
+        "headers": "object",
+        "body": "string|object",
+        "timing": "object"
+      }
+    },
+    "scrape": {
+      "method": "POST",
+      "path": "/scrape",
+      "description": "Scrape structured data from HTML",
+      "parameters": {
+        "url": {
+          "type": "string",
+          "required": true,
+          "description": "The URL to scrape"
+        },
+        "selectors": {
+          "type": "object",
+          "required": true,
+          "description": "CSS selectors for data extraction"
+        },
+        "format": {
+          "type": "string",
+          "default": "json",
+          "description": "Output format (json, csv, xml)"
+        }
+      },
+      "response": {
+        "data": "object|array",
+        "metadata": "object"
+      }
+    },
+    "parse": {
+      "method": "POST",
+      "path": "/parse",
+      "description": "Parse HTML content",
+      "parameters": {
+        "html": {
+          "type": "string",
+          "required": true,
+          "description": "HTML content to parse"
+        },
+        "selectors": {
+          "type": "object",
+          "required": true,
+          "description": "CSS selectors for parsing"
+        }
+      },
+      "response": {
+        "parsed": "object",
+        "metadata": "object"
+      }
+    },
+    "extract": {
+      "method": "POST",
+      "path": "/extract",
+      "description": "Extract specific data patterns",
+      "parameters": {
+        "content": {
+          "type": "string",
+          "required": true,
+          "description": "Content to extract from"
+        },
+        "patterns": {
+          "type": "array",
+          "required": true,
+          "description": "Extraction patterns (regex, XPath, etc.)"
+        }
+      },
+      "response": {
+        "matches": "array",
+        "metadata": "object"
+      }
+    }
+  },
+  "usage_examples": {
+    "fetch_example": {
+      "description": "Fetch vocabulary data from external API",
+      "request": {
+        "url": "https://api.language-data.org/vocabulary",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json"
+        }
+      }
+    },
+    "scrape_example": {
+      "description": "Scrape grammar examples from website",
+      "request": {
+        "url": "https://bulgarian-grammar.example.com",
+        "selectors": {
+          "examples": ".grammar-example",
+          "title": "h2",
+          "content": ".example-content"
+        }
+      }
+    }
+  }
+}

@@ -1,16 +1,17 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
   import type { MatchingExercise } from '$lib/schemas/exercises';
-  import { ExerciseService } from '$lib/services/exercise';
 
-  let { exercise = $bindable(), onComplete }: { exercise: MatchingExercise; onComplete?: (results: any) => void } = $props();
+  let { exercise = $bindable() }: { exercise: MatchingExercise } = $props();
   const dispatch = createEventDispatcher();
 
   let userMatches = $state<Record<string, string>>({});
   let showFeedback = $state(false);
   let isCorrect = $state(false);
 
-  const currentQuestion = $derived(exercise.questions[exercise.currentQuestionIndex]);
+  // Derive left/right items from pairs
+  const leftItems = $derived(exercise.pairs.map((p) => ({ id: p.leftId, text: p.leftText })));
+  const rightItems = $derived(exercise.pairs.map((p) => ({ id: p.rightId, text: p.rightText })));
 
   function toggleMatch(leftId: string, rightId: string) {
     if (showFeedback) return;
@@ -23,30 +24,17 @@
   }
 
   function checkAnswer() {
-    const pairs = currentQuestion.pairs.map((pair) => ({
+    const pairs = exercise.pairs.map((pair) => ({
       leftId: pair.leftId,
       rightId: userMatches[pair.leftId],
     }));
 
-    isCorrect = ExerciseService.validateMatching(pairs, currentQuestion.correctPairs);
-    showFeedback = true;
-
-    // Store feedback
-    exercise.feedback.push({
-      questionId: currentQuestion.id,
-      isCorrect,
-      userMatches,
-      correctPairs: currentQuestion.correctPairs.reduce(
-        (acc, pair) => {
-          acc[pair.leftId] = pair.rightId;
-          return acc;
-        },
-        {} as Record<string, string>
-      ),
+    // Validate by comparing with original pairs
+    isCorrect = pairs.every((p) => {
+      const correct = exercise.pairs.find((cp) => cp.leftId === p.leftId);
+      return correct?.rightId === p.rightId;
     });
-
-    // Store user answer
-    exercise.userAnswers.push(JSON.stringify(userMatches));
+    showFeedback = true;
   }
 
   function nextQuestion() {
@@ -56,31 +44,30 @@
   }
 
   function skipQuestion() {
-    exercise.userAnswers.push('');
     dispatch('skip');
   }
 
   function isMatchCorrect(leftId: string, rightId: string): boolean {
-    const correctMatch = currentQuestion.correctPairs.find((p) => p.leftId === leftId);
+    const correctMatch = exercise.pairs.find((p) => p.leftId === leftId);
     return correctMatch?.rightId === rightId;
   }
 
   function allMatched(): boolean {
-    return currentQuestion.pairs.every((pair) => userMatches[pair.leftId]);
+    return exercise.pairs.every((pair) => userMatches[pair.leftId]);
   }
 
   function getRandomLeftItems() {
-    return currentQuestion.pairs.map((p) => ({ id: p.leftId, text: p.leftText }));
+    return leftItems;
   }
 
   function getRightItems() {
-    return currentQuestion.rightItems;
+    return rightItems;
   }
 </script>
 
 <div class="matching">
   <div class="question">
-    <h3>{currentQuestion.question}</h3>
+    <h3>{exercise.title}</h3>
   </div>
 
   <div class="matching-container">
@@ -91,13 +78,14 @@
           <div class="item-group">
             <div class="item left-item">{leftItem.text}</div>
             <div class="connections">
-              {#each currentQuestion.rightItems as rightItem (rightItem.id)}
+              {#each getRightItems() as rightItem (rightItem.id)}
                 <button
                   onclick={() => toggleMatch(leftItem.id, rightItem.id)}
                   class={`connection ${userMatches[leftItem.id] === rightItem.id ? 'active' : ''} ${showFeedback && isMatchCorrect(leftItem.id, userMatches[leftItem.id] || '') ? 'correct' : ''} ${showFeedback && userMatches[leftItem.id] === rightItem.id && !isMatchCorrect(leftItem.id, rightItem.id) ? 'incorrect' : ''}`}
                   disabled={showFeedback}
                   title={`Match to ${rightItem.text}`}
-                />
+                >
+                </button>
               {/each}
             </div>
           </div>

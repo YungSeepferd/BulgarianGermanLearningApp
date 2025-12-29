@@ -44,9 +44,8 @@ const config = {
 		// Note: The base path can be overridden via --base flag in vite build,
 		// which takes precedence over this config
 		paths: {
-			// Default to GitHub Pages base path for production
-			// When building for GitHub Pages, also pass --base /BulgarianGermanLearningApp/
-			base: '/BulgarianGermanLearningApp'
+			// Conditionally set base path: empty for dev, GitHub Pages path for production
+			base: process.argv.includes('dev') ? '' : '/BulgarianGermanLearningApp'
 		}
 	}
 };

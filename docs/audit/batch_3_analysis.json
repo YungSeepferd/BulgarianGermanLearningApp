@@ -1,0 +1,142 @@
+[
+  {
+    "id": "funf",
+    "partOfSpeech": "number",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "sechs",
+    "partOfSpeech": "number",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "sieben",
+    "partOfSpeech": "number",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "acht",
+    "partOfSpeech": "number",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "neun",
+    "partOfSpeech": "number",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "zehn",
+    "partOfSpeech": "number",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "elf",
+    "partOfSpeech": "number",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "zwoelf",
+    "partOfSpeech": "number",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "dreizehn",
+    "partOfSpeech": "number",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "zwanzig",
+    "partOfSpeech": "number",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": true
+  },
+  {
+    "id": "viele",
+    "partOfSpeech": "adjective",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "wenig",
+    "partOfSpeech": "adjective",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "alle",
+    "partOfSpeech": "adjective",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "einige",
+    "partOfSpeech": "adjective",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "keiner",
+    "partOfSpeech": "adjective",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "samstag",
+    "partOfSpeech": "interjection",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "stunde",
+    "partOfSpeech": "interjection",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "minute",
+    "partOfSpeech": "interjection",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "morgen",
+    "partOfSpeech": "interjection",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  },
+  {
+    "id": "mittag",
+    "partOfSpeech": "interjection",
+    "has_ipa": false,
+    "example_count": 2,
+    "has_grammar": false
+  }
+]

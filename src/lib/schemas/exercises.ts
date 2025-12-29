@@ -3,13 +3,87 @@ import { z } from 'zod';
 /**
  * Exercise Type Definitions
  * 
- * Schemas for all 5 exercise types in Phase 2:
+ * Schemas for all 6 exercise types:
  * 1. Fill-in-the-Blank
  * 2. Multiple Choice
  * 3. Matching
  * 4. Ordering/Sequencing
  * 5. Typing
+ * 6. Sentence Builder (NEW)
  */
+
+// ============================================================================
+// EXERCISE TYPE SCHEMAS
+// ============================================================================
+
+/**
+ * Sentence Builder Exercise (NEW)
+ * Users construct sentences by clicking words in the correct order
+ */
+export const SentenceBuilderExerciseSchema = z.object({
+  id: z.string(),
+  type: z.literal('sentence-builder'),
+  title: z.string(),
+  description: z.string().optional(),
+  grammarHint: z.string().optional(),
+  questions: z.array(
+    z.object({
+      id: z.string(),
+      prompt: z.string(),
+      words: z.array(z.string()),
+      correctOrder: z.array(z.string()),
+      difficulty: z.enum(['easy', 'medium', 'hard']).default('medium')
+    })
+  ),
+  currentQuestionIndex: z.number().default(0),
+  feedback: z.array(
+    z.object({
+      questionId: z.string(),
+      isCorrect: z.boolean(),
+      userAnswer: z.string(),
+      correctAnswer: z.string(),
+      attempts: z.number().default(1),
+      timestamp: z.date()
+    })
+  ).default([]),
+  feedbackMessages: z.object({
+    correct: z.string().optional(),
+    incorrect: z.string().optional()
+  }).optional()
+});
+
+/**
+ * Fill-in-the-Blank Exercise
+ */
+export const FillInTheBlankExerciseSchema = z.object({
+  id: z.string(),
+  type: z.literal('fill-in-blank'),
+  title: z.string(),
+  description: z.string().optional(),
+  questions: z.array(
+    z.object({
+      id: z.string(),
+      prompt: z.string(),
+      correctAnswer: z.string(),
+      acceptedVariations: z.array(z.string()).optional(),
+      difficulty: z.enum(['easy', 'medium', 'hard']).default('medium')
+    })
+  ),
+  currentQuestionIndex: z.number().default(0),
+  feedback: z.array(
+    z.object({
+      questionId: z.string(),
+      isCorrect: z.boolean(),
+      userAnswer: z.string(),
+      correctAnswer: z.string(),
+      timestamp: z.date()
+    })
+  ).default([]),
+  feedbackMessages: z.object({
+    correct: z.string().optional(),
+    incorrect: z.string().optional()
+  }).optional()
+});
 
 // ============================================================================
 // SHARED SCHEMAS
@@ -25,7 +99,7 @@ export const ExerciseItemBaseSchema = z.object({
   bulgarian: z.string().min(1, 'Bulgarian text is required'),
   partOfSpeech: z.enum(['noun', 'verb', 'adjective', 'adverb', 'other']),
   difficulty: z.enum(['easy', 'medium', 'hard']).default('medium'),
-  category: z.string().optional(),
+  category: z.string().optional()
 });
 
 /**
@@ -37,7 +111,7 @@ export const ExerciseAttemptResultSchema = z.object({
   userAnswer: z.string(),
   correctAnswer: z.string(),
   timeSpent: z.number().min(0, 'Time spent must be positive'),
-  timestamp: z.date().default(() => new Date()),
+  timestamp: z.date().default(() => new Date())
 });
 
 /**
@@ -50,7 +124,7 @@ export const ExerciseSessionSchema = z.object({
   endTime: z.date().optional(),
   totalAttempts: z.number().min(0).default(0),
   correctAttempts: z.number().min(0).default(0),
-  results: z.array(ExerciseAttemptResultSchema).default([]),
+  results: z.array(ExerciseAttemptResultSchema).default([])
 });
 
 // ============================================================================
@@ -68,10 +142,10 @@ export const FillInTheBlankQuestionSchema = ExerciseItemBaseSchema.extend({
   correctAnswer: z.string().min(1, 'Correct answer is required'),
   hints: z.array(z.string()).optional(),
   acceptedVariations: z.array(z.string()).optional(),
-  source: z.enum(['german', 'bulgarian']),
+  source: z.enum(['german', 'bulgarian'])
 });
 
-export const FillInTheBlankExerciseSchema = z.object({
+export const FillInTheBlankExerciseV2Schema = z.object({
   id: z.string(),
   type: z.literal('fill-in-blank'),
   questions: z.array(FillInTheBlankQuestionSchema),
@@ -82,8 +156,8 @@ export const FillInTheBlankExerciseSchema = z.object({
     questionId: z.string(),
     isCorrect: z.boolean(),
     userAnswer: z.string(),
-    correctAnswer: z.string(),
-  })).default([]),
+    correctAnswer: z.string()
+  })).default([])
 });
 
 // ============================================================================
@@ -96,7 +170,7 @@ export const FillInTheBlankExerciseSchema = z.object({
 export const MultipleChoiceOptionSchema = z.object({
   id: z.string(),
   text: z.string().min(1, 'Option text is required'),
-  isCorrect: z.boolean(),
+  isCorrect: z.boolean()
 });
 
 /**
@@ -107,7 +181,7 @@ export const MultipleChoiceQuestionSchema = ExerciseItemBaseSchema.extend({
   question: z.string().min(10, 'Question must be at least 10 characters'),
   options: z.array(MultipleChoiceOptionSchema).min(2, 'At least 2 options required'),
   explanation: z.string().optional(),
-  source: z.enum(['german', 'bulgarian']),
+  source: z.enum(['german', 'bulgarian'])
 });
 
 export const MultipleChoiceExerciseSchema = z.object({
@@ -121,8 +195,8 @@ export const MultipleChoiceExerciseSchema = z.object({
     questionId: z.string(),
     isCorrect: z.boolean(),
     userAnswer: z.string(),
-    correctAnswerId: z.string(),
-  })).default([]),
+    correctAnswerId: z.string()
+  })).default([])
 });
 
 // ============================================================================
@@ -137,7 +211,7 @@ export const MatchingPairSchema = z.object({
   leftId: z.string(),
   leftText: z.string().min(1, 'Left text is required'),
   rightId: z.string(),
-  rightText: z.string().min(1, 'Right text is required'),
+  rightText: z.string().min(1, 'Right text is required')
 });
 
 export const MatchingExerciseSchema = z.object({
@@ -147,10 +221,10 @@ export const MatchingExerciseSchema = z.object({
   pairs: z.array(MatchingPairSchema).min(2, 'At least 2 pairs required'),
   userMatches: z.array(z.object({
     leftId: z.string(),
-    rightId: z.string(),
+    rightId: z.string()
   })).default([]),
   isComplete: z.boolean().default(false),
-  correctCount: z.number().min(0).default(0),
+  correctCount: z.number().min(0).default(0)
 });
 
 // ============================================================================
@@ -163,7 +237,7 @@ export const MatchingExerciseSchema = z.object({
 export const SequencingItemSchema = z.object({
   id: z.string(),
   text: z.string().min(1, 'Item text is required'),
-  correctPosition: z.number().min(0, 'Correct position must be non-negative'),
+  correctPosition: z.number().min(0, 'Correct position must be non-negative')
 });
 
 export const OrderingExerciseSchema = z.object({
@@ -174,7 +248,7 @@ export const OrderingExerciseSchema = z.object({
   items: z.array(SequencingItemSchema).min(2, 'At least 2 items required'),
   userOrder: z.array(z.string()).default([]),
   isComplete: z.boolean().default(false),
-  correctCount: z.number().min(0).default(0),
+  correctCount: z.number().min(0).default(0)
 });
 
 // ============================================================================
@@ -192,7 +266,7 @@ export const TypingExerciseQuestionSchema = ExerciseItemBaseSchema.extend({
   acceptedVariations: z.array(z.string()).optional(),
   hints: z.array(z.string()).optional(),
   source: z.enum(['german', 'bulgarian']),
-  exerciseMode: z.enum(['translation', 'transcription']),
+  exerciseMode: z.enum(['translation', 'transcription'])
 });
 
 export const TypingExerciseSchema = z.object({
@@ -207,8 +281,8 @@ export const TypingExerciseSchema = z.object({
     isCorrect: z.boolean(),
     userAnswer: z.string(),
     correctAnswer: z.string(),
-    similarity: z.number().min(0).max(1),
-  })).default([]),
+    similarity: z.number().min(0).max(1)
+  })).default([])
 });
 
 // ============================================================================
@@ -219,11 +293,13 @@ export const TypingExerciseSchema = z.object({
  * Any exercise type
  */
 export const ExerciseSchema = z.union([
+  SentenceBuilderExerciseSchema,
   FillInTheBlankExerciseSchema,
+  FillInTheBlankExerciseV2Schema,
   MultipleChoiceExerciseSchema,
   MatchingExerciseSchema,
   OrderingExerciseSchema,
-  TypingExerciseSchema,
+  TypingExerciseSchema
 ]);
 
 /**
@@ -237,7 +313,7 @@ export const ExerciseResultsSchema = z.object({
   score: z.number().min(0).max(100),
   attempts: z.number().min(1),
   passedOnFirstAttempt: z.boolean(),
-  timestamp: z.date().default(() => new Date()),
+  timestamp: z.date().default(() => new Date())
 });
 
 /**
@@ -253,8 +329,8 @@ export const ExerciseStatsSchema = z.object({
     'multiple-choice': z.number().min(0),
     'matching': z.number().min(0),
     'ordering': z.number().min(0),
-    'typing': z.number().min(0),
-  }),
+    'typing': z.number().min(0)
+  })
 });
 
 // ============================================================================
@@ -265,8 +341,14 @@ export type ExerciseItemBase = z.infer<typeof ExerciseItemBaseSchema>;
 export type ExerciseAttemptResult = z.infer<typeof ExerciseAttemptResultSchema>;
 export type ExerciseSession = z.infer<typeof ExerciseSessionSchema>;
 
+export type SentenceBuilderExercise = z.infer<typeof SentenceBuilderExerciseSchema>;
+export type SentenceBuilderQuestion = z.infer<
+  typeof SentenceBuilderExerciseSchema.shape.questions.element
+>;
+
 export type FillInTheBlankQuestion = z.infer<typeof FillInTheBlankQuestionSchema>;
 export type FillInTheBlankExercise = z.infer<typeof FillInTheBlankExerciseSchema>;
+export type FillInTheBlankExerciseV2 = z.infer<typeof FillInTheBlankExerciseV2Schema>;
 
 export type MultipleChoiceOption = z.infer<typeof MultipleChoiceOptionSchema>;
 export type MultipleChoiceQuestion = z.infer<typeof MultipleChoiceQuestionSchema>;

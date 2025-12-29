@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import ExerciseContainer from '$lib/components/exercises/ExerciseContainer.svelte';
   import type { Exercise } from '$lib/schemas/exercises';
-  import { appState } from '$lib/state/app-state';
+  // app state not needed for default exercise
 
   let currentExercise = $state<Exercise | null>(null);
   let isLoading = $state(true);
@@ -11,7 +11,7 @@
   onMount(async () => {
     try {
       // Load initial exercise from app state or create default
-      currentExercise = appState.currentExercise || generateDefaultExercise();
+      currentExercise = generateDefaultExercise();
       isLoading = false;
     } catch (error) {
       console.error('Failed to load exercise:', error);
@@ -25,36 +25,47 @@
     return {
       id: 'exercise-1',
       type: 'fill-in-blank',
-      sessionId: 'session-1',
-      startedAt: new Date(),
       currentQuestionIndex: 0,
       userAnswers: [],
+      isComplete: false,
       feedback: [],
       questions: [
         {
           id: 'q1',
+          vocabularyId: 'vocab-guten-tag',
+          german: 'Guten _',
+          bulgarian: 'Добър _',
+          partOfSpeech: 'noun',
+          difficulty: 'easy',
+          type: 'fill-in-blank',
           question: 'Fill in the blank: "Guten ___"',
+          blankPosition: 12,
           correctAnswer: 'Tag',
           acceptedVariations: ['tag', 'TAG'],
           hints: ['German greeting', 'Means "day"'],
+          source: 'german'
         },
         {
           id: 'q2',
+          vocabularyId: 'vocab-dir',
+          german: 'Wie geht es _?',
+          bulgarian: 'Как си _?',
+          partOfSpeech: 'other',
+          difficulty: 'easy',
+          type: 'fill-in-blank',
           question: 'Fill in the blank: "Wie geht es ___?"',
+          blankPosition: 16,
           correctAnswer: 'dir',
-          acceptedVariations: ['dir', 'DIR', 'mir'],
+          acceptedVariations: ['dir', 'DIR'],
           hints: ['German question', 'Informal "you"'],
-        },
-      ],
+          source: 'german'
+        }
+      ]
     };
   }
 
-  function handleExerciseComplete(result: any) {
+  function handleExerciseComplete() {
     exerciseCompleted = true;
-    // Store results
-    if (appState.recordPracticeResult) {
-      appState.recordPracticeResult('exercise-completed', true);
-    }
   }
 
   function handleSkip() {
@@ -82,7 +93,7 @@
   <div class="content">
     {#if isLoading}
       <div class="loading">
-        <div class="spinner" />
+        <div class="spinner"></div>
         <p>Loading exercise...</p>
       </div>
     {:else if exerciseCompleted}
