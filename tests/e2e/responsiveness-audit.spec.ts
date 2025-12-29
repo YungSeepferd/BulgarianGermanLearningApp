@@ -7,7 +7,7 @@ const BREAKPOINTS = [
   { name: 'Tablet Portrait (768px)', width: 768, height: 1024 },
   { name: 'Tablet Landscape (1024px)', width: 1024, height: 768 },
   { name: 'Laptop (1366px)', width: 1366, height: 768 },
-  { name: 'Desktop (1920px)', width: 1920, height: 1080 },
+  { name: 'Desktop (1920px)', width: 1920, height: 1080 }
 ];
 
 async function getScrollbarInfo(page: Page) {
@@ -22,7 +22,7 @@ async function getScrollbarInfo(page: Page) {
       bodyScrollWidth: body.scrollWidth,
       hasHorizontalScroll: html.scrollWidth > html.clientWidth + 10 || body.scrollWidth > window.innerWidth + 10,
       hasVerticalScroll: html.scrollHeight > html.clientHeight + 10 || body.scrollHeight > window.innerHeight + 10,
-      buttons: Array.from(document.querySelectorAll('button')).filter(b => (b as any).offsetParent !== null).length,
+      buttons: Array.from(document.querySelectorAll('button')).filter(b => (b as any).offsetParent !== null).length
     };
   });
 }
@@ -70,7 +70,7 @@ test.describe('🎯 Comprehensive Responsive Design Audit', () => {
       { route: '/vocabulary', name: 'Vocabulary' },
       { route: '/practice', name: 'Practice' },
       { route: '/learn', name: 'Learn' },
-      { route: '/grammar', name: 'Grammar' },
+      { route: '/grammar', name: 'Grammar' }
     ];
 
     pages.forEach(({ route, name }) => {
