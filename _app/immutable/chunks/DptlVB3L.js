@@ -1,2 +1,0 @@
-import{m as s,a7 as a,k as t,u as o,a8 as n,a9 as f,v as r,aa as c,ab as e,ac as i}from"./BkkwGZv8.js";function l(i=!1){const l=s,m=l.l.u;if(!m)return;let p=()=>c(l.s);if(i){let s=0,a={};const t=e(()=>{let t=!1;const o=l.s;for(const s in o)o[s]!==a[s]&&(a[s]=o[s],t=!0);return t&&s++,s});p=()=>r(t)}m.b.length&&a(()=>{u(l,p),n(m.b)}),t(()=>{const s=o(()=>m.m.map(f));return()=>{for(const a of s)"function"==typeof a&&a()}}),m.a.length&&t(()=>{u(l,p),n(m.a)})}function u(s,a){if(s.l.s)for(const t of s.l.s)r(t);a()}i();export{l as i};
-//# sourceMappingURL=DptlVB3L.js.map

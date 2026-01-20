@@ -1,0 +1,2 @@
+import{d as a,b as e,H as s,h as l,g as n,C as o,e as d,s as r,f as t,i as f}from"./3_z0oAFI.js";function i(i,u){let h=null,m=l;var p;if(l){h=f;for(var v=n(document.head);null!==v&&(v.nodeType!==o||v.data!==i);)v=d(v);if(null===v)r(!1);else{var c=d(v);v.remove(),t(c)}}l||(p=document.head.appendChild(a()));try{e(()=>u(p),s)}finally{m&&(r(!0),t(h))}}export{i as h};
+//# sourceMappingURL=BZg_Ufa4.js.map
