@@ -166,7 +166,10 @@
   onpointerup={handlePointerUp}
   onpointercancel={handlePointerUp}
   onkeydown={handleKeyDown}
-  aria-label="{sourceText} - Tap to reveal translation"
+  aria-label={isFlipped 
+    ? `${sourceText} means ${targetText}. Swipe right if you know it, left to practice more.`
+    : `${sourceText} - Tap to reveal translation`}
+  aria-pressed={isFlipped}
 >
   <!-- Swipe indicators -->
   <div class="swipe-indicator left" class:visible={$position.x < -30}>
