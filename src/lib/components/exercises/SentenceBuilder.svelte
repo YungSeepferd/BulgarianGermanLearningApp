@@ -110,7 +110,7 @@
         {#each userOrder as word, i}
           <button
             class="word-bubble selected"
-            on:click={() => removeWord(i)}
+            onclick={() => removeWord(i)}
             title="Click to remove"
           >
             {word}
@@ -130,7 +130,7 @@
     {#each availableWords as word}
       <button
         class="word-bubble"
-        on:click={() => handleWordClick(word)}
+        onclick={() => handleWordClick(word)}
         disabled={showFeedback}
       >
         {word}
@@ -145,12 +145,12 @@
         {getFeedbackMessage()}
       </div>
       <div class="actions">
-        <button on:click={resetExercise} class="reset-btn">
+        <button onclick={resetExercise} class="reset-btn">
           Try Again
         </button>
         {#if isCorrect && exercise.currentQuestionIndex < exercise.questions.length - 1}
           <button
-            on:click={() => {
+            onclick={() => {
               exercise.currentQuestionIndex++;
               resetExercise();
             }}
@@ -161,7 +161,7 @@
         {/if}
       </div>
     {:else if userOrder.length > 0}
-      <button on:click={checkAnswer} class="check-btn">
+      <button onclick={checkAnswer} class="check-btn">
         Check Answer
       </button>
     {/if}

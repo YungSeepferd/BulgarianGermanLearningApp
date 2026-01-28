@@ -5,19 +5,32 @@
   import { base } from '$app/paths';
   import { vocabularyDb } from '$lib/data/db.svelte';
   import { appState } from '$lib/state/app-state';
-  // localization and ActionButton not used here
+  import { dailyVocabularyService } from '$lib/services/daily-vocabulary.svelte';
+  import { DailyCarousel } from '$lib/components/dashboard';
 
-  // Dashboard stats
+  // View mode: 'cards' (swipe practice) or 'stats' (overview)
+  let viewMode = $state<'cards' | 'stats'>('cards');
+  
+  // Dashboard stats (loaded async)
   let totalVocabulary = $state(0);
   let totalLearned = $state(0);
   let totalPracticed = $state(0);
-  let loading = $state(true);
+  let statsLoading = $state(true);
+
+  // Daily progress derived state
+  const dailyProgress = $derived(dailyVocabularyService.progress);
 
   // Load dashboard data
-  onMount(() => {
+  onMount(async () => {
     if (!browser) return;
 
     try {
+      // Initialize vocabulary database first (fixes the 0 vocabulary bug)
+      await vocabularyDb.initialize();
+      
+      // Initialize daily vocabulary service
+      await dailyVocabularyService.initialize();
+      
       // Get vocabulary stats
       const allItems = vocabularyDb.getVocabulary();
       totalVocabulary = allItems.length;
@@ -28,11 +41,10 @@
         totalLearned = Array.from(stats.entries()).filter(([_, s]) => s && s.correct > 0).length;
         totalPracticed = Array.from(stats.values()).reduce((sum, s) => sum + (s?.correct + s?.incorrect || 0), 0);
       }
-
     } catch (error) {
       console.error('Error loading dashboard data:', error);
     } finally {
-      loading = false;
+      statsLoading = false;
     }
   });
 
@@ -47,159 +59,403 @@
   function navigateToLearn() {
     goto(`${base}/learn`);
   }
+
+  function handleDailyComplete() {
+    // Could trigger confetti or celebration animation here
+    console.log('Daily vocabulary practice complete!');
+  }
+
+  function toggleView() {
+    viewMode = viewMode === 'cards' ? 'stats' : 'cards';
+  }
 </script>
 
 <svelte:head>
-  <title>Dashboard | Bulgarian-German Learning</title>
+  <title>Daily Practice | Bulgarian-German Learning</title>
+  <meta name="description" content="Learn 10 new Bulgarian-German vocabulary words every day" />
 </svelte:head>
 
 <div class="dashboard-container">
+  <!-- View Toggle Header -->
   <header class="dashboard-header">
-    <h1>Dashboard</h1>
-    <p class="subtitle">Dein Lernfortschritt auf einen Blick</p>
+    <div class="header-left">
+      <h1>{viewMode === 'cards' ? '🎯 Daily 10' : '📊 Dashboard'}</h1>
+    </div>
+    <button class="view-toggle" onclick={toggleView} aria-label="Toggle view">
+      {#if viewMode === 'cards'}
+        <span class="toggle-icon">📊</span>
+        <span class="toggle-text">Stats</span>
+      {:else}
+        <span class="toggle-icon">🎯</span>
+        <span class="toggle-text">Practice</span>
+      {/if}
+    </button>
   </header>
 
-  {#if loading}
-    <div class="loading">
-      <p>Lade Dashboard...</p>
-    </div>
+  {#if viewMode === 'cards'}
+    <!-- Daily Vocabulary Practice Mode (Default) -->
+    <main class="daily-practice-area">
+      <DailyCarousel onComplete={handleDailyComplete} />
+    </main>
+
+    <!-- Quick Navigation (Compact on mobile) -->
+    <nav class="quick-nav">
+      <button class="nav-pill" onclick={navigateToVocabulary}>
+        <span>📖</span>
+        <span>Browse All</span>
+      </button>
+      <button class="nav-pill" onclick={navigateToPractice}>
+        <span>✍️</span>
+        <span>Full Practice</span>
+      </button>
+      <button class="nav-pill" onclick={navigateToLearn}>
+        <span>🎓</span>
+        <span>Learning Paths</span>
+      </button>
+    </nav>
   {:else}
-    <!-- Stats Grid -->
-    <div class="stats-grid">
-      <div class="stat-card vocab">
-        <div class="stat-icon">📚</div>
-        <div class="stat-content">
-          <div class="stat-value">{totalVocabulary}</div>
-          <div class="stat-label">Wörter insgesamt</div>
-        </div>
+    <!-- Stats Overview Mode -->
+    {#if statsLoading}
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Loading stats...</p>
       </div>
-
-      <div class="stat-card learned">
-        <div class="stat-icon">✅</div>
-        <div class="stat-content">
-          <div class="stat-value">{totalLearned}</div>
-          <div class="stat-label">Gelernte Wörter</div>
+    {:else}
+      <!-- Today's Summary -->
+      <section class="daily-summary">
+        <h2>Today's Progress</h2>
+        <div class="daily-stats">
+          <div class="daily-stat">
+            <span class="daily-stat-value">{dailyProgress.swipedRight.length}</span>
+            <span class="daily-stat-label">Words Known</span>
+          </div>
+          <div class="daily-stat">
+            <span class="daily-stat-value">{dailyProgress.swipedLeft.length}</span>
+            <span class="daily-stat-label">Need Practice</span>
+          </div>
+          <div class="daily-stat">
+            <span class="daily-stat-value">{10 - dailyVocabularyService.completedCount}</span>
+            <span class="daily-stat-label">Remaining</span>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="stat-card practiced">
-        <div class="stat-icon">🎯</div>
-        <div class="stat-content">
-          <div class="stat-value">{totalPracticed}</div>
-          <div class="stat-label">Übungen absolviert</div>
+      <!-- Stats Grid -->
+      <section class="stats-section">
+        <h2>Overall Progress</h2>
+        <div class="stats-grid">
+          <div class="stat-card vocab">
+            <div class="stat-icon">📚</div>
+            <div class="stat-content">
+              <div class="stat-value">{totalVocabulary}</div>
+              <div class="stat-label">Total Words</div>
+            </div>
+          </div>
+
+          <div class="stat-card learned">
+            <div class="stat-icon">✅</div>
+            <div class="stat-content">
+              <div class="stat-value">{totalLearned}</div>
+              <div class="stat-label">Words Learned</div>
+            </div>
+          </div>
+
+          <div class="stat-card practiced">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-content">
+              <div class="stat-value">{totalPracticed}</div>
+              <div class="stat-label">Practice Sessions</div>
+            </div>
+          </div>
+
+          <div class="stat-card favorites">
+            <div class="stat-icon">❤️</div>
+            <div class="stat-content">
+              <div class="stat-value">{appState.favorites?.length || 0}</div>
+              <div class="stat-label">Favorites</div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="stat-card favorites">
-        <div class="stat-icon">❤️</div>
-        <div class="stat-content">
-          <div class="stat-value">{appState.favorites?.length || 0}</div>
-          <div class="stat-label">Favoriten</div>
+      <!-- Progress Bar -->
+      <section class="progress-section">
+        <div class="progress-card">
+          <div class="progress-info">
+            <span class="progress-label">Mastery Progress</span>
+            <span class="progress-value">
+              {totalVocabulary > 0 ? Math.round((totalLearned / totalVocabulary) * 100) : 0}%
+            </span>
+          </div>
+          <div class="progress-bar">
+            <div 
+              class="progress-fill" 
+              style="width: {totalVocabulary > 0 ? (totalLearned / totalVocabulary) * 100 : 0}%"
+            ></div>
+          </div>
+          <p class="progress-text">
+            {totalLearned} of {totalVocabulary} words mastered
+          </p>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- Quick Actions -->
-    <section class="quick-actions">
-      <h2>Schnellzugriff</h2>
-      <div class="actions-grid">
-        <button class="action-card" onclick={navigateToVocabulary}>
-          <div class="action-icon">📖</div>
-          <div class="action-title">Vokabular</div>
-          <div class="action-desc">Durchsuche alle Wörter</div>
-        </button>
+      <!-- Quick Actions -->
+      <section class="actions-section">
+        <h2>Quick Actions</h2>
+        <div class="actions-grid">
+          <button class="action-card" onclick={navigateToVocabulary}>
+            <div class="action-icon">📖</div>
+            <div class="action-title">Vocabulary</div>
+            <div class="action-desc">Browse all words</div>
+          </button>
 
-        <button class="action-card" onclick={navigateToPractice}>
-          <div class="action-icon">✍️</div>
-          <div class="action-title">Üben</div>
-          <div class="action-desc">Trainiere dein Wissen</div>
-        </button>
+          <button class="action-card" onclick={navigateToPractice}>
+            <div class="action-icon">✍️</div>
+            <div class="action-title">Practice</div>
+            <div class="action-desc">Train your knowledge</div>
+          </button>
 
-        <button class="action-card" onclick={navigateToLearn}>
-          <div class="action-icon">🎓</div>
-          <div class="action-title">Lernen</div>
-          <div class="action-desc">Strukturierte Lernpfade</div>
-        </button>
-      </div>
-    </section>
-
-    <!-- Progress Overview -->
-    <section class="progress-overview">
-      <h2>Lernfortschritt</h2>
-      <div class="progress-card">
-        <div class="progress-info">
-          <span class="progress-label">Gesamtfortschritt</span>
-          <span class="progress-value">
-            {totalVocabulary > 0 ? Math.round((totalLearned / totalVocabulary) * 100) : 0}%
-          </span>
+          <button class="action-card" onclick={navigateToLearn}>
+            <div class="action-icon">🎓</div>
+            <div class="action-title">Learn</div>
+            <div class="action-desc">Structured paths</div>
+          </button>
         </div>
-        <div class="progress-bar">
-          <div 
-            class="progress-fill" 
-            style="width: {totalVocabulary > 0 ? (totalLearned / totalVocabulary) * 100 : 0}%"
-          ></div>
-        </div>
-        <p class="progress-text">
-          Du hast {totalLearned} von {totalVocabulary} Wörtern gelernt
-        </p>
-      </div>
-    </section>
+      </section>
+    {/if}
   {/if}
 </div>
 
 <style>
   .dashboard-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    background: #f8fafc;
   }
 
+  :global(.dark) .dashboard-container {
+    background: #0f172a;
+  }
+
+  /* Header */
   .dashboard-header {
-    text-align: center;
-    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  :global(.dark) .dashboard-header {
+    background: #1e293b;
+    border-color: #334155;
   }
 
   .dashboard-header h1 {
-    font-size: 2.5rem;
-    color: #1f2937;
-    margin: 0 0 0.5rem 0;
-  }
-
-  .subtitle {
-    font-size: 1.125rem;
-    color: #6b7280;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
     margin: 0;
   }
 
+  :global(.dark) .dashboard-header h1 {
+    color: #f1f5f9;
+  }
+
+  .view-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #f1f5f9;
+    border: none;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  :global(.dark) .view-toggle {
+    background: #334155;
+    color: #cbd5e1;
+  }
+
+  .view-toggle:hover {
+    background: #e2e8f0;
+  }
+
+  :global(.dark) .view-toggle:hover {
+    background: #475569;
+  }
+
+  .toggle-icon {
+    font-size: 1.125rem;
+  }
+
+  /* Daily Practice Area - Full viewport height for swipe cards */
+  .daily-practice-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 180px);
+    padding: 0;
+  }
+
+  /* Quick Navigation Pills */
+  .quick-nav {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  :global(.dark) .quick-nav {
+    background: #1e293b;
+    border-color: #334155;
+  }
+
+  .nav-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    background: #f1f5f9;
+    border: none;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  :global(.dark) .nav-pill {
+    background: #334155;
+    color: #cbd5e1;
+  }
+
+  .nav-pill:hover {
+    background: #3b82f6;
+    color: white;
+  }
+
+  /* Loading State */
   .loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    gap: 1rem;
+  }
+
+  .spinner {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 3px solid #e2e8f0;
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  /* Stats View Styles */
+  .daily-summary,
+  .stats-section,
+  .progress-section,
+  .actions-section {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .daily-summary h2,
+  .stats-section h2,
+  .actions-section h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin: 0 0 1rem 0;
+  }
+
+  :global(.dark) .daily-summary h2,
+  :global(.dark) .stats-section h2,
+  :global(.dark) .actions-section h2 {
+    color: #f1f5f9;
+  }
+
+  /* Daily Summary */
+  .daily-stats {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .daily-stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  :global(.dark) .daily-stat {
+    background: #1e293b;
+  }
+
+  .daily-stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3b82f6;
+  }
+
+  .daily-stat-label {
+    font-size: 0.75rem;
+    color: #64748b;
     text-align: center;
-    padding: 3rem;
-    color: #6b7280;
   }
 
   /* Stats Grid */
   .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   .stat-card {
     background: white;
     border-radius: 1rem;
-    padding: 1.5rem;
+    padding: 1rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    gap: 1rem;
-    transition: transform 0.2s, box-shadow 0.2s;
+    gap: 0.75rem;
+    transition: transform 0.2s;
   }
 
-  .stat-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  :global(.dark) .stat-card {
+    background: #1e293b;
+  }
+
+  .stat-card:active {
+    transform: scale(0.98);
   }
 
   .stat-card.vocab {
@@ -207,7 +463,7 @@
   }
 
   .stat-card.learned {
-    border-left: 4px solid #10b981;
+    border-left: 4px solid #22c55e;
   }
 
   .stat-card.practiced {
@@ -219,7 +475,7 @@
   }
 
   .stat-icon {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
 
   .stat-content {
@@ -227,137 +483,139 @@
   }
 
   .stat-value {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: #1f2937;
+    color: #0f172a;
+  }
+
+  :global(.dark) .stat-value {
+    color: #f1f5f9;
   }
 
   .stat-label {
-    font-size: 0.875rem;
-    color: #6b7280;
-    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: #64748b;
   }
 
-  /* Quick Actions */
-  .quick-actions {
-    margin-bottom: 3rem;
-  }
-
-  .quick-actions h2 {
-    font-size: 1.5rem;
-    color: #1f2937;
-    margin: 0 0 1.5rem 0;
-  }
-
-  .actions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .action-card {
-    background: white;
-    border: 2px solid #e5e7eb;
-    border-radius: 1rem;
-    padding: 2rem;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-
-  .action-card:hover {
-    border-color: #667eea;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(102, 126, 234, 0.2);
-  }
-
-  .action-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .action-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-  }
-
-  .action-desc {
-    font-size: 0.875rem;
-    color: #6b7280;
-  }
-
-  /* Progress Overview */
-  .progress-overview h2 {
-    font-size: 1.5rem;
-    color: #1f2937;
-    margin: 0 0 1.5rem 0;
-  }
-
+  /* Progress Card */
   .progress-card {
     background: white;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  :global(.dark) .progress-card {
+    background: #1e293b;
   }
 
   .progress-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   .progress-label {
-    font-size: 1rem;
-    color: #6b7280;
+    font-size: 0.875rem;
+    color: #64748b;
   }
 
   .progress-value {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    color: #667eea;
+    color: #3b82f6;
   }
 
   .progress-bar {
-    height: 1rem;
-    background: #e5e7eb;
-    border-radius: 0.5rem;
+    height: 0.75rem;
+    background: #e2e8f0;
+    border-radius: 9999px;
     overflow: hidden;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  :global(.dark) .progress-bar {
+    background: #334155;
   }
 
   .progress-fill {
     height: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border-radius: 9999px;
     transition: width 0.5s ease;
   }
 
   .progress-text {
     font-size: 0.875rem;
-    color: #6b7280;
+    color: #64748b;
     text-align: center;
     margin: 0;
   }
 
-  @media (max-width: 768px) {
+  /* Actions Grid */
+  .actions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+
+  .action-card {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  :global(.dark) .action-card {
+    background: #1e293b;
+    border-color: #334155;
+  }
+
+  .action-card:hover {
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+  }
+
+  .action-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .action-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+  }
+
+  :global(.dark) .action-title {
+    color: #f1f5f9;
+  }
+
+  .action-desc {
+    font-size: 0.675rem;
+    color: #64748b;
+  }
+
+  /* Desktop responsiveness */
+  @media (min-width: 768px) {
     .dashboard-container {
-      padding: 1rem;
+      max-width: 480px;
+      margin-top: 1rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      min-height: auto;
+      height: calc(100vh - 2rem);
+      overflow: hidden;
     }
 
-    .dashboard-header h1 {
-      font-size: 2rem;
-    }
-
-    .stats-grid {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-
-    .actions-grid {
-      grid-template-columns: 1fr;
-      gap: 1rem;
+    .daily-practice-area {
+      min-height: 500px;
     }
   }
 </style>

@@ -1,8 +1,8 @@
 # 📊 Project Status - BulgarianGermanLearningApp
 
-**Last Updated**: December 29, 2025  
-**Current Phase**: Responsive Design Complete + Mobile Testing & Data Validation (Phase 11)  
-**Next Milestone**: Mobile Functionality Testing & Data Integrity Verification  
+**Last Updated**: January 28, 2026  
+**Current Phase**: Daily 10 Dashboard Launch (Phase 12)  
+**Next Milestone**: Production Deployment & User Testing  
 **Repository**: YungSeepferd/BulgarianGermanLearningApp
 
 ---
@@ -13,20 +13,22 @@
 
 | Metric | Value | Status |
 |--------|-------|--------|
-| **Vocabulary Items** | 746 total | ✅ Complete |
+| **Vocabulary Items** | 1,681 unique (deduplicated) | ✅ Complete |
 | **Grammar Rules** | 12 implemented | ✅ Complete |
 | **Test Coverage** | 95% unit, 80% component | ✅ Excellent |
 | **Deployment** | Live on GitHub Pages | ✅ Production |
-| **Svelte 5 Compliance** | 100% (after fix) | ✅ Complete |
+| **Svelte 5 Compliance** | 100% | ✅ Complete |
 | **Tailwind v4** | Fully configured | ✅ Complete |
 | **Responsive Design** | All viewports (320px-1440px) | ✅ Complete |
 | **Build Pipeline** | TypeScript + ESLint + Build | ✅ Passing |
+| **Daily 10 Dashboard** | Mobile-first swipe interface | ✅ NEW |
 
 ### Key Features
 
+- ✅ **Daily 10 Practice**: Swipe-to-learn mobile dashboard (NEW)
 - ✅ **Bidirectional Learning**: German ↔ Bulgarian
 - ✅ **Bilingual UI**: Complete German and Bulgarian interface
-- ✅ **Vocabulary System**: 746 items with search/filter
+- ✅ **Vocabulary System**: 1,681 items with search/filter
 - ✅ **Practice Modes**: Flashcards, interactive practice
 - ✅ **Lesson Generation**: Dynamic lesson creation
 - ✅ **Grammar Reference**: 12 Bulgarian grammar rules
@@ -35,7 +37,59 @@
 
 ---
 
-## 🚀 Active Development Focus (Phase 11)
+## 🚀 Active Development Focus (Phase 12)
+
+### ✅ Daily 10 Dashboard (COMPLETE - Jan 28, 2026)
+
+**New Mobile-First Dashboard with Swipe-to-Learn Interface:**
+
+The dashboard has been completely redesigned with a "Tinder-style" card interaction for effortless vocabulary learning:
+
+**Features Implemented:**
+- ✅ **Daily Vocabulary Service** - 10 new words each day, date-seeded for consistency
+- ✅ **Swipeable Cards** - Touch/mouse gesture support with spring animations
+- ✅ **Card Flip** - Tap to reveal translation, examples, and cultural notes
+- ✅ **Swipe Right** = "Got it!" (mark as known)
+- ✅ **Swipe Left** = "Practice more" (mark for review)
+- ✅ **Progress Tracking** - Visual dots showing completion status
+- ✅ **Daily Stats** - Summary view of learned vs. practice-needed words
+- ✅ **LocalStorage Persistence** - Progress saved across sessions
+
+**New Components:**
+- `src/lib/services/daily-vocabulary.svelte.ts` - Daily selection & progress service
+- `src/lib/components/dashboard/SwipeableCard.svelte` - Touch-enabled flashcard
+- `src/lib/components/dashboard/DailyCarousel.svelte` - Card stack manager
+- `src/routes/+page.svelte` - Completely rewritten mobile-first dashboard
+
+**Technical Details:**
+- Deterministic date-seeded random selection (mulberry32 PRNG)
+- Same 10 words shown all day, resets at midnight
+- Spring-animated card movements (svelte/motion)
+- Pointer Events API for unified touch/mouse handling
+- Visual feedback for swipe direction (green ✅ / orange 🔄)
+
+---
+
+### ✅ Repository Cleanup (COMPLETE - Jan 28, 2026)
+
+**Files Removed:**
+- 9 backup JSON files from `data/` folder
+- 4 vocabulary report files
+- Legacy archive contents (`_legacy_archive/*.md`)
+- Test routes (`test-navigation/`, `test-dashboard/`)
+- Root-level zombie files (PHASE_11_*.md, debug scripts)
+
+**Code Quality Fixes:**
+- Fixed 7 instances of deprecated `on:click` → `onclick` syntax
+- Verified vocabulary data deduplicated (1,681 unique items)
+
+**MCP Configuration:**
+- Added Storybook MCP server to:
+  - OpenAI Codex (`~/.codex/config.toml`)
+  - GitHub Copilot (`~/Library/.../Code/User/mcp.json`)
+  - Roo Code (`~/Library/.../rooveterinaryinc.roo-cline/settings/mcp_settings.json`)
+
+---
 
 ### ✅ Responsive Design (COMPLETE - Dec 29, 2025)
 
@@ -201,11 +255,6 @@ For detailed phase completion reports, see:
 - ✅ Created `docs/PROJECT_STATUS.md` (updated today)
 - ✅ Identified 12 zombie files for archiving
 - ✅ Generated comprehensive audit report
-
-**Next Steps:**
-- Archive zombie files to `_legacy_archive/`
-- Update AGENTS.md references
-- Complete offline capability implementation
 
 ### December 17, 2025 - Phase 10 Completion
 

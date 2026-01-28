@@ -207,7 +207,7 @@
     <nav class="lesson-navigation">
       <div class="nav-buttons">
         <button
-          on:click={prevExercise}
+          onclick={prevExercise}
           disabled={currentExerciseIndex === 0}
           class="button button--secondary"
         >
@@ -216,7 +216,7 @@
         
         {#if currentExerciseIndex < lesson.exercises.length - 1}
           <button
-            on:click={nextExercise}
+            onclick={nextExercise}
             class="button button--primary"
           >
             {appState.languageMode === 'DE_BG' ? 'Weiter' : 'Напред'}
@@ -232,7 +232,7 @@
       <div class="exercise-selector">
         <span>{appState.languageMode === 'DE_BG' ? 'Übung:' : 'Упражнение:'}</span>
         <select
-          on:change={(event) => {
+          onchange={(event) => {
             const target = event.target as HTMLSelectElement | null;
             if (target) {
               goToExercise(parseInt(target.value, 10));

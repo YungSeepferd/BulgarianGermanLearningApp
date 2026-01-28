@@ -40,12 +40,6 @@
 	"/practice": [
 		"src/routes/+layout.ts"
 	],
-	"/test-dashboard": [
-		"src/routes/+layout.ts"
-	],
-	"/test-navigation": [
-		"src/routes/+layout.ts"
-	],
 	"/vocabulary": [
 		"src/routes/+layout.ts"
 	],
