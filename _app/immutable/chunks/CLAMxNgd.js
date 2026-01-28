@@ -1,0 +1,2 @@
+import{A as s,ai as t,z as a,u as n,aj as o,ak as f,L as r,al as c,am as e,an as i}from"./wBlqi3UJ.js";function l(i=!1){const l=s,m=l.l.u;if(!m)return;let p=()=>c(l.s);if(i){let s=0,t={};const a=e(()=>{let a=!1;const n=l.s;for(const s in n)n[s]!==t[s]&&(t[s]=n[s],a=!0);return a&&s++,s});p=()=>r(a)}m.b.length&&t(()=>{u(l,p),o(m.b)}),a(()=>{const s=n(()=>m.m.map(f));return()=>{for(const t of s)"function"==typeof t&&t()}}),m.a.length&&a(()=>{u(l,p),o(m.a)})}function u(s,t){if(s.l.s)for(const a of s.l.s)r(a);t()}i();export{l as i};
+//# sourceMappingURL=CLAMxNgd.js.map

@@ -1,2 +1,0 @@
-import{j as n,k as e,m as t,n as s,u,o as l}from"./3_z0oAFI.js";function o(l){var o,a;null===t&&n(),s&&null!==t.l?(o=t,a=o.l,a.u??(a.u={a:[],b:[],m:[]})).m.push(l):e(()=>{const n=u(l);if("function"==typeof n)return n})}function a(){const e=t;return null===e&&n(),(n,t,s)=>{const u=e.s.$$events?.[n];if(u){const o=l(u)?u.slice():[u],a=function(n,e,{bubbles:t=!1,cancelable:s=!1}={}){return new CustomEvent(n,{detail:e,bubbles:t,cancelable:s})}(n,t,s);for(const n of o)n.call(e.x,a);return!a.defaultPrevented}return!0}}export{a as c,o};
-//# sourceMappingURL=DB-S5UIA.js.map
