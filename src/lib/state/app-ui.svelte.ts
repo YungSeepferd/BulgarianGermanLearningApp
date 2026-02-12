@@ -3,14 +3,17 @@ import { Debug } from '$lib/utils';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 import type { AppDataState } from './app-data.svelte';
 import { StateError, ErrorHandler } from '../services/errors';
+import { userSettings, type LanguageMode } from '$lib/stores/settings';
 
-export type LanguageMode = 'DE_BG' | 'BG_DE';
+// Re-export for backward compatibility
+export type { LanguageMode };
 
 export class AppUIState {
     // Reference to the data state
     private dataState: AppDataState;
 
     // UI State
+    // Note: languageMode is now synced with the persisted store
     languageMode = $state<LanguageMode>('DE_BG');
     searchQuery = $state('');
     currentItem = $state<VocabularyItem | null>(null);
@@ -24,14 +27,23 @@ export class AppUIState {
         this.languageMode === 'DE_BG' ? 'German → Bulgarian' : 'Bulgarian → German'
     );
 
+    // Unsubscribe function for the store subscription
+    private unsubscribeSettings: (() => void) | null = null;
+
     constructor(dataState: AppDataState) {
         this.dataState = dataState;
     }
 
     toggleLanguageMode() {
-        this.languageMode = this.languageMode === 'DE_BG' ? 'BG_DE' : 'DE_BG';
-        this.triggerLanguageModePersistence();
-  
+        const newMode = this.languageMode === 'DE_BG' ? 'BG_DE' : 'DE_BG';
+        this.languageMode = newMode;
+
+        // Update the persisted store
+        userSettings.update(settings => ({
+            ...settings,
+            languageMode: newMode
+        }));
+
         // Notify localization service about language change
         if (browser) {
             try {
@@ -56,25 +68,6 @@ export class AppUIState {
         // Add to recent searches if not empty and not already in list
         if (query.trim() && !this.dataState.recentSearches.includes(query)) {
             this.dataState.recentSearches = [query, ...this.dataState.recentSearches.slice(0, 9)]; // Keep last 10
-        }
-    }
-
-    /**
-     * Trigger language mode persistence to localStorage
-     * @throws StateError if saving fails
-     */
-    private triggerLanguageModePersistence(): void {
-        if (browser) {
-            try {
-                localStorage.setItem('app-language-mode', this.languageMode);
-                // Clean up old storage key if it exists
-                if (localStorage.getItem('tandem-direction')) {
-                    localStorage.removeItem('tandem-direction');
-                }
-            } catch (error) {
-                ErrorHandler.handleError(error, 'Failed to save language mode');
-                throw new StateError('Failed to save language mode', { error });
-            }
         }
     }
 
@@ -154,42 +147,61 @@ export class AppUIState {
     init(): void {
         if (browser) {
             try {
-                // Load initial language mode
-                const saved = localStorage.getItem('app-language-mode');
+                // Load initial language mode from persisted store
+                // with migration from old localStorage keys
+                let initialMode: LanguageMode = 'DE_BG';
+
+                // Check for old storage keys and migrate
                 const oldSaved = localStorage.getItem('tandem-direction');
-  
-                // Set default language if no preference exists
-                if (saved === 'DE_BG' || saved === 'BG_DE') {
-                    this.languageMode = saved as LanguageMode;
-                } else if (oldSaved === 'DE->BG') {
-                    this.languageMode = 'DE_BG';
-                    // Migrate from old format to new format
-                    localStorage.setItem('app-language-mode', 'DE_BG');
+                const oldLanguageMode = localStorage.getItem('app-language-mode');
+
+                if (oldSaved === 'DE->BG') {
+                    initialMode = 'DE_BG';
+                    // Migration will happen automatically via store
                     localStorage.removeItem('tandem-direction');
                 } else if (oldSaved === 'BG->DE') {
-                    this.languageMode = 'BG_DE';
-                    // Migrate from old format to new format
-                    localStorage.setItem('app-language-mode', 'BG_DE');
+                    initialMode = 'BG_DE';
                     localStorage.removeItem('tandem-direction');
-                } else {
-                    // Set default language (DE_BG) when no saved preference exists
-                    this.languageMode = 'DE_BG';
-                    localStorage.setItem('app-language-mode', 'DE_BG');
+                } else if (oldLanguageMode === 'DE_BG' || oldLanguageMode === 'BG_DE') {
+                    initialMode = oldLanguageMode as LanguageMode;
+                    // Migrate to new store format
+                    userSettings.update(s => ({ ...s, languageMode: initialMode }));
+                    // Clean up old key (new store uses prefixed key)
+                    localStorage.removeItem('app-language-mode');
                 }
-  
-                // Set up automatic syncing with event listener
-                window.addEventListener('storage', (e) => {
-                    if (e.key === 'app-language-mode') {
-                        const saved = localStorage.getItem('app-language-mode');
-                        if (saved === 'DE_BG' || saved === 'BG_DE') {
-                            this.languageMode = saved as LanguageMode;
-                        }
+
+                // Set initial value
+                this.languageMode = initialMode;
+
+                // Subscribe to store changes for cross-tab synchronization
+                this.unsubscribeSettings = userSettings.subscribe(settings => {
+                    if (settings.languageMode !== this.languageMode) {
+                        this.languageMode = settings.languageMode;
                     }
                 });
+
+                // Sync initial value to store if different
+                userSettings.update(settings => {
+                    if (settings.languageMode !== initialMode) {
+                        return { ...settings, languageMode: initialMode };
+                    }
+                    return settings;
+                });
+
             } catch (error) {
                 ErrorHandler.handleError(error, 'Failed to initialize UI state');
                 throw new StateError('Failed to initialize UI state', { error });
             }
+        }
+    }
+
+    /**
+     * Cleanup method to unsubscribe from stores
+     */
+    destroy(): void {
+        if (this.unsubscribeSettings) {
+            this.unsubscribeSettings();
+            this.unsubscribeSettings = null;
         }
     }
 }

@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import { t } from '$lib/services/localization';
   import { vocabularyDb } from '$lib/data/db.svelte';
   import { appState } from '$lib/state/app-state';
@@ -314,11 +313,6 @@
 
     currentPage = 0;
     loadVocabulary();
-  });
-
-  // Initialize on component mount
-  onMount(async () => {
-    await loadVocabulary();
   });
 
   // Load more items

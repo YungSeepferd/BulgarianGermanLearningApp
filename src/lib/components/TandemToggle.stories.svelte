@@ -36,24 +36,5 @@
 <!-- Search Mode -->
 <Story name="Search Mode" args={{ mode: 'search' }} />
 
-<!-- Interactive Demo -->
-<Story 
-  name="Interactive"
-  parameters={{
-    docs: {
-      description: {
-        story: 'Click the direction button to toggle between DE→BG and BG→DE. Click the mode button to switch between practice and search modes.'
-      }
-    }
-  }}
->
-  {#snippet children(args)}
-    <div style="padding: 20px; background: var(--background); border-radius: 8px;">
-      <TandemToggle 
-        mode={args.mode} 
-        onDirectionChange={args.onDirectionChange}
-        onModeChange={args.onModeChange}
-      />
-    </div>
-  {/snippet}
-</Story>
+<!-- Interactive Demo - Click direction to toggle DE→BG/BG→DE, click mode to switch practice/search -->
+<Story name="Interactive" args={{ mode: 'practice' }} />

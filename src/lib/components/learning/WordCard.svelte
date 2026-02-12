@@ -164,21 +164,6 @@
     font-size: 1rem;
   }
 
-  .gender-badge[data-gender='masculine'] {
-    background-color: #dbeafe;
-    border-color: #bfdbfe;
-  }
-
-  .gender-badge[data-gender='feminine'] {
-    background-color: #fce7f3;
-    border-color: #fbcfe8;
-  }
-
-  .gender-badge[data-gender='neuter'] {
-    background-color: #e0e7ff;
-    border-color: #c7d2fe;
-  }
-
   .pronunciation {
     display: flex;
     align-items: center;

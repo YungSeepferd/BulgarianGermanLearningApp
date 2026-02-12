@@ -26,9 +26,10 @@ const config = {
 
 	// File extensions - enable markdown support
 	extensions: ['.svelte', '.md'],
-	
+
 	// compilerOptions removed to allow auto-detection of runes vs legacy mode
-	// This fixes compatibility with libraries like lucide-svelte that use legacy syntax
+	// This fixes compatibility with libraries like lucide-svelte, svelte-motion
+	// Our app files use .svelte extension with runes syntax (auto-detected)
 
 	kit: {
 		// adapter-static for GitHub Pages deployment

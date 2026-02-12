@@ -1,6 +1,6 @@
 # 📑 Repository Documentation Index
 
-**Last Updated**: December 17, 2025 | **Repository**: Ready for team collaboration
+**Last Updated**: February 12, 2026 | **Repository**: Ready for team collaboration
 
 > Quick reference for all documentation and analysis completed on this repository.
 
@@ -34,9 +34,14 @@
 - [docs/CRITICAL_ISSUES_ANALYSIS.md](docs/CRITICAL_ISSUES_ANALYSIS.md) - Issues found & fixes (summary)
 - [docs/CRITICAL_ISSUES_DETAILS.md](docs/CRITICAL_ISSUES_DETAILS.md) - Deep technical analysis + rebuild script
 - [docs/DEBUGGING_GUIDE.md](docs/DEBUGGING_GUIDE.md) - Troubleshooting common issues
+- [docs/MANUAL_TESTING_PLAN.md](docs/MANUAL_TESTING_PLAN.md) - Manual QA testing plan with 93 test cases
+- [docs/MANUAL_TESTING_PLAN.md](docs/MANUAL_TESTING_PLAN.md) - Manual QA testing plan with 93 test cases
 - [docs/BILINGUAL_SUPPORT.md](docs/BILINGUAL_SUPPORT.md) - How the bilingual system works
 - [docs/CHANGELOG.md](docs/CHANGELOG.md) - Version history and changes
 - [docs/SIMPLIFICATION.md](docs/SIMPLIFICATION.md) - What was removed and why
+- [docs/COMPONENT_LIBRARY_ANALYSIS.md](docs/COMPONENT_LIBRARY_ANALYSIS.md) - shadcn-svelte & bits-ui capabilities
+- [docs/EXTERNAL_LINKS.md](docs/EXTERNAL_LINKS.md) - External library references
+- [docs/SVELTE_PACKAGES_RESEARCH.md](docs/SVELTE_PACKAGES_RESEARCH.md) - Svelte ecosystem packages research
 
 ---
 
@@ -53,6 +58,8 @@
 
 **For QA/Testing**
 → [docs/TESTING.md](docs/development/TESTING.md) - Test strategy
+→ [docs/MANUAL_TESTING_PLAN.md](docs/MANUAL_TESTING_PLAN.md) - 93 manual test cases & bug reports
+→ [docs/MANUAL_TESTING_PLAN.md](docs/MANUAL_TESTING_PLAN.md) - 93 manual test cases with bug reports
 
 **For DevOps/Deployment**
 → [docs/DEPLOYMENT.md](docs/deployment/DEPLOYMENT.md) - GitHub Pages deployment
@@ -147,8 +154,9 @@
 
 ### Write Tests
 1. [docs/TESTING.md](docs/development/TESTING.md) - Test strategy (15 min)
-2. Create test file next to component
-3. Run `pnpm run test:unit` to verify
+2. [docs/MANUAL_TESTING_PLAN.md](docs/MANUAL_TESTING_PLAN.md) - Manual QA checklist
+3. Create test file next to component
+4. Run `pnpm run test:unit` to verify
 
 ### Deploy Changes
 1. [docs/DEPLOYMENT.md](docs/deployment/DEPLOYMENT.md) - Deployment (10 min)
@@ -163,8 +171,11 @@
 |------|-------|
 | Lines of code analyzed | 66,000+ |
 | Critical issues found | 3 |
-| Documentation files created | 14+ |
-| Documentation lines written | 16,000+ |
+| Bugs found (Feb 2026) | 3 |
+| Documentation files created | 15+ |
+| Documentation lines written | 18,000+ |
+| Manual test cases | 93 |
+| Playwright test files | 17 |
 | Time to fix all issues | 30 minutes |
 | Setup time for new dev | 5 minutes |
 

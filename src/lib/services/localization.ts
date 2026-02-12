@@ -218,11 +218,11 @@ export class LocalizationService {
 
             // Split the key by dots to navigate the nested structure
             const keys = key.split('.');
-            let value: any = translations;
+            let value: unknown = translations;
 
             for (const k of keys) {
                 if (value && typeof value === 'object' && k in value) {
-                    value = value[k];
+                    value = (value as Record<string, unknown>)[k];
                 } else {
                     console.warn(`Translation key '${key}' not found`);
                     return key; // Return the key itself as fallback

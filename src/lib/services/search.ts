@@ -2,44 +2,64 @@
  * Search Service - Enhanced Vocabulary Search Functionality
  *
  * Provides advanced search capabilities for vocabulary items including:
- * - Fuzzy search with relevance scoring
+ * - Fuzzy search with relevance scoring using pre-computed index
  * - Comprehensive filtering by metadata
  * - Pagination support
  * - Weighted relevance ranking
+ * - Search result caching for performance
  *
  * Uses Fuse.js for fuzzy matching and implements custom filtering logic.
  */
 
 import { type VocabularySearchParams } from '$lib/schemas/vocabulary';
-import type { UnifiedVocabularyItem, VocabularyCategory, VocabularyMetadata } from '$lib/schemas/unified-vocabulary';
-import type { VocabularyItem } from '$lib/types/vocabulary';
-import { UnifiedVocabularyItemSchema } from '$lib/schemas/unified-vocabulary';
+import type { UnifiedVocabularyItem, VocabularyCategory } from '$lib/schemas/unified-vocabulary';
 import { vocabularyRepository } from '$lib/data/vocabulary-repository.svelte';
-import { z } from 'zod';
-import Fuse from 'fuse.js';
+
+// Search cache with TTL (5 minutes)
+interface CacheEntry {
+  results: UnifiedVocabularyItem[];
+  timestamp: number;
+  query: string;
+}
+
+const searchCache = new Map<string, CacheEntry>();
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 
 /**
- * Load vocabulary data via the unified repository
+ * Generate cache key from search params
  */
-async function getVocabularyData(): Promise<UnifiedVocabularyItem[]> {
-  await vocabularyRepository.load();
-  const items = vocabularyRepository.getAll();
-  return items.map(item => {
-    const metadata = item.metadata || {} as VocabularyMetadata;
-    return {
-      ...item,
-      metadata: {
-        ...metadata,
-        isCommon: metadata.isCommon ?? false,
-        isVerified: metadata.isVerified ?? false,
-        learningPhase: metadata.learningPhase ?? 0
-      }
-    };
+function getCacheKey(params: VocabularySearchParams): string {
+  return JSON.stringify({
+    q: params.query?.toLowerCase().trim(),
+    pos: params.partOfSpeech,
+    diff: params.difficulty,
+    cats: params.categories?.sort(),
+    phase: params.learningPhase
   });
 }
 
 /**
+ * Check if cache entry is valid
+ */
+function isCacheValid(entry: CacheEntry): boolean {
+  return Date.now() - entry.timestamp < CACHE_TTL;
+}
+
+/**
+ * Clear expired cache entries
+ */
+function cleanCache(): void {
+  const now = Date.now();
+  for (const [key, entry] of searchCache.entries()) {
+    if (now - entry.timestamp > CACHE_TTL) {
+      searchCache.delete(key);
+    }
+  }
+}
+
+/**
  * Search vocabulary with advanced filtering and fuzzy matching
+ * Uses pre-computed search index for fast results without loading all vocabulary
  *
  * @param params Search parameters including query, filters, and pagination
  * @returns Search results with pagination metadata
@@ -49,30 +69,70 @@ export async function searchVocabulary(params: VocabularySearchParams): Promise<
   total: number;
   hasMore: boolean;
 }> {
-  // Load vocabulary data
-  const vocabularyItems = await getVocabularyData();
-
   const safeOffset = Number.isFinite(params.offset) ? Number(params.offset) : 0;
   const safeLimit = Number.isFinite(params.limit) && params.limit && params.limit > 0
     ? Number(params.limit)
     : 20;
 
-  // Apply filters first to reduce the dataset for fuzzy search
-  let filteredItems: z.infer<typeof UnifiedVocabularyItemSchema>[] = applyFilters(vocabularyItems, params);
-
-  // Apply fuzzy search if query is provided
-  if (params.query) {
-    filteredItems = applyFuzzySearch(filteredItems, params.query) as z.infer<typeof UnifiedVocabularyItemSchema>[];
+  // Check cache first
+  const cacheKey = getCacheKey(params);
+  const cached = searchCache.get(cacheKey);
+  if (cached && isCacheValid(cached)) {
+    // Return cached results with pagination
+    const total = cached.results.length;
+    const paginatedItems = applyPagination(cached.results, safeOffset, safeLimit);
+    return {
+      items: paginatedItems,
+      total,
+      hasMore: safeOffset + safeLimit < total
+    };
   }
+
+  // Ensure repository is initialized (loads only index + A1)
+  if (!vocabularyRepository.loaded) {
+    await vocabularyRepository.initialize();
+  }
+
+  let filteredItems: UnifiedVocabularyItem[];
+
+  // Use pre-computed index for search if query provided
+  if (params.query?.trim()) {
+    // Search using repository (uses pre-computed index)
+    const searchResults = await vocabularyRepository.search(params.query, {
+      limit: 1000, // Get more for filtering
+      loadFullItems: true
+    });
+    filteredItems = searchResults
+      .map(r => r.item)
+      .filter((item): item is UnifiedVocabularyItem => item !== undefined);
+  } else {
+    // No query - use all loaded items (A1 initially, more if loaded)
+    filteredItems = vocabularyRepository.getAll();
+  }
+
+  // Apply filters
+  filteredItems = applyFilters(filteredItems, params);
 
   // Apply sorting
   filteredItems = applySorting(filteredItems, params);
+
+  // Cache the filtered results
+  searchCache.set(cacheKey, {
+    results: filteredItems,
+    timestamp: Date.now(),
+    query: params.query || ''
+  });
+
+  // Clean old cache entries periodically (1% chance)
+  if (Math.random() < 0.01) {
+    cleanCache();
+  }
 
   // Get total count before pagination
   const total = filteredItems.length;
 
   // Apply pagination
-  const paginatedItems = applyPagination(filteredItems, safeOffset, safeLimit) as z.infer<typeof UnifiedVocabularyItemSchema>[];
+  const paginatedItems = applyPagination(filteredItems, safeOffset, safeLimit);
 
   return {
     items: paginatedItems,
@@ -101,9 +161,9 @@ function applyFilters(items: UnifiedVocabularyItem[], params: VocabularySearchPa
       ? item.categories.some((category: VocabularyCategory) => params.categories?.includes(category))
       : true;
 
-    // Filter by learning phase
+    // Filter by learning phase (from metadata if available)
     const learningPhaseMatch = params.learningPhase !== undefined
-      ? ((item as unknown as VocabularyItem).learningPhase ?? 0) === params.learningPhase
+      ? (item.metadata?.learningPhase ?? 0) === params.learningPhase
       : true;
 
     return partOfSpeechMatch && difficultyMatch && categoryMatch && learningPhaseMatch;
@@ -111,34 +171,36 @@ function applyFilters(items: UnifiedVocabularyItem[], params: VocabularySearchPa
 }
 
 /**
- * Apply fuzzy search using Fuse.js for relevance scoring
+ * Quick search using pre-computed index (no loading required)
+ * Returns results from already loaded data
+ * This is the most efficient search for autocomplete/quick lookups
  */
-function applyFuzzySearch(items: UnifiedVocabularyItem[], query: string): UnifiedVocabularyItem[] {
-  // Configure Fuse.js for optimal search results
-  const fuse = new Fuse(items, {
-    keys: [
-      { name: 'german', weight: 0.4 },
-      { name: 'bulgarian', weight: 0.4 },
-      { name: 'transliteration', weight: 0.3 },
-      { name: 'categories', weight: 0.2 },
-      { name: 'metadata.examples.german', weight: 0.1 },
-      { name: 'metadata.examples.bulgarian', weight: 0.1 },
-      { name: 'metadata.notes', weight: 0.1 },
-      { name: 'metadata.mnemonic', weight: 0.1 }
-    ],
-    includeScore: true,
-    threshold: 0.4, // Adjust for more/less fuzzy matching
-    minMatchCharLength: 2,
-    shouldSort: true,
-    ignoreLocation: true
+export async function quickSearch(
+  query: string,
+  options: { limit?: number; loadFullItems?: boolean } = {}
+): Promise<{ items: UnifiedVocabularyItem[]; total: number }> {
+  const limit = options.limit ?? 20;
+
+  // Ensure repository is initialized
+  if (!vocabularyRepository.loaded) {
+    await vocabularyRepository.initialize();
+  }
+
+  // Use repository's search which uses pre-computed index
+  const results = await vocabularyRepository.search(query, {
+    limit,
+    loadFullItems: options.loadFullItems ?? true
   });
 
-  // Perform the search
-  const results = fuse.search(query);
-
-  // Return items sorted by relevance score
-  return results.map(result => result.item);
+  return {
+    items: results.map(r => r.item!).filter(Boolean),
+    total: results.length
+  };
 }
+
+// Note: applyFuzzySearch has been removed as search now uses the pre-computed
+// index directly in searchVocabulary(). The repository's search() method handles
+// fuzzy matching using the Fuse.js index without loading all vocabulary.
 
 /**
  * Apply sorting to the filtered items
@@ -187,35 +249,37 @@ export function clearVocabularyCache(): void {
 
 /**
  * Get search suggestions for autocomplete functionality
+ * Uses pre-computed index for fast prefix matching
  */
 export async function getSearchSuggestions(query: string, limit: number = 5): Promise<string[]> {
-  if (!query) return [];
+  if (!query || query.trim().length < 2) return [];
 
-  const vocabularyItems = await getVocabularyData();
+  const trimmedQuery = query.trim().toLowerCase();
 
-  // Simple prefix matching for suggestions
-  const lowerQuery = query.toLowerCase();
+  // Ensure repository is initialized
+  if (!vocabularyRepository.loaded) {
+    await vocabularyRepository.initialize();
+  }
+
+  // Use quick search with small limit to get matching items
+  const { items } = await quickSearch(trimmedQuery, { limit: limit * 2 });
+
   const suggestions = new Set<string>();
 
-  vocabularyItems.forEach(item => {
-    if (item.german.toLowerCase().startsWith(lowerQuery)) {
+  items.forEach(item => {
+    // Add exact matches or prefix matches
+    if (item.german.toLowerCase().startsWith(trimmedQuery)) {
       suggestions.add(item.german);
     }
-    if (item.bulgarian.toLowerCase().startsWith(lowerQuery)) {
+    if (item.bulgarian.toLowerCase().startsWith(trimmedQuery)) {
       suggestions.add(item.bulgarian);
     }
-    if (item.transliteration && typeof item.transliteration === 'string') {
-      if ((item.transliteration as string).toLowerCase().startsWith(lowerQuery)) {
-        suggestions.add(item.transliteration as string);
-      }
-    } else if (item.transliteration && typeof item.transliteration === 'object' && item.transliteration !== null) {
-      const translit = item.transliteration as { german?: string; bulgarian?: string };
-      if (translit.german && typeof translit.german === 'string' && translit.german.toLowerCase().startsWith(lowerQuery)) {
-        suggestions.add(translit.german);
-      }
-      if (translit.bulgarian && typeof translit.bulgarian === 'string' && translit.bulgarian.toLowerCase().startsWith(lowerQuery)) {
-        suggestions.add(translit.bulgarian);
-      }
+    // Add transliteration if available
+    if (item.transliteration?.bulgarian?.toLowerCase().startsWith(trimmedQuery)) {
+      suggestions.add(item.transliteration.bulgarian);
+    }
+    if (item.transliteration?.german?.toLowerCase().startsWith(trimmedQuery)) {
+      suggestions.add(item.transliteration.german);
     }
   });
 
@@ -225,25 +289,27 @@ export async function getSearchSuggestions(query: string, limit: number = 5): Pr
 
 /**
  * Get vocabulary statistics for search filters
+ * Uses lightweight index data instead of loading full vocabulary
  */
 export async function getVocabularyStats(): Promise<{
   partOfSpeech: Record<string, number>;
   difficulty: Record<string, number>;
   categories: Record<string, number>;
-  learningPhase: Record<string, number>;
-  isCommon: Record<string, number>;
-  isVerified: Record<string, number>;
+  totalCount: number;
 }> {
-  const vocabularyItems = await getVocabularyData();
+  // Ensure repository is initialized (only loads index)
+  if (!vocabularyRepository.loaded) {
+    await vocabularyRepository.initialize();
+  }
+
+  // Use index items for stats (lightweight - only metadata)
+  const indexItems = vocabularyRepository.getAllIndexItems();
 
   const partOfSpeech: Record<string, number> = {};
   const difficulty: Record<string, number> = {};
   const categories: Record<string, number> = {};
-  const learningPhase: Record<string, number> = {};
-  const isCommon: Record<string, number> = {};
-  const isVerified: Record<string, number> = {};
 
-  vocabularyItems.forEach(item => {
+  indexItems.forEach(item => {
     // Count by part of speech
     partOfSpeech[item.partOfSpeech] = (partOfSpeech[item.partOfSpeech] || 0) + 1;
 
@@ -254,26 +320,12 @@ export async function getVocabularyStats(): Promise<{
     item.categories.forEach(category => {
       categories[category] = (categories[category] || 0) + 1;
     });
-
-    // Count by learning phase
-    const phase = (item as unknown as VocabularyItem).learningPhase ?? 0;
-    learningPhase[phase] = (learningPhase[phase] || 0) + 1;
-
-    // Count by common status
-    const commonStatus = String((item as unknown as VocabularyItem).isCommon ?? item.metadata?.isCommon ?? false);
-    isCommon[commonStatus] = (isCommon[commonStatus] || 0) + 1;
-
-    // Count by verified status
-    const verifiedStatus = String((item as unknown as VocabularyItem).isVerified ?? item.metadata?.isVerified ?? false);
-    isVerified[verifiedStatus] = (isVerified[verifiedStatus] || 0) + 1;
   });
 
   return {
     partOfSpeech,
     difficulty,
     categories,
-    learningPhase,
-    isCommon,
-    isVerified
+    totalCount: indexItems.length
   };
 }

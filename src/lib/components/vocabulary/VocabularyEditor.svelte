@@ -41,35 +41,46 @@
 
   let { item = null, onSave, onCancel }: Props = $props();
 
-  // Form state
-  let formData: FormData = $state({
-    id: item?.id ?? uuidv4(),
-    german: item?.german ?? '',
-    bulgarian: item?.bulgarian ?? '',
-    partOfSpeech: item?.partOfSpeech ?? 'noun',
-    difficulty: (item?.difficulty ?? 'A1') as string,
-    categories: item?.categories ?? [],
-    definition: {
-      german: item?.definition?.german ?? '',
-      bulgarian: item?.definition?.bulgarian ?? '',
-    },
-    // Normalize examples to required string fields
-    examples: (item?.examples ?? [
-      { german: '', bulgarian: '', context: 'neutral' },
-    ]).map((ex) => ({
-      german: ex.german ?? '',
-      bulgarian: ex.bulgarian ?? '',
-      context: ex.context ?? 'neutral',
-    })),
-    grammarNotes: {
-      german: item?.grammarNotes?.german ?? '',
-      bulgarian: item?.grammarNotes?.bulgarian ?? '',
-    },
-    culturalNotes: item?.culturalNotes ?? '',
-    pronunciation: {
-      german: item?.pronunciation?.german ?? '',
-      bulgarian: item?.pronunciation?.bulgarian ?? '',
-    },
+  // Initialize form data helper
+  function createFormData(source: EditorItem | null | undefined): FormData {
+    return {
+      id: source?.id ?? uuidv4(),
+      german: source?.german ?? '',
+      bulgarian: source?.bulgarian ?? '',
+      partOfSpeech: source?.partOfSpeech ?? 'noun',
+      difficulty: (source?.difficulty ?? 'A1') as string,
+      categories: source?.categories ?? [],
+      definition: {
+        german: source?.definition?.german ?? '',
+        bulgarian: source?.definition?.bulgarian ?? '',
+      },
+      examples: (source?.examples ?? [
+        { german: '', bulgarian: '', context: 'neutral' },
+      ]).map((ex) => ({
+        german: ex.german ?? '',
+        bulgarian: ex.bulgarian ?? '',
+        context: ex.context ?? 'neutral',
+      })),
+      grammarNotes: {
+        german: source?.grammarNotes?.german ?? '',
+        bulgarian: source?.grammarNotes?.bulgarian ?? '',
+      },
+      culturalNotes: source?.culturalNotes ?? '',
+      pronunciation: {
+        german: source?.pronunciation?.german ?? '',
+        bulgarian: source?.pronunciation?.bulgarian ?? '',
+      },
+    };
+  }
+
+  // Form state - initialized from item
+  let formData: FormData = $state(createFormData(item));
+
+  // Reset form when item changes (new item selected for editing)
+  $effect(() => {
+    if (item) {
+      formData = createFormData(item);
+    }
   });
 
   let errors = $state<Record<string, string>>({});

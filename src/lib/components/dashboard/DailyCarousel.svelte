@@ -60,23 +60,29 @@
   }
 </script>
 
-<div class="daily-carousel">
+<div class="daily-carousel" role="region" aria-label="Daily vocabulary practice">
   <!-- Header with progress -->
   <header class="carousel-header">
     <div class="header-content">
       <h2 class="title">Today's Words</h2>
-      <p class="subtitle">
+      <p class="subtitle" aria-live="polite" aria-atomic="true">
         {#if isComplete}
-          All done for today! 🎉
+          <span class="sr-only">All done for today!</span>
+          <span aria-hidden="true">All done for today! 🎉</span>
         {:else}
-          {completedCount}/10 completed
+          <span class="sr-only">{completedCount} of 10 completed</span>
+          <span aria-hidden="true">{completedCount}/10 completed</span>
         {/if}
       </p>
     </div>
-    
+
     {#if isComplete}
-      <button class="reset-btn" onclick={handleReset}>
-        <span>🔄</span>
+      <button
+        class="reset-btn"
+        onclick={handleReset}
+        aria-label="Start over and practice all words again"
+      >
+        <span aria-hidden="true">🔄</span>
         <span>Practice Again</span>
       </button>
     {/if}
@@ -121,12 +127,16 @@
         <p>Please check your connection and try again.</p>
       </div>
     {:else if isComplete}
-      <div class="complete-state">
-        <span class="complete-icon">🎊</span>
+      <div class="complete-state" role="status" aria-live="polite" aria-atomic="true">
+        <span class="complete-icon" aria-hidden="true">🎊</span>
         <h3>Congratulations!</h3>
         <p>You've reviewed all 10 words for today.</p>
-        
-        <div class="stats-summary">
+        <p class="sr-only">
+          Summary: {progress.swipedRight.length} words marked as known,
+          {progress.swipedLeft.length} words need more practice.
+        </p>
+
+        <div class="stats-summary" aria-hidden="true">
           <div class="stat known">
             <span class="stat-value">{progress.swipedRight.length}</span>
             <span class="stat-label">Known</span>
@@ -153,6 +163,11 @@
         />
       {/each}
     {/if}
+  </div>
+
+  <!-- Keyboard instructions for screen readers -->
+  <div class="sr-only" role="note" aria-label="Keyboard instructions">
+    Use arrow keys to swipe cards. Left arrow for "need practice", Right arrow for "know it". Space or Enter to flip card.
   </div>
 
   <!-- Swipe instruction (shown only when cards are active) -->
@@ -463,5 +478,18 @@
     .card-stack {
       max-height: 550px;
     }
+  }
+
+  /* Screen reader only - visually hidden but accessible */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 </style>

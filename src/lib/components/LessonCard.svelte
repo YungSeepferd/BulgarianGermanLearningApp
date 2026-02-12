@@ -56,8 +56,11 @@
   }]);
 
   let currentVocabulary = $derived(safeVocabularyItems[currentVocabularyIndex] || safeVocabularyItems[0]);
+  let objectives = $derived(lesson.objectives ?? []);
   let completionPercentage = $derived(
-    Math.round((lesson.objectives.filter((obj: any) => obj.isCompleted).length / lesson.objectives.length) * 100)
+    objectives.length > 0
+      ? Math.round((objectives.filter((obj: any) => obj.isCompleted).length / objectives.length) * 100)
+      : 0
   );
 
   // Methods
@@ -78,7 +81,8 @@
   }
 
   function toggleObjective(objectiveId: string) {
-    lesson.objectives = lesson.objectives.map((obj: any) =>
+    const currentObjectives = lesson.objectives ?? [];
+    lesson.objectives = currentObjectives.map((obj: any) =>
       obj.id === objectiveId ? { ...obj, isCompleted: !obj.isCompleted } : obj
     );
     lesson.updatedAt = new Date();
@@ -220,7 +224,7 @@
       <div class="lesson-objectives">
         <h4>Learning Objectives</h4>
         <ul class="objectives-list">
-          {#each lesson.objectives as objective (objective.id)}
+          {#each objectives as objective (objective.id)}
             <li class="objective-item">
               <label class="objective-checkbox">
                 <input

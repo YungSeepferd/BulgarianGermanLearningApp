@@ -1,17 +1,18 @@
 /**
  * Daily Vocabulary Service
- * 
- * Provides 10 vocabulary items per day with deterministic selection
- * based on date seeding. Same 10 words available all day for consistent practice.
+ *
+ * Provides vocabulary items per day with deterministic selection
+ * based on date seeding. Same words available all day for consistent practice.
+ *
+ * Uses svelte-persisted-store for automatic storage synchronization.
  */
 
 import { browser } from '$app/environment';
 import { vocabularyDb } from '$lib/data/db.svelte';
 import type { VocabularyItem } from '$lib/types/vocabulary';
-
-// Local storage key for daily progress
-const DAILY_PROGRESS_KEY = 'daily-vocabulary-progress';
-const DAILY_ITEMS_KEY = 'daily-vocabulary-items';
+import { DAILY_VOCABULARY_COUNT } from '$lib/constants/app';
+import { persisted } from '$lib/stores/persisted';
+import { get, type Unsubscriber } from 'svelte/store';
 
 export interface DailyProgress {
   date: string; // YYYY-MM-DD format
@@ -20,6 +21,25 @@ export interface DailyProgress {
   swipedLeft: string[]; // "Practice more" - needs work
   currentIndex: number;
 }
+
+interface DailyItemsData {
+  date: string;
+  ids: string[];
+}
+
+// Persisted stores for daily vocabulary
+const dailyProgressStore = persisted<DailyProgress>('daily-vocabulary-progress', {
+  date: '',
+  completedIds: [],
+  swipedRight: [],
+  swipedLeft: [],
+  currentIndex: 0
+});
+
+const dailyItemsStore = persisted<DailyItemsData>('daily-vocabulary-items', {
+  date: '',
+  ids: []
+});
 
 class DailyVocabularyService {
   // Reactive state
@@ -32,7 +52,11 @@ class DailyVocabularyService {
     currentIndex: 0
   });
   private _initialized = $state(false);
+  private _initializing = $state(false); // Lock to prevent race conditions
   private _loading = $state(false);
+  private _error = $state<Error | null>(null);
+  private _initPromise: Promise<void> | null = null; // Track initialization promise
+  private _unsubscribeProgress: Unsubscriber | null = null; // Store subscription
 
   // Public getters
   get dailyItems(): VocabularyItem[] {
@@ -51,6 +75,10 @@ class DailyVocabularyService {
     return this._loading;
   }
 
+  get error(): Error | null {
+    return this._error;
+  }
+
   get currentItem(): VocabularyItem | null {
     if (this._dailyItems.length === 0) return null;
     return this._dailyItems[this._progress.currentIndex] ?? null;
@@ -61,28 +89,55 @@ class DailyVocabularyService {
   }
 
   get remainingCount(): number {
-    return 10 - this.completedCount;
+    return DAILY_VOCABULARY_COUNT - this.completedCount;
   }
 
   get isComplete(): boolean {
-    return this.completedCount >= 10;
+    return this.completedCount >= DAILY_VOCABULARY_COUNT;
   }
 
   /**
    * Initialize the daily vocabulary service
+   * Uses lock pattern to prevent race conditions from concurrent calls
    */
   async initialize(): Promise<void> {
-    if (!browser || this._initialized) return;
-    
+    if (!browser) return;
+
+    // Return existing promise if initialization is in progress
+    if (this._initPromise) {
+      return this._initPromise;
+    }
+
+    // Already initialized
+    if (this._initialized) {
+      return;
+    }
+
+    // Create initialization promise
+    this._initPromise = this.doInitialize();
+    return this._initPromise;
+  }
+
+  /**
+   * Actual initialization logic (protected by lock)
+   */
+  private async doInitialize(): Promise<void> {
+    // Double-check after getting the lock
+    if (this._initialized || this._initializing) {
+      return;
+    }
+
+    this._initializing = true;
     this._loading = true;
-    
+    this._error = null;
+
     try {
       // Ensure vocabulary database is loaded
       await vocabularyDb.initialize();
-      
+
       const today = this.getTodayString();
       const savedProgress = this.loadProgress();
-      
+
       // Check if we have saved data for today
       if (savedProgress && savedProgress.date === today) {
         this._progress = savedProgress;
@@ -100,13 +155,64 @@ class DailyVocabularyService {
         this.saveItems(this._dailyItems);
         this.saveProgress();
       }
-      
+
       this._initialized = true;
+
+      // Set up cross-tab synchronization
+      this._setupStoreSync();
     } catch (error) {
-      console.error('Failed to initialize daily vocabulary:', error);
+      const err = error instanceof Error ? error : new Error(String(error));
+      this._error = err;
+      console.error('Failed to initialize daily vocabulary:', err);
+      throw err; // Re-throw so callers can handle
     } finally {
+      this._initializing = false;
       this._loading = false;
     }
+  }
+
+  /**
+   * Set up store subscription for cross-tab synchronization
+   */
+  private _setupStoreSync(): void {
+    // Clean up existing subscription
+    if (this._unsubscribeProgress) {
+      this._unsubscribeProgress();
+    }
+
+    // Subscribe to store changes from other tabs
+    this._unsubscribeProgress = dailyProgressStore.subscribe(progress => {
+      // Only update if different and from another source (date won't match if not same day)
+      if (progress.date === this._progress.date &&
+          (progress.currentIndex !== this._progress.currentIndex ||
+           progress.completedIds.length !== this._progress.completedIds.length)) {
+        this._progress = { ...progress };
+      }
+    });
+  }
+
+  /**
+   * Clean up subscriptions when service is destroyed
+   */
+  destroy(): void {
+    if (this._unsubscribeProgress) {
+      this._unsubscribeProgress();
+      this._unsubscribeProgress = null;
+    }
+  }
+
+  /**
+   * Retry initialization after failure
+   */
+  async retry(): Promise<void> {
+    if (this._initializing) return;
+
+    // Reset state
+    this._initialized = false;
+    this._error = null;
+    this._initPromise = null;
+
+    return this.initialize();
   }
 
   /**
@@ -123,8 +229,8 @@ class DailyVocabularyService {
     const shuffled = this.seededShuffle([...allItems], seed);
     
     // Prioritize items user hasn't mastered (optional enhancement)
-    // For now, just take first 10 from shuffled list
-    return shuffled.slice(0, 10);
+    // Take first N items from shuffled list
+    return shuffled.slice(0, DAILY_VOCABULARY_COUNT);
   }
 
   /**
@@ -243,69 +349,52 @@ class DailyVocabularyService {
   }
 
   /**
-   * Save progress to localStorage
+   * Save progress to persisted store
    */
   private saveProgress(): void {
-    if (!browser) return;
-    try {
-      localStorage.setItem(DAILY_PROGRESS_KEY, JSON.stringify(this._progress));
-    } catch (error) {
-      console.error('Failed to save daily progress:', error);
-    }
+    dailyProgressStore.set(this._progress);
   }
 
   /**
-   * Load progress from localStorage
+   * Load progress from persisted store
    */
   private loadProgress(): DailyProgress | null {
     if (!browser) return null;
-    try {
-      const saved = localStorage.getItem(DAILY_PROGRESS_KEY);
-      return saved ? JSON.parse(saved) : null;
-    } catch {
-      return null;
-    }
+    const saved = get(dailyProgressStore);
+    // Return null if empty/default
+    if (!saved.date) return null;
+    return saved;
   }
 
   /**
-   * Save daily items to localStorage
+   * Save daily items to persisted store
    */
   private saveItems(items: VocabularyItem[]): void {
-    if (!browser) return;
-    try {
-      // Save only IDs to reduce storage size
-      const ids = items.map(item => item.id);
-      localStorage.setItem(DAILY_ITEMS_KEY, JSON.stringify({
-        date: this.getTodayString(),
-        ids
-      }));
-    } catch (error) {
-      console.error('Failed to save daily items:', error);
-    }
+    const ids = items.map(item => item.id);
+    dailyItemsStore.set({
+      date: this.getTodayString(),
+      ids
+    });
   }
 
   /**
-   * Load saved items from localStorage
+   * Load saved items from persisted store
    */
   private loadSavedItems(): VocabularyItem[] | null {
     if (!browser) return null;
-    try {
-      const saved = localStorage.getItem(DAILY_ITEMS_KEY);
-      if (!saved) return null;
-      
-      const { date, ids } = JSON.parse(saved);
-      if (date !== this.getTodayString()) return null;
-      
-      // Reconstruct items from IDs
-      const allItems = vocabularyDb.getVocabulary();
-      const itemMap = new Map(allItems.map(item => [item.id, item]));
-      
-      return ids
-        .map((id: string) => itemMap.get(id))
-        .filter((item: VocabularyItem | undefined): item is VocabularyItem => item !== undefined);
-    } catch {
-      return null;
-    }
+    const saved = get(dailyItemsStore);
+
+    // Check if data is for today
+    if (saved.date !== this.getTodayString()) return null;
+    if (!saved.ids.length) return null;
+
+    // Reconstruct items from IDs
+    const allItems = vocabularyDb.getVocabulary();
+    const itemMap = new Map(allItems.map(item => [item.id, item]));
+
+    return saved.ids
+      .map((id: string) => itemMap.get(id))
+      .filter((item: VocabularyItem | undefined): item is VocabularyItem => item !== undefined);
   }
 
   /**

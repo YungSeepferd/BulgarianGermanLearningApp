@@ -80,28 +80,4 @@
 <!-- Disabled State -->
 <Story name="Disabled" args={{ label: 'Disabled', variant: 'primary', disabled: true }} />
 
-<!-- All Variants Row -->
-<Story name="All Variants">
-  {#snippet children(args)}
-    <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
-      <ActionButton label="Primary" variant="primary" onclick={args.onclick} />
-      <ActionButton label="Secondary" variant="secondary" onclick={args.onclick} />
-      <ActionButton label="Success" variant="success" onclick={args.onclick} />
-      <ActionButton label="Danger" variant="danger" onclick={args.onclick} />
-      <ActionButton label="Practice" variant="practice" onclick={args.onclick} />
-      <ActionButton label="Quick" variant="quick-practice" onclick={args.onclick} />
-      <ActionButton label="Learn" variant="learn" onclick={args.onclick} />
-    </div>
-  {/snippet}
-</Story>
-
-<!-- All Sizes Row -->
-<Story name="All Sizes">
-  {#snippet children(args)}
-    <div style="display: flex; gap: 8px; align-items: center;">
-      <ActionButton label="Small" variant="primary" size="sm" onclick={args.onclick} />
-      <ActionButton label="Medium" variant="primary" size="md" onclick={args.onclick} />
-      <ActionButton label="Large" variant="primary" size="lg" onclick={args.onclick} />
-    </div>
-  {/snippet}
-</Story>
+<!-- All variants can be viewed via the individual stories above (Primary, Secondary, Success, Danger, Practice, Quick Practice, Learn) -->

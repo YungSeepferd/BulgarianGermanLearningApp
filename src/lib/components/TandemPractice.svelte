@@ -48,6 +48,8 @@
     averageResponseTime: 0
   });
   let startTime = $state(0);
+  let loadingTimeout: ReturnType<typeof setTimeout> | null = null;
+  let modeSwitchTimeout: ReturnType<typeof setTimeout> | null = null;
   // Enhanced animation functions
   function feedbackAnimation(node: HTMLElement) {
     return fly(node, {
@@ -99,7 +101,12 @@
       hasError = false;
 
       // Simulate loading delay for better UX
-      await new Promise(resolve => setTimeout(resolve, 300));
+      await new Promise(resolve => {
+        loadingTimeout = setTimeout(() => {
+          loadingTimeout = null;
+          resolve(undefined);
+        }, UI_FEEDBACK_DELAY_MS);
+      });
 
       await vocabularyDb.initialize();
       const items = vocabularyDb.getRandomVocabulary(1);
@@ -250,9 +257,9 @@
   }
 
   function getStreakEmoji(streak: number): string {
-    if (streak >= 10) return '🔥';
-    if (streak >= 5) return '⭐';
-    if (streak >= 3) return '✨';
+    if (streak >= STREAK_FIRE_THRESHOLD) return '🔥';
+    if (streak >= STREAK_STAR_THRESHOLD) return '⭐';
+    if (streak >= STREAK_SPARKLE_THRESHOLD) return '✨';
     return '';
   }
 
@@ -323,7 +330,8 @@
       // Set the item first, then change mode to ensure proper rendering
       currentItem = item;
       // Use a small timeout to ensure the mode change triggers re-render
-      setTimeout(() => {
+      modeSwitchTimeout = setTimeout(() => {
+        modeSwitchTimeout = null;
         try {
           mode = 'practice';
           resetAnswer();
@@ -332,7 +340,7 @@
           hasError = true;
           errorMessage = t('errors.switch_mode_failed');
         }
-      }, 10);
+      }, MODE_TRANSITION_DELAY_MS);
     } catch (err) {
       handleError(err, 'Failed to select item');
       hasError = true;
@@ -340,7 +348,27 @@
     }
   }
 
+  // Cleanup timeouts on component unmount
+  $effect(() => {
+    return () => {
+      if (loadingTimeout) {
+        clearTimeout(loadingTimeout);
+      }
+      if (modeSwitchTimeout) {
+        clearTimeout(modeSwitchTimeout);
+      }
+    };
+  });
+
   import { formatGermanTerm } from '$lib/utils/formatGerman';
+  import {
+    STREAK_FIRE_THRESHOLD,
+    STREAK_STAR_THRESHOLD,
+    STREAK_SPARKLE_THRESHOLD,
+    UI_FEEDBACK_DELAY_MS,
+    MODE_TRANSITION_DELAY_MS
+  } from '$lib/constants/app';
+
   function getQuestionText() {
     if (!currentItem) return '';
     return appState.languageMode === 'DE_BG' ? formatGermanTerm(currentItem) : currentItem.bulgarian;

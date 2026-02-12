@@ -191,7 +191,9 @@ export class ExerciseService {
   /**
    * Calculate statistics from exercise results
    */
-  static calculateStats(results: any[]): {
+  static calculateStats(
+    results: Array<{ isCorrect?: boolean; correct?: boolean }>
+  ): {
     totalAttempts: number;
     correctAnswers: number;
     incorrectAnswers: number;
@@ -202,7 +204,7 @@ export class ExerciseService {
     }
 
     const totalAttempts = results.length;
-    const correctAnswers = results.filter((r) => r.isCorrect || r.correct).length;
+    const correctAnswers = results.filter((r) => r.isCorrect === true || r.correct === true).length;
     const incorrectAnswers = totalAttempts - correctAnswers;
     const accuracy = (correctAnswers / totalAttempts) * 100;
 

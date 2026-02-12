@@ -44,34 +44,4 @@
 <!-- Full Mastery (100%) -->
 <Story name="Full Mastery" args={{ mastery: 100 }} />
 
-<!-- All Levels Demo -->
-<Story name="All Levels">
-  {#snippet children(args)}
-    <div style="display: flex; flex-direction: column; gap: 12px; padding: 16px;">
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <span style="width: 80px; font-size: 14px;">0%</span>
-        <MasteryGauge mastery={0} />
-      </div>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <span style="width: 80px; font-size: 14px;">20%</span>
-        <MasteryGauge mastery={20} />
-      </div>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <span style="width: 80px; font-size: 14px;">40%</span>
-        <MasteryGauge mastery={40} />
-      </div>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <span style="width: 80px; font-size: 14px;">60%</span>
-        <MasteryGauge mastery={60} />
-      </div>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <span style="width: 80px; font-size: 14px;">80%</span>
-        <MasteryGauge mastery={80} />
-      </div>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <span style="width: 80px; font-size: 14px;">100%</span>
-        <MasteryGauge mastery={100} />
-      </div>
-    </div>
-  {/snippet}
-</Story>
+<!-- Note: All Levels demo removed due to Storybook addon-svelte-csf plugin compatibility. Use individual stories above to see each level. -->

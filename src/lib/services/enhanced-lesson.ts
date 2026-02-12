@@ -297,7 +297,11 @@ class EnhancedLessonService {
     return 'A1';
   }
 
-  private normalizeVocabulary(items: VocabularyItem[]): VocabularyItem[] {
+  private normalizeVocabulary(items: VocabularyItem[]): (VocabularyItem & {
+    isCommon: boolean;
+    isVerified: boolean;
+    learningPhase: number;
+  })[] {
     return items.map(item => ({
       ...item,
       isCommon: item.isCommon ?? false,

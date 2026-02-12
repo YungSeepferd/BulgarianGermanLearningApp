@@ -1,6 +1,5 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
-  import { appState } from '$lib/state/app-state';
   import type { VocabularyItem } from '$lib/types/vocabulary';
   import { APP_ICONS, PRACTICE_ICONS } from '$lib/constants/icons';
   import ActionButton from '$lib/components/ui/ActionButton.svelte';
@@ -9,7 +8,7 @@
   let {
     item,
     variant = 'grid', // 'grid' | 'list' | 'flashcard' | 'lesson'
-    direction = appState.languageMode === 'DE_BG' ? 'DE->BG' : 'BG->DE',
+    direction = 'DE->BG', // Direction is now required - passed from parent or Storybook
     isSelected = false,
     isFlipped = false,
     showMetadata = true,
@@ -36,11 +35,16 @@
     onOpenDetail?: (item: VocabularyItem) => void;
   } = $props();
 
-  // Derived state
+  // Derived state - direction prop controls display direction
   const isDE_BG = $derived(direction === 'DE->BG');
   const sourceText = $derived(isDE_BG ? item.german : item.bulgarian);
   const targetText = $derived(isDE_BG ? item.bulgarian : item.german);
   const arrowDirection = $derived(isDE_BG ? '→' : '←');
+  const primaryCategory = $derived(item.categories?.[0]);
+  const culturalNote = $derived.by(() => {
+    const notes = (item as { culturalNotes?: string | string[] }).culturalNotes;
+    return Array.isArray(notes) ? notes[0] : notes;
+  });
 
   // Card class based on variant
   const cardClass = $derived.by(() => {
@@ -99,7 +103,7 @@
       }
     } as const;
 
-    const labels = appState.languageMode === 'DE_BG' ? categoryLabels.de : categoryLabels.bg;
+    const labels = isDE_BG ? categoryLabels.de : categoryLabels.bg;
     return labels[category as keyof typeof labels] ?? category;
   }
 
@@ -135,7 +139,7 @@
       }
     } as const;
 
-    const lang = appState.languageMode === 'DE_BG' ? 'de' : 'bg';
+    const lang = isDE_BG ? 'de' : 'bg';
     return labels[lang][pos as keyof typeof labels['de']] ?? pos;
   }
 
@@ -187,8 +191,10 @@
     class={cardClass}
     transition:fade={{ duration: 200 }}
   >
-    <!-- Difficulty Badge - Always visible -->
-    <span class="difficulty-badge">{item.cefrLevel}</span>
+    <!-- CEFR Level Badge - Top right with color coding -->
+    {#if item.cefrLevel}
+      <span class="cefr-badge" data-level={item.cefrLevel}>{item.cefrLevel}</span>
+    {/if}
 
     <div
       class="card-main-area"
@@ -201,7 +207,7 @@
       {#if showTags}
         <div class="card-tags">
           <span class="tag cerf-tag">{item.cefrLevel}</span>
-          <span class="tag category-tag">{getCategoryLabel(item.categories[0])}</span>
+          <span class="tag category-tag">{getCategoryLabel(primaryCategory)}</span>
           <span class="tag pos-tag">{getPartOfSpeechLabel(item.partOfSpeech)}</span>
         </div>
       {/if}
@@ -230,26 +236,26 @@
     {#if showActions}
       <div class="card-actions">
         <ActionButton
-          label={appState.languageMode === 'DE_BG' ? 'Üben' : 'Упражнявай'}
+          label={isDE_BG ? 'Üben' : 'Упражнявай'}
           variant="practice"
           size="sm"
           icon={PRACTICE_ICONS.STANDARD}
           onclick={handlePracticeClick}
         />
         <ActionButton
-          label={appState.languageMode === 'DE_BG' ? 'Lernen' : 'Научи'}
+          label={isDE_BG ? 'Lernen' : 'Научи'}
           variant="learn"
           size="sm"
           icon={PRACTICE_ICONS.LEARN}
           onclick={() => onOpenDetail(item)}
-          aria-label={appState.languageMode === 'DE_BG' ? `Lernen ${item.german}` : `Научи ${item.german}`}
+          aria-label={isDE_BG ? `Lernen ${item.german}` : `Научи ${item.german}`}
         />
         <label class="checkbox-label">
           <input
             type="checkbox"
             checked={isSelected}
             onchange={handleToggleSelect}
-            aria-label={appState.languageMode === 'DE_BG' ? 'Zum Üben auswählen' : 'Избери за упражнение'}
+            aria-label={isDE_BG ? 'Zum Üben auswählen' : 'Избери за упражнение'}
           />
           <span></span>
         </label>
@@ -267,8 +273,10 @@
     tabindex="0"
     onkeydown={handleCardKeydown}
   >
-    <!-- Difficulty Badge - Always visible -->
-    <span class="difficulty-badge">{item.cefrLevel}</span>
+    <!-- CEFR Level Badge - Top right with color coding -->
+    {#if item.cefrLevel}
+      <span class="cefr-badge" data-level={item.cefrLevel}>{item.cefrLevel}</span>
+    {/if}
     <div class="item-header">
       <div class="item-head-left">
         <label class="item-select">
@@ -277,7 +285,7 @@
             class="item-checkbox"
             checked={isSelected}
             onchange={handleToggleSelect}
-            aria-label={appState.languageMode === 'DE_BG' ? 'Zum Üben auswählen' : 'Избери за упражнение'}
+            aria-label={isDE_BG ? 'Zum Üben auswählen' : 'Избери за упражнение'}
           />
           <span class="direction-pill">
             {direction === 'DE->BG' ? 'Deutsch → Bulgarisch' : 'Български → Немски'}
@@ -299,25 +307,25 @@
       {#if showActions}
         <div class="action-buttons">
           <ActionButton
-            label={appState.languageMode === 'DE_BG' ? 'Üben' : 'Упражнявай'}
+            label={isDE_BG ? 'Üben' : 'Упражнявай'}
             variant="practice"
             size="sm"
             icon={PRACTICE_ICONS.STANDARD}
             onclick={handlePracticeClick}
           />
           <ActionButton
-            label={appState.languageMode === 'DE_BG' ? 'Lernen' : 'Научи'}
+            label={isDE_BG ? 'Lernen' : 'Научи'}
             variant="learn"
             size="sm"
             icon={PRACTICE_ICONS.LEARN}
             onclick={() => onOpenDetail(item)}
-            aria-label={appState.languageMode === 'DE_BG' ? `Lernen ${item.german}` : `Научи ${item.german}`}
+            aria-label={isDE_BG ? `Lernen ${item.german}` : `Научи ${item.german}`}
           />
           <button
             class="quick-practice-btn"
             onclick={handleQuickPracticeClick}
-            aria-label={appState.languageMode === 'DE_BG' ? 'Sofort üben' : 'Бързо упражнение'}
-            title={appState.languageMode === 'DE_BG' ? 'Sofort üben' : 'Бързо упражнение'}
+            aria-label={isDE_BG ? 'Sofort üben' : 'Бързо упражнение'}
+            title={isDE_BG ? 'Sofort üben' : 'Бързо упражнение'}
           >
             <span>{PRACTICE_ICONS.QUICK}</span>
           </button>
@@ -332,7 +340,7 @@
           {#if item.cefrLevel}
             <span class="difficulty-tag">{item.cefrLevel}</span>
           {/if}
-          <span class="category-tag">{getCategoryLabel(item.categories[0])}</span>
+          <span class="category-tag">{getCategoryLabel(primaryCategory)}</span>
           {#each item.tags || [] as tag}
             <span class="category-tag">{tag}</span>
           {/each}
@@ -350,7 +358,7 @@
     <!-- Examples preview -->
     {#if showMetadata && item.examples && item.examples.length > 0}
       <div class="examples-preview">
-        <div class="examples-header">{appState.languageMode === 'DE_BG' ? 'Beispiele' : 'Примери'}</div>
+        <div class="examples-header">{isDE_BG ? 'Beispiele' : 'Примери'}</div>
         {#each item.examples.slice(0, 2) as example}
           <div class="example-item">
             <span class="example-text">{isDE_BG ? example.german : example.bulgarian}</span>
@@ -367,21 +375,21 @@
       class="flashcard-inner" 
       onclick={handleFlipClick}
       onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleFlipClick(); } }}
-      aria-label={isFlipped ? (appState.languageMode === 'DE_BG' ? 'Zur Vorderseite umdrehen' : 'Обърни към предната страна') : (appState.languageMode === 'DE_BG' ? 'Zur Rückseite umdrehen' : 'Обърни към задната страна')}
+      aria-label={isFlipped ? (isDE_BG ? 'Zur Vorderseite umdrehen' : 'Обърни към предната страна') : (isDE_BG ? 'Zur Rückseite umdrehen' : 'Обърни към задната страна')}
     >
       {#if !isFlipped}
         <!-- Front side (question) -->
         <div class="flashcard-front" transition:fade={{ duration: 300 }}>
-          <div class="flashcard-label">{appState.languageMode === 'DE_BG' ? 'Frage' : 'Въпрос'}</div>
+          <div class="flashcard-label">{isDE_BG ? 'Frage' : 'Въпрос'}</div>
           <div class="flashcard-content">
             <div class="flashcard-text">{sourceText}</div>
-            <div class="flashcard-hint">{appState.languageMode === 'DE_BG' ? 'Klicken zum Umdrehen' : 'Кликнете за преглед'}</div>
+            <div class="flashcard-hint">{isDE_BG ? 'Klicken zum Umdrehen' : 'Кликнете за преглед'}</div>
           </div>
         </div>
       {:else}
         <!-- Back side (answer) -->
         <div class="flashcard-back" transition:fade={{ duration: 300 }}>
-          <div class="flashcard-label">{appState.languageMode === 'DE_BG' ? 'Antwort' : 'Отговор'}</div>
+          <div class="flashcard-label">{isDE_BG ? 'Antwort' : 'Отговор'}</div>
           <div class="flashcard-content">
             <div class="flashcard-text">{targetText}</div>
 
@@ -389,24 +397,24 @@
             {#if showMetadata}
               {#if item.mnemonics && item.mnemonics.length > 0}
                 <div class="flashcard-section">
-                  <div class="flashcard-section-title">{APP_ICONS.MNEMONIC} {appState.languageMode === 'DE_BG' ? 'Eselsbrücke' : 'Мнемоника'}</div>
+                  <div class="flashcard-section-title">{APP_ICONS.MNEMONIC} {isDE_BG ? 'Eselsbrücke' : 'Мнемоника'}</div>
                   <div class="flashcard-section-content">{item.mnemonics[0]}</div>
                 </div>
               {/if}
 
               {#if item.examples && item.examples.length > 0}
                 <div class="flashcard-section">
-                  <div class="flashcard-section-title">{APP_ICONS.EXAMPLE} {appState.languageMode === 'DE_BG' ? 'Beispiel' : 'Пример'}</div>
+                  <div class="flashcard-section-title">{APP_ICONS.EXAMPLE} {isDE_BG ? 'Beispiel' : 'Пример'}</div>
                   <div class="flashcard-section-content">
                     {isDE_BG ? item.examples[0]?.german : item.examples[0]?.bulgarian}
                   </div>
                 </div>
               {/if}
 
-              {#if item.culturalNotes && item.culturalNotes.length > 0}
+              {#if culturalNote}
                 <div class="flashcard-section">
-                  <div class="flashcard-section-title">{APP_ICONS.CULTURAL_NOTE} {appState.languageMode === 'DE_BG' ? 'Kulturelle Notiz' : 'Културна бележка'}</div>
-                  <div class="flashcard-section-content">{item.culturalNotes[0]}</div>
+                  <div class="flashcard-section-title">{APP_ICONS.CULTURAL_NOTE} {isDE_BG ? 'Kulturelle Notiz' : 'Културна бележка'}</div>
+                  <div class="flashcard-section-content">{culturalNote}</div>
                 </div>
               {/if}
             {/if}
@@ -418,19 +426,19 @@
     {#if showActions}
       <div class="flashcard-actions">
         <ActionButton
-          label={appState.languageMode === 'DE_BG' ? 'Leicht' : 'Лесно'}
+          label={isDE_BG ? 'Leicht' : 'Лесно'}
           variant="success"
           size="sm"
           onclick={() => onQuickPractice(item)}
         />
         <ActionButton
-          label={appState.languageMode === 'DE_BG' ? 'Normal' : 'Нормално'}
+          label={isDE_BG ? 'Normal' : 'Нормално'}
           variant="primary"
           size="sm"
           onclick={() => onPractice(item)}
         />
         <ActionButton
-          label={appState.languageMode === 'DE_BG' ? 'Schwer' : 'Трудно'}
+          label={isDE_BG ? 'Schwer' : 'Трудно'}
           variant="danger"
           size="sm"
           onclick={() => onPractice(item)}
@@ -475,7 +483,7 @@
     {#if showActions}
       <div class="lesson-actions">
         <ActionButton
-          label={appState.languageMode === 'DE_BG' ? 'Lernen' : 'Учи'}
+          label={isDE_BG ? 'Lernen' : 'Учи'}
           variant="learn"
           size="md"
           icon={PRACTICE_ICONS.LEARN}
@@ -547,21 +555,57 @@
     font-weight: 500;
   }
 
-  .difficulty-badge {
+  /* CEFR Level Badge - Color coded by level */
+  .cefr-badge {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-    background-color: #dbeafe;
-    color: #0c4a6e;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
+    padding: 0.375rem 0.75rem;
+    border-radius: 6px;
     font-size: 0.75rem;
-    font-weight: 600;
-    border: 1px solid #2563eb;
+    font-weight: 700;
+    letter-spacing: 0.025em;
     z-index: 10;
+    text-transform: uppercase;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   }
 
-  .variant-list .difficulty-badge {
+  /* A1 - Beginner - Blue */
+  .cefr-badge[data-level="A1"] {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    color: #1e40af;
+    border: 1px solid #3b82f6;
+  }
+
+  /* A2 - Elementary - Purple */
+  .cefr-badge[data-level="A2"] {
+    background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%);
+    color: #6b21a8;
+    border: 1px solid #9333ea;
+  }
+
+  /* B1 - Intermediate - Yellow */
+  .cefr-badge[data-level="B1"] {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    color: #92400e;
+    border: 1px solid #f59e0b;
+  }
+
+  /* B2 - Upper Intermediate - Orange */
+  .cefr-badge[data-level="B2"] {
+    background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+    color: #9a3412;
+    border: 1px solid #f97316;
+  }
+
+  /* C1 - Advanced - Red */
+  .cefr-badge[data-level="C1"] {
+    background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
+    color: #991b1b;
+    border: 1px solid #ef4444;
+  }
+
+  .variant-list .cefr-badge {
     position: static;
     margin-left: 0.5rem;
   }

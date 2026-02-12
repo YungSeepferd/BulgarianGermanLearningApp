@@ -6,42 +6,42 @@
  */
 
 export class AppError extends Error {
-    constructor(message: string, public context?: any) {
+    constructor(message: string, public context?: unknown) {
         super(message);
         this.name = 'AppError';
     }
 }
 
 export class ProgressError extends AppError {
-    constructor(message: string, context?: any) {
+    constructor(message: string, context?: unknown) {
         super(message, context);
         this.name = 'ProgressError';
     }
 }
 
 export class StateError extends AppError {
-    constructor(message: string, context?: any) {
+    constructor(message: string, context?: unknown) {
         super(message, context);
         this.name = 'StateError';
     }
 }
 
 export class ServiceError extends AppError {
-    constructor(message: string, context?: any) {
+    constructor(message: string, context?: unknown) {
         super(message, context);
         this.name = 'ServiceError';
     }
 }
 
 export class DataError extends AppError {
-    constructor(message: string, context?: any) {
+    constructor(message: string, context?: unknown) {
         super(message, context);
         this.name = 'DataError';
     }
 }
 
 export class ValidationError extends AppError {
-    constructor(message: string, context?: any) {
+    constructor(message: string, context?: unknown) {
         super(message, context);
         this.name = 'ValidationError';
     }
@@ -58,13 +58,29 @@ export class StorageError extends AppError {
  * Error handler utility for consistent error handling
  */
 export class ErrorHandler {
+    private static toastHandler: ((context: string, error: unknown) => void) | null = null;
+
     /**
-     * Handle an error by logging it and emitting an error event
+     * Register the toast handler for user-facing notifications
+     * This is called once during app initialization to avoid circular dependencies
+     */
+    static registerToastHandler(handler: (context: string, error: unknown) => void): void {
+        ErrorHandler.toastHandler = handler;
+    }
+
+    /**
+     * Handle an error by logging it, emitting an error event, and showing toast notification
      * @param error The error to handle
      * @param context Additional context about the error
      * @param eventBus Optional event bus for emitting error events
+     * @param showToast Whether to show a toast notification (default: true for user-facing errors)
      */
-    static handleError(error: unknown, context?: string, eventBus?: { emit: (type: string, data: any) => Promise<void> }): void {
+    static handleError(
+        error: unknown,
+        context?: string,
+        eventBus?: { emit: (type: string, data: any) => Promise<void> },
+        showToast: boolean = true
+    ): void {
         const err = error instanceof Error ? error : new Error(String(error));
         // Log the error
         console.error(`[${err.name}] ${context || 'Error'}:`, err.message, err.stack);
@@ -79,5 +95,17 @@ export class ErrorHandler {
                 console.error('Failed to emit error event:', emitError);
             });
         }
+
+        // Show toast notification for user-facing errors
+        if (showToast && ErrorHandler.toastHandler) {
+            ErrorHandler.toastHandler(context || 'Error', error);
+        }
+    }
+
+    /**
+     * Handle an error silently (no toast) - for background operations
+     */
+    static handleErrorSilent(error: unknown, context?: string): void {
+        ErrorHandler.handleError(error, context, undefined, false);
     }
 }

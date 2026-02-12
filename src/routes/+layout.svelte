@@ -1,12 +1,33 @@
 <script lang="ts">
   import Navigation from '$lib/components/Navigation.svelte';
+  import ErrorBoundary from '$lib/components/ErrorBoundary.svelte';
+  import Toaster from '$lib/components/ui/Toaster.svelte';
   import '$lib/styles/tokens.css';
   // Layout shell: no page-level logic needed here
   import { initializeVocabularyRepository } from '$lib/services/di-container';
   import { initializeAppState } from '$lib/state/app-state';
   import { ErrorHandler } from '$lib/services/errors';
+  import { showError } from '$lib/services/toast.svelte';
+  import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
 
   let { children } = $props();
+
+  // Register toast handler for error notifications
+  ErrorHandler.registerToastHandler((context, error) => {
+    const message = error instanceof Error ? error.message : String(error);
+    showError(message, context);
+  });
+
+  // Create QueryClient with default options
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: 1000 * 60 * 5, // 5 minutes
+        refetchOnWindowFocus: false,
+        retry: 1
+      }
+    }
+  });
 
   // Initialize shared data on client startup
   $effect(() => {
@@ -21,18 +42,30 @@
     })();
     return () => {};
   });
+
+  // Handle errors from error boundary
+  function handleBoundaryError(error: Error) {
+    ErrorHandler.handleError(error, 'ErrorBoundary');
+  }
 </script>
 
 <svelte:head>
   <title>Bulgarian-German Learning App</title>
 </svelte:head>
 
-<div class="app-layout">
-  <Navigation />
-  <main>
-    {@render children()}
-  </main>
-</div>
+<QueryClientProvider client={queryClient}>
+  <ErrorBoundary onError={handleBoundaryError}>
+    <div class="app-layout">
+      <Navigation />
+      <main>
+        {@render children()}
+      </main>
+    </div>
+  </ErrorBoundary>
+</QueryClientProvider>
+
+<!-- Global toast notifications -->
+<Toaster />
 
 
 <style>

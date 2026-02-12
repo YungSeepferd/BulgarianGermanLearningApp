@@ -11,11 +11,12 @@
   const resolvedMnemonic = $derived(item.mnemonic?.text || '');
 
   let isEditing = $state(false);
-  let mnemonicText = $state(resolvedMnemonic);
+  let mnemonicText = $state('');
   let error = $state<string | null>(null);
 
   // Update local state when item changes (if not editing)
   $effect(() => {
+    resolvedMnemonic; // Track dependency
     if (!isEditing) {
       mnemonicText = resolvedMnemonic;
     }

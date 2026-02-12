@@ -41,7 +41,7 @@ export class Debug {
      * @param message The message to log
      * @param data Additional data to log
      */
-    static log(context: string, message: string, data?: any): void {
+    static log(context: string, message: string, data?: unknown): void {
         if (!Debug.enabled) return;
 
         if (data !== undefined) {
@@ -71,7 +71,7 @@ export class Debug {
      * @param message The warning message
      * @param data Additional data to log
      */
-    static warn(context: string, message: string, data?: any): void {
+    static warn(context: string, message: string, data?: unknown): void {
         if (data !== undefined) {
             console.warn(`${Debug.PREFIX} [${context}] ${message}`, data);
         } else {

@@ -29,8 +29,9 @@ const VocabularyItemBaseSchema = z.object({
     z.date(),
     z.string().datetime().transform(str => new Date(str))
   ]).default(new Date()).transform(val => val instanceof Date ? val : new Date(val)),
-  isCommon: z.boolean().default(false),
-  isVerified: z.boolean().default(false)
+  isCommon: z.boolean().optional(),
+  isVerified: z.boolean().optional(),
+  learningPhase: z.number().optional()
 });
 
 // Vocabulary reference schema

@@ -8,14 +8,22 @@
   let isOffline = $state(false);
   let isForvo = $derived(audioUrl?.includes('forvo.com'));
 
+  // Named handler functions for proper cleanup
+  function handleOnline() {
+    isOffline = false;
+  }
+  function handleOffline() {
+    isOffline = true;
+  }
+
   onMount(() => {
     isOffline = !navigator.onLine;
-    window.addEventListener('online', () => isOffline = false);
-    window.addEventListener('offline', () => isOffline = true);
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
 
     return () => {
-      window.removeEventListener('online', () => isOffline = false);
-      window.removeEventListener('offline', () => isOffline = true);
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
     };
   });
 

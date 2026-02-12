@@ -12,6 +12,10 @@
   import { Button } from '$lib/components/ui/button';
   import type { LessonType, LessonDifficulty } from '$lib/schemas/lesson';
   import type { VocabularyCategory, PartOfSpeech } from '$lib/schemas/vocabulary';
+  import {
+    DEFAULT_LESSON_SIZE,
+    MODAL_CLOSE_DELAY_MS
+  } from '$lib/constants';
 
   // Simple error handler
   function handleError(error: unknown, context: string) {
@@ -26,6 +30,7 @@
   let error = $state<string | null>(null);
   let successMessage = $state<string | null>(null);
   let hasError = $state(false);
+  let successTimeout: ReturnType<typeof setTimeout> | null = null;
 
   // Lesson generation parameters
   let lessonParams = $state<{
@@ -48,7 +53,7 @@
     category: '',
     partOfSpeech: '',
     conceptType: '',
-    limit: 10,
+    limit: DEFAULT_LESSON_SIZE,
     includePractice: true,
     includeComparison: false,
     includeReview: false
@@ -71,14 +76,28 @@
       category: '',
       partOfSpeech: '',
       conceptType: '',
-      limit: 10,
+      limit: DEFAULT_LESSON_SIZE,
       includePractice: true,
       includeComparison: false,
       includeReview: false
     };
     error = null;
     successMessage = null;
+    // Clear any pending timeout
+    if (successTimeout) {
+      clearTimeout(successTimeout);
+      successTimeout = null;
+    }
   }
+
+  // Cleanup timeout on component unmount
+  $effect(() => {
+    return () => {
+      if (successTimeout) {
+        clearTimeout(successTimeout);
+      }
+    };
+  });
 
   function closeModal() {
     resetForm();
@@ -180,10 +199,11 @@
       // Show success message
       successMessage = t('lesson.generator.success_message');
 
-      // Close modal after 2 seconds
-      setTimeout(() => {
+      // Close modal after delay
+      successTimeout = setTimeout(() => {
+        successTimeout = null;
         closeModal();
-      }, 2000);
+      }, MODAL_CLOSE_DELAY_MS);
 
     } catch (err) {
       handleError(err, 'Failed to generate lesson');

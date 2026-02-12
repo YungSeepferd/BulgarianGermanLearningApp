@@ -1,7 +1,15 @@
 <script lang="ts">
   import { spring } from 'svelte/motion';
+  import { Motion } from 'svelte-motion';
   import type { VocabularyItem } from '$lib/types/vocabulary';
   import { appState } from '$lib/state/app-state';
+  import {
+    SWIPE_THRESHOLD_PX,
+    CARD_EXIT_DISTANCE_PX,
+    CARD_SWIPE_ROTATION_DEG,
+    TAP_MAX_DRAG_PX
+  } from '$lib/constants/learning';
+  import { CARD_SWIPE_DURATION_MS } from '$lib/constants/app';
 
   // Props
   let {
@@ -23,7 +31,25 @@
   let isDragging = $state(false);
   let startX = $state(0);
   let startY = $state(0);
-  let cardElement: HTMLElement;
+  let cardElement: HTMLButtonElement;
+  let animationTimeout: ReturnType<typeof setTimeout> | null = null;
+
+  // Add click handler via effect after element is bound
+  $effect(() => {
+    if (!cardElement) return;
+    
+    const handleClick = (_e: MouseEvent) => {
+      if (!isDragging && isActive) {
+        handleTap();
+      }
+    };
+    
+    cardElement.addEventListener('click', handleClick);
+    
+    return () => {
+      cardElement.removeEventListener('click', handleClick);
+    };
+  });
 
   // Spring animation for smooth movement
   const position = spring({ x: 0, y: 0 }, {
@@ -73,7 +99,11 @@
     startX = e.clientX;
     startY = e.clientY;
     
-    cardElement?.setPointerCapture(e.pointerId);
+    try {
+      cardElement?.setPointerCapture(e.pointerId);
+    } catch (err) {
+      // Ignore setPointerCapture errors (can happen with simulated events)
+    }
   }
 
   function handlePointerMove(e: PointerEvent) {
@@ -90,12 +120,16 @@
     if (!isDragging) return;
     
     isDragging = false;
-    cardElement?.releasePointerCapture(e.pointerId);
+    
+    try {
+      cardElement?.releasePointerCapture(e.pointerId);
+    } catch (err) {
+      // Ignore releasePointerCapture errors (can happen with simulated events)
+    }
     
     const deltaX = e.clientX - startX;
-    const threshold = 100;
-    
-    if (Math.abs(deltaX) > threshold) {
+
+    if (Math.abs(deltaX) > SWIPE_THRESHOLD_PX) {
       // Swipe detected
       if (deltaX > 0) {
         // Swipe right - "I know this"
@@ -108,19 +142,25 @@
       // Return to center (tap detected if minimal movement)
       position.set({ x: 0, y: 0 });
       rotation.set(0);
-      
-      if (Math.abs(deltaX) < 10 && Math.abs(e.clientY - startY) < 10) {
+
+      if (Math.abs(deltaX) < TAP_MAX_DRAG_PX && Math.abs(e.clientY - startY) < TAP_MAX_DRAG_PX) {
         handleTap();
       }
     }
   }
 
   function animateOffScreen(direction: 'left' | 'right') {
-    const exitX = direction === 'right' ? 500 : -500;
+    const exitX = direction === 'right' ? CARD_EXIT_DISTANCE_PX : -CARD_EXIT_DISTANCE_PX;
     position.set({ x: exitX, y: 0 });
-    rotation.set(direction === 'right' ? 30 : -30);
-    
-    setTimeout(() => {
+    rotation.set(direction === 'right' ? CARD_SWIPE_ROTATION_DEG : -CARD_SWIPE_ROTATION_DEG);
+
+    // Clear any existing timeout
+    if (animationTimeout) {
+      clearTimeout(animationTimeout);
+    }
+
+    animationTimeout = setTimeout(() => {
+      animationTimeout = null;
       if (direction === 'right') {
         onSwipeRight();
       } else {
@@ -130,8 +170,17 @@
       position.set({ x: 0, y: 0 }, { hard: true });
       rotation.set(0, { hard: true });
       isFlipped = false;
-    }, 200);
+    }, CARD_SWIPE_DURATION_MS);
   }
+
+  // Cleanup timeout on unmount
+  $effect(() => {
+    return () => {
+      if (animationTimeout) {
+        clearTimeout(animationTimeout);
+      }
+    };
+  });
 
   function handleTap() {
     isFlipped = !isFlipped;
@@ -152,14 +201,14 @@
   }
 </script>
 
-<div
+<button
   bind:this={cardElement}
   class="swipeable-card"
   class:active={isActive}
   class:flipped={isFlipped}
   class:dragging={isDragging}
   style="transform: translateX({$position.x}px) translateY({$position.y}px) rotate({$rotation}deg)"
-  role="button"
+  type="button"
   tabindex={isActive ? 0 : -1}
   onpointerdown={handlePointerDown}
   onpointermove={handlePointerMove}
@@ -182,71 +231,86 @@
   </div>
 
   <!-- Card Front -->
-  <div class="card-face front">
-    <!-- Header badges -->
-    <div class="card-header">
-      {#if item.cefrLevel}
-        <span class="badge cefr">{item.cefrLevel}</span>
-      {/if}
-      {#if getPartOfSpeechDisplay(item.partOfSpeech)}
-        <span class="badge pos">{getPartOfSpeechDisplay(item.partOfSpeech)}</span>
-      {/if}
-    </div>
+  <Motion
+    let:motion
+    animate={{ rotateY: isFlipped ? 180 : 0 }}
+    transition={{ duration: 0.4, ease: 'easeInOut' }}
+    style={{ position: 'absolute', inset: 0, backfaceVisibility: 'hidden' }}
+  >
+    <div use:motion class="card-face front">
+      <!-- Header badges -->
+      <div class="card-header">
+        {#if item.cefrLevel}
+          <span class="badge cefr">{item.cefrLevel}</span>
+        {/if}
+        {#if getPartOfSpeechDisplay(item.partOfSpeech)}
+          <span class="badge pos">{getPartOfSpeechDisplay(item.partOfSpeech)}</span>
+        {/if}
+      </div>
 
-    <!-- Main word -->
-    <div class="card-content">
-      <h2 class="source-word">{sourceText}</h2>
-      <p class="tap-hint">Tap to reveal</p>
-    </div>
+      <!-- Main word -->
+      <div class="card-content">
+        <h2 class="source-word">{sourceText}</h2>
+        <p class="tap-hint">Tap to reveal</p>
+      </div>
 
-    <!-- Category footer -->
-    <div class="card-footer">
-      {#if item.categories && item.categories.length > 0}
-        <span class="category">{getCategoryDisplay(item.categories)}</span>
-      {/if}
-    </div>
-  </div>
-
-  <!-- Card Back (flipped) -->
-  <div class="card-face back">
-    <!-- Header badges -->
-    <div class="card-header">
-      {#if item.cefrLevel}
-        <span class="badge cefr">{item.cefrLevel}</span>
-      {/if}
-      {#if getPartOfSpeechDisplay(item.partOfSpeech)}
-        <span class="badge pos">{getPartOfSpeechDisplay(item.partOfSpeech)}</span>
-      {/if}
-    </div>
-
-    <!-- Content -->
-    <div class="card-content">
-      <p class="source-small">{sourceText}</p>
-      <h2 class="target-word">{targetText}</h2>
-      
-      <!-- Example sentence if available -->
-      {#if item.examples && item.examples.length > 0 && item.examples[0]}
-        <div class="example-section">
-          <p class="example-german">{item.examples[0].german}</p>
-          <p class="example-bulgarian">{item.examples[0].bulgarian}</p>
-        </div>
-      {/if}
-
-      <!-- Additional info -->
-      {#if item.notes}
-        <p class="notes">{item.notes}</p>
-      {/if}
-    </div>
-
-    <!-- Swipe instructions -->
-    <div class="card-footer">
-      <div class="swipe-hint">
-        <span class="hint-left">← Practice more</span>
-        <span class="hint-right">Got it! →</span>
+      <!-- Category footer -->
+      <div class="card-footer">
+        {#if item.categories && item.categories.length > 0}
+          <span class="category">{getCategoryDisplay(item.categories)}</span>
+        {/if}
       </div>
     </div>
-  </div>
-</div>
+  </Motion>
+
+  <!-- Card Back (flipped) -->
+  <Motion
+    let:motion
+    initial={{ rotateY: -180 }}
+    animate={{ rotateY: isFlipped ? 0 : -180 }}
+    transition={{ duration: 0.4, ease: 'easeInOut' }}
+    style={{ position: 'absolute', inset: 0, backfaceVisibility: 'hidden' }}
+  >
+    <div use:motion class="card-face back">
+      <!-- Header badges -->
+      <div class="card-header">
+        {#if item.cefrLevel}
+          <span class="badge cefr">{item.cefrLevel}</span>
+        {/if}
+        {#if getPartOfSpeechDisplay(item.partOfSpeech)}
+          <span class="badge pos">{getPartOfSpeechDisplay(item.partOfSpeech)}</span>
+        {/if}
+      </div>
+
+      <!-- Content -->
+      <div class="card-content">
+        <p class="source-small">{sourceText}</p>
+        <h2 class="target-word">{targetText}</h2>
+
+        <!-- Example sentence if available -->
+        {#if item.examples && item.examples.length > 0 && item.examples[0]}
+          <div class="example-section">
+            <p class="example-german">{item.examples[0].german}</p>
+            <p class="example-bulgarian">{item.examples[0].bulgarian}</p>
+          </div>
+        {/if}
+
+        <!-- Additional info -->
+        {#if item.notes}
+          <p class="notes">{item.notes}</p>
+        {/if}
+      </div>
+
+      <!-- Swipe instructions -->
+      <div class="card-footer">
+        <div class="swipe-hint">
+          <span class="hint-left">← Practice more</span>
+          <span class="hint-right">Got it! →</span>
+        </div>
+      </div>
+    </div>
+  </Motion>
+</button>
 
 <style>
   .swipeable-card {
@@ -258,6 +322,13 @@
     cursor: grab;
     will-change: transform;
     transition: box-shadow 0.2s ease;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-align: left;
   }
 
   .swipeable-card:focus {
@@ -271,8 +342,9 @@
 
   .swipeable-card:not(.active) {
     pointer-events: none;
-    opacity: 0.5;
-    transform: scale(0.95) !important;
+    /* Completely hide inactive cards to prevent text bleed-through */
+    visibility: hidden;
+    /* Alternative: display: none; but visibility allows CSS transitions */
   }
 
   /* Swipe indicators */
@@ -330,6 +402,8 @@
     backface-visibility: hidden;
     overflow: hidden;
     padding: 1.5rem;
+    /* Ensure cards are fully opaque */
+    opacity: 1;
   }
 
   .card-face.back {

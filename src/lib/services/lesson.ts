@@ -480,8 +480,13 @@ export class LessonService {
 
   /**
    * Align vocabulary items with LessonSchema requirements
+   * Returns an item with required isCommon, isVerified, and learningPhase properties
    */
-  private normalizeVocabularyItem(item: VocabularyItem): VocabularyItem {
+  private normalizeVocabularyItem(item: VocabularyItem): VocabularyItem & {
+    isCommon: boolean;
+    isVerified: boolean;
+    learningPhase: number;
+  } {
     return {
       ...item,
       categories: this.normalizeCategories(item.categories),

@@ -9,7 +9,7 @@
     german: 'Guten Tag',
     bulgarian: 'Добър ден',
     partOfSpeech: 'phrase',
-    category: ['greetings'],
+    categories: ['greetings'],
     difficulty: 'beginner',
     examples: [
       { german: 'Guten Tag, wie geht es Ihnen?', bulgarian: 'Добър ден, как сте?' }
@@ -35,6 +35,7 @@
     },
     args: {
       item: mockItem,
+      direction: 'DE->BG',
       onPractice: fn(),
       onQuickPractice: fn(),
       onToggleSelect: fn(),

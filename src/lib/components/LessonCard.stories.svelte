@@ -97,17 +97,4 @@
   }} 
 />
 
-<!-- Multiple Lessons Grid -->
-<Story name="Lesson Grid">
-  {#snippet children(args)}
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; padding: 16px; max-width: 800px;">
-      <LessonCard lesson={mockLesson} onStart={args.onStart} />
-      <LessonCard lesson={advancedLesson} onStart={args.onStart} />
-      <LessonCard lesson={completedLesson} onStart={args.onStart} />
-      <LessonCard 
-        lesson={{...mockLesson, id: 'lesson-4', title: 'Food & Drinks', type: 'vocabulary'}} 
-        onStart={args.onStart} 
-      />
-    </div>
-  {/snippet}
-</Story>
+<!-- Note: Lesson Grid demo removed due to Storybook addon-svelte-csf plugin compatibility. Use individual stories above to see each lesson type. -->

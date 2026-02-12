@@ -57,62 +57,84 @@
         inProgress: 'В ход'
       });
 
-  onMount(async () => {
-    try {
-      isLoading = true;
-      
-      // Initialize vocabulary database
-      await vocabularyDb.initialize();
-      const allVocab = vocabularyDb.getVocabulary();
+  onMount(() => {
+    let mounted = true;
 
-      // Get recent words from progress tracking (fallback to recent searches)
-      const recentIds = appState.practiceStats?.keys() ? Array.from(appState.practiceStats.keys()).slice(0, 6) : [];
-      recentWords = recentIds
-        .map(id => allVocab.find(v => v.id === id))
-        .filter(Boolean) as VocabularyItem[];
-
-      // If no recent words, show some from recent searches
-      if (recentWords.length === 0) {
-        const searchTerms = appState.recentSearches?.slice(0, 3) || [];
-        recentWords = searchTerms
-          .map(term => allVocab.find(v => v.german?.toLowerCase().includes(term.toLowerCase()) || v.bulgarian?.toLowerCase().includes(term.toLowerCase())))
-          .filter(Boolean) as VocabularyItem[];
-      }
-
-      // Get recommended words (A1/A2 difficulty, not yet mastered)
-      const masteredIds = new Set(
-        Array.from(appState.practiceStats?.entries() || [])
-          .filter(([, stats]) => stats && stats.correct >= 3)
-          .map(([id]) => id)
-      );
-
-      recommendedWords = allVocab
-        .filter(v => (v.cefrLevel === 'A1' || v.cefrLevel === 'A2') && !masteredIds.has(v.id))
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 6);
-
-      // Real learning paths from service
+    async function loadData() {
       try {
-        const loadedPaths = await getLearningPaths();
-        const progressMap = new Map<string, LearningPathProgress>();
+        isLoading = true;
 
-        for (const path of loadedPaths) {
-          const progress = await getLearningPathProgress(path.id);
-          progressMap.set(path.id, progress);
+        // Initialize vocabulary database
+        await vocabularyDb.initialize();
+        if (!mounted) return;
+
+        const allVocab = vocabularyDb.getVocabulary();
+
+        // Get recent words from progress tracking (fallback to recent searches)
+        const recentIds = appState.practiceStats?.keys() ? Array.from(appState.practiceStats.keys()).slice(0, 6) : [];
+        recentWords = recentIds
+          .map(id => allVocab.find(v => v.id === id))
+          .filter(Boolean) as VocabularyItem[];
+
+        // If no recent words, show some from recent searches
+        if (recentWords.length === 0) {
+          const searchTerms = appState.recentSearches?.slice(0, 3) || [];
+          recentWords = searchTerms
+            .map(term => allVocab.find(v => v.german?.toLowerCase().includes(term.toLowerCase()) || v.bulgarian?.toLowerCase().includes(term.toLowerCase())))
+            .filter(Boolean) as VocabularyItem[];
         }
 
-        paths = loadedPaths;
-        pathProgress = progressMap;
-      } catch (err) {
-        pathsError = (err as Error).message ?? 'Failed to load learning paths';
+        // Get recommended words (A1/A2 difficulty, not yet mastered)
+        const masteredIds = new Set(
+          Array.from(appState.practiceStats?.entries() || [])
+            .filter(([, stats]) => stats && stats.correct >= 3)
+            .map(([id]) => id)
+        );
+
+        recommendedWords = allVocab
+          .filter(v => (v.cefrLevel === 'A1' || v.cefrLevel === 'A2') && !masteredIds.has(v.id))
+          .sort(() => Math.random() - 0.5)
+          .slice(0, 6);
+
+        // Real learning paths from service
+        try {
+          const loadedPaths = await getLearningPaths();
+          const progressMap = new Map<string, LearningPathProgress>();
+
+          for (const path of loadedPaths) {
+            if (!mounted) return;
+            const progress = await getLearningPathProgress(path.id);
+            progressMap.set(path.id, progress);
+          }
+
+          if (mounted) {
+            paths = loadedPaths;
+            pathProgress = progressMap;
+          }
+        } catch (err) {
+          if (mounted) {
+            pathsError = (err as Error).message ?? 'Failed to load learning paths';
+          }
+        } finally {
+          if (mounted) {
+            pathsLoading = false;
+          }
+        }
+      } catch (e) {
+        console.error('Error in Learn page onMount:', e);
       } finally {
-        pathsLoading = false;
+        if (mounted) {
+          isLoading = false;
+        }
       }
-    } catch (e) {
-      console.error('Error in Learn page onMount:', e);
-    } finally {
-      isLoading = false;
     }
+
+    loadData();
+
+    // Cleanup function
+    return () => {
+      mounted = false;
+    };
   });
 
   function handleCardClick(item: VocabularyItem) {
@@ -178,7 +200,12 @@
         <div class="word-grid">
           {#each recentWords as word (word.id)}
             <div class="card-wrapper">
-              <VocabularyCard item={word} variant="grid" onOpenDetail={() => handleCardClick(word)} />
+              <VocabularyCard
+                item={word}
+                variant="grid"
+                direction={appState.languageMode === 'DE_BG' ? 'DE->BG' : 'BG->DE'}
+                onOpenDetail={() => handleCardClick(word)}
+              />
             </div>
           {/each}
         </div>
@@ -191,7 +218,12 @@
         <div class="word-grid">
           {#each recommendedWords as word (word.id)}
             <div class="card-wrapper">
-              <VocabularyCard item={word} variant="grid" onOpenDetail={() => handleCardClick(word)} />
+              <VocabularyCard
+                item={word}
+                variant="grid"
+                direction={appState.languageMode === 'DE_BG' ? 'DE->BG' : 'BG->DE'}
+                onOpenDetail={() => handleCardClick(word)}
+              />
             </div>
           {/each}
         </div>

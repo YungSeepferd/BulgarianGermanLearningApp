@@ -102,14 +102,4 @@
   }} 
 />
 
-<!-- All Parts of Speech -->
-<Story name="All Types">
-  {#snippet children(args)}
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; padding: 16px;">
-      <WordCard item={nounItem} />
-      <WordCard item={verbItem} />
-      <WordCard item={adjectiveItem} />
-      <WordCard item={phraseItem} />
-    </div>
-  {/snippet}
-</Story>
+<!-- Note: All Types grid demo removed due to Storybook addon-svelte-csf plugin compatibility. Use individual stories above to see each type. -->

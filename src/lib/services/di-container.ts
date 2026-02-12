@@ -119,7 +119,7 @@ class DIContainer implements DIContainerInterface {
     /**
      * Get the AppDataState instance (initialized separately to avoid circular dependencies)
      */
-    public getAppDataState(): any {
+    public getAppDataState(): unknown {
         // This will be replaced with proper AppDataState import after initialization
         throw new Error('AppDataState should be accessed through app-state.ts to avoid circular dependencies');
     }
@@ -185,9 +185,8 @@ export async function initializeVocabularyData() {
 }
 
 /** Initialize the unified vocabulary repository (client only) */
-export async function initializeVocabularyRepository() {
-    await vocabularyRepository.load();
-    return vocabularyRepository;
+export async function initializeVocabularyRepository(): Promise<void> {
+    await vocabularyRepository.initialize();
 }
 
 export function getLessonGenerationEngine(): LessonGenerationEngine {

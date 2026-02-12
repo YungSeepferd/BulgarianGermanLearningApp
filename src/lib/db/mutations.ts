@@ -7,6 +7,18 @@ import { getDB } from './idb';
 import type { VocabularyProgress, ExerciseProgress, UserProgress } from '$lib/types/progress';
 import type { LessonProgress } from '$lib/types/lesson';
 import type { LearningPathProgress } from '$lib/types/learning-path';
+import type { VocabularyItem } from '$lib/schemas/vocabulary';
+
+/** Type for vocabulary items stored in IndexedDB with user edits */
+type DbVocabularyItem = VocabularyItem & {
+	userEdits?: {
+		mnemonics?: string;
+		culturalNotes?: string;
+		personalNotes?: string;
+		editedAt?: string;
+		[key: string]: string | undefined;
+	};
+};
 
 /**
  * Save or update vocabulary progress
@@ -71,7 +83,7 @@ export async function recordVocabularyAttempt(
  */
 export async function saveLessonProgress(progress: LessonProgress): Promise<void> {
 	const db = await getDB();
-	await db.put('lessonProgress', progress as any);
+	await db.put('lessonProgress', progress);
 }
 
 /**
@@ -79,18 +91,16 @@ export async function saveLessonProgress(progress: LessonProgress): Promise<void
  */
 export async function completLesson(lessonId: string): Promise<void> {
 	const db = await getDB();
-	let progress: any = await db.get('lessonProgress', lessonId);
+	const existing = await db.get('lessonProgress', lessonId) as LessonProgress | undefined;
 
-	if (!progress) {
-		progress = {
-			lessonId,
-			completed: false,
-			progress: 0,
-			completedVocabulary: [],
-			completedExercises: [],
-			timeSpent: 0
-		};
-	}
+	const progress: LessonProgress = existing ?? {
+		lessonId,
+		completed: false,
+		progress: 0,
+		completedVocabulary: [],
+		completedExercises: [],
+		timeSpent: 0
+	};
 
 	progress.completed = true;
 	progress.completedAt = new Date().toISOString();
@@ -112,7 +122,7 @@ export async function saveLearningPathProgress(progress: LearningPathProgress): 
  */
 export async function saveExerciseProgress(progress: ExerciseProgress): Promise<void> {
 	const db = await getDB();
-	await db.put('exerciseProgress', progress as any);
+	await db.put('exerciseProgress', progress);
 }
 
 /**
@@ -125,32 +135,29 @@ export async function completeExercise(
 	timeSpent: number
 ): Promise<void> {
 	const db = await getDB();
-	let progress = await db.get('exerciseProgress', exerciseId);
+	const existing = await db.get('exerciseProgress', exerciseId) as ExerciseProgress | undefined;
 
-	let ex: any = progress;
-	if (!ex) {
-		ex = {
-			exerciseId,
-			lessonId,
-			completed: false,
-			attempts: 0,
-			firstTryCorrect: false,
-			mistakes: [],
-			timeSpent: 0
-		};
-	}
+	const progress: ExerciseProgress = existing ?? {
+		exerciseId,
+		lessonId,
+		completed: false,
+		attempts: 0,
+		firstTryCorrect: false,
+		mistakes: [],
+		timeSpent: 0
+	};
 
-	ex.attempts++;
-	ex.completed = correct;
-	if (correct && ex.attempts === 1) {
-		ex.firstTryCorrect = true;
+	progress.attempts++;
+	progress.completed = correct;
+	if (correct && progress.attempts === 1) {
+		progress.firstTryCorrect = true;
 	}
 	if (correct) {
-		ex.completedAt = new Date().toISOString();
+		progress.completedAt = new Date().toISOString();
 	}
-	ex.timeSpent += timeSpent;
+	progress.timeSpent += timeSpent;
 
-	await db.put('exerciseProgress', ex);
+	await db.put('exerciseProgress', progress);
 }
 
 /**
@@ -226,26 +233,29 @@ export async function saveVocabularyEdit(
 	const db = await getDB();
 
 	// Get current vocabulary item
-	const item = await db.get('vocabulary', itemId);
+	const item = await db.get('vocabulary', itemId) as DbVocabularyItem | undefined;
 	if (!item) return;
 
 	// Save edit history
 	const edit = {
 		itemId,
 		field,
-		oldValue: (item as any)[field] || '',
+		oldValue: typeof item[field as keyof DbVocabularyItem] === 'string'
+			? String(item[field as keyof DbVocabularyItem])
+			: '',
 		newValue,
 		timestamp: new Date().toISOString(),
 		userId
 	};
 	await db.put('editHistory', edit);
 
-	// Update vocabulary item
-	if (!item.userEdits) {
-		item.userEdits = {};
-	}
-	(item.userEdits as any)[field] = newValue;
-	item.userEdits.editedAt = new Date().toISOString();
+	// Update vocabulary item with user edits
+	const existingEdits = item.userEdits ?? {};
+	item.userEdits = {
+		...existingEdits,
+		[field]: newValue,
+		editedAt: new Date().toISOString()
+	};
 
 	await db.put('vocabulary', item);
 }

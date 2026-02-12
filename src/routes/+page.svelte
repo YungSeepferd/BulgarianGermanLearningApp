@@ -7,9 +7,14 @@
   import { appState } from '$lib/state/app-state';
   import { dailyVocabularyService } from '$lib/services/daily-vocabulary.svelte';
   import { DailyCarousel } from '$lib/components/dashboard';
+  import VocabularyDetailPanel from '$lib/components/dashboard/VocabularyDetailPanel.svelte';
+  import type { VocabularyItem } from '$lib/types/vocabulary';
 
   // View mode: 'cards' (swipe practice) or 'stats' (overview)
   let viewMode = $state<'cards' | 'stats'>('cards');
+  
+  // Selected vocabulary for detail panel
+  let selectedVocabulary = $state<VocabularyItem | null>(null);
   
   // Dashboard stats (loaded async)
   let totalVocabulary = $state(0);
@@ -19,33 +24,61 @@
 
   // Daily progress derived state
   const dailyProgress = $derived(dailyVocabularyService.progress);
+  
+  // Get current vocabulary item
+  const currentItem = $derived.by(() => {
+    if (!dailyVocabularyService.dailyItems.length) return null;
+    return dailyVocabularyService.dailyItems[dailyProgress.currentIndex] || null;
+  });
+  
+  // Auto-update detail panel with current vocabulary
+  $effect(() => {
+    if (currentItem) {
+      selectedVocabulary = currentItem;
+    }
+  });
 
   // Load dashboard data
-  onMount(async () => {
+  onMount(() => {
     if (!browser) return;
 
-    try {
-      // Initialize vocabulary database first (fixes the 0 vocabulary bug)
-      await vocabularyDb.initialize();
-      
-      // Initialize daily vocabulary service
-      await dailyVocabularyService.initialize();
-      
-      // Get vocabulary stats
-      const allItems = vocabularyDb.getVocabulary();
-      totalVocabulary = allItems.length;
+    let mounted = true;
 
-      // Get user stats from app state
-      const stats = appState.practiceStats;
-      if (stats) {
-        totalLearned = Array.from(stats.entries()).filter(([_, s]) => s && s.correct > 0).length;
-        totalPracticed = Array.from(stats.values()).reduce((sum, s) => sum + (s?.correct + s?.incorrect || 0), 0);
+    async function loadData() {
+      try {
+        // Initialize vocabulary database first (fixes the 0 vocabulary bug)
+        await vocabularyDb.initialize();
+
+        // Initialize daily vocabulary service
+        await dailyVocabularyService.initialize();
+
+        if (!mounted) return;
+
+        // Get vocabulary stats
+        const allItems = vocabularyDb.getVocabulary();
+        totalVocabulary = allItems.length;
+
+        // Get user stats from app state
+        const stats = appState.practiceStats;
+        if (stats) {
+          totalLearned = Array.from(stats.entries()).filter(([_, s]) => s && s.correct > 0).length;
+          totalPracticed = Array.from(stats.values()).reduce((sum, s) => sum + (s?.correct + s?.incorrect || 0), 0);
+        }
+      } catch (error) {
+        console.error('Error loading dashboard data:', error);
+      } finally {
+        if (mounted) {
+          statsLoading = false;
+        }
       }
-    } catch (error) {
-      console.error('Error loading dashboard data:', error);
-    } finally {
-      statsLoading = false;
     }
+
+    loadData();
+
+    // Cleanup function
+    return () => {
+      mounted = false;
+    };
   });
 
   function navigateToVocabulary() {
@@ -94,9 +127,17 @@
 
   {#if viewMode === 'cards'}
     <!-- Daily Vocabulary Practice Mode (Default) -->
-    <main class="daily-practice-area">
-      <DailyCarousel onComplete={handleDailyComplete} />
-    </main>
+    <div class="practice-layout">
+      <main class="daily-practice-area">
+        <DailyCarousel onComplete={handleDailyComplete} />
+      </main>
+      
+      <!-- Vocabulary Detail Panel -->
+      <VocabularyDetailPanel 
+        item={selectedVocabulary}
+        onClose={() => selectedVocabulary = null}
+      />
+    </div>
 
     <!-- Quick Navigation (Compact on mobile) -->
     <nav class="quick-nav">
@@ -231,7 +272,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    max-width: 600px;
+    max-width: 1400px; /* Wider to accommodate detail panel */
     margin: 0 auto;
     padding: 0;
     background: #f8fafc;
@@ -302,13 +343,53 @@
     font-size: 1.125rem;
   }
 
-  /* Daily Practice Area - Full viewport height for swipe cards */
-  .daily-practice-area {
+  /* Practice Layout - Grid with sidebar for detail panel */
+  .practice-layout {
     flex: 1;
+    display: grid;
+    grid-template-columns: minmax(400px, 1fr) 400px;
+    gap: 1.5rem;
+    padding: 1rem;
+    align-items: start;
+    max-height: calc(100vh - 180px);
+  }
+  
+  /* Daily Practice Area */
+  .daily-practice-area {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 180px);
-    padding: 0;
+    min-width: 0; /* Prevent grid overflow */
+    height: 100%;
+  }
+
+  /* Tablet: Reduce detail panel width */
+  @media (max-width: 1200px) {
+    .dashboard-container {
+      max-width: 900px;
+    }
+    
+    .practice-layout {
+      grid-template-columns: 1fr 350px;
+      gap: 1rem;
+    }
+  }
+
+  /* Mobile: Stack detail panel below */
+  @media (max-width: 768px) {
+    .dashboard-container {
+      max-width: 600px;
+    }
+    
+    .practice-layout {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      max-height: none;
+      padding: 0;
+    }
+    
+    .daily-practice-area {
+      min-height: calc(100vh - 180px);
+    }
   }
 
   /* Quick Navigation Pills */

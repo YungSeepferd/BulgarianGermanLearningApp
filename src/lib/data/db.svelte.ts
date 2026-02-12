@@ -27,9 +27,9 @@ class VocabularyDB {
 
     async loadInitialData() {
         try {
-            Debug.log('VocabularyDB', 'Loading initial vocabulary data');
-            // Load via unified repository
-            await vocabularyRepository.load();
+            Debug.log('VocabularyDB', 'Loading initial vocabulary data (chunked)');
+            // Load via unified repository with chunked loading (loads index + A1 only)
+            await vocabularyRepository.initialize();
             const repoItems = vocabularyRepository.getAll();
 
             // Convert UnifiedVocabularyItem to VocabularyItem format
@@ -67,7 +67,36 @@ class VocabularyDB {
         }
     }
 
-    // Remove the unused import workaround since we're using DataLoader instead
+    /**
+     * Load all vocabulary levels (for when complete vocabulary is needed)
+     * Use this sparingly as it loads all chunks
+     */
+    async loadAllLevels(): Promise<void> {
+        if (!browser) return;
+
+        try {
+            Debug.log('VocabularyDB', 'Loading all vocabulary levels');
+            await vocabularyRepository.loadAll();
+
+            // Refresh items with all loaded data
+            const repoItems = vocabularyRepository.getAll();
+            this.items = repoItems.map(item => ({
+                ...item,
+                category: item.categories[0] || 'greetings',
+                categories: item.categories || ['greetings'],
+                tags: (item.tags ?? []),
+                isCommon: item.metadata?.isCommon ?? false,
+                isVerified: item.metadata?.isVerified ?? false,
+                learningPhase: item.metadata?.learningPhase ?? 0,
+                xp_value: item.xp_value ?? item.metadata?.xpValue ?? 10
+            }));
+
+            Debug.log('VocabularyDB', 'All levels loaded', { count: this.items.length });
+        } catch (error) {
+            Debug.error('VocabularyDB', 'Failed to load all levels', error as Error);
+            throw error;
+        }
+    }
 
     /** @param {VocabularyItem} item */
     add(item: VocabularyItem) {
