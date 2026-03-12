@@ -1,0 +1,2 @@
+import{n as a,h as s,H as e,i as l,m as n,C as o,y as r,s as d,o as t,k as i}from"./DMz3Gx7f.js";function m(m,f){let u=null,h=l;var p;if(l){u=i;for(var v=n(document.head);null!==v&&(v.nodeType!==o||v.data!==m);)v=r(v);if(null===v)d(!1);else{var y=r(v);v.remove(),t(y)}}l||(p=document.head.appendChild(a()));try{s(()=>f(p),e)}finally{h&&(d(!0),t(u))}}export{m as h};
+//# sourceMappingURL=DjR0UdtM.js.map

@@ -1,0 +1,2 @@
+import{c as s,u as t,a as n,b as o,r as a,d as f,g as r,e as c,f as e}from"./DMz3Gx7f.js";function i(i=!1){const u=s,m=u.l.u;if(!m)return;let p=()=>c(u.s);if(i){let s=0,t={};const n=e(()=>{let n=!1;const o=u.s;for(const s in o)o[s]!==t[s]&&(t[s]=o[s],n=!0);return n&&s++,s});p=()=>r(n)}m.b.length&&t(()=>{l(u,p),f(m.b)}),n(()=>{const s=o(()=>m.m.map(a));return()=>{for(const t of s)"function"==typeof t&&t()}}),m.a.length&&n(()=>{l(u,p),f(m.a)})}function l(s,t){if(s.l.s)for(const n of s.l.s)r(n);t()}export{i};
+//# sourceMappingURL=C-fh9vUg.js.map
