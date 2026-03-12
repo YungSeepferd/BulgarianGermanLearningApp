@@ -140,9 +140,22 @@ export class TemplateRenderer implements ITemplateRenderer {
 
     if (!path.includes('.')) return undefined;
 
-    return path.split('.').reduce((obj: any, key) => {
-      return (obj && typeof obj === 'object') ? obj[key] : undefined;
-    }, data);
+    const parts = path.split('.');
+    let result: unknown = data;
+    for (const key of parts) {
+      if (result && typeof result === 'object') {
+        result = (result as Record<string, unknown>)[key];
+      } else {
+        return undefined;
+      }
+    }
+    // Validate return type
+    if (result !== undefined && result !== null &&
+        typeof result !== 'string' && typeof result !== 'number' &&
+        typeof result !== 'boolean' && !Array.isArray(result) && typeof result !== 'object') {
+      return undefined;
+    }
+    return result as string | number | boolean | object | unknown[] | undefined;
   }
 
   /**

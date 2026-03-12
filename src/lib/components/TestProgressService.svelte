@@ -1,9 +1,8 @@
 <script lang="ts">
-  import { getDIContainer } from '$lib/services/di-container';
+  import { progressService } from '$lib/services/index';
   import { Debug } from '$lib/utils';
 
   Debug.log('TestProgressService', 'Loading ProgressService...');
-  const progressService = getDIContainer().getService('progressService');
   Debug.log('TestProgressService', 'ProgressService instance loaded', { instance: progressService });
 
   // Force migration

@@ -8,7 +8,6 @@
  */
 
 import { DataError, ErrorHandler } from '../services/errors';
-import { EventBus } from '../services/event-bus';
 import { Debug } from '../utils';
 
 import {
@@ -27,9 +26,9 @@ import {
 // Re-export types for compatibility
 export type { VocabularySearchParams } from './loader';
 
-// Helper to build options with optional eventBus
-function buildOptions(eventBus?: EventBus): { eventBus?: EventBus } {
-  return eventBus ? buildOptions(eventBus) : {};
+// Helper to build options (no eventBus needed anymore)
+function buildOptions() {
+  return {};
 }
 
 // ======================
@@ -41,17 +40,17 @@ function buildOptions(eventBus?: EventBus): { eventBus?: EventBus } {
  * Aggregates all level chunks into collection format
  * @deprecated Use vocabularyRepository.initialize() + vocabularyRepository.getAll()
  */
-export async function loadVocabulary(eventBus?: EventBus): Promise<UnifiedVocabularyCollection> {
+export async function loadVocabulary(eventBus?: undefined): Promise<UnifiedVocabularyCollection> {
   Debug.log('vocabulary-compat', 'loadVocabulary() called - using chunked loader');
 
   try {
     // Try new repository first
     if (!vocabularyRepository.loaded) {
-      await vocabularyRepository.initialize(buildOptions(eventBus));
+      await vocabularyRepository.initialize(buildOptions());
     }
 
     // Ensure all levels are loaded
-    await vocabularyRepository.loadAll(buildOptions(eventBus));
+    await vocabularyRepository.loadAll(buildOptions());
 
     const allItems = vocabularyRepository.getAll();
 
@@ -78,7 +77,7 @@ export async function loadVocabulary(eventBus?: EventBus): Promise<UnifiedVocabu
     // Fall back to legacy loader
     Debug.log('vocabulary-compat', 'Falling back to legacy loader');
     const { loadVocabulary: legacyLoad } = await import('./loader');
-    return legacyLoad(eventBus);
+    return legacyLoad();
   }
 }
 
@@ -95,14 +94,14 @@ export async function loadVocabularyBySearch(
     limit?: number;
     offset?: number;
   },
-  eventBus?: EventBus
+  eventBus?: undefined
 ): Promise<{ items: UnifiedVocabularyItem[]; total: number; hasMore: boolean }> {
   Debug.log('vocabulary-compat', 'loadVocabularyBySearch() called', { params });
 
   try {
     // Initialize repository
     if (!vocabularyRepository.loaded) {
-      await vocabularyRepository.initialize(buildOptions(eventBus));
+      await vocabularyRepository.initialize(buildOptions());
     }
 
     // If we have a query, use search
@@ -178,7 +177,7 @@ export async function loadVocabularyBySearch(
 
     // Fall back to legacy
     const { loadVocabularyBySearch: legacySearch } = await import('./loader');
-    return legacySearch(params, eventBus);
+    return legacySearch(params);
   }
 }
 
@@ -188,7 +187,7 @@ export async function loadVocabularyBySearch(
  */
 export async function loadVocabularyById(
   id: string,
-  eventBus?: EventBus
+  eventBus?: undefined
 ): Promise<UnifiedVocabularyItem | null> {
   Debug.log('vocabulary-compat', 'loadVocabularyById() called', { id });
 
@@ -209,14 +208,14 @@ export async function loadVocabularyById(
 export async function loadVocabularyByCategory(
   category: string,
   options: { limit?: number; difficulty?: number } = {},
-  eventBus?: EventBus
+  eventBus?: undefined
 ): Promise<UnifiedVocabularyItem[]> {
   Debug.log('vocabulary-compat', 'loadVocabularyByCategory() called', { category, options });
 
   try {
     // Ensure loaded
     if (!vocabularyRepository.loaded) {
-      await vocabularyRepository.initialize(buildOptions(eventBus));
+      await vocabularyRepository.initialize(buildOptions());
     }
 
     // Get from index (which has all items' metadata)
@@ -255,14 +254,14 @@ export async function loadVocabularyByCategory(
 export async function loadVocabularyByDifficulty(
   difficulty: number,
   options: { limit?: number; category?: string } = {},
-  eventBus?: EventBus
+  eventBus?: undefined
 ): Promise<UnifiedVocabularyItem[]> {
   Debug.log('vocabulary-compat', 'loadVocabularyByDifficulty() called', { difficulty, options });
 
   try {
     // Ensure loaded
     if (!vocabularyRepository.loaded) {
-      await vocabularyRepository.initialize(buildOptions(eventBus));
+      await vocabularyRepository.initialize(buildOptions());
     }
 
     // Get from index
@@ -307,16 +306,16 @@ export async function loadVocabularyByDifficulty(
 export async function getRandomVocabulary(
   count: number = 5,
   options: { difficulty?: number; category?: string } = {},
-  eventBus?: EventBus
+  eventBus?: undefined
 ): Promise<UnifiedVocabularyItem[]> {
   Debug.log('vocabulary-compat', 'getRandomVocabulary() called', { count, options });
 
   try {
     // Load all levels for random selection
     if (!vocabularyRepository.loaded) {
-      await vocabularyRepository.initialize(buildOptions(eventBus));
+      await vocabularyRepository.initialize(buildOptions());
     }
-    await vocabularyRepository.loadAll(buildOptions(eventBus));
+    await vocabularyRepository.loadAll(buildOptions());
 
     let items = vocabularyRepository.getAll();
 
@@ -342,11 +341,11 @@ export async function getRandomVocabulary(
  * Initialize vocabulary data (legacy compatibility)
  * @deprecated Use vocabularyRepository.initialize()
  */
-export async function initializeVocabulary(eventBus?: EventBus): Promise<void> {
+export async function initializeVocabulary(eventBus?: undefined): Promise<void> {
   Debug.log('vocabulary-compat', 'initializeVocabulary() called');
 
   try {
-    await vocabularyRepository.initialize(buildOptions(eventBus));
+    await vocabularyRepository.initialize(buildOptions());
   } catch (error) {
     ErrorHandler.handleError(error, 'vocabulary-compat.initializeVocabulary', eventBus);
     throw new DataError('Failed to initialize vocabulary', { error });

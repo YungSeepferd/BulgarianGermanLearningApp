@@ -163,7 +163,10 @@ vi.mock('$lib/data/loader', async (importOriginal) => {
     getRandomVocabulary: vi.fn().mockImplementation((count = 5) => {
       const shuffled = [...mockVocabularyData].sort(() => 0.5 - Math.random());
       return Promise.resolve(shuffled.slice(0, Math.min(count, shuffled.length)));
-    })
+    }),
+    clearVocabularyCache: vi.fn(),
+    initializeVocabulary: vi.fn().mockResolvedValue(undefined),
+    updateStats: vi.fn().mockResolvedValue(undefined)
   };
 });
 

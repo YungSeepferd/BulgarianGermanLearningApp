@@ -3,11 +3,9 @@
    * Global Error Handler Component
    *
    * Provides centralized error handling and user feedback for the application.
-   * Listens for error events and displays them to users in a consistent way.
+   * Now uses reactive state instead of event bus.
    */
 
-  import { getDIContainer } from '$lib/services/di-container';
-  import { EventTypes, type ErrorEvent } from '$lib/services/event-bus';
   import { Debug } from '$lib/utils';
 
   // State for error display
@@ -15,37 +13,21 @@
   let errorDetails = $state<string | null>(null);
   let showDetails = $state(false);
 
-  // Subscribe to global error events
-  $effect(() => {
-    Debug.log('GlobalErrorHandler', 'Initializing global error handler');
-    const eventBus = getDIContainer().getService('eventBus');
-    const unsubscribe = eventBus.subscribe(EventTypes.ERROR, (event: ErrorEvent) => {
-      handleErrorEvent(event);
-    });
+  // Error handler function that can be called from anywhere
+  // Components can import this and call handleGlobalError(error, context)
+  export function handleGlobalError(error: Error, context?: string): void {
+    Debug.error('GlobalErrorHandler', 'Global error received', error);
 
-    return () => {
-      Debug.log('GlobalErrorHandler', 'Cleaning up error event subscription');
-      unsubscribe();
-    };
-  });
+    const errorMessage = formatErrorMessage(error);
+    const details = formatErrorDetails(error, context);
 
-  function handleErrorEvent(event: ErrorEvent) {
-    Debug.error('GlobalErrorHandler', 'Global error received', event.error);
-
-    // Format error message for user display
-    const errorMessage = formatErrorMessage(event.error);
-    const details = formatErrorDetails(event.error, event.context);
-
-    // Store the error
     currentError = errorMessage;
     errorDetails = details;
 
-    // Show error to user
     Debug.log('GlobalErrorHandler', 'Displaying error to user', { error: errorMessage });
   }
 
   function formatErrorMessage(error: Error): string {
-    // Customize error messages based on error type
     if (error.name === 'NetworkError') {
       return 'Network connection issue. Please check your internet connection.';
     } else if (error.name === 'StorageError') {

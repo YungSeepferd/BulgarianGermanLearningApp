@@ -10,6 +10,7 @@
   import VocabularyCard from '$lib/components/ui/VocabularyCard.svelte';
   import { goto } from '$app/navigation';
   import { base } from '$app/paths';
+  import { Grid } from 'svelte-virtual';
 
   type ActiveFilter = {
     key: string;
@@ -352,6 +353,25 @@
 
   // Sidebar state
   let showFilters = $state(true);
+
+  // Virtual grid state
+  let containerWidth = $state(0);
+  let containerHeight = $state(600);
+  const ITEM_MIN_WIDTH = 280;
+  const ITEM_HEIGHT = 180;
+
+  // Calculate responsive columns based on container width
+  const gridColumns = $derived.by(() => {
+    if (containerWidth === 0) return 2;
+    const cols = Math.floor(containerWidth / ITEM_MIN_WIDTH);
+    return Math.max(2, Math.min(cols, 4));
+  });
+
+  // Calculate item width based on column count
+  const itemWidth = $derived.by(() => {
+    const cols = gridColumns;
+    return Math.floor((containerWidth - (cols - 1) * 16) / cols);
+  });
 </script>
 
 <svelte:head>
@@ -503,23 +523,41 @@
       {/if}
 
       {#if vocabularyItems.length > 0}
-        <div class="vocabulary-grid-items">
-          {#each vocabularyItems as item (item.id)}
-            <div class="card-link">
-              <VocabularyCard
-                {item}
-                variant="grid"
-                direction={appState.languageMode === 'DE_BG' ? 'DE->BG' : 'BG->DE'}
-                isSelected={selectedItems.has(item.id)}
-                showMetadata={true}
-                showActions={true}
-                showTags={true}
-                onPractice={handleSelectItem}
-                onToggleSelect={handleToggleSelectItem}
-                onOpenDetail={(item) => goto(`${base}/learn/${item.id}`)}
-              />
+        <div 
+          class="vocabulary-grid-container" 
+          bind:clientWidth={containerWidth}
+          bind:clientHeight={containerHeight}
+        >
+          {#if containerWidth > 0}
+            <Grid
+              itemCount={vocabularyItems.length}
+              itemHeight={ITEM_HEIGHT}
+              itemWidth={itemWidth}
+              height={Math.min(containerHeight, Math.ceil(vocabularyItems.length / gridColumns) * ITEM_HEIGHT + 50, 1200)}
+            >
+              <div slot="item" let:index let:style class="card-link" {style}>
+                {#if vocabularyItems[index]}
+                  {@const item = vocabularyItems[index]!}
+                  <VocabularyCard
+                    {item}
+                    variant="grid"
+                    direction={appState.languageMode === 'DE_BG' ? 'DE->BG' : 'BG->DE'}
+                    isSelected={selectedItems.has(item.id)}
+                    showMetadata={true}
+                    showActions={true}
+                    showTags={true}
+                    onPractice={handleSelectItem}
+                    onToggleSelect={handleToggleSelectItem}
+                    onOpenDetail={(item) => goto(`${base}/learn/${item.id}`)}
+                  />
+                {/if}
+              </div>
+            </Grid>
+          {:else}
+            <div class="loading-placeholder">
+              <div class="spinner">🌀</div>
             </div>
-          {/each}
+          {/if}
         </div>
 
         {#if hasMore}
@@ -740,6 +778,21 @@
     grid-template-columns: 1fr;
     gap: var(--space-6);
     align-items: start;
+  }
+
+  .vocabulary-grid-container {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .vocabulary-grid-container :global(.virtual-grid) {
+    position: relative;
+  }
+
+  .vocabulary-grid-container :global(.virtual-grid-item) {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   /* Fix for grid children to respect container width */

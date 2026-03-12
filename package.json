@@ -84,6 +84,7 @@
 		"@types/uuid": "^11.0.0",
 		"@typescript-eslint/eslint-plugin": "^8.50.0",
 		"@typescript-eslint/parser": "^8.50.0",
+		"@vite-pwa/sveltekit": "^1.1.0",
 		"@vitest/browser-playwright": "4.0.15",
 		"@vitest/coverage-v8": "^4.0.15",
 		"autoprefixer": "^10.4.23",
@@ -114,7 +115,8 @@
 		"vite-plugin-devtools-json": "^1.0.0",
 		"vitest": "^4.0.15",
 		"vitest-axe": "^0.1.0",
-		"vitest-browser-svelte": "^2.0.1"
+		"vitest-browser-svelte": "^2.0.1",
+		"workbox-window": "^7.4.0"
 	},
 	"dependencies": {
 		"@tanstack/svelte-query": "^6.0.18",
@@ -124,6 +126,7 @@
 		"clsx": "^2.1.1",
 		"commander": "^14.0.0",
 		"cookie": "^1.1.1",
+		"dexie": "^4.3.0",
 		"fuse.js": "^7.1.0",
 		"glob": "^13.0.0",
 		"idb": "^8.0.3",

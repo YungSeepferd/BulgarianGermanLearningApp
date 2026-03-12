@@ -1,5 +1,4 @@
 import { browser } from '$app/environment';
-import { EventBus } from '$lib/services/event-bus';
 import { ErrorHandler } from '$lib/services/errors';
 import { Debug } from '$lib/utils';
 import Fuse from 'fuse.js';
@@ -15,7 +14,6 @@ import {
 } from './vocabulary-loader';
 
 export interface LoadOptions {
-  eventBus?: EventBus;
   forceRefresh?: boolean;
 }
 
@@ -91,13 +89,13 @@ class VocabularyRepository {
   } | null = null;
 
   /** Event bus for error handling */
-  eventBus: EventBus | undefined;
+  eventBus: undefined | undefined;
 
   // ======================
   // Constructor
   // ======================
 
-  constructor(eventBus?: EventBus) {
+  constructor(eventBus?: undefined) {
     this.eventBus = eventBus;
   }
 
@@ -325,12 +323,10 @@ class VocabularyRepository {
 
     // Fall back to loader (will check index and load appropriate chunk)
     try {
-      const options: LoadOptions = {};
-      if (this.eventBus) options.eventBus = this.eventBus;
-      const item = await getItemFromLoader(id, options);
+      const item = await getItemFromLoader(id);
       return item ?? undefined;
     } catch (error) {
-      ErrorHandler.handleError(error, `VocabularyRepository.getById(${id})`, this.eventBus);
+      ErrorHandler.handleError(error, `VocabularyRepository.getById(${id})`, undefined);
       return undefined;
     }
   }
@@ -519,7 +515,7 @@ class VocabularyRepository {
 
     try {
       const { loadVocabulary } = await import('./loader');
-      const collection = await loadVocabulary(this.eventBus);
+      const collection = await loadVocabulary();
 
       // Group by level
       for (const item of collection.items) {

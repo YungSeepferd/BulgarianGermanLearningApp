@@ -31,7 +31,7 @@ export interface PracticeSessionState {
 export const LEARNING_PATHS = {
   A1_ESSENTIAL: 'essenzielle-a1',
   A1_BASICS: 'a1-grundlagen',
-  A2_INTERMEDIATE: 'a2-mittelstufe',
+  A2_INTERMEDIATE: 'a2-mittelstufe'
 } as const;
 
 /**

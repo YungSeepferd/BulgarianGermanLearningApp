@@ -7,7 +7,6 @@ import {
   isPracticeStat
 } from '$lib/schemas/localStorage.js';
 import { StorageError, ErrorHandler } from '../services/errors';
-import { EventBus } from '../services/event-bus';
 
 /**
  * LocalStorage utility class for managing user progress
@@ -27,7 +26,7 @@ export class LocalStorageManager {
     stats: Map<string, { correct: number; incorrect: number; lastPracticed: string }>;
     favorites: string[];
     recentSearches: string[];
-  }, eventBus?: EventBus): void {
+  }): void {
     try {
         const serializedStats = Array.from(progress.stats.entries()).map(([id, data]) => ({
             id,
@@ -55,7 +54,7 @@ export class LocalStorageManager {
         );
     } catch (error) {
         const err = error instanceof Error ? error : new Error(String(error));
-        ErrorHandler.handleError(err, 'Failed to save user progress', eventBus);
+        ErrorHandler.handleError(err, 'Failed to save user progress', undefined);
         throw new StorageError('Failed to save user progress', { error: err });
     }
   }
@@ -66,7 +65,7 @@ export class LocalStorageManager {
    * @returns Object containing user progress data or null if not found
    * @throws StorageError if loading fails
    */
-  public static loadUserProgress(eventBus?: EventBus): {
+  public static loadUserProgress(eventBus?: undefined): {
     stats: Map<string, { correct: number; incorrect: number; lastPracticed: string }>;
     favorites: string[];
     recentSearches: string[];
@@ -115,7 +114,7 @@ export class LocalStorageManager {
    * @param eventBus Optional event bus for error handling
    * @throws StorageError if saving fails
    */
-  public static savePracticeSession(session: PracticeSession, eventBus?: EventBus): void {
+  public static savePracticeSession(session: PracticeSession, eventBus?: undefined): void {
     try {
         // Validate practice session before saving
         const result = PracticeSessionSchema.safeParse(session);
@@ -140,7 +139,7 @@ export class LocalStorageManager {
    * @returns Practice session data or null if not found
    * @throws StorageError if loading fails
    */
-  public static loadPracticeSession(eventBus?: EventBus): PracticeSession | null {
+  public static loadPracticeSession(eventBus?: undefined): PracticeSession | null {
     try {
         const data = localStorage.getItem(LocalStorageManager.SESSION_KEY);
         if (!data) return null;
@@ -164,7 +163,7 @@ export class LocalStorageManager {
    * @param eventBus Optional event bus for error handling
    * @throws StorageError if clearing fails
    */
-  public static clearPracticeSession(eventBus?: EventBus): void {
+  public static clearPracticeSession(eventBus?: undefined): void {
     try {
         localStorage.removeItem(LocalStorageManager.SESSION_KEY);
     } catch (error) {
@@ -180,7 +179,7 @@ export class LocalStorageManager {
    * @returns JSON string containing all user data
    * @throws StorageError if exporting fails
    */
-  public static exportUserData(eventBus?: EventBus): string {
+  public static exportUserData(eventBus?: undefined): string {
     try {
         const progress = this.loadUserProgress(eventBus);
         const session = this.loadPracticeSession(eventBus);
@@ -203,7 +202,7 @@ export class LocalStorageManager {
    * @param eventBus Optional event bus for error handling
    * @throws StorageError if importing fails
    */
-  public static importUserData(jsonData: string, eventBus?: EventBus): void {
+  public static importUserData(jsonData: string): void {
     try {
         const data = JSON.parse(jsonData);
 
@@ -212,32 +211,31 @@ export class LocalStorageManager {
                 stats: data.progress.stats,
                 favorites: data.progress.favorites,
                 recentSearches: data.progress.recentSearches
-            }, eventBus);
+            });
         }
 
         if (data.session) {
-            this.savePracticeSession(data.session, eventBus);
+            this.savePracticeSession(data.session);
         }
     } catch (error) {
         const err = error instanceof Error ? error : new Error(String(error));
-        ErrorHandler.handleError(err, 'Failed to import user data', eventBus);
+        ErrorHandler.handleError(err, 'Failed to import user data', undefined);
         throw new StorageError('Failed to import user data', { error: err });
     }
   }
 
   /**
    * Clear all tandem-related data from localStorage
-   * @param eventBus Optional event bus for error handling
    * @throws StorageError if clearing fails
    */
-  public static clearAllData(eventBus?: EventBus): void {
+  public static clearAllData(): void {
     try {
         Object.keys(localStorage)
             .filter(key => key.startsWith(LocalStorageManager.PREFIX))
             .forEach(key => localStorage.removeItem(key));
     } catch (error) {
         const err = error instanceof Error ? error : new Error(String(error));
-        ErrorHandler.handleError(err, 'Failed to clear all user data', eventBus);
+        ErrorHandler.handleError(err, 'Failed to clear all user data', undefined);
         throw new StorageError('Failed to clear all user data', { error: err });
     }
   }

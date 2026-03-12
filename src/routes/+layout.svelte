@@ -4,7 +4,7 @@
   import Toaster from '$lib/components/ui/Toaster.svelte';
   import '$lib/styles/tokens.css';
   // Layout shell: no page-level logic needed here
-  import { initializeVocabularyRepository } from '$lib/services/di-container';
+  import { initializeVocabularyRepository } from '$lib/services/index';
   import { initializeAppState } from '$lib/state/app-state';
   import { ErrorHandler } from '$lib/services/errors';
   import { showError } from '$lib/services/toast.svelte';

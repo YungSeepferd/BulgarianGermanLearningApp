@@ -5,7 +5,7 @@
    * Displays a lesson with vocabulary items and progress tracking.
    */
 
-  import type { Lesson, LessonDifficulty, LessonType } from '../schemas/lesson';
+  import type { Lesson, LessonDifficulty, LessonType, LearningObjective, VocabularyReference } from '../schemas/lesson';
 
   // Props
   let { lesson, onStart } = $props<{ lesson: Lesson; onStart?: () => void }>();
@@ -17,7 +17,7 @@
 
   // Computed
   let vocabularyItems = $derived(
-    lesson.vocabulary.map((vocab: any) => {
+    lesson.vocabulary.map((vocab: VocabularyReference) => {
       if (typeof vocab === 'string') {
         return {
           id: vocab,
@@ -28,11 +28,11 @@
         };
       } else if (vocab && typeof vocab === 'object') {
         return {
-          id: vocab.id || `vocab-${Date.now()}`,
-          german: vocab.german || vocab.bulgarian || 'Unknown',
-          bulgarian: vocab.bulgarian || vocab.german || 'Unknown',
-          partOfSpeech: vocab.partOfSpeech || 'noun',
-          difficulty: vocab.difficulty || 1
+          id: (vocab as { id?: string }).id || `vocab-${Date.now()}`,
+          german: (vocab as { german?: string }).german || (vocab as { bulgarian?: string }).bulgarian || 'Unknown',
+          bulgarian: (vocab as { bulgarian?: string }).bulgarian || (vocab as { german?: string }).german || 'Unknown',
+          partOfSpeech: (vocab as { partOfSpeech?: string }).partOfSpeech || 'noun',
+          difficulty: (vocab as { difficulty?: number }).difficulty || 1
         };
       } else {
         return {
@@ -59,7 +59,7 @@
   let objectives = $derived(lesson.objectives ?? []);
   let completionPercentage = $derived(
     objectives.length > 0
-      ? Math.round((objectives.filter((obj: any) => obj.isCompleted).length / objectives.length) * 100)
+      ? Math.round((objectives.filter((obj: LearningObjective) => obj.isCompleted).length / objectives.length) * 100)
       : 0
   );
 
@@ -82,7 +82,7 @@
 
   function toggleObjective(objectiveId: string) {
     const currentObjectives = lesson.objectives ?? [];
-    lesson.objectives = currentObjectives.map((obj: any) =>
+    lesson.objectives = currentObjectives.map((obj: LearningObjective) =>
       obj.id === objectiveId ? { ...obj, isCompleted: !obj.isCompleted } : obj
     );
     lesson.updatedAt = new Date();

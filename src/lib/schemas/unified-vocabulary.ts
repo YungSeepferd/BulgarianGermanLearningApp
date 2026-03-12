@@ -374,6 +374,7 @@ export type Transliteration = z.infer<typeof TransliterationSchema>;
 export type Audio = z.infer<typeof AudioSchema>;
 export type Grammar = z.infer<typeof GrammarSchema>;
 export type Example = z.infer<typeof ExampleSchema>;
+export type DefinitionLink = z.infer<typeof DefinitionLinkSchema>;
 export type Notes = z.infer<typeof NotesSchema>;
 export type VocabularyMetadata = z.infer<typeof VocabularyMetadataSchema>;
 

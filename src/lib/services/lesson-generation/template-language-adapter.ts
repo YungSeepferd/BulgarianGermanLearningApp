@@ -87,24 +87,30 @@ export function getOppositeDirectionText(): string {
  * @param property The base property name
  * @returns The value for the current source language
  */
-export function getLanguageProperty(obj: any, property: string): string {
+export function getLanguageProperty(obj: Record<string, unknown> | null | undefined, property: string): string {
     if (!obj) return '';
 
     const sourceLang = getSourceLanguage();
 
     // Try direct property first (e.g., description.de)
-    if (obj[`${property}.${sourceLang}`]) {
-        return obj[`${property}.${sourceLang}`];
+    const directProp = obj[`${property}.${sourceLang}`];
+    if (typeof directProp === 'string') {
+        return directProp;
     }
 
     // Try nested property (e.g., description.german)
-    if (obj[property] && obj[property][sourceLang]) {
-        return obj[property][sourceLang];
+    const nestedObj = obj[property];
+    if (nestedObj && typeof nestedObj === 'object') {
+        const nestedValue = (nestedObj as Record<string, unknown>)[sourceLang];
+        if (typeof nestedValue === 'string') {
+            return nestedValue;
+        }
     }
 
     // Try simple property (e.g., description)
-    if (obj[property]) {
-        return obj[property];
+    const simpleProp = obj[property];
+    if (typeof simpleProp === 'string') {
+        return simpleProp;
     }
 
     return '';
@@ -116,19 +122,24 @@ export function getLanguageProperty(obj: any, property: string): string {
  * @param property The base property name
  * @returns The value for the current target language
  */
-export function getOppositeLanguageProperty(obj: any, property: string): string {
+export function getOppositeLanguageProperty(obj: Record<string, unknown> | null | undefined, property: string): string {
     if (!obj) return '';
 
     const targetLang = getTargetLanguage();
 
     // Try direct property first (e.g., description.bg)
-    if (obj[`${property}.${targetLang}`]) {
-        return obj[`${property}.${targetLang}`];
+    const directProp = obj[`${property}.${targetLang}`];
+    if (typeof directProp === 'string') {
+        return directProp;
     }
 
     // Try nested property (e.g., description.bulgarian)
-    if (obj[property] && obj[property][targetLang]) {
-        return obj[property][targetLang];
+    const nestedObj = obj[property];
+    if (nestedObj && typeof nestedObj === 'object') {
+        const nestedValue = (nestedObj as Record<string, unknown>)[targetLang];
+        if (typeof nestedValue === 'string') {
+            return nestedValue;
+        }
     }
 
     return '';

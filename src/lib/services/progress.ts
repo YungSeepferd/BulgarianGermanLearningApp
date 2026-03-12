@@ -3,10 +3,12 @@
  *
  * This service provides comprehensive progress tracking functionality for the language learning application.
  * It handles vocabulary mastery, lesson completion, quiz performance, and overall user progress.
+ *
+ * Uses IndexedDB (via Dexie) for storage with localStorage fallback.
  */
 
 import { v4 as uuidv4 } from 'uuid';
-import { TransactionManager } from '$lib/utils/transaction';
+import { browser } from '$app/environment';
 import {
   VocabularyMasterySchema,
   LessonProgressSchema,
@@ -26,13 +28,14 @@ import {
   calculateLevel,
   calculateXPForLevel
 } from '$lib/schemas/progress';
-import { EventBus, EventTypes, type XPEvent, type LevelUpEvent } from './event-bus';
+import { gameState } from '$lib/state/game-state.svelte';
 import { ProgressError, StorageError, ValidationError, ErrorHandler } from './errors';
 import { Debug } from '../utils';
+import { ProgressDB } from '$lib/data/indexeddb';
+import type { ProgressDataStore } from '$lib/data/indexeddb';
 
 export class ProgressService {
   private progressData: ProgressData = this.getDefaultProgressData();
-  private eventBus: EventBus;
   private static instance: ProgressService | null = null;
 
   // XP values for different actions
@@ -44,15 +47,9 @@ export class ProgressService {
     DAILY_GOAL: 200
   };
 
-  constructor(eventBus: EventBus) {
-    this.eventBus = eventBus;
-
-    // Use the same browser detection as loadProgress for consistency
-    const isBrowser = typeof window !== 'undefined' && typeof localStorage !== 'undefined';
-    if (isBrowser) {
-      console.log('ProgressService constructor called, loading progress...');
+  constructor() {
+    if (browser) {
       this.loadProgress();
-      console.log('Progress data loaded:', this.progressData);
     }
   }
 
@@ -62,9 +59,7 @@ export class ProgressService {
    */
   public static getInstance(): ProgressService {
     if (!ProgressService.instance) {
-      // Create a temporary event bus if none is provided
-      const eventBus = new EventBus();
-      ProgressService.instance = new ProgressService(eventBus);
+      ProgressService.instance = new ProgressService();
     }
     return ProgressService.instance;
   }
@@ -113,101 +108,63 @@ export class ProgressService {
     if (responseTime !== undefined && (typeof responseTime !== 'number' || responseTime < 0)) {
       throw new ValidationError('Invalid response time', { responseTime });
     }
-    // Create a transaction to ensure atomic updates
-    const transactionId = `vocab-practice-${itemId}-${Date.now()}`;
-    const transaction = TransactionManager.startTransaction(transactionId);
+    // Store original state for rollback on error
+    const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
 
     try {
         const now = new Date().toISOString();
 
-        // Store original state for rollback
-        const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
+        // Get or create mastery record
+        let mastery = this.progressData.vocabularyMastery[itemId] || {
+            id: uuidv4(),
+            itemId,
+            correctCount: 0,
+            incorrectCount: 0,
+            totalAttempts: 0,
+            lastPracticed: null,
+            masteryLevel: 0,
+            isMastered: false,
+            createdAt: now,
+            updatedAt: now
+        };
 
-        // Add vocabulary mastery update operation
-        transaction.addOperation(
-            async () => {
-                // Get or create mastery record
-                let mastery = this.progressData.vocabularyMastery[itemId] || {
-                    id: uuidv4(),
-                    itemId,
-                    correctCount: 0,
-                    incorrectCount: 0,
-                    totalAttempts: 0,
-                    lastPracticed: null,
-                    masteryLevel: 0,
-                    isMastered: false,
-                    createdAt: now,
-                    updatedAt: now
-                };
+        // Update mastery stats
+        if (correct) {
+            mastery.correctCount++;
+        } else {
+            mastery.incorrectCount++;
+        }
+        mastery.totalAttempts++;
+        mastery.lastPracticed = now;
+        mastery.updatedAt = now;
 
-                // Update mastery stats
-                if (correct) {
-                    mastery.correctCount++;
-                } else {
-                    mastery.incorrectCount++;
-                }
-                mastery.totalAttempts++;
-                mastery.lastPracticed = now;
-                mastery.updatedAt = now;
+        // Calculate mastery level
+        mastery.masteryLevel = calculateMasteryLevel(mastery.correctCount, mastery.incorrectCount);
+        mastery.isMastered = isItemMastered(mastery.masteryLevel);
 
-                // Calculate mastery level
-                mastery.masteryLevel = calculateMasteryLevel(mastery.correctCount, mastery.incorrectCount);
-                mastery.isMastered = isItemMastered(mastery.masteryLevel);
+        // Update the record
+        this.progressData.vocabularyMastery[itemId] = VocabularyMasterySchema.parse(mastery);
 
-                // Update the record
-                this.progressData.vocabularyMastery[itemId] = VocabularyMasterySchema.parse(mastery);
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back vocabulary mastery update', { itemId });
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
+        // Update overall progress
+        await this.updateOverallProgress({
+            xpEarned: ProgressService.XP_VALUES.VOCABULARY_PRACTICE,
+            wordsPracticed: 1,
+            timeSpent: responseTime || 0
+        });
 
-        // Add overall progress update operation
-        transaction.addOperation(
-            async () => {
-                // Update overall progress
-                await this.updateOverallProgress({
-                    xpEarned: ProgressService.XP_VALUES.VOCABULARY_PRACTICE,
-                    wordsPracticed: 1,
-                    timeSpent: responseTime || 0
-                });
-
-                // Award bonus XP for mastering an item
-                const mastery = this.progressData.vocabularyMastery[itemId];
-                if (mastery && mastery.isMastered && mastery.totalAttempts === 1) {
-                    await this.awardXP(ProgressService.XP_VALUES.VOCABULARY_MASTERED, 'Vocabulary mastered');
-                }
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back overall progress update', { itemId });
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
-
-        // Add save progress operation
-        transaction.addOperation(
-            async () => {
-                await this.saveProgress();
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back save progress', { itemId });
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
-
-        // Commit the transaction
-        await TransactionManager.commitTransaction(transactionId);
-
-    } catch (error: unknown) {
-        // Attempt to rollback the transaction if it wasn't committed
-        try {
-            await TransactionManager.rollbackTransaction(transactionId);
-        } catch (rollbackError: unknown) {
-          Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
+        // Award bonus XP for mastering an item
+        const updatedMastery = this.progressData.vocabularyMastery[itemId];
+        if (updatedMastery && updatedMastery.isMastered && updatedMastery.totalAttempts === 1) {
+            await this.awardXP(ProgressService.XP_VALUES.VOCABULARY_MASTERED, 'Vocabulary mastered');
         }
 
-        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to record vocabulary practice', this.eventBus);
+        await this.saveProgress();
+
+    } catch (error: unknown) {
+        // Restore original state on error
+        this.progressData = originalProgressData;
+
+        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to record vocabulary practice', undefined);
         throw new ProgressError('Failed to record vocabulary practice', { itemId, error: error instanceof Error ? error : new Error(String(error)) });
     }
   }
@@ -274,94 +231,57 @@ export class ProgressService {
     if (typeof completionPercentage !== 'number' || completionPercentage < 0 || completionPercentage > 100) {
       throw new ValidationError('Invalid completion percentage', { completionPercentage });
     }
-    // Create a transaction to ensure atomic updates
-    const transactionId = `lesson-progress-${lessonId}-${Date.now()}`;
-    const transaction = TransactionManager.startTransaction(transactionId);
+    // Store original state for rollback on error
+    const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
 
     try {
         const now = new Date().toISOString();
 
-        // Store original state for rollback
-        const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
+        // Get or create lesson progress record
+        let lessonProgress = this.progressData.lessonProgress[lessonId] || {
+            id: uuidv4(),
+            lessonId,
+            status: 'not_started',
+            completionPercentage: 0,
+            lastAccessed: null,
+            completedAt: null,
+            createdAt: now,
+            updatedAt: now
+        };
 
-        // Add lesson progress update operation
-        transaction.addOperation(
-            async () => {
-                // Get or create lesson progress record
-                let lessonProgress = this.progressData.lessonProgress[lessonId] || {
-                    id: uuidv4(),
-                    lessonId,
-                    status: 'not_started',
-                    completionPercentage: 0,
-                    lastAccessed: null,
-                    completedAt: null,
-                    createdAt: now,
-                    updatedAt: now
-                };
+        // Update lesson progress
+        lessonProgress.completionPercentage = Math.min(100, Math.max(0, completionPercentage));
+        lessonProgress.lastAccessed = now;
+        lessonProgress.updatedAt = now;
 
-                // Update lesson progress
-                lessonProgress.completionPercentage = Math.min(100, Math.max(0, completionPercentage));
-                lessonProgress.lastAccessed = now;
-                lessonProgress.updatedAt = now;
+        // Update status based on completion percentage
+        if (lessonProgress.completionPercentage >= 100) {
+            lessonProgress.status = 'completed';
+            lessonProgress.completedAt = now;
+        } else if (lessonProgress.completionPercentage > 0) {
+            lessonProgress.status = 'in_progress';
+        }
 
-                // Update status based on completion percentage
-                if (lessonProgress.completionPercentage >= 100) {
-                    lessonProgress.status = 'completed';
-                    lessonProgress.completedAt = now;
-                } else if (lessonProgress.completionPercentage > 0) {
-                    lessonProgress.status = 'in_progress';
-                }
+        // Update the record
+        this.progressData.lessonProgress[lessonId] = LessonProgressSchema.parse(lessonProgress);
 
-                // Update the record
-                this.progressData.lessonProgress[lessonId] = LessonProgressSchema.parse(lessonProgress);
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back lesson progress update', { lessonId });
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
+        // Update overall progress if lesson is completed
+        const updatedLessonProgress = this.progressData.lessonProgress[lessonId];
+        if (updatedLessonProgress && updatedLessonProgress.status === 'completed' && updatedLessonProgress.completionPercentage === 100) {
+            await this.updateOverallProgress({
+                xpEarned: ProgressService.XP_VALUES.LESSON_COMPLETED,
+                lessonsCompleted: 1,
+                timeSpent: 0
+            });
+        }
 
-        // Add overall progress update operation if lesson is completed
-        transaction.addOperation(
-            async () => {
-                const lessonProgress = this.progressData.lessonProgress[lessonId];
-                if (lessonProgress && lessonProgress.status === 'completed' && lessonProgress.completionPercentage === 100) {
-                    await this.updateOverallProgress({
-                        xpEarned: ProgressService.XP_VALUES.LESSON_COMPLETED,
-                        lessonsCompleted: 1,
-                        timeSpent: 0 // Time spent on lessons is tracked separately
-                    });
-                }
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back overall progress update', { lessonId });
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
-
-        // Add save progress operation
-        transaction.addOperation(
-            async () => {
-                await this.saveProgress();
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back save progress', { lessonId });
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
-
-        // Commit the transaction
-        await TransactionManager.commitTransaction(transactionId);
+        await this.saveProgress();
 
     } catch (error: unknown) {
-      // Attempt to rollback the transaction if it wasn't committed
-      try {
-        await TransactionManager.rollbackTransaction(transactionId);
-      } catch (rollbackError: unknown) {
-        Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
-      }
+        // Restore original state on error
+        this.progressData = originalProgressData;
 
-        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to record lesson progress', this.eventBus);
+        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to record lesson progress', undefined);
         throw new ProgressError('Failed to record lesson progress', { lessonId, completionPercentage, error });
     }
   }
@@ -424,81 +344,43 @@ export class ProgressService {
     if (!sessionId || typeof sessionId !== 'string') {
       throw new ValidationError('Invalid session ID', { sessionId });
     }
-    // Create a transaction to ensure atomic updates
-    const transactionId = `quiz-performance-${quizId}-${Date.now()}`;
-    const transaction = TransactionManager.startTransaction(transactionId);
+    // Store original state for rollback on error
+    const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
 
     try {
         const now = new Date().toISOString();
 
-        // Store original state for rollback
-        const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
+        // Create quiz performance record
+        const quizPerformance: QuizPerformance = {
+            id: uuidv4(),
+            quizId,
+            sessionId,
+            score: Math.min(100, Math.max(0, score)),
+            totalQuestions,
+            correctAnswers,
+            incorrectAnswers: totalQuestions - correctAnswers,
+            timeTaken,
+            completedAt: now,
+            createdAt: now
+        };
 
-        // Add quiz performance update operation
-        transaction.addOperation(
-            async () => {
-                // Create quiz performance record
-                const quizPerformance: QuizPerformance = {
-                    id: uuidv4(),
-                    quizId,
-                    sessionId,
-                    score: Math.min(100, Math.max(0, score)),
-                    totalQuestions,
-                    correctAnswers,
-                    incorrectAnswers: totalQuestions - correctAnswers,
-                    timeTaken,
-                    completedAt: now,
-                    createdAt: now
-                };
+        // Add to progress data
+        this.progressData.quizPerformance[quizPerformance.id] = QuizPerformanceSchema.parse(quizPerformance);
 
-                // Add to progress data
-                this.progressData.quizPerformance[quizPerformance.id] = QuizPerformanceSchema.parse(quizPerformance);
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back quiz performance update', { quizId });
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
+        // Update overall progress
+        await this.updateOverallProgress({
+            xpEarned: ProgressService.XP_VALUES.QUIZ_COMPLETED,
+            quizzesTaken: 1,
+            timeSpent: timeTaken
+        });
 
-        // Add overall progress update operation
-        transaction.addOperation(
-            async () => {
-                // Update overall progress
-                await this.updateOverallProgress({
-                    xpEarned: ProgressService.XP_VALUES.QUIZ_COMPLETED,
-                    quizzesTaken: 1,
-                    timeSpent: timeTaken
-                });
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back overall progress update', { quizId });
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
-
-        // Add save progress operation
-        transaction.addOperation(
-            async () => {
-                await this.saveProgress();
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back save progress', { quizId });
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
-
-        // Commit the transaction
-        await TransactionManager.commitTransaction(transactionId);
+        await this.saveProgress();
 
     } catch (error: unknown) {
-      // Attempt to rollback the transaction if it wasn't committed
-      try {
-        await TransactionManager.rollbackTransaction(transactionId);
-      } catch (rollbackError: unknown) {
-        Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
-      }
+        // Restore original state on error
+        this.progressData = originalProgressData;
 
-      ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to record quiz performance', this.eventBus);
+        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to record quiz performance', undefined);
         throw new ProgressError('Failed to record quiz performance', { quizId, score, error });
     }
   }
@@ -556,78 +438,41 @@ export class ProgressService {
     if (typeof timeTaken !== 'number' || timeTaken < 0) {
       throw new ValidationError('Invalid time taken', { timeTaken });
     }
-    // Create a transaction to ensure atomic updates
-    const transactionId = `question-performance-${questionId}-${Date.now()}`;
-    const transaction = TransactionManager.startTransaction(transactionId);
+    // Store original state for rollback on error
+    const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
 
     try {
         const now = new Date().toISOString();
 
-        // Store original state for rollback
-        const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
+        // Create question performance record
+        const questionPerformance: QuestionPerformance = {
+            id: uuidv4(),
+            quizPerformanceId,
+            questionId,
+            questionType,
+            wasCorrect,
+            userAnswer,
+            correctAnswer,
+            timeTaken,
+            createdAt: now
+        };
 
-        // Add question performance update operation
-        transaction.addOperation(
-            async () => {
-                // Create question performance record
-                const questionPerformance: QuestionPerformance = {
-                    id: uuidv4(),
-                    quizPerformanceId,
-                    questionId,
-                    questionType,
-                    wasCorrect,
-                    userAnswer,
-                    correctAnswer,
-                    timeTaken,
-                    createdAt: now
-                };
+        // Add to progress data
+        this.progressData.questionPerformance[questionPerformance.id] =
+            QuestionPerformanceSchema.parse(questionPerformance);
 
-                // Add to progress data
-                this.progressData.questionPerformance[questionPerformance.id] =
-                    QuestionPerformanceSchema.parse(questionPerformance);
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back question performance update', { questionId });
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
-
-        // Add vocabulary mastery update operation if applicable
+        // Update vocabulary mastery if applicable
         if (questionType.includes('vocabulary') && questionId) {
-            transaction.addOperation(
-                async () => {
-                    await this.recordVocabularyPractice(questionId, wasCorrect, timeTaken);
-                },
-                async () => {
-                    Debug.log('ProgressService', 'Rolling back vocabulary mastery update', { questionId });
-                    this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-                }
-            );
+            await this.recordVocabularyPractice(questionId, wasCorrect, timeTaken);
         }
 
-        // Add save progress operation
-        transaction.addOperation(
-            async () => {
-                await this.saveProgress();
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back save progress', { questionId });
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
-
-        // Commit the transaction
-        await TransactionManager.commitTransaction(transactionId);
+        await this.saveProgress();
 
     } catch (error: unknown) {
-      // Attempt to rollback the transaction if it wasn't committed
-      try {
-        await TransactionManager.rollbackTransaction(transactionId);
-      } catch (rollbackError: unknown) {
-        Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
-      }
+        // Restore original state on error
+        this.progressData = originalProgressData;
 
-      ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to record question performance', this.eventBus);
+        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to record question performance', undefined);
         throw new ProgressError('Failed to record question performance', { questionId, error: error instanceof Error ? error : new Error(String(error)) });
     }
   }
@@ -701,72 +546,43 @@ export class ProgressService {
     if (typeof timeSpent !== 'number' || timeSpent < 0) {
       throw new ValidationError('Invalid time spent', { timeSpent });
     }
-    // Create a transaction to ensure atomic updates
-    const transactionId = `daily-progress-${date}-${Date.now()}`;
-    const transaction = TransactionManager.startTransaction(transactionId);
+    // Store original state for rollback on error
+    const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
 
     try {
         const now = new Date().toISOString();
 
-        // Store original state for rollback
-        const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
+        // Get or create daily progress record
+        let dailyProgress = this.progressData.dailyProgress[date] || {
+            id: uuidv4(),
+            date: new Date(date).toISOString(),
+            xpEarned: 0,
+            wordsPracticed: 0,
+            lessonsCompleted: 0,
+            quizzesTaken: 0,
+            timeSpent: 0,
+            createdAt: now,
+            updatedAt: now
+        };
 
-        // Add daily progress update operation
-        transaction.addOperation(
-            async () => {
-                // Get or create daily progress record
-                let dailyProgress = this.progressData.dailyProgress[date] || {
-                    id: uuidv4(),
-                    date: new Date(date).toISOString(),
-                    xpEarned: 0,
-                    wordsPracticed: 0,
-                    lessonsCompleted: 0,
-                    quizzesTaken: 0,
-                    timeSpent: 0,
-                    createdAt: now,
-                    updatedAt: now
-                };
+        // Update daily progress
+        dailyProgress.xpEarned += xpEarned;
+        dailyProgress.wordsPracticed += wordsPracticed;
+        dailyProgress.lessonsCompleted += lessonsCompleted;
+        dailyProgress.quizzesTaken += quizzesTaken;
+        dailyProgress.timeSpent += timeSpent;
+        dailyProgress.updatedAt = now;
 
-                // Update daily progress
-                dailyProgress.xpEarned += xpEarned;
-                dailyProgress.wordsPracticed += wordsPracticed;
-                dailyProgress.lessonsCompleted += lessonsCompleted;
-                dailyProgress.quizzesTaken += quizzesTaken;
-                dailyProgress.timeSpent += timeSpent;
-                dailyProgress.updatedAt = now;
+        // Update the record
+        this.progressData.dailyProgress[date] = DailyProgressSchema.parse(dailyProgress);
 
-                // Update the record
-                this.progressData.dailyProgress[date] = DailyProgressSchema.parse(dailyProgress);
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back daily progress update', { date });
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
-
-        // Add save progress operation
-        transaction.addOperation(
-            async () => {
-                await this.saveProgress();
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back save progress', { date });
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
-
-        // Commit the transaction
-        await TransactionManager.commitTransaction(transactionId);
+        await this.saveProgress();
 
     } catch (error: unknown) {
-      // Attempt to rollback the transaction if it wasn't committed
-      try {
-        await TransactionManager.rollbackTransaction(transactionId);
-      } catch (rollbackError: unknown) {
-        Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
-      }
+        // Restore original state on error
+        this.progressData = originalProgressData;
 
-      ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to record daily progress', this.eventBus);
+        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to record daily progress', undefined);
         throw new ProgressError('Failed to record daily progress', { date, error: error instanceof Error ? error : new Error(String(error)) });
     }
   }
@@ -842,101 +658,55 @@ export class ProgressService {
     if (typeof params.timeSpent !== 'number' || params.timeSpent < 0) {
       throw new ValidationError('Invalid time spent', { timeSpent: params.timeSpent });
     }
-    // Create a transaction to ensure atomic updates
-    const transactionId = `overall-progress-${Date.now()}`;
-    const transaction = TransactionManager.startTransaction(transactionId);
+    // Store original state for rollback on error
+    const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
 
     try {
         const now = new Date().toISOString();
         const today = now.split('T')[0];
 
-        // Store original state for rollback
-        const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
+        // Update overall progress
+        this.progressData.overallProgress.totalXP += params.xpEarned;
+        this.progressData.overallProgress.totalWordsPracticed += params.wordsPracticed || 0;
+        this.progressData.overallProgress.totalLessonsCompleted += params.lessonsCompleted || 0;
+        this.progressData.overallProgress.totalQuizzesTaken += params.quizzesTaken || 0;
+        this.progressData.overallProgress.totalTimeSpent += params.timeSpent;
+        this.progressData.overallProgress.lastActiveDate = now;
+        this.progressData.overallProgress.updatedAt = now;
 
-        // Add overall progress update operation
-        transaction.addOperation(
-            async () => {
-                // Update overall progress
-                this.progressData.overallProgress.totalXP += params.xpEarned;
-                this.progressData.overallProgress.totalWordsPracticed += params.wordsPracticed || 0;
-                this.progressData.overallProgress.totalLessonsCompleted += params.lessonsCompleted || 0;
-                this.progressData.overallProgress.totalQuizzesTaken += params.quizzesTaken || 0;
-                this.progressData.overallProgress.totalTimeSpent += params.timeSpent;
-                this.progressData.overallProgress.lastActiveDate = now;
-                this.progressData.overallProgress.updatedAt = now;
-
-                // Update level based on total XP
-                const newLevel = calculateLevel(this.progressData.overallProgress.totalXP);
-                if (newLevel > this.progressData.overallProgress.currentLevel) {
-                    this.progressData.overallProgress.currentLevel = newLevel;
-                    // Level up event is handled by the UI
-                }
-
-                // Update streak information
-                if (today) {
-                    this.updateStreak(today);
-                }
-
-                // Record daily progress
-                if (today) {
-                    await this.recordDailyProgress(
-                        today,
-                        params.xpEarned,
-                        params.wordsPracticed || 0,
-                        params.lessonsCompleted || 0,
-                        params.quizzesTaken || 0,
-                        params.timeSpent
-                    );
-                }
-
-                // Emit XP earned event
-                await this.eventBus.emit(EventTypes.XP_EARNED, {
-                    amount: params.xpEarned,
-                    reason: 'Progress update',
-                    timestamp: new Date()
-                } as XPEvent);
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back overall progress update');
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
-
-        // Add save progress operation
-        transaction.addOperation(
-            async () => {
-                await this.saveProgress();
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back save progress');
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
-
-        // Commit the transaction
-        await TransactionManager.commitTransaction(transactionId);
-
-        // Check for level up and emit event if needed (outside transaction to avoid circular dependencies)
-        const oldLevel = calculateLevel(this.progressData.overallProgress.totalXP - params.xpEarned);
-        const newLevel = this.progressData.overallProgress.currentLevel;
-        if (newLevel > oldLevel) {
-            await this.eventBus.emit(EventTypes.LEVEL_UP, {
-                oldLevel,
-                newLevel,
-                totalXP: this.progressData.overallProgress.totalXP,
-                timestamp: new Date()
-            } as LevelUpEvent);
+        // Update level based on total XP
+        const newLevel = calculateLevel(this.progressData.overallProgress.totalXP);
+        if (newLevel > this.progressData.overallProgress.currentLevel) {
+            this.progressData.overallProgress.currentLevel = newLevel;
         }
 
-    } catch (error: unknown) {
-      // Attempt to rollback the transaction if it wasn't committed
-      try {
-        await TransactionManager.rollbackTransaction(transactionId);
-      } catch (rollbackError: unknown) {
-        Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
-      }
+        // Update streak information
+        if (today) {
+            this.updateStreak(today);
+        }
 
-      ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to update overall progress', this.eventBus);
+        // Record daily progress
+        if (today) {
+            await this.recordDailyProgress(
+                today,
+                params.xpEarned,
+                params.wordsPracticed || 0,
+                params.lessonsCompleted || 0,
+                params.quizzesTaken || 0,
+                params.timeSpent
+            );
+        }
+
+        // Update game state with XP
+        gameState.addXP(params.xpEarned, 'Progress update');
+
+        await this.saveProgress();
+
+    } catch (error: unknown) {
+        // Restore original state on error
+        this.progressData = originalProgressData;
+
+        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to update overall progress', undefined);
         throw new ProgressError('Failed to update overall progress', { error });
     }
   }
@@ -1043,7 +813,7 @@ export class ProgressService {
       return;
     } catch (validationError: unknown) {
       // If validation fails, try to repair the data
-      ErrorHandler.handleError(validationError as Error, 'Progress data validation failed, attempting repair', this.eventBus);
+      ErrorHandler.handleError(validationError as Error, 'Progress data validation failed, attempting repair', undefined);
 
       try {
         // Create a new default progress data structure
@@ -1065,7 +835,7 @@ export class ProgressService {
             repairedData.vocabularyMastery[itemId] = VocabularyMasterySchema.parse(mastery);
           } catch {
             // If parsing fails, skip this item
-            ErrorHandler.handleError(new Error('Invalid vocabulary mastery data'), `Failed to repair vocabulary mastery item ${itemId}`, this.eventBus);
+            ErrorHandler.handleError(new Error('Invalid vocabulary mastery data'), `Failed to repair vocabulary mastery item ${itemId}`, undefined);
           }
         }
 
@@ -1075,7 +845,7 @@ export class ProgressService {
             repairedData.lessonProgress[lessonId] = LessonProgressSchema.parse(lesson);
           } catch {
             // If parsing fails, skip this item
-            ErrorHandler.handleError(new Error('Invalid lesson progress data'), `Failed to repair lesson progress item ${lessonId}`, this.eventBus);
+            ErrorHandler.handleError(new Error('Invalid lesson progress data'), `Failed to repair lesson progress item ${lessonId}`, undefined);
           }
         }
 
@@ -1085,7 +855,7 @@ export class ProgressService {
             repairedData.quizPerformance[quizId] = QuizPerformanceSchema.parse(quiz);
           } catch {
             // If parsing fails, skip this item
-            ErrorHandler.handleError(new Error('Invalid quiz performance data'), `Failed to repair quiz performance item ${quizId}`, this.eventBus);
+            ErrorHandler.handleError(new Error('Invalid quiz performance data'), `Failed to repair quiz performance item ${quizId}`, undefined);
           }
         }
 
@@ -1095,7 +865,7 @@ export class ProgressService {
             repairedData.questionPerformance[questionId] = QuestionPerformanceSchema.parse(question);
           } catch {
             // If parsing fails, skip this item
-            ErrorHandler.handleError(new Error('Invalid question performance data'), `Failed to repair question performance item ${questionId}`, this.eventBus);
+            ErrorHandler.handleError(new Error('Invalid question performance data'), `Failed to repair question performance item ${questionId}`, undefined);
           }
         }
 
@@ -1108,7 +878,7 @@ export class ProgressService {
             }
           } catch {
             // If parsing fails, skip this item
-            ErrorHandler.handleError(new Error('Invalid daily progress data'), `Failed to repair daily progress item ${date}`, this.eventBus);
+            ErrorHandler.handleError(new Error('Invalid daily progress data'), `Failed to repair daily progress item ${date}`, undefined);
           }
         }
 
@@ -1119,10 +889,10 @@ export class ProgressService {
         await this.saveProgress();
 
         // Log successful repair
-        ErrorHandler.handleError(new Error('Progress data repair completed'), 'Successfully repaired progress data', this.eventBus);
+        ErrorHandler.handleError(new Error('Progress data repair completed'), 'Successfully repaired progress data', undefined);
 
       } catch (repairError: unknown) {
-        ErrorHandler.handleError(repairError as Error, 'Failed to repair progress data', this.eventBus);
+        ErrorHandler.handleError(repairError as Error, 'Failed to repair progress data', undefined);
         throw new ValidationError('Failed to repair corrupted progress data', { validationError, repairError });
       }
     }
@@ -1151,222 +921,182 @@ export class ProgressService {
   */
 
   /**
-   * Load progress data with atomic transaction for migration
+   * Load progress data
+   * Uses IndexedDB first, then falls back to localStorage
    * @throws StorageError if loading fails
    */
   public async loadProgress(): Promise<void> {
-    // Create a transaction to ensure atomic loading
-    const transactionId = `load-progress-${Date.now()}`;
-    const transaction = TransactionManager.startTransaction(transactionId);
-
     try {
-        // Check browser environment - use typeof window to ensure we're in a browser context
-        const isBrowser = typeof window !== 'undefined' && typeof localStorage !== 'undefined';
-        console.log('PROGRESS SERVICE: Browser environment check:', isBrowser);
-
-        if (!isBrowser) {
-            console.log('PROGRESS SERVICE: Not in browser environment, skipping loadProgress');
+        if (!browser) {
+            Debug.log('ProgressService', 'Not in browser environment, skipping loadProgress');
             return;
         }
 
-        // Store original state for rollback
-        const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
-
-        // Add load progress operation
-        transaction.addOperation(
-            async () => {
-                // Check for old data first - if it exists, migrate it regardless of new data
-                const oldDataExists = localStorage.getItem('tandem_user_progress') !== null;
-
-                if (oldDataExists) {
-                    await this.migrateOldProgressData();
+        // Try IndexedDB first
+        try {
+            const indexedDBData = await ProgressDB.getProgress();
+            if (indexedDBData) {
+                // Validate the data against our schema
+                try {
+                    const validatedData = ProgressDataSchema.parse(indexedDBData);
+                    this.progressData = validatedData;
+                    Debug.log('ProgressService', 'Progress loaded from IndexedDB');
                     return;
+                } catch (validationError: unknown) {
+                    Debug.log('ProgressService', 'IndexedDB data validation failed', { error: validationError });
+                    // Continue to try localStorage
                 }
-
-                // Try to load the new progress data format
-                const savedData = localStorage.getItem('tandem_progress_data');
-
-                if (savedData) {
-                    // Parse the saved data
-                    const parsedData = JSON.parse(savedData);
-
-                    // Validate the data against our schema
-                    try {
-                      const validatedData = ProgressDataSchema.parse(parsedData);
-                      this.progressData = validatedData;
-                      return;
-                    } catch (validationError: unknown) {
-                      ErrorHandler.handleError(validationError as Error, 'Data validation failed during progress load, attempting repair', this.eventBus);
-   
-                      // Try to repair the corrupted data
-                      try {
-                        // Create a temporary instance to validate and repair
-                        this.progressData = parsedData; // Temporarily set corrupted data
-   
-                        // Attempt to validate and repair
-                        await this.validateAndRepairProgressData();
-   
-                        // If repair succeeds, log and continue
-                        ErrorHandler.handleError(new Error('Progress data repair successful'), 'Successfully repaired corrupted progress data', this.eventBus);
-                        return;
-                      } catch (repairError: unknown) {
-                        ErrorHandler.handleError(repairError as Error, 'Failed to repair corrupted progress data', this.eventBus);
-                            this.progressData = this.getDefaultProgressData();
-                            await this.saveProgress(); // Save the default data to overwrite invalid data
-                            throw new ValidationError('Invalid progress data format and repair failed', { validationError, repairError });
-                        }
-                    }
-                }
-
-                // If no data found, use default data
-                this.progressData = this.getDefaultProgressData();
-                await this.saveProgress(); // Save the default data
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back load progress');
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
             }
-        );
+        } catch (e) {
+            Debug.log('ProgressService', 'IndexedDB read error, trying localStorage', { error: e });
+        }
 
-        // Commit the transaction
-        await TransactionManager.commitTransaction(transactionId);
+        // Check for old data first - if it exists, migrate it regardless of new data
+        const oldDataExists = localStorage.getItem('tandem_user_progress') !== null;
+
+        if (oldDataExists) {
+            await this.migrateOldProgressData();
+            return;
+        }
+
+        // Try to load the new progress data format from localStorage
+        const savedData = localStorage.getItem('tandem_progress_data');
+
+        if (savedData) {
+            // Parse the saved data
+            const parsedData = JSON.parse(savedData);
+
+            // Validate the data against our schema
+            try {
+              const validatedData = ProgressDataSchema.parse(parsedData);
+              this.progressData = validatedData;
+              
+              // Migrate to IndexedDB
+              try {
+                await this.saveProgress();
+              } catch (e) {
+                Debug.log('ProgressService', 'Failed to migrate to IndexedDB', { error: e });
+              }
+              return;
+            } catch (validationError: unknown) {
+              ErrorHandler.handleError(validationError as Error, 'Data validation failed during progress load, attempting repair', undefined);
+
+              // Try to repair the corrupted data
+              try {
+                // Create a temporary instance to validate and repair
+                this.progressData = parsedData; // Temporarily set corrupted data
+
+                // Attempt to validate and repair
+                await this.validateAndRepairProgressData();
+
+                // If repair succeeds, log and continue
+                ErrorHandler.handleError(new Error('Progress data repair successful'), 'Successfully repaired corrupted progress data', undefined);
+                return;
+              } catch (repairError: unknown) {
+                ErrorHandler.handleError(repairError as Error, 'Failed to repair corrupted progress data', undefined);
+                    this.progressData = this.getDefaultProgressData();
+                    await this.saveProgress(); // Save the default data to overwrite invalid data
+                    throw new ValidationError('Invalid progress data format and repair failed', { validationError, repairError });
+                }
+            }
+        }
+
+        // If no data found, use default data
+        this.progressData = this.getDefaultProgressData();
+        await this.saveProgress(); // Save the default data
 
     } catch (error: unknown) {
-      // Attempt to rollback the transaction if it wasn't committed
-      try {
-        await TransactionManager.rollbackTransaction(transactionId);
-      } catch (rollbackError: unknown) {
-        Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
-      }
-
-      ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to load progress data', this.eventBus);
+        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to load progress data', undefined);
         this.progressData = this.getDefaultProgressData();
         throw new StorageError('Failed to load progress data', { error });
     }
   }
 
- /**
-  * Save progress data using atomic transaction
-  * @throws StorageError if saving fails
-  */
- async saveProgress(): Promise<void> {
-   // Create a transaction to ensure atomic saving
-   const transactionId = `save-progress-${Date.now()}`;
-   const transaction = TransactionManager.startTransaction(transactionId);
+  /**
+   * Save progress data
+   * Uses IndexedDB first, then falls back to localStorage
+   * @throws StorageError if saving fails
+   */
+  async saveProgress(): Promise<void> {
+    try {
+        if (!browser) return;
 
-   try {
-       // Use the same browser detection as loadProgress for consistency
-       const isBrowser = typeof window !== 'undefined' && typeof localStorage !== 'undefined';
-       if (!isBrowser) return;
+        // Try IndexedDB first
+        try {
+            const progressDataStore: ProgressDataStore = {
+                vocabularyMastery: this.progressData.vocabularyMastery,
+                lessonProgress: this.progressData.lessonProgress,
+                quizPerformance: this.progressData.quizPerformance,
+                questionPerformance: this.progressData.questionPerformance,
+                dailyProgress: this.progressData.dailyProgress,
+                overallProgress: this.progressData.overallProgress
+            };
+            await ProgressDB.saveProgress(progressDataStore);
+            Debug.log('ProgressService', 'Progress saved to IndexedDB');
+        } catch (e) {
+            Debug.log('ProgressService', 'Failed to save to IndexedDB, using localStorage fallback', { error: e });
+            // Fallback to localStorage
+            localStorage.setItem('tandem_progress_data', JSON.stringify(this.progressData));
+        }
 
-       // Store original state for rollback
-       const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
-
-       // Add save progress operation
-       transaction.addOperation(
-           async () => {
-               localStorage.setItem('tandem_progress_data', JSON.stringify(this.progressData));
-           },
-           async () => {
-               Debug.log('ProgressService', 'Rolling back save progress');
-               this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-           }
-       );
-
-       // Commit the transaction
-       await TransactionManager.commitTransaction(transactionId);
-
-     } catch (error: unknown) {
-       // Attempt to rollback the transaction if it wasn't committed
-       try {
-         await TransactionManager.rollbackTransaction(transactionId);
-       } catch (rollbackError: unknown) {
-         Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
-       }
-
-       ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to save progress data', this.eventBus);
-       throw new StorageError('Failed to save progress data', { error });
-     }
+    } catch (error: unknown) {
+        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to save progress data', undefined);
+        throw new StorageError('Failed to save progress data', { error });
+    }
    }
 
   /**
-   * Migrate old progress data to new format if needed using atomic transaction
+   * Migrate old progress data to new format if needed
    * @throws StorageError if migration fails
    */
   private async migrateOldProgressData(): Promise<void> {
-    // Create a transaction to ensure atomic migration
-    const transactionId = `migrate-progress-${Date.now()}`;
-    const transaction = TransactionManager.startTransaction(transactionId);
-
     try {
         // Use the same browser detection as loadProgress for consistency
         const isBrowser = typeof window !== 'undefined' && typeof localStorage !== 'undefined';
         if (!isBrowser) return;
 
-        // Store original state for rollback
-        const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
+        // Check for old LocalStorageManager data
+        const oldData = localStorage.getItem('tandem_user_progress');
+        if (!oldData) {
+            return;
+        }
 
-        // Add migration operation
-        transaction.addOperation(
-            async () => {
-                // Check for old LocalStorageManager data
-                const oldData = localStorage.getItem('tandem_user_progress');
-                if (!oldData) {
-                    return;
+        // Parse the old data format
+        const parsedOldData = JSON.parse(oldData);
+
+        // Create new progress data structure from old data
+        const newProgressData = this.getDefaultProgressData();
+
+        // Migrate vocabulary mastery data from old stats
+        if (parsedOldData.stats) {
+            Object.entries(parsedOldData.stats).forEach(([itemId, stat]: [string, any]) => {
+                if (stat && typeof stat.correct === 'number' && typeof stat.incorrect === 'number') {
+                    const now = new Date().toISOString();
+                    newProgressData.vocabularyMastery[itemId] = {
+                        id: uuidv4(),
+                        itemId,
+                        correctCount: stat.correct,
+                        incorrectCount: stat.incorrect,
+                        totalAttempts: stat.correct + stat.incorrect,
+                        lastPracticed: stat.lastPracticed || now,
+                        masteryLevel: calculateMasteryLevel(stat.correct, stat.incorrect),
+                        isMastered: isItemMastered(calculateMasteryLevel(stat.correct, stat.incorrect)),
+                        createdAt: now,
+                        updatedAt: now
+                    };
                 }
+            });
+        }
 
-                // Parse the old data format
-                const parsedOldData = JSON.parse(oldData);
+        // Save the migrated data
+        this.progressData = newProgressData;
+        await this.saveProgress();
 
-                // Create new progress data structure from old data
-                const newProgressData = this.getDefaultProgressData();
-
-                // Migrate vocabulary mastery data from old stats
-                if (parsedOldData.stats) {
-                    Object.entries(parsedOldData.stats).forEach(([itemId, stat]: [string, any]) => {
-                        if (stat && typeof stat.correct === 'number' && typeof stat.incorrect === 'number') {
-                            const now = new Date().toISOString();
-                            newProgressData.vocabularyMastery[itemId] = {
-                                id: uuidv4(),
-                                itemId,
-                                correctCount: stat.correct,
-                                incorrectCount: stat.incorrect,
-                                totalAttempts: stat.correct + stat.incorrect,
-                                lastPracticed: stat.lastPracticed || now,
-                                masteryLevel: calculateMasteryLevel(stat.correct, stat.incorrect),
-                                isMastered: isItemMastered(calculateMasteryLevel(stat.correct, stat.incorrect)),
-                                createdAt: now,
-                                updatedAt: now
-                            };
-                        }
-                    });
-                }
-
-                // Save the migrated data
-                this.progressData = newProgressData;
-                await this.saveProgress();
-
-                // Remove the old data to prevent future migration attempts
-                localStorage.removeItem('tandem_user_progress');
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back migration');
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
-
-        // Commit the transaction
-        await TransactionManager.commitTransaction(transactionId);
+        // Remove the old data to prevent future migration attempts
+        localStorage.removeItem('tandem_user_progress');
 
     } catch (error: unknown) {
-      // Attempt to rollback the transaction if it wasn't committed
-      try {
-        await TransactionManager.rollbackTransaction(transactionId);
-      } catch (rollbackError: unknown) {
-        Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
-      }
-
-      ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to migrate old progress data', this.eventBus);
+        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to migrate old progress data', undefined);
         throw new StorageError('Failed to migrate old progress data', { error });
     }
   }
@@ -1385,86 +1115,47 @@ export class ProgressService {
   * @throws ValidationError if data validation fails
   * @throws StorageError if saving fails
   */
- async importProgress(jsonData: string): Promise<void> {
-   // Validate input parameter
-   if (!jsonData || typeof jsonData !== 'string') {
-     throw new ValidationError('Invalid JSON data', { jsonData });
-   }
-    // Create a transaction to ensure atomic import
-    const transactionId = `import-progress-${Date.now()}`;
-    const transaction = TransactionManager.startTransaction(transactionId);
+  async importProgress(jsonData: string): Promise<void> {
+    // Validate input parameter
+    if (!jsonData || typeof jsonData !== 'string') {
+      throw new ValidationError('Invalid JSON data', { jsonData });
+    }
+
+    // Store original state for rollback on error
+    const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
 
     try {
-        // Store original state for rollback
-        const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
-
-        // Add import operation
-        transaction.addOperation(
-            async () => {
-                const parsedData = JSON.parse(jsonData);
-                const validatedData = ProgressDataSchema.parse(parsedData);
-                this.progressData = validatedData;
-                await this.saveProgress();
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back import progress');
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
-
-        // Commit the transaction
-        await TransactionManager.commitTransaction(transactionId);
+        const parsedData = JSON.parse(jsonData);
+        const validatedData = ProgressDataSchema.parse(parsedData);
+        this.progressData = validatedData;
+        await this.saveProgress();
 
     } catch (error: unknown) {
-        // Attempt to rollback the transaction if it wasn't committed
-        try {
-            await TransactionManager.rollbackTransaction(transactionId);
-        } catch (rollbackError) {
-            Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
-        }
+        // Restore original state on error
+        this.progressData = originalProgressData;
 
-        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to import progress data', this.eventBus);
+        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to import progress data', undefined);
         throw new ValidationError('Failed to import progress data', { error });
     }
   }
 
   /**
-   * Reset all progress data using atomic transaction
+   * Reset all progress data
    * @throws StorageError if saving fails
    */
   async resetProgress(): Promise<void> {
-    // Create a transaction to ensure atomic reset
-    const transactionId = `reset-progress-${Date.now()}`;
-    const transaction = TransactionManager.startTransaction(transactionId);
+    // Store original state for rollback on error
+    const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
 
     try {
-        // Store original state for rollback
-        const originalProgressData = JSON.parse(JSON.stringify(this.progressData));
-
-        // Add reset operation
-        transaction.addOperation(
-            async () => {
-                this.progressData = this.getDefaultProgressData();
-                await this.saveProgress();
-            },
-            async () => {
-                Debug.log('ProgressService', 'Rolling back reset progress');
-                this.progressData = JSON.parse(JSON.stringify(originalProgressData));
-            }
-        );
-
-        // Commit the transaction
-        await TransactionManager.commitTransaction(transactionId);
+        this.progressData = this.getDefaultProgressData();
+        await this.saveProgress();
 
     } catch (error: unknown) {
-        // Attempt to rollback the transaction if it wasn't committed
-        try {
-            await TransactionManager.rollbackTransaction(transactionId);
-        } catch (rollbackError) {
-            Debug.error('ProgressService', 'Failed to rollback transaction', rollbackError as Error);
-        }
+        // Restore original state on error
+        this.progressData = originalProgressData;
 
-        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to reset progress data', this.eventBus);
+        ErrorHandler.handleError(error instanceof Error ? error : new Error(String(error)), 'Failed to reset progress data', undefined);
         throw new StorageError('Failed to reset progress data', { error });
     }
   }

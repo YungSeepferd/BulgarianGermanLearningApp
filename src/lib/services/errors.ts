@@ -48,7 +48,7 @@ export class ValidationError extends AppError {
 }
 
 export class StorageError extends AppError {
-    constructor(message: string, context?: any) {
+    constructor(message: string, context?: unknown) {
         super(message, context);
         this.name = 'StorageError';
     }
@@ -78,7 +78,7 @@ export class ErrorHandler {
     static handleError(
         error: unknown,
         context?: string,
-        eventBus?: { emit: (type: string, data: any) => Promise<void> },
+        eventBus?: { emit: (type: string, data: unknown) => Promise<void> },
         showToast: boolean = true
     ): void {
         const err = error instanceof Error ? error : new Error(String(error));

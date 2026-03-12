@@ -1,8 +1,7 @@
 import { browser } from '$app/environment';
 import { Debug } from '$lib/utils';
 import { vocabularyRepository } from '$lib/data/vocabulary-repository.svelte';
-import { getDIContainer } from '$lib/services/di-container';
-import { EventTypes } from '$lib/services/event-bus';
+import { ErrorHandler } from '$lib/services/errors';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 import type { LessonDifficulty } from '$lib/schemas/lesson';
 import type { VocabularyCategory, PartOfSpeech } from '$lib/schemas/vocabulary';
@@ -57,13 +56,8 @@ class VocabularyDB {
             this.items = [];
             this.initialized = true;
 
-            // Emit error event for global error handling
-            const eventBus = getDIContainer().getService('eventBus');
-            eventBus.emit(EventTypes.ERROR, {
-                error: new Error('Failed to load vocabulary data'),
-                context: 'VocabularyDB.loadInitialData',
-                timestamp: new Date()
-            });
+            // Handle error directly
+            ErrorHandler.handleError(error as Error, 'VocabularyDB.loadInitialData', undefined);
         }
     }
 

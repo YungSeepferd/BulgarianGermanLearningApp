@@ -72,13 +72,7 @@
 
   const breakdown = $derived(normalizeBreakdown(vocabularyItem));
   
-  interface NormalizedExample {
-    german: string;
-    bulgarian: string;
-    context?: string;
-  }
-  
-  const examples = $derived.by((): NormalizedExample[] => {
+  const examples = $derived.by((): Example[] => {
     // Use standard schema field first
     if (vocabularyItem.examples && vocabularyItem.examples.length > 0) {
       // Check if the first item matches the expected schema to avoid runtime errors with legacy data
@@ -87,7 +81,8 @@
         return vocabularyItem.examples.map((ex: Example) => ({
           german: ex.german,
           bulgarian: ex.bulgarian,
-          context: ex.context
+          context: ex.context,
+          source: ex.source
         }));
       }
     }
@@ -97,14 +92,15 @@
     const legacy = legacyItem.examples;
     
     if (Array.isArray(legacy)) {
-      return legacy.map((ex: any) => ({
+      return legacy.map((ex) => ({
         german: ex.sentence || ex.translation || ex.source || ex.german || '',
         bulgarian: ex.translation || ex.sentence || ex.target || ex.bulgarian || '',
-        context: ex.context
+        context: ex.context,
+        source: 'legacy' as const
       })).filter(ex => ex.german && ex.bulgarian);
     }
     
-    return [];
+    return [] as Example[];
   });
 
   const culturalNote = $derived(vocabularyItem.culturalNotes || vocabularyItem.metadata?.culturalNote || vocabularyItem.metadata?.notes);

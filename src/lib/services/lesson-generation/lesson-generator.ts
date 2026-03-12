@@ -20,7 +20,8 @@ import type {
   ILessonTemplateRepository,
   ICulturalGrammarService,
   ITemplateRenderer,
-  LessonDifficulty
+  LessonDifficulty,
+  GrammarQueryCriteria
 } from './types';
 import { lessonTemplateRepository } from './lesson-templates';
 import { culturalGrammarService } from './cultural-grammar';
@@ -29,7 +30,8 @@ import {
   loadVocabulary,
   loadVocabularyByCategory,
   loadVocabularyBySearch,
-  getRandomVocabulary
+  getRandomVocabulary,
+  type VocabularySearchParams
 } from '../../data/loader';
 import type { VocabularyItem, PartOfSpeech as _PartOfSpeech } from '$lib/types/vocabulary';
 import type { VocabularyCategory } from '$lib/schemas/vocabulary';
@@ -331,7 +333,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
     const sections: GeneratedLessonSection[] = [];
     
     // 1. Fetch Grammar Concepts
-    const queryParams: any = {
+    const queryParams: GrammarQueryCriteria = {
       difficulty: params.difficulty
     };
     if (params.criteria.partOfSpeech) queryParams.partOfSpeech = params.criteria.partOfSpeech;
@@ -358,7 +360,7 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
 
     // Find vocabulary relevant to the grammar concept (e.g. nouns for gender rules)
     if (mainConcept && mainConcept.partOfSpeech && mainConcept.partOfSpeech.length > 0) {
-      const searchParams: any = {
+      const searchParams: VocabularySearchParams = {
         difficulty: numericDifficulty,
         limit: 8
       };
@@ -637,21 +639,30 @@ export class LessonGenerationEngine implements ILessonGenerationEngine {
   /**
    * Align vocabulary items with lesson expectations (metadata, categories)
    */
-  private normalizeVocabularyItem(item: any): VocabularyItem {
+  private normalizeVocabularyItem(item: Record<string, unknown>): VocabularyItem {
+    const itemMetadata = item['metadata'] as Record<string, unknown> | undefined;
     const normalized: VocabularyItem = {
-      ...item,
-      categories: this.normalizeCategories(item.categories as Array<VocabularyCategory | string>),
-      isCommon: item.isCommon ?? (item.metadata as any)?.isCommon ?? false,
-      isVerified: item.isVerified ?? (item.metadata as any)?.isVerified ?? false,
-      learningPhase: item.learningPhase ?? (item.metadata as any)?.learningPhase ?? 0,
-      metadata: (item.metadata ?? {}) as any,
-      createdAt: item.createdAt ?? new Date(),
-      updatedAt: item.updatedAt ?? new Date()
+      id: String(item['id'] ?? ''),
+      german: String(item['german'] ?? ''),
+      bulgarian: String(item['bulgarian'] ?? ''),
+      partOfSpeech: String(item['partOfSpeech'] ?? 'noun') as VocabularyItem['partOfSpeech'],
+      difficulty: Number(item['difficulty'] ?? 1),
+      categories: this.normalizeCategories(item['categories'] as Array<VocabularyCategory | string>),
+      isCommon: (item['isCommon'] as boolean) ?? itemMetadata?.['isCommon'] ?? false,
+      isVerified: (item['isVerified'] as boolean) ?? itemMetadata?.['isVerified'] ?? false,
+      learningPhase: (item['learningPhase'] as number) ?? (itemMetadata?.['learningPhase'] as number) ?? 0,
+      metadata: (itemMetadata ?? {}) as VocabularyItem['metadata'],
+      createdAt: (item['createdAt'] as Date) ?? new Date(),
+      updatedAt: (item['updatedAt'] as Date) ?? new Date(),
+      // Required fields with defaults
+      examples: (item['examples'] as VocabularyItem['examples']) ?? [],
+      type: (item['type'] as VocabularyItem['type']) ?? 'word',
+      version: (item['version'] as number) ?? 1
     };
     return normalized;
   }
 
-  private normalizeVocabularyList(items: any[]): VocabularyItem[] {
+  private normalizeVocabularyList(items: Record<string, unknown>[]): VocabularyItem[] {
     return items.map(item => this.normalizeVocabularyItem(item));
   }
 

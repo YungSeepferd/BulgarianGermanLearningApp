@@ -2,9 +2,11 @@ import devtoolsJson from 'vite-plugin-devtools-json';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import { translationPlugin } from './src/lib/utils/translation-plugin';
+import { SvelteKitPWA } from '@vite-pwa/sveltekit';
+import { pwaOptions } from './src/lib/pwa-config';
 
 export default defineConfig(({ mode }) => ({
-  plugins: [sveltekit(), devtoolsJson(), translationPlugin()],
+  plugins: [sveltekit(), devtoolsJson(), translationPlugin(), SvelteKitPWA(pwaOptions)],
   resolve: {
     conditions: mode === 'test' ? ['browser'] : undefined,
     alias: { // Add alias to handle TypeScript files without extensions

@@ -8,7 +8,7 @@ type VocabItem = {
   difficulty: number;
   categories?: string[];
   partOfSpeech?: string;
-  metadata?: any;
+  metadata?: Record<string, unknown> | undefined;
 };
 
 // Quiz Question Schema

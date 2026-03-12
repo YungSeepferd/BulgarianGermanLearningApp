@@ -2,8 +2,9 @@
   import { Button } from '$lib/components/ui/button';
   import { ChevronLeft, ChevronRight } from 'lucide-svelte';
   import type { VocabularyItem } from '$lib/types/vocabulary';
+  import type { Example } from '$lib/schemas/unified-vocabulary';
 
-  let { item, examples: propExamples } = $props<{ item: VocabularyItem, examples?: any[] }>();
+  let { item, examples: propExamples } = $props<{ item: VocabularyItem, examples?: Example[] }>();
 
   let currentIndex = $state(0);
   let examples = $derived(propExamples || item.examples || []);

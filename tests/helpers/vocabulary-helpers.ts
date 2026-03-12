@@ -16,12 +16,12 @@ export const SAMPLE_VOCABULARY = {
     withArticle: 'der Apfel',
     withUmlaut: 'grün',
     withEsset: 'Straße',
-    long: 'Wissenschaftlichkeit',
+    long: 'Wissenschaftlichkeit'
   },
   bulgarian: {
     simple: 'здравей',
     withArticle: 'ябълката',
-    cyrillicOnly: 'училище',
+    cyrillicOnly: 'училище'
   },
   ceftLevels: ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const,
   partsOfSpeech: ['noun', 'verb', 'adjective', 'adverb', 'pronoun', 'preposition', 'conjunction', 'interjection'] as const,
@@ -29,7 +29,7 @@ export const SAMPLE_VOCABULARY = {
     'food', 'family', 'travel', 'work', 'education', 'health',
     'nature', 'technology', 'sports', 'culture', 'common_phrases',
     'time', 'numbers', 'colors', 'body', 'house', 'grammar'
-  ] as const,
+  ] as const
 };
 
 /**

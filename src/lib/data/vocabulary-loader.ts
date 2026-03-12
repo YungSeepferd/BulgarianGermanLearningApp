@@ -7,13 +7,14 @@
  * - Level-based chunk loading on demand
  * - Individual item fetching
  * - Pre-computed search index usage
+ *
+ * Uses IndexedDB (via Dexie) for caching with localStorage fallback.
  */
 
 import { base } from '$app/paths';
 import { browser } from '$app/environment';
 import { Debug } from '../utils';
 import { DataError, ErrorHandler } from '../services/errors';
-import { EventBus } from '../services/event-bus';
 import { z } from 'zod';
 import Fuse from 'fuse.js';
 import type { IFuseOptions, FuseIndexRecords } from 'fuse.js';
@@ -28,6 +29,7 @@ import {
   type CEFRLevel,
   CEFR_LEVELS
 } from '../schemas/vocabulary-index';
+import { VocabularyCacheDB } from './indexeddb';
 
 // ======================
 // Configuration
@@ -63,7 +65,6 @@ let searchIndexCache: {
 // ======================
 
 export interface LoadOptions {
-  eventBus?: EventBus;
   forceRefresh?: boolean;
 }
 
@@ -93,7 +94,21 @@ export async function loadIndex(options: LoadOptions = {}): Promise<VocabularyIn
   try {
     Debug.log('vocabulary-loader', 'Loading vocabulary index');
 
-    // Try localStorage first
+    // Try IndexedDB first
+    if (!options.forceRefresh) {
+      try {
+        const cachedIndex = await VocabularyCacheDB.getIndex();
+        if (cachedIndex) {
+          indexCache = cachedIndex;
+          Debug.log('vocabulary-loader', 'Index loaded from IndexedDB');
+          return cachedIndex;
+        }
+      } catch (e) {
+        Debug.log('vocabulary-loader', 'IndexedDB read error, trying localStorage', { error: e });
+      }
+    }
+
+    // Try localStorage fallback
     const cached = localStorage.getItem(INDEX_CACHE_KEY);
     if (cached && !options.forceRefresh) {
       try {
@@ -103,7 +118,13 @@ export async function loadIndex(options: LoadOptions = {}): Promise<VocabularyIn
         if (age < CACHE_EXPIRY_HOURS && entry.version === 1) {
           const parsed = VocabularyIndexSchema.parse(entry.data);
           indexCache = parsed;
-          Debug.log('vocabulary-loader', 'Index loaded from cache', { age: `${age.toFixed(1)}h` });
+          // Migrate to IndexedDB
+          try {
+            await VocabularyCacheDB.saveIndex(parsed);
+          } catch (e) {
+            Debug.log('vocabulary-loader', 'Failed to save to IndexedDB', { error: e });
+          }
+          Debug.log('vocabulary-loader', 'Index loaded from localStorage cache', { age: `${age.toFixed(1)}h` });
           return parsed;
         }
       } catch (e) {
@@ -122,18 +143,22 @@ export async function loadIndex(options: LoadOptions = {}): Promise<VocabularyIn
     const parsed = VocabularyIndexSchema.parse(data);
     indexCache = parsed;
 
-    // Cache in localStorage
-    const cacheEntry: CacheEntry<VocabularyIndex> = {
-      data: parsed,
-      timestamp: new Date().toISOString(),
-      version: 1
-    };
-
+    // Cache in IndexedDB first, then localStorage fallback
     try {
-      localStorage.setItem(INDEX_CACHE_KEY, JSON.stringify(cacheEntry));
+      await VocabularyCacheDB.saveIndex(parsed);
     } catch (e) {
-      // localStorage might be full
-      Debug.log('vocabulary-loader', 'Failed to cache index to localStorage', { error: e });
+      Debug.log('vocabulary-loader', 'Failed to cache index to IndexedDB', { error: e });
+      // Fallback to localStorage
+      try {
+        const cacheEntry: CacheEntry<VocabularyIndex> = {
+          data: parsed,
+          timestamp: new Date().toISOString(),
+          version: 1
+        };
+        localStorage.setItem(INDEX_CACHE_KEY, JSON.stringify(cacheEntry));
+      } catch (e2) {
+        Debug.log('vocabulary-loader', 'Failed to cache index to localStorage', { error: e2 });
+      }
     }
 
     Debug.log('vocabulary-loader', 'Index loaded from network', {
@@ -143,7 +168,7 @@ export async function loadIndex(options: LoadOptions = {}): Promise<VocabularyIn
 
     return parsed;
   } catch (error) {
-    ErrorHandler.handleError(error, 'Failed to load vocabulary index', options.eventBus);
+    ErrorHandler.handleError(error, 'Failed to load vocabulary index', undefined);
     throw new DataError('Failed to load vocabulary index', { error });
   }
 }
@@ -168,7 +193,21 @@ export async function loadLevelChunk(
     return chunkCache.get(level)!;
   }
 
-  // Check localStorage
+  // Check IndexedDB first
+  if (!options.forceRefresh) {
+    try {
+      const cachedChunk = await VocabularyCacheDB.getChunk(level);
+      if (cachedChunk) {
+        chunkCache.set(level, cachedChunk);
+        Debug.log('vocabulary-loader', `Level ${level} loaded from IndexedDB`, { count: cachedChunk.length });
+        return cachedChunk;
+      }
+    } catch (e) {
+      Debug.log('vocabulary-loader', `Level ${level} IndexedDB read error`, { error: e });
+    }
+  }
+
+  // Check localStorage fallback
   const cacheKey = `${CACHE_KEY_PREFIX}${level}`;
 
   try {
@@ -181,7 +220,13 @@ export async function loadLevelChunk(
         if (age < CACHE_EXPIRY_HOURS && entry.version === 1) {
           const parsed = z.array(ResilientUnifiedVocabularyItemSchema).parse(entry.data);
           chunkCache.set(level, parsed);
-          Debug.log('vocabulary-loader', `Level ${level} loaded from cache`, { count: parsed.length });
+          // Migrate to IndexedDB
+          try {
+            await VocabularyCacheDB.saveChunk(level, parsed);
+          } catch (e) {
+            Debug.log('vocabulary-loader', `Failed to save chunk ${level} to IndexedDB`, { error: e });
+          }
+          Debug.log('vocabulary-loader', `Level ${level} loaded from localStorage cache`, { count: parsed.length });
           return parsed;
         }
       } catch (e) {
@@ -218,25 +263,30 @@ export async function loadLevelChunk(
       }
     }).filter((item): item is UnifiedVocabularyItem => item !== null);
 
-    // Update caches
+    // Update memory cache
     chunkCache.set(level, items);
 
+    // Cache in IndexedDB first, then localStorage fallback
     try {
-      const cacheEntry: CacheEntry<unknown> = {
-        data: items,
-        timestamp: new Date().toISOString(),
-        version: 1
-      };
-      localStorage.setItem(cacheKey, JSON.stringify(cacheEntry));
+      await VocabularyCacheDB.saveChunk(level, items);
     } catch (e) {
-      // localStorage might be full
-      Debug.log('vocabulary-loader', 'Failed to cache chunk to localStorage', { error: e });
+      Debug.log('vocabulary-loader', `Failed to cache chunk ${level} to IndexedDB`, { error: e });
+      try {
+        const cacheEntry: CacheEntry<unknown> = {
+          data: items,
+          timestamp: new Date().toISOString(),
+          version: 1
+        };
+        localStorage.setItem(cacheKey, JSON.stringify(cacheEntry));
+      } catch (e2) {
+        Debug.log('vocabulary-loader', 'Failed to cache chunk to localStorage', { error: e2 });
+      }
     }
 
     Debug.log('vocabulary-loader', `Level ${level} loaded`, { count: items.length });
     return items;
   } catch (error) {
-    ErrorHandler.handleError(error, `Failed to load level ${level}`, options.eventBus);
+    ErrorHandler.handleError(error, `Failed to load level ${level}`, undefined);
     throw new DataError(`Failed to load level ${level}`, { level, error });
   }
 }
@@ -317,7 +367,35 @@ export async function loadSearchIndex(options: LoadOptions = {}): Promise<{
   }
 
   try {
-    // Try localStorage first
+    // Try IndexedDB first
+    if (!options.forceRefresh) {
+      try {
+        const cachedSearchIndex = await VocabularyCacheDB.getSearchIndex();
+        if (cachedSearchIndex) {
+          searchIndexCache = cachedSearchIndex;
+
+          const fuseIndex = Fuse.parseIndex<UnifiedVocabularyItem>(
+            cachedSearchIndex.index as { keys: string[]; records: FuseIndexRecords }
+          );
+          const fuse = new Fuse<UnifiedVocabularyItem>(
+            [],
+            cachedSearchIndex.options,
+            fuseIndex
+          );
+
+          Debug.log('vocabulary-loader', 'Search index loaded from IndexedDB');
+          return {
+            fuse,
+            miniIndex: cachedSearchIndex.miniIndex,
+            idToLevelMap: cachedSearchIndex.idToLevelMap
+          };
+        }
+      } catch (e) {
+        Debug.log('vocabulary-loader', 'Search index IndexedDB read error', { error: e });
+      }
+    }
+
+    // Try localStorage fallback
     const cached = localStorage.getItem(SEARCH_INDEX_CACHE_KEY);
     if (cached && !options.forceRefresh) {
       try {
@@ -339,6 +417,14 @@ export async function loadSearchIndex(options: LoadOptions = {}): Promise<{
             fuseIndex
           );
 
+          // Migrate to IndexedDB
+          try {
+            await VocabularyCacheDB.saveSearchIndex(data);
+          } catch (e) {
+            Debug.log('vocabulary-loader', 'Failed to save search index to IndexedDB', { error: e });
+          }
+
+          Debug.log('vocabulary-loader', 'Search index loaded from localStorage');
           return {
             fuse,
             miniIndex: data.miniIndex,
@@ -366,15 +452,21 @@ export async function loadSearchIndex(options: LoadOptions = {}): Promise<{
       miniIndex: data.miniIndex
     };
 
+    // Cache in IndexedDB first, then localStorage fallback
     try {
-      const cacheEntry: CacheEntry<typeof searchIndexCache> = {
-        data: searchIndexCache,
-        timestamp: new Date().toISOString(),
-        version: 1
-      };
-      localStorage.setItem(SEARCH_INDEX_CACHE_KEY, JSON.stringify(cacheEntry));
+      await VocabularyCacheDB.saveSearchIndex(searchIndexCache);
     } catch (e) {
-      Debug.log('vocabulary-loader', 'Failed to cache search index to localStorage', { error: e });
+      Debug.log('vocabulary-loader', 'Failed to cache search index to IndexedDB', { error: e });
+      try {
+        const cacheEntry: CacheEntry<typeof searchIndexCache> = {
+          data: searchIndexCache,
+          timestamp: new Date().toISOString(),
+          version: 1
+        };
+        localStorage.setItem(SEARCH_INDEX_CACHE_KEY, JSON.stringify(cacheEntry));
+      } catch (e2) {
+        Debug.log('vocabulary-loader', 'Failed to cache search index to localStorage', { error: e2 });
+      }
     }
 
     // Rehydrate Fuse using parseIndex
@@ -393,7 +485,7 @@ export async function loadSearchIndex(options: LoadOptions = {}): Promise<{
       idToLevelMap: data.idToLevelMap
     };
   } catch (error) {
-    ErrorHandler.handleError(error, 'Failed to load search index', options.eventBus);
+    ErrorHandler.handleError(error, 'Failed to load search index', undefined);
     // Return null fuse but still provide mini-index if available
     return { fuse: null, miniIndex: [], idToLevelMap: {} };
   }
@@ -464,11 +556,21 @@ export async function searchWithIndex(
 /**
  * Clear all vocabulary caches
  */
-export function clearChunkCache(): void {
+export async function clearChunkCache(): Promise<void> {
   chunkCache.clear();
   indexCache = null;
   searchIndexCache = null;
 
+  // Clear IndexedDB cache
+  if (browser) {
+    try {
+      await VocabularyCacheDB.clearCache();
+    } catch (e) {
+      Debug.log('vocabulary-loader', 'Failed to clear IndexedDB cache', { error: e });
+    }
+  }
+
+  // Clear localStorage fallback
   if (typeof localStorage !== 'undefined') {
     // Clear all vocabulary cache keys
     const keysToRemove: string[] = [];

@@ -5,6 +5,7 @@
 	 */
 
 	import type { VocabularyItem } from '$lib/types/vocabulary';
+	import type { DefinitionLink as DefinitionLinkType } from '$lib/schemas/unified-vocabulary';
 
 	interface Props {
 		item: VocabularyItem;
@@ -21,7 +22,7 @@
 	}: Props = $props();
 
 	// Get all definition links from item
-	const getDefinitionLinks = () => {
+	const getDefinitionLinks = (): Array<{ url: string; source: string; confidence: number; language?: string }> => {
 		const links: Array<{ url: string; source: string; confidence: number; language?: string }> = [];
 
 		// Add enrichment link
@@ -36,13 +37,13 @@
 
 		// Add definition links
 		if (item.definitions && Array.isArray(item.definitions)) {
-			item.definitions.forEach((def: any) => {
+			item.definitions.forEach((def: DefinitionLinkType) => {
 				if (def.url && !links.some(l => l.url === def.url)) {
 					links.push({
 						url: def.url,
 						source: def.source || 'unknown',
 						confidence: def.confidence || 0,
-						language: def.language,
+						...(def.language !== undefined && { language: def.language }),
 					});
 				}
 			});
