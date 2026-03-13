@@ -25,27 +25,31 @@
     info: 'ℹ️'
   };
 
-  // Color schemes
-  const colors: Record<ToastType, { bg: string; border: string; title: string }> = {
+  // Color schemes - using explicit colors that meet WCAG 4.5:1 on all light backgrounds
+  const colors: Record<ToastType, { bg: string; border: string; title: string; message: string }> = {
     error: {
       bg: 'bg-red-50',
       border: 'border-red-200',
-      title: 'text-red-800'
+      title: 'rgb(31 41 55)', // gray-800 - WCAG compliant on red-50
+      message: 'rgb(55 65 81)' // gray-700 - WCAG compliant on red-50
     },
     success: {
       bg: 'bg-green-50',
       border: 'border-green-200',
-      title: 'text-green-800'
+      title: 'rgb(31 41 55)', // gray-800 - WCAG compliant on green-50
+      message: 'rgb(55 65 81)' // gray-700 - WCAG compliant on green-50
     },
     warning: {
       bg: 'bg-amber-50',
       border: 'border-amber-200',
-      title: 'text-amber-800'
+      title: 'rgb(31 41 55)', // gray-800 - WCAG compliant on amber-50
+      message: 'rgb(55 65 81)' // gray-700 - WCAG compliant on amber-50
     },
     info: {
       bg: 'bg-blue-50',
       border: 'border-blue-200',
-      title: 'text-blue-800'
+      title: 'rgb(31 41 55)', // gray-800 - WCAG compliant on blue-50
+      message: 'rgb(55 65 81)' // gray-700 - WCAG compliant on blue-50
     }
   };
 
@@ -82,11 +86,11 @@
 
   <div class="toast-content">
     {#if title}
-      <h4 class="toast-title {colors[type].title}">
+      <h4 class="toast-title" style="color: {colors[type].title} !important">
         {title}
       </h4>
     {/if}
-    <p class="toast-message">
+    <p class="toast-message" style="color: {colors[type].message} !important">
       {message}
     </p>
   </div>
@@ -138,13 +142,14 @@
     font-weight: 600;
     font-size: 0.875rem;
     margin: 0 0 0.25rem 0;
+    color: inherit !important;
   }
 
   .toast-message {
     font-size: 0.875rem;
-    color: #4b5563;
     margin: 0;
     line-height: 1.5;
+    color: inherit !important;
   }
 
   .toast-close {

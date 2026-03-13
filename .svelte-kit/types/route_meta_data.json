@@ -2,49 +2,73 @@
 	"/": [
 		"src/routes/+page.ts",
 		"src/routes/+layout.ts",
-		"src/routes/+layout.ts"
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/admin/curate": [
+		"src/routes/admin/curate/+page.ts",
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
 	],
 	"/exercises": [
-		"src/routes/+layout.ts"
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
 	],
 	"/grammar": [
-		"src/routes/+layout.ts"
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
 	],
 	"/learn": [
-		"src/routes/+layout.ts"
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
 	],
 	"/learn/lesson/[lessonId]": [
-		"src/routes/+layout.ts"
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
 	],
 	"/learn/paths": [
-		"src/routes/+layout.ts"
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
 	],
 	"/learn/paths/[path]": [
 		"src/routes/learn/paths/[path]/+page.ts",
-		"src/routes/+layout.ts"
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
 	],
 	"/learn/paths/[path]/[lesson]": [
 		"src/routes/learn/paths/[path]/[lesson]/+page.ts",
-		"src/routes/+layout.ts"
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
 	],
 	"/learn/shuffle": [
-		"src/routes/+layout.ts"
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
 	],
 	"/learn/[id]": [
 		"src/routes/learn/[id]/+page.ts",
-		"src/routes/+layout.ts"
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
 	],
 	"/lessons": [
-		"src/routes/+layout.ts"
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/offline": [
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
 	],
 	"/practice": [
-		"src/routes/+layout.ts"
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
 	],
 	"/vocabulary": [
-		"src/routes/+layout.ts"
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
 	],
 	"/vocabulary/[id]": [
 		"src/routes/vocabulary/[id]/+page.ts",
-		"src/routes/+layout.ts"
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
 	]
 }

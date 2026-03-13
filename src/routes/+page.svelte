@@ -128,9 +128,9 @@
   {#if viewMode === 'cards'}
     <!-- Daily Vocabulary Practice Mode (Default) -->
     <div class="practice-layout">
-      <main class="daily-practice-area">
+      <div class="daily-practice-area" aria-label="Daily vocabulary practice">
         <DailyCarousel onComplete={handleDailyComplete} />
-      </main>
+      </div>
       
       <!-- Vocabulary Detail Panel -->
       <VocabularyDetailPanel 

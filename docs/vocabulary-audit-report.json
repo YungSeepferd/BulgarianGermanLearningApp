@@ -1,0 +1,756 @@
+{
+  "totalItems": 884,
+  "potentialRussian": [
+    {
+      "id": "wv_99b12120",
+      "bulgarian": "Искам да говоря със посолството / консулството на",
+      "german": "Ich möchte mit der Botschaft/dem Konsulat von ... sprechen",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_e7e7a3fa",
+      "bulgarian": "Това ли е перонът за",
+      "german": "Ist das der richtige Bahnsteig für",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_63ce1cba",
+      "bulgarian": "Мога ли да видя стаята първо",
+      "german": "Kann ich das Zimmer zuerst sehen",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_b1c0c357",
+      "bulgarian": "кръстовище/пресечка",
+      "german": "Kreuzung",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_3a054fe9",
+      "bulgarian": "Довиждане",
+      "german": "Auf Wiedersehen",
+      "reason": "Pattern \"жд\" is rare in Bulgarian, common in Russian"
+    },
+    {
+      "id": "a1_verb_014",
+      "bulgarian": "Завършвам",
+      "german": "beenden / abschließen",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_4b1b7e91",
+      "bulgarian": "Арестуван/-а ли съм",
+      "german": "Bin ich verhaftet",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_entertainment_014",
+      "bulgarian": "Подарък",
+      "german": "das Geschenk",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_house_001",
+      "bulgarian": "Къща",
+      "german": "das Haus",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_body_010",
+      "bulgarian": "Сърце",
+      "german": "das Herz",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "body-011-herz",
+      "bulgarian": "сърцето",
+      "german": "das Herz",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_place_010",
+      "bulgarian": "Театър",
+      "german": "das Theater",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_place_003",
+      "bulgarian": "Център",
+      "german": "das Zentrum",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_food_020",
+      "bulgarian": "Ябълка",
+      "german": "der Apfel",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "body-008-arm",
+      "bulgarian": "ръката",
+      "german": "der Arm",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "body-013-bauch",
+      "bulgarian": "коремът",
+      "german": "der Bauch",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_nature_004",
+      "bulgarian": "Дърво",
+      "german": "der Baum",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1-fam-005-bruder",
+      "bulgarian": "братът",
+      "german": "der Bruder",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_object_002",
+      "bulgarian": "Компютър",
+      "german": "der Computer",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_weather_006",
+      "bulgarian": "Гръм",
+      "german": "der Donner",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_family_009",
+      "bulgarian": "Съпруг",
+      "german": "der Ehemann",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "body-010-fuss",
+      "bulgarian": "стъпалото",
+      "german": "der Fuß",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_entertainment_003",
+      "bulgarian": "Рожден ден",
+      "german": "der Geburtstag",
+      "reason": "Pattern \"жд\" is rare in Bulgarian, common in Russian"
+    },
+    {
+      "id": "body-012-hals",
+      "bulgarian": "гърлото",
+      "german": "der Hals",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_clothing_049",
+      "bulgarian": "Ръкавица",
+      "german": "der Handschuh",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_object_009",
+      "bulgarian": "Лъжица",
+      "german": "der Löffel",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1-fam-010-mann",
+      "bulgarian": "мъжът",
+      "german": "der Mann",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_weather_002",
+      "bulgarian": "Дъжд",
+      "german": "der Regen",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "body-014-ruecken",
+      "bulgarian": "гърбът",
+      "german": "der Rücken",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1-fam-006-sohn",
+      "bulgarian": "синът",
+      "german": "der Sohn",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_weather_004",
+      "bulgarian": "Вятър",
+      "german": "der Wind",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_animal_012",
+      "bulgarian": "Вълк",
+      "german": "der Wolf",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_body_008",
+      "bulgarian": "Зъб",
+      "german": "der Zahn",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "body-005-zahn",
+      "bulgarian": "зъбът",
+      "german": "der Zahn",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_health_004",
+      "bulgarian": "Зъболекар",
+      "german": "der Zahnarzt",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_family_010",
+      "bulgarian": "Съпруга",
+      "german": "die Ehefrau",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "body-007-hand",
+      "bulgarian": "ръката",
+      "german": "die Hand",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_body_002",
+      "bulgarian": "Ръка",
+      "german": "die Hand, der Arm",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "body-003-nase",
+      "bulgarian": "носът",
+      "german": "die Nase",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_nature_001",
+      "bulgarian": "Слънце",
+      "german": "die Sonne",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_education_013",
+      "bulgarian": "Дъска",
+      "german": "die Tafel",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_family_004",
+      "bulgarian": "Дъщеря",
+      "german": "die Tochter",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1-fam-007-tochter",
+      "bulgarian": "дъщерята",
+      "german": "die Tochter",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_time_004",
+      "bulgarian": "Четвъртък",
+      "german": "Donnerstag",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adj_015",
+      "bulgarian": "Тънък",
+      "german": "dünn",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "ehefrau",
+      "bulgarian": "Съпруга",
+      "german": "Ehefrau",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "ehemann",
+      "bulgarian": "Съпруг",
+      "german": "Ehemann",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_73a4af98",
+      "bulgarian": "Съжалявам",
+      "german": "Es tut mir leid",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_final_014",
+      "bulgarian": "Огън",
+      "german": "Feuer",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_verb_061",
+      "bulgarian": "Продължавам",
+      "german": "fortsetzen, weitermachen",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_final_004",
+      "bulgarian": "Въпрос",
+      "german": "Frage",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_time_005",
+      "bulgarian": "Петък",
+      "german": "Freitag",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_final_039",
+      "bulgarian": "Мисъл",
+      "german": "Gedanke",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_color_006",
+      "bulgarian": "Жълт",
+      "german": "gelb",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_50d11781",
+      "bulgarian": "жълт / -а / -о",
+      "german": "gelb",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adj_056",
+      "bulgarian": "Гладък",
+      "german": "glatt",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adj_004",
+      "bulgarian": "Добър",
+      "german": "gut",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_b42c8d23",
+      "bulgarian": "Добър вечер",
+      "german": "Guten Abend",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "dobur_den_002",
+      "bulgarian": "Добър ден",
+      "german": "Guten Tag",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_final14_045",
+      "bulgarian": "Кърпа",
+      "german": "Handtuch",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adj_055",
+      "bulgarian": "Твърд",
+      "german": "hart",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "haus",
+      "bulgarian": "Къща",
+      "german": "Haus",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_f2acdd22",
+      "bulgarian": "МЪЖЕ",
+      "german": "HERREN",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_0209f2d6",
+      "bulgarian": "Аз свърших",
+      "german": "Ich bin fertig",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_96bac443",
+      "bulgarian": "Аз съм болен/болна",
+      "german": "Ich bin krank",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_8446c109",
+      "bulgarian": "Аз съм гражданин на",
+      "german": "Ich bin Staatsbürger von",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_347b5fdb",
+      "bulgarian": "Аз съм вегетарианец",
+      "german": "Ich bin Vegetarier",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_3a65da7e",
+      "bulgarian": "Имам нужда от лекар",
+      "german": "Ich brauche einen Arzt",
+      "reason": "Pattern \"жд\" is rare in Bulgarian, common in Russian"
+    },
+    {
+      "id": "wv_25878f44",
+      "bulgarian": "Имам нужда от помощ",
+      "german": "Ich brauche Ihre Hilfe",
+      "reason": "Pattern \"жд\" is rare in Bulgarian, common in Russian"
+    },
+    {
+      "id": "wv_d6f2dd3c",
+      "bulgarian": "Аз не ям говеждо месо",
+      "german": "Ich esse kein Rindfleisch",
+      "reason": "Pattern \"жд\" is rare in Bulgarian, common in Russian"
+    },
+    {
+      "id": "wv_6e12674b",
+      "bulgarian": "Не съм направил/-а нищо лошо",
+      "german": "Ich habe nichts falsch gemacht",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_final14_047",
+      "bulgarian": "Възглавница",
+      "german": "Kissen",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adj_009",
+      "bulgarian": "Малък",
+      "german": "klein",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_02abf438",
+      "bulgarian": "малък автобус",
+      "german": "Kleinbus",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adj_013",
+      "bulgarian": "Къс",
+      "german": "kurz",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adj_012",
+      "bulgarian": "Дълъг",
+      "german": "lang",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "emotion-009-lieb",
+      "bulgarian": "скъп",
+      "german": "lieb",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_final_013",
+      "bulgarian": "Въздух",
+      "german": "Luft",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_final_049",
+      "bulgarian": "Лъжа",
+      "german": "Lüge",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_final14_037",
+      "bulgarian": "Метър",
+      "german": "Meter",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "mir_geht_s_gut",
+      "bulgarian": "Добре съм",
+      "german": "Mir geht's gut",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adj_011",
+      "bulgarian": "Нисък",
+      "german": "niedrig, klein (von Personen)",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "rabatt",
+      "bulgarian": "Отстъпка",
+      "german": "Rabatt",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "regen",
+      "bulgarian": "Дъжд",
+      "german": "Regen",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_verb_097",
+      "bulgarian": "Пътувам",
+      "german": "reisen",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_848fd676",
+      "bulgarian": "говеждо месо",
+      "german": "Rindfleisch",
+      "reason": "Pattern \"жд\" is rare in Bulgarian, common in Russian"
+    },
+    {
+      "id": "wv_a9a12002",
+      "bulgarian": "събота",
+      "german": "Samstag",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_time_006",
+      "bulgarian": "Събота",
+      "german": "Samstag, Sonnabend",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_final_018",
+      "bulgarian": "Пясък",
+      "german": "Sand",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adj_047",
+      "bulgarian": "Мръсен",
+      "german": "schmutzig",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adj_029",
+      "bulgarian": "Бърз",
+      "german": "schnell",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adverb_005",
+      "bulgarian": "Бързо",
+      "german": "schnell",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_verb_087",
+      "bulgarian": "Виждам",
+      "german": "sehen",
+      "reason": "Pattern \"жд\" is rare in Bulgarian, common in Russian"
+    },
+    {
+      "id": "sein",
+      "bulgarian": "Съм",
+      "german": "sein",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_verb_073",
+      "bulgarian": "Бъда",
+      "german": "sein (perfektiv)",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "sonne",
+      "bulgarian": "Слънце",
+      "german": "Sonne",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_d4ea7cd0",
+      "bulgarian": "по-късно",
+      "german": "später",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_final_017",
+      "bulgarian": "Камък",
+      "german": "Stein",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "stra_e",
+      "bulgarian": "Път",
+      "german": "Straße",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_verb_066",
+      "bulgarian": "Търся",
+      "german": "suchen",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adj_023",
+      "bulgarian": "Скъп",
+      "german": "teuer, lieb",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_final14_022",
+      "bulgarian": "Гърне",
+      "german": "Topf",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adj_034",
+      "bulgarian": "Тъжен",
+      "german": "traurig",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adj_048",
+      "bulgarian": "Пълен",
+      "german": "voll",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adj_022",
+      "bulgarian": "Топъл",
+      "german": "warm",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_question_009",
+      "bulgarian": "Какъв",
+      "german": "was für ein, welcher Art",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wind",
+      "bulgarian": "Вятър",
+      "german": "Wind",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_question_004",
+      "bulgarian": "Къде",
+      "german": "wo",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_0e46616d",
+      "bulgarian": "Къде има много",
+      "german": "Wo gibt es viele",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_2e48e556",
+      "bulgarian": "Къде е спирката на автобуса/трамвая",
+      "german": "Wo ist die Bushaltestelle",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_c679e97c",
+      "bulgarian": "Къде е тоалетната",
+      "german": "Wo ist die Toilette",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_question_010",
+      "bulgarian": "Откъде",
+      "german": "woher",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_question_011",
+      "bulgarian": "Накъде",
+      "german": "wohin",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_64abe254",
+      "bulgarian": "Къде ме водите",
+      "german": "Wohin bringen Sie mich",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_adj_036",
+      "bulgarian": "Сърдит",
+      "german": "wütend, böse",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "wv_4d74c09e",
+      "bulgarian": "ДРЪПНИ",
+      "german": "ZIEHEN",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_grammar_011",
+      "bulgarian": "Към",
+      "german": "zu, nach",
+      "reason": "Russian hard sign \"ъ\" - Bulgarian uses it differently"
+    },
+    {
+      "id": "a1_grammar_016",
+      "bulgarian": "Между",
+      "german": "zwischen",
+      "reason": "Pattern \"жд\" is rare in Bulgarian, common in Russian"
+    }
+  ],
+  "missingGrammar": 876,
+  "missingExamples": 88,
+  "missingEtymology": 884,
+  "missingMnemonic": 884,
+  "missingNotes": 884,
+  "missingCulturalNotes": 884,
+  "missingAudio": 884,
+  "missingEmoji": 884,
+  "missingTransliteration": 884,
+  "byCategory": {
+    "food": 50,
+    "everyday-phrases": 511,
+    "transport": 56,
+    "places": 31,
+    "greetings": 31,
+    "time": 34,
+    "grammar": 20,
+    "numbers": 48,
+    "nature": 20,
+    "colors": 21,
+    "family": 33,
+    "body-parts": 24,
+    "home": 8,
+    "clothing": 15,
+    "animals": 14,
+    "technology": 9,
+    "weather": 10,
+    "professions": 15
+  },
+  "byPartOfSpeech": {
+    "phrase": 743,
+    "noun": 92,
+    "number": 32,
+    "adjective": 17
+  },
+  "byCefrLevel": {
+    "A2": 17,
+    "A1": 867
+  },
+  "enrichedItems": 0,
+  "itemsWithDefinitions": 0,
+  "richMetadataItems": 0,
+  "minimalItems": 884
+}

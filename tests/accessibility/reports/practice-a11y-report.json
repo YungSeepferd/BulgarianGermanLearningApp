@@ -1,0 +1,13 @@
+{
+  "page": "Practice",
+  "url": "/practice",
+  "timestamp": "2026-03-13T10:47:18.158Z",
+  "violations": [],
+  "passes": 0,
+  "violationsByImpact": {
+    "critical": 0,
+    "serious": 0,
+    "moderate": 0,
+    "minor": 0
+  }
+}

@@ -1,0 +1,502 @@
+[
+  {
+    "id": "wv_2cea5d54",
+    "german": "Bitte räumen Sie die Teller ab",
+    "bulgarian": "Моля, приберете чиниите",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "food"
+    ],
+    "examples": [
+      {
+        "german": "Bitte räumen Sie die Teller ab",
+        "bulgarian": "Моля, приберете чиниите",
+        "context": "dining",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T10:05:18.893Z",
+    "updatedAt": "2026-01-28T11:59:28.770Z",
+    "version": 1,
+    "emoji": "🥦",
+    "transliteration": {
+      "bulgarian": "Molya, priberete chiniite"
+    }
+  },
+  {
+    "id": "wv_0078dc6b",
+    "german": "Einen Tisch für eine Person/zwei Personen, bitte",
+    "bulgarian": "Маса за един човек/двама души, моля",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "food"
+    ],
+    "examples": [
+      {
+        "german": "Einen Tisch für eine Person/zwei Personen, bitte",
+        "bulgarian": "Маса за един човек/двама души, моля",
+        "context": "dining",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T10:05:18.893Z",
+    "updatedAt": "2026-01-28T11:59:28.772Z",
+    "version": 1,
+    "emoji": "🍎",
+    "transliteration": {
+      "bulgarian": "Masa za edin chovek/dvama dushi, molya"
+    }
+  },
+  {
+    "id": "wv_99b12120",
+    "german": "Ich möchte mit der Botschaft/dem Konsulat von ... sprechen",
+    "bulgarian": "Искам да говоря със посолството / консулството на",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Ich möchte mit der Botschaft/dem Konsulat von ... sprechen",
+        "bulgarian": "Искам да говоря със посолството / консулството на",
+        "context": "legal-authority",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T10:05:18.893Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1,
+    "emoji": "🗨️",
+    "transliteration": {
+      "bulgarian": "Iskam da govorya sas posolstvoto / konsulstvoto na"
+    }
+  },
+  {
+    "id": "wv_3ba20d46",
+    "german": "Ich möchte mit einem Anwalt sprechen",
+    "bulgarian": "Искам да говоря с адвокат",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Ich möchte mit einem Anwalt sprechen",
+        "bulgarian": "Искам да говоря с адвокат",
+        "context": "legal-authority",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T10:05:18.893Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1,
+    "emoji": "💬",
+    "transliteration": {
+      "bulgarian": "Iskam da govorya s advokat"
+    }
+  },
+  {
+    "id": "wv_e7e7a3fa",
+    "german": "Ist das der richtige Bahnsteig für",
+    "bulgarian": "Това ли е перонът за",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "transport"
+    ],
+    "examples": [
+      {
+        "german": "Ist das der richtige Bahnsteig für",
+        "bulgarian": "Това ли е перонът за",
+        "context": "directions",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T10:05:50.669Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1,
+    "emoji": "🚙",
+    "transliteration": {
+      "bulgarian": "Tova li e peronat za"
+    }
+  },
+  {
+    "id": "wv_c0b43fe1",
+    "german": "Kann ich bitte die Speisekarte sehen",
+    "bulgarian": "Мога ли да видя менюто, моля",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "food"
+    ],
+    "examples": [
+      {
+        "german": "Kann ich bitte die Speisekarte sehen",
+        "bulgarian": "Мога ли да видя менюто, моля",
+        "context": "dining",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T10:05:18.893Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1,
+    "emoji": "🍖",
+    "transliteration": {
+      "bulgarian": "Moga li da vidya menyuto, molya"
+    }
+  },
+  {
+    "id": "wv_59195815",
+    "german": "Kann ich bitte Ihr Telefon benutzen",
+    "bulgarian": "Извинете, мога ли да ползвам телефона ви",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Kann ich bitte Ihr Telefon benutzen",
+        "bulgarian": "Извинете, мога ли да ползвам телефона ви",
+        "context": "emergency",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T09:48:28.911Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1,
+    "emoji": "💭",
+    "transliteration": {
+      "bulgarian": "Izvinete, moga li da polzvam telefona vi"
+    }
+  },
+  {
+    "id": "wv_63ce1cba",
+    "german": "Kann ich das Zimmer zuerst sehen",
+    "bulgarian": "Мога ли да видя стаята първо",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "places"
+    ],
+    "examples": [
+      {
+        "german": "Kann ich das Zimmer zuerst sehen",
+        "bulgarian": "Мога ли да видя стаята първо",
+        "context": "accommodation",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T10:05:50.669Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1,
+    "emoji": "🏫",
+    "transliteration": {
+      "bulgarian": "Moga li da vidya stayata parvo"
+    }
+  },
+  {
+    "id": "wv_2273cfb8",
+    "german": "Kann ich in die Küche schauen",
+    "bulgarian": "Мога ли да погледна в кухнята",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "food"
+    ],
+    "examples": [
+      {
+        "german": "Kann ich in die Küche schauen",
+        "bulgarian": "Мога ли да погледна в кухнята",
+        "context": "dining",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T10:05:18.893Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1,
+    "emoji": "🥗",
+    "transliteration": {
+      "bulgarian": "Moga li da pogledna v kuhnyata"
+    }
+  },
+  {
+    "id": "wv_e519ae78",
+    "german": "Kann ich jetzt einfach ein Bußgeld zahlen",
+    "bulgarian": "Може ли само да платя глоба сега",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Kann ich jetzt einfach ein Bußgeld zahlen",
+        "bulgarian": "Може ли само да платя глоба сега",
+        "context": "legal-authority",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T10:05:18.893Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1,
+    "emoji": "🗣️",
+    "transliteration": {
+      "bulgarian": "Mozhe li samo da platya globa sega"
+    }
+  },
+  {
+    "id": "wv_9b64327d",
+    "german": "Können Sie ein anderes Hotel vorschlagen",
+    "bulgarian": "Можете ли да предложите друг хотел",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "places"
+    ],
+    "examples": [
+      {
+        "german": "Können Sie ein anderes Hotel vorschlagen",
+        "bulgarian": "Можете ли да предложите друг хотел",
+        "context": "accommodation",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T10:05:50.669Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1,
+    "emoji": "🏥",
+    "transliteration": {
+      "bulgarian": "Mozhete li da predlozhite drug hotel"
+    }
+  },
+  {
+    "id": "wv_1ad8b0b0",
+    "german": "Können Sie mir das auf der Karte zeigen",
+    "bulgarian": "Можете ли да ми покажете на картата",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "transport"
+    ],
+    "examples": [
+      {
+        "german": "Können Sie mir das auf der Karte zeigen",
+        "bulgarian": "Можете ли да ми покажете на картата",
+        "context": "directions",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T10:05:50.669Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1,
+    "emoji": "🚕",
+    "transliteration": {
+      "bulgarian": "Mozhete li da mi pokazhete na kartata"
+    }
+  },
+  {
+    "id": "wv_b1c0c357",
+    "german": "Kreuzung",
+    "bulgarian": "кръстовище/пресечка",
+    "partOfSpeech": "noun",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "transport"
+    ],
+    "examples": [
+      {
+        "german": "Kreuzung",
+        "bulgarian": "кръстовище/пресечка",
+        "context": "directions",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T10:05:50.669Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1,
+    "emoji": "🚆",
+    "transliteration": {
+      "bulgarian": "krastovishte/presechka"
+    },
+    "grammar": {
+      "gender": "feminine",
+      "declension": {
+        "nominative": {
+          "singular": "Kreuzung",
+          "plural": "Kreuzungen"
+        },
+        "accusative": {
+          "singular": "Kreuzung",
+          "plural": "Kreuzungen"
+        },
+        "dative": {
+          "singular": "Kreuzung",
+          "plural": "Kreuzungen"
+        },
+        "genitive": {
+          "singular": "Kreuzung",
+          "plural": "Kreuzungen"
+        }
+      }
+    },
+    "metadata": {
+      "enrichment": {
+        "enriched": true,
+        "confidence": 0.95,
+        "source": "automated_grammar_rules",
+        "enrichedAt": "2026-02-09T08:59:53.900Z"
+      }
+    }
+  },
+  {
+    "id": "a1_final_052",
+    "german": "Recht/Gerechtigkeit",
+    "bulgarian": "Правда",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Recht/Gerechtigkeit",
+        "bulgarian": "Правда",
+        "context": "Basic",
+        "source": "merged"
+      },
+      {
+        "german": "Ich habe Recht/Gerechtigkeit",
+        "bulgarian": "Имам правда",
+        "context": "Having",
+        "source": "merged"
+      },
+      {
+        "german": "Ich mag Recht/Gerechtigkeit",
+        "bulgarian": "Харесвам правда",
+        "context": "Liking",
+        "source": "merged"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T09:38:36.476Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1,
+    "emoji": "🗣️",
+    "transliteration": {
+      "bulgarian": "Pravda"
+    }
+  },
+  {
+    "id": "wv_c2d12eee",
+    "german": "Schön, Sie kennenzulernen",
+    "bulgarian": "Приятно ми е да се запознаем",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "greetings"
+    ],
+    "examples": [
+      {
+        "german": "Schön, Sie kennenzulernen",
+        "bulgarian": "Приятно ми е да се запознаем",
+        "context": "basic-greetings",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T09:48:28.911Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1,
+    "emoji": "🙋",
+    "transliteration": {
+      "bulgarian": "Priyatno mi e da se zapoznaem"
+    }
+  },
+  {
+    "id": "wv_f91f3f36",
+    "german": "Welche Linie bringt mich nach",
+    "bulgarian": "С коя линия ще стигна до",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "transport"
+    ],
+    "examples": [
+      {
+        "german": "Welche Linie bringt mich nach",
+        "bulgarian": "С коя линия ще стигна до",
+        "context": "directions",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T10:05:50.669Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1,
+    "emoji": "🚆",
+    "transliteration": {
+      "bulgarian": "S koya liniya shte stigna do"
+    }
+  },
+  {
+    "id": "wv_715ee3fd",
+    "german": "Wie viel kostet ein Zimmer für eine Person/zwei Personen",
+    "bulgarian": "Колко струва една стая за един човек/двама души",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "places"
+    ],
+    "examples": [
+      {
+        "german": "Wie viel kostet ein Zimmer für eine Person/zwei Personen",
+        "bulgarian": "Колко струва една стая за един човек/двама души",
+        "context": "accommodation",
+        "source": "current"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2025-12-18T10:05:50.669Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1,
+    "emoji": "🏢",
+    "transliteration": {
+      "bulgarian": "Kolko struva edna staya za edin chovek/dvama dushi"
+    }
+  }
+]

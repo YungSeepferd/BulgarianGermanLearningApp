@@ -57,7 +57,7 @@
   <ErrorBoundary onError={handleBoundaryError}>
     <div class="app-layout">
       <Navigation />
-      <main>
+      <main aria-label="Main content">
         {@render children()}
       </main>
     </div>

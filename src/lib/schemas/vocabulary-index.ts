@@ -29,13 +29,14 @@ export const VocabularyIndexItemSchema = z.object({
   tags: z.array(z.string()).optional().describe('Custom tags'),
 
   // Feature flags for quick filtering without loading full item
-  hasExamples: z.boolean().describe('Has usage examples'),
-  hasGrammar: z.boolean().describe('Has grammar details'),
-  hasAudio: z.boolean().describe('Has audio resources'),
-  hasNotes: z.boolean().optional().describe('Has notes/mnemonics'),
+  // Made optional with defaults for backward compatibility with existing index
+  hasExamples: z.boolean().optional().default(false).describe('Has usage examples'),
+  hasGrammar: z.boolean().optional().default(false).describe('Has grammar details'),
+  hasAudio: z.boolean().optional().default(false).describe('Has audio resources'),
+  hasNotes: z.boolean().optional().default(false).describe('Has notes/mnemonics'),
 
   // Quick stats
-  exampleCount: z.number().optional().describe('Number of examples'),
+  exampleCount: z.number().optional().default(0).describe('Number of examples'),
 
   // Sync timestamp for cache invalidation
   updatedAt: z.string().datetime().optional().describe('Last update timestamp')

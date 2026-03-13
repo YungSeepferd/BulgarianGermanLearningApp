@@ -741,8 +741,8 @@
     padding: var(--space-3) var(--space-4);
     border-radius: var(--border-radius-lg);
     border: none;
-    background: var(--color-button-primary);
-    color: var(--color-neutral-light);
+    background: #1d4ed8; /* Blue-700 for WCAG 4.5:1 contrast */
+    color: #ffffff;
     font-weight: var(--font-semibold);
     cursor: pointer;
     transition: var(--transition-filter);

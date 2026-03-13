@@ -32,7 +32,31 @@ export default defineConfig(({ mode }) => ({
     minify: 'terser',
     // Set empty base for GitHub Pages compatibility
     // This will be overridden in the build:gh-pages script
-    emptyOutDir: true
+    emptyOutDir: true,
+    // Improve code splitting for better lazy loading
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // Split vendor chunks for better caching
+          if (id.includes('node_modules/fuse.js')) {
+            return 'vendor-fuse';
+          }
+          if (id.includes('node_modules/zod')) {
+            return 'vendor-zod';
+          }
+          if (id.includes('node_modules/dexie')) {
+            return 'vendor-dexie';
+          }
+          // Split components that can be lazy loaded
+          if (id.includes('VocabularyCard.svelte') || id.includes('VocabularyList.svelte')) {
+            return 'components-vocabulary';
+          }
+          if (id.includes('/ui/Button.svelte') || id.includes('/ui/Input.svelte')) {
+            return 'components-ui';
+          }
+        }
+      }
+    }
   },
   test: {
     include: [
