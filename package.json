@@ -102,7 +102,7 @@
 		"lighthouse": "^13.0.3",
 		"lucide-svelte": "0.563.0",
 		"postcss": "^8.5.6",
-		"storybook": "^10.2.1",
+		"storybook": "^10.2.10",
 		"svelte": "5.46.0",
 		"svelte-check": "^4.3.4",
 		"svelte-eslint-parser": "^1.4.0",
