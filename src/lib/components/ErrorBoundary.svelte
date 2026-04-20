@@ -12,6 +12,7 @@
    */
 
   import { Button } from '$lib/components/ui/button';
+  import { logger } from '$lib/services/logger';
 
   interface Props {
     children: import('svelte').Snippet;
@@ -35,7 +36,7 @@
     errorCount++;
 
     // Log to console for debugging
-    console.error('[ErrorBoundary] Caught error:', errorObj);
+    logger.error('ErrorBoundary', `Caught error: ${errorObj.message}`, errorObj);
 
     // Call optional error handler
     onError?.(errorObj);

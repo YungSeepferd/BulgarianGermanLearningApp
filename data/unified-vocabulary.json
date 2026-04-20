@@ -384,7 +384,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.770Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_083b869fbeee",
@@ -398,7 +402,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.770Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "alle",
@@ -1320,7 +1328,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.770Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "actions"
+    ]
   },
   {
     "id": "a1_verb_041",
@@ -3303,7 +3315,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.770Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "wv_pc_f96ece40",
@@ -3956,7 +3972,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.770Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_transport_010",
@@ -4054,7 +4074,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.770Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "food"
+    ]
   },
   {
     "id": "a1_noun_028",
@@ -4110,7 +4134,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.770Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_entertainment_008",
@@ -4250,7 +4278,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.770Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_transport_005",
@@ -4306,7 +4338,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.770Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_house_007",
@@ -4716,7 +4752,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.770Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_9009f64066bf",
@@ -4730,7 +4770,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.770Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_noun_034",
@@ -4828,7 +4872,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.770Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_object_005",
@@ -4884,7 +4932,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.770Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_nature_006",
@@ -4982,7 +5034,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.770Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_house_001",
@@ -5448,7 +5504,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1-fam-012-kind",
@@ -5918,7 +5978,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_place_009",
@@ -6144,7 +6208,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_noun_035",
@@ -6452,7 +6520,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_transport_007",
@@ -6634,7 +6706,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "food"
+    ]
   },
   {
     "id": "a1_weather_001",
@@ -6732,7 +6808,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_education_012",
@@ -7082,7 +7162,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "body-008-arm",
@@ -7182,7 +7266,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_place_007",
@@ -7238,7 +7326,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_animal_011",
@@ -7584,7 +7676,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_transport_002",
@@ -7682,7 +7778,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "family"
+    ]
   },
   {
     "id": "pdf_e8511b80394f",
@@ -7696,7 +7796,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_3368914dfc27",
@@ -7710,7 +7814,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_16ed23160954",
@@ -7724,7 +7832,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "a1_weather_006",
@@ -7780,7 +7892,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "a1_tech_006",
@@ -7920,7 +8036,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_c8933e01e7b3",
@@ -7934,7 +8054,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_activity_007",
@@ -8134,7 +8258,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_f7950a9f9271",
@@ -8148,7 +8276,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "a1-fam-014-freund",
@@ -8446,7 +8578,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "family"
+    ]
   },
   {
     "id": "a1_family_008",
@@ -8545,7 +8681,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "body-012-hals",
@@ -8728,7 +8868,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_nature_010",
@@ -8784,7 +8928,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_animal_001",
@@ -8924,7 +9072,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_bfdf55541707",
@@ -8938,7 +9090,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_e115562a9196",
@@ -8952,7 +9108,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "food"
+    ]
   },
   {
     "id": "pdf_5409632d5cdc",
@@ -8966,7 +9126,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_ac803a8afcfe",
@@ -8980,7 +9144,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_98f1b831d735",
@@ -8995,7 +9163,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_food_015",
@@ -9093,7 +9265,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "colors"
+    ]
   },
   {
     "id": "a1_profession_011",
@@ -9277,7 +9453,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_profession_014",
@@ -9375,7 +9555,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_object_009",
@@ -9431,7 +9615,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1-fam-010-mann",
@@ -9523,7 +9711,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_a1d8d5ce5de8",
@@ -9537,7 +9729,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_50365d52bcd4",
@@ -9551,7 +9747,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_9243d0038734",
@@ -9565,7 +9765,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_nature_002",
@@ -9621,7 +9825,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "a1_body_007",
@@ -9721,7 +9929,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_6f0ac0d0851e",
@@ -9735,7 +9947,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_64410895d203",
@@ -9749,7 +9965,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_tech_008",
@@ -10015,7 +10235,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_clothing_042",
@@ -10071,7 +10295,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "body-014-ruecken",
@@ -10129,7 +10357,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_food_027",
@@ -10185,7 +10417,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "a1_profession_015",
@@ -10283,7 +10519,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_object_004",
@@ -10465,7 +10705,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_family_003",
@@ -10599,7 +10843,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "pdf_5241016d84a4",
@@ -10613,7 +10861,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_activity_001",
@@ -10711,7 +10963,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_entertainment_006",
@@ -10851,7 +11107,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_time_008",
@@ -10950,7 +11210,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_object_006",
@@ -11006,7 +11270,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_education_005",
@@ -11183,7 +11451,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "family"
+    ]
   },
   {
     "id": "a1_profession_009",
@@ -11613,7 +11885,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_month_012",
@@ -12033,7 +12309,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_place_012",
@@ -12131,7 +12411,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_nature_005",
@@ -12271,7 +12555,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_628c2944f325",
@@ -12286,7 +12574,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_7be479e1af6c",
@@ -12300,7 +12592,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_food_014",
@@ -12356,7 +12652,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "family"
+    ]
   },
   {
     "id": "a1_tech_007",
@@ -12412,7 +12712,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_entertainment_010",
@@ -12552,7 +12856,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_health_008",
@@ -12608,7 +12916,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1-fam-001-familie",
@@ -12705,7 +13017,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1-fam-011-frau",
@@ -12959,7 +13275,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "family"
+    ]
   },
   {
     "id": "a1_family_007",
@@ -13015,7 +13335,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "body-007-hand",
@@ -13115,7 +13439,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_3fb789b453d3",
@@ -13129,7 +13457,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_clothing_041",
@@ -13185,7 +13517,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_clothing_045",
@@ -13241,7 +13577,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_food_025",
@@ -13381,7 +13721,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_animal_002",
@@ -13437,7 +13781,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.771Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_health_009",
@@ -13577,7 +13925,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_profession_002",
@@ -13633,7 +13985,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_animal_010",
@@ -13785,7 +14141,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_activity_003",
@@ -13925,7 +14285,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "family"
+    ]
   },
   {
     "id": "pdf_47c9ba44d2eb",
@@ -13939,7 +14303,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_clothing_048",
@@ -14123,7 +14491,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_ccb2eaf34093",
@@ -14137,7 +14509,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_food_022",
@@ -14235,7 +14611,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_place_014",
@@ -14405,7 +14785,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_noun_037",
@@ -14581,7 +14965,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_tech_010",
@@ -14679,7 +15067,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_457c99d41608",
@@ -14693,7 +15085,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_place_001",
@@ -14917,7 +15313,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_b0d6ac237c82",
@@ -14931,7 +15331,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_education_013",
@@ -14987,7 +15391,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_clothing_052",
@@ -15205,7 +15613,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "family"
+    ]
   },
   {
     "id": "pdf_c073055ae5f0",
@@ -15219,7 +15631,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_house_008",
@@ -15275,7 +15691,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_transport_008",
@@ -15541,7 +15961,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_food_026",
@@ -15597,7 +16021,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_time_002",
@@ -16194,7 +16622,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "actions"
+    ]
   },
   {
     "id": "ehefrau",
@@ -16807,7 +17239,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "wv_pc_b2f3c788",
@@ -18270,7 +18706,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "actions"
+    ]
   },
   {
     "id": "a1_final14_025",
@@ -18827,7 +19267,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_time_005",
@@ -19068,7 +19512,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "actions"
+    ]
   },
   {
     "id": "a1_verb_056",
@@ -21269,7 +21717,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.772Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "wv_4e61e836",
@@ -25041,7 +25493,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdf_71e86fe06ae4",
@@ -25055,7 +25511,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "wv_e7e7a3fa",
@@ -25129,7 +25589,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "wv_36b02a9b",
@@ -25600,7 +26064,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "wv_c0b43fe1",
@@ -27691,7 +28159,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "education"
+    ]
   },
   {
     "id": "a1_verb_049",
@@ -27832,7 +28304,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_final_021",
@@ -29223,7 +29699,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "actions"
+    ]
   },
   {
     "id": "a1_verb_068",
@@ -29645,7 +30125,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_verb_046",
@@ -30774,7 +31258,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_final14_016",
@@ -31904,7 +32392,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "colors"
+    ]
   },
   {
     "id": "a1_color_010",
@@ -32093,7 +32585,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "wv_3d39ff79",
@@ -34171,7 +34667,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "actions"
+    ]
   },
   {
     "id": "a1_verb_096",
@@ -34757,7 +35257,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "wv_d4ea7cd0",
@@ -34893,7 +35397,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "actions"
+    ]
   },
   {
     "id": "sprechen",
@@ -35506,7 +36014,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "actions"
+    ]
   },
   {
     "id": "a1_final14_002",
@@ -36135,7 +36647,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "colors"
+    ]
   },
   {
     "id": "wv_pc_b72fb56f",
@@ -37061,7 +37577,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "colors"
+    ]
   },
   {
     "id": "a1_adj_048",
@@ -37478,7 +37998,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.773Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_verb_015",
@@ -40153,7 +40677,12 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "food",
+      "verbs"
+    ]
   },
   {
     "id": "pdf_7e328251a50d",
@@ -40177,7 +40706,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "a1_grammar_011",
@@ -40607,7 +41140,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "onthephone-n03qse",
@@ -40627,7 +41164,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "numbers"
+    ]
   },
   {
     "id": "doctorofmedicine-scke7f",
@@ -40645,7 +41186,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "ent-212y7",
@@ -40663,7 +41208,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "money-ihjtdo",
@@ -40681,7 +41230,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "exchange-7yea0m",
@@ -40699,7 +41252,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "numbers"
+    ]
   },
   {
     "id": "bank-k3hxkp",
@@ -40717,7 +41274,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "good-cf5du9",
@@ -40735,7 +41296,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "summeretc-3lmmlo",
@@ -40753,7 +41318,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "time-r2j8bi",
@@ -40773,7 +41342,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "literallylightnight-58g0tr",
@@ -40793,7 +41366,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "have-vodnw",
@@ -40813,7 +41390,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "femininewordsendingi-g8nsae",
@@ -40831,7 +41412,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "tea-ocgqj",
@@ -40849,7 +41434,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "oftencomingfromengli-k7djwh",
@@ -40867,7 +41456,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "noemphasis-go4m2l",
@@ -40887,7 +41480,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "lun-gmu32p",
@@ -40905,7 +41502,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "novolnie-2z8pfp",
@@ -40923,7 +41524,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "slncestone-0sbbiv",
@@ -40941,7 +41546,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "numbers"
+    ]
   },
   {
     "id": "ravnodnstvie-hamk3",
@@ -40959,7 +41568,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "lunnozatmnenie-tx5hw",
@@ -40977,7 +41590,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "zimnoslncestoene-q18jj8",
@@ -40995,7 +41612,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "jonosfra-1au1q",
@@ -41013,7 +41634,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "severnosijanie-81ri1",
@@ -41031,7 +41656,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "zrno-qp0l3",
@@ -41049,7 +41678,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "bedr-2ntb84",
@@ -41067,7 +41700,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "koljno-0yt1ce",
@@ -41085,7 +41722,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pet-wq3psb",
@@ -41103,7 +41744,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "numbers"
+    ]
   },
   {
     "id": "razreitelno-szussb",
@@ -41121,7 +41766,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "patent-rbo5jo",
@@ -41139,7 +41788,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "mf-2y5akm",
@@ -41159,7 +41812,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "iam-t8c37a",
@@ -41177,7 +41834,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "urn-fp7bha",
@@ -41197,7 +41858,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pp-kcenno",
@@ -41215,7 +41880,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "aquestion-0ir08h",
@@ -41233,7 +41902,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "atschool-fixqr9",
@@ -41251,7 +41924,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "atschool-5ssgmu",
@@ -41269,7 +41946,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "central-nmw0hi",
@@ -41287,7 +41968,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "adj-nvkhiq",
@@ -41307,7 +41992,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "adj-90lu9",
@@ -41327,7 +42016,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "adj-8uwuf",
@@ -41347,7 +42040,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "adj-oezvq7",
@@ -41367,7 +42064,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "forfirst-u6zzg",
@@ -41385,7 +42086,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "adj-6exjxm",
@@ -41405,7 +42110,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "aninstrument-gxee39",
@@ -41423,7 +42132,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "literallytillsoon-dqsoz",
@@ -41443,7 +42156,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "literallylightday-508ulp",
@@ -41463,7 +42180,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "morecasual-vlzivh",
@@ -41483,7 +42204,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "morecasual-moxcu5",
@@ -41501,7 +42226,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "literallyitcan-rjmt1c",
@@ -41519,7 +42248,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "neuterwordsendingin-n4315",
@@ -41537,7 +42270,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "consonant-8aexje",
@@ -41555,7 +42292,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "forneuterwordsending-4mwq1",
@@ -41575,7 +42316,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "tolike-qpmuu3",
@@ -41593,7 +42338,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "sginformal-cjwu2r",
@@ -41613,7 +42362,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "sginformal-0w0lpl",
@@ -41633,7 +42386,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "sginformal-djbtr",
@@ -41653,7 +42410,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "itismyfault-o1t3l",
@@ -41673,7 +42434,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "saidbyawoman-g25h4s",
@@ -41693,7 +42458,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "family"
+    ]
   },
   {
     "id": "ksmos-ymtwel",
@@ -41711,7 +42480,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "vselna-lj5fxr",
@@ -41729,7 +42502,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "slnevvjatr-nrvua2",
@@ -41747,7 +42524,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "zvezdenvjatr-2nr9va",
@@ -41765,7 +42546,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "zaknnahbl-ik1fpo",
@@ -41783,7 +42568,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "zvezd-lxrsdq",
@@ -41801,7 +42590,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "szvzdie-yfoo7",
@@ -41819,7 +42612,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "galktika-di8x9p",
@@ -41837,7 +42634,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "slnce-t7pj9",
@@ -41855,7 +42656,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "mgljavina-bsh82",
@@ -41873,7 +42678,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "svrhnva-ugua9",
@@ -41891,7 +42700,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "planta-bh975c",
@@ -41909,7 +42722,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "asterod-5q6zc",
@@ -41927,7 +42744,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "komta-8io36n",
@@ -41945,7 +42766,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "meteort-zgwuv8",
@@ -41963,7 +42788,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "krter-w1b9j",
@@ -41981,7 +42810,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "litosfera-l80jhu",
@@ -41999,7 +42832,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "sptnik-udn79",
@@ -42017,7 +42854,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "geografskadlina-sfczo",
@@ -42035,7 +42876,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "ekvtor-xi74f",
@@ -42053,7 +42898,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "severenpoljus-i13bef",
@@ -42071,7 +42920,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "jenpljus-6apzgr",
@@ -42089,7 +42942,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "zemljanin-e6fm5j",
@@ -42107,7 +42964,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "zornica-4q0h4o",
@@ -42125,7 +42986,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "zemj-du4aj7",
@@ -42143,7 +43008,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "merkrij-809gqo",
@@ -42161,7 +43030,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "venra-h55oke",
@@ -42179,7 +43052,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "mars-x48w8h",
@@ -42197,7 +43074,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "satrn-kugrw",
@@ -42215,7 +43096,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "slnevasistma-6hqfvb",
@@ -42233,7 +43118,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "polumsec-kbcdg",
@@ -42251,7 +43140,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "perihelij-vcnxhh",
@@ -42269,7 +43162,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "zent-229jd3",
@@ -42287,7 +43184,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "nadir-kh4qu",
@@ -42305,7 +43206,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "zatmnenie-r2c9k",
@@ -42323,7 +43228,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "ekliptika-6w0ac",
@@ -42341,7 +43250,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "zaljazvam-nd6ih",
@@ -42359,7 +43272,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "termosfra-pakns",
@@ -42377,7 +43294,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "atmosfra-w932r",
@@ -42395,7 +43316,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "neb-gw1vkm",
@@ -42413,7 +43338,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "nebosvod-ekamsw",
@@ -42431,7 +43360,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "zor-tw5k8",
@@ -42449,7 +43382,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "horiznt-xn0jv",
@@ -42467,7 +43404,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "meteor-aiv5u",
@@ -42485,7 +43426,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "areola-ccdq1z",
@@ -42503,7 +43448,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "medza-y3at6g",
@@ -42521,7 +43470,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pijvica-2kebq",
@@ -42539,7 +43492,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "sjnger-atwwv",
@@ -42557,7 +43514,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "morskitaralei-6jd87i",
@@ -42575,7 +43536,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "morskzvezd-4516dw",
@@ -42593,7 +43558,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "aktinija-ot6r5o",
@@ -42611,7 +43580,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "strda-uj17pr",
@@ -42629,7 +43602,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "oktopd-sp0xnn",
@@ -42647,7 +43624,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "kalmr-nkus6",
@@ -42665,7 +43646,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "mida-dch21e",
@@ -42683,7 +43668,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "golhljuv-qut7v",
@@ -42701,7 +43690,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "sepija-1bbdpj",
@@ -42719,7 +43712,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "rkovina-3ky19e",
@@ -42737,7 +43734,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "morskakrastavica-k92rzt",
@@ -42755,7 +43756,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "krjnik-xglr8a",
@@ -42773,7 +43778,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "telsen-c9wlev",
@@ -42791,7 +43800,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "grdenko-ndeodk",
@@ -42809,7 +43822,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "time"
+    ]
   },
   {
     "id": "korm-1lxovh",
@@ -42827,7 +43844,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "but-abw00f",
@@ -42845,7 +43866,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "zdnik-diujmb",
@@ -42863,7 +43888,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "tlovite-s6xuor",
@@ -42881,7 +43910,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "zadnik-ed0p8r",
@@ -42899,7 +43932,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "tlija-jjhmca",
@@ -42917,7 +43954,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "slabina-nfeum",
@@ -42935,7 +43976,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "hlbok-lx93ls",
@@ -42953,7 +43998,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "glav-427ca8",
@@ -42971,7 +44020,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "grlo-kun2ok",
@@ -42989,7 +44042,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "admovajblka-3nc4t8",
@@ -43007,7 +44064,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "food"
+    ]
   },
   {
     "id": "til-96bt3t",
@@ -43025,7 +44086,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "slepoie-f3spt9",
@@ -43043,7 +44108,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "glezen-hczk1",
@@ -43061,7 +44130,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "krak-7r9dvn",
@@ -43079,7 +44152,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "dokumnt-a9xgln",
@@ -43097,7 +44174,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "formuljr-1um7ze",
@@ -43115,7 +44196,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "ppka-pl6f8",
@@ -43133,7 +44218,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "oficialen-ehvgt8",
@@ -43151,7 +44240,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pdpis-6at9k64",
@@ -43169,7 +44262,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "avtograf-lrg82u",
@@ -43187,7 +44284,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "podpsvam-bs8ng6",
@@ -43205,7 +44306,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "podpisvam-nbu4vg",
@@ -43223,7 +44328,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "datram-4wbet6",
@@ -43241,7 +44350,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "registrram-wgcn4p",
@@ -43259,7 +44372,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "paragraf-0vkll",
@@ -43277,7 +44394,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "razdel-i3mn5c",
@@ -43295,7 +44416,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "dgovor-hlwx4u",
@@ -43313,7 +44438,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "dogovor-p3dtru",
@@ -43331,7 +44460,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "akt-hykuy8",
@@ -43349,7 +44482,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "uslvie-qw70au",
@@ -43367,7 +44504,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pasprt-u844ef",
@@ -43385,7 +44526,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "lnakrta-fu3n0f",
@@ -43403,7 +44548,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "diplma-uzxsn",
@@ -43421,7 +44570,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "aktzaradane-xea68c",
@@ -43439,7 +44592,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "propusk-9s4sx",
@@ -43457,7 +44614,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "zavetnie-b03ysy",
@@ -43475,7 +44636,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "kvitncija-k7puwh",
@@ -43493,7 +44658,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "svidtelstvo-ixpbra",
@@ -43511,7 +44680,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "licnz-9thu5e",
@@ -43529,7 +44702,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "vprsnik-w4ukyj",
@@ -43547,7 +44724,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "objavlnie-qcqbb",
@@ -43565,7 +44746,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "bjuletna-4zv13k",
@@ -43583,7 +44768,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "razreenie-7bp2wb",
@@ -43601,7 +44790,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "kvitancija-82s49j",
@@ -43619,7 +44812,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "eg-l1d3vd",
@@ -43637,7 +44834,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 4,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "slnev-8xut8",
@@ -43655,7 +44856,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "mlenpt-1hh9wu",
@@ -43673,7 +44878,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 3,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "dg-i4351",
@@ -43691,7 +44900,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "mda-wpxwca",
@@ -43709,7 +44922,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "tjlo-idjvu",
@@ -43727,7 +44944,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "grb-mbgc6f",
@@ -43745,7 +44966,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "grd-4qorxq",
@@ -43763,7 +44988,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "grd-n7p0rw",
@@ -43781,7 +45010,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "gz-k59pd",
@@ -43799,7 +45032,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "cca-kxttla",
@@ -43817,7 +45054,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "pitjl-0bhte8",
@@ -43835,7 +45076,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "stplo-4v4xfj",
@@ -43853,7 +45098,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "prst-12vxsw",
@@ -43871,7 +45120,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 2,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "dta-6n62y3",
@@ -43889,7 +45142,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "vza-si0wgh",
@@ -43907,7 +45164,11 @@
     "cefrInference": {
       "inferredAt": "2026-01-28T11:59:28.774Z",
       "method": "difficulty-weighted"
-    }
+    },
+    "difficulty": 1,
+    "categories": [
+      "common-nouns"
+    ]
   },
   {
     "id": "a1_auto_cb8a8c89-db84-4f29-b39e-c807ae9c45a2",

@@ -3,10 +3,10 @@
    * Global Error Handler Component
    *
    * Provides centralized error handling and user feedback for the application.
-   * Now uses reactive state instead of event bus.
+   * Routes all errors through LoggerService for collection and DevTools access.
    */
 
-  import { Debug } from '$lib/utils';
+  import { logger } from '$lib/services/logger';
 
   // State for error display
   let currentError = $state<string | null>(null);
@@ -16,7 +16,7 @@
   // Error handler function that can be called from anywhere
   // Components can import this and call handleGlobalError(error, context)
   export function handleGlobalError(error: Error, context?: string): void {
-    Debug.error('GlobalErrorHandler', 'Global error received', error);
+    logger.error('GlobalErrorHandler', 'Global error received', error);
 
     const errorMessage = formatErrorMessage(error);
     const details = formatErrorDetails(error, context);
@@ -24,7 +24,7 @@
     currentError = errorMessage;
     errorDetails = details;
 
-    Debug.log('GlobalErrorHandler', 'Displaying error to user', { error: errorMessage });
+    logger.debug('GlobalErrorHandler', 'Displaying error to user', { error: errorMessage });
   }
 
   function formatErrorMessage(error: Error): string {

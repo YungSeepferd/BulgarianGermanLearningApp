@@ -378,7 +378,7 @@ function printReport(result: AuditResult) {
   console.log('\n💡 RECOMMENDATIONS FOR LEARNING HUB');
   console.log('───────────────────────────────────────');
 
-  const recommendations = [];
+  const recommendations: string[] = [];
 
   if (result.missingGrammar > result.totalItems * 0.5) {
     recommendations.push(`• Add grammar details (gender, plural forms, conjugations) to ${result.missingGrammar} items for grammar grid display`);

@@ -16,6 +16,7 @@
   import type { VocabularyCategory, PartOfSpeech } from '$lib/schemas/vocabulary';
   import type { VocabularyItem } from '$lib/types/vocabulary';
   import type { Lesson, LessonDifficulty } from '$lib/schemas/lesson';
+  import { logger } from '$lib/services/logger';
 
   // State
   let lessons = $state<Lesson[]>([]);
@@ -202,7 +203,7 @@
       lessons = generatedLessons;
 
     } catch (err) {
-      console.error('Failed to load lessons:', err);
+      logger.error('LessonsPage', 'Failed to load lessons', err instanceof Error ? err : new Error(String(err)));
       error = err instanceof Error ? err.message : ui.error;
     } finally {
       isLoading = false;
@@ -233,7 +234,7 @@
             });
             lessons.push(lesson);
           } catch (error) {
-            console.error(`Failed to generate ${difficulty} lesson ${i + 1}:`, error);
+            logger.error('LessonsPage', `Failed to generate ${difficulty} lesson ${i + 1}`, error instanceof Error ? error : new Error(String(error)));
           }
         }
       }
@@ -257,7 +258,7 @@
           lessons.push(lesson);
         }
       } catch (error) {
-        console.error(`Failed to generate ${category} category lesson:`, error);
+        logger.error('LessonsPage', `Failed to generate ${category} category lesson`, error instanceof Error ? error : new Error(String(error)));
       }
     }
 
@@ -277,7 +278,7 @@
           lessons.push(lesson);
         }
       } catch (error) {
-        console.error(`Failed to generate ${partOfSpeech} lesson:`, error);
+        logger.error('LessonsPage', `Failed to generate ${partOfSpeech} lesson`, error instanceof Error ? error : new Error(String(error)));
       }
     }
 
@@ -291,13 +292,13 @@
         });
         lessons.push(lesson);
       } catch (error) {
-        console.error('Failed to generate mixed lesson:', error);
+        logger.error('LessonsPage', 'Failed to generate mixed lesson', error instanceof Error ? error : new Error(String(error)));
       }
     }
 
     // If no lessons were generated, create fallback lessons
     if (lessons.length === 0 && db.getVocabularyCount() > 0) {
-      console.warn('No lessons generated, creating fallback lessons');
+      logger.warn('LessonsPage', 'No lessons generated, creating fallback lessons');
       const fallbackLessons = generateFallbackLessons();
       lessons.push(...fallbackLessons);
     }

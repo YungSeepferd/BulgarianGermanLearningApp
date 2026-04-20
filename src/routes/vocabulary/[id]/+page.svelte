@@ -5,6 +5,7 @@
   import ActionButton from '$lib/components/ui/ActionButton.svelte';
   import type { PageData } from './$types';
   import type { VocabularyItem } from '$lib/types/vocabulary';
+  import { logger } from '$lib/services/logger';
 
   let { data }: { data: PageData } = $props();
 
@@ -187,7 +188,7 @@
   function handlePractice() {
     // Could navigate to practice mode with this word pre-selected
     // For now, just show a message
-    console.log('Practice mode for:', item.id);
+    logger.debug('VocabularyDetail', `Practice mode for: ${item.id}`);
   }
 
   // Navigation to next/previous items

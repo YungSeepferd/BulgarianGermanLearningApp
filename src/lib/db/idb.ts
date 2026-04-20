@@ -9,6 +9,7 @@ import type { VocabularyItem } from '$lib/schemas/vocabulary';
 import type { UserProgress, VocabularyProgress, ExerciseProgress } from '$lib/types/progress';
 import type { LessonProgress } from '$lib/types/lesson';
 import type { LearningPathProgress } from '$lib/types/learning-path';
+import { logger } from '$lib/services/logger';
 
 // @ts-ignore - DBSchema typing from idb is complex; schema works correctly at runtime
 export interface AppDatabase extends DBSchema {
@@ -96,7 +97,7 @@ export async function initializeDB(): Promise<IDBPDatabase<AppDatabase>> {
 
 	dbInstance = await openDB<AppDatabase>('BulgarianGermanApp', 1, {
 		upgrade(db, oldVersion, newVersion) {
-			console.log(`[IndexedDB] Upgrading from v${oldVersion} to v${newVersion}`);
+		logger.info('IndexedDB', `Upgrading from v${oldVersion} to v${newVersion}`);
 
 			// Vocabulary store (with user edits)
 			if (!db.objectStoreNames.contains('vocabulary')) {
@@ -104,7 +105,7 @@ export async function initializeDB(): Promise<IDBPDatabase<AppDatabase>> {
 				vocabStore.createIndex('partOfSpeech', 'partOfSpeech');
 				vocabStore.createIndex('difficulty', 'difficulty');
 				vocabStore.createIndex('learningPath', 'learningPath');
-				console.log('[IndexedDB] Created vocabulary store');
+				logger.info('IndexedDB', 'Created vocabulary store');
 			}
 
 			// Vocabulary progress (mastery tracking)
@@ -114,7 +115,7 @@ export async function initializeDB(): Promise<IDBPDatabase<AppDatabase>> {
 				});
 				vocabProgressStore.createIndex('mastery', 'mastery');
 				vocabProgressStore.createIndex('nextReview', 'nextReview');
-				console.log('[IndexedDB] Created vocabularyProgress store');
+				logger.info('IndexedDB', 'Created vocabularyProgress store');
 			}
 
 			// Lesson progress
@@ -124,7 +125,7 @@ export async function initializeDB(): Promise<IDBPDatabase<AppDatabase>> {
 				});
 				lessonProgressStore.createIndex('lessonId', 'lessonId');
 				lessonProgressStore.createIndex('completed', 'completed');
-				console.log('[IndexedDB] Created lessonProgress store');
+				logger.info('IndexedDB', 'Created lessonProgress store');
 			}
 
 			// Learning path progress
@@ -133,7 +134,7 @@ export async function initializeDB(): Promise<IDBPDatabase<AppDatabase>> {
 					keyPath: 'pathId'
 				});
 				pathProgressStore.createIndex('pathId', 'pathId');
-				console.log('[IndexedDB] Created learningPathProgress store');
+				logger.info('IndexedDB', 'Created learningPathProgress store');
 			}
 
 			// Exercise progress
@@ -142,13 +143,13 @@ export async function initializeDB(): Promise<IDBPDatabase<AppDatabase>> {
 				exerciseProgressStore.createIndex('lessonId', 'lessonId');
 				exerciseProgressStore.createIndex('exerciseId', 'exerciseId');
 				exerciseProgressStore.createIndex('completed', 'completed');
-				console.log('[IndexedDB] Created exerciseProgress store');
+				logger.info('IndexedDB', 'Created exerciseProgress store');
 			}
 
 			// User progress (global stats, preferences)
 			if (!db.objectStoreNames.contains('userProgress')) {
 				db.createObjectStore('userProgress', { keyPath: 'userId' });
-				console.log('[IndexedDB] Created userProgress store');
+				logger.info('IndexedDB', 'Created userProgress store');
 			}
 
 			// Edit history (track user contributions)
@@ -159,22 +160,22 @@ export async function initializeDB(): Promise<IDBPDatabase<AppDatabase>> {
 				});
 				editHistoryStore.createIndex('itemId', 'itemId');
 				editHistoryStore.createIndex('timestamp', 'timestamp');
-				console.log('[IndexedDB] Created editHistory store');
+				logger.info('IndexedDB', 'Created editHistory store');
 			}
 		},
 		blocked() {
-			console.warn('[IndexedDB] Database upgrade blocked - close other tabs');
+			logger.warn('IndexedDB', 'Database upgrade blocked - close other tabs');
 		},
 		blocking() {
-			console.warn('[IndexedDB] Blocking database upgrade in another tab');
+			logger.warn('IndexedDB', 'Blocking database upgrade in another tab');
 		},
 		terminated() {
-			console.error('[IndexedDB] Database connection terminated unexpectedly');
+			logger.error('IndexedDB', 'Database connection terminated unexpectedly');
 			dbInstance = null;
 		}
 	});
 
-	console.log('[IndexedDB] Database initialized successfully');
+	logger.info('IndexedDB', 'Database initialized successfully');
 	return dbInstance;
 }
 
@@ -195,7 +196,7 @@ export function closeDB(): void {
 	if (dbInstance) {
 		dbInstance.close();
 		dbInstance = null;
-		console.log('[IndexedDB] Database connection closed');
+		logger.info('IndexedDB', 'Database connection closed');
 	}
 }
 
@@ -205,5 +206,5 @@ export function closeDB(): void {
 export async function deleteDB(): Promise<void> {
 	closeDB();
 	await indexedDB.deleteDatabase('BulgarianGermanApp');
-	console.log('[IndexedDB] Database deleted');
+	logger.info('IndexedDB', 'Database deleted');
 }

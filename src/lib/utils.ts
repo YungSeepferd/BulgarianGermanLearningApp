@@ -14,16 +14,22 @@ export type WithElementRef<T, U extends HTMLElement = HTMLElement> = T & { ref?:
 
 /**
  * Debug utility for consistent logging across the application
+ *
+ * Delegates to LoggerService for structured logging with in-memory buffer.
+ * Maintains backward compatibility with existing Debug.log/error/warn calls.
+ * Auto-enabled in dev mode via LoggerService.
  */
+import { logger } from '$lib/services/logger';
+
 export class Debug {
-    private static enabled: boolean = false;
-    private static readonly PREFIX = '[TandemDebug]';
+    private static enabled: boolean = import.meta.env.DEV;
 
     /**
      * Enable debug logging
      */
     static enable(): void {
         Debug.enabled = true;
+        logger.setConsoleLevel('debug');
         Debug.log('Debug', 'Debug logging enabled');
     }
 
@@ -33,6 +39,7 @@ export class Debug {
     static disable(): void {
         Debug.log('Debug', 'Debug logging disabled');
         Debug.enabled = false;
+        logger.setConsoleLevel(import.meta.env.DEV ? 'debug' : 'error');
     }
 
     /**
@@ -43,39 +50,27 @@ export class Debug {
      */
     static log(context: string, message: string, data?: unknown): void {
         if (!Debug.enabled) return;
-
-        if (data !== undefined) {
-            console.log(`${Debug.PREFIX} [${context}] ${message}`, data);
-        } else {
-            console.log(`${Debug.PREFIX} [${context}] ${message}`);
-        }
+        logger.debug(context, message, data);
     }
 
     /**
-     * Log an error message
+     * Log an error message - always captured by LoggerService
      * @param context The context of the error
      * @param message The error message
      * @param error The error object
      */
     static error(context: string, message: string, error?: Error): void {
-        if (error) {
-            console.error(`${Debug.PREFIX} [${context}] ${message}`, error);
-        } else {
-            console.error(`${Debug.PREFIX} [${context}] ${message}`);
-        }
+        logger.error(context, message, error);
     }
 
     /**
-     * Log a warning message
+     * Log a warning message if debug is enabled
      * @param context The context of the warning
      * @param message The warning message
      * @param data Additional data to log
      */
     static warn(context: string, message: string, data?: unknown): void {
-        if (data !== undefined) {
-            console.warn(`${Debug.PREFIX} [${context}] ${message}`, data);
-        } else {
-            console.warn(`${Debug.PREFIX} [${context}] ${message}`);
-        }
+        if (!Debug.enabled) return;
+        logger.warn(context, message, data);
     }
 }

@@ -9,6 +9,7 @@
   import { DailyCarousel } from '$lib/components/dashboard';
   import VocabularyDetailPanel from '$lib/components/dashboard/VocabularyDetailPanel.svelte';
   import type { VocabularyItem } from '$lib/types/vocabulary';
+  import { logger } from '$lib/services/logger';
 
   // View mode: 'cards' (swipe practice) or 'stats' (overview)
   let viewMode = $state<'cards' | 'stats'>('cards');
@@ -65,7 +66,7 @@
           totalPracticed = Array.from(stats.values()).reduce((sum, s) => sum + (s?.correct + s?.incorrect || 0), 0);
         }
       } catch (error) {
-        console.error('Error loading dashboard data:', error);
+        logger.error('Dashboard', 'Failed to load dashboard data', error instanceof Error ? error : new Error(String(error)));
       } finally {
         if (mounted) {
           statsLoading = false;
@@ -95,7 +96,7 @@
 
   function handleDailyComplete() {
     // Could trigger confetti or celebration animation here
-    console.log('Daily vocabulary practice complete!');
+    logger.info('Dashboard', 'Daily vocabulary practice complete');
   }
 
   function toggleView() {

@@ -17,6 +17,7 @@
   import TypingExercise from '$lib/components/exercises/TypingExercise.svelte';
   import MatchingExercise from '$lib/components/exercises/MatchingExercise.svelte';
   import OrderingExercise from '$lib/components/exercises/OrderingExercise.svelte';
+  import { logger } from '$lib/services/logger';
 
   // Type for lesson data
   interface Lesson {
@@ -61,7 +62,7 @@
         throw new Error('Lesson not found');
       }
     } catch (err) {
-      console.error('Error loading lesson:', err);
+      logger.error('LessonPage', `Failed to load lesson ${lessonId}`, err instanceof Error ? err : new Error(String(err)));
       error = appState.languageMode === 'DE_BG' 
         ? 'Lektion nicht gefunden' 
         : 'Урокът не е намерен';
@@ -115,7 +116,7 @@
   // Exercise completion handler
   function handleExerciseComplete(event: CustomEvent<{ isCorrect: boolean }>) {
     // Could add celebration or tracking here
-    console.log('Exercise completed:', event.detail.isCorrect);
+    logger.debug('LessonPage', `Exercise completed: ${event.detail.isCorrect}`);
   }
 </script>
 

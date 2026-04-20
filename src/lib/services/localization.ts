@@ -8,6 +8,7 @@
 import { base } from '$app/paths';
 import { appState } from '../state/app-state';
 import { browser } from '$app/environment';
+import { logger } from '$lib/services/logger';
 
 // Define the structure of our translation files
 // type TranslationValue = string | { [key: string]: TranslationValue };
@@ -123,7 +124,7 @@ export class LocalizationService {
             try {
                 listener();
             } catch (error) {
-                console.error('Error in translation change listener:', error);
+                logger.error('LocalizationService', 'Error in translation change listener', error as Error);
             }
         }
     }
@@ -169,11 +170,11 @@ export class LocalizationService {
                 throw new Error(`Failed to load translations for ${lang}`);
             }
             const loadedTranslations = await response.json();
-            console.log('Loaded translations:', JSON.stringify(loadedTranslations, null, 2));
+            logger.debug('LocalizationService', `Loaded translations: ${JSON.stringify(loadedTranslations, null, 2)}`);
             translations = loadedTranslations;
             this.notifyTranslationChange(); // Notify that translations have changed
         } catch (error) {
-            console.error('Failed to load translations:', error);
+            logger.error('LocalizationService', 'Failed to load translations', error as Error);
             // Fallback to German if loading fails
             _currentLanguage = 'de';
             try {
@@ -183,7 +184,7 @@ export class LocalizationService {
                     this.notifyTranslationChange(); // Notify that translations have changed
                 }
             } catch (fallbackError) {
-                console.error('Failed to load fallback translations:', fallbackError);
+                logger.error('LocalizationService', 'Failed to load fallback translations', fallbackError as Error);
             }
         } finally {
             _isLoading = false;
@@ -212,7 +213,7 @@ export class LocalizationService {
 
             // If no translations are loaded, return the key as fallback
             if (!translations || Object.keys(translations).length === 0) {
-                console.warn(`Translation key '${key}' not available - no translations loaded`);
+                logger.warn('LocalizationService', `Translation key '${key}' not available - no translations loaded`);
                 return key;
             }
 
@@ -224,7 +225,7 @@ export class LocalizationService {
                 if (value && typeof value === 'object' && k in value) {
                     value = (value as Record<string, unknown>)[k];
                 } else {
-                    console.warn(`Translation key '${key}' not found`);
+                    logger.warn('LocalizationService', `Translation key '${key}' not found`);
                     return key; // Return the key itself as fallback
                 }
             }
@@ -241,10 +242,10 @@ export class LocalizationService {
                 return value;
             }
 
-            console.warn(`Translation key '${key}' is not a string`);
+            logger.warn('LocalizationService', `Translation key '${key}' is not a string`);
             return key; // Return the key itself as fallback
         } catch (error) {
-            console.error(`Error getting translation for key '${key}':`, error);
+            logger.error('LocalizationService', `Error getting translation for key '${key}'`, error as Error);
             return key; // Return the key itself as fallback
         }
     }
@@ -294,7 +295,7 @@ export class LocalizationService {
             try {
                 listener(_currentLanguage);
             } catch (error) {
-                console.error('Error in language change listener:', error);
+            logger.error('LocalizationService', 'Error in language change listener', error as Error);
             }
         }
         this.notifyTranslationChange(); // Also notify about translation changes

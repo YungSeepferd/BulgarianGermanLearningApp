@@ -1,6 +1,7 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 import { vocabularyDb } from '$lib/data/db.svelte';
+import { logger } from '$lib/services/logger';
 
 // Disable SSR to avoid vocabulary loading issues
 export const ssr = false;
@@ -20,7 +21,7 @@ export const load: PageLoad = async ({ params }) => {
       allItems: items
     };
   } catch (err) {
-    console.error('Error loading vocabulary detail:', err);
+    logger.error('VocabularyDetail', 'Failed to load word details', err instanceof Error ? err : new Error(String(err)));
     throw error(500, 'Failed to load word details');
   }
 };

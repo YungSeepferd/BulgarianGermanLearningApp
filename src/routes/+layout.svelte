@@ -8,6 +8,7 @@
   import { initializeAppState } from '$lib/state/app-state';
   import { ErrorHandler } from '$lib/services/errors';
   import { showError } from '$lib/services/toast.svelte';
+  import { logger } from '$lib/services/logger';
   import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
 
   let { children } = $props();
@@ -27,6 +28,11 @@
         retry: 1
       }
     }
+  });
+
+  // Initialize logger on client startup
+  $effect(() => {
+    logger.init();
   });
 
   // Initialize shared data on client startup
@@ -66,6 +72,13 @@
 
 <!-- Global toast notifications -->
 <Toaster />
+
+<!-- Dev tools panel (tree-shaken in production via dynamic import) -->
+{#if import.meta.env.DEV}
+  {#await import('$lib/components/ui/DevTools/DevToolsPanel.svelte') then module}
+    <module.default />
+  {/await}
+{/if}
 
 
 <style>

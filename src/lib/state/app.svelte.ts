@@ -17,6 +17,7 @@ import { ErrorHandler, StateError, StorageError } from '$lib/services/errors';
 import type { VocabularyItem } from '$lib/types/vocabulary';
 import type { VocabularyMastery, OverallProgress } from '$lib/schemas/progress';
 import { AppStateDB } from '$lib/data/indexeddb';
+import { logger } from '$lib/services/logger';
 
 // ============================================================================
 // STATE CLASS - Using Svelte 5 $state() fields
@@ -185,7 +186,7 @@ class AppStateClass {
                     LocalizationService.notifyLanguageChange();
                 });
             } catch (error) {
-                console.error('Failed to notify language change:', error);
+                logger.error('AppState', 'Failed to notify language change', error instanceof Error ? error : new Error(String(error)));
             }
         }
     }
@@ -519,7 +520,7 @@ export async function initializeAppState(): Promise<void> {
     try {
         await appState.init();
     } catch (error) {
-        console.error('Failed to initialize app state:', error);
+        logger.error('AppState', 'Failed to initialize app state', error instanceof Error ? error : new Error(String(error)));
         throw error;
     }
 }

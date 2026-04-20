@@ -31,6 +31,50 @@ vi.mock('$lib/data/loader', () => ({
   getRandomVocabulary: vi.fn()
 }));
 
+// Override global mock to get the REAL LessonGenerationEngine
+vi.mock('$lib/services/lesson-generation/lesson-generator.ts', async (importOriginal) => {
+  return importOriginal();
+});
+
+// Mock vocabulary-repository.svelte (transitive Svelte dependency)
+vi.mock('$lib/data/vocabulary-repository.svelte', () => ({
+  vocabularyRepository: {
+    loaded: true,
+    search: vi.fn().mockResolvedValue([]),
+    getAll: vi.fn().mockReturnValue([]),
+    invalidate: vi.fn(),
+    initialize: vi.fn().mockResolvedValue(undefined),
+  }
+}));
+
+// Mock lesson-templates
+vi.mock('$lib/services/lesson-generation/lesson-templates', () => ({
+  lessonTemplateRepository: {
+    getTemplate: vi.fn(),
+    getTemplateById: vi.fn(),
+    getAllTemplates: vi.fn(),
+    validateTemplate: vi.fn()
+  }
+}));
+
+// Mock cultural-grammar
+vi.mock('$lib/services/lesson-generation/cultural-grammar', () => ({
+  culturalGrammarService: {
+    query: vi.fn(),
+    getAllConcepts: vi.fn(),
+    conceptAppliesToPartOfSpeech: vi.fn()
+  }
+}));
+
+// Mock template-renderer
+vi.mock('$lib/services/lesson-generation/template-renderer', () => ({
+  templateRenderer: {
+    render: vi.fn(),
+    validateTemplate: vi.fn(),
+    validateData: vi.fn()
+  }
+}));
+
 // Mocks
 const mockTemplateRepository = {
   getTemplate: vi.fn(),

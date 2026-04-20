@@ -5,6 +5,8 @@
  * in the application, enabling better error handling and propagation.
  */
 
+import { logger } from '$lib/services/logger';
+
 export class AppError extends Error {
     constructor(message: string, public context?: unknown) {
         super(message);
@@ -56,6 +58,8 @@ export class StorageError extends AppError {
 
 /**
  * Error handler utility for consistent error handling
+ *
+ * Routes all errors through LoggerService for collection and devtools access.
  */
 export class ErrorHandler {
     private static toastHandler: ((context: string, error: unknown) => void) | null = null;
@@ -82,8 +86,9 @@ export class ErrorHandler {
         showToast: boolean = true
     ): void {
         const err = error instanceof Error ? error : new Error(String(error));
-        // Log the error
-        console.error(`[${err.name}] ${context || 'Error'}:`, err.message, err.stack);
+
+        // Route through LoggerService for structured collection
+        logger.error(context || 'Error', err.message, err);
 
         // Emit error event if event bus is available
         if (eventBus) {
@@ -92,7 +97,7 @@ export class ErrorHandler {
                 context,
                 timestamp: new Date()
             }).catch(emitError => {
-                console.error('Failed to emit error event:', emitError);
+                logger.error('EventBus', 'Failed to emit error event', emitError instanceof Error ? emitError : new Error(String(emitError)));
             });
         }
 

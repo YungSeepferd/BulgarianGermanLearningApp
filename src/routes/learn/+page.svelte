@@ -10,6 +10,7 @@
   import PathBrowser from '$lib/components/learning/PathBrowser.svelte';
   import type { LearningPath, LearningPathProgress } from '$lib/types/learning-path';
   import { getLearningPaths, getLearningPathProgress } from '$lib/services/learning-paths';
+  import { logger } from '$lib/services/logger';
 
   let isLoading = $state(true);
   let recentWords = $state<VocabularyItem[]>([]);
@@ -121,7 +122,7 @@
           }
         }
       } catch (e) {
-        console.error('Error in Learn page onMount:', e);
+        logger.error('LearnPage', 'Failed to load learn data', e instanceof Error ? e : new Error(String(e)));
       } finally {
         if (mounted) {
           isLoading = false;

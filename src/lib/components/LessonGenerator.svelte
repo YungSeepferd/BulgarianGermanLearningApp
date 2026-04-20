@@ -16,10 +16,11 @@
     DEFAULT_LESSON_SIZE,
     MODAL_CLOSE_DELAY_MS
   } from '$lib/constants';
+  import { logger } from '$lib/services/logger';
 
   // Simple error handler
   function handleError(error: unknown, context: string) {
-    console.error(`[${context}]`, error);
+    logger.error(context, error instanceof Error ? error.message : String(error), error instanceof Error ? error : new Error(String(error)));
   }
 
   // Props

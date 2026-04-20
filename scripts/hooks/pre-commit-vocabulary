@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# Pre-commit hook for vocabulary data validation
+# Runs vocabulary quality audit before commits that modify vocabulary data
+
+set -e
+
+echo "🔍 Running vocabulary data validation..."
+
+# Check if vocabulary files were modified
+VOCAB_CHANGED=$(git diff --cached --name-only | grep -E '(vocabulary|unified-vocabulary)' || true)
+
+if [ -z "$VOCAB_CHANGED" ]; then
+  echo "✅ No vocabulary files modified, skipping validation."
+  exit 0
+fi
+
+echo "📋 Vocabulary files modified:"
+echo "$VOCAB_CHANGED"
+echo ""
+
+# Run vocabulary quality audit
+echo "🔍 Running vocabulary quality audit..."
+pnpm tsx scripts/audit-vocabulary-quality.ts
+
+# Check exit code
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "❌ Vocabulary quality audit failed!"
+  echo "   Please fix the issues above before committing."
+  echo ""
+  echo "💡 To fix common issues:"
+  echo "   - Run: pnpm tsx scripts/fix-vocabulary-schema.ts"
+  echo "   - Run: pnpm tsx scripts/enrich-vocabulary-grammar.ts"
+  exit 1
+fi
+
+echo ""
+echo "✅ Vocabulary validation passed!"
+exit 0

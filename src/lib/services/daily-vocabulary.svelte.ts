@@ -13,6 +13,7 @@ import type { VocabularyItem } from '$lib/types/vocabulary';
 import { DAILY_VOCABULARY_COUNT } from '$lib/constants/app';
 import { persisted } from '$lib/stores/persisted';
 import { get, type Unsubscriber } from 'svelte/store';
+import { logger } from '$lib/services/logger';
 
 export interface DailyProgress {
   date: string; // YYYY-MM-DD format
@@ -163,7 +164,7 @@ class DailyVocabularyService {
     } catch (error) {
       const err = error instanceof Error ? error : new Error(String(error));
       this._error = err;
-      console.error('Failed to initialize daily vocabulary:', err);
+      logger.error('DailyVocabulary', 'Failed to initialize daily vocabulary', err);
       throw err; // Re-throw so callers can handle
     } finally {
       this._initializing = false;

@@ -1,7 +1,88 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/svelte';
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import TandemPractice from '$lib/components/TandemPractice.svelte';
 import { tick } from 'svelte';
+
+// Mock gameState first since session.svelte depends on it
+vi.mock('$lib/state/game-state.svelte', () => ({
+  gameState: {
+    isActive: false,
+    currentStreak: 0,
+    sessionXP: 0,
+    dailyXP: 0,
+    lastPracticeDate: null,
+    totalXP: 0,
+    level: 1,
+    nextLevelXP: 100,
+    currentLevelStartXP: 0,
+    levelProgress: 0,
+    progressPercentage: 0,
+    isDailyGoalReached: false,
+    startSession: vi.fn(),
+    endSession: vi.fn(),
+    awardXP: vi.fn().mockReturnValue(false),
+    recordPracticeResult: vi.fn(),
+    getTotalXP: vi.fn().mockReturnValue(0),
+  }
+}));
+
+// Mock session.svelte
+vi.mock('$lib/state/session.svelte', () => ({
+  LearningSession: class LearningSession {
+    isActive = false;
+    currentStreak = 0;
+    sessionXP = 0;
+    dailyXP = 0;
+    lastPracticeDate = null;
+    totalXP = 0;
+    level = 1;
+    nextLevelXP = 100;
+    currentLevelStartXP = 0;
+    levelProgress = 0;
+    progressPercentage = 0;
+    isDailyGoalReached = false;
+    dailyTarget = 50;
+    startSession = vi.fn();
+    endSession = vi.fn();
+    awardXP = vi.fn().mockReturnValue(false);
+    getTotalXP = vi.fn().mockReturnValue(0);
+  },
+  learningSession: {
+    isActive: false,
+    currentStreak: 0,
+    sessionXP: 0,
+    dailyXP: 0,
+    lastPracticeDate: null,
+    totalXP: 0,
+    level: 1,
+    nextLevelXP: 100,
+    currentLevelStartXP: 0,
+    levelProgress: 0,
+    progressPercentage: 0,
+    isDailyGoalReached: false,
+    dailyTarget: 50,
+    startSession: vi.fn(),
+    endSession: vi.fn(),
+    awardXP: vi.fn().mockReturnValue(false),
+    getTotalXP: vi.fn().mockReturnValue(0),
+  }
+}));
+
+// Mock logger
+vi.mock('$lib/services/logger', () => ({
+  logger: {
+    init: vi.fn(),
+    debug: vi.fn(),
+    info: vi.fn(),
+    warn: vi.fn(),
+    error: vi.fn(),
+    log: vi.fn(),
+  },
+  log: vi.fn(),
+  logInfo: vi.fn(),
+  logWarn: vi.fn(),
+  logError: vi.fn(),
+}));
 
 // Mock vocabularyDb
 vi.mock('$lib/data/db.svelte', () => {
@@ -36,14 +117,22 @@ vi.mock('$lib/data/db.svelte', () => {
 describe('TandemPractice Component', () => {
     beforeEach(() => {
         vi.clearAllMocks();
-        // No need to mock loader here if component uses vocabularyDb
+        vi.useFakeTimers();
+    });
+
+    afterEach(() => {
+        vi.useRealTimers();
     });
 
     it('should render and load initial item', async () => {
         render(TandemPractice, { global: { ssr: false } });
 
-        // Should show loading initially
-        expect(screen.getByText('practice.loading_vocabulary')).toBeInTheDocument();
+        // Should show loading initially (using translated text from mock)
+        expect(screen.getByText('Vokabular wird geladen…')).toBeInTheDocument();
+
+        // Advance timers to complete the loading delay
+        vi.advanceTimersByTime(600);
+        await tick();
 
         // Wait for item to load
         await waitFor(() => {
@@ -54,23 +143,31 @@ describe('TandemPractice Component', () => {
     it('should handle answer submission', async () => {
         render(TandemPractice, { global: { ssr: false } });
 
+        // Advance timers to complete the loading delay
+        vi.advanceTimersByTime(600);
+        await tick();
+
         await waitFor(() => {
             expect(screen.getByRole('heading', { name: 'das Haus' })).toBeInTheDocument();
         });
 
-        const input = screen.getByPlaceholderText('practice.type_answer_placeholder');
+        const input = screen.getByPlaceholderText('Antwort eingeben…');
         await fireEvent.input(input, { target: { value: 'Къща' } });
 
-        const checkBtn = screen.getByText('practice.check_answer');
+        const checkBtn = screen.getByText('Antwort prüfen');
         await fireEvent.click(checkBtn);
 
         await waitFor(() => {
-            expect(screen.getByText('practice.correct_answer')).toBeInTheDocument();
+            expect(screen.getByText('Korrekte Antwort')).toBeInTheDocument();
         });
     });
 
     it('should switch directions', async () => {
         render(TandemPractice, { global: { ssr: false } });
+
+        // Advance timers to complete the loading delay
+        vi.advanceTimersByTime(600);
+        await tick();
 
         await waitFor(() => {
             expect(screen.getByRole('heading', { name: 'das Haus' })).toBeInTheDocument();

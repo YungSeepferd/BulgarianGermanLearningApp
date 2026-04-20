@@ -4,6 +4,7 @@ import type { VocabularyItem } from '$lib/types/vocabulary';
 import type { AppDataState } from './app-data.svelte';
 import { StateError, ErrorHandler } from '../services/errors';
 import { userSettings, type LanguageMode } from '$lib/stores/settings';
+import { logger } from '$lib/services/logger';
 
 // Re-export for backward compatibility
 export type { LanguageMode };
@@ -52,7 +53,7 @@ export class AppUIState {
                     LocalizationService.notifyLanguageChange();
                 });
             } catch (error) {
-                console.error('Failed to notify language change:', error);
+                logger.error('AppUIState', 'Failed to notify language change', error instanceof Error ? error : new Error(String(error)));
             }
         }
     }

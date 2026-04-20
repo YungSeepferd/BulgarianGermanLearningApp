@@ -4,6 +4,7 @@
  */
 
 import { getDB } from './idb';
+import { logger } from '$lib/services/logger';
 import type { VocabularyProgress, ExerciseProgress, UserProgress } from '$lib/types/progress';
 import type { LessonProgress } from '$lib/types/lesson';
 import type { LearningPathProgress } from '$lib/types/learning-path';
@@ -215,7 +216,7 @@ export async function addXP(xp: number, userId: string = 'local-user'): Promise<
 	const newLevel = Math.floor(progress.stats.xp / 100) + 1;
 	if (newLevel > progress.stats.level) {
 		progress.stats.level = newLevel;
-		console.log(`[Gamification] Level up! Now level ${newLevel}`);
+		logger.info('Gamification', `Level up! Now level ${newLevel}`);
 	}
 
 	await saveUserProgress(progress);
@@ -328,5 +329,5 @@ export async function resetAllProgress(userId: string = 'local-user'): Promise<v
 	};
 
 	await db.put('userProgress', defaultProgress);
-	console.log('[IndexedDB] All progress reset');
+	logger.info('IndexedDB', 'All progress reset');
 }

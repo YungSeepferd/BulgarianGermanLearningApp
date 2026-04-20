@@ -58,6 +58,14 @@ function cleanCache(): void {
 }
 
 /**
+ * Clear ALL cache entries (including valid ones)
+ * Used for testing and when data changes
+ */
+function clearAllCache(): void {
+  searchCache.clear();
+}
+
+/**
  * Search vocabulary with advanced filtering and fuzzy matching
  * Uses pre-computed search index for fast results without loading all vocabulary
  *
@@ -245,6 +253,7 @@ function applyPagination(items: UnifiedVocabularyItem[], offset: number, limit: 
  */
 export function clearVocabularyCache(): void {
   vocabularyRepository.invalidate();
+  clearAllCache();
 }
 
 /**

@@ -1,5 +1,7 @@
 <script lang="ts">
   // Get props using new Svelte 5 runes syntax
+  import { logger } from '$lib/services/logger';
+
   const props = $props<{
     title: string;
     content: string;
@@ -22,12 +24,12 @@
   let isEven = $derived(count % 2 === 0);
 
   // Create effects using $effect
-  $effect(() => {
+$effect(() => {
      
-    console.log(`Count changed to: ${count}`);
+    logger.debug('TestCard', `Count changed to: ${count}`);
     return () => {
        
-      console.log(`Count effect cleanup`);
+      logger.debug('TestCard', 'Count effect cleanup');
     };
   });
 

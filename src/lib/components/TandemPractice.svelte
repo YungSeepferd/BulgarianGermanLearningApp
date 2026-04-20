@@ -8,6 +8,7 @@
   import { browser } from '$app/environment';
   import type { VocabularyItem } from '$lib/types/vocabulary';
   import { vocabularyDb } from '$lib/data/db.svelte';
+  import { logger } from '$lib/services/logger';
 
   // Track if component is mounted to prevent SSR fetch calls
   let isMounted = $state(false);
@@ -26,7 +27,7 @@
 
   // Simple error handler
   function handleError(error: unknown, context: string) {
-    console.error(`[${context}]`, error);
+    logger.error(context, error instanceof Error ? error.message : String(error), error instanceof Error ? error : new Error(String(error)));
   }
 
   // No separate direction state; compute inline when needed

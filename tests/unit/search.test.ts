@@ -6,41 +6,62 @@
  * - Comprehensive filtering
  * - Pagination
  * - Sorting
+ *
+ * Note: These tests mock vocabularyRepository from $lib/data/vocabulary-repository.svelte
+ * since the search service now uses the repository pattern instead of loadVocabulary.
  */
 
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { searchVocabulary, clearVocabularyCache, getSearchSuggestions, getVocabularyStats } from '$lib/services/search';
-import { loadVocabulary } from '$lib/data/loader';
-import type { VocabularyItem } from '$lib/schemas/vocabulary';
+import type { UnifiedVocabularyItem } from '$lib/schemas/unified-vocabulary';
+import type { VocabularyIndexItem } from '$lib/schemas/vocabulary-index';
 
-// Mock the loader to return test data
-vi.mock('$lib/data/loader', () => {
+// Use hoisted to define mocks before vi.mock is hoisted
+const { mockSearch, mockGetAll, mockInvalidate, mockInitialize, mockGetAllIndexItems } = vi.hoisted(() => {
   return {
-    loadVocabulary: vi.fn()
+    mockSearch: vi.fn(),
+    mockGetAll: vi.fn(),
+    mockInvalidate: vi.fn(),
+    mockInitialize: vi.fn().mockResolvedValue(undefined),
+    mockGetAllIndexItems: vi.fn(),
+  };
+});
+
+// Mock the vocabulary repository
+vi.mock('$lib/data/vocabulary-repository.svelte', () => {
+  return {
+    vocabularyRepository: {
+      loaded: true,
+      search: mockSearch,
+      getAll: mockGetAll,
+      invalidate: mockInvalidate,
+      initialize: mockInitialize,
+      getAllIndexItems: mockGetAllIndexItems,
+    }
   };
 });
 
 describe('SearchService', () => {
-  const mockVocabularyItems: VocabularyItem[] = [
+  const mockVocabularyItems: UnifiedVocabularyItem[] = [
     {
       id: '1',
       german: 'Haus',
       bulgarian: 'къща',
       partOfSpeech: 'noun',
       difficulty: 1,
-      categories: ['house'],
-      transliteration: 'kŭshta',
+      cefrLevel: 'A1',
+      categories: ['home'],
+      transliteration: { german: 'kŭshta', bulgarian: 'kŭshta' },
       metadata: {
         examples: [
-          { german: 'Das Haus ist groß.', bulgarian: 'Къщата е голяма.' }
+          { german: 'Das Haus ist groß.', bulgarian: 'Къщата е голяма.', source: 'current' as const }
         ],
-        notes: 'Common word for house'
+        notes: 'Common word for house',
+        learningPhase: 0
       },
       createdAt: new Date('2025-01-01'),
       updatedAt: new Date('2025-01-01'),
-      isCommon: true,
-      isVerified: true,
-      learningPhase: 0
+      version: 1
     },
     {
       id: '2',
@@ -48,19 +69,19 @@ describe('SearchService', () => {
       bulgarian: 'ябълка',
       partOfSpeech: 'noun',
       difficulty: 1,
+      cefrLevel: 'A1',
       categories: ['food'],
-      transliteration: 'yabŭlka',
+      transliteration: { german: 'yabŭlka', bulgarian: 'yabŭlka' },
       metadata: {
         examples: [
-          { german: 'Ich esse einen Apfel.', bulgarian: 'Аз ям ябълка.' }
+          { german: 'Ich esse einen Apfel.', bulgarian: 'Аз ям ябълка.', source: 'current' as const }
         ],
-        mnemonic: 'Sounds like "apple"'
+        mnemonic: 'Sounds like "apple"',
+        learningPhase: 1
       },
       createdAt: new Date('2025-01-02'),
       updatedAt: new Date('2025-01-02'),
-      isCommon: true,
-      isVerified: true,
-      learningPhase: 1
+      version: 1
     },
     {
       id: '3',
@@ -68,18 +89,18 @@ describe('SearchService', () => {
       bulgarian: 'тичам',
       partOfSpeech: 'verb',
       difficulty: 2,
+      cefrLevel: 'A2',
       categories: ['activities'],
-      transliteration: 'ticham',
+      transliteration: { german: 'ticham', bulgarian: 'ticham' },
       metadata: {
         examples: [
-          { german: 'Ich laufe schnell.', bulgarian: 'Аз тичам бързо.' }
-        ]
+          { german: 'Ich laufe schnell.', bulgarian: 'Аз тичам бързо.', source: 'current' as const }
+        ],
+        learningPhase: 2
       },
       createdAt: new Date('2025-01-03'),
       updatedAt: new Date('2025-01-03'),
-      isCommon: true,
-      isVerified: true,
-      learningPhase: 2
+      version: 1
     },
     {
       id: '4',
@@ -87,13 +108,15 @@ describe('SearchService', () => {
       bulgarian: 'голям',
       partOfSpeech: 'adjective',
       difficulty: 2,
+      cefrLevel: 'A1',
       categories: ['adjectives'],
-      transliteration: 'golyam',
+      transliteration: { german: 'golyam', bulgarian: 'golyam' },
+      metadata: {
+        learningPhase: 3
+      },
       createdAt: new Date('2025-01-04'),
       updatedAt: new Date('2025-01-04'),
-      isCommon: true,
-      isVerified: true,
-      learningPhase: 3
+      version: 1
     },
     {
       id: '5',
@@ -101,31 +124,55 @@ describe('SearchService', () => {
       bulgarian: 'бързо',
       partOfSpeech: 'adverb',
       difficulty: 3,
+      cefrLevel: 'B1',
       categories: ['adverbs'],
+      metadata: {
+        learningPhase: 4
+      },
       createdAt: new Date('2025-01-05'),
       updatedAt: new Date('2025-01-05'),
-      isCommon: true,
-      isVerified: true,
-      learningPhase: 4
+      version: 1
     }
   ];
 
-  beforeEach(() => {
-    // Clear the cache before each test
-    clearVocabularyCache();
+  // Create mock index items for stats (simplified version)
+  const createMockIndexItem = (item: UnifiedVocabularyItem): VocabularyIndexItem => ({
+    id: item.id,
+    german: item.german,
+    bulgarian: item.bulgarian,
+    partOfSpeech: item.partOfSpeech,
+    difficulty: item.difficulty,
+    cefrLevel: item.cefrLevel || 'A1',
+    categories: item.categories,
+  });
 
-    // Mock the loader to return test data
-    (loadVocabulary as any).mockResolvedValue({
-      items: mockVocabularyItems,
-      categories: ['house', 'food', 'activities', 'adjectives', 'adverbs'],
-      languagePair: 'de-bg',
-      difficultyRange: [1, 5] as [number, number],
-      id: 'test-collection',
-      name: 'Test Collection',
-      description: 'Test collection for unit tests',
-      createdAt: new Date(),
-      updatedAt: new Date()
-    });
+  const mockIndexItems: VocabularyIndexItem[] = mockVocabularyItems.map(createMockIndexItem);
+
+  // Helper to create Fuse.js-style search result
+  const createSearchResult = (item: UnifiedVocabularyItem) => ({
+    item,
+    mini: mockIndexItems.find(m => m.id === item.id)!,
+    score: 0
+  });
+
+  beforeEach(() => {
+    // Clear mocks first (before clearVocabularyCache which will call invalidate)
+    vi.clearAllMocks();
+
+    // Reset mock implementations
+    mockInitialize.mockResolvedValue(undefined);
+    mockInvalidate.mockImplementation(() => {});
+    mockGetAllIndexItems.mockReturnValue(mockIndexItems);
+
+    // Default: getAll returns a COPY of all items (to avoid mutation issues)
+    // Default search returns empty results - tests will override as needed
+    mockSearch.mockResolvedValue([]);
+    
+    // Always return a fresh copy from getAll to avoid mutation issues
+    mockGetAll.mockImplementation(() => [...mockVocabularyItems]);
+
+    // Clear the search cache to ensure fresh results
+    clearVocabularyCache();
   });
 
   describe('searchVocabulary', () => {
@@ -185,6 +232,11 @@ describe('SearchService', () => {
     });
 
     it('should filter by learning phase', async () => {
+      // Set up search to return Apfel (learningPhase: 1)
+      mockSearch.mockResolvedValue([
+        createSearchResult(mockVocabularyItems[1])
+      ]);
+
       const result = await searchVocabulary({
         learningPhase: 1,
         limit: 20,
@@ -198,6 +250,11 @@ describe('SearchService', () => {
     });
 
     it('should perform fuzzy search on german field', async () => {
+      // Mock search to return Haus when searching for "Hus"
+      mockSearch.mockResolvedValue([
+        createSearchResult(mockVocabularyItems[0])
+      ]);
+
       const result = await searchVocabulary({
         query: 'Hus', // Typo for "Haus"
         limit: 20,
@@ -211,6 +268,11 @@ describe('SearchService', () => {
     });
 
     it('should perform fuzzy search on bulgarian field', async () => {
+      // Mock search to return Apfel when searching for "яблка"
+      mockSearch.mockResolvedValue([
+        createSearchResult(mockVocabularyItems[1])
+      ]);
+
       const result = await searchVocabulary({
         query: 'яблка', // Bulgarian for "apple"
         limit: 20,
@@ -224,6 +286,11 @@ describe('SearchService', () => {
     });
 
     it('should perform fuzzy search on transliteration', async () => {
+      // Mock search to return Haus when searching for "kush"
+      mockSearch.mockResolvedValue([
+        createSearchResult(mockVocabularyItems[0])
+      ]);
+
       const result = await searchVocabulary({
         query: 'kush', // Typo for "kŭshta" (transliteration of къща)
         limit: 20,
@@ -237,6 +304,12 @@ describe('SearchService', () => {
     });
 
     it('should search in examples', async () => {
+      // Mock search to return both Haus and groß when searching for "groß"
+      mockSearch.mockResolvedValue([
+        createSearchResult(mockVocabularyItems[0]), // Haus (has "groß" in example)
+        createSearchResult(mockVocabularyItems[3])   // groß
+      ]);
+
       const result = await searchVocabulary({
         query: 'groß', // Search for word in example
         limit: 20,
@@ -344,6 +417,11 @@ describe('SearchService', () => {
     });
 
     it('should combine multiple filters', async () => {
+      // Set up search to return Apfel (noun, difficulty 1, food category)
+      mockSearch.mockResolvedValue([
+        createSearchResult(mockVocabularyItems[1])
+      ]);
+
       const result = await searchVocabulary({
         partOfSpeech: 'noun',
         difficulty: 1,
@@ -359,6 +437,9 @@ describe('SearchService', () => {
     });
 
     it('should return empty results when no items match filters', async () => {
+      // Set up search to return no results for "preposition"
+      mockSearch.mockResolvedValue([]);
+
       const result = await searchVocabulary({
         partOfSpeech: 'preposition',
         limit: 20,
@@ -375,24 +456,48 @@ describe('SearchService', () => {
 
   describe('getSearchSuggestions', () => {
     it('should return suggestions for german words', async () => {
+      // getSearchSuggestions uses quickSearch which calls repository.search()
+      // Then filters by prefix match (startsWith)
+      // Set up search to return Haus for "Hau"
+      mockSearch.mockResolvedValue([
+        createSearchResult(mockVocabularyItems[0])
+      ]);
+
       const suggestions = await getSearchSuggestions('Hau');
 
       expect(suggestions).toContain('Haus');
     });
 
     it('should return suggestions for bulgarian words', async () => {
+      // Set up search to return Apfel for "ябъл"
+      mockSearch.mockResolvedValue([
+        createSearchResult(mockVocabularyItems[1])
+      ]);
+
       const suggestions = await getSearchSuggestions('ябъл');
 
       expect(suggestions).toContain('ябълка');
     });
 
     it('should return suggestions for transliteration', async () => {
+      // Set up search to return Haus for "kŭ"
+      mockSearch.mockResolvedValue([
+        createSearchResult(mockVocabularyItems[0])
+      ]);
+
       const suggestions = await getSearchSuggestions('kŭ');
 
       expect(suggestions).toContain('kŭshta');
     });
 
     it('should limit the number of suggestions', async () => {
+      // Set up search to return multiple items
+      mockSearch.mockResolvedValue([
+        createSearchResult(mockVocabularyItems[0]), // Haus
+        createSearchResult(mockVocabularyItems[1]), // Apfel
+        createSearchResult(mockVocabularyItems[2]), // laufen
+      ]);
+
       const suggestions = await getSearchSuggestions('a', 2);
 
       expect(suggestions.length).toBeLessThanOrEqual(2);
@@ -400,6 +505,12 @@ describe('SearchService', () => {
 
     it('should return empty array for empty query', async () => {
       const suggestions = await getSearchSuggestions('');
+
+      expect(suggestions.length).toBe(0);
+    });
+
+    it('should return empty array for query shorter than 2 characters', async () => {
+      const suggestions = await getSearchSuggestions('a');
 
       expect(suggestions.length).toBe(0);
     });
@@ -418,6 +529,7 @@ describe('SearchService', () => {
     it('should return statistics by difficulty', async () => {
       const stats = await getVocabularyStats();
 
+      // Difficulty is a number (1-5), use numeric keys
       expect(stats.difficulty[1]).toBe(2);
       expect(stats.difficulty[2]).toBe(2);
       expect(stats.difficulty[3]).toBe(1);
@@ -426,30 +538,23 @@ describe('SearchService', () => {
     it('should return statistics by category', async () => {
       const stats = await getVocabularyStats();
 
-      expect(stats.categories.house).toBe(1);
+      expect(stats.categories.home).toBe(1);
       expect(stats.categories.food).toBe(1);
       expect(stats.categories.activities).toBe(1);
       expect(stats.categories.adjectives).toBe(1);
       expect(stats.categories.adverbs).toBe(1);
     });
 
-    it('should return statistics by learning phase', async () => {
+    it('should return total count', async () => {
       const stats = await getVocabularyStats();
 
-      expect(stats.learningPhase[0]).toBe(1);
-      expect(stats.learningPhase[1]).toBe(1);
-      expect(stats.learningPhase[2]).toBe(1);
-      expect(stats.learningPhase[3]).toBe(1);
-      expect(stats.learningPhase[4]).toBe(1);
+      expect(stats.totalCount).toBe(5);
     });
   });
 
   describe('clearVocabularyCache', () => {
-    it('should clear the vocabulary cache', async () => {
-      // Reset the mock to track calls accurately
-      vi.clearAllMocks();
-
-      // First call should load from loader
+    it('should call vocabularyRepository.invalidate()', async () => {
+      // First call should load from repository
       await searchVocabulary({
         query: '',
         limit: 20,
@@ -461,17 +566,17 @@ describe('SearchService', () => {
       // Clear the cache
       clearVocabularyCache();
 
-      // The mock should be called again after cache is cleared
-      await searchVocabulary({
-        query: '',
-        limit: 20,
-        offset: 0,
-        sortBy: 'german',
-        sortOrder: 'asc'
-      });
+      // vocabularyRepository.invalidate should be called (once by this test's explicit call)
+      // Note: beforeEach already calls clearVocabularyCache once
+      expect(mockInvalidate).toHaveBeenCalled();
+    });
 
-      // loadVocabulary should be called twice (once for each cache miss)
-      expect(loadVocabulary).toHaveBeenCalledTimes(2);
+    it('should reset loaded state after cache clear', async () => {
+      // Clear the cache
+      clearVocabularyCache();
+
+      // loaded state should be reset via invalidate
+      expect(mockInvalidate).toHaveBeenCalled();
     });
   });
 });

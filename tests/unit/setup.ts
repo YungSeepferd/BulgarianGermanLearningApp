@@ -223,14 +223,10 @@ vi.mock('$lib/services/localization.ts', async () => {
     },
     async setLanguage(lang: 'de' | 'bg') {
       currentLanguage = lang;
-      listeners.forEach((cb) => cb(currentLanguage));
+      listeners.forEach((cb) => { cb(currentLanguage); });
     },
     getCurrentLanguage() {
       return currentLanguage;
-    },
-    t(key: string) {
-      const table = translations[currentLanguage] || {};
-      return table[key] ?? key;
     },
     onLanguageChange(cb: (lang: string) => void) {
       listeners.push(cb);
@@ -242,20 +238,70 @@ vi.mock('$lib/services/localization.ts', async () => {
     offLanguageChange(cb: (lang: string) => void) {
       const idx = listeners.indexOf(cb);
       if (idx >= 0) listeners.splice(idx, 1);
+    },
+    notifyLanguageChange() {
+      listeners.forEach((cb) => { cb(currentLanguage); });
     }
   };
 
-  return { LocalizationService };
+  // Static method on the class
+  LocalizationService.notifyLanguageChange = function() {
+    listeners.forEach((cb) => { cb(currentLanguage); });
+  };
+
+  function t(key: string, params?: Record<string, string>): string {
+    const table = translations[currentLanguage] || {};
+    return table[key] ?? key;
+  }
+
+  return { LocalizationService, t };
 });
+
+// Mock gameState - must be mocked before session.svelte since session imports it
+vi.mock('$lib/state/game-state.svelte', () => ({
+  gameState: {
+    isActive: false,
+    currentStreak: 0,
+    sessionXP: 0,
+    dailyXP: 0,
+    lastPracticeDate: null,
+    totalXP: 0,
+    level: 1,
+    nextLevelXP: 100,
+    currentLevelStartXP: 0,
+    levelProgress: 0,
+    progressPercentage: 0,
+    isDailyGoalReached: false,
+    startSession: vi.fn(),
+    endSession: vi.fn(),
+    awardXP: vi.fn().mockReturnValue(false),
+    recordPracticeResult: vi.fn(),
+    getTotalXP: vi.fn().mockReturnValue(0),
+  }
+}));
 
 // Mock LearningSession used by DI container
 vi.mock('$lib/state/session.svelte', async () => {
   class LearningSession {
-    constructor() {}
-    start() { /* noop */ }
-    stop() { /* noop */ }
+    isActive = false;
+    currentStreak = 0;
+    sessionXP = 0;
+    dailyXP = 0;
+    lastPracticeDate = null;
+    totalXP = 0;
+    level = 1;
+    nextLevelXP = 100;
+    currentLevelStartXP = 0;
+    levelProgress = 0;
+    progressPercentage = 0;
+    isDailyGoalReached = false;
+    dailyTarget = 50;
+    startSession = vi.fn();
+    endSession = vi.fn();
+    awardXP = vi.fn().mockReturnValue(false);
+    getTotalXP = vi.fn().mockReturnValue(0);
   }
-  return { LearningSession };
+  return { LearningSession, learningSession: new LearningSession() };
 });
 
 // Mock LessonGenerationEngine to prevent constructor errors

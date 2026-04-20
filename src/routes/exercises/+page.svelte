@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import ExerciseContainer from '$lib/components/exercises/ExerciseContainer.svelte';
   import type { Exercise } from '$lib/schemas/exercises';
+  import { logger } from '$lib/services/logger';
   // app state not needed for default exercise
 
   let currentExercise = $state<Exercise | null>(null);
@@ -14,7 +15,7 @@
       currentExercise = generateDefaultExercise();
       isLoading = false;
     } catch (error) {
-      console.error('Failed to load exercise:', error);
+      logger.error('Exercises', 'Failed to load exercise', error instanceof Error ? error : new Error(String(error)));
       isLoading = false;
     }
   });

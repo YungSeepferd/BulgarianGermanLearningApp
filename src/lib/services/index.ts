@@ -13,6 +13,12 @@ import { culturalGrammarService } from './lesson-generation/cultural-grammar';
 import { templateRenderer } from './lesson-generation/template-renderer';
 import { vocabularyRepository } from '../data/vocabulary-repository.svelte';
 
+// Logging & infrastructure
+export { logger, log, logInfo, logWarn, logError } from './logger';
+export type { LogEntry, LogLevel } from './logger';
+export { eventBus } from './event-bus';
+export { ErrorHandler, AppError, ProgressError, StateError, ServiceError, DataError, ValidationError, StorageError } from './errors';
+
 // Create singleton instances
 export const progressService = new ProgressService();
 export const learningSessionInstance = learningSession;

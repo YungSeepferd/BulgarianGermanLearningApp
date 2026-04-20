@@ -17,6 +17,7 @@
   import { Button } from '$lib/components/ui/button';
   import { Badge } from '$lib/components/ui/badge';
   import { vocabularyRepository } from '$lib/data/vocabulary-repository.svelte';
+  import { logger } from '$lib/services/logger';
 
   // State
   let items = $state<VocabularyItem[]>([]);
@@ -53,7 +54,7 @@
       currentItem = firstNeedingEnrichment || items[0] || null;
 
     } catch (error) {
-      console.error('Failed to load vocabulary:', error);
+      logger.error('AdminCuration', 'Failed to load vocabulary', error instanceof Error ? error : new Error(String(error)));
       errorMessage = 'Failed to load vocabulary data';
     } finally {
       isLoading = false;
@@ -90,7 +91,7 @@
       }, 2000);
 
     } catch (error) {
-      console.error('Failed to save:', error);
+      logger.error('AdminCuration', 'Failed to save vocabulary', error instanceof Error ? error : new Error(String(error)));
       saveStatus = 'error';
       errorMessage = 'Failed to save changes';
     }

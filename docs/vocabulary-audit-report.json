@@ -1,5 +1,5 @@
 {
-  "totalItems": 884,
+  "totalItems": 896,
   "potentialRussian": [
     {
       "id": "wv_99b12120",
@@ -710,18 +710,18 @@
       "reason": "Pattern \"жд\" is rare in Bulgarian, common in Russian"
     }
   ],
-  "missingGrammar": 876,
-  "missingExamples": 88,
-  "missingEtymology": 884,
-  "missingMnemonic": 884,
-  "missingNotes": 884,
-  "missingCulturalNotes": 884,
-  "missingAudio": 884,
-  "missingEmoji": 884,
-  "missingTransliteration": 884,
+  "missingGrammar": 587,
+  "missingExamples": 12,
+  "missingEtymology": 896,
+  "missingMnemonic": 896,
+  "missingNotes": 896,
+  "missingCulturalNotes": 896,
+  "missingAudio": 0,
+  "missingEmoji": 0,
+  "missingTransliteration": 0,
   "byCategory": {
-    "food": 50,
-    "everyday-phrases": 511,
+    "food": 52,
+    "everyday-phrases": 521,
     "transport": 56,
     "places": 31,
     "greetings": 31,
@@ -740,17 +740,18 @@
     "professions": 15
   },
   "byPartOfSpeech": {
-    "phrase": 743,
+    "phrase": 717,
     "noun": 92,
     "number": 32,
-    "adjective": 17
+    "adjective": 17,
+    "verb": 38
   },
   "byCefrLevel": {
     "A2": 17,
-    "A1": 867
+    "A1": 879
   },
   "enrichedItems": 0,
   "itemsWithDefinitions": 0,
-  "richMetadataItems": 0,
-  "minimalItems": 884
+  "richMetadataItems": 309,
+  "minimalItems": 587
 }

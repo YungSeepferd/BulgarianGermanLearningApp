@@ -14,6 +14,7 @@
  */
 
 import { persisted } from './persisted';
+import { logger } from '$lib/services/logger';
 
 // ============================================
 // Types
@@ -300,7 +301,7 @@ export function importAllUserData(jsonData: string): boolean {
 
     return true;
   } catch (error) {
-    console.error('Failed to import user data:', error);
+    logger.error('Settings', 'Failed to import user data', error instanceof Error ? error : new Error(String(error)));
     return false;
   }
 }

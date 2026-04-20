@@ -1,5 +1,6 @@
 import { loadVocabulary } from '$lib/data/loader';
 import type { UnifiedVocabularyItem } from '$lib/schemas/unified-vocabulary';
+import { logger } from '$lib/services/logger';
 
 export class GameState {
 	// cards = $state<VocabularyItem[]>([]);
@@ -22,12 +23,12 @@ export class GameState {
 	async init() {
 		try {
 			this.loading = true;
-			console.log('Loading vocabulary...');
+			logger.debug('GameState', 'Loading vocabulary...');
 			const collection = await loadVocabulary();
-			console.log('Vocabulary loaded:', collection);
+			logger.debug('GameState', 'Vocabulary loaded', { itemCount: collection.items.length });
 			// The items are already of type UnifiedVocabularyItem
 			this.cards = collection.items;
-			console.log(`Loaded ${this.cards.length} vocabulary items`);
+			logger.info('GameState', `Loaded ${this.cards.length} vocabulary items`);
 			this.loading = false;
 		} catch (_error) {
 		    // Error loading vocabulary

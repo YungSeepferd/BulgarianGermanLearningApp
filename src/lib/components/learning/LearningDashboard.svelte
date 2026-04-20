@@ -7,6 +7,7 @@
   import ProgressStats from './ProgressStats.svelte';
   import ExampleCard from './ExampleCard.svelte';
   import GrammarInfo from './GrammarInfo.svelte';
+  import { logger } from '$lib/services/logger';
 
   interface Props {
     item: VocabularyItem;
@@ -32,7 +33,7 @@
 
     } catch (e) {
       error = e instanceof Error ? e.message : 'Failed to load progress data';
-      console.error('Error loading dashboard data:', e);
+      logger.error('LearningDashboard', 'Failed to load dashboard data', e instanceof Error ? e : new Error(String(e)));
     } finally {
       loading = false;
     }

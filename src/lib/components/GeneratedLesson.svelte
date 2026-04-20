@@ -9,6 +9,7 @@
 
   import { t } from '$lib/services/localization';
   import { appState } from '$lib/state/app-state';
+  import { logger } from '$lib/services/logger';
 
   // Language adapter functions
   function getSourceText(item) {
@@ -36,7 +37,7 @@
 
   // Simple error handler
   function handleError(error, context) {
-    console.error(`[${context}]`, error);
+    logger.error(context, error instanceof Error ? error.message : String(error), error instanceof Error ? error : new Error(String(error)));
   }
 
   // State

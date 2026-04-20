@@ -2,6 +2,7 @@
   import { Volume2, ExternalLink } from 'lucide-svelte';
   import { Button } from '$lib/components/ui/button';
   import { onMount } from 'svelte';
+  import { logger } from '$lib/services/logger';
 
   let { audioUrl } = $props<{ audioUrl?: string }>();
 
@@ -34,7 +35,7 @@
       window.open(audioUrl, '_blank');
     } else {
       const audio = new Audio(audioUrl);
-      audio.play().catch(e => console.error('Audio playback failed:', e));
+      audio.play().catch(e => logger.error('AudioWidget', 'Audio playback failed', e instanceof Error ? e : new Error(String(e))));
     }
   }
 </script>
