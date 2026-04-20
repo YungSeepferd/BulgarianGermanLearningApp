@@ -23,7 +23,7 @@ const { mockSearch, mockGetAll, mockInvalidate, mockInitialize, mockGetAllIndexI
     mockGetAll: vi.fn(),
     mockInvalidate: vi.fn(),
     mockInitialize: vi.fn().mockResolvedValue(undefined),
-    mockGetAllIndexItems: vi.fn(),
+    mockGetAllIndexItems: vi.fn()
   };
 });
 
@@ -36,7 +36,7 @@ vi.mock('$lib/data/vocabulary-repository.svelte', () => {
       getAll: mockGetAll,
       invalidate: mockInvalidate,
       initialize: mockInitialize,
-      getAllIndexItems: mockGetAllIndexItems,
+      getAllIndexItems: mockGetAllIndexItems
     }
   };
 });
@@ -143,7 +143,7 @@ describe('SearchService', () => {
     partOfSpeech: item.partOfSpeech,
     difficulty: item.difficulty,
     cefrLevel: item.cefrLevel || 'A1',
-    categories: item.categories,
+    categories: item.categories
   });
 
   const mockIndexItems: VocabularyIndexItem[] = mockVocabularyItems.map(createMockIndexItem);
@@ -495,7 +495,7 @@ describe('SearchService', () => {
       mockSearch.mockResolvedValue([
         createSearchResult(mockVocabularyItems[0]), // Haus
         createSearchResult(mockVocabularyItems[1]), // Apfel
-        createSearchResult(mockVocabularyItems[2]), // laufen
+        createSearchResult(mockVocabularyItems[2]) // laufen
       ]);
 
       const suggestions = await getSearchSuggestions('a', 2);

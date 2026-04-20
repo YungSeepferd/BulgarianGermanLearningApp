@@ -22,7 +22,7 @@ vi.mock('$lib/state/game-state.svelte', () => ({
     endSession: vi.fn(),
     awardXP: vi.fn().mockReturnValue(false),
     recordPracticeResult: vi.fn(),
-    getTotalXP: vi.fn().mockReturnValue(0),
+    getTotalXP: vi.fn().mockReturnValue(0)
   }
 }));
 
@@ -64,7 +64,7 @@ vi.mock('$lib/state/session.svelte', () => ({
     startSession: vi.fn(),
     endSession: vi.fn(),
     awardXP: vi.fn().mockReturnValue(false),
-    getTotalXP: vi.fn().mockReturnValue(0),
+    getTotalXP: vi.fn().mockReturnValue(0)
   }
 }));
 
@@ -76,12 +76,12 @@ vi.mock('$lib/services/logger', () => ({
     info: vi.fn(),
     warn: vi.fn(),
     error: vi.fn(),
-    log: vi.fn(),
+    log: vi.fn()
   },
   log: vi.fn(),
   logInfo: vi.fn(),
   logWarn: vi.fn(),
-  logError: vi.fn(),
+  logError: vi.fn()
 }));
 
 // Mock vocabularyDb

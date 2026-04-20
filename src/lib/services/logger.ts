@@ -30,7 +30,7 @@ const LEVEL_PRIORITY: Record<LogLevel, number> = {
   debug: 0,
   info: 1,
   warn: 2,
-  error: 3,
+  error: 3
 };
 
 class LoggerService {
@@ -127,9 +127,9 @@ class LoggerService {
         error: {
           name: error.name,
           message: error.message,
-          stack: error.stack,
-        },
-      }),
+          stack: error.stack
+        }
+      })
     };
 
     // Add to buffer if level meets threshold
@@ -167,7 +167,7 @@ class LoggerService {
       debug: console.log,
       info: console.info,
       warn: console.warn,
-      error: console.error,
+      error: console.error
     }[entry.level];
 
     const arg = entry.level === 'error' ? error : entry.data;
@@ -288,7 +288,7 @@ class LoggerService {
       {
         exportedAt: new Date().toISOString(),
         stats: this.getStats(),
-        entries: this.buffer,
+        entries: this.buffer
       },
       (_key, value) => {
         if (typeof value === 'object' && value !== null) {

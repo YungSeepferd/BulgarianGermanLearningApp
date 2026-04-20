@@ -276,7 +276,7 @@ vi.mock('$lib/state/game-state.svelte', () => ({
     endSession: vi.fn(),
     awardXP: vi.fn().mockReturnValue(false),
     recordPracticeResult: vi.fn(),
-    getTotalXP: vi.fn().mockReturnValue(0),
+    getTotalXP: vi.fn().mockReturnValue(0)
   }
 }));
 

@@ -73,7 +73,7 @@ const PLURAL_PATTERNS: Array<{ pattern: RegExp; suffix: string }> = [
   { pattern: /en$/i, suffix: '' },         // Garten -> Gärten (umlaut)
   { pattern: /er$/i, suffix: '' },         // Lehrer -> Lehrer (same)
   { pattern: /eur$/i, suffix: 'en' },      // Ingenieur -> Ingenieure
-  { pattern: /ier$/i, suffix: 'e' },       // Tier -> Tiere
+  { pattern: /ier$/i, suffix: 'e' }       // Tier -> Tiere
 ];
 
 // Common German verb conjugation patterns

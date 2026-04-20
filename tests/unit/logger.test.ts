@@ -15,7 +15,7 @@ import { describe, it, expect, beforeEach, vi } from 'vitest';
 
 // We need to mock import.meta.env since it's a SvelteKit compile-time variable
 vi.mock('import.meta.env', () => ({
-  DEV: true,
+  DEV: true
 }));
 
 // Import after the mock

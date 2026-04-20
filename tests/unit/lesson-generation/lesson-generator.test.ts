@@ -43,7 +43,7 @@ vi.mock('$lib/data/vocabulary-repository.svelte', () => ({
     search: vi.fn().mockResolvedValue([]),
     getAll: vi.fn().mockReturnValue([]),
     invalidate: vi.fn(),
-    initialize: vi.fn().mockResolvedValue(undefined),
+    initialize: vi.fn().mockResolvedValue(undefined)
   }
 }));
 
