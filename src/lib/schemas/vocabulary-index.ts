@@ -83,13 +83,13 @@ export const VocabularyIndexSchema = z.object({
   // All items (minimal metadata only)
   items: z.array(VocabularyIndexItemSchema).describe('All items metadata'),
 
-  // Global statistics
+  // Global statistics (optional - can be derived from items if missing)
   statistics: z.object({
     byCategory: z.record(z.string(), z.number()).describe('Global count by category'),
     byPartOfSpeech: z.record(z.string(), z.number()).describe('Global count by part of speech'),
     byDifficulty: z.record(z.string(), z.number()).describe('Global count by difficulty'),
     byLevel: z.record(z.string(), z.number()).describe('Count by CEFR level')
-  }).describe('Global statistics')
+  }).optional().describe('Global statistics (derived from items if not present)')
 });
 
 export type VocabularyIndex = z.infer<typeof VocabularyIndexSchema>;
@@ -181,6 +181,19 @@ export function calculateStatistics(items: VocabularyIndexItem[]) {
     byPartOfSpeech,
     byDifficulty,
     byLevel
+  };
+}
+
+/**
+ * Derive statistics from items array
+ */
+export function deriveStatisticsFromItems(items: VocabularyIndexItem[]) {
+  const stats = calculateStatistics(items);
+  return {
+    byCategory: stats.byCategory,
+    byPartOfSpeech: stats.byPartOfSpeech,
+    byDifficulty: stats.byDifficulty,
+    byLevel: stats.byLevel
   };
 }
 
