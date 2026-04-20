@@ -30,6 +30,7 @@ export default [{
         'public/',
         'themes/',
         'tools/',
+        'mcp-bun/',
         '*.min.js'
     ]
 }, {
