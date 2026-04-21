@@ -170,9 +170,9 @@
 
 <div class="learn-hub">
 
-  <header class="learn-header">
-    <h1>{ui.title}</h1>
-    <p class="subtitle">{ui.subtitle}</p>
+  <header class="hero">
+    <h1 class="hero-title">{ui.title}</h1>
+    <p class="hero-subtitle">{ui.subtitle}</p>
   </header>
 
   {#if isLoading}
@@ -197,10 +197,10 @@
 
     {#if recentWords.length > 0}
       <section class="recent-section">
-        <h2>{ui.recentTitle}</h2>
-        <div class="word-grid">
+        <h2 class="section-title">{ui.recentTitle}</h2>
+        <div class="horizontal-scroll">
           {#each recentWords as word (word.id)}
-            <div class="card-wrapper">
+            <div class="glass-card">
               <VocabularyCard
                 item={word}
                 variant="grid"
@@ -215,10 +215,11 @@
 
     {#if recommendedWords.length > 0}
       <section class="recommended-section">
-        <h2>{ui.recommendedTitle}</h2>
-        <div class="word-grid">
+        <h2 class="section-title">{ui.recommendedTitle}</h2>
+        <div class="horizontal-scroll">
           {#each recommendedWords as word (word.id)}
-            <div class="card-wrapper">
+            <div class="glass-card recommended-card">
+              <span class="badge">Recommended</span>
               <VocabularyCard
                 item={word}
                 variant="grid"
@@ -236,7 +237,7 @@
     {/if}
 
     <section class="paths-section">
-      <h2>{ui.pathsTitle}</h2>
+      <h2 class="section-title">{ui.pathsTitle}</h2>
       {#if pathsLoading}
         <div class="loading">
           <p>{ui.title === 'Lernen' ? 'Lernpfade werden geladen…' : 'Пътеките се зареждат…'}</p>
@@ -255,65 +256,151 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 1rem;
+    background: var(--bg-base);
+    min-height: 100vh;
   }
 
-  .learn-header {
+  /* Hero Section */
+  .hero {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    padding: 3rem 1rem;
   }
 
-  .learn-header h1 {
-    font-size: 2.5rem;
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
     font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
   }
 
-  .subtitle {
-    font-size: 1.1rem;
-    color: var(--color-text-secondary);
+  .hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    color: var(--text-secondary);
     margin: 0;
+    max-width: 600px;
+    margin-inline: auto;
   }
 
-  .loading {
-    text-align: center;
-    padding: 4rem 2rem;
-    color: var(--color-text-secondary);
+  /* Section Titles */
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
   }
 
+  /* Quick Actions */
   .quick-actions {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     flex-wrap: wrap;
   }
 
+  /* Horizontal Scroll Container */
+  .horizontal-scroll {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1.5rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-dim) var(--bg-surface);
+  }
+
+  .horizontal-scroll::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .horizontal-scroll::-webkit-scrollbar-track {
+    background: var(--bg-surface);
+    border-radius: 3px;
+  }
+
+  .horizontal-scroll::-webkit-scrollbar-thumb {
+    background: var(--accent-dim);
+    border-radius: 3px;
+  }
+
+  /* Dark Glass Cards */
+  .glass-card {
+    flex: 0 0 280px;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-md);
+  }
+
+  .glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg), 0 0 20px rgba(45, 212, 191, 0.1);
+  }
+
+  /* Recommended Card Badge */
+  .recommended-card {
+    position: relative;
+  }
+
+  .badge {
+    position: absolute;
+    top: -0.5rem;
+    right: 1rem;
+    background: var(--accent);
+    color: var(--bg-base);
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--accent-glow);
+  }
+
+  /* Sections */
   .recent-section,
   .recommended-section,
   .no-recommended,
   .paths-section {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
 
-  .recent-section h2,
-  .recommended-section h2,
-  .paths-section h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: var(--color-text-primary);
+  /* No Recommended State */
+  .no-recommended {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--bg-elevated);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    font-family: var(--font-body);
   }
 
-  .word-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
+  /* Loading State */
+  .loading {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-tertiary);
+    font-family: var(--font-body);
   }
 
+  .loading.error {
+    color: #ef4444;
+  }
+
+  /* Card Wrapper Hover */
   .card-wrapper {
     cursor: pointer;
-    border-radius: 0.5rem;
+    border-radius: var(--radius-lg);
     transition: transform 0.2s, box-shadow 0.2s;
   }
 
@@ -323,103 +410,48 @@
     outline: none;
   }
 
-  .no-recommended {
-    text-align: center;
-    padding: 2rem;
-    background: var(--color-background-secondary);
-    border-radius: 0.5rem;
-    color: var(--color-text-secondary);
-  }
-
+  /* Paths Grid (handled by PathBrowser but global reset here) */
   .paths-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
   }
 
-  .path-card {
-    background: var(--color-background-secondary);
-    border: 1px solid var(--color-border);
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    text-align: left;
-    cursor: pointer;
-    transition: all 0.2s;
-    font-family: inherit;
-  }
-
-  .path-card:hover,
-  .path-card:focus-visible {
-    background: var(--color-background-tertiary);
-    border-color: var(--color-primary);
-    outline: none;
-  }
-
-  .path-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-  }
-
-  .path-header h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--color-text-primary);
-    flex: 1;
-  }
-
-  .word-count {
-    background: var(--color-primary-light);
-    color: var(--color-primary-dark);
-    padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
-    font-size: 0.85rem;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-
-  .progress-bar {
-    height: 6px;
-    background: var(--color-background);
-    border-radius: 3px;
-    overflow: hidden;
-    margin-bottom: 0.75rem;
-  }
-
-  .progress-fill {
-    height: 100%;
-    background: var(--color-success);
-    transition: width 0.3s;
-    border-radius: 3px;
-  }
-
-  .progress-text {
-    font-size: 0.85rem;
-    color: var(--color-text-secondary);
-  }
-
+  /* Responsive */
   @media (max-width: 768px) {
     .learn-hub {
       padding: 1rem;
     }
 
-    .learn-header h1 {
-      font-size: 1.75rem;
+    .hero {
+      padding: 2rem 0.5rem;
+      margin-bottom: 2.5rem;
     }
 
-    .word-grid {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 0.75rem;
+    .hero-title {
+      font-size: 2.5rem;
     }
 
-    .paths-grid {
-      grid-template-columns: 1fr;
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+    }
+
+    .horizontal-scroll {
+      gap: 1rem;
+    }
+
+    .glass-card {
+      flex: 0 0 240px;
+      padding: 1rem;
     }
 
     .quick-actions {
       flex-direction: column;
+      gap: 1rem;
     }
   }
 </style>

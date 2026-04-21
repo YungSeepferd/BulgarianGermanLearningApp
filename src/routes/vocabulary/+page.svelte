@@ -61,10 +61,6 @@
         loadMore: 'Зареди още'
       });
 
-  const countLabel = $derived(appState.languageMode === 'DE_BG'
-    ? `${filteredCount} von ${totalCount} Einträgen`
-    : `${filteredCount} от ${totalCount} записа`);
- 
   // Categories for filtering
   const categories: VocabularyCategory[] = [
     'greetings',
@@ -379,11 +375,23 @@
 </svelte:head>
 
 <div class="vocabulary-page">
-  <header class="page-header">
+  <!-- Search Hero Section -->
+  <section class="search-hero" aria-labelledby="vocabulary-heading">
     <div class="headline">
       <p class="eyebrow">{appState.languageMode === 'DE_BG' ? 'Wortschatz • Vocabulary' : 'Речник • Vocabulary'}</p>
-      <h1 class="vocabulary-title">{ui.introTitle}</h1>
+      <h1 id="vocabulary-heading" class="vocabulary-title">{ui.introTitle}</h1>
       <p class="intro-lede">{ui.introLede}</p>
+    </div>
+    <div class="search-container">
+      <label for="hero-search" class="visually-hidden">{ui.searchAria || (appState.languageMode === 'DE_BG' ? 'Vokabular durchsuchen' : 'Търсене в речника')}</label>
+      <input
+        id="hero-search"
+        type="search"
+        placeholder={ui.searchPlaceholder}
+        bind:value={searchTerm}
+        class="hero-search-input"
+        aria-label={ui.searchAria || (appState.languageMode === 'DE_BG' ? 'Vokabular durchsuchen' : 'Търсене в речника')}
+      />
     </div>
     <div class="header-actions">
       <ActionButton
@@ -400,7 +408,7 @@
         {showFilters ? (appState.languageMode === 'DE_BG' ? 'Filter ausblenden' : 'Скрий филтрите') : (appState.languageMode === 'DE_BG' ? 'Filter anzeigen' : 'Покажи филтрите')}
       </button>
     </div>
-  </header>
+  </section>
 
   <div class="vocabulary-layout">
     <aside class="filter-panel" data-open={showFilters}>
@@ -486,7 +494,7 @@
 
     <div class="vocabulary-content">
       <div class="summary-bar">
-        <div class="summary-count">{countLabel}</div>
+        <span class="result-count-badge">{filteredCount} {appState.languageMode === 'DE_BG' ? 'von' : 'от'} {totalCount}</span>
         <div class="active-filters">
           {#if activeFilters.length > 0}
             {#each activeFilters as filter (filter.key)}
@@ -581,68 +589,119 @@
   .vocabulary-page {
     max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: var(--space-7) var(--space-5) var(--space-7);
-    color: var(--color-neutral-text-dark);
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    padding: var(--space-6) var(--space-5) var(--space-8);
+    background: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    min-height: 100vh;
   }
 
-  .page-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: var(--space-4);
-    margin-bottom: var(--space-6);
-    overflow-x: hidden; /* Prevent horizontal overflow */
-  }
-
-  .filter-chip:hover {
-    background: var(--color-primary-light);
-  }
-
-  .clear-all {
-    border: none;
-    background: transparent;
-    color: var(--color-primary-dark);
-    font-weight: var(--font-semibold);
-    cursor: pointer;
-    padding: var(--space-1) var(--space-2);
-  }
-
-  .no-active-filters {
-    color: var(--color-neutral-text);
-    font-size: var(--text-sm);
-  }
-
-  .state-block {
+  /* Hero Search Section */
+  .search-hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--space-3);
-    padding: var(--space-6) 0;
-    color: var(--color-neutral-text);
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
+    padding: var(--space-8) 0 var(--space-4);
+  }
+
+  .headline {
     text-align: center;
   }
 
-  .state-icon {
-    font-size: var(--text-2xl);
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-2);
   }
 
-  .load-more-container {
+  .vocabulary-title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 var(--space-3);
+    line-height: 1.2;
+  }
+
+  .intro-lede {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 480px;
+  }
+
+  .search-container {
+    width: 100%;
+    max-width: 640px;
+  }
+
+  .hero-search-input {
+    width: 100%;
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--text-lg);
+    font-family: var(--font-body);
+    background: var(--bg-surface);
+    border: 1px solid var(--bg-card-hover);
+    border-radius: var(--radius-full);
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-md);
+  }
+
+  .hero-search-input::placeholder {
+    color: var(--text-tertiary);
+  }
+
+  .hero-search-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: var(--accent-glow);
+  }
+
+  .header-actions {
     display: flex;
-    justify-content: center;
-    margin-top: var(--space-5);
+    gap: var(--space-3);
+    align-items: center;
   }
 
-  @media (min-width: var(--breakpoint-md)) {
-    .vocabulary-grid-items {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .filter-toggle {
+    padding: var(--space-2) var(--space-4);
+    background: var(--bg-surface);
+    border: 1px solid var(--bg-card-hover);
+    border-radius: var(--radius-lg);
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
   }
 
-  @media (min-width: var(--breakpoint-lg)) {
-    .vocabulary-grid-items {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+  .filter-toggle:hover {
+    background: var(--bg-card);
+    color: var(--text-primary);
+  }
+
+  /* Filter Panel - Compact Horizontal Pills */
+  .filter-panel {
+    display: none;
+    background: var(--bg-elevated);
+    border: 1px solid var(--bg-card);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .filter-panel[data-open="true"] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
   }
 
   .filter-panel__header {
@@ -655,52 +714,64 @@
   .panel-title {
     margin: 0;
     font-size: var(--text-lg);
-    color: var(--color-neutral-dark);
+    font-family: var(--font-display);
+    color: var(--text-primary);
   }
 
   .panel-reset {
     border: none;
     background: transparent;
-    color: var(--color-primary-darker);
-    font-weight: var(--font-semibold);
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--text-sm);
     cursor: pointer;
     padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-lg);
+    transition: all 0.2s ease;
+  }
+
+  .panel-reset:hover {
+    background: var(--accent-dim);
   }
 
   .filter-stack {
     display: flex;
     flex-direction: column;
-    gap: var(--filter-group-spacing);
+    gap: var(--space-5);
   }
 
   .filter-group {
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
+    gap: var(--space-3);
   }
 
   .filter-label {
     font-size: var(--text-sm);
-    color: var(--color-neutral-text-dark);
-    font-weight: var(--font-semibold);
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-weight: 600;
   }
 
   .filter-input,
   .filter-select {
     width: 100%;
-    padding: var(--space-3);
-    border-radius: var(--border-radius-lg);
-    border: 1px solid var(--color-neutral-border);
-    background: var(--color-neutral-light);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--bg-card-hover);
+    background: var(--bg-surface);
     font-size: var(--text-base);
-    color: var(--color-neutral-dark);
-    transition: var(--transition-filter);
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    transition: all 0.2s ease;
   }
 
   .filter-input:focus,
   .filter-select:focus {
-    outline: 2px solid var(--color-focus-ring);
-    outline-offset: var(--color-focus-ring-offset);
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: var(--accent-glow);
   }
 
   .pill-row {
@@ -710,25 +781,32 @@
   }
 
   .pill {
-    border: 1px solid var(--color-neutral-border);
-    background: var(--color-neutral-light);
-    color: var(--color-neutral-dark);
-    border-radius: 999px;
-    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--bg-card-hover);
+    background: var(--bg-surface);
+    color: var(--text-secondary);
+    border-radius: var(--radius-full);
+    padding: var(--space-2) var(--space-4);
     font-size: var(--text-sm);
+    font-family: var(--font-body);
     cursor: pointer;
-    transition: var(--transition-filter);
+    transition: all 0.2s ease;
   }
 
   .pill:hover {
-    border-color: var(--color-primary);
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
   }
 
   .pill--active {
-    background: var(--color-primary-light);
-    color: var(--color-primary-darker);
-    border-color: var(--color-primary);
-    font-weight: var(--font-semibold);
+    background: var(--accent);
+    color: var(--bg-base);
+    border-color: var(--accent);
+    font-weight: 600;
+  }
+
+  .pill--active:hover {
+    background: var(--accent);
+    color: var(--bg-base);
   }
 
   .filter-actions {
@@ -738,41 +816,48 @@
   }
 
   .primary-button {
-    padding: var(--space-3) var(--space-4);
-    border-radius: var(--border-radius-lg);
+    padding: var(--space-3) var(--space-5);
+    border-radius: var(--radius-lg);
     border: none;
-    background: #1d4ed8; /* Blue-700 for WCAG 4.5:1 contrast */
-    color: #ffffff;
-    font-weight: var(--font-semibold);
+    background: var(--accent);
+    color: var(--bg-base);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--text-sm);
     cursor: pointer;
-    transition: var(--transition-filter);
+    transition: all 0.2s ease;
   }
 
   .primary-button:disabled {
-    background: var(--color-neutral-border);
+    background: var(--bg-card-hover);
+    color: var(--text-muted);
     cursor: not-allowed;
   }
 
   .primary-button:not(:disabled):hover {
-    background: var(--color-button-primary-hover);
+    box-shadow: var(--accent-glow);
+    transform: translateY(-1px);
   }
 
   .secondary-button {
-    padding: var(--space-3) var(--space-4);
-    border-radius: var(--border-radius-lg);
-    border: 1px solid var(--color-neutral-border);
-    background: var(--color-neutral-light);
-    color: var(--color-neutral-dark);
-    font-weight: var(--font-semibold);
+    padding: var(--space-3) var(--space-5);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--bg-card-hover);
+    background: var(--bg-surface);
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--text-sm);
     cursor: pointer;
-    transition: var(--transition-filter);
+    transition: all 0.2s ease;
   }
 
   .secondary-button:hover {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
+    border-color: var(--accent);
+    color: var(--accent);
   }
 
+  /* Layout */
   .vocabulary-layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -780,9 +865,113 @@
     align-items: start;
   }
 
+  .vocabulary-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  /* Summary Bar with Result Count Badge */
+  .summary-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: var(--space-3) 0;
+  }
+
+  .result-count-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-2) var(--space-4);
+    background: var(--accent-dim);
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    border-radius: var(--radius-full);
+  }
+
+  .summary-count {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+  }
+
+  .active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    align-items: center;
+  }
+
+  .filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--bg-card-hover);
+    background: var(--bg-surface);
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .filter-chip:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .clear-all {
+    border: none;
+    background: transparent;
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    cursor: pointer;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-lg);
+    transition: all 0.2s ease;
+  }
+
+  .clear-all:hover {
+    background: var(--accent-dim);
+  }
+
+  .no-active-filters {
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+    font-family: var(--font-body);
+  }
+
+  /* State Blocks */
+  .state-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-10) 0;
+    color: var(--text-secondary);
+    text-align: center;
+  }
+
+  .state-icon {
+    font-size: var(--text-3xl);
+  }
+
+  /* Vocabulary Grid Container */
   .vocabulary-grid-container {
     width: 100%;
     min-height: 400px;
+    background: var(--bg-base);
+    border-radius: var(--radius-lg);
+    padding: var(--space-1);
   }
 
   .vocabulary-grid-container :global(.virtual-grid) {
@@ -795,71 +984,111 @@
     left: 0;
   }
 
-  /* Fix for grid children to respect container width */
-  .vocabulary-layout > * {
-    min-width: 0; /* Allow grid children to shrink below content size */
+  .card-link {
+    padding: var(--space-2);
+    height: 100%;
+    box-sizing: border-box;
   }
 
-  /* Fix for nested content to respect parent width */
-  .vocabulary-content > * {
-    min-width: 0; /* Allow nested content to shrink as well */
+  .card-link :global(.vocabulary-card) {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    height: 100%;
   }
 
-  /* Force hide any overflow from phantom scrollWidth */
-  .vocabulary-content,
-  .vocabulary-grid-items {
-    overflow-x: hidden;
+  .card-link :global(.vocabulary-card:hover) {
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(45, 212, 191, 0.2);
+    transform: translateY(-2px);
   }
 
-  .filter-panel {
-    display: none; /* Hidden on mobile by default */
-    position: sticky;
-    top: 0;
-    background: var(--color-filter-bg);
-    border: 1px solid var(--color-neutral-border);
-    border-radius: var(--border-radius-xl);
-    padding: var(--filter-panel-padding);
-    box-shadow: var(--shadow-filter-panel);
-    flex-direction: column;
-    gap: var(--filter-group-spacing);
-  }
-
-  @media (min-width: 768px) {
-    .vocabulary-layout {
-      grid-template-columns: minmax(280px, 360px) 1fr;
-    }
-
-    .filter-panel {
-      display: flex; /* Show on tablet+ screens */
-    }
-  }
-
-  .active-filters {
+  .loading-placeholder {
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-  }
-
-  .filter-chip {
-    display: inline-flex;
+    justify-content: center;
     align-items: center;
-    gap: var(--space-2);
-    padding: var(--space-2) var(--space-3);
-    border-radius: 999px;
-    border: 1px solid var(--color-primary);
-    background: var(--color-primary-lighter);
-    color: var(--color-primary-darker);
-    cursor: pointer;
-    transition: var(--transition-filter);
+    padding: var(--space-10);
   }
 
-  .filter-chip:hover {
-    background: var(--color-primary-light);
+  .spinner {
+    font-size: var(--text-2xl);
+    color: var(--accent);
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
 
   .load-more-container {
     display: flex;
     justify-content: center;
-    margin-top: var(--space-5);
+    margin-top: var(--space-6);
+  }
+
+  /* Layout fixes for nested content */
+  .vocabulary-layout > * {
+    min-width: 0;
+  }
+
+  .vocabulary-content > * {
+    min-width: 0;
+  }
+
+  /* Responsive - Filter Panel as Sidebar on larger screens */
+  @media (min-width: 768px) {
+    .vocabulary-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .filter-panel {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      padding: var(--space-4);
+      align-items: flex-start;
+    }
+
+    .filter-panel[data-open="false"] {
+      display: none;
+    }
+
+    .filter-panel[data-open="true"] {
+      display: flex;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .vocabulary-layout {
+      grid-template-columns: minmax(280px, 360px) 1fr;
+    }
+
+    .filter-panel {
+      position: sticky;
+      top: var(--space-4);
+      flex-direction: column;
+      gap: var(--space-5);
+    }
+
+    .filter-panel[data-open="false"] {
+      display: flex;
+    }
+  }
+
+  /* Accessibility */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 </style>

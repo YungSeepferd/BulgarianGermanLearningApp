@@ -83,18 +83,26 @@
 
 <style>
   :global(html) {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--font-body);
     font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    line-height: var(--leading-normal);
+    color: var(--text-primary);
+    background-color: var(--bg-base);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   :global(body) {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: var(--bg-base);
+    overflow-x: hidden;
+  }
+
+  :global(::selection) {
+    background: var(--accent-dim);
+    color: var(--accent);
   }
 
   .app-layout {
@@ -105,16 +113,22 @@
 
   main {
     flex: 1;
-    padding: 1rem;
-    background-color: white;
+    padding: var(--space-6) var(--space-4);
+    background-color: var(--bg-base);
   }
 
   @media (min-width: 769px) {
     main {
-        padding: 2rem;
-      max-width: 1200px;
+      padding: var(--space-8) var(--space-6);
+      max-width: var(--container-max);
       margin: 0 auto;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    main {
+      padding: var(--space-10) var(--space-8);
     }
   }
 </style>

@@ -110,10 +110,34 @@
 </svelte:head>
 
 <div class="dashboard-container">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1 class="hero-title">Daily Practice</h1>
+    <p class="hero-subtitle">Master Bulgarian-German, one word at a time.</p>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar" aria-label="Vocabulary statistics">
+    <div class="stat-item">
+      <span class="stat-number">{totalVocabulary}</span>
+      <span class="stat-label">Total Words</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">{totalLearned}</span>
+      <span class="stat-label">Learned</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">{totalPracticed}</span>
+      <span class="stat-label">Practiced</span>
+    </div>
+  </section>
+
   <!-- View Toggle Header -->
   <header class="dashboard-header">
     <div class="header-left">
-      <h1>{viewMode === 'cards' ? '🎯 Daily 10' : '📊 Dashboard'}</h1>
+      <h2>{viewMode === 'cards' ? '🎯 Daily 10' : '📊 Dashboard'}</h2>
     </div>
     <button class="view-toggle" onclick={toggleView} aria-label="Toggle view">
       {#if viewMode === 'cards'}
@@ -129,15 +153,18 @@
   {#if viewMode === 'cards'}
     <!-- Daily Vocabulary Practice Mode (Default) -->
     <div class="practice-layout">
-      <div class="daily-practice-area" aria-label="Daily vocabulary practice">
+      <!-- Daily Carousel Container -->
+      <div class="carousel-container" aria-label="Daily vocabulary practice">
         <DailyCarousel onComplete={handleDailyComplete} />
       </div>
       
       <!-- Vocabulary Detail Panel -->
-      <VocabularyDetailPanel 
-        item={selectedVocabulary}
-        onClose={() => selectedVocabulary = null}
-      />
+      <div class="detail-panel-container">
+        <VocabularyDetailPanel 
+          item={selectedVocabulary}
+          onClose={() => selectedVocabulary = null}
+        />
+      </div>
     </div>
 
     <!-- Quick Navigation (Compact on mobile) -->
@@ -146,7 +173,7 @@
         <span>📖</span>
         <span>Browse All</span>
       </button>
-      <button class="nav-pill" onclick={navigateToPractice}>
+      <button class="nav-pill nav-pill-accent" onclick={navigateToPractice}>
         <span>✍️</span>
         <span>Full Practice</span>
       </button>
@@ -165,7 +192,7 @@
     {:else}
       <!-- Today's Summary -->
       <section class="daily-summary">
-        <h2>Today's Progress</h2>
+        <h3>Today's Progress</h3>
         <div class="daily-stats">
           <div class="daily-stat">
             <span class="daily-stat-value">{dailyProgress.swipedRight.length}</span>
@@ -184,7 +211,7 @@
 
       <!-- Stats Grid -->
       <section class="stats-section">
-        <h2>Overall Progress</h2>
+        <h3>Overall Progress</h3>
         <div class="stats-grid">
           <div class="stat-card vocab">
             <div class="stat-icon">📚</div>
@@ -243,7 +270,7 @@
 
       <!-- Quick Actions -->
       <section class="actions-section">
-        <h2>Quick Actions</h2>
+        <h3>Quick Actions</h3>
         <div class="actions-grid">
           <button class="action-card" onclick={navigateToVocabulary}>
             <div class="action-icon">📖</div>
@@ -251,7 +278,7 @@
             <div class="action-desc">Browse all words</div>
           </button>
 
-          <button class="action-card" onclick={navigateToPractice}>
+          <button class="action-card action-card-accent" onclick={navigateToPractice}>
             <div class="action-icon">✍️</div>
             <div class="action-title">Practice</div>
             <div class="action-desc">Train your knowledge</div>
@@ -269,186 +296,257 @@
 </div>
 
 <style>
+  /* ===== CSS Custom Properties ===== */
+  :root {
+    --bg-base: #0b0d10;
+    --bg-elevated: #11131a;
+    --bg-surface: #181b24;
+    --bg-card: #1e2230;
+    --text-primary: #f0f2f5;
+    --text-secondary: #9aa3b2;
+    --text-tertiary: #5e6879;
+    --accent: #2dd4bf;
+    --accent-dim: rgba(45, 212, 191, 0.12);
+    --accent-glow: rgba(45, 212, 191, 0.35);
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Space Grotesk', system-ui, sans-serif;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 20px var(--accent-glow);
+    --success: #34d399;
+    --border-subtle: rgba(255, 255, 255, 0.06);
+  }
+
+  /* ===== Base Styles ===== */
   .dashboard-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    max-width: 1400px; /* Wider to accommodate detail panel */
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0;
-    background: #f8fafc;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-body);
   }
 
-  :global(.dark) .dashboard-container {
-    background: #0f172a;
+  /* ===== Hero Section ===== */
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-12) var(--space-6);
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg-base) 100%);
+    border-bottom: 1px solid var(--border-subtle);
   }
 
-  /* Header */
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl, 2.5rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 var(--space-3) 0;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-lg, 1.125rem);
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 400px;
+  }
+
+  /* ===== Stats Bar ===== */
+  .stats-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-6);
+    padding: var(--space-6) var(--space-4);
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+    padding: var(--space-4) var(--space-6);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    min-width: 100px;
+  }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl, 1.875rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: var(--text-xs, 0.75rem);
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--border-subtle);
+  }
+
+  /* ===== Header ===== */
   .dashboard-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.25rem;
-    background: white;
-    border-bottom: 1px solid #e2e8f0;
+    padding: var(--space-4) var(--space-6);
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border-subtle);
     position: sticky;
     top: 0;
     z-index: 100;
   }
 
-  :global(.dark) .dashboard-header {
-    background: #1e293b;
-    border-color: #334155;
-  }
-
-  .dashboard-header h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #0f172a;
+  .dashboard-header h2 {
+    font-family: var(--font-body);
+    font-size: var(--text-lg, 1.125rem);
+    font-weight: 600;
+    color: var(--text-primary);
     margin: 0;
-  }
-
-  :global(.dark) .dashboard-header h1 {
-    color: #f1f5f9;
   }
 
   .view-toggle {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: #f1f5f9;
-    border: none;
-    border-radius: 9999px;
-    font-size: 0.875rem;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    font-family: var(--font-body);
+    font-size: var(--text-sm, 0.875rem);
     font-weight: 500;
-    color: #475569;
+    color: var(--text-secondary);
     cursor: pointer;
     transition: all 0.2s ease;
   }
 
-  :global(.dark) .view-toggle {
-    background: #334155;
-    color: #cbd5e1;
-  }
-
   .view-toggle:hover {
-    background: #e2e8f0;
-  }
-
-  :global(.dark) .view-toggle:hover {
-    background: #475569;
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    color: var(--accent);
   }
 
   .toggle-icon {
     font-size: 1.125rem;
   }
 
-  /* Practice Layout - Grid with sidebar for detail panel */
+  /* ===== Practice Layout ===== */
   .practice-layout {
     flex: 1;
     display: grid;
     grid-template-columns: minmax(400px, 1fr) 400px;
-    gap: 1.5rem;
-    padding: 1rem;
+    gap: var(--space-6);
+    padding: var(--space-6);
     align-items: start;
-    max-height: calc(100vh - 180px);
+    max-height: calc(100vh - 280px);
   }
-  
-  /* Daily Practice Area */
-  .daily-practice-area {
+
+  /* ===== Carousel Container ===== */
+  .carousel-container {
     display: flex;
     flex-direction: column;
-    min-width: 0; /* Prevent grid overflow */
+    min-width: 0;
     height: 100%;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
   }
 
-  /* Tablet: Reduce detail panel width */
-  @media (max-width: 1200px) {
-    .dashboard-container {
-      max-width: 900px;
-    }
-    
-    .practice-layout {
-      grid-template-columns: 1fr 350px;
-      gap: 1rem;
-    }
+  /* ===== Detail Panel Container ===== */
+  .detail-panel-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
   }
 
-  /* Mobile: Stack detail panel below */
-  @media (max-width: 768px) {
-    .dashboard-container {
-      max-width: 600px;
-    }
-    
-    .practice-layout {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      max-height: none;
-      padding: 0;
-    }
-    
-    .daily-practice-area {
-      min-height: calc(100vh - 180px);
-    }
-  }
-
-  /* Quick Navigation Pills */
+  /* ===== Quick Navigation ===== */
   .quick-nav {
     display: flex;
-    gap: 0.5rem;
-    padding: 1rem;
-    background: white;
-    border-top: 1px solid #e2e8f0;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-6);
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--border-subtle);
     justify-content: center;
     flex-shrink: 0;
-  }
-
-  :global(.dark) .quick-nav {
-    background: #1e293b;
-    border-color: #334155;
   }
 
   .nav-pill {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.625rem 1rem;
-    background: #f1f5f9;
-    border: none;
-    border-radius: 9999px;
-    font-size: 0.875rem;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    font-family: var(--font-body);
+    font-size: var(--text-sm, 0.875rem);
     font-weight: 500;
-    color: #475569;
+    color: var(--text-secondary);
     cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  :global(.dark) .nav-pill {
-    background: #334155;
-    color: #cbd5e1;
+    transition: all 0.25s ease;
   }
 
   .nav-pill:hover {
-    background: #3b82f6;
-    color: white;
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-1px);
   }
 
-  /* Loading State */
+  .nav-pill-accent {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg-base);
+  }
+
+  .nav-pill-accent:hover {
+    background: var(--accent);
+    box-shadow: var(--shadow-glow);
+    color: var(--bg-base);
+  }
+
+  /* ===== Loading State ===== */
   .loading {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4rem 2rem;
-    gap: 1rem;
+    padding: var(--space-12) var(--space-8);
+    gap: var(--space-4);
   }
 
   .spinner {
     width: 2.5rem;
     height: 2.5rem;
-    border: 3px solid #e2e8f0;
-    border-top-color: #3b82f6;
+    border: 3px solid var(--bg-surface);
+    border-top-color: var(--accent);
     border-radius: 50%;
     animation: spin 1s linear infinite;
   }
@@ -457,33 +555,34 @@
     to { transform: rotate(360deg); }
   }
 
-  /* Stats View Styles */
+  .loading p {
+    color: var(--text-secondary);
+    font-size: var(--text-sm, 0.875rem);
+    margin: 0;
+  }
+
+  /* ===== Stats View Styles ===== */
   .daily-summary,
   .stats-section,
   .progress-section,
   .actions-section {
-    padding: 1.5rem 1.25rem;
+    padding: var(--space-6);
   }
 
-  .daily-summary h2,
-  .stats-section h2,
-  .actions-section h2 {
-    font-size: 1.125rem;
+  .daily-summary h3,
+  .stats-section h3,
+  .actions-section h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-xl, 1.25rem);
     font-weight: 600;
-    color: #0f172a;
-    margin: 0 0 1rem 0;
+    color: var(--text-primary);
+    margin: 0 0 var(--space-4) 0;
   }
 
-  :global(.dark) .daily-summary h2,
-  :global(.dark) .stats-section h2,
-  :global(.dark) .actions-section h2 {
-    color: #f1f5f9;
-  }
-
-  /* Daily Summary */
+  /* ===== Daily Summary ===== */
   .daily-stats {
     display: flex;
-    gap: 1rem;
+    gap: var(--space-4);
     justify-content: center;
   }
 
@@ -492,48 +591,45 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
-    background: white;
-    border-radius: 1rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-
-  :global(.dark) .daily-stat {
-    background: #1e293b;
+    padding: var(--space-5);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
   }
 
   .daily-stat-value {
-    font-size: 2rem;
+    font-family: var(--font-display);
+    font-size: var(--text-3xl, 1.875rem);
     font-weight: 700;
-    color: #3b82f6;
+    color: var(--accent);
   }
 
   .daily-stat-label {
-    font-size: 0.75rem;
-    color: #64748b;
+    font-size: var(--text-xs, 0.75rem);
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     text-align: center;
   }
 
-  /* Stats Grid */
+  /* ===== Stats Grid ===== */
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: var(--space-4);
   }
 
   .stat-card {
-    background: white;
-    border-radius: 1rem;
-    padding: 1rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    box-shadow: var(--shadow-md);
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    transition: transform 0.2s;
-  }
-
-  :global(.dark) .stat-card {
-    background: #1e293b;
+    gap: var(--space-4);
+    transition: all 0.2s ease;
   }
 
   .stat-card:active {
@@ -541,11 +637,11 @@
   }
 
   .stat-card.vocab {
-    border-left: 4px solid #3b82f6;
+    border-left: 4px solid var(--accent);
   }
 
   .stat-card.learned {
-    border-left: 4px solid #22c55e;
+    border-left: 4px solid var(--success);
   }
 
   .stat-card.practiced {
@@ -565,132 +661,180 @@
   }
 
   .stat-value {
-    font-size: 1.5rem;
+    font-family: var(--font-display);
+    font-size: var(--text-2xl, 1.5rem);
     font-weight: 700;
-    color: #0f172a;
-  }
-
-  :global(.dark) .stat-value {
-    color: #f1f5f9;
+    color: var(--text-primary);
   }
 
   .stat-label {
-    font-size: 0.75rem;
-    color: #64748b;
+    font-size: var(--text-xs, 0.75rem);
+    color: var(--text-tertiary);
   }
 
-  /* Progress Card */
+  /* ===== Progress Card ===== */
   .progress-card {
-    background: white;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-
-  :global(.dark) .progress-card {
-    background: #1e293b;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-md);
   }
 
   .progress-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.75rem;
+    margin-bottom: var(--space-4);
   }
 
   .progress-label {
-    font-size: 0.875rem;
-    color: #64748b;
+    font-size: var(--text-sm, 0.875rem);
+    color: var(--text-secondary);
   }
 
   .progress-value {
-    font-size: 1.25rem;
+    font-family: var(--font-display);
+    font-size: var(--text-xl, 1.25rem);
     font-weight: 700;
-    color: #3b82f6;
+    color: var(--accent);
   }
 
   .progress-bar {
-    height: 0.75rem;
-    background: #e2e8f0;
+    height: var(--space-2);
+    background: var(--bg-surface);
     border-radius: 9999px;
     overflow: hidden;
-    margin-bottom: 0.75rem;
-  }
-
-  :global(.dark) .progress-bar {
-    background: #334155;
+    margin-bottom: var(--space-3);
   }
 
   .progress-fill {
     height: 100%;
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    background: linear-gradient(135deg, var(--accent) 0%, #14b8a6 100%);
     border-radius: 9999px;
     transition: width 0.5s ease;
   }
 
   .progress-text {
-    font-size: 0.875rem;
-    color: #64748b;
+    font-size: var(--text-sm, 0.875rem);
+    color: var(--text-tertiary);
     text-align: center;
     margin: 0;
   }
 
-  /* Actions Grid */
+  /* ===== Actions Grid ===== */
   .actions-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
+    gap: var(--space-4);
   }
 
   .action-card {
-    background: white;
-    border: 2px solid #e2e8f0;
-    border-radius: 1rem;
-    padding: 1rem 0.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5) var(--space-3);
     text-align: center;
     cursor: pointer;
-    transition: all 0.2s;
-  }
-
-  :global(.dark) .action-card {
-    background: #1e293b;
-    border-color: #334155;
+    transition: all 0.25s ease;
   }
 
   .action-card:hover {
-    border-color: #3b82f6;
+    border-color: var(--accent);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .action-card-accent {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+  }
+
+  .action-card-accent:hover {
+    background: var(--accent);
+    color: var(--bg-base);
   }
 
   .action-icon {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2);
   }
 
   .action-title {
-    font-size: 0.875rem;
+    font-family: var(--font-body);
+    font-size: var(--text-sm, 0.875rem);
     font-weight: 600;
-    color: #0f172a;
-    margin-bottom: 0.25rem;
-  }
-
-  :global(.dark) .action-title {
-    color: #f1f5f9;
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
   }
 
   .action-desc {
-    font-size: 0.675rem;
-    color: #64748b;
+    font-size: var(--text-xs, 0.75rem);
+    color: var(--text-tertiary);
+  }
+
+  /* ===== Responsive Design ===== */
+  @media (max-width: 1200px) {
+    .dashboard-container {
+      max-width: 900px;
+    }
+    
+    .practice-layout {
+      grid-template-columns: 1fr 350px;
+      gap: var(--space-4);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .dashboard-container {
+      max-width: 600px;
+    }
+    
+    .practice-layout {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      max-height: none;
+      padding: var(--space-4);
+    }
+
+    .hero-section {
+      padding: var(--space-8) var(--space-4);
+    }
+
+    .hero-title {
+      font-size: var(--text-3xl, 1.875rem);
+    }
+
+    .stats-bar {
+      gap: var(--space-3);
+      padding: var(--space-4);
+    }
+
+    .stat-item {
+      min-width: 80px;
+      padding: var(--space-3) var(--space-4);
+    }
+
+    .stat-number {
+      font-size: var(--text-2xl, 1.5rem);
+    }
+
+    .daily-practice-area {
+      min-height: calc(100vh - 180px);
+    }
+
+    .actions-grid {
+      gap: var(--space-3);
+    }
   }
 
   /* Desktop responsiveness */
   @media (min-width: 768px) {
     .dashboard-container {
       max-width: 480px;
-      margin-top: 1rem;
-      border-radius: 1.5rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-top: var(--space-4);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
       min-height: auto;
       height: calc(100vh - 2rem);
       overflow: hidden;

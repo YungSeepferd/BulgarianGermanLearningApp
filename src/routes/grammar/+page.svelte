@@ -77,10 +77,6 @@
         areasLabel: 'Bereiche',
         areaCount: (n: number) => `${n} Regeln`,
         tableTitle: 'Kernkonstruktionen',
-        colRule: 'Regel',
-        colExample: 'Beispiel',
-        colDescription: 'Beschreibung',
-        colArea: 'Bereich',
         empty: 'Keine Treffer. Anderes Wort probieren.'
       }
     : {
@@ -107,292 +103,545 @@
 </svelte:head>
 
 <div class="page" role="region" aria-label={appState.languageMode === 'DE_BG' ? 'Grammatikregeln' : 'Граматични правила'}>
-  <header class="page-header">
-    <div>
-      <p class="eyebrow">{ui.eyebrow}</p>
-      <h1>{ui.title}</h1>
-      <p class="lede">{ui.lede}</p>
-    </div>
+  <!-- Hero -->
+  <header class="hero">
+    <p class="eyebrow">{ui.eyebrow}</p>
+    <h1 class="hero-title">{ui.title}</h1>
+    <p class="hero-lede">{ui.lede}</p>
   </header>
 
-  <div class="grid">
-    <section class="sidebar" aria-label="Настройки на изгледа">
-      <div class="panel">
-        <label class="label" for="search">{appState.languageMode === 'DE_BG' ? 'Suche in Regeln' : 'Търсене в правилата'}</label>
-        <input
-          id="search"
-          type="search"
-          role="searchbox"
-          placeholder={ui.searchPlaceholder}
-          bind:value={searchTerm}
-          class="input"
-        />
+  <!-- Controls -->
+  <div class="controls">
+    <div class="search-wrapper">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"/>
+        <path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input
+        type="search"
+        role="searchbox"
+        placeholder={ui.searchPlaceholder}
+        bind:value={searchTerm}
+        class="search-input"
+        aria-label={ui.searchPlaceholder}
+      />
+    </div>
 
-        <div class="toggle">
-          <label class="label" for="examples-toggle">{ui.examplesLabel}</label>
-          <label class="switch">
-            <input
-              id="examples-toggle"
-              type="checkbox"
-              checked={showExamples}
-              onchange={toggleExamples}
-              aria-label={appState.languageMode === 'DE_BG' ? 'Beispiele anzeigen' : 'Покажи примерите'}
-            />
-            <span>{ui.examplesState(showExamples)}</span>
-          </label>
-        </div>
+    <div class="controls-row">
+      <div class="area-pills" role="list" aria-label={ui.areasLabel}>
+        {#each areas as area}
+          <span
+            class="area-pill"
+            class:pill-verb={area === 'Verb Forms'}
+            class:pill-case={area === 'Cases'}
+            class:pill-particle={area === 'Particles'}
+            class:pill-order={area === 'Word Order'}
+            role="listitem"
+          >
+            {getAreaLabel(area)}
+          </span>
+        {/each}
       </div>
 
-      <div class="panel">
-        <p class="label">{ui.areasLabel}</p>
-        <div class="chips" role="list">
-          {#each areas as area}
-            <div class="chip" role="listitem">{getAreaLabel(area)}</div>
-          {/each}
-        </div>
-        <p class="meta">{ui.areaCount(filteredRules.length)}</p>
+      <div class="toggle-wrapper">
+        <span class="toggle-label">{ui.examplesLabel}</span>
+        <label class="toggle-switch">
+          <input
+            type="checkbox"
+            checked={showExamples}
+            onchange={toggleExamples}
+            aria-label={appState.languageMode === 'DE_BG' ? 'Beispiele anzeigen' : 'Покажи примерите'}
+          />
+          <span class="toggle-track"></span>
+        </label>
       </div>
-    </section>
-
-    <section class="content" aria-label="Списък с правила">
-      <div class="table-card">
-        <div class="table-header">
-          <div>
-            <p class="eyebrow">{appState.languageMode === 'DE_BG' ? 'Regeln' : 'Правила'}</p>
-            <h2>{ui.tableTitle}</h2>
-          </div>
-          <span class="count">{filteredRules.length}</span>
-        </div>
-
-        {#if filteredRules.length > 0}
-          <div class="table-wrapper" role="region" aria-label="Таблица с граматични правила">
-            <table class="grammar-table">
-              <thead>
-                <tr>
-                  <th scope="col">{ui.colRule}</th>
-                  {#if showExamples}
-                    <th scope="col">{ui.colExample}</th>
-                  {/if}
-                  <th scope="col">{ui.colDescription}</th>
-                  <th scope="col">{ui.colArea}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {#each filteredRules as rule}
-                  <tr>
-                    <td>{rule.rule}</td>
-                    {#if showExamples}
-                      <td>{rule.example}</td>
-                    {/if}
-                    <td>{appState.languageMode === 'DE_BG' ? rule.description_de : rule.description_bg}</td>
-                    <td>{getAreaLabel(rule.area)}</td>
-                  </tr>
-                {/each}
-              </tbody>
-            </table>
-          </div>
-        {:else}
-          <div class="empty">{ui.empty}</div>
-        {/if}
-      </div>
-    </section>
+    </div>
   </div>
+
+  <!-- Rule Cards -->
+  <section class="rules-section" aria-label="Списък с правила">
+    <div class="rules-header">
+      <h2 class="rules-title">{ui.tableTitle}</h2>
+      <span class="rules-count">{filteredRules.length}</span>
+    </div>
+
+    {#if filteredRules.length > 0}
+      <div class="rules-grid" role="list">
+        {#each filteredRules as rule (rule.rule)}
+          <article
+            class="rule-card"
+            class:card-verb={rule.area === 'Verb Forms'}
+            class:card-case={rule.area === 'Cases'}
+            class:card-particle={rule.area === 'Particles'}
+            class:card-order={rule.area === 'Word Order'}
+            role="listitem"
+          >
+            <div class="card-header">
+              <h3 class="card-title">{rule.rule}</h3>
+              <span
+                class="card-area-tag"
+                class:tag-verb={rule.area === 'Verb Forms'}
+                class:tag-case={rule.area === 'Cases'}
+                class:tag-particle={rule.area === 'Particles'}
+                class:tag-order={rule.area === 'Word Order'}
+              >
+                {getAreaLabel(rule.area)}
+              </span>
+            </div>
+
+            {#if showExamples}
+              <div class="card-example">
+                <span class="example-text">{rule.example}</span>
+              </div>
+            {/if}
+
+            <p class="card-description">
+              {appState.languageMode === 'DE_BG' ? rule.description_de : rule.description_bg}
+            </p>
+          </article>
+        {/each}
+      </div>
+    {:else}
+      <div class="empty-state">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.35-4.35"/>
+          <path d="M8 11h6"/>
+        </svg>
+        <p>{ui.empty}</p>
+      </div>
+    {/if}
+  </section>
 </div>
 
 <style>
   .page {
-    max-width: 1200px;
+    --page-bg: var(--bg-base);
+    --page-text: var(--text-primary);
+    --page-text-muted: var(--text-secondary);
+
+    max-width: var(--container-max, 1280px);
     margin: 0 auto;
-    padding: 1.5rem;
+    padding: var(--space-8) var(--space-6);
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: var(--space-8);
+    background: var(--page-bg);
+    color: var(--page-text);
+    min-height: 100vh;
   }
 
-  .page-header h1 {
-    margin: 0.25rem 0 0.5rem;
-    font-size: 2.25rem;
-    color: #0f172a;
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: var(--space-12) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    color: var(--page-text);
+    margin: 0;
+    line-height: var(--leading-tight);
+    letter-spacing: -0.02em;
+  }
+
+  .hero-lede {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    color: var(--page-text-muted);
+    margin: 0;
+    max-width: 640px;
+    line-height: var(--leading-loose);
   }
 
   .eyebrow {
+    font-family: var(--font-body);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 0.8rem;
-    color: #475569;
+    letter-spacing: 0.12em;
+    font-size: var(--text-sm);
+    color: var(--accent);
     margin: 0;
+    font-weight: 500;
   }
 
-  .lede {
-    margin: 0;
-    color: #475569;
-    max-width: 820px;
-    line-height: 1.6;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: minmax(320px, 380px) 1fr;
-    gap: 1.5rem;
-    align-items: start;
-  }
-
-  .sidebar {
+  /* Controls */
+  .controls {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-  }
-
-  .panel {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 1rem;
-    display: grid;
-    gap: 0.75rem;
-  }
-
-  .label {
-    font-weight: 600;
-    color: #1e293b;
-    margin: 0;
-  }
-
-  .input {
+    gap: var(--space-4);
     width: 100%;
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    border: 1px solid #cbd5e1;
-    font-size: 1rem;
-    background: white;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
-  .input:focus {
+  .search-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: var(--space-5);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: var(--text-tertiary);
+    pointer-events: none;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: var(--space-4) var(--space-5) var(--space-4) calc(var(--space-5) + 28px);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-default);
+    background: var(--bg-surface);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    transition: border-color var(--duration-200) var(--ease-out),
+                box-shadow var(--duration-200) var(--ease-out),
+                background var(--duration-200) var(--ease-out);
+  }
+
+  .search-input::placeholder {
+    color: var(--text-tertiary);
+  }
+
+  .search-input:focus {
     outline: none;
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    border-color: var(--accent);
+    background: var(--bg-surface-hover);
+    box-shadow: 0 0 0 3px var(--accent-glow);
   }
 
-  .toggle {
+  .controls-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-4);
   }
 
-  .switch {
+  /* Area Pills */
+  .area-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .area-pill {
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    border: 1px solid transparent;
+  }
+
+  .pill-verb {
+    background: rgba(45, 212, 191, 0.12);
+    color: var(--accent);
+    border-color: rgba(45, 212, 191, 0.25);
+  }
+
+  .pill-case {
+    background: rgba(251, 191, 36, 0.12);
+    color: var(--warning);
+    border-color: rgba(251, 191, 36, 0.25);
+  }
+
+  .pill-particle {
+    background: rgba(167, 139, 250, 0.12);
+    color: #a78bfa;
+    border-color: rgba(167, 139, 250, 0.25);
+  }
+
+  .pill-order {
+    background: rgba(244, 114, 182, 0.12);
+    color: #f472b6;
+    border-color: rgba(244, 114, 182, 0.25);
+  }
+
+  /* Toggle Switch */
+  .toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .toggle-label {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--page-text-muted);
+    font-weight: 500;
+  }
+
+  .toggle-switch {
+    position: relative;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
     cursor: pointer;
   }
 
-  .chips {
+  .toggle-switch input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .toggle-track {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    background: var(--bg-surface);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-default);
+    transition: background var(--duration-200) var(--ease-out),
+                border-color var(--duration-200) var(--ease-out);
+  }
+
+  .toggle-track::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    background: var(--text-secondary);
+    border-radius: 50%;
+    transition: transform var(--duration-200) var(--ease-spring),
+                background var(--duration-200) var(--ease-out);
+  }
+
+  .toggle-switch input:checked + .toggle-track {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+  }
+
+  .toggle-switch input:checked + .toggle-track::after {
+    transform: translateX(20px);
+    background: var(--accent);
+  }
+
+  .toggle-switch input:focus-visible + .toggle-track {
+    box-shadow: 0 0 0 3px var(--accent-glow);
+  }
+
+  /* Rules Section */
+  .rules-section {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: var(--space-6);
   }
 
-  .chip {
-    padding: 0.35rem 0.75rem;
-    background: #e2e8f0;
-    border-radius: 999px;
-    font-size: 0.9rem;
-    color: #0f172a;
+  .rules-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
   }
 
-  .meta {
+  .rules-title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    color: var(--page-text);
     margin: 0;
-    color: #475569;
-    font-size: 0.9rem;
   }
 
-  .content {
-    width: 100%;
+  .rules-count {
+    background: var(--accent-dim);
+    color: var(--accent);
+    border-radius: var(--radius-full);
+    padding: var(--space-1) var(--space-4);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    min-width: 2.5rem;
+    text-align: center;
   }
 
-  .table-card {
-    background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  /* Rules Grid */
+  .rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: var(--space-5);
   }
 
-  .table-header {
+  /* Rule Card */
+  .rule-card {
+    --card-accent: var(--accent);
+
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-md);
+    border-left: 3px solid var(--card-accent);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    transition: transform var(--duration-200) var(--ease-out),
+                box-shadow var(--duration-200) var(--ease-out);
+  }
+
+  .rule-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .card-verb { --card-accent: var(--accent); }
+  .card-case { --card-accent: var(--warning); }
+  .card-particle { --card-accent: #a78bfa; }
+  .card-order { --card-accent: #f472b6; }
+
+  .card-header {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .card-title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--page-text);
+    margin: 0;
+    line-height: var(--leading-tight);
+  }
+
+  .card-area-tag {
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .tag-verb {
+    background: rgba(45, 212, 191, 0.15);
+    color: var(--accent);
+  }
+
+  .tag-case {
+    background: rgba(251, 191, 36, 0.15);
+    color: var(--warning);
+  }
+
+  .tag-particle {
+    background: rgba(167, 139, 250, 0.15);
+    color: #a78bfa;
+  }
+
+  .tag-order {
+    background: rgba(244, 114, 182, 0.15);
+    color: #f472b6;
+  }
+
+  .card-example {
+    background: var(--accent-dim);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    border: 1px solid rgba(45, 212, 191, 0.08);
+  }
+
+  .example-text {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 500;
+    color: var(--page-text);
+    letter-spacing: 0.01em;
+  }
+
+  .card-description {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--page-text-muted);
+    margin: 0;
+    line-height: var(--leading-normal);
+  }
+
+  /* Empty State */
+  .empty-state {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 0.75rem;
-  }
-
-  .table-header h2 {
-    margin: 0.15rem 0 0;
-    color: #0f172a;
-  }
-
-  .count {
-    background: var(--color-primary-dark);
-    color: white;
-    border-radius: 999px;
-    padding: 0.35rem 0.75rem;
-    font-weight: 700;
-    min-width: 2.25rem;
+    gap: var(--space-4);
+    padding: var(--space-16) var(--space-8);
     text-align: center;
+    color: var(--page-text-muted);
   }
 
-  .table-wrapper {
-    overflow: auto;
+  .empty-state svg {
+    width: 48px;
+    height: 48px;
+    opacity: 0.4;
   }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 680px;
+  .empty-state p {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    margin: 0;
   }
 
-  th, td {
-    text-align: left;
-    padding: 0.75rem;
-    border-bottom: 1px solid #e2e8f0;
-    vertical-align: top;
-  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .page {
+      padding: var(--space-6) var(--space-4);
+      gap: var(--space-6);
+    }
 
-  th {
-    background: #f8fafc;
-    font-weight: 700;
-    color: #0f172a;
-    position: sticky;
-    top: 0;
-  }
+    .hero {
+      padding: var(--space-8) 0;
+    }
 
-  tr:hover td {
-    background: #f1f5f9;
-  }
+    .hero-title {
+      font-size: var(--text-3xl);
+    }
 
-  .empty {
-    padding: 1rem;
-    text-align: center;
-    color: #475569;
-  }
+    .hero-lede {
+      font-size: var(--text-base);
+    }
 
-  @media (max-width: 960px) {
-    .grid {
+    .controls-row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .area-pills {
+      justify-content: center;
+    }
+
+    .rules-grid {
       grid-template-columns: 1fr;
     }
 
-    table {
-      min-width: unset;
+    .card-header {
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .card-title {
+      font-size: var(--text-lg);
     }
   }
 
-  @media (max-width: 640px) {
-    .page-header h1 {
-      font-size: 1.75rem;
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: var(--text-2xl);
     }
 
-    .table-header h2 {
-      font-size: 1.25rem;
+    .rules-title {
+      font-size: var(--text-xl);
     }
   }
 </style>
