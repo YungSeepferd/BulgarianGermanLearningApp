@@ -92,12 +92,12 @@ Stack: ${error.stack || 'No stack trace available'}`;
     bottom: 2rem;
     right: 2rem;
     max-width: 400px;
-    background: #fef2f2;
-    border: 1px solid #fecaca;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: var(--bg-card);
+    border: 1px solid var(--danger);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
     z-index: 1000;
-    animation: slideIn 0.3s ease-out;
+    animation: slideIn var(--duration-300) var(--ease-out);
   }
 
   .error-content {
@@ -110,7 +110,7 @@ Stack: ${error.stack || 'No stack trace available'}`;
 
   .error-message {
     flex: 1;
-    color: #dc2626;
+    color: var(--danger);
     font-size: 0.9rem;
     font-weight: 500;
   }
@@ -124,22 +124,22 @@ Stack: ${error.stack || 'No stack trace available'}`;
     padding: 0.25rem 0.5rem;
     border: none;
     background: none;
-    color: #dc2626;
+    color: var(--danger);
     font-size: 0.8rem;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.2s;
+    border-radius: var(--radius-sm);
+    transition: background-color var(--duration-150);
   }
 
   .details-btn:hover, .dismiss-btn:hover {
-    background-color: #fecaca;
+    background-color: var(--accent-dim);
   }
 
   .error-details {
-    border-top: 1px solid #fecaca;
+    border-top: 1px solid var(--danger);
     padding: 1rem;
-    background: #fef2f2;
-    border-radius: 0 0 8px 8px;
+    background: var(--bg-surface);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
     max-height: 300px;
     overflow-y: auto;
   }
@@ -147,7 +147,7 @@ Stack: ${error.stack || 'No stack trace available'}`;
   .error-details pre {
     margin: 0;
     font-size: 0.75rem;
-    color: #dc2626;
+    color: var(--danger);
     white-space: pre-wrap;
     word-wrap: break-word;
   }

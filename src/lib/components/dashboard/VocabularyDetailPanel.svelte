@@ -198,10 +198,10 @@
     max-width: 400px;
     height: 100vh;
     overflow-y: auto;
-    background: var(--card-bg, white);
-    border-left: 1px solid var(--border-color, #e5e7eb);
+    background: var(--bg-card);
+    border-left: 1px solid var(--border-default);
     padding: 1.5rem;
-    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-lg);
   }
 
   .close-button {
@@ -211,7 +211,7 @@
     width: 32px;
     height: 32px;
     border: none;
-    background: var(--bg-secondary, #f3f4f6);
+    background: var(--bg-surface);
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.25rem;
@@ -223,7 +223,7 @@
   }
 
   .close-button:hover {
-    background: var(--bg-tertiary, #e5e7eb);
+    background: var(--bg-elevated);
   }
 
   .detail-header {
@@ -286,28 +286,28 @@
   }
 
   .cefr-badge[data-level="A1"] {
-    background: #dbeafe;
-    color: #1e40af;
+    background: var(--accent-dim);
+    color: var(--accent);
   }
 
   .cefr-badge[data-level="A2"] {
-    background: #ddd6fe;
-    color: #6b21a8;
+    background: rgba(168, 85, 247, 0.12);
+    color: #c084fc;
   }
 
   .cefr-badge[data-level="B1"] {
-    background: #fef3c7;
-    color: #92400e;
+    background: rgba(251, 191, 36, 0.12);
+    color: var(--warning);
   }
 
   .cefr-badge[data-level="B2"] {
-    background: #fed7aa;
-    color: #9a3412;
+    background: rgba(249, 115, 22, 0.12);
+    color: #fb923c;
   }
 
   .cefr-badge[data-level="C1"] {
-    background: #fecaca;
-    color: #991b1b;
+    background: rgba(248, 113, 113, 0.12);
+    color: var(--danger);
   }
 
   .detail-content {
@@ -388,11 +388,11 @@
   }
 
   .example-german {
-    color: var(--primary-600, #2563eb);
+    color: var(--accent);
   }
 
   .example-bulgarian {
-    color: var(--success-600, #16a34a);
+    color: var(--success);
   }
 
   .example-context {
@@ -432,21 +432,21 @@
   }
 
   .mnemonic-section {
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    background: var(--accent-dim);
     border-radius: 0.75rem;
     padding: 1rem;
-    border: none;
+    border: 1px solid var(--accent);
   }
 
   .mnemonic-section h3 {
     margin-top: 0;
-    color: #78350f;
+    color: var(--text-primary);
   }
 
   .mnemonic-text {
     font-size: 0.875rem;
     line-height: 1.6;
-    color: #78350f;
+    color: var(--text-secondary);
     margin: 0;
   }
 

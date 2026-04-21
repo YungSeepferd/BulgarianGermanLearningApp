@@ -507,7 +507,6 @@
 </Dialog>
 
 <style>
-
   .lesson-generator-form {
     padding: 1rem 0;
   }
@@ -515,7 +514,7 @@
   .form-section {
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--border-default);
   }
 
   .form-section:last-child {
@@ -525,8 +524,8 @@
 
   .form-section h3 {
     font-size: 1rem;
-    font-weight: 600;
-    color: #1e293b;
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
     margin-bottom: 1rem;
   }
 
@@ -538,8 +537,8 @@
     display: block;
     margin-bottom: 0.5rem;
     font-size: 0.875rem;
-    font-weight: 500;
-    color: #475569;
+    font-weight: var(--weight-medium);
+    color: var(--text-secondary);
   }
 
   .form-row {
@@ -551,10 +550,11 @@
   input, textarea, select {
     width: 100%;
     padding: 0.5rem 1rem;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-    background: white;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-default);
+    background: var(--bg-card);
     font-size: 0.875rem;
+    color: var(--text-primary);
   }
 
   textarea {
@@ -574,26 +574,27 @@
 
   .error-message {
     padding: 0.75rem 1rem;
-    background: #fef2f2;
-    border-radius: 8px;
-    color: #ef4444;
+    background: var(--bg-surface);
+    border-radius: var(--radius-md);
+    color: var(--danger);
     margin-bottom: 1rem;
     font-size: 0.875rem;
+    border: 1px solid var(--danger);
   }
 
   .success-message {
     padding: 0.75rem 1rem;
-    background: #f0fdf4;
-    border-radius: 8px;
-    color: #10b981;
+    background: var(--bg-surface);
+    border-radius: var(--radius-md);
+    color: var(--success);
     margin-bottom: 1rem;
     font-size: 0.875rem;
+    border: 1px solid var(--success);
   }
 
   @media (max-width: 768px) {
     .form-row {
       grid-template-columns: 1fr;
     }
-
   }
 </style>

@@ -39,15 +39,15 @@
 <style>
   .example-card {
     padding: var(--spacing-4, 1rem);
-    background-color: var(--color-bg-primary, #ffffff);
-    border: 1px solid var(--color-border, #e5e7eb);
-    border-radius: var(--radius-md, 0.375rem);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
     transition: box-shadow 0.2s ease, border-color 0.2s ease;
   }
 
   .example-card:hover {
-    box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1));
-    border-color: var(--color-primary-light, #bfdbfe);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
   }
 
   .example-text {
@@ -64,19 +64,21 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    border-radius: var(--radius-sm, 0.25rem);
-    background-color: var(--color-bg-secondary, #f3f4f6);
-    color: var(--color-text-secondary, #6b7280);
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-elevated);
+    color: var(--text-secondary);
   }
 
   .example-text.german .language-tag {
-    background-color: #dbeafe;
-    color: #1e40af;
+    background-color: var(--accent);
+    opacity: 0.2;
+    color: var(--accent);
   }
 
   .example-text.bulgarian .language-tag {
-    background-color: #fef3c7;
-    color: #92400e;
+    background-color: var(--warning);
+    opacity: 0.2;
+    color: var(--warning);
   }
 
   .example-text p {
@@ -84,7 +86,7 @@
     margin: 0;
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--color-text-primary, #111827);
+    color: var(--text-primary);
   }
 
   .example-divider {
@@ -95,7 +97,7 @@
 
   .arrow {
     font-size: 1.25rem;
-    color: var(--color-text-secondary, #6b7280);
+    color: var(--text-secondary);
     margin-left: var(--spacing-8, 2rem);
   }
 
@@ -105,9 +107,10 @@
     gap: var(--spacing-2, 0.5rem);
     padding: var(--spacing-3, 0.75rem);
     margin-top: var(--spacing-3, 0.75rem);
-    background-color: var(--color-bg-tertiary, #f0fdf4);
-    border-left: 3px solid #10b981;
-    border-radius: var(--radius-sm, 0.25rem);
+    background-color: var(--success);
+    opacity: 0.1;
+    border-left: 3px solid var(--success);
+    border-radius: var(--radius-sm);
   }
 
   .context-icon {
@@ -120,7 +123,7 @@
     margin: 0;
     font-size: 0.875rem;
     line-height: 1.5;
-    color: var(--color-text-secondary, #6b7280);
+    color: var(--text-secondary);
     font-style: italic;
   }
 

@@ -60,22 +60,22 @@ $effect(() => {
   .card {
     padding: 1rem;
     margin: 1rem 0;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-default);
     border-radius: 4px;
   }
 
   .shadow {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
   }
 
   .highlight {
-    background-color: #f5f5f5;
-    border-left: 3px solid #4285f4;
+    background-color: var(--bg-surface);
+    border-left: 3px solid var(--accent);
   }
 
   button {
     padding: 0.5rem 1rem;
-    background-color: #4285f4;
+    background-color: var(--accent);
     color: white;
     border: none;
     border-radius: 4px;
@@ -84,14 +84,14 @@ $effect(() => {
   }
 
   button:hover {
-    background-color: #3367d6;
+    background-color: var(--accent-dim);
   }
 
   .cta-button {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #34a853;
+    background-color: var(--success);
     color: white;
     text-decoration: none;
     border-radius: 4px;

@@ -151,45 +151,45 @@
     flex-direction: column;
     gap: 1rem;
     padding: 1.5rem;
-    background: var(--color-surface, #ffffff);
-    border-radius: 0.75rem;
-    border: 1px solid var(--color-border, #e5e7eb);
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-default);
   }
-  
+
   .list-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--color-border, #e5e7eb);
+    border-bottom: 1px solid var(--border-default);
   }
-  
+
   .list-title {
     margin: 0;
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--color-text-primary, #111827);
+    color: var(--text-primary);
   }
-  
+
   .completion-badge {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 0.25rem;
   }
-  
+
   .badge-text {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--color-primary, #3b82f6);
+    color: var(--accent);
   }
-  
+
   .badge-label {
     font-size: 0.75rem;
-    color: var(--color-text-secondary, #6b7280);
+    color: var(--text-secondary);
   }
-  
+
   .empty-list {
     display: flex;
     flex-direction: column;
@@ -198,44 +198,44 @@
     gap: 0.75rem;
     padding: 2rem 1rem;
     text-align: center;
-    color: var(--color-text-secondary, #6b7280);
+    color: var(--text-secondary);
   }
-  
+
   .empty-icon {
     width: 2rem;
     height: 2rem;
     opacity: 0.5;
   }
-  
+
   .lessons-container {
     display: flex;
     flex-direction: column;
   }
-  
+
   .lesson-item {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
     padding: 1rem;
-    border-radius: 0.5rem;
+    border-radius: var(--radius-md);
     transition: background 0.2s;
   }
-  
+
   .lesson-item:hover {
-    background: var(--color-hover, #f3f4f6);
+    background: var(--bg-card-hover);
   }
-  
+
   .lesson-item.current {
-    background: var(--color-primary-light, #eff6ff);
-    border-left: 3px solid var(--color-primary, #3b82f6);
+    background: var(--accent-dim);
+    border-left: 3px solid var(--accent);
     padding-left: calc(1rem - 3px);
   }
-  
+
   .lesson-item.completed .lesson-title {
     text-decoration: line-through;
     opacity: 0.7;
   }
-  
+
   .lesson-number {
     display: flex;
     align-items: center;
@@ -244,164 +244,165 @@
     height: 2rem;
     min-width: 2rem;
     border-radius: 50%;
-    background: var(--color-border, #e5e7eb);
-    color: var(--color-text-secondary, #6b7280);
+    background: var(--border-default);
+    color: var(--text-secondary);
     font-size: 0.875rem;
     font-weight: 600;
   }
-  
+
   .lesson-item.completed .lesson-number {
-    background: var(--color-success, #10b981);
-    color: white;
+    background: var(--success);
+    color: var(--bg-base);
   }
-  
+
   .lesson-item.current .lesson-number {
-    background: var(--color-primary, #3b82f6);
-    color: white;
+    background: var(--accent);
+    color: var(--bg-base);
   }
-  
+
   .checkmark {
     font-size: 1rem;
   }
-  
+
   .lesson-content {
     flex: 1;
     min-width: 0;
   }
-  
+
   .lesson-header {
     margin-bottom: 0.5rem;
   }
-  
+
   .lesson-title {
     margin: 0;
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--color-text-primary, #111827);
+    color: var(--text-primary);
   }
-  
+
   .lesson-description {
     margin: 0.25rem 0 0 0;
     font-size: 0.8rem;
-    color: var(--color-text-secondary, #6b7280);
+    color: var(--text-secondary);
   }
-  
+
   .lesson-meta {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-  
+
   .meta-tag {
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
     padding: 0.25rem 0.625rem;
-    background: var(--color-background, #f9fafb);
+    background: var(--bg-elevated);
     border-radius: 9999px;
     font-size: 0.75rem;
-    color: var(--color-text-secondary, #6b7280);
+    color: var(--text-secondary);
     white-space: nowrap;
   }
-  
+
   .meta-tag[data-difficulty='beginner'] {
-    background: #dbeafe;
-    color: #075985;
+    background: var(--success);
+    color: var(--bg-base);
   }
-  
+
   .meta-tag[data-difficulty='intermediate'] {
-    background: #fef08a;
-    color: #713f12;
+    background: var(--warning);
+    color: var(--bg-base);
   }
-  
+
   .meta-tag[data-difficulty='advanced'] {
-    background: #fed7aa;
-    color: #92400e;
+    background: var(--danger);
+    color: var(--bg-base);
   }
-  
+
   .lesson-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    background: var(--color-primary, #3b82f6);
-    color: white;
+    background: var(--accent);
+    color: var(--bg-base);
     border: none;
-    border-radius: 0.5rem;
+    border-radius: var(--radius-md);
     font-size: 0.8rem;
     font-weight: 600;
     white-space: nowrap;
     cursor: pointer;
     transition: background 0.2s;
   }
-  
+
   .lesson-btn:hover {
-    background: var(--color-primary-dark, #2563eb);
+    background: var(--accent-dim);
   }
-  
+
   .lesson-item.completed .lesson-btn {
-    background: var(--color-success, #10b981);
+    background: var(--success);
   }
-  
+
   .lesson-item.completed .lesson-btn:hover {
-    background: var(--color-success-dark, #059669);
+    background: var(--success);
+    opacity: 0.85;
   }
-  
+
   .lesson-btn svg {
     width: 1rem;
     height: 1rem;
   }
-  
+
   .lesson-divider {
     height: 1px;
-    background: var(--color-border, #e5e7eb);
+    background: var(--border-default);
     margin: 0.5rem 0;
   }
-  
+
   .list-footer {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--color-border, #e5e7eb);
+    border-top: 1px solid var(--border-default);
   }
-  
+
   .progress-bar {
     width: 100%;
     height: 0.375rem;
-    background: var(--color-border, #e5e7eb);
+    background: var(--border-default);
     border-radius: 9999px;
     overflow: hidden;
   }
-  
+
   .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--color-success, #10b981), var(--color-primary, #3b82f6));
+    background: linear-gradient(90deg, var(--success), var(--accent));
     transition: width 0.3s;
   }
-  
+
   .progress-text {
     font-size: 0.75rem;
-    color: var(--color-text-secondary, #6b7280);
+    color: var(--text-secondary);
     text-align: right;
   }
-  
+
   @media (max-width: 640px) {
     .lesson-list {
       padding: 1rem;
       gap: 0.75rem;
     }
-    
+
     .list-header {
       padding-bottom: 0.75rem;
     }
-    
+
     .lesson-item {
       padding: 0.75rem;
       gap: 0.75rem;
     }
-    
+
     .lesson-btn {
       padding: 0.5rem;
       width: auto;

@@ -129,103 +129,103 @@
 
 <style>
   .definite-article-patterns {
-    margin-top: var(--spacing-3, 0.75rem);
-    padding: var(--spacing-3, 0.75rem);
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-    border-radius: var(--radius-md, 0.375rem);
-    border: 1px solid #fbbf24;
+    margin-top: var(--space-3);
+    padding: var(--space-3);
+    background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-elevated) 100%);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--warning);
   }
 
   .patterns-header {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-1, 0.25rem);
-    margin-bottom: var(--spacing-3, 0.75rem);
+    gap: var(--space-1);
+    margin-bottom: var(--space-3);
   }
 
   .patterns-header h5 {
     margin: 0;
     font-size: 0.875rem;
     font-weight: 600;
-    color: #92400e;
+    color: var(--warning);
   }
 
   .bulgarian-label {
     font-size: 0.75rem;
-    color: #b45309;
+    color: var(--text-secondary);
     font-style: italic;
   }
 
   .rules-grid {
     display: grid;
-    gap: var(--spacing-2, 0.5rem);
-    margin-bottom: var(--spacing-2, 0.5rem);
+    gap: var(--space-2);
+    margin-bottom: var(--space-2);
   }
 
   .rule-card {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: var(--spacing-2, 0.5rem);
-    padding: var(--spacing-2, 0.5rem);
-    background: white;
-    border-radius: var(--radius-sm, 0.25rem);
+    gap: var(--space-2);
+    padding: var(--space-2);
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
     align-items: center;
   }
 
   .suffix-badge {
     grid-row: 1 / 3;
-    padding: var(--spacing-1, 0.25rem) var(--spacing-2, 0.5rem);
-    background-color: #f59e0b;
-    color: white;
+    padding: var(--space-1) var(--space-2);
+    background-color: var(--warning);
+    color: var(--bg-base);
     font-weight: 700;
     font-size: 0.875rem;
-    border-radius: var(--radius-sm, 0.25rem);
+    border-radius: var(--radius-sm);
     white-space: nowrap;
   }
 
   .example {
     font-size: 1rem;
     font-weight: 600;
-    color: #1f2937;
-    font-family: 'Noto Sans', 'Segoe UI', sans-serif;
+    color: var(--text-primary);
+    font-family: var(--font-body);
   }
 
   .usage {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-1, 0.25rem);
+    gap: var(--space-1);
   }
 
   .usage-en {
     font-size: 0.75rem;
-    color: #6b7280;
+    color: var(--text-secondary);
   }
 
   .usage-bg {
     font-size: 0.75rem;
-    color: #b45309;
+    color: var(--warning);
     font-style: italic;
   }
 
   .plural-section {
-    border-top: 1px dashed #fbbf24;
-    padding-top: var(--spacing-2, 0.5rem);
-    margin-top: var(--spacing-2, 0.5rem);
+    border-top: 1px dashed var(--warning);
+    padding-top: var(--space-2);
+    margin-top: var(--space-2);
   }
 
   .plural-card {
-    background-color: #fffbeb;
-    border: 1px solid #fbbf24;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--warning);
   }
 
   .comparison-note {
     display: flex;
-    gap: var(--spacing-2, 0.5rem);
+    gap: var(--space-2);
     align-items: flex-start;
-    margin-top: var(--spacing-3, 0.75rem);
-    padding: var(--spacing-2, 0.5rem);
-    background-color: white;
-    border-radius: var(--radius-sm, 0.25rem);
+    margin-top: var(--space-3);
+    padding: var(--space-2);
+    background-color: var(--bg-card);
+    border-radius: var(--radius-sm);
     font-size: 0.75rem;
   }
 
@@ -235,7 +235,7 @@
 
   .comparison-note p {
     margin: 0;
-    color: #92400e;
+    color: var(--warning);
     line-height: 1.4;
   }
 

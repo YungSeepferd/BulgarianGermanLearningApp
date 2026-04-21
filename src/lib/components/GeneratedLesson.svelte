@@ -547,15 +547,16 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--font-body);
   }
 
   .fallback-lesson-message {
     text-align: center;
     padding: 2rem;
-    background: #fef2f2;
-    border-radius: 12px;
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
     margin: 2rem 0;
+    border: 1px solid var(--danger);
   }
 
   .fallback-icon {
@@ -584,13 +585,13 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(59, 130, 246, 0.1);
+    background: var(--accent-dim);
   }
 
   .lesson-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #1e293b;
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
     margin: 0;
   }
 
@@ -603,9 +604,9 @@
 
   .lesson-badge {
     padding: 0.25rem 0.75rem;
-    border-radius: 20px;
+    border-radius: var(--radius-full);
     font-size: 0.875rem;
-    font-weight: 600;
+    font-weight: var(--weight-semibold);
     border: 1px solid;
     display: inline-block;
   }
@@ -618,21 +619,21 @@
 
   .lesson-tag {
     padding: 0.25rem 0.75rem;
-    background: #f1f5f9;
-    border-radius: 20px;
+    background: var(--bg-surface);
+    border-radius: var(--radius-full);
     font-size: 0.75rem;
-    color: #475569;
-    border: 1px solid #e2e8f0;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-default);
   }
 
   .lesson-tag.more {
-    background: #e2e8f0;
+    background: var(--bg-elevated);
   }
 
   .lesson-description {
-    color: #64748b;
+    color: var(--text-secondary);
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: var(--leading-loose);
     margin-bottom: 1.5rem;
   }
 
@@ -644,13 +645,13 @@
     display: block;
     text-align: right;
     font-size: 0.875rem;
-    color: #64748b;
+    color: var(--text-secondary);
     margin-top: 0.5rem;
   }
 
   .lesson-objectives {
-    background: #f8fafc;
-    border-radius: 12px;
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
     padding: 1.5rem;
     margin-bottom: 2rem;
   }
@@ -664,15 +665,15 @@
 
   .objectives-header h3 {
     font-size: 1.25rem;
-    font-weight: 600;
-    color: #1e293b;
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
     margin: 0;
   }
 
   .toggle-objectives {
     background: none;
     border: none;
-    color: #3b82f6;
+    color: var(--accent);
     cursor: pointer;
     font-size: 0.875rem;
     text-decoration: underline;
@@ -706,31 +707,31 @@
 
   .objective-checkbox span {
     font-size: 0.95rem;
-    color: #475569;
+    color: var(--text-secondary);
   }
 
   .objective-checkbox span.completed {
     text-decoration: line-through;
-    color: #94a3b8;
+    color: var(--text-tertiary);
   }
 
   .more-objectives {
-    color: #3b82f6;
+    color: var(--accent);
     font-size: 0.875rem;
   }
 
   .more-objectives button {
     background: none;
     border: none;
-    color: #3b82f6;
+    color: var(--accent);
     cursor: pointer;
     text-decoration: underline;
     padding: 0;
   }
 
   .lesson-vocabulary {
-    background: #f8fafc;
-    border-radius: 12px;
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
     padding: 1.5rem;
     margin-bottom: 2rem;
   }
@@ -744,15 +745,15 @@
 
   .vocabulary-header h3 {
     font-size: 1.25rem;
-    font-weight: 600;
-    color: #1e293b;
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
     margin: 0;
   }
 
   .toggle-vocabulary {
     background: none;
     border: none;
-    color: #3b82f6;
+    color: var(--accent);
     cursor: pointer;
     font-size: 0.875rem;
     text-decoration: underline;
@@ -760,12 +761,12 @@
 
   .vocabulary-preview {
     font-size: 0.95rem;
-    color: #475569;
+    color: var(--text-secondary);
     line-height: 1.5;
   }
 
   .more-vocabulary {
-    color: #3b82f6;
+    color: var(--accent);
     font-size: 0.875rem;
   }
 
@@ -777,21 +778,21 @@
   }
 
   .vocabulary-item {
-    background: white;
-    border-radius: 8px;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
     padding: 1rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
   }
 
   .vocabulary-source {
-    font-weight: 600;
-    color: #1e293b;
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
   }
 
   .vocabulary-target {
-    color: #3b82f6;
+    color: var(--accent);
     margin-bottom: 0.5rem;
     opacity: 0.8;
     font-size: 0.95rem;
@@ -799,17 +800,17 @@
 
   .vocabulary-part-of-speech {
     font-size: 0.75rem;
-    color: #64748b;
-    background: #f1f5f9;
+    color: var(--text-tertiary);
+    background: var(--bg-surface);
     padding: 0.25rem 0.5rem;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     display: inline-block;
     margin-right: 0.5rem;
   }
 
   .vocabulary-difficulty {
     font-size: 0.75rem;
-    color: #f59e0b;
+    color: var(--warning);
   }
 
   .lesson-sections {
@@ -825,11 +826,12 @@
 
   .sections-navigation button {
     padding: 0.5rem 1rem;
-    background: #f1f5f9;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
     cursor: pointer;
     font-size: 0.875rem;
+    color: var(--text-primary);
   }
 
   .sections-navigation button:disabled {
@@ -839,14 +841,14 @@
 
   .section-indicator {
     font-size: 0.875rem;
-    color: #64748b;
+    color: var(--text-secondary);
   }
 
   .section-content {
-    background: white;
-    border-radius: 12px;
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
     padding: 2rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
   }
 
   .section-header {
@@ -854,7 +856,7 @@
     align-items: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--border-default);
     padding-bottom: 1rem;
   }
 
@@ -864,32 +866,32 @@
 
   .section-title {
     font-size: 1.5rem;
-    font-weight: 600;
-    color: #1e293b;
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
     margin: 0;
     flex: 1;
   }
 
   .section-type {
     padding: 0.25rem 0.75rem;
-    background: #f1f5f9;
-    border-radius: 20px;
+    background: var(--bg-surface);
+    border-radius: var(--radius-full);
     font-size: 0.75rem;
-    color: #475569;
+    color: var(--text-secondary);
   }
 
   .section-body {
-    line-height: 1.7;
+    line-height: var(--leading-loose);
   }
 
   .section-content-text {
     font-size: 1rem;
-    color: #334155;
+    color: var(--text-secondary);
   }
 
   .section-content-text :global(strong) {
-    font-weight: 600;
-    color: #1e293b;
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
   }
 
   .section-content-text :global(em) {
@@ -897,16 +899,17 @@
   }
 
   .section-content-text :global(code) {
-    background: #f1f5f9;
+    background: var(--bg-surface);
     padding: 0.1rem 0.3rem;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     font-family: monospace;
+    color: var(--accent);
   }
 
   .section-meta {
     margin-top: 1rem;
     font-size: 0.75rem;
-    color: #94a3b8;
+    color: var(--text-tertiary);
   }
 
   .sections-overview {
@@ -915,8 +918,8 @@
 
   .sections-overview h3 {
     font-size: 1.25rem;
-    font-weight: 600;
-    color: #1e293b;
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
     margin-bottom: 1rem;
   }
 
@@ -927,20 +930,20 @@
   }
 
   .section-overview-item {
-    background: #f8fafc;
-    border-radius: 8px;
+    background: var(--bg-surface);
+    border-radius: var(--radius-md);
     padding: 1rem;
     cursor: pointer;
-    transition: background 0.2s ease;
+    transition: background var(--duration-200) ease;
   }
 
   .section-overview-item:hover {
-    background: #f1f5f9;
+    background: var(--bg-card-hover);
   }
 
   .section-overview-item.active {
-    background: #e2e8f0;
-    border-left: 3px solid #3b82f6;
+    background: var(--bg-elevated);
+    border-left: 3px solid var(--accent);
   }
 
   .section-overview-icon {
@@ -949,20 +952,20 @@
   }
 
   .section-overview-title {
-    font-weight: 500;
-    color: #1e293b;
+    font-weight: var(--weight-medium);
+    color: var(--text-primary);
     margin-bottom: 0.25rem;
   }
 
   .section-overview-type {
     font-size: 0.75rem;
-    color: #64748b;
+    color: var(--text-tertiary);
   }
 
   .no-sections-message {
     text-align: center;
     padding: 2rem;
-    color: #64748b;
+    color: var(--text-tertiary);
     font-size: 1rem;
   }
 
@@ -979,7 +982,7 @@
     }
 
     .lesson-title {
-      font-size: 1.5rem;
+      font-size: var(--text-xl);
     }
 
     .sections-list {

@@ -316,7 +316,7 @@
   .modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.75);
+    background: var(--bg-overlay);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -326,22 +326,22 @@
   }
 
   .modal-content {
-    background: white;
-    border-radius: 1rem;
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
     max-width: 900px;
     width: 100%;
     max-height: calc(100vh - 2rem);
     overflow-y: auto;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-lg);
   }
 
   .modal-header {
     position: sticky;
     top: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    color: var(--bg-base);
     padding: 1.5rem;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -353,8 +353,8 @@
   }
 
   .word-title {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
     margin: 0 0 0.5rem 0;
     display: flex;
     align-items: baseline;
@@ -362,13 +362,13 @@
   }
 
   .article {
-    font-size: 1.5rem;
+    font-size: var(--text-xl);
     opacity: 0.9;
-    font-weight: 600;
+    font-weight: var(--weight-semibold);
   }
 
   .translation {
-    font-size: 1.25rem;
+    font-size: var(--text-lg);
     opacity: 0.95;
     margin: 0;
   }
@@ -376,7 +376,7 @@
   .close-btn {
     background: rgba(255, 255, 255, 0.2);
     border: none;
-    color: white;
+    color: var(--bg-base);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -384,7 +384,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background var(--duration-200);
   }
 
   .close-btn:hover {
@@ -401,8 +401,8 @@
 
   .section-title {
     font-size: 1.25rem;
-    font-weight: 700;
-    color: #1f2937;
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
     margin: 0 0 1rem 0;
     display: flex;
     align-items: center;
@@ -434,19 +434,19 @@
   }
 
   .label {
-    font-weight: 600;
-    color: #6b7280;
+    font-weight: var(--weight-semibold);
+    color: var(--text-tertiary);
   }
 
   .value {
-    color: #1f2937;
+    color: var(--text-primary);
     font-size: 1.125rem;
   }
 
   .table-wrapper {
     overflow-x: auto;
-    border-radius: 0.5rem;
-    border: 1px solid #e5e7eb;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-default);
   }
 
   .grammar-table {
@@ -458,13 +458,14 @@
   .grammar-table td {
     padding: 0.75rem;
     text-align: left;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--border-default);
+    color: var(--text-secondary);
   }
 
   .grammar-table th {
-    background: #f9fafb;
-    font-weight: 600;
-    color: #374151;
+    background: var(--bg-surface);
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
   }
 
   .grammar-table tr:last-child td {
@@ -472,8 +473,8 @@
   }
 
   .case-label {
-    font-weight: 600;
-    color: #667eea;
+    font-weight: var(--weight-semibold);
+    color: var(--accent);
   }
 
   .examples-list {
@@ -483,28 +484,28 @@
   }
 
   .example-card {
-    background: #f9fafb;
-    border-radius: 0.5rem;
+    background: var(--bg-surface);
+    border-radius: var(--radius-md);
     padding: 1rem;
-    border-left: 4px solid #667eea;
+    border-left: 4px solid var(--accent);
   }
 
   .example-german {
     font-size: 1.125rem;
-    color: #1f2937;
+    color: var(--text-primary);
     margin: 0 0 0.5rem 0;
-    font-weight: 500;
+    font-weight: var(--weight-medium);
   }
 
   .example-bulgarian {
     font-size: 1rem;
-    color: #4b5563;
+    color: var(--text-secondary);
     margin: 0 0 0.5rem 0;
   }
 
   .example-context {
     font-size: 0.875rem;
-    color: #6b7280;
+    color: var(--text-tertiary);
     font-style: italic;
     margin: 0 0 0.75rem 0;
   }
@@ -513,17 +514,17 @@
     display: flex;
     gap: 0.5rem;
     padding-top: 0.75rem;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid var(--border-default);
   }
 
   .literal-label {
-    font-weight: 600;
-    color: #6b7280;
+    font-weight: var(--weight-semibold);
+    color: var(--text-tertiary);
     font-size: 0.875rem;
   }
 
   .literal-text {
-    color: #1f2937;
+    color: var(--text-primary);
     font-size: 0.875rem;
   }
 
@@ -534,8 +535,8 @@
   }
 
   .note-text {
-    color: #374151;
-    line-height: 1.6;
+    color: var(--text-secondary);
+    line-height: var(--leading-loose);
     margin: 0;
   }
 
@@ -552,8 +553,8 @@
 
   .group-title {
     font-size: 1rem;
-    font-weight: 600;
-    color: #4b5563;
+    font-weight: var(--weight-semibold);
+    color: var(--text-secondary);
     margin: 0;
   }
 
@@ -565,24 +566,24 @@
 
   .word-pill {
     padding: 0.5rem 1rem;
-    border-radius: 999px;
+    border-radius: var(--radius-full);
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: var(--weight-medium);
   }
 
   .synonym {
-    background: #dbeafe;
-    color: #1e40af;
+    background: var(--accent-dim);
+    color: var(--accent);
   }
 
   .antonym {
-    background: #fee2e2;
-    color: #991b1b;
+    background: var(--accent-dim);
+    color: var(--danger);
   }
 
   @media (max-width: 640px) {
     .word-title {
-      font-size: 1.5rem;
+      font-size: var(--text-xl);
     }
 
     .translation {

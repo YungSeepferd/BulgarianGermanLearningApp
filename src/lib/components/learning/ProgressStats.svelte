@@ -109,17 +109,17 @@
 <style>
   .progress-stats {
     padding: var(--spacing-6, 1.5rem);
-    background-color: var(--color-bg-primary, #ffffff);
-    border: 1px solid var(--color-border, #e5e7eb);
-    border-radius: var(--radius-lg, 0.5rem);
-    box-shadow: var(--shadow-sm, 0 1px 2px 0 rgba(0, 0, 0, 0.05));
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
     min-width: 280px;
   }
 
   .stats-header h3 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--color-text-primary, #111827);
+    color: var(--text-primary);
     margin: 0 0 var(--spacing-4, 1rem) 0;
   }
 
@@ -153,14 +153,14 @@
     display: block;
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-text-primary, #111827);
+    color: var(--text-primary);
     line-height: 1;
   }
 
   .label {
     display: block;
     font-size: 0.75rem;
-    color: var(--color-text-secondary, #6b7280);
+    color: var(--text-secondary);
     margin-top: var(--spacing-1, 0.25rem);
   }
 
@@ -171,7 +171,7 @@
     gap: var(--spacing-3, 0.75rem);
     margin-bottom: var(--spacing-4, 1rem);
     padding-bottom: var(--spacing-4, 1rem);
-    border-bottom: 1px solid var(--color-border, #e5e7eb);
+    border-bottom: 1px solid var(--border-default);
   }
 
   .stat-item {
@@ -181,21 +181,21 @@
   .stat-value {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--color-text-primary, #111827);
+    color: var(--text-primary);
     margin-bottom: var(--spacing-1, 0.25rem);
   }
 
   .stat-value.correct {
-    color: #10b981;
+    color: var(--success);
   }
 
   .stat-value.incorrect {
-    color: #ef4444;
+    color: var(--danger);
   }
 
   .stat-label {
     font-size: 0.75rem;
-    color: var(--color-text-secondary, #6b7280);
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
@@ -206,8 +206,8 @@
     align-items: center;
     gap: var(--spacing-3, 0.75rem);
     padding: var(--spacing-3, 0.75rem);
-    background-color: var(--color-bg-tertiary, #eff6ff);
-    border-radius: var(--radius-md, 0.375rem);
+    background-color: var(--accent-dim);
+    border-radius: var(--radius-md);
     margin-bottom: var(--spacing-4, 1rem);
   }
 
@@ -222,7 +222,7 @@
   .review-label {
     font-size: 0.75rem;
     font-weight: 600;
-    color: var(--color-text-secondary, #6b7280);
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
@@ -230,7 +230,7 @@
   .review-date {
     font-size: 0.875rem;
     font-weight: 500;
-    color: var(--color-text-primary, #111827);
+    color: var(--text-primary);
     margin-top: var(--spacing-1, 0.25rem);
   }
 
@@ -246,8 +246,8 @@
     align-items: center;
     gap: var(--spacing-2, 0.5rem);
     padding: var(--spacing-2, 0.5rem);
-    background-color: var(--color-bg-secondary, #f9fafb);
-    border-radius: var(--radius-md, 0.375rem);
+    background-color: var(--bg-elevated);
+    border-radius: var(--radius-md);
   }
 
   .stat-icon {
@@ -257,7 +257,7 @@
   .stat-text {
     font-size: 0.875rem;
     font-weight: 500;
-    color: var(--color-text-primary, #111827);
+    color: var(--text-primary);
   }
 
   @media (max-width: 640px) {
@@ -274,8 +274,8 @@
       justify-content: space-between;
       align-items: center;
       padding: var(--spacing-2, 0.5rem);
-      background-color: var(--color-bg-secondary, #f9fafb);
-      border-radius: var(--radius-md, 0.375rem);
+      background-color: var(--bg-elevated);
+      border-radius: var(--radius-md);
     }
 
     .stat-label {

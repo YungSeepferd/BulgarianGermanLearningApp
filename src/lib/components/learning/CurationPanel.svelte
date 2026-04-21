@@ -305,7 +305,7 @@ Example:
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-color: white;
+    background-color: var(--bg-base);
     border-radius: var(--radius-lg, 0.5rem);
     overflow: hidden;
   }
@@ -315,8 +315,8 @@ Example:
     justify-content: space-between;
     align-items: flex-start;
     padding: var(--spacing-4, 1rem);
-    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-    border-bottom: 1px solid var(--color-border, #e5e7eb);
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border-default);
   }
 
   .word-info {
@@ -339,18 +339,18 @@ Example:
     margin: 0;
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--color-text-primary, #111827);
+    color: var(--text-primary);
   }
 
   .bulgarian {
     font-size: 1rem;
-    color: var(--color-text-secondary, #6b7280);
+    color: var(--text-secondary);
     font-family: 'Noto Sans', 'Segoe UI', sans-serif;
   }
 
   .transliteration {
     font-size: 0.875rem;
-    color: var(--color-text-muted, #9ca3af);
+    color: var(--text-tertiary);
     font-style: italic;
   }
 
@@ -386,7 +386,7 @@ Example:
     gap: var(--spacing-2, 0.5rem);
     font-weight: 600;
     font-size: 0.875rem;
-    color: var(--color-text-primary, #111827);
+    color: var(--text-primary);
   }
 
   .label-icon {
@@ -405,7 +405,7 @@ Example:
   .help-text {
     margin: 0;
     font-size: 0.75rem;
-    color: var(--color-text-secondary, #6b7280);
+    color: var(--text-secondary);
   }
 
   .direction-notes {
@@ -422,7 +422,7 @@ Example:
 
   :global(.direction-label) {
     font-size: 0.75rem;
-    color: var(--color-text-secondary, #6b7280);
+    color: var(--text-secondary);
   }
 
   .panel-footer {
@@ -430,8 +430,8 @@ Example:
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-4, 1rem);
-    border-top: 1px solid var(--color-border, #e5e7eb);
-    background-color: var(--color-bg-secondary, #f9fafb);
+    border-top: 1px solid var(--border-default);
+    background-color: var(--bg-surface);
   }
 
   .item-meta {
@@ -442,7 +442,7 @@ Example:
 
   .item-id {
     font-size: 0.75rem;
-    color: var(--color-text-muted, #9ca3af);
+    color: var(--text-tertiary);
     font-family: monospace;
   }
 
@@ -452,11 +452,11 @@ Example:
   }
 
   :global(.skip-btn) {
-    color: var(--color-text-secondary, #6b7280);
+    color: var(--text-secondary);
   }
 
   :global(.save-btn) {
-    background-color: #22c55e;
+    background-color: var(--success);
     color: white;
   }
 
@@ -476,7 +476,7 @@ Example:
     justify-content: center;
     padding: var(--spacing-12, 3rem);
     text-align: center;
-    color: var(--color-text-secondary, #6b7280);
+    color: var(--text-secondary);
   }
 
   .empty-icon {

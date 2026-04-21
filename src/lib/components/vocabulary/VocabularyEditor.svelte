@@ -612,61 +612,62 @@
 
 <style>
   .vocabulary-editor {
-    background: var(--color-surface, #fff);
-    border-radius: var(--border-radius, 8px);
-    padding: var(--spacing-lg, 1.5rem);
-    box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.1));
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-md);
   }
 
   .editor-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--spacing-lg, 1.5rem);
-    border-bottom: 2px solid var(--color-border, #e0e0e0);
-    padding-bottom: var(--spacing-md, 1rem);
+    margin-bottom: var(--space-6);
+    border-bottom: 2px solid var(--border-default);
+    padding-bottom: var(--space-4);
   }
 
   .editor-header h2 {
     margin: 0;
-    font-size: 1.5rem;
-    color: var(--color-text-primary, #333);
+    font-size: var(--text-xl);
+    color: var(--text-primary);
   }
 
   .btn-preview {
-    background: var(--color-secondary, #f0f0f0);
-    border: 1px solid var(--color-border, #d0d0d0);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
     padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: var(--radius-md);
     cursor: pointer;
-    font-weight: 500;
-    transition: all 0.2s ease;
+    font-weight: var(--weight-medium);
+    color: var(--text-primary);
+    transition: all var(--duration-200);
   }
 
   .btn-preview:hover {
-    background: var(--color-tertiary, #e8e8e8);
+    background: var(--bg-surface-hover);
   }
 
   /* Preview Panel */
   .preview-panel {
-    background: var(--color-background, #f9f9f9);
-    border: 1px solid var(--color-border, #e0e0e0);
-    border-radius: 6px;
-    padding: var(--spacing-lg, 1.5rem);
-    margin-bottom: var(--spacing-lg, 1.5rem);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+    margin-bottom: var(--space-6);
   }
 
   .preview-item {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md, 1rem);
+    gap: var(--space-4);
   }
 
   .preview-header {
-    padding: var(--spacing-md, 1rem);
-    background: white;
-    border-radius: 4px;
-    border-left: 4px solid var(--color-primary, #0070f3);
+    padding: var(--space-4);
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--accent);
   }
 
   .word-pair {
@@ -678,15 +679,15 @@
 
   .word {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: var(--weight-semibold);
   }
 
   .word.german {
-    color: var(--color-german, #d4a373);
+    color: var(--german-tint);
   }
 
   .word.bulgarian {
-    color: var(--color-bulgarian, #4a90e2);
+    color: var(--bulgarian-tint);
   }
 
   .arrow {
@@ -701,21 +702,21 @@
 
   .difficulty,
   .speech {
-    background: var(--color-primary, #0070f3);
-    color: white;
+    background: var(--accent);
+    color: var(--bg-base);
     padding: 0.25rem 0.75rem;
-    border-radius: 12px;
-    font-weight: 500;
+    border-radius: var(--radius-full);
+    font-weight: var(--weight-medium);
   }
 
   .pronunciation,
   .definitions,
   .examples,
   .warnings {
-    padding: var(--spacing-md, 1rem);
-    background: white;
-    border-radius: 4px;
-    border-left: 2px solid var(--color-secondary, #f0f0f0);
+    padding: var(--space-4);
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    border-left: 2px solid var(--border-default);
   }
 
   .pronunciation strong,
@@ -724,7 +725,7 @@
   .warnings strong {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--color-text-primary, #333);
+    color: var(--text-primary);
   }
 
   .lang-pair {
@@ -736,51 +737,52 @@
   .example {
     margin-bottom: 1rem;
     padding: 0.5rem;
-    background: var(--color-background, #f9f9f9);
-    border-radius: 3px;
+    background: var(--bg-surface);
+    border-radius: var(--radius-sm);
   }
 
   .example-text {
     margin: 0.25rem 0;
-    line-height: 1.5;
+    line-height: var(--leading-normal);
   }
 
   .context {
     display: inline-block;
     font-size: 0.75rem;
-    background: var(--color-secondary, #f0f0f0);
+    background: var(--bg-elevated);
     padding: 0.25rem 0.5rem;
-    border-radius: 3px;
+    border-radius: var(--radius-sm);
     margin-top: 0.25rem;
   }
 
   .warning {
     padding: 0.5rem;
-    background: #fff3cd;
-    border-left: 2px solid #ffc107;
-    border-radius: 3px;
+    background: var(--accent-dim);
+    border-left: 2px solid var(--warning);
+    border-radius: var(--radius-sm);
     margin: 0.25rem 0;
     font-size: 0.9rem;
+    color: var(--warning);
   }
 
   /* Form Sections */
   .editor-form {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-lg, 1.5rem);
+    gap: var(--space-6);
   }
 
   .form-section {
-    border: 1px solid var(--color-border, #e0e0e0);
-    border-radius: 6px;
-    padding: var(--spacing-md, 1rem);
-    background: white;
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    background: var(--bg-card);
   }
 
   .form-section legend {
     font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--color-text-primary, #333);
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
     padding: 0 0.5rem;
   }
 
@@ -788,7 +790,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-bottom: var(--spacing-md, 1rem);
+    margin-bottom: var(--space-4);
   }
 
   .form-group:last-child {
@@ -800,8 +802,8 @@
   }
 
   .form-group label {
-    font-weight: 500;
-    color: var(--color-text-primary, #333);
+    font-weight: var(--weight-medium);
+    color: var(--text-primary);
     font-size: 0.95rem;
   }
 
@@ -809,34 +811,36 @@
   .form-group textarea,
   .form-group select {
     padding: 0.75rem;
-    border: 1px solid var(--color-border, #d0d0d0);
-    border-radius: 4px;
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
     font-family: inherit;
     font-size: 1rem;
-    transition: border-color 0.2s ease;
+    background: var(--bg-card);
+    color: var(--text-primary);
+    transition: border-color var(--duration-150);
   }
 
   .form-group input:focus,
   .form-group textarea:focus,
   .form-group select:focus {
     outline: none;
-    border-color: var(--color-primary, #0070f3);
-    box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-dim);
   }
 
   .form-group input::placeholder,
   .form-group textarea::placeholder {
-    color: var(--color-text-tertiary, #999);
+    color: var(--text-tertiary);
   }
 
   .form-group .error {
-    color: #d32f2f;
+    color: var(--danger);
     font-size: 0.85rem;
     margin-top: 0.25rem;
   }
 
   .form-group .hint {
-    color: #f57c00;
+    color: var(--warning);
     font-size: 0.85rem;
     margin-top: 0.25rem;
     display: block;
@@ -845,19 +849,19 @@
   .form-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-md, 1rem);
+    gap: var(--space-4);
   }
 
   .example-group {
-    background: var(--color-background, #f9f9f9);
-    padding: var(--spacing-md, 1rem);
-    border-radius: 4px;
-    margin-bottom: var(--spacing-md, 1rem);
+    background: var(--bg-surface);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-4);
   }
 
   .example-group h4 {
-    margin: 0 0 var(--spacing-sm, 0.5rem) 0;
-    color: var(--color-text-secondary, #666);
+    margin: 0 0 var(--space-2, 0.5rem) 0;
+    color: var(--text-secondary);
     font-size: 0.9rem;
   }
 
@@ -866,24 +870,24 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: var(--spacing-md, 1rem);
+    margin-bottom: var(--space-4);
   }
 
   .tag {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: var(--color-primary, #0070f3);
-    color: white;
+    background: var(--accent);
+    color: var(--bg-base);
     padding: 0.5rem 1rem;
-    border-radius: 20px;
+    border-radius: var(--radius-full);
     font-size: 0.9rem;
   }
 
   .tag-remove {
     background: none;
     border: none;
-    color: white;
+    color: var(--bg-base);
     cursor: pointer;
     font-size: 1rem;
     padding: 0;
@@ -901,20 +905,20 @@
   .btn-small {
     padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 4px;
+    border-radius: var(--radius-md);
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: var(--weight-medium);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all var(--duration-200);
   }
 
   .btn-primary {
-    background: var(--color-primary, #0070f3);
-    color: white;
+    background: var(--accent);
+    color: var(--bg-base);
   }
 
   .btn-primary:hover:not(:disabled) {
-    background: var(--color-primary-dark, #0052cc);
+    background: var(--accent-dark);
   }
 
   .btn-primary:disabled {
@@ -923,22 +927,23 @@
   }
 
   .btn-secondary {
-    background: var(--color-secondary, #f0f0f0);
-    color: var(--color-text-primary, #333);
-    border: 1px solid var(--color-border, #d0d0d0);
+    background: var(--bg-surface);
+    color: var(--text-primary);
+    border: 1px solid var(--border-default);
   }
 
   .btn-secondary:hover:not(:disabled) {
-    background: var(--color-tertiary, #e8e8e8);
+    background: var(--bg-surface-hover);
   }
 
   .btn-danger {
-    background: #d32f2f;
-    color: white;
+    background: var(--danger);
+    color: var(--bg-base);
   }
 
   .btn-danger:hover:not(:disabled) {
-    background: #b71c1c;
+    background: var(--danger);
+    filter: brightness(0.9);
   }
 
   .btn-small {
@@ -948,18 +953,18 @@
 
   .form-actions {
     display: flex;
-    gap: var(--spacing-md, 1rem);
+    gap: var(--space-4);
     justify-content: flex-end;
-    padding-top: var(--spacing-md, 1rem);
-    border-top: 1px solid var(--color-border, #e0e0e0);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--border-default);
   }
 
   .error-summary {
-    background: #ffebee;
-    border: 1px solid #f5bdbd;
-    border-radius: 4px;
-    padding: var(--spacing-md, 1rem);
-    color: #c62828;
+    background: var(--accent-dim);
+    border: 1px solid var(--danger);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    color: var(--danger);
   }
 
   .error-summary h3 {
@@ -979,7 +984,7 @@
   /* Responsive */
   @media (max-width: 768px) {
     .vocabulary-editor {
-      padding: var(--spacing-md, 1rem);
+      padding: var(--space-4);
     }
 
     .form-row {

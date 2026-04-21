@@ -116,14 +116,14 @@
     padding: 1rem;
     border-radius: 0.5rem;
     border: 1px solid;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--shadow-lg);
     max-width: 400px;
     min-width: 300px;
     pointer-events: auto;
   }
 
   .toast:focus {
-    outline: 2px solid #3b82f6;
+    outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
 
@@ -164,17 +164,17 @@
     border-radius: 0.25rem;
     cursor: pointer;
     font-size: 1.25rem;
-    color: #6b7280;
+    color: var(--text-tertiary);
     transition: all 0.2s ease;
   }
 
   .toast-close:hover {
-    background: rgba(0, 0, 0, 0.05);
-    color: #1f2937;
+    background: var(--accent-dim);
+    color: var(--text-primary);
   }
 
   .toast-close:focus {
-    outline: 2px solid #3b82f6;
+    outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
 

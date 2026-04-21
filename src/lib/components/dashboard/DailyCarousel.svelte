@@ -216,17 +216,13 @@
   .title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #0f172a;
+    color: var(--text-primary);
     margin: 0;
-  }
-
-  :global(.dark) .title {
-    color: #f1f5f9;
   }
 
   .subtitle {
     font-size: 0.875rem;
-    color: #64748b;
+    color: var(--text-secondary);
     margin: 0;
   }
 
@@ -235,8 +231,8 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    background: #3b82f6;
-    color: white;
+    background: var(--accent);
+    color: var(--bg-base);
     border: none;
     border-radius: 9999px;
     font-size: 0.875rem;
@@ -246,7 +242,8 @@
   }
 
   .reset-btn:hover {
-    background: #2563eb;
+    background: var(--accent);
+    opacity: 0.9;
   }
 
   /* Progress dots */
@@ -261,8 +258,8 @@
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    border: 2px solid #e2e8f0;
-    background: white;
+    border: 2px solid var(--border-default);
+    background: var(--bg-card);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -270,36 +267,30 @@
     transition: all 0.2s ease;
     font-size: 0.75rem;
     font-weight: 600;
-    color: #64748b;
-  }
-
-  :global(.dark) .dot {
-    border-color: #334155;
-    background: #1e293b;
-    color: #94a3b8;
+    color: var(--text-secondary);
   }
 
   .dot.current {
-    border-color: #3b82f6;
-    background: #3b82f6;
-    color: white;
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--bg-base);
     transform: scale(1.1);
   }
 
   .dot.known {
-    border-color: #22c55e;
-    background: #22c55e;
-    color: white;
+    border-color: var(--success);
+    background: var(--success);
+    color: var(--bg-base);
   }
 
   .dot.practice {
-    border-color: #f59e0b;
-    background: #f59e0b;
-    color: white;
+    border-color: var(--warning);
+    background: var(--warning);
+    color: var(--bg-base);
   }
 
   .dot:hover:not(.current):not(.known):not(.practice) {
-    border-color: #3b82f6;
+    border-color: var(--accent);
   }
 
   .dot-icon {
@@ -326,23 +317,16 @@
     text-align: center;
     gap: 1rem;
     padding: 2rem;
-    background: #f8fafc;
+    background: var(--bg-surface);
     border-radius: 1.5rem;
-    border: 2px dashed #e2e8f0;
-  }
-
-  :global(.dark) .loading-state,
-  :global(.dark) .empty-state,
-  :global(.dark) .complete-state {
-    background: #1e293b;
-    border-color: #334155;
+    border: 2px dashed var(--border-default);
   }
 
   .spinner {
     width: 3rem;
     height: 3rem;
-    border: 3px solid #e2e8f0;
-    border-top-color: #3b82f6;
+    border: 3px solid var(--border-default);
+    border-top-color: var(--accent);
     border-radius: 50%;
     animation: spin 1s linear infinite;
   }
@@ -358,16 +342,12 @@
 
   .complete-state h3 {
     font-size: 1.5rem;
-    color: #0f172a;
+    color: var(--text-primary);
     margin: 0;
   }
 
-  :global(.dark) .complete-state h3 {
-    color: #f1f5f9;
-  }
-
   .complete-state p {
-    color: #64748b;
+    color: var(--text-secondary);
     margin: 0;
   }
 
@@ -391,21 +371,21 @@
 
   .stat-label {
     font-size: 0.875rem;
-    color: #64748b;
+    color: var(--text-secondary);
   }
 
   .stat.known .stat-value {
-    color: #22c55e;
+    color: var(--success);
   }
 
   .stat.practice .stat-value {
-    color: #f59e0b;
+    color: var(--warning);
   }
 
   .practice-weak-btn {
     padding: 0.75rem 1.5rem;
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-    color: white;
+    background: var(--accent);
+    color: var(--bg-base);
     border: none;
     border-radius: 9999px;
     font-size: 1rem;
@@ -416,7 +396,7 @@
 
   .practice-weak-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+    box-shadow: var(--shadow-md);
   }
 
   /* Instructions footer */
@@ -433,15 +413,15 @@
     align-items: center;
     gap: 0.25rem;
     font-size: 0.75rem;
-    color: #64748b;
+    color: var(--text-secondary);
   }
 
   .instruction.left {
-    color: #f59e0b;
+    color: var(--warning);
   }
 
   .instruction.right {
-    color: #22c55e;
+    color: var(--success);
   }
 
   .instruction.center {

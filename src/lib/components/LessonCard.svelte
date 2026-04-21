@@ -330,8 +330,8 @@
     transform-style: preserve-3d;
     transition: transform 0.6s;
     border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    background: white;
+    box-shadow: var(--shadow-md);
+    background: var(--bg-base);
     overflow: hidden;
   }
 
@@ -356,7 +356,7 @@
 
   .lesson-card-back {
     transform: rotateY(180deg);
-    background: #f8fafc;
+    background: var(--bg-surface);
   }
 
   .lesson-header {
@@ -389,13 +389,13 @@
   .lesson-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #1e293b;
+    color: var(--text-primary);
     margin-bottom: 8px;
     line-height: 1.5;
   }
 
   .lesson-description {
-    color: #64748b;
+    color: var(--text-secondary);
     font-size: 0.875rem;
     line-height: 1.5;
     margin-bottom: 16px;
@@ -407,7 +407,7 @@
 
   .progress-bar-container {
     height: 6px;
-    background: #e2e8f0;
+    background: var(--border-default);
     border-radius: 3px;
     margin-bottom: 6px;
     overflow: hidden;
@@ -415,14 +415,14 @@
 
   .progress-bar {
     height: 100%;
-    background: #3b82f6;
+    background: var(--accent);
     border-radius: 3px;
     transition: width 0.3s ease;
   }
 
   .progress-text {
     font-size: 0.75rem;
-    color: #64748b;
+    color: var(--text-secondary);
     font-weight: 500;
   }
 
@@ -438,11 +438,11 @@
 
   .vocabulary-tag {
     padding: 4px 10px;
-    background: #f1f5f9;
+    background: var(--bg-surface);
     border-radius: 20px;
     font-size: 0.75rem;
-    color: #475569;
-    border: 1px solid #e2e8f0;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-default);
     max-width: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -450,16 +450,16 @@
   }
 
   .vocabulary-tag.more {
-    background: #e2e8f0;
+    background: var(--border-default);
   }
 
   .show-more-button {
     padding: 4px 8px;
-    background: #f1f5f9;
+    background: var(--bg-surface);
     border-radius: 20px;
     font-size: 0.75rem;
-    color: #475569;
-    border: 1px solid #e2e8f0;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-default);
     cursor: pointer;
     margin-left: 4px;
   }
@@ -482,30 +482,30 @@
   }
 
   .action-button.primary {
-    background: #3b82f6;
+    background: var(--accent);
     color: white;
   }
 
   .action-button.primary:hover {
-    background: #2563eb;
+    background: var(--accent-dim);
   }
 
   .action-button.secondary {
-    background: #e2e8f0;
-    color: #475569;
+    background: var(--border-default);
+    color: var(--text-secondary);
   }
 
   .action-button.secondary:hover {
-    background: #cbd5e1;
+    background: var(--border-subtle);
   }
 
   .back-button {
     padding: 6px 12px;
-    background: #f1f5f9;
+    background: var(--bg-surface);
     border-radius: 6px;
     font-size: 0.875rem;
-    color: #475569;
-    border: 1px solid #e2e8f0;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-default);
     cursor: pointer;
   }
 
@@ -516,7 +516,7 @@
   .lesson-objectives h4 {
     font-size: 1rem;
     font-weight: 600;
-    color: #1e293b;
+    color: var(--text-primary);
     margin-bottom: 12px;
   }
 
@@ -541,9 +541,53 @@
     margin: 0;
   }
 
-  .objective-checkbox span {
+.objective-checkbox span {
     font-size: 0.875rem;
-    color: #475569;
+    color: var(--text-secondary);
+  }
+
+  .objective-checkbox span.completed {
+    text-decoration: line-through;
+    color: var(--text-tertiary);
+  }
+
+  .lesson-vocabulary-details h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+  }
+
+  .vocabulary-counter {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+
+  .vocabulary-navigation button {
+    padding: 6px;
+    background: var(--bg-surface);
+    border-radius: 50%;
+    border: 1px solid var(--border-default);
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .vocabulary-navigation button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .vocabulary-card {
+    background: var(--bg-base);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
   }
 
   .objective-checkbox span.completed {
@@ -605,11 +649,11 @@
   }
 
   .vocabulary-language.german {
-    color: #1e293b;
+    color: var(--text-primary);
   }
 
   .vocabulary-language.bulgarian {
-    color: #3b82f6;
+    color: var(--accent);
     font-size: 1.25rem;
   }
 
@@ -622,26 +666,26 @@
 
   .part-of-speech {
     padding: 2px 8px;
-    background: #f1f5f9;
+    background: var(--bg-surface);
     border-radius: 12px;
     font-size: 0.75rem;
-    color: #475569;
+    color: var(--text-secondary);
   }
 
   .difficulty-indicator {
-    color: #f59e0b;
+    color: var(--warning);
   }
 
   .vocabulary-list {
     max-height: 200px;
     overflow-y: auto;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-default);
     border-radius: 8px;
   }
 
   .vocabulary-list-item {
     padding: 12px 16px;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--border-default);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -653,20 +697,20 @@
   }
 
   .vocabulary-list-item.active {
-    background: #f1f5f9;
+    background: var(--bg-surface);
   }
 
   .vocabulary-list-item:hover {
-    background: #f8fafc;
+    background: var(--bg-elevated);
   }
 
   .vocab-german {
     font-weight: 500;
-    color: #1e293b;
+    color: var(--text-primary);
   }
 
   .vocab-bulgarian {
-    color: #64748b;
+    color: var(--text-secondary);
     font-size: 0.875rem;
   }
 

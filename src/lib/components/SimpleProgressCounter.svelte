@@ -68,7 +68,7 @@
     grid-template-columns: repeat(3, 1fr); /* Force 3 columns on desktop */
     gap: 1.5rem;
     padding: 2rem;
-    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    background: var(--bg-elevated);
     border-radius: 0.75rem;
     margin: 2rem 0;
   }
@@ -82,15 +82,15 @@
   .stat-card {
     text-align: center;
     padding: 1.5rem;
-    background: white;
+    background: var(--bg-base);
     border-radius: 0.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
     transition: transform 0.2s, box-shadow 0.2s;
   }
 
   .stat-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
   }
 
   .stat-icon {
@@ -100,7 +100,7 @@
 
   .stat-label {
     font-size: 0.875rem;
-    color: #6b7280;
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
     font-weight: 500;
   }
@@ -108,7 +108,7 @@
   .stat-value {
     font-size: 1.875rem;
     font-weight: 700;
-    color: #1f2937;
+    color: var(--text-primary);
   }
 
   @media (max-width: 640px) {

@@ -772,7 +772,7 @@
   /* Response time styling */
   .response-time {
     font-size: 0.8rem;
-    color: #6c757d;
+    color: var(--text-secondary);
     margin-left: 0.5rem;
   }
 
@@ -790,7 +790,7 @@
 
   .header h2 {
     margin: 0;
-    color: #2c3e50;
+    color: var(--text-primary);
     font-size: 1.8rem;
   }
 
@@ -799,7 +799,7 @@
     gap: 2rem;
     margin-bottom: 2rem;
     padding: 1rem;
-    background: #f8f9fa;
+    background: var(--bg-surface);
     border-radius: 8px;
   }
 
@@ -811,14 +811,14 @@
 
   .stat-label {
     font-size: 0.9rem;
-    color: #6c757d;
+    color: var(--text-secondary);
     margin-bottom: 0.25rem;
   }
 
   .stat-value {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--text-primary);
   }
 
   .loading {
@@ -829,8 +829,8 @@
   .spinner {
     width: 40px;
     height: 40px;
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #007bff;
+    border: 4px solid var(--bg-elevated);
+    border-top: 4px solid var(--accent);
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin: 0 auto 1rem;
@@ -844,20 +844,20 @@
   .error {
     text-align: center;
     padding: 2rem;
-    color: #dc3545;
-    background: #fef2f2;
+    color: var(--danger);
+    background: rgba(248, 113, 113, 0.1);
     border-radius: 12px;
-    border: 1px solid #fecaca;
+    border: 1px solid rgba(248, 113, 113, 0.3);
   }
 
   .error-message {
     padding: 1.5rem;
-    background: #fef2f2;
+    background: rgba(248, 113, 113, 0.1);
     border-radius: 12px;
-    color: #ef4444;
+    color: var(--danger);
     margin: 2rem 0;
     text-align: center;
-    border: 1px solid #fecaca;
+    border: 1px solid rgba(248, 113, 113, 0.3);
   }
 
   .error-message .error-icon {
@@ -868,12 +868,12 @@
   .error-message h3 {
     margin: 0 0 1rem 0;
     font-size: 1.5rem;
-    color: #dc2626;
+    color: var(--danger);
   }
 
   .error-message p {
     margin: 0 0 1.5rem 0;
-    color: #b91c1c;
+    color: var(--text-secondary);
   }
 
   .error-message .error-actions {
@@ -884,10 +884,10 @@
   }
 
   .practice-card {
-    background: white;
+    background: var(--bg-card);
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
   }
 
   .question-section {
@@ -904,7 +904,7 @@
   .question-text {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #2c3e50;
+    color: var(--text-primary);
     margin-bottom: 1rem;
     line-height: 1.2;
   }
@@ -914,11 +914,11 @@
     justify-content: center;
     gap: 1rem;
     font-size: 0.9rem;
-    color: #6c757d;
+    color: var(--text-secondary);
   }
 
   .category, .difficulty {
-    background: #e9ecef;
+    background: var(--bg-elevated);
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
   }
@@ -937,14 +937,16 @@
   .answer-input {
     flex: 1;
     padding: 1rem;
-    border: 2px solid #dee2e6;
+    border: 2px solid var(--border-default);
     border-radius: 8px;
     font-size: 1.1rem;
+    background: var(--bg-elevated);
+    color: var(--text-primary);
   }
 
   .answer-input:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: var(--accent);
   }
 
   .feedback-section {
@@ -957,13 +959,13 @@
   }
 
   .feedback-section.correct {
-    background: #d4edda;
-    border: 1px solid #c3e6cb;
+    background: rgba(52, 211, 153, 0.15);
+    border: 1px solid rgba(52, 211, 153, 0.3);
   }
 
   .feedback-section.incorrect {
-    background: #f8d7da;
-    border: 1px solid #f5c6cb;
+    background: rgba(248, 113, 113, 0.15);
+    border: 1px solid rgba(248, 113, 113, 0.3);
   }
 
   .feedback-icon {
@@ -988,18 +990,18 @@
   .examples-section {
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid #dee2e6;
+    border-top: 1px solid var(--border-default);
   }
 
   .examples-section h4 {
     margin-bottom: 1rem;
-    color: #2c3e50;
+    color: var(--text-primary);
   }
 
   .example {
     margin-bottom: 1rem;
     padding: 1rem;
-    background: #f8f9fa;
+    background: var(--bg-surface);
     border-radius: 6px;
   }
 
@@ -1021,12 +1023,12 @@
 
   .search-header h3 {
     margin: 0;
-    color: #2c3e50;
+    color: var(--text-primary);
   }
 
   .search-direction {
     font-size: 0.9rem;
-    color: #6c757d;
+    color: var(--text-secondary);
   }
 
   .search-input-group {
@@ -1036,15 +1038,17 @@
   .search-input {
     width: 100%;
     padding: 1rem;
-    border: 2px solid #dee2e6;
+    border: 2px solid var(--border-default);
     border-radius: 8px;
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
+    background: var(--bg-elevated);
+    color: var(--text-primary);
   }
 
   .search-input:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: var(--accent);
   }
 
   @media (max-width: 768px) {
@@ -1091,12 +1095,12 @@
   .recommendations-section {
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid #dee2e6;
+    border-top: 1px solid var(--border-default);
   }
 
   .recommendations-section h4 {
     margin-bottom: 1rem;
-    color: #2c3e50;
+    color: var(--text-primary);
     font-size: 1.1rem;
     font-weight: 600;
   }
@@ -1111,8 +1115,8 @@
     flex: 1;
     min-width: 200px;
     padding: 1rem;
-    background: #f8f9fa;
-    border: 1px solid #dee2e6;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -1120,27 +1124,27 @@
   }
 
   .recommendation-item:hover {
-    background: #e9ecef;
+    background: var(--bg-card-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
   }
 
   .recommendation-item:focus {
-    outline: 2px solid #007bff;
+    outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
 
   .rec-text {
     display: block;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
   }
 
   .rec-meta {
     display: block;
     font-size: 0.8rem;
-    color: #6c757d;
+    color: var(--text-secondary);
   }
 
   /* Enhanced mobile responsiveness */

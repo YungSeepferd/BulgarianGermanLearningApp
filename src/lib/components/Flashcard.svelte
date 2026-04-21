@@ -314,7 +314,7 @@
   }
 
   .flashcard:focus-visible {
-    outline: 3px solid var(--color-focus-ring, #0d6efd);
+    outline: 3px solid var(--accent);
     outline-offset: 4px;
   }
 
@@ -327,16 +327,16 @@
     font-size: 0.875rem;
     font-weight: 600;
     text-transform: uppercase;
-    background: #f1f5f9;
-    color: #64748b;
+    background: var(--bg-surface);
+    color: var(--text-secondary);
   }
 
-  .level-badge.a1 { background: #dcfce7; color: #166534; }
-  .level-badge.a2 { background: #bbf7d0; color: #15803d; }
-  .level-badge.b1 { background: #dbeafe; color: #1e40af; }
-  .level-badge.b2 { background: #bfdbfe; color: #1d4ed8; }
-  .level-badge.c1 { background: #f3e8ff; color: #6b21a8; }
-  .level-badge.c2 { background: #e9d5ff; color: #7e22ce; }
+  .level-badge.a1 { background: var(--accent-dim); color: var(--accent); }
+  .level-badge.a2 { background: rgba(168, 85, 247, 0.12); color: #c084fc; }
+  .level-badge.b1 { background: rgba(251, 191, 36, 0.12); color: var(--warning); }
+  .level-badge.b2 { background: rgba(249, 115, 22, 0.12); color: #fb923c; }
+  .level-badge.c1 { background: rgba(168, 85, 247, 0.12); color: #c084fc; }
+  .level-badge.c2 { background: rgba(168, 85, 247, 0.15); color: #a855f7; }
 
   .audio-button {
     background: none;
@@ -357,7 +357,7 @@
   }
 
   .audio-button:focus-visible {
-    outline: 3px solid var(--color-focus-ring, #0d6efd);
+    outline: 3px solid var(--accent);
     outline-offset: 2px;
   }
 
@@ -373,12 +373,12 @@
 
   .declension-block { margin-top: var(--space-3); }
   .declension-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
-  .declension-case { text-align: left; padding: var(--space-1) var(--space-2); color: var(--color-neutral-text); }
+  .declension-case { text-align: left; padding: var(--space-1) var(--space-2); color: var(--text-secondary); }
   .declension-form { padding: var(--space-1) var(--space-2); }
   .external-links { margin-top: var(--space-3); }
   .links-list { display: flex; gap: var(--space-2); flex-wrap: wrap; }
-  .ext-link { color: var(--color-primary-dark); text-decoration: underline; }
-  .ext-link:focus-visible { outline: 3px solid var(--color-focus-ring, #0d6efd); outline-offset: 2px; }
+  .ext-link { color: var(--accent); text-decoration: underline; }
+  .ext-link:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
   .flashcard.flipped {
     transform: rotateY(180deg);
@@ -396,8 +396,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: white;
-    border: 1px solid var(--color-neutral-border);
+    background: var(--bg-card);
+    border: 1px solid var(--border-default);
   }
 
   .flashcard-back {
@@ -427,7 +427,7 @@
 
   .part-of-speech {
     font-size: var(--text-sm);
-    color: var(--color-neutral-text);
+    color: var(--text-secondary);
     margin: 0;
     text-transform: capitalize;
   }
@@ -436,19 +436,19 @@
     font-size: var(--text-3xl);
     font-weight: var(--font-extrabold);
     text-align: center;
-    color: var(--color-neutral-dark);
+    color: var(--text-primary);
     margin: var(--space-2) 0;
   }
 
   .pronunciation {
     font-family: monospace;
-    color: var(--color-neutral-text);
+    color: var(--text-tertiary);
     margin: 0;
   }
 
   .flip-hint {
     font-size: var(--text-sm);
-    color: var(--color-neutral-text-light);
+    color: var(--text-tertiary);
     margin-top: auto;
   }
 
@@ -457,7 +457,7 @@
     flex-direction: column;
     gap: var(--space-4);
     width: 100%;
-    color: var(--color-neutral-dark);
+    color: var(--text-primary);
   }
 
   .translation-block {
@@ -467,7 +467,7 @@
   .translation-label {
     margin: 0;
     font-size: var(--text-sm);
-    color: var(--color-neutral-text-light);
+    color: var(--text-tertiary);
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
@@ -483,15 +483,15 @@
   .composition-summary,
   .examples,
   .phrase-breakdown {
-    background: var(--color-neutral-lighter);
-    border: 1px solid var(--color-neutral-border);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
     border-radius: var(--border-radius-xl);
     padding: var(--space-4);
   }
 
   .enrichment-block {
-    background: var(--color-primary-light);
-    border: 1px solid var(--color-primary-lighter);
+    background: var(--accent-dim);
+    border: 1px solid var(--accent);
     border-radius: var(--border-radius-xl);
     padding: var(--space-4);
   }
@@ -516,13 +516,13 @@
     margin: 0;
     font-size: var(--text-base);
     font-weight: var(--font-bold);
-    color: var(--color-neutral-dark);
+    color: var(--text-primary);
   }
 
   .section-body {
     margin: var(--space-1) 0 0 0;
     font-size: var(--text-base);
-    color: var(--color-neutral-text-dark);
+    color: var(--text-secondary);
     line-height: 1.45;
   }
 
@@ -536,7 +536,7 @@
     margin: 0;
     font-size: var(--text-base);
     font-weight: var(--font-bold);
-    color: var(--color-neutral-dark);
+    color: var(--text-primary);
     text-align: center;
   }
 
@@ -559,26 +559,26 @@
     display: flex;
     justify-content: center;
     gap: var(--space-1);
-    color: var(--color-neutral-dark);
+    color: var(--text-primary);
   }
 
   .breakdown-meaning {
     font-size: var(--text-base);
-    color: var(--color-neutral-text);
+    color: var(--text-secondary);
   }
 
   .breakdown-note {
     font-size: var(--text-sm);
-    color: var(--color-neutral-text-light);
+    color: var(--text-tertiary);
   }
 
   .connector {
-    color: var(--color-neutral-text-light);
+    color: var(--text-tertiary);
   }
 
   .composition-summary {
     font-size: var(--text-base);
-    color: var(--color-neutral-text-dark);
+    color: var(--text-secondary);
   }
 
 
@@ -597,10 +597,39 @@
     }
   }
 
-  .mnemonic-highlight {
-    background-color: var(--color-warning-lighter);
-    border-left: 4px solid var(--color-warning);
+.mnemonic-highlight {
+    background-color: rgba(251, 191, 36, 0.12);
+    border-left: 4px solid var(--warning);
     font-style: italic;
+  }
+
+  .audio-container {
+    margin-bottom: var(--space-4);
+    display: flex;
+    justify-content: center;
+  }
+
+  .flashcard-container {
+    perspective: 1000px;
+    width: min(420px, 100%);
+    height: clamp(320px, 65vw, 520px);
+    max-height: 80vh;
+    margin: 0 auto;
+    pointer-events: auto;
+  }
+
+  .flashcard {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    background: transparent;
+    border: none;
+    overflow: hidden;
   }
 
   .audio-container {

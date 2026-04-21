@@ -105,8 +105,8 @@
     left: 0;
     width: 100%;
     padding: 1rem 1rem 2rem 1rem;
-    background: white;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.05);
+    background: var(--bg-elevated);
+    box-shadow: var(--shadow-lg);
     z-index: 50;
   }
 
@@ -121,35 +121,37 @@
   .answer-input {
     flex: 1;
     padding: 1rem;
-    border: 2px solid #e2e8f0;
-    border-radius: 0.75rem;
+    border: 2px solid var(--border-default);
+    border-radius: var(--radius-md);
     font-size: 1.125rem;
-    transition: all 0.2s;
+    background: var(--bg-card);
+    color: var(--text-primary);
+    transition: all var(--duration-200);
   }
 
   .answer-input:focus {
     outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-dim);
   }
 
   .check-btn, .next-btn {
     padding: 1rem 2rem;
     border: none;
-    border-radius: 0.75rem;
+    border-radius: var(--radius-md);
     font-weight: 700;
     font-size: 1rem;
     cursor: pointer;
-    transition: transform 0.1s;
+    transition: transform var(--duration-75);
   }
 
   .check-btn {
-    background: #3b82f6;
-    color: white;
+    background: var(--accent);
+    color: var(--bg-base);
   }
 
   .check-btn:disabled {
-    background: #94a3b8;
+    background: var(--text-tertiary);
     cursor: not-allowed;
   }
 
@@ -159,8 +161,8 @@
 
   .next-btn {
     width: 100%;
-    background: #22c55e;
-    color: white;
+    background: var(--success);
+    color: var(--bg-base);
   }
 
   /* Feedback State */
@@ -172,8 +174,8 @@
     padding: 0.5rem;
   }
 
-  .feedback-message.correct .text h3 { color: #16a34a; }
-  .feedback-message.incorrect .text h3 { color: #dc2626; }
+  .feedback-message.correct .text h3 { color: var(--success); }
+  .feedback-message.incorrect .text h3 { color: var(--danger); }
 
   .text h3 {
     margin: 0;
@@ -183,7 +185,7 @@
   .text p {
     margin: 0.25rem 0 0 0;
     font-size: 0.875rem;
-    color: #64748b;
+    color: var(--text-secondary);
   }
 
   .icon {

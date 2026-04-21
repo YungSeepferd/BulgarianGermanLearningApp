@@ -499,11 +499,10 @@
   .vocabulary-card {
     display: flex;
     flex-direction: column;
-    background-color: white;
-    border: 1px solid #e5e7eb;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-default);
     border-radius: 8px;
     transition: all 0.2s ease;
-    /* cursor: pointer; - Moved to card-main-area */
   }
 
   .card-main-area {
@@ -516,19 +515,19 @@
   }
 
   .card-main-area:focus-visible {
-    outline: 2px solid #2563eb;
+    outline: 2px solid var(--accent);
     outline-offset: 2px;
     border-radius: 4px;
   }
 
   .vocabulary-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-color: #d1d5db;
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-default);
   }
 
   .vocabulary-card.selected {
-    background-color: #eff6ff;
-    border-color: #3b82f6;
+    background-color: var(--accent-dim);
+    border-color: var(--accent);
   }
 
   /* GRID VARIANT STYLES */
@@ -567,42 +566,42 @@
     letter-spacing: 0.025em;
     z-index: 10;
     text-transform: uppercase;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-sm);
   }
 
   /* A1 - Beginner - Blue */
   .cefr-badge[data-level="A1"] {
-    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-    color: #1e40af;
-    border: 1px solid #3b82f6;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.25) 100%);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.4);
   }
 
   /* A2 - Elementary - Purple */
   .cefr-badge[data-level="A2"] {
-    background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%);
-    color: #6b21a8;
-    border: 1px solid #9333ea;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(168, 85, 247, 0.25) 100%);
+    color: #c084fc;
+    border: 1px solid rgba(168, 85, 247, 0.4);
   }
 
   /* B1 - Intermediate - Yellow */
   .cefr-badge[data-level="B1"] {
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-    color: #92400e;
-    border: 1px solid #f59e0b;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(251, 191, 36, 0.25) 100%);
+    color: var(--warning);
+    border: 1px solid rgba(251, 191, 36, 0.4);
   }
 
   /* B2 - Upper Intermediate - Orange */
   .cefr-badge[data-level="B2"] {
-    background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
-    color: #9a3412;
-    border: 1px solid #f97316;
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(249, 115, 22, 0.25) 100%);
+    color: #fb923c;
+    border: 1px solid rgba(249, 115, 22, 0.4);
   }
 
   /* C1 - Advanced - Red */
   .cefr-badge[data-level="C1"] {
-    background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
-    color: #991b1b;
-    border: 1px solid #ef4444;
+    background: linear-gradient(135deg, rgba(248, 113, 113, 0.15) 0%, rgba(248, 113, 113, 0.25) 100%);
+    color: var(--danger);
+    border: 1px solid rgba(248, 113, 113, 0.4);
   }
 
   .variant-list .cefr-badge {
@@ -611,18 +610,18 @@
   }
 
   .cerf-tag {
-    background-color: #dbeafe;
-    color: #0c4a6e;
+    background-color: var(--accent-dim);
+    color: var(--accent);
   }
 
   .category-tag {
-    background-color: #f0fdf4;
-    color: #166534;
+    background-color: rgba(52, 211, 153, 0.12);
+    color: var(--success);
   }
 
   .pos-tag {
-    background-color: #fdf2f8;
-    color: #831843;
+    background-color: rgba(168, 85, 247, 0.12);
+    color: #c084fc;
   }
 
   .card-content {
@@ -644,17 +643,17 @@
   }
 
   .vocab-term.source-lang {
-    color: #1f2937;
+    color: var(--text-primary);
     flex: 1;
   }
 
   .vocab-term.target-lang {
-    color: #0369a1;
+    color: var(--accent);
     flex: 1;
   }
 
   .vocab-arrow {
-    color: #9ca3af;
+    color: var(--text-tertiary);
     font-weight: 300;
     flex-shrink: 0;
   }
@@ -664,10 +663,10 @@
     align-items: flex-start;
     gap: 0.5rem;
     padding: 0.75rem;
-    background-color: #f9fafb;
+    background-color: var(--bg-surface);
     border-radius: 6px;
     font-size: 0.85rem;
-    color: #4b5563;
+    color: var(--text-secondary);
     line-height: 1.4;
   }
 
@@ -690,7 +689,7 @@
     align-items: center;
     gap: 0.75rem;
     padding-top: 0.75rem;
-    border-top: 1px solid #f3f4f6;
+    border-top: 1px solid var(--border-subtle);
   }
 
   .checkbox-label {
@@ -703,7 +702,7 @@
     width: 1.25rem;
     height: 1.25rem;
     cursor: pointer;
-    accent-color: #3b82f6;
+    accent-color: var(--accent);
   }
 
   /* LIST VARIANT STYLES */
@@ -738,17 +737,17 @@
     width: 1.25rem;
     height: 1.25rem;
     cursor: pointer;
-    accent-color: #3b82f6;
+    accent-color: var(--accent);
   }
 
   .direction-pill {
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background-color: #f0f9ff;
-    border: 1px solid #bae6fd;
+    background-color: var(--accent-dim);
+    border: 1px solid var(--accent);
     border-radius: 20px;
     font-size: 0.75rem;
-    color: #0369a1;
+    color: var(--accent);
     font-weight: 500;
   }
 
@@ -761,15 +760,15 @@
   }
 
   .term-row .word {
-    color: #1f2937;
+    color: var(--text-primary);
   }
 
   .term-row .arrow {
-    color: #9ca3af;
+    color: var(--text-tertiary);
   }
 
   .term-row .translation {
-    color: #0369a1;
+    color: var(--accent);
   }
 
   .action-buttons {
@@ -780,8 +779,8 @@
 
   .quick-practice-btn {
     padding: 0.6rem 0.8rem;
-    background-color: #fef3c7;
-    border: 1px solid #fcd34d;
+    background-color: rgba(251, 191, 36, 0.12);
+    border: 1px solid var(--warning);
     border-radius: 6px;
     cursor: pointer;
     font-size: 1.25rem;
@@ -789,7 +788,7 @@
   }
 
   .quick-practice-btn:hover {
-    background-color: #fde68a;
+    background-color: rgba(251, 191, 36, 0.2);
     transform: scale(1.05);
   }
 
@@ -809,8 +808,8 @@
   .difficulty-tag {
     display: inline-block;
     padding: 0.25rem 0.5rem;
-    background-color: #dbeafe;
-    color: #0c4a6e;
+    background-color: var(--accent-dim);
+    color: var(--accent);
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 500;
@@ -821,7 +820,7 @@
     align-items: center;
     gap: 0.75rem;
     font-size: 0.85rem;
-    color: #6b7280;
+    color: var(--text-secondary);
   }
 
   .type {
@@ -845,7 +844,7 @@
     width: 100%;
     min-height: 300px;
     cursor: pointer;
-    background-color: white;
+    background-color: var(--bg-card);
     border-radius: 8px;
     /* Button reset styles */
     border: none;
@@ -857,7 +856,7 @@
   }
 
   .flashcard-inner:focus-visible {
-    outline: 2px solid #2563eb;
+    outline: 2px solid var(--accent);
     outline-offset: 4px;
   }
 
@@ -876,15 +875,15 @@
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    border: 2px solid #e5e7eb;
+    border: 2px solid var(--border-default);
   }
 
   .flashcard-front {
-    background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%);
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-surface) 100%);
   }
 
   .flashcard-back {
-    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.08) 0%, rgba(52, 211, 153, 0.15) 100%);
   }
 
   .flashcard-label {
@@ -893,7 +892,7 @@
     right: 1rem;
     font-size: 0.75rem;
     font-weight: 600;
-    color: #6b7280;
+    color: var(--text-tertiary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
@@ -909,27 +908,27 @@
   .flashcard-text {
     font-size: 2rem;
     font-weight: 700;
-    color: #1f2937;
+    color: var(--text-primary);
     line-height: 1.3;
   }
 
   .flashcard-hint {
     font-size: 0.85rem;
-    color: #9ca3af;
+    color: var(--text-tertiary);
     font-style: italic;
   }
 
   .flashcard-section {
     margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid var(--border-subtle);
     text-align: left;
   }
 
   .flashcard-section-title {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #374151;
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
@@ -938,7 +937,7 @@
 
   .flashcard-section-content {
     font-size: 0.9rem;
-    color: #6b7280;
+    color: var(--text-tertiary);
     line-height: 1.5;
   }
 
@@ -946,14 +945,14 @@
     display: flex;
     gap: 0.75rem;
     padding: 1rem;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid var(--border-default);
     margin-top: 1rem;
   }
 
   /* LESSON VARIANT STYLES */
   .variant-lesson {
     padding: 1.5rem;
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-surface) 100%);
   }
 
   .lesson-card-content {
@@ -973,13 +972,13 @@
     margin: 0;
     font-size: 1.25rem;
     font-weight: 700;
-    color: #1f2937;
+    color: var(--text-primary);
   }
 
   .lesson-difficulty {
     padding: 0.25rem 0.75rem;
-    background-color: #dbeafe;
-    color: #0c4a6e;
+    background-color: var(--accent-dim);
+    color: var(--accent);
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 600;
@@ -989,7 +988,7 @@
   .lesson-summary {
     margin: 0;
     font-size: 0.9rem;
-    color: #6b7280;
+    color: var(--text-secondary);
     line-height: 1.6;
   }
 

@@ -130,10 +130,10 @@
     justify-content: center;
     padding: 4rem 2rem;
     text-align: center;
-    background: #f9fafb;
+    background: var(--bg-surface);
     border-radius: 12px;
-    border: 2px dashed #e5e7eb;
-    color: #6b7280;
+    border: 2px dashed var(--border-default);
+    color: var(--text-tertiary);
   }
 
   .empty-icon {
@@ -145,7 +145,7 @@
   .empty-state h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #374151;
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
   }
 
@@ -154,19 +154,19 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--border-default);
   }
 
   .results-header h3 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #374151;
+    color: var(--text-primary);
     margin: 0;
   }
 
   .direction-info {
     font-size: 0.9rem;
-    color: #6b7280;
+    color: var(--text-tertiary);
     font-weight: 500;
   }
 

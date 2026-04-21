@@ -152,62 +152,62 @@
   .ordering {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: 1rem;
   }
 
   .question {
-    padding: var(--spacing-md);
-    background: var(--color-bg-tertiary);
-    border-radius: var(--radius-md);
+    padding: 1rem;
+    background: var(--bg-surface);
+    border-radius: 8px;
   }
 
   .question h3 {
     margin: 0;
     font-size: 1.125rem;
-    color: var(--color-text);
+    color: var(--text-primary);
   }
 
   .description {
-    padding: var(--spacing-md);
-    background: var(--color-info-light);
-    border-radius: var(--radius-md);
-    border-left: 4px solid var(--color-info);
+    padding: 1rem;
+    background: var(--bg-surface);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);
   }
 
   .description p {
     margin: 0;
-    color: var(--color-text);
+    color: var(--text-primary);
     font-size: 0.9375rem;
   }
 
   .items-container {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: 1rem;
   }
 
   .item {
-    padding: var(--spacing-md);
-    background: white;
-    border: 2px solid var(--color-border);
-    border-radius: var(--radius-md);
+    padding: 1rem;
+    background: var(--bg-base);
+    border: 2px solid var(--border-default);
+    border-radius: 8px;
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
+    gap: 1rem;
     cursor: grab;
     transition: all 0.2s;
     user-select: none;
   }
 
   .item:not(.disabled):hover {
-    border-color: var(--color-primary);
-    background: var(--color-bg-tertiary);
+    border-color: var(--accent);
+    background: var(--bg-surface);
   }
 
   .item.dragging {
     opacity: 0.5;
-    background: var(--color-primary-light);
-    border-color: var(--color-primary);
+    background: var(--bg-surface);
+    border-color: var(--accent);
   }
 
   .item.disabled {
@@ -220,7 +220,7 @@
     justify-content: center;
     width: 32px;
     height: 32px;
-    background: var(--color-primary);
+    background: var(--accent);
     color: white;
     border-radius: 50%;
     font-weight: bold;
@@ -239,30 +239,30 @@
   }
 
   .status.correct {
-    color: var(--color-success);
+    color: var(--success);
   }
 
   .status.incorrect {
-    color: var(--color-error);
+    color: var(--danger);
   }
 
   .feedback {
-    padding: var(--spacing-md);
-    border-radius: var(--radius-md);
+    padding: 1rem;
+    border-radius: 8px;
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
+    gap: 1rem;
     font-weight: 500;
   }
 
   .feedback.correct {
-    background: var(--color-success-light);
-    color: var(--color-success-dark);
+    background: color-mix(in srgb, var(--success) 15%, transparent);
+    color: var(--success);
   }
 
   .feedback.incorrect {
-    background: var(--color-error-light);
-    color: var(--color-error-dark);
+    background: color-mix(in srgb, var(--danger) 15%, transparent);
+    color: var(--danger);
   }
 
   .feedback-icon {
@@ -271,59 +271,59 @@
   }
 
   .correct-order {
-    padding: var(--spacing-md);
-    background: var(--color-info-light);
-    border-left: 4px solid var(--color-info);
-    border-radius: var(--radius-md);
+    padding: 1rem;
+    background: var(--bg-surface);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
   }
 
   .correct-order strong {
     display: block;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-info-dark);
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
   }
 
   .correct-order ol {
     margin: 0;
-    padding-left: var(--spacing-lg);
+    padding-left: 1.5rem;
   }
 
   .correct-order li {
-    margin: var(--spacing-sm) 0;
-    color: var(--color-text);
+    margin: 0.5rem 0;
+    color: var(--text-primary);
   }
 
   .action-buttons {
     display: flex;
-    gap: var(--spacing-md);
+    gap: 1rem;
     justify-content: flex-end;
     flex-wrap: wrap;
   }
 
   .btn {
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: var(--radius-md);
+    border-radius: 8px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s;
   }
 
   .btn-primary {
-    background: var(--color-primary);
+    background: var(--accent);
     color: white;
   }
 
   .btn-primary:hover {
-    background: var(--color-primary-dark);
+    background: var(--accent-dim);
   }
 
   .btn-secondary {
-    background: var(--color-border);
-    color: var(--color-text);
+    background: var(--border-default);
+    color: var(--text-primary);
   }
 
   .btn-secondary:hover {
-    background: var(--color-border-dark);
+    background: var(--border-subtle);
   }
 </style>
