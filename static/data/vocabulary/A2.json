@@ -5,6 +5,7 @@
     "bulgarian": "Не трябва да пия вода от",
     "partOfSpeech": "noun",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "greetings"
     ],
@@ -13,26 +14,18 @@
         "german": "Aufbewahrungsbehälter",
         "bulgarian": "Не трябва да пия вода от",
         "context": "'sudove za suHra'nenie.",
-        "source": "peace-corps-pdf"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.770Z",
-    "version": 1,
     "enrichment": {
       "enriched": true,
-      "source": "peace-corps-pdf-translation-layer",
-      "enrichedAt": "2025-12-18T14:05:11.179Z"
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
     },
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.770Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.770Z",
+    "version": 1
   },
   {
     "id": "wv_pc_ceeeb0f8",
@@ -40,6 +33,7 @@
     "bulgarian": "чешмата",
     "partOfSpeech": "noun",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "greetings"
     ],
@@ -48,26 +42,18 @@
         "german": "Aufbewahrungsbehälter",
         "bulgarian": "чешмата",
         "context": "'sudove za suHra'nenie.",
-        "source": "peace-corps-pdf"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.770Z",
-    "version": 1,
     "enrichment": {
       "enriched": true,
-      "source": "peace-corps-pdf-translation-layer",
-      "enrichedAt": "2025-12-18T14:05:11.179Z"
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
     },
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.770Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.770Z",
+    "version": 1
   },
   {
     "id": "wv_pc_ee6a322c",
@@ -75,6 +61,7 @@
     "bulgarian": "Моля, дайте ми кола",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "everyday-phrases"
     ],
@@ -83,26 +70,18 @@
         "german": "Bitte geben Sie mir eine Cola",
         "bulgarian": "Моля, дайте ми кола",
         "context": "Please, give me a coke.",
-        "source": "peace-corps-pdf"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.770Z",
-    "version": 1,
     "enrichment": {
       "enriched": true,
-      "source": "peace-corps-pdf-translation-layer",
-      "enrichedAt": "2025-12-18T14:05:11.179Z"
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
     },
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.770Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.770Z",
+    "version": 1
   },
   {
     "id": "wv_2cea5d54",
@@ -110,6 +89,7 @@
     "bulgarian": "Моля, приберете чиниите",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "food"
     ],
@@ -124,15 +104,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:18.893Z",
     "updatedAt": "2026-01-28T11:59:28.770Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.770Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "wv_pc_f5d1dda2",
@@ -140,6 +112,7 @@
     "bulgarian": "Изгубих се",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "everyday-phrases"
     ],
@@ -148,26 +121,18 @@
         "german": "Bitte zeigen Sie mir den Weg",
         "bulgarian": "Изгубиx се",
         "context": "Please, show me the way",
-        "source": "peace-corps-pdf"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.770Z",
-    "version": 1,
     "enrichment": {
       "enriched": true,
-      "source": "peace-corps-pdf-translation-layer",
-      "enrichedAt": "2025-12-18T14:05:11.179Z"
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
     },
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.770Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.770Z",
+    "version": 1
   },
   {
     "id": "wv_0078dc6b",
@@ -175,6 +140,7 @@
     "bulgarian": "Маса за един човек/двама души, моля",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "food"
     ],
@@ -189,15 +155,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:18.893Z",
     "updatedAt": "2026-01-28T11:59:28.772Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.772Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "wv_pc_7fbc1dbd",
@@ -205,6 +163,7 @@
     "bulgarian": "английски/български",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "everyday-phrases"
     ],
@@ -213,26 +172,18 @@
         "german": "Englisch/Bulgarisch",
         "bulgarian": "английски/български",
         "context": "English/Bulgarian?",
-        "source": "peace-corps-pdf"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.772Z",
-    "version": 1,
     "enrichment": {
       "enriched": true,
-      "source": "peace-corps-pdf-translation-layer",
-      "enrichedAt": "2025-12-18T14:05:11.179Z"
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
     },
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.772Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.772Z",
+    "version": 1
   },
   {
     "id": "wv_pc_877b6d1f",
@@ -240,6 +191,7 @@
     "bulgarian": "Съжалявам, не говоря",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "greetings"
     ],
@@ -248,26 +200,18 @@
         "german": "Es tut mir leid, ich verstehe nicht",
         "bulgarian": "Съжалявам, не говоря",
         "context": "I am sorry, I don't.",
-        "source": "peace-corps-pdf"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.772Z",
-    "version": 1,
     "enrichment": {
       "enriched": true,
-      "source": "peace-corps-pdf-translation-layer",
-      "enrichedAt": "2025-12-18T14:05:11.179Z"
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
     },
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.772Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.772Z",
+    "version": 1
   },
   {
     "id": "wv_pc_bc12fbd9",
@@ -275,6 +219,7 @@
     "bulgarian": "Това е хотел",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "everyday-phrases"
     ],
@@ -283,26 +228,18 @@
         "german": "Grundlegende Fragen und Antworten (Erste Gespräche in der Gemeinschaft):",
         "bulgarian": "Това е xотел",
         "context": "Some Basic Questions and Answers ( Initial Community Exchanges):",
-        "source": "peace-corps-pdf"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.772Z",
-    "version": 1,
     "enrichment": {
       "enriched": true,
-      "source": "peace-corps-pdf-translation-layer",
-      "enrichedAt": "2025-12-18T14:05:11.179Z"
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
     },
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.772Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.772Z",
+    "version": 1
   },
   {
     "id": "wv_pc_25be94d0",
@@ -310,6 +247,7 @@
     "bulgarian": "Какво значи това",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "everyday-phrases"
     ],
@@ -318,26 +256,18 @@
         "german": "Grundlegende Fragen und Antworten (Erste Gespräche in der Gemeinschaft):",
         "bulgarian": "Какво значи това",
         "context": "Some Basic Questions and Answers ( Initial Community Exchanges):",
-        "source": "peace-corps-pdf"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.772Z",
-    "version": 1,
     "enrichment": {
       "enriched": true,
-      "source": "peace-corps-pdf-translation-layer",
-      "enrichedAt": "2025-12-18T14:05:11.179Z"
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
     },
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.772Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.772Z",
+    "version": 1
   },
   {
     "id": "wv_pc_dc5dc8ce",
@@ -345,6 +275,7 @@
     "bulgarian": "Аз съм от Невада",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "everyday-phrases"
     ],
@@ -353,26 +284,18 @@
         "german": "Ich bin ein Freiwilliger des Friedenskorps",
         "bulgarian": "Аз съм от Невада",
         "context": "I'm a Peace Corps Volunteer.",
-        "source": "peace-corps-pdf"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
     "enrichment": {
       "enriched": true,
-      "source": "peace-corps-pdf-translation-layer",
-      "enrichedAt": "2025-12-18T14:05:11.179Z"
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
     },
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1
   },
   {
     "id": "wv_pc_6b9e065b",
@@ -380,6 +303,7 @@
     "bulgarian": "Аз съм учител",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "everyday-phrases"
     ],
@@ -388,26 +312,18 @@
         "german": "Ich bin ein Freiwilliger des Friedenskorps",
         "bulgarian": "Аз съм учител",
         "context": "I'm a Peace Corps Volunteer.",
-        "source": "peace-corps-pdf"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
     "enrichment": {
       "enriched": true,
-      "source": "peace-corps-pdf-translation-layer",
-      "enrichedAt": "2025-12-18T14:05:11.179Z"
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
     },
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1
   },
   {
     "id": "wv_pc_0298ef98",
@@ -415,6 +331,7 @@
     "bulgarian": "Аз съм от Тексас",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "everyday-phrases"
     ],
@@ -423,26 +340,18 @@
         "german": "Ich bin ein Freiwilliger des Friedenskorps",
         "bulgarian": "Аз съм от Тексас",
         "context": "I'm a Peace Corps Volunteer.",
-        "source": "peace-corps-pdf"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
     "enrichment": {
       "enriched": true,
-      "source": "peace-corps-pdf-translation-layer",
-      "enrichedAt": "2025-12-18T14:05:11.179Z"
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
     },
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1
   },
   {
     "id": "wv_pc_1d37f8f2",
@@ -450,6 +359,7 @@
     "bulgarian": "Аз съм от Монтана",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "everyday-phrases"
     ],
@@ -458,26 +368,18 @@
         "german": "Ich bin ein Freiwilliger des Friedenskorps",
         "bulgarian": "Аз съм от Монтана",
         "context": "I'm a Peace Corps Volunteer.",
-        "source": "peace-corps-pdf"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
     "enrichment": {
       "enriched": true,
-      "source": "peace-corps-pdf-translation-layer",
-      "enrichedAt": "2025-12-18T14:05:11.179Z"
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
     },
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1
   },
   {
     "id": "wv_pc_f0727e19",
@@ -485,6 +387,7 @@
     "bulgarian": "Аз съм екоспециалист",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "everyday-phrases"
     ],
@@ -493,26 +396,18 @@
         "german": "Ich bin ein Freiwilliger des Friedenskorps",
         "bulgarian": "Аз съм екоспециалист",
         "context": "I'm a Peace Corps Volunteer.",
-        "source": "peace-corps-pdf"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
     "enrichment": {
       "enriched": true,
-      "source": "peace-corps-pdf-translation-layer",
-      "enrichedAt": "2025-12-18T14:05:11.179Z"
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
     },
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1
   },
   {
     "id": "wv_99b12120",
@@ -520,6 +415,7 @@
     "bulgarian": "Искам да говоря със посолството / консулството на",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "everyday-phrases"
     ],
@@ -534,15 +430,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:18.893Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "wv_3ba20d46",
@@ -550,6 +438,7 @@
     "bulgarian": "Искам да говоря с адвокат",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "everyday-phrases"
     ],
@@ -564,15 +453,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:18.893Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "wv_e7e7a3fa",
@@ -580,6 +461,7 @@
     "bulgarian": "Това ли е перонът за",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "transport"
     ],
@@ -594,15 +476,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:50.669Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "wv_c0b43fe1",
@@ -610,6 +484,7 @@
     "bulgarian": "Мога ли да видя менюто, моля",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "food"
     ],
@@ -624,15 +499,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:18.893Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "wv_59195815",
@@ -640,6 +507,7 @@
     "bulgarian": "Извинете, мога ли да ползвам телефона ви",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "everyday-phrases"
     ],
@@ -654,15 +522,7 @@
     "type": "word",
     "createdAt": "2025-12-18T09:48:28.911Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "wv_63ce1cba",
@@ -670,6 +530,7 @@
     "bulgarian": "Мога ли да видя стаята първо",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "places"
     ],
@@ -684,15 +545,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:50.669Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "wv_2273cfb8",
@@ -700,6 +553,7 @@
     "bulgarian": "Мога ли да погледна в кухнята",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "food"
     ],
@@ -714,15 +568,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:18.893Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "wv_e519ae78",
@@ -730,6 +576,7 @@
     "bulgarian": "Може ли само да платя глоба сега",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "everyday-phrases"
     ],
@@ -744,15 +591,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:18.893Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "wv_9b64327d",
@@ -760,6 +599,7 @@
     "bulgarian": "Можете ли да предложите друг хотел",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "places"
     ],
@@ -774,15 +614,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:50.669Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "wv_1ad8b0b0",
@@ -790,6 +622,7 @@
     "bulgarian": "Можете ли да ми покажете на картата",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "transport"
     ],
@@ -804,15 +637,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:50.669Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "wv_b1c0c357",
@@ -820,6 +645,7 @@
     "bulgarian": "кръстовище/пресечка",
     "partOfSpeech": "noun",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "transport"
     ],
@@ -834,13 +660,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:50.669Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "a1_final_052",
@@ -848,6 +668,7 @@
     "bulgarian": "Правда",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "everyday-phrases"
     ],
@@ -857,32 +678,12 @@
         "bulgarian": "Правда",
         "context": "Basic",
         "source": "merged"
-      },
-      {
-        "german": "Ich habe Recht/Gerechtigkeit",
-        "bulgarian": "Имам правда",
-        "context": "Having",
-        "source": "merged"
-      },
-      {
-        "german": "Ich mag Recht/Gerechtigkeit",
-        "bulgarian": "Харесвам правда",
-        "context": "Liking",
-        "source": "merged"
       }
     ],
     "type": "word",
     "createdAt": "2025-12-18T09:38:36.476Z",
-    "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "updatedAt": "2026-04-21T18:46:51.098Z",
+    "version": 2
   },
   {
     "id": "wv_c2d12eee",
@@ -890,6 +691,7 @@
     "bulgarian": "Приятно ми е да се запознаем",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "greetings"
     ],
@@ -904,15 +706,7 @@
     "type": "word",
     "createdAt": "2025-12-18T09:48:28.911Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "wv_f91f3f36",
@@ -920,6 +714,7 @@
     "bulgarian": "С коя линия ще стигна до",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "transport"
     ],
@@ -934,15 +729,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:50.669Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "wv_715ee3fd",
@@ -950,6 +737,7 @@
     "bulgarian": "Колко струва една стая за един човек/двама души",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "places"
     ],
@@ -964,15 +752,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:50.669Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.773Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "wv_pc_f252d23b",
@@ -980,6 +760,7 @@
     "bulgarian": "Къде мога да взема такси",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "transport"
     ],
@@ -988,26 +769,18 @@
         "german": "Wo kann ich ein Taxi bekommen",
         "bulgarian": "Къде мога да взема такси",
         "context": "Where can I get a taxi?",
-        "source": "peace-corps-pdf"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.774Z",
-    "version": 1,
     "enrichment": {
       "enriched": true,
-      "source": "peace-corps-pdf-translation-layer",
-      "enrichedAt": "2025-12-18T14:05:11.179Z"
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
     },
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.774Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.774Z",
+    "version": 1
   },
   {
     "id": "wv_pc_3c561035",
@@ -1015,6 +788,7 @@
     "bulgarian": "Аз съм от... / От... съм",
     "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
       "transport"
     ],
@@ -1023,225 +797,197 @@
         "german": "Woher kommen Sie",
         "bulgarian": "Аз съм от... / От... съм",
         "context": "Where are you from?",
-        "source": "peace-corps-pdf"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.774Z",
-    "version": 1,
     "enrichment": {
       "enriched": true,
-      "source": "peace-corps-pdf-translation-layer",
-      "enrichedAt": "2025-12-18T14:05:11.179Z"
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
     },
-    "correctionNote": "Comprehensive cleanup applied",
-    "needsReview": true,
-    "cefrLevel": "A2",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.774Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.774Z",
+    "version": 1
   },
   {
     "id": "exchange-7yea0m",
-    "english": "exchange",
-    "bulgarian": "курс",
     "german": "Grundlegende Fragen und Antworten (Erste Gespräche in der Gemeinschaft):",
+    "bulgarian": "курс",
     "partOfSpeech": "noun",
-    "category": "a2",
-    "enrichment": {
-      "source": "pdf-extraction-A2-English",
-      "date": "2025-12-18T14:20:07.427Z"
-    },
+    "difficulty": 4,
     "cefrLevel": "A2",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [],
+    "type": "word",
+    "enrichment": {
+      "source": "pdf-extraction-A2-English"
+    },
+    "createdAt": "2026-04-21T20:10:08.372Z",
     "updatedAt": "2026-01-28T11:59:28.774Z",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.774Z",
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "a1_auto_3baa4031-5ecc-4133-980f-cb959dfed1e8",
     "german": "bonbonpunsch",
     "bulgarian": "бонбонишункаориз",
-    "partOfSpeech": "unknown",
+    "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
-      "a1"
+      "greetings"
     ],
     "examples": [
       {
         "german": "bonbonpunsch",
         "bulgarian": "бонбонишункаориз",
         "context": "auto-import",
-        "source": "a1-extraction"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "cefrLevel": "A2",
+    "createdAt": "2026-04-21T20:10:08.372Z",
     "updatedAt": "2026-01-28T11:59:28.774Z",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.774Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "a1_auto_ac735665-5493-4eb4-a446-08789ce80fae",
     "german": "sugarcetlestabob",
     "bulgarian": "захароцетлещабоб",
-    "partOfSpeech": "unknown",
+    "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
-      "a1"
+      "greetings"
     ],
     "examples": [
       {
         "german": "sugarcetlestabob",
         "bulgarian": "захароцетлещабоб",
         "context": "auto-import",
-        "source": "a1-extraction"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "cefrLevel": "A2",
+    "createdAt": "2026-04-21T20:10:08.372Z",
     "updatedAt": "2026-01-28T11:59:28.774Z",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.774Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "a1_auto_8e8f22b6-6782-4ab5-84c8-71b9529106ac",
     "german": "Abschlussscheibe",
     "bulgarian": "леща",
-    "partOfSpeech": "unknown",
+    "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
-      "a1"
+      "greetings"
     ],
     "examples": [
       {
         "german": "Abschlussscheibe",
         "bulgarian": "леща",
         "context": "auto-import",
-        "source": "a1-extraction"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "cefrLevel": "A2",
+    "createdAt": "2026-04-21T20:10:08.372Z",
     "updatedAt": "2026-01-28T11:59:28.774Z",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.774Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "a1_auto_f31816ca-2c5c-4f4a-b511-fdd3da7bbaff",
     "german": "palästinensische",
     "bulgarian": "палестинец",
-    "partOfSpeech": "unknown",
+    "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
-      "a1"
+      "greetings"
     ],
     "examples": [
       {
         "german": "palästinensische",
         "bulgarian": "палестинец",
         "context": "auto-import",
-        "source": "a1-extraction"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "cefrLevel": "A2",
+    "createdAt": "2026-04-21T20:10:08.372Z",
     "updatedAt": "2026-01-28T11:59:28.774Z",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.774Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "a1_auto_059877e6-15fb-4b3a-8bb7-72ed11196c82",
     "german": "palästinensische",
     "bulgarian": "палестинка",
-    "partOfSpeech": "unknown",
+    "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
-      "a1"
+      "greetings"
     ],
     "examples": [
       {
         "german": "palästinensische",
         "bulgarian": "палестинка",
         "context": "auto-import",
-        "source": "a1-extraction"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "cefrLevel": "A2",
+    "createdAt": "2026-04-21T20:10:08.372Z",
     "updatedAt": "2026-01-28T11:59:28.774Z",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.774Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "a1_auto_110fafd5-aaed-4c0b-b280-9632b68ec22f",
     "german": "chickenmeatoilolinisol",
     "bulgarian": "пилешкомесомаслинисол",
-    "partOfSpeech": "unknown",
+    "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
-      "a1"
+      "greetings"
     ],
     "examples": [
       {
         "german": "chickenmeatoilolinisol",
         "bulgarian": "пилешкомесомаслинисол",
         "context": "auto-import",
-        "source": "a1-extraction"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "cefrLevel": "A2",
+    "createdAt": "2026-04-21T20:10:08.372Z",
     "updatedAt": "2026-01-28T11:59:28.774Z",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.774Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   },
   {
     "id": "a1_auto_acb9ab0a-3f71-4f64-a0e2-e42e70632f07",
     "german": "verbrauchermarkt",
     "bulgarian": "хипермаркет",
-    "partOfSpeech": "unknown",
+    "partOfSpeech": "phrase",
     "difficulty": 1,
+    "cefrLevel": "A2",
     "categories": [
-      "a1"
+      "greetings"
     ],
     "examples": [
       {
         "german": "verbrauchermarkt",
         "bulgarian": "хипермаркет",
         "context": "auto-import",
-        "source": "a1-extraction"
+        "source": "legacy"
       }
     ],
     "type": "word",
-    "cefrLevel": "A2",
+    "createdAt": "2026-04-21T20:10:08.372Z",
     "updatedAt": "2026-01-28T11:59:28.775Z",
-    "cefrInference": {
-      "inferredAt": "2026-01-28T11:59:28.775Z",
-      "difficulty": 1,
-      "method": "difficulty-weighted"
-    }
+    "version": 1
   }
 ]

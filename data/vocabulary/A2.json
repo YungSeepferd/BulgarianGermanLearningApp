@@ -1,5 +1,89 @@
 [
   {
+    "id": "wv_pc_db29089c",
+    "german": "Aufbewahrungsbehälter",
+    "bulgarian": "Не трябва да пия вода от",
+    "partOfSpeech": "noun",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "greetings"
+    ],
+    "examples": [
+      {
+        "german": "Aufbewahrungsbehälter",
+        "bulgarian": "Не трябва да пия вода от",
+        "context": "'sudove za suHra'nenie.",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "enrichment": {
+      "enriched": true,
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
+    },
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.770Z",
+    "version": 1
+  },
+  {
+    "id": "wv_pc_ceeeb0f8",
+    "german": "Aufbewahrungsbehälter",
+    "bulgarian": "чешмата",
+    "partOfSpeech": "noun",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "greetings"
+    ],
+    "examples": [
+      {
+        "german": "Aufbewahrungsbehälter",
+        "bulgarian": "чешмата",
+        "context": "'sudove za suHra'nenie.",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "enrichment": {
+      "enriched": true,
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
+    },
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.770Z",
+    "version": 1
+  },
+  {
+    "id": "wv_pc_ee6a322c",
+    "german": "Bitte geben Sie mir eine Cola",
+    "bulgarian": "Моля, дайте ми кола",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Bitte geben Sie mir eine Cola",
+        "bulgarian": "Моля, дайте ми кола",
+        "context": "Please, give me a coke.",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "enrichment": {
+      "enriched": true,
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
+    },
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.770Z",
+    "version": 1
+  },
+  {
     "id": "wv_2cea5d54",
     "german": "Bitte räumen Sie die Teller ab",
     "bulgarian": "Моля, приберете чиниите",
@@ -20,11 +104,35 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:18.893Z",
     "updatedAt": "2026-01-28T11:59:28.770Z",
-    "version": 1,
-    "emoji": "🥦",
-    "transliteration": {
-      "bulgarian": "Molya, priberete chiniite"
-    }
+    "version": 1
+  },
+  {
+    "id": "wv_pc_f5d1dda2",
+    "german": "Bitte zeigen Sie mir den Weg",
+    "bulgarian": "Изгубих се",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Bitte zeigen Sie mir den Weg",
+        "bulgarian": "Изгубиx се",
+        "context": "Please, show me the way",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "enrichment": {
+      "enriched": true,
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
+    },
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.770Z",
+    "version": 1
   },
   {
     "id": "wv_0078dc6b",
@@ -47,11 +155,259 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:18.893Z",
     "updatedAt": "2026-01-28T11:59:28.772Z",
-    "version": 1,
-    "emoji": "🍎",
-    "transliteration": {
-      "bulgarian": "Masa za edin chovek/dvama dushi, molya"
-    }
+    "version": 1
+  },
+  {
+    "id": "wv_pc_7fbc1dbd",
+    "german": "Englisch/Bulgarisch",
+    "bulgarian": "английски/български",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Englisch/Bulgarisch",
+        "bulgarian": "английски/български",
+        "context": "English/Bulgarian?",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "enrichment": {
+      "enriched": true,
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
+    },
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.772Z",
+    "version": 1
+  },
+  {
+    "id": "wv_pc_877b6d1f",
+    "german": "Es tut mir leid, ich verstehe nicht",
+    "bulgarian": "Съжалявам, не говоря",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "greetings"
+    ],
+    "examples": [
+      {
+        "german": "Es tut mir leid, ich verstehe nicht",
+        "bulgarian": "Съжалявам, не говоря",
+        "context": "I am sorry, I don't.",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "enrichment": {
+      "enriched": true,
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
+    },
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.772Z",
+    "version": 1
+  },
+  {
+    "id": "wv_pc_bc12fbd9",
+    "german": "Grundlegende Fragen und Antworten (Erste Gespräche in der Gemeinschaft):",
+    "bulgarian": "Това е хотел",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Grundlegende Fragen und Antworten (Erste Gespräche in der Gemeinschaft):",
+        "bulgarian": "Това е xотел",
+        "context": "Some Basic Questions and Answers ( Initial Community Exchanges):",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "enrichment": {
+      "enriched": true,
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
+    },
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.772Z",
+    "version": 1
+  },
+  {
+    "id": "wv_pc_25be94d0",
+    "german": "Grundlegende Fragen und Antworten (Erste Gespräche in der Gemeinschaft):",
+    "bulgarian": "Какво значи това",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Grundlegende Fragen und Antworten (Erste Gespräche in der Gemeinschaft):",
+        "bulgarian": "Какво значи това",
+        "context": "Some Basic Questions and Answers ( Initial Community Exchanges):",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "enrichment": {
+      "enriched": true,
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
+    },
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.772Z",
+    "version": 1
+  },
+  {
+    "id": "wv_pc_dc5dc8ce",
+    "german": "Ich bin ein Freiwilliger des Friedenskorps",
+    "bulgarian": "Аз съм от Невада",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Ich bin ein Freiwilliger des Friedenskorps",
+        "bulgarian": "Аз съм от Невада",
+        "context": "I'm a Peace Corps Volunteer.",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "enrichment": {
+      "enriched": true,
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
+    },
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1
+  },
+  {
+    "id": "wv_pc_6b9e065b",
+    "german": "Ich bin ein Freiwilliger des Friedenskorps",
+    "bulgarian": "Аз съм учител",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Ich bin ein Freiwilliger des Friedenskorps",
+        "bulgarian": "Аз съм учител",
+        "context": "I'm a Peace Corps Volunteer.",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "enrichment": {
+      "enriched": true,
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
+    },
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1
+  },
+  {
+    "id": "wv_pc_0298ef98",
+    "german": "Ich bin ein Freiwilliger des Friedenskorps",
+    "bulgarian": "Аз съм от Тексас",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Ich bin ein Freiwilliger des Friedenskorps",
+        "bulgarian": "Аз съм от Тексас",
+        "context": "I'm a Peace Corps Volunteer.",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "enrichment": {
+      "enriched": true,
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
+    },
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1
+  },
+  {
+    "id": "wv_pc_1d37f8f2",
+    "german": "Ich bin ein Freiwilliger des Friedenskorps",
+    "bulgarian": "Аз съм от Монтана",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Ich bin ein Freiwilliger des Friedenskorps",
+        "bulgarian": "Аз съм от Монтана",
+        "context": "I'm a Peace Corps Volunteer.",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "enrichment": {
+      "enriched": true,
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
+    },
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1
+  },
+  {
+    "id": "wv_pc_f0727e19",
+    "german": "Ich bin ein Freiwilliger des Friedenskorps",
+    "bulgarian": "Аз съм екоспециалист",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "everyday-phrases"
+    ],
+    "examples": [
+      {
+        "german": "Ich bin ein Freiwilliger des Friedenskorps",
+        "bulgarian": "Аз съм екоспециалист",
+        "context": "I'm a Peace Corps Volunteer.",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "enrichment": {
+      "enriched": true,
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
+    },
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1
   },
   {
     "id": "wv_99b12120",
@@ -74,11 +430,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:18.893Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "emoji": "🗨️",
-    "transliteration": {
-      "bulgarian": "Iskam da govorya sas posolstvoto / konsulstvoto na"
-    }
+    "version": 1
   },
   {
     "id": "wv_3ba20d46",
@@ -101,11 +453,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:18.893Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "emoji": "💬",
-    "transliteration": {
-      "bulgarian": "Iskam da govorya s advokat"
-    }
+    "version": 1
   },
   {
     "id": "wv_e7e7a3fa",
@@ -128,11 +476,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:50.669Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "emoji": "🚙",
-    "transliteration": {
-      "bulgarian": "Tova li e peronat za"
-    }
+    "version": 1
   },
   {
     "id": "wv_c0b43fe1",
@@ -155,11 +499,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:18.893Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "emoji": "🍖",
-    "transliteration": {
-      "bulgarian": "Moga li da vidya menyuto, molya"
-    }
+    "version": 1
   },
   {
     "id": "wv_59195815",
@@ -182,11 +522,7 @@
     "type": "word",
     "createdAt": "2025-12-18T09:48:28.911Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "emoji": "💭",
-    "transliteration": {
-      "bulgarian": "Izvinete, moga li da polzvam telefona vi"
-    }
+    "version": 1
   },
   {
     "id": "wv_63ce1cba",
@@ -209,11 +545,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:50.669Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "emoji": "🏫",
-    "transliteration": {
-      "bulgarian": "Moga li da vidya stayata parvo"
-    }
+    "version": 1
   },
   {
     "id": "wv_2273cfb8",
@@ -236,11 +568,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:18.893Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "emoji": "🥗",
-    "transliteration": {
-      "bulgarian": "Moga li da pogledna v kuhnyata"
-    }
+    "version": 1
   },
   {
     "id": "wv_e519ae78",
@@ -263,11 +591,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:18.893Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "emoji": "🗣️",
-    "transliteration": {
-      "bulgarian": "Mozhe li samo da platya globa sega"
-    }
+    "version": 1
   },
   {
     "id": "wv_9b64327d",
@@ -290,11 +614,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:50.669Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "emoji": "🏥",
-    "transliteration": {
-      "bulgarian": "Mozhete li da predlozhite drug hotel"
-    }
+    "version": 1
   },
   {
     "id": "wv_1ad8b0b0",
@@ -317,11 +637,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:50.669Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "emoji": "🚕",
-    "transliteration": {
-      "bulgarian": "Mozhete li da mi pokazhete na kartata"
-    }
+    "version": 1
   },
   {
     "id": "wv_b1c0c357",
@@ -344,40 +660,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:50.669Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "emoji": "🚆",
-    "transliteration": {
-      "bulgarian": "krastovishte/presechka"
-    },
-    "grammar": {
-      "gender": "feminine",
-      "declension": {
-        "nominative": {
-          "singular": "Kreuzung",
-          "plural": "Kreuzungen"
-        },
-        "accusative": {
-          "singular": "Kreuzung",
-          "plural": "Kreuzungen"
-        },
-        "dative": {
-          "singular": "Kreuzung",
-          "plural": "Kreuzungen"
-        },
-        "genitive": {
-          "singular": "Kreuzung",
-          "plural": "Kreuzungen"
-        }
-      }
-    },
-    "metadata": {
-      "enrichment": {
-        "enriched": true,
-        "confidence": 0.95,
-        "source": "automated_grammar_rules",
-        "enrichedAt": "2026-02-09T08:59:53.900Z"
-      }
-    }
+    "version": 1
   },
   {
     "id": "a1_final_052",
@@ -395,28 +678,12 @@
         "bulgarian": "Правда",
         "context": "Basic",
         "source": "merged"
-      },
-      {
-        "german": "Ich habe Recht/Gerechtigkeit",
-        "bulgarian": "Имам правда",
-        "context": "Having",
-        "source": "merged"
-      },
-      {
-        "german": "Ich mag Recht/Gerechtigkeit",
-        "bulgarian": "Харесвам правда",
-        "context": "Liking",
-        "source": "merged"
       }
     ],
     "type": "word",
     "createdAt": "2025-12-18T09:38:36.476Z",
-    "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "emoji": "🗣️",
-    "transliteration": {
-      "bulgarian": "Pravda"
-    }
+    "updatedAt": "2026-04-21T18:46:51.098Z",
+    "version": 2
   },
   {
     "id": "wv_c2d12eee",
@@ -439,11 +706,7 @@
     "type": "word",
     "createdAt": "2025-12-18T09:48:28.911Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "emoji": "🙋",
-    "transliteration": {
-      "bulgarian": "Priyatno mi e da se zapoznaem"
-    }
+    "version": 1
   },
   {
     "id": "wv_f91f3f36",
@@ -466,11 +729,7 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:50.669Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "emoji": "🚆",
-    "transliteration": {
-      "bulgarian": "S koya liniya shte stigna do"
-    }
+    "version": 1
   },
   {
     "id": "wv_715ee3fd",
@@ -493,10 +752,242 @@
     "type": "word",
     "createdAt": "2025-12-18T10:05:50.669Z",
     "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1,
-    "emoji": "🏢",
-    "transliteration": {
-      "bulgarian": "Kolko struva edna staya za edin chovek/dvama dushi"
-    }
+    "version": 1
+  },
+  {
+    "id": "wv_pc_f252d23b",
+    "german": "Wo kann ich ein Taxi bekommen",
+    "bulgarian": "Къде мога да взема такси",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "transport"
+    ],
+    "examples": [
+      {
+        "german": "Wo kann ich ein Taxi bekommen",
+        "bulgarian": "Къде мога да взема такси",
+        "context": "Where can I get a taxi?",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "enrichment": {
+      "enriched": true,
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
+    },
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.774Z",
+    "version": 1
+  },
+  {
+    "id": "wv_pc_3c561035",
+    "german": "Woher kommen Sie",
+    "bulgarian": "Аз съм от... / От... съм",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "transport"
+    ],
+    "examples": [
+      {
+        "german": "Woher kommen Sie",
+        "bulgarian": "Аз съм от... / От... съм",
+        "context": "Where are you from?",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "enrichment": {
+      "enriched": true,
+      "enrichedAt": "2025-12-18T14:05:11.179Z",
+      "source": "peace-corps-pdf-translation-layer"
+    },
+    "createdAt": "2025-12-18T14:05:11.179Z",
+    "updatedAt": "2026-01-28T11:59:28.774Z",
+    "version": 1
+  },
+  {
+    "id": "exchange-7yea0m",
+    "german": "Grundlegende Fragen und Antworten (Erste Gespräche in der Gemeinschaft):",
+    "bulgarian": "курс",
+    "partOfSpeech": "noun",
+    "difficulty": 4,
+    "cefrLevel": "A2",
+    "categories": [
+      "numbers"
+    ],
+    "examples": [],
+    "type": "word",
+    "enrichment": {
+      "source": "pdf-extraction-A2-English"
+    },
+    "createdAt": "2026-04-21T20:10:08.372Z",
+    "updatedAt": "2026-01-28T11:59:28.774Z",
+    "version": 1
+  },
+  {
+    "id": "a1_auto_3baa4031-5ecc-4133-980f-cb959dfed1e8",
+    "german": "bonbonpunsch",
+    "bulgarian": "бонбонишункаориз",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "greetings"
+    ],
+    "examples": [
+      {
+        "german": "bonbonpunsch",
+        "bulgarian": "бонбонишункаориз",
+        "context": "auto-import",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2026-04-21T20:10:08.372Z",
+    "updatedAt": "2026-01-28T11:59:28.774Z",
+    "version": 1
+  },
+  {
+    "id": "a1_auto_ac735665-5493-4eb4-a446-08789ce80fae",
+    "german": "sugarcetlestabob",
+    "bulgarian": "захароцетлещабоб",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "greetings"
+    ],
+    "examples": [
+      {
+        "german": "sugarcetlestabob",
+        "bulgarian": "захароцетлещабоб",
+        "context": "auto-import",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2026-04-21T20:10:08.372Z",
+    "updatedAt": "2026-01-28T11:59:28.774Z",
+    "version": 1
+  },
+  {
+    "id": "a1_auto_8e8f22b6-6782-4ab5-84c8-71b9529106ac",
+    "german": "Abschlussscheibe",
+    "bulgarian": "леща",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "greetings"
+    ],
+    "examples": [
+      {
+        "german": "Abschlussscheibe",
+        "bulgarian": "леща",
+        "context": "auto-import",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2026-04-21T20:10:08.372Z",
+    "updatedAt": "2026-01-28T11:59:28.774Z",
+    "version": 1
+  },
+  {
+    "id": "a1_auto_f31816ca-2c5c-4f4a-b511-fdd3da7bbaff",
+    "german": "palästinensische",
+    "bulgarian": "палестинец",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "greetings"
+    ],
+    "examples": [
+      {
+        "german": "palästinensische",
+        "bulgarian": "палестинец",
+        "context": "auto-import",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2026-04-21T20:10:08.372Z",
+    "updatedAt": "2026-01-28T11:59:28.774Z",
+    "version": 1
+  },
+  {
+    "id": "a1_auto_059877e6-15fb-4b3a-8bb7-72ed11196c82",
+    "german": "palästinensische",
+    "bulgarian": "палестинка",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "greetings"
+    ],
+    "examples": [
+      {
+        "german": "palästinensische",
+        "bulgarian": "палестинка",
+        "context": "auto-import",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2026-04-21T20:10:08.372Z",
+    "updatedAt": "2026-01-28T11:59:28.774Z",
+    "version": 1
+  },
+  {
+    "id": "a1_auto_110fafd5-aaed-4c0b-b280-9632b68ec22f",
+    "german": "chickenmeatoilolinisol",
+    "bulgarian": "пилешкомесомаслинисол",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "greetings"
+    ],
+    "examples": [
+      {
+        "german": "chickenmeatoilolinisol",
+        "bulgarian": "пилешкомесомаслинисол",
+        "context": "auto-import",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2026-04-21T20:10:08.372Z",
+    "updatedAt": "2026-01-28T11:59:28.774Z",
+    "version": 1
+  },
+  {
+    "id": "a1_auto_acb9ab0a-3f71-4f64-a0e2-e42e70632f07",
+    "german": "verbrauchermarkt",
+    "bulgarian": "хипермаркет",
+    "partOfSpeech": "phrase",
+    "difficulty": 1,
+    "cefrLevel": "A2",
+    "categories": [
+      "greetings"
+    ],
+    "examples": [
+      {
+        "german": "verbrauchermarkt",
+        "bulgarian": "хипермаркет",
+        "context": "auto-import",
+        "source": "legacy"
+      }
+    ],
+    "type": "word",
+    "createdAt": "2026-04-21T20:10:08.372Z",
+    "updatedAt": "2026-01-28T11:59:28.775Z",
+    "version": 1
   }
 ]
