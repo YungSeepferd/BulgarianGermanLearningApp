@@ -64,9 +64,11 @@ class LoggerService {
     // Capture uncaught errors and unhandled rejections
     if (typeof window !== 'undefined') {
       window.addEventListener('error', (event) => {
+        if (event.error === null || event.error === undefined) return;
         this.error('Global', 'Uncaught error', event.error instanceof Error ? event.error : new Error(String(event.error)));
       });
       window.addEventListener('unhandledrejection', (event) => {
+        if (event.reason === null || event.reason === undefined) return;
         const err = event.reason instanceof Error ? event.reason : new Error(String(event.reason));
         this.error('Global', 'Unhandled promise rejection', err);
       });
