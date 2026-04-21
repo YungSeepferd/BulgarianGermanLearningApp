@@ -610,6 +610,8 @@
             <div class="input-group" in:fade>
               <input
                 type="text"
+                id="practice-answer"
+                name="practice-answer"
                 bind:value={userAnswer}
                 placeholder={t('practice.type_answer_placeholder')}
                 onkeydown={(e) => {

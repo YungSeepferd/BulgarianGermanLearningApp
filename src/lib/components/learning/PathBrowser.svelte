@@ -46,8 +46,6 @@
 
 <div class="path-browser">
   <div class="browser-header">
-    <h2>Learning Paths</h2>
-    
     <div class="filter-controls">
       <label for="difficulty-filter">Filter by difficulty:</label>
       <select id="difficulty-filter" bind:value={difficultyFilter}>
