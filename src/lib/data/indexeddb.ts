@@ -29,8 +29,8 @@ export interface VocabularyCacheEntry {
 }
 
 export interface SearchIndexData {
-  index: { keys: string[]; records: FuseIndexRecords };
-  options: IFuseOptions<UnifiedVocabularyItem>;
+  index?: { keys: string[]; records: FuseIndexRecords };
+  options?: IFuseOptions<UnifiedVocabularyItem>;
   idToLevelMap: Record<string, CEFRLevel>;
   miniIndex: Array<{
     id: string;

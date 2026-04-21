@@ -48,8 +48,8 @@ const CACHE_EXPIRY_HOURS = 24;
 const chunkCache = new Map<CEFRLevel, UnifiedVocabularyItem[]>();
 let indexCache: VocabularyIndex | null = null;
 let searchIndexCache: {
-  index: { keys: string[]; records: FuseIndexRecords };
-  options: IFuseOptions<UnifiedVocabularyItem>;
+  index?: { keys: string[]; records: FuseIndexRecords };
+  options?: IFuseOptions<UnifiedVocabularyItem>;
   idToLevelMap: Record<string, CEFRLevel>;
   miniIndex: Array<{
     id: string;
@@ -60,6 +60,28 @@ let searchIndexCache: {
     categories: string[];
   }>;
 } | null = null;
+
+function hasSerializedFuseIndex(
+  value: unknown
+): value is { keys: string[]; records: FuseIndexRecords } {
+  if (!value || typeof value !== 'object') {
+    return false;
+  }
+
+  const candidate = value as { keys?: unknown; records?: unknown };
+  return Array.isArray(candidate.keys) && Array.isArray(candidate.records);
+}
+
+function createFuseFromCachedSearchIndex(
+  data: NonNullable<typeof searchIndexCache>
+): Fuse<UnifiedVocabularyItem> | null {
+  if (!hasSerializedFuseIndex(data.index) || !data.options) {
+    return null;
+  }
+
+  const fuseIndex = Fuse.parseIndex<UnifiedVocabularyItem>(data.index);
+  return new Fuse<UnifiedVocabularyItem>([], data.options, fuseIndex);
+}
 
 // ======================
 // Types
@@ -356,15 +378,7 @@ export async function loadSearchIndex(options: LoadOptions = {}): Promise<{
   idToLevelMap: Record<string, CEFRLevel>;
 }> {
   if (searchIndexCache && !options.forceRefresh) {
-    // Rehydrate Fuse from cached index using parseIndex
-    const fuseIndex = Fuse.parseIndex<UnifiedVocabularyItem>(
-      searchIndexCache.index as { keys: string[]; records: FuseIndexRecords }
-    );
-    const fuse = new Fuse<UnifiedVocabularyItem>(
-      [],
-      searchIndexCache.options,
-      fuseIndex
-    );
+    const fuse = createFuseFromCachedSearchIndex(searchIndexCache);
     return {
       fuse,
       miniIndex: searchIndexCache.miniIndex,
@@ -379,17 +393,11 @@ export async function loadSearchIndex(options: LoadOptions = {}): Promise<{
         const cachedSearchIndex = await VocabularyCacheDB.getSearchIndex();
         if (cachedSearchIndex) {
           searchIndexCache = cachedSearchIndex;
+          const fuse = createFuseFromCachedSearchIndex(cachedSearchIndex);
 
-          const fuseIndex = Fuse.parseIndex<UnifiedVocabularyItem>(
-            cachedSearchIndex.index as { keys: string[]; records: FuseIndexRecords }
-          );
-          const fuse = new Fuse<UnifiedVocabularyItem>(
-            [],
-            cachedSearchIndex.options,
-            fuseIndex
-          );
-
-          Debug.log('vocabulary-loader', 'Search index loaded from IndexedDB');
+          Debug.log('vocabulary-loader', 'Search index loaded from IndexedDB', {
+            hasFuseIndex: !!fuse
+          });
           return {
             fuse,
             miniIndex: cachedSearchIndex.miniIndex,
@@ -412,16 +420,7 @@ export async function loadSearchIndex(options: LoadOptions = {}): Promise<{
           const data = entry.data as NonNullable<typeof searchIndexCache>;
 
           searchIndexCache = data;
-
-          // Rehydrate Fuse from cached data using parseIndex
-          const fuseIndex = Fuse.parseIndex<UnifiedVocabularyItem>(
-            data.index as { keys: string[]; records: FuseIndexRecords }
-          );
-          const fuse = new Fuse<UnifiedVocabularyItem>(
-            [],
-            data.options,
-            fuseIndex
-          );
+          const fuse = createFuseFromCachedSearchIndex(data);
 
           // Migrate to IndexedDB
           try {
@@ -430,7 +429,9 @@ export async function loadSearchIndex(options: LoadOptions = {}): Promise<{
             Debug.log('vocabulary-loader', 'Failed to save search index to IndexedDB', { error: e });
           }
 
-          Debug.log('vocabulary-loader', 'Search index loaded from localStorage');
+          Debug.log('vocabulary-loader', 'Search index loaded from localStorage', {
+            hasFuseIndex: !!fuse
+          });
           return {
             fuse,
             miniIndex: data.miniIndex,
@@ -475,15 +476,7 @@ export async function loadSearchIndex(options: LoadOptions = {}): Promise<{
       }
     }
 
-    // Rehydrate Fuse using parseIndex
-    const fuseIndex = Fuse.parseIndex<UnifiedVocabularyItem>(
-      data.index as { keys: string[]; records: FuseIndexRecords }
-    );
-    const fuse = new Fuse<UnifiedVocabularyItem>(
-      [],
-      data.fuseOptions,
-      fuseIndex
-    );
+    const fuse = createFuseFromCachedSearchIndex(searchIndexCache);
 
     return {
       fuse,
