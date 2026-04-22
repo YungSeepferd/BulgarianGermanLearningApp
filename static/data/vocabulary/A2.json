@@ -28,34 +28,6 @@
     "version": 1
   },
   {
-    "id": "wv_pc_ceeeb0f8",
-    "german": "Aufbewahrungsbehälter",
-    "bulgarian": "чешмата",
-    "partOfSpeech": "noun",
-    "difficulty": 1,
-    "cefrLevel": "A2",
-    "categories": [
-      "greetings"
-    ],
-    "examples": [
-      {
-        "german": "Aufbewahrungsbehälter",
-        "bulgarian": "чешмата",
-        "context": "'sudove za suHra'nenie.",
-        "source": "legacy"
-      }
-    ],
-    "type": "word",
-    "enrichment": {
-      "enriched": true,
-      "enrichedAt": "2025-12-18T14:05:11.179Z",
-      "source": "peace-corps-pdf-translation-layer"
-    },
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.770Z",
-    "version": 1
-  },
-  {
     "id": "wv_pc_ee6a322c",
     "german": "Bitte geben Sie mir eine Cola",
     "bulgarian": "Моля, дайте ми кола",
@@ -158,34 +130,6 @@
     "version": 1
   },
   {
-    "id": "wv_pc_7fbc1dbd",
-    "german": "Englisch/Bulgarisch",
-    "bulgarian": "английски/български",
-    "partOfSpeech": "phrase",
-    "difficulty": 1,
-    "cefrLevel": "A2",
-    "categories": [
-      "everyday-phrases"
-    ],
-    "examples": [
-      {
-        "german": "Englisch/Bulgarisch",
-        "bulgarian": "английски/български",
-        "context": "English/Bulgarian?",
-        "source": "legacy"
-      }
-    ],
-    "type": "word",
-    "enrichment": {
-      "enriched": true,
-      "enrichedAt": "2025-12-18T14:05:11.179Z",
-      "source": "peace-corps-pdf-translation-layer"
-    },
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.772Z",
-    "version": 1
-  },
-  {
     "id": "wv_pc_877b6d1f",
     "german": "Es tut mir leid, ich verstehe nicht",
     "bulgarian": "Съжалявам, не говоря",
@@ -214,59 +158,22 @@
     "version": 1
   },
   {
-    "id": "wv_pc_bc12fbd9",
+    "id": "exchange-7yea0m",
     "german": "Grundlegende Fragen und Antworten (Erste Gespräche in der Gemeinschaft):",
-    "bulgarian": "Това е хотел",
-    "partOfSpeech": "phrase",
-    "difficulty": 1,
+    "bulgarian": "курс",
+    "partOfSpeech": "noun",
+    "difficulty": 4,
     "cefrLevel": "A2",
     "categories": [
-      "everyday-phrases"
+      "numbers"
     ],
-    "examples": [
-      {
-        "german": "Grundlegende Fragen und Antworten (Erste Gespräche in der Gemeinschaft):",
-        "bulgarian": "Това е xотел",
-        "context": "Some Basic Questions and Answers ( Initial Community Exchanges):",
-        "source": "legacy"
-      }
-    ],
+    "examples": [],
     "type": "word",
     "enrichment": {
-      "enriched": true,
-      "enrichedAt": "2025-12-18T14:05:11.179Z",
-      "source": "peace-corps-pdf-translation-layer"
+      "source": "pdf-extraction-A2-English"
     },
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.772Z",
-    "version": 1
-  },
-  {
-    "id": "wv_pc_25be94d0",
-    "german": "Grundlegende Fragen und Antworten (Erste Gespräche in der Gemeinschaft):",
-    "bulgarian": "Какво значи това",
-    "partOfSpeech": "phrase",
-    "difficulty": 1,
-    "cefrLevel": "A2",
-    "categories": [
-      "everyday-phrases"
-    ],
-    "examples": [
-      {
-        "german": "Grundlegende Fragen und Antworten (Erste Gespräche in der Gemeinschaft):",
-        "bulgarian": "Какво значи това",
-        "context": "Some Basic Questions and Answers ( Initial Community Exchanges):",
-        "source": "legacy"
-      }
-    ],
-    "type": "word",
-    "enrichment": {
-      "enriched": true,
-      "enrichedAt": "2025-12-18T14:05:11.179Z",
-      "source": "peace-corps-pdf-translation-layer"
-    },
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.772Z",
+    "createdAt": "2026-04-21T21:45:50.270Z",
+    "updatedAt": "2026-01-28T11:59:28.774Z",
     "version": 1
   },
   {
@@ -283,118 +190,6 @@
       {
         "german": "Ich bin ein Freiwilliger des Friedenskorps",
         "bulgarian": "Аз съм от Невада",
-        "context": "I'm a Peace Corps Volunteer.",
-        "source": "legacy"
-      }
-    ],
-    "type": "word",
-    "enrichment": {
-      "enriched": true,
-      "enrichedAt": "2025-12-18T14:05:11.179Z",
-      "source": "peace-corps-pdf-translation-layer"
-    },
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1
-  },
-  {
-    "id": "wv_pc_6b9e065b",
-    "german": "Ich bin ein Freiwilliger des Friedenskorps",
-    "bulgarian": "Аз съм учител",
-    "partOfSpeech": "phrase",
-    "difficulty": 1,
-    "cefrLevel": "A2",
-    "categories": [
-      "everyday-phrases"
-    ],
-    "examples": [
-      {
-        "german": "Ich bin ein Freiwilliger des Friedenskorps",
-        "bulgarian": "Аз съм учител",
-        "context": "I'm a Peace Corps Volunteer.",
-        "source": "legacy"
-      }
-    ],
-    "type": "word",
-    "enrichment": {
-      "enriched": true,
-      "enrichedAt": "2025-12-18T14:05:11.179Z",
-      "source": "peace-corps-pdf-translation-layer"
-    },
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1
-  },
-  {
-    "id": "wv_pc_0298ef98",
-    "german": "Ich bin ein Freiwilliger des Friedenskorps",
-    "bulgarian": "Аз съм от Тексас",
-    "partOfSpeech": "phrase",
-    "difficulty": 1,
-    "cefrLevel": "A2",
-    "categories": [
-      "everyday-phrases"
-    ],
-    "examples": [
-      {
-        "german": "Ich bin ein Freiwilliger des Friedenskorps",
-        "bulgarian": "Аз съм от Тексас",
-        "context": "I'm a Peace Corps Volunteer.",
-        "source": "legacy"
-      }
-    ],
-    "type": "word",
-    "enrichment": {
-      "enriched": true,
-      "enrichedAt": "2025-12-18T14:05:11.179Z",
-      "source": "peace-corps-pdf-translation-layer"
-    },
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1
-  },
-  {
-    "id": "wv_pc_1d37f8f2",
-    "german": "Ich bin ein Freiwilliger des Friedenskorps",
-    "bulgarian": "Аз съм от Монтана",
-    "partOfSpeech": "phrase",
-    "difficulty": 1,
-    "cefrLevel": "A2",
-    "categories": [
-      "everyday-phrases"
-    ],
-    "examples": [
-      {
-        "german": "Ich bin ein Freiwilliger des Friedenskorps",
-        "bulgarian": "Аз съм от Монтана",
-        "context": "I'm a Peace Corps Volunteer.",
-        "source": "legacy"
-      }
-    ],
-    "type": "word",
-    "enrichment": {
-      "enriched": true,
-      "enrichedAt": "2025-12-18T14:05:11.179Z",
-      "source": "peace-corps-pdf-translation-layer"
-    },
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.773Z",
-    "version": 1
-  },
-  {
-    "id": "wv_pc_f0727e19",
-    "german": "Ich bin ein Freiwilliger des Friedenskorps",
-    "bulgarian": "Аз съм екоспециалист",
-    "partOfSpeech": "phrase",
-    "difficulty": 1,
-    "cefrLevel": "A2",
-    "categories": [
-      "everyday-phrases"
-    ],
-    "examples": [
-      {
-        "german": "Ich bin ein Freiwilliger des Friedenskorps",
-        "bulgarian": "Аз съм екоспециалист",
         "context": "I'm a Peace Corps Volunteer.",
         "source": "legacy"
       }
@@ -678,12 +473,24 @@
         "bulgarian": "Правда",
         "context": "Basic",
         "source": "merged"
+      },
+      {
+        "german": "Ich habe Recht/Gerechtigkeit",
+        "bulgarian": "Имам правда",
+        "context": "Having",
+        "source": "merged"
+      },
+      {
+        "german": "Ich mag Recht/Gerechtigkeit",
+        "bulgarian": "Харесвам правда",
+        "context": "Liking",
+        "source": "merged"
       }
     ],
     "type": "word",
     "createdAt": "2025-12-18T09:38:36.476Z",
-    "updatedAt": "2026-04-21T18:46:51.098Z",
-    "version": 2
+    "updatedAt": "2026-01-28T11:59:28.773Z",
+    "version": 1
   },
   {
     "id": "wv_c2d12eee",
@@ -783,53 +590,6 @@
     "version": 1
   },
   {
-    "id": "wv_pc_3c561035",
-    "german": "Woher kommen Sie",
-    "bulgarian": "Аз съм от... / От... съм",
-    "partOfSpeech": "phrase",
-    "difficulty": 1,
-    "cefrLevel": "A2",
-    "categories": [
-      "transport"
-    ],
-    "examples": [
-      {
-        "german": "Woher kommen Sie",
-        "bulgarian": "Аз съм от... / От... съм",
-        "context": "Where are you from?",
-        "source": "legacy"
-      }
-    ],
-    "type": "word",
-    "enrichment": {
-      "enriched": true,
-      "enrichedAt": "2025-12-18T14:05:11.179Z",
-      "source": "peace-corps-pdf-translation-layer"
-    },
-    "createdAt": "2025-12-18T14:05:11.179Z",
-    "updatedAt": "2026-01-28T11:59:28.774Z",
-    "version": 1
-  },
-  {
-    "id": "exchange-7yea0m",
-    "german": "Grundlegende Fragen und Antworten (Erste Gespräche in der Gemeinschaft):",
-    "bulgarian": "курс",
-    "partOfSpeech": "noun",
-    "difficulty": 4,
-    "cefrLevel": "A2",
-    "categories": [
-      "numbers"
-    ],
-    "examples": [],
-    "type": "word",
-    "enrichment": {
-      "source": "pdf-extraction-A2-English"
-    },
-    "createdAt": "2026-04-21T20:10:08.372Z",
-    "updatedAt": "2026-01-28T11:59:28.774Z",
-    "version": 1
-  },
-  {
     "id": "a1_auto_3baa4031-5ecc-4133-980f-cb959dfed1e8",
     "german": "bonbonpunsch",
     "bulgarian": "бонбонишункаориз",
@@ -848,7 +608,7 @@
       }
     ],
     "type": "word",
-    "createdAt": "2026-04-21T20:10:08.372Z",
+    "createdAt": "2026-04-21T21:45:50.270Z",
     "updatedAt": "2026-01-28T11:59:28.774Z",
     "version": 1
   },
@@ -871,7 +631,7 @@
       }
     ],
     "type": "word",
-    "createdAt": "2026-04-21T20:10:08.372Z",
+    "createdAt": "2026-04-21T21:45:50.270Z",
     "updatedAt": "2026-01-28T11:59:28.774Z",
     "version": 1
   },
@@ -894,7 +654,7 @@
       }
     ],
     "type": "word",
-    "createdAt": "2026-04-21T20:10:08.372Z",
+    "createdAt": "2026-04-21T21:45:50.270Z",
     "updatedAt": "2026-01-28T11:59:28.774Z",
     "version": 1
   },
@@ -917,30 +677,7 @@
       }
     ],
     "type": "word",
-    "createdAt": "2026-04-21T20:10:08.372Z",
-    "updatedAt": "2026-01-28T11:59:28.774Z",
-    "version": 1
-  },
-  {
-    "id": "a1_auto_059877e6-15fb-4b3a-8bb7-72ed11196c82",
-    "german": "palästinensische",
-    "bulgarian": "палестинка",
-    "partOfSpeech": "phrase",
-    "difficulty": 1,
-    "cefrLevel": "A2",
-    "categories": [
-      "greetings"
-    ],
-    "examples": [
-      {
-        "german": "palästinensische",
-        "bulgarian": "палестинка",
-        "context": "auto-import",
-        "source": "legacy"
-      }
-    ],
-    "type": "word",
-    "createdAt": "2026-04-21T20:10:08.372Z",
+    "createdAt": "2026-04-21T21:45:50.270Z",
     "updatedAt": "2026-01-28T11:59:28.774Z",
     "version": 1
   },
@@ -963,7 +700,7 @@
       }
     ],
     "type": "word",
-    "createdAt": "2026-04-21T20:10:08.372Z",
+    "createdAt": "2026-04-21T21:45:50.270Z",
     "updatedAt": "2026-01-28T11:59:28.774Z",
     "version": 1
   },
@@ -986,7 +723,7 @@
       }
     ],
     "type": "word",
-    "createdAt": "2026-04-21T20:10:08.372Z",
+    "createdAt": "2026-04-21T21:45:50.270Z",
     "updatedAt": "2026-01-28T11:59:28.775Z",
     "version": 1
   }

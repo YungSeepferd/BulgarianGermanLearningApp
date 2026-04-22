@@ -80,8 +80,10 @@ function auditTranslations(items: UnifiedVocabularyItem[]): AuditIssue[] {
       }
     }
 
-    // Check for empty or very short translations
-    if (item.bulgarian.length < 2 || item.german.length < 2) {
+    // Check for empty or very short translations (skip grammar particles & numbers)
+    const shortWordPoS = ['preposition', 'conjunction', 'interjection', 'particle', 'numeral', 'number'];
+    const isShortGrammar = shortWordPoS.includes(item.partOfSpeech) || /^[\d\s]+$/u.test(item.german);
+    if ((item.bulgarian.length < 2 || item.german.length < 2) && !isShortGrammar) {
       issues.push({
         type: 'invalid',
         id: item.id,
