@@ -236,6 +236,7 @@
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 1rem;
+    overflow-wrap: break-word;
   }
 
   .word {
@@ -257,6 +258,7 @@
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-primary, #111827);
+    overflow-wrap: break-word;
   }
 
   .word.german h2 {
@@ -465,6 +467,12 @@
       border-top: 1px solid var(--border-color, #e5e7eb);
       border-radius: 1rem 1rem 0 0;
       box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .close-button {
+      width: 48px;
+      height: 48px;
+      font-size: 1.5rem;
     }
   }
 </style>

@@ -16,6 +16,7 @@
   
   // Selected vocabulary for detail panel
   let selectedVocabulary = $state<VocabularyItem | null>(null);
+  let wasManuallyClosed = $state(false);
   
   // Dashboard stats (loaded async)
   let totalVocabulary = $state(0);
@@ -35,6 +36,9 @@
   // Auto-update detail panel with current vocabulary
   $effect(() => {
     if (currentItem) {
+      wasManuallyClosed = false;
+    }
+    if (currentItem && !wasManuallyClosed) {
       selectedVocabulary = currentItem;
     }
   });
@@ -162,7 +166,7 @@
       <div class="detail-panel-container">
         <VocabularyDetailPanel 
           item={selectedVocabulary}
-          onClose={() => selectedVocabulary = null}
+          onClose={() => { wasManuallyClosed = true; selectedVocabulary = null; }}
         />
       </div>
     </div>

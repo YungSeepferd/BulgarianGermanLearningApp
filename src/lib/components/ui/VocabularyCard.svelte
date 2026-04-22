@@ -640,6 +640,9 @@
     font-weight: 600;
     font-size: 0.95rem;
     line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .vocab-term.source-lang {
@@ -757,10 +760,14 @@
     gap: 0.5rem;
     font-weight: 600;
     font-size: 0.95rem;
+    overflow: hidden;
   }
 
   .term-row .word {
     color: var(--text-primary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .term-row .arrow {
@@ -769,6 +776,9 @@
 
   .term-row .translation {
     color: var(--accent);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .action-buttons {
@@ -973,6 +983,9 @@
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--text-primary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .lesson-difficulty {
