@@ -25,7 +25,7 @@
   {
     "id": "wv_pc_bee32b26",
     "german": "Bitte, nehmen Sie Platz",
-    "bulgarian": "Да, благодаря",
+    "bulgarian": "Моля, седнете",
     "partOfSpeech": "phrase",
     "difficulty": 1,
     "cefrLevel": "A1",
@@ -35,7 +35,7 @@
     "examples": [
       {
         "german": "Bitte, nehmen Sie Platz",
-        "bulgarian": "Да, благодаря",
+        "bulgarian": "Моля, седнете",
         "context": "Please, have a seat!",
         "source": "legacy"
       }
@@ -18155,7 +18155,7 @@
     "id": "a1_grammar_006",
     "german": "in",
     "bulgarian": "В",
-    "partOfSpeech": "phrase",
+    "partOfSpeech": "preposition",
     "difficulty": 1,
     "cefrLevel": "A1",
     "categories": [
@@ -20879,7 +20879,7 @@
     "id": "a1_grammar_008",
     "german": "mit",
     "bulgarian": "С",
-    "partOfSpeech": "phrase",
+    "partOfSpeech": "preposition",
     "difficulty": 1,
     "cefrLevel": "A1",
     "categories": [
@@ -26865,7 +26865,7 @@
     "id": "a1_grammar_001",
     "german": "und",
     "bulgarian": "И",
-    "partOfSpeech": "phrase",
+    "partOfSpeech": "conjunction",
     "difficulty": 1,
     "cefrLevel": "A1",
     "categories": [

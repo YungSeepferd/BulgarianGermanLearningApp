@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-21T21:56:26.013Z",
+  "lastUpdated": "2026-04-22T15:41:25.842Z",
   "totalItems": 1484,
   "levels": {
     "A1": {
       "count": 1454,
-      "chunkSize": 965170,
+      "chunkSize": 965185,
       "chunkPath": "./A1.json",
       "byCategory": {
         "food": 55,
@@ -29,11 +29,13 @@
         "culture": 1
       },
       "byPartOfSpeech": {
-        "phrase": 1052,
+        "phrase": 1049,
         "noun": 359,
         "number": 23,
         "adjective": 9,
-        "verb": 11
+        "verb": 11,
+        "preposition": 2,
+        "conjunction": 1
       },
       "byDifficulty": {
         "1": 1195,
@@ -109,7 +111,7 @@
     {
       "id": "wv_pc_bee32b26",
       "german": "Bitte, nehmen Sie Platz",
-      "bulgarian": "Да, благодаря",
+      "bulgarian": "Моля, седнете",
       "partOfSpeech": "phrase",
       "difficulty": 1,
       "cefrLevel": "A1",
@@ -10969,7 +10971,7 @@
       "id": "a1_grammar_006",
       "german": "in",
       "bulgarian": "В",
-      "partOfSpeech": "phrase",
+      "partOfSpeech": "preposition",
       "difficulty": 1,
       "cefrLevel": "A1",
       "categories": [
@@ -12705,7 +12707,7 @@
       "id": "a1_grammar_008",
       "german": "mit",
       "bulgarian": "С",
-      "partOfSpeech": "phrase",
+      "partOfSpeech": "preposition",
       "difficulty": 1,
       "cefrLevel": "A1",
       "categories": [
@@ -16192,7 +16194,7 @@
       "id": "a1_grammar_001",
       "german": "und",
       "bulgarian": "И",
-      "partOfSpeech": "phrase",
+      "partOfSpeech": "conjunction",
       "difficulty": 1,
       "cefrLevel": "A1",
       "categories": [
@@ -25378,11 +25380,13 @@
       "culture": 1
     },
     "byPartOfSpeech": {
-      "phrase": 1079,
+      "phrase": 1076,
       "noun": 362,
       "number": 23,
       "adjective": 9,
-      "verb": 11
+      "verb": 11,
+      "preposition": 2,
+      "conjunction": 1
     },
     "byDifficulty": {
       "1": 1224,
