@@ -273,16 +273,16 @@
         <h3>{labels.overview}</h3>
         <div class="info-grid">
           <div class="info-item">
-            <label>{labels.partOfSpeech}</label>
+            <span>{labels.partOfSpeech}</span>
             <div>{getPartsOfSpeechLabel(item.partOfSpeech)}</div>
           </div>
           <div class="info-item">
-            <label>{labels.difficulty}</label>
+            <span>{labels.difficulty}</span>
             <div>{getDifficultyLabel(item.difficulty)}</div>
           </div>
           {#if item.categories && item.categories.length > 0}
             <div class="info-item">
-              <label>{labels.category}</label>
+              <span>{labels.category}</span>
               <div>
                 {item.categories.map(c => getCategoryLabel(c)).join(', ')}
               </div>
@@ -608,7 +608,7 @@
     border: 1px solid var(--color-border);
   }
 
-  .info-item label {
+  .info-item span {
     display: block;
     font-weight: 600;
     color: var(--color-text-secondary);

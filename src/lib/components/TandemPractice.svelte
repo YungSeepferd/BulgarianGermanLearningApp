@@ -502,7 +502,7 @@
   {:else}
   <div class="header">
     <h2 class="app-title">
-      <span class="title-icon">🔄</span>
+      <span class="title-icon" aria-hidden="true">🔄</span>
       {t('practice.tandem_learning')}
     </h2>
     <TandemToggle

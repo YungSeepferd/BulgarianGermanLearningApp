@@ -27,8 +27,8 @@
         recentTitle: 'Zuletzt angesehen',
         recommendedTitle: 'Empfohlen für dich',
         pathsTitle: 'Lernpfade',
-        quickPractice: '🎲 Schnell üben',
-        browseVocab: '📚 Vokabular durchsuchen',
+        quickPractice: 'Schnell üben',
+        browseVocab: 'Vokabular durchsuchen',
         noRecent: 'Keine kürzlich angesehenen Wörter',
         noRecommended: 'Alle Wörter sind gemeistert! 🎉',
         essentialA1: 'Essenzielle A1 Wörter',
@@ -45,8 +45,8 @@
         recentTitle: 'Отскоро разглеждано',
         recommendedTitle: 'Препоръчано за теб',
         pathsTitle: 'Пътеки за учене',
-        quickPractice: '🎲 Бърза практика',
-        browseVocab: '📚 Преглед на речника',
+        quickPractice: 'Бърза практика',
+        browseVocab: 'Преглед на речника',
         noRecent: 'Нямате отскоро разглеждани думи',
         noRecommended: 'Всички думи са усвоени! 🎉',
         essentialA1: 'Основни думи A1',
@@ -353,7 +353,11 @@
   .badge {
     position: absolute;
     top: -0.5rem;
-    right: 1rem;
+    right: 0.75rem;
+    max-width: calc(100% - 1.5rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     background: var(--accent);
     color: var(--bg-base);
     font-family: var(--font-body);

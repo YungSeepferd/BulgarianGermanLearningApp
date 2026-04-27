@@ -42,15 +42,15 @@
 
     const variantMap: Record<string, string> = {
       primary:
-        "bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-500",
+        "bg-[var(--accent)] text-[var(--bg-base)] hover:opacity-90 focus:ring-[var(--accent)]",
       secondary:
-        "bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-400",
+        "bg-[var(--bg-elevated)] text-[var(--text-primary)] border border-[var(--border-subtle)] hover:bg-[var(--bg-surface)] focus:ring-[var(--accent)]",
       success:
         "bg-emerald-500 text-white hover:bg-emerald-600 focus:ring-emerald-500",
       danger:
         "bg-red-500 text-white hover:bg-red-600 focus:ring-red-500",
       practice:
-        "bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-500",
+        "bg-[var(--accent)] text-[var(--bg-base)] hover:opacity-90 focus:ring-[var(--accent)]",
       "quick-practice":
         "bg-amber-500 text-white hover:bg-amber-600 focus:ring-amber-500",
       learn:
@@ -70,5 +70,5 @@
 
 <style>
   /* No additional styles; relies on Tailwind classes in project */
-  button { -webkit-tap-highlight-color: transparent; }
+  button { -webkit-tap-highlight-color: transparent; font-family: var(--font-body); }
 </style>

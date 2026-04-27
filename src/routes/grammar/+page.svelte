@@ -119,7 +119,6 @@
       </svg>
       <input
         type="search"
-        role="searchbox"
         placeholder={ui.searchPlaceholder}
         bind:value={searchTerm}
         class="search-input"
