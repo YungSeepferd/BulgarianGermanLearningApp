@@ -33,9 +33,14 @@
     return dailyVocabularyService.dailyItems[dailyProgress.currentIndex] || null;
   });
   
+  // Track previous item to detect actual changes
+  let prevItem = $state<VocabularyItem | null>(null);
+
   // Auto-update detail panel with current vocabulary
   $effect(() => {
-    if (currentItem) {
+    // Only reset the guard when currentItem actually changes (not on close)
+    if (currentItem !== prevItem) {
+      prevItem = currentItem;
       wasManuallyClosed = false;
     }
     if (currentItem && !wasManuallyClosed) {
