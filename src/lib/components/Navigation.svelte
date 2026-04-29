@@ -87,12 +87,24 @@
     };
   });
 
+  let mobileMenuOpen = $state(false);
+
+  function toggleMobileMenu() {
+    mobileMenuOpen = !mobileMenuOpen;
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+  }
+
+  function closeMobileMenu() {
+    mobileMenuOpen = false;
+    document.body.style.overflow = '';
+  }
+
   function handleToggleLanguage() {
     appState.toggleDirection();
-    // Immediate optimistic UI update while translations reload
     directionLabel = buildDirectionLabel(isTranslationsLoading());
     languageCode = getCurrentLanguage();
     languageToggleAria = buildLanguageToggleAria(isTranslationsLoading());
+    closeMobileMenu();
   }
 </script>
 
@@ -113,6 +125,7 @@
             class="nav-link {currentPath === item.path ? 'active' : ''}"
             aria-current={currentPath === item.path ? 'page' : undefined}
             aria-label={item.name}
+            onclick={closeMobileMenu}
           >
             <span class="nav-icon" aria-hidden="true">{item.icon}</span>
             <span class="nav-text">{item.name}</span>
@@ -122,6 +135,17 @@
     </ul>
 
     <div class="nav-actions">
+      <button
+        class="hamburger"
+        onclick={toggleMobileMenu}
+        aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={mobileMenuOpen}
+      >
+        <span class="hamburger-line" aria-hidden="true"></span>
+        <span class="hamburger-line" aria-hidden="true"></span>
+        <span class="hamburger-line" aria-hidden="true"></span>
+      </button>
+
       <button
         class="language-toggle"
         onclick={handleToggleLanguage}
@@ -133,6 +157,38 @@
       </button>
     </div>
   </div>
+
+  {#if mobileMenuOpen}
+    <div class="mobile-overlay" onclick={closeMobileMenu} aria-hidden="true"></div>
+    <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      <div class="mobile-drawer-header">
+        <span class="logo-icon">🇧🇬🇩🇪</span>
+        <span class="logo-text">{appNameLabel}</span>
+        <button class="close-drawer" onclick={closeMobileMenu} aria-label="Close menu">✕</button>
+      </div>
+      <ul class="mobile-nav-list">
+        {#each translatedNavItems as item}
+          <li class="mobile-nav-item">
+            <a
+              href={getNavPath(item.path)}
+              class="mobile-nav-link {currentPath === item.path ? 'active' : ''}"
+              aria-current={currentPath === item.path ? 'page' : undefined}
+              onclick={closeMobileMenu}
+            >
+              <span class="nav-icon" aria-hidden="true">{item.icon}</span>
+              <span>{item.name}</span>
+            </a>
+          </li>
+        {/each}
+      </ul>
+      <div class="mobile-drawer-footer">
+        <button class="language-toggle mobile-language-toggle" onclick={handleToggleLanguage}>
+          <span class="lang-code">{languageCode.toUpperCase()}</span>
+          <span class="lang-direction">{directionLabel}</span>
+        </button>
+      </div>
+    </div>
+  {/if}
 </nav>
 
 <style>
@@ -310,6 +366,10 @@
     }
   }
 
+  .hamburger {
+    display: none;
+  }
+
   @media (max-width: 768px) {
     .navigation-container {
       height: 56px;
@@ -319,19 +379,141 @@
       display: none;
     }
 
-    .nav-link {
-      padding: 0 var(--space-2);
-    }
-
-    .nav-text {
+    .nav-list {
       display: none;
     }
 
-    .nav-icon {
-      margin-bottom: 0;
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: var(--text-primary);
+    }
+
+    .hamburger-line {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: currentColor;
+      border-radius: 2px;
+      transition: transform 0.2s var(--ease-out), opacity 0.2s var(--ease-out);
+    }
+
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 60;
+    }
+
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: min(280px, 80vw);
+      height: 100vh;
+      background: var(--bg-frosted);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-left: 1px solid var(--border-subtle);
+      z-index: 70;
+      display: flex;
+      flex-direction: column;
+      animation: drawer-slide 0.25s var(--ease-out);
+    }
+
+    @keyframes drawer-slide {
+      from { transform: translateX(100%); }
+      to   { transform: translateX(0); }
+    }
+
+    .mobile-drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-4);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .close-drawer {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      color: var(--text-primary);
+      font-size: 1.25rem;
+      cursor: pointer;
+      border-radius: var(--radius-md);
+    }
+
+    .mobile-nav-list {
+      list-style: none;
+      margin: 0;
+      padding: var(--space-2) 0;
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .mobile-nav-item {
+      margin: 0;
+    }
+
+    .mobile-nav-link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-3) var(--space-4);
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: var(--text-base);
+      font-weight: var(--weight-medium);
+      transition: all var(--duration-150) var(--ease-out);
+      border-left: 3px solid transparent;
+    }
+
+    .mobile-nav-link:hover {
+      background: var(--bg-surface);
+      color: var(--text-primary);
+    }
+
+    .mobile-nav-link.active {
+      color: var(--accent);
+      background: var(--accent-dim);
+      border-left-color: var(--accent);
+    }
+
+    .mobile-drawer-footer {
+      padding: var(--space-4);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .mobile-language-toggle {
+      width: 100%;
+      justify-content: center;
     }
 
     .lang-direction {
+      display: none;
+    }
+
+    .language-toggle .lang-direction {
+      display: none;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hamburger {
       display: none;
     }
   }

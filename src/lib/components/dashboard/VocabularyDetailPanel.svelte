@@ -9,6 +9,18 @@
 
   const isDE_BG = $derived(appState.languageMode === 'DE_BG');
 
+  // Lock body scroll when panel is open
+  $effect(() => {
+    if (item) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  });
+
   function getCEFRLabel(item: VocabularyItem): string {
     return item.cefrLevel || 'A1';
   }
@@ -473,6 +485,24 @@
       width: 48px;
       height: 48px;
       font-size: 1.5rem;
+    }
+  }
+
+  /* Mobile fullscreen - screens <= 640px */
+  @media (max-width: 640px) {
+    .vocabulary-detail-panel {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 0;
+      z-index: 100;
+      max-height: 100vh;
+    }
+
+    .close-button {
+      min-width: 48px;
+      min-height: 48px;
     }
   }
 </style>

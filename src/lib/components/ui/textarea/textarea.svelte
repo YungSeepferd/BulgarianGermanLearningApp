@@ -40,7 +40,7 @@
 		border: 1px solid var(--border-default);
 		border-radius: var(--radius-md);
 		background-color: var(--bg-card);
-		font-size: 0.875rem;
+		font-size: 1rem;
 		line-height: 1.5;
 		color: var(--text-primary);
 		resize: vertical;

@@ -377,8 +377,8 @@
     background: rgba(255, 255, 255, 0.2);
     border: none;
     color: var(--bg-base);
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     display: flex;
     align-items: center;
