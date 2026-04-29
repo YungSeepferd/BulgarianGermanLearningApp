@@ -360,7 +360,7 @@
   const gridColumns = $derived.by(() => {
     if (containerWidth === 0) return 2;
     const cols = Math.floor(containerWidth / ITEM_MIN_WIDTH);
-    return Math.max(2, Math.min(cols, 4));
+    return Math.max(1, Math.min(cols, 4));
   });
 
   // Calculate item width based on column count

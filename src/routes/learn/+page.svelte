@@ -458,4 +458,20 @@
       gap: 1rem;
     }
   }
+
+  /* Mobile: full-width cards to prevent overflow */
+  @media (max-width: 640px) {
+    .glass-card {
+      flex: 0 0 calc(100% - 1rem);
+      max-width: none;
+    }
+
+    .recommended-card {
+      flex: 0 0 calc(100% - 1rem);
+    }
+
+    .horizontal-scroll {
+      padding-inline: 0.25rem;
+    }
+  }
 </style>

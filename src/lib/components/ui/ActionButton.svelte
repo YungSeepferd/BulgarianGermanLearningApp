@@ -32,7 +32,7 @@
 
   let classes = $derived.by(() => {
     const base =
-      "inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-60 disabled:pointer-events-none select-none";
+      "inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-60 disabled:pointer-events-none select-none action-btn";
 
     const sizeMap: Record<string, string> = {
       sm: "h-8 px-3 text-sm",
@@ -40,24 +40,7 @@
       lg: "h-12 px-5 text-base",
     };
 
-    const variantMap: Record<string, string> = {
-      primary:
-        "bg-[var(--accent)] text-[var(--bg-base)] hover:opacity-90 focus:ring-[var(--accent)]",
-      secondary:
-        "bg-[var(--bg-elevated)] text-[var(--text-primary)] border border-[var(--border-subtle)] hover:bg-[var(--bg-surface)] focus:ring-[var(--accent)]",
-      success:
-        "bg-emerald-500 text-white hover:bg-emerald-600 focus:ring-emerald-500",
-      danger:
-        "bg-red-500 text-white hover:bg-red-600 focus:ring-red-500",
-      practice:
-        "bg-[var(--accent)] text-[var(--bg-base)] hover:opacity-90 focus:ring-[var(--accent)]",
-      "quick-practice":
-        "bg-amber-500 text-white hover:bg-amber-600 focus:ring-amber-500",
-      learn:
-        "bg-violet-500 text-white hover:bg-violet-600 focus:ring-violet-500",
-    };
-
-    return [base, sizeMap[size], variantMap[variant]].join(" ");
+    return [base, sizeMap[size], `variant-${variant}`].join(" ");
   });
 </script>
 
@@ -69,6 +52,65 @@
 </button>
 
 <style>
-  /* No additional styles; relies on Tailwind classes in project */
-  button { -webkit-tap-highlight-color: transparent; font-family: var(--font-body); }
+  button {
+    -webkit-tap-highlight-color: transparent;
+    font-family: var(--font-body);
+  }
+
+  .variant-primary {
+    background-color: var(--accent);
+    color: var(--bg-base);
+  }
+  .variant-primary:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+
+  .variant-secondary {
+    background-color: var(--bg-elevated);
+    color: var(--text-primary);
+    border: 1px solid var(--border-subtle);
+  }
+  .variant-secondary:hover:not(:disabled) {
+    background-color: var(--bg-surface);
+  }
+
+  .variant-success {
+    background-color: #10b981;
+    color: white;
+  }
+  .variant-success:hover:not(:disabled) {
+    background-color: #059669;
+  }
+
+  .variant-danger {
+    background-color: #ef4444;
+    color: white;
+  }
+  .variant-danger:hover:not(:disabled) {
+    background-color: #dc2626;
+  }
+
+  .variant-practice {
+    background-color: var(--accent);
+    color: var(--bg-base);
+  }
+  .variant-practice:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+
+  .variant-quick-practice {
+    background-color: #f59e0b;
+    color: white;
+  }
+  .variant-quick-practice:hover:not(:disabled) {
+    background-color: #d97706;
+  }
+
+  .variant-learn {
+    background-color: #8b5cf6;
+    color: white;
+  }
+  .variant-learn:hover:not(:disabled) {
+    background-color: #7c3aed;
+  }
 </style>
