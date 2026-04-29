@@ -206,9 +206,9 @@ export class LocalizationService {
      */
     static t(key: string, params?: Record<string, string>): string {
         try {
-            // If translations are still loading, return the key with loading indicator
+            // If translations are still loading, return the key as fallback
             if (_isLoading) {
-                return ''; // Return empty string during loading
+                return key; // Return key instead of empty string during loading
             }
 
             // If no translations are loaded, return the key as fallback
