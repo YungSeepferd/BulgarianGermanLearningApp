@@ -35,6 +35,9 @@
   
   // Track previous item to detect actual changes
   let prevItem = $state<VocabularyItem | null>(null);
+  
+  // Mobile detection — detail panel is too invasive to auto-open on small screens
+  let isMobile = $state(false);
 
   // Auto-update detail panel with current vocabulary
   $effect(() => {
@@ -43,9 +46,20 @@
       prevItem = currentItem;
       wasManuallyClosed = false;
     }
-    if (currentItem && !wasManuallyClosed && !selectedVocabulary) {
+    if (currentItem && !wasManuallyClosed && !selectedVocabulary && !isMobile) {
       selectedVocabulary = currentItem;
     }
+  });
+
+  // Mobile width detection via resize listener
+  $effect(() => {
+    if (!browser) return;
+    const check = () => {
+      isMobile = window.innerWidth <= 640;
+    };
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
   });
 
   // Load dashboard data
