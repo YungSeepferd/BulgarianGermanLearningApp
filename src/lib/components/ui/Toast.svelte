@@ -71,8 +71,8 @@
   exit={{ opacity: 0, x: 100, scale: 0.95 }}
   transition={{ duration: 0.3, ease: 'easeOut' }}
 >
-  <button
-    type="button"
+  <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+  <div
     use:motion
     class="toast {colors[type].bg} {colors[type].border}"
     role="alert"
@@ -106,7 +106,7 @@
       <span aria-hidden="true">×</span>
     </button>
   {/if}
-  </button>
+  </div>
 </Motion>
 
 <style>
@@ -115,7 +115,6 @@
     background: none;
     padding: 0;
     margin: 0;
-    cursor: pointer;
     width: 100%;
     text-align: left;
     font: inherit;
