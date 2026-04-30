@@ -71,7 +71,8 @@
   exit={{ opacity: 0, x: 100, scale: 0.95 }}
   transition={{ duration: 0.3, ease: 'easeOut' }}
 >
-  <div
+  <button
+    type="button"
     use:motion
     class="toast {colors[type].bg} {colors[type].border}"
     role="alert"
@@ -105,11 +106,20 @@
       <span aria-hidden="true">×</span>
     </button>
   {/if}
-  </div>
+  </button>
 </Motion>
 
 <style>
   .toast {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    color: inherit;
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
