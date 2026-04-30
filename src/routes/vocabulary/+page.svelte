@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { t } from '$lib/services/localization';
   import { vocabularyDb } from '$lib/data/db.svelte';
   import { appState } from '$lib/state/app-state';
   import { ErrorHandler } from '$lib/services/errors';
@@ -38,8 +37,8 @@
         title: 'Vokabular',
         introTitle: 'Wortschatz sicher aufbauen',
         introLede: 'Filtern nach Kategorie, Schwierigkeit oder Wortart und direkt mit den ausgewählten Wörtern üben.',
-        searchPlaceholder: t('search.search_placeholder'),
-        searchAria: t('search.search_vocabulary'),
+        searchPlaceholder: 'Suche nach Wörtern...',
+        searchAria: 'Vokabular durchsuchen',
         category: 'Kategorie',
         difficulty: 'Schwierigkeit',
         pos: 'Wortart',
@@ -53,6 +52,16 @@
         loadMore: 'Mehr laden'
       }
     : {
+        title: 'Речник',
+        introTitle: 'Изграждане на речник',
+        introLede: 'Филтриране по категория, трудност или част на речта и директна практика с избраните думи.',
+        searchPlaceholder: 'Търсене на думи...',
+        searchAria: 'Търсене в речника',
+        category: 'Категория',
+        difficulty: 'Трудност',
+        pos: 'Част на речта',
+        learningPhase: 'Фаза на учене',
+        reset: 'Изчистване на филтрите',
         practiceSelected: (n: number) => `Упражнявай избраните (${n})`,
         loading: 'Зареждане на речника...',
         error: 'Грешка при зареждане. Опитайте отново.',

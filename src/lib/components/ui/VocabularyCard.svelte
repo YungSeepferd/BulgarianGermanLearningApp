@@ -1046,4 +1046,58 @@
       padding: 1.5rem;
     }
   }
+
+  /* Mobile-optimized grid variant for 390px screens */
+  @media (max-width: 640px) {
+    .variant-grid {
+      padding: 0.875rem;
+    }
+
+    /* Hide tags, examples, actions on mobile to prevent overflow */
+    .variant-grid .card-tags {
+      display: none;
+    }
+
+    .variant-grid .examples-preview {
+      display: none;
+    }
+
+    .variant-grid .card-actions {
+      display: none;
+    }
+
+    /* Hide CEFR badge (already shown in parent card) */
+    .variant-grid .cefr-badge {
+      display: none;
+    }
+
+    /* Make vocab terms larger and centered */
+    .variant-grid .vocab-pair {
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 0;
+    }
+
+    .variant-grid .vocab-arrow {
+      order: -1;
+      font-size: 0.75rem;
+    }
+
+    .variant-grid .vocab-term {
+      font-size: 1rem;
+      text-align: center;
+      flex: none;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .variant-grid .card-main-area {
+      justify-content: center;
+      min-height: 80px;
+    }
+
+    .variant-grid .card-content {
+      margin-bottom: 0;
+    }
+  }
 </style>

@@ -43,7 +43,7 @@
       prevItem = currentItem;
       wasManuallyClosed = false;
     }
-    if (currentItem && !wasManuallyClosed) {
+    if (currentItem && !wasManuallyClosed && !selectedVocabulary) {
       selectedVocabulary = currentItem;
     }
   });
